@@ -1,3 +1,4 @@
+kde_enable_exceptions()
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
@@ -12,9 +13,6 @@ if ( PLEASE_TEST_INVITATIONS )
   add_definitions( -DPLEASE_TEST_INVITATIONS )
 endif()
 
-add_subdirectory( tests )
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS}")
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
 set(akonadicalendar_LIB_SRC
@@ -64,31 +62,37 @@ include_directories(
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 qt5_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
-qt4_add_dbus_adaptor( akonadicalendar_LIB_SRC ../interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
-add_library(akonadi-calendar ${LIBRARY_TYPE} ${akonadicalendar_LIB_SRC})
+qt5_add_dbus_adaptor( akonadicalendar_LIB_SRC ../interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
+add_library(KF5AkonadiCalendar ${akonadicalendar_LIB_SRC})
 
-generate_export_header(akonadi-calendar
-  BASE_NAME akonadi_calendar
-  EXPORT_FILE_NAME akonadi-calendar_export.h
+generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
+
+add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
+
+target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/AkonadiCalendar;${Boost_INCLUDE_DIR}>")
+
+
+target_link_libraries(KF5AkonadiCalendar
+    KF5::AkonadiCore
+    KF5::AkonadiWidgets
 )
 
-target_link_libraries(akonadi-calendar
-                      akonadi-contact
-                      akonadi-kmime
-                      akonadi-kde
-                      kpimidentities
-                      kpimutils
-                      kcalcore
-                      kcalutils
-                      kmime
-                      mailtransport
-                      ${KDE4_KDEUI_LIBS}
-                      ${KDE4_KIO_LIBS}
-                      ${KDE4_PHONON_LIBS})
+set_target_properties(KF5AkonadiCalendar PROPERTIES
+    VERSION ${AKONADICALENDAR_VERSION_STRING}
+    SOVERSION ${AKONADICALENDAR_SOVERSION}
+    EXPORT_NAME AkonadiCalendar
+)
 
-set_target_properties(akonadi-calendar PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION})
+ecm_generate_pri_file(BASE_NAME AkonadiCalendar
+    LIB_NAME KF5AkonadiCalendar
+    DEPS "KMime AkonadiCore AkonadiWidgets KIO" FILENAME_VAR PRI_FILENAME
+)
 
-install(TARGETS akonadi-calendar EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+
+install(TARGETS
+    KF5AkonadiCalendar
+    EXPORT KF5AkonadiCalendarTargets ${INSTALL_TARGETS_DEFAULT_ARGS}
+)
 
 install( FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
