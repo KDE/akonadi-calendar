@@ -94,6 +94,33 @@ install(TARGETS
     EXPORT KF5AkonadiCalendarTargets ${INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
+ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
+  HEADER_NAMES
+  BlockAlarmsAttribute
+  CalendarBase
+  CalendarClipboard
+  CalendarSettings
+  ETMCalendar
+  FetchJobCalendar
+  FreeBusyManager
+  FreeBusyProviderBase
+  History
+  ICalImporter
+  IncidenceChanger
+  ITIPHandler
+  PublishDialog
+  StandardCalendarActionManager
+  TodoPurger
+  REQUIRED_HEADERS AkonadiCalendar_HEADERS
+  PREFIX Akonadi/Calendar 
+)
+
+install(FILES
+    ${AkonadiCalendar_CamelCase_HEADERS}
+    DESTINATION ${INCLUDE_INSTALL_DIR}/Akonadi/Calendar
+    COMPONENT Devel
+)
+
 install( FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
   blockalarmsattribute.h
@@ -110,6 +137,7 @@ install( FILES
   publishdialog.h
   standardcalendaractionmanager.h
   todopurger.h
+  ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
   DESTINATION ${INCLUDE_INSTALL_DIR}/akonadi/calendar COMPONENT Devel
 )
