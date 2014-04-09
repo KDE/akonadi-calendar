@@ -1,11 +1,5 @@
 kde_enable_exceptions()
 
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${kcalcore_BINARY_DIR}
-)
-
 
 # TODO: Add a cmake option for this and enable it on jenkins
 set( PLEASE_TEST_INVITATIONS FALSE)
@@ -44,19 +38,6 @@ set(akonadicalendar_LIB_SRC
   standardcalendaractionmanager.cpp
   todopurger.cpp
   utils_p.cpp
-)
-
-include_directories(
-  ${CMAKE_BINARY_DIR}/kpimutils
-  ${CMAKE_BINARY_DIR}/kmime
-  ${CMAKE_BINARY_DIR}/kcalcore
-  ${CMAKE_BINARY_DIR}/kcalutils
-  ${CMAKE_BINARY_DIR}/akonadi
-  ${CMAKE_BINARY_DIR}/mailtransport
-  ${CMAKE_BINARY_DIR}/kpimidentities
-  ${CMAKE_BINARY_DIR}/akonadi/contact
-  ${CMAKE_BINARY_DIR}/akonadi/kmime
-  ${CMAKE_BINARY_DIR}/kabc
 )
 
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
