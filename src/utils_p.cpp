@@ -25,7 +25,7 @@
 #include <kmime/kmime_header_parsing.h>
 
 #include <KEMailSettings>
-#include <akonadi/collectiondialog.h>
+#include <AkonadiCore/collectiondialog.h>
 
 #include <QWidget>
 #include <QPointer>

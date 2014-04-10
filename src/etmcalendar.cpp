@@ -25,14 +25,14 @@
 #include "calfilterproxymodel_p.h"
 #include "utils_p.h"
 
-#include <akonadi/item.h>
-#include <akonadi/session.h>
-#include <akonadi/collection.h>
-#include <akonadi/changerecorder.h>
-#include <akonadi/itemfetchscope.h>
-#include <akonadi/entitydisplayattribute.h>
-#include <akonadi/entitymimetypefiltermodel.h>
-#include <akonadi/collectionfilterproxymodel.h>
+#include <AkonadiCore/item.h>
+#include <AkonadiCore/session.h>
+#include <AkonadiCore/collection.h>
+#include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/itemfetchscope.h>
+#include <AkonadiCore/entitydisplayattribute.h>
+#include <AkonadiCore/entitymimetypefiltermodel.h>
+#include <AkonadiCore/collectionfilterproxymodel.h>
 #include <KSelectionProxyModel>
 #include <KDescendantsProxyModel>
 

@@ -24,7 +24,7 @@
 #include "akonadi-calendar_export.h"
 #include "calendarbase.h"
 
-#include <akonadi/collection.h>
+#include <AkonadiCore/collection.h>
 
 class QAbstractItemModel;
 class KCheckableProxyModel;

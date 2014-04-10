@@ -24,7 +24,7 @@
 #include "akonadi-calendar_export.h"
 #include "calendarbase.h"
 
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 #include <KDE/KDateTime>
 #include <KDE/KSystemTimeZones>
 

@@ -21,7 +21,7 @@
 
 #include "standardcalendaractionmanager.h"
 
-#include <akonadi/entitytreemodel.h>
+#include <AkonadiCore/entitytreemodel.h>
 
 #include <kaction.h>
 #include <kactioncollection.h>

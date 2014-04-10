@@ -23,12 +23,12 @@
 #include "incidencechanger.h"
 #include "utils_p.h"
 
-#include <akonadi/item.h>
-#include <akonadi/collection.h>
+#include <AkonadiCore/item.h>
+#include <AkonadiCore/collection.h>
 
 #include <KSystemTimeZones>
 #include <KLocalizedString>
-
+#include <KDateTime>
 using namespace Akonadi;
 using namespace KCalCore;
 
@@ -106,11 +106,13 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     if (mItemIdByUid.contains(uid) && mItemIdByUid[uid] != item.id()) {
         // We only allow duplicate UIDs if they have the same item id, for example
         // when using virtual folders.
+#if 0
         qWarning() << "Discarding duplicate incidence with instanceIdentifier=" << uid
                    << "and summary " << incidence->summary()
                    << "; recurrenceId() =" << incidence->recurrenceId()
                    << "; new id=" << item.id()
                    << "; existing id=" << mItemIdByUid[uid];
+#endif
         return;
     }
 
@@ -279,15 +281,19 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
     const QString newUid = newIncidence->uid();
     if (mItemIdByUid.contains(newIdentifier)) {
         Incidence::Ptr oldIncidence = CalendarUtils::incidence(oldItem);
+#if 0
         qWarning() << "New uid shouldn't be known: "  << newIdentifier << "; id="
                    << newItem.id() << "; oldItem.id=" << mItemIdByUid[newIdentifier]
                    << "; new summary= " << newIncidence->summary()
                    << "; new recurrenceId=" << newIncidence->recurrenceId()
                    << "; oldIncidence" << oldIncidence;
+#endif
         if (oldIncidence) {
+#if 0
             qWarning() << "; oldIncidence uid=" << oldIncidence->uid()
                        << "; oldIncidence recurrenceId = " << oldIncidence->recurrenceId()
                        << "; oldIncidence summary = " << oldIncidence->summary();
+#endif
         }
         Q_ASSERT(false);
         return;
@@ -306,6 +312,7 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
     }
 
     if (newIncidence->instanceIdentifier() == oldIncidence->instanceIdentifier()) {
+#if 0
         qWarning() << "New uid=" << newIncidence->uid() << "; old uid=" << oldIncidence->uid()
                    << "; new recurrenceId="
                    << newIncidence->recurrenceId()
@@ -313,6 +320,7 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
                    << "; new summary = " << newIncidence->summary()
                    << "; old summary = " << oldIncidence->summary()
                    << "; id = " << newItem.id();
+#endif
         Q_ASSERT(false);   // The reason we're here in the first place
         return;
     }

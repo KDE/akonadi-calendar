@@ -22,7 +22,7 @@
 #include <kcalcore/incidence.h>
 #include <KMessageBox>
 #include <KLocalizedString>
-
+#include <QDebug>
 using namespace Akonadi;
 
 ITIPHandler::Private::Private(ITIPHandler *qq) : m_calendarLoadError(false)

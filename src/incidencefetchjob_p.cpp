@@ -19,10 +19,10 @@
 */
 
 #include "incidencefetchjob_p.h"
-#include <akonadi/collectionfetchjob.h>
-#include <akonadi/collectionfetchscope.h>
-#include <akonadi/itemfetchjob.h>
-#include <akonadi/itemfetchscope.h>
+#include <AkonadiCore/collectionfetchjob.h>
+#include <AkonadiCore/collectionfetchscope.h>
+#include <AkonadiCore/itemfetchjob.h>
+#include <AkonadiCore/itemfetchscope.h>
 #include <kcalcore/event.h>
 #include <kcalcore/journal.h>
 #include <kcalcore/todo.h>

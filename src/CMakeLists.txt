@@ -43,7 +43,7 @@ set(akonadicalendar_LIB_SRC
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 qt5_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
-qt5_add_dbus_adaptor( akonadicalendar_LIB_SRC ../interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
+qt5_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
 add_library(KF5AkonadiCalendar ${akonadicalendar_LIB_SRC})
 
 generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
@@ -56,6 +56,8 @@ target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${I
 target_link_libraries(KF5AkonadiCalendar
     KF5::AkonadiCore
     KF5::AkonadiWidgets
+    KF5::PimIdentities
+    KF5::MailTransport
 )
 
 set_target_properties(KF5AkonadiCalendar PROPERTIES
@@ -80,7 +82,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   BlockAlarmsAttribute
   CalendarBase
   CalendarClipboard
-  CalendarSettings
+  #CalendarSettings ### READD it ?
   ETMCalendar
   FetchJobCalendar
   FreeBusyManager

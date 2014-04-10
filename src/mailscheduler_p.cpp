@@ -23,7 +23,7 @@
 #include "calendarbase.h"
 #include "utils_p.h"
 
-#include <akonadi/item.h>
+#include <AkonadiCore/item.h>
 
 #include <kcalcore/icalformat.h>
 #include <kcalcore/incidence.h>

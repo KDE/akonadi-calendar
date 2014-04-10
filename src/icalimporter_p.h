@@ -25,8 +25,8 @@
 #include "icalimporter.h"
 #include "incidencechanger.h"
 
-#include <akonadi/item.h>
-#include <akonadi/collection.h>
+#include <AkonadiCore/item.h>
+#include <AkonadiCore/collection.h>
 
 #include <QString>
 #include <QObject>

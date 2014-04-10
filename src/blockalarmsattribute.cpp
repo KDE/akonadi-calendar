@@ -22,7 +22,7 @@
 */
 
 #include "blockalarmsattribute.h"
-#include <akonadi/attributefactory.h>
+#include <AkonadiCore/attributefactory.h>
 #include <QtCore/QByteArray>
 #include <QtCore/QDataStream>
 

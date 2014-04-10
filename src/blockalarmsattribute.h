@@ -24,7 +24,7 @@
 #include "akonadi-calendar_export.h"
 #include <kcalcore/alarm.h>
 
-#include <akonadi/attribute.h>
+#include <AkonadiCore/attribute.h>
 
 namespace Akonadi {
 

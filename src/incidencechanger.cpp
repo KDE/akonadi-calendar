@@ -22,10 +22,10 @@
 #include "mailscheduler_p.h"
 #include "utils_p.h"
 
-#include <akonadi/itemcreatejob.h>
-#include <akonadi/itemmodifyjob.h>
-#include <akonadi/itemdeletejob.h>
-#include <akonadi/transactionsequence.h>
+#include <AkonadiCore/itemcreatejob.h>
+#include <AkonadiCore/itemmodifyjob.h>
+#include <AkonadiCore/itemdeletejob.h>
+#include <AkonadiCore/transactionsequence.h>
 
 #include <KJob>
 #include <KLocalizedString>
