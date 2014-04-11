@@ -28,7 +28,7 @@
 
 #include <AkonadiCore/agentinstance.h>
 #include <AkonadiCore/agentmanager.h>
-#include <akonadi/contact/contactsearchjob.h>
+#include <contactsearchjob.h>
 
 #include <kcalcore/event.h>
 #include <kcalcore/freebusy.h>

@@ -39,9 +39,10 @@ FreeBusyDownloadJob::~FreeBusyDownloadJob()
 void FreeBusyDownloadJob::start()
 {
     KIO::TransferJob *job = KIO::get(mUrl, KIO::NoReload, KIO::HideProgressInfo);
-
+//PORT QT5
+#if 0
     job->ui()->setWindow(mParent);
-
+#endif
     connect(job, SIGNAL(result(KJob*)), SLOT(slotResult(KJob*)));
     connect(job, SIGNAL(data(KIO::Job*,QByteArray)), SLOT(slotData(KIO::Job*,QByteArray)));
 }

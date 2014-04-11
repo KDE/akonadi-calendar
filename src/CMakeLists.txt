@@ -58,6 +58,9 @@ target_link_libraries(KF5AkonadiCalendar
     KF5::AkonadiWidgets
     KF5::PimIdentities
     KF5::MailTransport
+    KF5::CalendarCore
+    KF5::CalendarUtils
+    KF5::AkonadiContact
 )
 
 set_target_properties(KF5AkonadiCalendar PROPERTIES

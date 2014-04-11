@@ -42,6 +42,7 @@
 
 #include <KMessageBox>
 #include <KLocalizedString>
+#include <KDebug>
 
 using namespace Akonadi;
 
@@ -79,7 +80,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
 
     if (d->m_currentOperation != OperationNone) {
         d->m_currentOperation = OperationNone;
-        qFatal() << "There can't be an operation in progress!" << d->m_currentOperation;
+        kFatal() << "There can't be an operation in progress!" << d->m_currentOperation;
         return;
     }
 

@@ -22,7 +22,7 @@
 #include <kcalcore/incidence.h>
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <QDebug>
+#include <KDebug>
 using namespace Akonadi;
 
 ITIPHandler::Private::Private(ITIPHandler *qq) : m_calendarLoadError(false)
@@ -45,7 +45,7 @@ void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result
         const QString &errorMessage)
 {
     if (m_currentOperation == OperationNone) {
-        qFatal() << "Operation can't be none!" << result << errorMessage;
+        kFatal() << "Operation can't be none!" << result << errorMessage;
         return;
     }
 
