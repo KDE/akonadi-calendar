@@ -23,7 +23,7 @@
 #include "history.h"
 #include "incidencechanger.h"
 #include <kcalcore/incidence.h>
-#include <AkonadiCore/collection.h>
+#include <collection.h>
 
 #include <QPointer>
 #include <QStack>

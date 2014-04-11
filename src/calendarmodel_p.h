@@ -21,7 +21,7 @@
 #ifndef AKONADI_CALENDARMODEL_P_H
 #define AKONADI_CALENDARMODEL_P_H
 
-#include <AkonadiCore/entitytreemodel.h>
+#include <entitytreemodel.h>
 #include <QSharedPointer>
 #include <QWeakPointer>
 

@@ -26,8 +26,8 @@
 #include "calendarsettings.h"
 #include "utils_p.h"
 
-#include <AkonadiCore/agentinstance.h>
-#include <AkonadiCore/agentmanager.h>
+#include <agentinstance.h>
+#include <agentmanager.h>
 #include <contactsearchjob.h>
 
 #include <kcalcore/event.h>
@@ -446,6 +446,8 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
 {
     KIO::FileCopyJob *job = static_cast<KIO::FileCopyJob *>(_job);
     if (job->error()) {
+//PORT QT5
+#if 0
         KMessageBox::sorry(
             job->ui()->window(),
             i18n("<qt><p>The software could not upload your free/busy list to "
@@ -455,6 +457,7 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
                  "<p>Please check the URL or contact your system administrator."
                  "</p></qt>", job->destUrl().prettyUrl(),
                  job->errorString()));
+#endif
     }
     // Delete temp file
     KUrl src = job->srcUrl();
@@ -887,7 +890,8 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
         KIO::Job *job = KIO::file_copy(src, targetURL, -1, KIO::Overwrite | KIO::HideProgressInfo);
 
-        job->ui()->setWindow(parentWidget);
+//PORT QT5
+        //job->ui()->setWindow(parentWidget);
 
         connect(job, SIGNAL(result(KJob*)), SLOT(slotUploadFreeBusyResult(KJob*)));
     }

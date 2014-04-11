@@ -242,11 +242,13 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                     // This isn't an update - the found incidence was modified more recently
                     errorString = i18n("This isn't an update. "
                                        "The found incidence was modified more recently.");
-
+//QT5 port
+#if 0
                     qWarning() << errorString
                                << "; revision=" << existingIncidence->revision()
                                << "; existing->lastModified=" << existingIncidence->lastModified()
                                << "; update->lastModified=" << incidence->lastModified();
+#endif
                     emit transactionFinished(ResultOutatedUpdate, errorString);
                     return;
                 }

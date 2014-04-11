@@ -25,7 +25,7 @@
 #include "incidencechanger.h"
 #include "calendarmodel_p.h"
 
-#include <AkonadiCore/entitytreemodel.h>
+#include <entitytreemodel.h>
 #include <KCheckableProxyModel>
 
 #include <QSet>

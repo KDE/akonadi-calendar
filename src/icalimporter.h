@@ -24,7 +24,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <AkonadiCore/collection.h>
+#include <collection.h>
 
 #include <QObject>
 #include <QString>

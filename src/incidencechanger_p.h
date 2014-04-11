@@ -28,9 +28,9 @@
 #include "itiphandlerhelper_p.h"
 #include "history.h"
 
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/transactionsequence.h>
+#include <item.h>
+#include <collection.h>
+#include <transactionsequence.h>
 
 #include <QSet>
 #include <QObject>

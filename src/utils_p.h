@@ -22,8 +22,8 @@
 #define AKONADI_CALENDAR_UTILS_P_
 
 #include <kcalcore/incidence.h>
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/collection.h>
+#include <item.h>
+#include <collection.h>
 
 #include <QString>
 #include <QStringList>

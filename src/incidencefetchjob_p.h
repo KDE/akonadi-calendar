@@ -22,9 +22,9 @@
 #define AKONADI_INCIDENCEFETCHJOB_P_H
 
 #include <kcalcore/incidence.h>
-#include <AkonadiCore/job.h>
-#include <AkonadiCore/mimetypechecker.h>
-#include <AkonadiCore/item.h>
+#include <job.h>
+#include <mimetypechecker.h>
+#include <item.h>
 
 namespace Akonadi {
 

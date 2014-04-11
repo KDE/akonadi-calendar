@@ -21,10 +21,10 @@
 #include "utils_p.h"
 #include <kcalcore/incidence.h>
 
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/collectionfetchscope.h>
+#include <item.h>
+#include <itemcreatejob.h>
+#include <collectionfetchjob.h>
+#include <collectionfetchscope.h>
 #include <QString>
 #include <QDialog>
 

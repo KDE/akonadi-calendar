@@ -24,7 +24,7 @@
 #include "mailclient_p.h"
 
 #include <kcalcore/incidence.h>
-#include <AkonadiCore/item.h>
+#include <item.h>
 
 namespace KCalCore {
 class ICalFormat;

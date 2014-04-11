@@ -20,8 +20,8 @@
 
 #include "calendarmodel_p.h"
 
-#include <AkonadiCore/changerecorder.h>
-#include <AkonadiCore/itemfetchscope.h>
+#include <changerecorder.h>
+#include <itemfetchscope.h>
 #include <kcalcore/event.h>
 #include <kcalcore/todo.h>
 #include <kcalcore/journal.h>
@@ -44,10 +44,14 @@ static KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item)
 
 static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
 {
+#if 0
     return
         item.hasPayload<KCalCore::Todo::Ptr>() ?
         item.payload<KCalCore::Todo::Ptr>() :
         KCalCore::Todo::Ptr();
+#else
+    return KCalCore::Todo::Ptr();
+#endif
 }
 
 class CalendarModel::Private

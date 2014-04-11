@@ -23,8 +23,8 @@
 #include "incidencechanger.h"
 #include "utils_p.h"
 
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/collection.h>
+#include <item.h>
+#include <collection.h>
 
 #include <KSystemTimeZones>
 #include <KLocalizedString>

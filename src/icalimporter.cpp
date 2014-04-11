@@ -23,8 +23,8 @@
 #include "icalimporter_p.h"
 #include "utils_p.h"
 
-#include <AkonadiCore/agentmanager.h>
-#include <AkonadiCore/agentinstancecreatejob.h>
+#include <agentmanager.h>
+#include <agentinstancecreatejob.h>
 
 #include <kcalcore/filestorage.h>
 #include <kcalcore/memorycalendar.h>

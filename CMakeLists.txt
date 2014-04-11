@@ -28,6 +28,7 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX AKONADICALENDAR
 find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
+
 if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Calendar_SOURCE_DIR})
   find_package(KF5MailTransport ${KF5_VERSION} CONFIG REQUIRED)
   find_package(KF5Akonadi CONFIG REQUIRED)

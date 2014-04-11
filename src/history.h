@@ -24,7 +24,7 @@
 #include "incidencechanger.h"
 
 #include <kcalcore/incidence.h>
-#include <AkonadiCore/item.h>
+#include <item.h>
 #include <QWidget>
 
 class HistoryTest;

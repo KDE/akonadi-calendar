@@ -24,7 +24,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <AkonadiCore/standardactionmanager.h>
+#include <standardactionmanager.h>
 
 #include <QtCore/QObject>
 

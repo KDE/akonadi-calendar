@@ -20,8 +20,8 @@
 
 #include "calfilterproxymodel_p.h"
 
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/entitytreemodel.h>
+#include <item.h>
+#include <entitytreemodel.h>
 
 #include <kcalcore/calfilter.h>
 #include <kcalcore/incidence.h>
