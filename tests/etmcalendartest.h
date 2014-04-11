@@ -21,7 +21,7 @@
 #define ETMCALENDAR_TEST_H_
 
 #include <kcalcore/calendar.h>
-#include <akonadi/collection.h>
+#include <AkonadiCore/collection.h>
 #include <QObject>
 
 namespace Akonadi {

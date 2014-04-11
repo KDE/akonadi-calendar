@@ -23,11 +23,11 @@
 #include "../incidencechanger.h"
 
 #include <akonadi/qtest_akonadi.h>
-#include <akonadi/itemfetchjob.h>
-#include <akonadi/itemcreatejob.h>
-#include <akonadi/collectionfetchjob.h>
-#include <akonadi/collectionfetchscope.h>
-#include <akonadi/itemcreatejob.h>
+#include <AkonadiCore/itemfetchjob.h>
+#include <AkonadiCore/itemcreatejob.h>
+#include <AkonadiCore/collectionfetchjob.h>
+#include <AkonadiCore/collectionfetchscope.h>
+#include <AkonadiCore/itemcreatejob.h>
 
 using namespace Akonadi;
 using namespace KCalCore;

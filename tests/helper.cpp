@@ -1,8 +1,8 @@
 #include "helper.h"
 
-#include <akonadi/itemfetchjob.h>
-#include <akonadi/collectionfetchjob.h>
-#include <akonadi/collectionfetchscope.h>
+#include <AkonadiCore/itemfetchjob.h>
+#include <AkonadiCore/collectionfetchjob.h>
+#include <AkonadiCore/collectionfetchscope.h>
 
 #include <QLatin1String>
 #include <QStringList>

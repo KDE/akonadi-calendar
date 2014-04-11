@@ -25,8 +25,8 @@
 
 #include <kcalcore/event.h>
 #include <kcalcore/icalformat.h>
-#include <akonadi/item.h>
-#include <akonadi/itemcreatejob.h>
+#include <AkonadiCore/item.h>
+#include <AkonadiCore/itemcreatejob.h>
 #include <akonadi/calendar/incidencechanger.h>
 #include <akonadi/calendar/itiphandler.h>
 
