@@ -23,6 +23,7 @@
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
 #include <KIO/TransferJob>
+#include <KJobWidgets/KJobWidgets>
 
 using namespace Akonadi;
 
@@ -39,10 +40,7 @@ FreeBusyDownloadJob::~FreeBusyDownloadJob()
 void FreeBusyDownloadJob::start()
 {
     KIO::TransferJob *job = KIO::get(mUrl, KIO::NoReload, KIO::HideProgressInfo);
-//PORT QT5
-#if 0
-    job->ui()->setWindow(mParent);
-#endif
+    KJobWidgets::setWindow(job,mParent);
     connect(job, SIGNAL(result(KJob*)), SLOT(slotResult(KJob*)));
     connect(job, SIGNAL(data(KIO::Job*,QByteArray)), SLOT(slotData(KIO::Job*,QByteArray)));
 }

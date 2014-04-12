@@ -51,6 +51,7 @@
 #include <QTimer>
 #include <QTimerEvent>
 #include <QStandardPaths>
+#include <KJobWidgets/KJobWidgets>
 
 using namespace Akonadi;
 using namespace KCalCore;
@@ -890,8 +891,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
         KIO::Job *job = KIO::file_copy(src, targetURL, -1, KIO::Overwrite | KIO::HideProgressInfo);
 
-//PORT QT5
-        //job->ui()->setWindow(parentWidget);
+        KJobWidgets::setWindow(job,parentWidget);
 
         connect(job, SIGNAL(result(KJob*)), SLOT(slotUploadFreeBusyResult(KJob*)));
     }
