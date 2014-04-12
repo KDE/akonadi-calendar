@@ -71,7 +71,7 @@ set_target_properties(KF5AkonadiCalendar PROPERTIES
 
 ecm_generate_pri_file(BASE_NAME AkonadiCalendar
     LIB_NAME KF5AkonadiCalendar
-    DEPS "KMime AkonadiCore AkonadiWidgets KIO" FILENAME_VAR PRI_FILENAME
+    DEPS "AkonadiCore AkonadiWidgets PimIdentities MailTransport CalendarCore CalendarUtils AkonadiContact" FILENAME_VAR PRI_FILENAME
 )
 
 
