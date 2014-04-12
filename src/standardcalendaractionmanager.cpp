@@ -506,7 +506,7 @@ public:
     StandardActionManager *mGenericManager;
     QItemSelectionModel *mCollectionSelectionModel;
     QItemSelectionModel *mItemSelectionModel;
-    QHash<StandardCalendarActionManager::Type, KAction*> mActions;
+    QHash<StandardCalendarActionManager::Type, QAction*> mActions;
     QSet<StandardCalendarActionManager::Type> mInterceptedActions;
     StandardCalendarActionManager *mParent;
 };
@@ -547,16 +547,16 @@ void StandardCalendarActionManager::setItemSelectionModel(QItemSelectionModel *s
     d->updateActions();
 }
 
-KAction* StandardCalendarActionManager::createAction(StandardCalendarActionManager::Type type)
+QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManager::Type type)
 {
     if (d->mActions.contains(type)) {
         return d->mActions.value(type);
     }
 
-    KAction *action = 0;
+    QAction *action = 0;
     switch (type) {
     case CreateEvent:
-        action = new KAction(d->mParentWidget);
+        action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("appointment-new")));
         action->setText(i18n("New E&vent..."));
         action->setWhatsThis(i18n("Create a new event"));
@@ -565,7 +565,7 @@ KAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateEvent()));
         break;
     case CreateTodo:
-        action = new KAction(d->mParentWidget);
+        action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("task-new")));
         action->setText(i18n("New &To-do..."));
         action->setWhatsThis(i18n("Create a new To-do"));
@@ -574,7 +574,7 @@ KAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateTodo()));
         break;
     case CreateSubTodo:
-        action = new KAction(d->mParentWidget);
+        action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("new_subtodo")));
         action->setText(i18n("New Su&b-to-do..."));
         action->setWhatsThis(i18n("Create a new Sub-to-do"));
@@ -583,7 +583,7 @@ KAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateSubTodo()));
         break;
     case CreateJournal:
-        action = new KAction(d->mParentWidget);
+        action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("journal-new")));
         action->setText(i18n("New &Journal..."));
         action->setWhatsThis(i18n("Create a new Journal"));
@@ -592,7 +592,7 @@ KAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateJournal()));
         break;
     case EditIncidence:
-        action = new KAction(d->mParentWidget);
+        action = new QAction(d->mParentWidget);
         action->setText(i18n("&Edit..."));
         action->setWhatsThis(i18n("Edit the selected incidence."));
         d->mActions.insert(EditIncidence, action);
@@ -607,9 +607,9 @@ KAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
     return action;
 }
 
-KAction* StandardCalendarActionManager::createAction(StandardActionManager::Type type)
+QAction* StandardCalendarActionManager::createAction(StandardActionManager::Type type)
 {
-    KAction *act = d->mGenericManager->action(type);
+    QAction *act = d->mGenericManager->action(type);
     if (!act)
         act = d->mGenericManager->createAction(type);
     d->updateGenericAction(type);
@@ -629,7 +629,7 @@ void StandardCalendarActionManager::createAllActions()
     d->updateActions();
 }
 
-KAction* StandardCalendarActionManager::action(StandardCalendarActionManager::Type type) const
+QAction* StandardCalendarActionManager::action(StandardCalendarActionManager::Type type) const
 {
     if (d->mActions.contains(type)) {
         return d->mActions.value(type);
@@ -638,7 +638,7 @@ KAction* StandardCalendarActionManager::action(StandardCalendarActionManager::Ty
     return 0;
 }
 
-KAction* StandardCalendarActionManager::action(StandardActionManager::Type type) const
+QAction* StandardCalendarActionManager::action(StandardActionManager::Type type) const
 {
     return d->mGenericManager->action(type);
 }
