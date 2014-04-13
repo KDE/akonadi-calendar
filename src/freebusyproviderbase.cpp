@@ -20,7 +20,7 @@
 #include "freebusyproviderbase.h"
 #include "freebusyproviderbase_p.h"
 
-#include "../dbusconnectionpool.h"
+#include <AkonadiCore/dbusconnectionpool.h>
 #include "freebusyprovideradaptor.h"
 
 #include <kdatetime.h>
