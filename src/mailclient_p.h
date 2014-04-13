@@ -24,7 +24,7 @@
 
 #include "akonadi-calendar_export.h"
 #include <kcalcore/incidencebase.h>
-#include <kmime/kmime_message.h>
+#include <kmime_message.h>
 #include <QObject>
 
 struct UnitTestResult {

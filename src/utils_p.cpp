@@ -22,7 +22,7 @@
 #include <kpimutils/email.h>
 #include <kpimidentities/identitymanager.h>
 #include <kpimidentities/identity.h>
-#include <kmime/kmime_header_parsing.h>
+#include <kmime_header_parsing.h>
 
 #include <KEMailSettings>
 #include <collectiondialog.h>
