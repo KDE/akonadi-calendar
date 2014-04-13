@@ -54,13 +54,13 @@ target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${I
 target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiCalendar
+    KF5::AkonadiContact
     KF5::AkonadiCore
     KF5::AkonadiWidgets
-    KF5::PimIdentities
-    KF5::MailTransport
     KF5::CalendarCore
     KF5::CalendarUtils
-    KF5::AkonadiContact
+    KF5::MailTransport
+    KF5::PimIdentities
 )
 
 set_target_properties(KF5AkonadiCalendar PROPERTIES
@@ -99,7 +99,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   StandardCalendarActionManager
   TodoPurger
   REQUIRED_HEADERS AkonadiCalendar_HEADERS
-  PREFIX Akonadi/Calendar 
+  PREFIX Akonadi/Calendar
 )
 
 install(FILES
