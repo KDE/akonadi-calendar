@@ -36,7 +36,6 @@
 
 #include <QDebug>
 #include <KMessageBox>
-#include <KStandardDirs>
 #include <KTemporaryFile>
 #include <KUrl>
 #include <KIO/Job>

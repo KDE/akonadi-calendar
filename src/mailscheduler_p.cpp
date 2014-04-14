@@ -31,7 +31,6 @@
 #include <kcalutils/scheduler.h>
 #include <identitymanager.h>
 
-#include <KStandardDirs>
 #include <KLocalizedString>
 #include <QStandardPaths>
 
