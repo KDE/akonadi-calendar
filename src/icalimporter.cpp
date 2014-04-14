@@ -34,7 +34,7 @@
 
 #include <KJob>
 #include <KLocalizedString>
-#include <KDebug>
+#include <QDebug>
 #include <KDateTime>
 #include <KUrl>
 #include <KIO/JobClasses>

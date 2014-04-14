@@ -34,7 +34,7 @@
 #include <kcalcore/freebusy.h>
 #include <kcalcore/person.h>
 
-#include <KDebug>
+#include <QDebug>
 #include <KMessageBox>
 #include <KStandardDirs>
 #include <KTemporaryFile>

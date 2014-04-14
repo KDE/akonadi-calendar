@@ -29,7 +29,7 @@
 #include <kcalcore/icalformat.h>
 #include <kcalutils/incidenceformatter.h>
 #include <kcalutils/stringify.h>
-#include <KDebug>
+#include <QDebug>
 #include <KLocalizedString>
 #include <KMessageBox>
 

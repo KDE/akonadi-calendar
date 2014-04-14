@@ -37,7 +37,7 @@
 #include <mailtransport/transport.h>
 #include <mailtransport/transportmanager.h>
 
-#include <KDebug>
+#include <QDebug>
 #include <KLocalizedString>
 #include <KJob>
 #include <KProtocolManager>

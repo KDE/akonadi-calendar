@@ -26,7 +26,7 @@
 #include <kcalcore/icalformat.h>
 #include <kcalcore/freebusycache.h>
 
-#include <KDebug>
+#include <QDebug>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSystemTimeZones>
