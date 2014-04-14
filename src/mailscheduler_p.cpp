@@ -29,7 +29,7 @@
 #include <kcalcore/incidence.h>
 #include <kcalcore/schedulemessage.h>
 #include <kcalutils/scheduler.h>
-#include <kpimidentities/identitymanager.h>
+#include <identitymanager.h>
 
 #include <KStandardDirs>
 #include <KLocalizedString>

@@ -37,8 +37,8 @@
 #include <kcalcore/attendee.h>
 #include <kcalutils/stringify.h>
 
-#include <kpimidentities/identitymanager.h>
-#include <mailtransport/transportmanager.h>
+#include <identitymanager.h>
+#include <transportmanager.h>
 
 #include <KMessageBox>
 #include <KLocalizedString>

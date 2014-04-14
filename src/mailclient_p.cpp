@@ -30,12 +30,12 @@
 #include <kcalcore/incidencebase.h>
 #include <kcalutils/incidenceformatter.h>
 #include <kmime_message.h>
-#include <kpimidentities/identity.h>
+#include <identity.h>
 #include <kpimutils/email.h>
 
-#include <mailtransport/messagequeuejob.h>
-#include <mailtransport/transport.h>
-#include <mailtransport/transportmanager.h>
+#include <messagequeuejob.h>
+#include <transport.h>
+#include <transportmanager.h>
 
 #include <QDebug>
 #include <KLocalizedString>

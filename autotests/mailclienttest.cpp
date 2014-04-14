@@ -23,7 +23,7 @@
 
 #include <kcalcore/incidence.h>
 #include <kcalcore/freebusy.h>
-#include <mailtransport/messagequeuejob.h>
+#include <messagequeuejob.h>
 #include <kpimidentities/identity.h>
 
 #include <akonadi/qtest_akonadi.h>

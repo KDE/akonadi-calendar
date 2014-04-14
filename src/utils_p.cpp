@@ -20,8 +20,8 @@
 
 #include "utils_p.h"
 #include <kpimutils/email.h>
-#include <kpimidentities/identitymanager.h>
-#include <kpimidentities/identity.h>
+#include <identitymanager.h>
+#include <identity.h>
 #include <kmime_header_parsing.h>
 
 #include <KEMailSettings>
