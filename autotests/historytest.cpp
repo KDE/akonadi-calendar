@@ -20,12 +20,12 @@
 #include "historytest.h"
 #include "helper.h"
 
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/collectionfetchscope.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <akonadi/qtest_akonadi.h>
+#include <itemfetchjob.h>
+#include <itemcreatejob.h>
+#include <collectionfetchjob.h>
+#include <collectionfetchscope.h>
+#include <itemfetchscope.h>
+#include <qtest_akonadi.h>
 #include <kcalcore/event.h>
 
 #include <QTestEventLoop>

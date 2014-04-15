@@ -20,8 +20,8 @@
 #ifndef CALENDARBASE_TEST_H_
 #define CALENDARBASE_TEST_H_
 
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/item.h>
+#include <collection.h>
+#include <item.h>
 
 
 #include <QtCore/QObject>

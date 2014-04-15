@@ -21,13 +21,13 @@
 
 #include "../etmcalendar.h"
 #include "../todopurger.h"
-#include <AkonadiCore/itemcreatejob.h>
-#include <akonadi/qtest_akonadi.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/collectionfetchscope.h>
-#include <akonadi/collectionmodifyjob.h>
-#include <AkonadiCore/itemdeletejob.h>
-#include <AkonadiCore/itemmodifyjob.h>
+#include <itemcreatejob.h>
+#include <qtest_akonadi.h>
+#include <collectionfetchjob.h>
+#include <collectionfetchscope.h>
+#include <collectionmodifyjob.h>
+#include <itemdeletejob.h>
+#include <itemmodifyjob.h>
 #include <KCheckableProxyModel>
 
 #include <QTestEventLoop>

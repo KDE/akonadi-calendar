@@ -25,10 +25,10 @@
 
 #include <kcalcore/event.h>
 #include <kcalcore/icalformat.h>
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <akonadi/calendar/incidencechanger.h>
-#include <akonadi/calendar/itiphandler.h>
+#include <item.h>
+#include <itemcreatejob.h>
+#include <incidencechanger.h>
+#include <itiphandler.h>
 
 #include <QString>
 #include <QFile>

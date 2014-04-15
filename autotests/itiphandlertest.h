@@ -24,8 +24,8 @@
 #include "../itiphandler.h"
 #include "unittestbase.h"
 
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/item.h>
+#include <collection.h>
+#include <item.h>
 
 #include <QHash>
 

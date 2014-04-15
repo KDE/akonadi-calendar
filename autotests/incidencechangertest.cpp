@@ -19,16 +19,16 @@
 
 #include "../incidencechanger.h"
 
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/collectionfetchscope.h>
-#include <akonadi/qtest_akonadi.h>
+#include <collection.h>
+#include <collectionfetchjob.h>
+#include <collectionfetchscope.h>
+#include <qtest_akonadi.h>
 
-#include <AkonadiCore/item.h>
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <AkonadiCore/itemfetchscope.h>
+#include <item.h>
+#include <collection.h>
+#include <itemfetchjob.h>
+#include <itemcreatejob.h>
+#include <itemfetchscope.h>
 
 #include <kcalcore/event.h>
 #include <kcalcore/journal.h>

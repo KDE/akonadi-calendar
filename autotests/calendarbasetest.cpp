@@ -22,12 +22,12 @@
 #include "../calendarbase.h"
 #include "../incidencechanger.h"
 
-#include <akonadi/qtest_akonadi.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemcreatejob.h>
-#include <AkonadiCore/collectionfetchjob.h>
-#include <AkonadiCore/collectionfetchscope.h>
-#include <AkonadiCore/itemcreatejob.h>
+#include <qtest_akonadi.h>
+#include <itemfetchjob.h>
+#include <itemcreatejob.h>
+#include <collectionfetchjob.h>
+#include <collectionfetchscope.h>
+#include <itemcreatejob.h>
 
 using namespace Akonadi;
 using namespace KCalCore;

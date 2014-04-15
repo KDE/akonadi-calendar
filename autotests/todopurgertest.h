@@ -21,7 +21,7 @@
 #define TODOPURGER_TEST_H_
 
 #include <kcalcore/calendar.h>
-#include <AkonadiCore/collection.h>
+#include <collection.h>
 #include <QObject>
 #include <QString>
 

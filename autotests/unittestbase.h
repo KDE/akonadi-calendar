@@ -22,8 +22,8 @@
 #define UNITTEST_BASE_H
 
 #include <kcalcore/calendar.h>
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/item.h>
+#include <collection.h>
+#include <item.h>
 
 #include <QObject>
 #include <QString>

@@ -86,7 +86,6 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   BlockAlarmsAttribute
   CalendarBase
   CalendarClipboard
-  #CalendarSettings ### READD it ?
   ETMCalendar
   FetchJobCalendar
   FreeBusyManager

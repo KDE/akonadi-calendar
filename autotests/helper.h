@@ -20,8 +20,8 @@
 #ifndef HELPER_H_
 #define HELPER_H_
 
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/item.h>
+#include <collection.h>
+#include <item.h>
 
 namespace Helper {
 bool confirmExists(const Akonadi::Item &item);

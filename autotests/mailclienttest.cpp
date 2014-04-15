@@ -26,7 +26,7 @@
 #include <messagequeuejob.h>
 #include <kpimidentities/identity.h>
 
-#include <akonadi/qtest_akonadi.h>
+#include <qtest_akonadi.h>
 
 #include <QTestEventLoop>
 #include <QtCore/QObject>
