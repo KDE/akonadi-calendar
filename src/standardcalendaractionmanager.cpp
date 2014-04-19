@@ -462,14 +462,11 @@ public:
 
         if (itemCount == 1) {
             const Akonadi::Item item = mGenericManager->selectedItems().first();
-//QT5 port
-#if 0
             if (item.isValid() && item.hasPayload<KCalCore::Todo::Ptr>()) {
                 if (mActions.contains(StandardCalendarActionManager::CreateSubTodo)) {
                     mActions[ StandardCalendarActionManager::CreateSubTodo ]->setEnabled(hasWritableCollection(KCalCore::Todo::todoMimeType()));
                 }
             }
-#endif
         }
 
         emit mParent->actionStateUpdated();
