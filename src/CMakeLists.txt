@@ -50,7 +50,7 @@ generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
 
 add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
 
-target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/calendar;${Boost_INCLUDE_DIR}>")
+target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar;${Boost_INCLUDE_DIR}>")
 target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiCalendar
@@ -98,7 +98,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   StandardCalendarActionManager
   TodoPurger
   REQUIRED_HEADERS AkonadiCalendar_HEADERS
-  PREFIX Akonadi/calendar
+  PREFIX Akonadi/Calendar
 )
 
 install( FILES
@@ -120,6 +120,6 @@ install( FILES
   todopurger.h
   ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/calendar COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar COMPONENT Devel
 )
 
