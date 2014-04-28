@@ -25,8 +25,8 @@
 #include "calendarsettings.h"
 #include "utils_p.h"
 
-#include <kcalcore/calendar.h>
-#include <kcalcore/icalformat.h>
+#include <calendar.h>
+#include <icalformat.h>
 #include <kcalutils/incidenceformatter.h>
 #include <kcalutils/stringify.h>
 #include <QDebug>

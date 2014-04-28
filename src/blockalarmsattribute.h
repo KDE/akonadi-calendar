@@ -22,7 +22,7 @@
 #define AKONADI_BLOCKALARMSATTRIBUTE_H
 
 #include "akonadi-calendar_export.h"
-#include <kcalcore/alarm.h>
+#include <alarm.h>
 
 #include <attribute.h>
 

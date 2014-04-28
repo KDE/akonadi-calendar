@@ -25,9 +25,9 @@
 
 #include <kaction.h>
 #include <kactioncollection.h>
-#include <kcalcore/event.h>
-#include <kcalcore/journal.h>
-#include <kcalcore/todo.h>
+#include <event.h>
+#include <journal.h>
+#include <todo.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
 #include <kglobal.h>

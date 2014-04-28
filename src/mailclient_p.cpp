@@ -25,9 +25,9 @@
 
 #include <collection.h>
 
-#include <kcalcore/attendee.h>
-#include <kcalcore/incidence.h>
-#include <kcalcore/incidencebase.h>
+#include <attendee.h>
+#include <incidence.h>
+#include <incidencebase.h>
 #include <kcalutils/incidenceformatter.h>
 #include <kmime_message.h>
 #include <identity.h>

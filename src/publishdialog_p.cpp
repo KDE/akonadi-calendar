@@ -22,7 +22,7 @@
 
 #include <akonadi/contact/emailaddressselectiondialog.h>
 #include <kpimutils/email.h>
-#include <kcalcore/person.h>
+#include <person.h>
 
 #include <KLocalizedString>
 #include <QTreeView>

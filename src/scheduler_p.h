@@ -22,8 +22,8 @@
 
 #include "calendarbase.h"
 
-#include <kcalcore/schedulemessage.h>
-#include <kcalcore/incidencebase.h>
+#include <schedulemessage.h>
+#include <incidencebase.h>
 
 #include <QtCore/QObject>
 #include <QtCore/QString>

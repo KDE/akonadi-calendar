@@ -24,8 +24,8 @@
 
 #include "publishdialog_p.h"
 
-#include <kcalcore/attendee.h>
-#include <kcalcore/person.h>
+#include <attendee.h>
+#include <person.h>
 
 #include <KLocalizedString>
 

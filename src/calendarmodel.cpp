@@ -22,9 +22,9 @@
 
 #include <changerecorder.h>
 #include <itemfetchscope.h>
-#include <kcalcore/event.h>
-#include <kcalcore/todo.h>
-#include <kcalcore/journal.h>
+#include <event.h>
+#include <todo.h>
+#include <journal.h>
 
 #include <KLocalizedString>
 #include <KIconLoader>

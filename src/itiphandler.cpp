@@ -31,10 +31,10 @@
 #include "utils_p.h"
 #include "mailclient_p.h"
 
-#include <kcalcore/icalformat.h>
-#include <kcalcore/incidence.h>
-#include <kcalcore/schedulemessage.h>
-#include <kcalcore/attendee.h>
+#include <icalformat.h>
+#include <incidence.h>
+#include <schedulemessage.h>
+#include <attendee.h>
 #include <kcalutils/stringify.h>
 
 #include <identitymanager.h>

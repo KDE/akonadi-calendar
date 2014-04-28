@@ -23,7 +23,7 @@
 #define AKONADI_MAILCLIENT_P_H
 
 #include "akonadi-calendar_export.h"
-#include <kcalcore/incidencebase.h>
+#include <incidencebase.h>
 #include <kmime_message.h>
 #include <QObject>
 

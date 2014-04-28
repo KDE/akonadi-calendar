@@ -21,7 +21,7 @@
 #ifndef AKONADI_INCIDENCEFETCHJOB_P_H
 #define AKONADI_INCIDENCEFETCHJOB_P_H
 
-#include <kcalcore/incidence.h>
+#include <incidence.h>
 #include <job.h>
 #include <mimetypechecker.h>
 #include <item.h>

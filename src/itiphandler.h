@@ -29,8 +29,8 @@
 #include "akonadi-calendar_export.h"
 #include "etmcalendar.h"
 
-#include <kcalcore/incidence.h>
-#include <kcalcore/schedulemessage.h>
+#include <incidence.h>
+#include <schedulemessage.h>
 
 #include <QString>
 #include <QWidget>

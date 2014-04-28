@@ -30,9 +30,9 @@
 #include <agentmanager.h>
 #include <contactsearchjob.h>
 
-#include <kcalcore/event.h>
-#include <kcalcore/freebusy.h>
-#include <kcalcore/person.h>
+#include <event.h>
+#include <freebusy.h>
+#include <person.h>
 
 #include <QDebug>
 #include <KMessageBox>

@@ -19,7 +19,7 @@
 
 #include "incidencechanger_p.h"
 #include "utils_p.h"
-#include <kcalcore/incidence.h>
+#include <incidence.h>
 
 #include <item.h>
 #include <itemcreatejob.h>
