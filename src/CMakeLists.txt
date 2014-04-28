@@ -98,7 +98,6 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   StandardCalendarActionManager
   TodoPurger
   REQUIRED_HEADERS AkonadiCalendar_HEADERS
-  PREFIX Akonadi/Calendar
 )
 
 install( FILES
