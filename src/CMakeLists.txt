@@ -78,7 +78,7 @@ install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 install(TARGETS
     KF5AkonadiCalendar
-    EXPORT KF5AkonadiCalendarTargets ${INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5AkonadiCalendarTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
