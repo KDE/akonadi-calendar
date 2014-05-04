@@ -21,7 +21,7 @@
 #include "scheduler_p.h"
 #include "calendarbase_p.h"
 
-#include <kcalutils/stringify.h>
+#include <stringify.h>
 
 #include <icalformat.h>
 #include <freebusycache.h>

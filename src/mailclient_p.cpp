@@ -28,10 +28,10 @@
 #include <attendee.h>
 #include <incidence.h>
 #include <incidencebase.h>
-#include <kcalutils/incidenceformatter.h>
+#include <incidenceformatter.h>
 #include <kmime_message.h>
 #include <identity.h>
-#include <kpimutils/email.h>
+#include <email.h>
 
 #include <messagequeuejob.h>
 #include <transport.h>

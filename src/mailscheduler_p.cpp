@@ -28,7 +28,7 @@
 #include <icalformat.h>
 #include <incidence.h>
 #include <schedulemessage.h>
-#include <kcalutils/scheduler.h>
+#include <scheduler.h>
 #include <identitymanager.h>
 
 #include <KLocalizedString>
