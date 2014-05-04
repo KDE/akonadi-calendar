@@ -30,6 +30,9 @@ find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Calendar_SOURCE_DIR})
+  set(AkonadiServer_MIN_VERSION "1.72.43")
+  find_package(Akonadi ${AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
+
   find_package(KF5MailTransport ${KF5_VERSION} CONFIG REQUIRED)
   find_package(KF5Akonadi CONFIG REQUIRED)
   find_package(KF5PimIdentities ${KF5_VERSION} CONFIG REQUIRED)
