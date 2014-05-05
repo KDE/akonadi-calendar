@@ -23,8 +23,8 @@
 
 #include <kcalutils/stringify.h>
 
-#include <icalformat.h>
-#include <freebusycache.h>
+#include <kcalcore/icalformat.h>
+#include <kcalcore/freebusycache.h>
 
 #include <QDebug>
 #include <KLocalizedString>

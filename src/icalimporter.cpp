@@ -26,11 +26,11 @@
 #include <agentmanager.h>
 #include <agentinstancecreatejob.h>
 
-#include <filestorage.h>
-#include <memorycalendar.h>
-#include <event.h>
-#include <todo.h>
-#include <journal.h>
+#include <kcalcore/filestorage.h>
+#include <kcalcore/memorycalendar.h>
+#include <kcalcore/event.h>
+#include <kcalcore/todo.h>
+#include <kcalcore/journal.h>
 
 #include <KJob>
 #include <KLocalizedString>

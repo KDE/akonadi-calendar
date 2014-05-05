@@ -23,9 +23,9 @@
 #include <collectionfetchscope.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <event.h>
-#include <journal.h>
-#include <todo.h>
+#include <kcalcore/event.h>
+#include <kcalcore/journal.h>
+#include <kcalcore/todo.h>
 
 using namespace Akonadi;
 

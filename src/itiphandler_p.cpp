@@ -19,7 +19,7 @@
 
 #include "itiphandler_p.h"
 #include "fetchjobcalendar.h"
-#include <incidence.h>
+#include <kcalcore/incidence.h>
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <KDebug>

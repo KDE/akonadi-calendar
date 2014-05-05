@@ -23,8 +23,8 @@
 #include <item.h>
 #include <entitytreemodel.h>
 
-#include <calfilter.h>
-#include <incidence.h>
+#include <kcalcore/calfilter.h>
+#include <kcalcore/incidence.h>
 
 using namespace Akonadi;
 

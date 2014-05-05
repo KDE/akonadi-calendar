@@ -27,8 +27,8 @@
 #include "itiphandler.h"
 #include "mailscheduler_p.h"
 
-#include <incidence.h>
-#include <schedulemessage.h>
+#include <kcalcore/incidence.h>
+#include <kcalcore/schedulemessage.h>
 
 #include <KGuiItem>
 #include <KLocalizedString>

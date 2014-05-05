@@ -22,7 +22,7 @@
 
 #include "history.h"
 #include "incidencechanger.h"
-#include <incidence.h>
+#include <kcalcore/incidence.h>
 #include <collection.h>
 
 #include <QPointer>

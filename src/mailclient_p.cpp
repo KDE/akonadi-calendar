@@ -25,11 +25,11 @@
 
 #include <collection.h>
 
-#include <attendee.h>
-#include <incidence.h>
-#include <incidencebase.h>
+#include <kcalcore/attendee.h>
+#include <kcalcore/incidence.h>
+#include <kcalcore/incidencebase.h>
 #include <kcalutils/incidenceformatter.h>
-#include <kmime_message.h>
+#include <kmime/kmime_message.h>
 #include <identity.h>
 #include <kpimutils/email.h>
 

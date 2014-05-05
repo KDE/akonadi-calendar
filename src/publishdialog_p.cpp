@@ -20,9 +20,9 @@
 
 #include "publishdialog_p.h"
 
-#include <akonadi/contact/emailaddressselectiondialog.h>
+#include <Akonadi/Contact/emailaddressselectiondialog.h>
 #include <kpimutils/email.h>
-#include <person.h>
+#include <kcalcore/person.h>
 
 #include <KLocalizedString>
 #include <QTreeView>

@@ -22,7 +22,7 @@
 #include "fetchjobcalendar.h"
 #include "utils_p.h"
 
-#include <todo.h>
+#include <kcalcore/todo.h>
 
 #include <KLocalizedString>
 using namespace Akonadi;

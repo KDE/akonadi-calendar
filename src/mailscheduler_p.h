@@ -23,7 +23,7 @@
 #include "scheduler_p.h"
 #include "mailclient_p.h"
 
-#include <incidence.h>
+#include <kcalcore/incidence.h>
 #include <item.h>
 
 namespace KCalCore {

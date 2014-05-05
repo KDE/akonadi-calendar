@@ -25,7 +25,7 @@
 #include "itiphandler.h"
 #include "itiphandlerhelper_p.h"
 
-#include <schedulemessage.h>
+#include <kcalcore/schedulemessage.h>
 
 #include <QObject>
 #include <QString>

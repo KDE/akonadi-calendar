@@ -24,7 +24,7 @@
 
 #include <item.h>
 #include <collection.h>
-#include <incidence.h>
+#include <kcalcore/incidence.h>
 
 #include <QWidget>
 
