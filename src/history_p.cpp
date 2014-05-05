@@ -19,7 +19,7 @@
 
 #include "history_p.h"
 
-#include <stringify.h>
+#include <kcalutils/stringify.h>
 #include <KLocalizedString>
 
 Entry::Entry(const Akonadi::Item &item,

@@ -27,8 +27,8 @@
 
 #include <calendar.h>
 #include <icalformat.h>
-#include <incidenceformatter.h>
-#include <stringify.h>
+#include <kcalutils/incidenceformatter.h>
+#include <kcalutils/stringify.h>
 #include <QDebug>
 #include <KLocalizedString>
 #include <KMessageBox>

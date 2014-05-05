@@ -35,7 +35,7 @@
 #include <incidence.h>
 #include <schedulemessage.h>
 #include <attendee.h>
-#include <stringify.h>
+#include <kcalutils/stringify.h>
 
 #include <identitymanager.h>
 #include <transportmanager.h>

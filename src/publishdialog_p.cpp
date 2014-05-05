@@ -20,8 +20,8 @@
 
 #include "publishdialog_p.h"
 
-#include <emailaddressselectiondialog.h>
-#include <email.h>
+#include <akonadi/contact/emailaddressselectiondialog.h>
+#include <kpimutils/email.h>
 #include <person.h>
 
 #include <KLocalizedString>

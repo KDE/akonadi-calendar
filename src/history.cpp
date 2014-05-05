@@ -20,7 +20,7 @@
 #include "history.h"
 #include "history_p.h"
 
-#include <stringify.h>
+#include <kcalutils/stringify.h>
 
 using namespace KCalCore;
 using namespace Akonadi;
