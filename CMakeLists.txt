@@ -43,6 +43,8 @@ endif()
 
 ########### Targets ###########
 
+add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar\")
+
 add_subdirectory(src)
 # TODO: Port autotests
 #add_subdirectory(autotests)
