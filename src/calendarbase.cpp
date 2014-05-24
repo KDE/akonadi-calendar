@@ -433,16 +433,13 @@ Item CalendarBase::item(const Incidence::Ptr &incidence) const
     return incidence ? item(incidence->instanceIdentifier()) : Item();
 }
 
-Akonadi::Item::List CalendarBase::items() const
-{
-    Q_D(const CalendarBase);
-    return d->mItemById.values();
-}
-
 Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
 {
     Q_D(const CalendarBase);
-    return d->mItemsByCollection.values(id);
+    if (id!=-1)
+       return d->mItemsByCollection.values(id);
+    else 
+       return d->mItemById.values();
 }
 
 Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &incidences) const

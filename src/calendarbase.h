@@ -82,18 +82,11 @@ public:
     Akonadi::Item item(Akonadi::Item::Id) const;
 
     /**
-     *  Returns the list of items contained in this calendar.
-     *  @see incidences()
-     */
-    Akonadi::Item::List items() const;
-
-    /**
      * Returns the list of items contained in this calendar that belong to the specified collection.
      * @see incidences()
-     * // TODO_KDE5: merge with items() overload
      * @since 4.12
      */
-    Akonadi::Item::List items(Akonadi::Collection::Id) const;
+    Akonadi::Item::List items(Akonadi::Collection::Id = -1) const;
 
     /**
       * Returns the item list that corresponds to the @p incidenceList.
