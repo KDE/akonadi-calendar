@@ -41,7 +41,7 @@ set(akonadicalendar_LIB_SRC
 )
 
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
-qt5_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
+ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 qt5_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
 add_library(KF5AkonadiCalendar ${akonadicalendar_LIB_SRC})
