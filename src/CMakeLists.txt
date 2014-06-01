@@ -50,7 +50,7 @@ generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
 
 add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
 
-target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar;${Boost_INCLUDE_DIR}>")
+target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar;{KF5_INCLUDE_INSTALL_DIR}/akonadi/calendar;${Boost_INCLUDE_DIR}>")
 target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiCalendar
