@@ -102,9 +102,12 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
 
 install( FILES
   ${AkonadiCalendar_CamelCase_HEADERS}
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar COMPONENT Devel
+)
+install( FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
   ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/akonadi/calendar COMPONENT Devel
 )
 
