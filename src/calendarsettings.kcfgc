@@ -6,4 +6,4 @@ ItemAccessors=true
 Mutators=true
 Visibility=AKONADI_CALENDAR_EXPORT
 SetUserTexts=true
-IncludeFiles=akonadi-calendar_export.h
+IncludeFiles=akonadi/calendar/akonadi-calendar_export.h
