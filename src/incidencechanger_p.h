@@ -134,7 +134,7 @@ public:
 
     ~CreationChange()
     {
-        //kDebug() << "CreationChange::~ will emit signal with " << resultCode;
+        //qDebug() << "CreationChange::~ will emit signal with " << resultCode;
         if (!parentChange)
             emitCompletionSignal();
     }
@@ -157,7 +157,7 @@ public:
 
     ~DeletionChange()
     {
-        //kDebug() << "DeletionChange::~ will emit signal with " << resultCode;
+        //qDebug() << "DeletionChange::~ will emit signal with " << resultCode;
         if (!parentChange)
             emitCompletionSignal();
     }
@@ -187,7 +187,7 @@ public:
 
     ~AtomicOperation()
     {
-        //kDebug() << "AtomicOperation::~ " << wasRolledback << changes.count();
+        //qDebug() << "AtomicOperation::~ " << wasRolledback << changes.count();
         if (m_wasRolledback) {
             for (int i=0; i<m_changes.count(); ++i) {
                 // When a job that can finish successfully is aborted because the transaction failed
@@ -211,7 +211,7 @@ public:
 
     void setRolledback()
     {
-        //kDebug() << "AtomicOperation::setRolledBack()";
+        //qDebug() << "AtomicOperation::setRolledBack()";
         m_wasRolledback = true;
         transaction()->rollback();
     }
