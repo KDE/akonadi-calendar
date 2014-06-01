@@ -20,7 +20,7 @@
 
 #include "publishdialog_p.h"
 
-#include <Akonadi/Contact/emailaddressselectiondialog.h>
+#include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <kpimutils/email.h>
 #include <kcalcore/person.h>
 
