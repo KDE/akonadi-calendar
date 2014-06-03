@@ -54,13 +54,16 @@ target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${K
 target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiCalendar
+PUBLIC
     KF5::AkonadiContact
     KF5::AkonadiCore
-    KF5::AkonadiWidgets
     KF5::CalendarCore
+PRIVATE
     KF5::CalendarUtils
+    KF5::AkonadiWidgets
     KF5::MailTransport
     KF5::PimIdentities
+    KF5::PimUtils
 )
 
 set_target_properties(KF5AkonadiCalendar PROPERTIES
@@ -71,7 +74,7 @@ set_target_properties(KF5AkonadiCalendar PROPERTIES
 
 ecm_generate_pri_file(BASE_NAME AkonadiCalendar
     LIB_NAME KF5AkonadiCalendar
-    DEPS "AkonadiCore AkonadiWidgets PimIdentities MailTransport CalendarCore CalendarUtils AkonadiContact" FILENAME_VAR PRI_FILENAME
+    DEPS "AkonadiCore CalendarCore AkonadiContact" FILENAME_VAR PRI_FILENAME
 )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

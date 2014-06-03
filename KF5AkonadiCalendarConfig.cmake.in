@@ -1,12 +1,7 @@
 @PACKAGE_INIT@
 
 find_dependency(KF5Akonadi "@KF5_VERSION@")
-find_dependency(KF5MailTransport "@KF5_VERSION@")
-find_dependency(KF5PimIdentities "@KF5_VERSION@")
 find_dependency(KF5CalendarCore "@KF5_VERSION@")
-find_dependency(KF5CalendarUtils "@KF5_VERSION@")
 find_dependency(KF5AkonadiContact "@KF5_VERSION@")
-find_dependency(KF5KDELibs4Support "@KF5_VERSION@")
-find_dependency(KF5Wallet "@KF5_VERSION@")
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5AkonadiCalendarTargets.cmake")

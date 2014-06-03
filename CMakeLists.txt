@@ -39,6 +39,7 @@ if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Calendar_SOURCE_DIR})
   find_package(KF5CalendarCore ${KF5_VERSION} CONFIG REQUIRED)
   find_package(KF5CalendarUtils ${KF5_VERSION} CONFIG REQUIRED)
   find_package(KF5AkonadiContact ${KF5_VERSION} CONFIG REQUIRED)
+  find_package(KF5PimUtils ${KF5_VERSION} CONFIG REQUIRED)
 endif()
 
 ########### Targets ###########
