@@ -55,10 +55,10 @@ target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonad
 
 target_link_libraries(KF5AkonadiCalendar
 PUBLIC
-    KF5::AkonadiContact
     KF5::AkonadiCore
     KF5::CalendarCore
 PRIVATE
+    KF5::AkonadiContact
     KF5::CalendarUtils
     KF5::AkonadiWidgets
     KF5::MailTransport
