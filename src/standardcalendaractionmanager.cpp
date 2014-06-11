@@ -30,7 +30,7 @@
 #include <kcalcore/todo.h>
 #include <klocale.h>
 #include <klocalizedstring.h>
-#include <kglobal.h>
+
 
 #include <QItemSelectionModel>
 #include <KLocale>
