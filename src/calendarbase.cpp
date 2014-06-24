@@ -28,7 +28,6 @@
 
 #include <KSystemTimeZones>
 #include <KLocalizedString>
-#include <KDateTime>
 using namespace Akonadi;
 using namespace KCalCore;
 
