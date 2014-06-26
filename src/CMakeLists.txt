@@ -1,5 +1,3 @@
-kde_enable_exceptions()
-
 
 # TODO: Add a cmake option for this and enable it on jenkins
 set( PLEASE_TEST_INVITATIONS FALSE)
