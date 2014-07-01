@@ -23,7 +23,7 @@
 
 #include <entitytreemodel.h>
 
-#include <kaction.h>
+#include <QAction>
 #include <kactioncollection.h>
 #include <kcalcore/event.h>
 #include <kcalcore/journal.h>
