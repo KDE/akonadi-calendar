@@ -27,7 +27,7 @@
 #include <collection.h>
 #include <kcalcore/memorycalendar.h>
 #include <kcalcore/incidence.h>
-#include <KDE/KDateTime>
+#include <KDateTime>
 
 namespace Akonadi {
 

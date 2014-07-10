@@ -25,8 +25,8 @@
 #include "calendarbase.h"
 
 #include <item.h>
-#include <KDE/KDateTime>
-#include <KDE/KSystemTimeZones>
+#include <KDateTime>
+#include <KSystemTimeZones>
 
 namespace Akonadi {
 class FetchJobCalendarPrivate;
