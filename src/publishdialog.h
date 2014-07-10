@@ -30,7 +30,7 @@ class PublishDialog_base;
 // Uses akonadi-contact, so don't move this class to KCalUtils.
 namespace Akonadi {
 
-class AKONADI_CALENDAR_EXPORT PublishDialog : public KDialog
+class AKONADI_CALENDAR_EXPORT PublishDialog : public QDialog
 {
     Q_OBJECT
 public:

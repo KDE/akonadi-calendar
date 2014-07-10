@@ -28,34 +28,27 @@
 #include <kcalcore/person.h>
 
 #include <KLocalizedString>
+#include <QDialogButtonBox>
+#include <QPushButton>
 
 using namespace KCalCore;
 using namespace Akonadi;
 
 PublishDialog::PublishDialog(QWidget *parent)
-    : KDialog(parent), d(new Private(this))
+    : QDialog(parent), d(new Private(this))
 {
-    setCaption(i18n("Select Addresses"));
-    setButtons(Ok|Cancel|Help);
-    setHelp("group-scheduling", "korganizer");
+    setWindowTitle(i18n("Select Addresses"));
+    //QT5 setHelp("group-scheduling", "korganizer");
+    QVBoxLayout *layout = new QVBoxLayout;
+    setLayout(layout);
     QWidget *widget = new QWidget(this);
     widget->setObjectName("PublishFreeBusy");
     d->mUI.setupUi(widget);
-    setMainWidget(widget);
+    layout->addWidget(widget);
     d->mUI.mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     d->mUI.mNameLineEdit->setEnabled(false);
     d->mUI.mEmailLineEdit->setEnabled(false);
 
-    setButtonToolTip(Ok, i18n("Send email to these recipients"));
-    setButtonWhatsThis(Ok, i18n("Clicking the <b>Ok</b> button will cause "
-                                "an email to be sent to the recipients you "
-                                "have entered."));
-    setButtonToolTip(Cancel, i18n("Cancel recipient selection and the email"));
-    setButtonWhatsThis(Cancel, i18n("Clicking the <b>Cancel</b> button will "
-                                    "cause the email operation to be terminated."));
-
-    setButtonWhatsThis(Help, i18n("Click the <b>Help</b> button to read "
-                                  "more information about Group Scheduling."));
 
     d->mUI.mNew->setIcon(QIcon::fromTheme("list-add"));
     d->mUI.mRemove->setIcon(QIcon::fromTheme("list-remove"));
@@ -74,6 +67,31 @@ PublishDialog::PublishDialog(QWidget *parent)
             d, SLOT(updateItem()));
     connect(d->mUI.mEmailLineEdit, SIGNAL(textChanged(QString)),
             d, SLOT(updateItem()));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::Help);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    layout->addWidget( buttonBox );
+
+    okButton->setToolTip( i18n("Send email to these recipients"));
+    okButton->setWhatsThis(i18n("Clicking the <b>Ok</b> button will cause "
+                                "an email to be sent to the recipients you "
+                                "have entered."));
+
+    QPushButton *cancelButton = buttonBox->button(QDialogButtonBox::Cancel);
+    cancelButton->setToolTip( i18n("Cancel recipient selection and the email"));
+    cancelButton->setWhatsThis( i18n("Clicking the <b>Cancel</b> button will "
+                                    "cause the email operation to be terminated."));
+
+    QPushButton *helpButton = buttonBox->button(QDialogButtonBox::Help);
+    helpButton->setWhatsThis( i18n("Click the <b>Help</b> button to read "
+                                  "more information about Group Scheduling."));
+
+
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
 }
 
 PublishDialog::~PublishDialog()
