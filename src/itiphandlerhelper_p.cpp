@@ -105,7 +105,7 @@ ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode,
         // local calendar.
         KCalCore::Incidence::Ptr _incidence(incidence->clone());
         if (_incidence->summary().isEmpty()) {
-            _incidence->setSummary(i18n("<placeholder>No summary given</placeholder>"));
+            _incidence->setSummary(xi18n("<placeholder>No summary given</placeholder>"));
         }
 
         // Send the mail

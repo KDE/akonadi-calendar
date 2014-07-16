@@ -305,7 +305,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
     if (d->mShowDialogs && existingIncidences.isEmpty() && incidence->revision() > 0) {
         KMessageBox::information(
             0,
-            i18nc("@info",
+            xi18nc("@info",
                   "<para>You accepted an invitation update, but an earlier version of the "
                   "item could not be found in your calendar.</para>"
                   "<para>This may have occurred because:<list>"
