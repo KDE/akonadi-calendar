@@ -42,7 +42,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout;
     setLayout(layout);
     QWidget *widget = new QWidget(this);
-    widget->setObjectName("PublishFreeBusy");
+    widget->setObjectName(QLatin1String("PublishFreeBusy"));
     d->mUI.setupUi(widget);
     layout->addWidget(widget);
     d->mUI.mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -50,10 +50,10 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mEmailLineEdit->setEnabled(false);
 
 
-    d->mUI.mNew->setIcon(QIcon::fromTheme("list-add"));
-    d->mUI.mRemove->setIcon(QIcon::fromTheme("list-remove"));
+    d->mUI.mNew->setIcon(QIcon::fromTheme(QLatin1String("list-add")));
+    d->mUI.mRemove->setIcon(QIcon::fromTheme(QLatin1String("list-remove")));
     d->mUI.mRemove->setEnabled(false);
-    d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme("view-pim-contacts"));
+    d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QLatin1String("view-pim-contacts")));
 
     connect(d->mUI.mListWidget, SIGNAL(itemSelectionChanged()),
             d, SLOT(updateInput()));
@@ -120,7 +120,7 @@ QString PublishDialog::addresses() const
         if (!item->text().isEmpty()) {
             to += item->text();
             if (i < count-1) {
-                to += ", ";
+                to += QLatin1String(", ");
             }
         }
     }

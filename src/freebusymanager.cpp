@@ -62,16 +62,16 @@ KUrl replaceVariablesUrl(const KUrl &url, const QString &email)
     QString emailName;
     QString emailHost;
 
-    const int atPos = email.indexOf('@');
+    const int atPos = email.indexOf(QLatin1Char('@'));
     if (atPos >= 0) {
         emailName = email.left(atPos);
         emailHost = email.mid(atPos + 1);
     }
 
     QString saveStr = url.path();
-    saveStr.replace(QRegExp("%[Ee][Mm][Aa][Ii][Ll]%"), email);
-    saveStr.replace(QRegExp("%[Nn][Aa][Mm][Ee]%"), emailName);
-    saveStr.replace(QRegExp("%[Ss][Ee][Rr][Vv][Ee][Rr]%"), emailHost);
+    saveStr.replace(QRegExp(QLatin1String("%[Ee][Mm][Aa][Ii][Ll]%")), email);
+    saveStr.replace(QRegExp(QLatin1String("%[Nn][Aa][Mm][Ee]%")), emailName);
+    saveStr.replace(QRegExp(QLatin1String("%[Ss][Ee][Rr][Vv][Ee][Rr]%")), emailHost);
 
     KUrl retUrl(url);
     retUrl.setPath(saveStr);
@@ -139,9 +139,9 @@ FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const Q
 {
     mInterface =
         QSharedPointer<QDBusInterface>(
-            new QDBusInterface("org.freedesktop.Akonadi.Resource." + provider,
-                               "/FreeBusyProvider",
-                               "org.freedesktop.Akonadi.Resource.FreeBusyProvider"));
+            new QDBusInterface(QLatin1String("org.freedesktop.Akonadi.Resource.") + provider,
+                               QLatin1String("/FreeBusyProvider"),
+                               QLatin1String("org.freedesktop.Akonadi.Resource.FreeBusyProvider")));
 }
 
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
@@ -301,7 +301,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         }
     }
 
-    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegExp("\\.[xiv]fb$"))) {
+    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegExp(QLatin1String("\\.[xiv]fb$")))) {
         // user specified a fullpath
         // do variable string replacements to the URL (MS Outlook style)
         const KUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
@@ -319,7 +319,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     }
 
     // else we search for a fb file in the specified URL with known possible extensions
-    const QStringList extensions = QStringList() << "xfb" << "ifb" << "vfb";
+    const QStringList extensions = QStringList() << QLatin1String("xfb") << QLatin1String("ifb") << QLatin1String("vfb");
     QStringList::ConstIterator ext;
     QList<KUrl> urlsToCheck;
     for (ext = extensions.constBegin(); ext != extensions.constEnd(); ++ext) {
@@ -327,11 +327,11 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         const KUrl sourceUrl = CalendarSettings::self()->freeBusyRetrieveUrl();
         KUrl dirURL = replaceVariablesUrl(sourceUrl, email);
         if (CalendarSettings::self()->freeBusyFullDomainRetrieval()) {
-            dirURL.addPath(email + '.' + (*ext));
+            dirURL.addPath(email + QLatin1Char('.') + (*ext));
         } else {
             // Cut off everything left of the @ sign to get the user name.
             const QString emailName = email.left(emailpos);
-            dirURL.addPath(emailName + '.' + (*ext));
+            dirURL.addPath(emailName + QLatin1Char('.') + (*ext));
         }
         dirURL.setUser(CalendarSettings::self()->freeBusyRetrieveUser());
         dirURL.setPass(CalendarSettings::self()->freeBusyRetrievePassword());
@@ -588,7 +588,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
         connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString,bool)),
                 this, SLOT(onHandlesFreeBusy(QString,bool)));
 
-        request.mInterface->call("canHandleFreeBusy", email);
+        request.mInterface->call(QLatin1String("canHandleFreeBusy"), email);
         request.mRequestStatus = FreeBusyProviderRequest::HandlingRequested;
         mProvidersRequestsByEmail[email].mRequests << request;
     }
@@ -647,7 +647,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
         ++queue->mHandlersCount;
         connect(iface, SIGNAL(freeBusyRetrieved(QString,QString,bool,QString)),
                 this, SLOT(onFreeBusyRetrieved(QString,QString,bool,QString)));
-        iface->call("retrieveFreeBusy", email, queue->mStartTime, queue->mEndTime);
+        iface->call(QLatin1String("retrieveFreeBusy"), email, queue->mStartTime, queue->mEndTime);
         queue->mRequests[requestIndex].mRequestStatus = FreeBusyProviderRequest::FreeBusyRequested;
     }
 }
@@ -660,7 +660,7 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
             mParentWidgetForMailling,
             i18n("The free/busy information was successfully sent."),
             i18n("Sending Free/Busy"),
-            "FreeBusyPublishSuccess");
+            QLatin1String("FreeBusyPublishSuccess"));
     } else {
         KMessageBox::error(mParentWidgetForMailling,
                            i18n("Unable to publish the free/busy data: %1", errorMsg));
