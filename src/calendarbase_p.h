@@ -66,10 +66,10 @@ public Q_SLOTS:
 
 public:
     QMultiHash<Akonadi::Collection::Id, Akonadi::Item> mItemsByCollection;
-    QHash<QString,Akonadi::Item::Id> mItemIdByUid;
+    QHash<QString, Akonadi::Item::Id> mItemIdByUid;
     QHash<Akonadi::Item::Id, Akonadi::Item> mItemById;
     Akonadi::IncidenceChanger *mIncidenceChanger;
-    QHash<QString,QStringList> mParentUidToChildrenUid;
+    QHash<QString, QStringList> mParentUidToChildrenUid;
     QWeakPointer<CalendarBase> mWeakPointer;
     Akonadi::Collection mCollectionForBatchInsertion;
     bool mBatchInsertionCancelled;
@@ -80,7 +80,7 @@ public:
     // to obtain the original RELATED-TO. Because RELATED-TO might have been modified
     // we can't trust the incidence stored in the calendar. ( Users of this class don't
     // operate on a incidence clone, they change the same incidence that's inside the calendar )
-    QHash<QString,QString> mUidToParent;
+    QHash<QString, QString> mUidToParent;
 
 private:
     CalendarBase *const q;

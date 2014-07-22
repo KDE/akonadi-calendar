@@ -228,7 +228,7 @@ public:
       * It's removed from akonadi in the background @see deleteFinished().
       * @param incidence the incidence to delete
       */
-    /**reimp*/ bool deleteIncidence(const KCalCore::Incidence::Ptr &);
+    /**reimp*/ bool deleteIncidence(const KCalCore::Incidence::Ptr &incidence);
 
     /**
         Call this to tell the calendar that you're adding a batch of incidences.

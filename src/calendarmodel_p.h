@@ -25,7 +25,6 @@
 #include <QSharedPointer>
 #include <QWeakPointer>
 
-
 namespace Akonadi {
 
 class CalendarModel : public Akonadi::EntityTreeModel
@@ -34,7 +33,7 @@ class CalendarModel : public Akonadi::EntityTreeModel
 public:
     typedef QSharedPointer<CalendarModel> Ptr;
     enum ItemColumn {
-        Summary=0,
+        Summary = 0,
         Type,
         DateTimeStart,
         DateTimeEnd,
@@ -45,12 +44,12 @@ public:
     };
 
     enum CollectionColumn {
-        CollectionTitle=0,
+        CollectionTitle = 0,
         CollectionColumnCount
     };
 
     enum Role {
-        SortRole=Akonadi::EntityTreeModel::UserRole,
+        SortRole = Akonadi::EntityTreeModel::UserRole,
         RecursRole
     };
 
@@ -61,11 +60,11 @@ public:
     void setWeakPointer(const QWeakPointer<CalendarModel> &weakPointer);
 
     /* reimp */
-    QVariant entityData(const Akonadi::Item &item, int column, int role=Qt::DisplayRole) const;
+    QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const;
 
     /* reimp */
     QVariant entityData(const Akonadi::Collection &collection, int column,
-                        int role=Qt::DisplayRole) const;
+                        int role = Qt::DisplayRole) const;
 
     /* reimp */
     int entityColumnCount(EntityTreeModel::HeaderGroup headerSet) const;
@@ -83,4 +82,3 @@ private:
 }
 
 #endif
-
