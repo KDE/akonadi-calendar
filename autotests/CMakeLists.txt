@@ -8,7 +8,8 @@ set( KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE )
 set( PREVIOUS_EXEC_OUTPUT_PATH ../../tests )
 set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
-include(../../AkonadiMacros.cmake)
+#TODO fix search it
+include(AkonadiMacros.cmake)
 
 add_definitions(-DITIP_DATA_DIR="\\"${CMAKE_CURRENT_SOURCE_DIR}/itip_data\\"" )
 

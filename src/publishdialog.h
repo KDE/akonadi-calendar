@@ -22,7 +22,7 @@
 #include "akonadi-calendar_export.h"
 
 #include <kcalcore/attendee.h>
-#include <KDialog>
+#include <QDialog>
 
 class PublishDialog_base;
 
