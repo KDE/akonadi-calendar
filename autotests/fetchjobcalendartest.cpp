@@ -17,7 +17,7 @@
     02110-1301, USA.
 */
 
-#include "../fetchjobcalendar.h"
+#include "../src/fetchjobcalendar.h"
 #include <itemfetchjob.h>
 #include <itemcreatejob.h>
 #include <collectionfetchjob.h>
@@ -109,6 +109,6 @@ public Q_SLOTS:
     }
 };
 
-QTEST_AKONADIMAIN(FetchJobCalendarTest, GUI)
+QTEST_AKONADIMAIN(FetchJobCalendarTest)
 
 #include "fetchjobcalendartest.moc"

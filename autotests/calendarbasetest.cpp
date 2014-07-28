@@ -19,8 +19,8 @@
 
 #include "calendarbasetest.h"
 
-#include "../calendarbase.h"
-#include "../incidencechanger.h"
+#include "../src/calendarbase.h"
+#include "../src/incidencechanger.h"
 
 #include <qtest_akonadi.h>
 #include <itemfetchjob.h>
@@ -32,7 +32,7 @@
 using namespace Akonadi;
 using namespace KCalCore;
 
-QTEST_AKONADIMAIN(CalendarBaseTest, GUI)
+QTEST_AKONADIMAIN(CalendarBaseTest)
 
 static bool compareUids(const QStringList &_uids, const Incidence::List &incidences)
 {

@@ -21,9 +21,9 @@
 #define HISTORY_TEST_H
 
 #include "unittestbase.h"
-#include "../history.h"
-#include "../history_p.h"
-#include "../incidencechanger.h"
+#include "../src/history.h"
+#include "../src/history_p.h"
+#include "../src/incidencechanger.h"
 
 enum SignalType {
     DeletionSignal,

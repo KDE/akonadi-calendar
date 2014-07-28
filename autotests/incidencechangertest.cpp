@@ -17,7 +17,7 @@
     02110-1301, USA.
 */
 
-#include "../incidencechanger.h"
+#include "../src/incidencechanger.h"
 
 #include <collection.h>
 #include <collectionfetchjob.h>
@@ -1116,7 +1116,7 @@ public Q_SLOTS:
     }
 
     void compareExpectedResult(IncidenceChanger::ResultCode result,
-                               IncidenceChanger::ResultCode expected, const QLatin1String &str)
+                               IncidenceChanger::ResultCode expected, const QString &str)
     {
         if (mPermissionsOrRollback) {
             if (expected == IncidenceChanger::ResultCodePermissions)
@@ -1142,6 +1142,6 @@ public Q_SLOTS:
     }
 };
 
-QTEST_AKONADIMAIN(IncidenceChangerTest, GUI)
+QTEST_AKONADIMAIN(IncidenceChangerTest)
 
 #include "incidencechangertest.moc"

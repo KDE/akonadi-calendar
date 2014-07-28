@@ -19,8 +19,8 @@
 
 #include "etmcalendartest.h"
 
-#include "../etmcalendar.h"
-#include "../utils_p.h"
+#include "../src/etmcalendar.h"
+#include "../src/utils_p.h"
 #include <itemcreatejob.h>
 #include <itemdeletejob.h>
 #include <qtest_akonadi.h>
@@ -546,4 +546,4 @@ void ETMCalendarTest::checkExitLoop()
     }
 }
 
-QTEST_AKONADIMAIN(ETMCalendarTest, GUI)
+QTEST_AKONADIMAIN(ETMCalendarTest)

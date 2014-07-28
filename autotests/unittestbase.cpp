@@ -20,7 +20,7 @@
 
 #include "unittestbase.h"
 #include "helper.h"
-#include "../fetchjobcalendar.h"
+#include "../src/fetchjobcalendar.h"
 #include "mailclient_p.h"
 
 #include <kcalcore/event.h>

@@ -613,4 +613,4 @@ void HistoryTest::maybeQuitEventLoop()
 }
 
 
-QTEST_AKONADIMAIN(HistoryTest, GUI)
+QTEST_AKONADIMAIN(HistoryTest)
