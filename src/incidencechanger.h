@@ -24,6 +24,8 @@
 
 #include <item.h>
 #include <collection.h>
+#include "itiphandler.h"
+
 #include <kcalcore/incidence.h>
 
 #include <QWidget>
@@ -134,9 +136,19 @@ public:
 
     /**
       * Creates a new IncidenceChanger instance.
+      * creates a default ITIPHandlerComponentFactory object.
       * @param parent parent QObject
       */
     explicit IncidenceChanger(QObject *parent = 0);
+
+    /**
+     * Creates a new IncidenceChanger instance.
+     * @param factory factory for creating dialogs and the mail transport job. To create a default
+     * factory set factory == 0
+     * @param parent parent QObject
+     * @since 4.15
+     */
+    explicit IncidenceChanger(ITIPHandlerComponentFactory *factory, QObject *parent);
 
     /**
       * Destroys this IncidenceChanger instance.
