@@ -89,8 +89,8 @@ PublishDialog::PublishDialog(QWidget *parent)
                                   "more information about Group Scheduling."));
 
 
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &PublishDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &PublishDialog::reject);
 
 }
 

@@ -46,7 +46,7 @@ void Akonadi::IncidenceFetchJob::doStart()
                                           << KCalCore::Event::eventMimeType()
                                           << KCalCore::Todo::todoMimeType()
                                           << KCalCore::Journal::journalMimeType());
-    connect(job, SIGNAL(result(KJob*)), SLOT(collectionFetchResult(KJob*)));
+    connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 
 void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob* job)
@@ -60,7 +60,7 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob* job)
             continue;
         ItemFetchJob *itemFetch = new ItemFetchJob(col, this);
         itemFetch->fetchScope().fetchFullPayload(true);
-        connect(itemFetch, SIGNAL(result(KJob*)), SLOT(itemFetchResult(KJob*)));
+        connect(itemFetch, &ItemFetchJob::result, this, &IncidenceFetchJob::itemFetchResult);
         ++m_jobCount;
     }
 }
