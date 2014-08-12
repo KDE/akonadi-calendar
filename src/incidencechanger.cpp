@@ -303,7 +303,7 @@ void IncidenceChanger::Private::handleCreateJobResult2(int changeId, ITIPHandler
     mChangeById.remove(changeId);
 
     if (status == ITIPHandlerHelper::ResultFailAbortUpdate) {
-        kError() << "Sending invitations failed, but did not delete the incidence";
+        qCritical() << "Sending invitations failed, but did not delete the incidence";
     }
 
     const uint atomicOperationId = change->atomicOperationId;
@@ -349,7 +349,6 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
         description = a->m_description;
     }
     if (j->error()) {
-        qCritical() << errorString;
         const QString errorString = j->errorString();
         qCritical() << errorString;
 
