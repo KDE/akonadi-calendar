@@ -77,6 +77,11 @@ MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJ
     return new MailTransport::MessageQueueJob(parent);
 }
 
+ITIPHandlerDialogDelegate *ITIPHandlerComponentFactory::createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent)
+{
+    return new ITIPHandlerDialogDelegate(incidence, method, parent);
+}
+
 ITIPHandler::ITIPHandler(QObject *parent) : QObject(parent)
     , d(new Private(/*factory=*/0, this))
 {
