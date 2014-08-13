@@ -36,7 +36,6 @@
 #include <KLocalizedString>
 #include <QDebug>
 #include <KDateTime>
-#include <KUrl>
 #include <KIO/JobClasses>
 #include <KIO/Scheduler>
 #include <KTemporaryFile>
@@ -242,7 +241,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         d->m_numIncidences = incidences.count();
     } else {
         d->m_collection = collection;
-        KIO::StoredTransferJob *job = KIO::storedGet(KUrl(url));
+        KIO::StoredTransferJob *job = KIO::storedGet(url);
         connect(job, SIGNAL(data(KIO::Job*,QByteArray)), d, SLOT(remoteDownloadFinished(KIO::Job*,QByteArray)));
     }
 
