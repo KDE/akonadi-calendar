@@ -28,12 +28,10 @@
 #include <kcalcore/event.h>
 #include <kcalcore/journal.h>
 #include <kcalcore/todo.h>
-#include <klocale.h>
 #include <klocalizedstring.h>
 
 
 #include <QItemSelectionModel>
-#include <KLocale>
 
 using namespace Akonadi;
 
@@ -47,7 +45,6 @@ public:
           mItemSelectionModel(0),
           mParent(parent)
     {
-        //QT5 KLocale::global()->insertCatalog(QStringLiteral("libakonadi-calendar"));
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
         mParent->connect(mGenericManager, SIGNAL(actionStateUpdated()),
                          mParent, SIGNAL(actionStateUpdated()));
