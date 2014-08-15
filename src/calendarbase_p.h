@@ -26,7 +26,6 @@
 #include <QVector>
 #include <QMultiHash>
 
-class KJob;
 
 namespace Akonadi {
 

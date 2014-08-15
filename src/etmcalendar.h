@@ -30,10 +30,8 @@ class QAbstractItemModel;
 class KCheckableProxyModel;
 
 namespace Akonadi {
-
-class EntityTreeModel;
 class ETMCalendarPrivate;
-class CollectionSelection;
+class EntityTreeModel;
 
 /**
  * @short A KCalCore::Calendar that uses an EntityTreeModel to populate itself.

@@ -26,14 +26,6 @@
 #include <kcalcore/incidence.h>
 #include <item.h>
 
-namespace KCalCore {
-class ICalFormat;
-}
-
-namespace KPIMIdentities {
-class IdentityManager;
-}
-
 namespace Akonadi {
 /*
   This class implements the iTIP interface using the email interface specified
