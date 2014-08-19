@@ -37,7 +37,7 @@
 #include <QDebug>
 #include <KMessageBox>
 #include <KTemporaryFile>
-#include <KUrl>
+#include <QUrl>
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
 #include <KIO/NetAccess>
@@ -57,7 +57,7 @@ using namespace KCalCore;
 
 /// Free helper functions
 
-KUrl replaceVariablesUrl(const KUrl &url, const QString &email)
+QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
 {
     QString emailName;
     QString emailHost;
@@ -73,7 +73,7 @@ KUrl replaceVariablesUrl(const KUrl &url, const QString &email)
     saveStr.replace(QRegExp(QLatin1String("%[Nn][Aa][Mm][Ee]%")), emailName);
     saveStr.replace(QRegExp(QLatin1String("%[Ss][Ee][Rr][Vv][Ee][Rr]%")), emailHost);
 
-    KUrl retUrl(url);
+    QUrl retUrl(url);
     retUrl.setPath(saveStr);
     return retUrl;
 }
@@ -82,7 +82,7 @@ KUrl replaceVariablesUrl(const KUrl &url, const QString &email)
 // is useless for the http and https protocols. And getting back
 // arbitrary data is also useless because a server can respond back
 // with a "no such document" page.  So we need smart checking.
-FbCheckerJob::FbCheckerJob(const QList<KUrl> &urlsToCheck, QObject *parent)
+FbCheckerJob::FbCheckerJob(const QList<QUrl> &urlsToCheck, QObject *parent)
     : KJob(parent),
       mUrlsToCheck(urlsToCheck)
 {
@@ -101,7 +101,7 @@ void FbCheckerJob::checkNextUrl()
         emitResult();
         return;
     }
-    const KUrl url = mUrlsToCheck.takeFirst();
+    const QUrl url = mUrlsToCheck.takeFirst();
 
     mData.clear();
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
@@ -126,7 +126,7 @@ void FbCheckerJob::onGetJobFinished(KJob *job)
     }
 }
 
-KUrl FbCheckerJob::validUrl() const
+QUrl FbCheckerJob::validUrl() const
 {
     return mValidUrl;
 }
@@ -192,8 +192,8 @@ FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
       mBrokenUrl(false),
       mParentWidgetForRetrieval(0)
 {
-    connect(this, SIGNAL(freeBusyUrlRetrieved(QString,KUrl)),
-            SLOT(finishProcessRetrieveQueue(QString,KUrl)));
+    connect(this, SIGNAL(freeBusyUrlRetrieved(QString,QUrl)),
+            SLOT(finishProcessRetrieveQueue(QString,QUrl)));
 }
 
 QString FreeBusyManagerPrivate::freeBusyDir() const
@@ -203,7 +203,7 @@ QString FreeBusyManagerPrivate::freeBusyDir() const
 
 void FreeBusyManagerPrivate::checkFreeBusyUrl()
 {
-    KUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
+    QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
     mBrokenUrl = targetURL.isEmpty() || !targetURL.isValid();
 }
 
@@ -221,10 +221,10 @@ void FreeBusyManagerPrivate::fetchFreeBusyUrl(const QString &email)
     QString url = group.readEntry(QStringLiteral("url"));
     if (!url.isEmpty()) {
         qDebug() << "Found cached url:" << url;
-        KUrl cachedUrl(url);
+        QUrl cachedUrl(url);
         if (Akonadi::CalendarUtils::thatIsMe(email)) {
-            cachedUrl.setUser(CalendarSettings::self()->freeBusyRetrieveUser());
-            cachedUrl.setPass(CalendarSettings::self()->freeBusyRetrievePassword());
+            cachedUrl.setUserName(CalendarSettings::self()->freeBusyRetrieveUser());
+            cachedUrl.setPassword(CalendarSettings::self()->freeBusyRetrievePassword());
         }
         emit freeBusyUrlRetrieved(email, replaceVariablesUrl(cachedUrl, email));
         return;
@@ -244,7 +244,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     if (_job->error()) {
         qCritical() << "Error while searching for contact: "
                  << _job->errorString() << ", email = " << email;
-        emit freeBusyUrlRetrieved(email, KUrl());
+        emit freeBusyUrlRetrieved(email, QUrl());
         return;
     }
 
@@ -262,7 +262,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
             qDebug() << "Preferred email of" << email << "is" << pref;
             if (!url.isEmpty()) {
                 qDebug() << "Taken url from preferred email:" << url;
-                emit freeBusyUrlRetrieved(email, replaceVariablesUrl(KUrl(url), email));
+                emit freeBusyUrlRetrieved(email, replaceVariablesUrl(QUrl(url), email));
                 return;
             }
         }
@@ -271,7 +271,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     if (!CalendarSettings::self()->freeBusyRetrieveAuto()) {
         // No, so no FB list here
         qDebug() << "No automatic retrieving";
-        emit freeBusyUrlRetrieved(email, KUrl());
+        emit freeBusyUrlRetrieved(email, QUrl());
         return;
     }
 
@@ -280,7 +280,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     int emailpos = email.indexOf(QLatin1Char('@'));
     if (emailpos == -1) {
         qWarning() << "No '@' found in" << email;
-        emit freeBusyUrlRetrieved(email, KUrl());
+        emit freeBusyUrlRetrieved(email, QUrl());
         return;
     }
 
@@ -290,13 +290,13 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     if (CalendarSettings::self()->freeBusyCheckHostname()) {
         // Don't try to fetch free/busy data for users not on the specified servers
         // This tests if the hostnames match, or one is a subset of the other
-        const QString hostDomain = KUrl(CalendarSettings::self()->freeBusyRetrieveUrl()).host();
+        const QString hostDomain = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl()).host();
         if (hostDomain != emailHost &&
                 !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
                 !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
             // Host names do not match
             qDebug() << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
-            emit freeBusyUrlRetrieved(email, KUrl());
+            emit freeBusyUrlRetrieved(email, QUrl());
             return;
         }
     }
@@ -304,12 +304,12 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegExp(QLatin1String("\\.[xiv]fb$")))) {
         // user specified a fullpath
         // do variable string replacements to the URL (MS Outlook style)
-        const KUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
-        KUrl fullpathURL = replaceVariablesUrl(sourceUrl, email);
+        const QUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
+        QUrl fullpathURL = replaceVariablesUrl(sourceUrl, email);
 
         // set the User and Password part of the URL
-        fullpathURL.setUser(CalendarSettings::self()->freeBusyRetrieveUser());
-        fullpathURL.setPass(CalendarSettings::self()->freeBusyRetrievePassword());
+        fullpathURL.setUserName(CalendarSettings::self()->freeBusyRetrieveUser());
+        fullpathURL.setPassword(CalendarSettings::self()->freeBusyRetrievePassword());
 
         // no need to cache this URL as this is pretty fast to get from the config value.
         // return the fullpath URL
@@ -321,20 +321,22 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     // else we search for a fb file in the specified URL with known possible extensions
     const QStringList extensions = QStringList() << QLatin1String("xfb") << QLatin1String("ifb") << QLatin1String("vfb");
     QStringList::ConstIterator ext;
-    QList<KUrl> urlsToCheck;
+    QList<QUrl> urlsToCheck;
     for (ext = extensions.constBegin(); ext != extensions.constEnd(); ++ext) {
         // build a url for this extension
-        const KUrl sourceUrl = CalendarSettings::self()->freeBusyRetrieveUrl();
-        KUrl dirURL = replaceVariablesUrl(sourceUrl, email);
+        const QUrl sourceUrl = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
+        QUrl dirURL = replaceVariablesUrl(sourceUrl, email);
         if (CalendarSettings::self()->freeBusyFullDomainRetrieval()) {
-            dirURL.addPath(email + QLatin1Char('.') + (*ext));
+            dirURL = dirURL.adjusted(QUrl::StripTrailingSlash);
+            dirURL.setPath(QString(dirURL.path() + QLatin1Char('/') + email + QLatin1Char('.') + (*ext)));
         } else {
             // Cut off everything left of the @ sign to get the user name.
             const QString emailName = email.left(emailpos);
-            dirURL.addPath(emailName + QLatin1Char('.') + (*ext));
+            dirURL = dirURL.adjusted(QUrl::StripTrailingSlash);
+            dirURL.setPath(QString(dirURL.path() + QLatin1Char('/') + emailName + QLatin1Char('.') + (*ext)));
         }
-        dirURL.setUser(CalendarSettings::self()->freeBusyRetrieveUser());
-        dirURL.setPass(CalendarSettings::self()->freeBusyRetrievePassword());
+        dirURL.setUserName(CalendarSettings::self()->freeBusyRetrieveUser());
+        dirURL.setPassword(CalendarSettings::self()->freeBusyRetrievePassword());
         urlsToCheck << dirURL;
     }
     KJob *checkerJob = new FbCheckerJob(urlsToCheck, this);
@@ -348,16 +350,16 @@ void FreeBusyManagerPrivate::fbCheckerJobFinished(KJob *job)
     const QString email = job->property("email").toString();
     if (!job->error()) {
         FbCheckerJob *checkerJob = static_cast<FbCheckerJob*>(job);
-        KUrl dirURL = checkerJob->validUrl();
+        QUrl dirURL = checkerJob->validUrl();
         // write the URL to the cache
         KConfig cfg(configFile());
         KConfigGroup group = cfg.group(email);
-        group.writeEntry("url", dirURL.prettyUrl());   // prettyURL() does not write user nor password
+        group.writeEntry("url", dirURL.toDisplayString());   // prettyURL() does not write user nor password
         qDebug() << "Found url email=" << email << "; url=" << dirURL;
         emit freeBusyUrlRetrieved(email, dirURL);
     } else {
         qDebug() << "Returning invalid url";
-        emit freeBusyUrlRetrieved(email, KUrl());
+        emit freeBusyUrlRetrieved(email, QUrl());
     }
 }
 
@@ -408,7 +410,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
         KMessageBox::sorry(
             mParentWidgetForRetrieval,
             i18n("Failed to download free/busy data from: %1\nReason: %2",
-                 job->url().prettyUrl(), job->errorText()),
+                 job->url().toDisplayString(), job->errorText()),
             i18n("Free/busy retrieval error"));
 
         // TODO: Ask for a retry? (i.e. queue  the email again when the user wants it).
@@ -432,7 +434,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
             KMessageBox::sorry(
                 mParentWidgetForRetrieval,
                 i18n("Failed to parse free/busy information that was retrieved from: %1",
-                     job->url().prettyUrl()),
+                     job->url().toDisplayString()),
                 i18n("Free/busy retrieval error"));
         }
     }
@@ -460,7 +462,7 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
 #endif
     }
     // Delete temp file
-    KUrl src = job->srcUrl();
+    QUrl src = job->srcUrl();
     Q_ASSERT(src.isLocalFile());
     if (src.isLocalFile()) {
         QFile::remove(src.toLocalFile());
@@ -492,12 +494,12 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
 }
 
 void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
-        const KUrl &freeBusyUrlForEmail)
+        const QUrl &freeBusyUrlForEmail)
 {
     Q_Q(FreeBusyManager);
 
     if (!freeBusyUrlForEmail.isValid()) {
-        qDebug() << "Invalid FreeBusy URL" << freeBusyUrlForEmail.prettyUrl() << email;
+        qDebug() << "Invalid FreeBusy URL" << freeBusyUrlForEmail.toDisplayString() << email;
         return;
     }
 
@@ -790,7 +792,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         return;
     }
 
-    KUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
+    QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
     if (targetURL.isEmpty())  {
         KMessageBox::sorry(
             parentWidget,
@@ -810,13 +812,13 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
     if (!targetURL.isValid()) {
         KMessageBox::sorry(
             parentWidget,
-            i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.prettyUrl()),
+            i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()),
             i18n("Invalid URL"));
         d->mBrokenUrl = true;
         return;
     }
-    targetURL.setUser(CalendarSettings::self()->freeBusyPublishUser());
-    targetURL.setPass(CalendarSettings::self()->freeBusyPublishPassword());
+    targetURL.setUserName(CalendarSettings::self()->freeBusyPublishUser());
+    targetURL.setPassword(CalendarSettings::self()->freeBusyPublishPassword());
 
     d->mUploadingFreeBusy = true;
 
@@ -853,7 +855,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         QString emailHost = defaultEmail.mid(defaultEmail.indexOf('@') + 1);
 
         // Put target string together
-        KUrl targetURL;
+        QUrl targetURL;
         if (CalendarSettings::self()->publishKolab()) {
             // we use Kolab
             QString server;
@@ -864,7 +866,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
                 server = CalendarSettings::self()->publishKolabServer();
             }
 
-            targetURL.setProtocol("webdavs");
+            targetURL.setScheme("webdavs");
             targetURL.setHost(server);
 
             QString fbname = CalendarSettings::self()->publishUserName();
@@ -873,17 +875,17 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
                 fbname = fbname.left(at);
             }
             targetURL.setPath("/freebusy/" + fbname + ".ifb");
-            targetURL.setUser(CalendarSettings::self()->publishUserName());
-            targetURL.setPass(CalendarSettings::self()->publishPassword());
+            targetURL.setUserName(CalendarSettings::self()->publishUserName());
+            targetURL.setPassword(CalendarSettings::self()->publishPassword());
         } else {
             // we use something else
             targetURL = CalendarSettings::self()->+publishAnyURL().replace("%SERVER%", emailHost);
-            targetURL.setUser(CalendarSettings::self()->publishUserName());
-            targetURL.setPass(CalendarSettings::self()->publishPassword());
+            targetURL.setUserName(CalendarSettings::self()->publishUserName());
+            targetURL.setPassword(CalendarSettings::self()->publishPassword());
         }
 #endif
 
-        KUrl src;
+        QUrl src;
         src.setPath(tempFile.fileName());
 
         qDebug() << targetURL;

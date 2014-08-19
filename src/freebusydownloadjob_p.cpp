@@ -27,7 +27,7 @@
 
 using namespace Akonadi;
 
-FreeBusyDownloadJob::FreeBusyDownloadJob(const KUrl &url, QWidget *parentWidget)
+FreeBusyDownloadJob::FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget)
     : mUrl(url), mParent(parentWidget)
 {
     setObjectName(QStringLiteral("FreeBusyDownloadJob"));
@@ -50,7 +50,7 @@ QByteArray FreeBusyDownloadJob::rawFreeBusyData() const
     return mFreeBusyData;
 }
 
-KUrl FreeBusyDownloadJob::url() const
+QUrl FreeBusyDownloadJob::url() const
 {
     return mUrl;
 }

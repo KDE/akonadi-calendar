@@ -32,7 +32,7 @@
 #include <QtDBus/QDBusInterface>
 
 #include <KJob>
-#include <KUrl>
+#include <QUrl>
 
 namespace KIO {
 class Job;
@@ -83,7 +83,7 @@ public:
     KCalCore::ICalFormat mFormat;
 
     QStringList mRetrieveQueue;
-    QMap<KUrl, QString> mFreeBusyUrlEmailMap;
+    QMap<QUrl, QString> mFreeBusyUrlEmailMap;
     QMap<QString, FreeBusyProvidersRequestsQueue> mProvidersRequestsByEmail;
 
     // Free/Busy uploading
@@ -117,7 +117,7 @@ public: /// Functions
 public Q_SLOTS:
     void processRetrieveQueue();
     void contactSearchJobFinished(KJob *_job);
-    void finishProcessRetrieveQueue(const QString &email, const KUrl &url);
+    void finishProcessRetrieveQueue(const QString &email, const QUrl &url);
     void onHandlesFreeBusy(const QString &email, bool handles);
     void onFreeBusyRetrieved(const QString &email, const QString &freeBusy,
                              bool success, const QString &errorText);
@@ -125,17 +125,17 @@ public Q_SLOTS:
     void fbCheckerJobFinished(KJob*);
 
 Q_SIGNALS:
-    void freeBusyUrlRetrieved(const QString &email, const KUrl &url);
+    void freeBusyUrlRetrieved(const QString &email, const QUrl &url);
 };
 
 class FbCheckerJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit FbCheckerJob(const QList<KUrl> &urlsToCheck, QObject *parent = 0);
+    explicit FbCheckerJob(const QList<QUrl> &urlsToCheck, QObject *parent = 0);
     virtual void start();
 
-    KUrl validUrl() const;
+    QUrl validUrl() const;
 
 private Q_SLOTS:
     void onGetJobFinished(KJob *job);
@@ -143,9 +143,9 @@ private Q_SLOTS:
 
 private:
     void checkNextUrl();
-    QList<KUrl> mUrlsToCheck;
+    QList<QUrl> mUrlsToCheck;
     QByteArray mData;
-    KUrl mValidUrl;
+    QUrl mValidUrl;
 };
 
 }

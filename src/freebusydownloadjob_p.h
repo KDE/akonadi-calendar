@@ -22,7 +22,7 @@
 #define AKONADI_FREEBUSYDOWNLOADJOB_P_H
 
 #include <KJob>
-#include <KUrl>
+#include <QUrl>
 
 namespace KIO {
 class Job;
@@ -34,12 +34,12 @@ class FreeBusyDownloadJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit FreeBusyDownloadJob(const KUrl &url, QWidget *parentWidget = 0);
+    explicit FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget = 0);
     ~FreeBusyDownloadJob();
 
     /** reimp */ void start();
 
-    KUrl url() const;
+    QUrl url() const;
     QByteArray rawFreeBusyData() const;
 
 private Q_SLOTS:
@@ -47,7 +47,7 @@ private Q_SLOTS:
     void slotResult(KJob *);
 
 private:
-    KUrl mUrl;
+    QUrl mUrl;
     QByteArray mFreeBusyData;
     QWidget *mParent;
 };
