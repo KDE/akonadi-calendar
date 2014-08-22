@@ -30,7 +30,6 @@
 #include <KIconLoader>
 
 #include <QPixmap>
-#include <QDateTime>
 
 using namespace Akonadi;
 

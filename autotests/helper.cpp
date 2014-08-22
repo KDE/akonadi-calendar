@@ -4,7 +4,6 @@
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
 
-#include <QLatin1String>
 #include <QStringList>
 
 using namespace Akonadi;
