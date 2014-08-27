@@ -70,7 +70,7 @@ ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory()
 {
 }
 
-MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KPIMIdentities::Identity &identity, QObject *parent)
+MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent)
 {
     Q_UNUSED(incidence);
     Q_UNUSED(identity);
@@ -357,7 +357,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
     // Clone so we can change organizer and recurid
     KCalCore::Incidence::Ptr incidence = KCalCore::Incidence::Ptr(originalIncidence->clone());
 
-    KPIMIdentities::IdentityManager identityManager;
+    KIdentityManagement::IdentityManager identityManager;
 
     QPointer<Akonadi::PublishDialog> publishdlg = new Akonadi::PublishDialog;
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {

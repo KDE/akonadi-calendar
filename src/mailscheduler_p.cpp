@@ -36,11 +36,11 @@
 
 
 using namespace Akonadi;
-using namespace KPIMIdentities;
+using namespace KIdentityManagement;
 
 class MailScheduler::Private {
 public:
-    KPIMIdentities::IdentityManager *m_identityManager;
+    KIdentityManagement::IdentityManager *m_identityManager;
     MailClient *m_mailer;
 };
 

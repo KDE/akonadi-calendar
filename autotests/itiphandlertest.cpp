@@ -85,7 +85,7 @@ public:
     {
     }
 
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KPIMIdentities::Identity &identity, QObject *parent = 0)
+    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0)
     {
         Q_UNUSED(incidence);
         Q_UNUSED(identity);

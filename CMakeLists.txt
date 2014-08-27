@@ -36,7 +36,7 @@ if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Calendar_SOURCE_DIR})
 
   find_package(KF5MailTransport ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5Akonadi ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-  find_package(KF5PimIdentities ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+  find_package(KF5IdentityManagement ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5CalendarCore ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5CalendarUtils ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
   find_package(KF5AkonadiContact ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)

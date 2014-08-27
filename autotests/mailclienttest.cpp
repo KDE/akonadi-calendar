@@ -35,7 +35,7 @@ static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlib
 
 using namespace Akonadi;
 
-Q_DECLARE_METATYPE(KPIMIdentities::Identity)
+Q_DECLARE_METATYPE(KIdentityManagement::Identity)
 Q_DECLARE_METATYPE(KCalCore::Incidence::Ptr)
 
 class FakeMessageQueueJob : public MailTransport::MessageQueueJob
@@ -74,7 +74,7 @@ public:
     {
     }
 
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KPIMIdentities::Identity &identity, QObject *parent = 0)
+    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0)
     {
         Q_UNUSED(incidence);
         Q_UNUSED(identity);
@@ -112,7 +112,7 @@ private Q_SLOTS:
     void testMailAttendees_data()
     {
         QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
-        QTest::addColumn<KPIMIdentities::Identity>("identity");
+        QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
         QTest::addColumn<QString>("transport");
@@ -124,7 +124,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedBccList");
 
         KCalCore::Incidence::Ptr incidence(new KCalCore::Event());
-        KPIMIdentities::Identity identity;
+        KIdentityManagement::Identity identity;
         bool bccMe;
         QString attachment;
         QString transport;
@@ -226,7 +226,7 @@ private Q_SLOTS:
     void testMailAttendees()
     {
         QFETCH(KCalCore::Incidence::Ptr, incidence);
-        QFETCH(KPIMIdentities::Identity, identity);
+        QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
         QFETCH(QString, transport);
@@ -271,7 +271,7 @@ private Q_SLOTS:
     void testMailOrganizer_data()
     {
         QTest::addColumn<KCalCore::IncidenceBase::Ptr>("incidence");
-        QTest::addColumn<KPIMIdentities::Identity>("identity");
+        QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<QString>("from");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
@@ -285,7 +285,7 @@ private Q_SLOTS:
         QTest::addColumn<QString>("expectedSubject");
 
         KCalCore::IncidenceBase::Ptr incidence(new KCalCore::Event());
-        KPIMIdentities::Identity identity;
+        KIdentityManagement::Identity identity;
         const QString from = QLatin1String(s_ourEmail);
         bool bccMe;
         QString attachment;
@@ -319,7 +319,7 @@ private Q_SLOTS:
     void testMailOrganizer()
     {
         QFETCH(KCalCore::IncidenceBase::Ptr, incidence);
-        QFETCH(KPIMIdentities::Identity, identity);
+        QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(QString, from);
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
@@ -351,7 +351,7 @@ private Q_SLOTS:
     void testMailTo_data()
     {
         QTest::addColumn<KCalCore::IncidenceBase::Ptr>("incidence");
-        QTest::addColumn<KPIMIdentities::Identity>("identity");
+        QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<QString>("from");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("recipients");
@@ -364,7 +364,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedBccList");
 
         KCalCore::IncidenceBase::Ptr incidence(new KCalCore::Event());
-        KPIMIdentities::Identity identity;
+        KIdentityManagement::Identity identity;
         const QString from = QLatin1String(s_ourEmail);
         bool bccMe;
         const QString recipients = QStringLiteral("unittests@dev.nul");
@@ -387,7 +387,7 @@ private Q_SLOTS:
     void testMailTo()
     {
         QFETCH(KCalCore::IncidenceBase::Ptr, incidence);
-        QFETCH(KPIMIdentities::Identity, identity);
+        QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(QString, from);
         QFETCH(bool, bccMe);
         QFETCH(QString, recipients);

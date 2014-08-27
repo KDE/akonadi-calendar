@@ -43,7 +43,7 @@ namespace MailTransport {
     class MessageQueueJob;
 }
 
-namespace KPIMIdentities {
+namespace KIdentityManagement {
     class Identity;
 }
 
@@ -210,7 +210,7 @@ public:
      * @param identity that is the mail sender
      * @param parent of the MailTransport::MessageQueueJob object
      */
-    virtual MailTransport::MessageQueueJob* createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KPIMIdentities::Identity &identity, QObject *parent = 0);
+    virtual MailTransport::MessageQueueJob* createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0);
 
     /*
      * @return A new ITIPHandlerDialogDelegate object

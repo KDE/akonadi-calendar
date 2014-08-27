@@ -39,7 +39,7 @@ struct UnitTestResult {
     UnitTestResult() : transportId(-1) {}
 };
 
-namespace KPIMIdentities {
+namespace KIdentityManagement {
 class Identity;
 }
 
@@ -72,18 +72,18 @@ public:
     ~MailClient();
 
     void mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
-                       const KPIMIdentities::Identity &identity,
+                       const KIdentityManagement::Identity &identity,
                        bool bccMe, const QString &attachment=QString(),
                        const QString &mailTransport = QString());
 
     void mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
-                       const KPIMIdentities::Identity &identity,
+                       const KIdentityManagement::Identity &identity,
                        const QString &from, bool bccMe,
                        const QString &attachment=QString(),
                        const QString &sub=QString(),
                        const QString &mailTransport = QString());
 
-    void mailTo(const KCalCore::IncidenceBase::Ptr &incidence, const KPIMIdentities::Identity &identity,
+    void mailTo(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity,
                 const QString &from, bool bccMe, const QString &recipients,
                 const QString &attachment = QString(), const QString &mailTransport = QString());
 
@@ -105,7 +105,7 @@ public:
       @param mailTransport defines the mail transport method. See here the
       kdepimlibs/mailtransport library.
     */
-    void send(const KCalCore::IncidenceBase::Ptr &incidence, const KPIMIdentities::Identity &identity, const QString &from, const QString &to,
+    void send(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &to,
               const QString &cc, const QString &subject, const QString &body,
               bool hidden=false, bool bccMe=false, const QString &attachment=QString(),
               const QString &mailTransport = QString());
