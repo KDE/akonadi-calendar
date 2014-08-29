@@ -248,8 +248,8 @@ void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalCore::iTIPMethod method,
     }
 
     ITIPHandlerDialogDelegate *askDelegator = m_factory->createITIPHanderDialogDelegate(incidence, method, mParent);
-    connect(askDelegator, SIGNAL(dialogClosed(int, KCalCore::iTIPMethod, KCalCore::Incidence::Ptr)),
-            SLOT(slotIncidenceCreatedDialogClosed(int, KCalCore::iTIPMethod, KCalCore::Incidence::Ptr)));
+    connect(askDelegator, SIGNAL(dialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)),
+            SLOT(slotIncidenceCreatedDialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)));
     askDelegator->openDialogIncidenceCreated(ITIPHandlerDialogDelegate::Attendees, question, mDefaultAction);
 }
 
