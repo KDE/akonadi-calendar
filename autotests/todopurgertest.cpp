@@ -98,7 +98,7 @@ void TodoPurgerTest::initTestCase()
     m_calendar->registerObserver(this);
     m_todoPurger = new TodoPurger(this);
 
-    connect(m_todoPurger, SIGNAL(todosPurged(bool,int,int)), SLOT(onTodosPurged(bool,int,int)));
+    connect(m_todoPurger, &Akonadi::TodoPurger::todosPurged, this, &TodoPurgerTest::onTodosPurged);
 
     connect(m_calendar, SIGNAL(collectionsAdded(Akonadi::Collection::List)),
             &QTestEventLoop::instance(), SLOT(exitLoop()));

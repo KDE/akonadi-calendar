@@ -82,7 +82,7 @@ void UnitTestBase::createIncidence(const Item &item)
 void UnitTestBase::verifyExists(const QString &uid, bool exists)
 {
     FetchJobCalendar *calendar = new FetchJobCalendar();
-    connect(calendar, SIGNAL(loadFinished(bool,QString)), SLOT(onLoadFinished(bool,QString)));
+    connect(calendar, &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
     calendar->deleteLater();
 
