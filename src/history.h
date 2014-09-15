@@ -55,7 +55,8 @@ class IncidenceChanger;
    @since 4.11
 */
 
-class AKONADI_CALENDAR_EXPORT History : public QObject {
+class AKONADI_CALENDAR_EXPORT History : public QObject
+{
     Q_OBJECT
 public:
     /**
@@ -255,7 +256,7 @@ private:
     explicit History(QObject *parent = 0);
 
     // Used by unit-tests
-    Akonadi::IncidenceChanger* incidenceChanger() const;
+    Akonadi::IncidenceChanger *incidenceChanger() const;
 
     //@cond PRIVATE
     class Private;

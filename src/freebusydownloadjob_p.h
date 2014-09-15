@@ -44,7 +44,7 @@ public:
 
 private Q_SLOTS:
     void slotData(KIO::Job *, const QByteArray &data);
-    void slotResult(KJob *);
+    void slotResult(KJob *job);
 
 private:
     QUrl mUrl;

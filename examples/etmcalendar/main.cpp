@@ -26,25 +26,25 @@
 
 using namespace Akonadi;
 
-int main( int argv, char **argc )
+int main(int argv, char **argc)
 {
-  QApplication app( argv, argc );
+    QApplication app(argv, argc);
 
-  ETMCalendar calendar;
+    ETMCalendar calendar;
 
-  QWidget *window = new QWidget();
-  QHBoxLayout *layout = new QHBoxLayout( window );
+    QWidget *window = new QWidget();
+    QHBoxLayout *layout = new QHBoxLayout(window);
 
-  QTreeView *collectionSelectionView = new QTreeView();
-  collectionSelectionView->setModel( calendar.checkableProxyModel() );
+    QTreeView *collectionSelectionView = new QTreeView();
+    collectionSelectionView->setModel(calendar.checkableProxyModel());
 
-  QTreeView *itemView = new QTreeView();
-  itemView->setModel( calendar.model() );
+    QTreeView *itemView = new QTreeView();
+    itemView->setModel(calendar.model());
 
-  layout->addWidget( collectionSelectionView );
-  layout->addWidget( itemView );
+    layout->addWidget(collectionSelectionView);
+    layout->addWidget(itemView);
 
-  window->show();
+    window->show();
 
-  return app.exec();
+    return app.exec();
 }

@@ -148,12 +148,12 @@ Q_SIGNALS:
     /**
       This signal is emitted to return results of free/busy requests.
     */
-    void freeBusyRetrieved(const KCalCore::FreeBusy::Ptr &,
+    void freeBusyRetrieved(const KCalCore::FreeBusy::Ptr &fb,
                            const QString &email);
 
 protected:
     /** React on timer events, used for delayed freebusy list uploading */
-    virtual void timerEvent(QTimerEvent *);
+    virtual void timerEvent(QTimerEvent *event);
 
 private:
     /**
@@ -166,7 +166,7 @@ private:
 private:
     friend class FreeBusyManagerStatic;
 
-    FreeBusyManagerPrivate * const d_ptr;
+    FreeBusyManagerPrivate *const d_ptr;
     Q_DECLARE_PRIVATE(FreeBusyManager)
     Q_DISABLE_COPY(FreeBusyManager)
     Q_PRIVATE_SLOT(d_ptr, void checkFreeBusyUrl())

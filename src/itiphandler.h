@@ -40,11 +40,11 @@
 #include <QWidget>
 
 namespace MailTransport {
-    class MessageQueueJob;
+class MessageQueueJob;
 }
 
 namespace KIdentityManagement {
-    class Identity;
+class Identity;
 }
 
 namespace Akonadi {
@@ -67,7 +67,8 @@ public:
  * @short Ui delegate for dialogs raised by the ITIPHandler and IncidenceChanger.
  * @since 4.15
  */
-class AKONADI_CALENDAR_EXPORT ITIPHandlerDialogDelegate : public QObject {
+class AKONADI_CALENDAR_EXPORT ITIPHandlerDialogDelegate : public QObject
+{
     Q_OBJECT
 public:
     // Posible default actions
@@ -99,10 +100,10 @@ public:
      * @param buttonNo: dialog's no answer
      */
     virtual void openDialogIncidenceCreated(Recipient recipient,
-                                    const QString &question,
-                                    Action action = ActionAsk,
-                                    const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                    const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+                                            const QString &question,
+                                            Action action = ActionAsk,
+                                            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is modified
@@ -116,11 +117,11 @@ public:
      * @param buttonNo: dialog's no answer
      */
     virtual void openDialogIncidenceModified(bool attendeeStatusChanged,
-                                     Recipient recipient,
-                                     const QString &question,
-                                     Action action = ActionAsk,
-                                     const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                     const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+                                             Recipient recipient,
+                                             const QString &question,
+                                             Action action = ActionAsk,
+                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is deleted
@@ -133,10 +134,10 @@ public:
      * @param buttonNo: dialog's no answer
      */
     virtual void openDialogIncidenceDeleted(Recipient recipient,
-                                    const QString &question,
-                                    Action action = ActionAsk,
-                                    const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                    const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+                                            const QString &question,
+                                            Action action = ActionAsk,
+                                            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
     /*
      * Opens a Dialog, when mail was sended
      * The function must emit a dialogClosed signal with the user's answer
@@ -147,9 +148,9 @@ public:
      * @param buttonNo: dialog's no answer
      */
     virtual void openDialogSchedulerFinished(const QString &question,
-                                     Action action = ActionAsk,
-                                     const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                     const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+                                             Action action = ActionAsk,
+                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
 Q_SIGNALS:
     /*
@@ -210,7 +211,7 @@ public:
      * @param identity that is the mail sender
      * @param parent of the MailTransport::MessageQueueJob object
      */
-    virtual MailTransport::MessageQueueJob* createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0);
+    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0);
 
     /*
      * @return A new ITIPHandlerDialogDelegate object
@@ -219,7 +220,7 @@ public:
      * @parent parent of the AskDelegator
      *
      */
-    virtual ITIPHandlerDialogDelegate* createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = 0);
+    virtual ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = 0);
 };
 
 /**
@@ -292,7 +293,7 @@ public:
     /**
      * Sets the UI delegate to edit counter proposals.
      */
-    void setGroupwareUiDelegate(GroupwareUiDelegate *);
+    void setGroupwareUiDelegate(GroupwareUiDelegate *delegate);
 
     /**
      * Sets the calendar that the itip handler should use.
@@ -300,7 +301,7 @@ public:
      *
      * If none is set, a FetchJobCalendar will be created internally.
      */
-    void setCalendar(const Akonadi::CalendarBase::Ptr &);
+    void setCalendar(const Akonadi::CalendarBase::Ptr &calendar);
 
     /**
      * Sets if the ITIP handler should show dialogs on error.

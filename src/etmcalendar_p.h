@@ -50,18 +50,21 @@ static bool isStructuralCollection(const Akonadi::Collection &collection)
               << KCalCore::Todo::todoMimeType()
               << KCalCore::Journal::journalMimeType();
     const QStringList collectionMimeTypes = collection.contentMimeTypes();
-    foreach(const QString &mimeType, mimeTypes) {
-        if (collectionMimeTypes.contains(mimeType))
+    foreach (const QString &mimeType, mimeTypes) {
+        if (collectionMimeTypes.contains(mimeType)) {
             return false;
+        }
     }
 
     return true;
 }
 
-class CheckableProxyModel : public KCheckableProxyModel {
+class CheckableProxyModel : public KCheckableProxyModel
+{
     Q_OBJECT
 public:
-    CheckableProxyModel(QObject *parent = 0) : KCheckableProxyModel(parent)
+    CheckableProxyModel(QObject *parent = 0)
+        : KCheckableProxyModel(parent)
     {
     }
 
@@ -70,8 +73,9 @@ public:
         if (role == Qt::CheckStateRole) {
             // Don't show the checkbox if the collection can't contain incidences
             const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
-            if (isStructuralCollection(collection))
+            if (isStructuralCollection(collection)) {
                 return QVariant();
+            }
         }
         return KCheckableProxyModel::data(index, role);
     }
@@ -96,15 +100,15 @@ public Q_SLOTS:
                                        int end = -1);
 
     Akonadi::Collection::List collectionsFromModel(const QAbstractItemModel *model,
-            const QModelIndex &parentIndex = QModelIndex(),
-            int start = 0,
-            int end = -1);
+                                                   const QModelIndex &parentIndex = QModelIndex(),
+                                                   int start = 0,
+                                                   int end = -1);
 
     // KCalCore::CalFilter has changed.
     void onFilterChanged();
 
     void clear();
-    void updateItem(const Akonadi::Item &);
+    void updateItem(const Akonadi::Item &item);
     Akonadi::Item itemFromIndex(const QModelIndex &idx);
     Akonadi::Collection collectionFromIndex(const QModelIndex &index);
     void itemsAdded(const Akonadi::Item::List &items);
@@ -121,7 +125,7 @@ public Q_SLOTS:
     void onDataChangedInFilteredModel(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void onRowsInsertedInFilteredModel(const QModelIndex &index, int start, int end);
     void onRowsAboutToBeRemovedInFilteredModel(const QModelIndex &index, int start, int end);
-    void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
+    void onCollectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &attributeNames);
     void onCollectionPopulated(Akonadi::Collection::Id);
 
 public:

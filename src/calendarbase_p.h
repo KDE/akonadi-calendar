@@ -26,7 +26,6 @@
 #include <QVector>
 #include <QMultiHash>
 
-
 namespace Akonadi {
 
 class CalendarBasePrivate : public QObject
@@ -49,17 +48,17 @@ public:
 
 public Q_SLOTS:
     void slotDeleteFinished(int changeId,
-                            const QVector<Akonadi::Item::Id> &,
+                            const QVector<Akonadi::Item::Id> &itemIds,
                             Akonadi::IncidenceChanger::ResultCode,
                             const QString &errorMessage);
 
     void slotCreateFinished(int changeId,
-                            const Akonadi::Item &,
+                            const Akonadi::Item &item,
                             Akonadi::IncidenceChanger::ResultCode,
                             const QString &errorMessage);
 
     void slotModifyFinished(int changeId,
-                            const Akonadi::Item &,
+                            const Akonadi::Item &item,
                             Akonadi::IncidenceChanger::ResultCode,
                             const QString &errorMessage);
 

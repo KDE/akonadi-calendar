@@ -30,7 +30,8 @@ namespace Akonadi {
 
 class IncidenceChanger;
 
-class TodoPurger::Private : public QObject {
+class TodoPurger::Private : public QObject
+{
     Q_OBJECT
 public:
     Private(TodoPurger *q);
@@ -52,6 +53,5 @@ private:
 };
 
 }
-
 
 #endif

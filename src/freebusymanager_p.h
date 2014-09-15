@@ -50,8 +50,7 @@ class FreeBusyManagerPrivate : public QObject
     Q_DECLARE_PUBLIC(FreeBusyManager)
 
 public: /// Structs
-    struct FreeBusyProviderRequest
-    {
+    struct FreeBusyProviderRequest {
         FreeBusyProviderRequest(const QString &provider);
 
         enum Status {
@@ -64,8 +63,7 @@ public: /// Structs
         QSharedPointer<QDBusInterface> mInterface;
     };
 
-    struct FreeBusyProvidersRequestsQueue
-    {
+    struct FreeBusyProvidersRequestsQueue {
         explicit FreeBusyProvidersRequestsQueue(const QString &start = QString(),
                                                 const QString &end = QString());
 
@@ -102,7 +100,7 @@ public: /// Functions
     void checkFreeBusyUrl();
     QString freeBusyDir() const;
     void fetchFreeBusyUrl(const QString &email);
-    QString freeBusyToIcal(const KCalCore::FreeBusy::Ptr &);
+    QString freeBusyToIcal(const KCalCore::FreeBusy::Ptr &freebusy);
     KCalCore::FreeBusy::Ptr iCalToFreeBusy(const QByteArray &freeBusyData);
     KCalCore::FreeBusy::Ptr ownerFreeBusy();
     QString ownerFreeBusyAsString();
@@ -122,7 +120,7 @@ public Q_SLOTS:
     void onFreeBusyRetrieved(const QString &email, const QString &freeBusy,
                              bool success, const QString &errorText);
     void processMailSchedulerResult(Akonadi::Scheduler::Result result, const QString &errorMsg);
-    void fbCheckerJobFinished(KJob*);
+    void fbCheckerJobFinished(KJob *job);
 
 Q_SIGNALS:
     void freeBusyUrlRetrieved(const QString &email, const QUrl &url);

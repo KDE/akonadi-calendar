@@ -24,7 +24,6 @@
 #include <kcalcore/attendee.h>
 #include <QDialog>
 
-
 //TODO: documentation
 // Uses akonadi-contact, so don't move this class to KCalUtils.
 namespace Akonadi {
@@ -37,7 +36,7 @@ public:
      * Creates a new PublishDialog
      * @param parent the dialog's parent
      */
-    explicit PublishDialog(QWidget *parent=0);
+    explicit PublishDialog(QWidget *parent = 0);
 
     /**
      * Destructor

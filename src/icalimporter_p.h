@@ -41,12 +41,13 @@ class Job;
 
 namespace Akonadi {
 
-class ICalImporter::Private : public QObject {
+class ICalImporter::Private : public QObject
+{
     Q_OBJECT
 public:
     Private(Akonadi::IncidenceChanger *changer, ICalImporter *qq);
     ~Private();
-    void setErrorMessage(const QString &);
+    void setErrorMessage(const QString &message);
 
     ICalImporter *const q;
     Akonadi::IncidenceChanger *m_changer;
@@ -58,8 +59,8 @@ public:
     KTemporaryFile *m_temporaryFile;
     Akonadi::Collection m_collection;
 public Q_SLOTS:
-    void resourceCreated(KJob *);
-    void remoteDownloadFinished(KIO::Job *, const QByteArray &);
+    void resourceCreated(KJob *job);
+    void remoteDownloadFinished(KIO::Job *job, const QByteArray &data);
     void onIncidenceCreated(int changeId,
                             const Akonadi::Item &item,
                             Akonadi::IncidenceChanger::ResultCode resultCode,

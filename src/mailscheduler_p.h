@@ -55,7 +55,6 @@ public:
                             KCalCore::iTIPMethod method,
                             const QString &recipients);
 
-
     /** Returns the directory where the free-busy information is stored */
     /** reimp*/ QString freeBusyDir() const;
 

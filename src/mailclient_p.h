@@ -36,7 +36,10 @@ struct UnitTestResult {
     QStringList bcc;
     int transportId;
     KMime::Message::Ptr message;
-    UnitTestResult() : transportId(-1) {}
+    UnitTestResult()
+        : transportId(-1)
+    {
+    }
 };
 
 namespace KIdentityManagement {
@@ -73,14 +76,14 @@ public:
 
     void mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,
-                       bool bccMe, const QString &attachment=QString(),
+                       bool bccMe, const QString &attachment = QString(),
                        const QString &mailTransport = QString());
 
     void mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,
                        const QString &from, bool bccMe,
-                       const QString &attachment=QString(),
-                       const QString &sub=QString(),
+                       const QString &attachment = QString(),
+                       const QString &sub = QString(),
                        const QString &mailTransport = QString());
 
     void mailTo(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity,
@@ -107,11 +110,11 @@ public:
     */
     void send(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &to,
               const QString &cc, const QString &subject, const QString &body,
-              bool hidden=false, bool bccMe=false, const QString &attachment=QString(),
+              bool hidden = false, bool bccMe = false, const QString &attachment = QString(),
               const QString &mailTransport = QString());
 
 private Q_SLOTS:
-    void handleQueueJobFinished(KJob* job);
+    void handleQueueJobFinished(KJob *job);
 
 Q_SIGNALS:
     void finished(Akonadi::MailClient::Result result, const QString &errorString);

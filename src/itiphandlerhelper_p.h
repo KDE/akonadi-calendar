@@ -30,7 +30,6 @@
 #include <kcalcore/incidence.h>
 #include <kcalcore/schedulemessage.h>
 
-
 #include <QObject>
 
 class QWidget;
@@ -80,7 +79,6 @@ public:
         ResultPending          /**< The user has been asked about one detail, waiting for him to anwser it */
     };
 
-
     /**
       When an Incidence is created/modified/deleted the user can choose to send
       an ICal message to the other participants. By default the user will be asked
@@ -106,7 +104,7 @@ public:
       @param incidence The new incidence.
      */
     void sendIncidenceCreatedMessage(KCalCore::iTIPMethod method,
-            const KCalCore::Incidence::Ptr &incidence);
+                                     const KCalCore::Incidence::Ptr &incidence);
 
     /**
        Checks if the incidence should really be modified.
@@ -126,15 +124,15 @@ public:
       @param attendeeStatusChanged if @c true and @p method is #iTIPRequest ask the user whether to send a status update as well
      */
     void sendIncidenceModifiedMessage(KCalCore::iTIPMethod method,
-            const KCalCore::Incidence::Ptr &incidence,
-            bool attendeeStatusChanged);
+                                      const KCalCore::Incidence::Ptr &incidence,
+                                      bool attendeeStatusChanged);
 
     /**
       Handles sending of ivitations for deleted incidences.
       @param incidence The deleted incidence.
      */
     void sendIncidenceDeletedMessage(KCalCore::iTIPMethod method,
-            const KCalCore::Incidence::Ptr &incidence);
+                                     const KCalCore::Incidence::Ptr &incidence);
 
     /**
       Send counter proposal message.
@@ -142,7 +140,7 @@ public:
       @param newIncidence The new event as edited by the user.
     */
     ITIPHandlerHelper::SendResult sendCounterProposal(const KCalCore::Incidence::Ptr &oldIncidence,
-            const KCalCore::Incidence::Ptr &newIncidence);
+                                                      const KCalCore::Incidence::Ptr &newIncidence);
 
     // Frees calendar if it doesn't have jobs running
     void calendarJobFinished(bool success, const QString &errorString);
@@ -166,8 +164,8 @@ private Q_SLOTS:
 
 private:
     ITIPHandlerHelper::SendResult sentInvitation(int messageBoxReturnCode,
-            const KCalCore::Incidence::Ptr &incidence,
-            KCalCore::iTIPMethod method);
+                                                 const KCalCore::Incidence::Ptr &incidence,
+                                                 KCalCore::iTIPMethod method);
 
     /**
       We are the organizer. If there is more than one attendee, or if there is

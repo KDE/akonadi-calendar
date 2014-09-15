@@ -45,7 +45,7 @@ protected:
 
 private Q_SLOTS:
     void collectionFetchResult(KJob *job);
-    void itemFetchResult(KJob * job);
+    void itemFetchResult(KJob *job);
 
 private:
     Akonadi::Item::List m_items;

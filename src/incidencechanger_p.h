@@ -45,14 +45,16 @@ namespace Akonadi {
 class TransactionSequence;
 class CollectionFetchJob;
 
-class Change : public QObject {
+class Change : public QObject
+{
     Q_OBJECT
 public:
     typedef QSharedPointer<Change> Ptr;
     typedef QList<Ptr> List;
     Change(IncidenceChanger *incidenceChanger, int changeId,
            IncidenceChanger::ChangeType changeType, uint operationId,
-           QWidget *parent) : id(changeId)
+           QWidget *parent)
+        : id(changeId)
         , type(changeType)
         , recordToHistory(incidenceChanger->historyEnabled())
         , parentWidget(parent)
@@ -115,16 +117,16 @@ class ModificationChange : public Change
 public:
     typedef QSharedPointer<ModificationChange> Ptr;
     ModificationChange(IncidenceChanger *changer, int id, uint atomicOperationId,
-                       QWidget *parent) : Change(changer, id,
-                                   IncidenceChanger::ChangeTypeModify,
-                                   atomicOperationId, parent)
+                       QWidget *parent)
+        : Change(changer, id, IncidenceChanger::ChangeTypeModify, atomicOperationId, parent)
     {
     }
 
     ~ModificationChange()
     {
-        if (!parentChange)
+        if (!parentChange) {
             emitCompletionSignal();
+        }
     }
 
     /**reimp*/
@@ -136,16 +138,17 @@ class CreationChange : public Change
 public:
     typedef QSharedPointer<CreationChange> Ptr;
     CreationChange(IncidenceChanger *changer, int id, uint atomicOperationId,
-                   QWidget *parent) : Change(changer, id, IncidenceChanger::ChangeTypeCreate,
-                               atomicOperationId, parent)
+                   QWidget *parent)
+        : Change(changer, id, IncidenceChanger::ChangeTypeCreate, atomicOperationId, parent)
     {
     }
 
     ~CreationChange()
     {
         //qDebug() << "CreationChange::~ will emit signal with " << resultCode;
-        if (!parentChange)
+        if (!parentChange) {
             emitCompletionSignal();
+        }
     }
 
     /**reimp*/
@@ -159,16 +162,17 @@ class DeletionChange : public Change
 public:
     typedef QSharedPointer<DeletionChange> Ptr;
     DeletionChange(IncidenceChanger *changer, int id, uint atomicOperationId,
-                   QWidget *parent) : Change(changer, id, IncidenceChanger::ChangeTypeDelete,
-                               atomicOperationId, parent)
+                   QWidget *parent)
+        : Change(changer, id, IncidenceChanger::ChangeTypeDelete, atomicOperationId, parent)
     {
     }
 
     ~DeletionChange()
     {
         //qDebug() << "DeletionChange::~ will emit signal with " << resultCode;
-        if (!parentChange)
+        if (!parentChange) {
             emitCompletionSignal();
+        }
     }
 
     /**reimp*/
@@ -177,7 +181,8 @@ public:
     QVector<Akonadi::Item::Id> mItemIds;
 };
 
-class AtomicOperation {
+class AtomicOperation
+{
 public:
     uint m_id;
 
@@ -198,14 +203,14 @@ public:
     {
         //qDebug() << "AtomicOperation::~ " << wasRolledback << changes.count();
         if (m_wasRolledback) {
-            for (int i=0; i<m_changes.count(); ++i) {
+            for (int i = 0; i < m_changes.count(); ++i) {
                 // When a job that can finish successfully is aborted because the transaction failed
                 // because of some other job, akonadi is returning an Unknown error
                 // which isnt very specific
                 if (m_changes[i]->completed &&
-                        (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess ||
-                         (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError &&
-                          m_changes[i]->errorString == QLatin1String("Unknown error.")))) {
+                    (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess ||
+                     (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError &&
+                      m_changes[i]->errorString == QLatin1String("Unknown error.")))) {
                     m_changes[i]->resultCode = IncidenceChanger::ResultCodeRolledback;
                 }
             }
@@ -234,7 +239,7 @@ public:
     {
         if (change->type == IncidenceChanger::ChangeTypeDelete) {
             DeletionChange::Ptr deletion = change.staticCast<DeletionChange>();
-            foreach(Akonadi::Item::Id id, deletion->mItemIds) {
+            foreach (Akonadi::Item::Id id, deletion->mItemIds) {
                 Q_ASSERT(!m_itemIdsInOperation.contains(id));
                 m_itemIdsInOperation.insert(id);
             }
@@ -270,8 +275,6 @@ public:
     void step1DetermineDestinationCollection(const Change::Ptr &change, const Collection &collection);
     void step2CreateIncidence(const Change::Ptr &change, const Collection &collection);
 
-
-
     /**
         Returns true if, for a specific item, an ItemDeleteJob is already running,
         or if one already run successfully.
@@ -289,7 +292,7 @@ public:
     void queueModification(Change::Ptr);
     void performModification(Change::Ptr);
     bool atomicOperationIsValid(uint atomicOperationId) const;
-    Akonadi::Job* parentJob(const Change::Ptr &) const;
+    Akonadi::Job *parentJob(const Change::Ptr &change) const;
     void cancelTransaction();
     void cleanupTransaction();
     bool allowAtomicOperation(int atomicOperationId, const Change::Ptr &change) const;
@@ -301,12 +304,12 @@ public:
                                         const QStringList &myEmails);
 
 public Q_SLOTS:
-    void handleCreateJobResult(KJob*);
-    void handleModifyJobResult(KJob*);
-    void handleDeleteJobResult(KJob*);
-    void handleTransactionJobResult(KJob*);
+    void handleCreateJobResult(KJob *job);
+    void handleModifyJobResult(KJob *job);
+    void handleDeleteJobResult(KJob *job);
+    void handleTransactionJobResult(KJob *job);
     void performNextModification(Akonadi::Item::Id id);
-    void onCollectionsLoaded(KJob*);
+    void onCollectionsLoaded(KJob *job);
 
     void handleCreateJobResult2(int changeId, ITIPHandlerHelper::SendResult);
     void handleDeleteJobResult2(int changeId, ITIPHandlerHelper::SendResult);
@@ -316,7 +319,7 @@ public Q_SLOTS:
 
 public:
     int mLatestChangeId;
-    QHash<const KJob*,Change::Ptr> mChangeForJob;
+    QHash<const KJob *, Change::Ptr> mChangeForJob;
     bool mShowDialogsOnError;
     Akonadi::Collection mDefaultCollection;
     DestinationPolicy mDestinationPolicy;
@@ -334,25 +337,25 @@ public:
       A in progress, a modification B waiting (queued), and then a new one C comes in,
       we just discard B, and queue C. The queue always has 1 element max.
     */
-    QHash<Akonadi::Item::Id,Change::Ptr> mQueuedModifications;
+    QHash<Akonadi::Item::Id, Change::Ptr> mQueuedModifications;
 
     /**
         So we know if there's already a modification in progress
       */
-    QHash<Akonadi::Item::Id,Change::Ptr> mModificationsInProgress;
+    QHash<Akonadi::Item::Id, Change::Ptr> mModificationsInProgress;
 
-    QHash<int,Change::Ptr> mChangeById;
+    QHash<int, Change::Ptr> mChangeById;
 
     /**
         Indexed by atomic operation id.
     */
-    QHash<uint,AtomicOperation*> mAtomicOperations;
+    QHash<uint, AtomicOperation *> mAtomicOperations;
 
     bool mRespectsCollectionRights;
     bool mGroupwareCommunication;
 
-    QHash<Akonadi::TransactionSequence*, uint> mAtomicOperationByTransaction;
-    QHash<uint,ITIPHandlerHelper::SendResult> mInvitationStatusByAtomicOperation;
+    QHash<Akonadi::TransactionSequence *, uint> mAtomicOperationByTransaction;
+    QHash<uint, ITIPHandlerHelper::SendResult> mInvitationStatusByAtomicOperation;
 
     uint mLatestAtomicOperationId;
     bool mBatchOperationInProgress;

@@ -26,8 +26,7 @@
 
 class KDateTime;
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class FreeBusyProviderBasePrivate;
 

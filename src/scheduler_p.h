@@ -127,7 +127,7 @@ public:
     /**
       Sets the free/busy cache used to store free/busy information.
     */
-    void setFreeBusyCache(KCalCore::FreeBusyCache *);
+    void setFreeBusyCache(KCalCore::FreeBusyCache *c);
 
     /**
       Returns the free/busy cache.
@@ -135,39 +135,40 @@ public:
     KCalCore::FreeBusyCache *freeBusyCache() const;
 
 protected:
-    void acceptPublish(const KCalCore::IncidenceBase::Ptr &,
+    void acceptPublish(const KCalCore::IncidenceBase::Ptr &incidence,
                        const Akonadi::CalendarBase::Ptr &calendar,
                        KCalCore::ScheduleMessage::Status status,
                        KCalCore::iTIPMethod method);
 
-    void acceptRequest(const KCalCore::IncidenceBase::Ptr &,
+    void acceptRequest(const KCalCore::IncidenceBase::Ptr &incidence,
                        const Akonadi::CalendarBase::Ptr &calendar,
                        KCalCore::ScheduleMessage::Status status,
                        const QString &email);
 
-    void acceptAdd(const KCalCore::IncidenceBase::Ptr &,
+    void acceptAdd(const KCalCore::IncidenceBase::Ptr &incidence,
                    KCalCore::ScheduleMessage::Status status);
 
-    void acceptCancel(const KCalCore::IncidenceBase::Ptr &,
+    void acceptCancel(const KCalCore::IncidenceBase::Ptr &incidence,
                       const Akonadi::CalendarBase::Ptr &calendar,
                       KCalCore::ScheduleMessage::Status status,
                       const QString &attendee);
 
-    void acceptDeclineCounter(const KCalCore::IncidenceBase::Ptr &,
+    void acceptDeclineCounter(const KCalCore::IncidenceBase::Ptr &incidence,
                               KCalCore::ScheduleMessage::Status status);
 
-    void acceptReply(const KCalCore::IncidenceBase::Ptr &,
+    void acceptReply(const KCalCore::IncidenceBase::Ptr &incidence,
                      const Akonadi::CalendarBase::Ptr &calendar,
                      KCalCore::ScheduleMessage::Status status,
                      KCalCore::iTIPMethod method);
 
-    void acceptRefresh(const KCalCore::IncidenceBase::Ptr &,
+    void acceptRefresh(const KCalCore::IncidenceBase::Ptr &incidence,
                        KCalCore::ScheduleMessage::Status status);
 
-    void acceptCounter(const KCalCore::IncidenceBase::Ptr &,
+    void acceptCounter(const KCalCore::IncidenceBase::Ptr &incidence,
                        KCalCore::ScheduleMessage::Status status);
 
-    void acceptFreeBusy(const KCalCore::IncidenceBase::Ptr &, KCalCore::iTIPMethod method);
+    void acceptFreeBusy(const KCalCore::IncidenceBase::Ptr &incidence,
+                        KCalCore::iTIPMethod method);
     KCalCore::ICalFormat *mFormat;
 
 Q_SIGNALS:

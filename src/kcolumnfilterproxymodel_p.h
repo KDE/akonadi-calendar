@@ -26,8 +26,7 @@
 
 template <class T> class QVector;
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class KColumnFilterProxyModelPrivate;
 
@@ -38,7 +37,7 @@ class KColumnFilterProxyModelPrivate;
 class KColumnFilterProxyModel : public QSortFilterProxyModel
 {
 public:
-    explicit KColumnFilterProxyModel(QObject* parent = 0);
+    explicit KColumnFilterProxyModel(QObject *parent = 0);
     virtual ~KColumnFilterProxyModel();
 
     /**
@@ -64,10 +63,10 @@ public:
     void setVisibleColumns(const QVector<int> &visibleColumns);
 
 protected:
-    virtual bool filterAcceptsColumn(int column, const QModelIndex& parent) const;
+    virtual bool filterAcceptsColumn(int column, const QModelIndex &parent) const;
 
 private:
-    KColumnFilterProxyModelPrivate * const d_ptr;
+    KColumnFilterProxyModelPrivate *const d_ptr;
     Q_DECLARE_PRIVATE(KColumnFilterProxyModel)
 };
 

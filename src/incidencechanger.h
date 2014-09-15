@@ -333,7 +333,7 @@ public:
       * It's always valid.
       * Ownership remains with IncidenceChanger.
       */
-    History* history() const;
+    History *history() const;
 
     /**
       * For performance reasons, IncidenceChanger internaly caches the ids of the last deleted items,

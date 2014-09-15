@@ -36,8 +36,7 @@ class KActionCollection;
 class QItemSelectionModel;
 class QWidget;
 
-namespace Akonadi
-{
+namespace Akonadi {
 
 class Item;
 /**
@@ -96,7 +95,7 @@ public:
       * connected to its default implementation provided by this class.
       * @param type the type of action to create
       */
-    QAction * createAction(Type type);
+    QAction *createAction(Type type);
 
     /**
       * Creates the action of the given type and adds it to the action collection
@@ -104,7 +103,7 @@ public:
       * connected to its default implementation provided by this class.
       * @param type the type of action to create
       */
-    QAction * createAction(StandardActionManager::Type type);
+    QAction *createAction(StandardActionManager::Type type);
 
     /**
       * Convenience method to create all standard actions.
@@ -115,13 +114,13 @@ public:
     /**
       * Returns the action of the given type, 0 if it has not been created (yet).
       */
-    QAction * action(Type type) const;
+    QAction *action(Type type) const;
 
     /**
       * Returns the action of the given type, 0 if it has not been created (yet).
       * @param type the type of action to return
       */
-    QAction * action(StandardActionManager::Type type) const;
+    QAction *action(StandardActionManager::Type type) const;
 
     /**
       * Sets the label of the action @p type to @p text, which is used during
@@ -190,7 +189,7 @@ Q_SIGNALS:
 private:
     //@cond PRIVATE
     class Private;
-    Private* const d;
+    Private *const d;
 
     Q_PRIVATE_SLOT(d, void slotCreateEvent())
     Q_PRIVATE_SLOT(d, void slotCreateTodo())

@@ -187,7 +187,7 @@ Q_SIGNALS:
       * @param collection The changed collection.
       * @param attributeNames The names of the collection attributes that have been changed.
       */
-    void collectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &attributeNames);
+    void collectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &attributeNames);
 
     /**
       * This signal is emitted when one or more collections are added to the ETM.

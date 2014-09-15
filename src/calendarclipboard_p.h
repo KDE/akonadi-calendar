@@ -35,10 +35,11 @@ namespace Akonadi {
 
 class IncidenceChanger;
 
-class CalendarClipboard::Private : public QObject {
+class CalendarClipboard::Private : public QObject
+{
     Q_OBJECT
 public:
-    Private(const Akonadi::CalendarBase::Ptr &,
+    Private(const Akonadi::CalendarBase::Ptr &calendar,
             Akonadi::IncidenceChanger *changer,
             CalendarClipboard *qq);
 

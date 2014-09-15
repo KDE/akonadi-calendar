@@ -36,7 +36,8 @@ class IncidenceChanger;
  * @author Sérgio Martins <iamsergio@gmail.com>
  * @since 4.11
  */
-class AKONADI_CALENDAR_EXPORT CalendarClipboard : public QObject {
+class AKONADI_CALENDAR_EXPORT CalendarClipboard : public QObject
+{
     Q_OBJECT
 public:
 

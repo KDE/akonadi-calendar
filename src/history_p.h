@@ -42,7 +42,8 @@ enum OperationType {
     TypeRedo
 };
 
-class Entry : public QObject {
+class Entry : public QObject
+{
     Q_OBJECT
 public:
     typedef QSharedPointer<Entry> Ptr;
@@ -60,9 +61,9 @@ protected:
     virtual bool undo() = 0;
     virtual bool redo() = 0;
     void updateIdsGlobaly(Item::Id oldId, Item::Id newId);
-    QWidget* currentParent() const;
+    QWidget *currentParent() const;
     IncidenceChanger *mChanger;
-    QHash<Akonadi::Item::Id,int> mLatestRevisionByItemId;
+    QHash<Akonadi::Item::Id, int> mLatestRevisionByItemId;
     History *q;
     QVector<int> mChangeIds;
 private:
@@ -70,18 +71,21 @@ private:
     Q_DISABLE_COPY(Entry)
 };
 
-class History::Private : public QObject {
+class History::Private : public QObject
+{
     Q_OBJECT
 public:
     Private(History *qq);
-    ~Private() {}
+    ~Private()
+    {
+    }
     void doIt(OperationType);
     void stackEntry(const Entry::Ptr &entry, uint atomicOperationId);
     void updateIds(Item::Id oldId, Item::Id newId);
     void finishOperation(int changeId, History::ResultCode, const QString &errorString);
-    QStack<Entry::Ptr>& destinationStack();
-    QStack<Entry::Ptr>& stack(OperationType);
-    QStack<Entry::Ptr>& stack();
+    QStack<Entry::Ptr> &destinationStack();
+    QStack<Entry::Ptr> &stack(OperationType);
+    QStack<Entry::Ptr> &stack();
     void undoOrRedo(OperationType, QWidget *parent);
 
     void emitDone(OperationType, History::ResultCode);
@@ -120,7 +124,8 @@ private:
     History *q;
 };
 
-class CreationEntry : public Entry {
+class CreationEntry : public Entry
+{
     Q_OBJECT
 public:
     typedef QSharedPointer<CreationEntry> Ptr;
@@ -144,7 +149,8 @@ private:
     Q_DISABLE_COPY(CreationEntry)
 };
 
-class DeletionEntry : public Entry {
+class DeletionEntry : public Entry
+{
     Q_OBJECT
 public:
     DeletionEntry(const Akonadi::Item::List &items, const QString &description, History *q);
@@ -162,12 +168,13 @@ private Q_SLOTS:
 private:
     IncidenceChanger::ResultCode mResultCode;
     QString mErrorString;
-    QHash<int,Akonadi::Item::Id> mOldIdByChangeId;
+    QHash<int, Akonadi::Item::Id> mOldIdByChangeId;
     int mNumPendingCreations;
     Q_DISABLE_COPY(DeletionEntry)
 };
 
-class ModificationEntry : public Entry {
+class ModificationEntry : public Entry
+{
     Q_OBJECT
 public:
     ModificationEntry(const Akonadi::Item &item,
@@ -187,7 +194,8 @@ private:
     Incidence::Ptr mOriginalPayload;
 };
 
-class MultiEntry : public Entry {
+class MultiEntry : public Entry
+{
     Q_OBJECT
 public:
     typedef QSharedPointer<MultiEntry> Ptr;

@@ -23,7 +23,6 @@
 #include "fetchjobcalendar.h"
 #include "calendarbase_p.h"
 
-
 class KJob;
 
 namespace Akonadi {
