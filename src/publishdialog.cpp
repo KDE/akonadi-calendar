@@ -39,7 +39,6 @@ PublishDialog::PublishDialog(QWidget *parent)
     : QDialog(parent), d(new Private(this))
 {
     setWindowTitle(i18n("Select Addresses"));
-    //QT5 setHelp("group-scheduling", "korganizer");
     QVBoxLayout *layout = new QVBoxLayout;
     setLayout(layout);
     QWidget *widget = new QWidget(this);
