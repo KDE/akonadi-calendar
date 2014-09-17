@@ -28,6 +28,7 @@
 #include <kcalcore/person.h>
 
 #include <KLocalizedString>
+#include <KHelpClient>
 #include <QDialogButtonBox>
 #include <QPushButton>
 
@@ -91,12 +92,18 @@ PublishDialog::PublishDialog(QWidget *parent)
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &PublishDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &PublishDialog::reject);
+    connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &PublishDialog::slotHelp);
 
 }
 
 PublishDialog::~PublishDialog()
 {
     delete d;
+}
+
+void PublishDialog::slotHelp()
+{
+    KHelpClient::invokeHelp(QLatin1String("group-scheduling"), QLatin1String("korganizer"));
 }
 
 void PublishDialog::addAttendee(const Attendee::Ptr &attendee)
