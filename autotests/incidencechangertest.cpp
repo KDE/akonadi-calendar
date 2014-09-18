@@ -45,7 +45,6 @@ Q_DECLARE_METATYPE(QList<Akonadi::Collection::Right>)
 Q_DECLARE_METATYPE(QList<Akonadi::Collection::Rights>)
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ResultCode>)
 Q_DECLARE_METATYPE(KCalCore::RecurrenceRule::PeriodType)
-Q_DECLARE_METATYPE(KCalCore::Event*)
 static Akonadi::Item item()
 {
     Item item;

@@ -203,5 +203,4 @@ private:
 
 }
 
-Q_DECLARE_METATYPE(KCalCore::Todo*)
 #endif
