@@ -31,12 +31,13 @@ using namespace Akonadi;
 class BlockAlarmsAttribute::Private
 {
 public:
-    Private():
-        audio(1),
-        display(1),
-        email(1),
-        procedure(1)
-    { }
+    Private()
+        : audio(1)
+        , display(1)
+        , email(1)
+        , procedure(1)
+    {
+    }
 
     int audio : 1;
     int display : 1;
@@ -44,8 +45,8 @@ public:
     int procedure : 1;
 };
 
-BlockAlarmsAttribute::BlockAlarmsAttribute():
-    d(new Private)
+BlockAlarmsAttribute::BlockAlarmsAttribute()
+    : d(new Private)
 {
 }
 

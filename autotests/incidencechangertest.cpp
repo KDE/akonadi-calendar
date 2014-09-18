@@ -69,15 +69,15 @@ class IncidenceChangerTest : public QObject
     Q_OBJECT
     Collection mCollection;
 
-    QHash<int,IncidenceChanger::ResultCode> mExpectedResultByChangeId;
+    QHash<int, IncidenceChanger::ResultCode> mExpectedResultByChangeId;
     IncidenceChanger *mChanger;
 
     int mIncidencesToDelete;
     int mIncidencesToAdd;
     int mIncidencesToModify;
 
-    QHash<int,Akonadi::Item::Id> mItemIdByChangeId;
-    QHash<QString,Akonadi::Item::Id> mItemIdByUid;
+    QHash<int, Akonadi::Item::Id> mItemIdByChangeId;
+    QHash<QString, Akonadi::Item::Id> mItemIdByUid;
     int mChangeToWaitFor;
     bool mPermissionsOrRollback;
     bool mDiscardedEqualsSuccess;
@@ -99,8 +99,8 @@ private Q_SLOTS:
         qRegisterMetaType<Akonadi::Item>("Akonadi::Item");
         qRegisterMetaType<QList<Akonadi::IncidenceChanger::ChangeType> >("QList<Akonadi::IncidenceChanger::ChangeType>");
         CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
-                CollectionFetchJob::Recursive,
-                this);
+                                                         CollectionFetchJob::Recursive,
+                                                         this);
         // Get list of collections
         job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
         AKVERIFYEXEC(job);
@@ -123,7 +123,7 @@ private Q_SLOTS:
         connect(mChanger, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
                 SLOT(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
 
-        connect(mChanger,SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
+        connect(mChanger, SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
                 SLOT(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
     }
 
@@ -294,7 +294,7 @@ private Q_SLOTS:
             if (expectedResultCode == IncidenceChanger::ResultCodeSuccess) {
                 // Check that the incidence was really deleted
                 Item item;
-                foreach(const Akonadi::Item &item, items) {
+                foreach (const Akonadi::Item &item, items) {
                     ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
                     fetchJob->fetchScope().fetchFullPayload();
                     QVERIFY(!fetchJob->exec());
@@ -407,7 +407,7 @@ private Q_SLOTS:
         }
 
         int changeId = -1;
-        for (int i=0; i<numberOfModifications; ++i) {
+        for (int i = 0; i < numberOfModifications; ++i) {
             Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
             Q_ASSERT(incidence);
             incidence->setSummary(QString::number(i));
@@ -437,9 +437,10 @@ private Q_SLOTS:
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);
             QCOMPARE(fetchJob->items().first().payload<KCalCore::Incidence::Ptr>()->summary(),
-                     QString::number(numberOfModifications-1));
-            if (mIncidencesToModify > 0)
+                     QString::number(numberOfModifications - 1));
+            if (mIncidencesToModify > 0) {
                 waitForSignals();
+            }
         }
 
         mDiscardedEqualsSuccess = false;
@@ -748,7 +749,7 @@ private Q_SLOTS:
         mIncidencesToAdd = 0;
         mIncidencesToModify = 0;
         mIncidencesToDelete = 0;
-        for (int i=0; i<items.count(); ++i) {
+        for (int i = 0; i < items.count(); ++i) {
             mCollection.setRights(rights[i]);
             mChanger->setDefaultCollection(mCollection);
             const Akonadi::Item item = items[i];
@@ -756,21 +757,24 @@ private Q_SLOTS:
             switch (changeTypes[i]) {
             case IncidenceChanger::ChangeTypeCreate:
                 changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalCore::Incidence::Ptr>() : Incidence::Ptr());
-                if (changeId != -1)
+                if (changeId != -1) {
                     ++mIncidencesToAdd;
+                }
                 break;
             case IncidenceChanger::ChangeTypeDelete:
                 changeId = mChanger->deleteIncidence(item);
-                if (changeId != -1)
+                if (changeId != -1) {
                     ++mIncidencesToDelete;
+                }
                 break;
             case IncidenceChanger::ChangeTypeModify:
                 QVERIFY(item.isValid());
                 QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
                 item.payload<KCalCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
                 changeId = mChanger->modifyIncidence(item);
-                if (changeId != -1)
+                if (changeId != -1) {
                     ++mIncidencesToModify;
+                }
                 break;
             default:
                 QVERIFY(false);
@@ -785,7 +789,7 @@ private Q_SLOTS:
         waitForSignals();
 
         //Validate:
-        for (int i=0; i<items.count(); ++i) {
+        for (int i = 0; i < items.count(); ++i) {
             const bool expectedSuccess = (expectedResults[i] == IncidenceChanger::ResultCodeSuccess);
             mCollection.setRights(rights[i]);
 
@@ -851,22 +855,22 @@ private Q_SLOTS:
 
         const KDateTime dtStart = KDateTime(QDate::currentDate(), QTime(8, 0));
         const KDateTime dtEnd = dtStart.addSecs(3600);
-        const int one_day = 3600*24;
+        const int one_day = 3600 * 24;
         const int one_hour = 3600;
         QBitArray days(7);
         QBitArray expectedDays(7);
 
         //-------------------------------------------------------------------------
-        days.setBit(dtStart.date().dayOfWeek()-1);
-        expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek()-1);
+        days.setBit(dtStart.date().dayOfWeek() - 1);
+        expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 
         QTest::newRow("weekly") << false << dtStart << dtEnd << one_day
                                 << 1 << KCalCore::RecurrenceRule::rWeekly
                                 <<  days << expectedDays << QDate() << QDate();
         //-------------------------------------------------------------------------
         days.fill(false);
-        days.setBit(dtStart.date().dayOfWeek()-1);
-        expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek()-1);
+        days.setBit(dtStart.date().dayOfWeek() - 1);
+        expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 
         QTest::newRow("weekly allday") << true << KDateTime(dtStart.date()) << KDateTime(dtEnd.date())
                                        << one_day << 1 << KCalCore::RecurrenceRule::rWeekly
@@ -874,7 +878,7 @@ private Q_SLOTS:
         //-------------------------------------------------------------------------
         // Here nothing should change
         days.fill(false);
-        days.setBit(dtStart.date().dayOfWeek()-1);
+        days.setBit(dtStart.date().dayOfWeek() - 1);
 
         QTest::newRow("weekly nop") << false << dtStart << dtEnd << one_hour
                                     << 1 << KCalCore::RecurrenceRule::rWeekly
@@ -883,14 +887,14 @@ private Q_SLOTS:
         // Test with multiple week days. Only the weekday from the old DTSTART should be unset.
         days.fill(true);
         expectedDays = days;
-        expectedDays.clearBit(dtStart.date().dayOfWeek()-1);
+        expectedDays.clearBit(dtStart.date().dayOfWeek() - 1);
         QTest::newRow("weekly multiple") << false << dtStart << dtEnd << one_day
                                          << 1 << KCalCore::RecurrenceRule::rWeekly
                                          << days << expectedDays << QDate() << QDate();
         //-------------------------------------------------------------------------
         // Testing moving an event such that DTSTART > recurrence end, which would
         // result in the event disappearing from all views.
-        QTest::newRow("recur end") << false << dtStart << dtEnd << one_day*7
+        QTest::newRow("recur end") << false << dtStart << dtEnd << one_day * 7
                                    << 1 << KCalCore::RecurrenceRule::rDaily
                                    << QBitArray() << QBitArray()
                                    << dtStart.date().addDays(3)
@@ -1016,7 +1020,7 @@ public Q_SLOTS:
             qDebug() << "Error string is " << errorMessage;
         } else {
             QVERIFY(!deletedIds.isEmpty());
-            foreach(Akonadi::Item::Id id , deletedIds) {
+            foreach (Akonadi::Item::Id id, deletedIds) {
                 QVERIFY(id != -1);
             }
         }
@@ -1064,10 +1068,11 @@ public Q_SLOTS:
         --mIncidencesToModify;
         QVERIFY(changeId != -1);
 
-        if (resultCode == IncidenceChanger::ResultCodeSuccess)
+        if (resultCode == IncidenceChanger::ResultCodeSuccess) {
             QVERIFY(item.isValid());
-        else
+        } else {
             qDebug() << "Error string is " << errorString;
+        }
 
         compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId],
                               QStringLiteral("modifyFinished"));
@@ -1077,8 +1082,9 @@ public Q_SLOTS:
 
     void maybeQuitEventLoop()
     {
-        if (mIncidencesToDelete == 0 && mIncidencesToAdd == 0 && mIncidencesToModify == 0)
+        if (mIncidencesToDelete == 0 && mIncidencesToAdd == 0 && mIncidencesToModify == 0) {
             QTestEventLoop::instance().exitLoop();
+        }
     }
 
     void testDefaultCollection()
@@ -1118,19 +1124,23 @@ public Q_SLOTS:
                                IncidenceChanger::ResultCode expected, const QString &str)
     {
         if (mPermissionsOrRollback) {
-            if (expected == IncidenceChanger::ResultCodePermissions)
+            if (expected == IncidenceChanger::ResultCodePermissions) {
                 expected = IncidenceChanger::ResultCodeRolledback;
+            }
 
-            if (result == IncidenceChanger::ResultCodePermissions)
+            if (result == IncidenceChanger::ResultCodePermissions) {
                 result = IncidenceChanger::ResultCodeRolledback;
+            }
         }
 
         if (mDiscardedEqualsSuccess) {
-            if (expected == IncidenceChanger::ResultCodeModificationDiscarded)
+            if (expected == IncidenceChanger::ResultCodeModificationDiscarded) {
                 expected = IncidenceChanger::ResultCodeSuccess;
+            }
 
-            if (result == IncidenceChanger::ResultCodeModificationDiscarded)
+            if (result == IncidenceChanger::ResultCodeModificationDiscarded) {
                 result = IncidenceChanger::ResultCodeSuccess;
+            }
         }
 
         if (result != expected) {

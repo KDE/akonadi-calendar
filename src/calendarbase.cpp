@@ -46,7 +46,8 @@ static QString itemToString(const Akonadi::Item &item)
     return str;
 }
 
-CalendarBasePrivate::CalendarBasePrivate(CalendarBase *qq) : QObject()
+CalendarBasePrivate::CalendarBasePrivate(CalendarBase *qq)
+    : QObject()
     , mIncidenceChanger(new IncidenceChanger())
     , mBatchInsertionCancelled(false)
     , mListensForNewItems(false)
@@ -84,9 +85,9 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
 
     if (!incidence) {
         qCritical() << "Incidence is null. id=" << item.id()
-                 << "; hasPayload()="  << item.hasPayload()
-                 << "; has incidence=" << item.hasPayload<KCalCore::Incidence::Ptr>()
-                 << "; mime type="     << item.mimeType();
+                    << "; hasPayload()="  << item.hasPayload()
+                    << "; has incidence=" << item.hasPayload<KCalCore::Incidence::Ptr>()
+                    << "; mime type="     << item.mimeType();
         Q_ASSERT(false);
         return;
     }
@@ -97,8 +98,8 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     if (uid.isEmpty()) {
         // This code path should never happen
         qCritical() << "Incidence has empty UID. id=" << item.id()
-                 << "; summary=" << incidence->summary()
-                 << "Please fix it. Ignoring this incidence.";
+                    << "; summary=" << incidence->summary()
+                    << "Please fix it. Ignoring this incidence.";
         return;
     }
 
@@ -209,15 +210,16 @@ void CalendarBasePrivate::deleteAllIncidencesOfType(const QString &mimeType)
 }
 
 void CalendarBasePrivate::slotDeleteFinished(int changeId,
-        const QVector<Akonadi::Item::Id> &itemIds,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+                                             const QVector<Akonadi::Item::Id> &itemIds,
+                                             IncidenceChanger::ResultCode resultCode,
+                                             const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
-        foreach(const Akonadi::Item::Id &id, itemIds) {
-            if (mItemById.contains(id))
+        foreach (const Akonadi::Item::Id &id, itemIds) {
+            if (mItemById.contains(id)) {
                 internalRemove(mItemById.value(id));
+            }
         }
     }
 
@@ -225,9 +227,9 @@ void CalendarBasePrivate::slotDeleteFinished(int changeId,
 }
 
 void CalendarBasePrivate::slotCreateFinished(int changeId,
-        const Akonadi::Item &item,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+                                             const Akonadi::Item &item,
+                                             IncidenceChanger::ResultCode resultCode,
+                                             const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(item);
@@ -243,9 +245,9 @@ void CalendarBasePrivate::slotCreateFinished(int changeId,
 }
 
 void CalendarBasePrivate::slotModifyFinished(int changeId,
-        const Akonadi::Item &item,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+                                             const Akonadi::Item &item,
+                                             IncidenceChanger::ResultCode resultCode,
+                                             const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(item);
@@ -257,7 +259,7 @@ void CalendarBasePrivate::slotModifyFinished(int changeId,
 
         if (localIncidence) {
             //update our local one
-            *(static_cast<KCalCore::IncidenceBase*>(localIncidence.data())) = *(incidence.data());
+            *(static_cast<KCalCore::IncidenceBase *>(localIncidence.data())) = *(incidence.data());
         } else {
             // This shouldn't happen, unless the incidence gets deleted between event loops
             qWarning() << "CalendarBasePrivate::slotModifyFinished() Incidence was deleted already probably? id=" << item.id();
@@ -269,7 +271,7 @@ void CalendarBasePrivate::slotModifyFinished(int changeId,
 }
 
 void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
-        const Akonadi::Item &newItem, const QString &newIdentifier)
+                                          const Akonadi::Item &newItem, const QString &newIdentifier)
 {
     Q_ASSERT(oldItem.isValid());
     Incidence::Ptr newIncidence = CalendarUtils::incidence(newItem);
@@ -375,15 +377,16 @@ void CalendarBasePrivate::handleParentChanged(const KCalCore::Incidence::Ptr &ne
     }
 }
 
-CalendarBase::CalendarBase(QObject *parent) : MemoryCalendar(KSystemTimeZones::local())
+CalendarBase::CalendarBase(QObject *parent)
+    : MemoryCalendar(KSystemTimeZones::local())
     , d_ptr(new CalendarBasePrivate(this))
 {
     setParent(parent);
     setDeletionTracking(false);
 }
 
-CalendarBase::CalendarBase(CalendarBasePrivate *const dd,
-                           QObject *parent) : MemoryCalendar(KSystemTimeZones::local())
+CalendarBase::CalendarBase(CalendarBasePrivate *const dd, QObject *parent)
+    : MemoryCalendar(KSystemTimeZones::local())
     , d_ptr(dd)
 {
     setParent(parent);
@@ -411,8 +414,9 @@ Akonadi::Item CalendarBase::item(const QString &uid) const
     Q_D(const CalendarBase);
     Akonadi::Item i;
 
-    if (uid.isEmpty())
+    if (uid.isEmpty()) {
         return i;
+    }
 
     if (d->mItemIdByUid.contains(uid)) {
         const Akonadi::Item::Id id = d->mItemIdByUid[uid];
@@ -435,17 +439,18 @@ Item CalendarBase::item(const Incidence::Ptr &incidence) const
 Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
 {
     Q_D(const CalendarBase);
-    if (id!=-1)
-       return d->mItemsByCollection.values(id);
-    else 
-       return d->mItemById.values();
+    if (id != -1) {
+        return d->mItemsByCollection.values(id);
+    } else {
+        return d->mItemById.values();
+    }
 }
 
 Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &incidences) const
 {
     Akonadi::Item::List items;
 
-    foreach(const KCalCore::Incidence::Ptr &incidence, incidences) {
+    foreach (const KCalCore::Incidence::Ptr &incidence, incidences) {
         if (incidence) {
             items << item(incidence->instanceIdentifier());
         } else {
@@ -481,12 +486,13 @@ KCalCore::Incidence::List CalendarBase::childIncidences(const QString &parentUid
     Q_D(const CalendarBase);
     KCalCore::Incidence::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
-    Q_FOREACH(const QString &uid, uids) {
+    Q_FOREACH (const QString &uid, uids) {
         Incidence::Ptr child = incidence(uid);
-        if (child)
+        if (child) {
             children.append(child);
-        else
+        } else {
             qWarning() << "Invalid child with uid " << uid;
+        }
     }
     return children;
 }
@@ -516,12 +522,13 @@ Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const
     Q_D(const CalendarBase);
     Akonadi::Item::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
-    Q_FOREACH(const QString &uid, uids) {
+    Q_FOREACH (const QString &uid, uids) {
         Akonadi::Item child = item(uid);
-        if (child.isValid() && child.hasPayload<KCalCore::Incidence::Ptr>())
+        if (child.isValid() && child.hasPayload<KCalCore::Incidence::Ptr>()) {
             children.append(child);
-        else
+        } else {
             qWarning() << "Invalid child with uid " << uid;
+        }
     }
     return children;
 }
@@ -643,7 +650,7 @@ QWeakPointer<CalendarBase> CalendarBase::weakPointer() const
     return d->mWeakPointer;
 }
 
-IncidenceChanger* CalendarBase::incidenceChanger() const
+IncidenceChanger *CalendarBase::incidenceChanger() const
 {
     Q_D(const CalendarBase);
     return d->mIncidenceChanger;

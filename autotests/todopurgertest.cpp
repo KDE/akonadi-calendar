@@ -50,8 +50,9 @@ void TodoPurgerTest::createTodo(const QString &uid, const QString &parentUid, bo
     todo->setDtStart(yesterday);
     todo->setRelatedTo(parentUid);
 
-    if (recurring)
+    if (recurring) {
         todo->recurrence()->setDaily(1);
+    }
 
     if (recurring && completed) {
         todo->setCompleted(today);
@@ -60,7 +61,6 @@ void TodoPurgerTest::createTodo(const QString &uid, const QString &parentUid, bo
     }
 
     todo->setSummary(QStringLiteral("summary"));
-
 
     item.setPayload<KCalCore::Incidence::Ptr>(todo);
     ItemCreateJob *job = new ItemCreateJob(item, m_collection, this);
@@ -71,8 +71,8 @@ void TodoPurgerTest::createTodo(const QString &uid, const QString &parentUid, bo
 void TodoPurgerTest::fetchCollection()
 {
     CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
-            CollectionFetchJob::Recursive,
-            this);
+                                                     CollectionFetchJob::Recursive,
+                                                     this);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.todo"));
     AKVERIFYEXEC(job);
@@ -135,7 +135,7 @@ void TodoPurgerTest::testPurge()
     QCOMPARE(m_numIgnored, 2);
 }
 
-void TodoPurgerTest::calendarIncidenceAdded(const Incidence::Ptr &)
+void TodoPurgerTest::calendarIncidenceAdded(const Incidence::Ptr &incidence)
 {
     --m_pendingCreations;
     if (m_pendingCreations == 0) {
@@ -143,7 +143,7 @@ void TodoPurgerTest::calendarIncidenceAdded(const Incidence::Ptr &)
     }
 }
 
-void TodoPurgerTest::calendarIncidenceDeleted(const Incidence::Ptr &)
+void TodoPurgerTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence)
 {
     --m_pendingDeletions;
     if (m_pendingDeletions == 0 && !m_pendingPurgeSignal) {
@@ -197,7 +197,6 @@ void TodoPurgerTest::createTree()
     createTodo(tr("h1"), tr("h"), false);    // Won't be deleted
     createTodo(tr("h1.1"), tr("h1"), true);  // Will be deleted
     createTodo(tr("h1.2"), tr("h1"), true);  // Will be deleted
-
 
     // Now wait for incidences do be created
     QTestEventLoop::instance().enterLoop(10);

@@ -31,7 +31,10 @@ using namespace Akonadi;
 class CalFilterProxyModel::Private
 {
 public:
-    explicit Private() : filter(0) {}
+    explicit Private()
+        : filter(0)
+    {
+    }
     KCalCore::CalFilter *filter;
 };
 
@@ -53,8 +56,9 @@ KCalCore::CalFilter *CalFilterProxyModel::filter() const
 
 void CalFilterProxyModel::setFilter(KCalCore::CalFilter *filter)
 {
-    if (filter == d->filter)
+    if (filter == d->filter) {
         return;
+    }
 
     d->filter = filter;
     invalidateFilter();
@@ -62,20 +66,24 @@ void CalFilterProxyModel::setFilter(KCalCore::CalFilter *filter)
 
 bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    if (!d->filter)
+    if (!d->filter) {
         return true;
+    }
 
     const QModelIndex idx = sourceModel()->index(source_row, 0, source_parent);
-    if (!idx.isValid())
+    if (!idx.isValid()) {
         return false;
+    }
 
     const Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>())
+    if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>()) {
         return false;
+    }
 
     const KCalCore::Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
-    if (!incidence)
+    if (!incidence) {
         return false;
+    }
 
     return d->filter->filterIncidence(incidence);
 }

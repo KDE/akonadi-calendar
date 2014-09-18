@@ -20,11 +20,10 @@ bool Helper::confirmDoesntExist(const Akonadi::Item &item)
     return job->exec() == 0;
 }
 
-
 Akonadi::Collection Helper::fetchCollection()
 {
     CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
-            CollectionFetchJob::Recursive);
+                                                     CollectionFetchJob::Recursive);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
     const bool ret = job->exec();

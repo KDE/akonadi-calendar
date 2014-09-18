@@ -37,8 +37,8 @@ static KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item)
 {
     return
         item.hasPayload<KCalCore::Incidence::Ptr>() ?
-        item.payload<KCalCore::Incidence::Ptr>() :
-        KCalCore::Incidence::Ptr();
+            item.payload<KCalCore::Incidence::Ptr>()
+            : KCalCore::Incidence::Ptr();
 }
 
 static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
@@ -46,8 +46,8 @@ static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
 #if 0
     return
         item.hasPayload<KCalCore::Todo::Ptr>() ?
-        item.payload<KCalCore::Todo::Ptr>() :
-        KCalCore::Todo::Ptr();
+        item.payload<KCalCore::Todo::Ptr>()
+        : KCalCore::Todo::Ptr();
 #else
     return KCalCore::Todo::Ptr();
 #endif
@@ -221,7 +221,7 @@ int CalendarModel::entityColumnCount(EntityTreeModel::HeaderGroup headerSet) con
 }
 
 QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientation,
-        int role, EntityTreeModel::HeaderGroup headerSet) const
+                                         int role, EntityTreeModel::HeaderGroup headerSet) const
 {
     if (role != Qt::DisplayRole || orientation != Qt::Horizontal) {
         return QVariant();
@@ -258,4 +258,3 @@ QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientatio
     }
     return QVariant();
 }
-

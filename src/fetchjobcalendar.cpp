@@ -28,7 +28,8 @@
 using namespace Akonadi;
 using namespace KCalCore;
 
-FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq) : CalendarBasePrivate(qq)
+FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
+    : CalendarBasePrivate(qq)
     , m_isLoaded(false)
     , q(qq)
 {
@@ -43,7 +44,7 @@ FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
 
 void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 {
-    IncidenceFetchJob *searchJob = static_cast<Akonadi::IncidenceFetchJob*>(job);
+    IncidenceFetchJob *searchJob = static_cast<Akonadi::IncidenceFetchJob *>(job);
     bool success = true;
     QString errorMessage;
     if (searchJob->error()) {
@@ -51,7 +52,7 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
         errorMessage = searchJob->errorText();
         qWarning() << "Unable to fetch incidences:" << searchJob->errorText();
     } else {
-        foreach(const Akonadi::Item &item, searchJob->items()) {
+        foreach (const Akonadi::Item &item, searchJob->items()) {
             if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>()) {
                 success = false;
                 errorMessage = QString::fromLatin1("Invalid item or payload: %1").arg(item.id());
@@ -67,7 +68,8 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
                               Q_ARG(bool, success), Q_ARG(QString, errorMessage));
 }
 
-FetchJobCalendar::FetchJobCalendar(QObject *parent) : CalendarBase(new FetchJobCalendarPrivate(this), parent)
+FetchJobCalendar::FetchJobCalendar(QObject *parent)
+    : CalendarBase(new FetchJobCalendarPrivate(this), parent)
 {
 }
 
@@ -77,7 +79,7 @@ FetchJobCalendar::~FetchJobCalendar()
 
 bool FetchJobCalendar::isLoaded() const
 {
-    FetchJobCalendarPrivate *d = static_cast<FetchJobCalendarPrivate*>(d_ptr.data());
+    FetchJobCalendarPrivate *d = static_cast<FetchJobCalendarPrivate *>(d_ptr.data());
     return d->m_isLoaded;
 }
 

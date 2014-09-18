@@ -109,14 +109,14 @@ void FbCheckerJob::checkNextUrl()
     connect(job, SIGNAL(result(KJob*)), this, SLOT(onGetJobFinished(KJob*)));
 }
 
-void FbCheckerJob::dataReceived(KIO::Job*, const QByteArray &data)
+void FbCheckerJob::dataReceived(KIO::Job *, const QByteArray &data)
 {
     mData.append(data);
 }
 
 void FbCheckerJob::onGetJobFinished(KJob *job)
 {
-    KIO::TransferJob *transferJob = static_cast<KIO::TransferJob*>(job);
+    KIO::TransferJob *transferJob = static_cast<KIO::TransferJob *>(job);
     if (mData.contains("BEGIN:VCALENDAR")) {
         qDebug() << "found freebusy";
         mValidUrl = transferJob->url();
@@ -130,7 +130,6 @@ QUrl FbCheckerJob::validUrl() const
 {
     return mValidUrl;
 }
-
 
 /// FreeBusyManagerPrivate::FreeBusyProviderRequest
 
@@ -243,18 +242,18 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
 
     if (_job->error()) {
         qCritical() << "Error while searching for contact: "
-                 << _job->errorString() << ", email = " << email;
+                    << _job->errorString() << ", email = " << email;
         emit freeBusyUrlRetrieved(email, QUrl());
         return;
     }
 
-    Akonadi::ContactSearchJob *job = qobject_cast<Akonadi::ContactSearchJob*>(_job);
+    Akonadi::ContactSearchJob *job = qobject_cast<Akonadi::ContactSearchJob *>(_job);
     KConfig cfg(configFile());
     KConfigGroup group = cfg.group(email);
     QString url = group.readEntry(QStringLiteral("url"));
 
     const KABC::Addressee::List contacts = job->contacts();
-    foreach(const KABC::Addressee &contact, contacts) {
+    foreach (const KABC::Addressee &contact, contacts) {
         const QString pref = contact.preferredEmail();
         if (!pref.isEmpty() && pref != email) {
             group = cfg.group(pref);
@@ -292,8 +291,8 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         // This tests if the hostnames match, or one is a subset of the other
         const QString hostDomain = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl()).host();
         if (hostDomain != emailHost &&
-                !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
-                !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
+            !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
+            !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
             // Host names do not match
             qDebug() << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
             emit freeBusyUrlRetrieved(email, QUrl());
@@ -349,7 +348,7 @@ void FreeBusyManagerPrivate::fbCheckerJobFinished(KJob *job)
 {
     const QString email = job->property("email").toString();
     if (!job->error()) {
-        FbCheckerJob *checkerJob = static_cast<FbCheckerJob*>(job);
+        FbCheckerJob *checkerJob = static_cast<FbCheckerJob *>(job);
         QUrl dirURL = checkerJob->validUrl();
         // write the URL to the cache
         KConfig cfg(configFile());
@@ -390,7 +389,7 @@ KCalCore::FreeBusy::Ptr FreeBusyManagerPrivate::ownerFreeBusy()
     KCalCore::FreeBusy::Ptr freebusy(new KCalCore::FreeBusy(events, start, end));
     freebusy->setOrganizer(KCalCore::Person::Ptr(
                                new KCalCore::Person(Akonadi::CalendarUtils::fullName(),
-                                       Akonadi::CalendarUtils::email())));
+                                                    Akonadi::CalendarUtils::email())));
     return freebusy;
 }
 
@@ -494,7 +493,7 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
 }
 
 void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
-        const QUrl &freeBusyUrlForEmail)
+                                                        const QUrl &freeBusyUrlForEmail)
 {
     Q_Q(FreeBusyManager);
 
@@ -521,7 +520,7 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
 
     // user has automatic uploading disabled, bail out
     if (!CalendarSettings::self()->freeBusyPublishAuto() ||
-            CalendarSettings::self()->freeBusyPublishUrl().isEmpty()) {
+        CalendarSettings::self()->freeBusyPublishUrl().isEmpty()) {
         return;
     }
 
@@ -536,7 +535,7 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
     if (!mUploadingFreeBusy) {
         // Not currently uploading
         if (mNextUploadTime.isNull() ||
-                QDateTime::currentDateTime() > mNextUploadTime) {
+            QDateTime::currentDateTime() > mNextUploadTime) {
             // No uploading have been done in this session, or delay time is over
             q->publishFreeBusy();
             return;
@@ -569,7 +568,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
 {
     QStringList providers;
     Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
-    foreach(const Akonadi::AgentInstance &agent, agents) {
+    foreach (const Akonadi::AgentInstance &agent, agents) {
         if (agent.type().capabilities().contains(QStringLiteral("FreeBusyProvider"))) {
             providers << agent.identifier();
         }
@@ -578,13 +577,13 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
 }
 
 void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
-        const QString &email)
+                                                    const QString &email)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue();
     }
 
-    foreach(const QString &provider, providers) {
+    foreach (const QString &provider, providers) {
         FreeBusyProviderRequest request(provider);
 
         connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString,bool)),
@@ -597,9 +596,9 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
 }
 
 void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
-        const QString &email,
-        const KDateTime &start,
-        const KDateTime &end)
+                                                    const QString &email,
+                                                    const KDateTime &start,
+                                                    const KDateTime &end)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue(start, end);
@@ -614,7 +613,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
         return;
     }
 
-    QDBusInterface *iface = dynamic_cast<QDBusInterface*>(sender());
+    QDBusInterface *iface = dynamic_cast<QDBusInterface *>(sender());
     if (!iface) {
         return;
     }
@@ -655,7 +654,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
 }
 
 void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Result result,
-        const QString &errorMsg)
+                                                        const QString &errorMsg)
 {
     if (result == Scheduler::ResultSuccess) {
         KMessageBox::information(
@@ -672,9 +671,9 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
 }
 
 void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
-        const QString &freeBusy,
-        bool success,
-        const QString &errorText)
+                                                 const QString &freeBusy,
+                                                 bool success,
+                                                 const QString &errorText)
 {
     Q_Q(FreeBusyManager);
     Q_UNUSED(errorText);
@@ -683,7 +682,7 @@ void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
         return;
     }
 
-    QDBusInterface *iface = dynamic_cast<QDBusInterface*>(sender());
+    QDBusInterface *iface = dynamic_cast<QDBusInterface *>(sender());
     if (!iface) {
         return;
     }
@@ -738,9 +737,10 @@ public:
 
 }
 
-Q_GLOBAL_STATIC( FreeBusyManagerStatic, sManagerInstance )
+Q_GLOBAL_STATIC(FreeBusyManagerStatic, sManagerInstance)
 
-FreeBusyManager::FreeBusyManager() : d_ptr(new FreeBusyManagerPrivate(this))
+FreeBusyManager::FreeBusyManager()
+    : d_ptr(new FreeBusyManagerPrivate(this))
 {
     setObjectName(QStringLiteral("FreeBusyManager"));
     connect(CalendarSettings::self(), SIGNAL(configChanged()), SLOT(checkFreeBusyUrl()));
@@ -851,7 +851,8 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         textStream.flush();
 
 #if 0
-        QString defaultEmail = KOCore()::self()->email();
+        QString defaultEmail = KOCore()
+                               ::self()->email();
         QString emailHost = defaultEmail.mid(defaultEmail.indexOf('@') + 1);
 
         // Put target string together
@@ -860,7 +861,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
             // we use Kolab
             QString server;
             if (CalendarSettings::self()->publishKolabServer() == QLatin1String("%SERVER%") ||
-                    CalendarSettings::self()->publishKolabServer().isEmpty()) {
+                CalendarSettings::self()->publishKolabServer().isEmpty()) {
                 server = emailHost;
             } else {
                 server = CalendarSettings::self()->publishKolabServer();
@@ -879,7 +880,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
             targetURL.setPassword(CalendarSettings::self()->publishPassword());
         } else {
             // we use something else
-            targetURL = CalendarSettings::self()->+publishAnyURL().replace("%SERVER%", emailHost);
+            targetURL = CalendarSettings::self()-> +publishAnyURL().replace("%SERVER%", emailHost);
             targetURL.setUserName(CalendarSettings::self()->publishUserName());
             targetURL.setPassword(CalendarSettings::self()->publishPassword());
         }
@@ -892,7 +893,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
         KIO::Job *job = KIO::file_copy(src, targetURL, -1, KIO::Overwrite | KIO::HideProgressInfo);
 
-        KJobWidgets::setWindow(job,parentWidget);
+        KJobWidgets::setWindow(job, parentWidget);
 
         connect(job, SIGNAL(result(KJob*)), SLOT(slotUploadFreeBusyResult(KJob*)));
     }
@@ -1016,7 +1017,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
 
     QDir freeBusyDirectory(fbd);
     if (!freeBusyDirectory.exists()) {
-        qDebug() << "Directory" << fbd <<" does not exist!";
+        qDebug() << "Directory" << fbd << " does not exist!";
         qDebug() << "Creating directory:" << fbd;
 
         if (!freeBusyDirectory.mkpath(fbd)) {
@@ -1049,8 +1050,9 @@ bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
     return true;
 }
 
-void FreeBusyManager::timerEvent(QTimerEvent *)
+void FreeBusyManager::timerEvent(QTimerEvent *event)
 {
+    Q_UNUSED(event)
     publishFreeBusy();
 }
 

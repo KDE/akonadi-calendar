@@ -51,7 +51,8 @@ static const char *s_outEmail2 = "identity2@kde.org";
 class FakeMessageQueueJob : public MailTransport::MessageQueueJob
 {
 public:
-    explicit FakeMessageQueueJob(QObject *parent = 0) : MailTransport::MessageQueueJob(parent)
+    explicit FakeMessageQueueJob(QObject *parent = 0)
+        : MailTransport::MessageQueueJob(parent)
     {
     }
 
@@ -75,13 +76,13 @@ public:
     static UnitTestResult::List sUnitTestResults;
 };
 
-
 UnitTestResult::List FakeMessageQueueJob::sUnitTestResults;
 
 class FakeITIPHandlerComponentFactory : public ITIPHandlerComponentFactory
 {
 public:
-    FakeITIPHandlerComponentFactory(QObject *parent = 0) : ITIPHandlerComponentFactory(parent)
+    FakeITIPHandlerComponentFactory(QObject *parent = 0)
+        : ITIPHandlerComponentFactory(parent)
     {
     }
 
@@ -92,8 +93,6 @@ public:
         return new FakeMessageQueueJob(parent);
     }
 };
-
-
 
 void ITIPHandlerTest::initTestCase()
 {
@@ -113,7 +112,7 @@ void ITIPHandlerTest::initTestCase()
     connect(m_changer, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
             SLOT(onDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
 
-    connect(m_changer,SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(m_changer, SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
             SLOT(onModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
 }
 
@@ -314,14 +313,13 @@ void ITIPHandlerTest::testProcessITIPMessages()
 
     m_expectedResult = Akonadi::ITIPHandler::ResultSuccess;
 
-    for (int i=0; i<invitation_filenames.count(); i++) {
+    for (int i = 0; i < invitation_filenames.count(); i++) {
         // First accept the invitation that creates the incidence:
         QString iCalData = icalData(invitation_filenames.at(i));
         Item::List items;
         qDebug() << "Processing " << invitation_filenames.at(i);
         processItip(iCalData, receiver, actions.at(i), -1, items);
     }
-
 
     QString expectedICalData = icalData(expected_filename);
     KCalCore::MemoryCalendar::Ptr expectedCalendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(KDateTime::UTC));
@@ -337,7 +335,6 @@ void ITIPHandlerTest::testProcessITIPMessageCancel_data()
     QTest::addColumn<QString>("creation_data_filename"); // filename to create incidence
     QTest::addColumn<QString>("cancel_data_filename"); // filename with incidence cancelation
     QTest::addColumn<QString>("incidenceUid"); // uid of incidence in invitation
-
 
     QString creation_data_filename;
     QString cancel_data_filename;
@@ -550,8 +547,8 @@ void ITIPHandlerTest::testOutgoingInvitations()
         QVERIFY(changeId != 1);
         waitForIt();
         QCOMPARE(FakeMessageQueueJob::sUnitTestResults.count(), expectedEmailCount);
+        break;
     }
-    break;
     case IncidenceChanger::ChangeTypeDelete:
         // Create if first, so we have something to delete
         m_changer->setGroupwareCommunication(false);
@@ -583,7 +580,6 @@ void ITIPHandlerTest::testIdentity_data()
     const QString myAlias1    = QStringLiteral("alias1@kde.org"); // hardcoded in emailidentities, do not change
     const QString myIdentity2 = QLatin1String(s_outEmail2);
 
-
     QTest::newRow("Me")           << myEmail     << true;
     QTest::newRow("Also me")      << myEmail2    << true;
     QTest::newRow("My identity2") << myIdentity2 << true;
@@ -607,7 +603,7 @@ void ITIPHandlerTest::testIdentity()
 void ITIPHandlerTest::cleanup()
 {
     Akonadi::Item::List items = calendarItems();
-    foreach(const Akonadi::Item &item, items) {
+    foreach (const Akonadi::Item &item, items) {
         ItemDeleteJob *job = new ItemDeleteJob(item);
         AKVERIFYEXEC(job);
     }
@@ -654,7 +650,7 @@ Attendee::Ptr ITIPHandlerTest::ourAttendee(const KCalCore::Incidence::Ptr &incid
 {
     KCalCore::Attendee::List attendees = incidence->attendees();
     KCalCore::Attendee::Ptr me;
-    foreach(const KCalCore::Attendee::Ptr &attendee, attendees) {
+    foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
         if (attendee->email() == QLatin1String(s_ourEmail)) {
             me = attendee;
             break;
@@ -726,6 +722,5 @@ void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item,
     QCOMPARE(resultCode, m_cancelExpected ? IncidenceChanger::ResultCodeUserCanceled
              : IncidenceChanger::ResultCodeSuccess);
 }
-
 
 QTEST_AKONADIMAIN(ITIPHandlerTest, GUI)

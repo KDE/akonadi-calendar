@@ -17,7 +17,6 @@
     02110-1301, USA.
 */
 
-
 #ifndef UNITTEST_BASE_H
 #define UNITTEST_BASE_H
 
@@ -32,7 +31,8 @@ namespace Akonadi {
 class IncidenceChanger;
 }
 
-class UnitTestBase : public QObject {
+class UnitTestBase : public QObject
+{
     Q_OBJECT
 public:
     UnitTestBase();

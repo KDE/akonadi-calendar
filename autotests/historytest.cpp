@@ -35,7 +35,6 @@ using namespace KCalCore;
 
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ChangeType>)
 
-
 static bool checkSummary(const Akonadi::Item &item, const QString &expected)
 {
     ItemFetchJob *job = new ItemFetchJob(item);
@@ -179,7 +178,7 @@ void HistoryTest::testDeletion()
     waitForSignals();
 
     // Check that it doesn't exist anymore
-    foreach(const Akonadi::Item &item, items) {
+    foreach (const Akonadi::Item &item, items) {
         QVERIFY(Helper::confirmDoesntExist(item));
     }
 
@@ -296,7 +295,7 @@ void HistoryTest::testAtomicOperations()
     mChanger->setDestinationPolicy(IncidenceChanger::DestinationPolicyNeverAsk);
     mChanger->startAtomicOperation();
 
-    for (int i=0; i<items.count(); ++i) {
+    for (int i = 0; i < items.count(); ++i) {
         const Akonadi::Item item = items[i];
         int changeId = -1;
         switch (changeTypes[i]) {
@@ -313,8 +312,7 @@ void HistoryTest::testAtomicOperations()
             mKnownChangeIds << changeId;
             ++mPendingSignals[DeletionSignal];
             break;
-        case IncidenceChanger::ChangeTypeModify:
-        {
+        case IncidenceChanger::ChangeTypeModify: {
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
             Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalCore::Incidence::Ptr>()->clone());
@@ -323,8 +321,8 @@ void HistoryTest::testAtomicOperations()
             QVERIFY(changeId != -1);
             mKnownChangeIds << changeId;
             ++mPendingSignals[ModificationSignal];
+            break;
         }
-        break;
         default:
             QVERIFY(false);
         }
@@ -343,7 +341,7 @@ void HistoryTest::testAtomicOperations()
     QCOMPARE(mHistory->d->redoCount(), 1);
 
     // Verify that it got undone
-    for (int i=0; i<items.count(); ++i) {
+    for (int i = 0; i < items.count(); ++i) {
         const Akonadi::Item item = items[i];
         switch (changeTypes[i]) {
         case IncidenceChanger::ChangeTypeCreate:
@@ -376,7 +374,6 @@ void HistoryTest::testAtomicOperations()
     QCOMPARE(mHistory->d->redoCount(), 0);
     QCOMPARE(mHistory->d->undoCount(), 0);
 }
-
 
 // Tests a sequence of various create/delete/modify operations
 void HistoryTest::testMix_data()
@@ -421,7 +418,7 @@ void HistoryTest::testMix()
     mChanger->setRespectsCollectionRights(false);
     mChanger->setDestinationPolicy(IncidenceChanger::DestinationPolicyNeverAsk);
 
-    for (int i=0; i<items.count(); ++i) {
+    for (int i = 0; i < items.count(); ++i) {
         Akonadi::Item item = items[i];
         int changeId = -1;
         switch (changeTypes[i]) {
@@ -441,8 +438,7 @@ void HistoryTest::testMix()
             ++mPendingSignals[DeletionSignal];
             waitForSignals();
             break;
-        case IncidenceChanger::ChangeTypeModify:
-        {
+        case IncidenceChanger::ChangeTypeModify: {
             item = item.isValid() ? item : mItemByChangeId.value(lastCreateChangeId);
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
@@ -465,8 +461,8 @@ void HistoryTest::testMix()
     QCOMPARE(mHistory->d->undoCount(), changeTypes.count());
 
     // All operations are done, now undo them:
-    for (int i=0; i<changeTypes.count(); i++) {
-        QCOMPARE(mHistory->d->undoCount(), changeTypes.count()-i);
+    for (int i = 0; i < changeTypes.count(); i++) {
+        QCOMPARE(mHistory->d->undoCount(), changeTypes.count() - i);
         QCOMPARE(mHistory->d->redoCount(), i);
         mPendingSignals[UndoSignal] = 1;
         mHistory->undo();
@@ -477,9 +473,9 @@ void HistoryTest::testMix()
     QCOMPARE(mHistory->d->redoCount(), changeTypes.count());
 
     // Now redo them
-    for (int i=0; i<changeTypes.count(); i++) {
+    for (int i = 0; i < changeTypes.count(); i++) {
         QCOMPARE(mHistory->d->undoCount(), i);
-        QCOMPARE(mHistory->d->redoCount(), changeTypes.count()-i);
+        QCOMPARE(mHistory->d->redoCount(), changeTypes.count() - i);
         mPendingSignals[RedoSignal] = 1;
         mHistory->redo();
         waitForSignals();
@@ -489,31 +485,30 @@ void HistoryTest::testMix()
     QCOMPARE(mHistory->d->redoCount(), 0);
 }
 
-
 void HistoryTest::waitForSignals()
 {
     bool somethingToWaitFor = false;
-    for (int i=0; i<NumSignals; ++i) {
+    for (int i = 0; i < NumSignals; ++i) {
         if (mPendingSignals.value(static_cast<SignalType>(i))) {
             somethingToWaitFor = true;
             break;
         }
     }
 
-    if (!somethingToWaitFor)
+    if (!somethingToWaitFor) {
         return;
+    }
 
     QTestEventLoop::instance().enterLoop(10);
 
     if (QTestEventLoop::instance().timeout()) {
-        for (int i=0; i<NumSignals; ++i) {
+        for (int i = 0; i < NumSignals; ++i) {
             qDebug() << mPendingSignals.value(static_cast<SignalType>(i));
         }
     }
 
     QVERIFY(!QTestEventLoop::instance().timeout());
 }
-
 
 void HistoryTest::deleteFinished(int changeId,
                                  const QVector<Akonadi::Item::Id> &deletedIds,
@@ -522,8 +517,9 @@ void HistoryTest::deleteFinished(int changeId,
 {
     QVERIFY(changeId != -1);
 
-    if (!mKnownChangeIds.contains(changeId))
+    if (!mKnownChangeIds.contains(changeId)) {
         return;
+    }
 
     QVERIFY(mPendingSignals[DeletionSignal] > 0);
     --mPendingSignals[DeletionSignal];
@@ -532,7 +528,7 @@ void HistoryTest::deleteFinished(int changeId,
         qDebug() << "Error string is " << errorMessage;
     } else {
         QVERIFY(!deletedIds.isEmpty());
-        foreach(Akonadi::Item::Id id , deletedIds) {
+        foreach (Akonadi::Item::Id id, deletedIds) {
             QVERIFY(id != -1);
         }
     }
@@ -546,8 +542,9 @@ void HistoryTest::createFinished(int changeId,
 {
     QVERIFY(changeId != -1);
 
-    if (!mKnownChangeIds.contains(changeId))
+    if (!mKnownChangeIds.contains(changeId)) {
         return;
+    }
 
     QVERIFY(mPendingSignals[CreationSignal] > 0);
 
@@ -572,8 +569,9 @@ void HistoryTest::modifyFinished(int changeId,
                                  Akonadi::IncidenceChanger::ResultCode resultCode,
                                  const QString &errorString)
 {
-    if (!mKnownChangeIds.contains(changeId))
+    if (!mKnownChangeIds.contains(changeId)) {
         return;
+    }
 
     QVERIFY(mPendingSignals[ModificationSignal] > 0);
     --mPendingSignals[ModificationSignal];
@@ -581,10 +579,11 @@ void HistoryTest::modifyFinished(int changeId,
     QVERIFY(changeId != -1);
     QCOMPARE(resultCode, IncidenceChanger::ResultCodeSuccess);
 
-    if (resultCode == IncidenceChanger::ResultCodeSuccess)
+    if (resultCode == IncidenceChanger::ResultCodeSuccess) {
         QVERIFY(item.isValid());
-    else
+    } else {
         qDebug() << "Error string is " << errorString;
+    }
 
     maybeQuitEventLoop();
 }
@@ -605,12 +604,12 @@ void HistoryTest::handleUndone(Akonadi::History::ResultCode result)
 
 void HistoryTest::maybeQuitEventLoop()
 {
-    for (int i=0; i<NumSignals; ++i) {
-        if (mPendingSignals.value(static_cast<SignalType>(i)) > 0)
+    for (int i = 0; i < NumSignals; ++i) {
+        if (mPendingSignals.value(static_cast<SignalType>(i)) > 0) {
             return;
+        }
     }
     QTestEventLoop::instance().exitLoop();
 }
-
 
 QTEST_AKONADIMAIN(HistoryTest)

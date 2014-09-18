@@ -40,7 +40,7 @@ FreeBusyDownloadJob::~FreeBusyDownloadJob()
 void FreeBusyDownloadJob::start()
 {
     KIO::TransferJob *job = KIO::get(mUrl, KIO::NoReload, KIO::HideProgressInfo);
-    KJobWidgets::setWindow(job,mParent);
+    KJobWidgets::setWindow(job, mParent);
     connect(job, &KIO::TransferJob::result, this, &FreeBusyDownloadJob::slotResult);
     connect(job, &KIO::TransferJob::data, this, &FreeBusyDownloadJob::slotData);
 }
@@ -68,4 +68,3 @@ void FreeBusyDownloadJob::slotResult(KJob *job)
 
     emitResult();
 }
-

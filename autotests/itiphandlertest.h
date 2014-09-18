@@ -29,7 +29,6 @@
 
 #include <QHash>
 
-
 class ITIPHandlerTest : public UnitTestBase
 {
     Q_OBJECT

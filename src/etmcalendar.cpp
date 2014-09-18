@@ -44,7 +44,8 @@ using namespace KCalCore;
 
 //TODO: implement batchAdding
 
-ETMCalendarPrivate::ETMCalendarPrivate(ETMCalendar *qq) : CalendarBasePrivate(qq)
+ETMCalendarPrivate::ETMCalendarPrivate(ETMCalendar *qq)
+    : CalendarBasePrivate(qq)
     , mETM(0)
     , mFilteredETM(0)
     , mCheckableProxyModel(0)
@@ -79,7 +80,7 @@ void ETMCalendarPrivate::init()
         allMimeTypes << KCalCore::Event::eventMimeType() << KCalCore::Todo::todoMimeType()
                      << KCalCore::Journal::journalMimeType();
 
-        foreach(const QString &mimetype, allMimeTypes) {
+        foreach (const QString &mimetype, allMimeTypes) {
             monitor->setMimeTypeMonitored(mimetype, mMimeTypes.isEmpty() || mMimeTypes.contains(mimetype));
         }
 
@@ -118,17 +119,18 @@ void ETMCalendarPrivate::init()
 }
 
 void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collection,
-        const QSet<QByteArray> &attributeNames)
+                                             const QSet<QByteArray> &attributeNames)
 {
     Q_ASSERT(collection.isValid());
     // Is the collection changed to read-only, we update all Incidences
     if (attributeNames.contains("AccessRights")) {
         Akonadi::Item::List items = q->items();
-        foreach(const Akonadi::Item &item, items) {
+        foreach (const Akonadi::Item &item, items) {
             if (item.storageCollectionId() == collection.id()) {
                 KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
-                if (incidence)
+                if (incidence) {
                     incidence->setReadOnly(!(collection.rights() & Akonadi::Collection::CanChangeItem));
+                }
             }
         }
     }
@@ -153,7 +155,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCollectionProxyModel->setSourceModel(columnFilterProxy);
 
     // Keep track of selected items.
-    QItemSelectionModel* selectionModel = new QItemSelectionModel(mCollectionProxyModel);
+    QItemSelectionModel *selectionModel = new QItemSelectionModel(mCollectionProxyModel);
     selectionModel->setObjectName(QLatin1String("Calendar Selection Model"));
 
     // Make item selection work by means of checkboxes.
@@ -204,7 +206,7 @@ void ETMCalendarPrivate::clear()
     if (!mItemById.isEmpty()) {
         // This never happens
         qDebug() << "This shouldnt happen: !mItemById.isEmpty()";
-        foreach(Akonadi::Item::Id id, mItemById.keys()) {
+        foreach (Akonadi::Item::Id id, mItemById.keys()) {
             qDebug() << "Id = " << id;
         }
 
@@ -215,7 +217,7 @@ void ETMCalendarPrivate::clear()
     if (!mItemIdByUid.isEmpty()) {
         // This never happens
         qDebug() << "This shouldnt happen: !mItemIdByUid.isEmpty()";
-        foreach(const QString &uid, mItemIdByUid.keys()) {
+        foreach (const QString &uid, mItemIdByUid.keys()) {
             qDebug() << "uid: " << uid;
         }
         mItemIdByUid.clear();
@@ -226,8 +228,8 @@ void ETMCalendarPrivate::clear()
 }
 
 Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel *model,
-        const QModelIndex &parentIndex,
-        int start, int end)
+                                                       const QModelIndex &parentIndex,
+                                                       int start, int end)
 {
     const int endRow = end >= 0 ? end : model->rowCount(parentIndex) - 1;
     Akonadi::Item::List items;
@@ -250,8 +252,8 @@ Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel 
 }
 
 Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstractItemModel *model,
-        const QModelIndex &parentIndex,
-        int start, int end)
+                                                                   const QModelIndex &parentIndex,
+                                                                   int start, int end)
 {
     const int endRow = end >= 0 ? end : model->rowCount(parentIndex) - 1;
     Akonadi::Collection::List collections;
@@ -283,7 +285,7 @@ Akonadi::Item ETMCalendarPrivate::itemFromIndex(const QModelIndex &idx)
 void ETMCalendarPrivate::itemsAdded(const Akonadi::Item::List &items)
 {
     if (!items.isEmpty()) {
-        foreach(const Akonadi::Item &item, items) {
+        foreach (const Akonadi::Item &item, items) {
             internalInsert(item);
         }
 
@@ -298,7 +300,7 @@ void ETMCalendarPrivate::itemsAdded(const Akonadi::Item::List &items)
 
 void ETMCalendarPrivate::itemsRemoved(const Akonadi::Item::List &items)
 {
-    foreach(const Akonadi::Item &item, items) {
+    foreach (const Akonadi::Item &item, items) {
         internalRemove(item);
     }
     emit q->calendarChanged();
@@ -313,14 +315,15 @@ void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index,
                                         int start, int end)
 {
     Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index,
-                                            start, end);
+                                                                 start, end);
 
-    foreach(const Akonadi::Collection &collection, collections) {
+    foreach (const Akonadi::Collection &collection, collections) {
         mCollectionMap[collection.id()] = collection;
     }
 
-    if (!collections.isEmpty())
+    if (!collections.isEmpty()) {
         emit q->collectionsAdded(collections);
+    }
 }
 
 void ETMCalendarPrivate::onCollectionPopulated(Akonadi::Collection::Id id)
@@ -332,12 +335,13 @@ void ETMCalendarPrivate::onCollectionPopulated(Akonadi::Collection::Id id)
 void ETMCalendarPrivate::onRowsRemoved(const QModelIndex &index, int start, int end)
 {
     Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index, start, end);
-    foreach(const Akonadi::Collection &collection, collections) {
+    foreach (const Akonadi::Collection &collection, collections) {
         mCollectionMap.remove(collection.id());
     }
 
-    if (!collections.isEmpty())
+    if (!collections.isEmpty()) {
         emit q->collectionsRemoved(collections);
+    }
 }
 
 void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft,
@@ -383,7 +387,7 @@ void ETMCalendarPrivate::onModelResetInFilteredModel()
 }
 
 void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft,
-        const QModelIndex &bottomRight)
+                                                      const QModelIndex &bottomRight)
 {
     Q_ASSERT(topLeft.row() <= bottomRight.row());
     const int endRow = bottomRight.row();
@@ -391,8 +395,9 @@ void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft
     int row = i.row();
     while (row <= endRow) {
         const Akonadi::Item item = itemFromIndex(i);
-        if (item.isValid() && item.hasPayload<KCalCore::Incidence::Ptr>())
+        if (item.isValid() && item.hasPayload<KCalCore::Incidence::Ptr>()) {
             updateItem(item);
+        }
 
         ++row;
         i = i.sibling(row, topLeft.column());
@@ -434,13 +439,13 @@ void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
 }
 
 void ETMCalendarPrivate::onRowsInsertedInFilteredModel(const QModelIndex &index,
-        int start, int end)
+                                                       int start, int end)
 {
     itemsAdded(itemsFromModel(mFilteredETM, index, start, end));
 }
 
 void ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel(const QModelIndex &index,
-        int start, int end)
+                                                               int start, int end)
 {
     itemsRemoved(itemsFromModel(mFilteredETM, index, start, end));
 }
@@ -450,13 +455,15 @@ void ETMCalendarPrivate::onFilterChanged()
     mCalFilterProxyModel->setFilter(q->filter());
 }
 
-ETMCalendar::ETMCalendar(QObject *parent) : CalendarBase(new ETMCalendarPrivate(this), parent)
+ETMCalendar::ETMCalendar(QObject *parent)
+    : CalendarBase(new ETMCalendarPrivate(this), parent)
 {
     Q_D(ETMCalendar);
     d->init();
 }
 
-ETMCalendar::ETMCalendar(const QStringList &mimeTypes, QObject *parent) : CalendarBase(new ETMCalendarPrivate(this), parent)
+ETMCalendar::ETMCalendar(const QStringList &mimeTypes, QObject *parent)
+    : CalendarBase(new ETMCalendarPrivate(this), parent)
 {
     Q_D(ETMCalendar);
     d->mMimeTypes = mimeTypes;
@@ -468,7 +475,7 @@ ETMCalendar::ETMCalendar(ETMCalendar *other, QObject *parent)
 {
     Q_D(ETMCalendar);
 
-    CalendarModel *model = qobject_cast<Akonadi::CalendarModel*>(other->entityTreeModel());
+    CalendarModel *model = qobject_cast<Akonadi::CalendarModel *>(other->entityTreeModel());
     if (model) {
         d->mETM = model->weakPointer().toStrongRef();
     }
@@ -514,8 +521,8 @@ KCheckableProxyModel *ETMCalendar::checkableProxyModel() const
 }
 
 KCalCore::Alarm::List ETMCalendar::alarms(const KDateTime &from,
-        const KDateTime &to,
-        bool excludeBlockedAlarms) const
+                                          const KDateTime &to,
+                                          bool excludeBlockedAlarms) const
 {
     Q_D(const ETMCalendar);
     KCalCore::Alarm::List alarmList;
@@ -531,8 +538,7 @@ KCalCore::Alarm::List ETMCalendar::alarms(const KDateTime &from,
             if (parentCollection.isValid() && parentCollection.hasAttribute<BlockAlarmsAttribute>()) {
                 blockedAttr = parentCollection.attribute<BlockAlarmsAttribute>();
                 if (blockedAttr->isAlarmTypeBlocked(Alarm::Audio) && blockedAttr->isAlarmTypeBlocked(Alarm::Display)
-                        && blockedAttr->isAlarmTypeBlocked(Alarm::Email) && blockedAttr->isAlarmTypeBlocked(Alarm::Procedure))
-                {
+                    && blockedAttr->isAlarmTypeBlocked(Alarm::Email) && blockedAttr->isAlarmTypeBlocked(Alarm::Procedure)) {
                     continue;
                 }
             }
@@ -551,7 +557,7 @@ KCalCore::Alarm::List ETMCalendar::alarms(const KDateTime &from,
 
         if (blockedAttr) {
             // Remove all blocked types of alarms
-            Q_FOREACH(const KCalCore::Alarm::Ptr &alarm, incidence->alarms()) {
+            Q_FOREACH (const KCalCore::Alarm::Ptr &alarm, incidence->alarms()) {
                 if (blockedAttr->isAlarmTypeBlocked(alarm->type())) {
                     incidence->removeAlarm(alarm);
                 }
@@ -615,13 +621,15 @@ bool ETMCalendar::isLoaded() const
 {
     Q_D(const ETMCalendar);
 
-    if (!entityTreeModel()->isCollectionTreeFetched())
+    if (!entityTreeModel()->isCollectionTreeFetched()) {
         return false;
+    }
 
     Akonadi::Collection::List collections = d->mCollectionMap.values();
     foreach (const Akonadi::Collection &collection, collections) {
-        if (!entityTreeModel()->isCollectionPopulated(collection.id()))
+        if (!entityTreeModel()->isCollectionPopulated(collection.id())) {
             return false;
+        }
     }
 
     return true;

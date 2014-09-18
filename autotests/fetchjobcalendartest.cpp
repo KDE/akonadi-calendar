@@ -50,8 +50,8 @@ class FetchJobCalendarTest : public QObject
     void fetchCollection()
     {
         CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
-                CollectionFetchJob::Recursive,
-                this);
+                                                         CollectionFetchJob::Recursive,
+                                                         this);
         // Get list of collections
         job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
         AKVERIFYEXEC(job);
@@ -102,8 +102,9 @@ private Q_SLOTS:
 public Q_SLOTS:
     void handleLoadFinished(bool success, const QString &errorMessage)
     {
-        if (!success)
+        if (!success) {
             qDebug() << errorMessage;
+        }
         QVERIFY(success);
         QTestEventLoop::instance().exitLoop();
     }
