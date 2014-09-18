@@ -25,6 +25,7 @@
 #include "akonadi-calendar_export.h"
 
 #include <standardactionmanager.h>
+#include <kcalcore/todo.h>
 
 #include <QtCore/QObject>
 
@@ -202,4 +203,5 @@ private:
 
 }
 
+Q_DECLARE_METATYPE(KCalCore::Todo*)
 #endif
