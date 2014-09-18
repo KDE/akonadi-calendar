@@ -32,7 +32,6 @@
 using namespace Akonadi;
 using namespace KCalCore;
 
-Q_DECLARE_METATYPE(KCalCore::Journal*)
 QTEST_AKONADIMAIN(CalendarBaseTest)
 
 static bool compareUids(const QStringList &_uids, const Incidence::List &incidences)
