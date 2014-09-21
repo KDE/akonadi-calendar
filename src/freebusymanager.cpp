@@ -105,8 +105,8 @@ void FbCheckerJob::checkNextUrl()
 
     mData.clear();
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
-    connect(job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(dataReceived(KIO::Job*,QByteArray)));
-    connect(job, SIGNAL(result(KJob*)), this, SLOT(onGetJobFinished(KJob*)));
+    connect(job, &KIO::TransferJob::data, this, &FbCheckerJob::dataReceived);
+    connect(job, &KIO::TransferJob::result, this, &FbCheckerJob::onGetJobFinished);
 }
 
 void FbCheckerJob::dataReceived(KIO::Job *, const QByteArray &data)
@@ -232,7 +232,7 @@ void FreeBusyManagerPrivate::fetchFreeBusyUrl(const QString &email)
     Akonadi::ContactSearchJob *job = new Akonadi::ContactSearchJob();
     job->setQuery(Akonadi::ContactSearchJob::Email, email);
     job->setProperty("contactEmail", QVariant::fromValue(email));
-    connect(job, SIGNAL(result(KJob*)), this, SLOT(contactSearchJobFinished(KJob*)));
+    connect(job, &Akonadi::ContactSearchJob::result, this, &FreeBusyManagerPrivate::contactSearchJobFinished);
     job->start();
 }
 
@@ -340,7 +340,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     }
     KJob *checkerJob = new FbCheckerJob(urlsToCheck, this);
     checkerJob->setProperty("email", email);
-    connect(checkerJob, SIGNAL(result(KJob*)), this, SLOT(fbCheckerJobFinished(KJob*)));
+    connect(checkerJob, &KJob::result, this, &FreeBusyManagerPrivate::fbCheckerJobFinished);
     checkerJob->start();
 }
 
