@@ -24,7 +24,8 @@
 
 Entry::Entry(const Akonadi::Item &item,
              const QString &description,
-             History *qq) : QObject()
+             History *qq)
+    : QObject()
 {
     mItems << item;
     init(description, qq);
@@ -32,7 +33,8 @@ Entry::Entry(const Akonadi::Item &item,
 
 Entry::Entry(const Akonadi::Item::List &items,
              const QString &description,
-             History *qq) : QObject(), mItems(items)
+             History *qq)
+    : QObject(), mItems(items)
 {
     init(description, qq);
 }
@@ -44,7 +46,7 @@ void Entry::init(const QString &description, History *qq)
     mChanger = qq->d->mChanger;
 }
 
-QWidget* Entry::currentParent() const
+QWidget *Entry::currentParent() const
 {
     return q->d->mCurrentParent;
 }
@@ -73,19 +75,22 @@ void Entry::doIt(OperationType type)
 {
     bool result = false;
     mChangeIds.clear();
-    if (type == TypeRedo)
+    if (type == TypeRedo) {
         result = redo();
-    else if (type == TypeUndo)
+    } else if (type == TypeUndo) {
         result = undo();
-    else
+    } else {
         Q_ASSERT(false);
+    }
 
-    if (!result)
+    if (!result) {
         emit finished(IncidenceChanger::ResultCodeJobError, i18n("General error"));
+    }
 }
 
 CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &description,
-                             History *q) : Entry(item, description, q)
+                             History *q)
+    : Entry(item, description, q)
 {
     mLatestRevisionByItemId.insert(item.id(), item.revision());
     Q_ASSERT(mItems.count() == 1);
@@ -105,8 +110,9 @@ bool CreationEntry::undo()
     const int changeId = mChanger->deleteIncidence(mItems.first(), currentParent());
     mChangeIds << changeId;
 
-    if (changeId == -1)
+    if (changeId == -1) {
         qCritical() << "Undo failed";
+    }
 
     return changeId != -1;
 }
@@ -116,12 +122,13 @@ bool CreationEntry::redo()
     Akonadi::Item item = mItems.first();
     Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
     const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>(),
-                         Collection(item.storageCollectionId()),
-                         currentParent());
+                                                   Collection(item.storageCollectionId()),
+                                                   currentParent());
     mChangeIds << changeId;
 
-    if (changeId == -1)
+    if (changeId == -1) {
         qCritical() << "Redo failed";
+    }
 
     return changeId != -1;
 }
@@ -159,7 +166,8 @@ void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
 }
 
 DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &description,
-                             History *q) : Entry(items, description, q)
+                             History *q)
+    : Entry(items, description, q)
 {
     const Incidence::Ptr incidence = items.first().payload<KCalCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
@@ -178,18 +186,20 @@ bool DeletionEntry::undo()
     mErrorString.clear();
     const bool useAtomicOperation = mItems.count() > 1 ;
     bool success = true;
-    foreach(const Akonadi::Item &item, mItems) {
-        if (useAtomicOperation)
+    foreach (const Akonadi::Item &item, mItems) {
+        if (useAtomicOperation) {
             mChanger->startAtomicOperation();
+        }
 
         Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
         const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>(),
-                             Collection(item.storageCollectionId()),
-                             currentParent());
+                                                       Collection(item.storageCollectionId()),
+                                                       currentParent());
         success = (changeId != -1) && success;
         mChangeIds << changeId;
-        if (useAtomicOperation)
+        if (useAtomicOperation) {
             mChanger->endAtomicOperation();
+        }
 
         mOldIdByChangeId.insert(changeId, item.id());
     }
@@ -202,8 +212,9 @@ bool DeletionEntry::redo()
     const int changeId = mChanger->deleteIncidences(mItems, currentParent());
     mChangeIds << changeId;
 
-    if (changeId == -1)
+    if (changeId == -1) {
         qCritical() << "Redo failed";
+    }
 
     return changeId != -1;
 }
@@ -214,8 +225,9 @@ void DeletionEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
-            foreach(Akonadi::Item::Id id, deletedIds)
-            mLatestRevisionByItemId.remove(id);   // TODO
+            foreach (Akonadi::Item::Id id, deletedIds) {
+                mLatestRevisionByItemId.remove(id);    // TODO
+            }
         }
         emit finished(resultCode, errorString);
     }
@@ -235,15 +247,17 @@ void DeletionEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
         }
         --mNumPendingCreations;
         mOldIdByChangeId.remove(changeId);
-        if (mNumPendingCreations == 0)
+        if (mNumPendingCreations == 0) {
             emit finished(mResultCode, mErrorString);
+        }
     }
 }
 
 ModificationEntry::ModificationEntry(const Akonadi::Item &item,
                                      const Incidence::Ptr &originalPayload,
                                      const QString &description,
-                                     History *q) : Entry(item, description, q)
+                                     History *q)
+    : Entry(item, description, q)
     , mOriginalPayload(originalPayload->clone())
 {
     const Incidence::Ptr incidence = mItems.first().payload<KCalCore::Incidence::Ptr>();
@@ -263,8 +277,9 @@ bool ModificationEntry::undo()
     const int changeId = mChanger->modifyIncidence(oldItem, Incidence::Ptr(), currentParent());
     mChangeIds << changeId;
 
-    if (changeId == -1)
+    if (changeId == -1) {
         qCritical() << "Undo failed";
+    }
 
     return changeId != -1;
 }
@@ -272,18 +287,19 @@ bool ModificationEntry::undo()
 bool ModificationEntry::redo()
 {
     const int changeId = mChanger->modifyIncidence(mItems.first(), mOriginalPayload,
-                         currentParent());
+                                                   currentParent());
     mChangeIds << changeId;
 
-    if (changeId == -1)
+    if (changeId == -1) {
         qCritical() << "Redo failed";
+    }
 
     return changeId != -1;
 }
 
 void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item,
-        Akonadi::IncidenceChanger::ResultCode resultCode,
-        const QString &errorString)
+                                         Akonadi::IncidenceChanger::ResultCode resultCode,
+                                         const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -294,7 +310,8 @@ void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item
 }
 
 MultiEntry::MultiEntry(int id, const QString &description,
-                       History *q) : Entry(Item(), description, q)
+                       History *q)
+    : Entry(Item(), description, q)
     , mAtomicOperationId(id)
     , mFinishedEntries(0)
     , mOperationInProgress(TypeNone)
@@ -313,7 +330,7 @@ void MultiEntry::addEntry(const Entry::Ptr &entry)
 
 void MultiEntry::updateIds(Item::Id oldId, Item::Id newId)
 {
-    for (int i=0; i<mEntries.count(); ++i) {
+    for (int i = 0; i < mEntries.count(); ++i) {
         mEntries.at(i)->updateIds(oldId, newId);
     }
 }
@@ -328,7 +345,7 @@ bool MultiEntry::undo()
     const int count = mEntries.count();
     // To undo a batch of changes we iterate in reverse order so we don't violate
     // causality.
-    for (int i=count-1; i>=0; --i) {
+    for (int i = count - 1; i >= 0; --i) {
         mEntries[i]->doIt(TypeUndo);
     }
 
@@ -342,8 +359,9 @@ bool MultiEntry::redo()
     mOperationInProgress = TypeRedo;
     Q_ASSERT(!mEntries.isEmpty());
     mFinishedEntries = 0;
-    foreach(const Entry::Ptr &entry, mEntries)
-    entry->doIt(TypeRedo);
+    foreach (const Entry::Ptr &entry, mEntries) {
+        entry->doIt(TypeRedo);
+    }
     mChanger->endAtomicOperation();
     return true;
 }
@@ -353,8 +371,8 @@ void MultiEntry::onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCod
 {
     ++mFinishedEntries;
     if (mFinishedEntries == mEntries.count() ||
-            (mFinishedEntries < mEntries.count() &&
-             resultCode != IncidenceChanger::ResultCodeSuccess)) {
+        (mFinishedEntries < mEntries.count() &&
+         resultCode != IncidenceChanger::ResultCodeSuccess)) {
         mFinishedEntries = mEntries.count(); // we're done
         mOperationInProgress = TypeNone;
         emit finished(resultCode, errorString);

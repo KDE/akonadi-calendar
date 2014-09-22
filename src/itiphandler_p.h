@@ -33,7 +33,8 @@
 
 namespace Akonadi {
 
-struct Invitation {
+struct Invitation
+{
     QString receiver;
     QString iCal;
     QString action;

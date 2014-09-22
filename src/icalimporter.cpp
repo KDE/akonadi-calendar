@@ -48,7 +48,9 @@ using namespace KCalCore;
 using namespace Akonadi;
 
 ICalImporter::Private::Private(IncidenceChanger *changer,
-                               ICalImporter *qq) : QObject(), q(qq)
+                               ICalImporter *qq)
+    : QObject()
+    , q(qq)
     , m_changer(changer)
     , m_numIncidences(0)
     , m_working(false)
@@ -68,12 +70,13 @@ ICalImporter::Private::~Private()
 }
 
 void ICalImporter::Private::onIncidenceCreated(int changeId,
-        const Akonadi::Item &,
-        Akonadi::IncidenceChanger::ResultCode resultCode,
-        const QString &errorString)
+                                               const Akonadi::Item &item,
+                                               Akonadi::IncidenceChanger::ResultCode resultCode,
+                                               const QString &errorString)
 {
-    if (!m_pendingRequests.contains(changeId))
-        return; // Not ours
+    if (!m_pendingRequests.contains(changeId)) {
+        return;    // Not ours
+    }
 
     m_pendingRequests.removeAll(changeId);
 
@@ -96,7 +99,7 @@ void ICalImporter::Private::setErrorMessage(const QString &message)
 
 void ICalImporter::Private::resourceCreated(KJob *job)
 {
-    Akonadi::AgentInstanceCreateJob *createjob = qobject_cast<Akonadi::AgentInstanceCreateJob*>(job);
+    Akonadi::AgentInstanceCreateJob *createjob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
     Q_ASSERT(createjob);
     m_working = false;
     if (createjob->error()) {
@@ -139,7 +142,8 @@ void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArr
 }
 
 ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer,
-                           QObject *parent) : QObject(parent)
+                           QObject *parent)
+    : QObject(parent)
     , d(new Private(changer, this))
 {
 }
@@ -226,14 +230,16 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         const IncidenceChanger::DestinationPolicy policySaved = d->m_changer->destinationPolicy();
         d->m_changer->startAtomicOperation(i18n("Merge ical file into existing calendar."));
         d->m_changer->setDestinationPolicy(IncidenceChanger::DestinationPolicyNeverAsk);
-        foreach(const Incidence::Ptr &incidence, incidences) {
+        foreach (const Incidence::Ptr &incidence, incidences) {
             Q_ASSERT(incidence);
-            if (!incidence)
+            if (!incidence) {
                 continue;
+            }
             const int requestId = d->m_changer->createIncidence(incidence, collection);
             Q_ASSERT(requestId != -1); // -1 only happens with invalid incidences
-            if (requestId != -1)
+            if (requestId != -1) {
                 d->m_pendingRequests << requestId;
+            }
         }
         d->m_changer->endAtomicOperation();
 

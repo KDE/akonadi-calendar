@@ -28,7 +28,8 @@
 #include <kmime/kmime_message.h>
 #include <QObject>
 
-struct UnitTestResult {
+struct UnitTestResult
+{
     typedef QList<UnitTestResult> List;
     QString from;
     QStringList to;

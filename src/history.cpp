@@ -25,7 +25,9 @@
 using namespace KCalCore;
 using namespace Akonadi;
 
-History::History(QObject *parent) : QObject(parent), d(new Private(this))
+History::History(QObject *parent)
+    : QObject(parent)
+    , d(new Private(this))
 {
     d->mChanger = new IncidenceChanger(/*history=*/false, this);
     d->mChanger->setObjectName(QLatin1String("changer"));   // for auto-connects
@@ -39,7 +41,8 @@ History::~History()
     delete d;
 }
 
-History::Private::Private(History *qq) : q(qq)
+History::Private::Private(History *qq)
+    : q(qq)
 {
 
 }
@@ -95,7 +98,7 @@ void History::recordDeletions(const Akonadi::Item::List &items,
 {
     Entry::Ptr entry(new DeletionEntry(items, description, this));
 
-    foreach(const Akonadi::Item &item, items) {
+    foreach (const Akonadi::Item &item, items) {
         Q_UNUSED(item);
         Q_ASSERT_X(item.isValid(),
                    "History::recordDeletion()", "Item must be valid.");
@@ -108,18 +111,20 @@ void History::recordDeletions(const Akonadi::Item::List &items,
 
 QString History::nextUndoDescription() const
 {
-    if (!d->mUndoStack.isEmpty())
+    if (!d->mUndoStack.isEmpty()) {
         return d->mUndoStack.top()->mDescription;
-    else
+    } else {
         return QString();
+    }
 }
 
 QString History::nextRedoDescription() const
 {
-    if (!d->mRedoStack.isEmpty())
+    if (!d->mRedoStack.isEmpty()) {
         return d->mRedoStack.top()->mDescription;
-    else
+    } else {
         return QString();
+    }
 }
 
 void History::undo(QWidget *parent)
@@ -179,11 +184,13 @@ void History::Private::updateIds(Item::Id oldId, Item::Id newId)
 {
     mEntryInProgress->updateIds(oldId, newId);
 
-    foreach(const Entry::Ptr &entry, mUndoStack)
-    entry->updateIds(oldId, newId);
+    foreach (const Entry::Ptr &entry, mUndoStack) {
+        entry->updateIds(oldId, newId);
+    }
 
-    foreach(const Entry::Ptr &entry, mRedoStack)
-    entry->updateIds(oldId, newId);
+    foreach (const Entry::Ptr &entry, mRedoStack) {
+        entry->updateIds(oldId, newId);
+    }
 }
 
 void History::Private::doIt(OperationType type)
@@ -223,7 +230,7 @@ void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult
     // was in progress
     if (!mQueuedEntries.isEmpty()) {
         mRedoStack.clear();
-        foreach(const Entry::Ptr &entry, mQueuedEntries) {
+        foreach (const Entry::Ptr &entry, mQueuedEntries) {
             mUndoStack.push(entry);
         }
         mQueuedEntries.clear();
@@ -243,9 +250,9 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
     if (useMultiEntry) {
         Entry::Ptr topEntry = (mOperationTypeInProgress == TypeNone)                           ?
                               (mUndoStack.isEmpty() ? Entry::Ptr() : mUndoStack.top())   :
-                                  (mQueuedEntries.isEmpty() ? Entry::Ptr() : mQueuedEntries.last());
+                              (mQueuedEntries.isEmpty() ? Entry::Ptr() : mQueuedEntries.last());
 
-        const bool topIsMultiEntry = qobject_cast<MultiEntry*>(topEntry.data());
+        const bool topIsMultiEntry = qobject_cast<MultiEntry *>(topEntry.data());
 
         if (topIsMultiEntry) {
             MultiEntry::Ptr multiEntry = topEntry.staticCast<MultiEntry>();
@@ -256,7 +263,7 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
             multiEntry->addEntry(entry);
         } else {
             MultiEntry::Ptr multiEntry = MultiEntry::Ptr(new MultiEntry(atomicOperationId,
-                                         entry->mDescription, q));
+                                                                        entry->mDescription, q));
             multiEntry->addEntry(entry);
             entryToPush = multiEntry;
         }
@@ -294,7 +301,7 @@ void History::Private::undoOrRedo(OperationType type, QWidget *parent)
     }
 }
 
-QStack<Entry::Ptr>& History::Private::stack(OperationType type)
+QStack<Entry::Ptr> &History::Private::stack(OperationType type)
 {
     // Entries from the undo stack go to the redo stack, and vice-versa
     return type == TypeUndo ? mUndoStack : mRedoStack;
@@ -317,12 +324,12 @@ int History::Private::undoCount() const
     return mUndoStack.count();
 }
 
-QStack<Entry::Ptr>& History::Private::stack()
+QStack<Entry::Ptr> &History::Private::stack()
 {
     return stack(mOperationTypeInProgress);
 }
 
-QStack<Entry::Ptr>& History::Private::destinationStack()
+QStack<Entry::Ptr> &History::Private::destinationStack()
 {
     // Entries from the undo stack go to the redo stack, and vice-versa
     return mOperationTypeInProgress == TypeRedo ? mUndoStack : mRedoStack;

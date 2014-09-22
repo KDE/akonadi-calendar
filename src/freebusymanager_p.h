@@ -50,7 +50,8 @@ class FreeBusyManagerPrivate : public QObject
     Q_DECLARE_PUBLIC(FreeBusyManager)
 
 public: /// Structs
-    struct FreeBusyProviderRequest {
+    struct FreeBusyProviderRequest
+    {
         FreeBusyProviderRequest(const QString &provider);
 
         enum Status {
@@ -63,7 +64,8 @@ public: /// Structs
         QSharedPointer<QDBusInterface> mInterface;
     };
 
-    struct FreeBusyProvidersRequestsQueue {
+    struct FreeBusyProvidersRequestsQueue
+    {
         explicit FreeBusyProvidersRequestsQueue(const QString &start = QString(),
                                                 const QString &end = QString());
 
