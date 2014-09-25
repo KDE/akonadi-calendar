@@ -33,14 +33,6 @@
 
 using namespace Akonadi;
 
-static KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item)
-{
-    return
-        item.hasPayload<KCalCore::Incidence::Ptr>() ?
-            item.payload<KCalCore::Incidence::Ptr>()
-            : KCalCore::Incidence::Ptr();
-}
-
 static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
 {
     return item.hasPayload<KCalCore::Todo::Ptr>() ? item.payload<KCalCore::Todo::Ptr>()
@@ -89,7 +81,7 @@ void CalendarModel::setWeakPointer(const QWeakPointer<CalendarModel> &weakPointe
 
 QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int role) const
 {
-    const KCalCore::Incidence::Ptr inc = incidence(item);
+    const KCalCore::Incidence::Ptr inc = CalendarUtils::incidence(item);
     if (!inc) {
         return QVariant();
     }
