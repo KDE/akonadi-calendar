@@ -145,7 +145,7 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
                                  success ? QString() : i18n("Error: %1", errorMessage));
 }
 
-void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult, KCalCore::iTIPMethod /*method*/, const KCalCore::Incidence::Ptr &incidence)
+void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult, KCalCore::iTIPMethod /*method*/, const KCalCore::Incidence::Ptr &)
 {
     if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded ||
         sendResult == ITIPHandlerHelper::ResultCanceled) {
