@@ -38,11 +38,11 @@
 #include <KDateTime>
 #include <KIO/JobClasses>
 #include <KIO/Scheduler>
-#include <KTemporaryFile>
 
 #include <QUrl>
 #include <QFile>
 #include <QDBusInterface>
+#include <QTemporaryFile>
 
 using namespace KCalCore;
 using namespace Akonadi;
@@ -132,7 +132,7 @@ void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArr
     m_working = false;
     if (success) {
         delete m_temporaryFile;
-        m_temporaryFile = new KTemporaryFile();
+        m_temporaryFile = new QTemporaryFile();
         m_temporaryFile->write(data.constData(), data.count());
         q->importIntoExistingResource(QUrl(m_temporaryFile->fileName()), m_collection);
     } else {

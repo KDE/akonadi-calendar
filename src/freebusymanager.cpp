@@ -36,7 +36,7 @@
 
 #include <QDebug>
 #include <KMessageBox>
-#include <KTemporaryFile>
+
 #include <QUrl>
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
@@ -50,6 +50,7 @@
 #include <QTimer>
 #include <QTimerEvent>
 #include <QStandardPaths>
+#include <QTemporaryFile>
 #include <KJobWidgets/KJobWidgets>
 
 using namespace Akonadi;
@@ -843,7 +844,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
                                       QStringLiteral("ORGANIZER:"));
 
     // Create a local temp file and save the message to it
-    KTemporaryFile tempFile;
+    QTemporaryFile tempFile;
     tempFile.setAutoRemove(false);
     if (tempFile.open()) {
         QTextStream textStream(&tempFile);

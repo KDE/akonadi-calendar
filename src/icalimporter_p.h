@@ -33,7 +33,7 @@
 #include <QList>
 
 class KJob;
-class KTemporaryFile;
+class QTemporaryFile;
 class QByteArray;
 namespace KIO {
 class Job;
@@ -56,7 +56,7 @@ public:
 
     QString m_lastErrorMessage;
     bool m_working;
-    KTemporaryFile *m_temporaryFile;
+    QTemporaryFile *m_temporaryFile;
     Akonadi::Collection m_collection;
 public Q_SLOTS:
     void resourceCreated(KJob *job);
