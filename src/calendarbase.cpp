@@ -54,16 +54,13 @@ CalendarBasePrivate::CalendarBasePrivate(CalendarBase *qq)
     , mLastCreationCancelled(false)
     , q(qq)
 {
-    connect(mIncidenceChanger,
-            SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(mIncidenceChanger, SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
             SLOT(slotCreateFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
 
-    connect(mIncidenceChanger,
-            SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(mIncidenceChanger, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
             SLOT(slotDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
 
-    connect(mIncidenceChanger,
-            SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(mIncidenceChanger, SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
             SLOT(slotModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
 
     mIncidenceChanger->setDestinationPolicy(IncidenceChanger::DestinationPolicyAsk);

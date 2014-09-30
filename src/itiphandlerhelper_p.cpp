@@ -195,8 +195,7 @@ ITIPHandlerHelper::ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidg
     , m_scheduler(new MailScheduler(m_factory, this))
     , m_status(StatusNone)
 {
-    connect(m_scheduler, SIGNAL(transactionFinished(Akonadi::Scheduler::Result,QString)),
-            SLOT(onSchedulerFinished(Akonadi::Scheduler::Result,QString)));
+    connect(m_scheduler, &MailScheduler::transactionFinished, this, &ITIPHandlerHelper::onSchedulerFinished);
 }
 
 ITIPHandlerHelper::~ITIPHandlerHelper()
@@ -248,8 +247,7 @@ void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalCore::iTIPMethod method,
     }
 
     ITIPHandlerDialogDelegate *askDelegator = m_factory->createITIPHanderDialogDelegate(incidence, method, mParent);
-    connect(askDelegator, SIGNAL(dialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)),
-            SLOT(slotIncidenceCreatedDialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)));
+    connect(askDelegator, &ITIPHandlerDialogDelegate::dialogClosed, this, &ITIPHandlerHelper::slotIncidenceCreatedDialogClosed);
     askDelegator->openDialogIncidenceCreated(ITIPHandlerDialogDelegate::Attendees, question, mDefaultAction);
 }
 
@@ -296,8 +294,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalCore::iTIPMethod method
 {
     ITIPHandlerDialogDelegate *askDelegator = m_factory->createITIPHanderDialogDelegate(incidence, method, mParent);
 
-    connect(askDelegator, SIGNAL(dialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)),
-            SLOT(slotIncidenceModifiedDialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)));
+    connect(askDelegator, &ITIPHandlerDialogDelegate::dialogClosed, this, &ITIPHandlerHelper::slotIncidenceModifiedDialogClosed);
     // For a modified incidence, either we are the organizer or someone else.
     if (weAreOrganizerOf(incidence)) {
         if (weNeedToSendMailFor(incidence)) {
@@ -360,8 +357,7 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalCore::iTIPMethod method,
 
     ITIPHandlerDialogDelegate *askDelegator = m_factory->createITIPHanderDialogDelegate(incidence, method, mParent);
 
-    connect(askDelegator, SIGNAL(dialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)),
-            SLOT(slotIncidenceDeletedDialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)));
+    connect(askDelegator, &ITIPHandlerDialogDelegate::dialogClosed, this, &ITIPHandlerHelper::slotIncidenceDeletedDialogClosed);
 
     // For a modified incidence, either we are the organizer or someone else.
     if (weAreOrganizerOf(incidence)) {
@@ -481,8 +477,7 @@ void ITIPHandlerHelper::onSchedulerFinished(Akonadi::Scheduler::Result result,
 
             ITIPHandlerDialogDelegate *askDelegator = m_factory->createITIPHanderDialogDelegate(KCalCore::Incidence::Ptr(), KCalCore::iTIPNoMethod, mParent);
 
-            connect(askDelegator, SIGNAL(dialogClosed(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)),
-                    SLOT(slotSchedulerFinishDialog(int,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)));
+            connect(askDelegator, &ITIPHandlerDialogDelegate::dialogClosed, this, &ITIPHandlerHelper::slotSchedulerFinishDialog);
             askDelegator->openDialogSchedulerFinished(question,  ITIPHandlerDialogDelegate::ActionAsk,
                                                       KGuiItem(i18nc("@action:button dialog positive answer to abort question","Abort Update")));
             return;

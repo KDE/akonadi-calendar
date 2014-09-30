@@ -99,10 +99,8 @@ CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &descripti
         mDescription = i18nc("%1 is event, todo or journal", "%1 creation",
                              KCalUtils::Stringify::incidenceType(incidence->type()));
     }
-    connect(mChanger, SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onCreateFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
-    connect(mChanger, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(mChanger, &IncidenceChanger::createFinished, this, &CreationEntry::onCreateFinished);
+    connect(mChanger, &IncidenceChanger::deleteFinished, this, &CreationEntry::onDeleteFinished);
 }
 
 bool CreationEntry::undo()
@@ -174,10 +172,8 @@ DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &de
         mDescription = i18nc("%1 is event, todo or journal", "%1 deletion",
                              KCalUtils::Stringify::incidenceType(incidence->type()));
     }
-    connect(mChanger, SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onCreateFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
-    connect(mChanger, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(mChanger, &IncidenceChanger::createFinished, this, &DeletionEntry::onCreateFinished);
+    connect(mChanger, &IncidenceChanger::deleteFinished, this, &DeletionEntry::onDeleteFinished);
 }
 
 bool DeletionEntry::undo()
@@ -266,8 +262,7 @@ ModificationEntry::ModificationEntry(const Akonadi::Item &item,
                               KCalUtils::Stringify::incidenceType(incidence->type()));
     }
 
-    connect(mChanger, SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(mChanger, &IncidenceChanger::modifyFinished, this, &ModificationEntry::onModifyFinished);
 }
 
 bool ModificationEntry::undo()
@@ -323,8 +318,7 @@ void MultiEntry::addEntry(const Entry::Ptr &entry)
 {
     Q_ASSERT(mOperationInProgress == TypeNone);
     mEntries.append(entry);
-    connect(entry.data(), SIGNAL(finished(Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onEntryFinished(Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(entry.data(), SIGNAL(finished(Akonadi::IncidenceChanger::ResultCode,QString)), SLOT(onEntryFinished(Akonadi::IncidenceChanger::ResultCode,QString)),
             Qt::UniqueConnection);
 }
 

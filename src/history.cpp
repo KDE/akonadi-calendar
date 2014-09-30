@@ -200,8 +200,7 @@ void History::Private::doIt(OperationType type)
     Q_ASSERT(!stack().isEmpty());
     mEntryInProgress = stack().pop();
 
-    connect(mEntryInProgress.data(), SIGNAL(finished(Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(handleFinished(Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(mEntryInProgress.data(), SIGNAL(finished(Akonadi::IncidenceChanger::ResultCode,QString)), SLOT(handleFinished(Akonadi::IncidenceChanger::ResultCode,QString)),
             Qt::UniqueConnection);
     mEntryInProgress->doIt(type);
 }

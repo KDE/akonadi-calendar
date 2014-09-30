@@ -50,8 +50,7 @@ MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *pare
     d->m_identityManager = new IdentityManager(/*ro=*/true, this);
     d->m_mailer = new MailClient(factory, parent);
 
-    connect(d->m_mailer, SIGNAL(finished(Akonadi::MailClient::Result,QString)),
-            SLOT(onMailerFinished(Akonadi::MailClient::Result,QString)));
+    connect(d->m_mailer, &MailClient::finished, this, &MailScheduler::onMailerFinished);
 }
 
 MailScheduler::~MailScheduler()
