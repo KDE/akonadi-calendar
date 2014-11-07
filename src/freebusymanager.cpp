@@ -253,8 +253,8 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     KConfigGroup group = cfg.group(email);
     QString url = group.readEntry(QStringLiteral("url"));
 
-    const KABC::Addressee::List contacts = job->contacts();
-    foreach (const KABC::Addressee &contact, contacts) {
+    const KContacts::Addressee::List contacts = job->contacts();
+    foreach (const KContacts::Addressee &contact, contacts) {
         const QString pref = contact.preferredEmail();
         if (!pref.isEmpty() && pref != email) {
             group = cfg.group(pref);
