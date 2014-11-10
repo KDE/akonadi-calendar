@@ -54,7 +54,6 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mRemove->setIcon(QIcon::fromTheme(QLatin1String("list-remove")));
     d->mUI.mRemove->setEnabled(false);
     d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QLatin1String("view-pim-contacts")));
-
     connect(d->mUI.mListWidget, SIGNAL(itemSelectionChanged()),
             d, SLOT(updateInput()));
     connect(d->mUI.mNew, SIGNAL(clicked()),
