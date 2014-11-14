@@ -149,7 +149,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCollectionProxyModel = new Akonadi::CollectionFilterProxyModel(this);
     mCollectionProxyModel->setObjectName(QLatin1String("Only show collections"));
     mCollectionProxyModel->setDynamicSortFilter(true);
-    mCollectionProxyModel->addMimeTypeFilter(QString::fromLatin1("text/calendar"));
+    mCollectionProxyModel->addMimeTypeFilter(QStringLiteral("text/calendar"));
     mCollectionProxyModel->setExcludeVirtualCollections(true);
     mCollectionProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     mCollectionProxyModel->setSourceModel(columnFilterProxy);

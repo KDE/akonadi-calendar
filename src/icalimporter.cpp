@@ -111,7 +111,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     }
 
     Akonadi::AgentInstance instance = createjob->instance();
-    QDBusInterface iface(QString::fromLatin1("org.freedesktop.Akonadi.Resource.%1").arg(instance.identifier()), QStringLiteral("/Settings"));
+    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.%1").arg(instance.identifier()), QStringLiteral("/Settings"));
 
     if (!iface.isValid()) {
         setErrorMessage(i18n("Failed to obtain D-Bus interface for remote configuration."));

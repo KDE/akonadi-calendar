@@ -555,7 +555,7 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("New E&vent..."));
         action->setWhatsThis(i18n("Create a new event"));
         d->mActions.insert(CreateEvent, action);
-        d->mActionCollection->addAction(QString::fromLatin1("akonadi_event_create"), action);
+        d->mActionCollection->addAction(QStringLiteral("akonadi_event_create"), action);
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateEvent()));
         break;
     case CreateTodo:
@@ -564,7 +564,7 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("New &To-do..."));
         action->setWhatsThis(i18n("Create a new To-do"));
         d->mActions.insert(CreateTodo, action);
-        d->mActionCollection->addAction(QString::fromLatin1("akonadi_todo_create"), action);
+        d->mActionCollection->addAction(QStringLiteral("akonadi_todo_create"), action);
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateTodo()));
         break;
     case CreateSubTodo:
@@ -573,7 +573,7 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("New Su&b-to-do..."));
         action->setWhatsThis(i18n("Create a new Sub-to-do"));
         d->mActions.insert(CreateSubTodo, action);
-        d->mActionCollection->addAction(QString::fromLatin1("akonadi_subtodo_create"), action);
+        d->mActionCollection->addAction(QStringLiteral("akonadi_subtodo_create"), action);
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateSubTodo()));
         break;
     case CreateJournal:
@@ -582,7 +582,7 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("New &Journal..."));
         action->setWhatsThis(i18n("Create a new Journal"));
         d->mActions.insert(CreateJournal, action);
-        d->mActionCollection->addAction(QString::fromLatin1("akonadi_journal_create"), action);
+        d->mActionCollection->addAction(QStringLiteral("akonadi_journal_create"), action);
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotCreateJournal()));
         break;
     case EditIncidence:
@@ -590,7 +590,7 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("&Edit..."));
         action->setWhatsThis(i18n("Edit the selected incidence."));
         d->mActions.insert(EditIncidence, action);
-        d->mActionCollection->addAction(QString::fromLatin1("akonadi_incidence_edit"), action);
+        d->mActionCollection->addAction(QStringLiteral("akonadi_incidence_edit"), action);
         connect(action, SIGNAL(triggered(bool)), this, SLOT(slotEditIncidence()));
         break;
     default:
