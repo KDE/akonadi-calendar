@@ -83,7 +83,7 @@ void Scheduler::acceptTransaction(const IncidenceBase::Ptr &incidence,
 {
     Q_ASSERT(incidence);
     Q_ASSERT(calendar);
-    qDebug() << "method=" << ScheduleMessage::methodName(method);   //krazy:exclude=kdebug
+    qDebug() << "method=" << ScheduleMessage::methodName(method);
     connectCalendar(calendar);
     switch (method) {
     case iTIPPublish:
@@ -129,7 +129,7 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
     Result result = ResultSuccess;
 
     qDebug() << "status="
-             << KCalUtils::Stringify::scheduleMessageStatus(status);   //krazy:exclude=kdebug
+             << KCalUtils::Stringify::scheduleMessageStatus(status);
 
     Incidence::Ptr newInc = newIncBase.staticCast<Incidence>() ;
     Incidence::Ptr calInc = calendar->incidence(newIncBase->uid());
@@ -189,7 +189,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
     Result result = ResultSuccess;
 
     const Incidence::List existingIncidences = calendar->incidencesFromSchedulingID(schedulingUid);
-    qDebug() << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status)   //krazy:exclude=kdebug
+    qDebug() << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status)
              << ": found " << existingIncidences.count()
              << " incidences with schedulingID " << incidence->schedulingID()
              << "; uid was = " << schedulingUid;
