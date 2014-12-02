@@ -68,7 +68,7 @@ public:
       * @param actionCollection The action collection to operate on.
       * @param parent The parent widget.
       */
-    explicit StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent = 0);
+    explicit StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent = Q_NULLPTR);
 
     /**
       * Destroys the standard calendar action manager.

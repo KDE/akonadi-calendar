@@ -87,7 +87,7 @@ public:
     /**
      * Creates a new AskDelegator
      */
-    explicit ITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = 0);
+    explicit ITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = Q_NULLPTR);
 
     /*
      * Opens a Dialog, when an incidence is created
@@ -220,7 +220,7 @@ public:
      * @parent parent of the AskDelegator
      *
      */
-    virtual ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = 0);
+    virtual ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = Q_NULLPTR);
 };
 
 /**

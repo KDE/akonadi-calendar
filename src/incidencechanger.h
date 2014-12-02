@@ -172,7 +172,7 @@ public:
       */
     int createIncidence(const KCalCore::Incidence::Ptr &incidence,
                         const Akonadi::Collection &collection = Akonadi::Collection(),
-                        QWidget *parent = 0);
+                        QWidget *parent = Q_NULLPTR);
 
     /**
       * Deletes an incidence. If it's recurring, all occurrences are deleted.
@@ -186,7 +186,7 @@ public:
       *         Returns -1 if item is invalid. The deleteFinished() signal won't be emitted in this
       *         case.
       */
-    int deleteIncidence(const Akonadi::Item &item, QWidget *parent = 0);
+    int deleteIncidence(const Akonadi::Item &item, QWidget *parent = Q_NULLPTR);
 
     /**
       * Deletes a list of Items.
@@ -199,7 +199,7 @@ public:
       *         Returns -1 if any item is invalid or if @p items is empty. The deleteFinished() signal
       *         won't be emitted in this case.
       */
-    int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = 0);
+    int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = Q_NULLPTR);
 
     /**
       * Modifies an incidence.
@@ -218,7 +218,7 @@ public:
       */
     int modifyIncidence(const Akonadi::Item &item,
                         const KCalCore::Incidence::Ptr &originalPayload = KCalCore::Incidence::Ptr(),
-                        QWidget *parent = 0);
+                        QWidget *parent = Q_NULLPTR);
 
     /**
       * Some incidence operations require more than one change. Like dissociating

@@ -155,7 +155,7 @@ public:
       * @param parent will be passed to dialogs created by IncidenceChanger,
       *        for example those asking if you want to send invitations.
       */
-    void undoAll(QWidget *parent = 0);
+    void undoAll(QWidget *parent = Q_NULLPTR);
 
     /**
       * Returns true if there are changes that can be undone.
@@ -209,7 +209,7 @@ public Q_SLOTS:
       * @see redo()
       * @see undone()
       */
-    void undo(QWidget *parent = 0);
+    void undo(QWidget *parent = Q_NULLPTR);
 
     /**
       * Reverts the change that's on top of the redo stack.
@@ -224,7 +224,7 @@ public Q_SLOTS:
       * @see undo()
       * @see redone()
       */
-    void redo(QWidget *parent = 0);
+    void redo(QWidget *parent = Q_NULLPTR);
 
 Q_SIGNALS:
     /**
