@@ -139,7 +139,7 @@ public:
       * creates a default ITIPHandlerComponentFactory object.
       * @param parent parent QObject
       */
-    explicit IncidenceChanger(QObject *parent = 0);
+    explicit IncidenceChanger(QObject *parent = Q_NULLPTR);
 
     /**
      * Creates a new IncidenceChanger instance.
@@ -443,7 +443,7 @@ private:
     friend class History;
     friend class AtomicOperation;
     // used internally by the History class
-    explicit IncidenceChanger(bool enableHistory, QObject *parent = 0);
+    explicit IncidenceChanger(bool enableHistory, QObject *parent = Q_NULLPTR);
     class Private;
     Private *const d;
     //@endcond

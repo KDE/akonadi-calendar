@@ -39,7 +39,7 @@ class AKONADI_CALENDAR_EXPORT TodoPurger : public QObject
 {
     Q_OBJECT
 public:
-    explicit TodoPurger(QObject *parent = 0);
+    explicit TodoPurger(QObject *parent = Q_NULLPTR);
     ~TodoPurger();
 
     /**

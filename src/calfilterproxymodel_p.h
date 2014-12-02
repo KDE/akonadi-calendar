@@ -33,7 +33,7 @@ class CalFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    explicit CalFilterProxyModel(QObject *parent = 0);
+    explicit CalFilterProxyModel(QObject *parent = Q_NULLPTR);
     ~CalFilterProxyModel();
 
     KCalCore::CalFilter *filter() const;

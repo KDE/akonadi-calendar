@@ -50,7 +50,7 @@ public:
       * Creates a new FetchJobCalendar. Loading begins asynchronously.
       * @see loadFinished()
       */
-    explicit FetchJobCalendar(QObject *parent = 0);
+    explicit FetchJobCalendar(QObject *parent = Q_NULLPTR);
 
     /**
       * Destroys this FetchJobCalendar.

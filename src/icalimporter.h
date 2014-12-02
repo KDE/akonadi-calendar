@@ -50,7 +50,7 @@ public:
      *                If you pass an existing one, you will be able to undo/redo import operations.
      * @param parent  Parent QObject.
      */
-    explicit ICalImporter(Akonadi::IncidenceChanger *changer = 0, QObject *parent = 0);
+    explicit ICalImporter(Akonadi::IncidenceChanger *changer = 0, QObject *parent = Q_NULLPTR);
 
     /**
      * Translated error message.

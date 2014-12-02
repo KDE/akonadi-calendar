@@ -39,7 +39,7 @@ public:
     /**
      * @param calendar Must be a valid and loaded calendar.
      */
-    explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = 0);
+    explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = Q_NULLPTR);
     ~MailScheduler();
 
     /** reimp */

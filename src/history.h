@@ -253,7 +253,7 @@ private:
     friend class Entry;
 
     // Only IncidenceChanger can create History classes
-    explicit History(QObject *parent = 0);
+    explicit History(QObject *parent = Q_NULLPTR);
 
     // Used by unit-tests
     Akonadi::IncidenceChanger *incidenceChanger() const;

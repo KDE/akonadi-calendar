@@ -56,7 +56,7 @@ public:
      */
     explicit CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar,
                                Akonadi::IncidenceChanger *changer = 0,
-                               QObject *parent = 0);
+                               QObject *parent = Q_NULLPTR);
     /**
      * Destroys the CalendarClipboard instance.
      */

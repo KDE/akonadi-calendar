@@ -63,7 +63,7 @@ public:
     /**
       Creates a scheduler for calendar specified as argument.
     */
-    explicit Scheduler(QObject *parent = 0);
+    explicit Scheduler(QObject *parent = Q_NULLPTR);
     ~Scheduler();
 
     void setShowDialogs(bool enable);

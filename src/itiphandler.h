@@ -198,7 +198,7 @@ public:
     /*
      * Created a new ITIPHandlerComponentFactory object.
      */
-    explicit ITIPHandlerComponentFactory(QObject *parent = 0);
+    explicit ITIPHandlerComponentFactory(QObject *parent = Q_NULLPTR);
 
     /*
      * deletes the object.
@@ -211,7 +211,7 @@ public:
      * @param identity that is the mail sender
      * @param parent of the MailTransport::MessageQueueJob object
      */
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0);
+    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = Q_NULLPTR);
 
     /*
      * @return A new ITIPHandlerDialogDelegate object
@@ -241,7 +241,7 @@ public:
      * Creates a new ITIPHandler instance.
      * creates a default ITIPHandlerComponentFactory object.
      */
-    explicit ITIPHandler(QObject *parent = 0);
+    explicit ITIPHandler(QObject *parent = Q_NULLPTR);
 
     /**
      * Create a new ITIPHandler instance.
