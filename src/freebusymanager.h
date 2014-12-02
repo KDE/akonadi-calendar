@@ -153,7 +153,7 @@ Q_SIGNALS:
 
 protected:
     /** React on timer events, used for delayed freebusy list uploading */
-    virtual void timerEvent(QTimerEvent *event);
+    virtual void timerEvent(QTimerEvent *event) Q_DECL_OVERRIDE;
 
 private:
     /**
