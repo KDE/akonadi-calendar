@@ -70,22 +70,22 @@ public:
     /**
       * Reimplemented from Attribute
       */
-    QByteArray type() const;
+    QByteArray type() const Q_DECL_OVERRIDE;
 
     /**
       * Reimplemented from Attribute
       */
-    BlockAlarmsAttribute *clone() const;
+    BlockAlarmsAttribute *clone() const Q_DECL_OVERRIDE;
 
     /**
       * Reimplemented from Attribute
       */
-    QByteArray serialized() const;
+    QByteArray serialized() const Q_DECL_OVERRIDE;
 
     /**
       * Reimplemented from Attribute
       */
-    void deserialize(const QByteArray &data);
+    void deserialize(const QByteArray &data) Q_DECL_OVERRIDE;
 
 private:
     class Private;
