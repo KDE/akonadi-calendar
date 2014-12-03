@@ -565,8 +565,8 @@ KCalCore::Alarm::List ETMCalendar::alarms(const KDateTime &from,
             Akonadi::Collection parentCollection = d->mCollectionMap.value(item.storageCollectionId());
             if (parentCollection.isValid() && parentCollection.hasAttribute<BlockAlarmsAttribute>()) {
                 blockedAttr = parentCollection.attribute<BlockAlarmsAttribute>();
-                if (blockedAttr->isAlarmTypeBlocked(Alarm::Audio) && blockedAttr->isAlarmTypeBlocked(Alarm::Display)
-                    && blockedAttr->isAlarmTypeBlocked(Alarm::Email) && blockedAttr->isAlarmTypeBlocked(Alarm::Procedure)) {
+                if (blockedAttr->isEverythingBlocked())
+                {
                     continue;
                 }
             }
