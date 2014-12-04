@@ -21,7 +21,7 @@
 #include "publishdialog_p.h"
 
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
-#include <kpimutils/email.h>
+#include <kemailaddress.h>
 #include <kcalcore/person.h>
 
 #include <KLocalizedString>
@@ -124,7 +124,7 @@ void PublishDialog::Private::updateInput()
 
     QListWidgetItem *item = mUI.mListWidget->selectedItems().first();
     QString mail, name;
-    KPIMUtils::extractEmailAddressAndName(item->text(), mail, name);
+    KEmailAddress::extractEmailAddressAndName(item->text(), mail, name);
     mUI.mNameLineEdit->setText(name);
     mUI.mEmailLineEdit->setText(mail);
 }

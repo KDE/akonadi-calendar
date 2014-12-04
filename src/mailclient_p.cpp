@@ -31,7 +31,7 @@
 #include <kcalutils/incidenceformatter.h>
 #include <kmime/kmime_message.h>
 #include <identity.h>
-#include <kpimutils/email.h>
+#include <kemailaddress.h>
 
 #include <messagequeuejob.h>
 #include <transport.h>
@@ -174,10 +174,10 @@ void MailClient::mailTo(const KCalCore::IncidenceBase::Ptr &incidence,
 
 static QStringList extractEmailAndNormalize(const QString &email)
 {
-    const QStringList splittedEmail = KPIMUtils::splitAddressList(email);
+    const QStringList splittedEmail = KEmailAddress::splitAddressList(email);
     QStringList normalizedEmail;
     foreach(const QString &email, splittedEmail) {
-        const QString str = KPIMUtils::extractEmailAddress(KPIMUtils::normalizeAddressesAndEncodeIdn(email));
+        const QString str = KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(email));
         normalizedEmail << str;
     }
     return normalizedEmail;
@@ -332,10 +332,10 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
     const QString unormalizedFrom = (transport && transport->specifySenderOverwriteAddress()) ?
                                     transport->senderOverwriteAddress() : from;
 
-    const QString normalizedFrom = KPIMUtils::extractEmailAddress(
-                                       KPIMUtils::normalizeAddressesAndEncodeIdn(unormalizedFrom));
+    const QString normalizedFrom = KEmailAddress::extractEmailAddress(
+                                       KEmailAddress::normalizeAddressesAndEncodeIdn(unormalizedFrom));
 
-    const QString finalFrom = KPIMUtils::extractEmailAddress(normalizedFrom);
+    const QString finalFrom = KEmailAddress::extractEmailAddress(normalizedFrom);
     qjob->addressAttribute().setFrom(finalFrom);
 
     QStringList toStringList;

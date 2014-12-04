@@ -19,7 +19,7 @@
 */
 
 #include "utils_p.h"
-#include <kpimutils/email.h>
+#include <kemailaddress.h>
 #include <identitymanager.h>
 #include <identity.h>
 #include <kmime/kmime_header_parsing.h>
@@ -70,12 +70,12 @@ QString Akonadi::CalendarUtils::fullName()
     QString tusername = settings.getSetting(KEMailSettings::RealName);
 
     // Quote the username as it might contain commas and other quotable chars.
-    tusername = KPIMUtils::quoteNameIfNecessary(tusername);
+    tusername = KEmailAddress::quoteNameIfNecessary(tusername);
 
     QString tname, temail;
     // ignore the return value from extractEmailAddressAndName() because
     // it will always be false since tusername does not contain "@domain".
-    KPIMUtils::extractEmailAddressAndName(tusername, temail, tname);
+    KEmailAddress::extractEmailAddressAndName(tusername, temail, tname);
     return tname;
 }
 
