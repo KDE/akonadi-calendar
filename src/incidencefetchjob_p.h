@@ -41,7 +41,7 @@ public:
 
     Akonadi::Item::List items() const;
 protected:
-    void doStart();
+    void doStart() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void collectionFetchResult(KJob *job);
