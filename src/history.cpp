@@ -30,7 +30,7 @@ History::History(QObject *parent)
     , d(new Private(this))
 {
     d->mChanger = new IncidenceChanger(/*history=*/false, this);
-    d->mChanger->setObjectName(QLatin1String("changer"));   // for auto-connects
+    d->mChanger->setObjectName(QStringLiteral("changer"));   // for auto-connects
     d->mOperationTypeInProgress = TypeNone;
     d->mEnabled = true;
     d->mUndoAllInProgress = false;
