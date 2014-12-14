@@ -19,7 +19,7 @@
 
 #include "history.h"
 #include "history_p.h"
-
+#include "akonadicalendar_debug.h"
 #include <kcalutils/stringify.h>
 
 using namespace KCalCore;
@@ -140,13 +140,13 @@ void History::redo(QWidget *parent)
 void History::undoAll(QWidget *parent)
 {
     if (d->mOperationTypeInProgress != TypeNone) {
-        qWarning() << "Don't call History::undoAll() while an undo/redo/undoAll is in progress";
+        qCWarning(AKONADICALENDAR_LOG) << "Don't call History::undoAll() while an undo/redo/undoAll is in progress";
     } else if (d->mEnabled) {
         d->mUndoAllInProgress = true;
         d->mCurrentParent = parent;
         d->doIt(TypeUndo);
     } else {
-        qWarning() << "Don't call undo/redo when History is disabled";
+        qCWarning(AKONADICALENDAR_LOG) << "Don't call undo/redo when History is disabled";
     }
 }
 
@@ -293,10 +293,10 @@ void History::Private::undoOrRedo(OperationType type, QWidget *parent)
             mCurrentParent = parent;
             doIt(type);
         } else {
-            qWarning() << "Don't call undo/redo when History is disabled";
+            qCWarning(AKONADICALENDAR_LOG) << "Don't call undo/redo when History is disabled";
         }
     } else {
-        qWarning() << "Don't call undo/redo when the stack is empty.";
+        qCWarning(AKONADICALENDAR_LOG) << "Don't call undo/redo when the stack is empty.";
     }
 }
 

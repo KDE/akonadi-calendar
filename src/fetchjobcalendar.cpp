@@ -21,7 +21,7 @@
 #include "fetchjobcalendar.h"
 #include "fetchjobcalendar_p.h"
 #include "incidencefetchjob_p.h"
-
+#include "akonadicalendar_debug.h"
 #include <item.h>
 #include <collection.h>
 
@@ -50,13 +50,13 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
     if (searchJob->error()) {
         success = false;
         errorMessage = searchJob->errorText();
-        qWarning() << "Unable to fetch incidences:" << searchJob->errorText();
+        qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << searchJob->errorText();
     } else {
         foreach (const Akonadi::Item &item, searchJob->items()) {
             if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>()) {
                 success = false;
                 errorMessage = QStringLiteral("Invalid item or payload: %1").arg(item.id());
-                qWarning() << "Unable to fetch incidences:" << errorMessage;
+                qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << errorMessage;
                 continue;
             }
             internalInsert(item);

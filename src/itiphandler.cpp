@@ -43,7 +43,7 @@
 
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <QDebug>
+#include "akonadicalendar_debug.h"
 
 using namespace Akonadi;
 
@@ -104,7 +104,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
                                      const QString &iCal,
                                      const QString &action)
 {
-    qDebug() << "processiTIPMessage called with receiver=" << receiver
+    qCDebug(AKONADICALENDAR_LOG) << "processiTIPMessage called with receiver=" << receiver
              << "; action=" << action;
 
     if (d->m_currentOperation != OperationNone) {
@@ -197,17 +197,17 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
             return; // signal emitted in onSchedulerFinished().
         } else {
             // We don't have the incidence, nothing to cancel
-            qWarning() << "Couldn't find the incidence to delete.\n"
+            qCWarning(AKONADICALENDAR_LOG) << "Couldn't find the incidence to delete.\n"
                        << "You deleted it previously or didn't even accept the invitation it in the first place.\n"
                        << "; uid=" << d->m_incidence->uid()
                        << "; identifier=" << d->m_incidence->instanceIdentifier()
                        << "; summary=" << d->m_incidence->summary();
 
-            qDebug() << "\n Here's what we do have with such a summary:";
+            qCDebug(AKONADICALENDAR_LOG) << "\n Here's what we do have with such a summary:";
             KCalCore::Incidence::List knownIncidences = calendar()->incidences();
             foreach(const KCalCore::Incidence::Ptr &knownIncidence, knownIncidences) {
                 if (knownIncidence->summary() == d->m_incidence->summary()) {
-                    qDebug() << "\nFound: uid=" << knownIncidence->uid()
+                    qCDebug(AKONADICALENDAR_LOG) << "\nFound: uid=" << knownIncidence->uid()
                              << "; identifier=" << knownIncidence->instanceIdentifier()
                              << "; schedulingId" << knownIncidence->schedulingID();
                 }
@@ -255,7 +255,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
             }
         } else {
             // This should never happen
-            qWarning() << "No UI delegate is set";
+            qCWarning(AKONADICALENDAR_LOG) << "No UI delegate is set";
             emitiTipMessageProcessed(this, ResultError, i18n("Could not start editor to edit counter proposal"));
         }
     }

@@ -24,7 +24,7 @@
 #include "kcolumnfilterproxymodel_p.h"
 #include "calfilterproxymodel_p.h"
 #include "utils_p.h"
-
+#include "akonadicalendar_debug.h"
 #include <item.h>
 #include <session.h>
 #include <collection.h>
@@ -205,9 +205,9 @@ void ETMCalendarPrivate::clear()
 
     if (!mItemById.isEmpty()) {
         // This never happens
-        qDebug() << "This shouldnt happen: !mItemById.isEmpty()";
+        qCDebug(AKONADICALENDAR_LOG) << "This shouldnt happen: !mItemById.isEmpty()";
         foreach (Akonadi::Item::Id id, mItemById.keys()) {
-            qDebug() << "Id = " << id;
+            qCDebug(AKONADICALENDAR_LOG) << "Id = " << id;
         }
 
         mItemById.clear();
@@ -216,9 +216,9 @@ void ETMCalendarPrivate::clear()
 
     if (!mItemIdByUid.isEmpty()) {
         // This never happens
-        qDebug() << "This shouldnt happen: !mItemIdByUid.isEmpty()";
+        qCDebug(AKONADICALENDAR_LOG) << "This shouldnt happen: !mItemIdByUid.isEmpty()";
         foreach (const QString &uid, mItemIdByUid.keys()) {
-            qDebug() << "uid: " << uid;
+            qCDebug(AKONADICALENDAR_LOG) << "uid: " << uid;
         }
         mItemIdByUid.clear();
         //Q_ASSERT(false);

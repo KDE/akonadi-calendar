@@ -29,7 +29,7 @@
 #include <kcalcore/icalformat.h>
 #include <kcalutils/incidenceformatter.h>
 #include <kcalutils/stringify.h>
-#include <QDebug>
+#include "akonadicalendar_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 
@@ -55,11 +55,11 @@ QString proposalComment(const KCalCore::Incidence::Ptr &incidence)
     break;
     case KCalCore::IncidenceBase::TypeTodo:
     {
-        qWarning() << "NOT IMPLEMENTED: proposalComment called for to-do.";
+        qCWarning(AKONADICALENDAR_LOG) << "NOT IMPLEMENTED: proposalComment called for to-do.";
     }
     break;
     default:
-        qWarning() << "NOT IMPLEMENTED: proposalComment called for " << incidence->typeStr();
+        qCWarning(AKONADICALENDAR_LOG) << "NOT IMPLEMENTED: proposalComment called for " << incidence->typeStr();
     }
 
     return comment;
@@ -218,7 +218,7 @@ void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalCore::iTIPMethod method,
     /// When we created the incidence, we *must* be the organizer.
 
     if (!weAreOrganizerOf(incidence)) {
-        qWarning() << "Creating incidence which has another organizer! Will skip sending invitations."
+        qCWarning(AKONADICALENDAR_LOG) << "Creating incidence which has another organizer! Will skip sending invitations."
                  << "; email= "       << incidence->organizer()->email()
                  << "; thatIsMe() = " << Akonadi::CalendarUtils::thatIsMe(incidence->organizer()->email());
         emit sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::ResultFailAbortUpdate, method, incidence);

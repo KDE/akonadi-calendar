@@ -21,7 +21,7 @@
 #include "incidencechanger_p.h"
 #include "mailscheduler_p.h"
 #include "utils_p.h"
-
+#include "akonadicalendar_debug.h"
 #include <itemcreatejob.h>
 #include <itemmodifyjob.h>
 #include <itemdeletejob.h>
@@ -168,7 +168,7 @@ IncidenceChanger::Private::~Private()
     if (!mAtomicOperations.isEmpty() ||
         !mQueuedModifications.isEmpty() ||
         !mModificationsInProgress.isEmpty()) {
-        qDebug() << "Normal if the application was being used. "
+        qCDebug(AKONADICALENDAR_LOG) << "Normal if the application was being used. "
                  "But might indicate a memory leak if it wasn't";
     }
 }
@@ -432,7 +432,7 @@ void IncidenceChanger::Private::handleModifyJobResult(KJob *job)
             // but the delete is probably already recorded to History, and that would make undo not work
             // in the proper order.
             resultCode = ResultCodeAlreadyDeleted;
-            qWarning() << "Trying to change item " << item.id() << " while deletion is in progress.";
+            qCWarning(AKONADICALENDAR_LOG) << "Trying to change item " << item.id() << " while deletion is in progress.";
         } else {
             qCritical() << errorString;
         }
@@ -744,7 +744,7 @@ int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence,
                                       QWidget *parent)
 {
     if (!incidence) {
-        qWarning() << "An invalid payload is not allowed.";
+        qCWarning(AKONADICALENDAR_LOG) << "An invalid payload is not allowed.";
         d->cancelTransaction();
         return -1;
     }
@@ -757,7 +757,7 @@ int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence,
     Q_ASSERT(!(d->mBatchOperationInProgress && !d->mAtomicOperations.contains(atomicOperationId)));
     if (d->mBatchOperationInProgress && d->mAtomicOperations[atomicOperationId]->rolledback()) {
         const QString errorMessage = d->showErrorDialog(ResultCodeRolledback, parent);
-        qWarning() << errorMessage;
+        qCWarning(AKONADICALENDAR_LOG) << errorMessage;
 
         change->resultCode = ResultCodeRolledback;
         change->errorString = errorMessage;
@@ -806,7 +806,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
 
     foreach (const Item &item, items) {
         if (!d->hasRights(item.parentCollection(), ChangeTypeDelete)) {
-            qWarning() << "Item " << item.id() << " can't be deleted due to ACL restrictions";
+            qCWarning(AKONADICALENDAR_LOG) << "Item " << item.id() << " can't be deleted due to ACL restrictions";
             const QString errorString = d->showErrorDialog(ResultCodePermissions, parent);
             change->resultCode = ResultCodePermissions;
             change->errorString = errorString;
@@ -819,7 +819,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
         const QString errorString = d->showErrorDialog(ResultCodeDuplicateId, parent);
         change->resultCode = ResultCodeDuplicateId;
         change->errorString = errorString;
-        qWarning() << errorString;
+        qCWarning(AKONADICALENDAR_LOG) << errorString;
         d->cancelTransaction();
         return changeId;
     }
@@ -828,7 +828,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     foreach (const Item &item, items) {
         if (d->deleteAlreadyCalled(item.id())) {
             // IncidenceChanger::deleteIncidence() called twice, ignore this one.
-            qDebug() << "Item " << item.id() << " already deleted or being deleted, skipping";
+            qCDebug(AKONADICALENDAR_LOG) << "Item " << item.id() << " already deleted or being deleted, skipping";
         } else {
             itemsToDelete.append(item);
         }
@@ -846,14 +846,14 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     if (itemsToDelete.isEmpty()) {
         QVector<Akonadi::Item::Id> itemIdList;
         itemIdList.append(Item().id());
-        qDebug() << "Items already deleted or being deleted, skipping";
+        qCDebug(AKONADICALENDAR_LOG) << "Items already deleted or being deleted, skipping";
         const QString errorMessage =
             i18n("That calendar item was already deleted, or currently being deleted.");
         // Queued emit because return must be executed first, otherwise caller won't know this workId
         change->resultCode = ResultCodeAlreadyDeleted;
         change->errorString = errorMessage;
         d->cancelTransaction();
-        qWarning() << errorMessage;
+        qCWarning(AKONADICALENDAR_LOG) << errorMessage;
         return changeId;
     }
     change->originalItems = itemsToDelete;
@@ -903,13 +903,13 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem,
                                       QWidget *parent)
 {
     if (!changedItem.isValid() || !changedItem.hasPayload<Incidence::Ptr>()) {
-        qWarning() << "An invalid item or payload is not allowed.";
+        qCWarning(AKONADICALENDAR_LOG) << "An invalid item or payload is not allowed.";
         d->cancelTransaction();
         return -1;
     }
 
     if (!d->hasRights(changedItem.parentCollection(), ChangeTypeModify)) {
-        qWarning() << "Item " << changedItem.id() << " can't be deleted due to ACL restrictions";
+        qCWarning(AKONADICALENDAR_LOG) << "Item " << changedItem.id() << " can't be deleted due to ACL restrictions";
         const int changeId = ++d->mLatestChangeId;
         const QString errorString = d->showErrorDialog(ResultCodePermissions, parent);
         emitModifyFinished(this, changeId, changedItem, ResultCodePermissions, errorString);
@@ -941,7 +941,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem,
         change->resultCode = ResultCodeDuplicateId;
         change->errorString = errorString;
         d->cancelTransaction();
-        qWarning() << "Atomic operation now allowed";
+        qCWarning(AKONADICALENDAR_LOG) << "Atomic operation now allowed";
         return changeId;
     }
 
@@ -969,7 +969,7 @@ void IncidenceChanger::Private::performModification(Change::Ptr change)
 
     if (deleteAlreadyCalled(id)) {
         // IncidenceChanger::deleteIncidence() called twice, ignore this one.
-        qDebug() << "Item " << id << " already deleted or being deleted, skipping";
+        qCDebug(AKONADICALENDAR_LOG) << "Item " << id << " already deleted or being deleted, skipping";
 
         // Queued emit because return must be executed first, otherwise caller won't know this workId
         emitModifyFinished(q, change->id, newItem, ResultCodeAlreadyDeleted,
@@ -1004,7 +1004,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
     Q_ASSERT(newItem.hasPayload<Incidence::Ptr>());
     if (status == ITIPHandlerHelper::ResultCanceled) { //TODO:fireout what is right here:)
         // User got a "You're not the organizer, do you really want to send" dialog, and said "no"
-        qDebug() << "User cancelled, giving up";
+        qCDebug(AKONADICALENDAR_LOG) << "User cancelled, giving up";
         emitModifyFinished(q, change->id, newItem, ResultCodeUserCanceled, QString());
         return;
     }
@@ -1062,7 +1062,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
 void IncidenceChanger::startAtomicOperation(const QString &operationDescription)
 {
     if (d->mBatchOperationInProgress) {
-        qDebug() << "An atomic operation is already in progress.";
+        qCDebug(AKONADICALENDAR_LOG) << "An atomic operation is already in progress.";
         return;
     }
 
@@ -1077,7 +1077,7 @@ void IncidenceChanger::startAtomicOperation(const QString &operationDescription)
 void IncidenceChanger::endAtomicOperation()
 {
     if (!d->mBatchOperationInProgress) {
-        qDebug() << "No atomic operation is in progress.";
+        qCDebug(AKONADICALENDAR_LOG) << "No atomic operation is in progress.";
         return;
     }
 
@@ -1321,7 +1321,7 @@ bool IncidenceChanger::Private::allowAtomicOperation(int atomicOperationId,
     }
 
     if (!allow) {
-        qWarning() << "Each change belonging to a group operation"
+        qCWarning(AKONADICALENDAR_LOG) << "Each change belonging to a group operation"
                    << "must have a different Akonadi::Item::Id";
     }
 

@@ -34,7 +34,7 @@
 #include <kcalcore/freebusy.h>
 #include <kcalcore/person.h>
 
-#include <QDebug>
+#include "akonadicalendar_debug.h"
 #include <KMessageBox>
 
 #include <QUrl>
@@ -97,7 +97,7 @@ void FbCheckerJob::start()
 void FbCheckerJob::checkNextUrl()
 {
     if (mUrlsToCheck.isEmpty()) {
-        qDebug() << "No fb file found";
+        qCDebug(AKONADICALENDAR_LOG) << "No fb file found";
         setError(KJob::UserDefinedError);
         emitResult();
         return;
@@ -119,7 +119,7 @@ void FbCheckerJob::onGetJobFinished(KJob *job)
 {
     KIO::TransferJob *transferJob = static_cast<KIO::TransferJob *>(job);
     if (mData.contains("BEGIN:VCALENDAR")) {
-        qDebug() << "found freebusy";
+        qCDebug(AKONADICALENDAR_LOG) << "found freebusy";
         mValidUrl = transferJob->url();
         emitResult();
     } else {
@@ -220,7 +220,7 @@ void FreeBusyManagerPrivate::fetchFreeBusyUrl(const QString &email)
     KConfigGroup group = cfg.group(email);
     QString url = group.readEntry(QStringLiteral("url"));
     if (!url.isEmpty()) {
-        qDebug() << "Found cached url:" << url;
+        qCDebug(AKONADICALENDAR_LOG) << "Found cached url:" << url;
         QUrl cachedUrl(url);
         if (Akonadi::CalendarUtils::thatIsMe(email)) {
             cachedUrl.setUserName(CalendarSettings::self()->freeBusyRetrieveUser());
@@ -259,9 +259,9 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         if (!pref.isEmpty() && pref != email) {
             group = cfg.group(pref);
             url = group.readEntry("url");
-            qDebug() << "Preferred email of" << email << "is" << pref;
+            qCDebug(AKONADICALENDAR_LOG) << "Preferred email of" << email << "is" << pref;
             if (!url.isEmpty()) {
-                qDebug() << "Taken url from preferred email:" << url;
+                qCDebug(AKONADICALENDAR_LOG) << "Taken url from preferred email:" << url;
                 emit freeBusyUrlRetrieved(email, replaceVariablesUrl(QUrl(url), email));
                 return;
             }
@@ -270,7 +270,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     // None found. Check if we do automatic FB retrieving then
     if (!CalendarSettings::self()->freeBusyRetrieveAuto()) {
         // No, so no FB list here
-        qDebug() << "No automatic retrieving";
+        qCDebug(AKONADICALENDAR_LOG) << "No automatic retrieving";
         emit freeBusyUrlRetrieved(email, QUrl());
         return;
     }
@@ -279,7 +279,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     // address (this also avoids downloading for "(empty email)").
     int emailpos = email.indexOf(QLatin1Char('@'));
     if (emailpos == -1) {
-        qWarning() << "No '@' found in" << email;
+        qCWarning(AKONADICALENDAR_LOG) << "No '@' found in" << email;
         emit freeBusyUrlRetrieved(email, QUrl());
         return;
     }
@@ -295,7 +295,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
             !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
             !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
             // Host names do not match
-            qDebug() << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
+            qCDebug(AKONADICALENDAR_LOG) << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
             emit freeBusyUrlRetrieved(email, QUrl());
             return;
         }
@@ -313,7 +313,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
 
         // no need to cache this URL as this is pretty fast to get from the config value.
         // return the fullpath URL
-        qDebug() << "Found url. email=" << email << "; url=" << fullpathURL;
+        qCDebug(AKONADICALENDAR_LOG) << "Found url. email=" << email << "; url=" << fullpathURL;
         emit freeBusyUrlRetrieved(email, fullpathURL);
         return;
     }
@@ -355,10 +355,10 @@ void FreeBusyManagerPrivate::fbCheckerJobFinished(KJob *job)
         KConfig cfg(configFile());
         KConfigGroup group = cfg.group(email);
         group.writeEntry("url", dirURL.toDisplayString());   // prettyURL() does not write user nor password
-        qDebug() << "Found url email=" << email << "; url=" << dirURL;
+        qCDebug(AKONADICALENDAR_LOG) << "Found url email=" << email << "; url=" << dirURL;
         emit freeBusyUrlRetrieved(email, dirURL);
     } else {
-        qDebug() << "Returning invalid url";
+        qCDebug(AKONADICALENDAR_LOG) << "Returning invalid url";
         emit freeBusyUrlRetrieved(email, QUrl());
     }
 }
@@ -374,8 +374,8 @@ KCalCore::FreeBusy::Ptr FreeBusyManagerPrivate::iCalToFreeBusy(const QByteArray 
     KCalCore::FreeBusy::Ptr fb = mFormat.parseFreeBusy(freeBusyVCal);
 
     if (!fb) {
-        qDebug() << "Error parsing free/busy";
-        qDebug() << freeBusyVCal;
+        qCDebug(AKONADICALENDAR_LOG) << "Error parsing free/busy";
+        qCDebug(AKONADICALENDAR_LOG) << freeBusyVCal;
     }
 
     return fb;
@@ -427,7 +427,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
             KCalCore::Person::Ptr p = fb->organizer();
             p->setEmail(email);
             q->saveFreeBusy(fb, p);
-            qDebug() << "Freebusy retrieved for " << email;
+            qCDebug(AKONADICALENDAR_LOG) << "Freebusy retrieved for " << email;
             emit q->freeBusyRetrieved(fb, email);
         } else {
             qCritical() << "Error downloading freebusy, invalid fb.";
@@ -480,7 +480,7 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
 
     // First, try to find all agents that are free-busy providers
     QStringList providers = getFreeBusyProviders();
-    qDebug() << "Got the following FreeBusy providers: " << providers;
+    qCDebug(AKONADICALENDAR_LOG) << "Got the following FreeBusy providers: " << providers;
 
     // If some free-busy providers were found let's query them first and ask them
     // if they manage the free-busy information for the email address we have.
@@ -499,12 +499,12 @@ void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
     Q_Q(FreeBusyManager);
 
     if (!freeBusyUrlForEmail.isValid()) {
-        qDebug() << "Invalid FreeBusy URL" << freeBusyUrlForEmail.toDisplayString() << email;
+        qCDebug(AKONADICALENDAR_LOG) << "Invalid FreeBusy URL" << freeBusyUrlForEmail.toDisplayString() << email;
         return;
     }
 
     if (mFreeBusyUrlEmailMap.contains(freeBusyUrlForEmail)) {
-        qDebug() << "Download already in progress for " << freeBusyUrlForEmail;
+        qCDebug(AKONADICALENDAR_LOG) << "Download already in progress for " << freeBusyUrlForEmail;
         return;
     }
 
@@ -551,7 +551,7 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
     } else {
         // We are currently uploading the FB list. Start the timer
         if (eta <= 0) {
-            qDebug() << "This shouldn't happen! eta <= 0";
+            qCDebug(AKONADICALENDAR_LOG) << "This shouldn't happen! eta <= 0";
             eta = 10; // whatever
         }
     }
@@ -621,7 +621,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
 
     FreeBusyProvidersRequestsQueue *queue = &mProvidersRequestsByEmail[email];
     QString respondingService = iface->service();
-    qDebug() << respondingService << "responded to our FreeBusy request:" << handles;
+    qCDebug(AKONADICALENDAR_LOG) << respondingService << "responded to our FreeBusy request:" << handles;
     int requestIndex = -1;
 
     for (int i = 0; i < queue->mRequests.size(); ++i) {
@@ -890,7 +890,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         QUrl src;
         src.setPath(tempFile.fileName());
 
-        qDebug() << targetURL;
+        qCDebug(AKONADICALENDAR_LOG) << targetURL;
 
         KIO::Job *job = KIO::file_copy(src, targetURL, -1, KIO::Overwrite | KIO::HideProgressInfo);
 
@@ -937,9 +937,9 @@ bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
 {
     Q_D(FreeBusyManager);
 
-    qDebug() << email;
+    qCDebug(AKONADICALENDAR_LOG) << email;
     if (email.isEmpty()) {
-        qDebug() << "Email is empty";
+        qCDebug(AKONADICALENDAR_LOG) << "Email is empty";
         return false;
     }
 
@@ -947,7 +947,7 @@ bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
 
     if (Akonadi::CalendarUtils::thatIsMe(email)) {
         // Don't download our own free-busy list from the net
-        qDebug() << "freebusy of owner, not downloading";
+        qCDebug(AKONADICALENDAR_LOG) << "freebusy of owner, not downloading";
         emit freeBusyRetrieved(d->ownerFreeBusy(), email);
         return true;
     }
@@ -955,14 +955,14 @@ bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
     // Check for cached copy of free/busy list
     KCalCore::FreeBusy::Ptr fb = loadFreeBusy(email);
     if (fb) {
-        qDebug() << "Found a cached copy for " << email;
+        qCDebug(AKONADICALENDAR_LOG) << "Found a cached copy for " << email;
         emit freeBusyRetrieved(fb, email);
         return true;
     }
 
     // Don't download free/busy if the user does not want it.
     if (!CalendarSettings::self()->freeBusyRetrieveAuto() && !forceDownload) {
-        qDebug() << "Not downloading freebusy";
+        qCDebug(AKONADICALENDAR_LOG) << "Not downloading freebusy";
         return false;
     }
 
@@ -970,7 +970,7 @@ bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
 
     if (d->mRetrieveQueue.count() > 1) {
         // TODO: true should always emit
-        qWarning() << "Returning true without emit, is this correct?";
+        qCWarning(AKONADICALENDAR_LOG) << "Returning true without emit, is this correct?";
         return true;
     }
 
@@ -993,12 +993,12 @@ KCalCore::FreeBusy::Ptr FreeBusyManager::loadFreeBusy(const QString &email)
 
     QFile f(fbd + QLatin1Char('/') + email + QStringLiteral(".ifb"));
     if (!f.exists()) {
-        qDebug() << f.fileName() << "doesn't exist.";
+        qCDebug(AKONADICALENDAR_LOG) << f.fileName() << "doesn't exist.";
         return KCalCore::FreeBusy::Ptr();
     }
 
     if (!f.open(QIODevice::ReadOnly)) {
-        qDebug() << "Unable to open file" << f.fileName();
+        qCDebug(AKONADICALENDAR_LOG) << "Unable to open file" << f.fileName();
         return KCalCore::FreeBusy::Ptr();
     }
 
@@ -1013,17 +1013,17 @@ bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
 {
     Q_D(FreeBusyManager);
     Q_ASSERT(person);
-    qDebug() << person->fullName();
+    qCDebug(AKONADICALENDAR_LOG) << person->fullName();
 
     QString fbd = d->freeBusyDir();
 
     QDir freeBusyDirectory(fbd);
     if (!freeBusyDirectory.exists()) {
-        qDebug() << "Directory" << fbd << " does not exist!";
-        qDebug() << "Creating directory:" << fbd;
+        qCDebug(AKONADICALENDAR_LOG) << "Directory" << fbd << " does not exist!";
+        qCDebug(AKONADICALENDAR_LOG) << "Creating directory:" << fbd;
 
         if (!freeBusyDirectory.mkpath(fbd)) {
-            qDebug() << "Could not create directory:" << fbd;
+            qCDebug(AKONADICALENDAR_LOG) << "Could not create directory:" << fbd;
             return false;
         }
     }
@@ -1034,7 +1034,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
     filename += QStringLiteral(".ifb");
     QFile f(filename);
 
-    qDebug() << "filename:" << filename;
+    qCDebug(AKONADICALENDAR_LOG) << "filename:" << filename;
 
     freebusy->clearAttendees();
     freebusy->setOrganizer(person);
@@ -1042,7 +1042,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
     QString messageText = d->mFormat.createScheduleMessage(freebusy, KCalCore::iTIPPublish);
 
     if (!f.open(QIODevice::ReadWrite)) {
-        qDebug() << "acceptFreeBusy: Can't open:" << filename << "for writing";
+        qCDebug(AKONADICALENDAR_LOG) << "acceptFreeBusy: Can't open:" << filename << "for writing";
         return false;
     }
     QTextStream t(&f);

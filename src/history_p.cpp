@@ -18,7 +18,7 @@
 */
 
 #include "history_p.h"
-
+#include "akonadicalendar_debug.h"
 #include <kcalutils/stringify.h>
 #include <KLocalizedString>
 
@@ -154,7 +154,7 @@ void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
             Q_ASSERT(mItems.count() == 1);
 
             if (mItems.first().id() == item.id()) {
-                qWarning() << "Duplicate id. Old= " << mItems.first().id() << item.id();
+                qCWarning(AKONADICALENDAR_LOG) << "Duplicate id. Old= " << mItems.first().id() << item.id();
                 Q_ASSERT(false);
             }
             updateIdsGlobaly(mItems.first().id(), item.id());

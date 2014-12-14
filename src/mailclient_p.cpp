@@ -37,7 +37,7 @@
 #include <transport.h>
 #include <transportmanager.h>
 
-#include <QDebug>
+#include "akonadicalendar_debug.h"
 #include <KLocalizedString>
 #include <KJob>
 #include <KProtocolManager>
@@ -63,7 +63,7 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     Q_ASSERT(incidence);
     KCalCore::Attendee::List attendees = incidence->attendees();
     if (attendees.isEmpty()) {
-        qWarning() << "There are no attendees to e-mail";
+        qCWarning(AKONADICALENDAR_LOG) << "There are no attendees to e-mail";
         emit finished(ResultNoAttendees, i18n("There are no attendees to e-mail"));
         return;
     }
@@ -99,7 +99,7 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     }
     if (toList.isEmpty() && ccList.isEmpty()) {
         // Not really to be called a groupware meeting, eh
-        qWarning() << "There are really no attendees to e-mail";
+        qCWarning(AKONADICALENDAR_LOG) << "There are really no attendees to e-mail";
         emit finished(ResultReallyNoAttendees, i18n("There are no attendees to e-mail"));
         return;
     }
@@ -207,7 +207,7 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
     if (to.isEmpty()) {
         to = from;
     }
-    qDebug() << "\nFrom:" << from
+    qCDebug(AKONADICALENDAR_LOG) << "\nFrom:" << from
              << "\nTo:" << to
              << "\nCC:" << cc
              << "\nSubject:" << subject << "\nBody: \n" << body

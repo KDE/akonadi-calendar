@@ -20,7 +20,7 @@
 #include "incidencechanger_p.h"
 #include "utils_p.h"
 #include <kcalcore/incidence.h>
-
+#include "akonadicalendar_debug.h"
 #include <item.h>
 #include <itemcreatejob.h>
 #include <collectionfetchjob.h>
@@ -120,7 +120,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         if (candidateCollections.count() == 1 && candidateCollections.first().isValid()) {
             // We only have 1 writable collection, don't bother the user with a dialog
             collectionToUse = candidateCollections.first();
-            qDebug() << "Only one collection exists, will not show collection dialog: " << collectionToUse.displayName();
+            qCDebug(AKONADICALENDAR_LOG) << "Only one collection exists, will not show collection dialog: " << collectionToUse.displayName();
             step2CreateIncidence(change, collectionToUse);
             continue;
         }
@@ -133,7 +133,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         collectionToUse = CalendarUtils::selectCollection(parent, /*by-ref*/dialogCode,
                           mimeTypes, mDefaultCollection);
         if (dialogCode != QDialog::Accepted) {
-            qDebug() << "User canceled collection choosing";
+            qCDebug(AKONADICALENDAR_LOG) << "User canceled collection choosing";
             change->resultCode = ResultCodeUserCanceled;
             canceled = true;
             cancelTransaction();
@@ -141,7 +141,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         }
 
         if (collectionToUse.isValid() && !hasRights(collectionToUse, ChangeTypeCreate)) {
-            qWarning() << "No ACLs for incidence creation";
+            qCWarning(AKONADICALENDAR_LOG) << "No ACLs for incidence creation";
             const QString errorMessage = showErrorDialog(ResultCodePermissions, parent);
             change->resultCode = ResultCodePermissions;
             change->errorString = errorMessage;
@@ -184,7 +184,7 @@ void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change
                 step2CreateIncidence(change, mDefaultCollection);
                 break;
             }
-            qWarning() << "Destination policy is to use the default collection."
+            qCWarning(AKONADICALENDAR_LOG) << "Destination policy is to use the default collection."
                        << "But it's invalid or doesn't have proper ACLs."
                        << "isValid = "  << mDefaultCollection.isValid()
                        << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);

@@ -34,7 +34,7 @@
 
 #include <KJob>
 #include <KLocalizedString>
-#include <QDebug>
+#include "akonadicalendar_debug.h"
 #include <KDateTime>
 #include <KIO/JobClasses>
 #include <KIO/Scheduler>

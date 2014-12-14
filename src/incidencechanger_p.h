@@ -145,7 +145,7 @@ public:
 
     ~CreationChange()
     {
-        //qDebug() << "CreationChange::~ will emit signal with " << resultCode;
+        //qCDebug(AKONADICALENDAR_LOG) << "CreationChange::~ will emit signal with " << resultCode;
         if (!parentChange) {
             emitCompletionSignal();
         }
@@ -169,7 +169,7 @@ public:
 
     ~DeletionChange()
     {
-        //qDebug() << "DeletionChange::~ will emit signal with " << resultCode;
+        //qCDebug(AKONADICALENDAR_LOG) << "DeletionChange::~ will emit signal with " << resultCode;
         if (!parentChange) {
             emitCompletionSignal();
         }
@@ -201,7 +201,7 @@ public:
 
     ~AtomicOperation()
     {
-        //qDebug() << "AtomicOperation::~ " << wasRolledback << changes.count();
+        //qCDebug(AKONADICALENDAR_LOG) << "AtomicOperation::~ " << wasRolledback << changes.count();
         if (m_wasRolledback) {
             for (int i = 0; i < m_changes.count(); ++i) {
                 // When a job that can finish successfully is aborted because the transaction failed
@@ -225,7 +225,7 @@ public:
 
     void setRolledback()
     {
-        //qDebug() << "AtomicOperation::setRolledBack()";
+        //qCDebug(AKONADICALENDAR_LOG) << "AtomicOperation::setRolledBack()";
         m_wasRolledback = true;
         transaction()->rollback();
     }

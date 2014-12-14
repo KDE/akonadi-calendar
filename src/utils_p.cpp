@@ -23,7 +23,7 @@
 #include <identitymanager.h>
 #include <identity.h>
 #include <kmime/kmime_header_parsing.h>
-
+#include "akonadicalendar_debug.h"
 #include <KEMailSettings>
 #include <collectiondialog.h>
 
@@ -40,7 +40,7 @@ Akonadi::CalendarUtils::selectCollection(QWidget *parent,
 {
     QPointer<Akonadi::CollectionDialog> dlg(new Akonadi::CollectionDialog(parent));
 
-    qDebug() << "selecting collections with mimeType in " << mimeTypes;
+    qCDebug(AKONADICALENDAR_LOG) << "selecting collections with mimeType in " << mimeTypes;
 
     dlg->changeCollectionDialogOptions(Akonadi::CollectionDialog::KeepTreeExpanded);
     dlg->setMimeTypeFilter(mimeTypes);
@@ -56,7 +56,7 @@ Akonadi::CalendarUtils::selectCollection(QWidget *parent,
         collection = dlg->selectedCollection();
 
         if (!collection.isValid()) {
-            qWarning() <<"An invalid collection was selected!";
+            qCWarning(AKONADICALENDAR_LOG) <<"An invalid collection was selected!";
         }
     }
     delete dlg;
