@@ -34,7 +34,7 @@ class FreeBusyDownloadJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget = 0);
+    explicit FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget = Q_NULLPTR);
     ~FreeBusyDownloadJob();
 
     /** reimp */ void start();

@@ -275,20 +275,20 @@ public:
      */
     void sendiTIPMessage(KCalCore::iTIPMethod method,
                          const KCalCore::Incidence::Ptr &incidence,
-                         QWidget *parentWidget = 0);
+                         QWidget *parentWidget = Q_NULLPTR);
 
     /**
      * Publishes incidence @p incidence.
      * A publish dialog will prompt the user to input recipients.
      * @see rfc2446 3.2.1
      */
-    void publishInformation(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = 0);
+    void publishInformation(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = Q_NULLPTR);
 
     /**
      * Sends an e-mail with the incidence attached as iCalendar source.
      * A dialog will prompt the user to input recipients.
      */
-    void sendAsICalendar(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = 0);
+    void sendAsICalendar(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = Q_NULLPTR);
 
     /**
      * Sets the UI delegate to edit counter proposals.
