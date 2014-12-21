@@ -36,14 +36,8 @@ find_package(KF5IdentityManagement ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarUtils ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${Akonadi-Calendar_SOURCE_DIR})
-  find_package(KF5Akonadi ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-  find_package(KF5AkonadiContact ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-else()
-  # IMPORTED targets are scoped, so KF5::AkonadiPrivate found in ../akonadi
-  # won't work here, and it is a PUBLIC dependency of KF5::Akonadi
-  find_package(KF5AkonadiServer ${KF5AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF5Akonadi ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+find_package(KF5AkonadiContact ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 
@@ -76,7 +70,5 @@ install(FILES
   DESTINATION ${KF5_INCLUDE_INSTALL_DIR} COMPONENT Devel
 )
 
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
