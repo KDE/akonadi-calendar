@@ -51,7 +51,7 @@ static const char *s_outEmail2 = "identity2@kde.org";
 class FakeMessageQueueJob : public MailTransport::MessageQueueJob
 {
 public:
-    explicit FakeMessageQueueJob(QObject *parent = 0)
+    explicit FakeMessageQueueJob(QObject *parent = Q_NULLPTR)
         : MailTransport::MessageQueueJob(parent)
     {
     }
@@ -81,7 +81,7 @@ UnitTestResult::List FakeMessageQueueJob::sUnitTestResults;
 class FakeITIPHandlerComponentFactory : public ITIPHandlerComponentFactory
 {
 public:
-    FakeITIPHandlerComponentFactory(QObject *parent = 0)
+    FakeITIPHandlerComponentFactory(QObject *parent = Q_NULLPTR)
         : ITIPHandlerComponentFactory(parent)
     {
     }
