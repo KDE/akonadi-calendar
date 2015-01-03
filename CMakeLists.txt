@@ -16,7 +16,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 
-set(KF5_VERSION "5.5.0")
+set(KF5_VERSION "5.6.0")
 set(AKONADICALENDAR_LIB_VERSION "4.79.0")
 set(CALENDARCORE_LIB_VERSION "4.79.0")
 set(AKONADICONTACT_LIB_VERSION "4.79.0")
