@@ -59,8 +59,8 @@ ICalImporter::Private::Private(IncidenceChanger *changer,
     if (!changer) {
         m_changer = new IncidenceChanger(q);
     }
-    connect(m_changer, SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onIncidenceCreated(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(m_changer, &IncidenceChanger::createFinished,
+            this, &ICalImporter::Private::onIncidenceCreated);
 
 }
 
@@ -169,7 +169,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
     Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
-    connect(job, SIGNAL(result(KJob*)), d, SLOT(resourceCreated(KJob*)));
+    connect(job, &KJob::result, d, &Private::resourceCreated);
     job->start();
 
     return true;

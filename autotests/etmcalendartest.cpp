@@ -118,8 +118,8 @@ void ETMCalendarTest:: initTestCase()
 
     mCalendar = new ETMCalendar();
     QVERIFY(!mCalendar->isLoaded());
-    connect(mCalendar, SIGNAL(collectionsAdded(Akonadi::Collection::List)),
-            SLOT(handleCollectionsAdded(Akonadi::Collection::List)));
+    connect(mCalendar, &ETMCalendar::collectionsAdded,
+            this, &ETMCalendarTest::handleCollectionsAdded);
 
     mCalendar->registerObserver(this);
 

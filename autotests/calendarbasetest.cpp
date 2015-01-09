@@ -130,11 +130,11 @@ void CalendarBaseTest::initTestCase()
     mCalendar = new CalendarBase();
     mCalendar->incidenceChanger()->setDestinationPolicy(IncidenceChanger::DestinationPolicyDefault);
     mCalendar->incidenceChanger()->setDefaultCollection(mCollection);
-    connect(mCalendar, SIGNAL(createFinished(bool,QString)),
-            SLOT(handleCreateFinished(bool,QString)));
+    connect(mCalendar, &CalendarBase::createFinished,
+            this, &CalendarBaseTest::handleCreateFinished);
 
-    connect(mCalendar, SIGNAL(deleteFinished(bool,QString)),
-            SLOT(handleDeleteFinished(bool,QString)));
+    connect(mCalendar, &CalendarBase::deleteFinished,
+            this, &CalendarBaseTest::handleDeleteFinished);
     createInitialIncidences();
 }
 

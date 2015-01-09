@@ -117,14 +117,14 @@ private Q_SLOTS:
         mChanger = new IncidenceChanger(this);
         mChanger->setShowDialogsOnError(false);
 
-        connect(mChanger, SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-                SLOT(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+        connect(mChanger, &IncidenceChanger::createFinished,
+                this, &IncidenceChangerTest::createFinished);
 
-        connect(mChanger, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-                SLOT(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+        connect(mChanger, &IncidenceChanger::deleteFinished,
+                this, &IncidenceChangerTest::deleteFinished);
 
-        connect(mChanger, SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-                SLOT(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+        connect(mChanger, &IncidenceChanger::modifyFinished,
+                this, &IncidenceChangerTest::modifyFinished);
     }
 
     void testCreating_data()

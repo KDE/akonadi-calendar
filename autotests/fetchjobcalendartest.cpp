@@ -82,8 +82,8 @@ private Q_SLOTS:
         createIncidence(tr("f"));
 
         FetchJobCalendar *calendar = new FetchJobCalendar();
-        connect(calendar, SIGNAL(loadFinished(bool,QString)),
-                SLOT(handleLoadFinished(bool,QString)));
+        connect(calendar, &FetchJobCalendar::loadFinished,
+                this, &FetchJobCalendarTest::handleLoadFinished);
         QTestEventLoop::instance().enterLoop(10);
         QVERIFY(!QTestEventLoop::instance().timeout());
 

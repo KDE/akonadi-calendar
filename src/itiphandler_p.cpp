@@ -36,14 +36,14 @@ ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler 
     , q(qq)
 {
     m_helper->setParent(this);
-    connect(m_scheduler, SIGNAL(transactionFinished(Akonadi::Scheduler::Result,QString)),
-            SLOT(onSchedulerFinished(Akonadi::Scheduler::Result,QString)));
+    connect(m_scheduler, &Scheduler::transactionFinished,
+            this, &ITIPHandler::Private::onSchedulerFinished);
 
-    connect(m_helper, SIGNAL(finished(Akonadi::ITIPHandlerHelper::SendResult,QString)),
-            SLOT(onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult,QString)));
+    connect(m_helper, &ITIPHandlerHelper::finished,
+            this, &ITIPHandler::Private::onHelperFinished);
 
-    connect(m_helper, SIGNAL(sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::SendResult,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)),
-            SLOT(onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult,KCalCore::iTIPMethod,KCalCore::Incidence::Ptr)));
+    connect(m_helper, &ITIPHandlerHelper::sendIncidenceModifiedMessageFinished,
+            this, &ITIPHandler::Private::onHelperModifyDialogClosed);
 }
 
 void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result,

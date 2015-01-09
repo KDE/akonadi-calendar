@@ -48,12 +48,12 @@ CalendarClipboard::Private::Private(const Akonadi::CalendarBase::Ptr &calendar,
     m_dndfactory = new KCalUtils::DndFactory(m_calendar);
 
     connect(m_changer,
-            SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(slotModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+            &IncidenceChanger::modifyFinished,
+            this, &CalendarClipboard::Private::slotModifyFinished);
 
     connect(m_changer,
-            SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(slotDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+            &IncidenceChanger::deleteFinished,
+            this, &CalendarClipboard::Private::slotDeleteFinished);
 }
 
 CalendarClipboard::Private::~Private()

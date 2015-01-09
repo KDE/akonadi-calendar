@@ -34,8 +34,8 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     , q(qq)
 {
     IncidenceFetchJob *job = new IncidenceFetchJob();
-    connect(job, SIGNAL(result(KJob*)),
-            SLOT(slotSearchJobFinished(KJob*)));
+    connect(job, &KJob::result,
+            this, &FetchJobCalendarPrivate::slotSearchJobFinished);
 }
 
 FetchJobCalendarPrivate::~FetchJobCalendarPrivate()

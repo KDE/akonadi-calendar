@@ -357,7 +357,7 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
     }
 
     qjob->setMessage(message);
-    connect(qjob, SIGNAL(finished(KJob*)), SLOT(handleQueueJobFinished(KJob*)));
+    connect(qjob, &KJob::finished, this, &MailClient::handleQueueJobFinished);
     qjob->start();
 }
 

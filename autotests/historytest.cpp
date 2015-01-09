@@ -80,22 +80,22 @@ void HistoryTest::initTestCase()
     mHistory = mChanger->history();
 
     connect(mChanger,
-            SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+            &IncidenceChanger::createFinished,
+            this, &HistoryTest::createFinished);
 
     connect(mChanger,
-            SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+            &IncidenceChanger::deleteFinished,
+            this, &HistoryTest::deleteFinished);
 
     connect(mChanger,
-            SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+            &IncidenceChanger::modifyFinished,
+            this, &HistoryTest::modifyFinished);
 
-    connect(mHistory, SIGNAL(undone(Akonadi::History::ResultCode)),
-            SLOT(handleUndone(Akonadi::History::ResultCode)));
+    connect(mHistory, &History::undone,
+            this, &HistoryTest::handleUndone);
 
-    connect(mHistory, SIGNAL(redone(Akonadi::History::ResultCode)),
-            SLOT(handleRedone(Akonadi::History::ResultCode)));
+    connect(mHistory, &History::redone,
+            this, &HistoryTest::handleRedone);
 }
 
 void HistoryTest::testCreation_data()

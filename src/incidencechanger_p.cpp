@@ -51,7 +51,7 @@ void IncidenceChanger::Private::loadCollections()
             Akonadi::CollectionFetchJob::Recursive);
 
     m_collectionFetchJob->fetchScope().setContentMimeTypes(KCalCore::Incidence::mimeTypes());
-    connect(m_collectionFetchJob, SIGNAL(result(KJob*)), SLOT(onCollectionsLoaded(KJob*)));
+    connect(m_collectionFetchJob, &KJob::result, this, &IncidenceChanger::Private::onCollectionsLoaded);
     m_collectionFetchJob->start();
 }
 
@@ -235,8 +235,8 @@ void IncidenceChanger::Private::step2CreateIncidence(const Change::Ptr &change,
     }
 
     // QueuedConnection because of possible sync exec calls.
-    connect(createJob, SIGNAL(result(KJob*)),
-            SLOT(handleCreateJobResult(KJob*)), Qt::QueuedConnection);
+    connect(createJob, &KJob::result,
+            this, &IncidenceChanger::Private::handleCreateJobResult, Qt::QueuedConnection);
 
     mChangeById.insert(change->id, change);
 }

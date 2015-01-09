@@ -147,8 +147,8 @@ void TodoPurger::setIncidenceChager(IncidenceChanger *changer)
     d->m_changer = changer;
     d->m_currentChangeId = -1;
     if (changer)
-        connect(changer, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-                d, SLOT(onItemsDeleted(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+        connect(changer, &IncidenceChanger::deleteFinished,
+                d, &Private::onItemsDeleted);
 }
 
 void TodoPurger::setCalendar(const CalendarBase::Ptr &calendar)

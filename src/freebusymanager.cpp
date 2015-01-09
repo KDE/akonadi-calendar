@@ -192,8 +192,8 @@ FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
       mBrokenUrl(false),
       mParentWidgetForRetrieval(0)
 {
-    connect(this, SIGNAL(freeBusyUrlRetrieved(QString,QUrl)),
-            SLOT(finishProcessRetrieveQueue(QString,QUrl)));
+    connect(this, &FreeBusyManagerPrivate::freeBusyUrlRetrieved,
+            this, &FreeBusyManagerPrivate::finishProcessRetrieveQueue);
 }
 
 QString FreeBusyManagerPrivate::freeBusyDir() const
