@@ -49,7 +49,7 @@ generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
 
 add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
 
-target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar;${KF5_INCLUDE_INSTALL_DIR}/akonadi/calendar;${Boost_INCLUDE_DIR}>")
+target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Calendar;${KF5_INCLUDE_INSTALL_DIR}/akonadi/calendar;${Boost_INCLUDE_DIR}>")
 target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src;${Boost_INCLUDE_DIR}>")
 
 target_link_libraries(KF5AkonadiCalendar
@@ -105,12 +105,12 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
 
 install( FILES
   ${AkonadiCalendar_CamelCase_HEADERS}
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/Akonadi/Calendar COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Calendar COMPONENT Devel
 )
 install( FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
   ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/akonadi/calendar COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/calendar COMPONENT Devel
 )
 
