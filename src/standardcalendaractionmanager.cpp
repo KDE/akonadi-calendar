@@ -41,8 +41,8 @@ public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardCalendarActionManager *parent)
         : mActionCollection(actionCollection),
           mParentWidget(parentWidget),
-          mCollectionSelectionModel(0),
-          mItemSelectionModel(0),
+          mCollectionSelectionModel(Q_NULLPTR),
+          mItemSelectionModel(Q_NULLPTR),
           mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
@@ -547,7 +547,7 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
         return d->mActions.value(type);
     }
 
-    QAction *action = 0;
+    QAction *action = Q_NULLPTR;
     switch (type) {
     case CreateEvent:
         action = new QAction(d->mParentWidget);
@@ -629,7 +629,7 @@ QAction* StandardCalendarActionManager::action(StandardCalendarActionManager::Ty
         return d->mActions.value(type);
     }
 
-    return 0;
+    return Q_NULLPTR;
 }
 
 QAction* StandardCalendarActionManager::action(StandardActionManager::Type type) const

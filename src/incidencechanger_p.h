@@ -130,7 +130,7 @@ public:
     }
 
     /**reimp*/
-    void emitCompletionSignal();
+    void emitCompletionSignal() Q_DECL_OVERRIDE;
 };
 
 class CreationChange : public Change
@@ -152,7 +152,7 @@ public:
     }
 
     /**reimp*/
-    void emitCompletionSignal();
+    void emitCompletionSignal() Q_DECL_OVERRIDE;
 
     Akonadi::Collection mUsedCol1lection;
 };
@@ -176,7 +176,7 @@ public:
     }
 
     /**reimp*/
-    void emitCompletionSignal();
+    void emitCompletionSignal() Q_DECL_OVERRIDE;
 
     QVector<Akonadi::Item::Id> mItemIds;
 };

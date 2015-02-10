@@ -31,7 +31,7 @@ ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler 
     , m_method(KCalCore::iTIPNoMethod)
     , m_helper(new ITIPHandlerHelper(m_factory))
     , m_currentOperation(OperationNone)
-    , m_uiDelegate(0)
+    , m_uiDelegate(Q_NULLPTR)
     , m_showDialogsOnError(true)
     , q(qq)
 {

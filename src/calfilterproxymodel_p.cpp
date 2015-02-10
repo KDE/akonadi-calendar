@@ -32,7 +32,7 @@ class CalFilterProxyModel::Private
 {
 public:
     explicit Private()
-        : filter(0)
+        : filter(Q_NULLPTR)
     {
     }
     KCalCore::CalFilter *filter;

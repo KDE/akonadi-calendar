@@ -37,7 +37,7 @@ class KColumnFilterProxyModelPrivate;
 class KColumnFilterProxyModel : public QSortFilterProxyModel
 {
 public:
-    explicit KColumnFilterProxyModel(QObject *parent = 0);
+    explicit KColumnFilterProxyModel(QObject *parent = nullptr);
     virtual ~KColumnFilterProxyModel();
 
     /**
@@ -63,7 +63,7 @@ public:
     void setVisibleColumns(const QVector<int> &visibleColumns);
 
 protected:
-    virtual bool filterAcceptsColumn(int column, const QModelIndex &parent) const;
+    virtual bool filterAcceptsColumn(int column, const QModelIndex &parent) const Q_DECL_OVERRIDE;
 
 private:
     KColumnFilterProxyModelPrivate *const d_ptr;

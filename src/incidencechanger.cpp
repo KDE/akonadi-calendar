@@ -144,7 +144,7 @@ IncidenceChanger::Private::Private(bool enableHistory, ITIPHandlerComponentFacto
     mLatestChangeId = 0;
     mShowDialogsOnError = true;
     mFactory = factory ? factory : new ITIPHandlerComponentFactory(this);
-    mHistory = enableHistory ? new History(this) : 0;
+    mHistory = enableHistory ? new History(this) : Q_NULLPTR;
     mUseHistory = enableHistory;
     mDestinationPolicy = DestinationPolicyDefault;
     mRespectsCollectionRights = false;
@@ -152,7 +152,7 @@ IncidenceChanger::Private::Private(bool enableHistory, ITIPHandlerComponentFacto
     mLatestAtomicOperationId = 0;
     mBatchOperationInProgress = false;
     mAutoAdjustRecurrence = true;
-    m_collectionFetchJob = 0;
+    m_collectionFetchJob = Q_NULLPTR;
     m_invitationPolicy = InvitationPolicyAsk;
 
     qRegisterMetaType<QVector<Akonadi::Item::Id> >("QVector<Akonadi::Item::Id>");
@@ -205,7 +205,7 @@ Akonadi::Job *IncidenceChanger::Private::parentJob(const Change::Ptr &change) co
 {
     return (mBatchOperationInProgress && !change->queuedModification) ?
            mAtomicOperations[mLatestAtomicOperationId]->transaction()
-           : 0;
+           : Q_NULLPTR;
 }
 
 void IncidenceChanger::Private::queueModification(Change::Ptr change)
@@ -623,7 +623,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
         }
         case IncidenceChanger::ChangeTypeDelete: {
             handler->deleteLater();
-            handler = 0;
+            handler = Q_NULLPTR;
             Q_ASSERT(!change->originalItems.isEmpty());
             foreach (const Akonadi::Item &item, change->originalItems) {
                 Q_ASSERT(item.hasPayload());
@@ -690,13 +690,13 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
         }
         default:
             handler->deleteLater();
-            handler = 0;
+            handler = Q_NULLPTR;
             Q_ASSERT(false);
             change->emitUserDialogClosedAfterChange(ITIPHandlerHelper::ResultCanceled);
             return;
         }
         handler->deleteLater();
-        handler  = 0;
+        handler  = Q_NULLPTR;
         change->emitUserDialogClosedAfterChange(ITIPHandlerHelper::ResultSuccess);
     } else {
         change->emitUserDialogClosedAfterChange(ITIPHandlerHelper::ResultSuccess);
@@ -718,7 +718,7 @@ bool IncidenceChanger::Private::myAttendeeStatusChanged(const Incidence::Ptr &ne
 
 IncidenceChanger::IncidenceChanger(QObject *parent)
     : QObject(parent)
-    , d(new Private(/**history=*/true, /*factory=*/0, this))
+    , d(new Private(/**history=*/true, /*factory=*/Q_NULLPTR, this))
 {
 }
 
@@ -730,7 +730,7 @@ IncidenceChanger::IncidenceChanger(ITIPHandlerComponentFactory *factory, QObject
 
 IncidenceChanger::IncidenceChanger(bool enableHistory, QObject *parent)
     : QObject(parent)
-    , d(new Private(enableHistory, /*factory=*/0, this))
+    , d(new Private(enableHistory, /*factory=*/Q_NULLPTR, this))
 {
 }
 
@@ -981,7 +981,7 @@ void IncidenceChanger::Private::performModification(Change::Ptr change)
     const bool hasAtomicOperationId = atomicOperationId != 0;
     if (hasAtomicOperationId &&
         mAtomicOperations[atomicOperationId]->rolledback()) {
-        const QString errorMessage = showErrorDialog(ResultCodeRolledback, 0);
+        const QString errorMessage = showErrorDialog(ResultCodeRolledback, Q_NULLPTR);
         qCritical() << errorMessage;
         emitModifyFinished(q, changeId, newItem, ResultCodeRolledback, errorMessage);
         return;
@@ -1386,7 +1386,7 @@ AtomicOperation::AtomicOperation(IncidenceChanger::Private *icp,
     , m_numCompletedChanges(0)
     , m_transactionCompleted(false)
     , m_wasRolledback(false)
-    , m_transaction(0)
+    , m_transaction(Q_NULLPTR)
     , m_incidenceChangerPrivate(icp)
 
 {

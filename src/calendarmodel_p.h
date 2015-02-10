@@ -60,18 +60,18 @@ public:
     void setWeakPointer(const QWeakPointer<CalendarModel> &weakPointer);
 
     /* reimp */
-    QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const;
+    QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
     /* reimp */
     QVariant entityData(const Akonadi::Collection &collection, int column,
-                        int role = Qt::DisplayRole) const;
+                        int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
     /* reimp */
-    int entityColumnCount(EntityTreeModel::HeaderGroup headerSet) const;
+    int entityColumnCount(EntityTreeModel::HeaderGroup headerSet) const Q_DECL_OVERRIDE;
 
     /* reimp */
     QVariant entityHeaderData(int section, Qt::Orientation orientation, int role,
-                              EntityTreeModel::HeaderGroup headerSet) const;
+                              EntityTreeModel::HeaderGroup headerSet) const Q_DECL_OVERRIDE;
 
 private:
     explicit CalendarModel(Akonadi::ChangeRecorder *monitor);

@@ -135,7 +135,7 @@ QUrl FbCheckerJob::validUrl() const
 /// FreeBusyManagerPrivate::FreeBusyProviderRequest
 
 FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const QString &provider)
-    : mRequestStatus(NotStarted), mInterface(0)
+    : mRequestStatus(NotStarted), mInterface(Q_NULLPTR)
 {
     mInterface =
         QSharedPointer<QDBusInterface>(
@@ -148,7 +148,7 @@ FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const Q
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(
     const QString &start, const QString &end)
-    : mHandlersCount(0), mResultingFreeBusy(0)
+    : mHandlersCount(0), mResultingFreeBusy(Q_NULLPTR)
 {
     KDateTime startDate, endDate;
 
@@ -175,7 +175,7 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(
     const KDateTime &start, const KDateTime &end)
-    : mHandlersCount(0), mResultingFreeBusy(0)
+    : mHandlersCount(0), mResultingFreeBusy(Q_NULLPTR)
 {
     mStartTime = start.toString();
     mEndTime = end.toString();
@@ -190,7 +190,7 @@ FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
       mTimerID(0),
       mUploadingFreeBusy(false),
       mBrokenUrl(false),
-      mParentWidgetForRetrieval(0)
+      mParentWidgetForRetrieval(Q_NULLPTR)
 {
     connect(this, &FreeBusyManagerPrivate::freeBusyUrlRetrieved,
             this, &FreeBusyManagerPrivate::finishProcessRetrieveQueue);
@@ -922,7 +922,7 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
     QPointer<PublishDialog> publishdlg = new PublishDialog();
     if (publishdlg->exec() == QDialog::Accepted) {
         // Send the mail
-        MailScheduler *scheduler = new MailScheduler(/*factory=*/0, this);
+        MailScheduler *scheduler = new MailScheduler(/*factory=*/Q_NULLPTR, this);
         connect(scheduler, SIGNAL(transactionFinished(Akonadi::Scheduler::Result,QString))
                 , d, SLOT(processMailSchedulerResult(Akonadi::Scheduler::Result,QString)));
         d->mParentWidgetForMailling = parentWidget;

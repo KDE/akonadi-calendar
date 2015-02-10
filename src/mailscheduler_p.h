@@ -44,19 +44,19 @@ public:
 
     /** reimp */
     void publish(const KCalCore::IncidenceBase::Ptr &incidence,
-                 const QString &recipients);
+                 const QString &recipients) Q_DECL_OVERRIDE;
 
     /** reimp */
     void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
-                            KCalCore::iTIPMethod method);
+                            KCalCore::iTIPMethod method) Q_DECL_OVERRIDE;
 
     /** reimp */
     void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
                             KCalCore::iTIPMethod method,
-                            const QString &recipients);
+                            const QString &recipients) Q_DECL_OVERRIDE;
 
     /** Returns the directory where the free-busy information is stored */
-    /** reimp*/ QString freeBusyDir() const;
+    /** reimp*/ QString freeBusyDir() const Q_DECL_OVERRIDE;
 
     /**
      * Accepts a counter proposal.
