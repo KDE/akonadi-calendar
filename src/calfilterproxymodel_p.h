@@ -40,7 +40,6 @@ public:
     void setFilter(KCalCore::CalFilter *filter);
 
 protected:
-    /* reimp */
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
 
 private:

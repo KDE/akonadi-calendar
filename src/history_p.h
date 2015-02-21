@@ -131,10 +131,7 @@ public:
     typedef QSharedPointer<CreationEntry> Ptr;
     CreationEntry(const Akonadi::Item &item, const QString &description, History *q);
 
-    /**reimp*/
     bool undo() Q_DECL_OVERRIDE;
-
-    /** reimp */
     bool redo() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
@@ -154,8 +151,8 @@ class DeletionEntry : public Entry
     Q_OBJECT
 public:
     DeletionEntry(const Akonadi::Item::List &items, const QString &description, History *q);
-    /**reimp*/ bool undo() Q_DECL_OVERRIDE;
-    /**reimp*/ bool redo() Q_DECL_OVERRIDE;
+    bool undo() Q_DECL_OVERRIDE;
+    bool redo() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
@@ -182,8 +179,8 @@ public:
                       const QString &description,
                       History *q);
 
-    /**reimp*/ bool undo() Q_DECL_OVERRIDE;
-    /**reimp*/ bool redo() Q_DECL_OVERRIDE;
+    bool undo() Q_DECL_OVERRIDE;
+    bool redo() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void onModifyFinished(int changeId, const Akonadi::Item &item,
@@ -202,12 +199,11 @@ public:
     MultiEntry(int id, const QString &description, History *q);
 
     void addEntry(const Entry::Ptr &entry);
-    /** reimp */ void updateIds(Item::Id oldId, Item::Id newId) Q_DECL_OVERRIDE;
+    void updateIds(Item::Id oldId, Item::Id newId) Q_DECL_OVERRIDE;
 
 protected:
-    /**reimp*/
     bool undo() Q_DECL_OVERRIDE;
-    /**reimp*/ bool redo() Q_DECL_OVERRIDE;
+    bool redo() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCode,

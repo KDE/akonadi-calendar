@@ -42,21 +42,18 @@ public:
     explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = Q_NULLPTR);
     ~MailScheduler();
 
-    /** reimp */
     void publish(const KCalCore::IncidenceBase::Ptr &incidence,
                  const QString &recipients) Q_DECL_OVERRIDE;
 
-    /** reimp */
     void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
                             KCalCore::iTIPMethod method) Q_DECL_OVERRIDE;
 
-    /** reimp */
     void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
                             KCalCore::iTIPMethod method,
                             const QString &recipients) Q_DECL_OVERRIDE;
 
     /** Returns the directory where the free-busy information is stored */
-    /** reimp*/ QString freeBusyDir() const Q_DECL_OVERRIDE;
+    QString freeBusyDir() const Q_DECL_OVERRIDE;
 
     /**
      * Accepts a counter proposal.

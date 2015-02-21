@@ -67,24 +67,9 @@ public:
      */
     bool isAlarmTypeBlocked(KCalCore::Alarm::Type type) const;
 
-    /**
-      * Reimplemented from Attribute
-      */
     QByteArray type() const Q_DECL_OVERRIDE;
-
-    /**
-      * Reimplemented from Attribute
-      */
     BlockAlarmsAttribute *clone() const Q_DECL_OVERRIDE;
-
-    /**
-      * Reimplemented from Attribute
-      */
     QByteArray serialized() const Q_DECL_OVERRIDE;
-
-    /**
-      * Reimplemented from Attribute
-      */
     void deserialize(const QByteArray &data) Q_DECL_OVERRIDE;
 
 private:

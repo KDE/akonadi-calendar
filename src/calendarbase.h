@@ -145,14 +145,14 @@ public:
       * It's added to akonadi in the background @see createFinished().
       * @param event the event to be added
       */
-    /**reimp*/ bool addEvent(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
+    bool addEvent(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
 
     /**
       * Deletes an Event from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param event the event to be deleted
       */
-    /**reimp*/ bool deleteEvent(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
+    bool deleteEvent(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
 
     /**
       * Reimplementation of KCalCore::Calendar::deleteAllEvents() that
@@ -163,21 +163,21 @@ public:
       *
       * @deprecated
       */
-    /**reimp*/ void deleteAllEvents() Q_DECL_OVERRIDE;
+    void deleteAllEvents() Q_DECL_OVERRIDE;
 
     /**
       * Adds a Todo to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param todo the todo to add
       */
-    /**reimp*/ bool addTodo(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
+    bool addTodo(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
 
     /**
       * Deletes a Todo from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param todo the todo to delete
       */
-    /**reimp*/ bool deleteTodo(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
+    bool deleteTodo(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
 
     /**
       * Reimplementation of KCalCore::Calendar::deleteAllTodos() that
@@ -188,21 +188,21 @@ public:
       *
       * @deprecated
       */
-    /**reimp*/ void deleteAllTodos() Q_DECL_OVERRIDE;
+    void deleteAllTodos() Q_DECL_OVERRIDE;
 
     /**
       * Adds a Journal to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param journal the journal to add
       */
-    /**reimp*/ bool addJournal(const KCalCore::Journal::Ptr &journal) Q_DECL_OVERRIDE;
+    bool addJournal(const KCalCore::Journal::Ptr &journal) Q_DECL_OVERRIDE;
 
     /**
       * Deletes a Journal from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param journal the journal to delete
       */
-    /**reimp*/ bool deleteJournal(const KCalCore::Journal::Ptr &journal) Q_DECL_OVERRIDE;
+    bool deleteJournal(const KCalCore::Journal::Ptr &journal) Q_DECL_OVERRIDE;
 
     /**
       * Reimplementation of KCalCore::Calendar::deleteAllJournals() that
@@ -213,21 +213,21 @@ public:
       *
       * @deprecated
       */
-    /**reimp*/ void deleteAllJournals() Q_DECL_OVERRIDE;
+    void deleteAllJournals() Q_DECL_OVERRIDE;
 
     /**
       * Adds an incidence to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param incidence the incidence to add
       */
-    /**reimp*/ bool addIncidence(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
+    bool addIncidence(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
 
     /**
       * Deletes an incidence from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param incidence the incidence to delete
       */
-    /**reimp*/ bool deleteIncidence(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
+    bool deleteIncidence(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
 
     /**
         Call this to tell the calendar that you're adding a batch of incidences.
@@ -235,13 +235,13 @@ public:
 
         @see endBatchAdding()
     */
-    /**reimp*/ void startBatchAdding() Q_DECL_OVERRIDE;
+    void startBatchAdding() Q_DECL_OVERRIDE;
 
     /**
       * Tells the Calendar that you stoped adding a batch of incidences.
       * @see startBatchAdding()
       */
-    /**reimp*/ void endBatchAdding() Q_DECL_OVERRIDE;
+    void endBatchAdding() Q_DECL_OVERRIDE;
 
     /**
       * Returns the IncidenceChanger used by this calendar to make changes in akonadi.

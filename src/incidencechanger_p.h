@@ -129,7 +129,6 @@ public:
         }
     }
 
-    /**reimp*/
     void emitCompletionSignal() Q_DECL_OVERRIDE;
 };
 
@@ -151,7 +150,6 @@ public:
         }
     }
 
-    /**reimp*/
     void emitCompletionSignal() Q_DECL_OVERRIDE;
 
     Akonadi::Collection mUsedCol1lection;
@@ -175,7 +173,6 @@ public:
         }
     }
 
-    /**reimp*/
     void emitCompletionSignal() Q_DECL_OVERRIDE;
 
     QVector<Akonadi::Item::Id> mItemIds;
