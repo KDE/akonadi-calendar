@@ -43,14 +43,8 @@ static KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item)
 
 static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
 {
-#if 0
-    return
-        item.hasPayload<KCalCore::Todo::Ptr>() ?
-        item.payload<KCalCore::Todo::Ptr>()
-        : KCalCore::Todo::Ptr();
-#else
-    return KCalCore::Todo::Ptr();
-#endif
+    return item.hasPayload<KCalCore::Todo::Ptr>() ? item.payload<KCalCore::Todo::Ptr>()
+                                                  : KCalCore::Todo::Ptr();
 }
 
 class CalendarModel::Private
