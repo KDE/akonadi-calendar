@@ -131,7 +131,7 @@ public:
       @param email is a QString containing a email string in the
       "FirstName LastName <emailaddress>" format.
     */
-    virtual KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email);
+    KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email) Q_DECL_OVERRIDE;
 
     /**
       Save freebusy information belonging to an email.
@@ -141,8 +141,8 @@ public:
       @param freebusy is a pointer to a valid FreeBusy instance.
       @param person is a valid Person instance.
     */
-    virtual bool saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
-                              const KCalCore::Person::Ptr &person);
+    bool saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
+                      const KCalCore::Person::Ptr &person) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /**
