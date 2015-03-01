@@ -155,17 +155,6 @@ public:
     bool deleteEvent(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
 
     /**
-      * Reimplementation of KCalCore::Calendar::deleteAllEvents() that
-      * does nothing. Do not use this.
-      *
-      * A convenience function that makes it easy to have a massive data-loss
-      * is a bad idea.
-      *
-      * @deprecated
-      */
-    void deleteAllEvents() Q_DECL_OVERRIDE;
-
-    /**
       * Adds a Todo to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param todo the todo to add
@@ -180,17 +169,6 @@ public:
     bool deleteTodo(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
 
     /**
-      * Reimplementation of KCalCore::Calendar::deleteAllTodos() that
-      * does nothing. Do not use this.
-      *
-      * A convenience function that makes it easy to have a massive data-loss
-      * is a bad idea.
-      *
-      * @deprecated
-      */
-    void deleteAllTodos() Q_DECL_OVERRIDE;
-
-    /**
       * Adds a Journal to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param journal the journal to add
@@ -203,17 +181,6 @@ public:
       * @param journal the journal to delete
       */
     bool deleteJournal(const KCalCore::Journal::Ptr &journal) Q_DECL_OVERRIDE;
-
-    /**
-      * Reimplementation of KCalCore::Calendar::deleteAllJournals() that
-      * does nothing. Do not use this.
-      *
-      * A convenience function that makes it easy to have a massive data-loss
-      * is a bad idea.
-      *
-      * @deprecated
-      */
-    void deleteAllJournals() Q_DECL_OVERRIDE;
 
     /**
       * Adds an incidence to the calendar.
@@ -267,7 +234,7 @@ Q_SIGNALS:
 
     /**
       * This signal is emitted when an incidence is deleted in akonadi through
-      * delete{Incidence,Event,Todo,Journal} or deleteAll{Events,Todos,Journals}
+      * delete{Incidence,Event,Todo,Journal}
       * @param success the success of the operation
       * @param errorMessage if @p success is false, contains the error message
       */
