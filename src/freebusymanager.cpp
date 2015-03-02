@@ -448,18 +448,15 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
 {
     KIO::FileCopyJob *job = static_cast<KIO::FileCopyJob *>(_job);
     if (job->error()) {
-//PORT QT5
-#if 0
         KMessageBox::sorry(
-            job->ui()->window(),
+            0,
             i18n("<qt><p>The software could not upload your free/busy list to "
                  "the URL '%1'. There might be a problem with the access "
                  "rights, or you specified an incorrect URL. The system said: "
                  "<em>%2</em>.</p>"
                  "<p>Please check the URL or contact your system administrator."
-                 "</p></qt>", job->destUrl().prettyUrl(),
+                 "</p></qt>", job->destUrl().toString(),
                  job->errorString()));
-#endif
     }
     // Delete temp file
     QUrl src = job->srcUrl();
