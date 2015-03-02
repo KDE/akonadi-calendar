@@ -21,7 +21,7 @@
 
 #include "mailclient_p.h"
 
-//#include "akonadi/kdepimlibs-version.h"
+#include "akonadi-calendar-version.h"
 
 #include <collection.h>
 
@@ -253,10 +253,9 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
 
     // Set the headers
 
-//QT5 port
     message->userAgent()->fromUnicodeString(
         KProtocolManager::userAgentForApplication(
-            QStringLiteral("KOrganizer"), QLatin1String(/*KDEPIMLIBS_VERSION*/ "4.9.97")), "utf-8");
+            QStringLiteral("KOrganizer"), QLatin1String(AKONADI_CALENDAR_VERSION)), "utf-8");
 
     message->from()->fromUnicodeString(from, "utf-8");
     message->to()->fromUnicodeString(to, "utf-8");
