@@ -196,8 +196,6 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
     default:
         return QVariant();
     }
-
-    return QVariant();
 }
 
 QVariant CalendarModel::entityData(const Akonadi::Collection &collection,
