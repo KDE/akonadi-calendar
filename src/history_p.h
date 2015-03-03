@@ -97,7 +97,7 @@ public:
     int redoCount() const;
     int undoCount() const;
 
-    IncidenceChanger *mChanger;
+    IncidenceChanger *const mChanger;
 
     QStack<Entry::Ptr> mUndoStack;
     QStack<Entry::Ptr> mRedoStack;
@@ -121,7 +121,7 @@ public Q_SLOTS:
     void handleFinished(Akonadi::IncidenceChanger::ResultCode, const QString &errorString);
 
 private:
-    History *q;
+    History *const q;
 };
 
 class CreationEntry : public Entry
