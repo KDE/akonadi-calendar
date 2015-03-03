@@ -148,6 +148,7 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             break;
         }
 
+        return QVariant();
     case SortRole:
         switch (column) {
         case Summary:
