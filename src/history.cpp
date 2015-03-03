@@ -29,11 +29,6 @@ History::History(QObject *parent)
     : QObject(parent)
     , d(new Private(this))
 {
-    d->mChanger = new IncidenceChanger(/*history=*/false, this);
-    d->mChanger->setObjectName(QStringLiteral("changer"));   // for auto-connects
-    d->mOperationTypeInProgress = TypeNone;
-    d->mEnabled = true;
-    d->mUndoAllInProgress = false;
 }
 
 History::~History()
@@ -42,9 +37,13 @@ History::~History()
 }
 
 History::Private::Private(History *qq)
-    : q(qq)
+    : mChanger(new IncidenceChanger(/*history=*/false, qq))
+    , mOperationTypeInProgress(TypeNone)
+    , mUndoAllInProgress(false)
+    , mEnabled(true)
+    , q(qq)
 {
-
+    mChanger->setObjectName(QStringLiteral("changer"));   // for auto-connects
 }
 
 void History::recordCreation(const Akonadi::Item &item,
