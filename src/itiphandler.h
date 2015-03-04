@@ -53,12 +53,14 @@ namespace Akonadi {
  * @short Ui delegate for editing counter proposals.
  * @since 4.11
  */
-class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate
+class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate : public QObject
 {
+    Q_OBJECT
 public:
+    explicit GroupwareUiDelegate(QObject *parent = Q_NULLPTR);
     virtual ~GroupwareUiDelegate();
-    virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
 
+    virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
     virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) = 0;
     virtual void createCalendar() = 0;
 };

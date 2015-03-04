@@ -57,6 +57,10 @@ static void emitiTipMessageProcessed(ITIPHandler *handler,
                               Q_ARG(QString, errorString));
 }
 
+GroupwareUiDelegate::GroupwareUiDelegate(QObject *parent) : QObject(parent)
+{
+}
+
 GroupwareUiDelegate::~GroupwareUiDelegate()
 {
 }
