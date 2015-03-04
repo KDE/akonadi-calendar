@@ -176,9 +176,8 @@ public:
 
     /**
       * Returns if the calendar already finished loading.
-      * TODO_KDE5: make virtual in base class
       */
-    bool isLoaded() const;
+    bool isLoaded() const Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /**

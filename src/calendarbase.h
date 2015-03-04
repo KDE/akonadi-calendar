@@ -223,6 +223,11 @@ public:
       */
     bool modifyIncidence(const KCalCore::Incidence::Ptr &newIncidence);
 
+    /**
+      * Returns if the calendar already finished loading.
+      */
+    virtual bool isLoaded() const = 0;
+
 Q_SIGNALS:
     /**
       * This signal is emitted when an incidence is created in akonadi through
