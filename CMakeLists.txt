@@ -72,7 +72,6 @@ install(FILES
   COMPONENT Devel
 )
 
-#QT5 REACTIVATE IT
 install(EXPORT KF5AkonadiCalendarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiCalendarTargets.cmake NAMESPACE KF5::)
 
 install(FILES
