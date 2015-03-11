@@ -225,8 +225,9 @@ public:
 
     /**
       * Returns if the calendar already finished loading.
+      * Base class returns true.
       */
-    virtual bool isLoaded() const = 0;
+    virtual bool isLoaded() const;
 
 Q_SIGNALS:
     /**

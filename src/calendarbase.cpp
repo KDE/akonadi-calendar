@@ -632,5 +632,10 @@ void CalendarBase::endBatchAdding()
     KCalCore::MemoryCalendar::endBatchAdding();
 }
 
+bool CalendarBase::isLoaded() const
+{
+    return true;
+}
+
 #include "moc_calendarbase.cpp"
 #include "moc_calendarbase_p.cpp"
