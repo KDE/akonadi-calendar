@@ -38,12 +38,21 @@ void PublishDialog::Private::addItem()
 {
     mUI.mNameLineEdit->setEnabled(true);
     mUI.mEmailLineEdit->setEnabled(true);
-    QListWidgetItem *item = new QListWidgetItem(mUI.mListWidget);
-    mUI.mListWidget->addItem(item);
+    QListWidgetItem *item = mUI.mListWidget->currentItem();
+    if (item) {
+        if (!item->text().isEmpty()) {
+            item = new QListWidgetItem(mUI.mListWidget);
+            mUI.mListWidget->addItem(item);
+        }
+    } else {
+        item = new QListWidgetItem(mUI.mListWidget);
+        mUI.mListWidget->addItem(item);
+    }
+
     mUI.mListWidget->setItemSelected(item, true);
     mUI.mNameLineEdit->setPlaceholderText(i18n("(EmptyName)"));
     mUI.mEmailLineEdit->setPlaceholderText(i18n("(EmptyEmail)"));
-
+    mUI.mListWidget->setCurrentItem(item);
     mUI.mRemove->setEnabled(true);
 }
 
