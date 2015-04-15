@@ -306,7 +306,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
         KMessageBox::information(
             Q_NULLPTR,
             xi18nc("@info",
-                  "<para>You accepted an invitation update, but an earlier version of the "
+                  "<para>You added an invitation update, but an earlier version of the "
                   "item could not be found in your calendar.</para>"
                   "<para>This may have occurred because:<list>"
                   "<item>the organizer did not include you in the original invitation</item>"
