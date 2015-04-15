@@ -89,7 +89,7 @@ public:
      */
     explicit ETMCalendar(ETMCalendar *calendar, QObject *parent = Q_NULLPTR);
 
-    explicit ETMCalendar(ChangeRecorder *monitor, QObject *parent = 0);
+    explicit ETMCalendar(ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);
     /**
       * Destroys this ETMCalendar.
       */

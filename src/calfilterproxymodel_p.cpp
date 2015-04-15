@@ -77,7 +77,7 @@ bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &so
     }
 
     const Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    if (!item.isValid())
+    if (!item.isValid()) {
         return false;
     }
 

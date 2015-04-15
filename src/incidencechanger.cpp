@@ -43,7 +43,7 @@ using namespace KCalCore;
 # define RUNNING_UNIT_TESTS false
 #endif
 
-ITIPHandlerDialogDelegate::Action actionFromStatus(ITIPHandlerHelper::SendResult result)
+static ITIPHandlerDialogDelegate::Action actionFromStatus(ITIPHandlerHelper::SendResult result)
 {
     //enum SendResult {
     //      Canceled,        /**< Sending was canceled by the user, meaning there are
@@ -63,24 +63,20 @@ ITIPHandlerDialogDelegate::Action actionFromStatus(ITIPHandlerHelper::SendResult
     }
 }
 
-bool weAreOrganizer(Incidence::Ptr incidence)
+static bool weAreOrganizer(const Incidence::Ptr &incidence)
 {
     const QString email = incidence->organizer()->email();
     return Akonadi::CalendarUtils::thatIsMe(email);
 }
 
-bool allowedModificationsWithoutRevisionUpdate(Incidence::Ptr incidence)
+static bool allowedModificationsWithoutRevisionUpdate(const Incidence::Ptr &incidence)
 {
     // Modifications that are per user allowd without getting outofsync with organisator
     // * if only alarm settings are modified.
     const QSet<KCalCore::IncidenceBase::Field> dirtyFields = incidence->dirtyFields();
     QSet<KCalCore::IncidenceBase::Field> alarmOnlyModify;
     alarmOnlyModify << IncidenceBase::FieldAlarms << IncidenceBase::FieldLastModified;
-    if (dirtyFields == alarmOnlyModify) {
-        return true;
-    }
-
-    return false;
+    return (dirtyFields == alarmOnlyModify);
 }
 
 namespace Akonadi {
@@ -1069,7 +1065,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
                         << IncidenceBase::FieldRecurrence;
         if (!(incidence->dirtyFields() & resetPartStatus).isEmpty() && weAreOrganizer(incidence)) {
             foreach (const Attendee::Ptr &attendee, incidence->attendees()) {
-                if ( attendee->role() != Attendee::NonParticipant &&
+                if (attendee->role() != Attendee::NonParticipant &&
                     attendee->status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
                     attendee->setStatus(Attendee::NeedsAction);
                     attendee->setRSVP(true);

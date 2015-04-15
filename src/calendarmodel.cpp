@@ -20,6 +20,7 @@
 
 #include "calendarmodel_p.h"
 
+#include "utils_p.h"
 #include <changerecorder.h>
 #include <itemfetchscope.h>
 #include <kcalcore/event.h>

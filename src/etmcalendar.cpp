@@ -52,7 +52,7 @@ ETMCalendarPrivate::ETMCalendarPrivate(ETMCalendar *qq)
     , mCheckableProxyModel(Q_NULLPTR)
     , mCollectionProxyModel(Q_NULLPTR)
     , mCalFilterProxyModel(Q_NULLPTR)
-    , mCalFilterPartStatusProxyModel(0)
+    , mCalFilterPartStatusProxyModel(Q_NULLPTR)
     , mSelectionProxy(Q_NULLPTR)
     , mCollectionFilteringEnabled(true)
     , q(qq)
@@ -184,7 +184,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCalFilterPartStatusProxyModel->setDynamicSortFilter(true);
     mCalFilterPartStatusProxyModel->setBlockedStatusList(blockedStatusList);
     mCalFilterPartStatusProxyModel->setSourceModel(mCalFilterProxyModel);
-    mCalFilterPartStatusProxyModel->setObjectName("PartStatus filtering");
+    mCalFilterPartStatusProxyModel->setObjectName(QStringLiteral("PartStatus filtering"));
 
     mFilteredETM = new Akonadi::EntityMimeTypeFilterModel(this);
     mFilteredETM->setSourceModel(mCalFilterPartStatusProxyModel);
@@ -501,10 +501,10 @@ ETMCalendar::ETMCalendar(ChangeRecorder *monitor, QObject *parent)
     Q_D(ETMCalendar);
 
     if (monitor) {
-        connect(monitor, SIGNAL(collectionChanged(Akonadi::Collection,QSet<QByteArray>)),
-            d, SLOT(onCollectionChanged(Akonadi::Collection,QSet<QByteArray>)));
+        QObject::connect(monitor, static_cast<void (Akonadi::Monitor:: *)(const Akonadi::Collection &, const QSet<QByteArray> &)>(&Akonadi::Monitor::collectionChanged),
+            d, &ETMCalendarPrivate::onCollectionChanged);
         d->mETM = CalendarModel::create(monitor);
-        d->mETM->setObjectName("ETM");
+        d->mETM->setObjectName(QStringLiteral("ETM"));
         d->mETM->setListFilter(Akonadi::CollectionFetchScope::Display);
     }
 

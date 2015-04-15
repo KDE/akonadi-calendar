@@ -124,14 +124,14 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     Akonadi::Collection collection = item.parentCollection();
     if (collection.isValid()) {
         // Some items don't have collection set
-        if (item.storageCollectionId() !=  collection.id() && item.storageCollectionId() > -1) {
+        if (item.storageCollectionId() != collection.id() && item.storageCollectionId() > -1) {
             if (mCollections.contains(item.storageCollectionId())) {
                 collection = mCollections.value(item.storageCollectionId());
                 incidence->setReadOnly(!(collection.rights() & Akonadi::Collection::CanChangeItem));
               } else if (!mCollectionJobs.key(item.storageCollectionId())) {
                 collection = Akonadi::Collection(item.storageCollectionId());
                 Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(collection, Akonadi::CollectionFetchJob::Base, this);
-                connect(job, SIGNAL(result(KJob*)), this, SLOT(collectionFetchResult(KJob*)));
+                QObject::connect(job, &KJob::result, this, &CalendarBasePrivate::collectionFetchResult);
                 mCollectionJobs.insert(job,  collection.id());
             }
         } else {
@@ -166,8 +166,8 @@ void CalendarBasePrivate::collectionFetchResult(KJob* job)
 {
     Akonadi::Collection::Id colid = mCollectionJobs.take(job);
 
-    if ( job->error() ) {
-        qDebug() << "Error occurred";
+    if (job->error()) {
+        qWarning() << "Error occurred: " << job->errorString();
         return;
     }
 
@@ -175,7 +175,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob* job)
 
     const Akonadi::Collection collection = fetchJob->collections().first();
     if (collection.id() !=  colid) {
-        kError() <<  "Fetched the wrong collection,  should fetch: " <<  colid << "fetched: " <<  collection.id();
+        qCritical() <<  "Fetched the wrong collection,  should fetch: " <<  colid << "fetched: " <<  collection.id();
     }
 
     bool isReadOnly = !(collection.rights() & Akonadi::Collection::CanChangeItem);
@@ -186,7 +186,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob* job)
 
     mCollections.insert(collection.id(),  collection);
 
-    if (mCollectionJobs.count() == 0) {
+    if (mCollectionJobs.isEmpty()) {
         emit fetchFinished();
     }
 }

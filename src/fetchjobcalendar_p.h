@@ -44,8 +44,8 @@ public:
 
 private:
     FetchJobCalendar *const q;
-    QString mErrorMessage;
-    bool mSuccess;
+    QString m_errorMessage;
+    bool m_success;
 };
 
 }

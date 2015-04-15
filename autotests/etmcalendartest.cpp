@@ -557,7 +557,7 @@ void ETMCalendarTest::testFilterInvitations()
     // incidence do not pop up in model
     QCOMPARE(mCalendar->model()->rowCount(), anz);
 
-    kDebug() << "first invite ended";
+    qDebug() << "first invite ended";
 }
 
 void ETMCalendarTest::testFilterInvitationsChanged()

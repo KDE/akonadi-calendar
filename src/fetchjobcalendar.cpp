@@ -36,8 +36,8 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     IncidenceFetchJob *job = new IncidenceFetchJob();
     connect(job, &KJob::result,
             this, &FetchJobCalendarPrivate::slotSearchJobFinished);
-    connect(this, SIGNAL(fetchFinished()),
-            SLOT(slotFetchJobFinished()));
+    connect(this, &CalendarBasePrivate::fetchFinished,
+            this, &FetchJobCalendarPrivate::slotFetchJobFinished);
 }
 
 FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
@@ -47,25 +47,25 @@ FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
 void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 {
     IncidenceFetchJob *searchJob = static_cast<Akonadi::IncidenceFetchJob *>(job);
-    mSuccess = true;
-    mErrorMessage = QString();
+    m_success = true;
+    m_errorMessage = QString();
     if (searchJob->error()) {
-        mSuccess = false;
-        mErrorMessage = searchJob->errorText();
+        m_success = false;
+        m_errorMessage = searchJob->errorText();
         qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << searchJob->errorText();
     } else {
         foreach (const Akonadi::Item &item, searchJob->items()) {
             if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>()) {
-                mSuccess = false;
-                errorMessage = QStringLiteral("Invalid item or payload: %1").arg(item.id());
-                qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << errorMessage;
+                m_success = false;
+                m_errorMessage = QStringLiteral("Invalid item or payload: %1").arg(item.id());
+                qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << m_errorMessage;
                 continue;
             }
             internalInsert(item);
         }
     }
 
-    if (mCollectionJobs.count() ==  0) {
+    if (mCollectionJobs.isEmpty()) {
         slotFetchJobFinished();
     }
 }
@@ -75,7 +75,7 @@ void FetchJobCalendarPrivate::slotFetchJobFinished()
     m_isLoaded = true;
     // emit loadFinished() in a delayed manner, due to freezes because of execs.
     QMetaObject::invokeMethod(q, "loadFinished", Qt::QueuedConnection,
-                              Q_ARG(bool, mSuccess), Q_ARG(QString, mErrorMessage));
+                              Q_ARG(bool, m_success), Q_ARG(QString, m_errorMessage));
 }
 
 FetchJobCalendar::FetchJobCalendar(QObject *parent)

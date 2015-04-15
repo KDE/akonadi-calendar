@@ -29,7 +29,7 @@
 #include <itemfetchjob.h>
 #include <itemcreatejob.h>
 #include <itemfetchscope.h>
-#include <akonadi/itemdeletejob.h>
+#include <itemdeletejob.h>
 
 #include <kcalcore/event.h>
 #include <kcalcore/journal.h>
