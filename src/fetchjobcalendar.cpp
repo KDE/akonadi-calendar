@@ -36,6 +36,8 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     IncidenceFetchJob *job = new IncidenceFetchJob();
     connect(job, &KJob::result,
             this, &FetchJobCalendarPrivate::slotSearchJobFinished);
+    connect(this, SIGNAL(fetchFinished()),
+            SLOT(slotFetchJobFinished()));
 }
 
 FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
@@ -45,16 +47,16 @@ FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
 void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 {
     IncidenceFetchJob *searchJob = static_cast<Akonadi::IncidenceFetchJob *>(job);
-    bool success = true;
-    QString errorMessage;
+    mSuccess = true;
+    mErrorMessage = QString();
     if (searchJob->error()) {
-        success = false;
-        errorMessage = searchJob->errorText();
+        mSuccess = false;
+        mErrorMessage = searchJob->errorText();
         qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << searchJob->errorText();
     } else {
         foreach (const Akonadi::Item &item, searchJob->items()) {
             if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>()) {
-                success = false;
+                mSuccess = false;
                 errorMessage = QStringLiteral("Invalid item or payload: %1").arg(item.id());
                 qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << errorMessage;
                 continue;
@@ -62,10 +64,18 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
             internalInsert(item);
         }
     }
+
+    if (mCollectionJobs.count() ==  0) {
+        slotFetchJobFinished();
+    }
+}
+
+void FetchJobCalendarPrivate::slotFetchJobFinished()
+{
     m_isLoaded = true;
     // emit loadFinished() in a delayed manner, due to freezes because of execs.
     QMetaObject::invokeMethod(q, "loadFinished", Qt::QueuedConnection,
-                              Q_ARG(bool, success), Q_ARG(QString, errorMessage));
+                              Q_ARG(bool, mSuccess), Q_ARG(QString, mErrorMessage));
 }
 
 FetchJobCalendar::FetchJobCalendar(QObject *parent)
