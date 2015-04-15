@@ -37,6 +37,7 @@ set(akonadicalendar_LIB_SRC
   standardcalendaractionmanager.cpp
   todopurger.cpp
   utils_p.cpp
+  calfilterpartstatusproxymodel_p.cpp
 )
 
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)

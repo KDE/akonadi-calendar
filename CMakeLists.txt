@@ -48,7 +48,6 @@ find_package(KF5CalendarUtils ${CALENDARUTILS_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiContact ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
-  calfilterpartstatusproxymodel_p.cpp
 
 ########### Targets ###########
 

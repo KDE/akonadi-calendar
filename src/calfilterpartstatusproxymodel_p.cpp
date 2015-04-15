@@ -20,15 +20,15 @@
 #include "calfilterpartstatusproxymodel_p.h"
 #include "utils_p.h"
 
-#include <akonadi/collection.h>
-#include <akonadi/item.h>
-#include <akonadi/entitytreemodel.h>
+#include <collection.h>
+#include <item.h>
+#include <entitytreemodel.h>
 
 #include <kcalcore/incidence.h>
 #include <kcalcore/attendee.h>
-#include <kpimutils/email.h>
+// #include <email.h>
 
-#include <kpimidentities/identitymanager.h>
+#include <identitymanager.h>
 #include <kemailsettings.h>
 
 using namespace Akonadi;
@@ -44,7 +44,7 @@ public:
 
     bool mFilterVirtual;
     QList<KCalCore::Attendee::PartStat> mBlockedStatusList;
-    KPIMIdentities::IdentityManager mIdentityManager;
+    KIdentityManagement::IdentityManager mIdentityManager;
 };
 
 void CalFilterPartStatusProxyModel::slotIdentitiesChanged()
@@ -56,8 +56,8 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private())
 {
-    connect(&(d->mIdentityManager), SIGNAL(changed()),
-            SLOT(slotIdentitiesChanged()));
+    QObject::connect(&d->mIdentityManager, static_cast<void (KIdentityManagement::IdentityManager:: *)()>(&KIdentityManagement::IdentityManager::changed),
+            this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 
 CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel()
@@ -110,12 +110,8 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     }
 
     foreach (const KCalCore::Attendee::Ptr &attendee, incidence->attendees()) {
-        if ( CalendarUtils::thatIsMe(attendee) ) {
-            if ( d->mBlockedStatusList.contains(attendee->status()) ) {
-                return false;
-            } else {
-                return true;
-            }
+        if (CalendarUtils::thatIsMe(attendee)) {
+            return !d->mBlockedStatusList.contains(attendee->status());
         }
     }
 
