@@ -106,7 +106,9 @@ bool Akonadi::CalendarUtils::thatIsMe(const QString &_email)
 QStringList Akonadi::CalendarUtils::allEmails()
 {
     QStringList emails;
-    foreach(const QString &email, KIdentityManagement::allEmails()) {
+    const QSet<QString> &allEmails = KIdentityManagement::allEmails();
+    emails.reserve(allEmails.count());
+    foreach(const QString &email, allEmails) {
         emails.append(email);
     }
     return emails;

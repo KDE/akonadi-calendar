@@ -362,6 +362,7 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
 
     QSharedPointer<DeletionChange> deletionChange = change.staticCast<DeletionChange>();
 
+    deletionChange->mItemIds.reserve(items.count());
     foreach (const Akonadi::Item &item, items) {
         deletionChange->mItemIds.append(item.id());
     }
