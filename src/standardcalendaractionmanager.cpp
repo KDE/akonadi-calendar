@@ -346,7 +346,7 @@ public:
         // update action labels
         const int itemCount = mItemSelectionModel->selectedRows().count();
         if (itemCount == 1) {
-            const QModelIndex index = mItemSelectionModel->selectedRows().first();
+            const QModelIndex index = mItemSelectionModel->selectedRows().at(0);
             if (index.isValid()) {
                 const QString mimeType = index.data(EntityTreeModel::MimeTypeRole).toString();
                 if (mimeType == KCalCore::Event::eventMimeType()) {
@@ -472,7 +472,7 @@ public:
         }
 
         if (itemCount == 1) {
-            const Akonadi::Item item = mGenericManager->selectedItems().first();
+            const Akonadi::Item item = mGenericManager->selectedItems().at(0);
             if (item.isValid() && item.hasPayload<KCalCore::Todo::Ptr>()) {
                 if (mActions.contains(StandardCalendarActionManager::CreateSubTodo)) {
                     mActions[ StandardCalendarActionManager::CreateSubTodo ]->setEnabled(hasWritableCollection(KCalCore::Todo::todoMimeType()));

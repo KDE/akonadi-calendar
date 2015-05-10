@@ -62,7 +62,7 @@ void PublishDialog::Private::removeItem()
         return;
     }
     QListWidgetItem *item;
-    item = mUI.mListWidget->selectedItems().first();
+    item = mUI.mListWidget->selectedItems().at(0);
 
     int row = mUI.mListWidget->row(item);
     mUI.mListWidget->takeItem(row);
@@ -113,25 +113,25 @@ void PublishDialog::Private::openAddressbook()
 
 void PublishDialog::Private::updateItem()
 {
-    if (!mUI.mListWidget->selectedItems().count()) {
+    if (mUI.mListWidget->selectedItems().isEmpty()) {
         return;
     }
 
     Person person(mUI.mNameLineEdit->text(), mUI.mEmailLineEdit->text());
-    QListWidgetItem *item = mUI.mListWidget->selectedItems().first();
+    QListWidgetItem *item = mUI.mListWidget->selectedItems().at(0);
     item->setText(person.fullName());
 }
 
 void PublishDialog::Private::updateInput()
 {
-    if (!mUI.mListWidget->selectedItems().count()) {
+    if (mUI.mListWidget->selectedItems().isEmpty()) {
         return;
     }
 
     mUI.mNameLineEdit->setEnabled(true);
     mUI.mEmailLineEdit->setEnabled(true);
 
-    QListWidgetItem *item = mUI.mListWidget->selectedItems().first();
+    QListWidgetItem *item = mUI.mListWidget->selectedItems().at(0);
     QString mail, name;
     KEmailAddress::extractEmailAddressAndName(item->text(), mail, name);
     mUI.mNameLineEdit->setText(name);

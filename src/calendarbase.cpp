@@ -173,7 +173,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob* job)
 
     Akonadi::CollectionFetchJob *fetchJob = qobject_cast<Akonadi::CollectionFetchJob*>( job );
 
-    const Akonadi::Collection collection = fetchJob->collections().first();
+    const Akonadi::Collection collection = fetchJob->collections().at(0);
     if (collection.id() !=  colid) {
         qCritical() <<  "Fetched the wrong collection,  should fetch: " <<  colid << "fetched: " <<  collection.id();
     }

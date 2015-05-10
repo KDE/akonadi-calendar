@@ -628,7 +628,7 @@ void Scheduler::acceptFreeBusy(const IncidenceBase::Ptr &incidence, iTIPMethod m
         from = freebusy->organizer();
     }
     if ((method == iTIPReply) && (freebusy->attendeeCount() == 1)) {
-        Attendee::Ptr attendee = freebusy->attendees().first();
+        Attendee::Ptr attendee = freebusy->attendees().at(0);
         from->setName(attendee->name());
         from->setEmail(attendee->email());
     }

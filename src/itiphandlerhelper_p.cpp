@@ -184,7 +184,7 @@ bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalCore::Incidence::Ptr &inci
     // At least one attendee
     return
         incidence->attendees().count() > 1 ||
-        incidence->attendees().first()->email() != incidence->organizer()->email();
+        incidence->attendees().at(0)->email() != incidence->organizer()->email();
 }
 
 ITIPHandlerHelper::ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent)
