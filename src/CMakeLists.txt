@@ -64,6 +64,7 @@ PRIVATE
     KF5::MailTransport
     KF5::IdentityManagement
     KF5::Codecs
+    KF5::DBusAddons
 )
 
 set_target_properties(KF5AkonadiCalendar PROPERTIES
