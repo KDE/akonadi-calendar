@@ -243,8 +243,8 @@ public:
                 i18n("Paste failed"));
             break;
         case Akonadi::StandardActionManager::SynchronizeCollectionTree:
-            mGenericManager->setActionText(Akonadi::StandardActionManager::SynchronizeCollectionTree,
-                                           ki18n("Update Available Calendars"));
+            mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollectionTree)->setText(
+                                           i18n("Update Available Calendars"));
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollectionTree)->setWhatsThis(
                 i18n("Updates the tree of available calendars."));
 
