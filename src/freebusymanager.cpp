@@ -319,9 +319,15 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     }
 
     // else we search for a fb file in the specified URL with known possible extensions
-    const QStringList extensions = QStringList() << QLatin1String("xfb") << QLatin1String("ifb") << QLatin1String("vfb");
+    QStringList extensions;
+    extensions.reserve(3);
+    extensions << QLatin1String("xfb");
+    extensions << QLatin1String("ifb");
+    extensions << QLatin1String("vfb");
+
     QStringList::ConstIterator ext;
     QList<QUrl> urlsToCheck;
+    urlsToCheck.reserve(extensions.count());
     for (ext = extensions.constBegin(); ext != extensions.constEnd(); ++ext) {
         // build a url for this extension
         const QUrl sourceUrl = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
