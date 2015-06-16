@@ -216,22 +216,11 @@ void ETMCalendarPrivate::clear()
     itemsRemoved(mItemById.values());
 
     if (!mItemById.isEmpty()) {
-        // This never happens
-        qCDebug(AKONADICALENDAR_LOG) << "This shouldnt happen: !mItemById.isEmpty()";
-        foreach (Akonadi::Item::Id id, mItemById.keys()) {
-            qCDebug(AKONADICALENDAR_LOG) << "Id = " << id;
-        }
-
         mItemById.clear();
         //Q_ASSERT(false); // TODO: discover why this happens
     }
 
     if (!mItemIdByUid.isEmpty()) {
-        // This never happens
-        qCDebug(AKONADICALENDAR_LOG) << "This shouldnt happen: !mItemIdByUid.isEmpty()";
-        foreach (const QString &uid, mItemIdByUid.keys()) {
-            qCDebug(AKONADICALENDAR_LOG) << "uid: " << uid;
-        }
         mItemIdByUid.clear();
         //Q_ASSERT(false);
     }
