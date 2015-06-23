@@ -50,10 +50,10 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mEmailLineEdit->setEnabled(false);
 
 
-    d->mUI.mNew->setIcon(QIcon::fromTheme(QLatin1String("list-add")));
-    d->mUI.mRemove->setIcon(QIcon::fromTheme(QLatin1String("list-remove")));
+    d->mUI.mNew->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    d->mUI.mRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     d->mUI.mRemove->setEnabled(false);
-    d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QLatin1String("view-pim-contacts")));
+    d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QStringLiteral("view-pim-contacts")));
     connect(d->mUI.mListWidget, SIGNAL(itemSelectionChanged()),
             d, SLOT(updateInput()));
     connect(d->mUI.mNew, SIGNAL(clicked()),
