@@ -172,7 +172,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
         const KCalCore::Attendee::List attendees = d->m_incidence->attendees();
-        foreach(KCalCore::Attendee::Ptr attendee, attendees) {
+        foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
             if (attendee->email() == receiver) {
                 if (action.startsWith(QStringLiteral("accepted"))) {
                     attendee->setStatus(KCalCore::Attendee::Accepted);
