@@ -642,8 +642,7 @@ bool ETMCalendar::isLoaded() const
         return false;
     }
 
-    Akonadi::Collection::List collections = d->mCollectionMap.values();
-    foreach (const Akonadi::Collection &collection, collections) {
+    foreach (const Akonadi::Collection &collection, d->mCollectionMap) {
         if (!entityTreeModel()->isCollectionPopulated(collection.id())) {
             return false;
         }
