@@ -7,3 +7,5 @@ Mutators=true
 Visibility=AKONADI_CALENDAR_EXPORT
 SetUserTexts=true
 IncludeFiles=akonadi-calendar_export.h
+TranslationDomain=libakonadi-calendar5
+TranslationSystem=kde
