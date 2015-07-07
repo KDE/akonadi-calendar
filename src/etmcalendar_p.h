@@ -64,7 +64,7 @@ class CheckableProxyModel : public KCheckableProxyModel
 {
     Q_OBJECT
 public:
-    CheckableProxyModel(QObject *parent = 0)
+    CheckableProxyModel(QObject *parent = Q_NULLPTR)
         : KCheckableProxyModel(parent)
     {
     }
