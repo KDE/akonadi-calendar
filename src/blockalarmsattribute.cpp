@@ -157,7 +157,6 @@ void BlockAlarmsAttribute::deserialize(const QByteArray &data)
     }
 }
 
-#ifndef KDELIBS_STATIC_LIBS
 namespace {
 
 // Anonymous namespace; function is invisible outside this file.
@@ -173,13 +172,3 @@ const bool registered = dummy();
 
 } // namespace
 
-#else
-
-extern bool ___Akonadi____INIT()
-{
-    Akonadi::AttributeFactory::registerAttribute<Akonadi::BlockAlarmsAttribute>();
-
-    return true;
-}
-
-#endif
