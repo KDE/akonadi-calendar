@@ -23,11 +23,13 @@
 
 #include <QSortFilterProxyModel>
 
-namespace KCalCore {
+namespace KCalCore
+{
 class CalFilter;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class CalFilterProxyModel : public QSortFilterProxyModel
 {

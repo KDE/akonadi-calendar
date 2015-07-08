@@ -32,7 +32,8 @@
 using namespace Akonadi;
 using namespace KCalCore;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class History;
 

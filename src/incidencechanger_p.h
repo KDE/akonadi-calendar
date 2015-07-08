@@ -40,7 +40,8 @@
 class KJob;
 class QWidget;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class TransactionSequence;
 class CollectionFetchJob;
@@ -205,9 +206,9 @@ public:
                 // because of some other job, akonadi is returning an Unknown error
                 // which isnt very specific
                 if (m_changes[i]->completed &&
-                    (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess ||
-                     (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError &&
-                      m_changes[i]->errorString == QLatin1String("Unknown error.")))) {
+                        (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess ||
+                         (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError &&
+                          m_changes[i]->errorString == QLatin1String("Unknown error.")))) {
                     m_changes[i]->resultCode = IncidenceChanger::ResultCodeRolledback;
                 }
             }

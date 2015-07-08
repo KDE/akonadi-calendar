@@ -26,7 +26,8 @@
 
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class FetchJobCalendarPrivate;
 /**
 * @short A KCalCore::Calendar that uses a one time IncidenceFetchJob to populate itself.

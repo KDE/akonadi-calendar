@@ -25,7 +25,8 @@
 #include <QSharedPointer>
 #include <QWeakPointer>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class CalendarModel : public Akonadi::EntityTreeModel
 {

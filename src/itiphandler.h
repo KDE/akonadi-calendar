@@ -39,15 +39,18 @@
 #include <QString>
 #include <QWidget>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class MessageQueueJob;
 }
 
-namespace KIdentityManagement {
+namespace KIdentityManagement
+{
 class Identity;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short Ui delegate for editing counter proposals.
@@ -119,11 +122,11 @@ public:
      * @param buttonNo: dialog's no answer
      */
     virtual void openDialogIncidenceModified(bool attendeeStatusChanged,
-                                             Recipient recipient,
-                                             const QString &question,
-                                             Action action = ActionAsk,
-                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+            Recipient recipient,
+            const QString &question,
+            Action action = ActionAsk,
+            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is deleted
@@ -150,9 +153,9 @@ public:
      * @param buttonNo: dialog's no answer
      */
     virtual void openDialogSchedulerFinished(const QString &question,
-                                             Action action = ActionAsk,
-                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+            Action action = ActionAsk,
+            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
 Q_SIGNALS:
     /*

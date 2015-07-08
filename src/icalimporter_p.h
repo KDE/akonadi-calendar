@@ -35,11 +35,13 @@
 class KJob;
 class QTemporaryFile;
 class QByteArray;
-namespace KIO {
+namespace KIO
+{
 class Job;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class ICalImporter::Private : public QObject
 {

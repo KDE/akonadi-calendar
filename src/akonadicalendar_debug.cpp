@@ -20,4 +20,3 @@
 #include "akonadicalendar_debug.h"
 Q_LOGGING_CATEGORY(AKONADICALENDAR_LOG, "log_akonadicalendar")
 
-

@@ -28,8 +28,7 @@
 #include <kmime/kmime_message.h>
 #include <QObject>
 
-struct UnitTestResult
-{
+struct UnitTestResult {
     typedef QList<UnitTestResult> List;
     QString from;
     QStringList to;
@@ -43,13 +42,15 @@ struct UnitTestResult
     }
 };
 
-namespace KIdentityManagement {
+namespace KIdentityManagement
+{
 class Identity;
 }
 
 class KJob;
 
-namespace Akonadi {
+namespace Akonadi
+{
 #ifdef PLEASE_TEST_INVITATIONS
 #define EXPORT_MAILCLIENT AKONADI_CALENDAR_EXPORT
 #else

@@ -29,7 +29,8 @@
 class QAbstractItemModel;
 class KCheckableProxyModel;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ChangeRecorder;
 class ETMCalendarPrivate;
 class EntityTreeModel;

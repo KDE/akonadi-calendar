@@ -29,7 +29,8 @@
 
 class HistoryTest;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class IncidenceChanger;
 

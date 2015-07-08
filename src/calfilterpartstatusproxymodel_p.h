@@ -23,7 +23,8 @@
 #include <kcalcore/attendee.h>
 #include <QSortFilterProxyModel>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {

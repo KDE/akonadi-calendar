@@ -56,8 +56,8 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private())
 {
-    QObject::connect(&d->mIdentityManager, static_cast<void (KIdentityManagement::IdentityManager:: *)()>(&KIdentityManagement::IdentityManager::changed),
-            this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
+    QObject::connect(&d->mIdentityManager, static_cast<void (KIdentityManagement::IdentityManager::*)()>(&KIdentityManagement::IdentityManager::changed),
+                     this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 
 CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel()
@@ -75,7 +75,6 @@ void CalFilterPartStatusProxyModel::setBlockedStatusList(const QList<KCalCore::A
     d->mBlockedStatusList = blockStatusList;
 }
 
-
 bool CalFilterPartStatusProxyModel::filterVirtual() const
 {
     return d->mFilterVirtual;
@@ -86,12 +85,12 @@ void CalFilterPartStatusProxyModel::setFilterVirtual(bool filterVirtual)
     d->mFilterVirtual = filterVirtual;
 }
 
-
 bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     const QModelIndex idx = sourceModel()->index(source_row, 0, source_parent);
-    if (!idx.isValid())
+    if (!idx.isValid()) {
         return false;
+    }
 
     const Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {

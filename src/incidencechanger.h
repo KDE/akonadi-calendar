@@ -30,7 +30,8 @@
 
 #include <QWidget>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @short IncidenceChanger is the preferred way to easily create, modify and delete incidences.

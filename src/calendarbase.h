@@ -28,7 +28,8 @@
 #include <kcalcore/memorycalendar.h>
 #include <kcalcore/incidence.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class CalendarBasePrivate;
 class IncidenceChanger;

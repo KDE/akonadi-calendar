@@ -26,7 +26,8 @@
 
 class Akonadi__FreeBusyProviderAdaptor;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * @internal

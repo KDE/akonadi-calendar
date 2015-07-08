@@ -34,11 +34,13 @@
 #include <KJob>
 #include <QUrl>
 
-namespace KIO {
+namespace KIO
+{
 class Job;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class FreeBusyManager;
 
@@ -50,8 +52,7 @@ class FreeBusyManagerPrivate : public QObject
     Q_DECLARE_PUBLIC(FreeBusyManager)
 
 public: /// Structs
-    struct FreeBusyProviderRequest
-    {
+    struct FreeBusyProviderRequest {
         FreeBusyProviderRequest(const QString &provider);
 
         enum Status {
@@ -64,8 +65,7 @@ public: /// Structs
         QSharedPointer<QDBusInterface> mInterface;
     };
 
-    struct FreeBusyProvidersRequestsQueue
-    {
+    struct FreeBusyProvidersRequestsQueue {
         explicit FreeBusyProvidersRequestsQueue(const QString &start = QString(),
                                                 const QString &end = QString());
 

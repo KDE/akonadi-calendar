@@ -29,7 +29,7 @@
 
 using namespace Akonadi;
 
-Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject* parent): Job(parent), m_jobCount(0)
+Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent): Job(parent), m_jobCount(0)
 {
     m_mimeTypeChecker.addWantedMimeType(QLatin1String("text/calendar"));
 }
@@ -49,11 +49,12 @@ void Akonadi::IncidenceFetchJob::doStart()
     connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 
-void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob* job)
+void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob *job)
 {
-    if (job->error())   // handled in base class
+    if (job->error()) { // handled in base class
         return;
-    CollectionFetchJob *fetch = qobject_cast<CollectionFetchJob*>(job);
+    }
+    CollectionFetchJob *fetch = qobject_cast<CollectionFetchJob *>(job);
     Q_ASSERT(fetch);
 
     if (fetch->collections().isEmpty()) {
@@ -61,9 +62,10 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob* job)
         return;
     }
 
-    foreach(const Collection &col, fetch->collections()) {
-        if (!m_mimeTypeChecker.isWantedCollection(col) || col.isVirtual())
+    foreach (const Collection &col, fetch->collections()) {
+        if (!m_mimeTypeChecker.isWantedCollection(col) || col.isVirtual()) {
             continue;
+        }
         ItemFetchJob *itemFetch = new ItemFetchJob(col, this);
         itemFetch->fetchScope().fetchFullPayload(true);
         connect(itemFetch, &ItemFetchJob::result, this, &IncidenceFetchJob::itemFetchResult);
@@ -71,19 +73,22 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob* job)
     }
 }
 
-void Akonadi::IncidenceFetchJob::itemFetchResult(KJob* job)
+void Akonadi::IncidenceFetchJob::itemFetchResult(KJob *job)
 {
-    if (job->error())   // handled in base class
+    if (job->error()) { // handled in base class
         return;
+    }
     --m_jobCount;
-    ItemFetchJob *fetch = qobject_cast<ItemFetchJob*>(job);
-    foreach(const Item &item, fetch->items()) {
-        if (!m_mimeTypeChecker.isWantedItem(item))
+    ItemFetchJob *fetch = qobject_cast<ItemFetchJob *>(job);
+    foreach (const Item &item, fetch->items()) {
+        if (!m_mimeTypeChecker.isWantedItem(item)) {
             continue;
+        }
         m_items.push_back(item);
     }
 
-    if (m_jobCount <= 0)
+    if (m_jobCount <= 0) {
         emitResult();
+    }
 }
 

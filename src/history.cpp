@@ -261,7 +261,7 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
             multiEntry->addEntry(entry);
         } else {
             MultiEntry::Ptr multiEntry = MultiEntry::Ptr(new MultiEntry(atomicOperationId,
-                                                                        entry->mDescription, q));
+                                         entry->mDescription, q));
             multiEntry->addEntry(entry);
             entryToPush = multiEntry;
         }

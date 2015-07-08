@@ -35,7 +35,8 @@ class QAbstractItemModel;
 class CheckableProxyModel;
 class KSelectionProxyModel;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class EntityTreeModel;
 class EntityMimeTypeFilterModel;
@@ -101,9 +102,9 @@ public Q_SLOTS:
                                        int end = -1);
 
     Akonadi::Collection::List collectionsFromModel(const QAbstractItemModel *model,
-                                                   const QModelIndex &parentIndex = QModelIndex(),
-                                                   int start = 0,
-                                                   int end = -1);
+            const QModelIndex &parentIndex = QModelIndex(),
+            int start = 0,
+            int end = -1);
 
     // KCalCore::CalFilter has changed.
     void onFilterChanged();

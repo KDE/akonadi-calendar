@@ -34,7 +34,8 @@
 
 class QWidget;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 enum Status {
     StatusNone,
@@ -140,7 +141,7 @@ public:
       @param newIncidence The new event as edited by the user.
     */
     ITIPHandlerHelper::SendResult sendCounterProposal(const KCalCore::Incidence::Ptr &oldIncidence,
-                                                      const KCalCore::Incidence::Ptr &newIncidence);
+            const KCalCore::Incidence::Ptr &newIncidence);
 
     // Frees calendar if it doesn't have jobs running
     void calendarJobFinished(bool success, const QString &errorString);
@@ -164,8 +165,8 @@ private Q_SLOTS:
 
 private:
     ITIPHandlerHelper::SendResult sentInvitation(int messageBoxReturnCode,
-                                                 const KCalCore::Incidence::Ptr &incidence,
-                                                 KCalCore::iTIPMethod method);
+            const KCalCore::Incidence::Ptr &incidence,
+            KCalCore::iTIPMethod method);
 
     /**
       We are the organizer. If there is more than one attendee, or if there is

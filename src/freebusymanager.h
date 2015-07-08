@@ -28,7 +28,8 @@
 
 #include <kcalcore/freebusycache.h>
 //TODO: document
-namespace Akonadi {
+namespace Akonadi
+{
 class FreeBusyManagerPrivate;
 class FreeBusyManagerStatic;
 

@@ -26,7 +26,8 @@
 #include <kcalcore/incidence.h>
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /*
   This class implements the iTIP interface using the email interface specified
   as Mail.

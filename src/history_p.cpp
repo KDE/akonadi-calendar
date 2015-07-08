@@ -120,8 +120,8 @@ bool CreationEntry::redo()
     Akonadi::Item item = mItems.first();
     Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
     const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>(),
-                                                   Collection(item.storageCollectionId()),
-                                                   currentParent());
+                         Collection(item.storageCollectionId()),
+                         currentParent());
     mChangeIds << changeId;
 
     if (changeId == -1) {
@@ -189,8 +189,8 @@ bool DeletionEntry::undo()
 
         Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
         const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>(),
-                                                       Collection(item.storageCollectionId()),
-                                                       currentParent());
+                             Collection(item.storageCollectionId()),
+                             currentParent());
         success = (changeId != -1) && success;
         mChangeIds << changeId;
         if (useAtomicOperation) {
@@ -282,7 +282,7 @@ bool ModificationEntry::undo()
 bool ModificationEntry::redo()
 {
     const int changeId = mChanger->modifyIncidence(mItems.first(), mOriginalPayload,
-                                                   currentParent());
+                         currentParent());
     mChangeIds << changeId;
 
     if (changeId == -1) {
@@ -293,8 +293,8 @@ bool ModificationEntry::redo()
 }
 
 void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item,
-                                         Akonadi::IncidenceChanger::ResultCode resultCode,
-                                         const QString &errorString)
+        Akonadi::IncidenceChanger::ResultCode resultCode,
+        const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -365,8 +365,8 @@ void MultiEntry::onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCod
 {
     ++mFinishedEntries;
     if (mFinishedEntries == mEntries.count() ||
-        (mFinishedEntries < mEntries.count() &&
-         resultCode != IncidenceChanger::ResultCodeSuccess)) {
+            (mFinishedEntries < mEntries.count() &&
+             resultCode != IncidenceChanger::ResultCodeSuccess)) {
         mFinishedEntries = mEntries.count(); // we're done
         mOperationInProgress = TypeNone;
         emit finished(resultCode, errorString);

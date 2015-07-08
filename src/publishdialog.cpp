@@ -49,7 +49,6 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mNameLineEdit->setEnabled(false);
     d->mUI.mEmailLineEdit->setEnabled(false);
 
-
     d->mUI.mNew->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     d->mUI.mRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     d->mUI.mRemove->setEnabled(false);
@@ -67,26 +66,25 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(d->mUI.mEmailLineEdit, SIGNAL(textChanged(QString)),
             d, SLOT(updateItem()));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::Help);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    layout->addWidget( buttonBox );
+    layout->addWidget(buttonBox);
 
-    okButton->setToolTip( i18n("Send email to these recipients"));
+    okButton->setToolTip(i18n("Send email to these recipients"));
     okButton->setWhatsThis(i18n("Clicking the <b>Ok</b> button will cause "
                                 "an email to be sent to the recipients you "
                                 "have entered."));
 
     QPushButton *cancelButton = buttonBox->button(QDialogButtonBox::Cancel);
-    cancelButton->setToolTip( i18n("Cancel recipient selection and the email"));
-    cancelButton->setWhatsThis( i18n("Clicking the <b>Cancel</b> button will "
+    cancelButton->setToolTip(i18n("Cancel recipient selection and the email"));
+    cancelButton->setWhatsThis(i18n("Clicking the <b>Cancel</b> button will "
                                     "cause the email operation to be terminated."));
 
     QPushButton *helpButton = buttonBox->button(QDialogButtonBox::Help);
-    helpButton->setWhatsThis( i18n("Click the <b>Help</b> button to read "
+    helpButton->setWhatsThis(i18n("Click the <b>Help</b> button to read "
                                   "more information about Group Scheduling."));
-
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &PublishDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &PublishDialog::reject);
@@ -120,11 +118,11 @@ QString PublishDialog::addresses() const
     QString to;
     QListWidgetItem *item;
     const int count = d->mUI.mListWidget->count();
-    for (int i=0; i<count; ++i) {
+    for (int i = 0; i < count; ++i) {
         item = d->mUI.mListWidget->item(i);
         if (!item->text().isEmpty()) {
             to += item->text();
-            if (i < count-1) {
+            if (i < count - 1) {
                 to += QLatin1String(", ");
             }
         }

@@ -292,8 +292,8 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         // This tests if the hostnames match, or one is a subset of the other
         const QString hostDomain = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl()).host();
         if (hostDomain != emailHost &&
-            !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
-            !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
+                !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
+                !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
             // Host names do not match
             qCDebug(AKONADICALENDAR_LOG) << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
             emit freeBusyUrlRetrieved(email, QUrl());
@@ -396,7 +396,7 @@ KCalCore::FreeBusy::Ptr FreeBusyManagerPrivate::ownerFreeBusy()
     KCalCore::FreeBusy::Ptr freebusy(new KCalCore::FreeBusy(events, start, end));
     freebusy->setOrganizer(KCalCore::Person::Ptr(
                                new KCalCore::Person(Akonadi::CalendarUtils::fullName(),
-                                                    Akonadi::CalendarUtils::email())));
+                                       Akonadi::CalendarUtils::email())));
     return freebusy;
 }
 
@@ -497,7 +497,7 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
 }
 
 void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
-                                                        const QUrl &freeBusyUrlForEmail)
+        const QUrl &freeBusyUrlForEmail)
 {
     Q_Q(FreeBusyManager);
 
@@ -524,7 +524,7 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
 
     // user has automatic uploading disabled, bail out
     if (!CalendarSettings::self()->freeBusyPublishAuto() ||
-        CalendarSettings::self()->freeBusyPublishUrl().isEmpty()) {
+            CalendarSettings::self()->freeBusyPublishUrl().isEmpty()) {
         return;
     }
 
@@ -539,7 +539,7 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
     if (!mUploadingFreeBusy) {
         // Not currently uploading
         if (mNextUploadTime.isNull() ||
-            QDateTime::currentDateTime() > mNextUploadTime) {
+                QDateTime::currentDateTime() > mNextUploadTime) {
             // No uploading have been done in this session, or delay time is over
             q->publishFreeBusy();
             return;
@@ -581,7 +581,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
 }
 
 void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
-                                                    const QString &email)
+        const QString &email)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue();
@@ -600,9 +600,9 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
 }
 
 void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
-                                                    const QString &email,
-                                                    const KDateTime &start,
-                                                    const KDateTime &end)
+        const QString &email,
+        const KDateTime &start,
+        const KDateTime &end)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue(start, end);
@@ -658,7 +658,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
 }
 
 void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Result result,
-                                                        const QString &errorMsg)
+        const QString &errorMsg)
 {
     if (result == Scheduler::ResultSuccess) {
         KMessageBox::information(
@@ -675,9 +675,9 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
 }
 
 void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
-                                                 const QString &freeBusy,
-                                                 bool success,
-                                                 const QString &errorText)
+        const QString &freeBusy,
+        bool success,
+        const QString &errorText)
 {
     Q_Q(FreeBusyManager);
     Q_UNUSED(errorText);
@@ -731,7 +731,8 @@ void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
 
 /// FreeBusyManager::Singleton
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class FreeBusyManagerStatic
 {
@@ -865,7 +866,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
             // we use Kolab
             QString server;
             if (CalendarSettings::self()->publishKolabServer() == QLatin1String("%SERVER%") ||
-                CalendarSettings::self()->publishKolabServer().isEmpty()) {
+                    CalendarSettings::self()->publishKolabServer().isEmpty()) {
                 server = emailHost;
             } else {
                 server = CalendarSettings::self()->publishKolabServer();

@@ -26,7 +26,8 @@
 #include <kcalcore/incidence.h>
 #include <QObject>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class IncidenceChanger;
 

@@ -31,10 +31,10 @@
 #include <QString>
 #include <QPointer>
 
-namespace Akonadi {
-
-struct Invitation
+namespace Akonadi
 {
+
+struct Invitation {
     QString receiver;
     QString iCal;
     QString action;

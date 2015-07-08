@@ -106,10 +106,10 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
         // when using virtual folders.
 #if 0
         qCWarning(AKONADICALENDAR_LOG) << "Discarding duplicate incidence with instanceIdentifier=" << uid
-                   << "and summary " << incidence->summary()
-                   << "; recurrenceId() =" << incidence->recurrenceId()
-                   << "; new id=" << item.id()
-                   << "; existing id=" << mItemIdByUid[uid];
+                                       << "and summary " << incidence->summary()
+                                       << "; recurrenceId() =" << incidence->recurrenceId()
+                                       << "; new id=" << item.id()
+                                       << "; existing id=" << mItemIdByUid[uid];
 #endif
         return;
     }
@@ -117,7 +117,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     if (incidence->type() == KCalCore::Incidence::TypeEvent && !incidence->dtStart().isValid()) {
         // TODO: make the parser discard them would also be a good idea
         qCWarning(AKONADICALENDAR_LOG) << "Discarding event with invalid DTSTART. identifier="
-                   << incidence->instanceIdentifier() << "; summary=" << incidence->summary();
+                                       << incidence->instanceIdentifier() << "; summary=" << incidence->summary();
         return;
     }
 
@@ -128,7 +128,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
             if (mCollections.contains(item.storageCollectionId())) {
                 collection = mCollections.value(item.storageCollectionId());
                 incidence->setReadOnly(!(collection.rights() & Akonadi::Collection::CanChangeItem));
-              } else if (!mCollectionJobs.key(item.storageCollectionId())) {
+            } else if (!mCollectionJobs.key(item.storageCollectionId())) {
                 collection = Akonadi::Collection(item.storageCollectionId());
                 Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(collection, Akonadi::CollectionFetchJob::Base, this);
                 QObject::connect(job, &KJob::result, this, &CalendarBasePrivate::collectionFetchResult);
@@ -162,7 +162,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     }
 }
 
-void CalendarBasePrivate::collectionFetchResult(KJob* job)
+void CalendarBasePrivate::collectionFetchResult(KJob *job)
 {
     Akonadi::Collection::Id colid = mCollectionJobs.take(job);
 
@@ -171,7 +171,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob* job)
         return;
     }
 
-    Akonadi::CollectionFetchJob *fetchJob = qobject_cast<Akonadi::CollectionFetchJob*>( job );
+    Akonadi::CollectionFetchJob *fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
     const Akonadi::Collection collection = fetchJob->collections().at(0);
     if (collection.id() !=  colid) {
@@ -234,9 +234,9 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
 }
 
 void CalendarBasePrivate::slotDeleteFinished(int changeId,
-                                             const QVector<Akonadi::Item::Id> &itemIds,
-                                             IncidenceChanger::ResultCode resultCode,
-                                             const QString &errorMessage)
+        const QVector<Akonadi::Item::Id> &itemIds,
+        IncidenceChanger::ResultCode resultCode,
+        const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -251,9 +251,9 @@ void CalendarBasePrivate::slotDeleteFinished(int changeId,
 }
 
 void CalendarBasePrivate::slotCreateFinished(int changeId,
-                                             const Akonadi::Item &item,
-                                             IncidenceChanger::ResultCode resultCode,
-                                             const QString &errorMessage)
+        const Akonadi::Item &item,
+        IncidenceChanger::ResultCode resultCode,
+        const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(item);
@@ -269,9 +269,9 @@ void CalendarBasePrivate::slotCreateFinished(int changeId,
 }
 
 void CalendarBasePrivate::slotModifyFinished(int changeId,
-                                             const Akonadi::Item &item,
-                                             IncidenceChanger::ResultCode resultCode,
-                                             const QString &errorMessage)
+        const Akonadi::Item &item,
+        IncidenceChanger::ResultCode resultCode,
+        const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(item);
@@ -295,7 +295,7 @@ void CalendarBasePrivate::slotModifyFinished(int changeId,
 }
 
 void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
-                                          const Akonadi::Item &newItem, const QString &newIdentifier)
+        const Akonadi::Item &newItem, const QString &newIdentifier)
 {
     Q_ASSERT(oldItem.isValid());
     Incidence::Ptr newIncidence = CalendarUtils::incidence(newItem);
@@ -308,16 +308,16 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
         Incidence::Ptr oldIncidence = CalendarUtils::incidence(oldItem);
 #if 0
         qCWarning(AKONADICALENDAR_LOG) << "New uid shouldn't be known: "  << newIdentifier << "; id="
-                   << newItem.id() << "; oldItem.id=" << mItemIdByUid[newIdentifier]
-                   << "; new summary= " << newIncidence->summary()
-                   << "; new recurrenceId=" << newIncidence->recurrenceId()
-                   << "; oldIncidence" << oldIncidence;
+                                       << newItem.id() << "; oldItem.id=" << mItemIdByUid[newIdentifier]
+                                       << "; new summary= " << newIncidence->summary()
+                                       << "; new recurrenceId=" << newIncidence->recurrenceId()
+                                       << "; oldIncidence" << oldIncidence;
 #endif
         if (oldIncidence) {
 #if 0
             qCWarning(AKONADICALENDAR_LOG) << "; oldIncidence uid=" << oldIncidence->uid()
-                       << "; oldIncidence recurrenceId = " << oldIncidence->recurrenceId()
-                       << "; oldIncidence summary = " << oldIncidence->summary();
+                                           << "; oldIncidence recurrenceId = " << oldIncidence->recurrenceId()
+                                           << "; oldIncidence summary = " << oldIncidence->summary();
 #endif
         }
         Q_ASSERT(false);
@@ -339,12 +339,12 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
     if (newIncidence->instanceIdentifier() == oldIncidence->instanceIdentifier()) {
 #if 0
         qCWarning(AKONADICALENDAR_LOG) << "New uid=" << newIncidence->uid() << "; old uid=" << oldIncidence->uid()
-                   << "; new recurrenceId="
-                   << newIncidence->recurrenceId()
-                   << "; old recurrenceId=" << oldIncidence->recurrenceId()
-                   << "; new summary = " << newIncidence->summary()
-                   << "; old summary = " << oldIncidence->summary()
-                   << "; id = " << newItem.id();
+                                       << "; new recurrenceId="
+                                       << newIncidence->recurrenceId()
+                                       << "; old recurrenceId=" << oldIncidence->recurrenceId()
+                                       << "; new summary = " << newIncidence->summary()
+                                       << "; old summary = " << oldIncidence->summary()
+                                       << "; id = " << newItem.id();
 #endif
         Q_ASSERT(false);   // The reason we're here in the first place
         return;

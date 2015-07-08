@@ -42,8 +42,9 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
         deleteTodos();
     } else {
         m_lastError = message;
-        if (m_calendarOwnership)
+        if (m_calendarOwnership) {
             m_calendar.clear();
+        }
         emit q->todosPurged(false, 0, 0);
     }
 }
@@ -51,12 +52,14 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
 void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Entity::Id> &deletedItems,
         IncidenceChanger::ResultCode result, const QString &message)
 {
-    if (changeId != m_currentChangeId)
-        return; // Not ours.
+    if (changeId != m_currentChangeId) {
+        return;    // Not ours.
+    }
 
     m_lastError = message;
-    if (m_calendarOwnership)
+    if (m_calendarOwnership) {
         m_calendar.clear();
+    }
     emit q->todosPurged(result == IncidenceChanger::ResultCodeSuccess, deletedItems.count(), m_ignoredItems);
 }
 
@@ -77,7 +80,7 @@ void TodoPurger::Private::deleteTodos()
     Akonadi::Item::List items = m_calendar->items();
     Akonadi::Item::List toDelete;
     m_ignoredItems = 0;
-    foreach(const Akonadi::Item &item, items) {
+    foreach (const Akonadi::Item &item, items) {
         KCalCore::Todo::Ptr todo = CalendarUtils::incidence(item).dynamicCast<KCalCore::Todo>();
 
         if (!todo || !todo->isCompleted()) {
@@ -92,8 +95,9 @@ void TodoPurger::Private::deleteTodos()
     }
 
     if (toDelete.isEmpty()) {
-        if (m_calendarOwnership)
+        if (m_calendarOwnership) {
             m_calendar.clear();
+        }
         emit q->todosPurged(true, 0, m_ignoredItems);
     } else {
         m_currentChangeId = m_changer->deleteIncidences(toDelete);
@@ -110,26 +114,29 @@ bool TodoPurger::Private::treeIsDeletable(const KCalCore::Todo::Ptr &todo)
 {
     Q_ASSERT(todo);
 
-    if (!todo->isCompleted() || todo->isReadOnly())
+    if (!todo->isCompleted() || todo->isReadOnly()) {
         return false;
+    }
 
     KCalCore::Incidence::List childs = m_calendar->childIncidences(todo->uid());
-    if (childs.isEmpty())
+    if (childs.isEmpty()) {
         return true;
+    }
 
-    foreach(const KCalCore::Incidence::Ptr &child, childs) {
+    foreach (const KCalCore::Incidence::Ptr &child, childs) {
         KCalCore::Todo::Ptr childTodo = child.dynamicCast<KCalCore::Todo>();
 
-        if (!childTodo)
-            return false; // This never happens
+        if (!childTodo) {
+            return false;    // This never happens
+        }
 
-        if (!treeIsDeletable(childTodo))
+        if (!treeIsDeletable(childTodo)) {
             return false;
+        }
     }
 
     return true;
 }
-
 
 TodoPurger::TodoPurger(QObject *parent)
     : QObject(parent)

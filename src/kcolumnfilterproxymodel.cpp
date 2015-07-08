@@ -25,7 +25,8 @@
 
 using namespace Akonadi;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class KColumnFilterProxyModelPrivate
 {
 public:
@@ -33,7 +34,7 @@ public:
 };
 }
 
-KColumnFilterProxyModel::KColumnFilterProxyModel(QObject* parent)
+KColumnFilterProxyModel::KColumnFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d_ptr(new KColumnFilterProxyModelPrivate)
 { }

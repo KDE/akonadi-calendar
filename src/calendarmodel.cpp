@@ -37,7 +37,7 @@ using namespace Akonadi;
 static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
 {
     return item.hasPayload<KCalCore::Todo::Ptr>() ? item.payload<KCalCore::Todo::Ptr>()
-                                                  : KCalCore::Todo::Ptr();
+           : KCalCore::Todo::Ptr();
 }
 
 class CalendarModel::Private
@@ -207,7 +207,7 @@ int CalendarModel::entityColumnCount(EntityTreeModel::HeaderGroup headerSet) con
 }
 
 QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientation,
-                                         int role, EntityTreeModel::HeaderGroup headerSet) const
+        int role, EntityTreeModel::HeaderGroup headerSet) const
 {
     if (role != Qt::DisplayRole || orientation != Qt::Horizontal) {
         return QVariant();

@@ -70,9 +70,9 @@ ICalImporter::Private::~Private()
 }
 
 void ICalImporter::Private::onIncidenceCreated(int changeId,
-                                               const Akonadi::Item &item,
-                                               Akonadi::IncidenceChanger::ResultCode resultCode,
-                                               const QString &errorString)
+        const Akonadi::Item &item,
+        Akonadi::IncidenceChanger::ResultCode resultCode,
+        const QString &errorString)
 {
     Q_UNUSED(item);
 

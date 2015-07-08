@@ -57,7 +57,7 @@ Akonadi::CalendarUtils::selectCollection(QWidget *parent,
         collection = dlg->selectedCollection();
 
         if (!collection.isValid()) {
-            qCWarning(AKONADICALENDAR_LOG) <<"An invalid collection was selected!";
+            qCWarning(AKONADICALENDAR_LOG) << "An invalid collection was selected!";
         }
     }
     delete dlg;
@@ -108,7 +108,7 @@ QStringList Akonadi::CalendarUtils::allEmails()
     QStringList emails;
     const QSet<QString> &allEmails = KIdentityManagement::allEmails();
     emails.reserve(allEmails.count());
-    foreach(const QString &email, allEmails) {
+    foreach (const QString &email, allEmails) {
         emails.append(email);
     }
     return emails;

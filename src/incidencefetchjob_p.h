@@ -26,7 +26,8 @@
 #include <mimetypechecker.h>
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 /**
  * Retrieve all incidences in all calendars.

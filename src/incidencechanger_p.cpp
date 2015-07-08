@@ -59,7 +59,7 @@ Collection::List IncidenceChanger::Private::collectionsForMimeType(const QString
         const Collection::List &collections)
 {
     Collection::List result;
-    foreach(const Akonadi::Collection &collection, collections) {
+    foreach (const Akonadi::Collection &collection, collections) {
         if (collection.contentMimeTypes().contains(mimeType)) {
             result << collection;
         }
@@ -78,7 +78,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
 
     Q_ASSERT(job == m_collectionFetchJob);
     Akonadi::Collection::List allCollections;
-    foreach(const Akonadi::Collection &collection, m_collectionFetchJob->collections()) {
+    foreach (const Akonadi::Collection &collection, m_collectionFetchJob->collections()) {
         if (collection.rights() & Akonadi::Collection::CanCreateItem) {
             allCollections << collection;
         }
@@ -91,7 +91,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
     bool noAcl = false;
     bool invalidCollection = false;
     Collection collectionToUse;
-    foreach(const Change::Ptr &change, mPendingCreations) {
+    foreach (const Change::Ptr &change, mPendingCreations) {
         mPendingCreations.removeAll(change);
 
         if (canceled) {
@@ -185,18 +185,16 @@ void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change
                 break;
             }
             qCWarning(AKONADICALENDAR_LOG) << "Destination policy is to use the default collection."
-                       << "But it's invalid or doesn't have proper ACLs."
-                       << "isValid = "  << mDefaultCollection.isValid()
-                       << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);
-            // else fallthrough, and ask the user.
-        case DestinationPolicyAsk:
-        {
+                                           << "But it's invalid or doesn't have proper ACLs."
+                                           << "isValid = "  << mDefaultCollection.isValid()
+                                           << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);
+        // else fallthrough, and ask the user.
+        case DestinationPolicyAsk: {
             mPendingCreations << change;
             loadCollections(); // Now we wait, collections are being loaded async
             break;
         }
-        case DestinationPolicyNeverAsk:
-        {
+        case DestinationPolicyNeverAsk: {
             const bool hasRights = this->hasRights(mDefaultCollection, ChangeTypeCreate);
             if (mDefaultCollection.isValid() && hasRights) {
                 step2CreateIncidence(change, mDefaultCollection);

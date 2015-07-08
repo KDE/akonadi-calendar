@@ -23,7 +23,8 @@
 #include "publishdialog.h"
 #include "ui_publishdialog_base.h"
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class PublishDialog::Private : public QObject
 {

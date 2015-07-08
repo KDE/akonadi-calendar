@@ -66,7 +66,7 @@ GroupwareUiDelegate::~GroupwareUiDelegate()
 }
 
 ITIPHandlerComponentFactory::ITIPHandlerComponentFactory(QObject *parent)
-  : QObject(parent)
+    : QObject(parent)
 {
 }
 
@@ -92,7 +92,6 @@ ITIPHandler::ITIPHandler(QObject *parent) : QObject(parent)
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
 }
 
-
 ITIPHandler::ITIPHandler(ITIPHandlerComponentFactory *factory, QObject *parent) : QObject(parent)
     , d(new Private(factory, this))
 {
@@ -109,7 +108,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
                                      const QString &action)
 {
     qCDebug(AKONADICALENDAR_LOG) << "processiTIPMessage called with receiver=" << receiver
-             << "; action=" << action;
+                                 << "; action=" << action;
 
     if (d->m_currentOperation != OperationNone) {
         d->m_currentOperation = OperationNone;
@@ -202,18 +201,18 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         } else {
             // We don't have the incidence, nothing to cancel
             qCWarning(AKONADICALENDAR_LOG) << "Couldn't find the incidence to delete.\n"
-                       << "You deleted it previously or didn't even accept the invitation it in the first place.\n"
-                       << "; uid=" << d->m_incidence->uid()
-                       << "; identifier=" << d->m_incidence->instanceIdentifier()
-                       << "; summary=" << d->m_incidence->summary();
+                                           << "You deleted it previously or didn't even accept the invitation it in the first place.\n"
+                                           << "; uid=" << d->m_incidence->uid()
+                                           << "; identifier=" << d->m_incidence->instanceIdentifier()
+                                           << "; summary=" << d->m_incidence->summary();
 
             qCDebug(AKONADICALENDAR_LOG) << "\n Here's what we do have with such a summary:";
             KCalCore::Incidence::List knownIncidences = calendar()->incidences();
-            foreach(const KCalCore::Incidence::Ptr &knownIncidence, knownIncidences) {
+            foreach (const KCalCore::Incidence::Ptr &knownIncidence, knownIncidences) {
                 if (knownIncidence->summary() == d->m_incidence->summary()) {
                     qCDebug(AKONADICALENDAR_LOG) << "\nFound: uid=" << knownIncidence->uid()
-                             << "; identifier=" << knownIncidence->instanceIdentifier()
-                             << "; schedulingId" << knownIncidence->schedulingID();
+                                                 << "; identifier=" << knownIncidence->instanceIdentifier()
+                                                 << "; schedulingId" << knownIncidence->schedulingID();
                 }
             }
 
@@ -344,10 +343,11 @@ void ITIPHandler::publishInformation(const KCalCore::Incidence::Ptr &incidence,
             publishdlg->addAttendee(*it);
         }
     }
-    if (publishdlg->exec() == QDialog::Accepted && publishdlg)
+    if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
         d->m_scheduler->publish(incidence, publishdlg->addresses());
-    else
-        emit informationPublished(ResultSuccess, QString());   // Canceled.
+    } else {
+        emit informationPublished(ResultSuccess, QString());    // Canceled.
+    }
     delete publishdlg;
 }
 

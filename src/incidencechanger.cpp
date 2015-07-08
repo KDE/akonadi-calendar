@@ -79,7 +79,8 @@ static bool allowedModificationsWithoutRevisionUpdate(const Incidence::Ptr &inci
     return (dirtyFields == alarmOnlyModify);
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 // Does a queued emit, with QMetaObject::invokeMethod
 static void emitCreateFinished(IncidenceChanger *changer,
                                int changeId,
@@ -182,10 +183,10 @@ IncidenceChanger::Private::Private(bool enableHistory, ITIPHandlerComponentFacto
 IncidenceChanger::Private::~Private()
 {
     if (!mAtomicOperations.isEmpty() ||
-        !mQueuedModifications.isEmpty() ||
-        !mModificationsInProgress.isEmpty()) {
+            !mQueuedModifications.isEmpty() ||
+            !mModificationsInProgress.isEmpty()) {
         qCDebug(AKONADICALENDAR_LOG) << "Normal if the application was being used. "
-                 "But might indicate a memory leak if it wasn't";
+                                     "But might indicate a memory leak if it wasn't";
     }
 }
 
@@ -197,7 +198,7 @@ bool IncidenceChanger::Private::atomicOperationIsValid(uint atomicOperationId) c
 }
 
 bool IncidenceChanger::Private::hasRights(const Collection &collection,
-                                          IncidenceChanger::ChangeType changeType) const
+        IncidenceChanger::ChangeType changeType) const
 {
     bool result = false;
     switch (changeType) {
@@ -688,7 +689,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
             Incidence::Ptr newIncidence = CalendarUtils::incidence(change->newItem);
 
             if (!newIncidence->supportsGroupwareCommunication() ||
-                !Akonadi::CalendarUtils::thatIsMe(newIncidence->organizer()->email())) {
+                    !Akonadi::CalendarUtils::thatIsMe(newIncidence->organizer()->email())) {
                 // If we're not the organizer, the user already saw the "Do you really want to do this, incidence will become out of sync"
                 break;
             }
@@ -702,8 +703,8 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
             }
 
             const bool attendeeStatusChanged = myAttendeeStatusChanged(newIncidence,
-                                                                       oldIncidence,
-                                                                       Akonadi::CalendarUtils::allEmails());
+                                               oldIncidence,
+                                               Akonadi::CalendarUtils::allEmails());
 
             handler->sendIncidenceModifiedMessage(KCalCore::iTIPRequest, newIncidence, attendeeStatusChanged);
             return;
@@ -727,8 +728,8 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
 
 /** static */
 bool IncidenceChanger::Private::myAttendeeStatusChanged(const Incidence::Ptr &newInc,
-                                                        const Incidence::Ptr &oldInc,
-                                                        const QStringList &myEmails)
+        const Incidence::Ptr &oldInc,
+        const QStringList &myEmails)
 {
     Q_ASSERT(newInc);
     Q_ASSERT(oldInc);
@@ -774,7 +775,7 @@ int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence,
     const uint atomicOperationId = d->mBatchOperationInProgress ? d->mLatestAtomicOperationId : 0;
 
     const Change::Ptr change(new CreationChange(this, ++d->mLatestChangeId,
-                                                atomicOperationId, parent));
+                             atomicOperationId, parent));
     const int changeId = change->id;
     Q_ASSERT(!(d->mBatchOperationInProgress && !d->mAtomicOperations.contains(atomicOperationId)));
     if (d->mBatchOperationInProgress && d->mAtomicOperations[atomicOperationId]->rolledback()) {
@@ -946,7 +947,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem,
     const uint atomicOperationId = d->mBatchOperationInProgress ? d->mLatestAtomicOperationId : 0;
     const int changeId = ++d->mLatestChangeId;
     ModificationChange *modificationChange = new ModificationChange(this, changeId,
-                                                                    atomicOperationId, parent);
+            atomicOperationId, parent);
     Change::Ptr change(modificationChange);
 
     if (originalPayload) {
@@ -1003,7 +1004,7 @@ void IncidenceChanger::Private::performModification(Change::Ptr change)
     const uint atomicOperationId = change->atomicOperationId;
     const bool hasAtomicOperationId = atomicOperationId != 0;
     if (hasAtomicOperationId &&
-        mAtomicOperations[atomicOperationId]->rolledback()) {
+            mAtomicOperations[atomicOperationId]->rolledback()) {
         const QString errorMessage = showErrorDialog(ResultCodeRolledback, Q_NULLPTR);
         qCritical() << errorMessage;
         emitModifyFinished(q, changeId, newItem, ResultCodeRolledback, errorMessage);
@@ -1038,7 +1039,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
     QHash<Akonadi::Item::Id, int> &latestRevisionByItemId =
         ConflictPreventer::self()->mLatestRevisionByItemId;
     if (latestRevisionByItemId.contains(id) &&
-        latestRevisionByItemId[id] > newItem.revision()) {
+            latestRevisionByItemId[id] > newItem.revision()) {
         /* When a ItemModifyJob ends, the application can still modify the old items if the user
          * is quick because the ETM wasn't updated yet, and we'll get a STORE error, because
          * we are not modifying the latest revision.
@@ -1068,7 +1069,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
         if (!(incidence->dirtyFields() & resetPartStatus).isEmpty() && weAreOrganizer(incidence)) {
             foreach (const Attendee::Ptr &attendee, incidence->attendees()) {
                 if (attendee->role() != Attendee::NonParticipant &&
-                    attendee->status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
+                        attendee->status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
                     attendee->setStatus(Attendee::NeedsAction);
                     attendee->setRSVP(true);
                 }
@@ -1136,7 +1137,7 @@ void IncidenceChanger::endAtomicOperation()
     const bool allJobsCompleted = !atomicOperation->pendingJobs();
 
     if (allJobsCompleted && atomicOperation->rolledback() &&
-        atomicOperation->m_transactionCompleted) {
+            atomicOperation->m_transactionCompleted) {
         // The transaction job already completed, we can cleanup:
         delete d->mAtomicOperations.take(d->mLatestAtomicOperationId);
         d->mBatchOperationInProgress = false;
@@ -1247,7 +1248,7 @@ Akonadi::Collection IncidenceChanger::lastCollectionUsed() const
 }
 
 QString IncidenceChanger::Private::showErrorDialog(IncidenceChanger::ResultCode resultCode,
-                                                   QWidget *parent)
+        QWidget *parent)
 {
     QString errorString;
     switch (resultCode) {
@@ -1281,10 +1282,10 @@ QString IncidenceChanger::Private::showErrorDialog(IncidenceChanger::ResultCode 
 }
 
 void IncidenceChanger::Private::adjustRecurrence(const KCalCore::Incidence::Ptr &originalIncidence,
-                                                 const KCalCore::Incidence::Ptr &incidence)
+        const KCalCore::Incidence::Ptr &incidence)
 {
     if (!originalIncidence || !incidence->recurs() || incidence->hasRecurrenceId() || !mAutoAdjustRecurrence
-        || !incidence->dirtyFields().contains(KCalCore::Incidence::FieldDtStart)) {
+            || !incidence->dirtyFields().contains(KCalCore::Incidence::FieldDtStart)) {
         return;
     }
 
@@ -1341,7 +1342,7 @@ void IncidenceChanger::Private::cleanupTransaction()
 }
 
 bool IncidenceChanger::Private::allowAtomicOperation(int atomicOperationId,
-                                                     const Change::Ptr &change) const
+        const Change::Ptr &change) const
 {
     bool allow = true;
     if (atomicOperationId > 0) {
@@ -1365,7 +1366,7 @@ bool IncidenceChanger::Private::allowAtomicOperation(int atomicOperationId,
 
     if (!allow) {
         qCWarning(AKONADICALENDAR_LOG) << "Each change belonging to a group operation"
-                   << "must have a different Akonadi::Item::Id";
+                                       << "must have a different Akonadi::Item::Id";
     }
 
     return allow;

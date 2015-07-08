@@ -25,7 +25,8 @@
 
 class KJob;
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class FetchJobCalendarPrivate : public CalendarBasePrivate
 {

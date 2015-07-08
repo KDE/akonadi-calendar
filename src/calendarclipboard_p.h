@@ -27,11 +27,13 @@
 #include <QVector>
 #include <QSet>
 
-namespace KCalUtils {
+namespace KCalUtils
+{
 class DndFactory;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class IncidenceChanger;
 

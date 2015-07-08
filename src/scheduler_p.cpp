@@ -34,8 +34,7 @@
 using namespace KCalCore;
 using namespace Akonadi;
 
-struct Akonadi::Scheduler::Private
-{
+struct Akonadi::Scheduler::Private {
 public:
     Private(Scheduler *qq) : mFreeBusyCache(Q_NULLPTR)
         , mShowDialogs(true)
@@ -102,7 +101,7 @@ void Scheduler::acceptTransaction(const IncidenceBase::Ptr &incidence,
         acceptDeclineCounter(incidence, status);
         break;
     case iTIPReply:
-        acceptReply(incidence,calendar, status, method);
+        acceptReply(incidence, calendar, status, method);
         break;
     case iTIPRefresh:
         acceptRefresh(incidence, status);
@@ -129,7 +128,7 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
     Result result = ResultSuccess;
 
     qCDebug(AKONADICALENDAR_LOG) << "status="
-             << KCalUtils::Stringify::scheduleMessageStatus(status);
+                                 << KCalUtils::Stringify::scheduleMessageStatus(status);
 
     Incidence::Ptr newInc = newIncBase.staticCast<Incidence>() ;
     Incidence::Ptr calInc = calendar->incidence(newIncBase->uid());
@@ -190,21 +189,21 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
 
     const Incidence::List existingIncidences = calendar->incidencesFromSchedulingID(schedulingUid);
     qCDebug(AKONADICALENDAR_LOG) << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status)
-             << ": found " << existingIncidences.count()
-             << " incidences with schedulingID " << incidence->schedulingID()
-             << "; uid was = " << schedulingUid;
+                                 << ": found " << existingIncidences.count()
+                                 << " incidences with schedulingID " << incidence->schedulingID()
+                                 << "; uid was = " << schedulingUid;
 
     if (existingIncidences.isEmpty()) {
         // Perfectly normal if the incidence doesn't exist. This is probably
         // a new invitation.
         qCDebug(AKONADICALENDAR_LOG) << "incidence not found; calendar = " << calendar.data()
-                 << "; incidence count = " << calendar->incidences().count();
+                                     << "; incidence count = " << calendar->incidences().count();
     }
 
-    foreach(const KCalCore::Incidence::Ptr &existingIncidence, existingIncidences) {
+    foreach (const KCalCore::Incidence::Ptr &existingIncidence, existingIncidences) {
         qCDebug(AKONADICALENDAR_LOG) << "Considering this found event ("
-                 << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
-                 << ") :" << mFormat->toString(existingIncidence);
+                                     << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
+                                     << ") :" << mFormat->toString(existingIncidence);
         // If it's readonly, we can't possible update it.
         if (existingIncidence->isReadOnly()) {
             continue;
@@ -245,9 +244,9 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
 //QT5 port
 #if 0
                     qCWarning(AKONADICALENDAR_LOG) << errorString
-                               << "; revision=" << existingIncidence->revision()
-                               << "; existing->lastModified=" << existingIncidence->lastModified()
-                               << "; update->lastModified=" << incidence->lastModified();
+                                                   << "; revision=" << existingIncidence->revision()
+                                                   << "; existing->lastModified=" << existingIncidence->lastModified()
+                                                   << "; update->lastModified=" << incidence->lastModified();
 #endif
                     emit transactionFinished(ResultOutatedUpdate, errorString);
                     return;
@@ -277,7 +276,6 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                         }
                     }
 
-
                     const bool success = calendar->modifyIncidence(incidence);
 
                     if (!success) {
@@ -306,15 +304,15 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
         KMessageBox::information(
             Q_NULLPTR,
             xi18nc("@info",
-                  "<para>You added an invitation update, but an earlier version of the "
-                  "item could not be found in your calendar.</para>"
-                  "<para>This may have occurred because:<list>"
-                  "<item>the organizer did not include you in the original invitation</item>"
-                  "<item>you did not accept the original invitation yet</item>"
-                  "<item>you deleted the original invitation from your calendar</item>"
-                  "<item>you no longer have access to the calendar containing the invitation</item>"
-                  "</list></para>"
-                  "<para>This is not a problem, but we thought you should know.</para>"),
+                   "<para>You added an invitation update, but an earlier version of the "
+                   "item could not be found in your calendar.</para>"
+                   "<para>This may have occurred because:<list>"
+                   "<item>the organizer did not include you in the original invitation</item>"
+                   "<item>you did not accept the original invitation yet</item>"
+                   "<item>you deleted the original invitation from your calendar</item>"
+                   "<item>you no longer have access to the calendar containing the invitation</item>"
+                   "</list></para>"
+                   "<para>This is not a problem, but we thought you should know.</para>"),
             i18nc("@title", "Cannot find invitation to be updated"), QLatin1String("AcceptCantFindIncidence"));
     }
     qCDebug(AKONADICALENDAR_LOG) << "Storing new incidence with scheduling uid=" << schedulingUid << " and uid=" << incidence->uid();
@@ -352,16 +350,16 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
 
     const Incidence::List existingIncidences = calendar->incidencesFromSchedulingID(incidence->uid());
     qCDebug(AKONADICALENDAR_LOG) << "Scheduler::acceptCancel="
-             << KCalUtils::Stringify::scheduleMessageStatus(status)   //krazy2:exclude=kdebug
-             << ": found " << existingIncidences.count()
-             << " incidences with schedulingID " << incidence->schedulingID();
+                                 << KCalUtils::Stringify::scheduleMessageStatus(status)   //krazy2:exclude=kdebug
+                                 << ": found " << existingIncidences.count()
+                                 << " incidences with schedulingID " << incidence->schedulingID();
 
     Result result = ResultIncidenceToDeleteNotFound;
     QString errorString = i18n("Could not find incidence to delete.");
-    foreach(const KCalCore::Incidence::Ptr &existingIncidence, existingIncidences) {
+    foreach (const KCalCore::Incidence::Ptr &existingIncidence, existingIncidences) {
         qCDebug(AKONADICALENDAR_LOG) << "Considering this found event ("
-                 << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
-                 << ") :" << mFormat->toString(existingIncidence);
+                                     << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
+                                     << ") :" << mFormat->toString(existingIncidence);
 
         // If it's readonly, we can't possible remove it.
         if (existingIncidence->isReadOnly()) {
@@ -383,7 +381,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
         // on the invitation" case. So check the attendee status of the attendee.
         bool isMine = true;
         const Attendee::List attendees = existingIncidence->attendees();
-        foreach(const KCalCore::Attendee::Ptr &attendee, attendees) {
+        foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
             if (attendee->email() == attendeeEmail &&
                     attendee->status() == Attendee::NeedsAction) {
                 // This incidence wasn't created by me - it's probably in a shared
@@ -463,7 +461,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
     // try harder to find the correct incidence
     if (!incidence) {
         const Incidence::List list = calendar->incidences();
-        for (Incidence::List::ConstIterator it=list.constBegin(), end=list.constEnd();
+        for (Incidence::List::ConstIterator it = list.constBegin(), end = list.constEnd();
                 it != end; ++it) {
             if ((*it)->schedulingID() == incidenceBase->uid()) {
                 incidence = (*it).dynamicCast<Incidence>();
@@ -642,7 +640,7 @@ void Scheduler::acceptFreeBusy(const IncidenceBase::Ptr &incidence, iTIPMethod m
 
 void Scheduler::handleCreateFinished(bool success, const QString &errorMessage)
 {
-    CalendarBase *calendar = qobject_cast<Akonadi::CalendarBase*>(sender());
+    CalendarBase *calendar = qobject_cast<Akonadi::CalendarBase *>(sender());
     const bool cancelled = calendar && calendar->d_ptr->mLastCreationCancelled;
 
     emit transactionFinished(success ? ResultSuccess

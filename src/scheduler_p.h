@@ -28,12 +28,14 @@
 #include <QtCore/QObject>
 #include <QtCore/QString>
 
-namespace KCalCore {
+namespace KCalCore
+{
 class ICalFormat;
 class FreeBusyCache;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
   This class provides an encapsulation of iTIP transactions (RFC 2446).
   It is an abstract base class for inheritance by implementations of the

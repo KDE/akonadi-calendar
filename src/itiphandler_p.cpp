@@ -132,8 +132,8 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
             Q_ASSERT(m_incidence);
             m_helper->setDialogParent(m_parentWidget);
             m_helper->sendIncidenceModifiedMessage(KCalCore::iTIPRequest,
-                        KCalCore::Incidence::Ptr(m_incidence->clone()),
-                        false);
+                                                   KCalCore::Incidence::Ptr(m_incidence->clone()),
+                                                   false);
             m_incidence.clear();
             return;
         } else {
@@ -148,11 +148,10 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
 void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult, KCalCore::iTIPMethod /*method*/, const KCalCore::Incidence::Ptr &)
 {
     if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded ||
-        sendResult == ITIPHandlerHelper::ResultCanceled) {
-            emit q->iTipMessageSent(ResultSuccess, QString());
+            sendResult == ITIPHandlerHelper::ResultCanceled) {
+        emit q->iTipMessageSent(ResultSuccess, QString());
     }
 }
-
 
 void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result result,
         const QString &errorMessage)
@@ -245,8 +244,9 @@ CalendarBase::Ptr ITIPHandler::Private::calendar()
 bool ITIPHandler::Private::isLoaded()
 {
     FetchJobCalendar::Ptr fetchJobCalendar = calendar().dynamicCast<Akonadi::FetchJobCalendar>();
-    if (fetchJobCalendar)
+    if (fetchJobCalendar) {
         return fetchJobCalendar->isLoaded();
+    }
 
     // If it's an ETMCalendar, set through setCalendar(), then it's already loaded, it's a requirement of setCalendar().
     // ETM doesn't have any way to check if it's already populated, so we have to require loaded calendars.

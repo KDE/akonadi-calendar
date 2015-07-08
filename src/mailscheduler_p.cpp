@@ -34,11 +34,11 @@
 #include <KLocalizedString>
 #include <QStandardPaths>
 
-
 using namespace Akonadi;
 using namespace KIdentityManagement;
 
-class MailScheduler::Private {
+class MailScheduler::Private
+{
 public:
     KIdentityManagement::IdentityManager *m_identityManager;
     MailClient *m_mailer;
@@ -63,8 +63,9 @@ void MailScheduler::publish(const KCalCore::IncidenceBase::Ptr &incidence,
                             const QString &recipients)
 {
     Q_ASSERT(incidence);
-    if (!incidence)
+    if (!incidence) {
         return;
+    }
 
     const QString messageText = mFormat->createScheduleMessage(incidence, KCalCore::iTIPPublish);
     d->m_mailer->mailTo(incidence,
@@ -79,8 +80,9 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
                                        const QString &recipients)
 {
     Q_ASSERT(incidence);
-    if (!incidence)
+    if (!incidence) {
         return;
+    }
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
 
     d->m_mailer->mailTo(incidence,
@@ -95,8 +97,9 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
                                        KCalCore::iTIPMethod method)
 {
     Q_ASSERT(incidence);
-    if (!incidence)
+    if (!incidence) {
         return;
+    }
 
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
 
@@ -134,8 +137,9 @@ void MailScheduler::acceptCounterProposal(const KCalCore::Incidence::Ptr &incide
 {
     Q_ASSERT(incidence);
     Q_ASSERT(calendar);
-    if (!incidence || !calendar)
+    if (!incidence || !calendar) {
         return;
+    }
 
     Akonadi::Item exInc = calendar->item(incidence);
     if (!exInc.isValid()) {
@@ -168,11 +172,13 @@ void MailScheduler::acceptCounterProposal(const KCalCore::Incidence::Ptr &incide
 
         exIncPtr->updated();
 
-        if (!calendar->modifyIncidence(exIncPtr))
+        if (!calendar->modifyIncidence(exIncPtr)) {
             result = ResultModifyingError;
+        }
     } else {
-        if (!calendar->addIncidence(KCalCore::Incidence::Ptr(incidence->clone())))
+        if (!calendar->addIncidence(KCalCore::Incidence::Ptr(incidence->clone()))) {
             result = ResultCreatingError;
+        }
     }
 
     if (result != ResultSuccess) {

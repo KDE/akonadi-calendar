@@ -94,7 +94,7 @@ void PublishDialog::Private::openAddressbook()
         if (dialogPtr) {
             const Akonadi::EmailAddressSelection::List selections = dialogPtr->selectedAddresses();
             if (!selections.isEmpty()) {
-                foreach(const Akonadi::EmailAddressSelection &selection, selections) {
+                foreach (const Akonadi::EmailAddressSelection &selection, selections) {
                     mUI.mNameLineEdit->setEnabled(true);
                     mUI.mEmailLineEdit->setEnabled(true);
                     QListWidgetItem *item = new QListWidgetItem(mUI.mListWidget);

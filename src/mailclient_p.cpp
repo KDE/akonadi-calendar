@@ -45,7 +45,6 @@
 
 using namespace Akonadi;
 
-
 MailClient::MailClient(ITIPHandlerComponentFactory *factory, QObject *parent) : QObject(parent)
     , mFactory(factory ? factory : new ITIPHandlerComponentFactory(this))
 {
@@ -74,7 +73,7 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     QStringList toList;
     QStringList ccList;
     const int numberOfAttendees = attendees.count();
-    for (int i=0; i<numberOfAttendees; ++i) {
+    for (int i = 0; i < numberOfAttendees; ++i) {
         KCalCore::Attendee::Ptr a = attendees.at(i);
 
         const QString email = a->email();
@@ -177,7 +176,7 @@ static QStringList extractEmailAndNormalize(const QString &email)
     const QStringList splittedEmail = KEmailAddress::splitAddressList(email);
     QStringList normalizedEmail;
     normalizedEmail.reserve(splittedEmail.count());
-    foreach(const QString &email, splittedEmail) {
+    foreach (const QString &email, splittedEmail) {
         const QString str = KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(email));
         normalizedEmail << str;
     }
@@ -209,11 +208,11 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
         to = from;
     }
     qCDebug(AKONADICALENDAR_LOG) << "\nFrom:" << from
-             << "\nTo:" << to
-             << "\nCC:" << cc
-             << "\nSubject:" << subject << "\nBody: \n" << body
-             << "\nAttachment:\n" << attachment
-             << "\nmailTransport: " << mailTransport;
+                                 << "\nTo:" << to
+                                 << "\nCC:" << cc
+                                 << "\nSubject:" << subject << "\nBody: \n" << body
+                                 << "\nAttachment:\n" << attachment
+                                 << "\nmailTransport: " << mailTransport;
 
     MailTransport::Transport *transport =
         MailTransport::TransportManager::self()->transportByName(mailTransport);
@@ -226,7 +225,7 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
 
     if (!transport) {
         qCritical() << "Error fetching transport; mailTransport"
-                 << mailTransport << MailTransport::TransportManager::self()->defaultTransportName();
+                    << mailTransport << MailTransport::TransportManager::self()->defaultTransportName();
         emit finished(ResultErrorFetchingTransport,
                       i18n("Error fetching transport. Unable to send invitations"));
         return;

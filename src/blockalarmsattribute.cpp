@@ -102,12 +102,12 @@ bool BlockAlarmsAttribute::isAlarmTypeBlocked(KCalCore::Alarm::Type type) const
 bool BlockAlarmsAttribute::isEverythingBlocked() const
 {
     return isAlarmTypeBlocked(KCalCore::Alarm::Audio) && isAlarmTypeBlocked(KCalCore::Alarm::Display)
-        && isAlarmTypeBlocked(KCalCore::Alarm::Email) && isAlarmTypeBlocked(KCalCore::Alarm::Procedure);
+           && isAlarmTypeBlocked(KCalCore::Alarm::Email) && isAlarmTypeBlocked(KCalCore::Alarm::Procedure);
 }
 
 QByteArray BlockAlarmsAttribute::type() const
 {
-    static const QByteArray sType( "BlockAlarmsAttribute" );
+    static const QByteArray sType("BlockAlarmsAttribute");
     return sType;
 }
 
@@ -157,7 +157,8 @@ void BlockAlarmsAttribute::deserialize(const QByteArray &data)
     }
 }
 
-namespace {
+namespace
+{
 
 // Anonymous namespace; function is invisible outside this file.
 bool dummy()

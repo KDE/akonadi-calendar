@@ -30,7 +30,6 @@
 #include <kcalcore/todo.h>
 #include <klocalizedstring.h>
 
-
 #include <QItemSelectionModel>
 
 using namespace Akonadi;
@@ -77,10 +76,10 @@ public:
                 StandardActionManager::CreateCollection, StandardActionManager::ErrorMessageTitle,
                 i18n("Calendar folder creation failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList() <<
-                                                                                                   QLatin1String("inode/directory") <<
-                                                                                                   QLatin1String("application/x-vnd.akonadi.calendar.todo") <<
-                                                                                                   QLatin1String("application/x-vnd.akonadi.calendar.event") <<
-                                                                                                   QLatin1String("application/x-vnd.akonadi.calendar.journal") );
+                    QLatin1String("inode/directory") <<
+                    QLatin1String("application/x-vnd.akonadi.calendar.todo") <<
+                    QLatin1String("application/x-vnd.akonadi.calendar.event") <<
+                    QLatin1String("application/x-vnd.akonadi.calendar.journal"));
 
             break;
         case  Akonadi::StandardActionManager::CopyCollections:
@@ -244,7 +243,7 @@ public:
             break;
         case Akonadi::StandardActionManager::SynchronizeCollectionTree:
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollectionTree)->setText(
-                                           i18n("Update Available Calendars"));
+                i18n("Update Available Calendars"));
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollectionTree)->setWhatsThis(
                 i18n("Updates the tree of available calendars."));
 
@@ -513,7 +512,7 @@ public:
     StandardActionManager *mGenericManager;
     QItemSelectionModel *mCollectionSelectionModel;
     QItemSelectionModel *mItemSelectionModel;
-    QHash<StandardCalendarActionManager::Type, QAction*> mActions;
+    QHash<StandardCalendarActionManager::Type, QAction *> mActions;
     QSet<StandardCalendarActionManager::Type> mInterceptedActions;
     StandardCalendarActionManager *mParent;
 };
@@ -554,7 +553,7 @@ void StandardCalendarActionManager::setItemSelectionModel(QItemSelectionModel *s
     d->updateActions();
 }
 
-QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManager::Type type)
+QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManager::Type type)
 {
     if (d->mActions.contains(type)) {
         return d->mActions.value(type);
@@ -614,11 +613,12 @@ QAction* StandardCalendarActionManager::createAction(StandardCalendarActionManag
     return action;
 }
 
-QAction* StandardCalendarActionManager::createAction(StandardActionManager::Type type)
+QAction *StandardCalendarActionManager::createAction(StandardActionManager::Type type)
 {
     QAction *act = d->mGenericManager->action(type);
-    if (!act)
+    if (!act) {
         act = d->mGenericManager->createAction(type);
+    }
     d->updateGenericAction(type);
     return act;
 }
@@ -636,7 +636,7 @@ void StandardCalendarActionManager::createAllActions()
     d->updateActions();
 }
 
-QAction* StandardCalendarActionManager::action(StandardCalendarActionManager::Type type) const
+QAction *StandardCalendarActionManager::action(StandardCalendarActionManager::Type type) const
 {
     if (d->mActions.contains(type)) {
         return d->mActions.value(type);
@@ -645,7 +645,7 @@ QAction* StandardCalendarActionManager::action(StandardCalendarActionManager::Ty
     return Q_NULLPTR;
 }
 
-QAction* StandardCalendarActionManager::action(StandardActionManager::Type type) const
+QAction *StandardCalendarActionManager::action(StandardActionManager::Type type) const
 {
     return d->mGenericManager->action(type);
 }

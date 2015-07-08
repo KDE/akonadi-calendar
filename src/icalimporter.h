@@ -34,7 +34,8 @@
  *
  * @since 4.12
  */
-namespace Akonadi {
+namespace Akonadi
+{
 
 class IncidenceChanger;
 

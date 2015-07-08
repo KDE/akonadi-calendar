@@ -26,7 +26,8 @@
 #include <QVector>
 #include <QMultiHash>
 
-namespace Akonadi {
+namespace Akonadi
+{
 
 class CalendarBasePrivate : public QObject
 {
@@ -70,7 +71,7 @@ signals:
 public:
     QMultiHash<Akonadi::Collection::Id, Akonadi::Item> mItemsByCollection;
     QHash<Akonadi::Collection::Id, Akonadi::Collection> mCollections;
-    QHash<KJob*, Akonadi::Collection::Id> mCollectionJobs;
+    QHash<KJob *, Akonadi::Collection::Id> mCollectionJobs;
     QHash<QString, Akonadi::Item::Id> mItemIdByUid;
     QHash<Akonadi::Item::Id, Akonadi::Item> mItemById;
     Akonadi::IncidenceChanger *mIncidenceChanger;
