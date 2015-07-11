@@ -213,7 +213,7 @@ void ETMCalendarPrivate::clear()
     mCollectionMap.clear();
     mItemsByCollection.clear();
 
-    itemsRemoved(mItemById.values());
+    itemsRemoved(mItemById.values().toVector());
 
     if (!mItemById.isEmpty()) {
         mItemById.clear();

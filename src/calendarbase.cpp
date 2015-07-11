@@ -464,9 +464,9 @@ Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
 {
     Q_D(const CalendarBase);
     if (id != -1) {
-        return d->mItemsByCollection.values(id);
+        return d->mItemsByCollection.values(id).toVector();
     } else {
-        return d->mItemById.values();
+        return d->mItemById.values().toVector();
     }
 }
 
