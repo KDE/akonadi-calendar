@@ -287,8 +287,8 @@ public:
                           const KCalCore::Incidence::Ptr &incidence);
 
     bool hasRights(const Akonadi::Collection &collection, IncidenceChanger::ChangeType) const;
-    void queueModification(Change::Ptr);
-    void performModification(Change::Ptr);
+    void queueModification(const Change::Ptr &);
+    void performModification(const Change::Ptr &);
     bool atomicOperationIsValid(uint atomicOperationId) const;
     Akonadi::Job *parentJob(const Change::Ptr &change) const;
     void cancelTransaction();

@@ -225,7 +225,7 @@ Akonadi::Job *IncidenceChanger::Private::parentJob(const Change::Ptr &change) co
            : Q_NULLPTR;
 }
 
-void IncidenceChanger::Private::queueModification(Change::Ptr change)
+void IncidenceChanger::Private::queueModification(const Change::Ptr &change)
 {
     // If there's already a change queued we just discard it
     // and send the newer change, which already includes
@@ -982,7 +982,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem,
     return changeId;
 }
 
-void IncidenceChanger::Private::performModification(Change::Ptr change)
+void IncidenceChanger::Private::performModification(const Change::Ptr &change)
 {
     const Item::Id id = change->newItem.id();
     Akonadi::Item &newItem = change->newItem;
