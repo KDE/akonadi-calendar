@@ -133,7 +133,7 @@ class FbCheckerJob : public KJob
     Q_OBJECT
 public:
     explicit FbCheckerJob(const QList<QUrl> &urlsToCheck, QObject *parent = Q_NULLPTR);
-    virtual void start();
+    void start() Q_DECL_OVERRIDE;
 
     QUrl validUrl() const;
 
