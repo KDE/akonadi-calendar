@@ -479,6 +479,7 @@ Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
 Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &incidences) const
 {
     Akonadi::Item::List items;
+    items.reserve(incidences.size());
 
     foreach (const KCalCore::Incidence::Ptr &incidence, incidences) {
         if (incidence) {
