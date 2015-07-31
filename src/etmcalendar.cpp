@@ -213,7 +213,12 @@ void ETMCalendarPrivate::clear()
     mCollectionMap.clear();
     mItemsByCollection.clear();
 
-    itemsRemoved(mItemById.values().toVector());
+    Akonadi::Item::List removedItems;
+    removedItems.reserve(mItemById.size());
+    for (auto it = mItemById.cbegin(), end = mItemById.cend(); it != end; ++it)
+        removedItems.push_back(it.value());
+
+    itemsRemoved(removedItems);
 
     if (!mItemById.isEmpty()) {
         mItemById.clear();

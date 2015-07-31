@@ -463,11 +463,17 @@ Item CalendarBase::item(const Incidence::Ptr &incidence) const
 Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
 {
     Q_D(const CalendarBase);
-    if (id != -1) {
-        return d->mItemsByCollection.values(id).toVector();
-    } else {
-        return d->mItemById.values().toVector();
+
+    Akonadi::Item::List result;
+    if (id == -1)
+        result.reserve(d->mItemById.size());
+
+    for (auto it = d->mItemById.cbegin(), end = d->mItemById.cend(); it != end; ++it) {
+        if (id == -1 || id == it.key())
+            result.push_back(it.value());
     }
+
+    return result;
 }
 
 Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &incidences) const
