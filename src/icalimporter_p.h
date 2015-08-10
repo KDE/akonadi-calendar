@@ -43,7 +43,7 @@ class Job;
 namespace Akonadi
 {
 
-class ICalImporter::Private : public QObject
+class Q_DECL_HIDDEN ICalImporter::Private : public QObject
 {
     Q_OBJECT
 public:

@@ -33,7 +33,7 @@
 
 using namespace Akonadi;
 
-class CalFilterPartStatusProxyModel::Private
+class Q_DECL_HIDDEN CalFilterPartStatusProxyModel::Private
 {
 public:
     explicit Private()

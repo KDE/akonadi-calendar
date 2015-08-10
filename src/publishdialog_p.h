@@ -26,7 +26,7 @@
 namespace Akonadi
 {
 
-class PublishDialog::Private : public QObject
+class Q_DECL_HIDDEN PublishDialog::Private : public QObject
 {
     Q_OBJECT
 

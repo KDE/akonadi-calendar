@@ -31,7 +31,7 @@ namespace Akonadi
 
 class IncidenceChanger;
 
-class TodoPurger::Private : public QObject
+class Q_DECL_HIDDEN TodoPurger::Private : public QObject
 {
     Q_OBJECT
 public:

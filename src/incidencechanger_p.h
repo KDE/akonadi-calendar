@@ -258,7 +258,7 @@ private:
     IncidenceChanger::Private *m_incidenceChangerPrivate;
 };
 
-class IncidenceChanger::Private : public QObject
+class Q_DECL_HIDDEN IncidenceChanger::Private : public QObject
 {
     Q_OBJECT
 public:

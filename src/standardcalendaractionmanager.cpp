@@ -34,7 +34,7 @@
 
 using namespace Akonadi;
 
-class StandardCalendarActionManager::Private
+class Q_DECL_HIDDEN StandardCalendarActionManager::Private
 {
 public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardCalendarActionManager *parent)

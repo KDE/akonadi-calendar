@@ -40,7 +40,7 @@ static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
            : KCalCore::Todo::Ptr();
 }
 
-class CalendarModel::Private
+class Q_DECL_HIDDEN CalendarModel::Private
 {
 public:
     Private()

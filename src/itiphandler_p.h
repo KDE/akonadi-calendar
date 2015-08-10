@@ -55,7 +55,7 @@ enum Operation {
     OperationSendAsICalendar
 };
 
-class ITIPHandler::Private : public QObject
+class Q_DECL_HIDDEN ITIPHandler::Private : public QObject
 {
     Q_OBJECT
 public:

@@ -29,7 +29,7 @@
 
 using namespace Akonadi;
 
-class CalFilterProxyModel::Private
+class Q_DECL_HIDDEN CalFilterProxyModel::Private
 {
 public:
     explicit Private()

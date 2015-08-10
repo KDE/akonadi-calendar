@@ -37,7 +37,7 @@ namespace Akonadi
 
 class IncidenceChanger;
 
-class CalendarClipboard::Private : public QObject
+class Q_DECL_HIDDEN CalendarClipboard::Private : public QObject
 {
     Q_OBJECT
 public:

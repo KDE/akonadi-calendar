@@ -37,7 +37,7 @@
 using namespace Akonadi;
 using namespace KIdentityManagement;
 
-class MailScheduler::Private
+class Q_DECL_HIDDEN MailScheduler::Private
 {
 public:
     KIdentityManagement::IdentityManager *m_identityManager;

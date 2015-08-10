@@ -28,7 +28,7 @@
 
 using namespace Akonadi;
 
-class BlockAlarmsAttribute::Private
+class Q_DECL_HIDDEN BlockAlarmsAttribute::Private
 {
 public:
     Private()
