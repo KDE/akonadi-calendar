@@ -5,8 +5,6 @@ if ( PLEASE_TEST_INVITATIONS )
   add_definitions( -DPLEASE_TEST_INVITATIONS )
 endif()
 
-remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
-
 set(akonadicalendar_LIB_SRC
   akonadicalendar_debug.cpp
   blockalarmsattribute.cpp
