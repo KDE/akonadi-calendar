@@ -128,7 +128,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
 
     QString data_filename;
     QString action = QStringLiteral("accepted");
-    QString incidenceUid = QString::fromLatin1("uosj936i6arrtl9c2i5r2mfuvg");
+    QString incidenceUid = QStringLiteral("uosj936i6arrtl9c2i5r2mfuvg");
     QString receiver = QLatin1String(s_ourEmail);
     Akonadi::ITIPHandler::Result expectedResult;
     int expectedNumIncidences = 0;
@@ -350,7 +350,7 @@ void ITIPHandlerTest::testProcessITIPMessageCancel_data()
 
     QString creation_data_filename;
     QString cancel_data_filename;
-    QString incidenceUid = QString::fromLatin1("uosj936i6arrtl9c2i5r2mfuvg");
+    QString incidenceUid = QStringLiteral("uosj936i6arrtl9c2i5r2mfuvg");
     //----------------------------------------------------------------------------------------------
     // Someone invited us to an event, we accept, then organizer cancels event
     creation_data_filename = QStringLiteral("invited_us");
@@ -587,7 +587,7 @@ void ITIPHandlerTest::testIdentity_data()
     QTest::addColumn<bool>("expectedResult");
 
     const QString myEmail = QLatin1String(s_ourEmail);
-    QString myEmail2      = QString::fromLatin1("Some name <%1>").arg(myEmail);
+    QString myEmail2      = QStringLiteral("Some name <%1>").arg(myEmail);
 
     const QString myAlias1    = QStringLiteral("alias1@kde.org"); // hardcoded in emailidentities, do not change
     const QString myIdentity2 = QLatin1String(s_outEmail2);
@@ -595,7 +595,7 @@ void ITIPHandlerTest::testIdentity_data()
     QTest::newRow("Me")           << myEmail     << true;
     QTest::newRow("Also me")      << myEmail2    << true;
     QTest::newRow("My identity2") << myIdentity2 << true;
-    QTest::newRow("Not me")       << QString::fromLatin1("laura.palmer@twinpeaks.com") << false;
+    QTest::newRow("Not me")       << QStringLiteral("laura.palmer@twinpeaks.com") << false;
 
     QTest::newRow("My alias") << myAlias1 << true;
 
