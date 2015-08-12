@@ -425,8 +425,9 @@ Akonadi::Item CalendarBase::item(Akonadi::Item::Id id) const
 {
     Q_D(const CalendarBase);
     Akonadi::Item i;
-    if (d->mItemById.contains(id)) {
-        i = d->mItemById[id];
+    auto it = d->mItemById.constFind(id);
+    if (it != d->mItemById.cend()) {
+        i = *it;
     } else {
         qCDebug(AKONADICALENDAR_LOG) << "Can't find any item with id " << id;
     }
@@ -442,13 +443,15 @@ Akonadi::Item CalendarBase::item(const QString &uid) const
         return i;
     }
 
-    if (d->mItemIdByUid.contains(uid)) {
-        const Akonadi::Item::Id id = d->mItemIdByUid[uid];
-        if (!d->mItemById.contains(id)) {
+    auto it = d->mItemIdByUid.constFind(uid);
+    if (it != d->mItemIdByUid.cend()) {
+        const Akonadi::Item::Id id = *it;
+        auto it2 = d->mItemById.constFind(id);
+        if (it2 == d->mItemById.cend()) {
             qCritical() << "Item with id " << id << "(uid=" << uid << ") not found, but in uid map";
             Q_ASSERT_X(false, "CalendarBase::item", "not in mItemById");
         }
-        i = d->mItemById[id];
+        i = *it2;
     } else {
         qCDebug(AKONADICALENDAR_LOG) << "Can't find any incidence with uid " << uid;
     }
