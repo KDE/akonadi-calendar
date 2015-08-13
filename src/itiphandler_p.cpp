@@ -164,7 +164,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
                                           m_queuedInvitation.incidence->summary(),
                                           KCalCore::ScheduleMessage::methodName(m_queuedInvitation.method)),
                                      i18n("Sending Free/Busy"),
-                                     QLatin1String("FreeBusyPublishSuccess"));
+                                     QStringLiteral("FreeBusyPublishSuccess"));
         }
         emit q->iTipMessageSent(ITIPHandler::ResultSuccess, QString());
     } else {
@@ -189,7 +189,7 @@ void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Resu
             KMessageBox::information(m_parentWidget,
                                      i18n("The item information was successfully sent."),
                                      i18n("Publishing"),
-                                     QLatin1String("IncidencePublishSuccess"));
+                                     QStringLiteral("IncidencePublishSuccess"));
         }
         emit q->informationPublished(ITIPHandler::ResultSuccess, QString());
     } else {
@@ -211,7 +211,7 @@ void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailScheduler::Result 
             KMessageBox::information(m_parentWidget,
                                      i18n("The item information was successfully sent."),
                                      i18n("Forwarding"),
-                                     QLatin1String("IncidenceForwardSuccess"));
+                                     QStringLiteral("IncidenceForwardSuccess"));
         }
         emit q->sentAsICalendar(ITIPHandler::ResultSuccess, QString());
     } else {

@@ -255,7 +255,7 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
 
     message->userAgent()->fromUnicodeString(
         KProtocolManager::userAgentForApplication(
-            QStringLiteral("KOrganizer"), QLatin1String(AKONADI_CALENDAR_VERSION)), "utf-8");
+            QStringLiteral("KOrganizer"), QStringLiteral(AKONADI_CALENDAR_VERSION)), "utf-8");
 
     message->from()->fromUnicodeString(from, "utf-8");
     message->to()->fromUnicodeString(to, "utf-8");

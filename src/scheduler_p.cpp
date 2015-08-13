@@ -313,7 +313,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                    "<item>you no longer have access to the calendar containing the invitation</item>"
                    "</list></para>"
                    "<para>This is not a problem, but we thought you should know.</para>"),
-            i18nc("@title", "Cannot find invitation to be updated"), QLatin1String("AcceptCantFindIncidence"));
+            i18nc("@title", "Cannot find invitation to be updated"), QStringLiteral("AcceptCantFindIncidence"));
     }
     qCDebug(AKONADICALENDAR_LOG) << "Storing new incidence with scheduling uid=" << schedulingUid << " and uid=" << incidence->uid();
 

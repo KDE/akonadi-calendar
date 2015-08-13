@@ -70,9 +70,9 @@ QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
     }
 
     QString saveStr = url.path();
-    saveStr.replace(QRegExp(QLatin1String("%[Ee][Mm][Aa][Ii][Ll]%")), email);
-    saveStr.replace(QRegExp(QLatin1String("%[Nn][Aa][Mm][Ee]%")), emailName);
-    saveStr.replace(QRegExp(QLatin1String("%[Ss][Ee][Rr][Vv][Ee][Rr]%")), emailHost);
+    saveStr.replace(QRegExp(QStringLiteral("%[Ee][Mm][Aa][Ii][Ll]%")), email);
+    saveStr.replace(QRegExp(QStringLiteral("%[Nn][Aa][Mm][Ee]%")), emailName);
+    saveStr.replace(QRegExp(QStringLiteral("%[Ss][Ee][Rr][Vv][Ee][Rr]%")), emailHost);
 
     QUrl retUrl(url);
     retUrl.setPath(saveStr);
@@ -139,9 +139,9 @@ FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const Q
 {
     mInterface =
         QSharedPointer<QDBusInterface>(
-            new QDBusInterface(QLatin1String("org.freedesktop.Akonadi.Resource.") + provider,
-                               QLatin1String("/FreeBusyProvider"),
-                               QLatin1String("org.freedesktop.Akonadi.Resource.FreeBusyProvider")));
+            new QDBusInterface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + provider,
+                               QStringLiteral("/FreeBusyProvider"),
+                               QStringLiteral("org.freedesktop.Akonadi.Resource.FreeBusyProvider")));
 }
 
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
@@ -301,7 +301,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         }
     }
 
-    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegExp(QLatin1String("\\.[xiv]fb$")))) {
+    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegExp(QStringLiteral("\\.[xiv]fb$")))) {
         // user specified a fullpath
         // do variable string replacements to the URL (MS Outlook style)
         const QUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
@@ -321,9 +321,9 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     // else we search for a fb file in the specified URL with known possible extensions
     QStringList extensions;
     extensions.reserve(3);
-    extensions << QLatin1String("xfb");
-    extensions << QLatin1String("ifb");
-    extensions << QLatin1String("vfb");
+    extensions << QStringLiteral("xfb");
+    extensions << QStringLiteral("ifb");
+    extensions << QStringLiteral("vfb");
 
     QStringList::ConstIterator ext;
     QList<QUrl> urlsToCheck;
@@ -593,7 +593,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
         connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString,bool)),
                 this, SLOT(onHandlesFreeBusy(QString,bool)));
 
-        request.mInterface->call(QLatin1String("canHandleFreeBusy"), email);
+        request.mInterface->call(QStringLiteral("canHandleFreeBusy"), email);
         request.mRequestStatus = FreeBusyProviderRequest::HandlingRequested;
         mProvidersRequestsByEmail[email].mRequests << request;
     }
@@ -652,7 +652,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
         ++queue->mHandlersCount;
         connect(iface, SIGNAL(freeBusyRetrieved(QString,QString,bool,QString)),
                 this, SLOT(onFreeBusyRetrieved(QString,QString,bool,QString)));
-        iface->call(QLatin1String("retrieveFreeBusy"), email, queue->mStartTime, queue->mEndTime);
+        iface->call(QStringLiteral("retrieveFreeBusy"), email, queue->mStartTime, queue->mEndTime);
         queue->mRequests[requestIndex].mRequestStatus = FreeBusyProviderRequest::FreeBusyRequested;
     }
 }
@@ -665,7 +665,7 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
             mParentWidgetForMailling,
             i18n("The free/busy information was successfully sent."),
             i18n("Sending Free/Busy"),
-            QLatin1String("FreeBusyPublishSuccess"));
+            QStringLiteral("FreeBusyPublishSuccess"));
     } else {
         KMessageBox::error(mParentWidgetForMailling,
                            i18n("Unable to publish the free/busy data: %1", errorMsg));

@@ -47,7 +47,7 @@ class CalFilterPartStatusProxyModel;
 static bool isStructuralCollection(const Akonadi::Collection &collection)
 {
     QStringList mimeTypes;
-    mimeTypes << QLatin1String("text/calendar")
+    mimeTypes << QStringLiteral("text/calendar")
               << KCalCore::Event::eventMimeType()
               << KCalCore::Todo::todoMimeType()
               << KCalCore::Journal::journalMimeType();

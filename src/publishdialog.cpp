@@ -42,7 +42,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout;
     setLayout(layout);
     QWidget *widget = new QWidget(this);
-    widget->setObjectName(QLatin1String("PublishFreeBusy"));
+    widget->setObjectName(QStringLiteral("PublishFreeBusy"));
     d->mUI.setupUi(widget);
     layout->addWidget(widget);
     d->mUI.mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -99,7 +99,7 @@ PublishDialog::~PublishDialog()
 
 void PublishDialog::slotHelp()
 {
-    KHelpClient::invokeHelp(QLatin1String("group-scheduling"), QLatin1String("korganizer"));
+    KHelpClient::invokeHelp(QStringLiteral("group-scheduling"), QStringLiteral("korganizer"));
 }
 
 void PublishDialog::addAttendee(const Attendee::Ptr &attendee)
