@@ -536,16 +536,16 @@ void ETMCalendarTest::testShareETM()
 void ETMCalendarTest::testFilterInvitations()
 {
     int anz = mCalendar->model()->rowCount();
-    QString uid = QLatin1String("invite-01");
+    QString uid = QStringLiteral("invite-01");
     Item item;
     Incidence::Ptr incidence = Incidence::Ptr(new Event());
     KEMailSettings emailSettings;
-    KCalCore::Attendee::Ptr me(new KCalCore::Attendee(QLatin1String("me"), emailSettings.getSetting(KEMailSettings::EmailAddress)));
+    KCalCore::Attendee::Ptr me(new KCalCore::Attendee(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress)));
 
     item.setMimeType(Event::eventMimeType());
     incidence->setUid(uid);
     incidence->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
-    incidence->setSummary(QLatin1String("summary"));
+    incidence->setSummary(QStringLiteral("summary"));
 
     me->setStatus(KCalCore::Attendee::NeedsAction);
     incidence->addAttendee(me);
@@ -565,9 +565,9 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     int anz = mCalendar->model()->rowCount();
 
     KEMailSettings emailSettings;
-    KCalCore::Attendee::Ptr me(new KCalCore::Attendee(QLatin1String("me"), emailSettings.getSetting(KEMailSettings::EmailAddress)));
+    KCalCore::Attendee::Ptr me(new KCalCore::Attendee(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress)));
 
-    QString uid = QLatin1String("invite-02");
+    QString uid = QStringLiteral("invite-02");
     mIncidencesToAdd = 1;
     createIncidence(uid);
     waitForIt();

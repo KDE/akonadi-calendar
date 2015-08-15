@@ -46,8 +46,8 @@ Q_DECLARE_METATYPE(QList<Akonadi::Collection::Right>)
 Q_DECLARE_METATYPE(QList<Akonadi::Collection::Rights>)
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ResultCode>)
 Q_DECLARE_METATYPE(KCalCore::RecurrenceRule::PeriodType)
-QString s_ourEmail = QLatin1String("unittests@dev.nul"); // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
-QString s_outEmail2 = QLatin1String("identity2@kde.org");
+QString s_ourEmail = QStringLiteral("unittests@dev.nul"); // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
+QString s_outEmail2 = QStringLiteral("identity2@kde.org");
 
 static Akonadi::Item item()
 {
@@ -384,9 +384,9 @@ private Q_SLOTS:
         Item item;
         item.setMimeType(Event::eventMimeType());
         Incidence::Ptr incidence = Incidence::Ptr(new Event());
-        incidence->setUid(QLatin1String("test123uid"));
-        incidence->setSummary(QLatin1String("summary"));
-        incidence->setOrganizer(Person::Ptr(new Person(QLatin1String("orga"), QLatin1String("orga@dev.nul"))));
+        incidence->setUid(QStringLiteral("test123uid"));
+        incidence->setSummary(QStringLiteral("summary"));
+        incidence->setOrganizer(Person::Ptr(new Person(QStringLiteral("orga"), QStringLiteral("orga@dev.nul"))));
         incidence->setDirtyFields(QSet<IncidenceBase::Field>());
         item.setPayload<KCalCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
@@ -428,12 +428,12 @@ private Q_SLOTS:
 
         const Attendee::Ptr us = Attendee::Ptr(new Attendee(QString(), s_ourEmail));
         us->setStatus(Attendee::Accepted);
-        const Attendee::Ptr mia = Attendee::Ptr(new Attendee(QLatin1String("Mia Wallace"), QLatin1String("mia@dev.nul")));
+        const Attendee::Ptr mia = Attendee::Ptr(new Attendee(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul")));
         mia->setStatus(Attendee::Declined);
         mia->setRSVP(false);
-        const Attendee::Ptr vincent = Attendee::Ptr(new Attendee(QLatin1String("Vincent"), QLatin1String("vincent@dev.nul")));
+        const Attendee::Ptr vincent = Attendee::Ptr(new Attendee(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul")));
         vincent->setStatus(Attendee::Delegated);
-        const Attendee::Ptr jules = Attendee::Ptr(new Attendee(QLatin1String("Jules"), QLatin1String("jules@dev.nul")));
+        const Attendee::Ptr jules = Attendee::Ptr(new Attendee(QStringLiteral("Jules"), QStringLiteral("jules@dev.nul")));
         jules->setStatus(Attendee::Accepted);
         jules->setRole(Attendee::NonParticipant);
 
@@ -441,11 +441,11 @@ private Q_SLOTS:
         Item item;
         item.setMimeType(Event::eventMimeType());
         Event::Ptr incidence = Event::Ptr(new Event());
-        incidence->setUid(QLatin1String("test123uid"));
+        incidence->setUid(QStringLiteral("test123uid"));
         incidence->setDtStart(KDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), KDateTime::UTC));
         incidence->setDtEnd(KDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), KDateTime::UTC));
         incidence->setAllDay(false);
-        incidence->setLocation(QLatin1String("location"));
+        incidence->setLocation(QStringLiteral("location"));
         incidence->setOrganizer(Person::Ptr(new Person(QString(), s_ourEmail)));
         incidence->addAttendee(us);
         incidence->addAttendee(mia);
@@ -477,14 +477,14 @@ private Q_SLOTS:
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
-            event->setLocation(QLatin1String("location2"));
+            event->setLocation(QStringLiteral("location2"));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:location") << item << event << true;
         }
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
-            event->setSummary(QLatin1String("summary"));
+            event->setSummary(QStringLiteral("summary"));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:summary") << item << event << false;
         }
@@ -493,12 +493,12 @@ private Q_SLOTS:
         Item item2;
         item2.setMimeType(Event::eventMimeType());
         Event::Ptr incidence2 = Event::Ptr(new Event());
-        incidence2->setUid(QLatin1String("test123uid"));
+        incidence2->setUid(QStringLiteral("test123uid"));
         incidence2->setDtStart(KDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), KDateTime::UTC));
         incidence2->setDtEnd(KDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), KDateTime::UTC));
         incidence2->setAllDay(false);
-        incidence2->setLocation(QLatin1String("location"));
-        incidence2->setOrganizer(Person::Ptr(new Person(QLatin1String("External organizator"), QLatin1String("exorga@dev.nul"))));
+        incidence2->setLocation(QStringLiteral("location"));
+        incidence2->setOrganizer(Person::Ptr(new Person(QStringLiteral("External organizator"), QStringLiteral("exorga@dev.nul"))));
         incidence2->addAttendee(us);
         incidence2->addAttendee(mia);
         incidence2->addAttendee(vincent);
@@ -526,13 +526,13 @@ private Q_SLOTS:
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
-            event->setLocation(QLatin1String("location2"));
+            event->setLocation(QStringLiteral("location2"));
             QTest::newRow("attendee:location") << item2 << event << false;
         }
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
-            event->setSummary(QLatin1String("summary"));
+            event->setSummary(QStringLiteral("summary"));
             QTest::newRow("attendee:summary") << item2 << event << false;
         }
 
