@@ -12,7 +12,7 @@ set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 add_definitions(-DITIP_DATA_DIR="\\"${CMAKE_CURRENT_SOURCE_DIR}/itip_data\\"" )
 
-set(common_sources unittestbase.cpp helper.cpp ${Akonadi-Calendar_SOURCE_DIR}/src/akonadicalendar_debug.cpp ${Akonadi-Calendar_SOURCE_DIR}/src/utils_p.cpp)
+set(common_sources unittestbase.cpp helper.cpp ${Akonadi-Calendar_BINARY_DIR}/src/akonadicalendar_debug.cpp ${Akonadi-Calendar_SOURCE_DIR}/src/utils_p.cpp)
 
 # the tests need the ical resource, which we might not have at this point (e.g. on the CI)
 find_program(AKONADI_ICAL_RESOURCE NAMES akonadi_ical_resource)
