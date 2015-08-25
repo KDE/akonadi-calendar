@@ -39,10 +39,10 @@ public:
     {
     }
 
-    int audio : 1;
-    int display : 1;
-    int email : 1;
-    int procedure : 1;
+    int audio;
+    int display;
+    int email;
+    int procedure;
 };
 
 BlockAlarmsAttribute::BlockAlarmsAttribute()
@@ -138,10 +138,10 @@ void BlockAlarmsAttribute::deserialize(const QByteArray &data)
 {
     // Pre-4.11, default behavior
     if (data.isEmpty()) {
-        d->audio = true;
-        d->display = true;
-        d->email = true;
-        d->procedure = true;
+        d->audio = 1;
+        d->display = 1;
+        d->email = 1;
+        d->procedure = 1;
     } else {
         QByteArray ba = data;
         QDataStream stream(&ba, QIODevice::ReadOnly);
