@@ -45,8 +45,8 @@ public:
           mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
-        mParent->connect(mGenericManager, SIGNAL(actionStateUpdated()),
-                         mParent, SIGNAL(actionStateUpdated()));
+        mParent->connect(mGenericManager, &StandardActionManager::actionStateUpdated,
+                         mParent, &StandardCalendarActionManager::actionStateUpdated);
         mGenericManager->setMimeTypeFilter(QStringList() << QStringLiteral("text/calendar"));
         mGenericManager->setCapabilityFilter(QStringList() << QStringLiteral("Resource"));
     }

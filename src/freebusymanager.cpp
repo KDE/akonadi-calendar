@@ -927,8 +927,8 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
     if (publishdlg->exec() == QDialog::Accepted) {
         // Send the mail
         MailScheduler *scheduler = new MailScheduler(/*factory=*/Q_NULLPTR, this);
-        connect(scheduler, SIGNAL(transactionFinished(Akonadi::Scheduler::Result,QString))
-                , d, SLOT(processMailSchedulerResult(Akonadi::Scheduler::Result,QString)));
+        connect(scheduler, &Scheduler::transactionFinished
+                , d, &FreeBusyManagerPrivate::processMailSchedulerResult);
         d->mParentWidgetForMailling = parentWidget;
 
         scheduler->publish(freebusy, publishdlg->addresses());

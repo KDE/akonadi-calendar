@@ -93,29 +93,29 @@ void ETMCalendarPrivate::init()
 
     setupFilteredETM();
 
-    connect(q, SIGNAL(filterChanged()), SLOT(onFilterChanged()));
+    connect(q, &Calendar::filterChanged, this, &ETMCalendarPrivate::onFilterChanged);
 
-    connect(mETM.data(), SIGNAL(collectionPopulated(Akonadi::Collection::Id)),
-            SLOT(onCollectionPopulated(Akonadi::Collection::Id)));
-    connect(mETM.data(), SIGNAL(rowsInserted(QModelIndex,int,int)),
-            SLOT(onRowsInserted(QModelIndex,int,int)));
-    connect(mETM.data(), SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-            SLOT(onDataChanged(QModelIndex,QModelIndex)));
-    connect(mETM.data(), SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-            SLOT(onRowsMoved(QModelIndex,int,int,QModelIndex,int)));
-    connect(mETM.data(), SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            SLOT(onRowsRemoved(QModelIndex,int,int)));
+    connect(mETM.data(), &EntityTreeModel::collectionPopulated,
+            this, &ETMCalendarPrivate::onCollectionPopulated);
+    connect(mETM.data(), &QAbstractItemModel::rowsInserted,
+            this, &ETMCalendarPrivate::onRowsInserted);
+    connect(mETM.data(), &QAbstractItemModel::dataChanged,
+            this, &ETMCalendarPrivate::onDataChanged);
+    connect(mETM.data(), &QAbstractItemModel::rowsMoved,
+            this, &ETMCalendarPrivate::onRowsMoved);
+    connect(mETM.data(), &QAbstractItemModel::rowsRemoved,
+            this, &ETMCalendarPrivate::onRowsRemoved);
 
-    connect(mFilteredETM, SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-            SLOT(onDataChangedInFilteredModel(QModelIndex,QModelIndex)));
-    connect(mFilteredETM, SIGNAL(layoutChanged()),
-            SLOT(onLayoutChangedInFilteredModel()));
-    connect(mFilteredETM, SIGNAL(modelReset()),
-            SLOT(onModelResetInFilteredModel()));
-    connect(mFilteredETM, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            SLOT(onRowsInsertedInFilteredModel(QModelIndex,int,int)));
-    connect(mFilteredETM, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-            SLOT(onRowsAboutToBeRemovedInFilteredModel(QModelIndex,int,int)));
+    connect(mFilteredETM, &QAbstractItemModel::dataChanged,
+            this, &ETMCalendarPrivate::onDataChangedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::layoutChanged,
+            this, &ETMCalendarPrivate::onLayoutChangedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::modelReset,
+            this, &ETMCalendarPrivate::onModelResetInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::rowsInserted,
+            this, &ETMCalendarPrivate::onRowsInsertedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::rowsAboutToBeRemoved,
+            this, &ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel);
 
     loadFromETM();
 }

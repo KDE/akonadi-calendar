@@ -92,7 +92,7 @@ void UnitTestBase::verifyExists(const QString &uid, bool exists)
 Akonadi::Item::List UnitTestBase::calendarItems()
 {
     FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
-    connect(calendar.data(), SIGNAL(loadFinished(bool,QString)), SLOT(onLoadFinished(bool,QString)));
+    connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
     KCalCore::ICalFormat format;
     QString dump = format.toString(calendar.staticCast<KCalCore::Calendar>());
@@ -110,7 +110,7 @@ void UnitTestBase::onLoadFinished(bool success, const QString &)
 void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalendar)
 {
     FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
-    connect(calendar.data(), SIGNAL(loadFinished(bool,QString)), SLOT(onLoadFinished(bool,QString)));
+    connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
 
 

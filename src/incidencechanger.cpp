@@ -311,8 +311,8 @@ void IncidenceChanger::Private::handleCreateJobResult(KJob *job)
         change->newItem = item;
 
         if (change->useGroupwareCommunication) {
-            connect(change.data(), SIGNAL(dialogClosedAfterChange(int,ITIPHandlerHelper::SendResult)),
-                    SLOT(handleCreateJobResult2(int,ITIPHandlerHelper::SendResult)));
+            connect(change.data(), &Change::dialogClosedAfterChange,
+                    this, &Private::handleCreateJobResult2);
             handleInvitationsAfterChange(change);
         } else {
             handleCreateJobResult2(change->id, ITIPHandlerHelper::ResultSuccess);
@@ -400,8 +400,8 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
         }
 
         if (change->useGroupwareCommunication) {
-            connect(change.data(), SIGNAL(dialogClosedAfterChange(int,ITIPHandlerHelper::SendResult)),
-                    SLOT(handleDeleteJobResult2(int,ITIPHandlerHelper::SendResult)));
+            connect(change.data(), &Change::dialogClosedAfterChange,
+                    this, &Private::handleDeleteJobResult2);
             handleInvitationsAfterChange(change);
         } else {
             handleDeleteJobResult2(change->id, ITIPHandlerHelper::ResultSuccess);
@@ -478,8 +478,8 @@ void IncidenceChanger::Private::handleModifyJobResult(KJob *job)
         }
 
         if (change->useGroupwareCommunication) {
-            connect(change.data(), SIGNAL(dialogClosedAfterChange(int,ITIPHandlerHelper::SendResult)),
-                    SLOT(handleModifyJobResult2(int,ITIPHandlerHelper::SendResult)));
+            connect(change.data(), &Change::dialogClosedAfterChange,
+                    this, &Private::handleModifyJobResult2);
             handleInvitationsAfterChange(change);
         } else {
             handleModifyJobResult2(change->id, ITIPHandlerHelper::ResultSuccess);
@@ -533,8 +533,8 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
                 handler->setDefaultAction(actionFromStatus(mInvitationStatusByAtomicOperation.value(change->atomicOperationId)));
             }
 
-            connect(handler, SIGNAL(finished(Akonadi::ITIPHandlerHelper::SendResult,QString)),
-                    change.data(), SLOT(emitUserDialogClosedBeforeChange(Akonadi::ITIPHandlerHelper::SendResult)));
+            connect(handler, &ITIPHandlerHelper::finished,
+                    change.data(), &Change::emitUserDialogClosedBeforeChange);
 
             foreach (const Akonadi::Item &item, change->originalItems) {
                 Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
@@ -620,8 +620,8 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
 {
     if (change->useGroupwareCommunication) {
         ITIPHandlerHelper *handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
-        connect(handler, SIGNAL(finished(Akonadi::ITIPHandlerHelper::SendResult,QString)),
-                change.data(), SLOT(emitUserDialogClosedAfterChange(Akonadi::ITIPHandlerHelper::SendResult)));
+        connect(handler, &ITIPHandlerHelper::finished,
+                change.data(), &Change::emitUserDialogClosedAfterChange);
         handler->setParent(this);
 
         const bool alwaysSend = m_invitationPolicy == InvitationPolicySend;
@@ -884,8 +884,8 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     d->mChangeById.insert(changeId, change);
 
     if (d->mGroupwareCommunication) {
-        connect(change.data(), SIGNAL(dialogClosedBeforeChange(int,ITIPHandlerHelper::SendResult)),
-                d, SLOT(deleteIncidences2(int,ITIPHandlerHelper::SendResult)));
+        connect(change.data(), &Change::dialogClosedBeforeChange,
+                d, &Private::deleteIncidences2);
         d->handleInvitationsBeforeChange(change);
     } else {
         d->deleteIncidences2(changeId, ITIPHandlerHelper::ResultSuccess);
@@ -918,8 +918,8 @@ void IncidenceChanger::Private::deleteIncidences2(int changeId, ITIPHandlerHelpe
     }
 
     // QueuedConnection because of possible sync exec calls.
-    connect(deleteJob, SIGNAL(result(KJob*)),
-            SLOT(handleDeleteJobResult(KJob*)), Qt::QueuedConnection);
+    connect(deleteJob, &KJob::result,
+            this, &Private::handleDeleteJobResult, Qt::QueuedConnection);
 }
 
 int IncidenceChanger::modifyIncidence(const Item &changedItem,
@@ -1011,8 +1011,8 @@ void IncidenceChanger::Private::performModification(const Change::Ptr &change)
         return;
     }
     if (mGroupwareCommunication) {
-        connect(change.data(), SIGNAL(dialogClosedBeforeChange(int,ITIPHandlerHelper::SendResult)),
-                SLOT(performModification2(int,ITIPHandlerHelper::SendResult)));
+        connect(change.data(), &Change::dialogClosedBeforeChange,
+                this, &Private::performModification2);
         handleInvitationsBeforeChange(change);
     } else {
         performModification2(change->id,  ITIPHandlerHelper::ResultSuccess);
@@ -1098,8 +1098,8 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
 
         mModificationsInProgress[newItem.id()] = change;
         // QueuedConnection because of possible sync exec calls.
-        connect(modifyJob, SIGNAL(result(KJob*)),
-                SLOT(handleModifyJobResult(KJob*)), Qt::QueuedConnection);
+        connect(modifyJob, &KJob::result,
+                this, &Private::handleModifyJobResult, Qt::QueuedConnection);
     }
 }
 
@@ -1445,8 +1445,8 @@ Akonadi::TransactionSequence *AtomicOperation::transaction()
 
         m_incidenceChangerPrivate->mAtomicOperationByTransaction.insert(m_transaction, m_id);
 
-        QObject::connect(m_transaction, SIGNAL(result(KJob*)),
-                         m_incidenceChangerPrivate, SLOT(handleTransactionJobResult(KJob*)));
+        QObject::connect(m_transaction, &KJob::result,
+                         m_incidenceChangerPrivate, &IncidenceChanger::Private::handleTransactionJobResult);
     }
 
     return m_transaction;

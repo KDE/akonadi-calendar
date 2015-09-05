@@ -318,7 +318,7 @@ void MultiEntry::addEntry(const Entry::Ptr &entry)
 {
     Q_ASSERT(mOperationInProgress == TypeNone);
     mEntries.append(entry);
-    connect(entry.data(), SIGNAL(finished(Akonadi::IncidenceChanger::ResultCode,QString)), SLOT(onEntryFinished(Akonadi::IncidenceChanger::ResultCode,QString)),
+    connect(entry.data(), &Entry::finished, this, &MultiEntry::onEntryFinished,
             Qt::UniqueConnection);
 }
 

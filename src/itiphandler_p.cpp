@@ -232,8 +232,8 @@ CalendarBase::Ptr ITIPHandler::Private::calendar()
 {
     if (!m_calendar) {
         FetchJobCalendar::Ptr fetchJobCalendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
-        connect(fetchJobCalendar.data(), SIGNAL(loadFinished(bool,QString)),
-                SLOT(onLoadFinished(bool,QString)));
+        connect(fetchJobCalendar.data(), &FetchJobCalendar::loadFinished,
+                this, &Private::onLoadFinished);
 
         m_calendar = fetchJobCalendar;
     }

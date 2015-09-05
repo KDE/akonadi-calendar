@@ -662,10 +662,10 @@ void Scheduler::handleDeleteFinished(bool success, const QString &errorMessage)
 
 void Scheduler::connectCalendar(const Akonadi::CalendarBase::Ptr &calendar)
 {
-    connect(calendar.data(), SIGNAL(createFinished(bool,QString)),
-            SLOT(handleCreateFinished(bool,QString)), Qt::UniqueConnection);
-    connect(calendar.data(), SIGNAL(modifyFinished(bool,QString)),
-            SLOT(handleModifyFinished(bool,QString)), Qt::UniqueConnection);
-    connect(calendar.data(), SIGNAL(deleteFinished(bool,QString)),
-            SLOT(handleDeleteFinished(bool,QString)), Qt::UniqueConnection);
+    connect(calendar.data(), &CalendarBase::createFinished,
+            this, &Scheduler::handleCreateFinished, Qt::UniqueConnection);
+    connect(calendar.data(), &CalendarBase::modifyFinished,
+            this, &Scheduler::handleModifyFinished, Qt::UniqueConnection);
+    connect(calendar.data(), &CalendarBase::deleteFinished,
+            this, &Scheduler::handleDeleteFinished, Qt::UniqueConnection);
 }
