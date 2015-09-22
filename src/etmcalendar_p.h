@@ -135,7 +135,7 @@ public:
     Akonadi::EntityMimeTypeFilterModel *mFilteredETM;
 
     // akonadi id to collections
-    QHash<Akonadi::Entity::Id, Akonadi::Collection> mCollectionMap;
+    QHash<Akonadi::Collection::Id, Akonadi::Collection> mCollectionMap;
     CheckableProxyModel *mCheckableProxyModel;
     Akonadi::CollectionFilterProxyModel *mCollectionProxyModel;
     Akonadi::CalFilterProxyModel *mCalFilterProxyModel; //KCalCore::CalFilter stuff

@@ -49,7 +49,7 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
     }
 }
 
-void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Entity::Id> &deletedItems,
+void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &deletedItems,
         IncidenceChanger::ResultCode result, const QString &message)
 {
     if (changeId != m_currentChangeId) {

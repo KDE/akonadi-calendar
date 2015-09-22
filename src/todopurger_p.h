@@ -48,7 +48,9 @@ public:
 
 public Q_SLOTS:
     void onCalendarLoaded(bool success, const QString &message);
-    void onItemsDeleted(int changeId, const QVector<Akonadi::Item::Id> &deletedItems, Akonadi::IncidenceChanger::ResultCode, const QString &message);
+    void onItemsDeleted(int changeId, const QVector<Akonadi::Item::Id> &deletedItems,
+                        Akonadi::IncidenceChanger::ResultCode,
+                        const QString &message);
 private:
     TodoPurger *const q;
 };
