@@ -252,6 +252,7 @@ public:
     Akonadi::TransactionSequence *transaction();
 
 private:
+    Q_DISABLE_COPY(AtomicOperation)
     QVector<Change::Ptr> m_changes;
     bool m_wasRolledback;
     Akonadi::TransactionSequence *m_transaction; // constructed in first use
