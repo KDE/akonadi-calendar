@@ -124,36 +124,8 @@ static void emitDeleteFinished(IncidenceChanger *changer,
 }
 }
 
-class ConflictPreventerPrivate;
-class ConflictPreventer
-{
-    friend class ConflictPreventerPrivate;
-public:
-    static ConflictPreventer *self();
-
-    // To avoid conflicts when the two modifications came from within the same application
-    QHash<Akonadi::Item::Id, int> mLatestRevisionByItemId;
-private:
-    ConflictPreventer()
-    {
-    }
-    ~ConflictPreventer()
-    {
-    }
-};
-
-class ConflictPreventerPrivate
-{
-public:
-    ConflictPreventer instance;
-};
-
-Q_GLOBAL_STATIC(ConflictPreventerPrivate, sConflictPreventerPrivate)
-
-ConflictPreventer *ConflictPreventer::self()
-{
-    return &sConflictPreventerPrivate->instance;
-}
+typedef QHash<Akonadi::Item::Id, int> IdToRevisionHash;
+Q_GLOBAL_STATIC(IdToRevisionHash, s_latestRevisionByItemId)
 
 IncidenceChanger::Private::Private(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *qq)
     : q(qq)
@@ -469,7 +441,8 @@ void IncidenceChanger::Private::handleModifyJobResult(KJob *job)
                                   Q_ARG(Akonadi::Item::Id, item.id()));
 
     } else { // success
-        ConflictPreventer::self()->mLatestRevisionByItemId[item.id()] = item.revision();
+
+        (*(s_latestRevisionByItemId()))[item.id()] = item.revision();
         change->newItem = item;
         if (change->recordToHistory && !change->originalItems.isEmpty()) {
             Q_ASSERT(change->originalItems.count() == 1);
@@ -1036,15 +1009,14 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
     const uint atomicOperationId = change->atomicOperationId;
     const bool hasAtomicOperationId = atomicOperationId != 0;
 
-    QHash<Akonadi::Item::Id, int> &latestRevisionByItemId =
-        ConflictPreventer::self()->mLatestRevisionByItemId;
+    QHash<Akonadi::Item::Id, int> &latestRevisionByItemId = *(s_latestRevisionByItemId());
     if (latestRevisionByItemId.contains(id) &&
             latestRevisionByItemId[id] > newItem.revision()) {
         /* When a ItemModifyJob ends, the application can still modify the old items if the user
          * is quick because the ETM wasn't updated yet, and we'll get a STORE error, because
          * we are not modifying the latest revision.
          *
-         * When a job ends, we keep the new revision in mLatestRevisionByItemId
+         * When a job ends, we keep the new revision in s_latestRevisionByItemId
          * so we can update the item's revision
          */
         newItem.setRevision(latestRevisionByItemId[id]);
