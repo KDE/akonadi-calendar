@@ -37,6 +37,7 @@ class KColumnFilterProxyModelPrivate;
  */
 class KColumnFilterProxyModel : public QSortFilterProxyModel
 {
+    Q_OBJECT
 public:
     explicit KColumnFilterProxyModel(QObject *parent = nullptr);
     virtual ~KColumnFilterProxyModel();

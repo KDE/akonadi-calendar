@@ -115,6 +115,7 @@ protected:
 
 class ModificationChange : public Change
 {
+    Q_OBJECT
 public:
     typedef QSharedPointer<ModificationChange> Ptr;
     ModificationChange(IncidenceChanger *changer, int id, uint atomicOperationId,
@@ -135,6 +136,7 @@ public:
 
 class CreationChange : public Change
 {
+    Q_OBJECT
 public:
     typedef QSharedPointer<CreationChange> Ptr;
     CreationChange(IncidenceChanger *changer, int id, uint atomicOperationId,
@@ -158,6 +160,7 @@ public:
 
 class DeletionChange : public Change
 {
+    Q_OBJECT
 public:
     typedef QSharedPointer<DeletionChange> Ptr;
     DeletionChange(IncidenceChanger *changer, int id, uint atomicOperationId,
