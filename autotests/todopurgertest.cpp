@@ -143,7 +143,7 @@ void TodoPurgerTest::calendarIncidenceAdded(const Incidence::Ptr &incidence)
     }
 }
 
-void TodoPurgerTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence)
+void TodoPurgerTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
 {
     --m_pendingDeletions;
     if (m_pendingDeletions == 0 && !m_pendingPurgeSignal) {
