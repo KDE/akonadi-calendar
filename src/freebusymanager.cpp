@@ -533,13 +533,13 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
         return;
     }
 
-    int now = static_cast<int>(QDateTime::currentDateTime().toTime_t());
+    const QDateTime currentDateTime = QDateTime::currentDateTime();
+    int now = static_cast<int>(currentDateTime.toTime_t());
     int eta = static_cast<int>(mNextUploadTime.toTime_t()) - now;
 
     if (!mUploadingFreeBusy) {
         // Not currently uploading
-        if (mNextUploadTime.isNull() ||
-                QDateTime::currentDateTime() > mNextUploadTime) {
+        if (mNextUploadTime.isNull() || currentDateTime > mNextUploadTime) {
             // No uploading have been done in this session, or delay time is over
             q->publishFreeBusy();
             return;
