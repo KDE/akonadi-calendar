@@ -91,6 +91,7 @@ public:
     void deserialize(const QByteArray &data) Q_DECL_OVERRIDE;
 
 private:
+    Q_DISABLE_COPY(BlockAlarmsAttribute)
     class Private;
     Private *const d;
 };

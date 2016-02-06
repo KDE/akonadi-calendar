@@ -148,6 +148,7 @@ public:
 
 private:
     //@cond PRIVATE
+    Q_DISABLE_COPY(FreeBusyProviderBase)
     FreeBusyProviderBasePrivate *const d;
     //@endcond
 };
