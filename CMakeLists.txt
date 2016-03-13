@@ -17,7 +17,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 
-set(KF5_VERSION "5.17.0")
+set(KF5_VERSION "5.19.0")
 set(AKONADICALENDAR_LIB_VERSION "5.40.0")
 set(CALENDARCORE_LIB_VERSION "5.1.40")
 set(AKONADICONTACT_LIB_VERSION "5.1.40")
