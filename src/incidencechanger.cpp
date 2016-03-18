@@ -641,7 +641,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
                         newMe->setStatus(KCalCore::Attendee::Declined);
                         incidence->clearAttendees();
                         incidence->addAttendee(newMe);
-                        break;
+                        //break;
                     }
 
                     if (notifyOrganizer) {
