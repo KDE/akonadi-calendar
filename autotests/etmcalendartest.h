@@ -60,6 +60,9 @@ public Q_SLOTS:
     void handleCollectionsAdded(const Akonadi::Collection::List &collectionList);
 
 private:
+    //quiet --overloaded-virtual warning
+    using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
+
     void deleteIncidence(const QString &uid);
     void createIncidence(const QString &uid);
     void createTodo(const QString &uid, const QString &parentUid);
