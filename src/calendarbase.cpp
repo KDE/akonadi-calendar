@@ -207,6 +207,8 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
     // Null incidence means it was deleted via CalendarBase::deleteIncidence(), but then
     // the ETMCalendar received the monitor notification and tried to delete it again.
     if (incidence) {
+        q->Calendar::notifyIncidenceAboutToBeDeleted(incidence);
+
         mItemById.remove(item.id());
         // qCDebug(AKONADICALENDAR_LOG) << "Deleting incidence from calendar .id=" << item.id() << "uid=" << incidence->uid();
         mItemIdByUid.remove(incidence->instanceIdentifier());
@@ -222,8 +224,12 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
                 mUidToParent.remove(uid);
             }
         }
+
+        q->Calendar::setObserversEnabled(false);
         // Must be the last one due to re-entrancy
         const bool result = q->MemoryCalendar::deleteIncidence(incidence);
+        q->Calendar::setObserversEnabled(true);
+        q->Calendar::notifyIncidenceDeleted(incidence);
         if (!result) {
             qCritical() << "Error removing incidence " << itemToString(item);
             Q_ASSERT(false);
