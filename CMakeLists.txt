@@ -17,7 +17,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
-set(PIM_VERSION "5.2.40")
+set(PIM_VERSION "5.2.80")
 
 set(AKONADICALENDAR_LIB_VERSION ${PIM_VERSION})
 set(CALENDARCORE_LIB_VERSION "5.2.40")
