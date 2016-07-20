@@ -28,9 +28,10 @@
 #include <kcalcore/person.h>
 
 #include <KLocalizedString>
-#include <KHelpClient>
+#include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QUrl>
 
 using namespace KCalCore;
 using namespace Akonadi;
@@ -99,7 +100,10 @@ PublishDialog::~PublishDialog()
 
 void PublishDialog::slotHelp()
 {
-    KHelpClient::invokeHelp(QStringLiteral("group-scheduling"), QStringLiteral("korganizer"));
+    QUrl url;
+    url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/group-scheduling.html")));
+    // launch khelpcenter, or a browser for URIs not handled by khelpcenter
+    QDesktopServices::openUrl(url);
 }
 
 void PublishDialog::addAttendee(const Attendee::Ptr &attendee)
