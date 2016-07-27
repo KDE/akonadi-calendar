@@ -65,7 +65,7 @@ public:
     void acceptCounterProposal(const KCalCore::Incidence::Ptr &incidence,
                                const Akonadi::CalendarBase::Ptr &calendar);
 
-private Q_SLOTS:
+private:
     /**
      * @brief onMailerFinished Handles the result of the MailClient operation.
      * @param result Error code.

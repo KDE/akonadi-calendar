@@ -115,7 +115,7 @@ public:
               bool hidden = false, bool bccMe = false, const QString &attachment = QString(),
               const QString &mailTransport = QString());
 
-private Q_SLOTS:
+private:
     void handleQueueJobFinished(KJob *job);
 
 Q_SIGNALS:

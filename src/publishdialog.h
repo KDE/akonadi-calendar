@@ -56,10 +56,8 @@ public:
      */
     QString addresses() const;
 
-private Q_SLOTS:
-    void slotHelp();
-
 private:
+    void slotHelp();
     //@cond PRIVATE
     class Private;
     Private *const d;
