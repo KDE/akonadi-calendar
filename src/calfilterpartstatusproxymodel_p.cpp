@@ -37,14 +37,14 @@ class Q_DECL_HIDDEN CalFilterPartStatusProxyModel::Private
 {
 public:
     explicit Private()
-        : mFilterVirtual(false)
-        , mIdentityManager(/*ro=*/ true)
+        : mFilterVirtual(false),
+          mIdentityManager(KIdentityManagement::IdentityManager::self())
     {
     }
 
     bool mFilterVirtual;
     QList<KCalCore::Attendee::PartStat> mBlockedStatusList;
-    KIdentityManagement::IdentityManager mIdentityManager;
+    KIdentityManagement::IdentityManager *mIdentityManager;
 };
 
 void CalFilterPartStatusProxyModel::slotIdentitiesChanged()
@@ -56,7 +56,8 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private())
 {
-    QObject::connect(&d->mIdentityManager, static_cast<void (KIdentityManagement::IdentityManager::*)()>(&KIdentityManagement::IdentityManager::changed),
+
+    QObject::connect(d->mIdentityManager, static_cast<void (KIdentityManagement::IdentityManager::*)()>(&KIdentityManagement::IdentityManager::changed),
                      this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 
