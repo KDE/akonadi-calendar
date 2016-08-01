@@ -47,7 +47,7 @@ public:
 MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent) : Scheduler(parent)
     , d(new Private())
 {
-    d->m_identityManager = new IdentityManager(/*ro=*/true, this);
+    d->m_identityManager = KIdentityManagement::IdentityManager::self();
     d->m_mailer = new MailClient(factory, parent);
 
     connect(d->m_mailer, &MailClient::finished, this, &MailScheduler::onMailerFinished);
