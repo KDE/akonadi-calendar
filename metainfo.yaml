@@ -1,5 +1,7 @@
-maintainer: 
-description: Akonadi-Calendar library
+name: akonadi-calendar
+fancyname: Akonadi Calendar
+maintainer: dvratil
+description: Akonadi Calendar library
 tier: 3
 type: functional
 platforms:
@@ -12,3 +14,7 @@ libraries:
    cmake: "KF5::AkonadiCalendar"
 cmakename: KF5AkonadiCalendar
 
+public_lib: true
+group: kdepim
+platforms:
+    - name: Linux
