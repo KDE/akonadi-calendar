@@ -192,8 +192,6 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
 {
     Q_UNUSED(hidden);
 
-    UnitTestResult unitTestResult;
-
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(
                 Q_NULLPTR, MailTransport::TransportManager::IfNoTransportExists)) {
         qCritical() << "Error while creating transport";
@@ -300,7 +298,7 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
         bodyMessage->setHeader(bodyDisposition);
         message->addContent(bodyMessage);
 
-        // Set the sedcond multipart, the attachment.
+        // Set the second multipart, the attachment.
         if (!attachment.isEmpty()) {
             KMime::Content *attachMessage = new KMime::Content;
             KMime::Headers::ContentDisposition *attachDisposition = new KMime::Headers::ContentDisposition;
