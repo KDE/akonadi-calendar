@@ -1,4 +1,4 @@
-# Akonadi Calendar
+# Akonadi Calendar #
 
 Akonadi Calendar is a library that effectively bridges the type-agnostic API of
 the Akonadi client libraries and the domain-specific KCalCore library. It provides
