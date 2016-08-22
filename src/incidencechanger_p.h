@@ -101,7 +101,7 @@ public:
     bool queuedModification;
     bool useGroupwareCommunication;
 
-signals:
+Q_SIGNALS:
     void dialogClosedBeforeChange(int id, ITIPHandlerHelper::SendResult status);
     void dialogClosedAfterChange(int id, ITIPHandlerHelper::SendResult status);
 
