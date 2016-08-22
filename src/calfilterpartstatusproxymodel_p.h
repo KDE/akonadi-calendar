@@ -48,7 +48,7 @@ private:
     Private *const d;
 
     //@endcond
-private slots:
+private Q_SLOTS:
     void slotIdentitiesChanged();
 };
 

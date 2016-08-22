@@ -105,7 +105,7 @@ signals:
     void dialogClosedBeforeChange(int id, ITIPHandlerHelper::SendResult status);
     void dialogClosedAfterChange(int id, ITIPHandlerHelper::SendResult status);
 
-public slots:
+public Q_SLOTS:
     void emitUserDialogClosedAfterChange(Akonadi::ITIPHandlerHelper::SendResult status);
     void emitUserDialogClosedBeforeChange(Akonadi::ITIPHandlerHelper::SendResult status);
 
