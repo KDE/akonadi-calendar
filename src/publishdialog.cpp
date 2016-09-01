@@ -40,8 +40,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     : QDialog(parent), d(new Private(this))
 {
     setWindowTitle(i18n("Select Addresses"));
-    QVBoxLayout *layout = new QVBoxLayout;
-    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(this);
     QWidget *widget = new QWidget(this);
     widget->setObjectName(QStringLiteral("PublishFreeBusy"));
     d->mUI.setupUi(widget);
@@ -67,7 +66,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged,
             d, &Private::updateItem);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
