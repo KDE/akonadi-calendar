@@ -29,7 +29,7 @@
 #include <item.h>
 #include <session.h>
 #include <collection.h>
-#include <changerecorder.h>
+#include <monitor.h>
 #include <itemfetchscope.h>
 #include <entitydisplayattribute.h>
 #include <entitymimetypefiltermodel.h>
@@ -64,7 +64,7 @@ void ETMCalendarPrivate::init()
 {
     if (!mETM) {
         Akonadi::Session *session = new Akonadi::Session("ETMCalendar", q);
-        Akonadi::ChangeRecorder *monitor = new Akonadi::ChangeRecorder(q);
+        Akonadi::Monitor *monitor = new Akonadi::Monitor(q);
         connect(monitor, SIGNAL(collectionChanged(Akonadi::Collection,QSet<QByteArray>)),
                 SLOT(onCollectionChanged(Akonadi::Collection,QSet<QByteArray>)));
 
@@ -489,7 +489,7 @@ ETMCalendar::ETMCalendar(ETMCalendar *other, QObject *parent)
     d->init();
 }
 
-ETMCalendar::ETMCalendar(ChangeRecorder *monitor, QObject *parent)
+ETMCalendar::ETMCalendar(Monitor *monitor, QObject *parent)
     : CalendarBase(new ETMCalendarPrivate(this), parent)
 {
     Q_D(ETMCalendar);
