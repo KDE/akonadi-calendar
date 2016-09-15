@@ -21,7 +21,7 @@
 #include "calendarmodel_p.h"
 
 #include "utils_p.h"
-#include <changerecorder.h>
+#include <monitor.h>
 #include <itemfetchscope.h>
 #include <kcalcore/event.h>
 #include <kcalcore/todo.h>
@@ -50,14 +50,14 @@ public:
     QWeakPointer<CalendarModel> m_weakPointer;
 };
 
-CalendarModel::CalendarModel(Akonadi::ChangeRecorder *monitor)
+CalendarModel::CalendarModel(Akonadi::Monitor *monitor)
     : EntityTreeModel(monitor),
       d(new Private())
 {
     monitor->itemFetchScope().fetchAllAttributes(true);
 }
 
-CalendarModel::Ptr CalendarModel::create(ChangeRecorder *monitor)
+CalendarModel::Ptr CalendarModel::create(Monitor *monitor)
 {
     CalendarModel *model = new CalendarModel(monitor);
     CalendarModel::Ptr modelPtr = CalendarModel::Ptr(model);

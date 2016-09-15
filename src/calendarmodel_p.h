@@ -22,6 +22,7 @@
 #define AKONADI_CALENDARMODEL_P_H
 
 #include <entitytreemodel.h>
+#include <monitor.h>
 #include <QSharedPointer>
 #include <QWeakPointer>
 
@@ -54,7 +55,7 @@ public:
         RecursRole
     };
 
-    static Akonadi::CalendarModel::Ptr create(Akonadi::ChangeRecorder *monitor);
+    static Akonadi::CalendarModel::Ptr create(Akonadi::Monitor *monitor);
     ~CalendarModel();
 
     QWeakPointer<CalendarModel> weakPointer() const;
@@ -71,7 +72,7 @@ public:
                               EntityTreeModel::HeaderGroup headerSet) const Q_DECL_OVERRIDE;
 
 private:
-    explicit CalendarModel(Akonadi::ChangeRecorder *monitor);
+    explicit CalendarModel(Akonadi::Monitor *monitor);
     class Private;
     Private *const d;
 };
