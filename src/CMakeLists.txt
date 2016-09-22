@@ -37,7 +37,7 @@ set(akonadicalendar_LIB_SRC
   calfilterpartstatusproxymodel_p.cpp
 )
 
-ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME log_akonadicalendar)
+ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar)
 
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
