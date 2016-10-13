@@ -475,11 +475,12 @@ Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
 
     Akonadi::Item::List result;
     if (id == -1)
-        result.reserve(d->mItemById.size());
+        result.reserve(d->mItemsByCollection.size());
 
-    for (auto it = d->mItemById.cbegin(), end = d->mItemById.cend(); it != end; ++it) {
-        if (id == -1 || id == it.key())
-            result.push_back(it.value());
+    auto it = id == -1 ? d->mItemsByCollection.cbegin() : d->mItemsByCollection.constFind(id);
+    while (it != d->mItemsByCollection.cend() && (id == -1 || it.key() == id)) {
+        result.push_back(*it);
+        ++it;
     }
 
     return result;
