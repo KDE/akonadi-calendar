@@ -502,7 +502,7 @@ Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &inci
     return items;
 }
 
-KCalCore::Incidence::List CalendarBase::childIncidences(const Akonadi::Item::Id &parentId) const
+KCalCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id parentId) const
 {
     Q_D(const CalendarBase);
     KCalCore::Incidence::List childs;

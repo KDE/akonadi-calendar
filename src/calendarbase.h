@@ -105,7 +105,7 @@ public:
       * Only the direct childs are returned
       * @param parentId identifier of the parent item
       */
-    KCalCore::Incidence::List childIncidences(const Akonadi::Item::Id &parentId) const;
+    KCalCore::Incidence::List childIncidences(Item::Id parentId) const;
 
     /**
       * Returns the child items of the parent identified by @p parentUid.

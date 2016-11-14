@@ -366,7 +366,7 @@ private Q_SLOTS:
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);
-            Item fetchedItem = fetchJob->items().first();
+            Item fetchedItem = fetchJob->items().constFirst();
             QVERIFY(fetchedItem.isValid());
             QVERIFY(fetchedItem.hasPayload<KCalCore::Incidence::Ptr>());
             Incidence::Ptr incidence = fetchedItem.payload<KCalCore::Incidence::Ptr>();
@@ -409,7 +409,7 @@ private Q_SLOTS:
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         QVERIFY(fetchJob->items().count() == 1);
-        Item fetchedItem = fetchJob->items().first();
+        Item fetchedItem = fetchJob->items().constFirst();
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalCore::Incidence::Ptr>());
         Incidence::Ptr incidence2 = fetchedItem.payload<KCalCore::Incidence::Ptr>();
@@ -563,7 +563,7 @@ private Q_SLOTS:
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         QVERIFY(fetchJob->items().count() == 1);
-        Item fetchedItem = fetchJob->items().first();
+        Item fetchedItem = fetchJob->items().constFirst();
 
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalCore::Event::Ptr>());
@@ -1026,11 +1026,11 @@ private Q_SLOTS:
                     fJob->fetchScope().fetchFullPayload();
                     AKVERIFYEXEC(fJob);
                     QCOMPARE(fJob->items().count(), 1);
-                    QVERIFY(fJob->items().first().isValid());
-                    QVERIFY(fJob->items().first().hasPayload());
-                    QVERIFY(fJob->items().first().hasPayload<KCalCore::Incidence::Ptr>());
+                    QVERIFY(fJob->items().constFirst().isValid());
+                    QVERIFY(fJob->items().constFirst().hasPayload());
+                    QVERIFY(fJob->items().constFirst().hasPayload<KCalCore::Incidence::Ptr>());
                     QCOMPARE(item.payload<KCalCore::Incidence::Ptr>()->uid(),
-                             fJob->items().first().payload<KCalCore::Incidence::Ptr>()->uid());
+                             fJob->items().constFirst().payload<KCalCore::Incidence::Ptr>()->uid());
                 }
                 break;
             case IncidenceChanger::ChangeTypeDelete:
