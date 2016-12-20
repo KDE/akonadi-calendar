@@ -77,10 +77,10 @@ void TodoPurger::Private::deleteTodos()
     m_changer->setGroupwareCommunication(false);
 
     m_changer->startAtomicOperation(i18n("Purging completed to-dos"));
-    Akonadi::Item::List items = m_calendar->items();
+    const Akonadi::Item::List items = m_calendar->items();
     Akonadi::Item::List toDelete;
     m_ignoredItems = 0;
-    foreach (const Akonadi::Item &item, items) {
+    for (const Akonadi::Item &item : items) {
         KCalCore::Todo::Ptr todo = CalendarUtils::incidence(item).dynamicCast<KCalCore::Todo>();
 
         if (!todo || !todo->isCompleted()) {
@@ -118,12 +118,12 @@ bool TodoPurger::Private::treeIsDeletable(const KCalCore::Todo::Ptr &todo)
         return false;
     }
 
-    KCalCore::Incidence::List childs = m_calendar->childIncidences(todo->uid());
+    const KCalCore::Incidence::List childs = m_calendar->childIncidences(todo->uid());
     if (childs.isEmpty()) {
         return true;
     }
 
-    foreach (const KCalCore::Incidence::Ptr &child, childs) {
+    for (const KCalCore::Incidence::Ptr &child : childs) {
         KCalCore::Todo::Ptr childTodo = child.dynamicCast<KCalCore::Todo>();
 
         if (!childTodo) {

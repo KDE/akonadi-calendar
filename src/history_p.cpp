@@ -221,7 +221,7 @@ void DeletionEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
-            foreach (Akonadi::Item::Id id, deletedIds) {
+            for (const Akonadi::Item::Id id : deletedIds) {
                 mLatestRevisionByItemId.remove(id);    // TODO
             }
         }

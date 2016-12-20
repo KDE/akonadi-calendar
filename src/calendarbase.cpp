@@ -246,7 +246,7 @@ void CalendarBasePrivate::slotDeleteFinished(int changeId,
 {
     Q_UNUSED(changeId);
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
-        foreach (const Akonadi::Item::Id &id, itemIds) {
+        for (const Akonadi::Item::Id &id : itemIds) {
             if (mItemById.contains(id)) {
                 internalRemove(mItemById.value(id));
             }
@@ -491,7 +491,7 @@ Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &inci
     Akonadi::Item::List items;
     items.reserve(incidences.size());
 
-    foreach (const KCalCore::Incidence::Ptr &incidence, incidences) {
+    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
         if (incidence) {
             items << item(incidence->instanceIdentifier());
         } else {
@@ -527,7 +527,7 @@ KCalCore::Incidence::List CalendarBase::childIncidences(const QString &parentUid
     Q_D(const CalendarBase);
     KCalCore::Incidence::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
-    Q_FOREACH (const QString &uid, uids) {
+    for (const QString &uid : uids) {
         Incidence::Ptr child = incidence(uid);
         if (child) {
             children.append(child);

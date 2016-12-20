@@ -38,7 +38,7 @@ static bool compareUids(const QStringList &_uids, const Incidence::List &inciden
 {
     QStringList uids = _uids;
 
-    foreach(const KCalCore::Incidence::Ptr &incidence, incidences) {
+    for(const KCalCore::Incidence::Ptr &incidence : incidences) {
         if (uids.contains(incidence->uid()))
             uids.removeAll(incidence->uid());
     }

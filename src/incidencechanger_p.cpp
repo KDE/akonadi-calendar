@@ -59,7 +59,7 @@ Collection::List IncidenceChanger::Private::collectionsForMimeType(const QString
         const Collection::List &collections)
 {
     Collection::List result;
-    foreach (const Akonadi::Collection &collection, collections) {
+    for (const Akonadi::Collection &collection : collections) {
         if (collection.contentMimeTypes().contains(mimeType)) {
             result << collection;
         }

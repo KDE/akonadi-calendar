@@ -381,7 +381,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
         // on the invitation" case. So check the attendee status of the attendee.
         bool isMine = true;
         const Attendee::List attendees = existingIncidence->attendees();
-        foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
+        for (const KCalCore::Attendee::Ptr &attendee : attendees) {
             if (attendee->email() == attendeeEmail &&
                     attendee->status() == Attendee::NeedsAction) {
                 // This incidence wasn't created by me - it's probably in a shared

@@ -400,7 +400,7 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalCore::iTIPMethod method,
 
         const QStringList myEmails = Akonadi::CalendarUtils::allEmails();
         bool incidenceAcceptedBefore = false;
-        foreach (const QString &email, myEmails) {
+        for (const QString &email : myEmails) {
             KCalCore::Attendee::Ptr me = incidence->attendeeByMail(email);
             if (me &&
                     (me->status() == KCalCore::Attendee::Accepted ||

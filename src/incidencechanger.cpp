@@ -336,7 +336,7 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
     QSharedPointer<DeletionChange> deletionChange = change.staticCast<DeletionChange>();
 
     deletionChange->mItemIds.reserve(deletionChange->mItemIds.count() + items.count());
-    foreach (const Akonadi::Item &item, items) {
+    for (const Akonadi::Item &item : items) {
         deletionChange->mItemIds.append(item.id());
     }
     QString description;
@@ -788,7 +788,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
         return -1;
     }
 
-    foreach (const Item &item, items) {
+    for (const Item &item : items) {
         if (!item.isValid()) {
             qCritical() << "Items must be valid!";
             d->cancelTransaction();
@@ -800,7 +800,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     const int changeId = ++d->mLatestChangeId;
     const Change::Ptr change(new DeletionChange(this, changeId, atomicOperationId, parent));
 
-    foreach (const Item &item, items) {
+    for (const Item &item : items) {
         if (!d->hasRights(item.parentCollection(), ChangeTypeDelete)) {
             qCWarning(AKONADICALENDAR_LOG) << "Item " << item.id() << " can't be deleted due to ACL restrictions";
             const QString errorString = d->showErrorDialog(ResultCodePermissions, parent);

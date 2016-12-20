@@ -254,7 +254,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     QString url = group.readEntry(QStringLiteral("url"));
 
     const KContacts::Addressee::List contacts = job->contacts();
-    foreach (const KContacts::Addressee &contact, contacts) {
+    for (const KContacts::Addressee &contact : contacts) {
         const QString pref = contact.preferredEmail();
         if (!pref.isEmpty() && pref != email) {
             group = cfg.group(pref);
@@ -571,8 +571,8 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
 QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
 {
     QStringList providers;
-    Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
-    foreach (const Akonadi::AgentInstance &agent, agents) {
+    const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
+    for (const Akonadi::AgentInstance &agent : agents) {
         if (agent.type().capabilities().contains(QStringLiteral("FreeBusyProvider"))) {
             providers << agent.identifier();
         }
@@ -587,7 +587,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue();
     }
 
-    foreach (const QString &provider, providers) {
+    for (const QString &provider : providers) {
         FreeBusyProviderRequest request(provider);
 
         connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString,bool)),

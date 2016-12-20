@@ -108,7 +108,7 @@ QStringList Akonadi::CalendarUtils::allEmails()
     QStringList emails;
     const QSet<QString> &allEmails = KIdentityManagement::allEmails();
     emails.reserve(allEmails.count());
-    foreach (const QString &email, allEmails) {
+    for (const QString &email : allEmails) {
         emails.append(email);
     }
     return emails;

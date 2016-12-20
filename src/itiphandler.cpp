@@ -171,7 +171,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
         const KCalCore::Attendee::List attendees = d->m_incidence->attendees();
-        foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
+        for (const KCalCore::Attendee::Ptr &attendee : attendees) {
             if (attendee->email() == receiver) {
                 if (action.startsWith(QStringLiteral("accepted"))) {
                     attendee->setStatus(KCalCore::Attendee::Accepted);
@@ -207,8 +207,8 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
                                            << "; summary=" << d->m_incidence->summary();
 
             qCDebug(AKONADICALENDAR_LOG) << "\n Here's what we do have with such a summary:";
-            KCalCore::Incidence::List knownIncidences = calendar()->incidences();
-            foreach (const KCalCore::Incidence::Ptr &knownIncidence, knownIncidences) {
+            const KCalCore::Incidence::List knownIncidences = calendar()->incidences();
+            for (const KCalCore::Incidence::Ptr &knownIncidence : knownIncidences) {
                 if (knownIncidence->summary() == d->m_incidence->summary()) {
                     qCDebug(AKONADICALENDAR_LOG) << "\nFound: uid=" << knownIncidence->uid()
                                                  << "; identifier=" << knownIncidence->instanceIdentifier()

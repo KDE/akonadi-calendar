@@ -78,11 +78,9 @@ void ETMCalendarPrivate::init()
         monitor->setItemFetchScope(scope);
         monitor->setAllMonitored(true);
 
-        QStringList allMimeTypes;
-        allMimeTypes << KCalCore::Event::eventMimeType() << KCalCore::Todo::todoMimeType()
-                     << KCalCore::Journal::journalMimeType();
+        const QStringList allMimeTypes = { KCalCore::Event::eventMimeType(), KCalCore::Todo::todoMimeType(), KCalCore::Journal::journalMimeType() };
 
-        foreach (const QString &mimetype, allMimeTypes) {
+        for (const QString &mimetype : allMimeTypes) {
             monitor->setMimeTypeMonitored(mimetype, mMimeTypes.isEmpty() || mMimeTypes.contains(mimetype));
         }
 
@@ -126,8 +124,8 @@ void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collecti
     Q_ASSERT(collection.isValid());
     // Is the collection changed to read-only, we update all Incidences
     if (attributeNames.contains("AccessRights")) {
-        Akonadi::Item::List items = q->items();
-        foreach (const Akonadi::Item &item, items) {
+        const Akonadi::Item::List items = q->items();
+        for (const Akonadi::Item &item : items) {
             if (item.storageCollectionId() == collection.id()) {
                 KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 if (incidence) {
@@ -291,7 +289,7 @@ Akonadi::Item ETMCalendarPrivate::itemFromIndex(const QModelIndex &idx)
 void ETMCalendarPrivate::itemsAdded(const Akonadi::Item::List &items)
 {
     if (!items.isEmpty()) {
-        foreach (const Akonadi::Item &item, items) {
+        for (const Akonadi::Item &item : items) {
             internalInsert(item);
         }
 
@@ -306,7 +304,7 @@ void ETMCalendarPrivate::itemsAdded(const Akonadi::Item::List &items)
 
 void ETMCalendarPrivate::itemsRemoved(const Akonadi::Item::List &items)
 {
-    foreach (const Akonadi::Item &item, items) {
+    for (const Akonadi::Item &item : items) {
         internalRemove(item);
     }
     emit q->calendarChanged();
@@ -320,10 +318,10 @@ Akonadi::Collection ETMCalendarPrivate::collectionFromIndex(const QModelIndex &i
 void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index,
                                         int start, int end)
 {
-    Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index,
+    const Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index,
                                             start, end);
 
-    foreach (const Akonadi::Collection &collection, collections) {
+    for (const Akonadi::Collection &collection : collections) {
         mCollectionMap[collection.id()] = collection;
     }
 
@@ -340,8 +338,8 @@ void ETMCalendarPrivate::onCollectionPopulated(Akonadi::Collection::Id id)
 
 void ETMCalendarPrivate::onRowsRemoved(const QModelIndex &index, int start, int end)
 {
-    Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index, start, end);
-    foreach (const Akonadi::Collection &collection, collections) {
+    const Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index, start, end);
+    for (const Akonadi::Collection &collection : collections) {
         mCollectionMap.remove(collection.id());
     }
 
