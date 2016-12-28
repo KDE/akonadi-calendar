@@ -563,7 +563,7 @@ Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const
     Q_D(const CalendarBase);
     Akonadi::Item::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
-    Q_FOREACH (const QString &uid, uids) {
+    for (const QString &uid : uids) {
         Akonadi::Item child = item(uid);
         if (child.isValid() && child.hasPayload<KCalCore::Incidence::Ptr>()) {
             children.append(child);
