@@ -66,14 +66,14 @@ public:
     /**
       * Constructs a new ETMCalendar. Loading begins immediately, asynchronously.
       */
-    explicit ETMCalendar(QObject *parent = Q_NULLPTR);
+    explicit ETMCalendar(QObject *parent = nullptr);
 
     /**
      * Constructs a new ETMCalendar that will only load the specified mime types.
      * Use this ctor to ignore journals or to-dos for example.
      * If no mime types are specified, all mime types will be used.
      */
-    explicit ETMCalendar(const QStringList &mimeTypes, QObject *parent = Q_NULLPTR);
+    explicit ETMCalendar(const QStringList &mimeTypes, QObject *parent = nullptr);
 
     /**
      * Constructs a new ETMCalendar.
@@ -88,9 +88,9 @@ public:
      *
      * @since 4.13
      */
-    explicit ETMCalendar(ETMCalendar *calendar, QObject *parent = Q_NULLPTR);
+    explicit ETMCalendar(ETMCalendar *calendar, QObject *parent = nullptr);
 
-    explicit ETMCalendar(Monitor *monitor, QObject *parent = Q_NULLPTR);
+    explicit ETMCalendar(Monitor *monitor, QObject *parent = nullptr);
     /**
       * Destroys this ETMCalendar.
       */

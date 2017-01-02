@@ -73,7 +73,7 @@ public:
         ResultQueueJobError
     };
 
-    explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = Q_NULLPTR);
+    explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailClient();
 
     void mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,

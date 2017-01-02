@@ -47,13 +47,13 @@ using namespace KCalCore;
 
 ETMCalendarPrivate::ETMCalendarPrivate(ETMCalendar *qq)
     : CalendarBasePrivate(qq)
-    , mETM(Q_NULLPTR)
-    , mFilteredETM(Q_NULLPTR)
-    , mCheckableProxyModel(Q_NULLPTR)
-    , mCollectionProxyModel(Q_NULLPTR)
-    , mCalFilterProxyModel(Q_NULLPTR)
-    , mCalFilterPartStatusProxyModel(Q_NULLPTR)
-    , mSelectionProxy(Q_NULLPTR)
+    , mETM(nullptr)
+    , mFilteredETM(nullptr)
+    , mCheckableProxyModel(nullptr)
+    , mCollectionProxyModel(nullptr)
+    , mCalFilterProxyModel(nullptr)
+    , mCalFilterPartStatusProxyModel(nullptr)
+    , mSelectionProxy(nullptr)
     , mCollectionFilteringEnabled(true)
     , q(qq)
 {
@@ -550,7 +550,7 @@ KCalCore::Alarm::List ETMCalendar::alarms(const KDateTime &from,
     while (i.hasNext()) {
         const Akonadi::Item item = i.next().value();
 
-        BlockAlarmsAttribute *blockedAttr = Q_NULLPTR;
+        BlockAlarmsAttribute *blockedAttr = nullptr;
 
         if (excludeBlockedAlarms) {
             // take the collection from m_collectionMap, because we need the up-to-date collection attrs

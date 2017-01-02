@@ -37,7 +37,7 @@ public:
      * Creates a new PublishDialog
      * @param parent the dialog's parent
      */
-    explicit PublishDialog(QWidget *parent = Q_NULLPTR);
+    explicit PublishDialog(QWidget *parent = nullptr);
 
     /**
      * Destructor

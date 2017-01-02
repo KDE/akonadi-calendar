@@ -156,7 +156,7 @@ public:
       * @param parent will be passed to dialogs created by IncidenceChanger,
       *        for example those asking if you want to send invitations.
       */
-    void undoAll(QWidget *parent = Q_NULLPTR);
+    void undoAll(QWidget *parent = nullptr);
 
     /**
       * Returns true if there are changes that can be undone.
@@ -210,7 +210,7 @@ public Q_SLOTS:
       * @see redo()
       * @see undone()
       */
-    void undo(QWidget *parent = Q_NULLPTR);
+    void undo(QWidget *parent = nullptr);
 
     /**
       * Reverts the change that's on top of the redo stack.
@@ -225,7 +225,7 @@ public Q_SLOTS:
       * @see undo()
       * @see redone()
       */
-    void redo(QWidget *parent = Q_NULLPTR);
+    void redo(QWidget *parent = nullptr);
 
 Q_SIGNALS:
     /**
@@ -254,7 +254,7 @@ private:
     friend class Entry;
 
     // Only IncidenceChanger can create History classes
-    explicit History(QObject *parent = Q_NULLPTR);
+    explicit History(QObject *parent = nullptr);
 
     // Used by unit-tests
     Akonadi::IncidenceChanger *incidenceChanger() const;

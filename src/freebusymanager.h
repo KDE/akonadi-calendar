@@ -52,12 +52,12 @@ public:
       @see KCalPrefBase::freeBusyPublishUrl()
       @see KCalPrefBase::freeBusyPublishDays();
       */
-    void publishFreeBusy(QWidget *parentWidget = Q_NULLPTR);
+    void publishFreeBusy(QWidget *parentWidget = nullptr);
 
     /**
       Mail the freebusy information.
       */
-    void mailFreeBusy(int daysToPublish = 30, QWidget *parentWidget = Q_NULLPTR);
+    void mailFreeBusy(int daysToPublish = 30, QWidget *parentWidget = nullptr);
 
     /**
       Retrieve the freebusy information of somebody else, i.e. it will not try
@@ -93,7 +93,7 @@ public:
       @return true if a download is initiated, and false otherwise
     */
     bool retrieveFreeBusy(const QString &email, bool forceDownload,
-                          QWidget *parentWidget = Q_NULLPTR);
+                          QWidget *parentWidget = nullptr);
 
     /**
         Retrieve the freebusy information of a contact for a specified period.

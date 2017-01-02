@@ -28,7 +28,7 @@
 using namespace Akonadi;
 
 TodoPurger::Private::Private(TodoPurger *q)
-    : m_changer(Q_NULLPTR)
+    : m_changer(nullptr)
     , m_currentChangeId(-1)
     , m_ignoredItems(0)
     , m_calendarOwnership(true)

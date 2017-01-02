@@ -30,7 +30,7 @@ class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    explicit CalFilterPartStatusProxyModel(QObject *parent = Q_NULLPTR);
+    explicit CalFilterPartStatusProxyModel(QObject *parent = nullptr);
     ~CalFilterPartStatusProxyModel();
 
     void setFilterVirtual(bool filterVirtual);

@@ -200,7 +200,7 @@ void CalendarClipboard::cutIncidence(const KCalCore::Incidence::Ptr &incidence,
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
     if (mode == AskMode && hasChildren) {
-        const int km = KMessageBox::questionYesNoCancel(Q_NULLPTR,
+        const int km = KMessageBox::questionYesNoCancel(nullptr,
                        i18n("The item \"%1\" has sub-to-dos. "
                             "Do you want to cut just this item and "
                             "make all its sub-to-dos independent, or "
@@ -241,7 +241,7 @@ bool CalendarClipboard::copyIncidence(const KCalCore::Incidence::Ptr &incidence,
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
     if (mode == AskMode && hasChildren) {
-        const int km = KMessageBox::questionYesNoCancel(Q_NULLPTR,
+        const int km = KMessageBox::questionYesNoCancel(nullptr,
                        i18n("The item \"%1\" has sub-to-dos. "
                             "Do you want to copy just this item or "
                             "copy the to-do with all its sub-to-dos?",

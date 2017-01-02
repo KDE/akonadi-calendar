@@ -84,7 +84,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         }
     }
 
-    m_collectionFetchJob = Q_NULLPTR;
+    m_collectionFetchJob = nullptr;
     bool canceled = false;
 
     // These two will never be true, maybe even assert
@@ -167,7 +167,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
 
 bool IncidenceChanger::Private::isLoadingCollections() const
 {
-    return m_collectionFetchJob != Q_NULLPTR;
+    return m_collectionFetchJob != nullptr;
 }
 
 void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change::Ptr &change,

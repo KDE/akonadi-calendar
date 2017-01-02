@@ -87,7 +87,7 @@ ITIPHandlerDialogDelegate *ITIPHandlerComponentFactory::createITIPHanderDialogDe
 }
 
 ITIPHandler::ITIPHandler(QObject *parent) : QObject(parent)
-    , d(new Private(/*factory=*/Q_NULLPTR, this))
+    , d(new Private(/*factory=*/nullptr, this))
 {
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
 }
@@ -142,7 +142,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         qCritical() << "Error parsing" << errorMessage;
 
         if (d->m_showDialogsOnError) {
-            KMessageBox::detailedError(Q_NULLPTR, // mParent, TODO
+            KMessageBox::detailedError(nullptr, // mParent, TODO
                                        i18n("Error while processing an invitation or update."),
                                        errorMessage);
         }
@@ -308,7 +308,7 @@ void ITIPHandler::sendiTIPMessage(KCalCore::iTIPMethod method,
     d->m_currentOperation = OperationSendiTIPMessage;
 
     KCalCore::Incidence *incidenceCopy = incidence->clone();
-    incidenceCopy->registerObserver(Q_NULLPTR);
+    incidenceCopy->registerObserver(nullptr);
     incidenceCopy->clearAttendees();
 
     d->m_scheduler->performTransaction(incidence, method);

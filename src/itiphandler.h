@@ -60,7 +60,7 @@ class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate : public QObject
 {
     Q_OBJECT
 public:
-    explicit GroupwareUiDelegate(QObject *parent = Q_NULLPTR);
+    explicit GroupwareUiDelegate(QObject *parent = nullptr);
     virtual ~GroupwareUiDelegate();
 
     virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
@@ -92,7 +92,7 @@ public:
     /**
      * Creates a new AskDelegator
      */
-    explicit ITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = Q_NULLPTR);
+    explicit ITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = nullptr);
 
     /*
      * Opens a Dialog, when an incidence is created
@@ -203,7 +203,7 @@ public:
     /*
      * Created a new ITIPHandlerComponentFactory object.
      */
-    explicit ITIPHandlerComponentFactory(QObject *parent = Q_NULLPTR);
+    explicit ITIPHandlerComponentFactory(QObject *parent = nullptr);
 
     /*
      * deletes the object.
@@ -216,7 +216,7 @@ public:
      * @param identity that is the mail sender
      * @param parent of the MailTransport::MessageQueueJob object
      */
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = Q_NULLPTR);
+    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr);
 
     /*
      * @return A new ITIPHandlerDialogDelegate object
@@ -225,7 +225,7 @@ public:
      * @parent parent of the AskDelegator
      *
      */
-    virtual ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = Q_NULLPTR);
+    virtual ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent = nullptr);
 };
 
 /**
@@ -246,7 +246,7 @@ public:
      * Creates a new ITIPHandler instance.
      * creates a default ITIPHandlerComponentFactory object.
      */
-    explicit ITIPHandler(QObject *parent = Q_NULLPTR);
+    explicit ITIPHandler(QObject *parent = nullptr);
 
     /**
      * Create a new ITIPHandler instance.
@@ -280,20 +280,20 @@ public:
      */
     void sendiTIPMessage(KCalCore::iTIPMethod method,
                          const KCalCore::Incidence::Ptr &incidence,
-                         QWidget *parentWidget = Q_NULLPTR);
+                         QWidget *parentWidget = nullptr);
 
     /**
      * Publishes incidence @p incidence.
      * A publish dialog will prompt the user to input recipients.
      * @see rfc2446 3.2.1
      */
-    void publishInformation(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = Q_NULLPTR);
+    void publishInformation(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = nullptr);
 
     /**
      * Sends an e-mail with the incidence attached as iCalendar source.
      * A dialog will prompt the user to input recipients.
      */
-    void sendAsICalendar(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = Q_NULLPTR);
+    void sendAsICalendar(const KCalCore::Incidence::Ptr &incidence, QWidget *parentWidget = nullptr);
 
     /**
      * Sets the UI delegate to edit counter proposals.

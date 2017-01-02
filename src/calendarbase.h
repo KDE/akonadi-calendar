@@ -56,7 +56,7 @@ public:
     /**
       * Constructs a CalendarBase object.
       */
-    explicit CalendarBase(QObject *parent = Q_NULLPTR);
+    explicit CalendarBase(QObject *parent = nullptr);
 
     /**
       * Destroys the calendar.

@@ -54,7 +54,7 @@ ICalImporter::Private::Private(IncidenceChanger *changer,
     , m_changer(changer)
     , m_numIncidences(0)
     , m_working(false)
-    , m_temporaryFile(Q_NULLPTR)
+    , m_temporaryFile(nullptr)
 {
     if (!changer) {
         m_changer = new IncidenceChanger(q);
@@ -220,7 +220,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
             int dialogCode;
             QStringList mimeTypes = QStringList() << KCalCore::Event::eventMimeType() << KCalCore::Todo::todoMimeType()
                                     << KCalCore::Journal::journalMimeType();
-            collection = CalendarUtils::selectCollection(Q_NULLPTR, dialogCode /*by-ref*/, mimeTypes);
+            collection = CalendarUtils::selectCollection(nullptr, dialogCode /*by-ref*/, mimeTypes);
         }
 
         if (!collection.isValid()) {

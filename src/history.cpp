@@ -222,7 +222,7 @@ void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult
         stack().push(mEntryInProgress);
     }
 
-    mCurrentParent = Q_NULLPTR;
+    mCurrentParent = nullptr;
 
     // Process recordCreation/Modification/Deletions that came in while an operation
     // was in progress

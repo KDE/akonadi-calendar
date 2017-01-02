@@ -193,7 +193,7 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
     Q_UNUSED(hidden);
 
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(
-                Q_NULLPTR, MailTransport::TransportManager::IfNoTransportExists)) {
+                nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
         qCritical() << "Error while creating transport";
         emit finished(ResultErrorCreatingTransport, i18n("Error while creating transport"));
         return;

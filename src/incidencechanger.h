@@ -140,7 +140,7 @@ public:
       * creates a default ITIPHandlerComponentFactory object.
       * @param parent parent QObject
       */
-    explicit IncidenceChanger(QObject *parent = Q_NULLPTR);
+    explicit IncidenceChanger(QObject *parent = nullptr);
 
     /**
      * Creates a new IncidenceChanger instance.
@@ -173,7 +173,7 @@ public:
       */
     int createIncidence(const KCalCore::Incidence::Ptr &incidence,
                         const Akonadi::Collection &collection = Akonadi::Collection(),
-                        QWidget *parent = Q_NULLPTR);
+                        QWidget *parent = nullptr);
 
     /**
       * Deletes an incidence. If it's recurring, all occurrences are deleted.
@@ -187,7 +187,7 @@ public:
       *         Returns -1 if item is invalid. The deleteFinished() signal won't be emitted in this
       *         case.
       */
-    int deleteIncidence(const Akonadi::Item &item, QWidget *parent = Q_NULLPTR);
+    int deleteIncidence(const Akonadi::Item &item, QWidget *parent = nullptr);
 
     /**
       * Deletes a list of Items.
@@ -200,7 +200,7 @@ public:
       *         Returns -1 if any item is invalid or if @p items is empty. The deleteFinished() signal
       *         won't be emitted in this case.
       */
-    int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = Q_NULLPTR);
+    int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = nullptr);
 
     /**
       * Modifies an incidence.
@@ -219,7 +219,7 @@ public:
       */
     int modifyIncidence(const Akonadi::Item &item,
                         const KCalCore::Incidence::Ptr &originalPayload = KCalCore::Incidence::Ptr(),
-                        QWidget *parent = Q_NULLPTR);
+                        QWidget *parent = nullptr);
 
     /**
       * Some incidence operations require more than one change. Like dissociating
@@ -444,7 +444,7 @@ private:
     friend class History;
     friend class AtomicOperation;
     // used internally by the History class
-    explicit IncidenceChanger(bool enableHistory, QObject *parent = Q_NULLPTR);
+    explicit IncidenceChanger(bool enableHistory, QObject *parent = nullptr);
     class Private;
     Private *const d;
     //@endcond

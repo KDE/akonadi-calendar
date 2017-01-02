@@ -65,7 +65,7 @@ class ITIPHandlerHelper : public QObject
 {
     Q_OBJECT
 public:
-    explicit ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent = Q_NULLPTR);
+    explicit ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent = nullptr);
     ~ITIPHandlerHelper();
 
     enum SendResult {

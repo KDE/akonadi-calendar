@@ -40,7 +40,7 @@ public:
     /**
      * @param calendar Must be a valid and loaded calendar.
      */
-    explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = Q_NULLPTR);
+    explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailScheduler();
 
     void publish(const KCalCore::IncidenceBase::Ptr &incidence,
