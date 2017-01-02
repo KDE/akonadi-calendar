@@ -455,7 +455,7 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
     KIO::FileCopyJob *job = static_cast<KIO::FileCopyJob *>(_job);
     if (job->error()) {
         KMessageBox::sorry(
-            0,
+            nullptr,
             i18n("<qt><p>The software could not upload your free/busy list to "
                  "the URL '%1'. There might be a problem with the access "
                  "rights, or you specified an incorrect URL. The system said: "

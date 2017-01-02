@@ -86,7 +86,7 @@ void UnitTestBase::verifyExists(const QString &uid, bool exists)
     waitForIt();
     calendar->deleteLater();
 
-    QCOMPARE(calendar->incidence(uid) != 0, exists);
+    QCOMPARE(calendar->incidence(uid) != nullptr, exists);
 }
 
 Akonadi::Item::List UnitTestBase::calendarItems()
