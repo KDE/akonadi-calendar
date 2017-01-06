@@ -353,11 +353,13 @@ public:
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                        ki18np("Copy Event", "Copy %1 Events"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)->setText(i18n("Copy Event To"));
+                    QAction *act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu);
+                    if (act) {
+                        act->setText(i18n("Copy Event To"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)->setText(i18n("Copy Event To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog);
+                    if (act) {
+                        act->setText(i18n("Copy Event To"));
                     }
                     if (mGenericManager->action(Akonadi::StandardActionManager::DeleteItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::DeleteItems,
@@ -367,25 +369,30 @@ public:
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CutItems,
                                                        ki18np("Cut Event", "Cut %1 Events"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)->setText(i18n("Move Event To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu);
+                    if (act) {
+                        act->setText(i18n("Move Event To"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)->setText(i18n("Move Event To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog);
+                    if (act) {
+                        act->setText(i18n("Move Event To"));
                     }
-                    if (mActions.contains(StandardCalendarActionManager::EditIncidence)) {
-                        mActions.value(StandardCalendarActionManager::EditIncidence)->setText(i18n("Edit Event..."));
+                    act = mActions.value(StandardCalendarActionManager::EditIncidence);
+                    if (act) {
+                        act->setText(i18n("Edit Event..."));
                     }
                 } else if (mimeType == KCalCore::Todo::todoMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                        ki18np("Copy To-do", "Copy %1 To-dos"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)->setText(i18n("Copy To-do To"));
+                    QAction *act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu);
+                    if (act) {
+                        act->setText(i18n("Copy To-do To"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)->setText(i18n("Copy To-do To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog);
+                    if (act) {
+                        act->setText(i18n("Copy To-do To"));
                     }
                     if (mGenericManager->action(Akonadi::StandardActionManager::DeleteItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::DeleteItems,
@@ -395,25 +402,30 @@ public:
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CutItems,
                                                        ki18np("Cut To-do", "Cut %1 To-dos"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)->setText(i18n("Move To-do To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu);
+                    if (act) {
+                        act->setText(i18n("Move To-do To"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)->setText(i18n("Move To-do To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog);
+                    if (act) {
+                        act->setText(i18n("Move To-do To"));
                     }
-                    if (mActions.contains(StandardCalendarActionManager::EditIncidence)) {
-                        mActions.value(StandardCalendarActionManager::EditIncidence)->setText(i18n("Edit To-do..."));
+                    act = mActions.value(StandardCalendarActionManager::EditIncidence);
+                    if (act) {
+                        act->setText(i18n("Edit To-do..."));
                     }
                 } else if (mimeType == KCalCore::Journal::journalMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                        ki18np("Copy Journal", "Copy %1 Journals"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu)->setText(i18n("Copy Journal To"));
+                    QAction *act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToMenu);
+                    if (act) {
+                        act->setText(i18n("Copy Journal To"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog)->setText(i18n("Copy Journal To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::CopyItemToDialog);
+                    if (act) {
+                        act->setText(i18n("Copy Journal To"));
                     }
                     if (mGenericManager->action(Akonadi::StandardActionManager::DeleteItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::DeleteItems,
@@ -423,31 +435,38 @@ public:
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CutItems,
                                                        ki18np("Cut Journal", "Cut %1 Journals"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu)->setText(i18n("Move Journal To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToMenu);
+                    if (act) {
+                        act->setText(i18n("Move Journal To"));
                     }
-                    if (mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)) {
-                        mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog)->setText(i18n("Move Journal To"));
+                    act = mGenericManager->action(Akonadi::StandardActionManager::MoveItemToDialog);
+                    if (act) {
+                        act->setText(i18n("Move Journal To"));
                     }
-                    if (mActions.contains(StandardCalendarActionManager::EditIncidence)) {
-                        mActions.value(StandardCalendarActionManager::EditIncidence)->setText(i18n("Edit Journal..."));
+                    act = mActions.value(StandardCalendarActionManager::EditIncidence);
+                    if (act) {
+                        act->setText(i18n("Edit Journal..."));
                     }
                 }
             }
         }
 
         // update action states
-        if (mActions.contains(StandardCalendarActionManager::CreateEvent)) {
-            mActions[ StandardCalendarActionManager::CreateEvent ]->setEnabled(hasWritableCollection(KCalCore::Event::eventMimeType()));
+        QAction *act = mActions.value(StandardCalendarActionManager::CreateEvent);
+        if (act) {
+            act->setEnabled(hasWritableCollection(KCalCore::Event::eventMimeType()));
         }
-        if (mActions.contains(StandardCalendarActionManager::CreateTodo)) {
-            mActions[ StandardCalendarActionManager::CreateTodo ]->setEnabled(hasWritableCollection(KCalCore::Todo::todoMimeType()));
+        act = mActions.value(StandardCalendarActionManager::CreateTodo);
+        if (act) {
+            act->setEnabled(hasWritableCollection(KCalCore::Todo::todoMimeType()));
         }
-        if (mActions.contains(StandardCalendarActionManager::CreateJournal)) {
-            mActions[ StandardCalendarActionManager::CreateJournal ]->setEnabled(hasWritableCollection(KCalCore::Journal::journalMimeType()));
+        act = mActions.value(StandardCalendarActionManager::CreateJournal);
+        if (act) {
+            act->setEnabled(hasWritableCollection(KCalCore::Journal::journalMimeType()));
         }
 
-        if (mActions.contains(StandardCalendarActionManager::EditIncidence)) {
+        act = mActions.value(StandardCalendarActionManager::EditIncidence);
+        if (act) {
             bool canEditItem = true;
 
             // only one selected item can be edited
@@ -463,11 +482,12 @@ public:
                 }
             }
 
-            mActions.value(StandardCalendarActionManager::EditIncidence)->setEnabled(canEditItem);
+            act->setEnabled(canEditItem);
         }
 
-        if (mActions.contains(StandardCalendarActionManager::CreateSubTodo)) {
-            mActions[ StandardCalendarActionManager::CreateSubTodo ]->setEnabled(false);
+        act = mActions.value(StandardCalendarActionManager::CreateSubTodo);
+        if (act) {
+            act->setEnabled(false);
         }
 
         if (itemCount == 1) {
@@ -555,11 +575,12 @@ void StandardCalendarActionManager::setItemSelectionModel(QItemSelectionModel *s
 
 QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManager::Type type)
 {
-    if (d->mActions.contains(type)) {
-        return d->mActions.value(type);
+
+    QAction *action = d->mActions.value(type);
+    if (action) {
+        return action;
     }
 
-    QAction *action = nullptr;
     switch (type) {
     case CreateEvent:
         action = new QAction(d->mParentWidget);
@@ -638,11 +659,7 @@ void StandardCalendarActionManager::createAllActions()
 
 QAction *StandardCalendarActionManager::action(StandardCalendarActionManager::Type type) const
 {
-    if (d->mActions.contains(type)) {
-        return d->mActions.value(type);
-    }
-
-    return nullptr;
+    return d->mActions.value(type);
 }
 
 QAction *StandardCalendarActionManager::action(StandardActionManager::Type type) const

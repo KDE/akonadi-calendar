@@ -46,13 +46,12 @@ class CalFilterPartStatusProxyModel;
 
 static bool isStructuralCollection(const Akonadi::Collection &collection)
 {
-    QStringList mimeTypes;
-    mimeTypes << QStringLiteral("text/calendar")
-              << KCalCore::Event::eventMimeType()
-              << KCalCore::Todo::todoMimeType()
-              << KCalCore::Journal::journalMimeType();
+    const QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar")
+                                                << KCalCore::Event::eventMimeType()
+                                                << KCalCore::Todo::todoMimeType()
+                                                << KCalCore::Journal::journalMimeType();
     const QStringList collectionMimeTypes = collection.contentMimeTypes();
-    foreach (const QString &mimeType, mimeTypes) {
+    for (const QString &mimeType : mimeTypes) {
         if (collectionMimeTypes.contains(mimeType)) {
             return false;
         }
