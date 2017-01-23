@@ -54,7 +54,8 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
         m_errorMessage = searchJob->errorText();
         qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << searchJob->errorText();
     } else {
-        foreach (const Akonadi::Item &item, searchJob->items()) {
+        const Akonadi::Item::List lstItem = searchJob->items();
+        for (const Akonadi::Item &item : lstItem) {
             if (!item.isValid() || !item.hasPayload<KCalCore::Incidence::Ptr>()) {
                 m_success = false;
                 m_errorMessage = QStringLiteral("Invalid item or payload: %1").arg(item.id());

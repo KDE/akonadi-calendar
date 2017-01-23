@@ -94,11 +94,9 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
         }
         if (inc->type() == KCalCore::IncidenceBase::TypeTodo) {
             return SmallIcon(QStringLiteral("view-pim-tasks"));
-        }
-        if (inc->type() == KCalCore::IncidenceBase::TypeJournal) {
+        } else if (inc->type() == KCalCore::IncidenceBase::TypeJournal) {
             return SmallIcon(QStringLiteral("view-pim-journal"));
-        }
-        if (inc->type() == KCalCore::IncidenceBase::TypeEvent) {
+        } else if (inc->type() == KCalCore::IncidenceBase::TypeEvent) {
             return SmallIcon(QStringLiteral("view-calendar"));
         }
         return SmallIcon(QStringLiteral("network-wired"));

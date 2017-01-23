@@ -200,7 +200,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                                      << "; incidence count = " << calendar->incidences().count();
     }
 
-    foreach (const KCalCore::Incidence::Ptr &existingIncidence, existingIncidences) {
+    for (const KCalCore::Incidence::Ptr &existingIncidence : existingIncidences) {
         qCDebug(AKONADICALENDAR_LOG) << "Considering this found event ("
                                      << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
                                      << ") :" << mFormat->toString(existingIncidence);
