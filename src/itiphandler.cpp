@@ -38,7 +38,7 @@
 #include <kcalutils/stringify.h>
 
 #include <identitymanager.h>
-#include <mailtransport/messagequeuejob.h>
+#include <mailtransportakonadi/messagequeuejob.h>
 #include <mailtransport/transportmanager.h>
 
 #include <KMessageBox>

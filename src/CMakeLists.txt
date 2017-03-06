@@ -60,7 +60,7 @@ PRIVATE
     KF5::AkonadiContact
     KF5::CalendarUtils
     KF5::AkonadiWidgets
-    KF5::MailTransport
+    KF5::MailTransportAkonadi
     KF5::IdentityManagement
     KF5::Codecs
     KF5::DBusAddons
