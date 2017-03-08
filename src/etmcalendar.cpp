@@ -152,7 +152,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCollectionProxyModel->setObjectName(QStringLiteral("Only show collections"));
     mCollectionProxyModel->setDynamicSortFilter(true);
     mCollectionProxyModel->addMimeTypeFilter(QStringLiteral("text/calendar"));
-    mCollectionProxyModel->setExcludeVirtualCollections(true);
+    mCollectionProxyModel->setExcludeVirtualCollections(false);
     mCollectionProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     mCollectionProxyModel->setSourceModel(columnFilterProxy);
 
