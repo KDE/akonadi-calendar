@@ -19,12 +19,12 @@
 
 // mailclient_p.cpp isn't exported so we include it directly.
 
-#include "../mailclient_p.h"
+#include "mailclient_p.h"
 
 #include <kcalcore/incidence.h>
 #include <kcalcore/freebusy.h>
 #include <messagequeuejob.h>
-#include <kpimidentities/identity.h>
+#include <KIdentityManagement/Identity>
 
 #include <qtest_akonadi.h>
 
@@ -439,6 +439,6 @@ private:
 
 };
 
-QTEST_AKONADIMAIN(MailClientTest, GUI)
+QTEST_AKONADIMAIN(MailClientTest)
 
 #include "mailclienttest.moc"

@@ -19,9 +19,9 @@
 
 #include "itiphandlertest.h"
 #include "helper.h"
-#include "../mailclient_p.h"
-#include "../fetchjobcalendar.h"
-#include "../utils_p.h"
+#include "mailclient_p.h"
+#include "fetchjobcalendar.h"
+#include "utils_p.h"
 
 #include <kcalcore/icalformat.h>
 #include <kcalcore/attendee.h>
@@ -702,7 +702,7 @@ void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item,
     QCOMPARE(resultCode, IncidenceChanger::ResultCodeSuccess);
 }
 
-void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Entity::Id> &deletedIds,
+void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
                                        IncidenceChanger::ResultCode resultCode,
                                        const QString &errorString)
 {
@@ -735,4 +735,4 @@ void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item,
              : IncidenceChanger::ResultCodeSuccess);
 }
 
-QTEST_AKONADIMAIN(ITIPHandlerTest, GUI)
+QTEST_AKONADIMAIN(ITIPHandlerTest)
