@@ -20,8 +20,8 @@
 #ifndef ITIPHANDLER_TEST_H
 #define ITIPHANDLER_TEST_H
 
-#include "../incidencechanger.h"
-#include "../itiphandler.h"
+#include "incidencechanger.h"
+#include "itiphandler.h"
 #include "unittestbase.h"
 
 #include <collection.h>

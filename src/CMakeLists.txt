@@ -1,10 +1,4 @@
 
-# TODO: Add a cmake option for this and enable it on jenkins
-set( PLEASE_TEST_INVITATIONS FALSE)
-if ( PLEASE_TEST_INVITATIONS )
-  add_definitions( -DPLEASE_TEST_INVITATIONS )
-endif()
-
 set(akonadicalendar_LIB_SRC
   blockalarmsattribute.cpp
   calendarbase.cpp

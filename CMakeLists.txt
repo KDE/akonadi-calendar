@@ -54,6 +54,13 @@ find_package(KF5AkonadiContact ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
+
+# TODO: switch to more standard approach for export-class-if-building-autotests once the tests pass
+set( PLEASE_TEST_INVITATIONS FALSE)
+if ( PLEASE_TEST_INVITATIONS )
+     add_definitions( -DPLEASE_TEST_INVITATIONS )
+endif()
+
 add_subdirectory(src)
 
 if (BUILD_TESTING)
