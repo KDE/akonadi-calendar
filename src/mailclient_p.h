@@ -22,7 +22,7 @@
 #ifndef AKONADI_MAILCLIENT_P_H
 #define AKONADI_MAILCLIENT_P_H
 
-#include "akonadi-calendar_export.h"
+#include "akonadi-calendar_tests_export.h"
 #include "itiphandler.h"
 #include <kcalcore/incidencebase.h>
 #include <kmime/kmime_message.h>
@@ -51,15 +51,10 @@ class KJob;
 
 namespace Akonadi
 {
-#ifdef PLEASE_TEST_INVITATIONS
-#define EXPORT_MAILCLIENT AKONADI_CALENDAR_EXPORT
-#else
-#define EXPORT_MAILCLIENT
-#endif
 
 class ITIPHandlerComponentFactory;
 
-class EXPORT_MAILCLIENT MailClient : public QObject
+class AKONADI_CALENDAR_TESTS_EXPORT MailClient : public QObject
 
 {
     Q_OBJECT

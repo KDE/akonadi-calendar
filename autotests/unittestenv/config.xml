@@ -1,0 +1,5 @@
+<config>
+    <confighome>xdgconfig</confighome>
+    <datahome>xdglocal</datahome>
+</config>
+

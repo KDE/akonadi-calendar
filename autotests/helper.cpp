@@ -31,7 +31,8 @@ Akonadi::Collection Helper::fetchCollection()
     Q_UNUSED(ret);
 
     // Find our collection
-    Collection::List collections = job->collections();
+    const Collection::List collections = job->collections();
+    Q_ASSERT(!collections.isEmpty());
     Collection collection = collections.first();
 
     Q_ASSERT(collection.isValid());

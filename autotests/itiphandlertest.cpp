@@ -97,6 +97,8 @@ public:
 void ITIPHandlerTest::initTestCase()
 {
     AkonadiTest::checkTestIsIsolated();
+    extern AKONADI_CALENDAR_TESTS_EXPORT bool akonadi_calendar_running_unittests;
+    akonadi_calendar_running_unittests = true;
     m_pendingItipMessageSignal = 0;
     m_pendingIncidenceChangerSignal = 0;
     m_itipHandler = 0;
@@ -634,7 +636,7 @@ void ITIPHandlerTest::createITIPHandler()
 
 QString ITIPHandlerTest::icalData(const QString &data_filename)
 {
-    QString absolutePath = QLatin1String(ITIP_DATA_DIR) + QLatin1Char('/') + data_filename;
+    QString absolutePath = QFINDTESTDATA(QStringLiteral("itip_data/") + data_filename);
     return QString::fromLatin1(readFile(absolutePath));
 }
 
