@@ -1,0 +1,2 @@
+#include "akonadi-calendar_export.h"
+#define AKONADI_CALENDAR_TESTS_EXPORT @AKONADI_CALENDAR_TESTS_EXPORT@

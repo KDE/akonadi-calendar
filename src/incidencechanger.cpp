@@ -37,11 +37,8 @@
 using namespace Akonadi;
 using namespace KCalCore;
 
-#ifdef PLEASE_TEST_INVITATIONS
-# define RUNNING_UNIT_TESTS true
-#else
-# define RUNNING_UNIT_TESTS false
-#endif
+AKONADI_CALENDAR_TESTS_EXPORT bool akonadi_calendar_running_unittests = false;
+
 
 static ITIPHandlerDialogDelegate::Action actionFromStatus(ITIPHandlerHelper::SendResult result)
 {
@@ -551,7 +548,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
                 return;
             }
 
-            if (RUNNING_UNIT_TESTS && !weAreOrganizer(newIncidence)) {
+            if (akonadi_calendar_running_unittests && !weAreOrganizer(newIncidence)) {
                 // This is a bit of a workaround when running tests. I don't want to show the
                 // "You're not organizer, do you want to modify event?" dialog in unit-tests, but want
                 // to emulate a "yes" and a "no" press.
