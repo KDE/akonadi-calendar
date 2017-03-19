@@ -102,9 +102,9 @@ void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMess
                                   m_queuedInvitation.iCal,
                                   m_queuedInvitation.action);
         } else {
-            emit q->iTipMessageSent(ResultError, i18n("Error loading calendar: %1", errorMessage));
+            emit q->iTipMessageProcessed(ResultError, i18n("Error loading calendar: %1", errorMessage));
         }
-    } else if (m_currentOperation ==  OperationSendiTIPMessage) {
+    } else if (m_currentOperation == OperationSendiTIPMessage) {
         q->sendiTIPMessage(m_queuedInvitation.method,
                            m_queuedInvitation.incidence,
                            m_parentWidget);
