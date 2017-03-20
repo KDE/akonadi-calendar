@@ -41,12 +41,12 @@ Q_DECLARE_METATYPE(KCalCore::Incidence::Ptr)
 class FakeMessageQueueJob : public MailTransport::MessageQueueJob
 {
 public:
-    explicit FakeMessageQueueJob(QObject *parent = 0)
+    explicit FakeMessageQueueJob(QObject *parent = nullptr)
         : MailTransport::MessageQueueJob(parent)
     {
     }
 
-    virtual void start()
+    void start() Q_DECL_OVERRIDE
     {
         UnitTestResult unitTestResult;
         unitTestResult.message     = message();
@@ -71,12 +71,12 @@ UnitTestResult::List FakeMessageQueueJob::sUnitTestResults;
 class FakeITIPHandlerComponentFactory : public ITIPHandlerComponentFactory
 {
 public:
-    explicit FakeITIPHandlerComponentFactory(QObject *parent = 0)
+    explicit FakeITIPHandlerComponentFactory(QObject *parent = nullptr)
         : ITIPHandlerComponentFactory(parent)
     {
     }
 
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0)
+    MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) Q_DECL_OVERRIDE
     {
         Q_UNUSED(incidence);
         Q_UNUSED(identity);

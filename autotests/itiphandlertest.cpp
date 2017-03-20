@@ -56,7 +56,7 @@ public:
     {
     }
 
-    virtual void start()
+    void start() Q_DECL_OVERRIDE
     {
         UnitTestResult unitTestResult;
         unitTestResult.message     = message();
@@ -86,7 +86,7 @@ public:
     {
     }
 
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = 0)
+    MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) Q_DECL_OVERRIDE
     {
         Q_UNUSED(incidence);
         Q_UNUSED(identity);
