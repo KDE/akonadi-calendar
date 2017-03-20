@@ -30,7 +30,7 @@
 #include <collectionfetchscope.h>
 #include <itemfetchscope.h>
 #include <qtest_akonadi.h>
-#include <mailtransport/messagequeuejob.h>
+#include <mailtransportakonadi/messagequeuejob.h>
 
 #include <kcalcore/event.h>
 
