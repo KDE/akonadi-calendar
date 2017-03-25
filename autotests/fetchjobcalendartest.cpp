@@ -24,8 +24,6 @@
 #include <collectionfetchscope.h>
 #include <qtest_akonadi.h>
 
-#include <QTestEventLoop>
-
 using namespace Akonadi;
 using namespace KCalCore;
 
@@ -38,7 +36,7 @@ class FetchJobCalendarTest : public QObject
     {
         Item item;
         item.setMimeType(Event::eventMimeType());
-        Incidence::Ptr incidence = Incidence::Ptr(new Event());
+        Incidence::Ptr incidence(new Event());
         incidence->setUid(uid);
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
@@ -74,39 +72,26 @@ private Q_SLOTS:
 
     void testFetching()
     {
-        createIncidence(tr("a"));
-        createIncidence(tr("b"));
-        createIncidence(tr("c"));
-        createIncidence(tr("d"));
-        createIncidence(tr("e"));
-        createIncidence(tr("f"));
+        createIncidence(QStringLiteral("a"));
+        createIncidence(QStringLiteral("b"));
+        createIncidence(QStringLiteral("c"));
+        createIncidence(QStringLiteral("d"));
+        createIncidence(QStringLiteral("e"));
+        createIncidence(QStringLiteral("f"));
 
-        FetchJobCalendar *calendar = new FetchJobCalendar();
-        connect(calendar, &FetchJobCalendar::loadFinished,
-                this, &FetchJobCalendarTest::handleLoadFinished);
-        QTestEventLoop::instance().enterLoop(10);
-        QVERIFY(!QTestEventLoop::instance().timeout());
+        FetchJobCalendar calendar;
+        QSignalSpy spy(&calendar, &FetchJobCalendar::loadFinished);
+        QVERIFY(spy.wait(1000));
+        QVERIFY2(spy.at(0).at(0).toBool(), qPrintable(spy.at(0).at(1).toString()));
 
-        Incidence::List incidences = calendar->incidences();
-        QVERIFY(incidences.count() == 6);
-        QVERIFY(calendar->item(tr("a")).isValid());
-        QVERIFY(calendar->item(tr("b")).isValid());
-        QVERIFY(calendar->item(tr("c")).isValid());
-        QVERIFY(calendar->item(tr("d")).isValid());
-        QVERIFY(calendar->item(tr("e")).isValid());
-        QVERIFY(calendar->item(tr("f")).isValid());
-
-        delete calendar;
-    }
-
-public Q_SLOTS:
-    void handleLoadFinished(bool success, const QString &errorMessage)
-    {
-        if (!success) {
-            qDebug() << errorMessage;
-        }
-        QVERIFY(success);
-        QTestEventLoop::instance().exitLoop();
+        const Incidence::List incidences = calendar.incidences();
+        QCOMPARE(incidences.count(), 6);
+        QVERIFY(calendar.item(QStringLiteral("a")).isValid());
+        QVERIFY(calendar.item(QStringLiteral("b")).isValid());
+        QVERIFY(calendar.item(QStringLiteral("c")).isValid());
+        QVERIFY(calendar.item(QStringLiteral("d")).isValid());
+        QVERIFY(calendar.item(QStringLiteral("e")).isValid());
+        QVERIFY(calendar.item(QStringLiteral("f")).isValid());
     }
 };
 
