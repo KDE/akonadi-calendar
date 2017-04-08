@@ -96,23 +96,6 @@ public:
                           QWidget *parentWidget = nullptr);
 
     /**
-        Retrieve the freebusy information of a contact for a specified period.
-
-        This method works as the previous one except that there is no fallback
-        on the URL mechanism.
-
-        @param email Address of the person for which the F/B list should be
-              retrieved
-        @param start Start of the period to get F/B data for
-        @param end End of the period to get F/B data for
-        @return true if a free-busy provider has been contacted, regardless
-                of the fact that it will respond positively to the handling
-                request
-      */
-    bool retrieveFreeBusy(const QString &email, const KDateTime &start,
-                          const KDateTime &end);
-
-    /**
       Clears the retrieval queue, i.e. all retrieval request that are not started
       yet will not start at all. The freebusy retrieval that currently is
       downloading (if one) will not be canceled.
