@@ -24,7 +24,7 @@
 
 #include <QtCore/QString>
 
-class KDateTime;
+class QDateTime;
 
 namespace Akonadi
 {
@@ -73,7 +73,7 @@ public:
       *
       * @return The date and time the cache was last updated.
       */
-    virtual KDateTime lastCacheUpdate() const = 0;
+    virtual QDateTime lastCacheUpdate() const = 0;
 
     /**
       * This method is called to find out is the resource
@@ -124,7 +124,7 @@ public:
       * @param end The end of the free-busy period
       * @see freeBusyRetrieved()
       */
-    virtual void retrieveFreeBusy(const QString &email, const KDateTime &start, const KDateTime &end) = 0;
+    virtual void retrieveFreeBusy(const QString &email, const QDateTime &start, const QDateTime &end) = 0;
 
     /**
       * Derivate classes must call this method to notify the requestor

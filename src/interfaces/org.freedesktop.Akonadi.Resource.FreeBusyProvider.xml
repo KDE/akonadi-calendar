@@ -2,7 +2,8 @@
 <node>
   <interface name="org.freedesktop.Akonadi.Resource.FreeBusyProvider">
     <method name="lastCacheUpdate">
-      <arg type="s" direction="out"/>
+      <arg type="((iii)(iiii)i)" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QDateTime"/>
     </method>
     <method name="canHandleFreeBusy">
       <arg name="email" type="s" direction="in"/>
@@ -10,8 +11,11 @@
     </method>
     <method name="retrieveFreeBusy">
       <arg name="email" type="s" direction="in"/>
-      <arg name="start" type="s" direction="in"/>
-      <arg name="end" type="s" direction="in"/>
+      <arg name="start" type="((iii)(iiii)i)" direction="in"/>
+      <arg name="end" type="((iii)(iiii)i)" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QDateTime"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QDateTime"/>
+    </signal>
       <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
     </method>
     <signal name="handlesFreeBusy">

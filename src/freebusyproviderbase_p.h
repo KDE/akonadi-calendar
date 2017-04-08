@@ -72,9 +72,9 @@ private:
     friend class ::Akonadi__FreeBusyProviderAdaptor;
 
     // D-Bus calls
-    QString lastCacheUpdate();
+    QDateTime lastCacheUpdate();
     void canHandleFreeBusy(const QString &email);
-    void retrieveFreeBusy(const QString &email, const QString &start, const QString &end);
+    void retrieveFreeBusy(const QString &email, const QDateTime &start, const QDateTime &end);
 
     FreeBusyProviderBase *const q;
 };

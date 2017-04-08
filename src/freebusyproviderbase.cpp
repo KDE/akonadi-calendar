@@ -23,7 +23,7 @@
 #include <KDBusConnectionPool>
 #include "freebusyprovideradaptor.h"
 
-#include <kdatetime.h>
+#include <QDateTime>
 
 using namespace Akonadi;
 
@@ -35,10 +35,9 @@ FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *q
             this, QDBusConnection::ExportAdaptors);
 }
 
-QString FreeBusyProviderBasePrivate::lastCacheUpdate()
+QDateTime FreeBusyProviderBasePrivate::lastCacheUpdate()
 {
-    KDateTime last = q->lastCacheUpdate();
-    return last.toString();
+    return q->lastCacheUpdate();
 }
 
 void FreeBusyProviderBasePrivate::canHandleFreeBusy(const QString &email)
@@ -46,10 +45,8 @@ void FreeBusyProviderBasePrivate::canHandleFreeBusy(const QString &email)
     q->canHandleFreeBusy(email);
 }
 
-void FreeBusyProviderBasePrivate::retrieveFreeBusy(const QString &email, const QString &_start, const QString &_end)
+void FreeBusyProviderBasePrivate::retrieveFreeBusy(const QString &email, const QDateTime &start, const QDateTime &end)
 {
-    KDateTime start = KDateTime::fromString(_start);
-    KDateTime end = KDateTime::fromString(_end);
     q->retrieveFreeBusy(email, start, end);
 }
 
