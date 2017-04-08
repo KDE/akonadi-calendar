@@ -146,40 +146,22 @@ FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const Q
 
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
 
-FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(
-    const QString &start, const QString &end)
+FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue()
     : mHandlersCount(0), mResultingFreeBusy(nullptr)
 {
-    KDateTime startDate, endDate;
-
-    if (!start.isEmpty()) {
-        mStartTime = start;
-        startDate = KDateTime::fromString(start);
-    } else {
-        // Set the start of the period to today 00:00:00
-        startDate = KDateTime(KDateTime::currentLocalDate());
-        mStartTime = startDate.toString();
-    }
-
-    if (!end.isEmpty()) {
-        mEndTime = end;
-        endDate = KDateTime::fromString(end);
-    } else {
-        // Set the end of the period to today + 14 days.
-        endDate = KDateTime(KDateTime::currentLocalDate()).addDays(14);
-        mEndTime = endDate.toString();
-    }
-
-    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(startDate, endDate));
+    // Set the start of the period to today 00:00:00
+    mStartTime = QDateTime(QDate::currentDate(), QTime());
+    mEndTime = mStartTime.addDays(14);
+    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KDateTime(mStartTime), KDateTime(mEndTime)));
 }
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(
-    const KDateTime &start, const KDateTime &end)
+    const QDateTime &start, const QDateTime &end)
     : mHandlersCount(0), mResultingFreeBusy(nullptr)
 {
-    mStartTime = start.toString();
-    mEndTime = end.toString();
-    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(start, end));
+    mStartTime = start;
+    mEndTime = end;
+    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KDateTime(start), KDateTime(end)));
 }
 
 /// FreeBusyManagerPrivate
@@ -601,8 +583,8 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
 
 void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
         const QString &email,
-        const KDateTime &start,
-        const KDateTime &end)
+        const QDateTime &start,
+        const QDateTime &end)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue(start, end);

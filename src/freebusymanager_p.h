@@ -66,13 +66,11 @@ public: /// Structs
     };
 
     struct FreeBusyProvidersRequestsQueue {
-        explicit FreeBusyProvidersRequestsQueue(const QString &start = QString(),
-                                                const QString &end = QString());
+        FreeBusyProvidersRequestsQueue();
+        FreeBusyProvidersRequestsQueue(const QDateTime &start, const QDateTime &end);
 
-        FreeBusyProvidersRequestsQueue(const KDateTime &start, const KDateTime &end);
-
-        QString mStartTime;
-        QString mEndTime;
+        QDateTime mStartTime;
+        QDateTime mEndTime;
         QList<FreeBusyProviderRequest> mRequests;
         int mHandlersCount;
         KCalCore::FreeBusy::Ptr mResultingFreeBusy;
@@ -112,7 +110,7 @@ public: /// Functions
     QStringList getFreeBusyProviders() const;
     void queryFreeBusyProviders(const QStringList &providers, const QString &email);
     void queryFreeBusyProviders(const QStringList &providers, const QString &email,
-                                const KDateTime &start, const KDateTime &end);
+                                const QDateTime &start, const QDateTime &end);
 
 public Q_SLOTS:
     void processRetrieveQueue();
