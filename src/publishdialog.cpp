@@ -99,8 +99,7 @@ PublishDialog::~PublishDialog()
 
 void PublishDialog::slotHelp()
 {
-    QUrl url;
-    url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/group-scheduling.html")));
+    const QUrl url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/group-scheduling.html")));
     // launch khelpcenter, or a browser for URIs not handled by khelpcenter
     QDesktopServices::openUrl(url);
 }
