@@ -307,9 +307,7 @@ QStack<Entry::Ptr> &History::Private::stack(OperationType type)
 
 void History::Private::setEnabled(bool enabled)
 {
-    if (enabled != mEnabled) {
-        mEnabled = enabled;
-    }
+    mEnabled = enabled;
 }
 
 int History::Private::redoCount() const

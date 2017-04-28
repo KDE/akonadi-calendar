@@ -310,7 +310,8 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     QStringList::ConstIterator ext;
     QList<QUrl> urlsToCheck;
     urlsToCheck.reserve(extensions.count());
-    for (ext = extensions.constBegin(); ext != extensions.constEnd(); ++ext) {
+    QStringList::ConstIterator extEnd(extensions.constEnd());
+    for (ext = extensions.constBegin(); ext != extEnd; ++ext) {
         // build a url for this extension
         const QUrl sourceUrl = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
         QUrl dirURL = replaceVariablesUrl(sourceUrl, email);
@@ -677,7 +678,8 @@ void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
     QString respondingService = iface->service();
     int requestIndex = -1;
 
-    for (int i = 0; i < queue->mRequests.size(); ++i) {
+    const int requestsSize(queue->mRequests.size());
+    for (int i = 0; i < requestsSize; ++i) {
         if (queue->mRequests.at(i).mInterface->service() == respondingService) {
             requestIndex = i;
         }

@@ -324,7 +324,8 @@ void MultiEntry::addEntry(const Entry::Ptr &entry)
 
 void MultiEntry::updateIds(Item::Id oldId, Item::Id newId)
 {
-    for (int i = 0; i < mEntries.count(); ++i) {
+    const int numberOfEntries(mEntries.count());
+    for (int i = 0; i < numberOfEntries; ++i) {
         mEntries.at(i)->updateIds(oldId, newId);
     }
 }
