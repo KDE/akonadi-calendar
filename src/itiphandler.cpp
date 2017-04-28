@@ -373,7 +373,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
             incidence->setOrganizer(KCalCore::Person::Ptr(
                                         new KCalCore::Person(Akonadi::CalendarUtils::fullName(),
                                                 Akonadi::CalendarUtils::email())));
-        }
+        }        
 
         if (incidence->hasRecurrenceId()) {
             // For an individual occurrence, recur id doesn't make sense, since we're not sending the whole recurrence series.
@@ -393,6 +393,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
                        recipients, messageText,
                        MailTransport::TransportManager::self()->defaultTransportName());
     }
+    delete publishdlg;
 }
 
 void ITIPHandler::setGroupwareUiDelegate(GroupwareUiDelegate *delegate)
