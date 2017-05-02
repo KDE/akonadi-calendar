@@ -354,7 +354,7 @@ bool MultiEntry::redo()
     mOperationInProgress = TypeRedo;
     Q_ASSERT(!mEntries.isEmpty());
     mFinishedEntries = 0;
-    foreach (const Entry::Ptr &entry, mEntries) {
+    for (const Entry::Ptr &entry : qAsConst(mEntries)) {
         entry->doIt(TypeRedo);
     }
     mChanger->endAtomicOperation();
