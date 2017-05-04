@@ -182,7 +182,7 @@ bool DeletionEntry::undo()
     mErrorString.clear();
     const bool useAtomicOperation = mItems.count() > 1 ;
     bool success = true;
-    foreach (const Akonadi::Item &item, mItems) {
+    for (const Akonadi::Item &item : qAsConst(mItems)) {
         if (useAtomicOperation) {
             mChanger->startAtomicOperation();
         }

@@ -226,7 +226,7 @@ void CalendarClipboard::cutIncidence(const KCalCore::Incidence::Ptr &incidence,
         d->getIncidenceHierarchy(incidence, uids);
         Q_ASSERT(!uids.isEmpty());
         KCalCore::Incidence::List incidencesToCut;
-        foreach (const QString &uid, uids) {
+        for (const QString &uid : qAsConst(uids)) {
             KCalCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
             if (child) {
                 incidencesToCut << child;
@@ -264,7 +264,7 @@ bool CalendarClipboard::copyIncidence(const KCalCore::Incidence::Ptr &incidence,
         QStringList uids;
         d->getIncidenceHierarchy(incidence, uids);
         Q_ASSERT(!uids.isEmpty());
-        foreach (const QString &uid, uids) {
+        for (const QString &uid : qAsConst(uids)) {
             KCalCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
             if (child) {
                 incidencesToCopy << child;

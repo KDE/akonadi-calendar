@@ -183,11 +183,11 @@ void History::Private::updateIds(Item::Id oldId, Item::Id newId)
 {
     mEntryInProgress->updateIds(oldId, newId);
 
-    foreach (const Entry::Ptr &entry, mUndoStack) {
+    for (const Entry::Ptr &entry : qAsConst(mUndoStack)) {
         entry->updateIds(oldId, newId);
     }
 
-    foreach (const Entry::Ptr &entry, mRedoStack) {
+    for (const Entry::Ptr &entry : qAsConst(mRedoStack)) {
         entry->updateIds(oldId, newId);
     }
 }
@@ -228,7 +228,7 @@ void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult
     // was in progress
     if (!mQueuedEntries.isEmpty()) {
         mRedoStack.clear();
-        foreach (const Entry::Ptr &entry, mQueuedEntries) {
+        for (const Entry::Ptr &entry : qAsConst(mQueuedEntries)) {
             mUndoStack.push(entry);
         }
         mQueuedEntries.clear();

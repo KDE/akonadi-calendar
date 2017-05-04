@@ -616,14 +616,14 @@ void ITIPHandlerTest::testIdentity()
 
 void ITIPHandlerTest::cleanup()
 {
-    Akonadi::Item::List items = calendarItems();
-    foreach (const Akonadi::Item &item, items) {
+    const Akonadi::Item::List items = calendarItems();
+    for (const Akonadi::Item &item : items) {
         ItemDeleteJob *job = new ItemDeleteJob(item);
         AKVERIFYEXEC(job);
     }
 
     delete m_itipHandler;
-    m_itipHandler = 0;
+    m_itipHandler = nullptr;
 }
 
 void ITIPHandlerTest::createITIPHandler()
@@ -662,9 +662,9 @@ void ITIPHandlerTest::processItip(const QString &icaldata, const QString &receiv
 
 Attendee::Ptr ITIPHandlerTest::ourAttendee(const KCalCore::Incidence::Ptr &incidence) const
 {
-    KCalCore::Attendee::List attendees = incidence->attendees();
+    const KCalCore::Attendee::List attendees = incidence->attendees();
     KCalCore::Attendee::Ptr me;
-    foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
+    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
         if (attendee->email() == QLatin1String(s_ourEmail)) {
             me = attendee;
             break;

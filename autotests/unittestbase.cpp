@@ -116,10 +116,10 @@ void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalen
 
     // Now compare the expected calendar to the calendar we got.
     Incidence::List incidences = calendar->incidences();
-    Incidence::List expectedIncidences = expectedCalendar->incidences();
+    const Incidence::List expectedIncidences = expectedCalendar->incidences();
 
     // First, replace the randomly generated UIDs with the UID that came in the invitation e-mail...
-    foreach(const KCalCore::Incidence::Ptr &incidence, incidences) {
+    for(const KCalCore::Incidence::Ptr &incidence : incidences) {
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We have incidece with uid=" << incidence->uid()
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
@@ -129,7 +129,7 @@ void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalen
     }
 
     // ... so we can compare them
-    foreach(const KCalCore::Incidence::Ptr &incidence, expectedIncidences) {
+    for(const KCalCore::Incidence::Ptr &incidence : expectedIncidences) {
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We expect incidece with uid=" << incidence->uid()
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
