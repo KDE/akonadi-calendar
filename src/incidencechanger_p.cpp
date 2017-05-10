@@ -91,7 +91,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
     bool noAcl = false;
     bool invalidCollection = false;
     Collection collectionToUse;
-    foreach (const Change::Ptr &change, mPendingCreations) {
+    foreach (const Change::Ptr &change, mPendingCreations) { //Don't use for(...:...) here.
         mPendingCreations.removeAll(change);
 
         if (canceled) {

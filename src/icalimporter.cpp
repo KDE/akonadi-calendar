@@ -209,7 +209,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         }
 
         d->m_pendingRequests.clear();
-        Incidence::List incidences = temporaryCalendar->incidences();
+        const Incidence::List incidences = temporaryCalendar->incidences();
 
         if (incidences.isEmpty()) {
             d->setErrorMessage(i18n("The ical file to merge is empty."));
@@ -232,7 +232,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         const IncidenceChanger::DestinationPolicy policySaved = d->m_changer->destinationPolicy();
         d->m_changer->startAtomicOperation(i18n("Merge ical file into existing calendar."));
         d->m_changer->setDestinationPolicy(IncidenceChanger::DestinationPolicyNeverAsk);
-        foreach (const Incidence::Ptr &incidence, incidences) {
+        for (const Incidence::Ptr &incidence : qAsConst(incidences)) {
             Q_ASSERT(incidence);
             if (!incidence) {
                 continue;
