@@ -62,7 +62,7 @@ public:
       * Returns if the calendar already finished loading.
       * This is an alternative to listening for the loadFinished() signal.
       */
-    bool isLoaded() const Q_DECL_OVERRIDE;
+    bool isLoaded() const override;
 
 Q_SIGNALS:
     /**

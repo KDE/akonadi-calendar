@@ -44,17 +44,17 @@ public:
     ~MailScheduler();
 
     void publish(const KCalCore::IncidenceBase::Ptr &incidence,
-                 const QString &recipients) Q_DECL_OVERRIDE;
+                 const QString &recipients) override;
 
     void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
-                            KCalCore::iTIPMethod method) Q_DECL_OVERRIDE;
+                            KCalCore::iTIPMethod method) override;
 
     void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
                             KCalCore::iTIPMethod method,
-                            const QString &recipients) Q_DECL_OVERRIDE;
+                            const QString &recipients) override;
 
     /** Returns the directory where the free-busy information is stored */
-    QString freeBusyDir() const Q_DECL_OVERRIDE;
+    QString freeBusyDir() const override;
 
     /**
      * Accepts a counter proposal.

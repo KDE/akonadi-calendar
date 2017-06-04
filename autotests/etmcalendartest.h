@@ -54,9 +54,9 @@ private Q_SLOTS:
     void testFilterInvitationsChanged();
 
 public Q_SLOTS:
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar* cal) Q_DECL_OVERRIDE;
+    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar* cal) override;
     void handleCollectionsAdded(const Akonadi::Collection::List &collectionList);
 
 private:

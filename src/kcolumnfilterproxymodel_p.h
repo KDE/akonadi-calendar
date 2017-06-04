@@ -65,7 +65,7 @@ public:
     void setVisibleColumns(const QVector<int> &visibleColumns);
 
 protected:
-    bool filterAcceptsColumn(int column, const QModelIndex &parent) const Q_DECL_OVERRIDE;
+    bool filterAcceptsColumn(int column, const QModelIndex &parent) const override;
 
 private:
     KColumnFilterProxyModelPrivate *const d_ptr;

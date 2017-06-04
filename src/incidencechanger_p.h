@@ -131,7 +131,7 @@ public:
         }
     }
 
-    void emitCompletionSignal() Q_DECL_OVERRIDE;
+    void emitCompletionSignal() override;
 };
 
 class CreationChange : public Change
@@ -153,7 +153,7 @@ public:
         }
     }
 
-    void emitCompletionSignal() Q_DECL_OVERRIDE;
+    void emitCompletionSignal() override;
 
     Akonadi::Collection mUsedCol1lection;
 };
@@ -177,7 +177,7 @@ public:
         }
     }
 
-    void emitCompletionSignal() Q_DECL_OVERRIDE;
+    void emitCompletionSignal() override;
 
     QVector<Akonadi::Item::Id> mItemIds;
 };

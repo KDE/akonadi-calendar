@@ -39,8 +39,8 @@ private Q_SLOTS:
     void testPurge();
 
 public:
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) Q_DECL_OVERRIDE;
+    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) override;
 
 public Q_SLOTS:
     void onTodosPurged(bool success, int numDeleted, int numIgnored);

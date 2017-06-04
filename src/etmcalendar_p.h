@@ -69,7 +69,7 @@ public:
     {
     }
 
-    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE
+    QVariant data(const QModelIndex &index, int role) const override
     {
         if (role == Qt::CheckStateRole) {
             // Don't show the checkbox if the collection can't contain incidences

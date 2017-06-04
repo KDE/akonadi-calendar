@@ -115,7 +115,7 @@ public:
       @param email is a QString containing a email string in the
       "FirstName LastName <emailaddress>" format.
     */
-    KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email) Q_DECL_OVERRIDE;
+    KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email) override;
 
     /**
       Save freebusy information belonging to an email.
@@ -126,7 +126,7 @@ public:
       @param person is a valid Person instance.
     */
     bool saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
-                      const KCalCore::Person::Ptr &person) Q_DECL_OVERRIDE;
+                      const KCalCore::Person::Ptr &person) override;
 
 Q_SIGNALS:
     /**
@@ -137,7 +137,7 @@ Q_SIGNALS:
 
 protected:
     /** React on timer events, used for delayed freebusy list uploading */
-    void timerEvent(QTimerEvent *event) Q_DECL_OVERRIDE;
+    void timerEvent(QTimerEvent *event) override;
 
 private:
     /**

@@ -39,7 +39,7 @@ public:
     explicit FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget = nullptr);
     ~FreeBusyDownloadJob();
 
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
     QUrl url() const;
     QByteArray rawFreeBusyData() const;

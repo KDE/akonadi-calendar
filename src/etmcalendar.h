@@ -157,7 +157,7 @@ public:
       */
     KCalCore::Alarm::List alarms(const KDateTime &from,
                                  const KDateTime &to,
-                                 bool excludeBlockedAlarms = false) const Q_DECL_OVERRIDE;
+                                 bool excludeBlockedAlarms = false) const override;
 
     /**
      * Enable or disable collection filtering.
@@ -177,7 +177,7 @@ public:
     /**
       * Returns if the calendar already finished loading.
       */
-    bool isLoaded() const Q_DECL_OVERRIDE;
+    bool isLoaded() const override;
 
 Q_SIGNALS:
     /**
