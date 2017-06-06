@@ -23,7 +23,7 @@
 #include <collection.h>
 #include <item.h>
 
-#include <QtCore/QObject>
+#include <QObject>
 #include <QStringList>
 
 namespace Akonadi {

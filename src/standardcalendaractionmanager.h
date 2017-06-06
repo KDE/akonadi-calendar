@@ -27,7 +27,7 @@
 #include <AkonadiWidgets/StandardActionManager>
 #include <kcalcore/todo.h>
 
-#include <QtCore/QObject>
+#include <QObject>
 
 //needed for windows ce, its defined somewhere
 #undef CreateEvent

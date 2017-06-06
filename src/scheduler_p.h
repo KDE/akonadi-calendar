@@ -25,8 +25,8 @@
 #include <kcalcore/schedulemessage.h>
 #include <kcalcore/incidencebase.h>
 
-#include <QtCore/QObject>
-#include <QtCore/QString>
+#include <QObject>
+#include <QString>
 
 namespace KCalCore
 {

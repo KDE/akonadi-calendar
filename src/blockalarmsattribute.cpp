@@ -23,8 +23,8 @@
 
 #include "blockalarmsattribute.h"
 #include <attributefactory.h>
-#include <QtCore/QByteArray>
-#include <QtCore/QDataStream>
+#include <QByteArray>
+#include <QDataStream>
 
 using namespace Akonadi;
 

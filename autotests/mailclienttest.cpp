@@ -29,7 +29,7 @@
 #include <qtest_akonadi.h>
 
 #include <QTestEventLoop>
-#include <QtCore/QObject>
+#include <QObject>
 
 static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 

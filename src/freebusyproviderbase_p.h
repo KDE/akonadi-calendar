@@ -22,7 +22,7 @@
 
 #include "freebusyproviderbase.h"
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class Akonadi__FreeBusyProviderAdaptor;
 

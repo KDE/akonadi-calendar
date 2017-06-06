@@ -27,9 +27,9 @@
 #include <kcalcore/freebusy.h>
 #include <kcalcore/icalformat.h>
 
-#include <QtCore/QPointer>
-#include <QtDBus/QDBusContext>
-#include <QtDBus/QDBusInterface>
+#include <QPointer>
+#include <QDBusContext>
+#include <QDBusInterface>
 
 #include <KJob>
 #include <QUrl>

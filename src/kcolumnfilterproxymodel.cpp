@@ -21,7 +21,7 @@
 
 #include "kcolumnfilterproxymodel_p.h"
 
-#include <QtCore/QVector>
+#include <QVector>
 
 using namespace Akonadi;
 

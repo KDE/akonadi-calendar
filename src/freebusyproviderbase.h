@@ -22,7 +22,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <QtCore/QString>
+#include <QString>
 
 class QDateTime;
 
