@@ -218,7 +218,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
 
         if (!collection.isValid()) {
             int dialogCode;
-            QStringList mimeTypes = QStringList() << KCalCore::Event::eventMimeType() << KCalCore::Todo::todoMimeType()
+            const QStringList mimeTypes = QStringList() << KCalCore::Event::eventMimeType() << KCalCore::Todo::todoMimeType()
                                     << KCalCore::Journal::journalMimeType();
             collection = CalendarUtils::selectCollection(nullptr, dialogCode /*by-ref*/, mimeTypes);
         }

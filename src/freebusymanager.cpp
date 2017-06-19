@@ -610,7 +610,8 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
     qCDebug(AKONADICALENDAR_LOG) << respondingService << "responded to our FreeBusy request:" << handles;
     int requestIndex = -1;
 
-    for (int i = 0; i < queue->mRequests.size(); ++i) {
+    const int requestsSize(queue->mRequests.size());
+    for (int i = 0; i < requestsSize; ++i) {
         if (queue->mRequests.at(i).mInterface->service() == respondingService) {
             requestIndex = i;
         }
