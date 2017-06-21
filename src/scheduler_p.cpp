@@ -474,10 +474,8 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         //get matching attendee in calendar
         qCDebug(AKONADICALENDAR_LOG) << "match found!";
         Attendee::List attendeesIn = incidenceBase->attendees();
-        Attendee::List attendeesEv;
         Attendee::List attendeesNew;
-
-        attendeesEv = incidence->attendees();
+        Attendee::List attendeesEv = incidence->attendees();
         Attendee::List::ConstIterator inIt;
         Attendee::List::ConstIterator evIt;
         for (inIt = attendeesIn.constBegin(); inIt != attendeesIn.constEnd(); ++inIt) {
@@ -502,8 +500,8 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         }
 
         bool attendeeAdded = false;
-        for (Attendee::List::ConstIterator it = attendeesNew.constBegin();
-                it != attendeesNew.constEnd(); ++it) {
+        for (Attendee::List::ConstIterator it = attendeesNew.constBegin(), end = attendeesNew.constEnd();
+                it != end; ++it) {
             Attendee::Ptr attNew = *it;
             QString msg =
                 i18nc("@info", "%1 wants to attend %2 but was not invited.",
