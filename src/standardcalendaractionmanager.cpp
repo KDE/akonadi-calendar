@@ -602,7 +602,6 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         break;
     case CreateSubTodo:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QStringLiteral("new_subtodo")));
         action->setText(i18n("New Su&b-to-do..."));
         action->setWhatsThis(i18n("Create a new Sub-to-do"));
         d->mActions.insert(CreateSubTodo, action);
