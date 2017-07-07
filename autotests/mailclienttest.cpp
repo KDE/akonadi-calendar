@@ -434,9 +434,6 @@ private Q_SLOTS:
         }
     }
 
-public Q_SLOTS:
-private:
-
 };
 
 QTEST_AKONADIMAIN(MailClientTest)
