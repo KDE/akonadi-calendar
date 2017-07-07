@@ -364,7 +364,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
     // Clone so we can change organizer and recurid
     KCalCore::Incidence::Ptr incidence = KCalCore::Incidence::Ptr(originalIncidence->clone());
 
-    KIdentityManagement::IdentityManager identityManager;
+
 
     QPointer<Akonadi::PublishDialog> publishdlg = new Akonadi::PublishDialog;
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
@@ -389,7 +389,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
         connect(mailer, SIGNAL(finished(Akonadi::MailClient::Result,QString)),
                 d, SLOT(finishSendAsICalendar(Akonadi::MailScheduler::Result,QString)));
 
-        mailer->mailTo(incidence, identityManager.identityForAddress(from), from, bccMe,
+        mailer->mailTo(incidence, KIdentityManagement::IdentityManager::self()->identityForAddress(from), from, bccMe,
                        recipients, messageText,
                        MailTransport::TransportManager::self()->defaultTransportName());
     }
