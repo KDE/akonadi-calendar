@@ -191,7 +191,6 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
                       const QString &attachment, const QString &mailTransport)
 {
     Q_UNUSED(hidden);
-
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(
                 nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
         qCritical() << "Error while creating transport";
@@ -205,6 +204,8 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
     if (to.isEmpty()) {
         to = from;
     }
+    to = KEmailAddress::extractEmailAddress(
+                                       KEmailAddress::normalizeAddressesAndEncodeIdn(to));
     qCDebug(AKONADICALENDAR_LOG) << "\nFrom:" << from
                                  << "\nTo:" << to
                                  << "\nCC:" << cc
