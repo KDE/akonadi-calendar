@@ -342,5 +342,10 @@ void History::Private::emitDone(OperationType type, History::ResultCode resultCo
     }
 }
 
+Akonadi::IncidenceChanger *History::incidenceChanger() const
+{
+    return d->mChanger;
+}
+
 #include "moc_history.cpp"
 #include "moc_history_p.cpp"
