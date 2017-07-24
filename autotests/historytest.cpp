@@ -39,10 +39,20 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
 {
     ItemFetchJob *job = new ItemFetchJob(item);
     job->fetchScope().fetchFullPayload();
-    Q_ASSERT(job->exec());
-    Q_ASSERT(!job->items().isEmpty());
+    bool ok = false;
+    [&]() {
+        QVERIFY(job->exec());
+        QVERIFY(!job->items().isEmpty());
+        ok = true;
+    }();
+    if (!ok) {
+        return false;
+    }
     Item it = job->items().first();
-    Q_ASSERT(it.hasPayload());
+    if (!it.hasPayload()) {
+        qWarning() << "Item has no payload";
+        return false;
+    }
 
     if (it.payload<KCalCore::Incidence::Ptr>()->summary() == expected) {
         return true;
@@ -67,9 +77,11 @@ static Akonadi::Item createItem(const Akonadi::Collection &collection)
 {
     Item i = item();
     ItemCreateJob *createJob = new ItemCreateJob(i, collection);
+    [&]() {
+        QVERIFY(createJob->exec());
+        QVERIFY(createJob->item().isValid());
+    }();
 
-    Q_ASSERT(createJob->exec());
-    Q_ASSERT(createJob->item().isValid());
     return createJob->item();
 }
 
