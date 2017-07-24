@@ -1119,6 +1119,9 @@ void IncidenceChanger::endAtomicOperation()
 void IncidenceChanger::setShowDialogsOnError(bool enable)
 {
     d->mShowDialogsOnError = enable;
+    if (d->mHistory) {
+        d->mHistory->incidenceChanger()->setShowDialogsOnError(enable);
+    }
 }
 
 bool IncidenceChanger::showDialogsOnError() const
