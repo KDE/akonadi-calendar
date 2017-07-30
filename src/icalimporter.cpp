@@ -22,25 +22,16 @@
 #include "icalimporter.h"
 #include "icalimporter_p.h"
 #include "utils_p.h"
-
-#include <agentmanager.h>
-#include <agentinstancecreatejob.h>
-
-#include <kcalcore/filestorage.h>
-#include <kcalcore/memorycalendar.h>
-#include <kcalcore/event.h>
-#include <kcalcore/todo.h>
-#include <kcalcore/journal.h>
-
-#include <KJob>
-#include <KLocalizedString>
 #include "akonadicalendar_debug.h"
-#include <KDateTime>
-#include <KIO/JobClasses>
-#include <KIO/Scheduler>
 
-#include <QUrl>
-#include <QFile>
+#include <AkonadiCore/ServerManager>
+#include <AkonadiCore/AgentInstanceCreateJob>
+#include <AkonadiCore/AgentManager>
+
+#include <KCalCore/FileStorage>
+
+#include <KIO/Job>
+
 #include <QDBusInterface>
 #include <QTemporaryFile>
 
@@ -61,7 +52,6 @@ ICalImporter::Private::Private(IncidenceChanger *changer,
     }
     connect(m_changer, &IncidenceChanger::createFinished,
             this, &ICalImporter::Private::onIncidenceCreated);
-
 }
 
 ICalImporter::Private::~Private()
@@ -101,7 +91,9 @@ void ICalImporter::Private::setErrorMessage(const QString &message)
 
 void ICalImporter::Private::resourceCreated(KJob *job)
 {
-    Akonadi::AgentInstanceCreateJob *createjob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
+    Akonadi::AgentInstanceCreateJob *createjob =
+        qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
+
     Q_ASSERT(createjob);
     m_working = false;
     if (createjob->error()) {
@@ -111,8 +103,11 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     }
 
     Akonadi::AgentInstance instance = createjob->instance();
-    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.%1").arg(instance.identifier()), QStringLiteral("/Settings"));
+    const QString service =
+        Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
+                                                 instance.identifier());
 
+    QDBusInterface iface(service, QStringLiteral("/Settings"));
     if (!iface.isValid()) {
         setErrorMessage(i18n("Failed to obtain D-Bus interface for remote configuration."));
         emit q->importIntoNewFinished(false);
@@ -166,7 +161,9 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     d->m_working = true;
 
-    Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
+    Akonadi::AgentType type =
+        Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
+
     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
     connect(job, &KJob::result, d, &Private::resourceCreated);
@@ -218,9 +215,11 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
 
         if (!collection.isValid()) {
             int dialogCode;
-            const QStringList mimeTypes = QStringList() << KCalCore::Event::eventMimeType() << KCalCore::Todo::todoMimeType()
-                                    << KCalCore::Journal::journalMimeType();
-            collection = CalendarUtils::selectCollection(nullptr, dialogCode /*by-ref*/, mimeTypes);
+            const QStringList mimeTypes = QStringList()
+                << KCalCore::Event::eventMimeType()
+                << KCalCore::Todo::todoMimeType()
+                << KCalCore::Journal::journalMimeType();
+            collection = CalendarUtils::selectCollection(nullptr, dialogCode/*by-ref*/, mimeTypes);
         }
 
         if (!collection.isValid()) {
@@ -250,7 +249,8 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
     } else {
         d->m_collection = collection;
         KIO::StoredTransferJob *job = KIO::storedGet(url);
-        connect(job, SIGNAL(data(KIO::Job*,QByteArray)), d, SLOT(remoteDownloadFinished(KIO::Job*,QByteArray)));
+        connect(job, SIGNAL(data(KIO::Job*,QByteArray)),
+                d, SLOT(remoteDownloadFinished(KIO::Job*,QByteArray)));
     }
 
     d->m_working = true;
