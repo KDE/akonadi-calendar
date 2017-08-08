@@ -492,8 +492,7 @@ ETMCalendar::ETMCalendar(Monitor *monitor, QObject *parent)
     Q_D(ETMCalendar);
 
     if (monitor) {
-        QObject::connect(monitor, static_cast<void (Akonadi::Monitor::*)(const Akonadi::Collection &, const QSet<QByteArray> &)>(&Akonadi::Monitor::collectionChanged),
-                         d, &ETMCalendarPrivate::onCollectionChanged);
+        QObject::connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Akonadi::Monitor::collectionChanged), d, &ETMCalendarPrivate::onCollectionChanged);
         d->mETM = CalendarModel::create(monitor);
         d->mETM->setObjectName(QStringLiteral("ETM"));
         d->mETM->setListFilter(Akonadi::CollectionFetchScope::Display);

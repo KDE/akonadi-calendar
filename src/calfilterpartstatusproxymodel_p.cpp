@@ -57,8 +57,7 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     , d(new Private())
 {
 
-    QObject::connect(d->mIdentityManager, static_cast<void (KIdentityManagement::IdentityManager::*)()>(&KIdentityManagement::IdentityManager::changed),
-                     this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
+    QObject::connect(d->mIdentityManager, QOverload<>::of(&KIdentityManagement::IdentityManager::changed), this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 
 CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel()
