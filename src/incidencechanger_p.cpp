@@ -189,9 +189,7 @@ void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change
                                            << "isValid = "  << mDefaultCollection.isValid()
                                            << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);
         // else fallthrough, and ask the user.
-#if QT_VERSION >= QT_VERSION_CHECK(5,8,0)
         Q_FALLTHROUGH();
-#endif
         case DestinationPolicyAsk: {
             mPendingCreations << change;
             loadCollections(); // Now we wait, collections are being loaded async
