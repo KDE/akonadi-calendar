@@ -91,9 +91,9 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
         // Optional Participants and Non-Participants are copied on the email
         if (a->role() == KCalCore::Attendee::OptParticipant ||
                 a->role() == KCalCore::Attendee::NonParticipant) {
-            ccList << a->fullName();
+            ccList << a->email();
         } else {
-            toList << a->fullName();
+            toList << a->email();
         }
     }
     if (toList.isEmpty() && ccList.isEmpty()) {
@@ -204,8 +204,6 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
     if (to.isEmpty()) {
         to = from;
     }
-    to = KEmailAddress::extractEmailAddress(
-                                       KEmailAddress::normalizeAddressesAndEncodeIdn(to));
     qCDebug(AKONADICALENDAR_LOG) << "\nFrom:" << from
                                  << "\nTo:" << to
                                  << "\nCC:" << cc
