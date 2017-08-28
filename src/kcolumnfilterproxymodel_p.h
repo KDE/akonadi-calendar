@@ -68,8 +68,7 @@ protected:
     bool filterAcceptsColumn(int column, const QModelIndex &parent) const override;
 
 private:
-    KColumnFilterProxyModelPrivate *const d_ptr;
-    Q_DECLARE_PRIVATE(KColumnFilterProxyModel)
+    QVector<int> m_visibleColumns;
 };
 
 }
