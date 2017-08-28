@@ -40,8 +40,8 @@ using namespace KIdentityManagement;
 class Q_DECL_HIDDEN MailScheduler::Private
 {
 public:
-    KIdentityManagement::IdentityManager *m_identityManager;
-    MailClient *m_mailer;
+    KIdentityManagement::IdentityManager *m_identityManager = nullptr;
+    MailClient *m_mailer = nullptr;
 };
 
 MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent) : Scheduler(parent)

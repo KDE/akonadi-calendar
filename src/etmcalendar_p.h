@@ -131,16 +131,16 @@ public Q_SLOTS:
 
 public:
     Akonadi::CalendarModel::Ptr mETM;
-    Akonadi::EntityMimeTypeFilterModel *mFilteredETM;
+    Akonadi::EntityMimeTypeFilterModel *mFilteredETM = nullptr;
 
     // akonadi id to collections
     QHash<Akonadi::Collection::Id, Akonadi::Collection> mCollectionMap;
-    CheckableProxyModel *mCheckableProxyModel;
-    Akonadi::CollectionFilterProxyModel *mCollectionProxyModel;
-    Akonadi::CalFilterProxyModel *mCalFilterProxyModel; //KCalCore::CalFilter stuff
+    CheckableProxyModel *mCheckableProxyModel = nullptr;
+    Akonadi::CollectionFilterProxyModel *mCollectionProxyModel = nullptr;
+    Akonadi::CalFilterProxyModel *mCalFilterProxyModel = nullptr; //KCalCore::CalFilter stuff
     //filter out all invitations and declined events
-    Akonadi::CalFilterPartStatusProxyModel *mCalFilterPartStatusProxyModel;
-    KSelectionProxyModel *mSelectionProxy;
+    Akonadi::CalFilterPartStatusProxyModel *mCalFilterPartStatusProxyModel = nullptr;
+    KSelectionProxyModel *mSelectionProxy = nullptr;
     bool mCollectionFilteringEnabled;
     QSet<Akonadi::Collection::Id> mPopulatedCollectionIds;
     QStringList mMimeTypes;

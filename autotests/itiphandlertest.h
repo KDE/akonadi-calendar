@@ -87,9 +87,9 @@ private:
     int m_pendingIncidenceChangerSignal;
     Akonadi::Item mLastInsertedItem;
     Akonadi::ITIPHandler::Result m_expectedResult;
-    Akonadi::ITIPHandler *m_itipHandler;
-    Akonadi::IncidenceChanger *m_changer;
-    bool m_cancelExpected;
+    Akonadi::ITIPHandler *m_itipHandler = nullptr;
+    Akonadi::IncidenceChanger *m_changer = nullptr;
+    bool m_cancelExpected = false;
 };
 
 #endif

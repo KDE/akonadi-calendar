@@ -33,10 +33,9 @@ class Q_DECL_HIDDEN CalFilterProxyModel::Private
 {
 public:
     explicit Private()
-        : filter(nullptr)
     {
     }
-    KCalCore::CalFilter *filter;
+    KCalCore::CalFilter *filter = nullptr;
 };
 
 CalFilterProxyModel::CalFilterProxyModel(QObject *parent)

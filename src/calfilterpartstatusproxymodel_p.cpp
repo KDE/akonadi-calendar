@@ -42,9 +42,9 @@ public:
     {
     }
 
-    bool mFilterVirtual;
+    bool mFilterVirtual = false;
     QList<KCalCore::Attendee::PartStat> mBlockedStatusList;
-    KIdentityManagement::IdentityManager *mIdentityManager;
+    KIdentityManagement::IdentityManager *mIdentityManager = nullptr;
 };
 
 void CalFilterPartStatusProxyModel::slotIdentitiesChanged()

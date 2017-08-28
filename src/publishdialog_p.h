@@ -42,7 +42,7 @@ public Q_SLOTS:
 
 public:
     Ui::PublishDialog_base mUI;
-    PublishDialog *q;
+    PublishDialog *q = nullptr;
 };
 }
 #endif

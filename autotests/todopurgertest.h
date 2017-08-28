@@ -50,16 +50,16 @@ private:
     void createTodo(const QString &uid, const QString &parentUid, bool completed, bool recurring = false);
     void fetchCollection();
 
-    Akonadi::ETMCalendar *m_calendar;
+    Akonadi::ETMCalendar *m_calendar = nullptr;
     Akonadi::Collection m_collection;
     int m_pendingCreations;
     int m_pendingDeletions;
-    bool m_pendingPurgeSignal;
+    bool m_pendingPurgeSignal = false;
 
     int m_numDeleted;
     int m_numIgnored;
 
-    Akonadi::TodoPurger *m_todoPurger;
+    Akonadi::TodoPurger *m_todoPurger = nullptr;
 };
 
 #endif

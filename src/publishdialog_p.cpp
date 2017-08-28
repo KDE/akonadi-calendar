@@ -61,8 +61,7 @@ void PublishDialog::Private::removeItem()
     if (mUI.mListWidget->selectedItems().isEmpty()) {
         return;
     }
-    QListWidgetItem *item;
-    item = mUI.mListWidget->selectedItems().at(0);
+    QListWidgetItem *item = mUI.mListWidget->selectedItems().at(0);
 
     int row = mUI.mListWidget->row(item);
     mUI.mListWidget->takeItem(row);

@@ -74,7 +74,7 @@ class IncidenceChangerTest : public QObject
     Collection mCollection;
 
     QHash<int, IncidenceChanger::ResultCode> mExpectedResultByChangeId;
-    IncidenceChanger *mChanger;
+    IncidenceChanger *mChanger = nullptr;
 
     int mIncidencesToDelete;
     int mIncidencesToAdd;

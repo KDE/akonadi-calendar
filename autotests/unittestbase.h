@@ -54,7 +54,7 @@ protected:
     static Akonadi::Item generateIncidence(const QString &uid, const QString &organizer = QString());
 
     Akonadi::Collection mCollection;
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
 };
 
 #endif

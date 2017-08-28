@@ -84,9 +84,9 @@ public Q_SLOTS:
 public:
 
     Akonadi::CalendarBase::Ptr m_calendar;
-    Akonadi::IncidenceChanger *m_changer;
-    KCalUtils::DndFactory *m_dndfactory;
-    bool m_abortCurrentOperation;
+    Akonadi::IncidenceChanger *m_changer = nullptr;
+    KCalUtils::DndFactory *m_dndfactory = nullptr;
+    bool m_abortCurrentOperation = false;
     QSet<int> m_pendingChangeIds;
     CalendarClipboard *const q;
 };

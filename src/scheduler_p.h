@@ -170,7 +170,7 @@ protected:
 
     void acceptFreeBusy(const KCalCore::IncidenceBase::Ptr &incidence,
                         KCalCore::iTIPMethod method);
-    KCalCore::ICalFormat *mFormat;
+    KCalCore::ICalFormat *mFormat = nullptr;
 
 Q_SIGNALS:
     void transactionFinished(Akonadi::Scheduler::Result, const QString &errorMessage);

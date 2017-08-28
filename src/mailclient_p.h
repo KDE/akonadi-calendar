@@ -118,7 +118,7 @@ Q_SIGNALS:
 
 public:
     // For unit-test usage, since we can't depend on kdepim-runtime on jenkins
-    ITIPHandlerComponentFactory *mFactory;
+    ITIPHandlerComponentFactory *mFactory = nullptr;
 };
 
 }

@@ -75,14 +75,14 @@ public:
     Invitation m_queuedInvitation;
     bool m_calendarLoadError;
     CalendarBase::Ptr m_calendar;
-    ITIPHandlerComponentFactory *m_factory;
-    MailScheduler *m_scheduler;
+    ITIPHandlerComponentFactory *m_factory = nullptr;
+    MailScheduler *m_scheduler = nullptr;
     KCalCore::Incidence::Ptr m_incidence;
     KCalCore::iTIPMethod m_method; // METHOD field of ical rfc of incoming invitation
-    ITIPHandlerHelper *m_helper;
+    ITIPHandlerHelper *m_helper = nullptr;
     Operation m_currentOperation;
     QPointer<QWidget> m_parentWidget; // To be used for KMessageBoxes
-    GroupwareUiDelegate *m_uiDelegate;
+    GroupwareUiDelegate *m_uiDelegate = nullptr;
     bool m_showDialogsOnError;
     ITIPHandler *const q;
 

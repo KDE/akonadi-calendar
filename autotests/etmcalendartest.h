@@ -70,7 +70,7 @@ private:
     void waitForIt();
     void checkExitLoop();
 
-    Akonadi::ETMCalendar *mCalendar;
+    Akonadi::ETMCalendar *mCalendar = nullptr;
     Akonadi::Collection mCollection;
     int mIncidencesToAdd;
     int mIncidencesToDelete;

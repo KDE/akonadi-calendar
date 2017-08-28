@@ -257,9 +257,9 @@ public:
 private:
     Q_DISABLE_COPY(AtomicOperation)
     QVector<Change::Ptr> m_changes;
-    bool m_wasRolledback;
-    Akonadi::TransactionSequence *m_transaction; // constructed in first use
-    IncidenceChanger::Private *m_incidenceChangerPrivate;
+    bool m_wasRolledback = false;
+    Akonadi::TransactionSequence *m_transaction = nullptr; // constructed in first use
+    IncidenceChanger::Private *m_incidenceChangerPrivate = nullptr;
 };
 
 class Q_DECL_HIDDEN IncidenceChanger::Private : public QObject
@@ -322,14 +322,14 @@ public Q_SLOTS:
 public:
     int mLatestChangeId;
     QHash<const KJob *, Change::Ptr> mChangeForJob;
-    bool mShowDialogsOnError;
+    bool mShowDialogsOnError = false;
     Akonadi::Collection mDefaultCollection;
     DestinationPolicy mDestinationPolicy;
     QVector<Akonadi::Item::Id> mDeletedItemIds;
     Change::List mPendingCreations; // Creations waiting for collections to be loaded
 
-    History *mHistory;
-    bool mUseHistory;
+    History *mHistory = nullptr;
+    bool mUseHistory = false;
 
     /**
       Queue modifications by ID. We can only send a modification to akonadi when the previous
@@ -353,8 +353,8 @@ public:
     */
     QHash<uint, AtomicOperation *> mAtomicOperations;
 
-    bool mRespectsCollectionRights;
-    bool mGroupwareCommunication;
+    bool mRespectsCollectionRights = false;
+    bool mGroupwareCommunication = false;
 
     QHash<Akonadi::TransactionSequence *, uint> mAtomicOperationByTransaction;
     QHash<uint, ITIPHandlerHelper::SendResult> mInvitationStatusByAtomicOperation;
@@ -364,15 +364,15 @@ public:
     Akonadi::Collection mLastCollectionUsed;
     bool mAutoAdjustRecurrence;
 
-    Akonadi::CollectionFetchJob *m_collectionFetchJob;
+    Akonadi::CollectionFetchJob *m_collectionFetchJob = nullptr;
 
     QMap<KJob *, QSet<KCalCore::IncidenceBase::Field> > mDirtyFieldsByJob;
 
     IncidenceChanger::InvitationPolicy m_invitationPolicy;
 
-    ITIPHandlerComponentFactory *mFactory;
+    ITIPHandlerComponentFactory *mFactory = nullptr;
 private:
-    IncidenceChanger *q;
+    IncidenceChanger *q = nullptr;
 };
 
 }

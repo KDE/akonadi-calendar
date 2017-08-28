@@ -53,8 +53,8 @@ private:
     Akonadi::Item::Id createTodo(const QString &uid, const QString &parentUid = QString());
 
     Akonadi::Collection mCollection;
-    Akonadi::CalendarBase *mCalendar;
-    bool mExpectedSlotResult;
+    Akonadi::CalendarBase *mCalendar = nullptr;
+    bool mExpectedSlotResult = false;
     QStringList mUids;
     QString mOneEventUid;
     QString mOneTodoUid;

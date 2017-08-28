@@ -63,9 +63,9 @@ protected:
     virtual bool redo() = 0;
     void updateIdsGlobaly(Item::Id oldId, Item::Id newId);
     QWidget *currentParent() const;
-    IncidenceChanger *mChanger;
+    IncidenceChanger *mChanger = nullptr;
     QHash<Akonadi::Item::Id, int> mLatestRevisionByItemId;
-    History *q;
+    History *q = nullptr;
     QVector<int> mChangeIds;
 private:
     void init(const QString &description, History *qq);

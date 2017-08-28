@@ -527,14 +527,14 @@ public:
         // dummy as long as there are no editors available in kdepimlibs/
     }
 
-    KActionCollection *mActionCollection;
-    QWidget *mParentWidget;
-    StandardActionManager *mGenericManager;
-    QItemSelectionModel *mCollectionSelectionModel;
-    QItemSelectionModel *mItemSelectionModel;
+    KActionCollection *mActionCollection = nullptr;
+    QWidget *mParentWidget = nullptr;
+    StandardActionManager *mGenericManager = nullptr;
+    QItemSelectionModel *mCollectionSelectionModel = nullptr;
+    QItemSelectionModel *mItemSelectionModel = nullptr;
     QHash<StandardCalendarActionManager::Type, QAction *> mActions;
     QSet<StandardCalendarActionManager::Type> mInterceptedActions;
-    StandardCalendarActionManager *mParent;
+    StandardCalendarActionManager *mParent = nullptr;
 };
 
 Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent)

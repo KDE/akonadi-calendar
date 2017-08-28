@@ -52,13 +52,13 @@ public:
     void setErrorMessage(const QString &message);
 
     ICalImporter *const q;
-    Akonadi::IncidenceChanger *m_changer;
+    Akonadi::IncidenceChanger *m_changer = nullptr;
     int m_numIncidences;
     QList<int> m_pendingRequests;
 
     QString m_lastErrorMessage;
-    bool m_working;
-    QTemporaryFile *m_temporaryFile;
+    bool m_working = false;
+    QTemporaryFile *m_temporaryFile = nullptr;
     Akonadi::Collection m_collection;
 public Q_SLOTS:
     void resourceCreated(KJob *job);

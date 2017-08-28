@@ -36,7 +36,7 @@ class Q_DECL_HIDDEN TodoPurger::Private : public QObject
     Q_OBJECT
 public:
     Private(TodoPurger *q);
-    IncidenceChanger *m_changer;
+    IncidenceChanger *m_changer = nullptr;
     QString m_lastError;
     CalendarBase::Ptr m_calendar;
     int m_currentChangeId;

@@ -183,9 +183,9 @@ private:
     bool weNeedToSendMailFor(const KCalCore::Incidence::Ptr &incidence);
 
     ITIPHandlerDialogDelegate::Action mDefaultAction;
-    QWidget *mParent;
-    ITIPHandlerComponentFactory *m_factory;
-    MailScheduler *m_scheduler;
+    QWidget *mParent = nullptr;
+    ITIPHandlerComponentFactory *m_factory = nullptr;
+    MailScheduler *m_scheduler = nullptr;
     Status m_status;
 };
 

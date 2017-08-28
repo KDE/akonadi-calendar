@@ -183,7 +183,7 @@ protected:
                         const KGuiItem &buttonNo) const;
 
     // parent of the dialog
-    QWidget *mParent;
+    QWidget *mParent = nullptr;
 
     // Incidence related to the dialog
     KCalCore::Incidence::Ptr mIncidence;

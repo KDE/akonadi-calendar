@@ -37,7 +37,7 @@ enum SignalType {
 class HistoryTest : public UnitTestBase
 {
     Q_OBJECT
-    History *mHistory;
+    History *mHistory = nullptr;
     QHash<SignalType, int> mPendingSignals;
     QHash<int, Akonadi::Item> mItemByChangeId;
     QList<int> mKnownChangeIds;

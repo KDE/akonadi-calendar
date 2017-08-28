@@ -89,7 +89,7 @@ class MailClientTest : public QObject
     Q_OBJECT
 
 private:
-    MailClient *mMailClient;
+    MailClient *mMailClient = nullptr;
     int mPendingSignals;
     MailClient::Result mLastResult;
     QString mLastErrorMessage;
