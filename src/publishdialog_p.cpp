@@ -25,6 +25,7 @@
 #include <kcalcore/person.h>
 
 #include <KLocalizedString>
+#include <QPointer>
 #include <QTreeView>
 
 using namespace KCalCore;
@@ -84,31 +85,27 @@ void PublishDialog::Private::removeItem()
 
 void PublishDialog::Private::openAddressbook()
 {
-    QWeakPointer<Akonadi::EmailAddressSelectionDialog> dialog(
+    QPointer<Akonadi::EmailAddressSelectionDialog> dialog(
         new Akonadi::EmailAddressSelectionDialog(q));
-    dialog.data()->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
+    dialog->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
 
-    if (dialog.data()->exec() == QDialog::Accepted) {
-
-        Akonadi::EmailAddressSelectionDialog *dialogPtr = dialog.data();
-        if (dialogPtr) {
-            const Akonadi::EmailAddressSelection::List selections = dialogPtr->selectedAddresses();
-            if (!selections.isEmpty()) {
-                for (const Akonadi::EmailAddressSelection &selection : selections) {
-                    mUI.mNameLineEdit->setEnabled(true);
-                    mUI.mEmailLineEdit->setEnabled(true);
-                    QListWidgetItem *item = new QListWidgetItem(mUI.mListWidget);
-                    mUI.mListWidget->setItemSelected(item, true);
-                    mUI.mNameLineEdit->setText(selection.name());
-                    mUI.mEmailLineEdit->setText(selection.email());
-                    mUI.mListWidget->addItem(item);
-                }
-
-                mUI.mRemove->setEnabled(true);
+    if (dialog->exec() == QDialog::Accepted) {
+        const Akonadi::EmailAddressSelection::List selections = dialog->selectedAddresses();
+        if (!selections.isEmpty()) {
+            for (const Akonadi::EmailAddressSelection &selection : selections) {
+                mUI.mNameLineEdit->setEnabled(true);
+                mUI.mEmailLineEdit->setEnabled(true);
+                QListWidgetItem *item = new QListWidgetItem(mUI.mListWidget);
+                mUI.mListWidget->setItemSelected(item, true);
+                mUI.mNameLineEdit->setText(selection.name());
+                mUI.mEmailLineEdit->setText(selection.email());
+                mUI.mListWidget->addItem(item);
             }
+
+            mUI.mRemove->setEnabled(true);
         }
     }
-    delete dialog.data();
+    delete dialog;
 }
 
 void PublishDialog::Private::updateItem()
