@@ -702,7 +702,7 @@ private Q_SLOTS:
         QTest::newRow("delete two - success ") << items << changeTypes << failureExpectedList
                                                << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // Creation succeeds but deletion doesnt ( invalid item case )
+        // Creation succeeds but deletion doesn't ( invalid item case )
         items.clear();
         items << item() << Item(); // Invalid item on purpose
         changeTypes.clear();
@@ -734,7 +734,7 @@ private Q_SLOTS:
         QTest::newRow("try delete,create") << items << changeTypes << failureExpectedList
                                            << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // Creation succeeds but deletion doesnt ( valid, inexistant item case )
+        // Creation succeeds but deletion doesn't ( valid, inexistant item case )
         items.clear();
         items << item() << Item(10101010);
         changeTypes.clear();
@@ -782,7 +782,7 @@ private Q_SLOTS:
         QTest::newRow("try delete(ACL),create") << items << changeTypes << failureExpectedList
                                                 << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        //Creation succeeds but deletion doesnt ( NO ACL case )
+        //Creation succeeds but deletion doesn't ( NO ACL case )
         items.clear();
         items << item() << createItem(mCollection);
         changeTypes.clear();
@@ -798,7 +798,7 @@ private Q_SLOTS:
         QTest::newRow("create,try delete(ACL)") << items << changeTypes << failureExpectedList
                                                 << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // 1 successfull modification, 1 failed creation
+        // 1 successful modification, 1 failed creation
         changeTypes.clear();
         changeTypes << IncidenceChanger::ChangeTypeModify << IncidenceChanger::ChangeTypeCreate;
         items.clear();
@@ -814,7 +814,7 @@ private Q_SLOTS:
         QTest::newRow("modify,try create") << items << changeTypes << failureExpectedList
                                            << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // 1 successfull modification, 1 failed creation
+        // 1 successful modification, 1 failed creation
         changeTypes.clear();
         changeTypes << IncidenceChanger::ChangeTypeModify << IncidenceChanger::ChangeTypeCreate;
         items.clear();
@@ -830,7 +830,7 @@ private Q_SLOTS:
         QTest::newRow("modify,try create v2") << items << changeTypes << failureExpectedList
                                               << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // 1 failed creation, 1 successfull modification
+        // 1 failed creation, 1 successful modification
         changeTypes.clear();
         changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeModify;
         items.clear();
@@ -846,7 +846,7 @@ private Q_SLOTS:
         QTest::newRow("try create,modify") << items << changeTypes << failureExpectedList
                                            << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // 1 failed creation, 1 successfull modification
+        // 1 failed creation, 1 successful modification
         changeTypes.clear();
         changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeModify;
         items.clear();

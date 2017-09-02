@@ -424,7 +424,7 @@ void ETMCalendarTest::testNotifyObserverBug()
     // and that observer then called calendar->item(incidence->uid()) the retrieved item would still
     // have the old payload, because CalendarBase::updateItem() was still on the stack
     // and would only update after calendarIncidenceChanged() returned.
-    // This test ensure that doesnt happen.
+    // This test ensure that doesn't happen.
     const QLatin1String uid("todo-notify-bug");
     createTodo(uid, QString());
     waitForIt();

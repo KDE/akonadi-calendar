@@ -23,8 +23,8 @@
   02110-1301, USA.
 */
 
-#ifndef _AKONADI_CALENDAR_ITIP_HANDLER_H
-#define _AKONADI_CALENDAR_ITIP_HANDLER_H
+#ifndef AKONADI_CALENDAR_ITIP_HANDLER_H
+#define AKONADI_CALENDAR_ITIP_HANDLER_H
 
 #include "akonadi-calendar_export.h"
 #include "etmcalendar.h"
@@ -76,7 +76,7 @@ class AKONADI_CALENDAR_EXPORT ITIPHandlerDialogDelegate : public QObject
 {
     Q_OBJECT
 public:
-    // Posible default actions
+    // Possible default actions
     enum Action {
         ActionAsk,              /**< Ask the user for a descision */
         ActionSendMessage,      /**< Answer with Yes */
@@ -159,7 +159,7 @@ public:
 
 Q_SIGNALS:
     /*
-     * Signal is emited, when the user has answered the dialog or the defaultAction is used
+     * Signal is emitted, when the user has answered the dialog or the defaultAction is used
      * @param answer: answer should be part of KMessageBox:ButtonCode, keep in mind that it is a YesNoDialog so normally it should be KMessageBox::Yes or KMessageBox::No
      * @param method: itip method
      * @param incidence: purpose of the dialog

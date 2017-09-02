@@ -77,7 +77,7 @@ public:
                                 (e.g. when we are the only attendee) */
         ResultError,           /**< An unexpected error occurred */
         ResultSuccess,         /**< The invitation was sent to all attendees. */
-        ResultPending          /**< The user has been asked about one detail, waiting for him to anwser it */
+        ResultPending          /**< The user has been asked about one detail, waiting for the answer */
     };
 
     /**
