@@ -350,7 +350,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
 
     const Incidence::List existingIncidences = calendar->incidencesFromSchedulingID(incidence->uid());
     qCDebug(AKONADICALENDAR_LOG) << "Scheduler::acceptCancel="
-                                 << KCalUtils::Stringify::scheduleMessageStatus(status)   //krazy2:exclude=kdebug
+                                 << KCalUtils::Stringify::scheduleMessageStatus(status)
                                  << ": found " << existingIncidences.count()
                                  << " incidences with schedulingID " << incidence->schedulingID();
 
@@ -508,7 +508,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
                       attNew->fullName(), incidence->summary());
             if (!attNew->delegator().isEmpty()) {
                 msg = i18nc("@info", "%1 wants to attend %2 on behalf of %3.",
-                            attNew->fullName(), incidence->summary() , attNew->delegator());
+                            attNew->fullName(), incidence->summary(), attNew->delegator());
             }
             if (KMessageBox::questionYesNo(
                         nullptr, msg, i18nc("@title", "Uninvited attendee"),
