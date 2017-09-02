@@ -27,7 +27,6 @@
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
 #include <collectionmodifyjob.h>
-#include <itemdeletejob.h>
 #include <itemmodifyjob.h>
 #include <KCheckableProxyModel>
 #include <KEMailSettings>
@@ -39,7 +38,6 @@ using namespace Akonadi;
 using namespace KCalCore;
 
 Q_DECLARE_METATYPE(QSet<QByteArray>)
-
 
 KCalCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &item)
 {
@@ -262,7 +260,6 @@ void ETMCalendarTest::testSelectCollection()
     }
 }
 
-
 void ETMCalendarTest::calendarIncidenceAdded(const Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
@@ -307,7 +304,7 @@ void ETMCalendarTest::calendarIncidenceChanged(const Incidence::Ptr &incidence)
     checkExitLoop();
 }
 
-void ETMCalendarTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalCore::Calendar* cal)
+void ETMCalendarTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalCore::Calendar *cal)
 {
     Q_UNUSED(cal);
     const QString id = incidence->customProperty("VOLATILE", "AKONADI-ID");
@@ -510,7 +507,6 @@ void ETMCalendarTest::testItem()
     // The pointers should be the same
     QCOMPARE(incidence1.data(), incidence2.data());
     QCOMPARE(incidence.data(), incidence1.data());
-
 }
 
 void ETMCalendarTest::testShareETM()
@@ -582,7 +578,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     item.setPayload<KCalCore::Incidence::Ptr>(incidence);
 
     mIncidencesToDelete = 1;
-    ItemModifyJob *modifyJob = new ItemModifyJob(item,  this);
+    ItemModifyJob *modifyJob = new ItemModifyJob(item, this);
     AKVERIFYEXEC(modifyJob);
     waitForIt();
     QCOMPARE(mCalendar->model()->rowCount(), anz);
@@ -596,12 +592,11 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     item.setPayload<KCalCore::Incidence::Ptr>(incidence);
     item.setRevision(2);
     mIncidencesToAdd = 1;
-    modifyJob = new ItemModifyJob(item,  this);
+    modifyJob = new ItemModifyJob(item, this);
     AKVERIFYEXEC(modifyJob);
     waitForIt();
     QCOMPARE(mCalendar->model()->rowCount(), anz+1);
 }
-
 
 void ETMCalendarTest::waitForIt()
 {

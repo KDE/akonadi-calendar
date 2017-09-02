@@ -27,7 +27,6 @@
 #include <itemcreatejob.h>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
-#include <itemcreatejob.h>
 
 using namespace Akonadi;
 using namespace KCalCore;
@@ -38,7 +37,7 @@ static bool compareUids(const QStringList &_uids, const Incidence::List &inciden
 {
     QStringList uids = _uids;
 
-    for(const KCalCore::Incidence::Ptr &incidence : incidences) {
+    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
         if (uids.contains(incidence->uid()))
             uids.removeAll(incidence->uid());
     }
@@ -145,7 +144,7 @@ void CalendarBaseTest::cleanupTestCase()
 
 void CalendarBaseTest::testItem()
 {
-    foreach(const QString &uid, mUids) {
+    foreach (const QString &uid, mUids) {
         const Item item1 = mCalendar->item(uid);
         const Item item2 = mCalendar->item(item1.id());
         QVERIFY(item1.isValid());
@@ -165,8 +164,8 @@ void CalendarBaseTest::testChildIncidences_data()
     QTest::newRow("Invalid parent") << "doesnt exist" << Item::Id(404) << QStringList();
     Item::Id id = createTodo(tr("parent1"));
     QVERIFY(id > -1);
-    QVERIFY(createTodo(tr("child1"),  tr("parent1")) > -1);
-    QVERIFY(createTodo(tr("child2"),  tr("parent1")) > -1);
+    QVERIFY(createTodo(tr("child1"), tr("parent1")) > -1);
+    QVERIFY(createTodo(tr("child2"), tr("parent1")) > -1);
     QTest::newRow("2 childs") << "parent1"
                               << id << (QStringList() <<  tr("child1") << tr("child2"));
 }
@@ -255,19 +254,20 @@ void CalendarBaseTest::testDeleteAll()
 }
 */
 
-
 void CalendarBaseTest::handleCreateFinished(bool success, const QString &errorString)
 {
-    if (!success)
+    if (!success) {
         qDebug() << "handleCreateFinished(): " << errorString;
+    }
     QCOMPARE(success, mExpectedSlotResult);
     QTestEventLoop::instance().exitLoop();
 }
 
 void CalendarBaseTest::handleDeleteFinished(bool success, const QString &errorString)
 {
-    if (!success)
+    if (!success) {
         qDebug() << "handleDeleteFinished(): " << errorString;
+    }
     QCOMPARE(success, mExpectedSlotResult);
     QTestEventLoop::instance().exitLoop();
 }

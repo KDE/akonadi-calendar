@@ -25,7 +25,6 @@
 #include <qtest_akonadi.h>
 
 #include <item.h>
-#include <collection.h>
 #include <itemfetchjob.h>
 #include <itemcreatejob.h>
 #include <itemfetchscope.h>
@@ -534,7 +533,6 @@ private Q_SLOTS:
             event->setSummary(QStringLiteral("summary"));
             QTest::newRow("attendee:summary") << item2 << event << false;
         }
-
     }
 
     void testModifyRescedule()
