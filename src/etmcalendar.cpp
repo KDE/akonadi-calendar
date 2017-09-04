@@ -65,6 +65,7 @@ void ETMCalendarPrivate::init()
     if (!mETM) {
         Akonadi::Session *session = new Akonadi::Session("ETMCalendar", q);
         Akonadi::Monitor *monitor = new Akonadi::Monitor(q);
+        monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
         connect(monitor, SIGNAL(collectionChanged(Akonadi::Collection,QSet<QByteArray>)),
                 SLOT(onCollectionChanged(Akonadi::Collection,QSet<QByteArray>)));
 
