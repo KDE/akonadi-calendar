@@ -41,7 +41,6 @@
 #include <KLocalizedString>
 #include <KJob>
 #include <KProtocolManager>
-#include <KSystemTimeZone>
 
 using namespace Akonadi;
 
@@ -119,8 +118,7 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
         subject = i18n("Free Busy Object");
     }
 
-    const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence,
-                         KSystemTimeZones::local());
+    const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
 
     send(incidence, identity, from, to, cc, subject, body, false, bccMe, attachment, mailTransport);
 }
@@ -143,8 +141,7 @@ void MailClient::mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
         subject = i18n("Free Busy Message");
     }
 
-    const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence,
-                         KSystemTimeZones::local());
+    const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
 
     send(incidence, identity, from, to, QString(), subject, body, false, bccMe, attachment, mailTransport);
 }
@@ -164,8 +161,7 @@ void MailClient::mailTo(const KCalCore::IncidenceBase::Ptr &incidence,
         subject = i18n("Free Busy Message");
     }
 
-    const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence,
-                         KSystemTimeZones::local());
+    const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
 
     send(incidence, identity, from, recipients, QString(), subject, body, false,
          bccMe, attachment, mailTransport);
