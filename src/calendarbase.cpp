@@ -28,6 +28,7 @@
 #include <collection.h>
 
 #include <KLocalizedString>
+#include <QTimeZone>
 
 using namespace Akonadi;
 using namespace KCalCore;
@@ -408,7 +409,7 @@ void CalendarBasePrivate::handleParentChanged(const KCalCore::Incidence::Ptr &ne
 }
 
 CalendarBase::CalendarBase(QObject *parent)
-    : MemoryCalendar(KDateTime::LocalZone)
+    : MemoryCalendar(QTimeZone::systemTimeZone())
     , d_ptr(new CalendarBasePrivate(this))
 {
     setParent(parent);
@@ -416,7 +417,7 @@ CalendarBase::CalendarBase(QObject *parent)
 }
 
 CalendarBase::CalendarBase(CalendarBasePrivate *const dd, QObject *parent)
-    : MemoryCalendar(KDateTime::LocalZone)
+    : MemoryCalendar(QTimeZone::systemTimeZone())
     , d_ptr(dd)
 {
     setParent(parent);

@@ -51,6 +51,7 @@
 #include <QTimerEvent>
 #include <QStandardPaths>
 #include <QTemporaryFile>
+#include <QTimeZone>
 #include <KJobWidgets/KJobWidgets>
 
 using namespace Akonadi;
@@ -756,7 +757,7 @@ void FreeBusyManager::setCalendar(const Akonadi::ETMCalendar::Ptr &c)
 
     d->mCalendar = c;
     if (d->mCalendar) {
-        d->mFormat.setTimeSpec(d->mCalendar->timeSpec());
+        d->mFormat.setTimeZone(d->mCalendar->timeZone());
         connect(d->mCalendar.data(), SIGNAL(calendarChanged()), SLOT(uploadFreeBusy()));
     }
 

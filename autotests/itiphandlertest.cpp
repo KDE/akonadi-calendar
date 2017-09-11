@@ -35,6 +35,7 @@
 #include <kcalcore/event.h>
 
 #include <QString>
+#include <QTimeZone>
 
 using namespace Akonadi;
 using namespace KCalCore;
@@ -336,7 +337,7 @@ void ITIPHandlerTest::testProcessITIPMessages()
     }
 
     QString expectedICalData = icalData(expected_filename);
-    KCalCore::MemoryCalendar::Ptr expectedCalendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(KDateTime::UTC));
+    KCalCore::MemoryCalendar::Ptr expectedCalendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(QTimeZone::utc()));
     KCalCore::ICalFormat format;
     format.fromString(expectedCalendar, expectedICalData);
     compareCalendars(expectedCalendar); // Here's where the cool and complex comparations are done

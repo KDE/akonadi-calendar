@@ -29,6 +29,7 @@
 #include "akonadicalendar_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QTimeZone>
 
 using namespace KCalCore;
 using namespace Akonadi;
@@ -50,7 +51,7 @@ Scheduler::Scheduler(QObject *parent) : QObject(parent)
     , d(new Akonadi::Scheduler::Private(this))
 {
     mFormat = new ICalFormat();
-    mFormat->setTimeSpec(KDateTime::LocalZone);
+    mFormat->setTimeZone(QTimeZone::systemTimeZone());
 }
 
 Scheduler::~Scheduler()

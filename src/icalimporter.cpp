@@ -34,6 +34,7 @@
 
 #include <QDBusInterface>
 #include <QTemporaryFile>
+#include <QTimeZone>
 
 using namespace KCalCore;
 using namespace Akonadi;
@@ -196,7 +197,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
             d->setErrorMessage(i18n("The specified file doesn't exist, aborting import."));
             return false;
         }
-        MemoryCalendar::Ptr temporaryCalendar(new MemoryCalendar(KDateTime::LocalZone));
+        MemoryCalendar::Ptr temporaryCalendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
         FileStorage storage(temporaryCalendar);
         storage.setFileName(url.path());
         bool success = storage.load();
