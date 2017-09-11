@@ -377,7 +377,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
 
         if (incidence->hasRecurrenceId()) {
             // For an individual occurrence, recur id doesn't make sense, since we're not sending the whole recurrence series.
-            incidence->setRecurrenceId(KDateTime());
+            incidence->setRecurrenceId({});
         }
 
         KCalCore::ICalFormat format;
