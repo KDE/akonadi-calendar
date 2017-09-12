@@ -33,6 +33,7 @@
 #include <kcalcore/event.h>
 #include <kcalcore/freebusy.h>
 #include <kcalcore/person.h>
+#include <kcalcore/utils.h>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
@@ -899,12 +900,12 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
         return;
     }
 
-    KDateTime start = KDateTime::currentUtcDateTime().toTimeSpec(d->mCalendar->timeSpec());
-    KDateTime end = start.addDays(daysToPublish);
+    QDateTime start = QDateTime::currentDateTimeUtc().toTimeZone(d->mCalendar->timeZone());
+    QDateTime end = start.addDays(daysToPublish);
 
     KCalCore::Event::List events = d->mCalendar->rawEvents(start.date(), end.date());
 
-    FreeBusy::Ptr freebusy(new FreeBusy(events, start, end));
+    FreeBusy::Ptr freebusy(new FreeBusy(events, KCalCore::q2k(start), KCalCore::q2k(end)));
     freebusy->setOrganizer(Person::Ptr(
                                new Person(Akonadi::CalendarUtils::fullName(),
                                           Akonadi::CalendarUtils::email())));
