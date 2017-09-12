@@ -153,10 +153,10 @@ public:
       * Returns all alarms occurring in a specified time interval.
       * @param from start date of interval
       * @param to end data of interval
-      * @param exludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
+      * @param excludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
       */
-    KCalCore::Alarm::List alarms(const KDateTime &from,
-                                 const KDateTime &to,
+    KCalCore::Alarm::List alarms(const QDateTime &from,
+                                 const QDateTime &to,
                                  bool excludeBlockedAlarms = false) const override;
 
     /**

@@ -539,8 +539,8 @@ KCheckableProxyModel *ETMCalendar::checkableProxyModel() const
     return d->mCheckableProxyModel;
 }
 
-KCalCore::Alarm::List ETMCalendar::alarms(const KDateTime &from,
-        const KDateTime &to,
+KCalCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
+        const QDateTime &to,
         bool excludeBlockedAlarms) const
 {
     Q_D(const ETMCalendar);
