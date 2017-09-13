@@ -65,7 +65,7 @@ public Q_SLOTS:
 
     void collectionFetchResult(KJob *job);
 
-signals:
+Q_SIGNALS:
     void fetchFinished();
 
 public:
