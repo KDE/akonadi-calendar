@@ -50,7 +50,13 @@ target_link_libraries(KF5AkonadiCalendar
 PUBLIC
     KF5::AkonadiCore
     KF5::CalendarCore
+    KF5::WidgetsAddons
+    KF5::I18n
 PRIVATE
+    KF5::Codecs
+    KF5::IconThemes
+    KF5::KIOWidgets
+    KF5::XmlGui
     KF5::AkonadiContact
     KF5::CalendarUtils
     KF5::AkonadiWidgets

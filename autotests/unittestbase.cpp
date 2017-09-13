@@ -186,7 +186,7 @@ Item UnitTestBase::generateIncidence(const QString &uid, const QString &organize
         incidence->setUid(uid);
     }
 
-    const KDateTime now = KDateTime::currentUtcDateTime();
+    const QDateTime now = QDateTime::currentDateTimeUtc();
     incidence->setDtStart(now);
     incidence->setDateTime(now.addSecs(3600), Incidence::RoleEnd);
     incidence->setSummary(QStringLiteral("summary"));

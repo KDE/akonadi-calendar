@@ -75,7 +75,7 @@ void CalendarBaseTest::createInitialIncidences()
         Event::Ptr event = Event::Ptr(new Event());
         event->setUid(QStringLiteral("event") + QString::number(i));
         event->setSummary(QStringLiteral("summary") + QString::number(i));
-        event->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+        event->setDtStart(QDateTime::currentDateTimeUtc());
         mUids.append(event->uid());
         QVERIFY(mCalendar->addEvent(event));
         QTestEventLoop::instance().enterLoop(5);
@@ -86,7 +86,7 @@ void CalendarBaseTest::createInitialIncidences()
     for (int i=0; i<5; ++i) {
         Todo::Ptr todo = Todo::Ptr(new Todo());
         todo->setUid(QStringLiteral("todo") + QString::number(i));
-        todo->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+        todo->setDtStart(QDateTime::currentDateTimeUtc());
         todo->setSummary(QStringLiteral("summary") + QString::number(i));
         mUids.append(todo->uid());
         QVERIFY(mCalendar->addTodo(todo));
@@ -99,7 +99,7 @@ void CalendarBaseTest::createInitialIncidences()
         Journal::Ptr journal = Journal::Ptr(new Journal());
         journal->setUid(QStringLiteral("journal") + QString::number(i));
         journal->setSummary(QStringLiteral("summary") + QString::number(i));
-        journal->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+        journal->setDtStart(QDateTime::currentDateTimeUtc());
         mUids.append(journal->uid());
         QVERIFY(mCalendar->addJournal(journal));
         QTestEventLoop::instance().enterLoop(5);
@@ -111,7 +111,7 @@ void CalendarBaseTest::createInitialIncidences()
         Incidence::Ptr incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("incidence") + QString::number(i));
         incidence->setSummary(QStringLiteral("summary") + QString::number(i));
-        incidence->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+        incidence->setDtStart(QDateTime::currentDateTimeUtc());
         mUids.append(incidence->uid());
         QVERIFY(mCalendar->addIncidence(incidence));
         QTestEventLoop::instance().enterLoop(5);

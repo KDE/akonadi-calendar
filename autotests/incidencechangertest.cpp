@@ -440,8 +440,8 @@ private Q_SLOTS:
         item.setMimeType(Event::eventMimeType());
         Event::Ptr incidence = Event::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
-        incidence->setDtStart(KDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), KDateTime::UTC));
-        incidence->setDtEnd(KDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), KDateTime::UTC));
+        incidence->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), Qt::UTC));
+        incidence->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), Qt::UTC));
         incidence->setAllDay(false);
         incidence->setLocation(QStringLiteral("location"));
         incidence->setOrganizer(Person::Ptr(new Person(QString(), s_ourEmail)));
@@ -454,14 +454,14 @@ private Q_SLOTS:
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
-            event->setDtStart(KDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), KDateTime::UTC));
+            event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:start Date") << item << event << true;
         }
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
-            event->setDtEnd(KDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), KDateTime::UTC));
+            event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:end Date") << item << event << true;
         }
@@ -492,8 +492,8 @@ private Q_SLOTS:
         item2.setMimeType(Event::eventMimeType());
         Event::Ptr incidence2 = Event::Ptr(new Event());
         incidence2->setUid(QStringLiteral("test123uid"));
-        incidence2->setDtStart(KDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), KDateTime::UTC));
-        incidence2->setDtEnd(KDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), KDateTime::UTC));
+        incidence2->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), Qt::UTC));
+        incidence2->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), Qt::UTC));
         incidence2->setAllDay(false);
         incidence2->setLocation(QStringLiteral("location"));
         incidence2->setOrganizer(Person::Ptr(new Person(QStringLiteral("External organizator"), QStringLiteral("exorga@dev.nul"))));
@@ -506,13 +506,13 @@ private Q_SLOTS:
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
-            event->setDtStart(KDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), KDateTime::UTC));
+            event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
             QTest::newRow("attendee:start Date") << item2 << event << false;
         }
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
-            event->setDtEnd(KDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), KDateTime::UTC));
+            event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
             QTest::newRow("attendee:end Date") << item2 << event << false;
         }
 
@@ -1055,8 +1055,8 @@ private Q_SLOTS:
     void testAdjustRecurrence_data()
     {
         QTest::addColumn<bool>("allDay");
-        QTest::addColumn<KDateTime>("dtStart");
-        QTest::addColumn<KDateTime>("dtEnd");
+        QTest::addColumn<QDateTime>("dtStart");
+        QTest::addColumn<QDateTime>("dtEnd");
         QTest::addColumn<int>("offsetToMove");
         QTest::addColumn<int>("frequency");
         QTest::addColumn<KCalCore::RecurrenceRule::PeriodType>("recurrenceType");
@@ -1069,8 +1069,8 @@ private Q_SLOTS:
         QTest::addColumn<QDate>("recurrenceEnd");
         QTest::addColumn<QDate>("expectedRecurrenceEnd");
 
-        const KDateTime dtStart = KDateTime(QDate::currentDate(), QTime(8, 0));
-        const KDateTime dtEnd = dtStart.addSecs(3600);
+        const QDateTime dtStart = QDateTime(QDate::currentDate(), QTime(8, 0));
+        const QDateTime dtEnd = dtStart.addSecs(3600);
         const int one_day = 3600 * 24;
         const int one_hour = 3600;
         QBitArray days(7);
@@ -1088,7 +1088,7 @@ private Q_SLOTS:
         days.setBit(dtStart.date().dayOfWeek() - 1);
         expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 
-        QTest::newRow("weekly allday") << true << KDateTime(dtStart.date()) << KDateTime(dtEnd.date())
+        QTest::newRow("weekly allday") << true << QDateTime(dtStart.date()) << QDateTime(dtEnd.date())
                                        << one_day << 1 << KCalCore::RecurrenceRule::rWeekly
                                        << days << expectedDays << QDate() << QDate();
         //-------------------------------------------------------------------------
@@ -1122,8 +1122,8 @@ private Q_SLOTS:
     void testAdjustRecurrence()
     {
         QFETCH(bool, allDay);
-        QFETCH(KDateTime, dtStart);
-        QFETCH(KDateTime, dtEnd);
+        QFETCH(QDateTime, dtStart);
+        QFETCH(QDateTime, dtEnd);
         QFETCH(int, offsetToMove);
         QFETCH(int, frequency);
         QFETCH(KCalCore::RecurrenceRule::PeriodType, recurrenceType);

@@ -146,14 +146,14 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             return inc->summary();
 
         case DateTimeStart:
-            return inc->dtStart().toUtc().dateTime();
+            return inc->dtStart().toUTC();
 
         case DateTimeEnd:
-            return inc->dateTime(KCalCore::Incidence::RoleEndTimeZone).toUtc().dateTime();
+            return inc->dateTime(KCalCore::Incidence::RoleEndTimeZone).toUTC();
 
         case DateTimeDue:
             if (KCalCore::Todo::Ptr t = todo(item)) {
-                return t->dtDue().toUtc().dateTime();
+                return t->dtDue().toUTC();
             } else {
                 return QVariant();
             }

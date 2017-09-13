@@ -33,7 +33,6 @@
 #include <kcalcore/event.h>
 #include <kcalcore/freebusy.h>
 #include <kcalcore/person.h>
-#include <kcalcore/utils.h>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
@@ -41,7 +40,6 @@
 #include <QUrl>
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
-#include <KIO/NetAccess>
 #include <KLocalizedString>
 
 #include <QDir>
@@ -154,7 +152,7 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
     // Set the start of the period to today 00:00:00
     mStartTime = QDateTime(QDate::currentDate(), QTime());
     mEndTime = mStartTime.addDays(14);
-    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KDateTime(mStartTime), KDateTime(mEndTime)));
+    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(mStartTime, mEndTime));
 }
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(
@@ -163,7 +161,7 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 {
     mStartTime = start;
     mEndTime = end;
-    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KDateTime(start), KDateTime(end)));
+    mResultingFreeBusy = KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(start, end));
 }
 
 /// FreeBusyManagerPrivate
@@ -374,8 +372,8 @@ KCalCore::FreeBusy::Ptr FreeBusyManagerPrivate::iCalToFreeBusy(const QByteArray 
 
 KCalCore::FreeBusy::Ptr FreeBusyManagerPrivate::ownerFreeBusy()
 {
-    KDateTime start = KDateTime::currentUtcDateTime();
-    KDateTime end = start.addDays(CalendarSettings::self()->freeBusyPublishDays());
+    QDateTime start = QDateTime::currentDateTimeUtc();
+    QDateTime end = start.addDays(CalendarSettings::self()->freeBusyPublishDays());
 
     KCalCore::Event::List events = mCalendar ? mCalendar->rawEvents(start.date(), end.date()) : KCalCore::Event::List();
     KCalCore::FreeBusy::Ptr freebusy(new KCalCore::FreeBusy(events, start, end));
@@ -905,7 +903,7 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
 
     KCalCore::Event::List events = d->mCalendar->rawEvents(start.date(), end.date());
 
-    FreeBusy::Ptr freebusy(new FreeBusy(events, KCalCore::q2k(start), KCalCore::q2k(end)));
+    FreeBusy::Ptr freebusy(new FreeBusy(events, start, end));
     freebusy->setOrganizer(Person::Ptr(
                                new Person(Akonadi::CalendarUtils::fullName(),
                                           Akonadi::CalendarUtils::email())));

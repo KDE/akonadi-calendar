@@ -56,7 +56,7 @@ void ETMCalendarTest::createIncidence(const QString &uid)
     item.setMimeType(Event::eventMimeType());
     Incidence::Ptr incidence = Incidence::Ptr(new Event());
     incidence->setUid(uid);
-    incidence->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+    incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
     item.setPayload<KCalCore::Incidence::Ptr>(incidence);
     ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
@@ -541,7 +541,7 @@ void ETMCalendarTest::testFilterInvitations()
 
     item.setMimeType(Event::eventMimeType());
     incidence->setUid(uid);
-    incidence->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+    incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
 
     me->setStatus(KCalCore::Attendee::NeedsAction);

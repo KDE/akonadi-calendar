@@ -39,7 +39,7 @@ class FetchJobCalendarTest : public QObject
         Incidence::Ptr incidence(new Event());
         incidence->setUid(uid);
         incidence->setSummary(QStringLiteral("summary"));
-        incidence->setDtStart(KDateTime::currentDateTime(KDateTime::UTC));
+        incidence->setDtStart(QDateTime::currentDateTimeUtc());
         item.setPayload<KCalCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);

@@ -46,10 +46,10 @@ QString proposalComment(const KCalCore::Incidence::Ptr &incidence)
 
     switch (incidence->type()) {
     case KCalCore::IncidenceBase::TypeEvent: {
-        const KDateTime dtEnd = incidence->dateTime(KCalCore::Incidence::RoleDisplayEnd);
+        const QDateTime dtEnd = incidence->dateTime(KCalCore::Incidence::RoleDisplayEnd);
         comment = i18n("Proposed new meeting time: %1 - %2",
-                       KCalUtils::IncidenceFormatter::dateToString(incidence->dtStart().toLocalZone().date()),
-                       KCalUtils::IncidenceFormatter::dateToString(dtEnd.toLocalZone().date()));
+                       KCalUtils::IncidenceFormatter::dateToString(incidence->dtStart().toLocalTime().date()),
+                       KCalUtils::IncidenceFormatter::dateToString(dtEnd.toLocalTime().date()));
     }
     break;
     case KCalCore::IncidenceBase::TypeTodo: {
