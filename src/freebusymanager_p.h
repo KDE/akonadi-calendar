@@ -28,7 +28,6 @@
 #include <kcalcore/icalformat.h>
 
 #include <QPointer>
-#include <QDBusContext>
 #include <QDBusInterface>
 
 #include <KJob>

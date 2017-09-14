@@ -50,7 +50,6 @@
 #include <QTimerEvent>
 #include <QStandardPaths>
 #include <QTemporaryFile>
-#include <QTimeZone>
 #include <KJobWidgets/KJobWidgets>
 
 using namespace Akonadi;
