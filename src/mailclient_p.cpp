@@ -321,9 +321,20 @@ void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
 
     // Put the newly created item in the MessageQueueJob.
     MailTransport::MessageQueueJob *qjob = mFactory->createMessageQueueJob(incidence, identity, this);
+
+    if (identity.disabledFcc()) {
+        qjob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+    } else {
+        const Akonadi::Collection sentCollection(identity.fcc().toLongLong());
+        if (sentCollection.isValid()) {
+            qjob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToCollection);
+            qjob->sentBehaviourAttribute().setMoveToCollection(sentCollection);
+        } else {
+            qjob->sentBehaviourAttribute().setSentBehaviour(
+                MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
+        }
+    }
     qjob->transportAttribute().setTransportId(transportId);
-    qjob->sentBehaviourAttribute().setSentBehaviour(
-        MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
 
     const QString unormalizedFrom = (transport && transport->specifySenderOverwriteAddress()) ?
                                     transport->senderOverwriteAddress() : from;
