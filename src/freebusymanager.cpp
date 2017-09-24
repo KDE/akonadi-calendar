@@ -496,7 +496,7 @@ void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
     mFreeBusyUrlEmailMap.insert(freeBusyUrlForEmail, email);
 
     FreeBusyDownloadJob *job = new FreeBusyDownloadJob(freeBusyUrlForEmail, mParentWidgetForRetrieval);
-    q->connect(job, SIGNAL(result(KJob*)), SLOT(processFreeBusyDownloadResult(KJob*)));
+    q->connect(job, &FreeBusyDownloadJob::result, this, [this](KJob*job) { processFreeBusyDownloadResult(job);});
     job->start();
 }
 

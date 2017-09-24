@@ -192,13 +192,6 @@ private:
     //@cond PRIVATE
     class Private;
     Private *const d;
-
-    Q_PRIVATE_SLOT(d, void slotCreateEvent())
-    Q_PRIVATE_SLOT(d, void slotCreateTodo())
-    Q_PRIVATE_SLOT(d, void slotCreateSubTodo())
-    Q_PRIVATE_SLOT(d, void slotCreateJournal())
-    Q_PRIVATE_SLOT(d, void slotEditIncidence())
-    Q_PRIVATE_SLOT(d, void updateActions())
     //@endcond
 };
 
