@@ -44,14 +44,12 @@ public:
 protected:
     void doStart() override;
 
-private Q_SLOTS:
+private:
     void collectionFetchResult(KJob *job);
     void itemFetchResult(KJob *job);
-
-private:
     Akonadi::Item::List m_items;
     Akonadi::MimeTypeChecker m_mimeTypeChecker;
-    int m_jobCount;
+    int m_jobCount = 0;
 };
 
 }

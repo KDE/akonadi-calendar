@@ -25,7 +25,8 @@
 #include "akonadicalendar_debug.h"
 using namespace Akonadi;
 
-ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler *qq) : m_calendarLoadError(false)
+ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler *qq)
+    : m_calendarLoadError(false)
     , m_factory(factory ? factory : new ITIPHandlerComponentFactory(this))
     , m_scheduler(new MailScheduler(m_factory, qq))
     , m_method(KCalCore::iTIPNoMethod)

@@ -73,7 +73,7 @@ public:
     bool isLoaded(); // don't make const
 
     Invitation m_queuedInvitation;
-    bool m_calendarLoadError;
+    bool m_calendarLoadError = false;
     CalendarBase::Ptr m_calendar;
     ITIPHandlerComponentFactory *m_factory = nullptr;
     MailScheduler *m_scheduler = nullptr;
@@ -83,10 +83,10 @@ public:
     Operation m_currentOperation;
     QPointer<QWidget> m_parentWidget; // To be used for KMessageBoxes
     GroupwareUiDelegate *m_uiDelegate = nullptr;
-    bool m_showDialogsOnError;
+    bool m_showDialogsOnError = true;
     ITIPHandler *const q;
 
-private Q_SLOTS:
+private:
     void finishSendAsICalendar(Akonadi::MailScheduler::Result, const QString &errorMessage);
     void onLoadFinished(bool success, const QString &errorMessage);
     void onSchedulerFinished(Akonadi::Scheduler::Result, const QString &errorMessage);
