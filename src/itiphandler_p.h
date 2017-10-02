@@ -86,8 +86,8 @@ public:
     bool m_showDialogsOnError = true;
     ITIPHandler *const q;
 
+    void finishSendAsICalendar(Akonadi::MailClient::Result, const QString &errorMessage);
 private:
-    void finishSendAsICalendar(Akonadi::MailScheduler::Result, const QString &errorMessage);
     void onLoadFinished(bool success, const QString &errorMessage);
     void onSchedulerFinished(Akonadi::Scheduler::Result, const QString &errorMessage);
     void onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result,

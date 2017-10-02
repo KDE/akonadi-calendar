@@ -204,10 +204,10 @@ void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Resu
     }
 }
 
-void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailScheduler::Result result,
+void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result result,
         const QString &errorMessage)
 {
-    if (result == Scheduler::ResultSuccess) {
+    if (result == MailClient::ResultSuccess) {
         if (m_parentWidget) {
             KMessageBox::information(m_parentWidget,
                                      i18n("The item information was successfully sent."),

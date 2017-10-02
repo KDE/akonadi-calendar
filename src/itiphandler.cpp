@@ -386,8 +386,7 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
         const QString messageText = format.createScheduleMessage(incidence, KCalCore::iTIPRequest);
         MailClient *mailer = new MailClient(d->m_factory);
         d->m_queuedInvitation.incidence = incidence;
-        connect(mailer, SIGNAL(finished(Akonadi::MailClient::Result,QString)),
-                d, SLOT(finishSendAsICalendar(Akonadi::MailScheduler::Result,QString)));
+        connect(mailer, &MailClient::finished, d, [this](Akonadi::MailClient::Result result, const QString &str) { d->finishSendAsICalendar(result,str); });
 
         mailer->mailTo(incidence, KIdentityManagement::IdentityManager::self()->identityForAddress(from), from, bccMe,
                        recipients, messageText,
