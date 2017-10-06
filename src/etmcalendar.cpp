@@ -66,8 +66,8 @@ void ETMCalendarPrivate::init()
         Akonadi::Session *session = new Akonadi::Session("ETMCalendar", q);
         Akonadi::Monitor *monitor = new Akonadi::Monitor(q);
         monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
-        connect(monitor, SIGNAL(collectionChanged(Akonadi::Collection,QSet<QByteArray>)),
-                SLOT(onCollectionChanged(Akonadi::Collection,QSet<QByteArray>)));
+        connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged), this, [this]( const Akonadi::Collection &cols, const QSet<QByteArray> &set)
+        { onCollectionChanged(cols, set);});
 
         Akonadi::ItemFetchScope scope;
         scope.fetchFullPayload(true);
