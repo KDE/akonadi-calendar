@@ -678,8 +678,6 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
 
             handler->sendIncidenceModifiedMessage(KCalCore::iTIPRequest, newIncidence, attendeeStatusChanged);
             return;
-
-            break;
         }
         default:
             handler->deleteLater();

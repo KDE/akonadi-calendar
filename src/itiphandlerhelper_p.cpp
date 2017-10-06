@@ -396,7 +396,7 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalCore::iTIPMethod method,
         askDelegator->openDialogIncidenceDeleted(ITIPHandlerDialogDelegate::Organizer, question, mDefaultAction,
                 KGuiItem(i18nc("@action:button dialog positive answer", "Send Update")));
         return;
-    } else if (incidence->type() == KCalCore::Incidence::TypeEvent) {
+    } else {
 
         const QStringList myEmails = Akonadi::CalendarUtils::allEmails();
         bool incidenceAcceptedBefore = false;
