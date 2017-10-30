@@ -31,18 +31,10 @@ using namespace Akonadi;
 class Q_DECL_HIDDEN BlockAlarmsAttribute::Private
 {
 public:
-    Private()
-        : audio(1)
-        , display(1)
-        , email(1)
-        , procedure(1)
-    {
-    }
-
-    int audio;
-    int display;
-    int email;
-    int procedure;
+    int audio = 1;
+    int display = 1;
+    int email = 1;
+    int procedure = 1;
 };
 
 BlockAlarmsAttribute::BlockAlarmsAttribute()

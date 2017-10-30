@@ -36,14 +36,12 @@ using namespace Akonadi;
 
 struct Akonadi::Scheduler::Private {
 public:
-    Private(Scheduler *qq) : mFreeBusyCache(nullptr)
-        , mShowDialogs(true)
-        , q(qq)
+    Private(Scheduler *qq) : q(qq)
     {
     }
 
-    FreeBusyCache *mFreeBusyCache;
-    bool mShowDialogs;
+    FreeBusyCache *mFreeBusyCache = nullptr;
+    bool mShowDialogs = true;
     Scheduler *const q;
 };
 
