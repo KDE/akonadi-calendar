@@ -346,6 +346,7 @@ void ITIPHandler::publishInformation(const KCalCore::Incidence::Ptr &incidence,
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
         d->m_scheduler->publish(incidence, publishdlg->addresses());
     } else {
+        d->m_currentOperation = OperationNone;
         emit informationPublished(ResultSuccess, QString());    // Canceled.
     }
     delete publishdlg;
@@ -416,4 +417,3 @@ Akonadi::CalendarBase::Ptr ITIPHandler::calendar() const
 {
     return d->m_calendar;
 }
-
