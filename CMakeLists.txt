@@ -38,10 +38,8 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
 configure_file(akonadi-calendar-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/akonadi-calendar-version.h @ONLY)
 
 if(BUILD_TESTING)
-    set(AKONADI_CALENDAR_TESTS_EXPORT AKONADI_CALENDAR_EXPORT)
-endif()
-configure_file(akonadi-calendar_tests_export.h.in "${CMAKE_CURRENT_BINARY_DIR}/src/akonadi-calendar_tests_export.h" @ONLY)
-
+   add_definitions(-DBUILD_TESTING)
+endif(BUILD_TESTING)
 
 ########### Find packages ###########
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
