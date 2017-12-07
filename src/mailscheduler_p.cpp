@@ -128,7 +128,7 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
 
 QString MailScheduler::freeBusyDir() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("korganizer/freebusy");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusy");
 }
 
 //TODO: AKONADI_PORT review following code

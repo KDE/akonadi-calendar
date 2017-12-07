@@ -179,7 +179,7 @@ FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
 
 QString FreeBusyManagerPrivate::freeBusyDir() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("korganizer/freebusy");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusy");
 }
 
 void FreeBusyManagerPrivate::checkFreeBusyUrl()
@@ -190,7 +190,7 @@ void FreeBusyManagerPrivate::checkFreeBusyUrl()
 
 static QString configFile()
 {
-    static QString file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("korganizer/freebusyurls");
+    static QString file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusyurls");
     return file;
 }
 
