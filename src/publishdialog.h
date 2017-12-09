@@ -56,6 +56,9 @@ public:
      */
     QString addresses() const;
 
+public Q_SLOTS:
+    void accept() override;
+
 private:
     void slotHelp();
     //@cond PRIVATE

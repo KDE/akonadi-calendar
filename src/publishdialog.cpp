@@ -27,7 +27,11 @@
 #include <kcalcore/attendee.h>
 #include <kcalcore/person.h>
 
+#include <KCodecs/KEmailAddress>
+
 #include <KLocalizedString>
+#include <KMessageBox>
+
 #include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -66,7 +70,8 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged,
             d, &Private::updateItem);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    QDialogButtonBox *buttonBox =
+        new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -89,7 +94,6 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &PublishDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &PublishDialog::reject);
     connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &PublishDialog::slotHelp);
-
 }
 
 PublishDialog::~PublishDialog()
@@ -131,3 +135,18 @@ QString PublishDialog::addresses() const
     return to;
 }
 
+void PublishDialog::accept()
+{
+    QString badAddress;
+    const KEmailAddress::EmailParseResult addressOk =
+        KEmailAddress::isValidAddressList(addresses(), badAddress);
+    if (addressOk != KEmailAddress::AddressOk) {
+        KMessageBox::sorry(this,
+                           i18n("Unable to publish the calendar incidence due to an "
+                                "invalid recipients string. %1",
+                                emailParseResultToString(addressOk)),
+                           i18n("Publishing Error"));
+    } else {
+        QDialog::accept();
+    }
+}
