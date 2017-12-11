@@ -39,7 +39,7 @@ configure_file(akonadi-calendar-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-endif(BUILD_TESTING)
+endif()
 
 ########### Find packages ###########
 find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
