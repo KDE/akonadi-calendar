@@ -164,35 +164,35 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         return;
     }
 
-    if (action.startsWith(QStringLiteral("accepted")) ||
-            action.startsWith(QStringLiteral("tentative")) ||
-            action.startsWith(QStringLiteral("delegated")) ||
-            action.startsWith(QStringLiteral("counter"))) {
+    if (action.startsWith(QLatin1String("accepted")) ||
+            action.startsWith(QLatin1String("tentative")) ||
+            action.startsWith(QLatin1String("delegated")) ||
+            action.startsWith(QLatin1String("counter"))) {
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
         const KCalCore::Attendee::List attendees = d->m_incidence->attendees();
         for (const KCalCore::Attendee::Ptr &attendee : attendees) {
             if (attendee->email() == receiver) {
-                if (action.startsWith(QStringLiteral("accepted"))) {
+                if (action.startsWith(QLatin1String("accepted"))) {
                     attendee->setStatus(KCalCore::Attendee::Accepted);
-                } else if (action.startsWith(QStringLiteral("tentative"))) {
+                } else if (action.startsWith(QLatin1String("tentative"))) {
                     attendee->setStatus(KCalCore::Attendee::Tentative);
                 } else if (CalendarSettings::self()->outlookCompatCounterProposals() &&
-                           action.startsWith(QStringLiteral("counter"))) {
+                           action.startsWith(QLatin1String("counter"))) {
                     attendee->setStatus(KCalCore::Attendee::Tentative);
-                } else if (action.startsWith(QStringLiteral("delegated"))) {
+                } else if (action.startsWith(QLatin1String("delegated"))) {
                     attendee->setStatus(KCalCore::Attendee::Delegated);
                 }
                 break;
             }
         }
         if (CalendarSettings::self()->outlookCompatCounterProposals() ||
-                !action.startsWith(QStringLiteral("counter"))) {
+                !action.startsWith(QLatin1String("counter"))) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, receiver);
             return; // signal emitted in onSchedulerFinished().
         }
         //TODO: what happens here? we must emit a signal
-    } else if (action.startsWith(QStringLiteral("cancel"))) {
+    } else if (action.startsWith(QLatin1String("cancel"))) {
         // Delete the old incidence, if one is present
         KCalCore::Incidence::Ptr existingIncidence = d->calendar()->incidenceFromSchedulingID(d->m_incidence->uid());
         if (existingIncidence) {
@@ -218,7 +218,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
 
             emitiTipMessageProcessed(this, ResultSuccess, QString());
         }
-    } else if (action.startsWith(QStringLiteral("reply"))) {
+    } else if (action.startsWith(QLatin1String("reply"))) {
         if (d->m_method != KCalCore::iTIPCounter) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, QString());
         } else {
@@ -235,7 +235,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         emitiTipMessageProcessed(this, ResultError, i18n("Invalid action: %1", action));
     }
 
-    if (action.startsWith(QStringLiteral("counter"))) {
+    if (action.startsWith(QLatin1String("counter"))) {
         if (d->m_uiDelegate) {
             Akonadi::Item item;
             item.setMimeType(d->m_incidence->mimeType());
