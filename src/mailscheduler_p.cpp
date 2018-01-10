@@ -30,6 +30,7 @@
 #include <kcalcore/schedulemessage.h>
 #include <kcalutils/scheduler.h>
 #include <identitymanager.h>
+#include <identity.h>
 
 #include <KLocalizedString>
 #include <QStandardPaths>
@@ -40,6 +41,8 @@ using namespace KIdentityManagement;
 class Q_DECL_HIDDEN MailScheduler::Private
 {
 public:
+    KIdentityManagement::Identity identityForIncidence(const KCalCore::IncidenceBase::Ptr &incidence) const;
+
     KIdentityManagement::IdentityManager *m_identityManager = nullptr;
     MailClient *m_mailer = nullptr;
 };
@@ -59,6 +62,13 @@ MailScheduler::~MailScheduler()
     delete d;
 }
 
+KIdentityManagement::Identity MailScheduler::Private::identityForIncidence(const KCalCore::IncidenceBase::Ptr &incidence) const
+{
+    const auto organizer = incidence->organizer();
+    const QString organizerEmail = organizer ? organizer->email() : CalendarUtils::email();
+    return m_identityManager->identityForAddress(organizerEmail);
+}
+
 void MailScheduler::publish(const KCalCore::IncidenceBase::Ptr &incidence,
                             const QString &recipients)
 {
@@ -69,7 +79,7 @@ void MailScheduler::publish(const KCalCore::IncidenceBase::Ptr &incidence,
 
     const QString messageText = mFormat->createScheduleMessage(incidence, KCalCore::iTIPPublish);
     d->m_mailer->mailTo(incidence,
-                        d->m_identityManager->identityForAddress(CalendarUtils::email()),
+                        d->identityForIncidence(incidence),
                         CalendarUtils::email(),
                         CalendarSettings::self()->bcc(), recipients, messageText,
                         CalendarSettings::self()->mailTransport());
@@ -86,7 +96,7 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
 
     d->m_mailer->mailTo(incidence,
-                        d->m_identityManager->identityForAddress(Akonadi::CalendarUtils::email()),
+                        d->identityForIncidence(incidence),
                         Akonadi::CalendarUtils::email(),
                         CalendarSettings::self()->bcc(),
                         recipients, messageText,
@@ -108,7 +118,7 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
             method == KCalCore::iTIPAdd ||
             method == KCalCore::iTIPDeclineCounter) {
         d->m_mailer->mailAttendees(incidence,
-                                   d->m_identityManager->identityForAddress(CalendarUtils::email()),
+                                   d->identityForIncidence(incidence),
                                    CalendarSettings::self()->bcc(), messageText,
                                    CalendarSettings::self()->mailTransport());
     } else {
@@ -119,7 +129,7 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
         }
 
         d->m_mailer->mailOrganizer(incidence,
-                                   d->m_identityManager->identityForAddress(CalendarUtils::email()),
+                                   d->identityForIncidence(incidence),
                                    CalendarUtils::email(),
                                    CalendarSettings::self()->bcc(),
                                    messageText, subject, CalendarSettings::self()->mailTransport());
