@@ -555,7 +555,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
     QStringList providers;
     const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
     for (const Akonadi::AgentInstance &agent : agents) {
-        if (agent.type().capabilities().contains(QStringLiteral("FreeBusyProvider"))) {
+        if (agent.type().capabilities().contains(QLatin1String("FreeBusyProvider"))) {
             providers << agent.identifier();
         }
     }
