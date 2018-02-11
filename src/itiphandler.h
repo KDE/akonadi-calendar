@@ -61,7 +61,7 @@ class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate : public QObject
     Q_OBJECT
 public:
     explicit GroupwareUiDelegate(QObject *parent = nullptr);
-    virtual ~GroupwareUiDelegate();
+    ~GroupwareUiDelegate() override;
 
     virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
     virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) = 0;
@@ -208,7 +208,7 @@ public:
     /*
      * deletes the object.
      */
-    virtual ~ITIPHandlerComponentFactory();
+    ~ITIPHandlerComponentFactory() override;
 
     /*
      * @return A new MailTransport::MessageQueueJob object

@@ -40,7 +40,7 @@ class KColumnFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit KColumnFilterProxyModel(QObject *parent = nullptr);
-    virtual ~KColumnFilterProxyModel();
+    ~KColumnFilterProxyModel() override;
 
     /**
       Returns a vector containing the visible columns. If the vector is empy, all
