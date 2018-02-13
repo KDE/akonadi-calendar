@@ -102,7 +102,7 @@ void ITIPHandlerTest::initTestCase()
     akonadi_calendar_running_unittests = true;
     m_pendingItipMessageSignal = 0;
     m_pendingIncidenceChangerSignal = 0;
-    m_itipHandler = 0;
+    m_itipHandler = nullptr;
     m_cancelExpected = false;
     m_changer = new IncidenceChanger(new FakeITIPHandlerComponentFactory(this), this);
     m_changer->setHistoryEnabled(false);
