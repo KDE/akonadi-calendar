@@ -15,7 +15,6 @@
       <arg name="end" type="((iii)(iiii)i)" direction="in"/>
       <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QDateTime"/>
       <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QDateTime"/>
-    </signal>
       <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
     </method>
     <signal name="handlesFreeBusy">
