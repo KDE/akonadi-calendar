@@ -1,4 +1,5 @@
 include(ECMMarkAsTest)
+include(ECMAddTests)
 
 set(QT_REQUIRED_VERSION "5.8.0")
 find_package(Qt5Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
@@ -26,3 +27,9 @@ add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${c
 add_akonadi_isolated_test_advanced( mailclienttest.cpp "" "KF5::AkonadiCalendar;KF5::Mime;KF5::MailTransportAkonadi;KF5::IdentityManagement")
 
 endif()
+
+
+ecm_add_test(kcalcoreserializertest.cpp ../serializers/akonadi_serializer_kcalcore.cpp
+    LINK_LIBRARIES KF5::CalendarUtils KF5::CalendarCore KF5::AkonadiCore KF5::I18n Qt5::Test
+    TEST_NAME kcalcoreserializertest
+)
