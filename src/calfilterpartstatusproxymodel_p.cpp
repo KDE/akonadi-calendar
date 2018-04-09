@@ -108,6 +108,11 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
         return true;
     }
 
+    // always show if we are the organizer
+    if (CalendarUtils::thatIsMe(incidence->organizer()->email())) {
+        return true;
+    }
+
     foreach (const KCalCore::Attendee::Ptr &attendee, incidence->attendees()) {
         if (CalendarUtils::thatIsMe(attendee)) {
             return !d->mBlockedStatusList.contains(attendee->status());
