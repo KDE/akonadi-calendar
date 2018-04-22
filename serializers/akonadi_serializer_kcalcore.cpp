@@ -73,8 +73,11 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
         case KCalCore::Incidence::TypeJournal:
             base = Journal::Ptr(new Journal());
             break;
-        default:
+        case KCalCore::Incidence::TypeFreeBusy:
+            base = FreeBusy::Ptr(new FreeBusy());
             break;
+        case KCalCore::Incidence::TypeUnknown:
+            return false;
         }
         input >> base;
         incidence = base.staticCast<KCalCore::Incidence>();
