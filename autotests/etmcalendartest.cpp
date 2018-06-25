@@ -45,7 +45,7 @@ KCalCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &
     // since we don't call hasPayload()
     try {
         return item.payload<KCalCore::Incidence::Ptr>();
-    } catch (Akonadi::PayloadException) {
+    } catch (const Akonadi::PayloadException&) {
         return KCalCore::Incidence::Ptr();
     }
 }
