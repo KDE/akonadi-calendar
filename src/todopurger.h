@@ -66,7 +66,7 @@ public:
     /**
      * Use this after receiving the an unsuccessful todosPurged() signal to get a i18n error message.
      */
-    QString lastError() const;
+    Q_REQUIRED_RESULT QString lastError() const;
 
 Q_SIGNALS:
     /**

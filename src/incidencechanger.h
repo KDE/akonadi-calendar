@@ -171,7 +171,7 @@ public:
       *         Returns -1 if @p incidence is invalid. The createFinished() signal
       *         won't be emitted in this case.
       */
-    int createIncidence(const KCalCore::Incidence::Ptr &incidence,
+    Q_REQUIRED_RESULT int createIncidence(const KCalCore::Incidence::Ptr &incidence,
                         const Akonadi::Collection &collection = Akonadi::Collection(),
                         QWidget *parent = nullptr);
 
@@ -187,7 +187,7 @@ public:
       *         Returns -1 if item is invalid. The deleteFinished() signal won't be emitted in this
       *         case.
       */
-    int deleteIncidence(const Akonadi::Item &item, QWidget *parent = nullptr);
+    Q_REQUIRED_RESULT int deleteIncidence(const Akonadi::Item &item, QWidget *parent = nullptr);
 
     /**
       * Deletes a list of Items.
@@ -200,7 +200,7 @@ public:
       *         Returns -1 if any item is invalid or if @p items is empty. The deleteFinished() signal
       *         won't be emitted in this case.
       */
-    int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = nullptr);
+    Q_REQUIRED_RESULT int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = nullptr);
 
     /**
       * Modifies an incidence.
@@ -217,7 +217,7 @@ public:
       *         Returns -1 if the item doesn't have a valid payload. The modifyFinished() signal
       *         won't be emitted in this case.
       */
-    int modifyIncidence(const Akonadi::Item &item,
+    Q_REQUIRED_RESULT int modifyIncidence(const Akonadi::Item &item,
                         const KCalCore::Incidence::Ptr &originalPayload = KCalCore::Incidence::Ptr(),
                         QWidget *parent = nullptr);
 
@@ -263,7 +263,7 @@ public:
       * @see setDefaultCollection()
       * @see DestinationPolicy
       */
-    Akonadi::Collection defaultCollection() const;
+    Q_REQUIRED_RESULT Akonadi::Collection defaultCollection() const;
 
     /**
       * Sets the destination policy to use. The destination policy determines the
@@ -280,7 +280,7 @@ public:
       * @see setDestinationPolicy()
       * @see DestinationPolicy
       */
-    DestinationPolicy destinationPolicy() const;
+    Q_REQUIRED_RESULT DestinationPolicy destinationPolicy() const;
 
     /**
       * Sets if IncidenceChanger should show error dialogs.
@@ -293,7 +293,7 @@ public:
       *
       * @see setShowDialogsOnError()
       */
-    bool showDialogsOnError() const;
+    Q_REQUIRED_RESULT bool showDialogsOnError() const;
 
     /**
       * Sets if IncidenceChanger should honour collection's ACLs by disallowing changes if
@@ -309,7 +309,7 @@ public:
       * @see setRespectsCollectionRights()
       * @see ResultCode::ResultCodePermissions
       */
-    bool respectsCollectionRights() const;
+    Q_REQUIRED_RESULT bool respectsCollectionRights() const;
 
     /**
       * Enable or disable history.
@@ -327,7 +327,7 @@ public:
       * @see history()
       * @see historyEnabled()
       */
-    bool historyEnabled() const;
+    Q_REQUIRED_RESULT bool historyEnabled() const;
 
     /**
       * Returns a pointer to the history object.
@@ -347,7 +347,7 @@ public:
       *
       * @return true if the item was deleted recently, false otherwise.
       */
-    bool deletedRecently(Akonadi::Item::Id) const;
+    Q_REQUIRED_RESULT bool deletedRecently(Akonadi::Item::Id) const;
 
     /**
       * Enables or disabled groupware communication.
@@ -361,7 +361,7 @@ public:
       * Default is false.
       * @see setGroupwareCommuniation()
       */
-    bool groupwareCommunication() const;
+    Q_REQUIRED_RESULT bool groupwareCommunication() const;
 
     /**
      * Makes modifyIncidence() adjust recurrence parameters when modifying DTSTART.
@@ -372,7 +372,7 @@ public:
      * True if recurrence parameters are adjusted when modifying DTSTART.
      * Default is true.
      */
-    bool autoAdjustRecurrence() const;
+    Q_REQUIRED_RESULT bool autoAdjustRecurrence() const;
 
     /**
      * Sets the invitation policy.
@@ -387,7 +387,7 @@ public:
      *
      * @since 4.12
      */
-    InvitationPolicy invitationPolicy() const;
+    Q_REQUIRED_RESULT InvitationPolicy invitationPolicy() const;
 
     /**
       * Returns the collection that the last createIncidence() used.
@@ -395,7 +395,7 @@ public:
       *
       * @see createIncidence().
       */
-    Akonadi::Collection lastCollectionUsed() const;
+    Q_REQUIRED_RESULT Akonadi::Collection lastCollectionUsed() const;
 
 Q_SIGNALS:
     /**

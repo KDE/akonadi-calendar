@@ -61,65 +61,65 @@ public:
     /**
       * Destroys the calendar.
       */
-    ~CalendarBase();
+    ~CalendarBase() override;
 
     /**
       * Returns the Item containing the incidence with uid @p uid or an invalid Item
       * if the incidence isn't found.
       * @see Use item(Incidence::Ptr) instead where possible. This function doesn't take exceptions (recurrenceId) into account (and thus always returns the main event).
       */
-    Akonadi::Item item(const QString &uid) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(const QString &uid) const;
 
     /**
       * Returns the Item containing the incidence with uid @p uid or an invalid Item
       * if the incidence isn't found.
       */
-    Akonadi::Item item(const KCalCore::Incidence::Ptr &incidence) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(const KCalCore::Incidence::Ptr &incidence) const;
 
     /**
       * Returns the Item with @p id or an invalid Item if not found.
       */
-    Akonadi::Item item(Akonadi::Item::Id) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(Akonadi::Item::Id) const;
 
     /**
      * Returns the list of items contained in this calendar that belong to the specified collection.
      * @see incidences()
      * @since 4.12
      */
-    Akonadi::Item::List items(Akonadi::Collection::Id = -1) const;
+    Q_REQUIRED_RESULT Akonadi::Item::List items(Akonadi::Collection::Id = -1) const;
 
     /**
       * Returns the item list that corresponds to the @p incidenceList.
       */
-    Akonadi::Item::List itemList(const KCalCore::Incidence::List &incidenceList) const;
+    Q_REQUIRED_RESULT Akonadi::Item::List itemList(const KCalCore::Incidence::List &incidenceList) const;
 
     /**
       * Returns the child incidences of the parent identified by @p parentUid.
       * Only the direct childs are returned
       * @param parentUid identifier of the parent incidence
       */ //TODO: unit-test
-    KCalCore::Incidence::List childIncidences(const QString &parentUid) const;
+    Q_REQUIRED_RESULT KCalCore::Incidence::List childIncidences(const QString &parentUid) const;
 
     /**
       * Returns the child incidences of the parent identified by @p parentId.
       * Only the direct childs are returned
       * @param parentId identifier of the parent item
       */
-    KCalCore::Incidence::List childIncidences(Item::Id parentId) const;
+    Q_REQUIRED_RESULT KCalCore::Incidence::List childIncidences(Item::Id parentId) const;
 
     /**
       * Returns the child items of the parent identified by @p parentUid.
       * Only the direct childs are returned
       * @param parentUid identifier of the parent incidence
       */
-    Akonadi::Item::List childItems(const QString &parentUid) const;
+    Q_REQUIRED_RESULT Akonadi::Item::List childItems(const QString &parentUid) const;
 
     /**
       * Returns the child items of the parent identified by @p parentId.
       * Only the direct childs are returned
       * @param parentId identifier of the parent item
       */
-    Akonadi::Item::List childItems(const Akonadi::Item::Id &parentId) const;
+    Q_REQUIRED_RESULT Akonadi::Item::List childItems(const Akonadi::Item::Id &parentId) const;
 
     /**
       * Sets the weak pointer that's associated with this instance.
@@ -139,7 +139,7 @@ public:
       * The default is an invalid weak pointer.
       * @see setWeakPointer()
       */
-    QWeakPointer<CalendarBase> weakPointer() const;
+    Q_REQUIRED_RESULT QWeakPointer<CalendarBase> weakPointer() const;
 
     /**
       * Adds an Event to the calendar.
@@ -215,7 +215,7 @@ public:
       * Returns the IncidenceChanger used by this calendar to make changes in akonadi.
       * Use this if you need the defaults used by CalendarBase.
       */
-    Akonadi::IncidenceChanger *incidenceChanger() const;
+    Q_REQUIRED_RESULT Akonadi::IncidenceChanger *incidenceChanger() const;
 
     /**
       * Modifies an incidence.

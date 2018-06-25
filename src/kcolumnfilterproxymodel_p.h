@@ -46,7 +46,7 @@ public:
       Returns a vector containing the visible columns. If the vector is empy, all
       columns are visible.
     */
-    QVector<int> visbileColumns() const;
+    Q_REQUIRED_RESULT QVector<int> visbileColumns() const;
 
     /**
       Convenience function. Has the same effect as:

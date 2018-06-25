@@ -42,7 +42,7 @@ public:
     /**
      * Destructor
      */
-    ~PublishDialog();
+    ~PublishDialog() override;
 
     /**
      * Adds a new attendee to the dialog
@@ -54,7 +54,7 @@ public:
      * Returns a list of e-mail addresses.
      * //TODO: This should be a QStringList, but KCalUtils::Scheduler::publish() accepts a QString.
      */
-    QString addresses() const;
+    Q_REQUIRED_RESULT QString addresses() const;
 
 public Q_SLOTS:
     void accept() override;

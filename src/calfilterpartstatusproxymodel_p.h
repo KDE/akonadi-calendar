@@ -31,10 +31,10 @@ class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit CalFilterPartStatusProxyModel(QObject *parent = nullptr);
-    ~CalFilterPartStatusProxyModel();
+    ~CalFilterPartStatusProxyModel() override;
 
     void setFilterVirtual(bool filterVirtual);
-    bool filterVirtual() const;
+    Q_REQUIRED_RESULT bool filterVirtual() const;
 
     void setBlockedStatusList(const QList<KCalCore::Attendee::PartStat> &blockStatusList);
     const QList<KCalCore::Attendee::PartStat> &blockedStatusList() const;

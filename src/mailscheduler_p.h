@@ -41,7 +41,7 @@ public:
      * @param calendar Must be a valid and loaded calendar.
      */
     explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
-    ~MailScheduler();
+    ~MailScheduler() override;
 
     void publish(const KCalCore::IncidenceBase::Ptr &incidence,
                  const QString &recipients) override;
@@ -54,7 +54,7 @@ public:
                             const QString &recipients) override;
 
     /** Returns the directory where the free-busy information is stored */
-    QString freeBusyDir() const override;
+    Q_REQUIRED_RESULT QString freeBusyDir() const override;
 
     /**
      * Accepts a counter proposal.

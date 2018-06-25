@@ -115,7 +115,7 @@ public:
       @param email is a QString containing a email string in the
       "FirstName LastName <emailaddress>" format.
     */
-    KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email) override;
+    Q_REQUIRED_RESULT KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email) override;
 
     /**
       Save freebusy information belonging to an email.

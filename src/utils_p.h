@@ -38,18 +38,18 @@ namespace Akonadi
 {
 namespace CalendarUtils
 {
-QString fullName();
-QString email();
-bool thatIsMe(const QString &email);
+Q_REQUIRED_RESULT QString fullName();
+Q_REQUIRED_RESULT QString email();
+Q_REQUIRED_RESULT bool thatIsMe(const QString &email);
 
 //faster version, because we know that attendee->email() is only the email address
-bool thatIsMe(const KCalCore::Attendee::Ptr &attendee);
+Q_REQUIRED_RESULT bool thatIsMe(const KCalCore::Attendee::Ptr &attendee);
 
-QStringList allEmails();
+Q_REQUIRED_RESULT QStringList allEmails();
 
-KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item);
+Q_REQUIRED_RESULT KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item);
 
-Akonadi::Collection selectCollection(QWidget *parent,
+Q_REQUIRED_RESULT Akonadi::Collection selectCollection(QWidget *parent,
                                      int &dialogCode,
                                      const QStringList &mimeTypes,
                                      const Akonadi::Collection &defaultCollection = Akonadi::Collection());

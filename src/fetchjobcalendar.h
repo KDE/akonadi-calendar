@@ -56,13 +56,13 @@ public:
     /**
       * Destroys this FetchJobCalendar.
       */
-    ~FetchJobCalendar();
+    ~FetchJobCalendar() override;
 
     /**
       * Returns if the calendar already finished loading.
       * This is an alternative to listening for the loadFinished() signal.
       */
-    bool isLoaded() const override;
+    Q_REQUIRED_RESULT bool isLoaded() const override;
 
 Q_SIGNALS:
     /**
