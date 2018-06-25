@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
+
 
 set(akonadicalendar_LIB_SRC
   blockalarmsattribute.cpp
