@@ -516,8 +516,8 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
     }
 
     const QDateTime currentDateTime = QDateTime::currentDateTime();
-    int now = static_cast<int>(currentDateTime.toTime_t());
-    int eta = static_cast<int>(mNextUploadTime.toTime_t()) - now;
+    int now = static_cast<int>(currentDateTime.toSecsSinceEpoch());
+    int eta = static_cast<int>(mNextUploadTime.toSecsSinceEpoch()) - now;
 
     if (!mUploadingFreeBusy) {
         // Not currently uploading

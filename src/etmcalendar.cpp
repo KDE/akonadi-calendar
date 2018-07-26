@@ -245,7 +245,7 @@ Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel 
         if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
             items << item;
         } else {
-            const QModelIndex childIndex = i.child(0, 0);
+            const QModelIndex childIndex = model->index(0, 0, i);
             if (childIndex.isValid()) {
                 items << itemsFromModel(model, i);
             }
@@ -268,7 +268,7 @@ Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstra
         const Akonadi::Collection collection = collectionFromIndex(i);
         if (collection.isValid()) {
             collections << collection;
-            QModelIndex childIndex = i.child(0, 0);
+            QModelIndex childIndex = model->index(0, 0, i);
             if (childIndex.isValid()) {
                 collections << collectionsFromModel(model, i);
             }
