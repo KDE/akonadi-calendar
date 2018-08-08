@@ -8,6 +8,7 @@ target_link_libraries(akonadi_serializer_kcalcore
     KF5::CalendarUtils
     KF5::CalendarCore
     KF5::AkonadiCore
+    KF5::AkonadiSearch
     KF5::I18n
 )
 install(TARGETS akonadi_serializer_kcalcore

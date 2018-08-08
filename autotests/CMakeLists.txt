@@ -30,6 +30,6 @@ endif()
 
 
 ecm_add_test(kcalcoreserializertest.cpp ../serializers/akonadi_serializer_kcalcore.cpp
-    LINK_LIBRARIES KF5::CalendarUtils KF5::CalendarCore KF5::AkonadiCore KF5::I18n Qt5::Test
+    LINK_LIBRARIES KF5::CalendarUtils KF5::CalendarCore KF5::AkonadiCore KF5::I18n Qt5::Test KF5::AkonadiSearch
     TEST_NAME kcalcoreserializertest
 )
