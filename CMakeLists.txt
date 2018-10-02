@@ -18,7 +18,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
-include(ECMCoverageOption)
+
 
 
 set(AKONADICALENDAR_LIB_VERSION ${PIM_VERSION})
