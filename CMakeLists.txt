@@ -59,7 +59,7 @@ find_package(KF5AkonadiContact ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 
 add_subdirectory(src)
