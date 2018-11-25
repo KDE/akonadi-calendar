@@ -1,8 +1,15 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5-serializer\")
 
+include_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 set(akonadi_serializer_kcalcore_SRCS
     akonadi_serializer_kcalcore.cpp
 )
+ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer)
+
 add_library(akonadi_serializer_kcalcore MODULE ${akonadi_serializer_kcalcore_SRCS})
 target_link_libraries(akonadi_serializer_kcalcore
     KF5::CalendarUtils

@@ -31,7 +31,7 @@
 #include <KLocalizedString>
 
 #include <QDate>
-#include <QDebug>
+#include "serializer_debug.h"
 
 using namespace KCalCore;
 using namespace KCalUtils;
@@ -87,11 +87,11 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
     }
 
     if (!incidence) {
-        qWarning() << "Failed to parse incidence! Item id = " << item.id()
+        qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << "Failed to parse incidence! Item id = " << item.id()
                    << "Storage collection id " << item.storageCollectionId()
                    << "parentCollectionId = " << item.parentCollection().id();
         data.seek(0);
-        qWarning() << QString::fromUtf8(data.readAll());
+        qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << QString::fromUtf8(data.readAll());
         return false;
     }
 
