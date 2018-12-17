@@ -964,12 +964,7 @@ bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
 
     // queued, because "true" means the download was initiated. So lets
     // return before starting stuff
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     QMetaObject::invokeMethod(d, [this, d] { d->processRetrieveQueue(); }, Qt::QueuedConnection);
-#else
-    QMetaObject::invokeMethod(d, "processRetrieveQueue", Qt::QueuedConnection);
-#endif
-
     return true;
 }
 
