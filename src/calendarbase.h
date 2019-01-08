@@ -119,7 +119,7 @@ public:
       * Only the direct childs are returned
       * @param parentId identifier of the parent item
       */
-    Q_REQUIRED_RESULT Akonadi::Item::List childItems(const Akonadi::Item::Id &parentId) const;
+    Q_REQUIRED_RESULT Akonadi::Item::List childItems(Item::Id parentId) const;
 
     /**
       * Sets the weak pointer that's associated with this instance.

@@ -103,8 +103,8 @@ private Q_SLOTS:
         mPendingSignals = 0;
         mMailClient = new MailClient(new FakeITIPHandlerComponentFactory(this), this);
         mLastResult = MailClient::ResultSuccess;
-        connect(mMailClient, SIGNAL(finished(Akonadi::MailClient::Result,QString)),
-                SLOT(handleFinished(Akonadi::MailClient::Result,QString)));
+        connect(mMailClient, &MailClient::finished,
+                this, &MailClientTest::handleFinished);
     }
 
     void cleanupTestCase()

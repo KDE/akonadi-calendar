@@ -109,14 +109,14 @@ void ITIPHandlerTest::initTestCase()
     m_changer->setGroupwareCommunication(true);
     m_changer->setInvitationPolicy(IncidenceChanger::InvitationPolicySend); // don't show dialogs
 
-    connect(m_changer, SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onCreateFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(m_changer, &IncidenceChanger::createFinished,
+            this, &ITIPHandlerTest::onCreateFinished);
 
-    connect(m_changer, SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(m_changer, &IncidenceChanger::deleteFinished,
+            this, &ITIPHandlerTest::onDeleteFinished);
 
-    connect(m_changer, SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
-            SLOT(onModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+    connect(m_changer, &IncidenceChanger::modifyFinished,
+            this, &ITIPHandlerTest::onModifyFinished);
 }
 
 void ITIPHandlerTest::testProcessITIPMessage_data()
@@ -187,10 +187,10 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     // Process a REQUEST without having the incidence in our calendar.
     // itiphandler should return success and add the rquest to a calendar
     expectedResult = ITIPHandler::ResultSuccess;
-    data_filename = QLatin1String("invited_us");
+    data_filename = QStringLiteral("invited_us");
     expectedNumIncidences = 1;
     expectedPartStat = KCalCore::Attendee::NeedsAction;
-    action = QLatin1String("request");
+    action = QStringLiteral("request");
     QTest::newRow("invited us5") << data_filename << action << receiver << incidenceUid
                                  << expectedResult
                                  << expectedNumIncidences
@@ -631,8 +631,8 @@ void ITIPHandlerTest::createITIPHandler()
 {
     m_itipHandler = new Akonadi::ITIPHandler(new FakeITIPHandlerComponentFactory(this), this);
     m_itipHandler->setShowDialogsOnError(false);
-    connect(m_itipHandler, SIGNAL(iTipMessageProcessed(Akonadi::ITIPHandler::Result,QString)),
-            SLOT(oniTipMessageProcessed(Akonadi::ITIPHandler::Result,QString)));
+    connect(m_itipHandler, &ITIPHandler::iTipMessageProcessed,
+            this, &ITIPHandlerTest::oniTipMessageProcessed);
 }
 
 QString ITIPHandlerTest::icalData(const QString &data_filename)

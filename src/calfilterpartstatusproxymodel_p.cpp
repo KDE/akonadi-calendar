@@ -49,7 +49,7 @@ public:
 
 void CalFilterPartStatusProxyModel::slotIdentitiesChanged()
 {
-    emit invalidate();
+    invalidate();
 }
 
 CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
