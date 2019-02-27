@@ -50,7 +50,7 @@ void PublishDialog::Private::addItem()
         mUI.mListWidget->addItem(item);
     }
 
-    mUI.mListWidget->setItemSelected(item, true);
+    item->setSelected(true);
     mUI.mNameLineEdit->setPlaceholderText(i18n("(EmptyName)"));
     mUI.mEmailLineEdit->setPlaceholderText(i18n("(EmptyEmail)"));
     mUI.mListWidget->setCurrentItem(item);
@@ -95,7 +95,7 @@ void PublishDialog::Private::openAddressbook()
                 mUI.mNameLineEdit->setEnabled(true);
                 mUI.mEmailLineEdit->setEnabled(true);
                 QListWidgetItem *item = new QListWidgetItem(mUI.mListWidget);
-                mUI.mListWidget->setItemSelected(item, true);
+                item->setSelected(true);
                 mUI.mNameLineEdit->setText(selection.name());
                 mUI.mEmailLineEdit->setText(selection.email());
                 mUI.mListWidget->addItem(item);
