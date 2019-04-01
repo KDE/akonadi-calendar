@@ -34,7 +34,7 @@
 #include <QFile>
 #include <QByteArray>
 #include <QTestEventLoop>
-#include <qtest.h>
+#include <QTest>
 
 using namespace Akonadi;
 using namespace KCalCore;
