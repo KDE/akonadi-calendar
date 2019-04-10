@@ -180,7 +180,8 @@ void CalendarBasePrivate::collectionFetchResult(KJob *job)
     }
 
     bool isReadOnly = !(collection.rights() & Akonadi::Collection::CanChangeItem);
-    foreach (const Akonadi::Item &item, mItemsByCollection.values(collection.id())) {
+    const auto lst = mItemsByCollection.values(collection.id());
+    for (const Akonadi::Item &item : lst) {
         KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
         incidence->setReadOnly(isReadOnly);
     }

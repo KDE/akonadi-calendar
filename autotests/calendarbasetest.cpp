@@ -144,7 +144,7 @@ void CalendarBaseTest::cleanupTestCase()
 
 void CalendarBaseTest::testItem()
 {
-    foreach (const QString &uid, mUids) {
+    for (const QString &uid : qAsConst(mUids)) {
         const Item item1 = mCalendar->item(uid);
         const Item item2 = mCalendar->item(item1.id());
         QVERIFY(item1.isValid());

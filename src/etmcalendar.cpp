@@ -576,7 +576,8 @@ KCalCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
 
         if (blockedAttr) {
             // Remove all blocked types of alarms
-            Q_FOREACH (const KCalCore::Alarm::Ptr &alarm, incidence->alarms()) {
+            const auto alarmsLst = incidence->alarms();
+            for (const KCalCore::Alarm::Ptr &alarm : alarmsLst) {
                 if (blockedAttr->isAlarmTypeBlocked(alarm->type())) {
                     incidence->removeAlarm(alarm);
                 }

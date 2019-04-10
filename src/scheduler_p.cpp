@@ -354,7 +354,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
 
     Result result = ResultIncidenceToDeleteNotFound;
     QString errorString = i18n("Could not find incidence to delete.");
-    foreach (const KCalCore::Incidence::Ptr &existingIncidence, existingIncidences) {
+    for (const KCalCore::Incidence::Ptr &existingIncidence : existingIncidences) {
         qCDebug(AKONADICALENDAR_LOG) << "Considering this found event ("
                                      << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
                                      << ") :" << mFormat->toString(existingIncidence);

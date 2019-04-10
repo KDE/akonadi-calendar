@@ -353,7 +353,7 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
                                     errorString));
         }
 
-        foreach (const Item &item, items) {
+        for (const Item &item : items) {
             // Werent deleted due to error
             mDeletedItemIds.remove(mDeletedItemIds.indexOf(item.id()));
         }
@@ -506,7 +506,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
             connect(handler, &ITIPHandlerHelper::finished,
                     change.data(), &Change::emitUserDialogClosedBeforeChange);
 
-            foreach (const Akonadi::Item &item, change->originalItems) {
+            for (const Akonadi::Item &item : qAsConst(change->originalItems)) {
                 Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
                 Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 if (!incidence->supportsGroupwareCommunication()) {
@@ -617,7 +617,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
             handler->deleteLater();
             handler = nullptr;
             Q_ASSERT(!change->originalItems.isEmpty());
-            foreach (const Akonadi::Item &item, change->originalItems) {
+            for (const Akonadi::Item &item : qAsConst(change->originalItems)) {
                 Q_ASSERT(item.hasPayload());
                 Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 Q_ASSERT(incidence);
@@ -816,7 +816,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     }
 
     Item::List itemsToDelete;
-    foreach (const Item &item, items) {
+    for (const Item &item : items) {
         if (d->deleteAlreadyCalled(item.id())) {
             // IncidenceChanger::deleteIncidence() called twice, ignore this one.
             qCDebug(AKONADICALENDAR_LOG) << "Item " << item.id() << " already deleted or being deleted, skipping";
@@ -876,7 +876,7 @@ void IncidenceChanger::Private::deleteIncidences2(int changeId, ITIPHandlerHelpe
     }
 
     mDeletedItemIds.reserve(mDeletedItemIds.count() + change->originalItems.count());
-    foreach (const Item &item, change->originalItems) {
+    for (const Item &item : qAsConst(change->originalItems)) {
         mDeletedItemIds << item.id();
     }
 
@@ -1034,7 +1034,8 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
                         << IncidenceBase::FieldDuration
                         << IncidenceBase::FieldRecurrence;
         if (!(incidence->dirtyFields() & resetPartStatus).isEmpty() && weAreOrganizer(incidence)) {
-            foreach (const Attendee::Ptr &attendee, incidence->attendees()) {
+            const auto attendees = incidence->attendees();
+            for (const Attendee::Ptr &attendee : attendees) {
                 if (attendee->role() != Attendee::NonParticipant &&
                         attendee->status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
                     attendee->setStatus(Attendee::NeedsAction);
@@ -1325,7 +1326,7 @@ bool IncidenceChanger::Private::allowAtomicOperation(int atomicOperationId,
             allow = !operation->m_itemIdsInOperation.contains(change->newItem.id());
         } else if (change->type == ChangeTypeDelete) {
             DeletionChange::Ptr deletion = change.staticCast<DeletionChange>();
-            foreach (Akonadi::Item::Id id, deletion->mItemIds) {
+            for (Akonadi::Item::Id id : qAsConst(deletion->mItemIds)) {
                 if (operation->m_itemIdsInOperation.contains(id)) {
                     allow = false;
                     break;

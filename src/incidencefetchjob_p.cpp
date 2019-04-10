@@ -62,7 +62,8 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob *job)
         return;
     }
 
-    foreach (const Collection &col, fetch->collections()) {
+    const auto collections = fetch->collections();
+    for (const Collection &col : collections) {
         if (!m_mimeTypeChecker.isWantedCollection(col) || col.isVirtual()) {
             continue;
         }
@@ -80,7 +81,8 @@ void Akonadi::IncidenceFetchJob::itemFetchResult(KJob *job)
     }
     --m_jobCount;
     ItemFetchJob *fetch = qobject_cast<ItemFetchJob *>(job);
-    foreach (const Item &item, fetch->items()) {
+    const auto items = fetch->items();
+    for (const Item &item : items) {
         if (!m_mimeTypeChecker.isWantedItem(item)) {
             continue;
         }

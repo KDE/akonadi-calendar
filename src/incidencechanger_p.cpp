@@ -78,7 +78,8 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
 
     Q_ASSERT(job == m_collectionFetchJob);
     Akonadi::Collection::List allCollections;
-    foreach (const Akonadi::Collection &collection, m_collectionFetchJob->collections()) {
+    const auto collections = m_collectionFetchJob->collections();
+    for (const Akonadi::Collection &collection : collections) {
         if (collection.rights() & Akonadi::Collection::CanCreateItem) {
             allCollections << collection;
         }
@@ -91,7 +92,8 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
     bool noAcl = false;
     bool invalidCollection = false;
     Collection collectionToUse;
-    foreach (const Change::Ptr &change, mPendingCreations) { //Don't use for(...:...) here.
+    const auto lstPendingCreations = mPendingCreations;
+    for (const Change::Ptr &change : lstPendingCreations) {
         mPendingCreations.removeAll(change);
 
         if (canceled) {
