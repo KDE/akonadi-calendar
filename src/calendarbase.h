@@ -122,26 +122,6 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item::List childItems(Item::Id parentId) const;
 
     /**
-      * Sets the weak pointer that's associated with this instance.
-      * Use this if later on you need to cast sender() into a QSharedPointer
-      *
-      * @code
-      *   QWeakPointer<CalendarBase> weakPtr = qobject_cast<CalendarBase*>( sender() )->weakPointer();
-      *   CalendarBase::Ptr calendar( weakPtr.toStrongRef() );
-      * @endcode
-      *
-      * @see weakPointer()
-      */
-    void setWeakPointer(const QWeakPointer<Akonadi::CalendarBase> &pointer);
-
-    /**
-      * Returns the weak pointer set with setWeakPointer().
-      * The default is an invalid weak pointer.
-      * @see setWeakPointer()
-      */
-    Q_REQUIRED_RESULT QWeakPointer<CalendarBase> weakPointer() const;
-
-    /**
       * Adds an Event to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param event the event to be added

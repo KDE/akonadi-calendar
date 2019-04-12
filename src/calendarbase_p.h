@@ -76,7 +76,6 @@ public:
     QHash<Akonadi::Item::Id, Akonadi::Item> mItemById;
     Akonadi::IncidenceChanger *mIncidenceChanger = nullptr;
     QHash<QString, QStringList> mParentUidToChildrenUid;
-    QWeakPointer<CalendarBase> mWeakPointer;
     Akonadi::Collection mCollectionForBatchInsertion;
     bool mBatchInsertionCancelled = false;
     bool mListensForNewItems = false; // does this model detect new item creations ?

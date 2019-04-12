@@ -663,18 +663,6 @@ bool CalendarBase::modifyIncidence(const KCalCore::Incidence::Ptr &newIncidence)
     return -1 != d->mIncidenceChanger->modifyIncidence(item_);
 }
 
-void CalendarBase::setWeakPointer(const QWeakPointer<CalendarBase> &pointer)
-{
-    Q_D(CalendarBase);
-    d->mWeakPointer = pointer;
-}
-
-QWeakPointer<CalendarBase> CalendarBase::weakPointer() const
-{
-    Q_D(const CalendarBase);
-    return d->mWeakPointer;
-}
-
 IncidenceChanger *CalendarBase::incidenceChanger() const
 {
     Q_D(const CalendarBase);
