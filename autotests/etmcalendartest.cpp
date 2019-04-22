@@ -162,7 +162,7 @@ void ETMCalendarTest::testCollectionChanged()
 {
     QFETCH(Akonadi::Collection, noRightsCollection);
     CollectionModifyJob *job = new CollectionModifyJob(mCollection, this);
-    QSignalSpy spy(mCalendar, SIGNAL(collectionChanged(Akonadi::Collection,QSet<QByteArray>)));
+    QSignalSpy spy(mCalendar, &ETMCalendar::collectionChanged);
     mIncidencesToChange = 6;
     AKVERIFYEXEC(job);
     QTestEventLoop::instance().enterLoop(10);
