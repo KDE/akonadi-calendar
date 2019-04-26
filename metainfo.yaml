@@ -12,7 +12,7 @@ release: false
 libraries:
  - qmake: AkonadiCalendar 
    cmake: "KF5::AkonadiCalendar"
-   cmakename: KF5AkonadiCalendar
+cmakename: KF5AkonadiCalendar
 
 public_lib: true
 group: kdepim
