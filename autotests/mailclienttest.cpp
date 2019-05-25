@@ -133,8 +133,7 @@ private Q_SLOTS:
         MailClient::Result expectedResult = MailClient::ResultNoAttendees;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         const QString expectedFrom = QStringLiteral("unittests@dev.nul");   // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalCore::Person::Ptr organizer(new KCalCore::Person(QStringLiteral("Organizer"),
-                                                             QStringLiteral("unittests@dev.nul")));
+        KCalCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
 
         QStringList toList;
         QStringList toCcList;
@@ -296,8 +295,7 @@ private Q_SLOTS:
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalCore::Person::Ptr organizer(new KCalCore::Person(QStringLiteral("Organizer"),
-                                                             QStringLiteral("unittests@dev.nul")));
+        KCalCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
         incidence->setOrganizer(organizer);
 
         QStringList toList;
@@ -376,8 +374,7 @@ private Q_SLOTS:
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalCore::Person::Ptr organizer(new KCalCore::Person(QStringLiteral("Organizer"),
-                                                             QStringLiteral("unittests@dev.nul")));
+        KCalCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
         QStringList toList;
         toList << QLatin1String(s_ourEmail);
         QStringList toBccList;

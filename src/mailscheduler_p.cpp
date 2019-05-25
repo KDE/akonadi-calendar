@@ -65,7 +65,7 @@ MailScheduler::~MailScheduler()
 KIdentityManagement::Identity MailScheduler::Private::identityForIncidence(const KCalCore::IncidenceBase::Ptr &incidence) const
 {
     const auto organizer = incidence->organizer();
-    const QString organizerEmail = organizer ? organizer->email() : CalendarUtils::email();
+    const QString organizerEmail = !organizer.isEmpty() ? organizer.email() : CalendarUtils::email();
     return m_identityManager->identityForAddress(organizerEmail);
 }
 

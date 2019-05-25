@@ -126,7 +126,7 @@ public:
       @param person is a valid Person instance.
     */
     bool saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
-                      const KCalCore::Person::Ptr &person) override;
+                      const KCalCore::Person &person) override;
 
 Q_SIGNALS:
     /**

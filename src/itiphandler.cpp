@@ -370,10 +370,8 @@ void ITIPHandler::sendAsICalendar(const KCalCore::Incidence::Ptr &originalIncide
     QPointer<Akonadi::PublishDialog> publishdlg = new Akonadi::PublishDialog;
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
         const QString recipients = publishdlg->addresses();
-        if (incidence->organizer()->isEmpty()) {
-            incidence->setOrganizer(KCalCore::Person::Ptr(
-                                        new KCalCore::Person(Akonadi::CalendarUtils::fullName(),
-                                                Akonadi::CalendarUtils::email())));
+        if (incidence->organizer().isEmpty()) {
+            incidence->setOrganizer(KCalCore::Person(Akonadi::CalendarUtils::fullName(), Akonadi::CalendarUtils::email()));
         }        
 
         if (incidence->hasRecurrenceId()) {

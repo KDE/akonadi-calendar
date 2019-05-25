@@ -376,9 +376,7 @@ KCalCore::FreeBusy::Ptr FreeBusyManagerPrivate::ownerFreeBusy()
 
     KCalCore::Event::List events = mCalendar ? mCalendar->rawEvents(start.date(), end.date()) : KCalCore::Event::List();
     KCalCore::FreeBusy::Ptr freebusy(new KCalCore::FreeBusy(events, start, end));
-    freebusy->setOrganizer(KCalCore::Person::Ptr(
-                               new KCalCore::Person(Akonadi::CalendarUtils::fullName(),
-                                       Akonadi::CalendarUtils::email())));
+    freebusy->setOrganizer(KCalCore::Person(Akonadi::CalendarUtils::fullName(), Akonadi::CalendarUtils::email()));
     return freebusy;
 }
 
@@ -412,8 +410,9 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
         const QString email = mFreeBusyUrlEmailMap.take(job->url());
 
         if (fb) {
-            KCalCore::Person::Ptr p = fb->organizer();
-            p->setEmail(email);
+            KCalCore::Person p = fb->organizer();
+            p.setEmail(email);
+            fb->setOrganizer(p);
             q->saveFreeBusy(fb, p);
             qCDebug(AKONADICALENDAR_LOG) << "Freebusy retrieved for " << email;
             emit q->freeBusyRetrieved(fb, email);
@@ -903,9 +902,7 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
     KCalCore::Event::List events = d->mCalendar->rawEvents(start.date(), end.date());
 
     FreeBusy::Ptr freebusy(new FreeBusy(events, start, end));
-    freebusy->setOrganizer(Person::Ptr(
-                               new Person(Akonadi::CalendarUtils::fullName(),
-                                          Akonadi::CalendarUtils::email())));
+    freebusy->setOrganizer(Person(Akonadi::CalendarUtils::fullName(), Akonadi::CalendarUtils::email()));
 
     QPointer<PublishDialog> publishdlg = new PublishDialog();
     if (publishdlg->exec() == QDialog::Accepted) {
@@ -997,11 +994,10 @@ KCalCore::FreeBusy::Ptr FreeBusyManager::loadFreeBusy(const QString &email)
 }
 
 bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
-                                   const KCalCore::Person::Ptr &person)
+                                   const KCalCore::Person &person)
 {
     Q_D(FreeBusyManager);
-    Q_ASSERT(person);
-    qCDebug(AKONADICALENDAR_LOG) << person->fullName();
+    qCDebug(AKONADICALENDAR_LOG) << person.fullName();
 
     QString fbd = d->freeBusyDir();
 
@@ -1018,7 +1014,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
 
     QString filename(fbd);
     filename += QLatin1Char('/');
-    filename += person->email();
+    filename += person.email();
     filename += QStringLiteral(".ifb");
     QFile f(filename);
 

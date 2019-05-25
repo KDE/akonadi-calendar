@@ -109,7 +109,7 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     }
 
     // always show if we are the organizer
-    if (CalendarUtils::thatIsMe(incidence->organizer()->email())) {
+    if (CalendarUtils::thatIsMe(incidence->organizer().email())) {
         return true;
     }
 

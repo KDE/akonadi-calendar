@@ -62,7 +62,7 @@ static ITIPHandlerDialogDelegate::Action actionFromStatus(ITIPHandlerHelper::Sen
 
 static bool weAreOrganizer(const Incidence::Ptr &incidence)
 {
-    const QString email = incidence->organizer()->email();
+    const QString email = incidence->organizer().email();
     return Akonadi::CalendarUtils::thatIsMe(email);
 }
 
@@ -514,7 +514,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
                 }
                 // We only send CANCEL if we're the organizer.
                 // If we're not, then we send REPLY with PartStat=Declined in handleInvitationsAfterChange()
-                if (Akonadi::CalendarUtils::thatIsMe(incidence->organizer()->email())) {
+                if (Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email())) {
                     //TODO: not to popup all delete message dialogs at once :(
                     sendOk = false;
                     handler->sendIncidenceDeletedMessage(KCalCore::iTIPCancel, incidence);
@@ -625,7 +625,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
                     continue;
                 }
 
-                if (!Akonadi::CalendarUtils::thatIsMe(incidence->organizer()->email())) {
+                if (!Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email())) {
                     const QStringList myEmails = Akonadi::CalendarUtils::allEmails();
                     bool notifyOrganizer = false;
                     KCalCore::Attendee::Ptr me(incidence->attendeeByMails(myEmails));
@@ -659,7 +659,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
             Incidence::Ptr newIncidence = CalendarUtils::incidence(change->newItem);
 
             if (!newIncidence->supportsGroupwareCommunication() ||
-                    !Akonadi::CalendarUtils::thatIsMe(newIncidence->organizer()->email())) {
+                    !Akonadi::CalendarUtils::thatIsMe(newIncidence->organizer().email())) {
                 // If we're not the organizer, the user already saw the "Do you really want to do this, incidence will become out of sync"
                 break;
             }

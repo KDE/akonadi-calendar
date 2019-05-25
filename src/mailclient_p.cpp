@@ -66,8 +66,8 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
         return;
     }
 
-    const QString from = incidence->organizer()->fullName();
-    const QString organizerEmail = incidence->organizer()->email();
+    const QString from = incidence->organizer().fullName();
+    const QString organizerEmail = incidence->organizer().email();
 
     QStringList toList;
     QStringList ccList;
@@ -129,7 +129,7 @@ void MailClient::mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
                                const QString &attachment,
                                const QString &sub, const QString &mailTransport)
 {
-    const QString to = incidence->organizer()->fullName();
+    const QString to = incidence->organizer().fullName();
     QString subject = sub;
 
     if (incidence->type() != KCalCore::Incidence::TypeFreeBusy) {

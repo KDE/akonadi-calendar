@@ -191,9 +191,9 @@ static void compareIncidenceBase(AbstractDifferencesReporter *reporter, const In
 {
     compareList(reporter, i18n("Attendees"), left->attendees(), right->attendees());
 
-    if (!compareString(left->organizer()->fullName(), right->organizer()->fullName())) {
+    if (!compareString(left->organizer().fullName(), right->organizer().fullName())) {
         reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Organizer"),
-                              left->organizer()->fullName(), right->organizer()->fullName());
+                              left->organizer().fullName(), right->organizer().fullName());
     }
 
     if (!compareString(left->uid(), right->uid())) {

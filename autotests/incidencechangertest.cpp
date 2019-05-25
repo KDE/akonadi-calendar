@@ -384,7 +384,7 @@ private Q_SLOTS:
         Incidence::Ptr incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
-        incidence->setOrganizer(Person::Ptr(new Person(QStringLiteral("orga"), QStringLiteral("orga@dev.nul"))));
+        incidence->setOrganizer(Person(QStringLiteral("orga"), QStringLiteral("orga@dev.nul")));
         incidence->setDirtyFields(QSet<IncidenceBase::Field>());
         item.setPayload<KCalCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
@@ -444,7 +444,7 @@ private Q_SLOTS:
         incidence->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), Qt::UTC));
         incidence->setAllDay(false);
         incidence->setLocation(QStringLiteral("location"));
-        incidence->setOrganizer(Person::Ptr(new Person(QString(), s_ourEmail)));
+        incidence->setOrganizer(Person(QString(), s_ourEmail));
         incidence->addAttendee(us);
         incidence->addAttendee(mia);
         incidence->addAttendee(vincent);
@@ -496,7 +496,7 @@ private Q_SLOTS:
         incidence2->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), Qt::UTC));
         incidence2->setAllDay(false);
         incidence2->setLocation(QStringLiteral("location"));
-        incidence2->setOrganizer(Person::Ptr(new Person(QStringLiteral("External organizator"), QStringLiteral("exorga@dev.nul"))));
+        incidence2->setOrganizer(Person(QStringLiteral("External organizator"), QStringLiteral("exorga@dev.nul")));
         incidence2->addAttendee(us);
         incidence2->addAttendee(mia);
         incidence2->addAttendee(vincent);
@@ -569,7 +569,7 @@ private Q_SLOTS:
         QCOMPARE(incidence->revision(), revision + 1);
 
         if (expectReset) {
-            if (incidence->organizer()->email() == s_ourEmail) {
+            if (incidence->organizer().email() == s_ourEmail) {
                 QCOMPARE(incidence->attendeeByMail(s_ourEmail)->status(), Attendee::Accepted);
             } else {
                 QCOMPARE(incidence->attendeeByMail(s_ourEmail)->status(), Attendee::NeedsAction);

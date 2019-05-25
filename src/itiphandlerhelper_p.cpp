@@ -159,7 +159,7 @@ ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode,
 
 bool ITIPHandlerHelper::weAreOrganizerOf(const KCalCore::Incidence::Ptr &incidence)
 {
-    const QString email = incidence->organizer()->email();
+    const QString email = incidence->organizer().email();
     return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty()
            || email == QLatin1String("invalid@email.address");
 }
@@ -168,8 +168,8 @@ bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalCore::Incidence::Ptr &inci
 {
     if (!weAreOrganizerOf(incidence)) {
         qCritical() << "We should be the organizer of this incidence."
-                    << "; email= "       << incidence->organizer()->email()
-                    << "; thatIsMe() = " << Akonadi::CalendarUtils::thatIsMe(incidence->organizer()->email());
+                    << "; email= "       << incidence->organizer().email()
+                    << "; thatIsMe() = " << Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email());
         Q_ASSERT(false);
         return false;
     }
@@ -181,7 +181,7 @@ bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalCore::Incidence::Ptr &inci
     // At least one attendee
     return
         incidence->attendees().count() > 1 ||
-        incidence->attendees().at(0)->email() != incidence->organizer()->email();
+        incidence->attendees().at(0)->email() != incidence->organizer().email();
 }
 
 ITIPHandlerHelper::ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent)
@@ -216,8 +216,8 @@ void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalCore::iTIPMethod method,
 
     if (!weAreOrganizerOf(incidence)) {
         qCWarning(AKONADICALENDAR_LOG) << "Creating incidence which has another organizer! Will skip sending invitations."
-                                       << "; email= "       << incidence->organizer()->email()
-                                       << "; thatIsMe() = " << Akonadi::CalendarUtils::thatIsMe(incidence->organizer()->email());
+                                       << "; email= "       << incidence->organizer().email()
+                                       << "; thatIsMe() = " << Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email());
         emit sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::ResultFailAbortUpdate, method, incidence);
         emit finished(ITIPHandlerHelper::ResultFailAbortUpdate, QString());
         return;
