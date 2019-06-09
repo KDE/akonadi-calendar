@@ -28,7 +28,6 @@
 #include <kcalcore/icalformat.h>
 #include <kcalcore/incidence.h>
 #include <kcalcore/schedulemessage.h>
-#include <kcalutils/scheduler.h>
 #include <identitymanager.h>
 #include <identity.h>
 
