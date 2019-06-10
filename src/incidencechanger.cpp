@@ -1034,14 +1034,15 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
                         << IncidenceBase::FieldDuration
                         << IncidenceBase::FieldRecurrence;
         if (!(incidence->dirtyFields() & resetPartStatus).isEmpty() && weAreOrganizer(incidence)) {
-            const auto attendees = incidence->attendees();
-            for (const Attendee::Ptr &attendee : attendees) {
+            auto attendees = incidence->attendees();
+            for (auto &attendee : attendees) {
                 if (attendee->role() != Attendee::NonParticipant &&
                         attendee->status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
                     attendee->setStatus(Attendee::NeedsAction);
                     attendee->setRSVP(true);
                 }
             }
+            incidence->setAttendees(attendees);
         }
     }
 

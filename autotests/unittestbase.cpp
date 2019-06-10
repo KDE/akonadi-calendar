@@ -123,10 +123,11 @@ void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalen
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We have incidece with uid=" << incidence->uid()
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
-        const auto attendees = incidence->attendees();
-        for (const KCalCore::Attendee::Ptr &attendee : attendees) {
+        auto attendees = incidence->attendees();
+        for (auto &attendee : attendees) {
             attendee->setUid(attendee->email());
         }
+        incidence->setAttendees(attendees);
     }
 
     // ... so we can compare them
@@ -134,10 +135,11 @@ void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalen
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We expect incidece with uid=" << incidence->uid()
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
-        const auto attendees = incidence->attendees();
-        for (const KCalCore::Attendee::Ptr &attendee : attendees) {
+        auto attendees = incidence->attendees();
+        for (auto &attendee : attendees) {
             attendee->setUid(attendee->email());
         }
+        incidence->setAttendees(attendees);
     }
 
     QCOMPARE(incidences.count(), expectedIncidences.count());

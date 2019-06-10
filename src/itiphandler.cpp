@@ -170,8 +170,8 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
             action.startsWith(QLatin1String("counter"))) {
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
-        const KCalCore::Attendee::List attendees = d->m_incidence->attendees();
-        for (const KCalCore::Attendee::Ptr &attendee : attendees) {
+        KCalCore::Attendee::List attendees = d->m_incidence->attendees();
+        for (auto &attendee : attendees) {
             if (attendee->email() == receiver) {
                 if (action.startsWith(QLatin1String("accepted"))) {
                     attendee->setStatus(KCalCore::Attendee::Accepted);
@@ -186,6 +186,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
                 break;
             }
         }
+        d->m_incidence->setAttendees(attendees);
         if (CalendarSettings::self()->outlookCompatCounterProposals() ||
                 !action.startsWith(QLatin1String("counter"))) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, receiver);
