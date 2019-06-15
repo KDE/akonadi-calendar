@@ -628,14 +628,14 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
                 if (!Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email())) {
                     const QStringList myEmails = Akonadi::CalendarUtils::allEmails();
                     bool notifyOrganizer = false;
-                    KCalCore::Attendee::Ptr me(incidence->attendeeByMails(myEmails));
-                    if (me) {
-                        if (me->status() == KCalCore::Attendee::Accepted ||
-                                me->status() == KCalCore::Attendee::Delegated) {
+                    const KCalCore::Attendee me(incidence->attendeeByMails(myEmails));
+                    if (!me.isNull()) {
+                        if (me.status() == KCalCore::Attendee::Accepted ||
+                                me.status() == KCalCore::Attendee::Delegated) {
                             notifyOrganizer = true;
                         }
-                        KCalCore::Attendee::Ptr newMe(new KCalCore::Attendee(*me));
-                        newMe->setStatus(KCalCore::Attendee::Declined);
+                        KCalCore::Attendee newMe(me);
+                        newMe.setStatus(KCalCore::Attendee::Declined);
                         incidence->clearAttendees();
                         incidence->addAttendee(newMe);
                         //break;
@@ -701,10 +701,10 @@ bool IncidenceChanger::Private::myAttendeeStatusChanged(const Incidence::Ptr &ne
 {
     Q_ASSERT(newInc);
     Q_ASSERT(oldInc);
-    const Attendee::Ptr oldMe = oldInc->attendeeByMails(myEmails);
-    const Attendee::Ptr newMe = newInc->attendeeByMails(myEmails);
+    const Attendee oldMe = oldInc->attendeeByMails(myEmails);
+    const Attendee newMe = newInc->attendeeByMails(myEmails);
 
-    return oldMe && newMe && oldMe->status() != newMe->status();
+    return !oldMe.isNull() && !newMe.isNull() && oldMe.status() != newMe.status();
 }
 
 IncidenceChanger::IncidenceChanger(QObject *parent)
@@ -1036,10 +1036,10 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
         if (!(incidence->dirtyFields() & resetPartStatus).isEmpty() && weAreOrganizer(incidence)) {
             auto attendees = incidence->attendees();
             for (auto &attendee : attendees) {
-                if (attendee->role() != Attendee::NonParticipant &&
-                        attendee->status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
-                    attendee->setStatus(Attendee::NeedsAction);
-                    attendee->setRSVP(true);
+                if (attendee.role() != Attendee::NonParticipant &&
+                        attendee.status() != Attendee::Delegated && !Akonadi::CalendarUtils::thatIsMe(attendee)) {
+                    attendee.setStatus(Attendee::NeedsAction);
+                    attendee.setRSVP(true);
                 }
             }
             incidence->setAttendees(attendees);

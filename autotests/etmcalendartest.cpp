@@ -537,14 +537,14 @@ void ETMCalendarTest::testFilterInvitations()
     Item item;
     Incidence::Ptr incidence = Incidence::Ptr(new Event());
     KEMailSettings emailSettings;
-    KCalCore::Attendee::Ptr me(new KCalCore::Attendee(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress)));
+    KCalCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
 
     item.setMimeType(Event::eventMimeType());
     incidence->setUid(uid);
     incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
 
-    me->setStatus(KCalCore::Attendee::NeedsAction);
+    me.setStatus(KCalCore::Attendee::NeedsAction);
     incidence->addAttendee(me);
 
     item.setPayload<KCalCore::Incidence::Ptr>(incidence);
@@ -562,7 +562,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     int anz = mCalendar->model()->rowCount();
 
     KEMailSettings emailSettings;
-    KCalCore::Attendee::Ptr me(new KCalCore::Attendee(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress)));
+    KCalCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
 
     QString uid = QStringLiteral("invite-02");
     mIncidencesToAdd = 1;
@@ -583,7 +583,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     waitForIt();
     QCOMPARE(mCalendar->model()->rowCount(), anz);
 
-    me->setStatus(KCalCore::Attendee::Accepted);
+    me.setStatus(KCalCore::Attendee::Accepted);
     incidence->clearAttendees();
     incidence->addAttendee(me);
 

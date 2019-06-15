@@ -424,16 +424,16 @@ private Q_SLOTS:
         QTest::addColumn<Event::Ptr>("event");
         QTest::addColumn<bool>("expectReset");
 
-        const Attendee::Ptr us = Attendee::Ptr(new Attendee(QString(), s_ourEmail));
-        us->setStatus(Attendee::Accepted);
-        const Attendee::Ptr mia = Attendee::Ptr(new Attendee(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul")));
-        mia->setStatus(Attendee::Declined);
-        mia->setRSVP(false);
-        const Attendee::Ptr vincent = Attendee::Ptr(new Attendee(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul")));
-        vincent->setStatus(Attendee::Delegated);
-        const Attendee::Ptr jules = Attendee::Ptr(new Attendee(QStringLiteral("Jules"), QStringLiteral("jules@dev.nul")));
-        jules->setStatus(Attendee::Accepted);
-        jules->setRole(Attendee::NonParticipant);
+        Attendee us(QString(), s_ourEmail);
+        us.setStatus(Attendee::Accepted);
+        Attendee mia(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul"));
+        mia.setStatus(Attendee::Declined);
+        mia.setRSVP(false);
+        Attendee vincent(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul"));
+        vincent.setStatus(Attendee::Delegated);
+        Attendee jules(QStringLiteral("Jules"), QStringLiteral("jules@dev.nul"));
+        jules.setStatus(Attendee::Accepted);
+        jules.setRole(Attendee::NonParticipant);
 
         // we as organizator
         Item item;
@@ -570,21 +570,21 @@ private Q_SLOTS:
 
         if (expectReset) {
             if (incidence->organizer().email() == s_ourEmail) {
-                QCOMPARE(incidence->attendeeByMail(s_ourEmail)->status(), Attendee::Accepted);
+                QCOMPARE(incidence->attendeeByMail(s_ourEmail).status(), Attendee::Accepted);
             } else {
-                QCOMPARE(incidence->attendeeByMail(s_ourEmail)->status(), Attendee::NeedsAction);
+                QCOMPARE(incidence->attendeeByMail(s_ourEmail).status(), Attendee::NeedsAction);
             }
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("mia@dev.nul"))->status(), Attendee::NeedsAction);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("mia@dev.nul"))->RSVP(), true);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("vincent@dev.nul"))->status(), Attendee::Delegated);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("vincent@dev.nul"))->RSVP(), false);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("jules@dev.nul"))->status(), Attendee::Accepted);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("jules@dev.nul"))->RSVP(), false);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("mia@dev.nul")).status(), Attendee::NeedsAction);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("mia@dev.nul")).RSVP(), true);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("vincent@dev.nul")).status(), Attendee::Delegated);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("vincent@dev.nul")).RSVP(), false);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("jules@dev.nul")).status(), Attendee::Accepted);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("jules@dev.nul")).RSVP(), false);
         } else {
-            QCOMPARE(incidence->attendeeByMail(s_ourEmail)->status(), Attendee::Accepted);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("mia@dev.nul"))->status(), Attendee::Declined);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("vincent@dev.nul"))->status(), Attendee::Delegated);
-            QCOMPARE(incidence->attendeeByMail(QLatin1String("jules@dev.nul"))->status(), Attendee::Accepted);
+            QCOMPARE(incidence->attendeeByMail(s_ourEmail).status(), Attendee::Accepted);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("mia@dev.nul")).status(), Attendee::Declined);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("vincent@dev.nul")).status(), Attendee::Delegated);
+            QCOMPARE(incidence->attendeeByMail(QLatin1String("jules@dev.nul")).status(), Attendee::Accepted);
         }
         delete fetchJob;
     }

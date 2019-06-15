@@ -43,7 +43,7 @@ Q_REQUIRED_RESULT QString email();
 Q_REQUIRED_RESULT bool thatIsMe(const QString &email);
 
 //faster version, because we know that attendee->email() is only the email address
-Q_REQUIRED_RESULT bool thatIsMe(const KCalCore::Attendee::Ptr &attendee);
+Q_REQUIRED_RESULT bool thatIsMe(const KCalCore::Attendee &attendee);
 
 Q_REQUIRED_RESULT QStringList allEmails();
 

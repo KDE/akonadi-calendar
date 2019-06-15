@@ -114,9 +114,9 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     }
 
     const auto attendees = incidence->attendees();
-    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
+    for (const KCalCore::Attendee &attendee : attendees) {
         if (CalendarUtils::thatIsMe(attendee)) {
-            return !d->mBlockedStatusList.contains(attendee->status());
+            return !d->mBlockedStatusList.contains(attendee.status());
         }
     }
 

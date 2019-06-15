@@ -172,21 +172,22 @@ void ITIPHandler::processiTIPMessage(const QString &receiver,
         // since this does not know the choice I made in the KMail bpf
         KCalCore::Attendee::List attendees = d->m_incidence->attendees();
         for (auto &attendee : attendees) {
-            if (attendee->email() == receiver) {
+            if (attendee.email() == receiver) {
                 if (action.startsWith(QLatin1String("accepted"))) {
-                    attendee->setStatus(KCalCore::Attendee::Accepted);
+                    attendee.setStatus(KCalCore::Attendee::Accepted);
                 } else if (action.startsWith(QLatin1String("tentative"))) {
-                    attendee->setStatus(KCalCore::Attendee::Tentative);
+                    attendee.setStatus(KCalCore::Attendee::Tentative);
                 } else if (CalendarSettings::self()->outlookCompatCounterProposals() &&
                            action.startsWith(QLatin1String("counter"))) {
-                    attendee->setStatus(KCalCore::Attendee::Tentative);
+                    attendee.setStatus(KCalCore::Attendee::Tentative);
                 } else if (action.startsWith(QLatin1String("delegated"))) {
-                    attendee->setStatus(KCalCore::Attendee::Delegated);
+                    attendee.setStatus(KCalCore::Attendee::Delegated);
                 }
                 break;
             }
         }
         d->m_incidence->setAttendees(attendees);
+
         if (CalendarSettings::self()->outlookCompatCounterProposals() ||
                 !action.startsWith(QLatin1String("counter"))) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, receiver);

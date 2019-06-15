@@ -266,9 +266,9 @@ void ITIPHandlerTest::testProcessITIPMessage()
         QCOMPARE(incidence->schedulingID(), incidenceUid);
         QVERIFY(incidence->schedulingID() != incidence->uid());
 
-        KCalCore::Attendee::Ptr me = ourAttendee(incidence);
-        QVERIFY(me);
-        QCOMPARE(me->status(), expectedPartStat);
+        KCalCore::Attendee me = ourAttendee(incidence);
+        QVERIFY(!me.isNull());
+        QCOMPARE(me.status(), expectedPartStat);
     }
 
     cleanup();
@@ -417,10 +417,10 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     Q_UNUSED(invitationPolicyAsk);
 
     const QString ourEmail     = QLatin1String(s_ourEmail);
-    const Attendee::Ptr us = Attendee::Ptr(new Attendee(QString(), ourEmail));
-    const Attendee::Ptr mia = Attendee::Ptr(new Attendee(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul")));
-    const Attendee::Ptr vincent = Attendee::Ptr(new Attendee(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul")));
-    const Attendee::Ptr jules = Attendee::Ptr(new Attendee(QStringLiteral("Jules"), QStringLiteral("jules@dev.nul")));
+    Attendee us(QString(), ourEmail);
+    const Attendee mia(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul"));
+    const Attendee vincent(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul"));
+    const Attendee jules(QStringLiteral("Jules"), QStringLiteral("jules@dev.nul"));
     const QString uid = QStringLiteral("random-uid-123");
 
     //----------------------------------------------------------------------------------------------
@@ -481,44 +481,44 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
-    item = generateIncidence(uid, /**organizer=*/mia->email());
+    item = generateIncidence(uid, /**organizer=*/mia.email());
     incidence = item.payload<KCalCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
-    us->setStatus(Attendee::Accepted); // TODO: Test without accepted status
+    us.setStatus(Attendee::Accepted); // TODO: Test without accepted status
     incidence->addAttendee(us); // TODO: test that attendees didn't receive the REPLY
     expectedEmailCount = 1; // REPLY is always sent, there are no dialogs to control this. Dialogs only control REQUEST and CANCEL. Bug or feature ?
     QTest::newRow("Deletion. We didnt organize.") << item << changeType << expectedEmailCount << invitationPolicyDontSend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
-    item = generateIncidence(uid, /**organizer=*/mia->email());
+    item = generateIncidence(uid, /**organizer=*/mia.email());
     incidence = item.payload<KCalCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules); // TODO: test that attendees didn't receive the REPLY
-    us->setStatus(Attendee::Accepted); // TODO: Test without accepted status
+    us.setStatus(Attendee::Accepted); // TODO: Test without accepted status
     incidence->addAttendee(us);
     expectedEmailCount = 1;
     QTest::newRow("Deletion. We didnt organize.2") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "yes".
     changeType = IncidenceChanger::ChangeTypeModify;
-    item = generateIncidence(uid, /**organizer=*/mia->email());
+    item = generateIncidence(uid, /**organizer=*/mia.email());
     incidence = item.payload<KCalCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
-    us->setStatus(Attendee::Accepted);
+    us.setStatus(Attendee::Accepted);
     incidence->addAttendee(us);
     expectedEmailCount = 0;
     QTest::newRow("Modification. We didnt organize") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "no".
     changeType = IncidenceChanger::ChangeTypeModify;
-    item = generateIncidence(uid, /**organizer=*/mia->email());
+    item = generateIncidence(uid, /**organizer=*/mia.email());
     incidence = item.payload<KCalCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
-    us->setStatus(Attendee::Accepted);
+    us.setStatus(Attendee::Accepted);
     incidence->addAttendee(us);
     expectedEmailCount = 0;
     QTest::newRow("Modification. We didnt organize.2") << item << changeType << expectedEmailCount << invitationPolicyDontSend << userCancels;
@@ -661,12 +661,12 @@ void ITIPHandlerTest::processItip(const QString &icaldata, const QString &receiv
     }
 }
 
-Attendee::Ptr ITIPHandlerTest::ourAttendee(const KCalCore::Incidence::Ptr &incidence) const
+Attendee ITIPHandlerTest::ourAttendee(const KCalCore::Incidence::Ptr &incidence) const
 {
     const KCalCore::Attendee::List attendees = incidence->attendees();
-    KCalCore::Attendee::Ptr me;
-    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
-        if (attendee->email() == QLatin1String(s_ourEmail)) {
+    KCalCore::Attendee me;
+    for (const KCalCore::Attendee &attendee : attendees) {
+        if (attendee.email() == QLatin1String(s_ourEmail)) {
             me = attendee;
             break;
         }

@@ -125,7 +125,7 @@ void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalen
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
         auto attendees = incidence->attendees();
         for (auto &attendee : attendees) {
-            attendee->setUid(attendee->email());
+            attendee.setUid(attendee.email());
         }
         incidence->setAttendees(attendees);
     }
@@ -137,7 +137,7 @@ void UnitTestBase::compareCalendars(const KCalCore::Calendar::Ptr &expectedCalen
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
         auto attendees = incidence->attendees();
         for (auto &attendee : attendees) {
-            attendee->setUid(attendee->email());
+            attendee.setUid(attendee.email());
         }
         incidence->setAttendees(attendees);
     }

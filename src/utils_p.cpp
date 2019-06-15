@@ -86,9 +86,9 @@ QString Akonadi::CalendarUtils::email()
     return emailSettings.getSetting(KEMailSettings::EmailAddress);
 }
 
-bool Akonadi::CalendarUtils::thatIsMe(const KCalCore::Attendee::Ptr &attendee)
+bool Akonadi::CalendarUtils::thatIsMe(const KCalCore::Attendee &attendee)
 {
-    return KIdentityManagement::thatIsMe(attendee->email());
+    return KIdentityManagement::thatIsMe(attendee.email());
 }
 
 bool Akonadi::CalendarUtils::thatIsMe(const QString &_email)

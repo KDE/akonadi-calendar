@@ -181,7 +181,7 @@ bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalCore::Incidence::Ptr &inci
     // At least one attendee
     return
         incidence->attendees().count() > 1 ||
-        incidence->attendees().at(0)->email() != incidence->organizer().email();
+        incidence->attendees().at(0).email() != incidence->organizer().email();
 }
 
 ITIPHandlerHelper::ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent)
@@ -401,10 +401,10 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalCore::iTIPMethod method,
         const QStringList myEmails = Akonadi::CalendarUtils::allEmails();
         bool incidenceAcceptedBefore = false;
         for (const QString &email : myEmails) {
-            KCalCore::Attendee::Ptr me = incidence->attendeeByMail(email);
-            if (me &&
-                    (me->status() == KCalCore::Attendee::Accepted ||
-                     me->status() == KCalCore::Attendee::Delegated)) {
+            const KCalCore::Attendee me = incidence->attendeeByMail(email);
+            if (!me.isNull() &&
+                    (me.status() == KCalCore::Attendee::Accepted ||
+                     me.status() == KCalCore::Attendee::Delegated)) {
                 incidenceAcceptedBefore = true;
                 break;
             }

@@ -73,9 +73,9 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     QStringList ccList;
     const int numberOfAttendees = attendees.count();
     for (int i = 0; i < numberOfAttendees; ++i) {
-        KCalCore::Attendee::Ptr a = attendees.at(i);
+        const KCalCore::Attendee a = attendees.at(i);
 
-        const QString email = a->email();
+        const QString email = a.email();
         if (email.isEmpty()) {
             continue;
         }
@@ -88,11 +88,11 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
         }
 
         // Optional Participants and Non-Participants are copied on the email
-        if (a->role() == KCalCore::Attendee::OptParticipant ||
-                a->role() == KCalCore::Attendee::NonParticipant) {
-            ccList << a->email();
+        if (a.role() == KCalCore::Attendee::OptParticipant ||
+                a.role() == KCalCore::Attendee::NonParticipant) {
+            ccList << a.email();
         } else {
-            toList << a->email();
+            toList << a.email();
         }
     }
     if (toList.isEmpty() && ccList.isEmpty()) {

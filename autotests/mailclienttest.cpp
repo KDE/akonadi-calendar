@@ -144,8 +144,7 @@ private Q_SLOTS:
                                       << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One attendee, but without e-mail
-        KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(QStringLiteral("name1"),
-                                                                QString()));
+        KCalCore::Attendee attendee(QStringLiteral("name1"), QString());
         incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
         incidence->addAttendee(attendee);
         expectedResult = MailClient::ResultReallyNoAttendees;
@@ -154,8 +153,7 @@ private Q_SLOTS:
                                                  << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee
-        attendee = KCalCore::Attendee::Ptr(new KCalCore::Attendee(QStringLiteral("name1"),
-                                                                  QStringLiteral("test@foo.org")));
+        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
         incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
         incidence->addAttendee(attendee);
         incidence->setOrganizer(organizer);
@@ -166,8 +164,7 @@ private Q_SLOTS:
                                       << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee
-        attendee = KCalCore::Attendee::Ptr(new KCalCore::Attendee(QStringLiteral("name1"),
-                                                                  QStringLiteral("test@foo.org")));
+        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
         incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
@@ -180,8 +177,7 @@ private Q_SLOTS:
                                            << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee, and bcc me
-        attendee = KCalCore::Attendee::Ptr(new KCalCore::Attendee(QStringLiteral("name1"),
-                                                                  QStringLiteral("test@foo.org")));
+        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
         incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
@@ -195,16 +191,11 @@ private Q_SLOTS:
                                   << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // Test CC list
-        attendee = KCalCore::Attendee::Ptr(new KCalCore::Attendee(QStringLiteral("name1"),
-                                                                  QStringLiteral("test@foo.org")));
-        KCalCore::Attendee::Ptr optionalAttendee =
-            KCalCore::Attendee::Ptr(new KCalCore::Attendee(QStringLiteral("opt"),
-                                                           QStringLiteral("optional@foo.org")));
-        KCalCore::Attendee::Ptr nonParticipant =
-            KCalCore::Attendee::Ptr(new KCalCore::Attendee(QStringLiteral("non"),
-                                                           QStringLiteral("non@foo.org")));
-        optionalAttendee->setRole(KCalCore::Attendee::OptParticipant);
-        nonParticipant->setRole(KCalCore::Attendee::NonParticipant);
+        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
+        KCalCore::Attendee optionalAttendee(QStringLiteral("opt"), QStringLiteral("optional@foo.org"));
+        KCalCore::Attendee nonParticipant(QStringLiteral("non"), QStringLiteral("non@foo.org"));
+        optionalAttendee.setRole(KCalCore::Attendee::OptParticipant);
+        nonParticipant.setRole(KCalCore::Attendee::NonParticipant);
         incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);

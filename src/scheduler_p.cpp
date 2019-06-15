@@ -225,7 +225,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
             const Attendee::List attendees = existingIncidence->attendees();
             Attendee::List::ConstIterator ait;
             for (ait = attendees.begin(); ait != attendees.end(); ++ait) {
-                if ((*ait)->email() == email && (*ait)->status() == Attendee::NeedsAction) {
+                if ((*ait).email() == email && (*ait).status() == Attendee::NeedsAction) {
                     // This incidence wasn't created by me - it's probably in a shared folder
                     // and meant for someone else, ignore it.
                     qCDebug(AKONADICALENDAR_LOG) << "ignoring " << existingUid << " since I'm still NeedsAction there";
@@ -379,9 +379,9 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
         // on the invitation" case. So check the attendee status of the attendee.
         bool isMine = true;
         const Attendee::List attendees = existingIncidence->attendees();
-        for (const KCalCore::Attendee::Ptr &attendee : attendees) {
-            if (attendee->email() == attendeeEmail &&
-                    attendee->status() == Attendee::NeedsAction) {
+        for (const KCalCore::Attendee &attendee : attendees) {
+            if (attendee.email() == attendeeEmail &&
+                    attendee.status() == Attendee::NeedsAction) {
                 // This incidence wasn't created by me - it's probably in a shared
                 // folder and meant for someone else, ignore it.
                 qCDebug(AKONADICALENDAR_LOG) << "ignoring " << existingUid << " since I'm still NeedsAction there";
@@ -477,18 +477,18 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         for (const auto &attIn : attendeesIn) {
             bool found = false;
             for (auto &attEv : attendeesEv) {
-                if (attIn->email().toLower() == attEv->email().toLower()) {
+                if (attIn.email().toLower() == attEv.email().toLower()) {
                     //update attendee-info
                     qCDebug(AKONADICALENDAR_LOG) << "update attendee";
-                    attEv->setStatus(attIn->status());
-                    attEv->setDelegate(attIn->delegate());
-                    attEv->setDelegator(attIn->delegator());
+                    attEv.setStatus(attIn.status());
+                    attEv.setDelegate(attIn.delegate());
+                    attEv.setDelegator(attIn.delegator());
                     result = ResultSuccess;
                     errorString.clear();
                     found = true;
                 }
             }
-            if (!found && attIn->status() != Attendee::Declined) {
+            if (!found && attIn.status() != Attendee::Declined) {
                 attendeesNew.append(attIn);
             }
         }
@@ -498,10 +498,10 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         for (const auto &attNew : qAsConst(attendeesNew)) {
             QString msg =
                 i18nc("@info", "%1 wants to attend %2 but was not invited.",
-                      attNew->fullName(), incidence->summary());
-            if (!attNew->delegator().isEmpty()) {
+                      attNew.fullName(), incidence->summary());
+            if (!attNew.delegator().isEmpty()) {
                 msg = i18nc("@info", "%1 wants to attend %2 on behalf of %3.",
-                            attNew->fullName(), incidence->summary(), attNew->delegator());
+                            attNew.fullName(), incidence->summary(), attNew.delegator());
             }
             if (KMessageBox::questionYesNo(
                         nullptr, msg, i18nc("@title", "Uninvited attendee"),
@@ -510,15 +510,15 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
                 Incidence::Ptr cancel = incidence;
                 cancel->addComment(i18nc("@info",
                                          "The organizer rejected your attendance at this meeting."));
-                performTransaction(incidenceBase, iTIPCancel, attNew->fullName());
+                performTransaction(incidenceBase, iTIPCancel, attNew.fullName());
                 continue;
             }
 
-            Attendee::Ptr a(new Attendee(attNew->name(), attNew->email(), attNew->RSVP(),
-                                         attNew->status(), attNew->role(), attNew->uid()));
+            Attendee a(attNew.name(), attNew.email(), attNew.RSVP(),
+                                         attNew.status(), attNew.role(), attNew.uid());
 
-            a->setDelegate(attNew->delegate());
-            a->setDelegator(attNew->delegator());
+            a.setDelegate(attNew.delegate());
+            a.setDelegator(attNew.delegator());
             incidence->addAttendee(a);
 
             result = ResultSuccess;
@@ -617,9 +617,9 @@ void Scheduler::acceptFreeBusy(const IncidenceBase::Ptr &incidence, iTIPMethod m
         from = freebusy->organizer();
     }
     if ((method == iTIPReply) && (freebusy->attendeeCount() == 1)) {
-        Attendee::Ptr attendee = freebusy->attendees().at(0);
-        from.setName(attendee->name());
-        from.setEmail(attendee->email());
+        Attendee attendee = freebusy->attendees().at(0);
+        from.setName(attendee.name());
+        from.setEmail(attendee.email());
     }
 
     if (!d->mFreeBusyCache->saveFreeBusy(freebusy, from)) {

@@ -64,7 +64,7 @@ private:
     void processItip(const QString &icaldata, const QString &receiver,
                      const QString &action, int expectedNumIncidences,
                      Akonadi::Item::List &items);
-    KCalCore::Attendee::Ptr ourAttendee(const KCalCore::Incidence::Ptr &incidence) const;
+    KCalCore::Attendee ourAttendee(const KCalCore::Incidence::Ptr &incidence) const;
 
 public Q_SLOTS:
     void oniTipMessageProcessed(Akonadi::ITIPHandler::Result result,

@@ -108,12 +108,12 @@ void PublishDialog::slotHelp()
     QDesktopServices::openUrl(url);
 }
 
-void PublishDialog::addAttendee(const Attendee::Ptr &attendee)
+void PublishDialog::addAttendee(const Attendee &attendee)
 {
     d->mUI.mNameLineEdit->setEnabled(true);
     d->mUI.mEmailLineEdit->setEnabled(true);
     QListWidgetItem *item = new QListWidgetItem(d->mUI.mListWidget);
-    Person person(attendee->name(), attendee->email());
+    Person person(attendee.name(), attendee.email());
     item->setText(person.fullName());
     d->mUI.mListWidget->addItem(item);
     d->mUI.mRemove->setEnabled(!d->mUI.mListWidget->selectedItems().isEmpty());

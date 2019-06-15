@@ -132,9 +132,9 @@ static bool compareString(const QString &left, const QString &right)
     }
 }
 
-static QString toString(const Attendee::Ptr &attendee)
+static QString toString(const Attendee &attendee)
 {
-    return attendee->name() + QLatin1Char('<') + attendee->email() + QLatin1Char('>');
+    return attendee.name() + QLatin1Char('<') + attendee.email() + QLatin1Char('>');
 }
 
 static QString toString(const Alarm::Ptr &)

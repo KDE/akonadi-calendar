@@ -48,7 +48,7 @@ public:
      * Adds a new attendee to the dialog
      * @param attendee the attendee to add
      */
-    void addAttendee(const KCalCore::Attendee::Ptr &attendee);
+    void addAttendee(const KCalCore::Attendee &attendee);
 
     /**
      * Returns a list of e-mail addresses.
