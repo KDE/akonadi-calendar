@@ -142,7 +142,7 @@ static QString toString(const Alarm::Ptr &)
     return QString();
 }
 
-static QString toString(const Attachment::Ptr &)
+static QString toString(const Attachment &)
 {
     return QString();
 }
