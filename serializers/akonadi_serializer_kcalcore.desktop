@@ -95,6 +95,6 @@ Comment[zh_TW]=事件、工作與日誌項目物件的 Akonadi 序列器外掛�
 
 [Plugin]
 Type=text/calendar,application/x-vnd.akonadi.note,application/x-vnd.kde.notes
-X-Akonadi-Class=default;KCalCore::Incidence*;
+X-Akonadi-Class=default;KCalendarCore::Incidence*;
 X-KDE-Library=akonadi_serializer_kcalcore
 X-KDE-ClassName=Akonadi::SerializerPluginKCalCore
