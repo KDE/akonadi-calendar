@@ -94,7 +94,7 @@ CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &descripti
 {
     mLatestRevisionByItemId.insert(item.id(), item.revision());
     Q_ASSERT(mItems.count() == 1);
-    const Incidence::Ptr incidence = mItems.first().payload<KCalCore::Incidence::Ptr>();
+    const Incidence::Ptr incidence = mItems.first().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
         mDescription = i18nc("%1 is event, todo or journal", "%1 creation",
                              KCalUtils::Stringify::incidenceType(incidence->type()));
@@ -118,8 +118,8 @@ bool CreationEntry::undo()
 bool CreationEntry::redo()
 {
     Akonadi::Item item = mItems.first();
-    Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
-    const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>(),
+    Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+    const int changeId = mChanger->createIncidence(item.payload<KCalendarCore::Incidence::Ptr>(),
                          Collection(item.storageCollectionId()),
                          currentParent());
     mChangeIds << changeId;
@@ -167,7 +167,7 @@ DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &de
                              History *q)
     : Entry(items, description, q)
 {
-    const Incidence::Ptr incidence = items.first().payload<KCalCore::Incidence::Ptr>();
+    const Incidence::Ptr incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
         mDescription = i18nc("%1 is event, todo or journal", "%1 deletion",
                              KCalUtils::Stringify::incidenceType(incidence->type()));
@@ -187,8 +187,8 @@ bool DeletionEntry::undo()
             mChanger->startAtomicOperation();
         }
 
-        Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
-        const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>(),
+        Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+        const int changeId = mChanger->createIncidence(item.payload<KCalendarCore::Incidence::Ptr>(),
                              Collection(item.storageCollectionId()),
                              currentParent());
         success = (changeId != -1) && success;
@@ -256,7 +256,7 @@ ModificationEntry::ModificationEntry(const Akonadi::Item &item,
     : Entry(item, description, q)
     , mOriginalPayload(originalPayload->clone())
 {
-    const Incidence::Ptr incidence = mItems.first().payload<KCalCore::Incidence::Ptr>();
+    const Incidence::Ptr incidence = mItems.first().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
         mDescription =  i18nc("%1 is event, todo or journal", "%1 modification",
                               KCalUtils::Stringify::incidenceType(incidence->type()));
@@ -268,7 +268,7 @@ ModificationEntry::ModificationEntry(const Akonadi::Item &item,
 bool ModificationEntry::undo()
 {
     Item oldItem = mItems.first();
-    oldItem.setPayload<KCalCore::Incidence::Ptr>(mOriginalPayload);
+    oldItem.setPayload<KCalendarCore::Incidence::Ptr>(mOriginalPayload);
     const int changeId = mChanger->modifyIncidence(oldItem, Incidence::Ptr(), currentParent());
     mChangeIds << changeId;
 

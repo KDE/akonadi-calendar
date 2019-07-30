@@ -24,8 +24,8 @@
 
 #include "publishdialog_p.h"
 
-#include <kcalcore/attendee.h>
-#include <kcalcore/person.h>
+#include <kcalendarcore/attendee.h>
+#include <kcalendarcore/person.h>
 
 #include <KCodecs/KEmailAddress>
 
@@ -37,7 +37,7 @@
 #include <QPushButton>
 #include <QUrl>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace Akonadi;
 
 PublishDialog::PublishDialog(QWidget *parent)

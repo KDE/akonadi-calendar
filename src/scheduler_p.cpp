@@ -23,15 +23,15 @@
 
 #include <kcalutils/stringify.h>
 
-#include <kcalcore/icalformat.h>
-#include <kcalcore/freebusycache.h>
+#include <kcalendarcore/icalformat.h>
+#include <kcalendarcore/freebusycache.h>
 
 #include "akonadicalendar_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QTimeZone>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace Akonadi;
 
 struct Akonadi::Scheduler::Private {
@@ -198,7 +198,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                                      << "; incidence count = " << calendar->incidences().count();
     }
 
-    for (const KCalCore::Incidence::Ptr &existingIncidence : existingIncidences) {
+    for (const KCalendarCore::Incidence::Ptr &existingIncidence : existingIncidences) {
         qCDebug(AKONADICALENDAR_LOG) << "Considering this found event ("
                                      << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
                                      << ") :" << mFormat->toString(existingIncidence);
@@ -354,7 +354,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
 
     Result result = ResultIncidenceToDeleteNotFound;
     QString errorString = i18n("Could not find incidence to delete.");
-    for (const KCalCore::Incidence::Ptr &existingIncidence : existingIncidences) {
+    for (const KCalendarCore::Incidence::Ptr &existingIncidence : existingIncidences) {
         qCDebug(AKONADICALENDAR_LOG) << "Considering this found event ("
                                      << (existingIncidence->isReadOnly() ? "readonly" : "readwrite")
                                      << ") :" << mFormat->toString(existingIncidence);
@@ -379,7 +379,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
         // on the invitation" case. So check the attendee status of the attendee.
         bool isMine = true;
         const Attendee::List attendees = existingIncidence->attendees();
-        for (const KCalCore::Attendee &attendee : attendees) {
+        for (const KCalendarCore::Attendee &attendee : attendees) {
             if (attendee.email() == attendeeEmail &&
                     attendee.status() == Attendee::NeedsAction) {
                 // This incidence wasn't created by me - it's probably in a shared

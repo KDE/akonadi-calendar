@@ -36,14 +36,14 @@ class ETMCalendarPrivate;
 class EntityTreeModel;
 
 /**
- * @short A KCalCore::Calendar that uses an EntityTreeModel to populate itself.
+ * @short A KCalendarCore::Calendar that uses an EntityTreeModel to populate itself.
  *
- * All non-idempotent KCalCore::Calendar methods interact with Akonadi.
+ * All non-idempotent KCalendarCore::Calendar methods interact with Akonadi.
  * If you need a need a non-persistent calendar use FetchJobCalendar.
  *
  * ETMCalendar allows to be populated with only a subset of your calendar items,
  * by using a KCheckableProxyModel to specify which collections to be used
- * and/or by setting a KCalCore::CalFilter.
+ * and/or by setting a KCalendarCore::CalFilter.
  *
  * @see FetchJobCalendar
  * @see CalendarBase
@@ -123,7 +123,7 @@ public:
     KCheckableProxyModel *checkableProxyModel() const;
 
     /**
-     * Convenience method to access the contents of this KCalCore::Calendar through
+     * Convenience method to access the contents of this KCalendarCore::Calendar through
      * a QAIM interface.
      *
      * Like through calendar interface, the model only items of selected collections.
@@ -137,10 +137,10 @@ public:
     /**
      * Returns the underlying EntityTreeModel.
      *
-     * For most uses, you'll want model() or the KCalCore::Calendar interface instead.
+     * For most uses, you'll want model() or the KCalendarCore::Calendar interface instead.
      *
      * It contains every item and collection with calendar mime type, doesn't have
-     * KCalCore filtering and doesn't honour any collection selection.
+     * KCalendarCore filtering and doesn't honour any collection selection.
      *
      * This method is exposed for performance reasons only, so you can reuse it,
      * since it's resource savy.
@@ -155,7 +155,7 @@ public:
       * @param to end data of interval
       * @param excludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
       */
-    KCalCore::Alarm::List alarms(const QDateTime &from,
+    KCalendarCore::Alarm::List alarms(const QDateTime &from,
                                  const QDateTime &to,
                                  bool excludeBlockedAlarms = false) const override;
 

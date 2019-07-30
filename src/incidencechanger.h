@@ -26,7 +26,7 @@
 #include <collection.h>
 #include "itiphandler.h"
 
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 
 #include <QWidget>
 
@@ -64,7 +64,7 @@ namespace Akonadi
  *
  * changer->setDestinationPolicy( IncidenceChanger::DestinationPolicyAsk );
  *
- * KCalCore::Incidence::Ptr incidence = (...);
+ * KCalendarCore::Incidence::Ptr incidence = (...);
  * int changeId = changer->createIncidence( incidence, Akonadi::Collection() );
  *
  *
@@ -171,7 +171,7 @@ public:
       *         Returns -1 if @p incidence is invalid. The createFinished() signal
       *         won't be emitted in this case.
       */
-    Q_REQUIRED_RESULT int createIncidence(const KCalCore::Incidence::Ptr &incidence,
+    Q_REQUIRED_RESULT int createIncidence(const KCalendarCore::Incidence::Ptr &incidence,
                         const Akonadi::Collection &collection = Akonadi::Collection(),
                         QWidget *parent = nullptr);
 
@@ -218,7 +218,7 @@ public:
       *         won't be emitted in this case.
       */
     Q_REQUIRED_RESULT int modifyIncidence(const Akonadi::Item &item,
-                        const KCalCore::Incidence::Ptr &originalPayload = KCalCore::Incidence::Ptr(),
+                        const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
                         QWidget *parent = nullptr);
 
     /**

@@ -20,7 +20,7 @@
 #ifndef ETMCALENDAR_TEST_H_
 #define ETMCALENDAR_TEST_H_
 
-#include <kcalcore/calendar.h>
+#include <kcalendarcore/calendar.h>
 #include <collection.h>
 #include <QObject>
 
@@ -28,7 +28,7 @@ namespace Akonadi {
 class ETMCalendar;
 }
 
-class ETMCalendarTest : public QObject, KCalCore::Calendar::CalendarObserver
+class ETMCalendarTest : public QObject, KCalendarCore::Calendar::CalendarObserver
 {
     Q_OBJECT
 private Q_SLOTS:
@@ -54,14 +54,14 @@ private Q_SLOTS:
     void testFilterInvitationsChanged();
 
 public Q_SLOTS:
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar* cal) override;
+    void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar* cal) override;
     void handleCollectionsAdded(const Akonadi::Collection::List &collectionList);
 
 private:
     //quiet --overloaded-virtual warning
-    using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
+    using KCalendarCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 
     void deleteIncidence(const QString &uid);
     void createIncidence(const QString &uid);

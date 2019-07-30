@@ -26,7 +26,7 @@
 #include <AkonadiCore/itemserializerplugin.h>
 #include <AkonadiCore/gidextractorinterface.h>
 
-#include <KCalCore/ICalFormat>
+#include <KCalendarCore/ICalFormat>
 
 namespace Akonadi {
 
@@ -50,7 +50,7 @@ public:
     QString extractGid(const Item &item) const override;
 
 private:
-    KCalCore::ICalFormat mFormat;
+    KCalendarCore::ICalFormat mFormat;
 };
 
 }

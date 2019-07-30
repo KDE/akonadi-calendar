@@ -24,8 +24,8 @@
 #include <item.h>
 #include <entitytreemodel.h>
 
-#include <kcalcore/calfilter.h>
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/calfilter.h>
+#include <kcalendarcore/incidence.h>
 
 using namespace Akonadi;
 
@@ -35,7 +35,7 @@ public:
     explicit Private()
     {
     }
-    KCalCore::CalFilter *filter = nullptr;
+    KCalendarCore::CalFilter *filter = nullptr;
 };
 
 CalFilterProxyModel::CalFilterProxyModel(QObject *parent)
@@ -49,12 +49,12 @@ CalFilterProxyModel::~CalFilterProxyModel()
     delete d;
 }
 
-KCalCore::CalFilter *CalFilterProxyModel::filter() const
+KCalendarCore::CalFilter *CalFilterProxyModel::filter() const
 {
     return d->filter;
 }
 
-void CalFilterProxyModel::setFilter(KCalCore::CalFilter *filter)
+void CalFilterProxyModel::setFilter(KCalendarCore::CalFilter *filter)
 {
     if (filter == d->filter) {
         return;
@@ -80,7 +80,7 @@ bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &so
         return false;
     }
 
-    const KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+    const KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
     if (!incidence) {
         return false;
     }

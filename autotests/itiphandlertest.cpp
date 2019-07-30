@@ -23,8 +23,8 @@
 #include "fetchjobcalendar.h"
 #include "utils_p.h"
 
-#include <kcalcore/icalformat.h>
-#include <kcalcore/attendee.h>
+#include <kcalendarcore/icalformat.h>
+#include <kcalendarcore/attendee.h>
 #include <itemdeletejob.h>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
@@ -32,18 +32,18 @@
 #include <qtest_akonadi.h>
 #include <mailtransportakonadi/messagequeuejob.h>
 
-#include <kcalcore/event.h>
+#include <kcalendarcore/event.h>
 
 #include <QString>
 #include <QTimeZone>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::InvitationPolicy)
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ChangeType>)
 Q_DECLARE_METATYPE(Akonadi::ITIPHandler::Result)
-Q_DECLARE_METATYPE(KCalCore::Attendee::PartStat)
+Q_DECLARE_METATYPE(KCalendarCore::Attendee::PartStat)
 Q_DECLARE_METATYPE(QList<int>)
 
 static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
@@ -87,7 +87,7 @@ public:
     {
     }
 
-    MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
+    MailTransport::MessageQueueJob *createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
     {
         Q_UNUSED(incidence);
         Q_UNUSED(identity);
@@ -127,7 +127,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     QTest::addColumn<QString>("incidenceUid"); // uid of incidence in invitation
     QTest::addColumn<Akonadi::ITIPHandler::Result>("expectedResult");
     QTest::addColumn<int>("expectedNumIncidences");
-    QTest::addColumn<KCalCore::Attendee::PartStat>("expectedPartStat");
+    QTest::addColumn<KCalendarCore::Attendee::PartStat>("expectedPartStat");
 
     QString data_filename;
     QString action = QStringLiteral("accepted");
@@ -135,14 +135,14 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     QString receiver = QLatin1String(s_ourEmail);
     Akonadi::ITIPHandler::Result expectedResult;
     int expectedNumIncidences = 0;
-    KCalCore::Attendee::PartStat expectedPartStat;
+    KCalendarCore::Attendee::PartStat expectedPartStat;
 
     //----------------------------------------------------------------------------------------------
     // Someone invited us to an event, and we accept
     expectedResult = ITIPHandler::ResultSuccess;
     data_filename = QStringLiteral("invited_us");
     expectedNumIncidences = 1;
-    expectedPartStat = KCalCore::Attendee::Accepted;
+    expectedPartStat = KCalendarCore::Attendee::Accepted;
     action = QStringLiteral("accepted");
     QTest::newRow("invited us1") << data_filename << action << receiver << incidenceUid
                                  << expectedResult
@@ -153,7 +153,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     expectedResult = ITIPHandler::ResultSuccess;
     data_filename = QStringLiteral("invited_us");
     expectedNumIncidences = 1;
-    expectedPartStat = KCalCore::Attendee::Tentative;
+    expectedPartStat = KCalendarCore::Attendee::Tentative;
     action = QStringLiteral("tentative");
     QTest::newRow("invited us2") << data_filename << action << receiver << incidenceUid
                                  << expectedResult
@@ -166,7 +166,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
 
     // The e-mail to the delegate is sent by kmail's text_calendar.cpp
     expectedNumIncidences = 1;
-    expectedPartStat = KCalCore::Attendee::Delegated;
+    expectedPartStat = KCalendarCore::Attendee::Delegated;
     action = QStringLiteral("delegated");
     QTest::newRow("invited us3") << data_filename << action << receiver << incidenceUid
                                  << expectedResult
@@ -189,7 +189,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     expectedResult = ITIPHandler::ResultSuccess;
     data_filename = QStringLiteral("invited_us");
     expectedNumIncidences = 1;
-    expectedPartStat = KCalCore::Attendee::NeedsAction;
+    expectedPartStat = KCalendarCore::Attendee::NeedsAction;
     action = QStringLiteral("request");
     QTest::newRow("invited us5") << data_filename << action << receiver << incidenceUid
                                  << expectedResult
@@ -219,7 +219,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     expectedResult = ITIPHandler::ResultSuccess;
     data_filename = QStringLiteral("bug235749");
     expectedNumIncidences = 1;
-    expectedPartStat = KCalCore::Attendee::Accepted;
+    expectedPartStat = KCalendarCore::Attendee::Accepted;
     action = QStringLiteral("accepted");
     incidenceUid = QStringLiteral("b6f0466a-8877-49d0-a4fc-8ee18ffd8e07"); // Don't change, hardcoded in data file
     QTest::newRow("bug 235749") << data_filename << action << receiver << incidenceUid
@@ -231,7 +231,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     expectedResult = ITIPHandler::ResultError;
     data_filename = QStringLiteral("invited_us");
     expectedNumIncidences = 0;
-    expectedPartStat = KCalCore::Attendee::Accepted;
+    expectedPartStat = KCalendarCore::Attendee::Accepted;
     action = QStringLiteral("counter");
     incidenceUid = QStringLiteral("b6f0466a-8877-49d0-a4fc-8ee18ffd8e07");
     QTest::newRow("counter error") << data_filename << action << receiver << incidenceUid
@@ -249,7 +249,7 @@ void ITIPHandlerTest::testProcessITIPMessage()
     QFETCH(QString, incidenceUid);
     QFETCH(Akonadi::ITIPHandler::Result, expectedResult);
     QFETCH(int, expectedNumIncidences);
-    QFETCH(KCalCore::Attendee::PartStat, expectedPartStat);
+    QFETCH(KCalendarCore::Attendee::PartStat, expectedPartStat);
 
     FakeMessageQueueJob::sUnitTestResults.clear();
     createITIPHandler();
@@ -261,12 +261,12 @@ void ITIPHandlerTest::testProcessITIPMessage()
     processItip(iCalData, receiver, action, expectedNumIncidences, items);
 
     if (expectedNumIncidences == 1) {
-        KCalCore::Incidence::Ptr incidence = items.first().payload<KCalCore::Incidence::Ptr>();
+        KCalendarCore::Incidence::Ptr incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
         QVERIFY(incidence);
         QCOMPARE(incidence->schedulingID(), incidenceUid);
         QVERIFY(incidence->schedulingID() != incidence->uid());
 
-        KCalCore::Attendee me = ourAttendee(incidence);
+        KCalendarCore::Attendee me = ourAttendee(incidence);
         QVERIFY(!me.isNull());
         QCOMPARE(me.status(), expectedPartStat);
     }
@@ -337,8 +337,8 @@ void ITIPHandlerTest::testProcessITIPMessages()
     }
 
     QString expectedICalData = icalData(expected_filename);
-    KCalCore::MemoryCalendar::Ptr expectedCalendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(QTimeZone::utc()));
-    KCalCore::ICalFormat format;
+    KCalendarCore::MemoryCalendar::Ptr expectedCalendar = KCalendarCore::MemoryCalendar::Ptr(new KCalendarCore::MemoryCalendar(QTimeZone::utc()));
+    KCalendarCore::ICalFormat format;
     format.fromString(expectedCalendar, expectedICalData);
     compareCalendars(expectedCalendar); // Here's where the cool and complex comparations are done
 
@@ -388,7 +388,7 @@ void ITIPHandlerTest::testProcessITIPMessageCancel()
     Item::List items;
     processItip(iCalData, receiver, QStringLiteral("accepted"), 1, items);
 
-    KCalCore::Incidence::Ptr incidence = items.first().payload<KCalCore::Incidence::Ptr>();
+    KCalendarCore::Incidence::Ptr incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
     QVERIFY(incidence);
 
     // good, now accept the invitation that has the CANCEL
@@ -408,7 +408,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     const bool userCancels      = true;
 
     Akonadi::Item item;
-    KCalCore::Incidence::Ptr incidence;
+    KCalendarCore::Incidence::Ptr incidence;
     IncidenceChanger::ChangeType changeType;
     const IncidenceChanger::InvitationPolicy invitationPolicyAsk     = IncidenceChanger::InvitationPolicyAsk;
     const IncidenceChanger::InvitationPolicy invitationPolicySend     = IncidenceChanger::InvitationPolicySend;
@@ -427,7 +427,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // Creation. We are organizer. We invite another person.
     changeType = IncidenceChanger::ChangeTypeCreate;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     expectedEmailCount = 1;
@@ -437,7 +437,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // Creation. We are organizer. We invite another person. But we choose not to send invitation e-mail.
     changeType = IncidenceChanger::ChangeTypeCreate;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     expectedEmailCount = 0;
@@ -446,7 +446,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We delete an event that we organized, and has attendees, that will be notified.
     changeType = IncidenceChanger::ChangeTypeDelete;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     expectedEmailCount = 1;
@@ -455,7 +455,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We delete an event that we organized, and has attendees. We won't send e-mail notifications.
     changeType = IncidenceChanger::ChangeTypeDelete;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     expectedEmailCount = 0;
@@ -464,7 +464,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We delete an event that we organized, and has attendees, who will be notified.
     changeType = IncidenceChanger::ChangeTypeModify;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     expectedEmailCount = 1;
@@ -473,7 +473,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We delete an event that we organized, and has attendees, who wont be notified.
     changeType = IncidenceChanger::ChangeTypeModify;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent); // TODO: test that all attendees got the e-mail
     incidence->addAttendee(jules);
     expectedEmailCount = 0;
@@ -482,7 +482,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
     item = generateIncidence(uid, /**organizer=*/mia.email());
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     us.setStatus(Attendee::Accepted); // TODO: Test without accepted status
@@ -493,7 +493,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
     item = generateIncidence(uid, /**organizer=*/mia.email());
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules); // TODO: test that attendees didn't receive the REPLY
     us.setStatus(Attendee::Accepted); // TODO: Test without accepted status
@@ -504,7 +504,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "yes".
     changeType = IncidenceChanger::ChangeTypeModify;
     item = generateIncidence(uid, /**organizer=*/mia.email());
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     us.setStatus(Attendee::Accepted);
@@ -515,7 +515,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "no".
     changeType = IncidenceChanger::ChangeTypeModify;
     item = generateIncidence(uid, /**organizer=*/mia.email());
-    incidence = item.payload<KCalCore::Incidence::Ptr>();
+    incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
     us.setStatus(Attendee::Accepted);
@@ -532,7 +532,7 @@ void ITIPHandlerTest::testOutgoingInvitations()
     QFETCH(int, expectedEmailCount);
     QFETCH(IncidenceChanger::InvitationPolicy, invitationPolicy);
     QFETCH(bool, userCancels);
-    KCalCore::Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+    KCalendarCore::Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
 
     m_pendingIncidenceChangerSignal = 1;
     FakeMessageQueueJob::sUnitTestResults.clear();
@@ -661,11 +661,11 @@ void ITIPHandlerTest::processItip(const QString &icaldata, const QString &receiv
     }
 }
 
-Attendee ITIPHandlerTest::ourAttendee(const KCalCore::Incidence::Ptr &incidence) const
+Attendee ITIPHandlerTest::ourAttendee(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    const KCalCore::Attendee::List attendees = incidence->attendees();
-    KCalCore::Attendee me;
-    for (const KCalCore::Attendee &attendee : attendees) {
+    const KCalendarCore::Attendee::List attendees = incidence->attendees();
+    KCalendarCore::Attendee me;
+    for (const KCalendarCore::Attendee &attendee : attendees) {
         if (attendee.email() == QLatin1String(s_ourEmail)) {
             me = attendee;
             break;

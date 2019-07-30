@@ -22,13 +22,13 @@
 
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <kemailaddress.h>
-#include <kcalcore/person.h>
+#include <kcalendarcore/person.h>
 
 #include <KLocalizedString>
 #include <QPointer>
 #include <QTreeView>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace Akonadi;
 
 PublishDialog::Private::Private(PublishDialog *qq) : QObject(), q(qq)

@@ -20,7 +20,7 @@
 #ifndef TODOPURGER_TEST_H_
 #define TODOPURGER_TEST_H_
 
-#include <kcalcore/calendar.h>
+#include <kcalendarcore/calendar.h>
 #include <collection.h>
 #include <QObject>
 #include <QString>
@@ -30,7 +30,7 @@ class ETMCalendar;
 class TodoPurger;
 }
 
-class TodoPurgerTest : public QObject, KCalCore::Calendar::CalendarObserver
+class TodoPurgerTest : public QObject, KCalendarCore::Calendar::CalendarObserver
 {
     Q_OBJECT
 private Q_SLOTS:
@@ -39,8 +39,8 @@ private Q_SLOTS:
     void testPurge();
 
 public:
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) override;
+    void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar) override;
 
 public Q_SLOTS:
     void onTodosPurged(bool success, int numDeleted, int numIgnored);

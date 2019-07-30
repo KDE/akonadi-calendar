@@ -47,9 +47,9 @@ class CalFilterPartStatusProxyModel;
 static bool isStructuralCollection(const Akonadi::Collection &collection)
 {
     const QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar")
-                                                << KCalCore::Event::eventMimeType()
-                                                << KCalCore::Todo::todoMimeType()
-                                                << KCalCore::Journal::journalMimeType();
+                                                << KCalendarCore::Event::eventMimeType()
+                                                << KCalendarCore::Todo::todoMimeType()
+                                                << KCalendarCore::Journal::journalMimeType();
     const QStringList collectionMimeTypes = collection.contentMimeTypes();
     for (const QString &mimeType : mimeTypes) {
         if (collectionMimeTypes.contains(mimeType)) {
@@ -105,7 +105,7 @@ public Q_SLOTS:
             int start = 0,
             int end = -1);
 
-    // KCalCore::CalFilter has changed.
+    // KCalendarCore::CalFilter has changed.
     void onFilterChanged();
 
     void clear();
@@ -137,7 +137,7 @@ public:
     QHash<Akonadi::Collection::Id, Akonadi::Collection> mCollectionMap;
     CheckableProxyModel *mCheckableProxyModel = nullptr;
     Akonadi::CollectionFilterProxyModel *mCollectionProxyModel = nullptr;
-    Akonadi::CalFilterProxyModel *mCalFilterProxyModel = nullptr; //KCalCore::CalFilter stuff
+    Akonadi::CalFilterProxyModel *mCalFilterProxyModel = nullptr; //KCalendarCore::CalFilter stuff
     //filter out all invitations and declined events
     Akonadi::CalFilterPartStatusProxyModel *mCalFilterPartStatusProxyModel = nullptr;
     KSelectionProxyModel *mSelectionProxy = nullptr;

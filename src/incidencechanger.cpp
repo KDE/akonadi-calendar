@@ -35,7 +35,7 @@
 #include <QBitArray>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 AKONADI_CALENDAR_TESTS_EXPORT bool akonadi_calendar_running_unittests = false;
 
@@ -70,8 +70,8 @@ static bool allowedModificationsWithoutRevisionUpdate(const Incidence::Ptr &inci
 {
     // Modifications that are per user allowd without getting outofsync with organisator
     // * if only alarm settings are modified.
-    const QSet<KCalCore::IncidenceBase::Field> dirtyFields = incidence->dirtyFields();
-    QSet<KCalCore::IncidenceBase::Field> alarmOnlyModify;
+    const QSet<KCalendarCore::IncidenceBase::Field> dirtyFields = incidence->dirtyFields();
+    QSet<KCalendarCore::IncidenceBase::Field> alarmOnlyModify;
     alarmOnlyModify << IncidenceBase::FieldAlarms << IncidenceBase::FieldLastModified;
     return (dirtyFields == alarmOnlyModify);
 }
@@ -276,7 +276,7 @@ void IncidenceChanger::Private::handleCreateJobResult(KJob *job)
         // puff, change finally goes out of scope, and emits the incidenceCreated signal.
     } else {
         Q_ASSERT(item.isValid());
-        Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
+        Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
         change->newItem = item;
 
         if (change->useGroupwareCommunication) {
@@ -401,9 +401,9 @@ void IncidenceChanger::Private::handleModifyJobResult(KJob *job)
     const ItemModifyJob *j = qobject_cast<const ItemModifyJob *>(job);
     const Item item = j->item();
     Q_ASSERT(mDirtyFieldsByJob.contains(job));
-    Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
-    const QSet<KCalCore::IncidenceBase::Field> dirtyFields = mDirtyFieldsByJob.value(job);
-    item.payload<KCalCore::Incidence::Ptr>()->setDirtyFields(dirtyFields);
+    Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+    const QSet<KCalendarCore::IncidenceBase::Field> dirtyFields = mDirtyFieldsByJob.value(job);
+    item.payload<KCalendarCore::Incidence::Ptr>()->setDirtyFields(dirtyFields);
     QString description;
     if (change->atomicOperationId != 0) {
         AtomicOperation *a = mAtomicOperations[change->atomicOperationId];
@@ -507,7 +507,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
                     change.data(), &Change::emitUserDialogClosedBeforeChange);
 
             for (const Akonadi::Item &item : qAsConst(change->originalItems)) {
-                Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
+                Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
                 Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 if (!incidence->supportsGroupwareCommunication()) {
                     continue;
@@ -517,7 +517,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
                 if (Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email())) {
                     //TODO: not to popup all delete message dialogs at once :(
                     sendOk = false;
-                    handler->sendIncidenceDeletedMessage(KCalCore::iTIPCancel, incidence);
+                    handler->sendIncidenceDeletedMessage(KCalendarCore::iTIPCancel, incidence);
                     if (change->atomicOperationId) {
                         mInvitationStatusByAtomicOperation.insert(change->atomicOperationId, status);
                     }
@@ -608,7 +608,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
         case IncidenceChanger::ChangeTypeCreate: {
             Incidence::Ptr incidence = CalendarUtils::incidence(change->newItem);
             if (incidence->supportsGroupwareCommunication()) {
-                handler->sendIncidenceCreatedMessage(KCalCore::iTIPRequest, incidence);
+                handler->sendIncidenceCreatedMessage(KCalendarCore::iTIPRequest, incidence);
                 return;
             }
             break;
@@ -628,14 +628,14 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
                 if (!Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email())) {
                     const QStringList myEmails = Akonadi::CalendarUtils::allEmails();
                     bool notifyOrganizer = false;
-                    const KCalCore::Attendee me(incidence->attendeeByMails(myEmails));
+                    const KCalendarCore::Attendee me(incidence->attendeeByMails(myEmails));
                     if (!me.isNull()) {
-                        if (me.status() == KCalCore::Attendee::Accepted ||
-                                me.status() == KCalCore::Attendee::Delegated) {
+                        if (me.status() == KCalendarCore::Attendee::Accepted ||
+                                me.status() == KCalendarCore::Attendee::Delegated) {
                             notifyOrganizer = true;
                         }
-                        KCalCore::Attendee newMe(me);
-                        newMe.setStatus(KCalCore::Attendee::Declined);
+                        KCalendarCore::Attendee newMe(me);
+                        newMe.setStatus(KCalendarCore::Attendee::Declined);
                         incidence->clearAttendees();
                         incidence->addAttendee(newMe);
                         //break;
@@ -643,7 +643,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
 
                     if (notifyOrganizer) {
                         MailScheduler scheduler(mFactory, change->parentWidget); // TODO make async
-                        scheduler.performTransaction(incidence, KCalCore::iTIPReply);
+                        scheduler.performTransaction(incidence, KCalendarCore::iTIPReply);
                     }
                 }
             }
@@ -676,7 +676,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
                                                oldIncidence,
                                                Akonadi::CalendarUtils::allEmails());
 
-            handler->sendIncidenceModifiedMessage(KCalCore::iTIPRequest, newIncidence, attendeeStatusChanged);
+            handler->sendIncidenceModifiedMessage(KCalendarCore::iTIPRequest, newIncidence, attendeeStatusChanged);
             return;
         }
         default:
@@ -757,7 +757,7 @@ int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence,
     }
 
     Item item;
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
     item.setMimeType(incidence->mimeType());
 
     change->newItem = item;
@@ -891,7 +891,7 @@ void IncidenceChanger::Private::deleteIncidences2(int changeId, ITIPHandlerHelpe
 }
 
 int IncidenceChanger::modifyIncidence(const Item &changedItem,
-                                      const KCalCore::Incidence::Ptr &originalPayload,
+                                      const KCalendarCore::Incidence::Ptr &originalPayload,
                                       QWidget *parent)
 {
     if (!changedItem.isValid() || !changedItem.hasPayload<Incidence::Ptr>()) {
@@ -920,7 +920,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem,
 
     if (originalPayload) {
         Item originalItem(changedItem);
-        originalItem.setPayload<KCalCore::Incidence::Ptr>(originalPayload);
+        originalItem.setPayload<KCalendarCore::Incidence::Ptr>(originalPayload);
         modificationChange->originalItems << originalItem;
     }
 
@@ -1019,7 +1019,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
 
     Incidence::Ptr incidence = CalendarUtils::incidence(newItem);
     {
-        if (!allowedModificationsWithoutRevisionUpdate(incidence)) {        // increment revision ( KCalCore revision, not akonadi )
+        if (!allowedModificationsWithoutRevisionUpdate(incidence)) {        // increment revision ( KCalendarCore revision, not akonadi )
             const int revision = incidence->revision();
             incidence->setRevision(revision + 1);
         }
@@ -1253,11 +1253,11 @@ QString IncidenceChanger::Private::showErrorDialog(IncidenceChanger::ResultCode 
     return errorString;
 }
 
-void IncidenceChanger::Private::adjustRecurrence(const KCalCore::Incidence::Ptr &originalIncidence,
-        const KCalCore::Incidence::Ptr &incidence)
+void IncidenceChanger::Private::adjustRecurrence(const KCalendarCore::Incidence::Ptr &originalIncidence,
+        const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!originalIncidence || !incidence->recurs() || incidence->hasRecurrenceId() || !mAutoAdjustRecurrence
-            || !incidence->dirtyFields().contains(KCalCore::Incidence::FieldDtStart)) {
+            || !incidence->dirtyFields().contains(KCalendarCore::Incidence::FieldDtStart)) {
         return;
     }
 
@@ -1268,9 +1268,9 @@ void IncidenceChanger::Private::adjustRecurrence(const KCalCore::Incidence::Ptr 
         return;
     }
 
-    KCalCore::Recurrence *recurrence = incidence->recurrence();
+    KCalendarCore::Recurrence *recurrence = incidence->recurrence();
     switch (recurrence->recurrenceType()) {
-    case KCalCore::Recurrence::rWeekly: {
+    case KCalendarCore::Recurrence::rWeekly: {
         QBitArray days = recurrence->days();
         const int oldIndex = originalDate.dayOfWeek() - 1; // QDate returns [1-7];
         const int newIndex = newStartDate.dayOfWeek() - 1;
@@ -1372,7 +1372,7 @@ Lost code from KDE 4.4 that was never called/used with incidenceeditors-ng.
 
 void IncidenceChanger::cancelAttendees( const Akonadi::Item &aitem )
 {
-  const KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence( aitem );
+  const KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence( aitem );
   Q_ASSERT( incidence );
   if ( KCalPrefs::instance()->mUseGroupwareCommunication ) {
     if ( KMessageBox::questionYesNo(
@@ -1388,7 +1388,7 @@ void IncidenceChanger::cancelAttendees( const Akonadi::Item &aitem )
       // manually.
       CalendarSupport::MailScheduler scheduler(
         static_cast<CalendarSupport::Calendar*>(d->mCalendar) );
-      scheduler.performTransaction( incidence, KCalCore::iTIPCancel );
+      scheduler.performTransaction( incidence, KCalendarCore::iTIPCancel );
     }
   }
 }

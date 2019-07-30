@@ -22,7 +22,7 @@
 #include "fetchjobcalendar.h"
 #include "utils_p.h"
 
-#include <kcalcore/todo.h>
+#include <kcalendarcore/todo.h>
 
 #include <KLocalizedString>
 using namespace Akonadi;
@@ -81,7 +81,7 @@ void TodoPurger::Private::deleteTodos()
     Akonadi::Item::List toDelete;
     m_ignoredItems = 0;
     for (const Akonadi::Item &item : items) {
-        KCalCore::Todo::Ptr todo = CalendarUtils::incidence(item).dynamicCast<KCalCore::Todo>();
+        KCalendarCore::Todo::Ptr todo = CalendarUtils::incidence(item).dynamicCast<KCalendarCore::Todo>();
 
         if (!todo || !todo->isCompleted()) {
             continue;
@@ -110,7 +110,7 @@ void TodoPurger::Private::deleteTodos()
     m_changer->setGroupwareCommunication(oldGroupware);
 }
 
-bool TodoPurger::Private::treeIsDeletable(const KCalCore::Todo::Ptr &todo)
+bool TodoPurger::Private::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
 {
     Q_ASSERT(todo);
 
@@ -118,13 +118,13 @@ bool TodoPurger::Private::treeIsDeletable(const KCalCore::Todo::Ptr &todo)
         return false;
     }
 
-    const KCalCore::Incidence::List childs = m_calendar->childIncidences(todo->uid());
+    const KCalendarCore::Incidence::List childs = m_calendar->childIncidences(todo->uid());
     if (childs.isEmpty()) {
         return true;
     }
 
-    for (const KCalCore::Incidence::Ptr &child : childs) {
-        KCalCore::Todo::Ptr childTodo = child.dynamicCast<KCalCore::Todo>();
+    for (const KCalendarCore::Incidence::Ptr &child : childs) {
+        KCalendarCore::Todo::Ptr childTodo = child.dynamicCast<KCalendarCore::Todo>();
 
         if (!childTodo) {
             return false;    // This never happens

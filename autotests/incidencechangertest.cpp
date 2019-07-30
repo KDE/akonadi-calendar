@@ -30,21 +30,21 @@
 #include <itemfetchscope.h>
 #include <itemdeletejob.h>
 
-#include <kcalcore/event.h>
-#include <kcalcore/journal.h>
-#include <kcalcore/todo.h>
+#include <kcalendarcore/event.h>
+#include <kcalendarcore/journal.h>
+#include <kcalendarcore/todo.h>
 
 #include <QBitArray>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ChangeType>)
 Q_DECLARE_METATYPE(QList<bool>)
 Q_DECLARE_METATYPE(QList<Akonadi::Collection::Right>)
 Q_DECLARE_METATYPE(QList<Akonadi::Collection::Rights>)
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ResultCode>)
-Q_DECLARE_METATYPE(KCalCore::RecurrenceRule::PeriodType)
+Q_DECLARE_METATYPE(KCalendarCore::RecurrenceRule::PeriodType)
 QString s_ourEmail = QStringLiteral("unittests@dev.nul"); // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 QString s_outEmail2 = QStringLiteral("identity2@kde.org");
 
@@ -54,7 +54,7 @@ static Akonadi::Item item()
     Incidence::Ptr incidence = Incidence::Ptr(new Event());
     incidence->setSummary(QStringLiteral("random summary"));
     item.setMimeType(incidence->mimeType());
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
     return item;
 }
 
@@ -232,9 +232,9 @@ private Q_SLOTS:
                 Item retrievedItem = fetchJob->items().first();
                 QVERIFY(retrievedItem.isValid());
                 QVERIFY(retrievedItem.hasPayload());
-                QVERIFY(retrievedItem.hasPayload<KCalCore::Event::Ptr>());
-                QVERIFY(retrievedItem.hasPayload<KCalCore::Incidence::Ptr>());
-                Incidence::Ptr incidence = retrievedItem.payload<KCalCore::Incidence::Ptr>();
+                QVERIFY(retrievedItem.hasPayload<KCalendarCore::Event::Ptr>());
+                QVERIFY(retrievedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
+                Incidence::Ptr incidence = retrievedItem.payload<KCalendarCore::Incidence::Ptr>();
                 QCOMPARE(incidence->summary(), summary);
                 QCOMPARE(incidence->uid(), uid);
             }
@@ -324,12 +324,12 @@ private Q_SLOTS:
         Incidence::Ptr incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
         incidence->setSummary(QStringLiteral("New Summary"));
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
         QTest::newRow("Change summary") << item << "New Summary" << true << 1 << false
                                         << IncidenceChanger::ResultCodeSuccess;
@@ -366,8 +366,8 @@ private Q_SLOTS:
             QVERIFY(fetchJob->items().count() == 1);
             Item fetchedItem = fetchJob->items().constFirst();
             QVERIFY(fetchedItem.isValid());
-            QVERIFY(fetchedItem.hasPayload<KCalCore::Incidence::Ptr>());
-            Incidence::Ptr incidence = fetchedItem.payload<KCalCore::Incidence::Ptr>();
+            QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
+            Incidence::Ptr incidence = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
             QCOMPARE(incidence->summary(), newSummary);
             QCOMPARE(incidence->revision(), expectedRevision);
             delete fetchJob;
@@ -386,7 +386,7 @@ private Q_SLOTS:
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setOrganizer(Person(QStringLiteral("orga"), QStringLiteral("orga@dev.nul")));
         incidence->setDirtyFields(QSet<IncidenceBase::Field>());
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
@@ -394,7 +394,7 @@ private Q_SLOTS:
         alarm->setStartOffset(Duration(-15));
         alarm->setType(Alarm::Display);
         incidence->addAlarm(alarm);
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
         mChanger->setRespectsCollectionRights(true);
         const int changeId = mChanger->modifyIncidence(item);
@@ -409,8 +409,8 @@ private Q_SLOTS:
         QVERIFY(fetchJob->items().count() == 1);
         Item fetchedItem = fetchJob->items().constFirst();
         QVERIFY(fetchedItem.isValid());
-        QVERIFY(fetchedItem.hasPayload<KCalCore::Incidence::Ptr>());
-        Incidence::Ptr incidence2 = fetchedItem.payload<KCalCore::Incidence::Ptr>();
+        QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
+        Incidence::Ptr incidence2 = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
         QCOMPARE(incidence2->alarms().count(), 1);
         QCOMPARE(incidence2->revision(), 0);
         delete fetchJob;
@@ -450,7 +450,7 @@ private Q_SLOTS:
         incidence->addAttendee(vincent);
         incidence->addAttendee(jules);
         incidence->setDirtyFields(QSet<IncidenceBase::Field>());
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
@@ -502,7 +502,7 @@ private Q_SLOTS:
         incidence2->addAttendee(vincent);
         incidence2->addAttendee(jules);
         incidence2->setDirtyFields(QSet<IncidenceBase::Field>());
-        item2.setPayload<KCalCore::Incidence::Ptr>(incidence2);
+        item2.setPayload<KCalendarCore::Incidence::Ptr>(incidence2);
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
@@ -545,7 +545,7 @@ private Q_SLOTS:
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
-        item.setPayload<KCalCore::Incidence::Ptr>(event);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(event);
 
         int revision = event->revision();
 
@@ -563,8 +563,8 @@ private Q_SLOTS:
         Item fetchedItem = fetchJob->items().constFirst();
 
         QVERIFY(fetchedItem.isValid());
-        QVERIFY(fetchedItem.hasPayload<KCalCore::Event::Ptr>());
-        Event::Ptr incidence = fetchedItem.payload<KCalCore::Event::Ptr>();
+        QVERIFY(fetchedItem.hasPayload<KCalendarCore::Event::Ptr>());
+        Event::Ptr incidence = fetchedItem.payload<KCalendarCore::Event::Ptr>();
 
         QCOMPARE(incidence->revision(), revision + 1);
 
@@ -600,7 +600,7 @@ private Q_SLOTS:
         Incidence::Ptr incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
@@ -624,7 +624,7 @@ private Q_SLOTS:
 
         int changeId = -1;
         for (int i = 0; i < numberOfModifications; ++i) {
-            Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+            Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             Q_ASSERT(incidence);
             incidence->setSummary(QString::number(i));
             changeId = mChanger->modifyIncidence(item);
@@ -638,7 +638,7 @@ private Q_SLOTS:
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
                 QVERIFY(fetchJob->items().count() == 1);
-                QCOMPARE(fetchJob->items().first().payload<KCalCore::Incidence::Ptr>()->summary(),
+                QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(),
                          QString::number(i));
             }
         }
@@ -652,7 +652,7 @@ private Q_SLOTS:
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);
-            QCOMPARE(fetchJob->items().first().payload<KCalCore::Incidence::Ptr>()->summary(),
+            QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(),
                      QString::number(numberOfModifications - 1));
             if (mIncidencesToModify > 0) {
                 waitForSignals();
@@ -972,7 +972,7 @@ private Q_SLOTS:
             int changeId = -1;
             switch (changeTypes[i]) {
             case IncidenceChanger::ChangeTypeCreate:
-                changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalCore::Incidence::Ptr>() : Incidence::Ptr());
+                changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalendarCore::Incidence::Ptr>() : Incidence::Ptr());
                 if (changeId != -1) {
                     ++mIncidencesToAdd;
                 }
@@ -985,8 +985,8 @@ private Q_SLOTS:
                 break;
             case IncidenceChanger::ChangeTypeModify:
                 QVERIFY(item.isValid());
-                QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
-                item.payload<KCalCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
+                QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+                item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
                 changeId = mChanger->modifyIncidence(item);
                 if (changeId != -1) {
                     ++mIncidencesToModify;
@@ -1014,8 +1014,8 @@ private Q_SLOTS:
             switch (changeTypes[i]) {
             case IncidenceChanger::ChangeTypeCreate:
                 if (expectedSuccess) {
-                    QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
-                    Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+                    QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+                    Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
                     QVERIFY(incidence);
                     QVERIFY(!incidence->uid().isEmpty());
                     QVERIFY(mItemIdByUid.contains(incidence->uid()));
@@ -1025,9 +1025,9 @@ private Q_SLOTS:
                     QCOMPARE(fJob->items().count(), 1);
                     QVERIFY(fJob->items().constFirst().isValid());
                     QVERIFY(fJob->items().constFirst().hasPayload());
-                    QVERIFY(fJob->items().constFirst().hasPayload<KCalCore::Incidence::Ptr>());
-                    QCOMPARE(item.payload<KCalCore::Incidence::Ptr>()->uid(),
-                             fJob->items().constFirst().payload<KCalCore::Incidence::Ptr>()->uid());
+                    QVERIFY(fJob->items().constFirst().hasPayload<KCalendarCore::Incidence::Ptr>());
+                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->uid(),
+                             fJob->items().constFirst().payload<KCalendarCore::Incidence::Ptr>()->uid());
                 }
                 break;
             case IncidenceChanger::ChangeTypeDelete:
@@ -1041,8 +1041,8 @@ private Q_SLOTS:
                     ItemFetchJob *fJob = new ItemFetchJob(Item(item.id()));
                     fJob->fetchScope().fetchFullPayload();
                     AKVERIFYEXEC(fJob);
-                    QCOMPARE(item.payload<KCalCore::Incidence::Ptr>()->summary(),
-                             fJob->items().first().payload<KCalCore::Incidence::Ptr>()->summary());
+                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->summary(),
+                             fJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary());
                 }
                 break;
             default:
@@ -1059,7 +1059,7 @@ private Q_SLOTS:
         QTest::addColumn<QDateTime>("dtEnd");
         QTest::addColumn<int>("offsetToMove");
         QTest::addColumn<int>("frequency");
-        QTest::addColumn<KCalCore::RecurrenceRule::PeriodType>("recurrenceType");
+        QTest::addColumn<KCalendarCore::RecurrenceRule::PeriodType>("recurrenceType");
 
         // For weekly recurrences
         QTest::addColumn<QBitArray>("weekDays");
@@ -1081,7 +1081,7 @@ private Q_SLOTS:
         expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 
         QTest::newRow("weekly") << false << dtStart << dtEnd << one_day
-                                << 1 << KCalCore::RecurrenceRule::rWeekly
+                                << 1 << KCalendarCore::RecurrenceRule::rWeekly
                                 <<  days << expectedDays << QDate() << QDate();
         //-------------------------------------------------------------------------
         days.fill(false);
@@ -1089,7 +1089,7 @@ private Q_SLOTS:
         expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 
         QTest::newRow("weekly allday") << true << QDateTime(dtStart.date()) << QDateTime(dtEnd.date())
-                                       << one_day << 1 << KCalCore::RecurrenceRule::rWeekly
+                                       << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly
                                        << days << expectedDays << QDate() << QDate();
         //-------------------------------------------------------------------------
         // Here nothing should change
@@ -1097,7 +1097,7 @@ private Q_SLOTS:
         days.setBit(dtStart.date().dayOfWeek() - 1);
 
         QTest::newRow("weekly nop") << false << dtStart << dtEnd << one_hour
-                                    << 1 << KCalCore::RecurrenceRule::rWeekly
+                                    << 1 << KCalendarCore::RecurrenceRule::rWeekly
                                     << days << days << QDate() << QDate();
         //-------------------------------------------------------------------------
         // Test with multiple week days. Only the weekday from the old DTSTART should be unset.
@@ -1105,13 +1105,13 @@ private Q_SLOTS:
         expectedDays = days;
         expectedDays.clearBit(dtStart.date().dayOfWeek() - 1);
         QTest::newRow("weekly multiple") << false << dtStart << dtEnd << one_day
-                                         << 1 << KCalCore::RecurrenceRule::rWeekly
+                                         << 1 << KCalendarCore::RecurrenceRule::rWeekly
                                          << days << expectedDays << QDate() << QDate();
         //-------------------------------------------------------------------------
         // Testing moving an event such that DTSTART > recurrence end, which would
         // result in the event disappearing from all views.
         QTest::newRow("recur end") << false << dtStart << dtEnd << one_day * 7
-                                   << 1 << KCalCore::RecurrenceRule::rDaily
+                                   << 1 << KCalendarCore::RecurrenceRule::rDaily
                                    << QBitArray() << QBitArray()
                                    << dtStart.date().addDays(3)
                                    << QDate();
@@ -1126,7 +1126,7 @@ private Q_SLOTS:
         QFETCH(QDateTime, dtEnd);
         QFETCH(int, offsetToMove);
         QFETCH(int, frequency);
-        QFETCH(KCalCore::RecurrenceRule::PeriodType, recurrenceType);
+        QFETCH(KCalendarCore::RecurrenceRule::PeriodType, recurrenceType);
         QFETCH(QBitArray, weekDays);
         QFETCH(QBitArray, expectedWeekDays);
         QFETCH(QDate, recurrenceEnd);
@@ -1141,10 +1141,10 @@ private Q_SLOTS:
         Recurrence *recurrence = incidence->recurrence();
 
         switch (recurrenceType) {
-        case KCalCore::RecurrenceRule::rDaily:
+        case KCalendarCore::RecurrenceRule::rDaily:
             recurrence->setDaily(frequency);
             break;
-        case KCalCore::RecurrenceRule::rWeekly:
+        case KCalendarCore::RecurrenceRule::rWeekly:
             recurrence->setWeekly(frequency, weekDays);
             break;
         default:
@@ -1178,9 +1178,9 @@ private Q_SLOTS:
 
         // Now check the results
         switch (recurrenceType) {
-        case KCalCore::RecurrenceRule::rDaily:
+        case KCalendarCore::RecurrenceRule::rDaily:
             break;
-        case KCalCore::RecurrenceRule::rWeekly:
+        case KCalendarCore::RecurrenceRule::rWeekly:
             QCOMPARE(incidence->recurrence()->days(), expectedWeekDays);
             if (weekDays != expectedWeekDays) {
                 QVERIFY(incidence->dirtyFields().contains(IncidenceBase::FieldRecurrence));
@@ -1261,7 +1261,7 @@ public Q_SLOTS:
             QVERIFY(item.parentCollection().isValid());
             mItemIdByChangeId.insert(changeId, item.id());
             QVERIFY(item.hasPayload());
-            Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+            Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             mItemIdByUid.insert(incidence->uid(), item.id());
             mLastItemCreated = item;
         } else {

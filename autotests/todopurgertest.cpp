@@ -33,7 +33,7 @@
 #include <QTestEventLoop>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 Q_DECLARE_METATYPE(QSet<QByteArray>)
 
@@ -62,7 +62,7 @@ void TodoPurgerTest::createTodo(const QString &uid, const QString &parentUid, bo
 
     todo->setSummary(QStringLiteral("summary"));
 
-    item.setPayload<KCalCore::Incidence::Ptr>(todo);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(todo);
     ItemCreateJob *job = new ItemCreateJob(item, m_collection, this);
     m_pendingCreations++;
     AKVERIFYEXEC(job);
@@ -143,7 +143,7 @@ void TodoPurgerTest::calendarIncidenceAdded(const Incidence::Ptr &incidence)
     }
 }
 
-void TodoPurgerTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
+void TodoPurgerTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar)
 {
     --m_pendingDeletions;
     if (m_pendingDeletions == 0 && !m_pendingPurgeSignal) {

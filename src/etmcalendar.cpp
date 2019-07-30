@@ -41,7 +41,7 @@
 #include <QTreeView>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 //TODO: implement batchAdding
 
@@ -79,7 +79,7 @@ void ETMCalendarPrivate::init()
         monitor->setItemFetchScope(scope);
         monitor->setAllMonitored(true);
 
-        const QStringList allMimeTypes = { KCalCore::Event::eventMimeType(), KCalCore::Todo::todoMimeType(), KCalCore::Journal::journalMimeType() };
+        const QStringList allMimeTypes = { KCalendarCore::Event::eventMimeType(), KCalendarCore::Todo::todoMimeType(), KCalendarCore::Journal::journalMimeType() };
 
         for (const QString &mimetype : allMimeTypes) {
             monitor->setMimeTypeMonitored(mimetype, mMimeTypes.isEmpty() || mMimeTypes.contains(mimetype));
@@ -128,7 +128,7 @@ void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collecti
         const Akonadi::Item::List items = q->items();
         for (const Akonadi::Item &item : items) {
             if (item.storageCollectionId() == collection.id()) {
-                KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+                KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 if (incidence) {
                     incidence->setReadOnly(!(collection.rights() & Akonadi::Collection::CanChangeItem));
                 }
@@ -173,13 +173,13 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCalFilterProxyModel = new CalFilterProxyModel(this);
     mCalFilterProxyModel->setFilter(q->filter());
     mCalFilterProxyModel->setSourceModel(mSelectionProxy);
-    mCalFilterProxyModel->setObjectName(QStringLiteral("KCalCore::CalFilter filtering"));
+    mCalFilterProxyModel->setObjectName(QStringLiteral("KCalendarCore::CalFilter filtering"));
 
     mCalFilterPartStatusProxyModel = new CalFilterPartStatusProxyModel(this);
     mCalFilterPartStatusProxyModel->setFilterVirtual(false);
-    QList<KCalCore::Attendee::PartStat> blockedStatusList;
-    blockedStatusList << KCalCore::Attendee::NeedsAction;
-    blockedStatusList << KCalCore::Attendee::Declined;
+    QList<KCalendarCore::Attendee::PartStat> blockedStatusList;
+    blockedStatusList << KCalendarCore::Attendee::NeedsAction;
+    blockedStatusList << KCalendarCore::Attendee::Declined;
     mCalFilterPartStatusProxyModel->setDynamicSortFilter(true);
     mCalFilterPartStatusProxyModel->setBlockedStatusList(blockedStatusList);
     mCalFilterPartStatusProxyModel->setSourceModel(mCalFilterProxyModel);
@@ -242,7 +242,7 @@ Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel 
     QModelIndex i = model->index(row, 0, parentIndex);
     while (row <= endRow) {
         const Akonadi::Item item = itemFromIndex(i);
-        if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
+        if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             items << item;
         } else {
             const QModelIndex childIndex = model->index(0, 0, i);
@@ -399,7 +399,7 @@ void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft
     int row = i.row();
     while (row <= endRow) {
         const Akonadi::Item item = itemFromIndex(i);
-        if (item.isValid() && item.hasPayload<KCalCore::Incidence::Ptr>()) {
+        if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             updateItem(item);
         }
 
@@ -429,7 +429,7 @@ void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
     if (existingIncidence) {
         // We set the payload so that the internal incidence pointer and the one in mItemById stay the same
         Akonadi::Item updatedItem = item;
-        updatedItem.setPayload<KCalCore::Incidence::Ptr>(existingIncidence.staticCast<KCalCore::Incidence>());
+        updatedItem.setPayload<KCalendarCore::Incidence::Ptr>(existingIncidence.staticCast<KCalendarCore::Incidence>());
         mItemById.insert(item.id(), updatedItem);   // The item needs updating too, revision changed.
 
         // Check if RELATED-TO changed, updating parenting information
@@ -539,12 +539,12 @@ KCheckableProxyModel *ETMCalendar::checkableProxyModel() const
     return d->mCheckableProxyModel;
 }
 
-KCalCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
+KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
         const QDateTime &to,
         bool excludeBlockedAlarms) const
 {
     Q_D(const ETMCalendar);
-    KCalCore::Alarm::List alarmList;
+    KCalendarCore::Alarm::List alarmList;
     QHashIterator<Akonadi::Item::Id, Akonadi::Item> i(d->mItemById);
     while (i.hasNext()) {
         const Akonadi::Item item = i.next().value();
@@ -563,9 +563,9 @@ KCalCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
             }
         }
 
-        KCalCore::Incidence::Ptr incidence;
-        if (item.isValid() && item.hasPayload<KCalCore::Incidence::Ptr>()) {
-            incidence = KCalCore::Incidence::Ptr(item.payload<KCalCore::Incidence::Ptr>()->clone());
+        KCalendarCore::Incidence::Ptr incidence;
+        if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
+            incidence = KCalendarCore::Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
         } else {
             continue;
         }
@@ -577,7 +577,7 @@ KCalCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
         if (blockedAttr) {
             // Remove all blocked types of alarms
             const auto alarmsLst = incidence->alarms();
-            for (const KCalCore::Alarm::Ptr &alarm : alarmsLst) {
+            for (const KCalendarCore::Alarm::Ptr &alarm : alarmsLst) {
                 if (blockedAttr->isAlarmTypeBlocked(alarm->type())) {
                     incidence->removeAlarm(alarm);
                 }

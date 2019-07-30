@@ -47,19 +47,19 @@ BlockAlarmsAttribute::~BlockAlarmsAttribute()
     delete d;
 }
 
-void BlockAlarmsAttribute::blockAlarmType(KCalCore::Alarm::Type type, bool block)
+void BlockAlarmsAttribute::blockAlarmType(KCalendarCore::Alarm::Type type, bool block)
 {
     switch (type) {
-    case KCalCore::Alarm::Audio:
+    case KCalendarCore::Alarm::Audio:
         d->audio = block;
         return;
-    case KCalCore::Alarm::Display:
+    case KCalendarCore::Alarm::Display:
         d->display = block;
         return;
-    case KCalCore::Alarm::Email:
+    case KCalendarCore::Alarm::Email:
         d->email = block;
         return;
-    case KCalCore::Alarm::Procedure:
+    case KCalendarCore::Alarm::Procedure:
         d->procedure = block;
         return;
     default:
@@ -69,22 +69,22 @@ void BlockAlarmsAttribute::blockAlarmType(KCalCore::Alarm::Type type, bool block
 
 void BlockAlarmsAttribute::blockEverything(bool block)
 {
-    blockAlarmType(KCalCore::Alarm::Audio, block);
-    blockAlarmType(KCalCore::Alarm::Display, block);
-    blockAlarmType(KCalCore::Alarm::Email, block);
-    blockAlarmType(KCalCore::Alarm::Procedure, block);
+    blockAlarmType(KCalendarCore::Alarm::Audio, block);
+    blockAlarmType(KCalendarCore::Alarm::Display, block);
+    blockAlarmType(KCalendarCore::Alarm::Email, block);
+    blockAlarmType(KCalendarCore::Alarm::Procedure, block);
 }
 
-bool BlockAlarmsAttribute::isAlarmTypeBlocked(KCalCore::Alarm::Type type) const
+bool BlockAlarmsAttribute::isAlarmTypeBlocked(KCalendarCore::Alarm::Type type) const
 {
     switch (type) {
-    case KCalCore::Alarm::Audio:
+    case KCalendarCore::Alarm::Audio:
         return d->audio;
-    case KCalCore::Alarm::Display:
+    case KCalendarCore::Alarm::Display:
         return d->display;
-    case KCalCore::Alarm::Email:
+    case KCalendarCore::Alarm::Email:
         return d->email;
-    case KCalCore::Alarm::Procedure:
+    case KCalendarCore::Alarm::Procedure:
         return d->procedure;
     default:
         return false;
@@ -93,8 +93,8 @@ bool BlockAlarmsAttribute::isAlarmTypeBlocked(KCalCore::Alarm::Type type) const
 
 bool BlockAlarmsAttribute::isEverythingBlocked() const
 {
-    return isAlarmTypeBlocked(KCalCore::Alarm::Audio) && isAlarmTypeBlocked(KCalCore::Alarm::Display)
-           && isAlarmTypeBlocked(KCalCore::Alarm::Email) && isAlarmTypeBlocked(KCalCore::Alarm::Procedure);
+    return isAlarmTypeBlocked(KCalendarCore::Alarm::Audio) && isAlarmTypeBlocked(KCalendarCore::Alarm::Display)
+           && isAlarmTypeBlocked(KCalendarCore::Alarm::Email) && isAlarmTypeBlocked(KCalendarCore::Alarm::Procedure);
 }
 
 QByteArray BlockAlarmsAttribute::type() const

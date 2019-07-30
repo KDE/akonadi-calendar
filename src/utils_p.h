@@ -21,7 +21,7 @@
 #ifndef AKONADI_CALENDAR_UTILS_P_
 #define AKONADI_CALENDAR_UTILS_P_
 
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 #include <item.h>
 #include <collection.h>
 
@@ -43,11 +43,11 @@ Q_REQUIRED_RESULT QString email();
 Q_REQUIRED_RESULT bool thatIsMe(const QString &email);
 
 //faster version, because we know that attendee->email() is only the email address
-Q_REQUIRED_RESULT bool thatIsMe(const KCalCore::Attendee &attendee);
+Q_REQUIRED_RESULT bool thatIsMe(const KCalendarCore::Attendee &attendee);
 
 Q_REQUIRED_RESULT QStringList allEmails();
 
-Q_REQUIRED_RESULT KCalCore::Incidence::Ptr incidence(const Akonadi::Item &item);
+Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence(const Akonadi::Item &item);
 
 Q_REQUIRED_RESULT Akonadi::Collection selectCollection(QWidget *parent,
                                      int &dialogCode,

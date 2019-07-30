@@ -24,8 +24,8 @@
 #include <item.h>
 #include <entitytreemodel.h>
 
-#include <kcalcore/incidence.h>
-#include <kcalcore/attendee.h>
+#include <kcalendarcore/incidence.h>
+#include <kcalendarcore/attendee.h>
 // #include <email.h>
 
 #include <identitymanager.h>
@@ -42,7 +42,7 @@ public:
     {
     }
 
-    QList<KCalCore::Attendee::PartStat> mBlockedStatusList;
+    QList<KCalendarCore::Attendee::PartStat> mBlockedStatusList;
     KIdentityManagement::IdentityManager *mIdentityManager = nullptr;
     bool mFilterVirtual = false;
 };
@@ -65,12 +65,12 @@ CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel()
     delete d;
 }
 
-const QList<KCalCore::Attendee::PartStat> &CalFilterPartStatusProxyModel::blockedStatusList() const
+const QList<KCalendarCore::Attendee::PartStat> &CalFilterPartStatusProxyModel::blockedStatusList() const
 {
     return d->mBlockedStatusList;
 }
 
-void CalFilterPartStatusProxyModel::setBlockedStatusList(const QList<KCalCore::Attendee::PartStat> &blockStatusList)
+void CalFilterPartStatusProxyModel::setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList)
 {
     d->mBlockedStatusList = blockStatusList;
 }
@@ -97,7 +97,7 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
         return false;
     }
 
-    const KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+    const KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
     if (!incidence) {
         return false;
     }
@@ -114,7 +114,7 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     }
 
     const auto attendees = incidence->attendees();
-    for (const KCalCore::Attendee &attendee : attendees) {
+    for (const KCalendarCore::Attendee &attendee : attendees) {
         if (CalendarUtils::thatIsMe(attendee)) {
             return !d->mBlockedStatusList.contains(attendee.status());
         }

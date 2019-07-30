@@ -26,14 +26,14 @@
 #include "akonadi-calendar_export.h"
 #include "etmcalendar.h"
 
-#include <kcalcore/freebusycache.h>
+#include <kcalendarcore/freebusycache.h>
 //TODO: document
 namespace Akonadi
 {
 class FreeBusyManagerPrivate;
 class FreeBusyManagerStatic;
 
-class AKONADI_CALENDAR_EXPORT FreeBusyManager : public QObject, public KCalCore::FreeBusyCache
+class AKONADI_CALENDAR_EXPORT FreeBusyManager : public QObject, public KCalendarCore::FreeBusyCache
 {
     Q_OBJECT
 public:
@@ -110,29 +110,29 @@ public:
       information 0 is returned. In that case the information should be retrieved
       again by calling retrieveFreeBusy.
 
-      Implements KCalCore::FreeBusyCache::loadFreeBusy
+      Implements KCalendarCore::FreeBusyCache::loadFreeBusy
 
       @param email is a QString containing a email string in the
       "FirstName LastName <emailaddress>" format.
     */
-    Q_REQUIRED_RESULT KCalCore::FreeBusy::Ptr loadFreeBusy(const QString &email) override;
+    Q_REQUIRED_RESULT KCalendarCore::FreeBusy::Ptr loadFreeBusy(const QString &email) override;
 
     /**
       Save freebusy information belonging to an email.
 
-      Implements KCalCore::FreeBusyCache::saveFreeBusy
+      Implements KCalendarCore::FreeBusyCache::saveFreeBusy
 
       @param freebusy is a pointer to a valid FreeBusy instance.
       @param person is a valid Person instance.
     */
-    bool saveFreeBusy(const KCalCore::FreeBusy::Ptr &freebusy,
-                      const KCalCore::Person &person) override;
+    bool saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
+                      const KCalendarCore::Person &person) override;
 
 Q_SIGNALS:
     /**
       This signal is emitted to return results of free/busy requests.
     */
-    void freeBusyRetrieved(const KCalCore::FreeBusy::Ptr &fb,
+    void freeBusyRetrieved(const KCalendarCore::FreeBusy::Ptr &fb,
                            const QString &email);
 
 protected:

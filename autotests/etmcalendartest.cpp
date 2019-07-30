@@ -35,18 +35,18 @@
 #include <QSignalSpy>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 Q_DECLARE_METATYPE(QSet<QByteArray>)
 
-KCalCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &item)
+KCalendarCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &item)
 {
     // With this try-catch block, we get a 2x performance improvement in retrieving the payload
     // since we don't call hasPayload()
     try {
-        return item.payload<KCalCore::Incidence::Ptr>();
+        return item.payload<KCalendarCore::Incidence::Ptr>();
     } catch (const Akonadi::PayloadException&) {
-        return KCalCore::Incidence::Ptr();
+        return KCalendarCore::Incidence::Ptr();
     }
 }
 
@@ -58,7 +58,7 @@ void ETMCalendarTest::createIncidence(const QString &uid)
     incidence->setUid(uid);
     incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
     ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
     AKVERIFYEXEC(job);
 }
@@ -74,7 +74,7 @@ void ETMCalendarTest::createTodo(const QString &uid, const QString &parentUid)
 
     todo->setSummary(QStringLiteral("summary"));
 
-    item.setPayload<KCalCore::Incidence::Ptr>(todo);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(todo);
     ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
     mIncidencesToAdd++;
     mIncidencesToChange++;
@@ -304,7 +304,7 @@ void ETMCalendarTest::calendarIncidenceChanged(const Incidence::Ptr &incidence)
     checkExitLoop();
 }
 
-void ETMCalendarTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalCore::Calendar *cal)
+void ETMCalendarTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalendarCore::Calendar *cal)
 {
     Q_UNUSED(cal);
     const QString id = incidence->customProperty("VOLATILE", "AKONADI-ID");
@@ -430,7 +430,7 @@ void ETMCalendarTest::testNotifyObserverBug()
     waitForIt();
 
     Akonadi::Item item = mCalendar->item(uid);
-    KCalCore::Incidence::Ptr incidence = KCalCore::Incidence::Ptr(mCalendar->incidence(uid)->clone());
+    KCalendarCore::Incidence::Ptr incidence = KCalendarCore::Incidence::Ptr(mCalendar->incidence(uid)->clone());
     QVERIFY(item.isValid());
 
     // Modify it
@@ -451,7 +451,7 @@ void ETMCalendarTest::testUidChange()
     createTodo(originalUid, QString());
     waitForIt();
 
-    KCalCore::Incidence::Ptr clone = Incidence::Ptr(mCalendar->incidence(originalUid)->clone());
+    KCalendarCore::Incidence::Ptr clone = Incidence::Ptr(mCalendar->incidence(originalUid)->clone());
     QCOMPARE(clone->uid(), originalUid);
 
     Akonadi::Item item = mCalendar->item(originalUid);
@@ -465,7 +465,7 @@ void ETMCalendarTest::testUidChange()
     waitForIt();
 
     // Check that stuff still works fine
-    KCalCore::Incidence::Ptr incidence = mCalendar->incidence(originalUid);
+    KCalendarCore::Incidence::Ptr incidence = mCalendar->incidence(originalUid);
     QVERIFY(!incidence);
     incidence = mCalendar->incidence(newUid);
     QCOMPARE(incidence->uid(), newUid);
@@ -537,17 +537,17 @@ void ETMCalendarTest::testFilterInvitations()
     Item item;
     Incidence::Ptr incidence = Incidence::Ptr(new Event());
     KEMailSettings emailSettings;
-    KCalCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
+    KCalendarCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
 
     item.setMimeType(Event::eventMimeType());
     incidence->setUid(uid);
     incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
 
-    me.setStatus(KCalCore::Attendee::NeedsAction);
+    me.setStatus(KCalendarCore::Attendee::NeedsAction);
     incidence->addAttendee(me);
 
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
     ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
     AKVERIFYEXEC(job);
     waitForIt();
@@ -562,7 +562,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     int anz = mCalendar->model()->rowCount();
 
     KEMailSettings emailSettings;
-    KCalCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
+    KCalendarCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
 
     QString uid = QStringLiteral("invite-02");
     mIncidencesToAdd = 1;
@@ -575,7 +575,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
 
     incidence->addAttendee(me);
     incidence->setRevision(1);
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
     mIncidencesToDelete = 1;
     ItemModifyJob *modifyJob = new ItemModifyJob(item, this);
@@ -583,13 +583,13 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     waitForIt();
     QCOMPARE(mCalendar->model()->rowCount(), anz);
 
-    me.setStatus(KCalCore::Attendee::Accepted);
+    me.setStatus(KCalendarCore::Attendee::Accepted);
     incidence->clearAttendees();
     incidence->addAttendee(me);
 
     incidence->setRevision(2);
 
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
     item.setRevision(2);
     mIncidencesToAdd = 1;
     modifyJob = new ItemModifyJob(item, this);

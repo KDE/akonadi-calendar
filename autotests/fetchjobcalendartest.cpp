@@ -25,7 +25,7 @@
 #include <qtest_akonadi.h>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 class FetchJobCalendarTest : public QObject
 {
@@ -40,7 +40,7 @@ class FetchJobCalendarTest : public QObject
         incidence->setUid(uid);
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setDtStart(QDateTime::currentDateTimeUtc());
-        item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+        item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
         ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
     }

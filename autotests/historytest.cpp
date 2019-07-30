@@ -26,12 +26,12 @@
 #include <collectionfetchscope.h>
 #include <itemfetchscope.h>
 #include <qtest_akonadi.h>
-#include <kcalcore/event.h>
+#include <kcalendarcore/event.h>
 
 #include <QTestEventLoop>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ChangeType>)
 
@@ -54,10 +54,10 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
         return false;
     }
 
-    if (it.payload<KCalCore::Incidence::Ptr>()->summary() == expected) {
+    if (it.payload<KCalendarCore::Incidence::Ptr>()->summary() == expected) {
         return true;
     } else {
-        qDebug() << "Got " << it.payload<KCalCore::Incidence::Ptr>()->summary()
+        qDebug() << "Got " << it.payload<KCalendarCore::Incidence::Ptr>()->summary()
                  << "Expected " << expected;
         return false;
     }
@@ -69,7 +69,7 @@ static Akonadi::Item item()
     Incidence::Ptr incidence = Incidence::Ptr(new Event());
     incidence->setSummary(QStringLiteral("random summary"));
     item.setMimeType(incidence->mimeType());
-    item.setPayload<KCalCore::Incidence::Ptr>(incidence);
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
     return item;
 }
 
@@ -123,7 +123,7 @@ void HistoryTest::testCreation()
     QCOMPARE(mHistory->d->redoCount(), 0);
     QCOMPARE(mHistory->d->undoCount(), 0);
     QVERIFY(item.hasPayload());
-    const int changeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>());
+    const int changeId = mChanger->createIncidence(item.payload<KCalendarCore::Incidence::Ptr>());
     QVERIFY(changeId > 0);
     mKnownChangeIds << changeId;
     waitForSignals();
@@ -215,7 +215,7 @@ void HistoryTest::testModification_data()
     Item item1 = createItem(mCollection);
     const QString oldSummary(QStringLiteral("old"));
     const QString newSummary(QStringLiteral("new"));
-    item1.payload<KCalCore::Incidence::Ptr>()->setSummary(oldSummary);
+    item1.payload<KCalendarCore::Incidence::Ptr>()->setSummary(oldSummary);
     QTest::newRow("item1") << item1 << oldSummary << newSummary;
 }
 
@@ -225,9 +225,9 @@ void HistoryTest::testModification()
     QFETCH(QString, oldSummary);
     QFETCH(QString, newSummary);
     QVERIFY(item.hasPayload());
-    Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalCore::Incidence::Ptr>()->clone());
+    Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
 
-    item.payload<KCalCore::Incidence::Ptr>()->setSummary(newSummary);
+    item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(newSummary);
     mPendingSignals[ModificationSignal] = 1;
     QCOMPARE(mHistory->d->redoCount(), 0);
     QCOMPARE(mHistory->d->undoCount(), 0);
@@ -312,7 +312,7 @@ void HistoryTest::testAtomicOperations()
         int changeId = -1;
         switch (changeTypes[i]) {
         case IncidenceChanger::ChangeTypeCreate:
-            changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalCore::Incidence::Ptr>()
+            changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalendarCore::Incidence::Ptr>()
                                                  : Incidence::Ptr());
             QVERIFY(changeId != -1);
             mKnownChangeIds << changeId;
@@ -326,9 +326,9 @@ void HistoryTest::testAtomicOperations()
             break;
         case IncidenceChanger::ChangeTypeModify: {
             QVERIFY(item.isValid());
-            QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
-            Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalCore::Incidence::Ptr>()->clone());
-            item.payload<KCalCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
+            QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+            Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
+            item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
             changeId = mChanger->modifyIncidence(item, originalPayload);
             QVERIFY(changeId != -1);
             mKnownChangeIds << changeId;
@@ -435,7 +435,7 @@ void HistoryTest::testMix()
         int changeId = -1;
         switch (changeTypes[i]) {
         case IncidenceChanger::ChangeTypeCreate:
-            lastCreateChangeId = mChanger->createIncidence(item.payload<KCalCore::Incidence::Ptr>());
+            lastCreateChangeId = mChanger->createIncidence(item.payload<KCalendarCore::Incidence::Ptr>());
             QVERIFY(lastCreateChangeId != -1);
             mKnownChangeIds << lastCreateChangeId;
             ++mPendingSignals[CreationSignal];
@@ -453,9 +453,9 @@ void HistoryTest::testMix()
         case IncidenceChanger::ChangeTypeModify: {
             item = item.isValid() ? item : mItemByChangeId.value(lastCreateChangeId);
             QVERIFY(item.isValid());
-            QVERIFY(item.hasPayload<KCalCore::Incidence::Ptr>());
-            Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalCore::Incidence::Ptr>()->clone());
-            item.payload<KCalCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
+            QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+            Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
+            item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
             QVERIFY(originalPayload);
             changeId = mChanger->modifyIncidence(item, originalPayload);
             QVERIFY(changeId != -1);
@@ -567,7 +567,7 @@ void HistoryTest::createFinished(int changeId,
         QVERIFY(item.parentCollection().isValid());
         mItemByChangeId.insert(changeId, item);
         QVERIFY(item.hasPayload());
-        Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+        Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
         //mItemIdByUid.insert(incidence->uid(), item.id());
     } else {
         qDebug() << "Error string is " << errorString;

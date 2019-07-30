@@ -25,8 +25,8 @@
 
 #include <item.h>
 #include <collection.h>
-#include <kcalcore/memorycalendar.h>
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/memorycalendar.h>
+#include <kcalendarcore/incidence.h>
 
 namespace Akonadi
 {
@@ -37,9 +37,9 @@ class IncidenceChanger;
 /**
 * @short The base class for all akonadi aware calendars.
 *
-* Because it inherits KCalCore::Calendar, it provides seamless integration
-* with KCalCore and KCalUtils libraries eliminating any need for adapter
-* ( akonadi<->KCalCore ) classes.
+* Because it inherits KCalendarCore::Calendar, it provides seamless integration
+* with KCalendarCore and KCalUtils libraries eliminating any need for adapter
+* ( akonadi<->KCalendarCore ) classes.
 *
 * @see ETMCalendar
 * @see FetchJobCalendar
@@ -47,7 +47,7 @@ class IncidenceChanger;
 * @author Sérgio Martins <sergio.martins@kdab.com>
 * @since 4.11
 */
-class AKONADI_CALENDAR_EXPORT CalendarBase : public KCalCore::MemoryCalendar
+class AKONADI_CALENDAR_EXPORT CalendarBase : public KCalendarCore::MemoryCalendar
 {
     Q_OBJECT
 public:
@@ -74,7 +74,7 @@ public:
       * Returns the Item containing the incidence with uid @p uid or an invalid Item
       * if the incidence isn't found.
       */
-    Q_REQUIRED_RESULT Akonadi::Item item(const KCalCore::Incidence::Ptr &incidence) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     /**
       * Returns the Item with @p id or an invalid Item if not found.
@@ -91,21 +91,21 @@ public:
     /**
       * Returns the item list that corresponds to the @p incidenceList.
       */
-    Q_REQUIRED_RESULT Akonadi::Item::List itemList(const KCalCore::Incidence::List &incidenceList) const;
+    Q_REQUIRED_RESULT Akonadi::Item::List itemList(const KCalendarCore::Incidence::List &incidenceList) const;
 
     /**
       * Returns the child incidences of the parent identified by @p parentUid.
       * Only the direct childs are returned
       * @param parentUid identifier of the parent incidence
       */ //TODO: unit-test
-    Q_REQUIRED_RESULT KCalCore::Incidence::List childIncidences(const QString &parentUid) const;
+    Q_REQUIRED_RESULT KCalendarCore::Incidence::List childIncidences(const QString &parentUid) const;
 
     /**
       * Returns the child incidences of the parent identified by @p parentId.
       * Only the direct childs are returned
       * @param parentId identifier of the parent item
       */
-    Q_REQUIRED_RESULT KCalCore::Incidence::List childIncidences(Item::Id parentId) const;
+    Q_REQUIRED_RESULT KCalendarCore::Incidence::List childIncidences(Item::Id parentId) const;
 
     /**
       * Returns the child items of the parent identified by @p parentUid.
@@ -126,56 +126,56 @@ public:
       * It's added to akonadi in the background @see createFinished().
       * @param event the event to be added
       */
-    bool addEvent(const KCalCore::Event::Ptr &event) override;
+    bool addEvent(const KCalendarCore::Event::Ptr &event) override;
 
     /**
       * Deletes an Event from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param event the event to be deleted
       */
-    bool deleteEvent(const KCalCore::Event::Ptr &event) override;
+    bool deleteEvent(const KCalendarCore::Event::Ptr &event) override;
 
     /**
       * Adds a Todo to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param todo the todo to add
       */
-    bool addTodo(const KCalCore::Todo::Ptr &todo) override;
+    bool addTodo(const KCalendarCore::Todo::Ptr &todo) override;
 
     /**
       * Deletes a Todo from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param todo the todo to delete
       */
-    bool deleteTodo(const KCalCore::Todo::Ptr &todo) override;
+    bool deleteTodo(const KCalendarCore::Todo::Ptr &todo) override;
 
     /**
       * Adds a Journal to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param journal the journal to add
       */
-    bool addJournal(const KCalCore::Journal::Ptr &journal) override;
+    bool addJournal(const KCalendarCore::Journal::Ptr &journal) override;
 
     /**
       * Deletes a Journal from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param journal the journal to delete
       */
-    bool deleteJournal(const KCalCore::Journal::Ptr &journal) override;
+    bool deleteJournal(const KCalendarCore::Journal::Ptr &journal) override;
 
     /**
       * Adds an incidence to the calendar.
       * It's added to akonadi in the background @see createFinished().
       * @param incidence the incidence to add
       */
-    bool addIncidence(const KCalCore::Incidence::Ptr &incidence) override;
+    bool addIncidence(const KCalendarCore::Incidence::Ptr &incidence) override;
 
     /**
       * Deletes an incidence from the calendar.
       * It's removed from akonadi in the background @see deleteFinished().
       * @param incidence the incidence to delete
       */
-    bool deleteIncidence(const KCalCore::Incidence::Ptr &incidence) override;
+    bool deleteIncidence(const KCalendarCore::Incidence::Ptr &incidence) override;
 
     /**
         Call this to tell the calendar that you're adding a batch of incidences.
@@ -202,7 +202,7 @@ public:
       * The incidence with the same uid as @p newIncidence will be updated with the contents of
       * @param newIncidence the incidence to modify
       */
-    bool modifyIncidence(const KCalCore::Incidence::Ptr &newIncidence);
+    bool modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence);
 
     /**
       * Returns if the calendar already finished loading.

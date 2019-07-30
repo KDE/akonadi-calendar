@@ -61,21 +61,21 @@ CalendarClipboard::Private::~Private()
     delete m_dndfactory;
 }
 
-void CalendarClipboard::Private::getIncidenceHierarchy(const KCalCore::Incidence::Ptr &incidence,
+void CalendarClipboard::Private::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence,
         QStringList &uids)
 {
     // protecion against looping hierarchies
     if (incidence && !uids.contains(incidence->uid())) {
-        const KCalCore::Incidence::List immediateChildren = m_calendar->childIncidences(incidence->uid());
+        const KCalendarCore::Incidence::List immediateChildren = m_calendar->childIncidences(incidence->uid());
 
-        for (const KCalCore::Incidence::Ptr &child : immediateChildren) {
+        for (const KCalendarCore::Incidence::Ptr &child : immediateChildren) {
             getIncidenceHierarchy(child, uids);
         }
         uids.append(incidence->uid());
     }
 }
 
-void CalendarClipboard::Private::cut(const KCalCore::Incidence::List &incidences)
+void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::List &incidences)
 {
     const bool result = m_dndfactory->copyIncidences(incidences);
     m_pendingChangeIds.clear();
@@ -94,33 +94,33 @@ void CalendarClipboard::Private::cut(const KCalCore::Incidence::List &incidences
     }
 }
 
-void CalendarClipboard::Private::cut(const KCalCore::Incidence::Ptr &incidence)
+void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    KCalCore::Incidence::List incidences;
+    KCalendarCore::Incidence::List incidences;
     incidences << incidence;
     cut(incidences);
 }
 
-void CalendarClipboard::Private::makeChildsIndependent(const KCalCore::Incidence::Ptr &incidence)
+void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
-    const KCalCore::Incidence::List childs = m_calendar->childIncidences(incidence->uid());
+    const KCalendarCore::Incidence::List childs = m_calendar->childIncidences(incidence->uid());
 
     if (childs.isEmpty()) {
         cut(incidence);
     } else {
         m_pendingChangeIds.clear();
         m_abortCurrentOperation = false;
-        for (const KCalCore::Incidence::Ptr &child : childs) {
+        for (const KCalendarCore::Incidence::Ptr &child : childs) {
             Akonadi::Item childItem = m_calendar->item(incidence);
             if (!childItem.isValid()) {
                 emit q->cutFinished(/**success=*/ false, i18n("Can't find item: %1", childItem.id()));
                 return;
             }
 
-            KCalCore::Incidence::Ptr newIncidence(child->clone());
+            KCalendarCore::Incidence::Ptr newIncidence(child->clone());
             newIncidence->setRelatedTo(QString());
-            childItem.setPayload<KCalCore::Incidence::Ptr>(newIncidence);
+            childItem.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
             const int changeId = m_changer->modifyIncidence(childItem, /*originalPayload*/child);
             if (changeId == -1) {
                 m_abortCurrentOperation = true;
@@ -155,7 +155,7 @@ void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi:
             if (isLastChange) {
                 // All children are unparented, lets cut.
                 Q_ASSERT(item.isValid() && item.hasPayload());
-                cut(item.payload<KCalCore::Incidence::Ptr>());
+                cut(item.payload<KCalendarCore::Incidence::Ptr>());
             }
         } else {
             m_abortCurrentOperation = true;
@@ -195,7 +195,7 @@ CalendarClipboard::~CalendarClipboard()
 {
 }
 
-void CalendarClipboard::cutIncidence(const KCalCore::Incidence::Ptr &incidence,
+void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incidence,
                                      CalendarClipboard::Mode mode)
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
@@ -225,9 +225,9 @@ void CalendarClipboard::cutIncidence(const KCalCore::Incidence::Ptr &incidence,
         QStringList uids;
         d->getIncidenceHierarchy(incidence, uids);
         Q_ASSERT(!uids.isEmpty());
-        KCalCore::Incidence::List incidencesToCut;
+        KCalendarCore::Incidence::List incidencesToCut;
         for (const QString &uid : qAsConst(uids)) {
-            KCalCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
+            KCalendarCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
             if (child) {
                 incidencesToCut << child;
             }
@@ -236,7 +236,7 @@ void CalendarClipboard::cutIncidence(const KCalCore::Incidence::Ptr &incidence,
     }
 }
 
-bool CalendarClipboard::copyIncidence(const KCalCore::Incidence::Ptr &incidence,
+bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incidence,
                                       CalendarClipboard::Mode mode)
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
@@ -257,7 +257,7 @@ bool CalendarClipboard::copyIncidence(const KCalCore::Incidence::Ptr &incidence,
         mode = SingleMode; // Doesn't have children, don't ask
     }
 
-    KCalCore::Incidence::List incidencesToCopy;
+    KCalendarCore::Incidence::List incidencesToCopy;
     if (mode == SingleMode) {
         incidencesToCopy << incidence;
     } else {
@@ -265,7 +265,7 @@ bool CalendarClipboard::copyIncidence(const KCalCore::Incidence::Ptr &incidence,
         d->getIncidenceHierarchy(incidence, uids);
         Q_ASSERT(!uids.isEmpty());
         for (const QString &uid : qAsConst(uids)) {
-            KCalCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
+            KCalendarCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
             if (child) {
                 incidencesToCopy << child;
             }

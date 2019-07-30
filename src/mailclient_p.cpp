@@ -25,9 +25,9 @@
 
 #include <collection.h>
 
-#include <kcalcore/attendee.h>
-#include <kcalcore/incidence.h>
-#include <kcalcore/incidencebase.h>
+#include <kcalendarcore/attendee.h>
+#include <kcalendarcore/incidence.h>
+#include <kcalendarcore/incidencebase.h>
 #include <kcalutils/incidenceformatter.h>
 #include <kmime/kmime_message.h>
 #include <identity.h>
@@ -53,13 +53,13 @@ MailClient::~MailClient()
 {
 }
 
-void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
+void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                const KIdentityManagement::Identity &identity,
                                bool bccMe, const QString &attachment,
                                const QString &mailTransport)
 {
     Q_ASSERT(incidence);
-    KCalCore::Attendee::List attendees = incidence->attendees();
+    KCalendarCore::Attendee::List attendees = incidence->attendees();
     if (attendees.isEmpty()) {
         qCWarning(AKONADICALENDAR_LOG) << "There are no attendees to e-mail";
         emit finished(ResultNoAttendees, i18n("There are no attendees to e-mail"));
@@ -73,7 +73,7 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     QStringList ccList;
     const int numberOfAttendees = attendees.count();
     for (int i = 0; i < numberOfAttendees; ++i) {
-        const KCalCore::Attendee a = attendees.at(i);
+        const KCalendarCore::Attendee a = attendees.at(i);
 
         const QString email = a.email();
         if (email.isEmpty()) {
@@ -88,8 +88,8 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
         }
 
         // Optional Participants and Non-Participants are copied on the email
-        if (a.role() == KCalCore::Attendee::OptParticipant ||
-                a.role() == KCalCore::Attendee::NonParticipant) {
+        if (a.role() == KCalendarCore::Attendee::OptParticipant ||
+                a.role() == KCalendarCore::Attendee::NonParticipant) {
             ccList << a.email();
         } else {
             toList << a.email();
@@ -111,8 +111,8 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     }
 
     QString subject;
-    if (incidence->type() != KCalCore::Incidence::TypeFreeBusy) {
-        KCalCore::Incidence::Ptr inc = incidence.staticCast<KCalCore::Incidence>();
+    if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
+        KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
         subject = inc->summary();
     } else {
         subject = i18n("Free Busy Object");
@@ -123,7 +123,7 @@ void MailClient::mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
     send(incidence, identity, from, to, cc, subject, body, false, bccMe, attachment, mailTransport);
 }
 
-void MailClient::mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
+void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                const KIdentityManagement::Identity &identity,
                                const QString &from, bool bccMe,
                                const QString &attachment,
@@ -132,8 +132,8 @@ void MailClient::mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
     const QString to = incidence->organizer().fullName();
     QString subject = sub;
 
-    if (incidence->type() != KCalCore::Incidence::TypeFreeBusy) {
-        KCalCore::Incidence::Ptr inc = incidence.staticCast<KCalCore::Incidence>();
+    if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
+        KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
         if (subject.isEmpty()) {
             subject = inc->summary();
         }
@@ -146,7 +146,7 @@ void MailClient::mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
     send(incidence, identity, from, to, QString(), subject, body, false, bccMe, attachment, mailTransport);
 }
 
-void MailClient::mailTo(const KCalCore::IncidenceBase::Ptr &incidence,
+void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                         const KIdentityManagement::Identity &identity,
                         const QString &from, bool bccMe,
                         const QString &recipients, const QString &attachment,
@@ -154,8 +154,8 @@ void MailClient::mailTo(const KCalCore::IncidenceBase::Ptr &incidence,
 {
     QString subject;
 
-    if (incidence->type() != KCalCore::Incidence::TypeFreeBusy) {
-        KCalCore::Incidence::Ptr inc = incidence.staticCast<KCalCore::Incidence>();
+    if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
+        KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
         subject = inc->summary();
     } else {
         subject = i18n("Free Busy Message");
@@ -179,7 +179,7 @@ static QStringList extractEmailAndNormalize(const QString &email)
     return normalizedEmail;
 }
 
-void MailClient::send(const KCalCore::IncidenceBase::Ptr &incidence,
+void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
                       const KIdentityManagement::Identity &identity,
                       const QString &from, const QString &_to,
                       const QString &cc, const QString &subject,

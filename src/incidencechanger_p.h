@@ -287,8 +287,8 @@ public:
 
     void setChangeInternal(int changeId);
 
-    void adjustRecurrence(const KCalCore::Incidence::Ptr &originalIncidence,
-                          const KCalCore::Incidence::Ptr &incidence);
+    void adjustRecurrence(const KCalendarCore::Incidence::Ptr &originalIncidence,
+                          const KCalendarCore::Incidence::Ptr &incidence);
 
     bool hasRights(const Akonadi::Collection &collection, IncidenceChanger::ChangeType) const;
     void queueModification(const Change::Ptr &);
@@ -301,8 +301,8 @@ public:
 
     void handleInvitationsBeforeChange(const Change::Ptr &change);
     void handleInvitationsAfterChange(const Change::Ptr &change);
-    static bool myAttendeeStatusChanged(const KCalCore::Incidence::Ptr &newIncidence,
-                                        const KCalCore::Incidence::Ptr &oldIncidence,
+    static bool myAttendeeStatusChanged(const KCalendarCore::Incidence::Ptr &newIncidence,
+                                        const KCalendarCore::Incidence::Ptr &oldIncidence,
                                         const QStringList &myEmails);
 
 public Q_SLOTS:
@@ -366,7 +366,7 @@ public:
 
     Akonadi::CollectionFetchJob *m_collectionFetchJob = nullptr;
 
-    QMap<KJob *, QSet<KCalCore::IncidenceBase::Field> > mDirtyFieldsByJob;
+    QMap<KJob *, QSet<KCalendarCore::IncidenceBase::Field> > mDirtyFieldsByJob;
 
     IncidenceChanger::InvitationPolicy m_invitationPolicy;
 

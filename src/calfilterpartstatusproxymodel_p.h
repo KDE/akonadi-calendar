@@ -20,7 +20,7 @@
 #ifndef AKONADI_CALFILTERPARTSTATUSPROXYMODEL_P_H
 #define AKONADI_CALFILTERPARTSTATUSPROXYMODEL_P_H
 
-#include <kcalcore/attendee.h>
+#include <kcalendarcore/attendee.h>
 #include <QSortFilterProxyModel>
 
 namespace Akonadi
@@ -36,8 +36,8 @@ public:
     void setFilterVirtual(bool filterVirtual);
     Q_REQUIRED_RESULT bool filterVirtual() const;
 
-    void setBlockedStatusList(const QList<KCalCore::Attendee::PartStat> &blockStatusList);
-    const QList<KCalCore::Attendee::PartStat> &blockedStatusList() const;
+    void setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList);
+    const QList<KCalendarCore::Attendee::PartStat> &blockedStatusList() const;
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;

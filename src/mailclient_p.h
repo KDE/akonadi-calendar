@@ -24,7 +24,7 @@
 
 #include "akonadi-calendar_tests_export.h"
 #include "itiphandler.h"
-#include <kcalcore/incidencebase.h>
+#include <kcalendarcore/incidencebase.h>
 #include <kmime/kmime_message.h>
 #include <QObject>
 
@@ -71,19 +71,19 @@ public:
     explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailClient();
 
-    void mailAttendees(const KCalCore::IncidenceBase::Ptr &incidence,
+    void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,
                        bool bccMe, const QString &attachment = QString(),
                        const QString &mailTransport = QString());
 
-    void mailOrganizer(const KCalCore::IncidenceBase::Ptr &incidence,
+    void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,
                        const QString &from, bool bccMe,
                        const QString &attachment = QString(),
                        const QString &sub = QString(),
                        const QString &mailTransport = QString());
 
-    void mailTo(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity,
+    void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity,
                 const QString &from, bool bccMe, const QString &recipients,
                 const QString &attachment = QString(), const QString &mailTransport = QString());
 
@@ -105,7 +105,7 @@ public:
       @param mailTransport defines the mail transport method. See here the
       kdepimlibs/mailtransport library.
     */
-    void send(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &to,
+    void send(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &to,
               const QString &cc, const QString &subject, const QString &body,
               bool hidden = false, bool bccMe = false, const QString &attachment = QString(),
               const QString &mailTransport = QString());

@@ -132,8 +132,8 @@ public:
       *
       * The @p freeBusy is expected to be an iTIP request containing
       * the free-busy data. The simplest way to generate this is
-      * to use KCalCore::ICalFormat::createScheduleMessage()
-      * with the method KCalCore::iTIPRequest.
+      * to use KCalendarCore::ICalFormat::createScheduleMessage()
+      * with the method KCalendarCore::iTIPRequest.
       *
       * @param email The email address of the contact we give the
       *              response for. This is a simple email

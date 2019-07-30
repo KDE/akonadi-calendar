@@ -23,9 +23,9 @@
 #include <collectionfetchscope.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <kcalcore/event.h>
-#include <kcalcore/journal.h>
-#include <kcalcore/todo.h>
+#include <kcalendarcore/event.h>
+#include <kcalendarcore/journal.h>
+#include <kcalendarcore/todo.h>
 
 using namespace Akonadi;
 
@@ -43,9 +43,9 @@ void Akonadi::IncidenceFetchJob::doStart()
 {
     CollectionFetchJob *job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("text/calendar")
-                                          << KCalCore::Event::eventMimeType()
-                                          << KCalCore::Todo::todoMimeType()
-                                          << KCalCore::Journal::journalMimeType());
+                                          << KCalendarCore::Event::eventMimeType()
+                                          << KCalendarCore::Todo::todoMimeType()
+                                          << KCalendarCore::Journal::journalMimeType());
     connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 

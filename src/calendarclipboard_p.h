@@ -23,7 +23,7 @@
 #include "calendarclipboard.h"
 #include "incidencechanger.h"
 #include "calendarbase.h"
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 #include <QVector>
 #include <QSet>
 
@@ -51,18 +51,18 @@ public:
      * Returns all uids of incidenes having @p incidence has their parent (or grand parent, etc.)
      * @p incidence's uid is included in the list too.
      */
-    void getIncidenceHierarchy(const KCalCore::Incidence::Ptr &incidence, QStringList &uids);
+    void getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence, QStringList &uids);
 
     /**
      * Copies all these incidences to clipboard. Deletes them.
      * This function assumes the caller already unparented all childs ( made them independent ).
      */
-    void cut(const KCalCore::Incidence::List &incidences);
+    void cut(const KCalendarCore::Incidence::List &incidences);
 
     /**
      * Overload.
      */
-    void cut(const KCalCore::Incidence::Ptr &incidence);
+    void cut(const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
      * All immediate childs of @p incidence are made independent.
@@ -70,7 +70,7 @@ public:
      *
      * After it's done, signal makeChildsIndependentFinished() is emitted.
      */
-    void makeChildsIndependent(const KCalCore::Incidence::Ptr &incidence);
+    void makeChildsIndependent(const KCalendarCore::Incidence::Ptr &incidence);
 
 public Q_SLOTS:
     void slotModifyFinished(int changeId, const Akonadi::Item &item,
