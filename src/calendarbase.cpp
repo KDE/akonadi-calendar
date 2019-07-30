@@ -31,11 +31,11 @@
 #include <QTimeZone>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 static QString itemToString(const Akonadi::Item &item)
 {
-    const KCalCore::Incidence::Ptr &incidence = CalendarUtils::incidence(item);
+    const KCalendarCore::Incidence::Ptr &incidence = CalendarUtils::incidence(item);
     QString str;
     QTextStream stream(&str);
     stream << item.id()
@@ -79,13 +79,13 @@ CalendarBasePrivate::~CalendarBasePrivate()
 void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
 {
     Q_ASSERT(item.isValid());
-    Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
-    KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+    Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
+    KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
 
     if (!incidence) {
         qCritical() << "Incidence is null. id=" << item.id()
                     << "; hasPayload()="  << item.hasPayload()
-                    << "; has incidence=" << item.hasPayload<KCalCore::Incidence::Ptr>()
+                    << "; has incidence=" << item.hasPayload<KCalendarCore::Incidence::Ptr>()
                     << "; mime type="     << item.mimeType();
         Q_ASSERT(false);
         return;
@@ -115,7 +115,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
         return;
     }
 
-    if (incidence->type() == KCalCore::Incidence::TypeEvent && !incidence->dtStart().isValid()) {
+    if (incidence->type() == KCalendarCore::Incidence::TypeEvent && !incidence->dtStart().isValid()) {
         // TODO: make the parser discard them would also be a good idea
         qCWarning(AKONADICALENDAR_LOG) << "Discarding event with invalid DTSTART. identifier="
                                        << incidence->instanceIdentifier() << "; summary=" << incidence->summary();
@@ -182,7 +182,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob *job)
     bool isReadOnly = !(collection.rights() & Akonadi::Collection::CanChangeItem);
     const auto lst = mItemsByCollection.values(collection.id());
     for (const Akonadi::Item &item : lst) {
-        KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
         incidence->setReadOnly(isReadOnly);
     }
 
@@ -267,7 +267,7 @@ void CalendarBasePrivate::slotCreateFinished(int changeId,
     Q_UNUSED(item);
     if (resultCode == IncidenceChanger::ResultCodeSuccess && !mListensForNewItems) {
         Q_ASSERT(item.isValid());
-        Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
+        Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
         internalInsert(item);
     }
 
@@ -285,13 +285,13 @@ void CalendarBasePrivate::slotModifyFinished(int changeId,
     Q_UNUSED(item);
     QString message = errorMessage;
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
-        KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
         Q_ASSERT(incidence);
-        KCalCore::Incidence::Ptr localIncidence = q->incidence(incidence->instanceIdentifier());
+        KCalendarCore::Incidence::Ptr localIncidence = q->incidence(incidence->instanceIdentifier());
 
         if (localIncidence) {
             //update our local one
-            *(static_cast<KCalCore::IncidenceBase *>(localIncidence.data())) = *(incidence.data());
+            *(static_cast<KCalendarCore::IncidenceBase *>(localIncidence.data())) = *(incidence.data());
         } else {
             // This shouldn't happen, unless the incidence gets deleted between event loops
             qCWarning(AKONADICALENDAR_LOG) << "CalendarBasePrivate::slotModifyFinished() Incidence was deleted already probably? id=" << item.id();
@@ -378,7 +378,7 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
     newIncidence->setUid(newUid);
 }
 
-void CalendarBasePrivate::handleParentChanged(const KCalCore::Incidence::Ptr &newIncidence)
+void CalendarBasePrivate::handleParentChanged(const KCalendarCore::Incidence::Ptr &newIncidence)
 {
     Q_ASSERT(newIncidence);
 
@@ -488,12 +488,12 @@ Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
     return result;
 }
 
-Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &incidences) const
+Akonadi::Item::List CalendarBase::itemList(const KCalendarCore::Incidence::List &incidences) const
 {
     Akonadi::Item::List items;
     items.reserve(incidences.size());
 
-    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         if (incidence) {
             items << item(incidence->instanceIdentifier());
         } else {
@@ -504,15 +504,15 @@ Akonadi::Item::List CalendarBase::itemList(const KCalCore::Incidence::List &inci
     return items;
 }
 
-KCalCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id parentId) const
+KCalendarCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id parentId) const
 {
     Q_D(const CalendarBase);
-    KCalCore::Incidence::List childs;
+    KCalendarCore::Incidence::List childs;
 
     if (d->mItemById.contains(parentId)) {
         const Akonadi::Item item = d->mItemById.value(parentId);
         Q_ASSERT(item.isValid());
-        KCalCore::Incidence::Ptr parent = CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr parent = CalendarUtils::incidence(item);
 
         if (parent) {
             childs = childIncidences(parent->uid());
@@ -524,10 +524,10 @@ KCalCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id parent
     return childs;
 }
 
-KCalCore::Incidence::List CalendarBase::childIncidences(const QString &parentUid) const
+KCalendarCore::Incidence::List CalendarBase::childIncidences(const QString &parentUid) const
 {
     Q_D(const CalendarBase);
-    KCalCore::Incidence::List children;
+    KCalendarCore::Incidence::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
     for (const QString &uid : uids) {
         Incidence::Ptr child = incidence(uid);
@@ -548,7 +548,7 @@ Akonadi::Item::List CalendarBase::childItems(Akonadi::Item::Id parentId) const
     if (d->mItemById.contains(parentId)) {
         const Akonadi::Item item = d->mItemById.value(parentId);
         Q_ASSERT(item.isValid());
-        KCalCore::Incidence::Ptr parent = CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr parent = CalendarUtils::incidence(item);
 
         if (parent) {
             childs = childItems(parent->uid());
@@ -567,7 +567,7 @@ Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
     for (const QString &uid : uids) {
         Akonadi::Item child = item(uid);
-        if (child.isValid() && child.hasPayload<KCalCore::Incidence::Ptr>()) {
+        if (child.isValid() && child.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             children.append(child);
         } else {
             qCWarning(AKONADICALENDAR_LOG) << "Invalid child with uid " << uid;
@@ -576,37 +576,37 @@ Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const
     return children;
 }
 
-bool CalendarBase::addEvent(const KCalCore::Event::Ptr &event)
+bool CalendarBase::addEvent(const KCalendarCore::Event::Ptr &event)
 {
     return addIncidence(event);
 }
 
-bool CalendarBase::deleteEvent(const KCalCore::Event::Ptr &event)
+bool CalendarBase::deleteEvent(const KCalendarCore::Event::Ptr &event)
 {
     return deleteIncidence(event);
 }
 
-bool CalendarBase::addTodo(const KCalCore::Todo::Ptr &todo)
+bool CalendarBase::addTodo(const KCalendarCore::Todo::Ptr &todo)
 {
     return addIncidence(todo);
 }
 
-bool CalendarBase::deleteTodo(const KCalCore::Todo::Ptr &todo)
+bool CalendarBase::deleteTodo(const KCalendarCore::Todo::Ptr &todo)
 {
     return deleteIncidence(todo);
 }
 
-bool CalendarBase::addJournal(const KCalCore::Journal::Ptr &journal)
+bool CalendarBase::addJournal(const KCalendarCore::Journal::Ptr &journal)
 {
     return addIncidence(journal);
 }
 
-bool CalendarBase::deleteJournal(const KCalCore::Journal::Ptr &journal)
+bool CalendarBase::deleteJournal(const KCalendarCore::Journal::Ptr &journal)
 {
     return deleteIncidence(journal);
 }
 
-bool CalendarBase::addIncidence(const KCalCore::Incidence::Ptr &incidence)
+bool CalendarBase::addIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
     //TODO: Parent for dialogs
     Q_D(CalendarBase);
@@ -646,7 +646,7 @@ bool CalendarBase::addIncidence(const KCalCore::Incidence::Ptr &incidence)
     return changeId != -1;
 }
 
-bool CalendarBase::deleteIncidence(const KCalCore::Incidence::Ptr &incidence)
+bool CalendarBase::deleteIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_D(CalendarBase);
     Q_ASSERT(incidence);
@@ -654,12 +654,12 @@ bool CalendarBase::deleteIncidence(const KCalCore::Incidence::Ptr &incidence)
     return -1 != d->mIncidenceChanger->deleteIncidence(item_);
 }
 
-bool CalendarBase::modifyIncidence(const KCalCore::Incidence::Ptr &newIncidence)
+bool CalendarBase::modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence)
 {
     Q_D(CalendarBase);
     Q_ASSERT(newIncidence);
     Akonadi::Item item_ = item(newIncidence->instanceIdentifier());
-    item_.setPayload<KCalCore::Incidence::Ptr>(newIncidence);
+    item_.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
     return -1 != d->mIncidenceChanger->modifyIncidence(item_);
 }
 
@@ -671,7 +671,7 @@ IncidenceChanger *CalendarBase::incidenceChanger() const
 
 void CalendarBase::startBatchAdding()
 {
-    KCalCore::MemoryCalendar::startBatchAdding();
+    KCalendarCore::MemoryCalendar::startBatchAdding();
 }
 
 void CalendarBase::endBatchAdding()
@@ -679,7 +679,7 @@ void CalendarBase::endBatchAdding()
     Q_D(CalendarBase);
     d->mCollectionForBatchInsertion = Akonadi::Collection();
     d->mBatchInsertionCancelled = false;
-    KCalCore::MemoryCalendar::endBatchAdding();
+    KCalendarCore::MemoryCalendar::endBatchAdding();
 }
 
 bool CalendarBase::isLoaded() const

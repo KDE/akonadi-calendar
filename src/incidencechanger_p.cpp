@@ -19,7 +19,7 @@
 
 #include "incidencechanger_p.h"
 #include "utils_p.h"
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 #include "akonadicalendar_debug.h"
 #include <item.h>
 #include <itemcreatejob.h>
@@ -50,7 +50,7 @@ void IncidenceChanger::Private::loadCollections()
     m_collectionFetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
             Akonadi::CollectionFetchJob::Recursive);
 
-    m_collectionFetchJob->fetchScope().setContentMimeTypes(KCalCore::Incidence::mimeTypes());
+    m_collectionFetchJob->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(m_collectionFetchJob, &KJob::result, this, &IncidenceChanger::Private::onCollectionsLoaded);
     m_collectionFetchJob->start();
 }
@@ -117,7 +117,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
             continue;
         }
 
-        KCalCore::Incidence::Ptr incidence = CalendarUtils::incidence(change->newItem);
+        KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(change->newItem);
         Collection::List candidateCollections = collectionsForMimeType(incidence->mimeType(), allCollections);
         if (candidateCollections.count() == 1 && candidateCollections.first().isValid()) {
             // We only have 1 writable collection, don't bother the user with a dialog

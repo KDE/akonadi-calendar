@@ -22,13 +22,13 @@
 
 #include "calendarbase.h"
 
-#include <kcalcore/schedulemessage.h>
-#include <kcalcore/incidencebase.h>
+#include <kcalendarcore/schedulemessage.h>
+#include <kcalendarcore/incidencebase.h>
 
 #include <QObject>
 #include <QString>
 
-namespace KCalCore
+namespace KCalendarCore
 {
 class ICalFormat;
 class FreeBusyCache;
@@ -75,7 +75,7 @@ public:
       * @param incidence the incidence to send
       * @param recipients the people to send it to
     */
-    virtual void publish(const KCalCore::IncidenceBase::Ptr &incidence,
+    virtual void publish(const KCalendarCore::IncidenceBase::Ptr &incidence,
                          const QString &recipients) = 0;
     /**
       Performs iTIP transaction on incidence. The method is specified as the
@@ -84,8 +84,8 @@ public:
       @param incidence the incidence for the transaction. Must be valid.
       @param method the iTIP transaction method to use.
     */
-    virtual void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
-                                    KCalCore::iTIPMethod method) = 0;
+    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                    KCalendarCore::iTIPMethod method) = 0;
 
     /**
       Performs iTIP transaction on incidence to specified recipient(s).
@@ -95,8 +95,8 @@ public:
       @param method the iTIP transaction method to use.
       @param recipients the receipients of the transaction.
     */
-    virtual void performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
-                                    KCalCore::iTIPMethod method,
+    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                    KCalendarCore::iTIPMethod method,
                                     const QString &recipients) = 0;
 
     /**
@@ -114,10 +114,10 @@ public:
 
       Listen to the acceptTransactionFinished() signal to know the success.
     */
-    void acceptTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
+    void acceptTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
                            const Akonadi::CalendarBase::Ptr &calendar,
-                           KCalCore::iTIPMethod method,
-                           KCalCore::ScheduleMessage::Status status,
+                           KCalendarCore::iTIPMethod method,
+                           KCalendarCore::ScheduleMessage::Status status,
                            const QString &email = QString());
 
     /**
@@ -128,49 +128,49 @@ public:
     /**
       Sets the free/busy cache used to store free/busy information.
     */
-    void setFreeBusyCache(KCalCore::FreeBusyCache *c);
+    void setFreeBusyCache(KCalendarCore::FreeBusyCache *c);
 
     /**
       Returns the free/busy cache.
     */
-    KCalCore::FreeBusyCache *freeBusyCache() const;
+    KCalendarCore::FreeBusyCache *freeBusyCache() const;
 
 protected:
-    void acceptPublish(const KCalCore::IncidenceBase::Ptr &incidence,
+    void acceptPublish(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const Akonadi::CalendarBase::Ptr &calendar,
-                       KCalCore::ScheduleMessage::Status status,
-                       KCalCore::iTIPMethod method);
+                       KCalendarCore::ScheduleMessage::Status status,
+                       KCalendarCore::iTIPMethod method);
 
-    void acceptRequest(const KCalCore::IncidenceBase::Ptr &incidence,
+    void acceptRequest(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const Akonadi::CalendarBase::Ptr &calendar,
-                       KCalCore::ScheduleMessage::Status status,
+                       KCalendarCore::ScheduleMessage::Status status,
                        const QString &email);
 
-    void acceptAdd(const KCalCore::IncidenceBase::Ptr &incidence,
-                   KCalCore::ScheduleMessage::Status status);
+    void acceptAdd(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                   KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptCancel(const KCalCore::IncidenceBase::Ptr &incidence,
+    void acceptCancel(const KCalendarCore::IncidenceBase::Ptr &incidence,
                       const Akonadi::CalendarBase::Ptr &calendar,
-                      KCalCore::ScheduleMessage::Status status,
+                      KCalendarCore::ScheduleMessage::Status status,
                       const QString &attendee);
 
-    void acceptDeclineCounter(const KCalCore::IncidenceBase::Ptr &incidence,
-                              KCalCore::ScheduleMessage::Status status);
+    void acceptDeclineCounter(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                              KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptReply(const KCalCore::IncidenceBase::Ptr &incidence,
+    void acceptReply(const KCalendarCore::IncidenceBase::Ptr &incidence,
                      const Akonadi::CalendarBase::Ptr &calendar,
-                     KCalCore::ScheduleMessage::Status status,
-                     KCalCore::iTIPMethod method);
+                     KCalendarCore::ScheduleMessage::Status status,
+                     KCalendarCore::iTIPMethod method);
 
-    void acceptRefresh(const KCalCore::IncidenceBase::Ptr &incidence,
-                       KCalCore::ScheduleMessage::Status status);
+    void acceptRefresh(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                       KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptCounter(const KCalCore::IncidenceBase::Ptr &incidence,
-                       KCalCore::ScheduleMessage::Status status);
+    void acceptCounter(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                       KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptFreeBusy(const KCalCore::IncidenceBase::Ptr &incidence,
-                        KCalCore::iTIPMethod method);
-    KCalCore::ICalFormat *mFormat = nullptr;
+    void acceptFreeBusy(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                        KCalendarCore::iTIPMethod method);
+    KCalendarCore::ICalFormat *mFormat = nullptr;
 
 Q_SIGNALS:
     void transactionFinished(Akonadi::Scheduler::Result, const QString &errorMessage);

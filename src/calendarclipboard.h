@@ -23,7 +23,7 @@
 #include "calendarbase.h"
 #include "akonadi-calendar_export.h"
 
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 #include <QObject>
 
 namespace Akonadi
@@ -71,7 +71,7 @@ public:
      * @param mode how to treat child incidences. Defaults to #RecursiveMode
      * @see cutFinished().
      */
-    void cutIncidence(const KCalCore::Incidence::Ptr &incidence,
+    void cutIncidence(const KCalendarCore::Incidence::Ptr &incidence,
                       CalendarClipboard::Mode mode = RecursiveMode);
 
     /**
@@ -80,7 +80,7 @@ public:
      * @param mode how to treat child incidences. Defaults to #RecursiveMode
      * @return true on success
      */
-    bool copyIncidence(const KCalCore::Incidence::Ptr &incidence,
+    bool copyIncidence(const KCalendarCore::Incidence::Ptr &incidence,
                        CalendarClipboard::Mode mode = RecursiveMode);
 
     /**

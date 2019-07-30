@@ -27,8 +27,8 @@
 #include "itiphandler.h"
 #include "mailscheduler_p.h"
 
-#include <kcalcore/incidence.h>
-#include <kcalcore/schedulemessage.h>
+#include <kcalendarcore/incidence.h>
+#include <kcalendarcore/schedulemessage.h>
 
 #include <QObject>
 
@@ -104,8 +104,8 @@ public:
       Kontact/PIM) are the organizer.
       @param incidence The new incidence.
      */
-    void sendIncidenceCreatedMessage(KCalCore::iTIPMethod method,
-                                     const KCalCore::Incidence::Ptr &incidence);
+    void sendIncidenceCreatedMessage(KCalendarCore::iTIPMethod method,
+                                     const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
        Checks if the incidence should really be modified.
@@ -117,31 +117,31 @@ public:
 
        @param incidence The modified incidence. It may not be null.
      */
-    bool handleIncidenceAboutToBeModified(const KCalCore::Incidence::Ptr &incidence);
+    bool handleIncidenceAboutToBeModified(const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
       Handles sending of invitations for modified incidences.
       @param incidence The modified incidence.
       @param attendeeStatusChanged if @c true and @p method is #iTIPRequest ask the user whether to send a status update as well
      */
-    void sendIncidenceModifiedMessage(KCalCore::iTIPMethod method,
-                                      const KCalCore::Incidence::Ptr &incidence,
+    void sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod method,
+                                      const KCalendarCore::Incidence::Ptr &incidence,
                                       bool attendeeStatusChanged);
 
     /**
       Handles sending of ivitations for deleted incidences.
       @param incidence The deleted incidence.
      */
-    void sendIncidenceDeletedMessage(KCalCore::iTIPMethod method,
-                                     const KCalCore::Incidence::Ptr &incidence);
+    void sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod method,
+                                     const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
       Send counter proposal message.
       @param oldIncidence The original event provided in the invitations.
       @param newIncidence The new event as edited by the user.
     */
-    ITIPHandlerHelper::SendResult sendCounterProposal(const KCalCore::Incidence::Ptr &oldIncidence,
-            const KCalCore::Incidence::Ptr &newIncidence);
+    ITIPHandlerHelper::SendResult sendCounterProposal(const KCalendarCore::Incidence::Ptr &oldIncidence,
+            const KCalendarCore::Incidence::Ptr &newIncidence);
 
     // Frees calendar if it doesn't have jobs running
     void calendarJobFinished(bool success, const QString &errorString);
@@ -150,37 +150,37 @@ Q_SIGNALS:
     void finished(Akonadi::ITIPHandlerHelper::SendResult result,
                   const QString &errorMessage);
 
-    void sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::SendResult, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
-    void sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::SendResult, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
-    void sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::SendResult, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
+    void sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
 private Q_SLOTS:
     void onSchedulerFinished(Akonadi::Scheduler::Result result, const QString &errorMsg);
 
-    void slotIncidenceDeletedDialogClosed(const int, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
-    void slotIncidenceModifiedDialogClosed(const int, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
-    void slotIncidenceCreatedDialogClosed(const int, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
+    void slotIncidenceDeletedDialogClosed(const int, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
+    void slotIncidenceModifiedDialogClosed(const int, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
+    void slotIncidenceCreatedDialogClosed(const int, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
-    void slotSchedulerFinishDialog(const int result, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
+    void slotSchedulerFinishDialog(const int result, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
 private:
     ITIPHandlerHelper::SendResult sentInvitation(int messageBoxReturnCode,
-            const KCalCore::Incidence::Ptr &incidence,
-            KCalCore::iTIPMethod method);
+            const KCalendarCore::Incidence::Ptr &incidence,
+            KCalendarCore::iTIPMethod method);
 
     /**
       We are the organizer. If there is more than one attendee, or if there is
       only one, and it's not the same as the organizer, ask the user to send
       mail.
     */
-    bool weAreOrganizerOf(const KCalCore::Incidence::Ptr &incidence);
+    bool weAreOrganizerOf(const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
       Assumes that we are the organizer. If there is more than one attendee, or if
       there is only one, and it's not the same as the organizer, ask the user to send
       mail.
      */
-    bool weNeedToSendMailFor(const KCalCore::Incidence::Ptr &incidence);
+    bool weNeedToSendMailFor(const KCalendarCore::Incidence::Ptr &incidence);
 
     ITIPHandlerDialogDelegate::Action mDefaultAction;
     QWidget *mParent = nullptr;

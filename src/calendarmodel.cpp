@@ -23,9 +23,9 @@
 #include "utils_p.h"
 #include <monitor.h>
 #include <itemfetchscope.h>
-#include <kcalcore/event.h>
-#include <kcalcore/todo.h>
-#include <kcalcore/journal.h>
+#include <kcalendarcore/event.h>
+#include <kcalendarcore/todo.h>
+#include <kcalendarcore/journal.h>
 
 #include <KLocalizedString>
 #include <KIconLoader>
@@ -34,10 +34,10 @@
 
 using namespace Akonadi;
 
-static KCalCore::Todo::Ptr todo(const Akonadi::Item &item)
+static KCalendarCore::Todo::Ptr todo(const Akonadi::Item &item)
 {
-    return item.hasPayload<KCalCore::Todo::Ptr>() ? item.payload<KCalCore::Todo::Ptr>()
-           : KCalCore::Todo::Ptr();
+    return item.hasPayload<KCalendarCore::Todo::Ptr>() ? item.payload<KCalendarCore::Todo::Ptr>()
+           : KCalendarCore::Todo::Ptr();
 }
 
 class Q_DECL_HIDDEN CalendarModel::Private
@@ -82,7 +82,7 @@ void CalendarModel::setWeakPointer(const QWeakPointer<CalendarModel> &weakPointe
 
 QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int role) const
 {
-    const KCalCore::Incidence::Ptr inc = CalendarUtils::incidence(item);
+    const KCalendarCore::Incidence::Ptr inc = CalendarUtils::incidence(item);
     if (!inc) {
         return QVariant();
     }
@@ -92,11 +92,11 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
         if (column != Summary) {
             return QVariant();
         }
-        if (inc->type() == KCalCore::IncidenceBase::TypeTodo) {
+        if (inc->type() == KCalendarCore::IncidenceBase::TypeTodo) {
             return SmallIcon(QStringLiteral("view-pim-tasks"));
-        } else if (inc->type() == KCalCore::IncidenceBase::TypeJournal) {
+        } else if (inc->type() == KCalendarCore::IncidenceBase::TypeJournal) {
             return SmallIcon(QStringLiteral("view-pim-journal"));
-        } else if (inc->type() == KCalCore::IncidenceBase::TypeEvent) {
+        } else if (inc->type() == KCalendarCore::IncidenceBase::TypeEvent) {
             return SmallIcon(QStringLiteral("view-calendar"));
         }
         return SmallIcon(QStringLiteral("network-wired"));
@@ -110,24 +110,24 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             return inc->dtStart().toString();
 
         case DateTimeEnd:
-            return inc->dateTime(KCalCore::Incidence::RoleEndTimeZone).toString();
+            return inc->dateTime(KCalendarCore::Incidence::RoleEndTimeZone).toString();
 
         case DateTimeDue:
-            if (KCalCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->dtDue().toString();
             } else {
                 return QVariant();
             }
 
         case Priority:
-            if (KCalCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->priority();
             } else {
                 return QVariant();
             }
 
         case PercentComplete:
-            if (KCalCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->percentComplete();
             } else {
                 return QVariant();
@@ -149,24 +149,24 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             return inc->dtStart().toUTC();
 
         case DateTimeEnd:
-            return inc->dateTime(KCalCore::Incidence::RoleEndTimeZone).toUTC();
+            return inc->dateTime(KCalendarCore::Incidence::RoleEndTimeZone).toUTC();
 
         case DateTimeDue:
-            if (KCalCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->dtDue().toUTC();
             } else {
                 return QVariant();
             }
 
         case Priority:
-            if (KCalCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->priority();
             } else {
                 return QVariant();
             }
 
         case PercentComplete:
-            if (KCalCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->percentComplete();
             } else {
                 return QVariant();

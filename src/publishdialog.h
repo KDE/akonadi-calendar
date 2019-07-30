@@ -21,7 +21,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <kcalcore/attendee.h>
+#include <kcalendarcore/attendee.h>
 #include <QDialog>
 
 //TODO: documentation
@@ -48,7 +48,7 @@ public:
      * Adds a new attendee to the dialog
      * @param attendee the attendee to add
      */
-    void addAttendee(const KCalCore::Attendee &attendee);
+    void addAttendee(const KCalendarCore::Attendee &attendee);
 
     /**
      * Returns a list of e-mail addresses.

@@ -22,7 +22,7 @@
 #define AKONADI_BLOCKALARMSATTRIBUTE_H
 
 #include "akonadi-calendar_export.h"
-#include <kcalcore/alarm.h>
+#include <kcalendarcore/alarm.h>
 
 #include <attribute.h>
 
@@ -59,7 +59,7 @@ public:
      *
      * @since 4.11
      */
-    void blockAlarmType(KCalCore::Alarm::Type type, bool block = true);
+    void blockAlarmType(KCalendarCore::Alarm::Type type, bool block = true);
 
     /**
      * Blocks or unblocks every alarm type.
@@ -75,7 +75,7 @@ public:
      *
      * @since 4.11
      */
-    bool isAlarmTypeBlocked(KCalCore::Alarm::Type type) const;
+    bool isAlarmTypeBlocked(KCalendarCore::Alarm::Type type) const;
 
     /**
      * Returns whether all alarms are blocked or not.

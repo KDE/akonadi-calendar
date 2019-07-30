@@ -22,7 +22,7 @@
 #include "akonadicalendar_debug.h"
 #include <kcalutils/stringify.h>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace Akonadi;
 
 History::History(QObject *parent)
@@ -53,7 +53,7 @@ void History::recordCreation(const Akonadi::Item &item,
     Q_ASSERT_X(item.isValid(), "History::recordCreation()",
                "Item must be valid.");
 
-    Q_ASSERT_X(item.hasPayload<KCalCore::Incidence::Ptr>(), "History::recordCreation()",
+    Q_ASSERT_X(item.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordCreation()",
                "Item must have Incidence::Ptr payload.");
 
     Entry::Ptr entry(new CreationEntry(item, description, this));
@@ -68,12 +68,12 @@ void History::recordModification(const Akonadi::Item &oldItem,
 {
     Q_ASSERT_X(oldItem.isValid(), "History::recordModification", "old item must be valid");
     Q_ASSERT_X(newItem.isValid(), "History::recordModification", "newItem item must be valid");
-    Q_ASSERT_X(oldItem.hasPayload<KCalCore::Incidence::Ptr>(), "History::recordModification",
+    Q_ASSERT_X(oldItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification",
                "old item must have Incidence::Ptr payload");
-    Q_ASSERT_X(newItem.hasPayload<KCalCore::Incidence::Ptr>(), "History::recordModification",
+    Q_ASSERT_X(newItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification",
                "newItem item must have Incidence::Ptr payload");
 
-    Entry::Ptr entry(new ModificationEntry(newItem, oldItem.payload<KCalCore::Incidence::Ptr>(),
+    Entry::Ptr entry(new ModificationEntry(newItem, oldItem.payload<KCalendarCore::Incidence::Ptr>(),
                                            description, this));
 
     Q_ASSERT(newItem.revision() >= oldItem.revision());

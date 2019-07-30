@@ -22,7 +22,7 @@
 
 #include "history.h"
 #include "incidencechanger.h"
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 #include <collection.h>
 
 #include <QPointer>
@@ -30,7 +30,7 @@
 #include <QVector>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 namespace Akonadi
 {

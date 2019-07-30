@@ -28,7 +28,7 @@
 #include <AkonadiCore/AgentInstanceCreateJob>
 #include <AkonadiCore/AgentManager>
 
-#include <KCalCore/FileStorage>
+#include <KCalendarCore/FileStorage>
 
 #include <KIO/Job>
 
@@ -36,7 +36,7 @@
 #include <QTemporaryFile>
 #include <QTimeZone>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace Akonadi;
 
 ICalImporter::Private::Private(IncidenceChanger *changer,
@@ -217,9 +217,9 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         if (!collection.isValid()) {
             int dialogCode;
             const QStringList mimeTypes = QStringList()
-                << KCalCore::Event::eventMimeType()
-                << KCalCore::Todo::todoMimeType()
-                << KCalCore::Journal::journalMimeType();
+                << KCalendarCore::Event::eventMimeType()
+                << KCalendarCore::Todo::todoMimeType()
+                << KCalendarCore::Journal::journalMimeType();
             collection = CalendarUtils::selectCollection(nullptr, dialogCode/*by-ref*/, mimeTypes);
         }
 

@@ -20,7 +20,7 @@
 #ifndef UNITTEST_BASE_H
 #define UNITTEST_BASE_H
 
-#include <kcalcore/calendar.h>
+#include <kcalendarcore/calendar.h>
 #include <collection.h>
 #include <item.h>
 
@@ -49,7 +49,7 @@ public Q_SLOTS:
 
 protected:
 
-    void compareCalendars(const KCalCore::Calendar::Ptr &expectedCalendar);
+    void compareCalendars(const KCalendarCore::Calendar::Ptr &expectedCalendar);
     static QByteArray readFile(const QString &filename);
     static Akonadi::Item generateIncidence(const QString &uid, const QString &organizer = QString());
 

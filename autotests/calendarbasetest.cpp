@@ -29,7 +29,7 @@
 #include <collectionfetchscope.h>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 QTEST_AKONADIMAIN(CalendarBaseTest)
 
@@ -37,7 +37,7 @@ static bool compareUids(const QStringList &_uids, const Incidence::List &inciden
 {
     QStringList uids = _uids;
 
-    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         if (uids.contains(incidence->uid()))
             uids.removeAll(incidence->uid());
     }
@@ -150,8 +150,8 @@ void CalendarBaseTest::testItem()
         QVERIFY(item1.isValid());
         QVERIFY(item2.isValid());
         QCOMPARE(item1.id(), item2.id());
-        QCOMPARE(item1.payload<KCalCore::Incidence::Ptr>()->uid(), uid);
-        QCOMPARE(item2.payload<KCalCore::Incidence::Ptr>()->uid(), uid);
+        QCOMPARE(item1.payload<KCalendarCore::Incidence::Ptr>()->uid(), uid);
+        QCOMPARE(item2.payload<KCalendarCore::Incidence::Ptr>()->uid(), uid);
     }
 }
 
@@ -175,7 +175,7 @@ void CalendarBaseTest::testChildIncidences()
     QFETCH(QString, parentUid);
     QFETCH(Akonadi::Item::Id, parentId);
     QFETCH(QStringList, childrenUids);
-    KCalCore::Incidence::List childs = mCalendar->childIncidences(parentId);
+    KCalendarCore::Incidence::List childs = mCalendar->childIncidences(parentId);
     QVERIFY(compareUids(childrenUids, childs));
     childs = mCalendar->childIncidences(parentUid);
     QVERIFY(compareUids(childrenUids, childs));
@@ -193,19 +193,19 @@ void CalendarBaseTest::testDelete()
     QVERIFY(incidence.isValid());
 
     mExpectedSlotResult = true;
-    QVERIFY(mCalendar->deleteEvent(event.payload<KCalCore::Event::Ptr>()));
+    QVERIFY(mCalendar->deleteEvent(event.payload<KCalendarCore::Event::Ptr>()));
     QTestEventLoop::instance().enterLoop(5);
     QVERIFY(!QTestEventLoop::instance().timeout());
 
-    QVERIFY(mCalendar->deleteTodo(todo.payload<KCalCore::Todo::Ptr>()));
+    QVERIFY(mCalendar->deleteTodo(todo.payload<KCalendarCore::Todo::Ptr>()));
     QTestEventLoop::instance().enterLoop(5);
     QVERIFY(!QTestEventLoop::instance().timeout());
 
-    QVERIFY(mCalendar->deleteJournal(journal.payload<KCalCore::Journal::Ptr>()));
+    QVERIFY(mCalendar->deleteJournal(journal.payload<KCalendarCore::Journal::Ptr>()));
     QTestEventLoop::instance().enterLoop(5);
     QVERIFY(!QTestEventLoop::instance().timeout());
 
-    QVERIFY(mCalendar->deleteIncidence(incidence.payload<KCalCore::Incidence::Ptr>()));
+    QVERIFY(mCalendar->deleteIncidence(incidence.payload<KCalendarCore::Incidence::Ptr>()));
     QTestEventLoop::instance().enterLoop(5);
     QVERIFY(!QTestEventLoop::instance().timeout());
 

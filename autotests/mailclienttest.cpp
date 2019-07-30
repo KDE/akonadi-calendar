@@ -21,8 +21,8 @@
 
 #include "mailclient_p.h"
 
-#include <kcalcore/incidence.h>
-#include <kcalcore/freebusy.h>
+#include <kcalendarcore/incidence.h>
+#include <kcalendarcore/freebusy.h>
 #include <mailtransportakonadi/messagequeuejob.h>
 #include <KIdentityManagement/Identity>
 
@@ -36,7 +36,7 @@ static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlib
 using namespace Akonadi;
 
 Q_DECLARE_METATYPE(KIdentityManagement::Identity)
-Q_DECLARE_METATYPE(KCalCore::Incidence::Ptr)
+Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 
 class FakeMessageQueueJob : public MailTransport::MessageQueueJob
 {
@@ -76,7 +76,7 @@ public:
     {
     }
 
-    MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
+    MailTransport::MessageQueueJob *createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
     {
         Q_UNUSED(incidence);
         Q_UNUSED(identity);
@@ -113,7 +113,7 @@ private Q_SLOTS:
 
     void testMailAttendees_data()
     {
-        QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
+        QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
         QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
@@ -125,7 +125,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedCcList");
         QTest::addColumn<QStringList>("expectedBccList");
 
-        KCalCore::Incidence::Ptr incidence(new KCalCore::Event());
+        KCalendarCore::Incidence::Ptr incidence(new KCalendarCore::Event());
         KIdentityManagement::Identity identity;
         bool bccMe;
         QString attachment;
@@ -133,7 +133,7 @@ private Q_SLOTS:
         MailClient::Result expectedResult = MailClient::ResultNoAttendees;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         const QString expectedFrom = QStringLiteral("unittests@dev.nul");   // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
+        KCalendarCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
 
         QStringList toList;
         QStringList toCcList;
@@ -144,8 +144,8 @@ private Q_SLOTS:
                                       << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One attendee, but without e-mail
-        KCalCore::Attendee attendee(QStringLiteral("name1"), QString());
-        incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
+        KCalendarCore::Attendee attendee(QStringLiteral("name1"), QString());
+        incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->addAttendee(attendee);
         expectedResult = MailClient::ResultReallyNoAttendees;
         QTest::newRow("No attendees with email") << incidence << identity << bccMe << attachment << transport
@@ -153,8 +153,8 @@ private Q_SLOTS:
                                                  << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee
-        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
-        incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
+        attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
+        incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->addAttendee(attendee);
         incidence->setOrganizer(organizer);
         expectedResult = MailClient::ResultSuccess;
@@ -164,8 +164,8 @@ private Q_SLOTS:
                                       << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee
-        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
-        incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
+        attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
+        incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
         QString invalidTransport = QStringLiteral("foo");
@@ -177,8 +177,8 @@ private Q_SLOTS:
                                            << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee, and bcc me
-        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
-        incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
+        attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
+        incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
         expectedResult = MailClient::ResultSuccess;
@@ -191,12 +191,12 @@ private Q_SLOTS:
                                   << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // Test CC list
-        attendee = KCalCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
-        KCalCore::Attendee optionalAttendee(QStringLiteral("opt"), QStringLiteral("optional@foo.org"));
-        KCalCore::Attendee nonParticipant(QStringLiteral("non"), QStringLiteral("non@foo.org"));
-        optionalAttendee.setRole(KCalCore::Attendee::OptParticipant);
-        nonParticipant.setRole(KCalCore::Attendee::NonParticipant);
-        incidence = KCalCore::Incidence::Ptr(new KCalCore::Event());
+        attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
+        KCalendarCore::Attendee optionalAttendee(QStringLiteral("opt"), QStringLiteral("optional@foo.org"));
+        KCalendarCore::Attendee nonParticipant(QStringLiteral("non"), QStringLiteral("non@foo.org"));
+        optionalAttendee.setRole(KCalendarCore::Attendee::OptParticipant);
+        nonParticipant.setRole(KCalendarCore::Attendee::NonParticipant);
+        incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
         incidence->addAttendee(optionalAttendee);
@@ -217,7 +217,7 @@ private Q_SLOTS:
 
     void testMailAttendees()
     {
-        QFETCH(KCalCore::Incidence::Ptr, incidence);
+        QFETCH(KCalendarCore::Incidence::Ptr, incidence);
         QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
@@ -262,7 +262,7 @@ private Q_SLOTS:
 
     void testMailOrganizer_data()
     {
-        QTest::addColumn<KCalCore::IncidenceBase::Ptr>("incidence");
+        QTest::addColumn<KCalendarCore::IncidenceBase::Ptr>("incidence");
         QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<QString>("from");
         QTest::addColumn<bool>("bccMe");
@@ -276,7 +276,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedBccList");
         QTest::addColumn<QString>("expectedSubject");
 
-        KCalCore::IncidenceBase::Ptr incidence(new KCalCore::Event());
+        KCalendarCore::IncidenceBase::Ptr incidence(new KCalendarCore::Event());
         KIdentityManagement::Identity identity;
         const QString from = QLatin1String(s_ourEmail);
         bool bccMe;
@@ -286,7 +286,7 @@ private Q_SLOTS:
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
+        KCalendarCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
         incidence->setOrganizer(organizer);
 
         QStringList toList;
@@ -300,7 +300,7 @@ private Q_SLOTS:
                                << toList << toBccList << expectedSubject;
         //----------------------------------------------------------------------------------------------
         expectedSubject = QStringLiteral("Free Busy Message");
-        incidence = KCalCore::IncidenceBase::Ptr(new KCalCore::FreeBusy());
+        incidence = KCalendarCore::IncidenceBase::Ptr(new KCalendarCore::FreeBusy());
         incidence->setOrganizer(organizer);
         QTest::newRow("FreeBusy") << incidence << identity << from << bccMe << attachment << subject
                                   << transport << expectedResult << expectedTransportId << expectedFrom
@@ -309,7 +309,7 @@ private Q_SLOTS:
 
     void testMailOrganizer()
     {
-        QFETCH(KCalCore::IncidenceBase::Ptr, incidence);
+        QFETCH(KCalendarCore::IncidenceBase::Ptr, incidence);
         QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(QString, from);
         QFETCH(bool, bccMe);
@@ -342,7 +342,7 @@ private Q_SLOTS:
 
     void testMailTo_data()
     {
-        QTest::addColumn<KCalCore::IncidenceBase::Ptr>("incidence");
+        QTest::addColumn<KCalendarCore::IncidenceBase::Ptr>("incidence");
         QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<QString>("from");
         QTest::addColumn<bool>("bccMe");
@@ -355,7 +355,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedToList");
         QTest::addColumn<QStringList>("expectedBccList");
 
-        KCalCore::IncidenceBase::Ptr incidence(new KCalCore::Event());
+        KCalendarCore::IncidenceBase::Ptr incidence(new KCalendarCore::Event());
         KIdentityManagement::Identity identity;
         const QString from = QLatin1String(s_ourEmail);
         bool bccMe;
@@ -365,7 +365,7 @@ private Q_SLOTS:
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
+        KCalendarCore::Person organizer(QStringLiteral("Organizer"), QStringLiteral("unittests@dev.nul"));
         QStringList toList;
         toList << QLatin1String(s_ourEmail);
         QStringList toBccList;
@@ -377,7 +377,7 @@ private Q_SLOTS:
 
     void testMailTo()
     {
-        QFETCH(KCalCore::IncidenceBase::Ptr, incidence);
+        QFETCH(KCalendarCore::IncidenceBase::Ptr, incidence);
         QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(QString, from);
         QFETCH(bool, bccMe);

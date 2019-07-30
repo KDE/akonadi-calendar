@@ -25,7 +25,7 @@
 #include "itiphandler.h"
 #include "itiphandlerhelper_p.h"
 
-#include <kcalcore/schedulemessage.h>
+#include <kcalendarcore/schedulemessage.h>
 
 #include <QObject>
 #include <QString>
@@ -38,8 +38,8 @@ struct Invitation {
     QString receiver;
     QString iCal;
     QString action;
-    KCalCore::iTIPMethod method;
-    KCalCore::Incidence::Ptr incidence;
+    KCalendarCore::iTIPMethod method;
+    KCalendarCore::Incidence::Ptr incidence;
 };
 
 /**
@@ -77,8 +77,8 @@ public:
     CalendarBase::Ptr m_calendar;
     ITIPHandlerComponentFactory *m_factory = nullptr;
     MailScheduler *m_scheduler = nullptr;
-    KCalCore::Incidence::Ptr m_incidence;
-    KCalCore::iTIPMethod m_method; // METHOD field of ical rfc of incoming invitation
+    KCalendarCore::Incidence::Ptr m_incidence;
+    KCalendarCore::iTIPMethod m_method; // METHOD field of ical rfc of incoming invitation
     ITIPHandlerHelper *m_helper = nullptr;
     Operation m_currentOperation;
     QPointer<QWidget> m_parentWidget; // To be used for KMessageBoxes
@@ -93,7 +93,7 @@ private:
     void onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result,
                           const QString &errorMessage);
 
-    void onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult result, KCalCore::iTIPMethod method, const KCalCore::Incidence::Ptr &incidence);
+    void onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult result, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
     void onCounterProposalDelegateFinished(bool success, const QString &errorMessage);
 };

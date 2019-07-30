@@ -19,7 +19,7 @@
 
 #include "itiphandler_p.h"
 #include "fetchjobcalendar.h"
-#include <kcalcore/incidence.h>
+#include <kcalendarcore/incidence.h>
 #include <KMessageBox>
 #include <KLocalizedString>
 #include "akonadicalendar_debug.h"
@@ -29,7 +29,7 @@ ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler 
     : m_calendarLoadError(false)
     , m_factory(factory ? factory : new ITIPHandlerComponentFactory(this))
     , m_scheduler(new MailScheduler(m_factory, qq))
-    , m_method(KCalCore::iTIPNoMethod)
+    , m_method(KCalendarCore::iTIPNoMethod)
     , m_helper(new ITIPHandlerHelper(m_factory))
     , m_currentOperation(OperationNone)
     , m_uiDelegate(nullptr)
@@ -125,15 +125,15 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
 
     const bool success = result == MailScheduler::ResultSuccess;
 
-    if (m_method == KCalCore::iTIPCounter) {
+    if (m_method == KCalendarCore::iTIPCounter) {
         // Here we're processing a counter-proposal that someone sent us and we're the organizer.
         // TODO: Shouldn't there be a test to see if we're the organizer?
         if (success) {
             // send update to all attendees
             Q_ASSERT(m_incidence);
             m_helper->setDialogParent(m_parentWidget);
-            m_helper->sendIncidenceModifiedMessage(KCalCore::iTIPRequest,
-                                                   KCalCore::Incidence::Ptr(m_incidence->clone()),
+            m_helper->sendIncidenceModifiedMessage(KCalendarCore::iTIPRequest,
+                                                   KCalendarCore::Incidence::Ptr(m_incidence->clone()),
                                                    false);
             m_incidence.clear();
             return;
@@ -146,7 +146,7 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
                                  success ? QString() : i18n("Error: %1", errorMessage));
 }
 
-void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult, KCalCore::iTIPMethod /*method*/, const KCalCore::Incidence::Ptr &)
+void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult, KCalendarCore::iTIPMethod /*method*/, const KCalendarCore::Incidence::Ptr &)
 {
     if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded ||
             sendResult == ITIPHandlerHelper::ResultCanceled) {
@@ -163,7 +163,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
                                      i18n("The groupware message for item '%1' "
                                           "was successfully sent.\nMethod: %2",
                                           m_queuedInvitation.incidence->summary(),
-                                          KCalCore::ScheduleMessage::methodName(m_queuedInvitation.method)),
+                                          KCalendarCore::ScheduleMessage::methodName(m_queuedInvitation.method)),
                                      i18n("Sending Free/Busy"),
                                      QStringLiteral("FreeBusyPublishSuccess"));
         }
@@ -173,7 +173,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
                                     "%2 is request/reply/add/cancel/counter/etc.",
                                     "Unable to send the item '%1'.\nMethod: %2",
                                     m_queuedInvitation.incidence->summary(),
-                                    KCalCore::ScheduleMessage::methodName(m_queuedInvitation.method));
+                                    KCalendarCore::ScheduleMessage::methodName(m_queuedInvitation.method));
         if (m_parentWidget) {
             KMessageBox::error(m_parentWidget, error);
         }

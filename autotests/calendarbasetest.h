@@ -45,7 +45,7 @@ private Q_SLOTS:
     void testChildIncidences_data();
     void testChildIncidences();
     void testDelete();
-    // void testDeleteAll(); This has been disabled in KCalCore::Calendar::deleteAll*() so no need to test
+    // void testDeleteAll(); This has been disabled in KCalendarCore::Calendar::deleteAll*() so no need to test
 
 private:
     void fetchCollection();

@@ -25,9 +25,9 @@
 
 #include <QAction>
 #include <kactioncollection.h>
-#include <kcalcore/event.h>
-#include <kcalcore/journal.h>
-#include <kcalcore/todo.h>
+#include <kcalendarcore/event.h>
+#include <kcalendarcore/journal.h>
+#include <kcalendarcore/todo.h>
 #include <klocalizedstring.h>
 
 #include <QItemSelectionModel>
@@ -348,7 +348,7 @@ public:
             const QModelIndex index = mItemSelectionModel->selectedRows().at(0);
             if (index.isValid()) {
                 const QString mimeType = index.data(EntityTreeModel::MimeTypeRole).toString();
-                if (mimeType == KCalCore::Event::eventMimeType()) {
+                if (mimeType == KCalendarCore::Event::eventMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                        ki18np("Copy Event", "Copy %1 Events"));
@@ -381,7 +381,7 @@ public:
                     if (act) {
                         act->setText(i18n("Edit Event..."));
                     }
-                } else if (mimeType == KCalCore::Todo::todoMimeType()) {
+                } else if (mimeType == KCalendarCore::Todo::todoMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                        ki18np("Copy To-do", "Copy %1 To-dos"));
@@ -414,7 +414,7 @@ public:
                     if (act) {
                         act->setText(i18n("Edit To-do..."));
                     }
-                } else if (mimeType == KCalCore::Journal::journalMimeType()) {
+                } else if (mimeType == KCalendarCore::Journal::journalMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
                         mGenericManager->setActionText(Akonadi::StandardActionManager::CopyItems,
                                                        ki18np("Copy Journal", "Copy %1 Journals"));
@@ -454,15 +454,15 @@ public:
         // update action states
         QAction *act = mActions.value(StandardCalendarActionManager::CreateEvent);
         if (act) {
-            act->setEnabled(hasWritableCollection(KCalCore::Event::eventMimeType()));
+            act->setEnabled(hasWritableCollection(KCalendarCore::Event::eventMimeType()));
         }
         act = mActions.value(StandardCalendarActionManager::CreateTodo);
         if (act) {
-            act->setEnabled(hasWritableCollection(KCalCore::Todo::todoMimeType()));
+            act->setEnabled(hasWritableCollection(KCalendarCore::Todo::todoMimeType()));
         }
         act = mActions.value(StandardCalendarActionManager::CreateJournal);
         if (act) {
-            act->setEnabled(hasWritableCollection(KCalCore::Journal::journalMimeType()));
+            act->setEnabled(hasWritableCollection(KCalendarCore::Journal::journalMimeType()));
         }
 
         act = mActions.value(StandardCalendarActionManager::EditIncidence);
@@ -492,9 +492,9 @@ public:
 
         if (itemCount == 1) {
             const Akonadi::Item item = mGenericManager->selectedItems().at(0);
-            if (item.isValid() && item.hasPayload<KCalCore::Todo::Ptr>()) {
+            if (item.isValid() && item.hasPayload<KCalendarCore::Todo::Ptr>()) {
                 if (QAction *act = mActions.value(StandardCalendarActionManager::CreateSubTodo)) {
-                    act->setEnabled(hasWritableCollection(KCalCore::Todo::todoMimeType()));
+                    act->setEnabled(hasWritableCollection(KCalendarCore::Todo::todoMimeType()));
                 }
             }
         }

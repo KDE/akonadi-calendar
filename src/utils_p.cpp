@@ -86,7 +86,7 @@ QString Akonadi::CalendarUtils::email()
     return emailSettings.getSetting(KEMailSettings::EmailAddress);
 }
 
-bool Akonadi::CalendarUtils::thatIsMe(const KCalCore::Attendee &attendee)
+bool Akonadi::CalendarUtils::thatIsMe(const KCalendarCore::Attendee &attendee)
 {
     return KIdentityManagement::thatIsMe(attendee.email());
 }
@@ -114,13 +114,13 @@ QStringList Akonadi::CalendarUtils::allEmails()
     return emails;
 }
 
-KCalCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &item)
+KCalendarCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &item)
 {
     // With this try-catch block, we get a 2x performance improvement in retrieving the payload
     // since we don't call hasPayload()
     try {
-        return item.payload<KCalCore::Incidence::Ptr>();
+        return item.payload<KCalendarCore::Incidence::Ptr>();
     } catch (const Akonadi::PayloadException &) {
-        return KCalCore::Incidence::Ptr();
+        return KCalendarCore::Incidence::Ptr();
     }
 }

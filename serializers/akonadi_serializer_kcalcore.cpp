@@ -23,8 +23,8 @@
 #include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
 
-#include <KCalCore/Event>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
 
 #include <KCalUtils/Stringify>
 
@@ -33,7 +33,7 @@
 #include <QDate>
 #include "serializer_debug.h"
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace KCalUtils;
 using namespace Akonadi;
 
@@ -63,24 +63,24 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
 
     if (magic == IncidenceBase::magicSerializationIdentifier()) {
         IncidenceBase::Ptr base;
-        switch (static_cast<KCalCore::Incidence::IncidenceType>(type)) {
-        case KCalCore::Incidence::TypeEvent:
+        switch (static_cast<KCalendarCore::Incidence::IncidenceType>(type)) {
+        case KCalendarCore::Incidence::TypeEvent:
             base = Event::Ptr(new Event());
             break;
-        case KCalCore::Incidence::TypeTodo:
+        case KCalendarCore::Incidence::TypeTodo:
             base = Todo::Ptr(new Todo());
             break;
-        case KCalCore::Incidence::TypeJournal:
+        case KCalendarCore::Incidence::TypeJournal:
             base = Journal::Ptr(new Journal());
             break;
-        case KCalCore::Incidence::TypeFreeBusy:
+        case KCalendarCore::Incidence::TypeFreeBusy:
             base = FreeBusy::Ptr(new FreeBusy());
             break;
-        case KCalCore::Incidence::TypeUnknown:
+        case KCalendarCore::Incidence::TypeUnknown:
             return false;
         }
         input >> base;
-        incidence = base.staticCast<KCalCore::Incidence>();
+        incidence = base.staticCast<KCalendarCore::Incidence>();
     } else {
         // Use the old format
         incidence = mFormat.readIncidence(data.readAll());

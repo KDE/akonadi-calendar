@@ -23,7 +23,7 @@
 
 #include <QSortFilterProxyModel>
 
-namespace KCalCore
+namespace KCalendarCore
 {
 class CalFilter;
 }
@@ -38,8 +38,8 @@ public:
     explicit CalFilterProxyModel(QObject *parent = nullptr);
     ~CalFilterProxyModel();
 
-    KCalCore::CalFilter *filter() const;
-    void setFilter(KCalCore::CalFilter *filter);
+    KCalendarCore::CalFilter *filter() const;
+    void setFilter(KCalendarCore::CalFilter *filter);
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;

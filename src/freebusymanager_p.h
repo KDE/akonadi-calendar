@@ -24,8 +24,8 @@
 #include "etmcalendar.h"
 #include "mailscheduler_p.h"
 
-#include <kcalcore/freebusy.h>
-#include <kcalcore/icalformat.h>
+#include <kcalendarcore/freebusy.h>
+#include <kcalendarcore/icalformat.h>
 
 #include <QPointer>
 #include <QDBusInterface>
@@ -72,12 +72,12 @@ public: /// Structs
         QDateTime mEndTime;
         QList<FreeBusyProviderRequest> mRequests;
         int mHandlersCount;
-        KCalCore::FreeBusy::Ptr mResultingFreeBusy;
+        KCalendarCore::FreeBusy::Ptr mResultingFreeBusy;
     };
 
 public:
     Akonadi::ETMCalendar::Ptr mCalendar;
-    KCalCore::ICalFormat mFormat;
+    KCalendarCore::ICalFormat mFormat;
 
     QStringList mRetrieveQueue;
     QMap<QUrl, QString> mFreeBusyUrlEmailMap;
@@ -99,9 +99,9 @@ public: /// Functions
     void checkFreeBusyUrl();
     QString freeBusyDir() const;
     void fetchFreeBusyUrl(const QString &email);
-    QString freeBusyToIcal(const KCalCore::FreeBusy::Ptr &freebusy);
-    KCalCore::FreeBusy::Ptr iCalToFreeBusy(const QByteArray &freeBusyData);
-    KCalCore::FreeBusy::Ptr ownerFreeBusy();
+    QString freeBusyToIcal(const KCalendarCore::FreeBusy::Ptr &freebusy);
+    KCalendarCore::FreeBusy::Ptr iCalToFreeBusy(const QByteArray &freeBusyData);
+    KCalendarCore::FreeBusy::Ptr ownerFreeBusy();
     QString ownerFreeBusyAsString();
     void processFreeBusyDownloadResult(KJob *_job);
     void processFreeBusyUploadResult(KJob *_job);

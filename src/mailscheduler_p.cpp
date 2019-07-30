@@ -25,9 +25,9 @@
 
 #include <item.h>
 
-#include <kcalcore/icalformat.h>
-#include <kcalcore/incidence.h>
-#include <kcalcore/schedulemessage.h>
+#include <kcalendarcore/icalformat.h>
+#include <kcalendarcore/incidence.h>
+#include <kcalendarcore/schedulemessage.h>
 #include <identitymanager.h>
 #include <identity.h>
 
@@ -40,7 +40,7 @@ using namespace KIdentityManagement;
 class Q_DECL_HIDDEN MailScheduler::Private
 {
 public:
-    KIdentityManagement::Identity identityForIncidence(const KCalCore::IncidenceBase::Ptr &incidence) const;
+    KIdentityManagement::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
 
     KIdentityManagement::IdentityManager *m_identityManager = nullptr;
     MailClient *m_mailer = nullptr;
@@ -61,14 +61,14 @@ MailScheduler::~MailScheduler()
     delete d;
 }
 
-KIdentityManagement::Identity MailScheduler::Private::identityForIncidence(const KCalCore::IncidenceBase::Ptr &incidence) const
+KIdentityManagement::Identity MailScheduler::Private::identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const
 {
     const auto organizer = incidence->organizer();
     const QString organizerEmail = !organizer.isEmpty() ? organizer.email() : CalendarUtils::email();
     return m_identityManager->identityForAddress(organizerEmail);
 }
 
-void MailScheduler::publish(const KCalCore::IncidenceBase::Ptr &incidence,
+void MailScheduler::publish(const KCalendarCore::IncidenceBase::Ptr &incidence,
                             const QString &recipients)
 {
     Q_ASSERT(incidence);
@@ -76,7 +76,7 @@ void MailScheduler::publish(const KCalCore::IncidenceBase::Ptr &incidence,
         return;
     }
 
-    const QString messageText = mFormat->createScheduleMessage(incidence, KCalCore::iTIPPublish);
+    const QString messageText = mFormat->createScheduleMessage(incidence, KCalendarCore::iTIPPublish);
     d->m_mailer->mailTo(incidence,
                         d->identityForIncidence(incidence),
                         CalendarUtils::email(),
@@ -84,8 +84,8 @@ void MailScheduler::publish(const KCalCore::IncidenceBase::Ptr &incidence,
                         CalendarSettings::self()->mailTransport());
 }
 
-void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
-                                       KCalCore::iTIPMethod method,
+void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                       KCalendarCore::iTIPMethod method,
                                        const QString &recipients)
 {
     Q_ASSERT(incidence);
@@ -102,8 +102,8 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
                         CalendarSettings::self()->mailTransport());
 }
 
-void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incidence,
-                                       KCalCore::iTIPMethod method)
+void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                       KCalendarCore::iTIPMethod method)
 {
     Q_ASSERT(incidence);
     if (!incidence) {
@@ -112,18 +112,18 @@ void MailScheduler::performTransaction(const KCalCore::IncidenceBase::Ptr &incid
 
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
 
-    if (method == KCalCore::iTIPRequest ||
-            method == KCalCore::iTIPCancel ||
-            method == KCalCore::iTIPAdd ||
-            method == KCalCore::iTIPDeclineCounter) {
+    if (method == KCalendarCore::iTIPRequest ||
+            method == KCalendarCore::iTIPCancel ||
+            method == KCalendarCore::iTIPAdd ||
+            method == KCalendarCore::iTIPDeclineCounter) {
         d->m_mailer->mailAttendees(incidence,
                                    d->identityForIncidence(incidence),
                                    CalendarSettings::self()->bcc(), messageText,
                                    CalendarSettings::self()->mailTransport());
     } else {
         QString subject;
-        KCalCore::Incidence::Ptr inc = incidence.dynamicCast<KCalCore::Incidence>() ;
-        if (inc && method == KCalCore::iTIPCounter) {
+        KCalendarCore::Incidence::Ptr inc = incidence.dynamicCast<KCalendarCore::Incidence>() ;
+        if (inc && method == KCalendarCore::iTIPCounter) {
             subject = i18n("Counter proposal: %1", inc->summary());
         }
 
@@ -141,7 +141,7 @@ QString MailScheduler::freeBusyDir() const
 }
 
 //TODO: AKONADI_PORT review following code
-void MailScheduler::acceptCounterProposal(const KCalCore::Incidence::Ptr &incidence,
+void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &incidence,
         const Akonadi::CalendarBase::Ptr &calendar)
 {
     Q_ASSERT(incidence);
@@ -152,19 +152,19 @@ void MailScheduler::acceptCounterProposal(const KCalCore::Incidence::Ptr &incide
 
     Akonadi::Item exInc = calendar->item(incidence);
     if (!exInc.isValid()) {
-        KCalCore::Incidence::Ptr exIncidence = calendar->incidenceFromSchedulingID(incidence->uid());
+        KCalendarCore::Incidence::Ptr exIncidence = calendar->incidenceFromSchedulingID(incidence->uid());
         if (exIncidence) {
             exInc = calendar->item(exIncidence);
         }
-        //exInc = exIncItem.isValid() && exIncItem.hasPayload<KCalCore::Incidence::Ptr>() ?
-        //        exIncItem.payload<KCalCore::Incidence::Ptr>() : KCalCore::Incidence::Ptr();
+        //exInc = exIncItem.isValid() && exIncItem.hasPayload<KCalendarCore::Incidence::Ptr>() ?
+        //        exIncItem.payload<KCalendarCore::Incidence::Ptr>() : KCalendarCore::Incidence::Ptr();
     }
 
     incidence->setRevision(incidence->revision() + 1);
     Result result = ResultSuccess;
 
-    if (exInc.isValid() && exInc.hasPayload<KCalCore::Incidence::Ptr>()) {
-        KCalCore::Incidence::Ptr exIncPtr = exInc.payload<KCalCore::Incidence::Ptr>();
+    if (exInc.isValid() && exInc.hasPayload<KCalendarCore::Incidence::Ptr>()) {
+        KCalendarCore::Incidence::Ptr exIncPtr = exInc.payload<KCalendarCore::Incidence::Ptr>();
         incidence->setRevision(qMax(incidence->revision(), exIncPtr->revision() + 1));
         // some stuff we don't want to change, just to be safe
         incidence->setSchedulingID(exIncPtr->schedulingID());
@@ -172,8 +172,8 @@ void MailScheduler::acceptCounterProposal(const KCalCore::Incidence::Ptr &incide
 
         Q_ASSERT(exIncPtr && incidence);
 
-        KCalCore::IncidenceBase::Ptr i1 = exIncPtr;
-        KCalCore::IncidenceBase::Ptr i2 = incidence;
+        KCalendarCore::IncidenceBase::Ptr i1 = exIncPtr;
+        KCalendarCore::IncidenceBase::Ptr i2 = incidence;
 
         if (i1->type() == i2->type()) {
             *i1 = *i2;
@@ -185,7 +185,7 @@ void MailScheduler::acceptCounterProposal(const KCalCore::Incidence::Ptr &incide
             result = ResultModifyingError;
         }
     } else {
-        if (!calendar->addIncidence(KCalCore::Incidence::Ptr(incidence->clone()))) {
+        if (!calendar->addIncidence(KCalendarCore::Incidence::Ptr(incidence->clone()))) {
             result = ResultCreatingError;
         }
     }

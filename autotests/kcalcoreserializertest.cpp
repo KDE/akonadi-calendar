@@ -18,12 +18,12 @@
 */
 
 #include <AkonadiCore/Item>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 #include <QTest>
 #include <QObject>
 
 using namespace Akonadi;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 class KCalCoreSerializerTest : public QObject
 {
