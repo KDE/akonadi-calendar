@@ -21,10 +21,13 @@
 #include "publishdialog_p.h"
 
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 #include <kemailaddress.h>
 #include <kcalendarcore/person.h>
 
 #include <KLocalizedString>
+#include <KPluginFactory>
+#include <KPluginLoader>
 #include <QPointer>
 #include <QTreeView>
 
@@ -84,8 +87,15 @@ void PublishDialog::Private::removeItem()
 
 void PublishDialog::Private::openAddressbook()
 {
-    QPointer<Akonadi::EmailAddressSelectionDialog> dialog(
-        new Akonadi::EmailAddressSelectionDialog(q));
+    QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
+    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialog"));
+    KPluginFactory *factory = loader.factory();
+    if (factory) {
+        dialog = factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(q);
+    } else {
+        dialog = new Akonadi::EmailAddressSelectionDialog(q);
+    }
+
     dialog->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
 
     if (dialog->exec() == QDialog::Accepted) {
