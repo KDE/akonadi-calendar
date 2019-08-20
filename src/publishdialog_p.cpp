@@ -88,7 +88,7 @@ void PublishDialog::Private::removeItem()
 void PublishDialog::Private::openAddressbook()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
-    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialog"));
+    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
     KPluginFactory *factory = loader.factory();
     if (factory) {
         dialog = factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(q);
