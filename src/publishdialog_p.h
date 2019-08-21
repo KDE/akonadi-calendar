@@ -22,16 +22,17 @@
 
 #include "publishdialog.h"
 #include "ui_publishdialog_base.h"
+#include <KContacts/Addressee>
 
 namespace Akonadi
 {
 
 class Q_DECL_HIDDEN PublishDialog::Private : public QObject
 {
-    Q_OBJECT
-
+    Q_OBJECT    
 public:
     Private(PublishDialog *q);
+    void insertAddresses(const KContacts::Addressee::List &list);
 
 public Q_SLOTS:
     void addItem();

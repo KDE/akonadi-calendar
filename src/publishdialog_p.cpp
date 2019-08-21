@@ -25,6 +25,7 @@
 #include <kemailaddress.h>
 #include <kcalendarcore/person.h>
 
+
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -85,6 +86,20 @@ void PublishDialog::Private::removeItem()
     mUI.mListWidget->setCurrentRow(row);
 }
 
+void PublishDialog::Private::insertAddresses(const KContacts::Addressee::List &list)
+{
+    for (const KContacts::Addressee &contact : list) {
+        mUI.mNameLineEdit->setEnabled(true);
+        mUI.mEmailLineEdit->setEnabled(true);
+        QListWidgetItem *item = new QListWidgetItem(mUI.mListWidget);
+        item->setSelected(true);
+        mUI.mNameLineEdit->setText(contact.name());
+        mUI.mEmailLineEdit->setText(contact.preferredEmail());
+        mUI.mListWidget->addItem(item);
+    }
+}
+
+
 void PublishDialog::Private::openAddressbook()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
@@ -97,7 +112,7 @@ void PublishDialog::Private::openAddressbook()
     }
 
     dialog->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
-
+    connect(dialog.data(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &PublishDialog::Private::insertAddresses);
     if (dialog->exec() == QDialog::Accepted) {
         const Akonadi::EmailAddressSelection::List selections = dialog->selectedAddresses();
         if (!selections.isEmpty()) {
