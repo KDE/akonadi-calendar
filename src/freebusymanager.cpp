@@ -827,7 +827,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
     // We need to massage the list a bit so that Outlook understands
     // it.
-    messageText = messageText.replace(QRegExp(QStringLiteral("ORGANIZER\\s*:MAILTO:")),
+    messageText.replace(QRegExp(QStringLiteral("ORGANIZER\\s*:MAILTO:")),
                                       QStringLiteral("ORGANIZER:"));
 
     // Create a local temp file and save the message to it
