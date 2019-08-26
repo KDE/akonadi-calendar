@@ -103,11 +103,11 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     }
     QString to;
     if (!toList.isEmpty()) {
-        to = toList.join(QStringLiteral(", "));
+        to = toList.join(QLatin1String(", "));
     }
     QString cc;
     if (!ccList.isEmpty()) {
-        cc = ccList.join(QStringLiteral(", "));
+        cc = ccList.join(QLatin1String(", "));
     }
 
     QString subject;
