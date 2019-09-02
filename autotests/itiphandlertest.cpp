@@ -637,7 +637,7 @@ void ITIPHandlerTest::createITIPHandler()
 
 QString ITIPHandlerTest::icalData(const QString &data_filename)
 {
-    QString absolutePath = QFINDTESTDATA(QStringLiteral("itip_data/") + data_filename);
+    QString absolutePath = QFINDTESTDATA(QLatin1String("itip_data/") + data_filename);
     return QString::fromLatin1(readFile(absolutePath));
 }
 

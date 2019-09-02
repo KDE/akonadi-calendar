@@ -861,7 +861,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
             QString fbname = CalendarSettings::self()->publishUserName();
             int at = fbname.indexOf('@');
             if (at > 1 && fbname.length() > (uint)at) {
-                fbname = fbname.left(at);
+                fbname.truncate(at);
             }
             targetURL.setPath("/freebusy/" + fbname + ".ifb");
             targetURL.setUserName(CalendarSettings::self()->publishUserName());
