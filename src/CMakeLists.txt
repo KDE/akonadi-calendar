@@ -56,7 +56,6 @@ PUBLIC
     KF5::I18n
 PRIVATE
     KF5::Codecs
-    KF5::IconThemes
     KF5::KIOWidgets
     KF5::XmlGui
     KF5::AkonadiContact

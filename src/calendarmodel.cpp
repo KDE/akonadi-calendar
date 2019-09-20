@@ -28,9 +28,8 @@
 #include <kcalendarcore/journal.h>
 
 #include <KLocalizedString>
-#include <KIconLoader>
 
-#include <QPixmap>
+#include <QIcon>
 
 using namespace Akonadi;
 
@@ -93,13 +92,13 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             return QVariant();
         }
         if (inc->type() == KCalendarCore::IncidenceBase::TypeTodo) {
-            return SmallIcon(QStringLiteral("view-pim-tasks"));
+            return QIcon::fromTheme(QStringLiteral("view-pim-tasks"));
         } else if (inc->type() == KCalendarCore::IncidenceBase::TypeJournal) {
-            return SmallIcon(QStringLiteral("view-pim-journal"));
+            return QIcon::fromTheme(QStringLiteral("view-pim-journal"));
         } else if (inc->type() == KCalendarCore::IncidenceBase::TypeEvent) {
-            return SmallIcon(QStringLiteral("view-calendar"));
+            return QIcon::fromTheme(QStringLiteral("view-calendar"));
         }
-        return SmallIcon(QStringLiteral("network-wired"));
+        return QIcon::fromTheme(QStringLiteral("network-wired"));
 
     case Qt::DisplayRole:
         switch (column) {
