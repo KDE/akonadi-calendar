@@ -1,7 +1,7 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 find_dependency(KF5Akonadi "@AKONADI_LIB_VERSION@")
-find_dependency(KF5CalendarCore "@CALENDARCORE_LIB_VERSION@")
+find_dependency(KF5CalendarCore "@KF5_MIN_VERSION@")
 
 find_dependency(KF5I18n "@KF5_MIN_VERSION@")
 find_dependency(KF5WidgetsAddons "@KF5_MIN_VERSION@")
