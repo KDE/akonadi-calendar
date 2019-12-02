@@ -19,7 +19,7 @@
 */
 
 #include "utils_p.h"
-#include <kemailaddress.h>
+#include <KEmailAddress>
 #include <identitymanager.h>
 #include <identity.h>
 #include <kidentitymanagement/utils.h>

@@ -29,7 +29,7 @@
 // #include <email.h>
 
 #include <identitymanager.h>
-#include <kemailsettings.h>
+#include <KEMailSettings>
 
 using namespace Akonadi;
 

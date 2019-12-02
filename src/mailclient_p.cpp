@@ -31,7 +31,7 @@
 #include <kcalutils/incidenceformatter.h>
 #include <kmime/kmime_message.h>
 #include <identity.h>
-#include <kemailaddress.h>
+#include <KEmailAddress>
 
 #include <messagequeuejob.h>
 #include <transport.h>

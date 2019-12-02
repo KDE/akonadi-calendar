@@ -24,11 +24,11 @@
 #include <entitytreemodel.h>
 
 #include <QAction>
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <kcalendarcore/event.h>
 #include <kcalendarcore/journal.h>
 #include <kcalendarcore/todo.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QItemSelectionModel>
 
