@@ -43,7 +43,7 @@ using namespace Akonadi;
 PublishDialog::PublishDialog(QWidget *parent)
     : QDialog(parent), d(new Private(this))
 {
-    setWindowTitle(i18n("Select Addresses"));
+    setWindowTitle(i18nc("@title:window", "Select Addresses"));
     QVBoxLayout *layout = new QVBoxLayout(this);
     QWidget *widget = new QWidget(this);
     widget->setObjectName(QStringLiteral("PublishFreeBusy"));
