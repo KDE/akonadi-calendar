@@ -26,9 +26,7 @@
 
 class QDateTime;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class FreeBusyProviderBasePrivate;
 
 /**
@@ -152,7 +150,6 @@ private:
     FreeBusyProviderBasePrivate *const d;
     //@endcond
 };
-
 }
 
 #endif // AKONADI_FREEBUSYPROVIDERBASE_H

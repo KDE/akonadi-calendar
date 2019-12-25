@@ -66,8 +66,10 @@ void ETMCalendarPrivate::init()
         Akonadi::Session *session = new Akonadi::Session("ETMCalendar", q);
         Akonadi::Monitor *monitor = new Akonadi::Monitor(q);
         monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
-        connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged), this, [this]( const Akonadi::Collection &cols, const QSet<QByteArray> &set)
-        { onCollectionChanged(cols, set);});
+        connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged), this, [this](const Akonadi::Collection &cols, const QSet<QByteArray> &set)
+        {
+            onCollectionChanged(cols, set);
+        });
 
         Akonadi::ItemFetchScope scope;
         scope.fetchFullPayload(true);
@@ -119,8 +121,7 @@ void ETMCalendarPrivate::init()
     loadFromETM();
 }
 
-void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collection,
-        const QSet<QByteArray> &attributeNames)
+void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &attributeNames)
 {
     Q_ASSERT(collection.isValid());
     // Is the collection changed to read-only, we update all Incidences
@@ -165,7 +166,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCheckableProxyModel->setSourceModel(mCollectionProxyModel);
     mCheckableProxyModel->setObjectName(QStringLiteral("Add checkboxes"));
 
-    mSelectionProxy = new KSelectionProxyModel(selectionModel, /**parent=*/this);
+    mSelectionProxy = new KSelectionProxyModel(selectionModel, /**parent=*/ this);
     mSelectionProxy->setObjectName(QStringLiteral("Only show items of selected collection"));
     mSelectionProxy->setFilterBehavior(KSelectionProxyModel::ChildrenOfExactSelection);
     mSelectionProxy->setSourceModel(mETM.data());
@@ -214,8 +215,9 @@ void ETMCalendarPrivate::clear()
 
     Akonadi::Item::List removedItems;
     removedItems.reserve(mItemById.size());
-    for (auto it = mItemById.cbegin(), end = mItemById.cend(); it != end; ++it)
+    for (auto it = mItemById.cbegin(), end = mItemById.cend(); it != end; ++it) {
         removedItems.push_back(it.value());
+    }
 
     itemsRemoved(removedItems);
 
@@ -232,9 +234,7 @@ void ETMCalendarPrivate::clear()
     //m_virtualItems.clear();
 }
 
-Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel *model,
-        const QModelIndex &parentIndex,
-        int start, int end)
+Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex, int start, int end)
 {
     const int endRow = end >= 0 ? end : model->rowCount(parentIndex) - 1;
     Akonadi::Item::List items;
@@ -256,9 +256,7 @@ Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel 
     return items;
 }
 
-Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstractItemModel *model,
-        const QModelIndex &parentIndex,
-        int start, int end)
+Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex, int start, int end)
 {
     const int endRow = end >= 0 ? end : model->rowCount(parentIndex) - 1;
     Akonadi::Collection::List collections;
@@ -316,11 +314,10 @@ Akonadi::Collection ETMCalendarPrivate::collectionFromIndex(const QModelIndex &i
     return index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 }
 
-void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index,
-                                        int start, int end)
+void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index, int start, int end)
 {
     const Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index,
-                                            start, end);
+                                                                       start, end);
 
     for (const Akonadi::Collection &collection : collections) {
         mCollectionMap[collection.id()] = collection;
@@ -349,8 +346,7 @@ void ETMCalendarPrivate::onRowsRemoved(const QModelIndex &index, int start, int 
     }
 }
 
-void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft,
-                                       const QModelIndex &bottomRight)
+void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 {
     // We only update collections, because items are handled in the filtered model
     Q_ASSERT(topLeft.row() <= bottomRight.row());
@@ -364,11 +360,7 @@ void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft,
     }
 }
 
-void ETMCalendarPrivate::onRowsMoved(const QModelIndex &sourceParent,
-                                     int sourceStart,
-                                     int sourceEnd,
-                                     const QModelIndex &destinationParent,
-                                     int destinationRow)
+void ETMCalendarPrivate::onRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
 {
     //TODO
     Q_UNUSED(sourceParent);
@@ -390,8 +382,7 @@ void ETMCalendarPrivate::onModelResetInFilteredModel()
     loadFromETM();
 }
 
-void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft,
-        const QModelIndex &bottomRight)
+void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 {
     Q_ASSERT(topLeft.row() <= bottomRight.row());
     const int endRow = bottomRight.row();
@@ -442,14 +433,12 @@ void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
     }
 }
 
-void ETMCalendarPrivate::onRowsInsertedInFilteredModel(const QModelIndex &index,
-        int start, int end)
+void ETMCalendarPrivate::onRowsInsertedInFilteredModel(const QModelIndex &index, int start, int end)
 {
     itemsAdded(itemsFromModel(mFilteredETM, index, start, end));
 }
 
-void ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel(const QModelIndex &index,
-        int start, int end)
+void ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel(const QModelIndex &index, int start, int end)
 {
     itemsRemoved(itemsFromModel(mFilteredETM, index, start, end));
 }
@@ -539,9 +528,7 @@ KCheckableProxyModel *ETMCalendar::checkableProxyModel() const
     return d->mCheckableProxyModel;
 }
 
-KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from,
-        const QDateTime &to,
-        bool excludeBlockedAlarms) const
+KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from, const QDateTime &to, bool excludeBlockedAlarms) const
 {
     Q_D(const ETMCalendar);
     KCalendarCore::Alarm::List alarmList;

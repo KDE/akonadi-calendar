@@ -92,7 +92,7 @@ private Q_SLOTS:
         AkonadiTest::checkTestIsIsolated();
 
         mIncidencesToDelete = 0;
-        mIncidencesToAdd    = 0;
+        mIncidencesToAdd = 0;
         mIncidencesToModify = 0;
         mPermissionsOrRollback = false;
         mDiscardedEqualsSuccess = false;
@@ -249,7 +249,7 @@ private Q_SLOTS:
         QTest::addColumn<bool>("failureExpected");
         QTest::addColumn<Akonadi::IncidenceChanger::ResultCode>("expectedResultCode");
 
-        QTest::newRow("Delete empty list")   << Item::List() << true << true;
+        QTest::newRow("Delete empty list") << Item::List() << true << true;
         QTest::newRow("Delete invalid item") << (Item::List() << Item()) << true << true;
 
         ItemFetchJob *fetchJob = new ItemFetchJob(mCollection);
@@ -588,6 +588,7 @@ private Q_SLOTS:
         }
         delete fetchJob;
     }
+
     void testMassModifyForConflicts_data()
     {
         QTest::addColumn<Akonadi::Item>("item");
@@ -680,7 +681,7 @@ private Q_SLOTS:
         const Collection::Rights noRights = Collection::Rights();
         //------------------------------------------------------------------------------------------
         // Create two incidences, should succeed
-        items << item() << item() ;
+        items << item() << item();
         changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate;
         failureExpectedList << false << false;
         expectedResults << IncidenceChanger::ResultCodeSuccess << IncidenceChanger::ResultCodeSuccess;
@@ -1223,10 +1224,7 @@ public Q_SLOTS:
         QVERIFY(mChangeToWaitFor == -1);
     }
 
-    void deleteFinished(int changeId,
-                        const QVector<Akonadi::Item::Id> &deletedIds,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorMessage)
+    void deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
     {
         QVERIFY(changeId != -1);
         mChangeToWaitFor = -1;
@@ -1247,10 +1245,7 @@ public Q_SLOTS:
         maybeQuitEventLoop();
     }
 
-    void createFinished(int changeId,
-                        const Akonadi::Item &item,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString)
+    void createFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
     {
         QVERIFY(changeId != -1);
         mChangeToWaitFor = -1;
@@ -1275,10 +1270,7 @@ public Q_SLOTS:
         maybeQuitEventLoop();
     }
 
-    void modifyFinished(int changeId,
-                        const Akonadi::Item &item,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString)
+    void modifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
     {
         mChangeToWaitFor = -1;
         --mIncidencesToModify;
@@ -1336,8 +1328,7 @@ public Q_SLOTS:
         QCOMPARE(changer.respectsCollectionRights(), false);
     }
 
-    void compareExpectedResult(IncidenceChanger::ResultCode result,
-                               IncidenceChanger::ResultCode expected, const QString &str)
+    void compareExpectedResult(IncidenceChanger::ResultCode result, IncidenceChanger::ResultCode expected, const QString &str)
     {
         if (mPermissionsOrRollback) {
             if (expected == IncidenceChanger::ResultCodePermissions) {

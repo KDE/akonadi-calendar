@@ -40,9 +40,7 @@
 class KJob;
 class QWidget;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class TransactionSequence;
 class CollectionFetchJob;
 
@@ -52,9 +50,7 @@ class Change : public QObject
 public:
     typedef QSharedPointer<Change> Ptr;
     typedef QList<Ptr> List;
-    Change(IncidenceChanger *incidenceChanger, int changeId,
-           IncidenceChanger::ChangeType changeType, uint operationId,
-           QWidget *parent)
+    Change(IncidenceChanger *incidenceChanger, int changeId, IncidenceChanger::ChangeType changeType, uint operationId, QWidget *parent)
         : id(changeId)
         , type(changeType)
         , recordToHistory(incidenceChanger->historyEnabled())
@@ -118,8 +114,7 @@ class ModificationChange : public Change
     Q_OBJECT
 public:
     typedef QSharedPointer<ModificationChange> Ptr;
-    ModificationChange(IncidenceChanger *changer, int id, uint atomicOperationId,
-                       QWidget *parent)
+    ModificationChange(IncidenceChanger *changer, int id, uint atomicOperationId, QWidget *parent)
         : Change(changer, id, IncidenceChanger::ChangeTypeModify, atomicOperationId, parent)
     {
     }
@@ -139,8 +134,7 @@ class CreationChange : public Change
     Q_OBJECT
 public:
     typedef QSharedPointer<CreationChange> Ptr;
-    CreationChange(IncidenceChanger *changer, int id, uint atomicOperationId,
-                   QWidget *parent)
+    CreationChange(IncidenceChanger *changer, int id, uint atomicOperationId, QWidget *parent)
         : Change(changer, id, IncidenceChanger::ChangeTypeCreate, atomicOperationId, parent)
     {
     }
@@ -163,8 +157,7 @@ class DeletionChange : public Change
     Q_OBJECT
 public:
     typedef QSharedPointer<DeletionChange> Ptr;
-    DeletionChange(IncidenceChanger *changer, int id, uint atomicOperationId,
-                   QWidget *parent)
+    DeletionChange(IncidenceChanger *changer, int id, uint atomicOperationId, QWidget *parent)
         : Change(changer, id, IncidenceChanger::ChangeTypeDelete, atomicOperationId, parent)
     {
     }
@@ -208,10 +201,10 @@ public:
                 // When a job that can finish successfully is aborted because the transaction failed
                 // because of some other job, akonadi is returning an Unknown error
                 // which isnt very specific
-                if (m_changes[i]->completed &&
-                        (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess ||
-                         (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError &&
-                          m_changes[i]->errorString == QLatin1String("Unknown error.")))) {
+                if (m_changes[i]->completed
+                    && (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess
+                        || (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError
+                            && m_changes[i]->errorString == QLatin1String("Unknown error.")))) {
                     m_changes[i]->resultCode = IncidenceChanger::ResultCodeRolledback;
                 }
             }
@@ -287,8 +280,7 @@ public:
 
     void setChangeInternal(int changeId);
 
-    void adjustRecurrence(const KCalendarCore::Incidence::Ptr &originalIncidence,
-                          const KCalendarCore::Incidence::Ptr &incidence);
+    void adjustRecurrence(const KCalendarCore::Incidence::Ptr &originalIncidence, const KCalendarCore::Incidence::Ptr &incidence);
 
     bool hasRights(const Akonadi::Collection &collection, IncidenceChanger::ChangeType) const;
     void queueModification(const Change::Ptr &);
@@ -301,9 +293,7 @@ public:
 
     void handleInvitationsBeforeChange(const Change::Ptr &change);
     void handleInvitationsAfterChange(const Change::Ptr &change);
-    static bool myAttendeeStatusChanged(const KCalendarCore::Incidence::Ptr &newIncidence,
-                                        const KCalendarCore::Incidence::Ptr &oldIncidence,
-                                        const QStringList &myEmails);
+    static bool myAttendeeStatusChanged(const KCalendarCore::Incidence::Ptr &newIncidence, const KCalendarCore::Incidence::Ptr &oldIncidence, const QStringList &myEmails);
 
 public Q_SLOTS:
     void handleCreateJobResult(KJob *job);
@@ -374,7 +364,6 @@ public:
 private:
     IncidenceChanger *q = nullptr;
 };
-
 }
 
 #endif

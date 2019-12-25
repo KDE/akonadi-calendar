@@ -38,8 +38,9 @@ static bool compareUids(const QStringList &_uids, const Incidence::List &inciden
     QStringList uids = _uids;
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
-        if (uids.contains(incidence->uid()))
+        if (uids.contains(incidence->uid())) {
             uids.removeAll(incidence->uid());
+        }
     }
 
     if (uids.isEmpty() && _uids.count() == incidences.count()) {
@@ -53,8 +54,8 @@ static bool compareUids(const QStringList &_uids, const Incidence::List &inciden
 void CalendarBaseTest::fetchCollection()
 {
     CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
-            CollectionFetchJob::Recursive,
-            this);
+                                                     CollectionFetchJob::Recursive,
+                                                     this);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
     AKVERIFYEXEC(job);
@@ -71,7 +72,7 @@ void CalendarBaseTest::createInitialIncidences()
 {
     mExpectedSlotResult = true;
 
-    for (int i=0; i<5; ++i) {
+    for (int i = 0; i < 5; ++i) {
         Event::Ptr event = Event::Ptr(new Event());
         event->setUid(QStringLiteral("event") + QString::number(i));
         event->setSummary(QStringLiteral("summary") + QString::number(i));
@@ -83,7 +84,7 @@ void CalendarBaseTest::createInitialIncidences()
     }
     mOneEventUid = mUids.last();
 
-    for (int i=0; i<5; ++i) {
+    for (int i = 0; i < 5; ++i) {
         Todo::Ptr todo = Todo::Ptr(new Todo());
         todo->setUid(QStringLiteral("todo") + QString::number(i));
         todo->setDtStart(QDateTime::currentDateTimeUtc());
@@ -95,7 +96,7 @@ void CalendarBaseTest::createInitialIncidences()
     }
     mOneTodoUid = mUids.last();
 
-    for (int i=0; i<5; ++i) {
+    for (int i = 0; i < 5; ++i) {
         Journal::Ptr journal = Journal::Ptr(new Journal());
         journal->setUid(QStringLiteral("journal") + QString::number(i));
         journal->setSummary(QStringLiteral("summary") + QString::number(i));
@@ -107,7 +108,7 @@ void CalendarBaseTest::createInitialIncidences()
     }
     mOneJournalUid = mUids.last();
 
-    for (int i=0; i<5; ++i) {
+    for (int i = 0; i < 5; ++i) {
         Incidence::Ptr incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("incidence") + QString::number(i));
         incidence->setSummary(QStringLiteral("summary") + QString::number(i));
@@ -222,6 +223,7 @@ void CalendarBaseTest::testDelete()
     QVERIFY(mCalendar->item(journal.id()) == Item());
     QVERIFY(mCalendar->item(incidence.id()) == Item());
 }
+
 /*
 void CalendarBaseTest::testDeleteAll()
 {

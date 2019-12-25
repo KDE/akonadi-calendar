@@ -24,14 +24,11 @@
 #include <KJob>
 #include <QUrl>
 
-namespace KIO
-{
+namespace KIO {
 class Job;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class FreeBusyDownloadJob : public KJob
 {
     Q_OBJECT
@@ -53,7 +50,6 @@ private:
     QByteArray mFreeBusyData;
     QWidget *mParent = nullptr;
 };
-
 }
 
 #endif // FREEBUSYMANAGER_P_H

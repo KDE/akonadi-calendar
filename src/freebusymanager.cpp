@@ -83,8 +83,8 @@ QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
 // arbitrary data is also useless because a server can respond back
 // with a "no such document" page.  So we need smart checking.
 FbCheckerJob::FbCheckerJob(const QList<QUrl> &urlsToCheck, QObject *parent)
-    : KJob(parent),
-      mUrlsToCheck(urlsToCheck)
+    : KJob(parent)
+    , mUrlsToCheck(urlsToCheck)
 {
 }
 
@@ -134,19 +134,21 @@ QUrl FbCheckerJob::validUrl() const
 /// FreeBusyManagerPrivate::FreeBusyProviderRequest
 
 FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const QString &provider)
-    : mRequestStatus(NotStarted), mInterface(nullptr)
+    : mRequestStatus(NotStarted)
+    , mInterface(nullptr)
 {
-    mInterface =
-        QSharedPointer<QDBusInterface>(
-            new QDBusInterface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + provider,
-                               QStringLiteral("/FreeBusyProvider"),
-                               QStringLiteral("org.freedesktop.Akonadi.Resource.FreeBusyProvider")));
+    mInterface
+        = QSharedPointer<QDBusInterface>(
+              new QDBusInterface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + provider,
+                                 QStringLiteral("/FreeBusyProvider"),
+                                 QStringLiteral("org.freedesktop.Akonadi.Resource.FreeBusyProvider")));
 }
 
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue()
-    : mHandlersCount(0), mResultingFreeBusy(nullptr)
+    : mHandlersCount(0)
+    , mResultingFreeBusy(nullptr)
 {
     // Set the start of the period to today 00:00:00
     mStartTime = QDateTime(QDate::currentDate(), QTime());
@@ -156,7 +158,8 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(
     const QDateTime &start, const QDateTime &end)
-    : mHandlersCount(0), mResultingFreeBusy(nullptr)
+    : mHandlersCount(0)
+    , mResultingFreeBusy(nullptr)
 {
     mStartTime = start;
     mEndTime = end;
@@ -166,12 +169,12 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 /// FreeBusyManagerPrivate
 
 FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
-    : QObject(),
-      q_ptr(q),
-      mTimerID(0),
-      mUploadingFreeBusy(false),
-      mBrokenUrl(false),
-      mParentWidgetForRetrieval(nullptr)
+    : QObject()
+    , q_ptr(q)
+    , mTimerID(0)
+    , mUploadingFreeBusy(false)
+    , mBrokenUrl(false)
+    , mParentWidgetForRetrieval(nullptr)
 {
     connect(this, &FreeBusyManagerPrivate::freeBusyUrlRetrieved,
             this, &FreeBusyManagerPrivate::finishProcessRetrieveQueue);
@@ -272,9 +275,9 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         // Don't try to fetch free/busy data for users not on the specified servers
         // This tests if the hostnames match, or one is a subset of the other
         const QString hostDomain = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl()).host();
-        if (hostDomain != emailHost &&
-                !hostDomain.endsWith(QLatin1Char('.') + emailHost) &&
-                !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
+        if (hostDomain != emailHost
+            && !hostDomain.endsWith(QLatin1Char('.') + emailHost)
+            && !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
             // Host names do not match
             qCDebug(AKONADICALENDAR_LOG) << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
             emit freeBusyUrlRetrieved(email, QUrl());
@@ -473,12 +476,9 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
     } else {
         fetchFreeBusyUrl(email);
     }
-
-    return;
 }
 
-void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
-        const QUrl &freeBusyUrlForEmail)
+void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email, const QUrl &freeBusyUrlForEmail)
 {
     Q_Q(FreeBusyManager);
 
@@ -495,7 +495,9 @@ void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email,
     mFreeBusyUrlEmailMap.insert(freeBusyUrlForEmail, email);
 
     FreeBusyDownloadJob *job = new FreeBusyDownloadJob(freeBusyUrlForEmail, mParentWidgetForRetrieval);
-    q->connect(job, &FreeBusyDownloadJob::result, this, [this](KJob*job) { processFreeBusyDownloadResult(job);});
+    q->connect(job, &FreeBusyDownloadJob::result, this, [this](KJob *job) {
+        processFreeBusyDownloadResult(job);
+    });
     job->start();
 }
 
@@ -504,8 +506,8 @@ void FreeBusyManagerPrivate::uploadFreeBusy()
     Q_Q(FreeBusyManager);
 
     // user has automatic uploading disabled, bail out
-    if (!CalendarSettings::self()->freeBusyPublishAuto() ||
-            CalendarSettings::self()->freeBusyPublishUrl().isEmpty()) {
+    if (!CalendarSettings::self()->freeBusyPublishAuto()
+        || CalendarSettings::self()->freeBusyPublishUrl().isEmpty()) {
         return;
     }
 
@@ -561,8 +563,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
     return providers;
 }
 
-void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
-        const QString &email)
+void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers, const QString &email)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue();
@@ -580,10 +581,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
     }
 }
 
-void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers,
-        const QString &email,
-        const QDateTime &start,
-        const QDateTime &end)
+void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers, const QString &email, const QDateTime &start, const QDateTime &end)
 {
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue(start, end);
@@ -639,8 +637,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
     }
 }
 
-void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Result result,
-        const QString &errorMsg)
+void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Result result, const QString &errorMsg)
 {
     if (result == Scheduler::ResultSuccess) {
         KMessageBox::information(
@@ -656,10 +653,7 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
     sender()->deleteLater();
 }
 
-void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
-        const QString &freeBusy,
-        bool success,
-        const QString &errorText)
+void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText)
 {
     Q_Q(FreeBusyManager);
     Q_UNUSED(errorText);
@@ -714,15 +708,12 @@ void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email,
 
 /// FreeBusyManager::Singleton
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class FreeBusyManagerStatic
 {
 public:
     FreeBusyManager instance;
 };
-
 }
 
 Q_GLOBAL_STATIC(FreeBusyManagerStatic, sManagerInstance)
@@ -781,7 +772,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
     }
 
     QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
-    if (targetURL.isEmpty())  {
+    if (targetURL.isEmpty()) {
         KMessageBox::sorry(
             parentWidget,
             i18n("<qt><p>No URL configured for uploading your free/busy list. "
@@ -819,8 +810,8 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
     // Save the time of the next free/busy uploading
     d->mNextUploadTime = QDateTime::currentDateTime();
     if (CalendarSettings::self()->freeBusyPublishDelay() > 0) {
-        d->mNextUploadTime =
-            d->mNextUploadTime.addSecs(CalendarSettings::self()->freeBusyPublishDelay() * 60);
+        d->mNextUploadTime
+            = d->mNextUploadTime.addSecs(CalendarSettings::self()->freeBusyPublishDelay() * 60);
     }
 
     QString messageText = d->ownerFreeBusyAsString();
@@ -828,7 +819,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
     // We need to massage the list a bit so that Outlook understands
     // it.
     messageText.replace(QRegExp(QStringLiteral("ORGANIZER\\s*:MAILTO:")),
-                                      QStringLiteral("ORGANIZER:"));
+                        QStringLiteral("ORGANIZER:"));
 
     // Create a local temp file and save the message to it
     QTemporaryFile tempFile;
@@ -848,8 +839,8 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         if (CalendarSettings::self()->publishKolab()) {
             // we use Kolab
             QString server;
-            if (CalendarSettings::self()->publishKolabServer() == QLatin1String("%SERVER%") ||
-                    CalendarSettings::self()->publishKolabServer().isEmpty()) {
+            if (CalendarSettings::self()->publishKolabServer() == QLatin1String("%SERVER%")
+                || CalendarSettings::self()->publishKolabServer().isEmpty()) {
                 server = emailHost;
             } else {
                 server = CalendarSettings::self()->publishKolabServer();
@@ -868,7 +859,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
             targetURL.setPassword(CalendarSettings::self()->publishPassword());
         } else {
             // we use something else
-            targetURL = CalendarSettings::self()-> +publishAnyURL().replace("%SERVER%", emailHost);
+            targetURL = CalendarSettings::self()->+publishAnyURL().replace("%SERVER%", emailHost);
             targetURL.setUserName(CalendarSettings::self()->publishUserName());
             targetURL.setPassword(CalendarSettings::self()->publishPassword());
         }
@@ -907,9 +898,9 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
     QPointer<PublishDialog> publishdlg = new PublishDialog();
     if (publishdlg->exec() == QDialog::Accepted) {
         // Send the mail
-        MailScheduler *scheduler = new MailScheduler(/*factory=*/nullptr, this);
-        connect(scheduler, &Scheduler::transactionFinished
-                , d, &FreeBusyManagerPrivate::processMailSchedulerResult);
+        MailScheduler *scheduler = new MailScheduler(/*factory=*/ nullptr, this);
+        connect(scheduler, &Scheduler::transactionFinished,
+                d, &FreeBusyManagerPrivate::processMailSchedulerResult);
         d->mParentWidgetForMailling = parentWidget;
 
         scheduler->publish(freebusy, publishdlg->addresses());
@@ -917,8 +908,7 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
     delete publishdlg;
 }
 
-bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
-                                       QWidget *parentWidget)
+bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload, QWidget *parentWidget)
 {
     Q_D(FreeBusyManager);
 
@@ -961,7 +951,9 @@ bool FreeBusyManager::retrieveFreeBusy(const QString &email, bool forceDownload,
 
     // queued, because "true" means the download was initiated. So lets
     // return before starting stuff
-    QMetaObject::invokeMethod(d, [ d] { d->processRetrieveQueue(); }, Qt::QueuedConnection);
+    QMetaObject::invokeMethod(d, [ d] {
+        d->processRetrieveQueue();
+    }, Qt::QueuedConnection);
     return true;
 }
 
@@ -993,8 +985,7 @@ KCalendarCore::FreeBusy::Ptr FreeBusyManager::loadFreeBusy(const QString &email)
     return d->iCalToFreeBusy(str.toUtf8());
 }
 
-bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
-                                   const KCalendarCore::Person &person)
+bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy, const KCalendarCore::Person &person)
 {
     Q_D(FreeBusyManager);
     qCDebug(AKONADICALENDAR_LOG) << person.fullName();

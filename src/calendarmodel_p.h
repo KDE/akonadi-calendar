@@ -26,9 +26,7 @@
 #include <QSharedPointer>
 #include <QWeakPointer>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class CalendarModel : public Akonadi::EntityTreeModel
 {
     Q_OBJECT
@@ -63,20 +61,17 @@ public:
 
     Q_REQUIRED_RESULT QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const override;
 
-    Q_REQUIRED_RESULT QVariant entityData(const Akonadi::Collection &collection, int column,
-                        int role = Qt::DisplayRole) const override;
+    Q_REQUIRED_RESULT QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const override;
 
     Q_REQUIRED_RESULT int entityColumnCount(EntityTreeModel::HeaderGroup headerSet) const override;
 
-    Q_REQUIRED_RESULT QVariant entityHeaderData(int section, Qt::Orientation orientation, int role,
-                              EntityTreeModel::HeaderGroup headerSet) const override;
+    Q_REQUIRED_RESULT QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, EntityTreeModel::HeaderGroup headerSet) const override;
 
 private:
     explicit CalendarModel(Akonadi::Monitor *monitor);
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

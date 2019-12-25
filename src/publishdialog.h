@@ -26,9 +26,7 @@
 
 //TODO: documentation
 // Uses akonadi-contact, so don't move this class to KCalUtils.
-namespace Akonadi
-{
-
+namespace Akonadi {
 class AKONADI_CALENDAR_EXPORT PublishDialog : public QDialog
 {
     Q_OBJECT
@@ -66,7 +64,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

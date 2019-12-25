@@ -37,8 +37,8 @@ class Q_DECL_HIDDEN CalFilterPartStatusProxyModel::Private
 {
 public:
     explicit Private()
-        : mIdentityManager(KIdentityManagement::IdentityManager::self()),
-          mFilterVirtual(false)
+        : mIdentityManager(KIdentityManagement::IdentityManager::self())
+        , mFilterVirtual(false)
     {
     }
 
@@ -56,7 +56,6 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private())
 {
-
     QObject::connect(d->mIdentityManager, QOverload<>::of(&KIdentityManagement::IdentityManager::changed), this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 

@@ -26,8 +26,7 @@
 #include <kcalendarcore/incidence.h>
 #include <item.h>
 
-namespace Akonadi
-{
+namespace Akonadi {
 /*
   This class implements the iTIP interface using the email interface specified
   as Mail.
@@ -43,15 +42,11 @@ public:
     explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailScheduler() override;
 
-    void publish(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                 const QString &recipients) override;
+    void publish(const KCalendarCore::IncidenceBase::Ptr &incidence, const QString &recipients) override;
 
-    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                            KCalendarCore::iTIPMethod method) override;
+    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method) override;
 
-    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                            KCalendarCore::iTIPMethod method,
-                            const QString &recipients) override;
+    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &recipients) override;
 
     /** Returns the directory where the free-busy information is stored */
     Q_REQUIRED_RESULT QString freeBusyDir() const override;
@@ -62,8 +57,7 @@ public:
      * @param calendar A loaded calendar. Try not to use an ETMCalendar here, due to it's
      *                 async loading.
      */
-    void acceptCounterProposal(const KCalendarCore::Incidence::Ptr &incidence,
-                               const Akonadi::CalendarBase::Ptr &calendar);
+    void acceptCounterProposal(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar);
 
 private:
     /**
@@ -80,7 +74,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

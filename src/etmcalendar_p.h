@@ -35,9 +35,7 @@ class QAbstractItemModel;
 class CheckableProxyModel;
 class KSelectionProxyModel;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class EntityTreeModel;
 class EntityMimeTypeFilterModel;
 class CollectionFilterProxyModel;
@@ -95,15 +93,9 @@ public:
     void loadFromETM();
 
 public Q_SLOTS:
-    Akonadi::Item::List itemsFromModel(const QAbstractItemModel *model,
-                                       const QModelIndex &parentIndex = QModelIndex(),
-                                       int start = 0,
-                                       int end = -1);
+    Akonadi::Item::List itemsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex = QModelIndex(), int start = 0, int end = -1);
 
-    Akonadi::Collection::List collectionsFromModel(const QAbstractItemModel *model,
-            const QModelIndex &parentIndex = QModelIndex(),
-            int start = 0,
-            int end = -1);
+    Akonadi::Collection::List collectionsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex = QModelIndex(), int start = 0, int end = -1);
 
     // KCalendarCore::CalFilter has changed.
     void onFilterChanged();
@@ -118,8 +110,7 @@ public Q_SLOTS:
     void onRowsInserted(const QModelIndex &index, int start, int end);
     void onRowsRemoved(const QModelIndex &index, int start, int end);
     void onDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
-    void onRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd,
-                     const QModelIndex &destinationParent, int destinationRow);
+    void onRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
 
     void onLayoutChangedInFilteredModel();
     void onModelResetInFilteredModel();
@@ -147,7 +138,6 @@ public:
 private:
     ETMCalendar *const q;
 };
-
 }
 
 #endif

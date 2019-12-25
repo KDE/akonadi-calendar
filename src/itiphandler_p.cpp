@@ -47,8 +47,7 @@ ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler 
             this, &ITIPHandler::Private::onHelperModifyDialogClosed);
 }
 
-void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result,
-        const QString &errorMessage)
+void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result, const QString &errorMessage)
 {
     if (m_currentOperation == OperationNone) {
         qCritical() << "Operation can't be none!" << result << errorMessage;
@@ -70,8 +69,7 @@ void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result
     }
 }
 
-void ITIPHandler::Private::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result,
-        const QString &errorMessage)
+void ITIPHandler::Private::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage)
 {
     const bool success = result == ITIPHandlerHelper::ResultSuccess;
 
@@ -95,7 +93,6 @@ void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMess
 {
     if (m_currentOperation == OperationProcessiTIPMessage) {
         if (success) {
-
             // Harmless hack, processiTIPMessage() asserts that there's not current operation running
             // to prevent users from calling it twice.
             m_currentOperation = OperationNone;
@@ -114,8 +111,7 @@ void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMess
     }
 }
 
-void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Result result,
-        const QString &errorMessage)
+void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Result result, const QString &errorMessage)
 {
     // Handle when user cancels on the collection selection dialog
     if (result == MailScheduler::ResultUserCancelled) {
@@ -148,14 +144,13 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
 
 void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult, KCalendarCore::iTIPMethod /*method*/, const KCalendarCore::Incidence::Ptr &)
 {
-    if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded ||
-            sendResult == ITIPHandlerHelper::ResultCanceled) {
+    if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded
+        || sendResult == ITIPHandlerHelper::ResultCanceled) {
         emit q->iTipMessageSent(ResultSuccess, QString());
     }
 }
 
-void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result result,
-        const QString &errorMessage)
+void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result result, const QString &errorMessage)
 {
     if (result == Scheduler::ResultSuccess) {
         if (m_parentWidget) {
@@ -182,8 +177,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
     }
 }
 
-void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Result result,
-        const QString &errorMessage)
+void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Result result, const QString &errorMessage)
 {
     if (result == Scheduler::ResultSuccess) {
         if (m_parentWidget) {
@@ -204,8 +198,7 @@ void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Resu
     }
 }
 
-void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result result,
-        const QString &errorMessage)
+void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result result, const QString &errorMessage)
 {
     if (result == MailClient::ResultSuccess) {
         if (m_parentWidget) {
@@ -253,4 +246,3 @@ bool ITIPHandler::Private::isLoaded()
     // ETM doesn't have any way to check if it's already populated, so we have to require loaded calendars.
     return true;
 }
-

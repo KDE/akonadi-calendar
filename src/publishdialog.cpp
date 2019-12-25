@@ -41,7 +41,8 @@ using namespace KCalendarCore;
 using namespace Akonadi;
 
 PublishDialog::PublishDialog(QWidget *parent)
-    : QDialog(parent), d(new Private(this))
+    : QDialog(parent)
+    , d(new Private(this))
 {
     setWindowTitle(i18nc("@title:window", "Select Addresses"));
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -70,8 +71,8 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged,
             d, &Private::updateItem);
 
-    QDialogButtonBox *buttonBox =
-        new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    QDialogButtonBox *buttonBox
+        = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -138,8 +139,8 @@ QString PublishDialog::addresses() const
 void PublishDialog::accept()
 {
     QString badAddress;
-    const KEmailAddress::EmailParseResult addressOk =
-        KEmailAddress::isValidAddressList(addresses(), badAddress);
+    const KEmailAddress::EmailParseResult addressOk
+        = KEmailAddress::isValidAddressList(addresses(), badAddress);
     if (addressOk != KEmailAddress::AddressOk) {
         KMessageBox::sorry(this,
                            i18n("Unable to publish the calendar incidence due to an "

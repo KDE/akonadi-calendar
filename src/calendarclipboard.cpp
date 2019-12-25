@@ -29,9 +29,7 @@
 
 using namespace Akonadi;
 
-CalendarClipboard::Private::Private(const Akonadi::CalendarBase::Ptr &calendar,
-                                    Akonadi::IncidenceChanger *changer,
-                                    CalendarClipboard *qq)
+CalendarClipboard::Private::Private(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq)
     : QObject(qq)
     , m_calendar(calendar)
     , m_changer(changer)
@@ -61,8 +59,7 @@ CalendarClipboard::Private::~Private()
     delete m_dndfactory;
 }
 
-void CalendarClipboard::Private::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence,
-        QStringList &uids)
+void CalendarClipboard::Private::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence, QStringList &uids)
 {
     // protecion against looping hierarchies
     if (incidence && !uids.contains(incidence->uid())) {
@@ -85,12 +82,12 @@ void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::List &incid
         Akonadi::Item::List items = m_calendar->itemList(incidences);
         const int result = m_changer->deleteIncidences(items);
         if (result == -1) {
-            emit q->cutFinished(/**success=*/false, i18n("Error performing deletion."));
+            emit q->cutFinished(/**success=*/ false, i18n("Error performing deletion."));
         } else {
             m_pendingChangeIds << result;
         }
     } else {
-        emit q->cutFinished(/**success=*/false, i18n("Error performing copy."));
+        emit q->cutFinished(/**success=*/ false, i18n("Error performing copy."));
     }
 }
 
@@ -121,7 +118,7 @@ void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Inci
             KCalendarCore::Incidence::Ptr newIncidence(child->clone());
             newIncidence->setRelatedTo(QString());
             childItem.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
-            const int changeId = m_changer->modifyIncidence(childItem, /*originalPayload*/child);
+            const int changeId = m_changer->modifyIncidence(childItem, /*originalPayload*/ child);
             if (changeId == -1) {
                 m_abortCurrentOperation = true;
                 break;
@@ -130,14 +127,12 @@ void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Inci
             }
         }
         if (m_pendingChangeIds.isEmpty() && m_abortCurrentOperation) {
-            emit q->cutFinished(/**success=*/false, i18n("Error while removing relations."));
+            emit q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
         } // if m_pendingChangeIds isn't empty, we wait for all jobs to finish first.
     }
 }
 
-void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi::Item &item,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     if (!m_pendingChangeIds.contains(changeId)) {
         return; // Not ours, someone else deleted something, not our business.
@@ -149,7 +144,7 @@ void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi:
     Q_UNUSED(item);
     Q_UNUSED(errorMessage);
     if (m_abortCurrentOperation && isLastChange) {
-        emit q->cutFinished(/**success=*/false, i18n("Error while removing relations."));
+        emit q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
     } else if (!m_abortCurrentOperation) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
             if (isLastChange) {
@@ -163,9 +158,7 @@ void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi:
     }
 }
 
-void CalendarClipboard::Private::slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &ids,
-        Akonadi::IncidenceChanger::ResultCode result,
-        const QString &errorMessage)
+void CalendarClipboard::Private::slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &ids, Akonadi::IncidenceChanger::ResultCode result, const QString &errorMessage)
 {
     if (!m_pendingChangeIds.contains(changeId)) {
         return; // Not ours, someone else deleted something, not our business.
@@ -175,43 +168,39 @@ void CalendarClipboard::Private::slotDeleteFinished(int changeId, const QVector<
 
     Q_UNUSED(ids);
     if (result == IncidenceChanger::ResultCodeSuccess) {
-        emit q->cutFinished(/**success=*/true, QString());
+        emit q->cutFinished(/**success=*/ true, QString());
     } else {
-        emit q->cutFinished(/**success=*/false, i18n("Error while deleting incidences: %1",
-                                         errorMessage));
+        emit q->cutFinished(/**success=*/ false, i18n("Error while deleting incidences: %1",
+                                                      errorMessage));
     }
 }
 
-CalendarClipboard::CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar,
-                                     Akonadi::IncidenceChanger *changer,
-                                     QObject *parent)
+CalendarClipboard::CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, QObject *parent)
     : QObject(parent)
     , d(new Private(calendar, changer, this))
 {
-
 }
 
 CalendarClipboard::~CalendarClipboard()
 {
 }
 
-void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incidence,
-                                     CalendarClipboard::Mode mode)
+void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode)
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
     if (mode == AskMode && hasChildren) {
         const int km = KMessageBox::questionYesNoCancel(nullptr,
-                       i18n("The item \"%1\" has sub-to-dos. "
-                            "Do you want to cut just this item and "
-                            "make all its sub-to-dos independent, or "
-                            "cut the to-do with all its sub-to-dos?",
-                            incidence->summary()),
-                       i18n("KOrganizer Confirmation"),
-                       KGuiItem(i18n("Cut Only This")),
-                       KGuiItem(i18n("Cut All")));
+                                                        i18n("The item \"%1\" has sub-to-dos. "
+                                                             "Do you want to cut just this item and "
+                                                             "make all its sub-to-dos independent, or "
+                                                             "cut the to-do with all its sub-to-dos?",
+                                                             incidence->summary()),
+                                                        i18n("KOrganizer Confirmation"),
+                                                        KGuiItem(i18n("Cut Only This")),
+                                                        KGuiItem(i18n("Cut All")));
 
         if (km == KMessageBox::Cancel) {
-            emit cutFinished(/*success=*/true, QString());
+            emit cutFinished(/*success=*/ true, QString());
             return;
         }
         mode = km == KMessageBox::Yes ? SingleMode : RecursiveMode;
@@ -236,19 +225,18 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
     }
 }
 
-bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incidence,
-                                      CalendarClipboard::Mode mode)
+bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode)
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
     if (mode == AskMode && hasChildren) {
         const int km = KMessageBox::questionYesNoCancel(nullptr,
-                       i18n("The item \"%1\" has sub-to-dos. "
-                            "Do you want to copy just this item or "
-                            "copy the to-do with all its sub-to-dos?",
-                            incidence->summary()),
-                       i18n("KOrganizer Confirmation"),
-                       KGuiItem(i18n("Copy Only This")),
-                       KGuiItem(i18n("Copy All")));
+                                                        i18n("The item \"%1\" has sub-to-dos. "
+                                                             "Do you want to copy just this item or "
+                                                             "copy the to-do with all its sub-to-dos?",
+                                                             incidence->summary()),
+                                                        i18n("KOrganizer Confirmation"),
+                                                        KGuiItem(i18n("Copy Only This")),
+                                                        KGuiItem(i18n("Copy All")));
         if (km == KMessageBox::Cancel) {
             return true;
         }

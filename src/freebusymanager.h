@@ -28,8 +28,7 @@
 
 #include <kcalendarcore/freebusycache.h>
 //TODO: document
-namespace Akonadi
-{
+namespace Akonadi {
 class FreeBusyManagerPrivate;
 class FreeBusyManagerStatic;
 
@@ -92,8 +91,7 @@ public:
               retrieval of freebusy information is disabled in the configuration.
       @return true if a download is initiated, and false otherwise
     */
-    bool retrieveFreeBusy(const QString &email, bool forceDownload,
-                          QWidget *parentWidget = nullptr);
+    bool retrieveFreeBusy(const QString &email, bool forceDownload, QWidget *parentWidget = nullptr);
 
     /**
       Clears the retrieval queue, i.e. all retrieval request that are not started
@@ -125,15 +123,13 @@ public:
       @param freebusy is a pointer to a valid FreeBusy instance.
       @param person is a valid Person instance.
     */
-    bool saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
-                      const KCalendarCore::Person &person) override;
+    bool saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy, const KCalendarCore::Person &person) override;
 
 Q_SIGNALS:
     /**
       This signal is emitted to return results of free/busy requests.
     */
-    void freeBusyRetrieved(const KCalendarCore::FreeBusy::Ptr &fb,
-                           const QString &email);
+    void freeBusyRetrieved(const KCalendarCore::FreeBusy::Ptr &fb, const QString &email);
 
 protected:
     /** React on timer events, used for delayed freebusy list uploading */
@@ -159,7 +155,6 @@ private:
     Q_PRIVATE_SLOT(d_ptr, void processRetrieveQueue())
     Q_PRIVATE_SLOT(d_ptr, void uploadFreeBusy())
 };
-
 }
 
 #endif

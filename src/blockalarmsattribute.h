@@ -26,9 +26,7 @@
 
 #include <attribute.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short An Attribute that marks that alarms from a calendar collection are blocked.
  *
@@ -95,7 +93,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

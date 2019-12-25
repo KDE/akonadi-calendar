@@ -25,9 +25,7 @@
 
 class KJob;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class FetchJobCalendarPrivate : public CalendarBasePrivate
 {
     Q_OBJECT
@@ -48,7 +46,6 @@ private:
     QString m_errorMessage;
     bool m_success;
 };
-
 }
 
 #endif

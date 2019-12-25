@@ -61,6 +61,7 @@ class FetchJobCalendarTest : public QObject
 
         QVERIFY(mCollection.isValid());
     }
+
 private Q_SLOTS:
     void initTestCase()
     {

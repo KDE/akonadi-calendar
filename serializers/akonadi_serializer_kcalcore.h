@@ -29,11 +29,7 @@
 #include <KCalendarCore/ICalFormat>
 
 namespace Akonadi {
-
-class SerializerPluginKCalCore : public QObject
-                               , public ItemSerializerPlugin
-                               , public DifferencesAlgorithmInterface
-                               , public GidExtractorInterface
+class SerializerPluginKCalCore : public QObject, public ItemSerializerPlugin, public DifferencesAlgorithmInterface, public GidExtractorInterface
 {
     Q_OBJECT
     Q_INTERFACES(Akonadi::ItemSerializerPlugin)
@@ -52,7 +48,6 @@ public:
 private:
     KCalendarCore::ICalFormat mFormat;
 };
-
 }
 
 #endif

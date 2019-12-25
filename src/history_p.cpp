@@ -22,19 +22,16 @@
 #include <kcalutils/stringify.h>
 #include <KLocalizedString>
 
-Entry::Entry(const Akonadi::Item &item,
-             const QString &description,
-             History *qq)
+Entry::Entry(const Akonadi::Item &item, const QString &description, History *qq)
     : QObject()
 {
     mItems << item;
     init(description, qq);
 }
 
-Entry::Entry(const Akonadi::Item::List &items,
-             const QString &description,
-             History *qq)
-    : QObject(), mItems(items)
+Entry::Entry(const Akonadi::Item::List &items, const QString &description, History *qq)
+    : QObject()
+    , mItems(items)
 {
     init(description, qq);
 }
@@ -88,8 +85,7 @@ void Entry::doIt(OperationType type)
     }
 }
 
-CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &description,
-                             History *q)
+CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &description, History *q)
     : Entry(item, description, q)
 {
     mLatestRevisionByItemId.insert(item.id(), item.revision());
@@ -120,8 +116,8 @@ bool CreationEntry::redo()
     Akonadi::Item item = mItems.first();
     Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
     const int changeId = mChanger->createIncidence(item.payload<KCalendarCore::Incidence::Ptr>(),
-                         Collection(item.storageCollectionId()),
-                         currentParent());
+                                                   Collection(item.storageCollectionId()),
+                                                   currentParent());
     mChangeIds << changeId;
 
     if (changeId == -1) {
@@ -131,9 +127,7 @@ bool CreationEntry::redo()
     return changeId != -1;
 }
 
-void CreationEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
-                                     Akonadi::IncidenceChanger::ResultCode resultCode,
-                                     const QString &errorString)
+void CreationEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -144,9 +138,7 @@ void CreationEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::
     }
 }
 
-void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
-                                     Akonadi::IncidenceChanger::ResultCode resultCode,
-                                     const QString &errorString)
+void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -163,8 +155,7 @@ void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
     }
 }
 
-DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &description,
-                             History *q)
+DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &description, History *q)
     : Entry(items, description, q)
 {
     const Incidence::Ptr incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
@@ -180,7 +171,7 @@ bool DeletionEntry::undo()
 {
     mResultCode = IncidenceChanger::ResultCodeSuccess;
     mErrorString.clear();
-    const bool useAtomicOperation = mItems.count() > 1 ;
+    const bool useAtomicOperation = mItems.count() > 1;
     bool success = true;
     for (const Akonadi::Item &item : qAsConst(mItems)) {
         if (useAtomicOperation) {
@@ -189,8 +180,8 @@ bool DeletionEntry::undo()
 
         Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
         const int changeId = mChanger->createIncidence(item.payload<KCalendarCore::Incidence::Ptr>(),
-                             Collection(item.storageCollectionId()),
-                             currentParent());
+                                                       Collection(item.storageCollectionId()),
+                                                       currentParent());
         success = (changeId != -1) && success;
         mChangeIds << changeId;
         if (useAtomicOperation) {
@@ -215,9 +206,7 @@ bool DeletionEntry::redo()
     return changeId != -1;
 }
 
-void DeletionEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
-                                     Akonadi::IncidenceChanger::ResultCode resultCode,
-                                     const QString &errorString)
+void DeletionEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -229,9 +218,7 @@ void DeletionEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::
     }
 }
 
-void DeletionEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
-                                     Akonadi::IncidenceChanger::ResultCode resultCode,
-                                     const QString &errorString)
+void DeletionEntry::onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -249,17 +236,14 @@ void DeletionEntry::onCreateFinished(int changeId, const Akonadi::Item &item,
     }
 }
 
-ModificationEntry::ModificationEntry(const Akonadi::Item &item,
-                                     const Incidence::Ptr &originalPayload,
-                                     const QString &description,
-                                     History *q)
+ModificationEntry::ModificationEntry(const Akonadi::Item &item, const Incidence::Ptr &originalPayload, const QString &description, History *q)
     : Entry(item, description, q)
     , mOriginalPayload(originalPayload->clone())
 {
     const Incidence::Ptr incidence = mItems.first().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
-        mDescription =  i18nc("%1 is event, todo or journal", "%1 modification",
-                              KCalUtils::Stringify::incidenceType(incidence->type()));
+        mDescription = i18nc("%1 is event, todo or journal", "%1 modification",
+                             KCalUtils::Stringify::incidenceType(incidence->type()));
     }
 
     connect(mChanger, &IncidenceChanger::modifyFinished, this, &ModificationEntry::onModifyFinished);
@@ -282,7 +266,7 @@ bool ModificationEntry::undo()
 bool ModificationEntry::redo()
 {
     const int changeId = mChanger->modifyIncidence(mItems.first(), mOriginalPayload,
-                         currentParent());
+                                                   currentParent());
     mChangeIds << changeId;
 
     if (changeId == -1) {
@@ -292,9 +276,7 @@ bool ModificationEntry::redo()
     return changeId != -1;
 }
 
-void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item,
-        Akonadi::IncidenceChanger::ResultCode resultCode,
-        const QString &errorString)
+void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     if (mChangeIds.contains(changeId)) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -304,13 +286,11 @@ void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item
     }
 }
 
-MultiEntry::MultiEntry(int id, const QString &description,
-                       History *q)
+MultiEntry::MultiEntry(int id, const QString &description, History *q)
     : Entry(Item(), description, q)
     , mAtomicOperationId(id)
     , mFinishedEntries(0)
     , mOperationInProgress(TypeNone)
-
 {
 }
 
@@ -361,13 +341,12 @@ bool MultiEntry::redo()
     return true;
 }
 
-void MultiEntry::onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCode,
-                                 const QString &errorString)
+void MultiEntry::onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     ++mFinishedEntries;
-    if (mFinishedEntries == mEntries.count() ||
-            (mFinishedEntries < mEntries.count() &&
-             resultCode != IncidenceChanger::ResultCodeSuccess)) {
+    if (mFinishedEntries == mEntries.count()
+        || (mFinishedEntries < mEntries.count()
+            && resultCode != IncidenceChanger::ResultCodeSuccess)) {
         mFinishedEntries = mEntries.count(); // we're done
         mOperationInProgress = TypeNone;
         emit finished(resultCode, errorString);

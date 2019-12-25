@@ -35,14 +35,11 @@
 class KJob;
 class QTemporaryFile;
 class QByteArray;
-namespace KIO
-{
+namespace KIO {
 class Job;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Q_DECL_HIDDEN ICalImporter::Private : public QObject
 {
     Q_OBJECT
@@ -63,11 +60,7 @@ public:
 public Q_SLOTS:
     void resourceCreated(KJob *job);
     void remoteDownloadFinished(KIO::Job *job, const QByteArray &data);
-    void onIncidenceCreated(int changeId,
-                            const Akonadi::Item &item,
-                            Akonadi::IncidenceChanger::ResultCode resultCode,
-                            const QString &errorString);
+    void onIncidenceCreated(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 };
-
 }
 #endif // ICALIMPORTER_P_H

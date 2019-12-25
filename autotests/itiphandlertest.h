@@ -61,26 +61,17 @@ private:
     void cleanup();
     void createITIPHandler();
     QString icalData(const QString &filename);
-    void processItip(const QString &icaldata, const QString &receiver,
-                     const QString &action, int expectedNumIncidences,
-                     Akonadi::Item::List &items);
+    void processItip(const QString &icaldata, const QString &receiver, const QString &action, int expectedNumIncidences, Akonadi::Item::List &items);
     KCalendarCore::Attendee ourAttendee(const KCalendarCore::Incidence::Ptr &incidence) const;
 
 public Q_SLOTS:
-    void oniTipMessageProcessed(Akonadi::ITIPHandler::Result result,
-                                const QString &errorMessage);
+    void oniTipMessageProcessed(Akonadi::ITIPHandler::Result result, const QString &errorMessage);
 
-    void onCreateFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorMessage);
+    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
-    void onModifyFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
 private:
     int m_pendingItipMessageSignal;

@@ -34,9 +34,7 @@
  *
  * @since 4.12
  */
-namespace Akonadi
-{
-
+namespace Akonadi {
 class IncidenceChanger;
 
 class AKONADI_CALENDAR_EXPORT ICalImporter : public QObject
@@ -101,7 +99,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif // ICALIMPORTER_H

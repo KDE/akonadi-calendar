@@ -26,9 +26,7 @@
 #include <QVector>
 #include <QMultiHash>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class CalendarBasePrivate : public QObject
 {
     Q_OBJECT
@@ -90,7 +88,6 @@ public:
 private:
     CalendarBase *const q;
 };
-
 }
 
 #endif

@@ -33,14 +33,11 @@
 #include <KJob>
 #include <QUrl>
 
-namespace KIO
-{
+namespace KIO {
 class Job;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class FreeBusyManager;
 
 class FreeBusyManagerPrivate : public QObject
@@ -92,7 +89,7 @@ public:
     QPointer<QWidget > mParentWidgetForMailling;
 
     // the parentWidget to use while doing our "recursive" retrieval
-    QPointer<QWidget>  mParentWidgetForRetrieval;
+    QPointer<QWidget> mParentWidgetForRetrieval;
 
 public: /// Functions
     FreeBusyManagerPrivate(FreeBusyManager *q);
@@ -108,16 +105,14 @@ public: /// Functions
     void uploadFreeBusy();
     QStringList getFreeBusyProviders() const;
     void queryFreeBusyProviders(const QStringList &providers, const QString &email);
-    void queryFreeBusyProviders(const QStringList &providers, const QString &email,
-                                const QDateTime &start, const QDateTime &end);
+    void queryFreeBusyProviders(const QStringList &providers, const QString &email, const QDateTime &start, const QDateTime &end);
 
 public Q_SLOTS:
     void processRetrieveQueue();
     void contactSearchJobFinished(KJob *_job);
     void finishProcessRetrieveQueue(const QString &email, const QUrl &url);
     void onHandlesFreeBusy(const QString &email, bool handles);
-    void onFreeBusyRetrieved(const QString &email, const QString &freeBusy,
-                             bool success, const QString &errorText);
+    void onFreeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText);
     void processMailSchedulerResult(Akonadi::Scheduler::Result result, const QString &errorMsg);
     void fbCheckerJobFinished(KJob *job);
 
@@ -144,7 +139,6 @@ private:
     QByteArray mData;
     QUrl mValidUrl;
 };
-
 }
 
 #endif // FREEBUSYMANAGER_P_H

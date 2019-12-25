@@ -50,8 +50,8 @@ public:
 };
 
 CalendarModel::CalendarModel(Akonadi::Monitor *monitor)
-    : EntityTreeModel(monitor),
-      d(new Private())
+    : EntityTreeModel(monitor)
+    , d(new Private())
 {
     monitor->itemFetchScope().fetchAllAttributes(true);
 }
@@ -188,8 +188,7 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
     }
 }
 
-QVariant CalendarModel::entityData(const Akonadi::Collection &collection,
-                                   int column, int role) const
+QVariant CalendarModel::entityData(const Akonadi::Collection &collection, int column, int role) const
 {
     return EntityTreeModel::entityData(collection, column, role);
 }
@@ -203,8 +202,7 @@ int CalendarModel::entityColumnCount(EntityTreeModel::HeaderGroup headerSet) con
     }
 }
 
-QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientation,
-        int role, EntityTreeModel::HeaderGroup headerSet) const
+QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientation, int role, EntityTreeModel::HeaderGroup headerSet) const
 {
     if (role != Qt::DisplayRole || orientation != Qt::Horizontal) {
         return QVariant();

@@ -37,9 +37,7 @@ class KActionCollection;
 class QItemSelectionModel;
 class QWidget;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Item;
 /**
  * @short Manages calendar specific actions for collection and item views.
@@ -194,7 +192,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

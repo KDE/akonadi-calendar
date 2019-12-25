@@ -28,14 +28,12 @@
 #include <QObject>
 #include <QString>
 
-namespace KCalendarCore
-{
+namespace KCalendarCore {
 class ICalFormat;
 class FreeBusyCache;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 /**
   This class provides an encapsulation of iTIP transactions (RFC 2446).
   It is an abstract base class for inheritance by implementations of the
@@ -75,8 +73,7 @@ public:
       * @param incidence the incidence to send
       * @param recipients the people to send it to
     */
-    virtual void publish(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                         const QString &recipients) = 0;
+    virtual void publish(const KCalendarCore::IncidenceBase::Ptr &incidence, const QString &recipients) = 0;
     /**
       Performs iTIP transaction on incidence. The method is specified as the
       method argument and can be any valid iTIP method.
@@ -84,8 +81,7 @@ public:
       @param incidence the incidence for the transaction. Must be valid.
       @param method the iTIP transaction method to use.
     */
-    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                    KCalendarCore::iTIPMethod method) = 0;
+    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method) = 0;
 
     /**
       Performs iTIP transaction on incidence to specified recipient(s).
@@ -95,9 +91,7 @@ public:
       @param method the iTIP transaction method to use.
       @param recipients the receipients of the transaction.
     */
-    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                    KCalendarCore::iTIPMethod method,
-                                    const QString &recipients) = 0;
+    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &recipients) = 0;
 
     /**
       Accepts the transaction. The incidence argument specifies the iCal
@@ -114,11 +108,7 @@ public:
 
       Listen to the acceptTransactionFinished() signal to know the success.
     */
-    void acceptTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                           const Akonadi::CalendarBase::Ptr &calendar,
-                           KCalendarCore::iTIPMethod method,
-                           KCalendarCore::ScheduleMessage::Status status,
-                           const QString &email = QString());
+    void acceptTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::iTIPMethod method, KCalendarCore::ScheduleMessage::Status status, const QString &email = QString());
 
     /**
       Returns the directory where the free-busy information is stored.
@@ -136,40 +126,23 @@ public:
     KCalendarCore::FreeBusyCache *freeBusyCache() const;
 
 protected:
-    void acceptPublish(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       const Akonadi::CalendarBase::Ptr &calendar,
-                       KCalendarCore::ScheduleMessage::Status status,
-                       KCalendarCore::iTIPMethod method);
+    void acceptPublish(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, KCalendarCore::iTIPMethod method);
 
-    void acceptRequest(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       const Akonadi::CalendarBase::Ptr &calendar,
-                       KCalendarCore::ScheduleMessage::Status status,
-                       const QString &email);
+    void acceptRequest(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, const QString &email);
 
-    void acceptAdd(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                   KCalendarCore::ScheduleMessage::Status status);
+    void acceptAdd(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptCancel(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                      const Akonadi::CalendarBase::Ptr &calendar,
-                      KCalendarCore::ScheduleMessage::Status status,
-                      const QString &attendee);
+    void acceptCancel(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, const QString &attendee);
 
-    void acceptDeclineCounter(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                              KCalendarCore::ScheduleMessage::Status status);
+    void acceptDeclineCounter(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptReply(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                     const Akonadi::CalendarBase::Ptr &calendar,
-                     KCalendarCore::ScheduleMessage::Status status,
-                     KCalendarCore::iTIPMethod method);
+    void acceptReply(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, KCalendarCore::iTIPMethod method);
 
-    void acceptRefresh(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       KCalendarCore::ScheduleMessage::Status status);
+    void acceptRefresh(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptCounter(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       KCalendarCore::ScheduleMessage::Status status);
+    void acceptCounter(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptFreeBusy(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                        KCalendarCore::iTIPMethod method);
+    void acceptFreeBusy(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method);
     KCalendarCore::ICalFormat *mFormat = nullptr;
 
 Q_SIGNALS:
@@ -185,7 +158,6 @@ private:
     struct Private;
     Private *const d;
 };
-
 }
 
 #endif

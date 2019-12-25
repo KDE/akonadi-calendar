@@ -42,20 +42,16 @@ struct UnitTestResult {
     }
 };
 
-namespace KIdentityManagement
-{
+namespace KIdentityManagement {
 class Identity;
 }
 
 class KJob;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class ITIPHandlerComponentFactory;
 
 class AKONADI_CALENDAR_TESTS_EXPORT MailClient : public QObject
-
 {
     Q_OBJECT
 public:
@@ -71,21 +67,11 @@ public:
     explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailClient();
 
-    void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       const KIdentityManagement::Identity &identity,
-                       bool bccMe, const QString &attachment = QString(),
-                       const QString &mailTransport = QString());
+    void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, bool bccMe, const QString &attachment = QString(), const QString &mailTransport = QString());
 
-    void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       const KIdentityManagement::Identity &identity,
-                       const QString &from, bool bccMe,
-                       const QString &attachment = QString(),
-                       const QString &sub = QString(),
-                       const QString &mailTransport = QString());
+    void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, bool bccMe, const QString &attachment = QString(), const QString &sub = QString(), const QString &mailTransport = QString());
 
-    void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity,
-                const QString &from, bool bccMe, const QString &recipients,
-                const QString &attachment = QString(), const QString &mailTransport = QString());
+    void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, bool bccMe, const QString &recipients, const QString &attachment = QString(), const QString &mailTransport = QString());
 
     /**
       Sends mail with specified from, to and subject field and body as text.
@@ -105,10 +91,8 @@ public:
       @param mailTransport defines the mail transport method. See here the
       kdepimlibs/mailtransport library.
     */
-    void send(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &to,
-              const QString &cc, const QString &subject, const QString &body,
-              bool hidden = false, bool bccMe = false, const QString &attachment = QString(),
-              const QString &mailTransport = QString());
+    void send(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &to, const QString &cc, const QString &subject, const QString &body, bool hidden = false, bool bccMe = false,
+              const QString &attachment = QString(), const QString &mailTransport = QString());
 
 private:
     void handleQueueJobFinished(KJob *job);
@@ -120,7 +104,6 @@ public:
     // For unit-test usage, since we can't depend on kdepim-runtime on jenkins
     ITIPHandlerComponentFactory *mFactory = nullptr;
 };
-
 }
 
 Q_DECLARE_METATYPE(Akonadi::MailClient::Result)

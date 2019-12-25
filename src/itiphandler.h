@@ -39,19 +39,15 @@
 #include <QString>
 #include <QWidget>
 
-namespace MailTransport
-{
+namespace MailTransport {
 class MessageQueueJob;
 }
 
-namespace KIdentityManagement
-{
+namespace KIdentityManagement {
 class Identity;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short Ui delegate for editing counter proposals.
  * @since 4.11
@@ -104,11 +100,8 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogIncidenceCreated(Recipient recipient,
-                                            const QString &question,
-                                            Action action = ActionAsk,
-                                            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+    virtual void openDialogIncidenceCreated(Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer",
+                                                                                                                                                                                                                                                                   "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is modified
@@ -121,12 +114,8 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogIncidenceModified(bool attendeeStatusChanged,
-            Recipient recipient,
-            const QString &question,
-            Action action = ActionAsk,
-            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+    virtual void openDialogIncidenceModified(bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc(
+                                                                                                                                                                                                                                                                                              "@action:button dialog negative answer", "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is deleted
@@ -138,11 +127,8 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogIncidenceDeleted(Recipient recipient,
-                                            const QString &question,
-                                            Action action = ActionAsk,
-                                            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-                                            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+    virtual void openDialogIncidenceDeleted(Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer",
+                                                                                                                                                                                                                                                                   "Do Not Send")));
     /*
      * Opens a Dialog, when mail was sended
      * The function must emit a dialogClosed signal with the user's answer
@@ -152,10 +138,7 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogSchedulerFinished(const QString &question,
-            Action action = ActionAsk,
-            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+    virtual void openDialogSchedulerFinished(const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
 Q_SIGNALS:
     /*
@@ -177,10 +160,7 @@ protected:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    int askUserIfNeeded(const QString &question,
-                        Action action,
-                        const KGuiItem &buttonYes,
-                        const KGuiItem &buttonNo) const;
+    int askUserIfNeeded(const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo) const;
 
     // parent of the dialog
     QWidget *mParent = nullptr;
@@ -278,9 +258,7 @@ public:
      *                  Should contain a list of attendees.
      * @param parentWidget
      */
-    void sendiTIPMessage(KCalendarCore::iTIPMethod method,
-                         const KCalendarCore::Incidence::Ptr &incidence,
-                         QWidget *parentWidget = nullptr);
+    void sendiTIPMessage(KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence, QWidget *parentWidget = nullptr);
 
     /**
      * Publishes incidence @p incidence.
@@ -330,8 +308,7 @@ Q_SIGNALS:
      * @param errorMessage translated error message suitable for user dialogs.
      *                     Empty if the operation was successul
      */
-    void iTipMessageProcessed(Akonadi::ITIPHandler::Result result,
-                              const QString &errorMessage);
+    void iTipMessageProcessed(Akonadi::ITIPHandler::Result result, const QString &errorMessage);
 
     /**
      * Signal emitted after an iTip message was sent through sendiTIPMessage()
@@ -353,7 +330,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

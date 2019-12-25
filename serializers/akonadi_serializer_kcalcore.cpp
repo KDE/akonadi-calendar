@@ -88,8 +88,8 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
 
     if (!incidence) {
         qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << "Failed to parse incidence! Item id = " << item.id()
-                   << "Storage collection id " << item.storageCollectionId()
-                   << "parentCollectionId = " << item.parentCollection().id();
+                                                   << "Storage collection id " << item.storageCollectionId()
+                                                   << "parentCollectionId = " << item.parentCollection().id();
         data.seek(0);
         qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << QString::fromUtf8(data.readAll());
         return false;

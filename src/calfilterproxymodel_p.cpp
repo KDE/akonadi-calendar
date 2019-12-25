@@ -35,11 +35,13 @@ public:
     explicit Private()
     {
     }
+
     KCalendarCore::CalFilter *filter = nullptr;
 };
 
 CalFilterProxyModel::CalFilterProxyModel(QObject *parent)
-    : QSortFilterProxyModel(parent), d(new Private)
+    : QSortFilterProxyModel(parent)
+    , d(new Private)
 {
     setFilterKeyColumn(0);
 }

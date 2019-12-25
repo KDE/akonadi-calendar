@@ -29,8 +29,7 @@
 class QAbstractItemModel;
 class KCheckableProxyModel;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 class ETMCalendarPrivate;
 class EntityTreeModel;
@@ -155,9 +154,7 @@ public:
       * @param to end data of interval
       * @param excludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
       */
-    KCalendarCore::Alarm::List alarms(const QDateTime &from,
-                                 const QDateTime &to,
-                                 bool excludeBlockedAlarms = false) const override;
+    KCalendarCore::Alarm::List alarms(const QDateTime &from, const QDateTime &to, bool excludeBlockedAlarms = false) const override;
 
     /**
      * Enable or disable collection filtering.

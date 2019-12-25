@@ -44,7 +44,7 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
         QVERIFY(job->exec());
         QVERIFY(!job->items().isEmpty());
         ok = true;
-    }();
+    } ();
     if (!ok) {
         return false;
     }
@@ -80,7 +80,7 @@ static Akonadi::Item createItem(const Akonadi::Collection &collection)
     [&]() {
         QVERIFY(createJob->exec());
         QVERIFY(createJob->item().isValid());
-    }();
+    } ();
 
     return createJob->item();
 }
@@ -324,7 +324,8 @@ void HistoryTest::testAtomicOperations()
             mKnownChangeIds << changeId;
             ++mPendingSignals[DeletionSignal];
             break;
-        case IncidenceChanger::ChangeTypeModify: {
+        case IncidenceChanger::ChangeTypeModify:
+        {
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
             Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
@@ -450,7 +451,8 @@ void HistoryTest::testMix()
             ++mPendingSignals[DeletionSignal];
             waitForSignals();
             break;
-        case IncidenceChanger::ChangeTypeModify: {
+        case IncidenceChanger::ChangeTypeModify:
+        {
             item = item.isValid() ? item : mItemByChangeId.value(lastCreateChangeId);
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
@@ -462,12 +464,11 @@ void HistoryTest::testMix()
             mKnownChangeIds << changeId;
             ++mPendingSignals[ModificationSignal];
             waitForSignals();
+            break;
         }
-        break;
         default:
             QVERIFY(false);
         }
-
     }
 
     QCOMPARE(mHistory->d->undoCount(), changeTypes.count());
@@ -522,10 +523,7 @@ void HistoryTest::waitForSignals()
     QVERIFY(!QTestEventLoop::instance().timeout());
 }
 
-void HistoryTest::deleteFinished(int changeId,
-                                 const QVector<Akonadi::Item::Id> &deletedIds,
-                                 Akonadi::IncidenceChanger::ResultCode resultCode,
-                                 const QString &errorMessage)
+void HistoryTest::deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     QVERIFY(changeId != -1);
 
@@ -547,10 +545,7 @@ void HistoryTest::deleteFinished(int changeId,
     maybeQuitEventLoop();
 }
 
-void HistoryTest::createFinished(int changeId,
-                                 const Akonadi::Item &item,
-                                 Akonadi::IncidenceChanger::ResultCode resultCode,
-                                 const QString &errorString)
+void HistoryTest::createFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     QVERIFY(changeId != -1);
 
@@ -576,10 +571,7 @@ void HistoryTest::createFinished(int changeId,
     maybeQuitEventLoop();
 }
 
-void HistoryTest::modifyFinished(int changeId,
-                                 const Akonadi::Item &item,
-                                 Akonadi::IncidenceChanger::ResultCode resultCode,
-                                 const QString &errorString)
+void HistoryTest::modifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     if (!mKnownChangeIds.contains(changeId)) {
         return;

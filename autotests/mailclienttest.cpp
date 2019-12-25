@@ -49,11 +49,11 @@ public:
     void start() override
     {
         UnitTestResult unitTestResult;
-        unitTestResult.message     = message();
-        unitTestResult.from        = addressAttribute().from();
-        unitTestResult.to          = addressAttribute().to();
-        unitTestResult.cc          = addressAttribute().cc();
-        unitTestResult.bcc         = addressAttribute().bcc();
+        unitTestResult.message = message();
+        unitTestResult.from = addressAttribute().from();
+        unitTestResult.to = addressAttribute().to();
+        unitTestResult.cc = addressAttribute().cc();
+        unitTestResult.bcc = addressAttribute().bcc();
         unitTestResult.transportId = transportAttribute().transportId();
         FakeMessageQueueJob::sUnitTestResults << unitTestResult;
 
@@ -185,7 +185,7 @@ private Q_SLOTS:
         // Should default to the default transport
         toBccList.clear();
         toBccList << QStringLiteral("unittests@dev.nul");
-        QTest::newRow("Test bcc") << incidence << identity << /*bccMe*/true << attachment
+        QTest::newRow("Test bcc") << incidence << identity << /*bccMe*/ true << attachment
                                   << transport  << expectedResult
                                   << expectedTransportId << expectedFrom
                                   << toList << toCcList << toBccList;
@@ -209,7 +209,7 @@ private Q_SLOTS:
         toCcList.clear();
         toCcList << QStringLiteral("optional@foo.org")
                  << QStringLiteral("non@foo.org");
-        QTest::newRow("Test cc") << incidence << identity << /*bccMe*/true << attachment
+        QTest::newRow("Test cc") << incidence << identity << /*bccMe*/ true << attachment
                                  << transport  << expectedResult
                                  << expectedTransportId << expectedFrom
                                  << toList << toCcList << toBccList;
@@ -421,7 +421,6 @@ private Q_SLOTS:
             QVERIFY(!QTestEventLoop::instance().timeout());
         }
     }
-
 };
 
 QTEST_AKONADIMAIN(MailClientTest)

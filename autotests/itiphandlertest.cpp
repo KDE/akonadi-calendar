@@ -60,11 +60,11 @@ public:
     void start() override
     {
         UnitTestResult unitTestResult;
-        unitTestResult.message     = message();
-        unitTestResult.from        = addressAttribute().from();
-        unitTestResult.to          = addressAttribute().to();
-        unitTestResult.cc          = addressAttribute().cc();
-        unitTestResult.bcc         = addressAttribute().bcc();
+        unitTestResult.message = message();
+        unitTestResult.from = addressAttribute().from();
+        unitTestResult.to = addressAttribute().to();
+        unitTestResult.cc = addressAttribute().cc();
+        unitTestResult.bcc = addressAttribute().bcc();
         unitTestResult.transportId = transportAttribute().transportId();
         FakeMessageQueueJob::sUnitTestResults << unitTestResult;
 
@@ -405,18 +405,18 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     QTest::addColumn<bool>("userCancels");
 
     const bool userDoesntCancel = false;
-    const bool userCancels      = true;
+    const bool userCancels = true;
 
     Akonadi::Item item;
     KCalendarCore::Incidence::Ptr incidence;
     IncidenceChanger::ChangeType changeType;
-    const IncidenceChanger::InvitationPolicy invitationPolicyAsk     = IncidenceChanger::InvitationPolicyAsk;
-    const IncidenceChanger::InvitationPolicy invitationPolicySend     = IncidenceChanger::InvitationPolicySend;
+    const IncidenceChanger::InvitationPolicy invitationPolicyAsk = IncidenceChanger::InvitationPolicyAsk;
+    const IncidenceChanger::InvitationPolicy invitationPolicySend = IncidenceChanger::InvitationPolicySend;
     const IncidenceChanger::InvitationPolicy invitationPolicyDontSend = IncidenceChanger::InvitationPolicyDontSend;
     int expectedEmailCount = 0;
     Q_UNUSED(invitationPolicyAsk);
 
-    const QString ourEmail     = QLatin1String(s_ourEmail);
+    const QString ourEmail = QLatin1String(s_ourEmail);
     Attendee us(QString(), ourEmail);
     const Attendee mia(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul"));
     const Attendee vincent(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul"));
@@ -426,7 +426,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // Creation. We are organizer. We invite another person.
     changeType = IncidenceChanger::ChangeTypeCreate;
-    item = generateIncidence(uid, /**organizer=*/ourEmail);
+    item = generateIncidence(uid, /**organizer=*/ ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -436,7 +436,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // Creation. We are organizer. We invite another person. But we choose not to send invitation e-mail.
     changeType = IncidenceChanger::ChangeTypeCreate;
-    item = generateIncidence(uid, /**organizer=*/ourEmail);
+    item = generateIncidence(uid, /**organizer=*/ ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -445,7 +445,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event that we organized, and has attendees, that will be notified.
     changeType = IncidenceChanger::ChangeTypeDelete;
-    item = generateIncidence(uid, /**organizer=*/ourEmail);
+    item = generateIncidence(uid, /**organizer=*/ ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -454,7 +454,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event that we organized, and has attendees. We won't send e-mail notifications.
     changeType = IncidenceChanger::ChangeTypeDelete;
-    item = generateIncidence(uid, /**organizer=*/ourEmail);
+    item = generateIncidence(uid, /**organizer=*/ ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -463,7 +463,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event that we organized, and has attendees, who will be notified.
     changeType = IncidenceChanger::ChangeTypeModify;
-    item = generateIncidence(uid, /**organizer=*/ourEmail);
+    item = generateIncidence(uid, /**organizer=*/ ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -472,7 +472,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event that we organized, and has attendees, who wont be notified.
     changeType = IncidenceChanger::ChangeTypeModify;
-    item = generateIncidence(uid, /**organizer=*/ourEmail);
+    item = generateIncidence(uid, /**organizer=*/ ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent); // TODO: test that all attendees got the e-mail
     incidence->addAttendee(jules);
@@ -481,7 +481,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
-    item = generateIncidence(uid, /**organizer=*/mia.email());
+    item = generateIncidence(uid, /**organizer=*/ mia.email());
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -492,7 +492,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
-    item = generateIncidence(uid, /**organizer=*/mia.email());
+    item = generateIncidence(uid, /**organizer=*/ mia.email());
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules); // TODO: test that attendees didn't receive the REPLY
@@ -503,7 +503,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "yes".
     changeType = IncidenceChanger::ChangeTypeModify;
-    item = generateIncidence(uid, /**organizer=*/mia.email());
+    item = generateIncidence(uid, /**organizer=*/ mia.email());
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -514,7 +514,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     //----------------------------------------------------------------------------------------------
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "no".
     changeType = IncidenceChanger::ChangeTypeModify;
-    item = generateIncidence(uid, /**organizer=*/mia.email());
+    item = generateIncidence(uid, /**organizer=*/ mia.email());
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     incidence->addAttendee(vincent);
     incidence->addAttendee(jules);
@@ -546,7 +546,8 @@ void ITIPHandlerTest::testOutgoingInvitations()
         waitForIt();
         QCOMPARE(FakeMessageQueueJob::sUnitTestResults.count(), expectedEmailCount);
         break;
-    case IncidenceChanger::ChangeTypeModify: {
+    case IncidenceChanger::ChangeTypeModify:
+    {
         // Create if first, so we have something to modify
         m_changer->setGroupwareCommunication(false); // we disable groupware because creating an incidence which we're not the organizer of is not permitted.
         m_changer->createIncidence(incidence, mCollection);
@@ -581,7 +582,6 @@ void ITIPHandlerTest::testOutgoingInvitations()
     default:
         Q_ASSERT(false);
     }
-
 }
 
 void ITIPHandlerTest::testIdentity_data()
@@ -590,18 +590,17 @@ void ITIPHandlerTest::testIdentity_data()
     QTest::addColumn<bool>("expectedResult");
 
     const QString myEmail = QLatin1String(s_ourEmail);
-    QString myEmail2      = QStringLiteral("Some name <%1>").arg(myEmail);
+    QString myEmail2 = QStringLiteral("Some name <%1>").arg(myEmail);
 
-    const QString myAlias1    = QStringLiteral("alias1@kde.org"); // hardcoded in emailidentities, do not change
+    const QString myAlias1 = QStringLiteral("alias1@kde.org");    // hardcoded in emailidentities, do not change
     const QString myIdentity2 = QLatin1String(s_outEmail2);
 
-    QTest::newRow("Me")           << myEmail     << true;
-    QTest::newRow("Also me")      << myEmail2    << true;
+    QTest::newRow("Me") << myEmail     << true;
+    QTest::newRow("Also me") << myEmail2    << true;
     QTest::newRow("My identity2") << myIdentity2 << true;
-    QTest::newRow("Not me")       << QStringLiteral("laura.palmer@twinpeaks.com") << false;
+    QTest::newRow("Not me") << QStringLiteral("laura.palmer@twinpeaks.com") << false;
 
     QTest::newRow("My alias") << myAlias1 << true;
-
 }
 
 void ITIPHandlerTest::testIdentity()
@@ -641,9 +640,7 @@ QString ITIPHandlerTest::icalData(const QString &data_filename)
     return QString::fromLatin1(readFile(absolutePath));
 }
 
-void ITIPHandlerTest::processItip(const QString &icaldata, const QString &receiver,
-                                  const QString &action, int expectedNumIncidences,
-                                  Akonadi::Item::List &items)
+void ITIPHandlerTest::processItip(const QString &icaldata, const QString &receiver, const QString &action, int expectedNumIncidences, Akonadi::Item::List &items)
 {
     items.clear();
     m_pendingItipMessageSignal = 1;
@@ -690,9 +687,7 @@ void ITIPHandlerTest::oniTipMessageProcessed(ITIPHandler::Result result, const Q
     QCOMPARE(m_expectedResult, result);
 }
 
-void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item,
-                                       IncidenceChanger::ResultCode resultCode,
-                                       const QString &errorString)
+void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(errorString);
@@ -705,9 +700,7 @@ void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item,
     QCOMPARE(resultCode, IncidenceChanger::ResultCodeSuccess);
 }
 
-void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
-                                       IncidenceChanger::ResultCode resultCode,
-                                       const QString &errorString)
+void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(errorString);
@@ -721,9 +714,7 @@ void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Akonadi::Item
     QCOMPARE(resultCode, IncidenceChanger::ResultCodeSuccess);
 }
 
-void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item,
-                                       IncidenceChanger::ResultCode resultCode,
-                                       const QString &errorString)
+void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(errorString);

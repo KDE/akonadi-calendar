@@ -26,9 +26,7 @@
 #include <QString>
 #include <QObject>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class IncidenceChanger;
 
 class Q_DECL_HIDDEN TodoPurger::Private : public QObject
@@ -54,7 +52,6 @@ public Q_SLOTS:
 private:
     TodoPurger *const q;
 };
-
 }
 
 #endif

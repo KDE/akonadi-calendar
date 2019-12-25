@@ -24,11 +24,9 @@
 
 #include <QSortFilterProxyModel>
 
-template <class T> class QVector;
+template<class T> class QVector;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class KColumnFilterProxyModelPrivate;
 
 /**
@@ -70,7 +68,6 @@ protected:
 private:
     QVector<int> m_visibleColumns;
 };
-
 }
 
 #endif // KCOLUMNFILTERPROXYMODEL_H

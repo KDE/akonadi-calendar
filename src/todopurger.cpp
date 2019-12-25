@@ -49,8 +49,7 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
     }
 }
 
-void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &deletedItems,
-        IncidenceChanger::ResultCode result, const QString &message)
+void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &deletedItems, IncidenceChanger::ResultCode result, const QString &message)
 {
     if (changeId != m_currentChangeId) {
         return;    // Not ours.
@@ -153,9 +152,10 @@ void TodoPurger::setIncidenceChager(IncidenceChanger *changer)
 {
     d->m_changer = changer;
     d->m_currentChangeId = -1;
-    if (changer)
+    if (changer) {
         connect(changer, &IncidenceChanger::deleteFinished,
                 d, &Private::onItemsDeleted);
+    }
 }
 
 void TodoPurger::setCalendar(const CalendarBase::Ptr &calendar)

@@ -25,7 +25,6 @@
 #include <KEmailAddress>
 #include <kcalendarcore/person.h>
 
-
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -35,7 +34,8 @@
 using namespace KCalendarCore;
 using namespace Akonadi;
 
-PublishDialog::Private::Private(PublishDialog *qq) : QObject(), q(qq)
+PublishDialog::Private::Private(PublishDialog *qq) : QObject()
+    , q(qq)
 {
 }
 
@@ -99,7 +99,6 @@ void PublishDialog::Private::insertAddresses(const KContacts::Addressee::List &l
     }
 }
 
-
 void PublishDialog::Private::openAddressbook()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
@@ -158,4 +157,3 @@ void PublishDialog::Private::updateInput()
     mUI.mNameLineEdit->setText(name);
     mUI.mEmailLineEdit->setText(mail);
 }
-

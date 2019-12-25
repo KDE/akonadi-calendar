@@ -26,9 +26,7 @@
 
 class Akonadi__FreeBusyProviderAdaptor;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @internal
  * This class implements the D-Bus interface of FreeBusyProviderBase
@@ -78,7 +76,6 @@ private:
 
     FreeBusyProviderBase *const q;
 };
-
 }
 
 #endif // AKONADI_FREEBUSYPROVIDERBASEPRIVATE_H

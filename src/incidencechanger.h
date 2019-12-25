@@ -30,9 +30,7 @@
 
 #include <QWidget>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * @short IncidenceChanger is the preferred way to easily create, modify and delete incidences.
  *
@@ -171,9 +169,7 @@ public:
       *         Returns -1 if @p incidence is invalid. The createFinished() signal
       *         won't be emitted in this case.
       */
-    Q_REQUIRED_RESULT int createIncidence(const KCalendarCore::Incidence::Ptr &incidence,
-                        const Akonadi::Collection &collection = Akonadi::Collection(),
-                        QWidget *parent = nullptr);
+    Q_REQUIRED_RESULT int createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
     /**
       * Deletes an incidence. If it's recurring, all occurrences are deleted.
@@ -217,9 +213,7 @@ public:
       *         Returns -1 if the item doesn't have a valid payload. The modifyFinished() signal
       *         won't be emitted in this case.
       */
-    Q_REQUIRED_RESULT int modifyIncidence(const Akonadi::Item &item,
-                        const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
-                        QWidget *parent = nullptr);
+    Q_REQUIRED_RESULT int modifyIncidence(const Akonadi::Item &item, const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(), QWidget *parent = nullptr);
 
     /**
       * Some incidence operations require more than one change. Like dissociating
@@ -407,10 +401,7 @@ Q_SIGNALS:
       * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
       *        message. If you enabled error dialogs, this string was already presented to the user.
       */
-    void createFinished(int changeId,
-                        const Akonadi::Item &item,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString);
+    void createFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
     /**
       * Emitted when IncidenceChanger modifies an Incidence in akonadi.
       *
@@ -420,10 +411,7 @@ Q_SIGNALS:
       * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
       *        message. If you enabled error dialogs, this string was already presented to the user.
       */
-    void modifyFinished(int changeId,
-                        const Akonadi::Item &item,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString);
+    void modifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
     /**
       * Emitted when IncidenceChanger deletes an Incidence in akonadi.
       *
@@ -434,10 +422,7 @@ Q_SIGNALS:
       * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
       *        message. If you enabled error dialogs, this string was already presented to the user.
       */
-    void deleteFinished(int changeId,
-                        const QVector<Akonadi::Item::Id> &itemIdList,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString);
+    void deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &itemIdList, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
 private:
     //@cond PRIVATE
@@ -449,7 +434,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::DestinationPolicy)

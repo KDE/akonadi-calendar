@@ -39,8 +39,7 @@
 using namespace KCalendarCore;
 using namespace Akonadi;
 
-ICalImporter::Private::Private(IncidenceChanger *changer,
-                               ICalImporter *qq)
+ICalImporter::Private::Private(IncidenceChanger *changer, ICalImporter *qq)
     : QObject()
     , q(qq)
     , m_changer(changer)
@@ -60,10 +59,7 @@ ICalImporter::Private::~Private()
     delete m_temporaryFile;
 }
 
-void ICalImporter::Private::onIncidenceCreated(int changeId,
-        const Akonadi::Item &item,
-        Akonadi::IncidenceChanger::ResultCode resultCode,
-        const QString &errorString)
+void ICalImporter::Private::onIncidenceCreated(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_UNUSED(item);
 
@@ -92,8 +88,8 @@ void ICalImporter::Private::setErrorMessage(const QString &message)
 
 void ICalImporter::Private::resourceCreated(KJob *job)
 {
-    Akonadi::AgentInstanceCreateJob *createjob =
-        qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
+    Akonadi::AgentInstanceCreateJob *createjob
+        = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
 
     Q_ASSERT(createjob);
     m_working = false;
@@ -104,9 +100,9 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     }
 
     Akonadi::AgentInstance instance = createjob->instance();
-    const QString service =
-        Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
-                                                 instance.identifier());
+    const QString service
+        = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
+                                                   instance.identifier());
 
     QDBusInterface iface(service, QStringLiteral("/Settings"));
     if (!iface.isValid()) {
@@ -139,8 +135,7 @@ void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArr
     }
 }
 
-ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer,
-                           QObject *parent)
+ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer, QObject *parent)
     : QObject(parent)
     , d(new Private(changer, this))
 {
@@ -162,8 +157,8 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     d->m_working = true;
 
-    Akonadi::AgentType type =
-        Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
+    Akonadi::AgentType type
+        = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
 
     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
@@ -217,10 +212,10 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         if (!collection.isValid()) {
             int dialogCode;
             const QStringList mimeTypes = QStringList()
-                << KCalendarCore::Event::eventMimeType()
-                << KCalendarCore::Todo::todoMimeType()
-                << KCalendarCore::Journal::journalMimeType();
-            collection = CalendarUtils::selectCollection(nullptr, dialogCode/*by-ref*/, mimeTypes);
+                                          << KCalendarCore::Event::eventMimeType()
+                                          << KCalendarCore::Todo::todoMimeType()
+                                          << KCalendarCore::Journal::journalMimeType();
+            collection = CalendarUtils::selectCollection(nullptr, dialogCode /*by-ref*/, mimeTypes);
         }
 
         if (!collection.isValid()) {
@@ -250,7 +245,9 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
     } else {
         d->m_collection = collection;
         KIO::StoredTransferJob *job = KIO::storedGet(url);
-        connect(job, QOverload<KIO::Job *, const QByteArray &>::of(&KIO::TransferJob::data), d, [this](KIO::Job *job, const QByteArray &ba) { d->remoteDownloadFinished(job, ba); });
+        connect(job, QOverload<KIO::Job *, const QByteArray &>::of(&KIO::TransferJob::data), d, [this](KIO::Job *job, const QByteArray &ba) {
+            d->remoteDownloadFinished(job, ba);
+        });
     }
 
     d->m_working = true;

@@ -28,11 +28,12 @@
 using namespace Akonadi;
 
 FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *qq)
-    : QObject(), q(qq)
+    : QObject()
+    , q(qq)
 {
     new Akonadi__FreeBusyProviderAdaptor(this);
     KDBusConnectionPool::threadConnection().registerObject(QStringLiteral("/FreeBusyProvider"),
-            this, QDBusConnection::ExportAdaptors);
+                                                           this, QDBusConnection::ExportAdaptors);
 }
 
 QDateTime FreeBusyProviderBasePrivate::lastCacheUpdate()

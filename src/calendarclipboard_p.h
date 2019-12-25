@@ -27,23 +27,18 @@
 #include <QVector>
 #include <QSet>
 
-namespace KCalUtils
-{
+namespace KCalUtils {
 class DndFactory;
 }
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class IncidenceChanger;
 
 class Q_DECL_HIDDEN CalendarClipboard::Private : public QObject
 {
     Q_OBJECT
 public:
-    Private(const Akonadi::CalendarBase::Ptr &calendar,
-            Akonadi::IncidenceChanger *changer,
-            CalendarClipboard *qq);
+    Private(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq);
 
     ~Private();
 
@@ -73,13 +68,9 @@ public:
     void makeChildsIndependent(const KCalendarCore::Incidence::Ptr &incidence);
 
 public Q_SLOTS:
-    void slotModifyFinished(int changeId, const Akonadi::Item &item,
-                            Akonadi::IncidenceChanger::ResultCode resultCode,
-                            const QString &errorMessage);
+    void slotModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
-    void slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &ids,
-                            Akonadi::IncidenceChanger::ResultCode result,
-                            const QString &errorMessage);
+    void slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &ids, Akonadi::IncidenceChanger::ResultCode result, const QString &errorMessage);
 
 public:
 

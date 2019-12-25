@@ -38,11 +38,11 @@ class Q_DECL_HIDDEN StandardCalendarActionManager::Private
 {
 public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardCalendarActionManager *parent)
-        : mActionCollection(actionCollection),
-          mParentWidget(parentWidget),
-          mCollectionSelectionModel(nullptr),
-          mItemSelectionModel(nullptr),
-          mParent(parent)
+        : mActionCollection(actionCollection)
+        , mParentWidget(parentWidget)
+        , mCollectionSelectionModel(nullptr)
+        , mItemSelectionModel(nullptr)
+        , mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
         mParent->connect(mGenericManager, &StandardActionManager::actionStateUpdated,
@@ -75,11 +75,11 @@ public:
             mGenericManager->setContextText(
                 StandardActionManager::CreateCollection, StandardActionManager::ErrorMessageTitle,
                 i18n("Calendar folder creation failed"));
-            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList() <<
-                    QStringLiteral("inode/directory") <<
-                    QStringLiteral("application/x-vnd.akonadi.calendar.todo") <<
-                    QStringLiteral("application/x-vnd.akonadi.calendar.event") <<
-                    QStringLiteral("application/x-vnd.akonadi.calendar.journal"));
+            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setProperty("ContentMimeTypes", QStringList()
+                                                                                                   <<QStringLiteral("inode/directory")
+                                                                                                   <<QStringLiteral("application/x-vnd.akonadi.calendar.todo")
+                                                                                                   <<QStringLiteral("application/x-vnd.akonadi.calendar.event")
+                                                                                                   <<QStringLiteral("application/x-vnd.akonadi.calendar.journal"));
 
             break;
         case  Akonadi::StandardActionManager::CopyCollections:
@@ -252,6 +252,7 @@ public:
             break;
         }
     }
+
     void updateGenericAllActions()
     {
         updateGenericAction(StandardActionManager::CreateCollection);
@@ -292,16 +293,15 @@ public:
         updateGenericAction(StandardActionManager::MoveToTrashRestoreItemAlternative);
         updateGenericAction(StandardActionManager::SynchronizeFavoriteCollections);
         updateGenericAction(StandardActionManager::SynchronizeCollectionTree);
-
     }
 
     static bool hasWritableCollection(const QModelIndex &index, const QString &mimeType)
     {
-        const Akonadi::Collection collection =
-            index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const Akonadi::Collection collection
+            = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
         if (collection.isValid()) {
-            if (collection.contentMimeTypes().contains(mimeType) &&
-                    (collection.rights() & Akonadi::Collection::CanCreateItem)) {
+            if (collection.contentMimeTypes().contains(mimeType)
+                && (collection.rights() & Akonadi::Collection::CanCreateItem)) {
                 return true;
             }
         }
@@ -538,8 +538,8 @@ public:
 };
 
 Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent)
-    : QObject(parent),
-      d(new Private(actionCollection, parent, this))
+    : QObject(parent)
+    , d(new Private(actionCollection, parent, this))
 {
 }
 
@@ -553,9 +553,15 @@ void StandardCalendarActionManager::setCollectionSelectionModel(QItemSelectionMo
     d->mCollectionSelectionModel = selectionModel;
     d->mGenericManager->setCollectionSelectionModel(selectionModel);
 
-    connect(selectionModel->model(), &QAbstractItemModel::rowsInserted, this, [this]() { d->updateActions();});
-    connect(selectionModel->model(), &QAbstractItemModel::rowsRemoved, this, [this]() { d->updateActions();});
-    connect(selectionModel, &QItemSelectionModel::selectionChanged, this, [this]() { d->updateActions();});
+    connect(selectionModel->model(), &QAbstractItemModel::rowsInserted, this, [this]() {
+        d->updateActions();
+    });
+    connect(selectionModel->model(), &QAbstractItemModel::rowsRemoved, this, [this]() {
+        d->updateActions();
+    });
+    connect(selectionModel, &QItemSelectionModel::selectionChanged, this, [this]() {
+        d->updateActions();
+    });
     d->updateActions();
 }
 
@@ -564,14 +570,15 @@ void StandardCalendarActionManager::setItemSelectionModel(QItemSelectionModel *s
     d->mItemSelectionModel = selectionModel;
     d->mGenericManager->setItemSelectionModel(selectionModel);
 
-    connect(selectionModel, &QItemSelectionModel::selectionChanged, this, [this]() { d->updateActions();});
+    connect(selectionModel, &QItemSelectionModel::selectionChanged, this, [this]() {
+        d->updateActions();
+    });
 
     d->updateActions();
 }
 
 QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManager::Type type)
 {
-
     QAction *action = d->mActions.value(type);
     if (action) {
         return action;
@@ -585,7 +592,9 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setWhatsThis(i18n("Create a new event"));
         d->mActions.insert(CreateEvent, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_event_create"), action);
-        connect(action, &QAction::triggered, this, [this]() { d->slotCreateEvent(); });
+        connect(action, &QAction::triggered, this, [this]() {
+            d->slotCreateEvent();
+        });
         break;
     case CreateTodo:
         action = new QAction(d->mParentWidget);
@@ -594,7 +603,9 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setWhatsThis(i18n("Create a new To-do"));
         d->mActions.insert(CreateTodo, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_todo_create"), action);
-        connect(action, &QAction::triggered, this, [this]() { d->slotCreateTodo(); });
+        connect(action, &QAction::triggered, this, [this]() {
+            d->slotCreateTodo();
+        });
         break;
     case CreateSubTodo:
         action = new QAction(d->mParentWidget);
@@ -602,7 +613,9 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setWhatsThis(i18n("Create a new Sub-to-do"));
         d->mActions.insert(CreateSubTodo, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_subtodo_create"), action);
-        connect(action, &QAction::triggered, this, [this]() { d->slotCreateSubTodo(); });
+        connect(action, &QAction::triggered, this, [this]() {
+            d->slotCreateSubTodo();
+        });
         break;
     case CreateJournal:
         action = new QAction(d->mParentWidget);
@@ -611,7 +624,9 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setWhatsThis(i18n("Create a new Journal"));
         d->mActions.insert(CreateJournal, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_journal_create"), action);
-        connect(action, &QAction::triggered, this, [this]() { d->slotCreateJournal(); });
+        connect(action, &QAction::triggered, this, [this]() {
+            d->slotCreateJournal();
+        });
         break;
     case EditIncidence:
         action = new QAction(d->mParentWidget);
@@ -619,7 +634,9 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setWhatsThis(i18n("Edit the selected incidence."));
         d->mActions.insert(EditIncidence, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_incidence_edit"), action);
-        connect(action, &QAction::triggered, this, [this]() { d->slotEditIncidence(); });
+        connect(action, &QAction::triggered, this, [this]() {
+            d->slotEditIncidence();
+        });
         break;
     default:
         Q_ASSERT(false);   // should never happen

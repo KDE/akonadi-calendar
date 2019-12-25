@@ -34,10 +34,8 @@
 
 class QWidget;
 
-namespace Akonadi
-{
-namespace CalendarUtils
-{
+namespace Akonadi {
+namespace CalendarUtils {
 Q_REQUIRED_RESULT QString fullName();
 Q_REQUIRED_RESULT QString email();
 Q_REQUIRED_RESULT bool thatIsMe(const QString &email);
@@ -49,11 +47,7 @@ Q_REQUIRED_RESULT QStringList allEmails();
 
 Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence(const Akonadi::Item &item);
 
-Q_REQUIRED_RESULT Akonadi::Collection selectCollection(QWidget *parent,
-                                     int &dialogCode,
-                                     const QStringList &mimeTypes,
-                                     const Akonadi::Collection &defaultCollection = Akonadi::Collection());
-
+Q_REQUIRED_RESULT Akonadi::Collection selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }
 }
 

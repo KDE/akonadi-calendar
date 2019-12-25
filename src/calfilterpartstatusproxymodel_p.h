@@ -23,9 +23,7 @@
 #include <kcalendarcore/attendee.h>
 #include <QSortFilterProxyModel>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -51,7 +49,6 @@ private:
 private Q_SLOTS:
     void slotIdentitiesChanged();
 };
-
 }
 
 #endif

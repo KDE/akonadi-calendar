@@ -34,10 +34,7 @@
 using namespace Akonadi::CalendarUtils;
 
 Akonadi::Collection
-Akonadi::CalendarUtils::selectCollection(QWidget *parent,
-        int &dialogCode,
-        const QStringList &mimeTypes,
-        const Akonadi::Collection &defaultCollection)
+Akonadi::CalendarUtils::selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection)
 {
     QPointer<Akonadi::CollectionDialog> dlg(new Akonadi::CollectionDialog(parent));
 

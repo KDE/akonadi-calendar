@@ -27,7 +27,8 @@ using namespace Akonadi;
 
 KColumnFilterProxyModel::KColumnFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-{ }
+{
+}
 
 KColumnFilterProxyModel::~KColumnFilterProxyModel()
 {
@@ -51,7 +52,6 @@ void KColumnFilterProxyModel::setVisibleColumns(const QVector<int> &visibleColum
 
 bool KColumnFilterProxyModel::filterAcceptsColumn(int column, const QModelIndex &parent) const
 {
-
     if (!m_visibleColumns.isEmpty() && !m_visibleColumns.contains(column)) {
         // We only filter columns out when m_visibleColumns actually contains values.
         return false;
@@ -59,4 +59,3 @@ bool KColumnFilterProxyModel::filterAcceptsColumn(int column, const QModelIndex 
 
     return QSortFilterProxyModel::filterAcceptsColumn(column, parent);
 }
-

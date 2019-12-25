@@ -25,9 +25,7 @@
 
 #include <QObject>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class IncidenceChanger;
 
 /**
@@ -82,7 +80,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

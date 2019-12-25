@@ -32,9 +32,7 @@
 using namespace Akonadi;
 using namespace KCalendarCore;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class History;
 
 enum OperationType {
@@ -80,6 +78,7 @@ public:
     ~Private()
     {
     }
+
     void doIt(OperationType);
     void stackEntry(const Entry::Ptr &entry, uint atomicOperationId);
     void updateIds(Item::Id oldId, Item::Id newId);
@@ -136,13 +135,9 @@ public:
     bool redo() override;
 
 private Q_SLOTS:
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
-    void onCreateFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 private:
     Q_DISABLE_COPY(CreationEntry)
 };
@@ -156,13 +151,9 @@ public:
     bool redo() override;
 
 private Q_SLOTS:
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
-    void onCreateFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 private:
     IncidenceChanger::ResultCode mResultCode;
     QString mErrorString;
@@ -175,18 +166,13 @@ class ModificationEntry : public Entry
 {
     Q_OBJECT
 public:
-    ModificationEntry(const Akonadi::Item &item,
-                      const Incidence::Ptr &originalPayload,
-                      const QString &description,
-                      History *q);
+    ModificationEntry(const Akonadi::Item &item, const Incidence::Ptr &originalPayload, const QString &description, History *q);
 
     bool undo() override;
     bool redo() override;
 
 private Q_SLOTS:
-    void onModifyFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 private:
     Q_DISABLE_COPY(ModificationEntry)
     Incidence::Ptr mOriginalPayload;
@@ -207,8 +193,7 @@ protected:
     bool redo() override;
 
 private Q_SLOTS:
-    void onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCode,
-                         const QString &errorString);
+    void onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 public:
     const uint mAtomicOperationId;
 private:
@@ -217,7 +202,6 @@ private:
     OperationType mOperationInProgress;
     Q_DISABLE_COPY(MultiEntry)
 };
-
 }
 
 #endif

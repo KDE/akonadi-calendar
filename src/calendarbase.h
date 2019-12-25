@@ -28,9 +28,7 @@
 #include <kcalendarcore/memorycalendar.h>
 #include <kcalendarcore/incidence.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class CalendarBasePrivate;
 class IncidenceChanger;
 
@@ -97,7 +95,7 @@ public:
       * Returns the child incidences of the parent identified by @p parentUid.
       * Only the direct childs are returned
       * @param parentUid identifier of the parent incidence
-      */ //TODO: unit-test
+      *///TODO: unit-test
     Q_REQUIRED_RESULT KCalendarCore::Incidence::List childIncidences(const QString &parentUid) const;
 
     /**

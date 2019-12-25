@@ -133,7 +133,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
                 collection = Akonadi::Collection(item.storageCollectionId());
                 Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(collection, Akonadi::CollectionFetchJob::Base, this);
                 QObject::connect(job, &KJob::result, this, &CalendarBasePrivate::collectionFetchResult);
-                mCollectionJobs.insert(job,  collection.id());
+                mCollectionJobs.insert(job, collection.id());
             }
         } else {
             mCollections.insert(collection.id(), collection);
@@ -175,7 +175,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob *job)
     Akonadi::CollectionFetchJob *fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
     const Akonadi::Collection collection = fetchJob->collections().at(0);
-    if (collection.id() !=  colid) {
+    if (collection.id() != colid) {
         qCritical() <<  "Fetched the wrong collection,  should fetch: " <<  colid << "fetched: " <<  collection.id();
     }
 
@@ -186,7 +186,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob *job)
         incidence->setReadOnly(isReadOnly);
     }
 
-    mCollections.insert(collection.id(),  collection);
+    mCollections.insert(collection.id(), collection);
 
     if (mCollectionJobs.isEmpty()) {
         emit fetchFinished();
@@ -241,10 +241,7 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
     }
 }
 
-void CalendarBasePrivate::slotDeleteFinished(int changeId,
-        const QVector<Akonadi::Item::Id> &itemIds,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+void CalendarBasePrivate::slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &itemIds, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
@@ -258,10 +255,7 @@ void CalendarBasePrivate::slotDeleteFinished(int changeId,
     emit q->deleteFinished(resultCode == IncidenceChanger::ResultCodeSuccess, errorMessage);
 }
 
-void CalendarBasePrivate::slotCreateFinished(int changeId,
-        const Akonadi::Item &item,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+void CalendarBasePrivate::slotCreateFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(item);
@@ -276,10 +270,7 @@ void CalendarBasePrivate::slotCreateFinished(int changeId,
     emit q->createFinished(resultCode == IncidenceChanger::ResultCodeSuccess, errorMessage);
 }
 
-void CalendarBasePrivate::slotModifyFinished(int changeId,
-        const Akonadi::Item &item,
-        IncidenceChanger::ResultCode resultCode,
-        const QString &errorMessage)
+void CalendarBasePrivate::slotModifyFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     Q_UNUSED(item);
@@ -302,8 +293,7 @@ void CalendarBasePrivate::slotModifyFinished(int changeId,
     emit q->modifyFinished(resultCode == IncidenceChanger::ResultCodeSuccess, message);
 }
 
-void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem,
-        const Akonadi::Item &newItem, const QString &newIdentifier)
+void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &newIdentifier)
 {
     Q_ASSERT(oldItem.isValid());
     Incidence::Ptr newIncidence = CalendarUtils::incidence(newItem);
@@ -476,8 +466,9 @@ Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
     Q_D(const CalendarBase);
 
     Akonadi::Item::List result;
-    if (id == -1)
+    if (id == -1) {
         result.reserve(d->mItemsByCollection.size());
+    }
 
     auto it = id == -1 ? d->mItemsByCollection.cbegin() : d->mItemsByCollection.constFind(id);
     while (it != d->mItemsByCollection.cend() && (id == -1 || it.key() == id)) {

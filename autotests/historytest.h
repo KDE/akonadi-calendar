@@ -66,20 +66,11 @@ private:
     void waitForSignals();
 
 public Q_SLOTS:
-    void deleteFinished(int changeId,
-                        const QVector<Akonadi::Item::Id> &deletedIds,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorMessage);
+    void deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
-    void createFinished(int changeId,
-                        const Akonadi::Item &item,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString);
+    void createFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
-    void modifyFinished(int changeId,
-                        const Akonadi::Item &item,
-                        Akonadi::IncidenceChanger::ResultCode resultCode,
-                        const QString &errorString);
+    void modifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void handleRedone(Akonadi::History::ResultCode result);
     void handleUndone(Akonadi::History::ResultCode result);

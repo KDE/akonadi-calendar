@@ -29,9 +29,7 @@
 
 class HistoryTest;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class IncidenceChanger;
 
 /**
@@ -87,9 +85,7 @@ public:
       *        When a change is undone/redone, all other changes which are in the same group are also
       *        undone/redone
       */
-    void recordCreation(const Akonadi::Item &item,
-                        const QString &description,
-                        const uint atomicOperationId = 0);
+    void recordCreation(const Akonadi::Item &item, const QString &description, const uint atomicOperationId = 0);
 
     /**
       * Pushes an incidence modification onto the undo stack. The modification can be undone calling
@@ -105,10 +101,7 @@ public:
       *        When a change is undone/redone, all other changes which are in the same group are also
       *        undone/redone
       */
-    void recordModification(const Akonadi::Item &oldItem,
-                            const Akonadi::Item &newItem,
-                            const QString &description,
-                            const uint atomicOperationId = 0);
+    void recordModification(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &description, const uint atomicOperationId = 0);
 
     /**
       * Pushes an incidence deletion onto the undo stack. The deletion can be
@@ -122,9 +115,7 @@ public:
       *        When a change is undone/redone, all other changes which are in the same group are also
       *        undone/redone
       */
-    void recordDeletion(const Akonadi::Item &item,
-                        const QString &description,
-                        const uint atomicOperationId = 0);
+    void recordDeletion(const Akonadi::Item &item, const QString &description, const uint atomicOperationId = 0);
 
     /**
       * Pushes a list of incidence deletions onto the undo stack. The deletions can
@@ -136,9 +127,7 @@ public:
       * @param atomicOperationId If != 0, specifies which group of changes thischange belongs to.
       *        Will be useful for atomic undoing/redoing, not implemented yet.
       */
-    void recordDeletions(const Akonadi::Item::List &items,
-                         const QString &description,
-                         const uint atomicOperationId = 0);
+    void recordDeletions(const Akonadi::Item::List &items, const QString &description, const uint atomicOperationId = 0);
 
     /**
       * Returns the last error message.
@@ -264,7 +253,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

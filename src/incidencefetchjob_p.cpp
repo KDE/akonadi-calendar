@@ -29,7 +29,8 @@
 
 using namespace Akonadi;
 
-Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent): Job(parent), m_jobCount(0)
+Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent) : Job(parent)
+    , m_jobCount(0)
 {
     m_mimeTypeChecker.addWantedMimeType(QStringLiteral("text/calendar"));
 }
@@ -43,9 +44,9 @@ void Akonadi::IncidenceFetchJob::doStart()
 {
     CollectionFetchJob *job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("text/calendar")
-                                          << KCalendarCore::Event::eventMimeType()
-                                          << KCalendarCore::Todo::todoMimeType()
-                                          << KCalendarCore::Journal::journalMimeType());
+                                                        << KCalendarCore::Event::eventMimeType()
+                                                        << KCalendarCore::Todo::todoMimeType()
+                                                        << KCalendarCore::Journal::journalMimeType());
     connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 
@@ -93,4 +94,3 @@ void Akonadi::IncidenceFetchJob::itemFetchResult(KJob *job)
         emitResult();
     }
 }
-

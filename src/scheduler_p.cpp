@@ -73,10 +73,7 @@ FreeBusyCache *Scheduler::freeBusyCache() const
     return d->mFreeBusyCache;
 }
 
-void Scheduler::acceptTransaction(const IncidenceBase::Ptr &incidence,
-                                  const Akonadi::CalendarBase::Ptr &calendar,
-                                  iTIPMethod method,
-                                  ScheduleMessage::Status status, const QString &email)
+void Scheduler::acceptTransaction(const IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, iTIPMethod method, ScheduleMessage::Status status, const QString &email)
 {
     Q_ASSERT(incidence);
     Q_ASSERT(calendar);
@@ -112,10 +109,7 @@ void Scheduler::acceptTransaction(const IncidenceBase::Ptr &incidence,
     }
 }
 
-void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
-                              const Akonadi::CalendarBase::Ptr &calendar,
-                              ScheduleMessage::Status status,
-                              iTIPMethod method)
+void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase, const Akonadi::CalendarBase::Ptr &calendar, ScheduleMessage::Status status, iTIPMethod method)
 {
     if (newIncBase->type() == IncidenceBase::TypeFreeBusy) {
         acceptFreeBusy(newIncBase, method);
@@ -128,16 +122,16 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
     qCDebug(AKONADICALENDAR_LOG) << "status="
                                  << KCalUtils::Stringify::scheduleMessageStatus(status);
 
-    Incidence::Ptr newInc = newIncBase.staticCast<Incidence>() ;
+    Incidence::Ptr newInc = newIncBase.staticCast<Incidence>();
     Incidence::Ptr calInc = calendar->incidence(newIncBase->uid());
     switch (status) {
     case ScheduleMessage::Unknown:
     case ScheduleMessage::PublishNew:
     case ScheduleMessage::PublishUpdate:
         if (calInc && newInc) {
-            if ((newInc->revision() > calInc->revision()) ||
-                    (newInc->revision() == calInc->revision() &&
-                     newInc->lastModified() > calInc->lastModified())) {
+            if ((newInc->revision() > calInc->revision())
+                || (newInc->revision() == calInc->revision()
+                    && newInc->lastModified() > calInc->lastModified())) {
                 const QString oldUid = calInc->uid();
 
                 if (calInc->type() != newInc->type()) {
@@ -168,12 +162,9 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
     emit transactionFinished(result, errorString);
 }
 
-void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
-                              const Akonadi::CalendarBase::Ptr &calendar,
-                              ScheduleMessage::Status status,
-                              const QString &email)
+void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase, const Akonadi::CalendarBase::Ptr &calendar, ScheduleMessage::Status status, const QString &email)
 {
-    Incidence::Ptr incidence = incidenceBase.staticCast<Incidence>() ;
+    Incidence::Ptr incidence = incidenceBase.staticCast<Incidence>();
 
     if (incidence->type() == IncidenceBase::TypeFreeBusy) {
         // reply to this request is handled in korganizer's incomingdialog
@@ -234,8 +225,8 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                 }
             }
             if (isUpdate) {
-                if (existingRevision == incidence->revision() &&
-                        existingIncidence->lastModified() > incidence->lastModified()) {
+                if (existingRevision == incidence->revision()
+                    && existingIncidence->lastModified() > incidence->lastModified()) {
                     // This isn't an update - the found incidence was modified more recently
                     errorString = i18n("This isn't an update. "
                                        "The found incidence was modified more recently.");
@@ -256,7 +247,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                     errorString = i18n("Error: Assigning different incidence types.");
                     emit transactionFinished(result, errorString);
                 } else {
-                    incidence->setSchedulingID(schedulingUid, existingUid) ;
+                    incidence->setSchedulingID(schedulingUid, existingUid);
 
                     if (incidence->hasRecurrenceId()) {
                         Incidence::Ptr existingInstance = calendar->incidence(incidence->instanceIdentifier());
@@ -328,10 +319,7 @@ void Scheduler::acceptAdd(const IncidenceBase::Ptr &, ScheduleMessage::Status)
     emit transactionFinished(ResultSuccess, QString());
 }
 
-void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
-                             const Akonadi::CalendarBase::Ptr &calendar,
-                             ScheduleMessage::Status status,
-                             const QString &attendeeEmail)
+void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase, const Akonadi::CalendarBase::Ptr &calendar, ScheduleMessage::Status status, const QString &attendeeEmail)
 {
     Incidence::Ptr incidence = incidenceBase.staticCast<Incidence>();
 
@@ -380,8 +368,8 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
         bool isMine = true;
         const Attendee::List attendees = existingIncidence->attendees();
         for (const KCalendarCore::Attendee &attendee : attendees) {
-            if (attendee.email() == attendeeEmail &&
-                    attendee.status() == Attendee::NeedsAction) {
+            if (attendee.email() == attendeeEmail
+                && attendee.status() == Attendee::NeedsAction) {
                 // This incidence wasn't created by me - it's probably in a shared
                 // folder and meant for someone else, ignore it.
                 qCDebug(AKONADICALENDAR_LOG) << "ignoring " << existingUid << " since I'm still NeedsAction there";
@@ -410,7 +398,6 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
             if (result != ResultSuccess) {
                 emit transactionFinished(result, i18n("Error recording exception"));
             }
-
         } else {
             result = calendar->deleteIncidence(existingIncidence) ? ResultSuccess : ResultErrorDelete;
             if (result != ResultSuccess) {
@@ -440,10 +427,7 @@ void Scheduler::acceptDeclineCounter(const IncidenceBase::Ptr &, ScheduleMessage
     emit transactionFinished(ResultGenericError, i18n("Generic Error"));
 }
 
-void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
-                            const Akonadi::CalendarBase::Ptr &calendar,
-                            ScheduleMessage::Status status,
-                            iTIPMethod method)
+void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase, const Akonadi::CalendarBase::Ptr &calendar, ScheduleMessage::Status status, iTIPMethod method)
 {
     Q_UNUSED(status);
     if (incidenceBase->type() == IncidenceBase::TypeFreeBusy) {
@@ -460,7 +444,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
     if (!incidence) {
         const Incidence::List list = calendar->incidences();
         for (Incidence::List::ConstIterator it = list.constBegin(), end = list.constEnd();
-                it != end; ++it) {
+             it != end; ++it) {
             if ((*it)->schedulingID() == incidenceBase->uid()) {
                 incidence = (*it).dynamicCast<Incidence>();
                 break;
@@ -496,17 +480,17 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
 
         bool attendeeAdded = false;
         for (const auto &attNew : qAsConst(attendeesNew)) {
-            QString msg =
-                i18nc("@info", "%1 wants to attend %2 but was not invited.",
-                      attNew.fullName(), incidence->summary());
+            QString msg
+                = i18nc("@info", "%1 wants to attend %2 but was not invited.",
+                        attNew.fullName(), incidence->summary());
             if (!attNew.delegator().isEmpty()) {
                 msg = i18nc("@info", "%1 wants to attend %2 on behalf of %3.",
                             attNew.fullName(), incidence->summary(), attNew.delegator());
             }
             if (KMessageBox::questionYesNo(
-                        nullptr, msg, i18nc("@title", "Uninvited attendee"),
-                        KGuiItem(i18nc("@option", "Accept Attendance")),
-                        KGuiItem(i18nc("@option", "Reject Attendance"))) != KMessageBox::Yes) {
+                    nullptr, msg, i18nc("@title", "Uninvited attendee"),
+                    KGuiItem(i18nc("@option", "Accept Attendance")),
+                    KGuiItem(i18nc("@option", "Reject Attendance"))) != KMessageBox::Yes) {
                 Incidence::Ptr cancel = incidence;
                 cancel->addComment(i18nc("@info",
                                          "The organizer rejected your attendance at this meeting."));
@@ -515,7 +499,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
             }
 
             Attendee a(attNew.name(), attNew.email(), attNew.RSVP(),
-                                         attNew.status(), attNew.role(), attNew.uid());
+                       attNew.status(), attNew.role(), attNew.uid());
 
             a.setDelegate(attNew.delegate());
             a.setDelegator(attNew.delegator());
@@ -530,13 +514,13 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         if (attendeeAdded) {
             bool sendMail = false;
             if (KMessageBox::questionYesNo(
-                        nullptr,
-                        i18nc("@info",
-                              "An attendee was added to the incidence. "
-                              "Do you want to email the attendees an update message?"),
-                        i18nc("@title", "Attendee Added"),
-                        KGuiItem(i18nc("@option", "Send Messages")),
-                        KGuiItem(i18nc("@option", "Do Not Send"))) == KMessageBox::Yes) {
+                    nullptr,
+                    i18nc("@info",
+                          "An attendee was added to the incidence. "
+                          "Do you want to email the attendees an update message?"),
+                    i18nc("@title", "Attendee Added"),
+                    KGuiItem(i18nc("@option", "Send Messages")),
+                    KGuiItem(i18nc("@option", "Do Not Send"))) == KMessageBox::Yes) {
                 sendMail = true;
             }
 

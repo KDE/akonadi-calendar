@@ -56,7 +56,7 @@ private Q_SLOTS:
 public Q_SLOTS:
     void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
     void calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar* cal) override;
+    void calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *cal) override;
     void handleCollectionsAdded(const Akonadi::Collection::List &collectionList);
 
 private:

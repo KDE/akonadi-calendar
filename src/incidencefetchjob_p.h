@@ -26,9 +26,7 @@
 #include <mimetypechecker.h>
 #include <item.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 /**
  * Retrieve all incidences in all calendars.
  * This is a Strigi/Nepomuk-free replacement for an IncidenceSearchJob without a query.
@@ -51,7 +49,6 @@ private:
     Akonadi::MimeTypeChecker m_mimeTypeChecker;
     int m_jobCount = 0;
 };
-
 }
 
 #endif

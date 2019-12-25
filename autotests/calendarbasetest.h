@@ -60,7 +60,6 @@ private:
     QString mOneTodoUid;
     QString mOneJournalUid;
     QString mOneIncidenceUid;
-
 };
 
 #endif

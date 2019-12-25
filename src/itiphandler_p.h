@@ -31,9 +31,7 @@
 #include <QString>
 #include <QPointer>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 struct Invitation {
     QString receiver;
     QString iCal;
@@ -90,13 +88,11 @@ public:
 private:
     void onLoadFinished(bool success, const QString &errorMessage);
     void onSchedulerFinished(Akonadi::Scheduler::Result, const QString &errorMessage);
-    void onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result,
-                          const QString &errorMessage);
+    void onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage);
 
     void onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult result, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
     void onCounterProposalDelegateFinished(bool success, const QString &errorMessage);
 };
-
 }
 #endif

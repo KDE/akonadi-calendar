@@ -34,9 +34,7 @@
 
 class QWidget;
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 enum Status {
     StatusNone,
     StatusSendingInvitation
@@ -104,8 +102,7 @@ public:
       Kontact/PIM) are the organizer.
       @param incidence The new incidence.
      */
-    void sendIncidenceCreatedMessage(KCalendarCore::iTIPMethod method,
-                                     const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceCreatedMessage(KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
        Checks if the incidence should really be modified.
@@ -124,31 +121,26 @@ public:
       @param incidence The modified incidence.
       @param attendeeStatusChanged if @c true and @p method is #iTIPRequest ask the user whether to send a status update as well
      */
-    void sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod method,
-                                      const KCalendarCore::Incidence::Ptr &incidence,
-                                      bool attendeeStatusChanged);
+    void sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence, bool attendeeStatusChanged);
 
     /**
       Handles sending of ivitations for deleted incidences.
       @param incidence The deleted incidence.
      */
-    void sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod method,
-                                     const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
       Send counter proposal message.
       @param oldIncidence The original event provided in the invitations.
       @param newIncidence The new event as edited by the user.
     */
-    ITIPHandlerHelper::SendResult sendCounterProposal(const KCalendarCore::Incidence::Ptr &oldIncidence,
-            const KCalendarCore::Incidence::Ptr &newIncidence);
+    ITIPHandlerHelper::SendResult sendCounterProposal(const KCalendarCore::Incidence::Ptr &oldIncidence, const KCalendarCore::Incidence::Ptr &newIncidence);
 
     // Frees calendar if it doesn't have jobs running
     void calendarJobFinished(bool success, const QString &errorString);
 
 Q_SIGNALS:
-    void finished(Akonadi::ITIPHandlerHelper::SendResult result,
-                  const QString &errorMessage);
+    void finished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage);
 
     void sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
     void sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
@@ -164,9 +156,7 @@ private Q_SLOTS:
     void slotSchedulerFinishDialog(const int result, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
 private:
-    ITIPHandlerHelper::SendResult sentInvitation(int messageBoxReturnCode,
-            const KCalendarCore::Incidence::Ptr &incidence,
-            KCalendarCore::iTIPMethod method);
+    ITIPHandlerHelper::SendResult sentInvitation(int messageBoxReturnCode, const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method);
 
     /**
       We are the organizer. If there is more than one attendee, or if there is
@@ -188,7 +178,6 @@ private:
     MailScheduler *m_scheduler = nullptr;
     Status m_status;
 };
-
 }
 
 #endif

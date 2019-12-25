@@ -17,7 +17,6 @@
     02110-1301, USA.
 */
 
-
 #include "unittestbase.h"
 #include "helper.h"
 #include "../src/fetchjobcalendar.h"
@@ -113,13 +112,12 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
     connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
 
-
     // Now compare the expected calendar to the calendar we got.
     Incidence::List incidences = calendar->incidences();
     const Incidence::List expectedIncidences = expectedCalendar->incidences();
 
     // First, replace the randomly generated UIDs with the UID that came in the invitation e-mail...
-    for(const KCalendarCore::Incidence::Ptr &incidence : incidences) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We have incidece with uid=" << incidence->uid()
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
@@ -131,7 +129,7 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
     }
 
     // ... so we can compare them
-    for(const KCalendarCore::Incidence::Ptr &incidence : expectedIncidences) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : expectedIncidences) {
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We expect incidece with uid=" << incidence->uid()
                  << "; instanceidentifier=" << incidence->instanceIdentifier();
@@ -146,7 +144,7 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
 
     for (const KCalendarCore::Incidence::Ptr &expectedIncidence : expectedIncidences) {
         KCalendarCore::Incidence::Ptr incidence;
-        for (int i=0; i<incidences.count(); i++) {
+        for (int i = 0; i < incidences.count(); i++) {
             if (incidences.at(i)->instanceIdentifier() == expectedIncidence->instanceIdentifier()) {
                 incidence = incidences.at(i);
                 incidences.remove(i);

@@ -53,10 +53,7 @@ MailClient::~MailClient()
 {
 }
 
-void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                               const KIdentityManagement::Identity &identity,
-                               bool bccMe, const QString &attachment,
-                               const QString &mailTransport)
+void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, bool bccMe, const QString &attachment, const QString &mailTransport)
 {
     Q_ASSERT(incidence);
     KCalendarCore::Attendee::List attendees = incidence->attendees();
@@ -88,8 +85,8 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
         }
 
         // Optional Participants and Non-Participants are copied on the email
-        if (a.role() == KCalendarCore::Attendee::OptParticipant ||
-                a.role() == KCalendarCore::Attendee::NonParticipant) {
+        if (a.role() == KCalendarCore::Attendee::OptParticipant
+            || a.role() == KCalendarCore::Attendee::NonParticipant) {
             ccList << a.email();
         } else {
             toList << a.email();
@@ -123,11 +120,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     send(incidence, identity, from, to, cc, subject, body, false, bccMe, attachment, mailTransport);
 }
 
-void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                               const KIdentityManagement::Identity &identity,
-                               const QString &from, bool bccMe,
-                               const QString &attachment,
-                               const QString &sub, const QString &mailTransport)
+void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, bool bccMe, const QString &attachment, const QString &sub, const QString &mailTransport)
 {
     const QString to = incidence->organizer().fullName();
     QString subject = sub;
@@ -146,11 +139,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
     send(incidence, identity, from, to, QString(), subject, body, false, bccMe, attachment, mailTransport);
 }
 
-void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                        const KIdentityManagement::Identity &identity,
-                        const QString &from, bool bccMe,
-                        const QString &recipients, const QString &attachment,
-                        const QString &mailTransport)
+void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, bool bccMe, const QString &recipients, const QString &attachment, const QString &mailTransport)
 {
     QString subject;
 
@@ -179,16 +168,12 @@ static QStringList extractEmailAndNormalize(const QString &email)
     return normalizedEmail;
 }
 
-void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                      const KIdentityManagement::Identity &identity,
-                      const QString &from, const QString &_to,
-                      const QString &cc, const QString &subject,
-                      const QString &body, bool hidden, bool bccMe,
-                      const QString &attachment, const QString &mailTransport)
+void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &_to, const QString &cc, const QString &subject, const QString &body, bool hidden, bool bccMe, const QString &attachment,
+                      const QString &mailTransport)
 {
     Q_UNUSED(hidden);
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(
-                nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
+            nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
         qCritical() << "Error while creating transport";
         emit finished(ResultErrorCreatingTransport, i18n("Error while creating transport"));
         return;
@@ -207,13 +192,13 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                  << "\nAttachment:\n" << attachment
                                  << "\nmailTransport: " << mailTransport;
 
-    MailTransport::Transport *transport =
-        MailTransport::TransportManager::self()->transportByName(mailTransport);
+    MailTransport::Transport *transport
+        = MailTransport::TransportManager::self()->transportByName(mailTransport);
 
     if (!transport) {
-        transport =
-            MailTransport::TransportManager::self()->transportByName(
-                MailTransport::TransportManager::self()->defaultTransportName());
+        transport
+            = MailTransport::TransportManager::self()->transportByName(
+                  MailTransport::TransportManager::self()->defaultTransportName());
     }
 
     if (!transport) {
@@ -232,11 +217,11 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
     KConfigGroup configGroup(&config, QStringLiteral("Invitations"));
     const bool outlookConformInvitation = configGroup.readEntry("LegacyBodyInvites",
 #ifdef KDEPIM_ENTERPRISE_BUILD
-                                          true
+                                                                true
 #else
-                                          false
+                                                                false
 #endif
-                                                               );
+                                                                );
 
     // Now build the message we like to send. The message KMime::Message::Ptr instance
     // will be the root message that has 2 additional message. The body itself and
@@ -302,7 +287,7 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
             attachMessage->contentType()->setCharset("utf-8");
             attachMessage->contentType()->setName(QStringLiteral("cal.ics"), "utf-8");
             attachMessage->contentType()->setParameter(QStringLiteral("method"),
-                    QStringLiteral("request"));
+                                                       QStringLiteral("request"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(attachment.toUtf8()));
@@ -330,11 +315,11 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
     }
     qjob->transportAttribute().setTransportId(transportId);
 
-    const QString unormalizedFrom = (transport && transport->specifySenderOverwriteAddress()) ?
-                                    transport->senderOverwriteAddress() : from;
+    const QString unormalizedFrom = (transport && transport->specifySenderOverwriteAddress())
+                                    ? transport->senderOverwriteAddress() : from;
 
     const QString normalizedFrom = KEmailAddress::extractEmailAddress(
-                                       KEmailAddress::normalizeAddressesAndEncodeIdn(unormalizedFrom));
+        KEmailAddress::normalizeAddressesAndEncodeIdn(unormalizedFrom));
 
     const QString finalFrom = KEmailAddress::extractEmailAddress(normalizedFrom);
     qjob->addressAttribute().setFrom(finalFrom);

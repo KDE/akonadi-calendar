@@ -26,9 +26,7 @@
 #include <kcalendarcore/incidence.h>
 #include <QObject>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class IncidenceChanger;
 
 /**
@@ -55,9 +53,7 @@ public:
      *        If 0, an internal one will be created.
      * @param parent QObject parent
      */
-    explicit CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar,
-                               Akonadi::IncidenceChanger *changer = nullptr,
-                               QObject *parent = nullptr);
+    explicit CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer = nullptr, QObject *parent = nullptr);
     /**
      * Destroys the CalendarClipboard instance.
      */
@@ -71,8 +67,7 @@ public:
      * @param mode how to treat child incidences. Defaults to #RecursiveMode
      * @see cutFinished().
      */
-    void cutIncidence(const KCalendarCore::Incidence::Ptr &incidence,
-                      CalendarClipboard::Mode mode = RecursiveMode);
+    void cutIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode = RecursiveMode);
 
     /**
      * Copies the specified incidence into the clipboard.
@@ -80,8 +75,7 @@ public:
      * @param mode how to treat child incidences. Defaults to #RecursiveMode
      * @return true on success
      */
-    bool copyIncidence(const KCalendarCore::Incidence::Ptr &incidence,
-                       CalendarClipboard::Mode mode = RecursiveMode);
+    bool copyIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode = RecursiveMode);
 
     /**
      * Returns if there's any ical mime data available for pasting.
@@ -100,7 +94,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif
