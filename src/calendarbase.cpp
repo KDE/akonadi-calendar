@@ -448,8 +448,9 @@ Akonadi::Item CalendarBase::item(const QString &uid) const
         if (it2 == d->mItemById.cend()) {
             qCritical() << "Item with id " << id << "(uid=" << uid << ") not found, but in uid map";
             Q_ASSERT_X(false, "CalendarBase::item", "not in mItemById");
+        } else {
+            i = *it2;
         }
-        i = *it2;
     } else {
         qCDebug(AKONADICALENDAR_LOG) << "Can't find any incidence with uid " << uid;
     }
