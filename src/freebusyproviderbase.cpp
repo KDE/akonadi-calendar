@@ -20,9 +20,9 @@
 #include "freebusyproviderbase.h"
 #include "freebusyproviderbase_p.h"
 
-#include <KDBusConnectionPool>
 #include "freebusyprovideradaptor.h"
 
+#include <QDBusConnection>
 #include <QDateTime>
 
 using namespace Akonadi;
@@ -32,7 +32,7 @@ FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *q
     , q(qq)
 {
     new Akonadi__FreeBusyProviderAdaptor(this);
-    KDBusConnectionPool::threadConnection().registerObject(QStringLiteral("/FreeBusyProvider"),
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/FreeBusyProvider"),
                                                            this, QDBusConnection::ExportAdaptors);
 }
 
