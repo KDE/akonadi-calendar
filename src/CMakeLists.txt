@@ -33,7 +33,15 @@ set(akonadicalendar_LIB_SRC
   calfilterpartstatusproxymodel_p.cpp
 )
 
-ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar)
+else()
+    ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar
+        DESCRIPTION "akonadicalendar (pim lib)"
+        OLD_CATEGORY_NAMES log_akonadicalendar
+        EXPORT AKONADI-CALENDAR
+    )
+endif()
 
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
