@@ -49,7 +49,7 @@ class Change : public QObject
     Q_OBJECT
 public:
     typedef QSharedPointer<Change> Ptr;
-    typedef QList<Ptr> List;
+    typedef QVector<Ptr> List;
     Change(IncidenceChanger *incidenceChanger, int changeId, IncidenceChanger::ChangeType changeType, uint operationId, QWidget *parent)
         : id(changeId)
         , type(changeType)
