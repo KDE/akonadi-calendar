@@ -8,14 +8,10 @@ include_directories(
 set(akonadi_serializer_kcalcore_SRCS
     akonadi_serializer_kcalcore.cpp
 )
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer)
-else()
-    ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer
+ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer
         DESCRIPTION "calendar serializer (plugin)"
         EXPORT AKONADI-CALENDAR
     )
-endif()
 
 
 add_library(akonadi_serializer_kcalcore MODULE ${akonadi_serializer_kcalcore_SRCS})

@@ -94,14 +94,10 @@ install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    install(FILES akonadi-calendar.renamecategories akonadi-calendar.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-else ()
-    ecm_qt_install_logging_categories(
+ecm_qt_install_logging_categories(
         EXPORT AKONADI-CALENDAR
         FILE akonadi-calendar.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
-endif()
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
