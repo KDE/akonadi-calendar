@@ -122,18 +122,16 @@ void PublishDialog::addAttendee(const Attendee &attendee)
 
 QString PublishDialog::addresses() const
 {
-    QString to;
+    QStringList toList;
     const int count = d->mUI.mListWidget->count();
     for (int i = 0; i < count; ++i) {
         QListWidgetItem *item = d->mUI.mListWidget->item(i);
         if (!item->text().isEmpty()) {
-            to += item->text();
-            if (i < count - 1) {
-                to += QLatin1String(", ");
-            }
+            toList << item->text();
         }
     }
-    return to;
+
+    return toList.join(QLatin1Char(','));
 }
 
 void PublishDialog::accept()
