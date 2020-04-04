@@ -21,10 +21,10 @@
 #include "scheduler_p.h"
 #include "calendarbase_p.h"
 
-#include <kcalutils/stringify.h>
+#include <KCalUtils/Stringify>
 
-#include <kcalendarcore/icalformat.h>
-#include <kcalendarcore/freebusycache.h>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/FreeBusyCache>
 
 #include "akonadicalendar_debug.h"
 #include <KLocalizedString>

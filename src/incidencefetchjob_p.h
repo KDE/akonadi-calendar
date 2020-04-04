@@ -21,7 +21,7 @@
 #ifndef AKONADI_INCIDENCEFETCHJOB_P_H
 #define AKONADI_INCIDENCEFETCHJOB_P_H
 
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 #include <job.h>
 #include <mimetypechecker.h>
 #include <item.h>

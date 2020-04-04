@@ -25,9 +25,9 @@
 
 #include <item.h>
 
-#include <kcalendarcore/icalformat.h>
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/schedulemessage.h>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/ScheduleMessage>
 #include <identitymanager.h>
 #include <identity.h>
 

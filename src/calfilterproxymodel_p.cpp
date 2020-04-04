@@ -24,8 +24,8 @@
 #include <item.h>
 #include <entitytreemodel.h>
 
-#include <kcalendarcore/calfilter.h>
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/CalFilter>
+#include <KCalendarCore/Incidence>
 
 using namespace Akonadi;
 

@@ -18,8 +18,8 @@
 */
 
 #include "calendarclipboard_p.h"
-#include <kcalutils/dndfactory.h>
-#include <kcalutils/icaldrag.h>
+#include <KCalUtils/DndFactory>
+#include <KCalUtils/ICalDrag>
 
 #include <KLocalizedString>
 #include <KMessageBox>

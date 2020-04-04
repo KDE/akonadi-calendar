@@ -30,8 +30,8 @@
 #include <itemfetchscope.h>
 #include <itemdeletejob.h>
 
-#include <kcalendarcore/event.h>
-#include <kcalendarcore/journal.h>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Journal>
 #include <kcalendarcore/todo.h>
 
 #include <QBitArray>

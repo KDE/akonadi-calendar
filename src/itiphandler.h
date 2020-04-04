@@ -29,8 +29,8 @@
 #include "akonadi-calendar_export.h"
 #include "etmcalendar.h"
 
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/schedulemessage.h>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/ScheduleMessage>
 
 #include <KGuiItem>
 #include <KLocalizedString>

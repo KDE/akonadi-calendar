@@ -21,9 +21,9 @@
 
 #include "mailclient_p.h"
 
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/freebusy.h>
-#include <mailtransportakonadi/messagequeuejob.h>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/FreeBusy>
+#include <MailTransportAkonadi/MessageQueueJob>
 #include <KIdentityManagement/Identity>
 
 #include <qtest_akonadi.h>

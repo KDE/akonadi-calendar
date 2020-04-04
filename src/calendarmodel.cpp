@@ -23,9 +23,9 @@
 #include "utils_p.h"
 #include <monitor.h>
 #include <itemfetchscope.h>
-#include <kcalendarcore/event.h>
+#include <KCalendarCore/Event>
 #include <kcalendarcore/todo.h>
-#include <kcalendarcore/journal.h>
+#include <KCalendarCore/Journal>
 
 #include <KLocalizedString>
 

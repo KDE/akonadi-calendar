@@ -23,7 +23,7 @@
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 #include <KEmailAddress>
-#include <kcalendarcore/person.h>
+#include <KCalendarCore/Person>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

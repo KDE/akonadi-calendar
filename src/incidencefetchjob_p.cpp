@@ -23,8 +23,8 @@
 #include <collectionfetchscope.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <kcalendarcore/event.h>
-#include <kcalendarcore/journal.h>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Journal>
 #include <kcalendarcore/todo.h>
 
 using namespace Akonadi;

@@ -26,7 +26,7 @@
 #include <collectionfetchscope.h>
 #include <itemfetchscope.h>
 #include <qtest_akonadi.h>
-#include <kcalendarcore/event.h>
+#include <KCalendarCore/Event>
 
 #include <QTestEventLoop>
 

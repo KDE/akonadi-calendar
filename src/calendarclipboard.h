@@ -23,7 +23,7 @@
 #include "calendarbase.h"
 #include "akonadi-calendar_export.h"
 
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 #include <QObject>
 
 namespace Akonadi {

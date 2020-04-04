@@ -20,7 +20,7 @@
 #include "history.h"
 #include "history_p.h"
 #include "akonadicalendar_debug.h"
-#include <kcalutils/stringify.h>
+#include <KCalUtils/Stringify>
 
 using namespace KCalendarCore;
 using namespace Akonadi;

@@ -22,8 +22,8 @@
 #include "../src/fetchjobcalendar.h"
 #include "mailclient_p.h"
 
-#include <kcalendarcore/event.h>
-#include <kcalendarcore/icalformat.h>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/ICalFormat>
 #include <item.h>
 #include <itemcreatejob.h>
 #include <incidencechanger.h>

@@ -19,7 +19,7 @@
 
 #include "incidencechanger_p.h"
 #include "utils_p.h"
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 #include "akonadicalendar_debug.h"
 #include <item.h>
 #include <itemcreatejob.h>

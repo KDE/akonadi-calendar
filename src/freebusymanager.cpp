@@ -30,9 +30,9 @@
 #include <agentmanager.h>
 #include <contactsearchjob.h>
 
-#include <kcalendarcore/event.h>
-#include <kcalendarcore/freebusy.h>
-#include <kcalendarcore/person.h>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/FreeBusy>
+#include <KCalendarCore/Person>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>

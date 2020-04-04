@@ -26,9 +26,9 @@
 #include "utils_p.h"
 
 #include <kcalendarcore/calendar.h>
-#include <kcalendarcore/icalformat.h>
-#include <kcalutils/incidenceformatter.h>
-#include <kcalutils/stringify.h>
+#include <KCalendarCore/ICalFormat>
+#include <KCalUtils/IncidenceFormatter>
+#include <KCalUtils/Stringify>
 #include "akonadicalendar_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>

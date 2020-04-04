@@ -25,8 +25,8 @@
 
 #include <QAction>
 #include <KActionCollection>
-#include <kcalendarcore/event.h>
-#include <kcalendarcore/journal.h>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Journal>
 #include <kcalendarcore/todo.h>
 #include <KLocalizedString>
 

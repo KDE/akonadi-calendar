@@ -21,7 +21,7 @@
 #ifndef AKONADI_CALENDAR_UTILS_P_
 #define AKONADI_CALENDAR_UTILS_P_
 
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 #include <item.h>
 #include <collection.h>
 

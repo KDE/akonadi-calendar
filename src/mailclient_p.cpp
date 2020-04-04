@@ -25,10 +25,10 @@
 
 #include <collection.h>
 
-#include <kcalendarcore/attendee.h>
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/incidencebase.h>
-#include <kcalutils/incidenceformatter.h>
+#include <KCalendarCore/Attendee>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/IncidenceBase>
+#include <KCalUtils/IncidenceFormatter>
 #include <kmime/kmime_message.h>
 #include <identity.h>
 #include <KEmailAddress>

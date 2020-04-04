@@ -20,7 +20,7 @@
 #ifndef AKONADI_CALFILTERPARTSTATUSPROXYMODEL_P_H
 #define AKONADI_CALFILTERPARTSTATUSPROXYMODEL_P_H
 
-#include <kcalendarcore/attendee.h>
+#include <KCalendarCore/Attendee>
 #include <QSortFilterProxyModel>
 
 namespace Akonadi {

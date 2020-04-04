@@ -26,7 +26,7 @@
 #include "akonadi-calendar_export.h"
 #include "etmcalendar.h"
 
-#include <kcalendarcore/freebusycache.h>
+#include <KCalendarCore/FreeBusyCache>
 //TODO: document
 namespace Akonadi {
 class FreeBusyManagerPrivate;

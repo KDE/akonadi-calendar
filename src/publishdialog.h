@@ -21,7 +21,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <kcalendarcore/attendee.h>
+#include <KCalendarCore/Attendee>
 #include <QDialog>
 
 //TODO: documentation

@@ -24,8 +24,8 @@
 #include <item.h>
 #include <entitytreemodel.h>
 
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/attendee.h>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/Attendee>
 // #include <email.h>
 
 #include <identitymanager.h>

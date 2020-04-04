@@ -24,8 +24,8 @@
 #include "etmcalendar.h"
 #include "mailscheduler_p.h"
 
-#include <kcalendarcore/freebusy.h>
-#include <kcalendarcore/icalformat.h>
+#include <KCalendarCore/FreeBusy>
+#include <KCalendarCore/ICalFormat>
 
 #include <QPointer>
 #include <QDBusInterface>

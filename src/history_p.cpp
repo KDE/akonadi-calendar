@@ -19,7 +19,7 @@
 
 #include "history_p.h"
 #include "akonadicalendar_debug.h"
-#include <kcalutils/stringify.h>
+#include <KCalUtils/Stringify>
 #include <KLocalizedString>
 
 Entry::Entry(const Akonadi::Item &item, const QString &description, History *qq)

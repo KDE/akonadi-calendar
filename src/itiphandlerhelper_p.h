@@ -27,8 +27,8 @@
 #include "itiphandler.h"
 #include "mailscheduler_p.h"
 
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/schedulemessage.h>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/ScheduleMessage>
 
 #include <QObject>
 

@@ -23,7 +23,7 @@
 #include "calendarclipboard.h"
 #include "incidencechanger.h"
 #include "calendarbase.h"
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 #include <QVector>
 #include <QSet>
 

@@ -23,16 +23,16 @@
 #include "fetchjobcalendar.h"
 #include "utils_p.h"
 
-#include <kcalendarcore/icalformat.h>
-#include <kcalendarcore/attendee.h>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/Attendee>
 #include <itemdeletejob.h>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
 #include <itemfetchscope.h>
 #include <qtest_akonadi.h>
-#include <mailtransportakonadi/messagequeuejob.h>
+#include <MailTransportAkonadi/MessageQueueJob>
 
-#include <kcalendarcore/event.h>
+#include <KCalendarCore/Event>
 
 #include <QString>
 #include <QTimeZone>

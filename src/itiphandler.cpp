@@ -31,15 +31,15 @@
 #include "utils_p.h"
 #include "mailclient_p.h"
 
-#include <kcalendarcore/icalformat.h>
-#include <kcalendarcore/incidence.h>
-#include <kcalendarcore/schedulemessage.h>
-#include <kcalendarcore/attendee.h>
-#include <kcalutils/stringify.h>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/ScheduleMessage>
+#include <KCalendarCore/Attendee>
+#include <KCalUtils/Stringify>
 
 #include <identitymanager.h>
-#include <mailtransportakonadi/messagequeuejob.h>
-#include <mailtransport/transportmanager.h>
+#include <MailTransportAkonadi/MessageQueueJob>
+#include <MailTransport/TransportManager>
 
 #include <KMessageBox>
 #include <KLocalizedString>

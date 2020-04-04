@@ -25,8 +25,8 @@
 
 #include <item.h>
 #include <collection.h>
-#include <kcalendarcore/memorycalendar.h>
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/MemoryCalendar>
+#include <KCalendarCore/Incidence>
 
 namespace Akonadi {
 class CalendarBasePrivate;

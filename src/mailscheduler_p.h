@@ -23,7 +23,7 @@
 #include "scheduler_p.h"
 #include "mailclient_p.h"
 
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 #include <item.h>
 
 namespace Akonadi {

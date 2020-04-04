@@ -26,7 +26,7 @@
 #include <collection.h>
 #include "itiphandler.h"
 
-#include <kcalendarcore/incidence.h>
+#include <KCalendarCore/Incidence>
 
 #include <QWidget>
 
