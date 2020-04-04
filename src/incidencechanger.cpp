@@ -1128,6 +1128,16 @@ IncidenceChanger::DestinationPolicy IncidenceChanger::destinationPolicy() const
     return d->mDestinationPolicy;
 }
 
+void IncidenceChanger::setEntityTreeModel(Akonadi::EntityTreeModel *entityTreeModel)
+{
+    d->mEntityTreeModel = entityTreeModel;
+}
+
+Akonadi::EntityTreeModel *IncidenceChanger::entityTreeModel() const
+{
+    return d->mEntityTreeModel;
+}
+
 void IncidenceChanger::setDefaultCollection(const Akonadi::Collection &collection)
 {
     d->mDefaultCollection = collection;

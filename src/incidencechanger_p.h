@@ -314,6 +314,7 @@ public:
     QHash<const KJob *, Change::Ptr> mChangeForJob;
     bool mShowDialogsOnError = false;
     Akonadi::Collection mDefaultCollection;
+    Akonadi::EntityTreeModel *mEntityTreeModel = nullptr;
     DestinationPolicy mDestinationPolicy;
     QVector<Akonadi::Item::Id> mDeletedItemIds;
     Change::List mPendingCreations; // Creations waiting for collections to be loaded

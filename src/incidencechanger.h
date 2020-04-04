@@ -31,6 +31,7 @@
 #include <QWidget>
 
 namespace Akonadi {
+class EntityTreeModel;
 /**
  * @short IncidenceChanger is the preferred way to easily create, modify and delete incidences.
  *
@@ -240,6 +241,17 @@ public:
       * @see startAtomicOperation()
       */
     void endAtomicOperation();
+
+    /**
+     * Sets the base ETM tree model
+     * Used by the editor dialog's collection combobox, for instance.
+     */
+    void setEntityTreeModel(Akonadi::EntityTreeModel *model);
+
+    /**
+     * Returns the base ETM tree model
+     */
+    Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /**
       * Sets the default collection.
