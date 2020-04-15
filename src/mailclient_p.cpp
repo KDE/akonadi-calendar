@@ -59,7 +59,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     KCalendarCore::Attendee::List attendees = incidence->attendees();
     if (attendees.isEmpty()) {
         qCWarning(AKONADICALENDAR_LOG) << "There are no attendees to e-mail";
-        emit finished(ResultNoAttendees, i18n("There are no attendees to e-mail"));
+        Q_EMIT finished(ResultNoAttendees, i18n("There are no attendees to e-mail"));
         return;
     }
 
@@ -95,7 +95,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     if (toList.isEmpty() && ccList.isEmpty()) {
         // Not really to be called a groupware meeting, eh
         qCWarning(AKONADICALENDAR_LOG) << "There are really no attendees to e-mail";
-        emit finished(ResultReallyNoAttendees, i18n("There are no attendees to e-mail"));
+        Q_EMIT finished(ResultReallyNoAttendees, i18n("There are no attendees to e-mail"));
         return;
     }
     QString to;
@@ -175,7 +175,7 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence, const 
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(
             nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
         qCritical() << "Error while creating transport";
-        emit finished(ResultErrorCreatingTransport, i18n("Error while creating transport"));
+        Q_EMIT finished(ResultErrorCreatingTransport, i18n("Error while creating transport"));
         return;
     }
 
@@ -204,7 +204,7 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence, const 
     if (!transport) {
         qCritical() << "Error fetching transport; mailTransport"
                     << mailTransport << MailTransport::TransportManager::self()->defaultTransportName();
-        emit finished(ResultErrorFetchingTransport,
+        Q_EMIT finished(ResultErrorFetchingTransport,
                       i18n("Error fetching transport. Unable to send invitations"));
         return;
     }
@@ -351,9 +351,9 @@ void MailClient::handleQueueJobFinished(KJob *job)
 {
     if (job->error()) {
         qCritical() << "Error queueing message:" << job->errorText();
-        emit finished(ResultQueueJobError, i18n("Error queuing message in outbox: %1",
+        Q_EMIT finished(ResultQueueJobError, i18n("Error queuing message in outbox: %1",
                                                 job->errorText()));
     } else {
-        emit finished(ResultSuccess, QString());
+        Q_EMIT finished(ResultSuccess, QString());
     }
 }

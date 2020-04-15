@@ -151,7 +151,7 @@ bool History::clear()
     } else {
         result = false;
     }
-    emit changed();
+    Q_EMIT changed();
     return result;
 }
 
@@ -186,7 +186,7 @@ void History::Private::updateIds(Item::Id oldId, Item::Id newId)
 void History::Private::doIt(OperationType type)
 {
     mOperationTypeInProgress = type;
-    emit q->changed(); // Application will disable undo/redo buttons because operation is in progress
+    Q_EMIT q->changed(); // Application will disable undo/redo buttons because operation is in progress
     Q_ASSERT(!stack().isEmpty());
     mEntryInProgress = stack().pop();
 
@@ -226,7 +226,7 @@ void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult
 
     emitDone(mOperationTypeInProgress, resultCode);
     mOperationTypeInProgress = TypeNone;
-    emit q->changed();
+    Q_EMIT q->changed();
 }
 
 void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationId)
@@ -264,7 +264,7 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
             mUndoStack.push(entryToPush);
         }
         mRedoStack.clear();
-        emit q->changed();
+        Q_EMIT q->changed();
     } else {
         if (entryToPush) {
             mQueuedEntries.append(entryToPush);
@@ -324,9 +324,9 @@ QStack<Entry::Ptr> &History::Private::destinationStack()
 void History::Private::emitDone(OperationType type, History::ResultCode resultCode)
 {
     if (type == TypeUndo) {
-        emit q->undone(resultCode);
+        Q_EMIT q->undone(resultCode);
     } else if (type == TypeRedo) {
-        emit q->redone(resultCode);
+        Q_EMIT q->redone(resultCode);
     } else {
         Q_ASSERT(false);
     }

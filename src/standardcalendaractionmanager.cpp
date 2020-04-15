@@ -499,7 +499,7 @@ public:
             }
         }
 
-        emit mParent->actionStateUpdated();
+        Q_EMIT mParent->actionStateUpdated();
     }
 
     void slotCreateEvent()

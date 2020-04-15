@@ -89,7 +89,7 @@ void ITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipient recipient, 
 {
     Q_UNUSED(recipient);
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
-    emit dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
+    Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
 void ITIPHandlerDialogDelegate::openDialogIncidenceModified(bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
@@ -97,20 +97,20 @@ void ITIPHandlerDialogDelegate::openDialogIncidenceModified(bool attendeeStatusC
     Q_UNUSED(attendeeStatusChanged);
     Q_UNUSED(recipient);
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
-    emit dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
+    Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
 void ITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
     Q_UNUSED(recipient);
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
-    emit dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
+    Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
 void ITIPHandlerDialogDelegate::openDialogSchedulerFinished(const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
-    emit dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
+    Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
 ITIPHandlerHelper::SendResult
@@ -137,11 +137,11 @@ ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode, const KCalendarCore:
         m_scheduler->performTransaction(_incidence, method);
         return ITIPHandlerHelper::ResultSuccess;
     } else if (messageBoxReturnCode == KMessageBox::No) {
-        emit finished(ITIPHandlerHelper::ResultCanceled, QString());
+        Q_EMIT finished(ITIPHandlerHelper::ResultCanceled, QString());
         return ITIPHandlerHelper::ResultCanceled;
     } else {
         Q_ASSERT(false);   // TODO: Figure out if/how this can happen (by closing the dialog with x??)
-        emit finished(ITIPHandlerHelper::ResultCanceled, QString());
+        Q_EMIT finished(ITIPHandlerHelper::ResultCanceled, QString());
         return ITIPHandlerHelper::ResultCanceled;
     }
 }
@@ -206,14 +206,14 @@ void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalendarCore::iTIPMethod me
         qCWarning(AKONADICALENDAR_LOG) << "Creating incidence which has another organizer! Will skip sending invitations."
                                        << "; email= "       << incidence->organizer().email()
                                        << "; thatIsMe() = " << Akonadi::CalendarUtils::thatIsMe(incidence->organizer().email());
-        emit sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::ResultFailAbortUpdate, method, incidence);
-        emit finished(ITIPHandlerHelper::ResultFailAbortUpdate, QString());
+        Q_EMIT sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::ResultFailAbortUpdate, method, incidence);
+        Q_EMIT finished(ITIPHandlerHelper::ResultFailAbortUpdate, QString());
         return;
     }
 
     if (!weNeedToSendMailFor(incidence)) {
-        emit sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
-        emit finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
+        Q_EMIT sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
+        Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
         return;
     }
 
@@ -239,7 +239,7 @@ void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalendarCore::iTIPMethod me
 void ITIPHandlerHelper::slotIncidenceCreatedDialogClosed(int messageBoxReturnCode, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence)
 {
     ITIPHandlerHelper::SendResult status = sentInvitation(messageBoxReturnCode, incidence, method);
-    emit sendIncidenceCreatedMessageFinished(status, method, incidence);
+    Q_EMIT sendIncidenceCreatedMessageFinished(status, method, incidence);
 }
 
 bool ITIPHandlerHelper::handleIncidenceAboutToBeModified(const KCalendarCore::Incidence::Ptr &incidence)
@@ -288,8 +288,8 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
             askDelegator->openDialogIncidenceModified(attendeeStatusChanged, ITIPHandlerDialogDelegate::Attendees, question, mDefaultAction, KGuiItem(i18n("Send Update")));
             return;
         } else {
-            emit sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
-            emit finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
+            Q_EMIT sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
+            Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
             delete askDelegator;
             return;
         }
@@ -319,15 +319,15 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
         }
     }
     Q_ASSERT(false);   // Shouldn't happen.
-    emit sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
-    emit finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
+    Q_EMIT sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
+    Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
     delete askDelegator;
 }
 
 void ITIPHandlerHelper::slotIncidenceModifiedDialogClosed(int messageBoxReturnCode, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence)
 {
     ITIPHandlerHelper::SendResult status = sentInvitation(messageBoxReturnCode, incidence, method);
-    emit sendIncidenceModifiedMessageFinished(status, method, incidence);
+    Q_EMIT sendIncidenceModifiedMessageFinished(status, method, incidence);
 }
 
 void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence)
@@ -358,8 +358,8 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod me
             askDelegator->openDialogIncidenceDeleted(ITIPHandlerDialogDelegate::Attendees, question, mDefaultAction);
             return;
         } else {
-            emit sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
-            emit finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
+            Q_EMIT sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
+            Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
             delete askDelegator;
             return;
         }
@@ -400,23 +400,23 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod me
         } else {
             // We did not accept the event before and delete it from our calendar agian,
             // so there is no need to notify people.
-            emit sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
-            emit finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
+            Q_EMIT sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
+            Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
             delete askDelegator;
             return;
         }
     }
 
     Q_ASSERT(false);   // Shouldn't happen.
-    emit sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
-    emit finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
+    Q_EMIT sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
+    Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());
     delete askDelegator;
 }
 
 void ITIPHandlerHelper::slotIncidenceDeletedDialogClosed(const int messageBoxReturnCode, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence)
 {
     ITIPHandlerHelper::SendResult status = sentInvitation(messageBoxReturnCode, incidence, method);
-    emit sendIncidenceDeletedMessageFinished(status, method, incidence);
+    Q_EMIT sendIncidenceDeletedMessageFinished(status, method, incidence);
 }
 
 ITIPHandlerHelper::SendResult
@@ -461,7 +461,7 @@ void ITIPHandlerHelper::onSchedulerFinished(Akonadi::Scheduler::Result result, c
         }
     }
 
-    emit finished(success ? ResultSuccess : ResultError,
+    Q_EMIT finished(success ? ResultSuccess : ResultError,
                   success ? QString() : i18n("Error: %1", errorMsg));
 }
 
@@ -470,8 +470,8 @@ void ITIPHandlerHelper::slotSchedulerFinishDialog(const int result, KCalendarCor
     Q_UNUSED(method);
     Q_UNUSED(incidence);
     if (result == KMessageBox::Yes) {
-        emit finished(ResultFailAbortUpdate, QString());
+        Q_EMIT finished(ResultFailAbortUpdate, QString());
     } else {
-        emit finished(ResultFailKeepUpdate, QString());
+        Q_EMIT finished(ResultFailKeepUpdate, QString());
     }
 }

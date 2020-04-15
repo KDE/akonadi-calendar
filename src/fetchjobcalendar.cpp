@@ -74,7 +74,7 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 void FetchJobCalendarPrivate::slotFetchJobFinished()
 {
     m_isLoaded = true;
-    // emit loadFinished() in a delayed manner, due to freezes because of execs.
+    // Q_EMIT loadFinished() in a delayed manner, due to freezes because of execs.
     QMetaObject::invokeMethod(q, "loadFinished", Qt::QueuedConnection,
                               Q_ARG(bool, m_success), Q_ARG(QString, m_errorMessage));
 }

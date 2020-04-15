@@ -186,7 +186,7 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
     }
 
     if (result != ResultSuccess) {
-        emit transactionFinished(result, QStringLiteral("Error creating job"));
+        Q_EMIT transactionFinished(result, QStringLiteral("Error creating job"));
     } else {
         // Nothing to do here. Signal will be emitted when we hear back from the calendar.
     }
@@ -195,9 +195,9 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
 void MailScheduler::onMailerFinished(Akonadi::MailClient::Result result, const QString &errorMsg)
 {
     if (result == MailClient::ResultSuccess) {
-        emit transactionFinished(ResultSuccess, QString());
+        Q_EMIT transactionFinished(ResultSuccess, QString());
     } else {
         const QString message = i18n("Error sending e-mail: ") + errorMsg;
-        emit transactionFinished(ResultGenericError, message);
+        Q_EMIT transactionFinished(ResultGenericError, message);
     }
 }

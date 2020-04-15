@@ -81,7 +81,7 @@ void Entry::doIt(OperationType type)
     }
 
     if (!result) {
-        emit finished(IncidenceChanger::ResultCodeJobError, i18n("General error"));
+        Q_EMIT finished(IncidenceChanger::ResultCodeJobError, i18n("General error"));
     }
 }
 
@@ -134,7 +134,7 @@ void CreationEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::
             Q_ASSERT(deletedIds.count() == 1);
             mLatestRevisionByItemId.remove(deletedIds.first());   // TODO
         }
-        emit finished(resultCode, errorString);
+        Q_EMIT finished(resultCode, errorString);
     }
 }
 
@@ -151,7 +151,7 @@ void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item, Ak
             }
             updateIdsGlobaly(mItems.first().id(), item.id());
         }
-        emit finished(resultCode, errorString);
+        Q_EMIT finished(resultCode, errorString);
     }
 }
 
@@ -214,7 +214,7 @@ void DeletionEntry::onDeleteFinished(int changeId, const QVector<Akonadi::Item::
                 mLatestRevisionByItemId.remove(id);    // TODO
             }
         }
-        emit finished(resultCode, errorString);
+        Q_EMIT finished(resultCode, errorString);
     }
 }
 
@@ -231,7 +231,7 @@ void DeletionEntry::onCreateFinished(int changeId, const Akonadi::Item &item, Ak
         --mNumPendingCreations;
         mOldIdByChangeId.remove(changeId);
         if (mNumPendingCreations == 0) {
-            emit finished(mResultCode, mErrorString);
+            Q_EMIT finished(mResultCode, mErrorString);
         }
     }
 }
@@ -282,7 +282,7 @@ void ModificationEntry::onModifyFinished(int changeId, const Akonadi::Item &item
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
             mLatestRevisionByItemId.insert(item.id(), item.revision());
         }
-        emit finished(resultCode, errorString);
+        Q_EMIT finished(resultCode, errorString);
     }
 }
 
@@ -349,6 +349,6 @@ void MultiEntry::onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCod
             && resultCode != IncidenceChanger::ResultCodeSuccess)) {
         mFinishedEntries = mEntries.count(); // we're done
         mOperationInProgress = TypeNone;
-        emit finished(resultCode, errorString);
+        Q_EMIT finished(resultCode, errorString);
     }
 }

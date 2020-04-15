@@ -32,12 +32,12 @@ using namespace Akonadi;
 
 void Change::emitUserDialogClosedAfterChange(Akonadi::ITIPHandlerHelper::SendResult status)
 {
-    emit dialogClosedAfterChange(id, status);
+    Q_EMIT dialogClosedAfterChange(id, status);
 }
 
 void Change::emitUserDialogClosedBeforeChange(Akonadi::ITIPHandlerHelper::SendResult status)
 {
-    emit dialogClosedBeforeChange(id, status);
+    Q_EMIT dialogClosedBeforeChange(id, status);
 }
 
 void IncidenceChanger::Private::loadCollections()

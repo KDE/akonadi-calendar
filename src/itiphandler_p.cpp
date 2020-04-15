@@ -77,7 +77,7 @@ void ITIPHandler::Private::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResu
         MailScheduler::Result result2 = success ? MailScheduler::ResultSuccess : MailScheduler::ResultGenericError;
         finishProcessiTIPMessage(result2, i18n("Error: %1", errorMessage));
     } else {
-        emit q->iTipMessageSent(success ? ResultSuccess : ResultError,
+        Q_EMIT q->iTipMessageSent(success ? ResultSuccess : ResultError,
                                 success ? QString() : i18n("Error: %1", errorMessage));
     }
 }
@@ -100,7 +100,7 @@ void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMess
                                   m_queuedInvitation.iCal,
                                   m_queuedInvitation.action);
         } else {
-            emit q->iTipMessageProcessed(ResultError, i18n("Error loading calendar: %1", errorMessage));
+            Q_EMIT q->iTipMessageProcessed(ResultError, i18n("Error loading calendar: %1", errorMessage));
         }
     } else if (m_currentOperation == OperationSendiTIPMessage) {
         q->sendiTIPMessage(m_queuedInvitation.method,
@@ -115,7 +115,7 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
 {
     // Handle when user cancels on the collection selection dialog
     if (result == MailScheduler::ResultUserCancelled) {
-        emit q->iTipMessageProcessed(ResultCancelled, QString());
+        Q_EMIT q->iTipMessageProcessed(ResultCancelled, QString());
         return;
     }
 
@@ -138,7 +138,7 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
         }
     }
 
-    emit q->iTipMessageProcessed(success ? ResultSuccess : ResultError,
+    Q_EMIT q->iTipMessageProcessed(success ? ResultSuccess : ResultError,
                                  success ? QString() : i18n("Error: %1", errorMessage));
 }
 
@@ -146,7 +146,7 @@ void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendRes
 {
     if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded
         || sendResult == ITIPHandlerHelper::ResultCanceled) {
-        emit q->iTipMessageSent(ResultSuccess, QString());
+        Q_EMIT q->iTipMessageSent(ResultSuccess, QString());
     }
 }
 
@@ -162,7 +162,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
                                      i18n("Sending Free/Busy"),
                                      QStringLiteral("FreeBusyPublishSuccess"));
         }
-        emit q->iTipMessageSent(ITIPHandler::ResultSuccess, QString());
+        Q_EMIT q->iTipMessageSent(ITIPHandler::ResultSuccess, QString());
     } else {
         const QString error = i18nc("Groupware message sending failed. "
                                     "%2 is request/reply/add/cancel/counter/etc.",
@@ -173,7 +173,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
             KMessageBox::error(m_parentWidget, error);
         }
         qCritical() << "Groupware message sending failed." << error << errorMessage;
-        emit q->iTipMessageSent(ITIPHandler::ResultError, error + errorMessage);
+        Q_EMIT q->iTipMessageSent(ITIPHandler::ResultError, error + errorMessage);
     }
 }
 
@@ -186,7 +186,7 @@ void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Resu
                                      i18n("Publishing"),
                                      QStringLiteral("IncidencePublishSuccess"));
         }
-        emit q->informationPublished(ITIPHandler::ResultSuccess, QString());
+        Q_EMIT q->informationPublished(ITIPHandler::ResultSuccess, QString());
     } else {
         const QString error = i18n("Unable to publish the item '%1'",
                                    m_queuedInvitation.incidence->summary());
@@ -194,7 +194,7 @@ void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Resu
             KMessageBox::error(m_parentWidget, error);
         }
         qCritical() << "Publish failed." << error << errorMessage;
-        emit q->informationPublished(ITIPHandler::ResultError, error + errorMessage);
+        Q_EMIT q->informationPublished(ITIPHandler::ResultError, error + errorMessage);
     }
 }
 
@@ -207,7 +207,7 @@ void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result res
                                      i18n("Forwarding"),
                                      QStringLiteral("IncidenceForwardSuccess"));
         }
-        emit q->sentAsICalendar(ITIPHandler::ResultSuccess, QString());
+        Q_EMIT q->sentAsICalendar(ITIPHandler::ResultSuccess, QString());
     } else {
         if (m_parentWidget) {
             KMessageBox::error(m_parentWidget,
@@ -216,7 +216,7 @@ void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result res
                                i18n("Forwarding Error"));
         }
         qCritical() << "Sent as iCalendar failed." << errorMessage;
-        emit q->sentAsICalendar(ITIPHandler::ResultError, errorMessage);
+        Q_EMIT q->sentAsICalendar(ITIPHandler::ResultError, errorMessage);
     }
 
     sender()->deleteLater(); // Delete the mailer

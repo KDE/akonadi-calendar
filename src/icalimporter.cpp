@@ -73,10 +73,10 @@ void ICalImporter::Private::onIncidenceCreated(int changeId, const Akonadi::Item
         m_working = false;
         setErrorMessage(errorString);
         m_pendingRequests.clear();
-        emit q->importIntoExistingFinished(false, m_numIncidences);
+        Q_EMIT q->importIntoExistingFinished(false, m_numIncidences);
     } else if (m_pendingRequests.isEmpty()) {
         m_working = false;
-        emit q->importIntoExistingFinished(true, m_numIncidences);
+        Q_EMIT q->importIntoExistingFinished(true, m_numIncidences);
     }
 }
 
@@ -95,7 +95,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     m_working = false;
     if (createjob->error()) {
         setErrorMessage(i18n("Error creating ical resource: %1", createjob->errorString()));
-        emit q->importIntoNewFinished(false);
+        Q_EMIT q->importIntoNewFinished(false);
         return;
     }
 
@@ -107,7 +107,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     QDBusInterface iface(service, QStringLiteral("/Settings"));
     if (!iface.isValid()) {
         setErrorMessage(i18n("Failed to obtain D-Bus interface for remote configuration."));
-        emit q->importIntoNewFinished(false);
+        Q_EMIT q->importIntoNewFinished(false);
         return;
     }
 
@@ -117,7 +117,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     iface.call(QStringLiteral("setPath"), path);
     instance.reconfigure();
 
-    emit q->importIntoNewFinished(true);
+    Q_EMIT q->importIntoNewFinished(true);
 }
 
 void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArray &data)
@@ -131,7 +131,7 @@ void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArr
         q->importIntoExistingResource(QUrl(m_temporaryFile->fileName()), m_collection);
     } else {
         setErrorMessage(i18n("Could not download remote file."));
-        emit q->importIntoExistingFinished(false, 0);
+        Q_EMIT q->importIntoExistingFinished(false, 0);
     }
 }
 

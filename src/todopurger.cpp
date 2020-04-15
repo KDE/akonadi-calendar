@@ -45,7 +45,7 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
         if (m_calendarOwnership) {
             m_calendar.clear();
         }
-        emit q->todosPurged(false, 0, 0);
+        Q_EMIT q->todosPurged(false, 0, 0);
     }
 }
 
@@ -59,7 +59,7 @@ void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &
     if (m_calendarOwnership) {
         m_calendar.clear();
     }
-    emit q->todosPurged(result == IncidenceChanger::ResultCodeSuccess, deletedItems.count(), m_ignoredItems);
+    Q_EMIT q->todosPurged(result == IncidenceChanger::ResultCodeSuccess, deletedItems.count(), m_ignoredItems);
 }
 
 void TodoPurger::Private::deleteTodos()
@@ -97,7 +97,7 @@ void TodoPurger::Private::deleteTodos()
         if (m_calendarOwnership) {
             m_calendar.clear();
         }
-        emit q->todosPurged(true, 0, m_ignoredItems);
+        Q_EMIT q->todosPurged(true, 0, m_ignoredItems);
     } else {
         m_currentChangeId = m_changer->deleteIncidences(toDelete);
         Q_ASSERT(m_currentChangeId > 0);

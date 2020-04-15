@@ -137,7 +137,7 @@ void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collecti
         }
     }
 
-    emit q->collectionChanged(collection, attributeNames);
+    Q_EMIT q->collectionChanged(collection, attributeNames);
 }
 
 void ETMCalendarPrivate::setupFilteredETM()
@@ -296,7 +296,7 @@ void ETMCalendarPrivate::itemsAdded(const Akonadi::Item::List &items)
         if (mPopulatedCollectionIds.contains(id)) {
             // If the collection isn't populated yet, it will be sent later
             // Saves some cpu cycles
-            emit q->calendarChanged();
+            Q_EMIT q->calendarChanged();
         }
     }
 }
@@ -306,7 +306,7 @@ void ETMCalendarPrivate::itemsRemoved(const Akonadi::Item::List &items)
     for (const Akonadi::Item &item : items) {
         internalRemove(item);
     }
-    emit q->calendarChanged();
+    Q_EMIT q->calendarChanged();
 }
 
 Akonadi::Collection ETMCalendarPrivate::collectionFromIndex(const QModelIndex &index)
@@ -324,14 +324,14 @@ void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index, int start, int
     }
 
     if (!collections.isEmpty()) {
-        emit q->collectionsAdded(collections);
+        Q_EMIT q->collectionsAdded(collections);
     }
 }
 
 void ETMCalendarPrivate::onCollectionPopulated(Akonadi::Collection::Id id)
 {
     mPopulatedCollectionIds.insert(id);
-    emit q->calendarChanged();
+    Q_EMIT q->calendarChanged();
 }
 
 void ETMCalendarPrivate::onRowsRemoved(const QModelIndex &index, int start, int end)
@@ -342,7 +342,7 @@ void ETMCalendarPrivate::onRowsRemoved(const QModelIndex &index, int start, int 
     }
 
     if (!collections.isEmpty()) {
-        emit q->collectionsRemoved(collections);
+        Q_EMIT q->collectionsRemoved(collections);
     }
 }
 
@@ -398,7 +398,7 @@ void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft
         i = i.sibling(row, topLeft.column());
     }
 
-    emit q->calendarChanged();
+    Q_EMIT q->calendarChanged();
 }
 
 void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)

@@ -342,7 +342,7 @@ void ITIPHandler::publishInformation(const KCalendarCore::Incidence::Ptr &incide
         d->m_scheduler->publish(incidence, publishdlg->addresses());
     } else {
         d->m_currentOperation = OperationNone;
-        emit informationPublished(ResultSuccess, QString());    // Canceled.
+        Q_EMIT informationPublished(ResultSuccess, QString());    // Canceled.
     }
     delete publishdlg;
 }

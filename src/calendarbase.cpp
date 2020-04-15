@@ -189,7 +189,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob *job)
     mCollections.insert(collection.id(), collection);
 
     if (mCollectionJobs.isEmpty()) {
-        emit fetchFinished();
+        Q_EMIT fetchFinished();
     }
 }
 
@@ -252,7 +252,7 @@ void CalendarBasePrivate::slotDeleteFinished(int changeId, const QVector<Akonadi
         }
     }
 
-    emit q->deleteFinished(resultCode == IncidenceChanger::ResultCodeSuccess, errorMessage);
+    Q_EMIT q->deleteFinished(resultCode == IncidenceChanger::ResultCodeSuccess, errorMessage);
 }
 
 void CalendarBasePrivate::slotCreateFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
@@ -267,7 +267,7 @@ void CalendarBasePrivate::slotCreateFinished(int changeId, const Akonadi::Item &
 
     mLastCreationCancelled = (resultCode == IncidenceChanger::ResultCodeUserCanceled);
 
-    emit q->createFinished(resultCode == IncidenceChanger::ResultCodeSuccess, errorMessage);
+    Q_EMIT q->createFinished(resultCode == IncidenceChanger::ResultCodeSuccess, errorMessage);
 }
 
 void CalendarBasePrivate::slotModifyFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
@@ -290,7 +290,7 @@ void CalendarBasePrivate::slotModifyFinished(int changeId, const Akonadi::Item &
             resultCode = IncidenceChanger::ResultCodeAlreadyDeleted;
         }
     }
-    emit q->modifyFinished(resultCode == IncidenceChanger::ResultCodeSuccess, message);
+    Q_EMIT q->modifyFinished(resultCode == IncidenceChanger::ResultCodeSuccess, message);
 }
 
 void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &newIdentifier)

@@ -82,12 +82,12 @@ void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::List &incid
         Akonadi::Item::List items = m_calendar->itemList(incidences);
         const int result = m_changer->deleteIncidences(items);
         if (result == -1) {
-            emit q->cutFinished(/**success=*/ false, i18n("Error performing deletion."));
+            Q_EMIT q->cutFinished(/**success=*/ false, i18n("Error performing deletion."));
         } else {
             m_pendingChangeIds << result;
         }
     } else {
-        emit q->cutFinished(/**success=*/ false, i18n("Error performing copy."));
+        Q_EMIT q->cutFinished(/**success=*/ false, i18n("Error performing copy."));
     }
 }
 
@@ -111,7 +111,7 @@ void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Inci
         for (const KCalendarCore::Incidence::Ptr &child : childs) {
             Akonadi::Item childItem = m_calendar->item(incidence);
             if (!childItem.isValid()) {
-                emit q->cutFinished(/**success=*/ false, i18n("Can't find item: %1", childItem.id()));
+                Q_EMIT q->cutFinished(/**success=*/ false, i18n("Can't find item: %1", childItem.id()));
                 return;
             }
 
@@ -127,7 +127,7 @@ void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Inci
             }
         }
         if (m_pendingChangeIds.isEmpty() && m_abortCurrentOperation) {
-            emit q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
+            Q_EMIT q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
         } // if m_pendingChangeIds isn't empty, we wait for all jobs to finish first.
     }
 }
@@ -144,7 +144,7 @@ void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi:
     Q_UNUSED(item);
     Q_UNUSED(errorMessage);
     if (m_abortCurrentOperation && isLastChange) {
-        emit q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
+        Q_EMIT q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
     } else if (!m_abortCurrentOperation) {
         if (resultCode == IncidenceChanger::ResultCodeSuccess) {
             if (isLastChange) {
@@ -168,9 +168,9 @@ void CalendarClipboard::Private::slotDeleteFinished(int changeId, const QVector<
 
     Q_UNUSED(ids);
     if (result == IncidenceChanger::ResultCodeSuccess) {
-        emit q->cutFinished(/**success=*/ true, QString());
+        Q_EMIT q->cutFinished(/**success=*/ true, QString());
     } else {
-        emit q->cutFinished(/**success=*/ false, i18n("Error while deleting incidences: %1",
+        Q_EMIT q->cutFinished(/**success=*/ false, i18n("Error while deleting incidences: %1",
                                                       errorMessage));
     }
 }
@@ -200,7 +200,7 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
                                                         KGuiItem(i18n("Cut All")));
 
         if (km == KMessageBox::Cancel) {
-            emit cutFinished(/*success=*/ true, QString());
+            Q_EMIT cutFinished(/*success=*/ true, QString());
             return;
         }
         mode = km == KMessageBox::Yes ? SingleMode : RecursiveMode;

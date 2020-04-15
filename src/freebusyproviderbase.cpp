@@ -63,12 +63,12 @@ FreeBusyProviderBase::~FreeBusyProviderBase()
 
 void FreeBusyProviderBase::handlesFreeBusy(const QString &email, bool handles) const
 {
-    emit d->handlesFreeBusy(email, handles);
+    Q_EMIT d->handlesFreeBusy(email, handles);
 }
 
 void FreeBusyProviderBase::freeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText)
 {
-    emit d->freeBusyRetrieved(email, freeBusy, success, errorText);
+    Q_EMIT d->freeBusyRetrieved(email, freeBusy, success, errorText);
 }
 
 #include "moc_freebusyproviderbase_p.cpp"
