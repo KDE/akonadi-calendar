@@ -61,12 +61,12 @@ public:
         switch (type) {
         case Akonadi::StandardActionManager::CreateCollection:
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setText(
-                i18n("Add Calendar Folder..."));
+                i18n("Add Folder..."));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setWhatsThis(
                 i18n("Add a new calendar folder to the currently selected calendar folder."));
             mGenericManager->setContextText(
                 StandardActionManager::CreateCollection, StandardActionManager::DialogTitle,
-                i18nc("@title:window", "New Calendar Folder"));
+                i18nc("@title:window", "New Folder"));
 
             mGenericManager->setContextText(
                 StandardActionManager::CreateCollection, StandardActionManager::ErrorMessageText,
@@ -84,13 +84,13 @@ public:
             break;
         case  Akonadi::StandardActionManager::CopyCollections:
             mGenericManager->setActionText(Akonadi::StandardActionManager::CopyCollections,
-                                           ki18np("Copy Calendar Folder", "Copy %1 Calendar Folders"));
+                                           ki18np("Copy Folder", "Copy %1 Folders"));
             mGenericManager->action(Akonadi::StandardActionManager::CopyCollections)->setWhatsThis(
                 i18n("Copy the selected calendar folders to the clipboard."));
             break;
         case Akonadi::StandardActionManager::DeleteCollections:
             mGenericManager->setActionText(Akonadi::StandardActionManager::DeleteCollections,
-                                           ki18np("Delete Calendar Folder", "Delete %1 Calendar Folders"));
+                                           ki18np("Delete Folder", "Delete %1 Folders"));
             mGenericManager->action(Akonadi::StandardActionManager::DeleteCollections)->setWhatsThis(
                 i18n("Delete the selected calendar folders from the calendar."));
             mGenericManager->setContextText(
@@ -113,14 +113,14 @@ public:
             break;
         case Akonadi::StandardActionManager::SynchronizeCollections:
             mGenericManager->setActionText(Akonadi::StandardActionManager::SynchronizeCollections,
-                                           ki18np("Update Calendar Folder", "Update %1 Calendar Folders"));
+                                           ki18np("Update Folder", "Update %1 Folders"));
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollections)->setWhatsThis(
                 i18n("Update the content of the selected calendar folders."));
 
             break;
         case Akonadi::StandardActionManager::CutCollections:
             mGenericManager->setActionText(Akonadi::StandardActionManager::CutCollections,
-                                           ki18np("Cut Calendar Folder", "Cut %1 Calendar Folders"));
+                                           ki18np("Cut Folder", "Cut %1 Folders"));
             mGenericManager->action(Akonadi::StandardActionManager::CutCollections)->setWhatsThis(
                 i18n("Cut the selected calendar folders from the calendar."));
             break;
