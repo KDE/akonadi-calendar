@@ -425,7 +425,7 @@ void IncidenceChanger::Private::handleModifyJobResult(KJob *job)
         change->newItem = item;
         if (change->recordToHistory && !change->originalItems.isEmpty()) {
             Q_ASSERT(change->originalItems.count() == 1);
-            mHistory->recordModification(change->originalItems.first(), item,
+            mHistory->recordModification(change->originalItems.constFirst(), item,
                                          description, change->atomicOperationId);
         }
 
