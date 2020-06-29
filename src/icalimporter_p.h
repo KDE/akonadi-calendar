@@ -50,7 +50,7 @@ public:
 
     ICalImporter *const q;
     Akonadi::IncidenceChanger *m_changer = nullptr;
-    int m_numIncidences;
+    int m_numIncidences = 0;
     QList<int> m_pendingRequests;
 
     QString m_lastErrorMessage;

@@ -50,6 +50,7 @@ public:
      * @param parent  Parent QObject.
      */
     explicit ICalImporter(Akonadi::IncidenceChanger *changer = nullptr, QObject *parent = nullptr);
+    ~ICalImporter();
 
     /**
      * Translated error message.

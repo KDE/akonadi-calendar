@@ -40,12 +40,9 @@ using namespace KCalendarCore;
 using namespace Akonadi;
 
 ICalImporter::Private::Private(IncidenceChanger *changer, ICalImporter *qq)
-    : QObject()
+    : QObject(qq)
     , q(qq)
     , m_changer(changer)
-    , m_numIncidences(0)
-    , m_working(false)
-    , m_temporaryFile(nullptr)
 {
     if (!changer) {
         m_changer = new IncidenceChanger(q);
@@ -138,6 +135,10 @@ void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArr
 ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer, QObject *parent)
     : QObject(parent)
     , d(new Private(changer, this))
+{
+}
+
+ICalImporter::~ICalImporter()
 {
 }
 
