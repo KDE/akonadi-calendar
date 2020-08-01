@@ -31,7 +31,7 @@
 
 #include <QDir>
 #include <QFile>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QTextStream>
 #include <QTimer>
 #include <QTimerEvent>
@@ -56,9 +56,9 @@ QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
     }
 
     QString saveStr = url.path();
-    saveStr.replace(QRegExp(QStringLiteral("%[Ee][Mm][Aa][Ii][Ll]%")), email);
-    saveStr.replace(QRegExp(QStringLiteral("%[Nn][Aa][Mm][Ee]%")), emailName);
-    saveStr.replace(QRegExp(QStringLiteral("%[Ss][Ee][Rr][Vv][Ee][Rr]%")), emailHost);
+    saveStr.replace(QRegularExpression(QStringLiteral("%email%"), QRegularExpression::CaseInsensitiveOption), email);
+    saveStr.replace(QRegularExpression(QStringLiteral("%name%"), QRegularExpression::CaseInsensitiveOption), emailName);
+    saveStr.replace(QRegularExpression(QStringLiteral("%server%"), QRegularExpression::CaseInsensitiveOption), emailHost);
 
     QUrl retUrl(url);
     retUrl.setPath(saveStr);
@@ -272,7 +272,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         }
     }
 
-    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegExp(QStringLiteral("\\.[xiv]fb$")))) {
+    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegularExpression(QStringLiteral("\\.[xiv]fb$")))) {
         // user specified a fullpath
         // do variable string replacements to the URL (MS Outlook style)
         const QUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
@@ -805,7 +805,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
     // We need to massage the list a bit so that Outlook understands
     // it.
-    messageText.replace(QRegExp(QStringLiteral("ORGANIZER\\s*:MAILTO:")),
+    messageText.replace(QRegularExpression(QStringLiteral("ORGANIZER\\s*:MAILTO:")),
                         QStringLiteral("ORGANIZER:"));
 
     // Create a local temp file and save the message to it
