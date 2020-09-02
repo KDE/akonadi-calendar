@@ -25,12 +25,11 @@ class Q_DECL_HIDDEN CalFilterPartStatusProxyModel::Private
 public:
     explicit Private()
         : mIdentityManager(KIdentityManagement::IdentityManager::self())
-        , mFilterVirtual(false)
     {
     }
 
     QList<KCalendarCore::Attendee::PartStat> mBlockedStatusList;
-    KIdentityManagement::IdentityManager *mIdentityManager = nullptr;
+    KIdentityManagement::IdentityManager * const mIdentityManager;
     bool mFilterVirtual = false;
 };
 

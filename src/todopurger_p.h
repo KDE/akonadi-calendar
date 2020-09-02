@@ -24,9 +24,9 @@ public:
     IncidenceChanger *m_changer = nullptr;
     QString m_lastError;
     CalendarBase::Ptr m_calendar;
-    int m_currentChangeId;
-    int m_ignoredItems;
-    bool m_calendarOwnership; // If false it's not ours.
+    int m_currentChangeId = -1;
+    int m_ignoredItems = 0;
+    bool m_calendarOwnership = true; // If false it's not ours.
 
     void deleteTodos();
     Q_REQUIRED_RESULT bool treeIsDeletable(const KCalendarCore::Todo::Ptr &todo);

@@ -38,9 +38,6 @@ static QString itemToString(const Akonadi::Item &item)
 CalendarBasePrivate::CalendarBasePrivate(CalendarBase *qq)
     : QObject()
     , mIncidenceChanger(new IncidenceChanger())
-    , mBatchInsertionCancelled(false)
-    , mListensForNewItems(false)
-    , mLastCreationCancelled(false)
     , q(qq)
 {
     connect(mIncidenceChanger, &IncidenceChanger::createFinished,

@@ -20,7 +20,6 @@ CalendarClipboard::Private::Private(const Akonadi::CalendarBase::Ptr &calendar, 
     : QObject(qq)
     , m_calendar(calendar)
     , m_changer(changer)
-    , m_abortCurrentOperation(false)
     , q(qq)
 {
     Q_ASSERT(m_calendar);

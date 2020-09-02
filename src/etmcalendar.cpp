@@ -35,13 +35,6 @@ using namespace KCalendarCore;
 ETMCalendarPrivate::ETMCalendarPrivate(ETMCalendar *qq)
     : CalendarBasePrivate(qq)
     , mETM(nullptr)
-    , mFilteredETM(nullptr)
-    , mCheckableProxyModel(nullptr)
-    , mCollectionProxyModel(nullptr)
-    , mCalFilterProxyModel(nullptr)
-    , mCalFilterPartStatusProxyModel(nullptr)
-    , mSelectionProxy(nullptr)
-    , mCollectionFilteringEnabled(true)
     , q(qq)
 {
     mListensForNewItems = true;

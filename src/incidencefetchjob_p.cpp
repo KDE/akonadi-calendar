@@ -17,7 +17,6 @@
 using namespace Akonadi;
 
 Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent) : Job(parent)
-    , m_jobCount(0)
 {
     m_mimeTypeChecker.addWantedMimeType(QStringLiteral("text/calendar"));
 }

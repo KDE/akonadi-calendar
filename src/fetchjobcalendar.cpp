@@ -17,7 +17,6 @@ using namespace KCalendarCore;
 
 FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     : CalendarBasePrivate(qq)
-    , m_isLoaded(false)
     , q(qq)
 {
     IncidenceFetchJob *job = new IncidenceFetchJob();

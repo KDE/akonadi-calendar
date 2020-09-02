@@ -15,11 +15,7 @@
 using namespace Akonadi;
 
 TodoPurger::Private::Private(TodoPurger *q)
-    : m_changer(nullptr)
-    , m_currentChangeId(-1)
-    , m_ignoredItems(0)
-    , m_calendarOwnership(true)
-    , q(q)
+    : q(q)
 {
 }
 

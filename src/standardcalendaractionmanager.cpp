@@ -521,7 +521,7 @@ public:
     QItemSelectionModel *mItemSelectionModel = nullptr;
     QHash<StandardCalendarActionManager::Type, QAction *> mActions;
     QSet<StandardCalendarActionManager::Type> mInterceptedActions;
-    StandardCalendarActionManager *mParent = nullptr;
+    StandardCalendarActionManager *const mParent;
 };
 
 Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent)

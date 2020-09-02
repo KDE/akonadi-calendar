@@ -35,7 +35,7 @@ private Q_SLOTS:
 private:
     QUrl mUrl;
     QByteArray mFreeBusyData;
-    QWidget *mParent = nullptr;
+    QWidget *const mParent;
 };
 }
 

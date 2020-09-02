@@ -119,7 +119,7 @@ public:
     //filter out all invitations and declined events
     Akonadi::CalFilterPartStatusProxyModel *mCalFilterPartStatusProxyModel = nullptr;
     KSelectionProxyModel *mSelectionProxy = nullptr;
-    bool mCollectionFilteringEnabled;
+    bool mCollectionFilteringEnabled = true;
     QSet<Akonadi::Collection::Id> mPopulatedCollectionIds;
     QStringList mMimeTypes;
 private:

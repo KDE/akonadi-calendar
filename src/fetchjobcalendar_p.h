@@ -26,7 +26,7 @@ public Q_SLOTS:
     void slotFetchJobFinished();
 
 public:
-    bool m_isLoaded;
+    bool m_isLoaded = false;
 
 private:
     FetchJobCalendar *const q;

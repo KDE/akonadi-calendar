@@ -13,14 +13,12 @@
 using namespace Akonadi;
 
 ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler *qq)
-    : m_calendarLoadError(false)
-    , m_factory(factory ? factory : new ITIPHandlerComponentFactory(this))
+    : m_factory(factory ? factory : new ITIPHandlerComponentFactory(this))
     , m_scheduler(new MailScheduler(m_factory, qq))
     , m_method(KCalendarCore::iTIPNoMethod)
     , m_helper(new ITIPHandlerHelper(m_factory))
     , m_currentOperation(OperationNone)
     , m_uiDelegate(nullptr)
-    , m_showDialogsOnError(true)
     , q(qq)
 {
     m_helper->setParent(this);
