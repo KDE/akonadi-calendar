@@ -1,6 +1,7 @@
 [Misc]
 Name=Incidence Serializer
 Name[ar]=مُسلسِل الحدوثات
+Name[az]=Hadisələrin Saxlanılması
 Name[bs]=Seralizator događaja
 Name[ca]=Serialitzador d'incidències
 Name[ca@valencia]=Serialitzador d'incidències
@@ -47,6 +48,7 @@ Name[zh_CN]=事件序列转换器
 Name[zh_TW]=頻率序列器
 Comment=An Akonadi serializer plugin for events, tasks and journal entries
 Comment[ar]=ملحقة سَلسَلة «أكونادي» للأحداث والمهامّ ومدخلات اليوميّة
+Comment[az]=Hadisələrin, tapşırıqların,və qeydlərin saxlanılması modulu
 Comment[bs]=Akonadi dodatak serializatora za događaje, zadatke i žurnal upise
 Comment[ca]=Un connector de serialització de l'Akonadi per a esdeveniments, tasques i entrades de diari
 Comment[ca@valencia]=Un connector de serialització de l'Akonadi per a esdeveniments, tasques i entrades de diari
