@@ -11,12 +11,10 @@
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/ICalFormat>
-#include <item.h>
 #include <itemcreatejob.h>
 #include <incidencechanger.h>
 #include <itiphandler.h>
 
-#include <QString>
 #include <QFile>
 #include <QByteArray>
 #include <QTestEventLoop>

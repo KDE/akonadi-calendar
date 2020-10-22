@@ -12,7 +12,6 @@
 #include <entitytreemodel.h>
 
 #include <KCalendarCore/Incidence>
-#include <KCalendarCore/Attendee>
 // #include <email.h>
 
 #include <identitymanager.h>

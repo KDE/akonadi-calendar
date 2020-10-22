@@ -10,10 +10,8 @@
 #include "calendarbase.h"
 #include "utils_p.h"
 
-#include <item.h>
 
 #include <KCalendarCore/ICalFormat>
-#include <KCalendarCore/Incidence>
 #include <KCalendarCore/ScheduleMessage>
 #include <identitymanager.h>
 #include <identity.h>

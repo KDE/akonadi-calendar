@@ -19,8 +19,6 @@
 #include "mailclient_p.h"
 
 #include <KCalendarCore/ICalFormat>
-#include <KCalendarCore/Incidence>
-#include <KCalendarCore/ScheduleMessage>
 #include <KCalendarCore/Attendee>
 #include <KCalUtils/Stringify>
 
@@ -29,7 +27,6 @@
 #include <MailTransport/TransportManager>
 
 #include <KMessageBox>
-#include <KLocalizedString>
 #include "akonadicalendar_debug.h"
 
 using namespace Akonadi;

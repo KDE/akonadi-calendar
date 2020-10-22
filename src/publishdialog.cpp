@@ -11,7 +11,6 @@
 
 #include "publishdialog_p.h"
 
-#include <KCalendarCore/Attendee>
 #include <KCalendarCore/Person>
 
 #include <KCodecs/KEmailAddress>

@@ -15,7 +15,6 @@
 #include "akonadicalendar_debug.h"
 #include <item.h>
 #include <session.h>
-#include <collection.h>
 #include <monitor.h>
 #include <itemfetchscope.h>
 #include <entitydisplayattribute.h>

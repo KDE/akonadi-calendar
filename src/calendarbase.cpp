@@ -10,9 +10,7 @@
 #include "incidencechanger.h"
 #include "utils_p.h"
 #include "akonadicalendar_debug.h"
-#include <item.h>
 #include <collectionfetchjob.h>
-#include <collection.h>
 
 #include <KLocalizedString>
 #include <QTimeZone>
