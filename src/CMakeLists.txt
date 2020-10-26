@@ -78,7 +78,7 @@ set_target_properties(KF5AkonadiCalendar PROPERTIES
 
 ecm_generate_pri_file(BASE_NAME AkonadiCalendar
     LIB_NAME KF5AkonadiCalendar
-    DEPS "AkonadiCore CalendarCore" FILENAME_VAR PRI_FILENAME
+    DEPS "AkonadiCore KCalendarCore" FILENAME_VAR PRI_FILENAME
 )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
