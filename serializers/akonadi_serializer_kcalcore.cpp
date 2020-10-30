@@ -30,6 +30,24 @@ SerializerPluginKCalCore::SerializerPluginKCalCore()
 
 //// ItemSerializerPlugin interface
 
+namespace {
+
+bool isSerializedBinary(QIODevice &data)
+{
+    quint32 magic = 0;
+    data.peek(reinterpret_cast<char *>(&magic), sizeof(magic));
+    return magic == IncidenceBase::magicSerializationIdentifier();
+}
+
+struct Header {
+    quint32 magic;
+    quint32 incidenceVersion;
+    qint32 type;
+};
+
+} // namespace
+
+
 bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
 {
     Q_UNUSED(version);
@@ -38,19 +56,18 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
         return false;
     }
 
-    qint32 type;
-    quint32 magic, incidenceVersion;
-    QDataStream input(&data);
-    input >> magic;
-    input >> incidenceVersion;
-    input >> type;
-    data.seek(0);
-
     Incidence::Ptr incidence;
 
-    if (magic == IncidenceBase::magicSerializationIdentifier()) {
+    if (isSerializedBinary(data)) {
+        const auto buffer = data.peek(sizeof(Header));
+        QDataStream input(buffer);
+        Header header;
+        input >> header.magic;
+        input >> header.incidenceVersion;
+        input >> header.type;
+
         IncidenceBase::Ptr base;
-        switch (static_cast<KCalendarCore::Incidence::IncidenceType>(type)) {
+        switch (static_cast<KCalendarCore::Incidence::IncidenceType>(header.type)) {
         case KCalendarCore::Incidence::TypeEvent:
             base = Event::Ptr(new Event());
             break;
@@ -77,8 +94,10 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
         qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << "Failed to parse incidence! Item id = " << item.id()
                                                    << "Storage collection id " << item.storageCollectionId()
                                                    << "parentCollectionId = " << item.parentCollection().id();
-        data.seek(0);
-        qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << QString::fromUtf8(data.readAll());
+        if (!data.isSequential()) {
+            data.seek(0);
+            qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << QString::fromUtf8(data.readAll());
+        }
         return false;
     }
 
