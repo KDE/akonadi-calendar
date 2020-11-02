@@ -16,13 +16,13 @@ using namespace Akonadi;
 
 bool Helper::confirmExists(const Akonadi::Item &item)
 {
-    ItemFetchJob *job = new ItemFetchJob(item);
+    auto *job = new ItemFetchJob(item);
     return job->exec() != 0;
 }
 
 bool Helper::confirmDoesntExist(const Akonadi::Item &item)
 {
-    ItemFetchJob *job = new ItemFetchJob(item);
+    auto *job = new ItemFetchJob(item);
     return job->exec() == 0;
 }
 

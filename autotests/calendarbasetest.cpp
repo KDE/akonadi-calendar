@@ -197,10 +197,10 @@ void CalendarBaseTest::testDelete()
     QTestEventLoop::instance().enterLoop(5);
     QVERIFY(!QTestEventLoop::instance().timeout());
 
-    ItemFetchJob *job1 = new ItemFetchJob(event, this);
-    ItemFetchJob *job2 = new ItemFetchJob(todo, this);
-    ItemFetchJob *job3 = new ItemFetchJob(journal, this);
-    ItemFetchJob *job4 = new ItemFetchJob(incidence, this);
+    auto *job1 = new ItemFetchJob(event, this);
+    auto *job2 = new ItemFetchJob(todo, this);
+    auto *job3 = new ItemFetchJob(journal, this);
+    auto *job4 = new ItemFetchJob(incidence, this);
     QVERIFY(!job1->exec());
     QVERIFY(!job2->exec());
     QVERIFY(!job3->exec());

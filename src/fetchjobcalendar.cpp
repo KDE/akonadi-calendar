@@ -18,7 +18,7 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     : CalendarBasePrivate(qq)
     , q(qq)
 {
-    IncidenceFetchJob *job = new IncidenceFetchJob();
+    auto *job = new IncidenceFetchJob();
     connect(job, &KJob::result,
             this, &FetchJobCalendarPrivate::slotSearchJobFinished);
     connect(this, &CalendarBasePrivate::fetchFinished,
@@ -31,7 +31,7 @@ FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
 
 void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 {
-    IncidenceFetchJob *searchJob = static_cast<Akonadi::IncidenceFetchJob *>(job);
+    auto *searchJob = static_cast<Akonadi::IncidenceFetchJob *>(job);
     m_success = true;
     m_errorMessage = QString();
     if (searchJob->error()) {
@@ -75,7 +75,7 @@ FetchJobCalendar::~FetchJobCalendar()
 
 bool FetchJobCalendar::isLoaded() const
 {
-    FetchJobCalendarPrivate *d = static_cast<FetchJobCalendarPrivate *>(d_ptr.data());
+    auto *d = static_cast<FetchJobCalendarPrivate *>(d_ptr.data());
     return d->m_isLoaded;
 }
 

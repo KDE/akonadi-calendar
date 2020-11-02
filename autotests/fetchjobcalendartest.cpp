@@ -28,7 +28,7 @@ class FetchJobCalendarTest : public QObject
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setDtStart(QDateTime::currentDateTimeUtc());
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-        ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+        auto *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
     }
 

@@ -59,13 +59,13 @@ void UnitTestBase::createIncidence(const QString &uid)
 void UnitTestBase::createIncidence(const Item &item)
 {
     QVERIFY(mCollection.isValid());
-    ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+    auto *job = new ItemCreateJob(item, mCollection, this);
     QVERIFY(job->exec());
 }
 
 void UnitTestBase::verifyExists(const QString &uid, bool exists)
 {
-    FetchJobCalendar *calendar = new FetchJobCalendar();
+    auto *calendar = new FetchJobCalendar();
     connect(calendar, &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
     calendar->deleteLater();

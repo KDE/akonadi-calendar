@@ -359,7 +359,7 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
         const QString from = Akonadi::CalendarUtils::email();
         const bool bccMe = Akonadi::CalendarSettings::self()->bcc();
         const QString messageText = format.createScheduleMessage(incidence, KCalendarCore::iTIPRequest);
-        MailClient *mailer = new MailClient(d->m_factory);
+        auto *mailer = new MailClient(d->m_factory);
         d->m_queuedInvitation.incidence = incidence;
         connect(mailer, &MailClient::finished, d, [this](Akonadi::MailClient::Result result, const QString &str) {
             d->finishSendAsICalendar(result, str);

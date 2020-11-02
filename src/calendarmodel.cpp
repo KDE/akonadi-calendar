@@ -46,7 +46,7 @@ CalendarModel::CalendarModel(Akonadi::Monitor *monitor)
 
 CalendarModel::Ptr CalendarModel::create(Monitor *monitor)
 {
-    CalendarModel *model = new CalendarModel(monitor);
+    auto *model = new CalendarModel(monitor);
     CalendarModel::Ptr modelPtr = CalendarModel::Ptr(model);
     model->setWeakPointer(modelPtr.toWeakRef());
     return modelPtr;

@@ -92,7 +92,7 @@ QByteArray BlockAlarmsAttribute::type() const
 
 BlockAlarmsAttribute *BlockAlarmsAttribute::clone() const
 {
-    BlockAlarmsAttribute *copy = new BlockAlarmsAttribute();
+    auto *copy = new BlockAlarmsAttribute();
     copy->d->audio = d->audio;
     copy->d->display = d->display;
     copy->d->email = d->email;

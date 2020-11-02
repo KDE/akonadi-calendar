@@ -24,7 +24,7 @@ Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ChangeType>)
 
 static bool checkSummary(const Akonadi::Item &item, const QString &expected)
 {
-    ItemFetchJob *job = new ItemFetchJob(item);
+    auto *job = new ItemFetchJob(item);
     job->fetchScope().fetchFullPayload();
     bool ok = false;
     [&]() {
@@ -63,7 +63,7 @@ static Akonadi::Item item()
 static Akonadi::Item createItem(const Akonadi::Collection &collection)
 {
     Item i = item();
-    ItemCreateJob *createJob = new ItemCreateJob(i, collection);
+    auto *createJob = new ItemCreateJob(i, collection);
     [&]() {
         QVERIFY(createJob->exec());
         QVERIFY(createJob->item().isValid());

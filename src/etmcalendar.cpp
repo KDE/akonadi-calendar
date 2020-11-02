@@ -43,7 +43,7 @@ void ETMCalendarPrivate::init()
 {
     if (!mETM) {
         Akonadi::Session *session = new Akonadi::Session("ETMCalendar", q);
-        Akonadi::Monitor *monitor = new Akonadi::Monitor(q);
+        auto *monitor = new Akonadi::Monitor(q);
         monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
         connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged), this, [this](const Akonadi::Collection &cols, const QSet<QByteArray> &set)
         {
@@ -122,7 +122,7 @@ void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collecti
 void ETMCalendarPrivate::setupFilteredETM()
 {
     // We're only interested in the CollectionTitle column
-    KColumnFilterProxyModel *columnFilterProxy = new KColumnFilterProxyModel(this);
+    auto *columnFilterProxy = new KColumnFilterProxyModel(this);
     columnFilterProxy->setSourceModel(mETM.data());
     columnFilterProxy->setVisibleColumn(CalendarModel::CollectionTitle);
     columnFilterProxy->setObjectName(QStringLiteral("Remove columns"));
@@ -136,7 +136,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCollectionProxyModel->setSourceModel(columnFilterProxy);
 
     // Keep track of selected items.
-    QItemSelectionModel *selectionModel = new QItemSelectionModel(mCollectionProxyModel);
+    auto *selectionModel = new QItemSelectionModel(mCollectionProxyModel);
     selectionModel->setObjectName(QStringLiteral("Calendar Selection Model"));
 
     // Make item selection work by means of checkboxes.
@@ -447,7 +447,7 @@ ETMCalendar::ETMCalendar(ETMCalendar *other, QObject *parent)
 {
     Q_D(ETMCalendar);
 
-    CalendarModel *model = qobject_cast<Akonadi::CalendarModel *>(other->entityTreeModel());
+    auto *model = qobject_cast<Akonadi::CalendarModel *>(other->entityTreeModel());
     if (model) {
         d->mETM = model->weakPointer().toStrongRef();
     }
@@ -590,7 +590,7 @@ void ETMCalendar::setCollectionFilteringEnabled(bool enable)
             d->mCalFilterProxyModel->setSourceModel(d->mSelectionProxy);
             delete qobject_cast<KDescendantsProxyModel *>(oldModel);
         } else {
-            KDescendantsProxyModel *flatner = new KDescendantsProxyModel(this);
+            auto *flatner = new KDescendantsProxyModel(this);
             flatner->setSourceModel(d->mETM.data());
             d->mCalFilterProxyModel->setSourceModel(flatner);
         }

@@ -41,7 +41,7 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob *job)
     if (job->error()) { // handled in base class
         return;
     }
-    CollectionFetchJob *fetch = qobject_cast<CollectionFetchJob *>(job);
+    auto *fetch = qobject_cast<CollectionFetchJob *>(job);
     Q_ASSERT(fetch);
 
     if (fetch->collections().isEmpty()) {
@@ -54,7 +54,7 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob *job)
         if (!m_mimeTypeChecker.isWantedCollection(col) || col.isVirtual()) {
             continue;
         }
-        ItemFetchJob *itemFetch = new ItemFetchJob(col, this);
+        auto *itemFetch = new ItemFetchJob(col, this);
         itemFetch->fetchScope().fetchFullPayload(true);
         connect(itemFetch, &ItemFetchJob::result, this, &IncidenceFetchJob::itemFetchResult);
         ++m_jobCount;
@@ -67,7 +67,7 @@ void Akonadi::IncidenceFetchJob::itemFetchResult(KJob *job)
         return;
     }
     --m_jobCount;
-    ItemFetchJob *fetch = qobject_cast<ItemFetchJob *>(job);
+    auto *fetch = qobject_cast<ItemFetchJob *>(job);
     const auto items = fetch->items();
     for (const Item &item : items) {
         if (!m_mimeTypeChecker.isWantedItem(item)) {

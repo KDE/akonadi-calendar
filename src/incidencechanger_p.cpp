@@ -209,7 +209,7 @@ void IncidenceChanger::Private::step2CreateIncidence(const Change::Ptr &change, 
 
     mLastCollectionUsed = collection;
 
-    ItemCreateJob *createJob = new ItemCreateJob(change->newItem, collection, parentJob(change));
+    auto *createJob = new ItemCreateJob(change->newItem, collection, parentJob(change));
     mChangeForJob.insert(createJob, change);
 
     if (mBatchOperationInProgress) {

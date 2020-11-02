@@ -48,7 +48,7 @@ static Akonadi::Item item()
 static Akonadi::Item createItem(const Akonadi::Collection &collection)
 {
     Item i = item();
-    ItemCreateJob *createJob = new ItemCreateJob(i, collection);
+    auto *createJob = new ItemCreateJob(i, collection);
 
     createJob->exec();
     return createJob->item();
@@ -212,7 +212,7 @@ private Q_SLOTS:
                 Item item;
                 QVERIFY(mItemIdByChangeId.contains(changeId));
                 item.setId(mItemIdByChangeId.value(changeId));
-                ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+                auto *fetchJob = new ItemFetchJob(item, this);
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
                 QVERIFY(!fetchJob->items().isEmpty());
@@ -239,7 +239,7 @@ private Q_SLOTS:
         QTest::newRow("Delete empty list") << Item::List() << true << true;
         QTest::newRow("Delete invalid item") << (Item::List() << Item()) << true << true;
 
-        ItemFetchJob *fetchJob = new ItemFetchJob(mCollection);
+        auto *fetchJob = new ItemFetchJob(mCollection);
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         Item::List items = fetchJob->items();
@@ -284,7 +284,7 @@ private Q_SLOTS:
             if (expectedResultCode == IncidenceChanger::ResultCodeSuccess) {
                 // Check that the incidence was really deleted
                 for (const Akonadi::Item &item : qAsConst(items)) {
-                    ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+                    auto *fetchJob = new ItemFetchJob(item, this);
                     fetchJob->fetchScope().fetchFullPayload();
                     QVERIFY(!fetchJob->exec());
                     QVERIFY(fetchJob->items().isEmpty());
@@ -312,7 +312,7 @@ private Q_SLOTS:
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-        ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+        auto *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
         incidence->setSummary(QStringLiteral("New Summary"));
@@ -347,7 +347,7 @@ private Q_SLOTS:
             mIncidencesToModify = 1;
             mExpectedResultByChangeId.insert(changeId, expectedResultCode);
             waitForSignals();
-            ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+            auto *fetchJob = new ItemFetchJob(item, this);
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);
@@ -374,7 +374,7 @@ private Q_SLOTS:
         incidence->setOrganizer(Person(QStringLiteral("orga"), QStringLiteral("orga@dev.nul")));
         incidence->setDirtyFields(QSet<IncidenceBase::Field>());
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-        ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+        auto *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
         Alarm::Ptr alarm = Alarm::Ptr(new Alarm(incidence.data()));
@@ -390,7 +390,7 @@ private Q_SLOTS:
         mIncidencesToModify = 1;
         mExpectedResultByChangeId.insert(changeId, IncidenceChanger::ResultCodeSuccess);
         waitForSignals();
-        ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+        auto *fetchJob = new ItemFetchJob(item, this);
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         QVERIFY(fetchJob->items().count() == 1);
@@ -529,7 +529,7 @@ private Q_SLOTS:
         QFETCH(bool, expectReset);
 
         item.setId(-1);
-        ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+        auto *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
         item.setPayload<KCalendarCore::Incidence::Ptr>(event);
@@ -543,7 +543,7 @@ private Q_SLOTS:
         mIncidencesToModify = 1;
         mExpectedResultByChangeId.insert(changeId, IncidenceChanger::ResultCodeSuccess);
         waitForSignals();
-        ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+        auto *fetchJob = new ItemFetchJob(item, this);
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         QVERIFY(fetchJob->items().count() == 1);
@@ -589,7 +589,7 @@ private Q_SLOTS:
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-        ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+        auto *job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
 
@@ -622,7 +622,7 @@ private Q_SLOTS:
                 mIncidencesToModify = 1;
                 mExpectedResultByChangeId.insert(changeId, IncidenceChanger::ResultCodeSuccess);
                 waitForSignals();
-                ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+                auto *fetchJob = new ItemFetchJob(item, this);
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
                 QVERIFY(fetchJob->items().count() == 1);
@@ -636,7 +636,7 @@ private Q_SLOTS:
             // Wait for the last one
             mExpectedResultByChangeId.insert(changeId, IncidenceChanger::ResultCodeSuccess);
             waitForChange(changeId);
-            ItemFetchJob *fetchJob = new ItemFetchJob(item, this);
+            auto *fetchJob = new ItemFetchJob(item, this);
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);

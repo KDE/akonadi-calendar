@@ -46,7 +46,7 @@ void ETMCalendarTest::createIncidence(const QString &uid)
     incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
     item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-    ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+    auto *job = new ItemCreateJob(item, mCollection, this);
     AKVERIFYEXEC(job);
 }
 
@@ -62,7 +62,7 @@ void ETMCalendarTest::createTodo(const QString &uid, const QString &parentUid)
     todo->setSummary(QStringLiteral("summary"));
 
     item.setPayload<KCalendarCore::Incidence::Ptr>(todo);
-    ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+    auto *job = new ItemCreateJob(item, mCollection, this);
     mIncidencesToAdd++;
     mIncidencesToChange++;
     AKVERIFYEXEC(job);
@@ -148,7 +148,7 @@ void ETMCalendarTest::testCollectionChanged_data()
 void ETMCalendarTest::testCollectionChanged()
 {
     QFETCH(Akonadi::Collection, noRightsCollection);
-    CollectionModifyJob *job = new CollectionModifyJob(mCollection, this);
+    auto *job = new CollectionModifyJob(mCollection, this);
     QSignalSpy spy(mCalendar, &ETMCalendar::collectionChanged);
     mIncidencesToChange = 6;
     AKVERIFYEXEC(job);
@@ -174,7 +174,7 @@ void ETMCalendarTest::testIncidencesModified()
     Incidence::Ptr clone = Incidence::Ptr(CalendarUtils::incidence(item)->clone());
     clone->setSummary(tr("foo33"));
     item.setPayload(clone);
-    ItemModifyJob *job = new ItemModifyJob(item);
+    auto *job = new ItemModifyJob(item);
     mIncidencesToChange = 1;
     AKVERIFYEXEC(job);
     QTestEventLoop::instance().enterLoop(10);
@@ -190,7 +190,7 @@ void ETMCalendarTest::testIncidencesDeleted()
     const Item item = mCalendar->item(tr("a"));
     QVERIFY(item.isValid());
     QVERIFY(item.hasPayload());
-    ItemDeleteJob *job = new ItemDeleteJob(item);
+    auto *job = new ItemDeleteJob(item);
     AKVERIFYEXEC(job);
     mIncidencesToDelete = 1;
     QTestEventLoop::instance().enterLoop(10);
@@ -353,7 +353,7 @@ void ETMCalendarTest::testSubTodos()
     ta->setRelatedTo(tr("tb"));
     mIncidencesToChange++;
 
-    ItemModifyJob *job = new ItemModifyJob(ta_item);
+    auto *job = new ItemModifyJob(ta_item);
     AKVERIFYEXEC(job);
     waitForIt();
 
@@ -400,7 +400,7 @@ void ETMCalendarTest::testSubTodos()
     // Delete everything, so we don't have duplicate ids when the next test row runs
     Akonadi::Item::List itemsToDelete = mCalendar->items();
     mIncidencesToDelete = itemsToDelete.count();
-    ItemDeleteJob *deleteJob = new ItemDeleteJob(itemsToDelete);
+    auto *deleteJob = new ItemDeleteJob(itemsToDelete);
     AKVERIFYEXEC(deleteJob);
     waitForIt();
 }
@@ -424,7 +424,7 @@ void ETMCalendarTest::testNotifyObserverBug()
     mIncidencesToChange = 1;
     incidence->setSummary(QStringLiteral("new-summary"));
     item.setPayload(incidence);
-    ItemModifyJob *job = new ItemModifyJob(item);
+    auto *job = new ItemModifyJob(item);
     AKVERIFYEXEC(job);
 
     // The test will now happen inside ETMCalendarTest::calendarIncidenceChanged()
@@ -446,7 +446,7 @@ void ETMCalendarTest::testUidChange()
     QVERIFY(item.isValid());
     item.setPayload(clone);
     mIncidencesToChange = 1;
-    ItemModifyJob *job = new ItemModifyJob(item);
+    auto *job = new ItemModifyJob(item);
     AKVERIFYEXEC(job);
 
     waitForIt();
@@ -501,7 +501,7 @@ void ETMCalendarTest::testShareETM()
     createTodo(QStringLiteral("uid-123"), QString());
     waitForIt();
 
-    ETMCalendar *calendar2 = new ETMCalendar(mCalendar, this);
+    auto *calendar2 = new ETMCalendar(mCalendar, this);
     calendar2->registerObserver(this);
 
     // Uncheck our calendar
@@ -535,7 +535,7 @@ void ETMCalendarTest::testFilterInvitations()
     incidence->addAttendee(me);
 
     item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-    ItemCreateJob *job = new ItemCreateJob(item, mCollection, this);
+    auto *job = new ItemCreateJob(item, mCollection, this);
     AKVERIFYEXEC(job);
     waitForIt();
     // incidence do not pop up in model
@@ -565,7 +565,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
     mIncidencesToDelete = 1;
-    ItemModifyJob *modifyJob = new ItemModifyJob(item, this);
+    auto *modifyJob = new ItemModifyJob(item, this);
     AKVERIFYEXEC(modifyJob);
     waitForIt();
     QCOMPARE(mCalendar->model()->rowCount(), anz);
