@@ -57,7 +57,7 @@ private:
     Q_DISABLE_COPY(Entry)
 };
 
-class History::Private : public QObject
+class AKONADI_CALENDAR_EXPORT History::Private : public QObject
 {
     Q_OBJECT
 public:
