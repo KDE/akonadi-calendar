@@ -643,7 +643,7 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
 void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText)
 {
     Q_Q(FreeBusyManager);
-    Q_UNUSED(errorText);
+    Q_UNUSED(errorText)
 
     if (!mProvidersRequestsByEmail.contains(email)) {
         return;

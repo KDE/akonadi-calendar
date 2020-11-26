@@ -76,7 +76,7 @@ void History::recordDeletions(const Akonadi::Item::List &items, const QString &d
     Entry::Ptr entry(new DeletionEntry(items, description, this));
 
     for (const Akonadi::Item &item : items) {
-        Q_UNUSED(item);
+        Q_UNUSED(item)
         Q_ASSERT_X(item.isValid(),
                    "History::recordDeletion()", "Item must be valid.");
         Q_ASSERT_X(item.hasPayload<Incidence::Ptr>(),

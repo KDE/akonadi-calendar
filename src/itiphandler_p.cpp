@@ -69,8 +69,8 @@ void ITIPHandler::Private::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResu
 
 void ITIPHandler::Private::onCounterProposalDelegateFinished(bool success, const QString &errorMessage)
 {
-    Q_UNUSED(success);
-    Q_UNUSED(errorMessage);
+    Q_UNUSED(success)
+    Q_UNUSED(errorMessage)
     // This will be used when we make editing counter proposals async.
 }
 

@@ -831,7 +831,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
 
 void IncidenceChanger::Private::deleteIncidences2(int changeId, ITIPHandlerHelper::SendResult status)
 {
-    Q_UNUSED(status);
+    Q_UNUSED(status)
     Change::Ptr change = mChangeById[changeId];
     const uint atomicOperationId = change->atomicOperationId;
     auto *deleteJob = new ItemDeleteJob(change->originalItems, parentJob(change));

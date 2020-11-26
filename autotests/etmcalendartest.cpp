@@ -293,7 +293,7 @@ void ETMCalendarTest::calendarIncidenceChanged(const Incidence::Ptr &incidence)
 
 void ETMCalendarTest::calendarIncidenceDeleted(const Incidence::Ptr &incidence, const KCalendarCore::Calendar *cal)
 {
-    Q_UNUSED(cal);
+    Q_UNUSED(cal)
     const QString id = incidence->customProperty("VOLATILE", "AKONADI-ID");
     QVERIFY(!id.isEmpty());
     QVERIFY(mIncidencesToDelete > 0);

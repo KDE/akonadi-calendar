@@ -156,7 +156,7 @@ static QStringList extractEmailAndNormalize(const QString &email)
 void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const QString &from, const QString &_to, const QString &cc, const QString &subject, const QString &body, bool hidden, bool bccMe, const QString &attachment,
                       const QString &mailTransport)
 {
-    Q_UNUSED(hidden);
+    Q_UNUSED(hidden)
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(
             nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
         qCritical() << "Error while creating transport";

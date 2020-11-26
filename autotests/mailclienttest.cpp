@@ -65,8 +65,8 @@ public:
 
     MailTransport::MessageQueueJob *createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
     {
-        Q_UNUSED(incidence);
-        Q_UNUSED(identity);
+        Q_UNUSED(incidence)
+        Q_UNUSED(identity)
         return new FakeMessageQueueJob(parent);
     }
 };

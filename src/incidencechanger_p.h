@@ -60,7 +60,7 @@ public:
 
     virtual void childAboutToDie(Change *child)
     {
-        Q_UNUSED(child);
+        Q_UNUSED(child)
     }
 
     virtual void emitCompletionSignal() = 0;

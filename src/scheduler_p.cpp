@@ -416,7 +416,7 @@ void Scheduler::acceptDeclineCounter(const IncidenceBase::Ptr &, ScheduleMessage
 
 void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase, const Akonadi::CalendarBase::Ptr &calendar, ScheduleMessage::Status status, iTIPMethod method)
 {
-    Q_UNUSED(status);
+    Q_UNUSED(status)
     if (incidenceBase->type() == IncidenceBase::TypeFreeBusy) {
         acceptFreeBusy(incidenceBase, method);
         return;

@@ -58,8 +58,8 @@ ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory()
 
 MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent)
 {
-    Q_UNUSED(incidence);
-    Q_UNUSED(identity);
+    Q_UNUSED(incidence)
+    Q_UNUSED(identity)
     return new MailTransport::MessageQueueJob(parent);
 }
 
@@ -333,7 +333,7 @@ void ITIPHandler::publishInformation(const KCalendarCore::Incidence::Ptr &incide
 
 void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalIncidence, QWidget *parentWidget)
 {
-    Q_UNUSED(parentWidget);
+    Q_UNUSED(parentWidget)
     Q_ASSERT(originalIncidence);
     if (!originalIncidence) {
         qCritical() << "Invalid incidence";

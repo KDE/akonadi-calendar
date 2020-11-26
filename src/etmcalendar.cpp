@@ -342,11 +342,11 @@ void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft, const QModelI
 void ETMCalendarPrivate::onRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
 {
     //TODO
-    Q_UNUSED(sourceParent);
-    Q_UNUSED(sourceStart);
-    Q_UNUSED(sourceEnd);
-    Q_UNUSED(destinationParent);
-    Q_UNUSED(destinationRow);
+    Q_UNUSED(sourceParent)
+    Q_UNUSED(sourceStart)
+    Q_UNUSED(sourceEnd)
+    Q_UNUSED(destinationParent)
+    Q_UNUSED(destinationRow)
 }
 
 void ETMCalendarPrivate::onLayoutChangedInFilteredModel()

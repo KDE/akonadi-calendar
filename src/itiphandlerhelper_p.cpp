@@ -74,22 +74,22 @@ int ITIPHandlerDialogDelegate::askUserIfNeeded(const QString &question, Action a
 
 void ITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
-    Q_UNUSED(recipient);
+    Q_UNUSED(recipient)
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
     Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
 void ITIPHandlerDialogDelegate::openDialogIncidenceModified(bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
-    Q_UNUSED(attendeeStatusChanged);
-    Q_UNUSED(recipient);
+    Q_UNUSED(attendeeStatusChanged)
+    Q_UNUSED(recipient)
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
     Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
 void ITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
-    Q_UNUSED(recipient);
+    Q_UNUSED(recipient)
     const int messageBoxReturnCode = askUserIfNeeded(question, action, buttonYes, buttonNo);
     Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
@@ -454,8 +454,8 @@ void ITIPHandlerHelper::onSchedulerFinished(Akonadi::Scheduler::Result result, c
 
 void ITIPHandlerHelper::slotSchedulerFinishDialog(const int result, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Q_UNUSED(method);
-    Q_UNUSED(incidence);
+    Q_UNUSED(method)
+    Q_UNUSED(incidence)
     if (result == KMessageBox::Yes) {
         Q_EMIT finished(ResultFailAbortUpdate, QString());
     } else {

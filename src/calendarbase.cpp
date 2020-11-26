@@ -225,7 +225,7 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
 
 void CalendarBasePrivate::slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &itemIds, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
-    Q_UNUSED(changeId);
+    Q_UNUSED(changeId)
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
         for (const Akonadi::Item::Id &id : itemIds) {
             if (mItemById.contains(id)) {
@@ -239,8 +239,8 @@ void CalendarBasePrivate::slotDeleteFinished(int changeId, const QVector<Akonadi
 
 void CalendarBasePrivate::slotCreateFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
-    Q_UNUSED(changeId);
-    Q_UNUSED(item);
+    Q_UNUSED(changeId)
+    Q_UNUSED(item)
     if (resultCode == IncidenceChanger::ResultCodeSuccess && !mListensForNewItems) {
         Q_ASSERT(item.isValid());
         Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
@@ -254,8 +254,8 @@ void CalendarBasePrivate::slotCreateFinished(int changeId, const Akonadi::Item &
 
 void CalendarBasePrivate::slotModifyFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
-    Q_UNUSED(changeId);
-    Q_UNUSED(item);
+    Q_UNUSED(changeId)
+    Q_UNUSED(item)
     QString message = errorMessage;
     if (resultCode == IncidenceChanger::ResultCodeSuccess) {
         KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);

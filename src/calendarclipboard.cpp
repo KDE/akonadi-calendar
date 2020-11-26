@@ -127,8 +127,8 @@ void CalendarClipboard::Private::slotModifyFinished(int changeId, const Akonadi:
     m_pendingChangeIds.remove(changeId);
     const bool isLastChange = m_pendingChangeIds.isEmpty();
 
-    Q_UNUSED(item);
-    Q_UNUSED(errorMessage);
+    Q_UNUSED(item)
+    Q_UNUSED(errorMessage)
     if (m_abortCurrentOperation && isLastChange) {
         Q_EMIT q->cutFinished(/**success=*/ false, i18n("Error while removing relations."));
     } else if (!m_abortCurrentOperation) {
@@ -152,7 +152,7 @@ void CalendarClipboard::Private::slotDeleteFinished(int changeId, const QVector<
 
     m_pendingChangeIds.remove(changeId);
 
-    Q_UNUSED(ids);
+    Q_UNUSED(ids)
     if (result == IncidenceChanger::ResultCodeSuccess) {
         Q_EMIT q->cutFinished(/**success=*/ true, QString());
     } else {

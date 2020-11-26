@@ -76,8 +76,8 @@ public:
 
     MailTransport::MessageQueueJob *createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
     {
-        Q_UNUSED(incidence);
-        Q_UNUSED(identity);
+        Q_UNUSED(incidence)
+        Q_UNUSED(identity)
         return new FakeMessageQueueJob(parent);
     }
 };
@@ -401,7 +401,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     const IncidenceChanger::InvitationPolicy invitationPolicySend = IncidenceChanger::InvitationPolicySend;
     const IncidenceChanger::InvitationPolicy invitationPolicyDontSend = IncidenceChanger::InvitationPolicyDontSend;
     int expectedEmailCount = 0;
-    Q_UNUSED(invitationPolicyAsk);
+    Q_UNUSED(invitationPolicyAsk)
 
     const QString ourEmail = QLatin1String(s_ourEmail);
     Attendee us(QString(), ourEmail);
@@ -676,8 +676,8 @@ void ITIPHandlerTest::oniTipMessageProcessed(ITIPHandler::Result result, const Q
 
 void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
-    Q_UNUSED(changeId);
-    Q_UNUSED(errorString);
+    Q_UNUSED(changeId)
+    Q_UNUSED(errorString)
     mLastInsertedItem = item;
     m_pendingIncidenceChangerSignal--;
     QVERIFY(m_pendingIncidenceChangerSignal >= 0);
@@ -689,9 +689,9 @@ void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item, Incidence
 
 void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
-    Q_UNUSED(changeId);
-    Q_UNUSED(errorString);
-    Q_UNUSED(deletedIds);
+    Q_UNUSED(changeId)
+    Q_UNUSED(errorString)
+    Q_UNUSED(deletedIds)
 
     m_pendingIncidenceChangerSignal--;
     QVERIFY(m_pendingIncidenceChangerSignal >= 0);
@@ -703,9 +703,9 @@ void ITIPHandlerTest::onDeleteFinished(int changeId, const QVector<Akonadi::Item
 
 void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
-    Q_UNUSED(changeId);
-    Q_UNUSED(errorString);
-    Q_UNUSED(item);
+    Q_UNUSED(changeId)
+    Q_UNUSED(errorString)
+    Q_UNUSED(item)
 
     m_pendingIncidenceChangerSignal--;
     QVERIFY(m_pendingIncidenceChangerSignal >= 0);

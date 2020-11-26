@@ -50,7 +50,7 @@ struct Header {
 
 bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
 {
-    Q_UNUSED(version);
+    Q_UNUSED(version)
 
     if (label != Item::FullPayload) {
         return false;
@@ -107,7 +107,7 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
 
 void SerializerPluginKCalCore::serialize(const Item &item, const QByteArray &label, QIODevice &data, int &version)
 {
-    Q_UNUSED(version);
+    Q_UNUSED(version)
 
     if (label != Item::FullPayload || !item.hasPayload<Incidence::Ptr>()) {
         return;
