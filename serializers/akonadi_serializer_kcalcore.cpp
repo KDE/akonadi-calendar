@@ -34,8 +34,11 @@ namespace {
 
 bool isSerializedBinary(QIODevice &data)
 {
-    quint32 magic = 0;
-    data.peek(reinterpret_cast<char *>(&magic), sizeof(magic));
+    const QByteArray buffer = data.peek(4);
+    // Use QDataStream because of endianness
+    quint32 magic;
+    QDataStream input(buffer);
+    input >> magic;
     return magic == IncidenceBase::magicSerializationIdentifier();
 }
 
@@ -83,7 +86,8 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
         case KCalendarCore::Incidence::TypeUnknown:
             return false;
         }
-        input >> base;
+        QDataStream stream(&data);
+        stream >> base;
         incidence = base.staticCast<KCalendarCore::Incidence>();
     } else {
         // Use the old format
