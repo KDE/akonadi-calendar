@@ -106,7 +106,7 @@ public:
     {
     }
 
-    ~ModificationChange()
+    ~ModificationChange() override
     {
         if (!parentChange) {
             emitCompletionSignal();
@@ -126,7 +126,7 @@ public:
     {
     }
 
-    ~CreationChange()
+    ~CreationChange() override
     {
         //qCDebug(AKONADICALENDAR_LOG) << "CreationChange::~ will emit signal with " << resultCode;
         if (!parentChange) {
@@ -149,7 +149,7 @@ public:
     {
     }
 
-    ~DeletionChange()
+    ~DeletionChange() override
     {
         //qCDebug(AKONADICALENDAR_LOG) << "DeletionChange::~ will emit signal with " << resultCode;
         if (!parentChange) {

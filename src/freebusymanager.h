@@ -128,7 +128,7 @@ private:
       Singleton
       */
     FreeBusyManager();
-    ~FreeBusyManager();
+    ~FreeBusyManager() override;
 
 private:
     friend class FreeBusyManagerStatic;

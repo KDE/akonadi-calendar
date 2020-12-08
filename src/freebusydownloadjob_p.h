@@ -21,7 +21,7 @@ class FreeBusyDownloadJob : public KJob
     Q_OBJECT
 public:
     explicit FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget = nullptr);
-    ~FreeBusyDownloadJob();
+    ~FreeBusyDownloadJob() override;
 
     void start() override;
 

@@ -20,7 +20,7 @@ class CalFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit CalFilterProxyModel(QObject *parent = nullptr);
-    ~CalFilterProxyModel();
+    ~CalFilterProxyModel() override;
 
     KCalendarCore::CalFilter *filter() const;
     void setFilter(KCalendarCore::CalFilter *filter);

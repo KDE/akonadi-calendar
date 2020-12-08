@@ -35,7 +35,7 @@ public:
     /**
       * Destroys the block alarms attribute.
       */
-    ~BlockAlarmsAttribute();
+    ~BlockAlarmsAttribute() override;
 
     /**
      * Blocks or unblocks given alarm type.
