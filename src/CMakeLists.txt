@@ -44,7 +44,9 @@ ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 qt5_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
 add_library(KF5AkonadiCalendar ${akonadicalendar_LIB_SRC})
-
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(KF5AkonadiCalendar PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
 
 add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
