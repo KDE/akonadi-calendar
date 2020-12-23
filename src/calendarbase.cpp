@@ -285,22 +285,6 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem, const Ak
 
     const QString newUid = newIncidence->uid();
     if (mItemIdByUid.contains(newIdentifier)) {
-        Incidence::Ptr oldIncidence = CalendarUtils::incidence(oldItem);
-#if 0
-        qCWarning(AKONADICALENDAR_LOG) << "New uid shouldn't be known: "  << newIdentifier << "; id="
-                                       << newItem.id() << "; oldItem.id=" << mItemIdByUid[newIdentifier]
-                                       << "; new summary= " << newIncidence->summary()
-                                       << "; new recurrenceId=" << newIncidence->recurrenceId()
-                                       << "; oldIncidence" << oldIncidence;
-#endif
-        if (oldIncidence) {
-#if 0
-            qCWarning(AKONADICALENDAR_LOG) << "; oldIncidence uid=" << oldIncidence->uid()
-                                           << "; oldIncidence recurrenceId = " << oldIncidence->recurrenceId()
-                                           << "; oldIncidence summary = " << oldIncidence->summary();
-#endif
-        }
-        Q_ASSERT(false);
         return;
     }
 
@@ -310,22 +294,17 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem, const Ak
     oldIncidence = q->MemoryCalendar::incidence(oldIncidence->uid());
 
     if (!oldIncidence) {
-        // How can this happen ?
-        qCWarning(AKONADICALENDAR_LOG) << "Couldn't find old incidence";
-        Q_ASSERT(false);
-        return;
+        q->MemoryCalendar::reload();
+        oldIncidence = q->MemoryCalendar::incidence(oldIncidence->uid());
+        if (!oldIncidence) {
+            // How can this happen ?
+            qCWarning(AKONADICALENDAR_LOG) << "Couldn't find old incidence";
+            Q_ASSERT(false);
+            return;
+        }
     }
 
     if (newIncidence->instanceIdentifier() == oldIncidence->instanceIdentifier()) {
-#if 0
-        qCWarning(AKONADICALENDAR_LOG) << "New uid=" << newIncidence->uid() << "; old uid=" << oldIncidence->uid()
-                                       << "; new recurrenceId="
-                                       << newIncidence->recurrenceId()
-                                       << "; old recurrenceId=" << oldIncidence->recurrenceId()
-                                       << "; new summary = " << newIncidence->summary()
-                                       << "; old summary = " << oldIncidence->summary()
-                                       << "; id = " << newItem.id();
-#endif
         Q_ASSERT(false);   // The reason we're here in the first place
         return;
     }
