@@ -18,7 +18,7 @@ class CalendarModel : public Akonadi::EntityTreeModel
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<CalendarModel> Ptr;
+    using Ptr = QSharedPointer<CalendarModel>;
     enum ItemColumn {
         Summary = 0,
         Type,

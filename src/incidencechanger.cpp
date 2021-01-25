@@ -94,7 +94,7 @@ static void emitDeleteFinished(IncidenceChanger *changer, int changeId, const QV
 }
 }
 
-typedef QHash<Akonadi::Item::Id, int> IdToRevisionHash;
+using IdToRevisionHash = QHash<Akonadi::Item::Id, int>;
 Q_GLOBAL_STATIC(IdToRevisionHash, s_latestRevisionByItemId)
 
 IncidenceChanger::Private::Private(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *qq)
@@ -195,7 +195,7 @@ void IncidenceChanger::Private::performNextModification(Akonadi::Item::Id id)
 
 void IncidenceChanger::Private::handleTransactionJobResult(KJob *job)
 {
-    auto *transaction = qobject_cast<TransactionSequence *>(job);
+    auto transaction = qobject_cast<TransactionSequence *>(job);
     Q_ASSERT(transaction);
     Q_ASSERT(mAtomicOperationByTransaction.contains(transaction));
 
@@ -228,7 +228,7 @@ void IncidenceChanger::Private::handleCreateJobResult(KJob *job)
 {
     Change::Ptr change = mChangeForJob.take(job);
 
-    const auto *j = qobject_cast<const ItemCreateJob *>(job);
+    const auto j = qobject_cast<const ItemCreateJob *>(job);
     Q_ASSERT(j);
     Akonadi::Item item = j->item();
 
@@ -299,7 +299,7 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
 {
     Change::Ptr change = mChangeForJob.take(job);
 
-    const auto *j = qobject_cast<const ItemDeleteJob *>(job);
+    const auto j = qobject_cast<const ItemDeleteJob *>(job);
     const Item::List items = j->deletedItems();
 
     QSharedPointer<DeletionChange> deletionChange = change.staticCast<DeletionChange>();
@@ -369,7 +369,7 @@ void IncidenceChanger::Private::handleModifyJobResult(KJob *job)
 {
     Change::Ptr change = mChangeForJob.take(job);
 
-    const auto *j = qobject_cast<const ItemModifyJob *>(job);
+    const auto j = qobject_cast<const ItemModifyJob *>(job);
     const Item item = j->item();
     Q_ASSERT(mDirtyFieldsByJob.contains(job));
     Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
@@ -462,7 +462,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
             bool sendOk = true;
             Q_ASSERT(!change->originalItems.isEmpty());
 
-            auto *handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
+            auto handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
             handler->setParent(this);
 
             if (m_invitationPolicy == InvitationPolicySend) {
@@ -560,7 +560,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
 void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &change)
 {
     if (change->useGroupwareCommunication) {
-        auto *handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
+        auto handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
         connect(handler, &ITIPHandlerHelper::finished,
                 change.data(), &Change::emitUserDialogClosedAfterChange);
         handler->setParent(this);
@@ -834,7 +834,7 @@ void IncidenceChanger::Private::deleteIncidences2(int changeId, ITIPHandlerHelpe
     Q_UNUSED(status)
     Change::Ptr change = mChangeById[changeId];
     const uint atomicOperationId = change->atomicOperationId;
-    auto *deleteJob = new ItemDeleteJob(change->originalItems, parentJob(change));
+    auto deleteJob = new ItemDeleteJob(change->originalItems, parentJob(change));
     mChangeForJob.insert(deleteJob, change);
 
     if (mBatchOperationInProgress) {
@@ -880,7 +880,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem, const KCalendarCo
 
     const uint atomicOperationId = d->mBatchOperationInProgress ? d->mLatestAtomicOperationId : 0;
     const int changeId = ++d->mLatestChangeId;
-    auto *modificationChange = new ModificationChange(this, changeId,
+    auto modificationChange = new ModificationChange(this, changeId,
                                                                     atomicOperationId, parent);
     Change::Ptr change(modificationChange);
 
@@ -1021,7 +1021,7 @@ void IncidenceChanger::Private::performModification2(int changeId, ITIPHandlerHe
         // Let's wait for it to end.
         queueModification(change);
     } else {
-        auto *modifyJob = new ItemModifyJob(newItem, parentJob(change));
+        auto modifyJob = new ItemModifyJob(newItem, parentJob(change));
         mChangeForJob.insert(modifyJob, change);
         mDirtyFieldsByJob.insert(modifyJob, incidence->dirtyFields());
 
@@ -1048,7 +1048,7 @@ void IncidenceChanger::startAtomicOperation(const QString &operationDescription)
     ++d->mLatestAtomicOperationId;
     d->mBatchOperationInProgress = true;
 
-    auto *atomicOperation = new AtomicOperation(d, d->mLatestAtomicOperationId);
+    auto atomicOperation = new AtomicOperation(d, d->mLatestAtomicOperationId);
     atomicOperation->m_description = operationDescription;
     d->mAtomicOperations.insert(d->mLatestAtomicOperationId, atomicOperation);
 }

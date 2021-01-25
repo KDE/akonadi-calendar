@@ -103,7 +103,7 @@ void FbCheckerJob::dataReceived(KIO::Job *, const QByteArray &data)
 
 void FbCheckerJob::onGetJobFinished(KJob *job)
 {
-    auto *transferJob = static_cast<KIO::TransferJob *>(job);
+    auto transferJob = static_cast<KIO::TransferJob *>(job);
     if (mData.contains("BEGIN:VCALENDAR")) {
         qCDebug(AKONADICALENDAR_LOG) << "found freebusy";
         mValidUrl = transferJob->url();
@@ -201,7 +201,7 @@ void FreeBusyManagerPrivate::fetchFreeBusyUrl(const QString &email)
         return;
     }
     // Try with the url configured by preferred email in kcontactmanager
-    auto *job = new Akonadi::ContactSearchJob();
+    auto job = new Akonadi::ContactSearchJob();
     job->setQuery(Akonadi::ContactSearchJob::Email, email);
     job->setProperty("contactEmail", QVariant::fromValue(email));
     connect(job, &Akonadi::ContactSearchJob::result, this, &FreeBusyManagerPrivate::contactSearchJobFinished);
@@ -219,7 +219,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         return;
     }
 
-    auto *job = qobject_cast<Akonadi::ContactSearchJob *>(_job);
+    auto job = qobject_cast<Akonadi::ContactSearchJob *>(_job);
     KConfig cfg(configFile());
     KConfigGroup group = cfg.group(email);
     QString url = group.readEntry(QStringLiteral("url"));
@@ -327,7 +327,7 @@ void FreeBusyManagerPrivate::fbCheckerJobFinished(KJob *job)
 {
     const QString email = job->property("email").toString();
     if (!job->error()) {
-        auto *checkerJob = static_cast<FbCheckerJob *>(job);
+        auto checkerJob = static_cast<FbCheckerJob *>(job);
         QUrl dirURL = checkerJob->validUrl();
         // write the URL to the cache
         KConfig cfg(configFile());
@@ -379,7 +379,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
 {
     Q_Q(FreeBusyManager);
 
-    auto *job = qobject_cast<FreeBusyDownloadJob *>(_job);
+    auto job = qobject_cast<FreeBusyDownloadJob *>(_job);
     Q_ASSERT(job);
     if (job->error()) {
         qCritical() << "Error downloading freebusy" << _job->errorString();
@@ -423,7 +423,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
 
 void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
 {
-    auto *job = static_cast<KIO::FileCopyJob *>(_job);
+    auto job = static_cast<KIO::FileCopyJob *>(_job);
     if (job->error()) {
         KMessageBox::sorry(
             nullptr,
@@ -481,7 +481,7 @@ void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email, co
 
     mFreeBusyUrlEmailMap.insert(freeBusyUrlForEmail, email);
 
-    auto *job = new FreeBusyDownloadJob(freeBusyUrlForEmail, mParentWidgetForRetrieval);
+    auto job = new FreeBusyDownloadJob(freeBusyUrlForEmail, mParentWidgetForRetrieval);
     q->connect(job, &FreeBusyDownloadJob::result, this, [this](KJob *job) {
         processFreeBusyDownloadResult(job);
     });
@@ -885,7 +885,7 @@ void FreeBusyManager::mailFreeBusy(int daysToPublish, QWidget *parentWidget)
     QPointer<PublishDialog> publishdlg = new PublishDialog();
     if (publishdlg->exec() == QDialog::Accepted) {
         // Send the mail
-        auto *scheduler = new MailScheduler(/*factory=*/ nullptr, this);
+        auto scheduler = new MailScheduler(/*factory=*/ nullptr, this);
         connect(scheduler, &Scheduler::transactionFinished,
                 d, &FreeBusyManagerPrivate::processMailSchedulerResult);
         d->mParentWidgetForMailling = parentWidget;

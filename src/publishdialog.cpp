@@ -31,8 +31,8 @@ PublishDialog::PublishDialog(QWidget *parent)
     , d(new Private(this))
 {
     setWindowTitle(i18nc("@title:window", "Select Addresses"));
-    auto *layout = new QVBoxLayout(this);
-    QWidget *widget = new QWidget(this);
+    auto layout = new QVBoxLayout(this);
+    auto widget = new QWidget(this);
     widget->setObjectName(QStringLiteral("PublishFreeBusy"));
     d->mUI.setupUi(widget);
     layout->addWidget(widget);
@@ -99,7 +99,7 @@ void PublishDialog::addAttendee(const Attendee &attendee)
 {
     d->mUI.mNameLineEdit->setEnabled(true);
     d->mUI.mEmailLineEdit->setEnabled(true);
-    auto *item = new QListWidgetItem(d->mUI.mListWidget);
+    auto item = new QListWidgetItem(d->mUI.mListWidget);
     Person person(attendee.name(), attendee.email());
     item->setText(person.fullName());
     d->mUI.mListWidget->addItem(item);

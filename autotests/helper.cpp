@@ -16,19 +16,19 @@ using namespace Akonadi;
 
 bool Helper::confirmExists(const Akonadi::Item &item)
 {
-    auto *job = new ItemFetchJob(item);
+    auto job = new ItemFetchJob(item);
     return job->exec() != 0;
 }
 
 bool Helper::confirmDoesntExist(const Akonadi::Item &item)
 {
-    auto *job = new ItemFetchJob(item);
+    auto job = new ItemFetchJob(item);
     return job->exec() == 0;
 }
 
 Akonadi::Collection Helper::fetchCollection()
 {
-    CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
+    auto job = new CollectionFetchJob(Collection::root(),
                                                      CollectionFetchJob::Recursive);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));

@@ -16,7 +16,7 @@
 #include <QObject>
 
 struct UnitTestResult {
-    typedef QList<UnitTestResult> List;
+    using List = QList<UnitTestResult>;
     QString from;
     QStringList to;
     QStringList cc;

@@ -148,7 +148,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
     Akonadi::AgentType type
         = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
 
-    auto *job = new Akonadi::AgentInstanceCreateJob(type, this);
+    auto job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
     connect(job, &KJob::result, d, &Private::resourceCreated);
     job->start();

@@ -78,7 +78,7 @@ void PublishDialog::Private::insertAddresses(const KContacts::Addressee::List &l
     for (const KContacts::Addressee &contact : list) {
         mUI.mNameLineEdit->setEnabled(true);
         mUI.mEmailLineEdit->setEnabled(true);
-        auto *item = new QListWidgetItem(mUI.mListWidget);
+        auto item = new QListWidgetItem(mUI.mListWidget);
         item->setSelected(true);
         mUI.mNameLineEdit->setText(contact.name());
         mUI.mEmailLineEdit->setText(contact.preferredEmail());
@@ -105,7 +105,7 @@ void PublishDialog::Private::openAddressbook()
             for (const Akonadi::EmailAddressSelection &selection : selections) {
                 mUI.mNameLineEdit->setEnabled(true);
                 mUI.mEmailLineEdit->setEnabled(true);
-                auto *item = new QListWidgetItem(mUI.mListWidget);
+                auto item = new QListWidgetItem(mUI.mListWidget);
                 item->setSelected(true);
                 mUI.mNameLineEdit->setText(selection.name());
                 mUI.mEmailLineEdit->setText(selection.email());

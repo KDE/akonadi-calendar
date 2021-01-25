@@ -31,7 +31,7 @@ class AKONADI_CALENDAR_EXPORT FetchJobCalendar : public Akonadi::CalendarBase
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<FetchJobCalendar> Ptr;
+    using Ptr = QSharedPointer<FetchJobCalendar>;
 
     /**
       * Creates a new FetchJobCalendar. Loading begins asynchronously.

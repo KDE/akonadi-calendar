@@ -47,7 +47,7 @@ public:
         CollectionColumnCount
     };
 
-    typedef QSharedPointer<ETMCalendar> Ptr;
+    using Ptr = QSharedPointer<ETMCalendar>;
 
     /**
       * Constructs a new ETMCalendar. Loading begins immediately, asynchronously.

@@ -35,8 +35,8 @@ class Change : public QObject
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<Change> Ptr;
-    typedef QVector<Ptr> List;
+    using Ptr = QSharedPointer<Change>;
+    using List = QVector<Ptr>;
     Change(IncidenceChanger *incidenceChanger, int changeId, IncidenceChanger::ChangeType changeType, uint operationId, QWidget *parent)
         : id(changeId)
         , type(changeType)
@@ -100,7 +100,7 @@ class ModificationChange : public Change
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<ModificationChange> Ptr;
+    using Ptr = QSharedPointer<ModificationChange>;
     ModificationChange(IncidenceChanger *changer, int id, uint atomicOperationId, QWidget *parent)
         : Change(changer, id, IncidenceChanger::ChangeTypeModify, atomicOperationId, parent)
     {
@@ -120,7 +120,7 @@ class CreationChange : public Change
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<CreationChange> Ptr;
+    using Ptr = QSharedPointer<CreationChange>;
     CreationChange(IncidenceChanger *changer, int id, uint atomicOperationId, QWidget *parent)
         : Change(changer, id, IncidenceChanger::ChangeTypeCreate, atomicOperationId, parent)
     {
@@ -143,7 +143,7 @@ class DeletionChange : public Change
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<DeletionChange> Ptr;
+    using Ptr = QSharedPointer<DeletionChange>;
     DeletionChange(IncidenceChanger *changer, int id, uint atomicOperationId, QWidget *parent)
         : Change(changer, id, IncidenceChanger::ChangeTypeDelete, atomicOperationId, parent)
     {

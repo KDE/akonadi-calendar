@@ -605,7 +605,7 @@ void ITIPHandlerTest::cleanup()
 {
     const Akonadi::Item::List items = calendarItems();
     for (const Akonadi::Item &item : items) {
-        auto *job = new ItemDeleteJob(item);
+        auto job = new ItemDeleteJob(item);
         AKVERIFYEXEC(job);
     }
 

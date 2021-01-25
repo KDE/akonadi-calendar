@@ -32,8 +32,8 @@ class Entry : public QObject
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<Entry> Ptr;
-    typedef QVector<Entry::Ptr> List;
+    using Ptr = QSharedPointer<Entry>;
+    using List = QVector<Entry::Ptr>;
     Entry(const Akonadi::Item &item, const QString &description, History *qq);
     Entry(const Akonadi::Item::List &items, const QString &description, History *qq);
     virtual void updateIds(Item::Id oldId, Item::Id newId);
@@ -115,7 +115,7 @@ class CreationEntry : public Entry
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<CreationEntry> Ptr;
+    using Ptr = QSharedPointer<CreationEntry>;
     CreationEntry(const Akonadi::Item &item, const QString &description, History *q);
 
     bool undo() override;
@@ -169,7 +169,7 @@ class MultiEntry : public Entry
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<MultiEntry> Ptr;
+    using Ptr = QSharedPointer<MultiEntry>;
     MultiEntry(int id, const QString &description, History *q);
 
     void addEntry(const Entry::Ptr &entry);

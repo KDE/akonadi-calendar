@@ -602,7 +602,7 @@ void Scheduler::acceptFreeBusy(const IncidenceBase::Ptr &incidence, iTIPMethod m
 
 void Scheduler::handleCreateFinished(bool success, const QString &errorMessage)
 {
-    auto *calendar = qobject_cast<Akonadi::CalendarBase *>(sender());
+    auto calendar = qobject_cast<Akonadi::CalendarBase *>(sender());
     const bool cancelled = calendar && calendar->d_ptr->mLastCreationCancelled;
 
     Q_EMIT transactionFinished(success ? ResultSuccess

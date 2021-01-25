@@ -36,7 +36,7 @@ class AKONADI_CALENDAR_EXPORT CalendarBase : public KCalendarCore::MemoryCalenda
 {
     Q_OBJECT
 public:
-    typedef QSharedPointer<CalendarBase> Ptr;
+    using Ptr = QSharedPointer<CalendarBase>;
 
     /**
       * Constructs a CalendarBase object.

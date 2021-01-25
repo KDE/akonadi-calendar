@@ -28,13 +28,13 @@ class FetchJobCalendarTest : public QObject
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setDtStart(QDateTime::currentDateTimeUtc());
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-        auto *job = new ItemCreateJob(item, mCollection, this);
+        auto job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
     }
 
     void fetchCollection()
     {
-        CollectionFetchJob *job = new CollectionFetchJob(Collection::root(),
+        auto job = new CollectionFetchJob(Collection::root(),
                                                          CollectionFetchJob::Recursive,
                                                          this);
         // Get list of collections

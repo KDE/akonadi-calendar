@@ -113,7 +113,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
                 incidence->setReadOnly(!(collection.rights() & Akonadi::Collection::CanChangeItem));
             } else if (!mCollectionJobs.key(item.storageCollectionId())) {
                 collection = Akonadi::Collection(item.storageCollectionId());
-                auto *job = new Akonadi::CollectionFetchJob(collection, Akonadi::CollectionFetchJob::Base, this);
+                auto job = new Akonadi::CollectionFetchJob(collection, Akonadi::CollectionFetchJob::Base, this);
                 QObject::connect(job, &KJob::result, this, &CalendarBasePrivate::collectionFetchResult);
                 mCollectionJobs.insert(job, collection.id());
             }
@@ -154,7 +154,7 @@ void CalendarBasePrivate::collectionFetchResult(KJob *job)
         return;
     }
 
-    auto *fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+    auto fetchJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
     const Akonadi::Collection collection = fetchJob->collections().at(0);
     if (collection.id() != colid) {
