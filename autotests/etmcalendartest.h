@@ -7,11 +7,12 @@
 #ifndef ETMCALENDAR_TEST_H_
 #define ETMCALENDAR_TEST_H_
 
-#include <kcalendarcore/calendar.h>
-#include <collection.h>
 #include <QObject>
+#include <collection.h>
+#include <kcalendarcore/calendar.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ETMCalendar;
 }
 
@@ -47,7 +48,7 @@ public Q_SLOTS:
     void handleCollectionsAdded(const Akonadi::Collection::List &collectionList);
 
 private:
-    //quiet --overloaded-virtual warning
+    // quiet --overloaded-virtual warning
     using KCalendarCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 
     void deleteIncidence(const QString &uid);

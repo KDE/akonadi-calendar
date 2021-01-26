@@ -14,17 +14,19 @@
 #include <KCalendarCore/FreeBusy>
 #include <KCalendarCore/ICalFormat>
 
-#include <QPointer>
 #include <QDBusInterface>
+#include <QPointer>
 
 #include <KJob>
 #include <QUrl>
 
-namespace KIO {
+namespace KIO
+{
 class Job;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class FreeBusyManager;
 
 class FreeBusyManagerPrivate : public QObject
@@ -38,11 +40,7 @@ public: /// Structs
     struct FreeBusyProviderRequest {
         FreeBusyProviderRequest(const QString &provider);
 
-        enum Status {
-            NotStarted,
-            HandlingRequested,
-            FreeBusyRequested
-        };
+        enum Status { NotStarted, HandlingRequested, FreeBusyRequested };
 
         Status mRequestStatus;
         QSharedPointer<QDBusInterface> mInterface;
@@ -73,7 +71,7 @@ public:
     bool mUploadingFreeBusy;
     bool mBrokenUrl;
 
-    QPointer<QWidget > mParentWidgetForMailling;
+    QPointer<QWidget> mParentWidgetForMailling;
 
     // the parentWidget to use while doing our "recursive" retrieval
     QPointer<QWidget> mParentWidgetForRetrieval;

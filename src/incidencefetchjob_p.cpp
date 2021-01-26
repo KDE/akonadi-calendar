@@ -6,17 +6,18 @@
 */
 
 #include "incidencefetchjob_p.h"
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Journal>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <KCalendarCore/Event>
-#include <KCalendarCore/Journal>
 #include <kcalendarcore/todo.h>
 
 using namespace Akonadi;
 
-Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent) : Job(parent)
+Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent)
+    : Job(parent)
 {
     m_mimeTypeChecker.addWantedMimeType(QStringLiteral("text/calendar"));
 }
@@ -29,10 +30,8 @@ Item::List Akonadi::IncidenceFetchJob::items() const
 void Akonadi::IncidenceFetchJob::doStart()
 {
     auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
-    job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("text/calendar")
-                                                        << KCalendarCore::Event::eventMimeType()
-                                                        << KCalendarCore::Todo::todoMimeType()
-                                                        << KCalendarCore::Journal::journalMimeType());
+    job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("text/calendar") << KCalendarCore::Event::eventMimeType()
+                                                        << KCalendarCore::Todo::todoMimeType() << KCalendarCore::Journal::journalMimeType());
     connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 

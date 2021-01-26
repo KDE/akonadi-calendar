@@ -6,9 +6,9 @@
 */
 
 #include "fetchjobcalendar.h"
+#include "akonadicalendar_debug.h"
 #include "fetchjobcalendar_p.h"
 #include "incidencefetchjob_p.h"
-#include "akonadicalendar_debug.h"
 #include <collection.h>
 
 using namespace Akonadi;
@@ -19,10 +19,8 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     , q(qq)
 {
     auto job = new IncidenceFetchJob();
-    connect(job, &KJob::result,
-            this, &FetchJobCalendarPrivate::slotSearchJobFinished);
-    connect(this, &CalendarBasePrivate::fetchFinished,
-            this, &FetchJobCalendarPrivate::slotFetchJobFinished);
+    connect(job, &KJob::result, this, &FetchJobCalendarPrivate::slotSearchJobFinished);
+    connect(this, &CalendarBasePrivate::fetchFinished, this, &FetchJobCalendarPrivate::slotFetchJobFinished);
 }
 
 FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
@@ -60,8 +58,7 @@ void FetchJobCalendarPrivate::slotFetchJobFinished()
 {
     m_isLoaded = true;
     // Q_EMIT loadFinished() in a delayed manner, due to freezes because of execs.
-    QMetaObject::invokeMethod(q, "loadFinished", Qt::QueuedConnection,
-                              Q_ARG(bool, m_success), Q_ARG(QString, m_errorMessage));
+    QMetaObject::invokeMethod(q, "loadFinished", Qt::QueuedConnection, Q_ARG(bool, m_success), Q_ARG(QString, m_errorMessage));
 }
 
 FetchJobCalendar::FetchJobCalendar(QObject *parent)

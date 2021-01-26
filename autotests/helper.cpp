@@ -6,9 +6,9 @@
 
 #include "helper.h"
 
-#include <itemfetchjob.h>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
+#include <itemfetchjob.h>
 
 #include <QStringList>
 
@@ -28,8 +28,7 @@ bool Helper::confirmDoesntExist(const Akonadi::Item &item)
 
 Akonadi::Collection Helper::fetchCollection()
 {
-    auto job = new CollectionFetchJob(Collection::root(),
-                                                     CollectionFetchJob::Recursive);
+    auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
     const bool ret = job->exec();

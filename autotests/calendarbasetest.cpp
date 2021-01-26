@@ -9,11 +9,11 @@
 #include "../src/calendarbase.h"
 #include "../src/incidencechanger.h"
 
-#include <qtest_akonadi.h>
-#include <itemfetchjob.h>
-#include <itemcreatejob.h>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
+#include <itemcreatejob.h>
+#include <itemfetchjob.h>
+#include <qtest_akonadi.h>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -40,9 +40,7 @@ static bool compareUids(const QStringList &_uids, const Incidence::List &inciden
 
 void CalendarBaseTest::fetchCollection()
 {
-    auto job = new CollectionFetchJob(Collection::root(),
-                                                     CollectionFetchJob::Recursive,
-                                                     this);
+    auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
     AKVERIFYEXEC(job);
@@ -117,11 +115,9 @@ void CalendarBaseTest::initTestCase()
     mCalendar = new CalendarBase();
     mCalendar->incidenceChanger()->setDestinationPolicy(IncidenceChanger::DestinationPolicyDefault);
     mCalendar->incidenceChanger()->setDefaultCollection(mCollection);
-    connect(mCalendar, &CalendarBase::createFinished,
-            this, &CalendarBaseTest::handleCreateFinished);
+    connect(mCalendar, &CalendarBase::createFinished, this, &CalendarBaseTest::handleCreateFinished);
 
-    connect(mCalendar, &CalendarBase::deleteFinished,
-            this, &CalendarBaseTest::handleDeleteFinished);
+    connect(mCalendar, &CalendarBase::deleteFinished, this, &CalendarBaseTest::handleDeleteFinished);
     createInitialIncidences();
 }
 
@@ -154,8 +150,7 @@ void CalendarBaseTest::testChildIncidences_data()
     QVERIFY(id > -1);
     QVERIFY(createTodo(tr("child1"), tr("parent1")) > -1);
     QVERIFY(createTodo(tr("child2"), tr("parent1")) > -1);
-    QTest::newRow("2 childs") << "parent1"
-                              << id << (QStringList() <<  tr("child1") << tr("child2"));
+    QTest::newRow("2 childs") << "parent1" << id << (QStringList() << tr("child1") << tr("child2"));
 }
 
 void CalendarBaseTest::testChildIncidences()
@@ -170,7 +165,7 @@ void CalendarBaseTest::testChildIncidences()
 }
 
 void CalendarBaseTest::testDelete()
-{   // No need for _data()
+{ // No need for _data()
     const Item event = mCalendar->item(mOneEventUid);
     QVERIFY(event.isValid());
     const Item todo = mCalendar->item(mOneTodoUid);
@@ -271,7 +266,7 @@ Item::Id CalendarBaseTest::createTodo(const QString &uid, const QString &parentU
     }
     mCalendar->addTodo(todo);
     QTestEventLoop::instance().enterLoop(5);
-    //QVERIFY( !QTestEventLoop::instance().timeout() );
+    // QVERIFY( !QTestEventLoop::instance().timeout() );
 
     return mCalendar->item(uid).id();
 }

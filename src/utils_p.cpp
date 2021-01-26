@@ -6,17 +6,17 @@
 */
 
 #include "utils_p.h"
-#include <KEmailAddress>
-#include <identitymanager.h>
-#include <identity.h>
-#include <kidentitymanagement/utils.h>
-#include <kmime/kmime_header_parsing.h>
 #include "akonadicalendar_debug.h"
 #include <KEMailSettings>
+#include <KEmailAddress>
 #include <collectiondialog.h>
+#include <identity.h>
+#include <identitymanager.h>
+#include <kidentitymanagement/utils.h>
+#include <kmime/kmime_header_parsing.h>
 
-#include <QWidget>
 #include <QPointer>
+#include <QWidget>
 
 using namespace Akonadi::CalendarUtils;
 

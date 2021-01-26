@@ -14,8 +14,9 @@
 #include "etmcalendar.h"
 
 #include <KCalendarCore/FreeBusyCache>
-//TODO: document
-namespace Akonadi {
+// TODO: document
+namespace Akonadi
+{
 class FreeBusyManagerPrivate;
 class FreeBusyManagerStatic;
 
@@ -24,8 +25,8 @@ class AKONADI_CALENDAR_EXPORT FreeBusyManager : public QObject, public KCalendar
     Q_OBJECT
 public:
     /**
-      * Returns the FreeBusyManager
-      */
+     * Returns the FreeBusyManager
+     */
     static FreeBusyManager *self();
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);

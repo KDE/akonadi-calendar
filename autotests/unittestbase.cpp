@@ -5,20 +5,20 @@
 */
 
 #include "unittestbase.h"
-#include "helper.h"
 #include "../src/fetchjobcalendar.h"
+#include "helper.h"
 #include "mailclient_p.h"
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/ICalFormat>
-#include <itemcreatejob.h>
 #include <incidencechanger.h>
+#include <itemcreatejob.h>
 #include <itiphandler.h>
 
-#include <QFile>
 #include <QByteArray>
-#include <QTestEventLoop>
+#include <QFile>
 #include <QTest>
+#include <QTestEventLoop>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -26,8 +26,8 @@ using namespace KCalendarCore;
 UnitTestBase::UnitTestBase()
 {
     qRegisterMetaType<Akonadi::Item>("Akonadi::Item");
-    qRegisterMetaType<QList<Akonadi::IncidenceChanger::ChangeType> >("QList<Akonadi::IncidenceChanger::ChangeType>");
-    qRegisterMetaType<QVector<Akonadi::Item::Id> >("QVector<Akonadi::Item::Id>");
+    qRegisterMetaType<QList<Akonadi::IncidenceChanger::ChangeType>>("QList<Akonadi::IncidenceChanger::ChangeType>");
+    qRegisterMetaType<QVector<Akonadi::Item::Id>>("QVector<Akonadi::Item::Id>");
     qRegisterMetaType<Akonadi::MailClient::Result>("Akonadi::MailClient::Result");
 
     mChanger = new IncidenceChanger(this);
@@ -104,8 +104,7 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
     // First, replace the randomly generated UIDs with the UID that came in the invitation e-mail...
     for (const KCalendarCore::Incidence::Ptr &incidence : qAsConst(incidences)) {
         incidence->setUid(incidence->schedulingID());
-        qDebug() << "We have incidece with uid=" << incidence->uid()
-                 << "; instanceidentifier=" << incidence->instanceIdentifier();
+        qDebug() << "We have incidece with uid=" << incidence->uid() << "; instanceidentifier=" << incidence->instanceIdentifier();
         auto attendees = incidence->attendees();
         for (auto &attendee : attendees) {
             attendee.setUid(attendee.email());
@@ -116,8 +115,7 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
     // ... so we can compare them
     for (const KCalendarCore::Incidence::Ptr &incidence : expectedIncidences) {
         incidence->setUid(incidence->schedulingID());
-        qDebug() << "We expect incidece with uid=" << incidence->uid()
-                 << "; instanceidentifier=" << incidence->instanceIdentifier();
+        qDebug() << "We expect incidece with uid=" << incidence->uid() << "; instanceidentifier=" << incidence->instanceIdentifier();
         auto attendees = incidence->attendees();
         for (auto &attendee : attendees) {
             attendee.setUid(attendee.email());

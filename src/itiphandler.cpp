@@ -11,35 +11,38 @@
 */
 
 #include "itiphandler.h"
+#include "calendarsettings.h"
 #include "itiphandler_p.h"
 #include "itiphandlerhelper_p.h"
-#include "calendarsettings.h"
+#include "mailclient_p.h"
 #include "publishdialog.h"
 #include "utils_p.h"
-#include "mailclient_p.h"
 
-#include <KCalendarCore/ICalFormat>
-#include <KCalendarCore/Attendee>
 #include <KCalUtils/Stringify>
+#include <KCalendarCore/Attendee>
+#include <KCalendarCore/ICalFormat>
 
-#include <identitymanager.h>
-#include <MailTransportAkonadi/MessageQueueJob>
 #include <MailTransport/TransportManager>
+#include <MailTransportAkonadi/MessageQueueJob>
+#include <identitymanager.h>
 
-#include <KMessageBox>
 #include "akonadicalendar_debug.h"
+#include <KMessageBox>
 
 using namespace Akonadi;
 
 // async emittion
 static void emitiTipMessageProcessed(ITIPHandler *handler, ITIPHandler::Result resultCode, const QString &errorString)
 {
-    QMetaObject::invokeMethod(handler, "iTipMessageProcessed", Qt::QueuedConnection,
+    QMetaObject::invokeMethod(handler,
+                              "iTipMessageProcessed",
+                              Qt::QueuedConnection,
                               Q_ARG(Akonadi::ITIPHandler::Result, resultCode),
                               Q_ARG(QString, errorString));
 }
 
-GroupwareUiDelegate::GroupwareUiDelegate(QObject *parent) : QObject(parent)
+GroupwareUiDelegate::GroupwareUiDelegate(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -56,25 +59,30 @@ ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory()
 {
 }
 
-MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent)
+MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                                                                   const KIdentityManagement::Identity &identity,
+                                                                                   QObject *parent)
 {
     Q_UNUSED(incidence)
     Q_UNUSED(identity)
     return new MailTransport::MessageQueueJob(parent);
 }
 
-ITIPHandlerDialogDelegate *ITIPHandlerComponentFactory::createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
+ITIPHandlerDialogDelegate *
+ITIPHandlerComponentFactory::createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
 {
     return new ITIPHandlerDialogDelegate(incidence, method, parent);
 }
 
-ITIPHandler::ITIPHandler(QObject *parent) : QObject(parent)
-    , d(new Private(/*factory=*/ nullptr, this))
+ITIPHandler::ITIPHandler(QObject *parent)
+    : QObject(parent)
+    , d(new Private(/*factory=*/nullptr, this))
 {
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
 }
 
-ITIPHandler::ITIPHandler(ITIPHandlerComponentFactory *factory, QObject *parent) : QObject(parent)
+ITIPHandler::ITIPHandler(ITIPHandlerComponentFactory *factory, QObject *parent)
+    : QObject(parent)
     , d(new Private(factory, this))
 {
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
@@ -87,8 +95,7 @@ ITIPHandler::~ITIPHandler()
 
 void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCal, const QString &action)
 {
-    qCDebug(AKONADICALENDAR_LOG) << "processiTIPMessage called with receiver=" << receiver
-                                 << "; action=" << action;
+    qCDebug(AKONADICALENDAR_LOG) << "processiTIPMessage called with receiver=" << receiver << "; action=" << action;
 
     if (d->m_currentOperation != OperationNone) {
         d->m_currentOperation = OperationNone;
@@ -117,7 +124,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
 
     if (!message) {
         const QString errorMessage = format.exception() ? i18n("Error message: %1", KCalUtils::Stringify::errorMessage(*format.exception()))
-                                     : i18n("Unknown error while parsing iCal invitation");
+                                                        : i18n("Unknown error while parsing iCal invitation");
 
         qCritical() << "Error parsing" << errorMessage;
 
@@ -144,9 +151,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         return;
     }
 
-    if (action.startsWith(QLatin1String("accepted"))
-        || action.startsWith(QLatin1String("tentative"))
-        || action.startsWith(QLatin1String("delegated"))
+    if (action.startsWith(QLatin1String("accepted")) || action.startsWith(QLatin1String("tentative")) || action.startsWith(QLatin1String("delegated"))
         || action.startsWith(QLatin1String("counter"))) {
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
@@ -157,8 +162,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
                     attendee.setStatus(KCalendarCore::Attendee::Accepted);
                 } else if (action.startsWith(QLatin1String("tentative"))) {
                     attendee.setStatus(KCalendarCore::Attendee::Tentative);
-                } else if (CalendarSettings::self()->outlookCompatCounterProposals()
-                           && action.startsWith(QLatin1String("counter"))) {
+                } else if (CalendarSettings::self()->outlookCompatCounterProposals() && action.startsWith(QLatin1String("counter"))) {
                     attendee.setStatus(KCalendarCore::Attendee::Tentative);
                 } else if (action.startsWith(QLatin1String("delegated"))) {
                     attendee.setStatus(KCalendarCore::Attendee::Delegated);
@@ -168,12 +172,11 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         }
         d->m_incidence->setAttendees(attendees);
 
-        if (CalendarSettings::self()->outlookCompatCounterProposals()
-            || !action.startsWith(QLatin1String("counter"))) {
+        if (CalendarSettings::self()->outlookCompatCounterProposals() || !action.startsWith(QLatin1String("counter"))) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, receiver);
             return; // signal emitted in onSchedulerFinished().
         }
-        //TODO: what happens here? we must emit a signal
+        // TODO: what happens here? we must emit a signal
     } else if (action.startsWith(QLatin1String("cancel"))) {
         // Delete the old incidence, if one is present
         KCalendarCore::Incidence::Ptr existingIncidence = d->calendar()->incidenceFromSchedulingID(d->m_incidence->uid());
@@ -184,16 +187,14 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
             // We don't have the incidence, nothing to cancel
             qCWarning(AKONADICALENDAR_LOG) << "Couldn't find the incidence to delete.\n"
                                            << "You deleted it previously or didn't even accept the invitation it in the first place.\n"
-                                           << "; uid=" << d->m_incidence->uid()
-                                           << "; identifier=" << d->m_incidence->instanceIdentifier()
+                                           << "; uid=" << d->m_incidence->uid() << "; identifier=" << d->m_incidence->instanceIdentifier()
                                            << "; summary=" << d->m_incidence->summary();
 
             qCDebug(AKONADICALENDAR_LOG) << "\n Here's what we do have with such a summary:";
             const KCalendarCore::Incidence::List knownIncidences = calendar()->incidences();
             for (const KCalendarCore::Incidence::Ptr &knownIncidence : knownIncidences) {
                 if (knownIncidence->summary() == d->m_incidence->summary()) {
-                    qCDebug(AKONADICALENDAR_LOG) << "\nFound: uid=" << knownIncidence->uid()
-                                                 << "; identifier=" << knownIncidence->instanceIdentifier()
+                    qCDebug(AKONADICALENDAR_LOG) << "\nFound: uid=" << knownIncidence->uid() << "; identifier=" << knownIncidence->instanceIdentifier()
                                                  << "; schedulingId" << knownIncidence->schedulingID();
                 }
             }
@@ -326,7 +327,7 @@ void ITIPHandler::publishInformation(const KCalendarCore::Incidence::Ptr &incide
         d->m_scheduler->publish(incidence, publishdlg->addresses());
     } else {
         d->m_currentOperation = OperationNone;
-        Q_EMIT informationPublished(ResultSuccess, QString());    // Canceled.
+        Q_EMIT informationPublished(ResultSuccess, QString()); // Canceled.
     }
     delete publishdlg;
 }
@@ -365,8 +366,12 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
             d->finishSendAsICalendar(result, str);
         });
 
-        mailer->mailTo(incidence, KIdentityManagement::IdentityManager::self()->identityForAddress(from), from, bccMe,
-                       recipients, messageText,
+        mailer->mailTo(incidence,
+                       KIdentityManagement::IdentityManager::self()->identityForAddress(from),
+                       from,
+                       bccMe,
+                       recipients,
+                       messageText,
                        MailTransport::TransportManager::self()->defaultTransportName());
     }
     delete publishdlg;

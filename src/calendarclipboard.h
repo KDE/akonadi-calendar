@@ -7,13 +7,14 @@
 #ifndef _AKONADI_CALENDAR_CLIPBOARD_H
 #define _AKONADI_CALENDAR_CLIPBOARD_H
 
-#include "calendarbase.h"
 #include "akonadi-calendar_export.h"
+#include "calendarbase.h"
 
 #include <KCalendarCore/Incidence>
 #include <QObject>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 
 /**
@@ -26,11 +27,10 @@ class AKONADI_CALENDAR_EXPORT CalendarClipboard : public QObject
 {
     Q_OBJECT
 public:
-
     enum Mode {
         SingleMode = 0, ///< Only the specified incidence is cut/copied.
-        RecursiveMode,  ///< The specified incidence's children are also cut/copied
-        AskMode         ///< The user is asked if he wants children to be cut/copied too
+        RecursiveMode, ///< The specified incidence's children are also cut/copied
+        AskMode ///< The user is asked if he wants children to be cut/copied too
     };
 
     /**

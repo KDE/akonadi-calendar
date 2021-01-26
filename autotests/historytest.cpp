@@ -7,13 +7,13 @@
 #include "historytest.h"
 #include "helper.h"
 
-#include <itemfetchjob.h>
-#include <itemcreatejob.h>
+#include <KCalendarCore/Event>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
+#include <itemcreatejob.h>
+#include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <qtest_akonadi.h>
-#include <KCalendarCore/Event>
 
 #include <QTestEventLoop>
 
@@ -31,7 +31,7 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
         QVERIFY(job->exec());
         QVERIFY(!job->items().isEmpty());
         ok = true;
-    } ();
+    }();
     if (!ok) {
         return false;
     }
@@ -44,8 +44,7 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
     if (it.payload<KCalendarCore::Incidence::Ptr>()->summary() == expected) {
         return true;
     } else {
-        qDebug() << "Got " << it.payload<KCalendarCore::Incidence::Ptr>()->summary()
-                 << "Expected " << expected;
+        qDebug() << "Got " << it.payload<KCalendarCore::Incidence::Ptr>()->summary() << "Expected " << expected;
         return false;
     }
 }
@@ -67,7 +66,7 @@ static Akonadi::Item createItem(const Akonadi::Collection &collection)
     [&]() {
         QVERIFY(createJob->exec());
         QVERIFY(createJob->item().isValid());
-    } ();
+    }();
 
     return createJob->item();
 }
@@ -78,23 +77,15 @@ void HistoryTest::initTestCase()
 
     mHistory = mChanger->history();
 
-    connect(mChanger,
-            &IncidenceChanger::createFinished,
-            this, &HistoryTest::createFinished);
+    connect(mChanger, &IncidenceChanger::createFinished, this, &HistoryTest::createFinished);
 
-    connect(mChanger,
-            &IncidenceChanger::deleteFinished,
-            this, &HistoryTest::deleteFinished);
+    connect(mChanger, &IncidenceChanger::deleteFinished, this, &HistoryTest::deleteFinished);
 
-    connect(mChanger,
-            &IncidenceChanger::modifyFinished,
-            this, &HistoryTest::modifyFinished);
+    connect(mChanger, &IncidenceChanger::modifyFinished, this, &HistoryTest::modifyFinished);
 
-    connect(mHistory, &History::undone,
-            this, &HistoryTest::handleUndone);
+    connect(mHistory, &History::undone, this, &HistoryTest::handleUndone);
 
-    connect(mHistory, &History::redone,
-            this, &HistoryTest::handleRedone);
+    connect(mHistory, &History::redone, this, &HistoryTest::handleRedone);
 }
 
 void HistoryTest::testCreation_data()
@@ -121,7 +112,7 @@ void HistoryTest::testCreation()
     QCOMPARE(mHistory->d->redoCount(), 0);
     QCOMPARE(mHistory->d->undoCount(), 1);
 
-    //undo it
+    // undo it
     mPendingSignals[UndoSignal] = 1;
     mHistory->undo();
     waitForSignals();
@@ -158,8 +149,7 @@ void HistoryTest::testDeletion_data()
     QTest::newRow("two items") << items;
 
     items.clear();
-    items << createItem(mCollection) << createItem(mCollection) << createItem(mCollection)
-          << createItem(mCollection);
+    items << createItem(mCollection) << createItem(mCollection) << createItem(mCollection) << createItem(mCollection);
     QTest::newRow("four items") << items;
 }
 
@@ -170,8 +160,7 @@ void HistoryTest::testDeletion()
     QCOMPARE(mHistory->d->redoCount(), 0);
     QCOMPARE(mHistory->d->undoCount(), 0);
 
-    const int changeId = (items.count() == 1) ? mChanger->deleteIncidence(items.first())
-                         : mChanger->deleteIncidences(items);
+    const int changeId = (items.count() == 1) ? mChanger->deleteIncidence(items.first()) : mChanger->deleteIncidences(items);
     QVERIFY(changeId > 0);
     mKnownChangeIds << changeId;
     waitForSignals();
@@ -261,7 +250,7 @@ void HistoryTest::testModification()
 void HistoryTest::testAtomicOperations_data()
 {
     QTest::addColumn<Akonadi::Item::List>("items");
-    QTest::addColumn<QList<Akonadi::IncidenceChanger::ChangeType> >("changeTypes");
+    QTest::addColumn<QList<Akonadi::IncidenceChanger::ChangeType>>("changeTypes");
 
     Akonadi::Item::List items;
     QList<Akonadi::IncidenceChanger::ChangeType> changeTypes;
@@ -299,8 +288,7 @@ void HistoryTest::testAtomicOperations()
         int changeId = -1;
         switch (changeTypes[i]) {
         case IncidenceChanger::ChangeTypeCreate:
-            changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalendarCore::Incidence::Ptr>()
-                                                 : Incidence::Ptr());
+            changeId = mChanger->createIncidence(item.hasPayload() ? item.payload<KCalendarCore::Incidence::Ptr>() : Incidence::Ptr());
             QVERIFY(changeId != -1);
             mKnownChangeIds << changeId;
             ++mPendingSignals[CreationSignal];
@@ -311,8 +299,7 @@ void HistoryTest::testAtomicOperations()
             mKnownChangeIds << changeId;
             ++mPendingSignals[DeletionSignal];
             break;
-        case IncidenceChanger::ChangeTypeModify:
-        {
+        case IncidenceChanger::ChangeTypeModify: {
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
             Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
@@ -379,7 +366,7 @@ void HistoryTest::testAtomicOperations()
 void HistoryTest::testMix_data()
 {
     QTest::addColumn<Akonadi::Item::List>("items");
-    QTest::addColumn<QList<Akonadi::IncidenceChanger::ChangeType> >("changeTypes");
+    QTest::addColumn<QList<Akonadi::IncidenceChanger::ChangeType>>("changeTypes");
 
     Akonadi::Item::List items;
     QList<Akonadi::IncidenceChanger::ChangeType> changeTypes;
@@ -438,8 +425,7 @@ void HistoryTest::testMix()
             ++mPendingSignals[DeletionSignal];
             waitForSignals();
             break;
-        case IncidenceChanger::ChangeTypeModify:
-        {
+        case IncidenceChanger::ChangeTypeModify: {
             item = item.isValid() ? item : mItemByChangeId.value(lastCreateChangeId);
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
@@ -510,7 +496,10 @@ void HistoryTest::waitForSignals()
     QVERIFY(!QTestEventLoop::instance().timeout());
 }
 
-void HistoryTest::deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
+void HistoryTest::deleteFinished(int changeId,
+                                 const QVector<Akonadi::Item::Id> &deletedIds,
+                                 Akonadi::IncidenceChanger::ResultCode resultCode,
+                                 const QString &errorMessage)
 {
     QVERIFY(changeId != -1);
 
@@ -550,7 +539,7 @@ void HistoryTest::createFinished(int changeId, const Akonadi::Item &item, Akonad
         mItemByChangeId.insert(changeId, item);
         QVERIFY(item.hasPayload());
         Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
-        //mItemIdByUid.insert(incidence->uid(), item.id());
+        // mItemIdByUid.insert(incidence->uid(), item.id());
     } else {
         qDebug() << "Error string is " << errorString;
     }

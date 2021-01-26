@@ -10,7 +10,8 @@
 #include <KCalendarCore/Attendee>
 #include <QSortFilterProxyModel>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT

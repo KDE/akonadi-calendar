@@ -10,12 +10,13 @@
 #include <QObject>
 
 #include <AkonadiCore/differencesalgorithminterface.h>
-#include <AkonadiCore/itemserializerplugin.h>
 #include <AkonadiCore/gidextractorinterface.h>
+#include <AkonadiCore/itemserializerplugin.h>
 
 #include <KCalendarCore/ICalFormat>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class SerializerPluginKCalCore : public QObject, public ItemSerializerPlugin, public DifferencesAlgorithmInterface, public GidExtractorInterface
 {
     Q_OBJECT

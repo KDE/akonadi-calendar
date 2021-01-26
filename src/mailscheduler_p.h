@@ -7,13 +7,14 @@
 #ifndef AKONADI_CALENDAR_MAILSCHEDULER_P_H
 #define AKONADI_CALENDAR_MAILSCHEDULER_P_H
 
-#include "scheduler_p.h"
 #include "mailclient_p.h"
+#include "scheduler_p.h"
 
 #include <KCalendarCore/Incidence>
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /*
   This class implements the iTIP interface using the email interface specified
   as Mail.
@@ -22,7 +23,6 @@ class MailScheduler : public Akonadi::Scheduler
 {
     Q_OBJECT
 public:
-
     /**
      * @param calendar Must be a valid and loaded calendar.
      */

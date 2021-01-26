@@ -19,14 +19,11 @@
 using namespace Akonadi;
 using namespace KCalendarCore;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class History;
 
-enum OperationType {
-    TypeNone,
-    TypeUndo,
-    TypeRedo
-};
+enum OperationType { TypeNone, TypeUndo, TypeRedo };
 
 class Entry : public QObject
 {
@@ -43,6 +40,7 @@ public:
     QString mDescription;
 Q_SIGNALS:
     void finished(Akonadi::IncidenceChanger::ResultCode, const QString &errorString);
+
 protected:
     virtual bool undo() = 0;
     virtual bool redo() = 0;
@@ -52,6 +50,7 @@ protected:
     QHash<Akonadi::Item::Id, int> mLatestRevisionByItemId;
     History *q = nullptr;
     QVector<int> mChangeIds;
+
 private:
     void init(const QString &description, History *qq);
     Q_DISABLE_COPY(Entry)
@@ -97,9 +96,9 @@ public:
     bool mUndoAllInProgress;
 
     /**
-      * When recordCreation/Deletion/Modification is called and an undo operation is already in progress
-      * the entry is added here.
-      */
+     * When recordCreation/Deletion/Modification is called and an undo operation is already in progress
+     * the entry is added here.
+     */
     QVector<Entry::Ptr> mQueuedEntries;
     bool mEnabled;
     QPointer<QWidget> mCurrentParent;
@@ -122,9 +121,11 @@ public:
     bool redo() override;
 
 private Q_SLOTS:
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    void
+    onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+
 private:
     Q_DISABLE_COPY(CreationEntry)
 };
@@ -138,9 +139,11 @@ public:
     bool redo() override;
 
 private Q_SLOTS:
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    void
+    onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+
 private:
     IncidenceChanger::ResultCode mResultCode;
     QString mErrorString;
@@ -160,6 +163,7 @@ public:
 
 private Q_SLOTS:
     void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+
 private:
     Q_DISABLE_COPY(ModificationEntry)
     Incidence::Ptr mOriginalPayload;
@@ -181,8 +185,10 @@ protected:
 
 private Q_SLOTS:
     void onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+
 public:
     const uint mAtomicOperationId;
+
 private:
     Entry::List mEntries;
     int mFinishedEntries;

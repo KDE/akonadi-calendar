@@ -7,14 +7,15 @@
 #ifndef UNITTEST_BASE_H
 #define UNITTEST_BASE_H
 
-#include <kcalendarcore/calendar.h>
 #include <collection.h>
 #include <item.h>
+#include <kcalendarcore/calendar.h>
 
 #include <QObject>
 #include <QString>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
@@ -35,7 +36,6 @@ public Q_SLOTS:
     void onLoadFinished(bool success, const QString &errorMessage);
 
 protected:
-
     void compareCalendars(const KCalendarCore::Calendar::Ptr &expectedCalendar);
     static QByteArray readFile(const QString &filename);
     static Akonadi::Item generateIncidence(const QString &uid, const QString &organizer = QString());

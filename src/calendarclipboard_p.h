@@ -7,18 +7,20 @@
 #ifndef _AKONADI_CALENDAR_CLIPBOARD_P_H
 #define _AKONADI_CALENDAR_CLIPBOARD_P_H
 
+#include "calendarbase.h"
 #include "calendarclipboard.h"
 #include "incidencechanger.h"
-#include "calendarbase.h"
 #include <KCalendarCore/Incidence>
-#include <QVector>
 #include <QSet>
+#include <QVector>
 
-namespace KCalUtils {
+namespace KCalUtils
+{
 class DndFactory;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 
 class Q_DECL_HIDDEN CalendarClipboard::Private : public QObject
@@ -60,7 +62,6 @@ public Q_SLOTS:
     void slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &ids, Akonadi::IncidenceChanger::ResultCode result, const QString &errorMessage);
 
 public:
-
     Akonadi::CalendarBase::Ptr m_calendar;
     Akonadi::IncidenceChanger *m_changer = nullptr;
     KCalUtils::DndFactory *m_dndfactory = nullptr;

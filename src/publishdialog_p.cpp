@@ -7,10 +7,10 @@
 
 #include "publishdialog_p.h"
 
-#include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
-#include <KEmailAddress>
+#include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <KCalendarCore/Person>
+#include <KEmailAddress>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -21,7 +21,8 @@
 using namespace KCalendarCore;
 using namespace Akonadi;
 
-PublishDialog::Private::Private(PublishDialog *qq) : QObject()
+PublishDialog::Private::Private(PublishDialog *qq)
+    : QObject()
     , q(qq)
 {
 }

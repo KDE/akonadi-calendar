@@ -7,12 +7,13 @@
 #ifndef TODOPURGER_TEST_H_
 #define TODOPURGER_TEST_H_
 
-#include <kcalendarcore/calendar.h>
-#include <collection.h>
 #include <QObject>
 #include <QString>
+#include <collection.h>
+#include <kcalendarcore/calendar.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ETMCalendar;
 class TodoPurger;
 }

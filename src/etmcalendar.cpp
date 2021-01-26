@@ -5,23 +5,23 @@
 */
 
 #include "etmcalendar.h"
-#include "etmcalendar_p.h"
+#include "akonadicalendar_debug.h"
 #include "blockalarmsattribute.h"
 #include "calendarmodel_p.h"
-#include "kcolumnfilterproxymodel_p.h"
-#include "calfilterproxymodel_p.h"
 #include "calfilterpartstatusproxymodel_p.h"
+#include "calfilterproxymodel_p.h"
+#include "etmcalendar_p.h"
+#include "kcolumnfilterproxymodel_p.h"
 #include "utils_p.h"
-#include "akonadicalendar_debug.h"
-#include <item.h>
-#include <session.h>
-#include <monitor.h>
-#include <itemfetchscope.h>
+#include <KDescendantsProxyModel>
+#include <KSelectionProxyModel>
+#include <collectionfilterproxymodel.h>
 #include <entitydisplayattribute.h>
 #include <entitymimetypefiltermodel.h>
-#include <collectionfilterproxymodel.h>
-#include <KSelectionProxyModel>
-#include <KDescendantsProxyModel>
+#include <item.h>
+#include <itemfetchscope.h>
+#include <monitor.h>
+#include <session.h>
 
 #include <QItemSelectionModel>
 #include <QTreeView>
@@ -29,7 +29,7 @@
 using namespace Akonadi;
 using namespace KCalendarCore;
 
-//TODO: implement batchAdding
+// TODO: implement batchAdding
 
 ETMCalendarPrivate::ETMCalendarPrivate(ETMCalendar *qq)
     : CalendarBasePrivate(qq)
@@ -45,10 +45,12 @@ void ETMCalendarPrivate::init()
         auto session = new Akonadi::Session("ETMCalendar", q);
         auto monitor = new Akonadi::Monitor(q);
         monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
-        connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged), this, [this](const Akonadi::Collection &cols, const QSet<QByteArray> &set)
-        {
-            onCollectionChanged(cols, set);
-        });
+        connect(monitor,
+                QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged),
+                this,
+                [this](const Akonadi::Collection &cols, const QSet<QByteArray> &set) {
+                    onCollectionChanged(cols, set);
+                });
 
         Akonadi::ItemFetchScope scope;
         scope.fetchFullPayload(true);
@@ -60,7 +62,9 @@ void ETMCalendarPrivate::init()
         monitor->setItemFetchScope(scope);
         monitor->setAllMonitored(true);
 
-        const QStringList allMimeTypes = { KCalendarCore::Event::eventMimeType(), KCalendarCore::Todo::todoMimeType(), KCalendarCore::Journal::journalMimeType() };
+        const QStringList allMimeTypes = {KCalendarCore::Event::eventMimeType(),
+                                          KCalendarCore::Todo::todoMimeType(),
+                                          KCalendarCore::Journal::journalMimeType()};
 
         for (const QString &mimetype : allMimeTypes) {
             monitor->setMimeTypeMonitored(mimetype, mMimeTypes.isEmpty() || mMimeTypes.contains(mimetype));
@@ -75,27 +79,17 @@ void ETMCalendarPrivate::init()
 
     connect(q, &Calendar::filterChanged, this, &ETMCalendarPrivate::onFilterChanged);
 
-    connect(mETM.data(), &EntityTreeModel::collectionPopulated,
-            this, &ETMCalendarPrivate::onCollectionPopulated);
-    connect(mETM.data(), &QAbstractItemModel::rowsInserted,
-            this, &ETMCalendarPrivate::onRowsInserted);
-    connect(mETM.data(), &QAbstractItemModel::dataChanged,
-            this, &ETMCalendarPrivate::onDataChanged);
-    connect(mETM.data(), &QAbstractItemModel::rowsMoved,
-            this, &ETMCalendarPrivate::onRowsMoved);
-    connect(mETM.data(), &QAbstractItemModel::rowsRemoved,
-            this, &ETMCalendarPrivate::onRowsRemoved);
+    connect(mETM.data(), &EntityTreeModel::collectionPopulated, this, &ETMCalendarPrivate::onCollectionPopulated);
+    connect(mETM.data(), &QAbstractItemModel::rowsInserted, this, &ETMCalendarPrivate::onRowsInserted);
+    connect(mETM.data(), &QAbstractItemModel::dataChanged, this, &ETMCalendarPrivate::onDataChanged);
+    connect(mETM.data(), &QAbstractItemModel::rowsMoved, this, &ETMCalendarPrivate::onRowsMoved);
+    connect(mETM.data(), &QAbstractItemModel::rowsRemoved, this, &ETMCalendarPrivate::onRowsRemoved);
 
-    connect(mFilteredETM, &QAbstractItemModel::dataChanged,
-            this, &ETMCalendarPrivate::onDataChangedInFilteredModel);
-    connect(mFilteredETM, &QAbstractItemModel::layoutChanged,
-            this, &ETMCalendarPrivate::onLayoutChangedInFilteredModel);
-    connect(mFilteredETM, &QAbstractItemModel::modelReset,
-            this, &ETMCalendarPrivate::onModelResetInFilteredModel);
-    connect(mFilteredETM, &QAbstractItemModel::rowsInserted,
-            this, &ETMCalendarPrivate::onRowsInsertedInFilteredModel);
-    connect(mFilteredETM, &QAbstractItemModel::rowsAboutToBeRemoved,
-            this, &ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::dataChanged, this, &ETMCalendarPrivate::onDataChangedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::layoutChanged, this, &ETMCalendarPrivate::onLayoutChangedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::modelReset, this, &ETMCalendarPrivate::onModelResetInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::rowsInserted, this, &ETMCalendarPrivate::onRowsInsertedInFilteredModel);
+    connect(mFilteredETM, &QAbstractItemModel::rowsAboutToBeRemoved, this, &ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel);
 
     loadFromETM();
 }
@@ -145,7 +139,7 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCheckableProxyModel->setSourceModel(mCollectionProxyModel);
     mCheckableProxyModel->setObjectName(QStringLiteral("Add checkboxes"));
 
-    mSelectionProxy = new KSelectionProxyModel(selectionModel, /**parent=*/ this);
+    mSelectionProxy = new KSelectionProxyModel(selectionModel, /**parent=*/this);
     mSelectionProxy->setObjectName(QStringLiteral("Only show items of selected collection"));
     mSelectionProxy->setFilterBehavior(KSelectionProxyModel::ChildrenOfExactSelection);
     mSelectionProxy->setSourceModel(mETM.data());
@@ -202,15 +196,15 @@ void ETMCalendarPrivate::clear()
 
     if (!mItemById.isEmpty()) {
         mItemById.clear();
-        //Q_ASSERT(false); // TODO: discover why this happens
+        // Q_ASSERT(false); // TODO: discover why this happens
     }
 
     if (!mItemIdByUid.isEmpty()) {
         mItemIdByUid.clear();
-        //Q_ASSERT(false);
+        // Q_ASSERT(false);
     }
     mParentUidToChildrenUid.clear();
-    //m_virtualItems.clear();
+    // m_virtualItems.clear();
 }
 
 Akonadi::Item::List ETMCalendarPrivate::itemsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex, int start, int end)
@@ -259,8 +253,7 @@ Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstra
 Akonadi::Item ETMCalendarPrivate::itemFromIndex(const QModelIndex &idx)
 {
     Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    item.setParentCollection(
-        idx.data(Akonadi::EntityTreeModel::ParentCollectionRole).value<Akonadi::Collection>());
+    item.setParentCollection(idx.data(Akonadi::EntityTreeModel::ParentCollectionRole).value<Akonadi::Collection>());
     return item;
 }
 
@@ -295,8 +288,7 @@ Akonadi::Collection ETMCalendarPrivate::collectionFromIndex(const QModelIndex &i
 
 void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index, int start, int end)
 {
-    const Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index,
-                                                                       start, end);
+    const Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index, start, end);
 
     for (const Akonadi::Collection &collection : collections) {
         mCollectionMap[collection.id()] = collection;
@@ -341,7 +333,7 @@ void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft, const QModelI
 
 void ETMCalendarPrivate::onRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
 {
-    //TODO
+    // TODO
     Q_UNUSED(sourceParent)
     Q_UNUSED(sourceStart)
     Q_UNUSED(sourceEnd)
@@ -400,13 +392,13 @@ void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
         // We set the payload so that the internal incidence pointer and the one in mItemById stay the same
         Akonadi::Item updatedItem = item;
         updatedItem.setPayload<KCalendarCore::Incidence::Ptr>(existingIncidence.staticCast<KCalendarCore::Incidence>());
-        mItemById.insert(item.id(), updatedItem);   // The item needs updating too, revision changed.
+        mItemById.insert(item.id(), updatedItem); // The item needs updating too, revision changed.
 
         // Check if RELATED-TO changed, updating parenting information
         handleParentChanged(newIncidence);
         *(existingIncidence.data()) = *(newIncidence.data());
     } else {
-        mItemById.insert(item.id(), item);   // The item needs updating too, revision changed.
+        mItemById.insert(item.id(), item); // The item needs updating too, revision changed.
         // The item changed it's UID, update our maps, the Google resource changes the UID when we create incidences.
         handleUidChange(oldItem, item, newIncidence->instanceIdentifier());
     }
@@ -461,7 +453,10 @@ ETMCalendar::ETMCalendar(Monitor *monitor, QObject *parent)
     Q_D(ETMCalendar);
 
     if (monitor) {
-        QObject::connect(monitor, QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Akonadi::Monitor::collectionChanged), d, &ETMCalendarPrivate::onCollectionChanged);
+        QObject::connect(monitor,
+                         QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Akonadi::Monitor::collectionChanged),
+                         d,
+                         &ETMCalendarPrivate::onCollectionChanged);
         d->mETM = CalendarModel::create(monitor);
         d->mETM->setObjectName(QStringLiteral("ETM"));
         d->mETM->setListFilter(Akonadi::CollectionFetchScope::Display);
@@ -474,7 +469,7 @@ ETMCalendar::~ETMCalendar()
 {
 }
 
-//TODO: move this up?
+// TODO: move this up?
 Akonadi::Collection ETMCalendar::collection(Akonadi::Collection::Id id) const
 {
     Q_D(const ETMCalendar);

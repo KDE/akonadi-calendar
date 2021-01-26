@@ -5,14 +5,14 @@
 */
 
 #include "incidencechanger_p.h"
+#include "akonadicalendar_debug.h"
 #include "utils_p.h"
 #include <KCalendarCore/Incidence>
-#include "akonadicalendar_debug.h"
-#include <itemcreatejob.h>
+#include <QDialog>
+#include <QString>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
-#include <QString>
-#include <QDialog>
+#include <itemcreatejob.h>
 
 using namespace Akonadi;
 
@@ -33,8 +33,7 @@ void IncidenceChanger::Private::loadCollections()
         return;
     }
 
-    m_collectionFetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-                                                           Akonadi::CollectionFetchJob::Recursive);
+    m_collectionFetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
     m_collectionFetchJob->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(m_collectionFetchJob, &KJob::result, this, &IncidenceChanger::Private::onCollectionsLoaded);
@@ -117,8 +116,7 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         QWidget *parent = change->parentWidget;
 
         const QStringList mimeTypes(incidence->mimeType());
-        collectionToUse = CalendarUtils::selectCollection(parent, /*by-ref*/ dialogCode,
-                                                          mimeTypes, mDefaultCollection);
+        collectionToUse = CalendarUtils::selectCollection(parent, /*by-ref*/ dialogCode, mimeTypes, mDefaultCollection);
         if (dialogCode != QDialog::Accepted) {
             qCDebug(AKONADICALENDAR_LOG) << "User canceled collection choosing";
             change->resultCode = ResultCodeUserCanceled;
@@ -172,24 +170,21 @@ void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change
             }
             qCWarning(AKONADICALENDAR_LOG) << "Destination policy is to use the default collection."
                                            << "But it's invalid or doesn't have proper ACLs."
-                                           << "isValid = "  << mDefaultCollection.isValid()
-                                           << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);
+                                           << "isValid = " << mDefaultCollection.isValid() << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);
             // else fallthrough, and ask the user.
             Q_FALLTHROUGH();
         case DestinationPolicyAsk:
             mPendingCreations << change;
             loadCollections(); // Now we wait, collections are being loaded async
             break;
-        case DestinationPolicyNeverAsk:
-        {
+        case DestinationPolicyNeverAsk: {
             const bool hasRights = this->hasRights(mDefaultCollection, ChangeTypeCreate);
             if (mDefaultCollection.isValid() && hasRights) {
                 step2CreateIncidence(change, mDefaultCollection);
             } else {
                 const QString errorString = showErrorDialog(ResultCodeInvalidDefaultCollection, parent);
                 qCritical() << errorString << "; rights are " << hasRights;
-                change->resultCode = hasRights ? ResultCodeInvalidDefaultCollection
-                                     : ResultCodePermissions;
+                change->resultCode = hasRights ? ResultCodeInvalidDefaultCollection : ResultCodePermissions;
                 change->errorString = errorString;
                 cancelTransaction();
             }
@@ -219,8 +214,7 @@ void IncidenceChanger::Private::step2CreateIncidence(const Change::Ptr &change, 
     }
 
     // QueuedConnection because of possible sync exec calls.
-    connect(createJob, &KJob::result,
-            this, &IncidenceChanger::Private::handleCreateJobResult, Qt::QueuedConnection);
+    connect(createJob, &KJob::result, this, &IncidenceChanger::Private::handleCreateJobResult, Qt::QueuedConnection);
 
     mChangeById.insert(change->id, change);
 }

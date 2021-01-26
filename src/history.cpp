@@ -5,8 +5,8 @@
 */
 
 #include "history.h"
-#include "history_p.h"
 #include "akonadicalendar_debug.h"
+#include "history_p.h"
 #include <KCalUtils/Stringify>
 
 using namespace KCalendarCore;
@@ -24,22 +24,20 @@ History::~History()
 }
 
 History::Private::Private(History *qq)
-    : mChanger(new IncidenceChanger(/*history=*/ false, qq))
+    : mChanger(new IncidenceChanger(/*history=*/false, qq))
     , mOperationTypeInProgress(TypeNone)
     , mUndoAllInProgress(false)
     , mEnabled(true)
     , q(qq)
 {
-    mChanger->setObjectName(QStringLiteral("changer"));   // for auto-connects
+    mChanger->setObjectName(QStringLiteral("changer")); // for auto-connects
 }
 
 void History::recordCreation(const Akonadi::Item &item, const QString &description, const uint atomicOperationId)
 {
-    Q_ASSERT_X(item.isValid(), "History::recordCreation()",
-               "Item must be valid.");
+    Q_ASSERT_X(item.isValid(), "History::recordCreation()", "Item must be valid.");
 
-    Q_ASSERT_X(item.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordCreation()",
-               "Item must have Incidence::Ptr payload.");
+    Q_ASSERT_X(item.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordCreation()", "Item must have Incidence::Ptr payload.");
 
     Entry::Ptr entry(new CreationEntry(item, description, this));
 
@@ -50,13 +48,10 @@ void History::recordModification(const Akonadi::Item &oldItem, const Akonadi::It
 {
     Q_ASSERT_X(oldItem.isValid(), "History::recordModification", "old item must be valid");
     Q_ASSERT_X(newItem.isValid(), "History::recordModification", "newItem item must be valid");
-    Q_ASSERT_X(oldItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification",
-               "old item must have Incidence::Ptr payload");
-    Q_ASSERT_X(newItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification",
-               "newItem item must have Incidence::Ptr payload");
+    Q_ASSERT_X(oldItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification", "old item must have Incidence::Ptr payload");
+    Q_ASSERT_X(newItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification", "newItem item must have Incidence::Ptr payload");
 
-    Entry::Ptr entry(new ModificationEntry(newItem, oldItem.payload<KCalendarCore::Incidence::Ptr>(),
-                                           description, this));
+    Entry::Ptr entry(new ModificationEntry(newItem, oldItem.payload<KCalendarCore::Incidence::Ptr>(), description, this));
 
     Q_ASSERT(newItem.revision() >= oldItem.revision());
 
@@ -77,10 +72,8 @@ void History::recordDeletions(const Akonadi::Item::List &items, const QString &d
 
     for (const Akonadi::Item &item : items) {
         Q_UNUSED(item)
-        Q_ASSERT_X(item.isValid(),
-                   "History::recordDeletion()", "Item must be valid.");
-        Q_ASSERT_X(item.hasPayload<Incidence::Ptr>(),
-                   "History::recordDeletion()", "Item must have an Incidence::Ptr payload.");
+        Q_ASSERT_X(item.isValid(), "History::recordDeletion()", "Item must be valid.");
+        Q_ASSERT_X(item.hasPayload<Incidence::Ptr>(), "History::recordDeletion()", "Item must have an Incidence::Ptr payload.");
     }
 
     d->stackEntry(entry, atomicOperationId);
@@ -177,8 +170,7 @@ void History::Private::doIt(OperationType type)
     Q_ASSERT(!stack().isEmpty());
     mEntryInProgress = stack().pop();
 
-    connect(mEntryInProgress.data(), &Entry::finished, this, &Private::handleFinished,
-            Qt::UniqueConnection);
+    connect(mEntryInProgress.data(), &Entry::finished, this, &Private::handleFinished, Qt::UniqueConnection);
     mEntryInProgress->doIt(type);
 }
 
@@ -188,8 +180,7 @@ void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult
     Q_ASSERT(!(mUndoAllInProgress && mOperationTypeInProgress == TypeRedo));
 
     const bool success = (changerResult == IncidenceChanger::ResultCodeSuccess);
-    const History::ResultCode resultCode = success ? History::ResultCodeSuccess
-                                           : History::ResultCodeError;
+    const History::ResultCode resultCode = success ? History::ResultCodeSuccess : History::ResultCodeError;
 
     if (success) {
         mLastErrorString.clear();
@@ -223,9 +214,8 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
     Entry::Ptr entryToPush;
 
     if (useMultiEntry) {
-        Entry::Ptr topEntry = (mOperationTypeInProgress == TypeNone)
-                              ? (mUndoStack.isEmpty() ? Entry::Ptr() : mUndoStack.top())
-                              : (mQueuedEntries.isEmpty() ? Entry::Ptr() : mQueuedEntries.last());
+        Entry::Ptr topEntry = (mOperationTypeInProgress == TypeNone) ? (mUndoStack.isEmpty() ? Entry::Ptr() : mUndoStack.top())
+                                                                     : (mQueuedEntries.isEmpty() ? Entry::Ptr() : mQueuedEntries.last());
 
         const bool topIsMultiEntry = qobject_cast<MultiEntry *>(topEntry.data());
 
@@ -237,8 +227,7 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
             }
             multiEntry->addEntry(entry);
         } else {
-            MultiEntry::Ptr multiEntry = MultiEntry::Ptr(new MultiEntry(atomicOperationId,
-                                                                        entry->mDescription, q));
+            MultiEntry::Ptr multiEntry = MultiEntry::Ptr(new MultiEntry(atomicOperationId, entry->mDescription, q));
             multiEntry->addEntry(entry);
             entryToPush = multiEntry;
         }

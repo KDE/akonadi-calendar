@@ -8,37 +8,23 @@
 #ifndef AKONADI_CALENDARMODEL_P_H
 #define AKONADI_CALENDARMODEL_P_H
 
-#include <entitytreemodel.h>
-#include <monitor.h>
 #include <QSharedPointer>
 #include <QWeakPointer>
+#include <entitytreemodel.h>
+#include <monitor.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class CalendarModel : public Akonadi::EntityTreeModel
 {
     Q_OBJECT
 public:
     using Ptr = QSharedPointer<CalendarModel>;
-    enum ItemColumn {
-        Summary = 0,
-        Type,
-        DateTimeStart,
-        DateTimeEnd,
-        DateTimeDue,
-        Priority,
-        PercentComplete,
-        ItemColumnCount
-    };
+    enum ItemColumn { Summary = 0, Type, DateTimeStart, DateTimeEnd, DateTimeDue, Priority, PercentComplete, ItemColumnCount };
 
-    enum CollectionColumn {
-        CollectionTitle = 0,
-        CollectionColumnCount
-    };
+    enum CollectionColumn { CollectionTitle = 0, CollectionColumnCount };
 
-    enum Role {
-        SortRole = Akonadi::EntityTreeModel::UserRole,
-        RecursRole
-    };
+    enum Role { SortRole = Akonadi::EntityTreeModel::UserRole, RecursRole };
 
     static Akonadi::CalendarModel::Ptr create(Akonadi::Monitor *monitor);
     ~CalendarModel() override;

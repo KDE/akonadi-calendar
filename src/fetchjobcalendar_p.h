@@ -7,17 +7,17 @@
 #ifndef AKONADI_FETCHJOBCALENDAR_P_H
 #define AKONADI_FETCHJOBCALENDAR_P_H
 
-#include "fetchjobcalendar.h"
 #include "calendarbase_p.h"
+#include "fetchjobcalendar.h"
 
 class KJob;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class FetchJobCalendarPrivate : public CalendarBasePrivate
 {
     Q_OBJECT
 public:
-
     explicit FetchJobCalendarPrivate(FetchJobCalendar *qq);
     ~FetchJobCalendarPrivate();
 

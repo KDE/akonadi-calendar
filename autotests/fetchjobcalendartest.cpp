@@ -5,10 +5,10 @@
 */
 
 #include "../src/fetchjobcalendar.h"
-#include <itemfetchjob.h>
-#include <itemcreatejob.h>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
+#include <itemcreatejob.h>
+#include <itemfetchjob.h>
 #include <qtest_akonadi.h>
 
 using namespace Akonadi;
@@ -34,9 +34,7 @@ class FetchJobCalendarTest : public QObject
 
     void fetchCollection()
     {
-        auto job = new CollectionFetchJob(Collection::root(),
-                                                         CollectionFetchJob::Recursive,
-                                                         this);
+        auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
         // Get list of collections
         job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
         AKVERIFYEXEC(job);

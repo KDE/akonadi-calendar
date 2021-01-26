@@ -9,8 +9,8 @@
 #define AKONADI_CALENDAR_UTILS_P_
 
 #include <KCalendarCore/Incidence>
-#include <item.h>
 #include <collection.h>
+#include <item.h>
 
 #include <QString>
 #include <QStringList>
@@ -21,20 +21,23 @@
 
 class QWidget;
 
-namespace Akonadi {
-namespace CalendarUtils {
+namespace Akonadi
+{
+namespace CalendarUtils
+{
 Q_REQUIRED_RESULT QString fullName();
 Q_REQUIRED_RESULT QString email();
 Q_REQUIRED_RESULT bool thatIsMe(const QString &email);
 
-//faster version, because we know that attendee->email() is only the email address
+// faster version, because we know that attendee->email() is only the email address
 Q_REQUIRED_RESULT bool thatIsMe(const KCalendarCore::Attendee &attendee);
 
 Q_REQUIRED_RESULT QStringList allEmails();
 
 Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence(const Akonadi::Item &item);
 
-Q_REQUIRED_RESULT Akonadi::Collection selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
+Q_REQUIRED_RESULT Akonadi::Collection
+selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }
 }
 

@@ -13,7 +13,8 @@
 
 template<class T> class QVector;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class KColumnFilterProxyModelPrivate;
 
 /**

@@ -8,14 +8,14 @@
 #include "utils_p.h"
 
 #include <collection.h>
-#include <item.h>
 #include <entitytreemodel.h>
+#include <item.h>
 
 #include <KCalendarCore/Incidence>
 // #include <email.h>
 
-#include <identitymanager.h>
 #include <KEMailSettings>
+#include <identitymanager.h>
 
 using namespace Akonadi;
 
@@ -28,7 +28,7 @@ public:
     }
 
     QList<KCalendarCore::Attendee::PartStat> mBlockedStatusList;
-    KIdentityManagement::IdentityManager * const mIdentityManager;
+    KIdentityManagement::IdentityManager *const mIdentityManager;
     bool mFilterVirtual = false;
 };
 
@@ -41,7 +41,10 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private())
 {
-    QObject::connect(d->mIdentityManager, QOverload<>::of(&KIdentityManagement::IdentityManager::changed), this, &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
+    QObject::connect(d->mIdentityManager,
+                     QOverload<>::of(&KIdentityManagement::IdentityManager::changed),
+                     this,
+                     &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 
 CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel()

@@ -9,11 +9,11 @@
 #include "calendarmodel_p.h"
 
 #include "utils_p.h"
-#include <monitor.h>
-#include <itemfetchscope.h>
 #include <KCalendarCore/Event>
-#include <kcalendarcore/todo.h>
 #include <KCalendarCore/Journal>
+#include <itemfetchscope.h>
+#include <kcalendarcore/todo.h>
+#include <monitor.h>
 
 #include <KLocalizedString>
 
@@ -23,8 +23,7 @@ using namespace Akonadi;
 
 static KCalendarCore::Todo::Ptr todo(const Akonadi::Item &item)
 {
-    return item.hasPayload<KCalendarCore::Todo::Ptr>() ? item.payload<KCalendarCore::Todo::Ptr>()
-           : KCalendarCore::Todo::Ptr();
+    return item.hasPayload<KCalendarCore::Todo::Ptr>() ? item.payload<KCalendarCore::Todo::Ptr>() : KCalendarCore::Todo::Ptr();
 }
 
 class Q_DECL_HIDDEN CalendarModel::Private

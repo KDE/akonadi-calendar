@@ -5,8 +5,8 @@
 */
 
 #include "todopurger.h"
-#include "todopurger_p.h"
 #include "fetchjobcalendar.h"
+#include "todopurger_p.h"
 #include "utils_p.h"
 
 #include <kcalendarcore/todo.h>
@@ -35,7 +35,7 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
 void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &deletedItems, IncidenceChanger::ResultCode result, const QString &message)
 {
     if (changeId != m_currentChangeId) {
-        return;    // Not ours.
+        return; // Not ours.
     }
 
     m_lastError = message;
@@ -109,7 +109,7 @@ bool TodoPurger::Private::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
         KCalendarCore::Todo::Ptr childTodo = child.dynamicCast<KCalendarCore::Todo>();
 
         if (!childTodo) {
-            return false;    // This never happens
+            return false; // This never happens
         }
 
         if (!treeIsDeletable(childTodo)) {
@@ -136,8 +136,7 @@ void TodoPurger::setIncidenceChager(IncidenceChanger *changer)
     d->m_changer = changer;
     d->m_currentChangeId = -1;
     if (changer) {
-        connect(changer, &IncidenceChanger::deleteFinished,
-                d, &Private::onItemsDeleted);
+        connect(changer, &IncidenceChanger::deleteFinished, d, &Private::onItemsDeleted);
     }
 }
 
@@ -155,7 +154,7 @@ void TodoPurger::purgeCompletedTodos()
         d->deleteTodos();
     } else {
         d->m_calendar = FetchJobCalendar::Ptr(new FetchJobCalendar(this));
-        connect(d->m_calendar.data(), SIGNAL(loadFinished(bool,QString)), d, SLOT(onCalendarLoaded(bool,QString)));
+        connect(d->m_calendar.data(), SIGNAL(loadFinished(bool, QString)), d, SLOT(onCalendarLoaded(bool, QString)));
     }
 }
 

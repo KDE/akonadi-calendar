@@ -13,20 +13,21 @@
 
 #include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class FetchJobCalendarPrivate;
 /**
-* @short A KCalendarCore::Calendar that uses a one time IncidenceFetchJob to populate itself.
-*
-* If you want a persistent calendar ( which monitors Akonadi for changes )
-* use an ETMCalendar.
-*
-* @see ETMCalendar
-* @see CalendarBase
-*
-* @author Sérgio Martins <sergio.martins@kdab.com>
-* @since 4.11
-*/
+ * @short A KCalendarCore::Calendar that uses a one time IncidenceFetchJob to populate itself.
+ *
+ * If you want a persistent calendar ( which monitors Akonadi for changes )
+ * use an ETMCalendar.
+ *
+ * @see ETMCalendar
+ * @see CalendarBase
+ *
+ * @author Sérgio Martins <sergio.martins@kdab.com>
+ * @since 4.11
+ */
 class AKONADI_CALENDAR_EXPORT FetchJobCalendar : public Akonadi::CalendarBase
 {
     Q_OBJECT
@@ -34,28 +35,28 @@ public:
     using Ptr = QSharedPointer<FetchJobCalendar>;
 
     /**
-      * Creates a new FetchJobCalendar. Loading begins asynchronously.
-      * @see loadFinished()
-      */
+     * Creates a new FetchJobCalendar. Loading begins asynchronously.
+     * @see loadFinished()
+     */
     explicit FetchJobCalendar(QObject *parent = nullptr);
 
     /**
-      * Destroys this FetchJobCalendar.
-      */
+     * Destroys this FetchJobCalendar.
+     */
     ~FetchJobCalendar() override;
 
     /**
-      * Returns if the calendar already finished loading.
-      * This is an alternative to listening for the loadFinished() signal.
-      */
+     * Returns if the calendar already finished loading.
+     * This is an alternative to listening for the loadFinished() signal.
+     */
     Q_REQUIRED_RESULT bool isLoaded() const override;
 
 Q_SIGNALS:
     /**
-      * This signal is emitted when the IncidenceFetchJob finishes.
-      * @param success the success of the operation
-      * @param errorMessage if @p success is false, contains the error message
-      */
+     * This signal is emitted when the IncidenceFetchJob finishes.
+     * @param success the success of the operation
+     * @param errorMessage if @p success is false, contains the error message
+     */
     void loadFinished(bool success, const QString &errorMessage);
 
 private:

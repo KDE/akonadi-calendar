@@ -9,18 +9,20 @@
 
 #include "calendarbase.h"
 
-#include <KCalendarCore/ScheduleMessage>
 #include <KCalendarCore/IncidenceBase>
+#include <KCalendarCore/ScheduleMessage>
 
 #include <QObject>
 #include <QString>
 
-namespace KCalendarCore {
+namespace KCalendarCore
+{
 class ICalFormat;
 class FreeBusyCache;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
   This class provides an encapsulation of iTIP transactions (RFC 2446).
   It is an abstract base class for inheritance by implementations of the
@@ -55,11 +57,11 @@ public:
     void setShowDialogs(bool enable);
 
     /**
-      * Notify @p recipients about @p incidence
-      *
-      * @param incidence the incidence to send
-      * @param recipients the people to send it to
-    */
+     * Notify @p recipients about @p incidence
+     *
+     * @param incidence the incidence to send
+     * @param recipients the people to send it to
+     */
     virtual void publish(const KCalendarCore::IncidenceBase::Ptr &incidence, const QString &recipients) = 0;
     /**
       Performs iTIP transaction on incidence. The method is specified as the
@@ -95,7 +97,11 @@ public:
 
       Listen to the acceptTransactionFinished() signal to know the success.
     */
-    void acceptTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::iTIPMethod method, KCalendarCore::ScheduleMessage::Status status, const QString &email = QString());
+    void acceptTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                           const Akonadi::CalendarBase::Ptr &calendar,
+                           KCalendarCore::iTIPMethod method,
+                           KCalendarCore::ScheduleMessage::Status status,
+                           const QString &email = QString());
 
     /**
       Returns the directory where the free-busy information is stored.
@@ -113,17 +119,29 @@ public:
     KCalendarCore::FreeBusyCache *freeBusyCache() const;
 
 protected:
-    void acceptPublish(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, KCalendarCore::iTIPMethod method);
+    void acceptPublish(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                       const Akonadi::CalendarBase::Ptr &calendar,
+                       KCalendarCore::ScheduleMessage::Status status,
+                       KCalendarCore::iTIPMethod method);
 
-    void acceptRequest(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, const QString &email);
+    void acceptRequest(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                       const Akonadi::CalendarBase::Ptr &calendar,
+                       KCalendarCore::ScheduleMessage::Status status,
+                       const QString &email);
 
     void acceptAdd(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptCancel(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, const QString &attendee);
+    void acceptCancel(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                      const Akonadi::CalendarBase::Ptr &calendar,
+                      KCalendarCore::ScheduleMessage::Status status,
+                      const QString &attendee);
 
     void acceptDeclineCounter(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 
-    void acceptReply(const KCalendarCore::IncidenceBase::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar, KCalendarCore::ScheduleMessage::Status status, KCalendarCore::iTIPMethod method);
+    void acceptReply(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                     const Akonadi::CalendarBase::Ptr &calendar,
+                     KCalendarCore::ScheduleMessage::Status status,
+                     KCalendarCore::iTIPMethod method);
 
     void acceptRefresh(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::ScheduleMessage::Status status);
 

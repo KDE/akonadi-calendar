@@ -9,11 +9,12 @@
 #define AKONADI_INCIDENCEFETCHJOB_P_H
 
 #include <KCalendarCore/Incidence>
+#include <item.h>
 #include <job.h>
 #include <mimetypechecker.h>
-#include <item.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * Retrieve all incidences in all calendars.
  * This is a Strigi/Nepomuk-free replacement for an IncidenceSearchJob without a query.
@@ -26,6 +27,7 @@ public:
     explicit IncidenceFetchJob(QObject *parent = nullptr);
 
     Akonadi::Item::List items() const;
+
 protected:
     void doStart() override;
 

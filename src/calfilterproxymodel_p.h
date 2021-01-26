@@ -10,11 +10,13 @@
 
 #include <QSortFilterProxyModel>
 
-namespace KCalendarCore {
+namespace KCalendarCore
+{
 class CalFilter;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class CalFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT

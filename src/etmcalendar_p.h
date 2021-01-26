@@ -7,22 +7,23 @@
 #ifndef AKONADI_ETMCALENDAR_P_H
 #define AKONADI_ETMCALENDAR_P_H
 
-#include "etmcalendar.h"
 #include "calendarbase_p.h"
-#include "incidencechanger.h"
 #include "calendarmodel_p.h"
+#include "etmcalendar.h"
+#include "incidencechanger.h"
 
-#include <entitytreemodel.h>
 #include <KCheckableProxyModel>
+#include <entitytreemodel.h>
 
-#include <QSet>
 #include <QModelIndex>
+#include <QSet>
 
 class QAbstractItemModel;
 class CheckableProxyModel;
 class KSelectionProxyModel;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class EntityTreeModel;
 class EntityMimeTypeFilterModel;
 class CollectionFilterProxyModel;
@@ -31,10 +32,8 @@ class CalFilterPartStatusProxyModel;
 
 static bool isStructuralCollection(const Akonadi::Collection &collection)
 {
-    const QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar")
-                                                << KCalendarCore::Event::eventMimeType()
-                                                << KCalendarCore::Todo::todoMimeType()
-                                                << KCalendarCore::Journal::journalMimeType();
+    const QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar") << KCalendarCore::Event::eventMimeType()
+                                                << KCalendarCore::Todo::todoMimeType() << KCalendarCore::Journal::journalMimeType();
     const QStringList collectionMimeTypes = collection.contentMimeTypes();
     for (const QString &mimeType : mimeTypes) {
         if (collectionMimeTypes.contains(mimeType)) {
@@ -71,7 +70,6 @@ class ETMCalendarPrivate : public CalendarBasePrivate
 {
     Q_OBJECT
 public:
-
     explicit ETMCalendarPrivate(ETMCalendar *qq);
     ~ETMCalendarPrivate();
 
@@ -82,7 +80,8 @@ public:
 public Q_SLOTS:
     Akonadi::Item::List itemsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex = QModelIndex(), int start = 0, int end = -1);
 
-    Akonadi::Collection::List collectionsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex = QModelIndex(), int start = 0, int end = -1);
+    Akonadi::Collection::List
+    collectionsFromModel(const QAbstractItemModel *model, const QModelIndex &parentIndex = QModelIndex(), int start = 0, int end = -1);
 
     // KCalendarCore::CalFilter has changed.
     void onFilterChanged();
@@ -115,13 +114,14 @@ public:
     QHash<Akonadi::Collection::Id, Akonadi::Collection> mCollectionMap;
     CheckableProxyModel *mCheckableProxyModel = nullptr;
     Akonadi::CollectionFilterProxyModel *mCollectionProxyModel = nullptr;
-    Akonadi::CalFilterProxyModel *mCalFilterProxyModel = nullptr; //KCalendarCore::CalFilter stuff
-    //filter out all invitations and declined events
+    Akonadi::CalFilterProxyModel *mCalFilterProxyModel = nullptr; // KCalendarCore::CalFilter stuff
+    // filter out all invitations and declined events
     Akonadi::CalFilterPartStatusProxyModel *mCalFilterPartStatusProxyModel = nullptr;
     KSelectionProxyModel *mSelectionProxy = nullptr;
     bool mCollectionFilteringEnabled = true;
     QSet<Akonadi::Collection::Id> mPopulatedCollectionIds;
     QStringList mMimeTypes;
+
 private:
     ETMCalendar *const q;
 };

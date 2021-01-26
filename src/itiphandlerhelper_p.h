@@ -21,11 +21,9 @@
 
 class QWidget;
 
-namespace Akonadi {
-enum Status {
-    StatusNone,
-    StatusSendingInvitation
-};
+namespace Akonadi
+{
+enum Status { StatusNone, StatusSendingInvitation };
 
 /**
   This class handles sending of invitations to attendees when Incidences (e.g.
@@ -54,15 +52,15 @@ public:
     ~ITIPHandlerHelper();
 
     enum SendResult {
-        ResultCanceled,        /**< Sending was canceled by the user, meaning there are
-                                  local changes of which other attendees are not aware. */
-        ResultFailKeepUpdate,  /**< Sending failed, the changes to the incidence must be kept. */
+        ResultCanceled, /**< Sending was canceled by the user, meaning there are
+                           local changes of which other attendees are not aware. */
+        ResultFailKeepUpdate, /**< Sending failed, the changes to the incidence must be kept. */
         ResultFailAbortUpdate, /**< Sending failed, the changes to the incidence must be undone. */
         ResultNoSendingNeeded, /**< In some cases it is not needed to send an invitation
                                 (e.g. when we are the only attendee) */
-        ResultError,           /**< An unexpected error occurred */
-        ResultSuccess,         /**< The invitation was sent to all attendees. */
-        ResultPending          /**< The user has been asked about one detail, waiting for the answer */
+        ResultError, /**< An unexpected error occurred */
+        ResultSuccess, /**< The invitation was sent to all attendees. */
+        ResultPending /**< The user has been asked about one detail, waiting for the answer */
     };
 
     /**

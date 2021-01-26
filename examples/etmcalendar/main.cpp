@@ -8,8 +8,8 @@
 #include <KCheckableProxyModel>
 
 #include <QApplication>
-#include <QTreeView>
 #include <QHBoxLayout>
+#include <QTreeView>
 
 using namespace Akonadi;
 

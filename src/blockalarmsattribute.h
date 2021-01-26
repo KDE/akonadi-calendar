@@ -13,7 +13,8 @@
 
 #include <attribute.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short An Attribute that marks that alarms from a calendar collection are blocked.
  *
@@ -28,13 +29,13 @@ class AKONADI_CALENDAR_EXPORT BlockAlarmsAttribute : public Akonadi::Attribute
 {
 public:
     /**
-      * Creates a new block alarms attribute.
-      */
+     * Creates a new block alarms attribute.
+     */
     BlockAlarmsAttribute();
 
     /**
-      * Destroys the block alarms attribute.
-      */
+     * Destroys the block alarms attribute.
+     */
     ~BlockAlarmsAttribute() override;
 
     /**

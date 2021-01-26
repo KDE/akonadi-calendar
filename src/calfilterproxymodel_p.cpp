@@ -8,8 +8,8 @@
 #include "calfilterproxymodel_p.h"
 #include "utils_p.h"
 
-#include <item.h>
 #include <entitytreemodel.h>
+#include <item.h>
 
 #include <KCalendarCore/CalFilter>
 #include <KCalendarCore/Incidence>

@@ -10,15 +10,15 @@
 #include "calendarbase.h"
 #include "incidencechanger.h"
 
-#include <QVector>
 #include <QMultiHash>
+#include <QVector>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class CalendarBasePrivate : public QObject
 {
     Q_OBJECT
 public:
-
     explicit CalendarBasePrivate(CalendarBase *qq);
     ~CalendarBasePrivate();
 
@@ -33,20 +33,11 @@ public:
     void handleParentChanged(const KCalendarCore::Incidence::Ptr &incidence);
 
 public Q_SLOTS:
-    void slotDeleteFinished(int changeId,
-                            const QVector<Akonadi::Item::Id> &itemIds,
-                            Akonadi::IncidenceChanger::ResultCode,
-                            const QString &errorMessage);
+    void slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &itemIds, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);
 
-    void slotCreateFinished(int changeId,
-                            const Akonadi::Item &item,
-                            Akonadi::IncidenceChanger::ResultCode,
-                            const QString &errorMessage);
+    void slotCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);
 
-    void slotModifyFinished(int changeId,
-                            const Akonadi::Item &item,
-                            Akonadi::IncidenceChanger::ResultCode,
-                            const QString &errorMessage);
+    void slotModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);
 
     void collectionFetchResult(KJob *job);
 

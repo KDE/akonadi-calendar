@@ -26,15 +26,18 @@
 #include <QString>
 #include <QWidget>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class MessageQueueJob;
 }
 
-namespace KIdentityManagement {
+namespace KIdentityManagement
+{
 class Identity;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @short Ui delegate for editing counter proposals.
  * @since 4.11
@@ -61,15 +64,15 @@ class AKONADI_CALENDAR_EXPORT ITIPHandlerDialogDelegate : public QObject
 public:
     // Possible default actions
     enum Action {
-        ActionAsk,              /**< Ask the user for a descision */
-        ActionSendMessage,      /**< Answer with Yes */
-        ActionDontSendMessage   /**< Answer with No */
+        ActionAsk, /**< Ask the user for a descision */
+        ActionSendMessage, /**< Answer with Yes */
+        ActionDontSendMessage /**< Answer with No */
     };
 
     // How will reveive the mail afterwards
     enum Recipient {
-        Organizer,              /**< the organizer of the incidence */
-        Attendees               /**< the attendees of the incidence */
+        Organizer, /**< the organizer of the incidence */
+        Attendees /**< the attendees of the incidence */
     };
 
     /**
@@ -87,8 +90,11 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogIncidenceCreated(Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer",
-                                                                                                                                                                                                                                                                   "Do Not Send")));
+    virtual void openDialogIncidenceCreated(Recipient recipient,
+                                            const QString &question,
+                                            Action action = ActionAsk,
+                                            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is modified
@@ -101,8 +107,12 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogIncidenceModified(bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc(
-                                                                                                                                                                                                                                                                                              "@action:button dialog negative answer", "Do Not Send")));
+    virtual void openDialogIncidenceModified(bool attendeeStatusChanged,
+                                             Recipient recipient,
+                                             const QString &question,
+                                             Action action = ActionAsk,
+                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
     /*
      * Opens a Dialog, when an incidence is deleted
@@ -114,8 +124,11 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogIncidenceDeleted(Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer",
-                                                                                                                                                                                                                                                                   "Do Not Send")));
+    virtual void openDialogIncidenceDeleted(Recipient recipient,
+                                            const QString &question,
+                                            Action action = ActionAsk,
+                                            const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                            const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
     /*
      * Opens a Dialog, when mail was sended
      * The function must emit a dialogClosed signal with the user's answer
@@ -125,12 +138,16 @@ public:
      * @param buttonYes: dialog's yes answer
      * @param buttonNo: dialog's no answer
      */
-    virtual void openDialogSchedulerFinished(const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+    virtual void openDialogSchedulerFinished(const QString &question,
+                                             Action action = ActionAsk,
+                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
+                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
 Q_SIGNALS:
     /*
      * Signal is emitted, when the user has answered the dialog or the defaultAction is used
-     * @param answer: answer should be part of KMessageBox:ButtonCode, keep in mind that it is a YesNoDialog so normally it should be KMessageBox::Yes or KMessageBox::No
+     * @param answer: answer should be part of KMessageBox:ButtonCode, keep in mind that it is a YesNoDialog so normally it should be KMessageBox::Yes or
+     * KMessageBox::No
      * @param method: itip method
      * @param incidence: purpose of the dialog
      */
@@ -183,7 +200,8 @@ public:
      * @param identity that is the mail sender
      * @param parent of the MailTransport::MessageQueueJob object
      */
-    virtual MailTransport::MessageQueueJob *createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr);
+    virtual MailTransport::MessageQueueJob *
+    createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr);
 
     /*
      * @return A new ITIPHandlerDialogDelegate object
@@ -192,7 +210,8 @@ public:
      * @parent parent of the AskDelegator
      *
      */
-    virtual ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent = nullptr);
+    virtual ITIPHandlerDialogDelegate *
+    createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent = nullptr);
 };
 
 /**
@@ -204,9 +223,9 @@ class AKONADI_CALENDAR_EXPORT ITIPHandler : public QObject
     Q_OBJECT
 public:
     enum Result {
-        ResultError,      /**< An unexpected error occurred */
-        ResultSuccess,    /**< The invitation was successfuly handled. */
-        ResultCancelled   /**< User cancelled the operation. @since 4.12 */
+        ResultError, /**< An unexpected error occurred */
+        ResultSuccess, /**< The invitation was successfuly handled. */
+        ResultCancelled /**< User cancelled the operation. @since 4.12 */
     };
 
     /**

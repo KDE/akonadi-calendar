@@ -12,10 +12,10 @@
 #include <qtest_akonadi.h>
 
 #include <item.h>
-#include <itemfetchjob.h>
 #include <itemcreatejob.h>
-#include <itemfetchscope.h>
 #include <itemdeletejob.h>
+#include <itemfetchjob.h>
+#include <itemfetchscope.h>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
@@ -85,12 +85,10 @@ private Q_SLOTS:
         mDiscardedEqualsSuccess = false;
 
         mChangeToWaitFor = -1;
-        //Control::start(); //TODO: uncomment when using testrunner
+        // Control::start(); //TODO: uncomment when using testrunner
         qRegisterMetaType<Akonadi::Item>("Akonadi::Item");
-        qRegisterMetaType<QList<Akonadi::IncidenceChanger::ChangeType> >("QList<Akonadi::IncidenceChanger::ChangeType>");
-        auto job = new CollectionFetchJob(Collection::root(),
-                                                         CollectionFetchJob::Recursive,
-                                                         this);
+        qRegisterMetaType<QList<Akonadi::IncidenceChanger::ChangeType>>("QList<Akonadi::IncidenceChanger::ChangeType>");
+        auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
         // Get list of collections
         job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
         AKVERIFYEXEC(job);
@@ -107,14 +105,11 @@ private Q_SLOTS:
         mChanger = new IncidenceChanger(this);
         mChanger->setShowDialogsOnError(false);
 
-        connect(mChanger, &IncidenceChanger::createFinished,
-                this, &IncidenceChangerTest::createFinished);
+        connect(mChanger, &IncidenceChanger::createFinished, this, &IncidenceChangerTest::createFinished);
 
-        connect(mChanger, &IncidenceChanger::deleteFinished,
-                this, &IncidenceChangerTest::deleteFinished);
+        connect(mChanger, &IncidenceChanger::deleteFinished, this, &IncidenceChangerTest::deleteFinished);
 
-        connect(mChanger, &IncidenceChanger::modifyFinished,
-                this, &IncidenceChangerTest::modifyFinished);
+        connect(mChanger, &IncidenceChanger::modifyFinished, this, &IncidenceChangerTest::modifyFinished);
     }
 
     void testCreating_data()
@@ -129,51 +124,41 @@ private Q_SLOTS:
         QTest::addColumn<bool>("failureExpected");
         QTest::addColumn<Akonadi::IncidenceChanger::ResultCode>("expectedResultCode");
 
-        QTest::newRow("Simple Creation1") << false << "SomeUid1" << "Summary1" << mCollection
-                                          << Collection() << true
-                                          << IncidenceChanger::DestinationPolicyNeverAsk
-                                          << false << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Simple Creation1") << false << "SomeUid1"
+                                          << "Summary1" << mCollection << Collection() << true << IncidenceChanger::DestinationPolicyNeverAsk << false
+                                          << IncidenceChanger::ResultCodeSuccess;
 
-        QTest::newRow("Simple Creation2") << false << "SomeUid2" << "Summary2" << mCollection
-                                          << Collection() << true
-                                          << IncidenceChanger::DestinationPolicyNeverAsk
-                                          << false << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Simple Creation2") << false << "SomeUid2"
+                                          << "Summary2" << mCollection << Collection() << true << IncidenceChanger::DestinationPolicyNeverAsk << false
+                                          << IncidenceChanger::ResultCodeSuccess;
 
-        QTest::newRow("Invalid incidence") << true << "SomeUid3" << "Summary3" << mCollection
-                                           << Collection() << true
-                                           << IncidenceChanger::DestinationPolicyNeverAsk
-                                           << true;
+        QTest::newRow("Invalid incidence") << true << "SomeUid3"
+                                           << "Summary3" << mCollection << Collection() << true << IncidenceChanger::DestinationPolicyNeverAsk << true;
 
-        QTest::newRow("Invalid collection") << false << "SomeUid4" << "Summary4" << Collection()
-                                            << Collection() << true
-                                            << IncidenceChanger::DestinationPolicyNeverAsk
-                                            << false << IncidenceChanger::ResultCodeInvalidDefaultCollection;
+        QTest::newRow("Invalid collection") << false << "SomeUid4"
+                                            << "Summary4" << Collection() << Collection() << true << IncidenceChanger::DestinationPolicyNeverAsk << false
+                                            << IncidenceChanger::ResultCodeInvalidDefaultCollection;
 
-        QTest::newRow("Default collection") << false << "SomeUid5" << "Summary5" << Collection()
-                                            << mCollection << true
-                                            << IncidenceChanger::DestinationPolicyDefault
-                                            << false << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Default collection") << false << "SomeUid5"
+                                            << "Summary5" << Collection() << mCollection << true << IncidenceChanger::DestinationPolicyDefault << false
+                                            << IncidenceChanger::ResultCodeSuccess;
 
         // In this case, the collection dialog shouldn't be shown, as we only have 1 collection
-        QTest::newRow("Only one collection") << false << "SomeUid6" << "Summary6" << Collection()
-                                             << Collection() << true
-                                             << IncidenceChanger::DestinationPolicyAsk
-                                             << false << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Only one collection") << false << "SomeUid6"
+                                             << "Summary6" << Collection() << Collection() << true << IncidenceChanger::DestinationPolicyAsk << false
+                                             << IncidenceChanger::ResultCodeSuccess;
 
         Collection collectionWithoutRights = Collection(mCollection.id());
         collectionWithoutRights.setRights(Collection::Rights());
         Q_ASSERT((mCollection.rights() & Akonadi::Collection::CanCreateItem));
 
-        QTest::newRow("No rights") << false << "SomeUid6" << "Summary6" << Collection()
-                                   << collectionWithoutRights << true
-                                   << IncidenceChanger::DestinationPolicyNeverAsk
-                                   << false << IncidenceChanger::ResultCodePermissions;
+        QTest::newRow("No rights") << false << "SomeUid6"
+                                   << "Summary6" << Collection() << collectionWithoutRights << true << IncidenceChanger::DestinationPolicyNeverAsk << false
+                                   << IncidenceChanger::ResultCodePermissions;
 
-        QTest::newRow("No rights but its ok") << false << "SomeUid7" << "Summary7" << Collection()
-                                              << collectionWithoutRights << false
-                                              << IncidenceChanger::DestinationPolicyNeverAsk
-                                              << false
-                                              << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("No rights but its ok") << false << "SomeUid7"
+                                              << "Summary7" << Collection() << collectionWithoutRights << false << IncidenceChanger::DestinationPolicyNeverAsk
+                                              << false << IncidenceChanger::ResultCodeSuccess;
     }
 
     void testCreating()
@@ -246,23 +231,17 @@ private Q_SLOTS:
 
         // 5 Incidences were created in testCreating(). Keep this in sync.
         QCOMPARE(items.count(), 5);
-        QTest::newRow("Simple delete") << (Item::List() << items.at(0)) << true << false
-                                       << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Simple delete") << (Item::List() << items.at(0)) << true << false << IncidenceChanger::ResultCodeSuccess;
 
-        QTest::newRow("Delete already deleted") << (Item::List() << items.at(0)) << true
-                                                << false
-                                                << IncidenceChanger::ResultCodeAlreadyDeleted;
+        QTest::newRow("Delete already deleted") << (Item::List() << items.at(0)) << true << false << IncidenceChanger::ResultCodeAlreadyDeleted;
 
-        QTest::newRow("Delete all others") << (Item::List() << items.at(1) << items.at(2))
-                                           << true << false << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Delete all others") << (Item::List() << items.at(1) << items.at(2)) << true << false << IncidenceChanger::ResultCodeSuccess;
 
         Collection collectionWithoutRights = Collection(mCollection.id());
         collectionWithoutRights.setRights(Collection::Rights());
         Item item = items.at(3);
         item.setParentCollection(collectionWithoutRights);
-        QTest::newRow("Delete can't delete") << (Item::List() << item)
-                                             << true << false
-                                             << IncidenceChanger::ResultCodePermissions;
+        QTest::newRow("Delete can't delete") << (Item::List() << item) << true << false << IncidenceChanger::ResultCodePermissions;
     }
 
     void testDeleting()
@@ -318,15 +297,13 @@ private Q_SLOTS:
         incidence->setSummary(QStringLiteral("New Summary"));
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
-        QTest::newRow("Change summary") << item << "New Summary" << true << 1 << false
-                                        << IncidenceChanger::ResultCodeSuccess;
+        QTest::newRow("Change summary") << item << "New Summary" << true << 1 << false << IncidenceChanger::ResultCodeSuccess;
 
         Collection collectionWithoutRights = Collection(mCollection.id());
         collectionWithoutRights.setRights(Collection::Rights());
         item.setParentCollection(collectionWithoutRights);
 
-        QTest::newRow("Can't change") << item << "New Summary" << true << 1 << false
-                                      << IncidenceChanger::ResultCodePermissions;
+        QTest::newRow("Can't change") << item << "New Summary" << true << 1 << false << IncidenceChanger::ResultCodePermissions;
     }
 
     void testModifying()
@@ -474,7 +451,7 @@ private Q_SLOTS:
             QTest::newRow("organizator:summary") << item << event << false;
         }
 
-        //we are normal attendee
+        // we are normal attendee
         Item item2;
         item2.setMimeType(Event::eventMimeType());
         Event::Ptr incidence2 = Event::Ptr(new Event());
@@ -593,7 +570,7 @@ private Q_SLOTS:
         AKVERIFYEXEC(job);
         item = job->item();
 
-        QTest::newRow("15 modifications in sequence") << item << true  << 15;
+        QTest::newRow("15 modifications in sequence") << item << true << 15;
         QTest::newRow("15 modifications in parallel") << item << false << 15;
     }
 
@@ -626,8 +603,7 @@ private Q_SLOTS:
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
                 QVERIFY(fetchJob->items().count() == 1);
-                QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(),
-                         QString::number(i));
+                QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(i));
             }
         }
 
@@ -640,8 +616,7 @@ private Q_SLOTS:
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);
-            QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(),
-                     QString::number(numberOfModifications - 1));
+            QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(numberOfModifications - 1));
             if (mIncidencesToModify > 0) {
                 waitForSignals();
             }
@@ -653,10 +628,10 @@ private Q_SLOTS:
     void testAtomicOperations_data()
     {
         QTest::addColumn<Akonadi::Item::List>("items");
-        QTest::addColumn<QList<Akonadi::IncidenceChanger::ChangeType> >("changeTypes");
-        QTest::addColumn<QList<bool> >("failureExpectedList");
-        QTest::addColumn<QList<Akonadi::IncidenceChanger::ResultCode> >("expectedResults");
-        QTest::addColumn<QList<Akonadi::Collection::Rights> >("rights");
+        QTest::addColumn<QList<Akonadi::IncidenceChanger::ChangeType>>("changeTypes");
+        QTest::addColumn<QList<bool>>("failureExpectedList");
+        QTest::addColumn<QList<Akonadi::IncidenceChanger::ResultCode>>("expectedResults");
+        QTest::addColumn<QList<Akonadi::Collection::Rights>>("rights");
         QTest::addColumn<bool>("permissionsOrRollback");
 
         Akonadi::Item::List items;
@@ -674,21 +649,18 @@ private Q_SLOTS:
         expectedResults << IncidenceChanger::ResultCodeSuccess << IncidenceChanger::ResultCodeSuccess;
         rights << allRights << allRights;
 
-        QTest::newRow("create two - success ") << items << changeTypes << failureExpectedList
-                                               << expectedResults << rights << false;
+        QTest::newRow("create two - success ") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         changeTypes.clear();
         changeTypes << IncidenceChanger::ChangeTypeModify << IncidenceChanger::ChangeTypeModify;
         items.clear();
         items << createItem(mCollection) << createItem(mCollection);
 
-        QTest::newRow("modify two - success ") << items << changeTypes << failureExpectedList
-                                               << expectedResults << rights << false;
+        QTest::newRow("modify two - success ") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         changeTypes.clear();
         changeTypes << IncidenceChanger::ChangeTypeDelete << IncidenceChanger::ChangeTypeDelete;
-        QTest::newRow("delete two - success ") << items << changeTypes << failureExpectedList
-                                               << expectedResults << rights << false;
+        QTest::newRow("delete two - success ") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // Creation succeeds but deletion doesn't ( invalid item case )
         items.clear();
@@ -698,13 +670,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << true;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << allRights << allRights;
 
-        QTest::newRow("create,try delete") << items << changeTypes << failureExpectedList
-                                           << expectedResults << rights << false;
+        QTest::newRow("create,try delete") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // deletion doesn't succeed, but creation does ( invalid item case )
         items.clear();
@@ -714,13 +684,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << true << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << allRights << allRights;
 
-        QTest::newRow("try delete,create") << items << changeTypes << failureExpectedList
-                                           << expectedResults << rights << false;
+        QTest::newRow("try delete,create") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // Creation succeeds but deletion doesn't ( valid, inexistant item case )
         items.clear();
@@ -730,13 +698,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeJobError;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeJobError;
         rights.clear();
         rights << allRights << allRights;
 
-        QTest::newRow("create,try delete v2") << items << changeTypes << failureExpectedList
-                                              << expectedResults << rights << false;
+        QTest::newRow("create,try delete v2") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // deletion doesn't succeed, but creation does ( valid, inexistant item case )
         items.clear();
@@ -746,13 +712,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeJobError
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodeJobError << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << allRights << allRights;
 
-        QTest::newRow("try delete,create v2") << items << changeTypes << failureExpectedList
-                                              << expectedResults << rights << false;
+        QTest::newRow("try delete,create v2") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // deletion doesn't succeed, but creation does ( NO ACL case )
         items.clear();
@@ -762,15 +726,13 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodePermissions
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodePermissions << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << noRights << allRights;
 
-        QTest::newRow("try delete(ACL),create") << items << changeTypes << failureExpectedList
-                                                << expectedResults << rights << false;
+        QTest::newRow("try delete(ACL),create") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        //Creation succeeds but deletion doesn't ( NO ACL case )
+        // Creation succeeds but deletion doesn't ( NO ACL case )
         items.clear();
         items << item() << createItem(mCollection);
         changeTypes.clear();
@@ -778,13 +740,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodePermissions;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodePermissions;
         rights.clear();
         rights << allRights << noRights;
 
-        QTest::newRow("create,try delete(ACL)") << items << changeTypes << failureExpectedList
-                                                << expectedResults << rights << false;
+        QTest::newRow("create,try delete(ACL)") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 1 successful modification, 1 failed creation
         changeTypes.clear();
@@ -794,13 +754,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << true;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << allRights << allRights;
 
-        QTest::newRow("modify,try create") << items << changeTypes << failureExpectedList
-                                           << expectedResults << rights << false;
+        QTest::newRow("modify,try create") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 1 successful modification, 1 failed creation
         changeTypes.clear();
@@ -810,13 +768,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodePermissions;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodePermissions;
         rights.clear();
         rights << allRights << noRights;
 
-        QTest::newRow("modify,try create v2") << items << changeTypes << failureExpectedList
-                                              << expectedResults << rights << false;
+        QTest::newRow("modify,try create v2") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 1 failed creation, 1 successful modification
         changeTypes.clear();
@@ -826,13 +782,11 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << true << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << allRights << allRights;
 
-        QTest::newRow("try create,modify") << items << changeTypes << failureExpectedList
-                                           << expectedResults << rights << false;
+        QTest::newRow("try create,modify") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 1 failed creation, 1 successful modification
         changeTypes.clear();
@@ -842,89 +796,75 @@ private Q_SLOTS:
         failureExpectedList.clear();
         failureExpectedList << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodePermissions
-                        << IncidenceChanger::ResultCodeRolledback;
+        expectedResults << IncidenceChanger::ResultCodePermissions << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << noRights << allRights;
 
-        QTest::newRow("try create,modify v2") << items << changeTypes << failureExpectedList
-                                              << expectedResults << rights << false;
+        QTest::newRow("try create,modify v2") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 4 creations, last one fails
         changeTypes.clear();
-        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
-                    << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate;
+        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
+                    << IncidenceChanger::ChangeTypeCreate;
         items.clear();
         items << item() << item() << item() << item();
         failureExpectedList.clear();
         failureExpectedList << false << false << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback
                         << IncidenceChanger::ResultCodePermissions;
         rights.clear();
         rights << allRights << allRights << allRights << noRights;
 
-        QTest::newRow("create 4, last fails") << items << changeTypes << failureExpectedList
-                                              << expectedResults << rights << false;
+        QTest::newRow("create 4, last fails") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 4 creations, first one fails
         changeTypes.clear();
-        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
-                    << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate;
+        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
+                    << IncidenceChanger::ChangeTypeCreate;
         items.clear();
         items << item() << item() << item() << item();
         failureExpectedList.clear();
         failureExpectedList << false << false << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodePermissions
-                        << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodeRolledback
+        expectedResults << IncidenceChanger::ResultCodePermissions << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodeRolledback
                         << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << noRights << allRights << allRights << allRights;
 
-        QTest::newRow("create 4, first fails") << items << changeTypes << failureExpectedList
-                                               << expectedResults << rights << false;
+        QTest::newRow("create 4, first fails") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 4 creations, second one fails
         changeTypes.clear();
-        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
-                    << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate;
+        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
+                    << IncidenceChanger::ChangeTypeCreate;
         items.clear();
         items << item() << item() << item() << item();
         failureExpectedList.clear();
         failureExpectedList << false << false << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodeRolledback
-                        << IncidenceChanger::ResultCodePermissions
-                        << IncidenceChanger::ResultCodeRolledback
+        expectedResults << IncidenceChanger::ResultCodeRolledback << IncidenceChanger::ResultCodePermissions << IncidenceChanger::ResultCodeRolledback
                         << IncidenceChanger::ResultCodeRolledback;
         rights.clear();
         rights << allRights << noRights << allRights << allRights;
 
-        QTest::newRow("create 4, second fails") << items << changeTypes << failureExpectedList
-                                                << expectedResults << rights << false;
+        QTest::newRow("create 4, second fails") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
         // 4 fails
         changeTypes.clear();
-        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
-                    << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate;
+        changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeCreate
+                    << IncidenceChanger::ChangeTypeCreate;
         items.clear();
         items << item() << item() << item() << item();
         failureExpectedList.clear();
         failureExpectedList << false << false << false << false;
         expectedResults.clear();
-        expectedResults << IncidenceChanger::ResultCodePermissions
-                        << IncidenceChanger::ResultCodePermissions
-                        << IncidenceChanger::ResultCodePermissions
+        expectedResults << IncidenceChanger::ResultCodePermissions << IncidenceChanger::ResultCodePermissions << IncidenceChanger::ResultCodePermissions
                         << IncidenceChanger::ResultCodePermissions;
         rights.clear();
         rights << noRights << noRights << noRights << noRights;
 
-        QTest::newRow("create 4, all fail") << items << changeTypes << failureExpectedList
-                                            << expectedResults << rights << true;
+        QTest::newRow("create 4, all fail") << items << changeTypes << failureExpectedList << expectedResults << rights << true;
         //------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------
@@ -992,7 +932,7 @@ private Q_SLOTS:
 
         waitForSignals();
 
-        //Validate:
+        // Validate:
         for (int i = 0; i < items.count(); ++i) {
             const bool expectedSuccess = (expectedResults[i] == IncidenceChanger::ResultCodeSuccess);
             mCollection.setRights(rights[i]);
@@ -1014,8 +954,7 @@ private Q_SLOTS:
                     QVERIFY(fJob->items().constFirst().isValid());
                     QVERIFY(fJob->items().constFirst().hasPayload());
                     QVERIFY(fJob->items().constFirst().hasPayload<KCalendarCore::Incidence::Ptr>());
-                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->uid(),
-                             fJob->items().constFirst().payload<KCalendarCore::Incidence::Ptr>()->uid());
+                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->uid(), fJob->items().constFirst().payload<KCalendarCore::Incidence::Ptr>()->uid());
                 }
                 break;
             case IncidenceChanger::ChangeTypeDelete:
@@ -1068,46 +1007,38 @@ private Q_SLOTS:
         days.setBit(dtStart.date().dayOfWeek() - 1);
         expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 
-        QTest::newRow("weekly") << false << dtStart << dtEnd << one_day
-                                << 1 << KCalendarCore::RecurrenceRule::rWeekly
-                                <<  days << expectedDays << QDate() << QDate();
+        QTest::newRow("weekly") << false << dtStart << dtEnd << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly << days << expectedDays << QDate()
+                                << QDate();
         //-------------------------------------------------------------------------
         days.fill(false);
         days.setBit(dtStart.date().dayOfWeek() - 1);
         expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        QTest::newRow("weekly allday") << true << QDateTime(dtStart.date()) << QDateTime(dtEnd.date())
-                                       << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly
+        QTest::newRow("weekly allday") << true << QDateTime(dtStart.date()) << QDateTime(dtEnd.date()) << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly
                                        << days << expectedDays << QDate() << QDate();
 #else
-        QTest::newRow("weekly allday") << true << QDateTime(dtStart.date().startOfDay()) << QDateTime(dtEnd.date().startOfDay())
-                                       << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly
-                                       << days << expectedDays << QDate() << QDate();
+        QTest::newRow("weekly allday") << true << QDateTime(dtStart.date().startOfDay()) << QDateTime(dtEnd.date().startOfDay()) << one_day << 1
+                                       << KCalendarCore::RecurrenceRule::rWeekly << days << expectedDays << QDate() << QDate();
 #endif
         //-------------------------------------------------------------------------
         // Here nothing should change
         days.fill(false);
         days.setBit(dtStart.date().dayOfWeek() - 1);
 
-        QTest::newRow("weekly nop") << false << dtStart << dtEnd << one_hour
-                                    << 1 << KCalendarCore::RecurrenceRule::rWeekly
-                                    << days << days << QDate() << QDate();
+        QTest::newRow("weekly nop") << false << dtStart << dtEnd << one_hour << 1 << KCalendarCore::RecurrenceRule::rWeekly << days << days << QDate()
+                                    << QDate();
         //-------------------------------------------------------------------------
         // Test with multiple week days. Only the weekday from the old DTSTART should be unset.
         days.fill(true);
         expectedDays = days;
         expectedDays.clearBit(dtStart.date().dayOfWeek() - 1);
-        QTest::newRow("weekly multiple") << false << dtStart << dtEnd << one_day
-                                         << 1 << KCalendarCore::RecurrenceRule::rWeekly
-                                         << days << expectedDays << QDate() << QDate();
+        QTest::newRow("weekly multiple") << false << dtStart << dtEnd << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly << days << expectedDays
+                                         << QDate() << QDate();
         //-------------------------------------------------------------------------
         // Testing moving an event such that DTSTART > recurrence end, which would
         // result in the event disappearing from all views.
-        QTest::newRow("recur end") << false << dtStart << dtEnd << one_day * 7
-                                   << 1 << KCalendarCore::RecurrenceRule::rDaily
-                                   << QBitArray() << QBitArray()
-                                   << dtStart.date().addDays(3)
-                                   << QDate();
+        QTest::newRow("recur end") << false << dtStart << dtEnd << one_day * 7 << 1 << KCalendarCore::RecurrenceRule::rDaily << QBitArray() << QBitArray()
+                                   << dtStart.date().addDays(3) << QDate();
         //-------------------------------------------------------------------------
         mCollection.setRights(Collection::Rights(Collection::AllRights));
     }
@@ -1209,14 +1140,15 @@ public Q_SLOTS:
         mChangeToWaitFor = changeId;
 
         int i = 0;
-        while (mChangeToWaitFor != -1 && i++ < 10) {  // wait 10 seconds max.
+        while (mChangeToWaitFor != -1 && i++ < 10) { // wait 10 seconds max.
             QTest::qWait(100);
         }
 
         QVERIFY(mChangeToWaitFor == -1);
     }
 
-    void deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
+    void
+    deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
     {
         QVERIFY(changeId != -1);
         mChangeToWaitFor = -1;
@@ -1231,8 +1163,7 @@ public Q_SLOTS:
             }
         }
 
-        compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId],
-                              QStringLiteral("createFinished"));
+        compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId], QStringLiteral("createFinished"));
 
         maybeQuitEventLoop();
     }
@@ -1255,8 +1186,7 @@ public Q_SLOTS:
             qDebug() << "Error string is " << errorString;
         }
 
-        compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId],
-                              QStringLiteral("createFinished"));
+        compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId], QStringLiteral("createFinished"));
 
         qDebug() << "Createfinished " << mIncidencesToAdd;
         maybeQuitEventLoop();
@@ -1274,8 +1204,7 @@ public Q_SLOTS:
             qDebug() << "Error string is " << errorString;
         }
 
-        compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId],
-                              QStringLiteral("modifyFinished"));
+        compareExpectedResult(resultCode, mExpectedResultByChangeId[changeId], QStringLiteral("modifyFinished"));
 
         maybeQuitEventLoop();
     }

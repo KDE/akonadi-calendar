@@ -7,19 +7,12 @@
 #ifndef HISTORY_TEST_H
 #define HISTORY_TEST_H
 
-#include "unittestbase.h"
 #include "../src/history.h"
 #include "../src/history_p.h"
 #include "../src/incidencechanger.h"
+#include "unittestbase.h"
 
-enum SignalType {
-    DeletionSignal,
-    CreationSignal,
-    ModificationSignal,
-    UndoSignal,
-    RedoSignal,
-    NumSignals
-};
+enum SignalType { DeletionSignal, CreationSignal, ModificationSignal, UndoSignal, RedoSignal, NumSignals };
 
 class HistoryTest : public UnitTestBase
 {
@@ -53,7 +46,8 @@ private:
     void waitForSignals();
 
 public Q_SLOTS:
-    void deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
+    void
+    deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
     void createFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 

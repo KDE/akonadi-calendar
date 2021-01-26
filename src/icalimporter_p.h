@@ -12,21 +12,23 @@
 #include "icalimporter.h"
 #include "incidencechanger.h"
 
-#include <item.h>
 #include <collection.h>
+#include <item.h>
 
-#include <QString>
-#include <QObject>
 #include <QList>
+#include <QObject>
+#include <QString>
 
 class KJob;
 class QTemporaryFile;
 class QByteArray;
-namespace KIO {
+namespace KIO
+{
 class Job;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Q_DECL_HIDDEN ICalImporter::Private : public QObject
 {
     Q_OBJECT

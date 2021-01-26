@@ -13,7 +13,8 @@
 
 class Akonadi__FreeBusyProviderAdaptor;
 
-namespace Akonadi {
+namespace Akonadi
+{
 /**
  * @internal
  * This class implements the D-Bus interface of FreeBusyProviderBase
@@ -29,27 +30,27 @@ public:
 
 Q_SIGNALS:
     /**
-      * This signal gets emitted when the resource answered
-      * the free-busy handling request.
-      *
-      * @param email The email address of the contact the resource
-      *              answered for.
-      * @param handles Whether the resource handles free-busy information
-      *              (true) or not (false).
-      */
+     * This signal gets emitted when the resource answered
+     * the free-busy handling request.
+     *
+     * @param email The email address of the contact the resource
+     *              answered for.
+     * @param handles Whether the resource handles free-busy information
+     *              (true) or not (false).
+     */
     void handlesFreeBusy(const QString &email, bool handles);
 
     /**
-      * This signal gets emitted when the resource answered the
-      * free-busy retrieval request.
-      *
-      * @param email The email address of the contact the resource
-      *              answers for.
-      * @param freeBusy The free-busy data in iCal format.
-      * @param success Whether the retrieval was successful or not.
-      * @param errorText A human friendly error message in case something
-      *                  went wrong.
-      */
+     * This signal gets emitted when the resource answered the
+     * free-busy retrieval request.
+     *
+     * @param email The email address of the contact the resource
+     *              answers for.
+     * @param freeBusy The free-busy data in iCal format.
+     * @param success Whether the retrieval was successful or not.
+     * @param errorText A human friendly error message in case something
+     *                  went wrong.
+     */
     void freeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText);
 
 private:

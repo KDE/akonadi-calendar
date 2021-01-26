@@ -6,8 +6,8 @@
 
 #include <AkonadiCore/Item>
 #include <KCalendarCore/Event>
-#include <QTest>
 #include <QObject>
+#include <QTest>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -32,32 +32,32 @@ private Q_SLOTS:
     {
         QFETCH(QString, mimeType);
 
-        QByteArray serialized
-            = "BEGIN:VCALENDAR\n"
-              "PRODID:-//K Desktop Environment//NONSGML libkcal 3.5//EN\n"
-              "VERSION:2.0\n"
-              "BEGIN:VEVENT\n"
-              "DTSTAMP:20070109T100625Z\n"
-              "ORGANIZER;CN=\"Volker Krause\":MAILTO:vkrause@kde.org\n"
-              "CREATED:20070109T100553Z\n"
-              "UID:libkcal-1135684253.945\n"
-              "SEQUENCE:1\n"
-              "LAST-MODIFIED:20070109T100625Z\n"
-              "SUMMARY:Test event\n"
-              "LOCATION:here\n"
-              "CLASS:PUBLIC\n"
-              "PRIORITY:5\n"
-              "CATEGORIES:KDE\n"
-              "DTSTART:20070109T183000Z\n"
-              "DTEND:20070109T225900Z\n"
-              "TRANSP:OPAQUE\n"
-              "BEGIN:VALARM\n"
-              "DESCRIPTION:\n"
-              "ACTION:DISPLAY\n"
-              "TRIGGER;VALUE=DURATION:-PT45M\n"
-              "END:VALARM\n"
-              "END:VEVENT\n"
-              "END:VCALENDAR\n";
+        QByteArray serialized =
+            "BEGIN:VCALENDAR\n"
+            "PRODID:-//K Desktop Environment//NONSGML libkcal 3.5//EN\n"
+            "VERSION:2.0\n"
+            "BEGIN:VEVENT\n"
+            "DTSTAMP:20070109T100625Z\n"
+            "ORGANIZER;CN=\"Volker Krause\":MAILTO:vkrause@kde.org\n"
+            "CREATED:20070109T100553Z\n"
+            "UID:libkcal-1135684253.945\n"
+            "SEQUENCE:1\n"
+            "LAST-MODIFIED:20070109T100625Z\n"
+            "SUMMARY:Test event\n"
+            "LOCATION:here\n"
+            "CLASS:PUBLIC\n"
+            "PRIORITY:5\n"
+            "CATEGORIES:KDE\n"
+            "DTSTART:20070109T183000Z\n"
+            "DTEND:20070109T225900Z\n"
+            "TRANSP:OPAQUE\n"
+            "BEGIN:VALARM\n"
+            "DESCRIPTION:\n"
+            "ACTION:DISPLAY\n"
+            "TRIGGER;VALUE=DURATION:-PT45M\n"
+            "END:VALARM\n"
+            "END:VEVENT\n"
+            "END:VCALENDAR\n";
 
         // deserializing
         Item item;
@@ -81,7 +81,7 @@ private Q_SLOTS:
         QFETCH(QString, mimeType);
 
         // 0 defaults to latin1.
-        //QT5 QVERIFY( QTextCodec::codecForCStrings() == 0 );
+        // QT5 QVERIFY( QTextCodec::codecForCStrings() == 0 );
 
         const QDate currentDate = QDate::currentDate();
 
@@ -92,7 +92,7 @@ private Q_SLOTS:
         event->setAllDay(true);
 
         // ü
-        const char latin1_umlaut[] = { static_cast<char>(0xFC), '\0' };
+        const char latin1_umlaut[] = {static_cast<char>(0xFC), '\0'};
         event->setSummary(QLatin1String(latin1_umlaut));
 
         Item item;
@@ -100,7 +100,7 @@ private Q_SLOTS:
         item.setPayload(event);
 
         // Serializer the item, the serialization should be in UTF-8:
-        const char utf_umlaut[] = { static_cast<char>(0xC3), static_cast<char>(0XBC), '\0' };
+        const char utf_umlaut[] = {static_cast<char>(0xC3), static_cast<char>(0XBC), '\0'};
         const QByteArray bytes = item.payloadData();
         QVERIFY(bytes.contains(utf_umlaut));
         QVERIFY(!bytes.contains(latin1_umlaut));

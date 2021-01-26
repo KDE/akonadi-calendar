@@ -8,17 +8,18 @@
 #define AKONADI_CALENDAR_ITIP_HANDLER_P_H
 
 #include "calendarbase.h"
-#include "mailscheduler_p.h"
 #include "itiphandler.h"
 #include "itiphandlerhelper_p.h"
+#include "mailscheduler_p.h"
 
 #include <KCalendarCore/ScheduleMessage>
 
 #include <QObject>
-#include <QString>
 #include <QPointer>
+#include <QString>
 
-namespace Akonadi {
+namespace Akonadi
+{
 struct Invitation {
     QString receiver;
     QString iCal;
@@ -32,13 +33,7 @@ struct Invitation {
  * These operations are async and we don't want them to be called before the other has finished.
  * This enum is just to Q_ASSERT that.
  */
-enum Operation {
-    OperationNone,
-    OperationProcessiTIPMessage,
-    OperationSendiTIPMessage,
-    OperationPublishInformation,
-    OperationSendAsICalendar
-};
+enum Operation { OperationNone, OperationProcessiTIPMessage, OperationSendiTIPMessage, OperationPublishInformation, OperationSendAsICalendar };
 
 class Q_DECL_HIDDEN ITIPHandler::Private : public QObject
 {
@@ -72,6 +67,7 @@ public:
     ITIPHandler *const q;
 
     void finishSendAsICalendar(Akonadi::MailClient::Result, const QString &errorMessage);
+
 private:
     void onLoadFinished(bool success, const QString &errorMessage);
     void onSchedulerFinished(Akonadi::Scheduler::Result, const QString &errorMessage);

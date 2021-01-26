@@ -7,13 +7,13 @@
 */
 
 #include "icalimporter.h"
+#include "akonadicalendar_debug.h"
 #include "icalimporter_p.h"
 #include "utils_p.h"
-#include "akonadicalendar_debug.h"
 
-#include <AkonadiCore/ServerManager>
 #include <AkonadiCore/AgentInstanceCreateJob>
 #include <AkonadiCore/AgentManager>
+#include <AkonadiCore/ServerManager>
 
 #include <KCalendarCore/FileStorage>
 
@@ -34,8 +34,7 @@ ICalImporter::Private::Private(IncidenceChanger *changer, ICalImporter *qq)
     if (!changer) {
         m_changer = new IncidenceChanger(q);
     }
-    connect(m_changer, &IncidenceChanger::createFinished,
-            this, &ICalImporter::Private::onIncidenceCreated);
+    connect(m_changer, &IncidenceChanger::createFinished, this, &ICalImporter::Private::onIncidenceCreated);
 }
 
 ICalImporter::Private::~Private()
@@ -43,12 +42,15 @@ ICalImporter::Private::~Private()
     delete m_temporaryFile;
 }
 
-void ICalImporter::Private::onIncidenceCreated(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
+void ICalImporter::Private::onIncidenceCreated(int changeId,
+                                               const Akonadi::Item &item,
+                                               Akonadi::IncidenceChanger::ResultCode resultCode,
+                                               const QString &errorString)
 {
     Q_UNUSED(item)
 
     if (!m_pendingRequests.contains(changeId)) {
-        return;    // Not ours
+        return; // Not ours
     }
 
     m_pendingRequests.removeAll(changeId);
@@ -72,8 +74,7 @@ void ICalImporter::Private::setErrorMessage(const QString &message)
 
 void ICalImporter::Private::resourceCreated(KJob *job)
 {
-    auto *createjob
-        = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
+    auto *createjob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
 
     Q_ASSERT(createjob);
     m_working = false;
@@ -84,9 +85,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     }
 
     Akonadi::AgentInstance instance = createjob->instance();
-    const QString service
-        = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
-                                                   instance.identifier());
+    const QString service = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, instance.identifier());
 
     QDBusInterface iface(service, QStringLiteral("/Settings"));
     if (!iface.isValid()) {
@@ -145,8 +144,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     d->m_working = true;
 
-    Akonadi::AgentType type
-        = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
+    Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
 
     auto job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
@@ -200,9 +198,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         if (!collection.isValid()) {
             int dialogCode;
             const QStringList mimeTypes = QStringList()
-                                          << KCalendarCore::Event::eventMimeType()
-                                          << KCalendarCore::Todo::todoMimeType()
-                                          << KCalendarCore::Journal::journalMimeType();
+                << KCalendarCore::Event::eventMimeType() << KCalendarCore::Todo::todoMimeType() << KCalendarCore::Journal::journalMimeType();
             collection = CalendarUtils::selectCollection(nullptr, dialogCode /*by-ref*/, mimeTypes);
         }
 

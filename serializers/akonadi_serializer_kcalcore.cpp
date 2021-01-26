@@ -7,8 +7,8 @@
 #include "akonadi_serializer_kcalcore.h"
 
 #include <AkonadiCore/AbstractDifferencesReporter>
-#include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
+#include <AkonadiCore/Item>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>
@@ -17,8 +17,8 @@
 
 #include <KLocalizedString>
 
-#include <QDate>
 #include "serializer_debug.h"
+#include <QDate>
 
 using namespace KCalendarCore;
 using namespace KCalUtils;
@@ -30,8 +30,8 @@ SerializerPluginKCalCore::SerializerPluginKCalCore()
 
 //// ItemSerializerPlugin interface
 
-namespace {
-
+namespace
+{
 bool isSerializedBinary(QIODevice &data)
 {
     const QByteArray buffer = data.peek(4);
@@ -49,7 +49,6 @@ struct Header {
 };
 
 } // namespace
-
 
 bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
 {
@@ -95,9 +94,8 @@ bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, 
     }
 
     if (!incidence) {
-        qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << "Failed to parse incidence! Item id = " << item.id()
-                                                   << "Storage collection id " << item.storageCollectionId()
-                                                   << "parentCollectionId = " << item.parentCollection().id();
+        qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << "Failed to parse incidence! Item id = " << item.id() << "Storage collection id "
+                                                   << item.storageCollectionId() << "parentCollectionId = " << item.parentCollection().id();
         if (!data.isSequential()) {
             data.seek(0);
             qCWarning(AKONADI_SERIALIZER_CALENDAR_LOG) << QString::fromUtf8(data.readAll());
@@ -181,8 +179,7 @@ static QString toString(bool value)
     }
 }
 
-template<class C>
-static void compareList(AbstractDifferencesReporter *reporter, const QString &id, const C &left, const C &right)
+template<class C> static void compareList(AbstractDifferencesReporter *reporter, const QString &id, const C &left, const C &right)
 {
     for (typename C::const_iterator it = left.begin(), end = left.end(); it != end; ++it) {
         if (!right.contains(*it)) {
@@ -202,61 +199,53 @@ static void compareIncidenceBase(AbstractDifferencesReporter *reporter, const In
     compareList(reporter, i18n("Attendees"), left->attendees(), right->attendees());
 
     if (!compareString(left->organizer().fullName(), right->organizer().fullName())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Organizer"),
-                              left->organizer().fullName(), right->organizer().fullName());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Organizer"), left->organizer().fullName(), right->organizer().fullName());
     }
 
     if (!compareString(left->uid(), right->uid())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("UID"),
-                              left->uid(), right->uid());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("UID"), left->uid(), right->uid());
     }
 
     if (left->allDay() != right->allDay()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Is all-day"),
-                              toString(left->allDay()), toString(right->allDay()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Is all-day"), toString(left->allDay()), toString(right->allDay()));
     }
 
     if (left->hasDuration() != right->hasDuration()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has duration"),
-                              toString(left->hasDuration()), toString(right->hasDuration()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has duration"), toString(left->hasDuration()), toString(right->hasDuration()));
     }
 
     if (left->duration() != right->duration()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Duration"),
-                              QString::number(left->duration().asSeconds()), QString::number(right->duration().asSeconds()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
+                              i18n("Duration"),
+                              QString::number(left->duration().asSeconds()),
+                              QString::number(right->duration().asSeconds()));
     }
 }
 
 static void compareIncidence(AbstractDifferencesReporter *reporter, const Incidence::Ptr &left, const Incidence::Ptr &right)
 {
     if (!compareString(left->description(), right->description())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Description"),
-                              left->description(), right->description());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Description"), left->description(), right->description());
     }
 
     if (!compareString(left->summary(), right->summary())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Summary"),
-                              left->summary(), right->summary());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Summary"), left->summary(), right->summary());
     }
 
     if (left->status() != right->status()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Status"),
-                              Stringify::incidenceStatus(left), Stringify::incidenceStatus(right));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Status"), Stringify::incidenceStatus(left), Stringify::incidenceStatus(right));
     }
 
     if (left->secrecy() != right->secrecy()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Secrecy"),
-                              toString(left->secrecy()), toString(right->secrecy()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Secrecy"), toString(left->secrecy()), toString(right->secrecy()));
     }
 
     if (left->priority() != right->priority()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Priority"),
-                              toString(left->priority()), toString(right->priority()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Priority"), toString(left->priority()), toString(right->priority()));
     }
 
     if (!compareString(left->location(), right->location())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Location"),
-                              left->location(), right->location());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Location"), left->location(), right->location());
     }
 
     compareList(reporter, i18n("Categories"), left->categories(), right->categories());
@@ -268,31 +257,26 @@ static void compareIncidence(AbstractDifferencesReporter *reporter, const Incide
     // TODO: recurrence dates and date/times, exrules, rrules
 
     if (left->created() != right->created()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
-                              i18n("Created"), left->created().toString(), right->created().toString());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Created"), left->created().toString(), right->created().toString());
     }
 
     if (!compareString(left->relatedTo(), right->relatedTo())) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
-                              i18n("Related Uid"), left->relatedTo(), right->relatedTo());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Related Uid"), left->relatedTo(), right->relatedTo());
     }
 }
 
 static void compareEvent(AbstractDifferencesReporter *reporter, const Event::Ptr &left, const Event::Ptr &right)
 {
     if (left->dtStart() != right->dtStart()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Start time"),
-                              left->dtStart().toString(), right->dtStart().toString());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Start time"), left->dtStart().toString(), right->dtStart().toString());
     }
 
     if (left->hasEndDate() != right->hasEndDate()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has End Date"),
-                              toString(left->hasEndDate()), toString(right->hasEndDate()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has End Date"), toString(left->hasEndDate()), toString(right->hasEndDate()));
     }
 
     if (left->dtEnd() != right->dtEnd()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("End Date"),
-                              left->dtEnd().toString(), right->dtEnd().toString());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("End Date"), left->dtEnd().toString(), right->dtEnd().toString());
     }
 
     // TODO: check transparency
@@ -301,33 +285,36 @@ static void compareEvent(AbstractDifferencesReporter *reporter, const Event::Ptr
 static void compareTodo(AbstractDifferencesReporter *reporter, const Todo::Ptr &left, const Todo::Ptr &right)
 {
     if (left->hasStartDate() != right->hasStartDate()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has Start Date"),
-                              toString(left->hasStartDate()), toString(right->hasStartDate()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
+                              i18n("Has Start Date"),
+                              toString(left->hasStartDate()),
+                              toString(right->hasStartDate()));
     }
 
     if (left->hasDueDate() != right->hasDueDate()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has Due Date"),
-                              toString(left->hasDueDate()), toString(right->hasDueDate()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has Due Date"), toString(left->hasDueDate()), toString(right->hasDueDate()));
     }
 
     if (left->dtDue() != right->dtDue()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Due Date"),
-                              left->dtDue().toString(), right->dtDue().toString());
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Due Date"), left->dtDue().toString(), right->dtDue().toString());
     }
 
     if (left->hasCompletedDate() != right->hasCompletedDate()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Has Complete Date"),
-                              toString(left->hasCompletedDate()), toString(right->hasCompletedDate()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
+                              i18n("Has Complete Date"),
+                              toString(left->hasCompletedDate()),
+                              toString(right->hasCompletedDate()));
     }
 
     if (left->percentComplete() != right->percentComplete()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Complete"),
-                              QString::number(left->percentComplete()), QString::number(right->percentComplete()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
+                              i18n("Complete"),
+                              QString::number(left->percentComplete()),
+                              QString::number(right->percentComplete()));
     }
 
     if (left->completed() != right->completed()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Completed"),
-                              toString(left->completed()), toString(right->completed()));
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Completed"), toString(left->completed()), toString(right->completed()));
     }
 }
 

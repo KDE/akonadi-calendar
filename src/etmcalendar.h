@@ -16,7 +16,8 @@
 class QAbstractItemModel;
 class KCheckableProxyModel;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Monitor;
 class ETMCalendarPrivate;
 class EntityTreeModel;
@@ -41,17 +42,13 @@ class AKONADI_CALENDAR_EXPORT ETMCalendar : public CalendarBase
 {
     Q_OBJECT
 public:
-
-    enum CollectionColumn {
-        CollectionTitle = 0,
-        CollectionColumnCount
-    };
+    enum CollectionColumn { CollectionTitle = 0, CollectionColumnCount };
 
     using Ptr = QSharedPointer<ETMCalendar>;
 
     /**
-      * Constructs a new ETMCalendar. Loading begins immediately, asynchronously.
-      */
+     * Constructs a new ETMCalendar. Loading begins immediately, asynchronously.
+     */
     explicit ETMCalendar(QObject *parent = nullptr);
 
     /**
@@ -78,8 +75,8 @@ public:
 
     explicit ETMCalendar(Monitor *monitor, QObject *parent = nullptr);
     /**
-      * Destroys this ETMCalendar.
-      */
+     * Destroys this ETMCalendar.
+     */
     ~ETMCalendar() override;
 
     /**
@@ -90,16 +87,16 @@ public:
     Q_REQUIRED_RESULT Akonadi::Collection collection(Akonadi::Collection::Id) const;
 
     /**
-      * Returns true if the collection owning incidence @p has righ @p right
-      */
+     * Returns true if the collection owning incidence @p has righ @p right
+     */
     Q_REQUIRED_RESULT bool hasRight(const Akonadi::Item &item, Akonadi::Collection::Right right) const;
 
     /**
-      * This is an overloaded function.
-      * @param uid the identifier for the incidence to check for rights
-      * @param right the access right to check for
-      * @see hasRight()
-      */
+     * This is an overloaded function.
+     * @param uid the identifier for the incidence to check for rights
+     * @param right the access right to check for
+     * @see hasRight()
+     */
     Q_REQUIRED_RESULT bool hasRight(const QString &uid, Akonadi::Collection::Right right) const;
 
     /**
@@ -136,11 +133,11 @@ public:
     Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /**
-      * Returns all alarms occurring in a specified time interval.
-      * @param from start date of interval
-      * @param to end data of interval
-      * @param excludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
-      */
+     * Returns all alarms occurring in a specified time interval.
+     * @param from start date of interval
+     * @param to end data of interval
+     * @param excludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
+     */
     KCalendarCore::Alarm::List alarms(const QDateTime &from, const QDateTime &to, bool excludeBlockedAlarms = false) const override;
 
     /**
@@ -159,36 +156,36 @@ public:
     Q_REQUIRED_RESULT bool collectionFilteringEnabled() const;
 
     /**
-      * Returns if the calendar already finished loading.
-      */
+     * Returns if the calendar already finished loading.
+     */
     Q_REQUIRED_RESULT bool isLoaded() const override;
 
 Q_SIGNALS:
     /**
-      * This signal is emitted if a collection has been changed (properties or attributes).
-      *
-      * @param collection The changed collection.
-      * @param attributeNames The names of the collection attributes that have been changed.
-      */
+     * This signal is emitted if a collection has been changed (properties or attributes).
+     *
+     * @param collection The changed collection.
+     * @param attributeNames The names of the collection attributes that have been changed.
+     */
     void collectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &attributeNames);
 
     /**
-      * This signal is emitted when one or more collections are added to the ETM.
-      *
-      * @param collection non empty list of collections
-      */
+     * This signal is emitted when one or more collections are added to the ETM.
+     *
+     * @param collection non empty list of collections
+     */
     void collectionsAdded(const Akonadi::Collection::List &collection);
 
     /**
-      * This signal is emitted when one or more collections are deleted from the ETM.
-      *
-      * @param collection non empty list of collections
-      */
+     * This signal is emitted when one or more collections are deleted from the ETM.
+     *
+     * @param collection non empty list of collections
+     */
     void collectionsRemoved(const Akonadi::Collection::List &collection);
 
     /**
-      * Emitted whenever an Item is inserted, removed or modified.
-      */
+     * Emitted whenever an Item is inserted, removed or modified.
+     */
     void calendarChanged();
 
 private:

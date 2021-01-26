@@ -19,8 +19,7 @@ FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *q
     , q(qq)
 {
     new Akonadi__FreeBusyProviderAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/FreeBusyProvider"),
-                                                           this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/FreeBusyProvider"), this, QDBusConnection::ExportAdaptors);
 }
 
 QDateTime FreeBusyProviderBasePrivate::lastCacheUpdate()

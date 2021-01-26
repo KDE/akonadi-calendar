@@ -9,9 +9,9 @@
 */
 
 #include "blockalarmsattribute.h"
-#include <attributefactory.h>
 #include <QByteArray>
 #include <QDataStream>
+#include <attributefactory.h>
 
 using namespace Akonadi;
 
@@ -81,7 +81,7 @@ bool BlockAlarmsAttribute::isAlarmTypeBlocked(KCalendarCore::Alarm::Type type) c
 bool BlockAlarmsAttribute::isEverythingBlocked() const
 {
     return isAlarmTypeBlocked(KCalendarCore::Alarm::Audio) && isAlarmTypeBlocked(KCalendarCore::Alarm::Display)
-           && isAlarmTypeBlocked(KCalendarCore::Alarm::Email) && isAlarmTypeBlocked(KCalendarCore::Alarm::Procedure);
+        && isAlarmTypeBlocked(KCalendarCore::Alarm::Email) && isAlarmTypeBlocked(KCalendarCore::Alarm::Procedure);
 }
 
 QByteArray BlockAlarmsAttribute::type() const
@@ -136,7 +136,8 @@ void BlockAlarmsAttribute::deserialize(const QByteArray &data)
     }
 }
 
-namespace {
+namespace
+{
 // Anonymous namespace; function is invisible outside this file.
 bool dummy()
 {

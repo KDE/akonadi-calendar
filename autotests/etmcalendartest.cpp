@@ -8,18 +8,18 @@
 
 #include "../src/etmcalendar.h"
 #include "../src/utils_p.h"
-#include <itemcreatejob.h>
-#include <itemdeletejob.h>
-#include <qtest_akonadi.h>
+#include <KCheckableProxyModel>
+#include <KEMailSettings>
 #include <collectionfetchjob.h>
 #include <collectionfetchscope.h>
 #include <collectionmodifyjob.h>
+#include <itemcreatejob.h>
+#include <itemdeletejob.h>
 #include <itemmodifyjob.h>
-#include <KCheckableProxyModel>
-#include <KEMailSettings>
+#include <qtest_akonadi.h>
 
-#include <QTestEventLoop>
 #include <QSignalSpy>
+#include <QTestEventLoop>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -77,9 +77,7 @@ void ETMCalendarTest::deleteIncidence(const QString &uid)
 
 void ETMCalendarTest::fetchCollection()
 {
-    auto job = new CollectionFetchJob(Collection::root(),
-                                                     CollectionFetchJob::Recursive,
-                                                     this);
+    auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
     // Get list of collections
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("application/x-vnd.akonadi.calendar.event"));
     AKVERIFYEXEC(job);
@@ -92,20 +90,19 @@ void ETMCalendarTest::fetchCollection()
     QVERIFY(mCollection.isValid());
 }
 
-void ETMCalendarTest:: initTestCase()
+void ETMCalendarTest::initTestCase()
 {
     AkonadiTest::checkTestIsIsolated();
     mIncidencesToAdd = 0;
     mIncidencesToChange = 0;
     mIncidencesToDelete = 0;
 
-    qRegisterMetaType<QSet<QByteArray> >("QSet<QByteArray>");
+    qRegisterMetaType<QSet<QByteArray>>("QSet<QByteArray>");
     fetchCollection();
 
     mCalendar = new ETMCalendar();
     QVERIFY(!mCalendar->isLoaded());
-    connect(mCalendar, &ETMCalendar::collectionsAdded,
-            this, &ETMCalendarTest::handleCollectionsAdded);
+    connect(mCalendar, &ETMCalendar::collectionsAdded, this, &ETMCalendarTest::handleCollectionsAdded);
 
     mCalendar->registerObserver(this);
 
@@ -157,7 +154,7 @@ void ETMCalendarTest::testCollectionChanged()
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).count(), 2);
     QCOMPARE(spy.at(0).at(0).value<Akonadi::Collection>(), mCollection);
-    QVERIFY(spy.at(0).at(1).value<QSet<QByteArray> >().contains(QByteArray("AccessRights")));
+    QVERIFY(spy.at(0).at(1).value<QSet<QByteArray>>().contains(QByteArray("AccessRights")));
 }
 
 void ETMCalendarTest::testIncidencesAdded()
@@ -224,7 +221,7 @@ void ETMCalendarTest::testUnselectCollection()
     checkable->setData(firstIndex, Qt::Unchecked, Qt::CheckStateRole);
 
     if (mIncidencesToDelete > 0) { // Actually they probably where deleted already
-        //doesn't need the event loop, but just in case
+        // doesn't need the event loop, but just in case
         QTestEventLoop::instance().enterLoop(10);
 
         if (QTestEventLoop::instance().timeout()) {
@@ -555,7 +552,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     mIncidencesToAdd = 1;
     createIncidence(uid);
     waitForIt();
-    QCOMPARE(mCalendar->model()->rowCount(), anz+1);
+    QCOMPARE(mCalendar->model()->rowCount(), anz + 1);
 
     Incidence::Ptr incidence = mCalendar->incidence(uid);
     Item item = mCalendar->item(uid);
@@ -582,7 +579,7 @@ void ETMCalendarTest::testFilterInvitationsChanged()
     modifyJob = new ItemModifyJob(item, this);
     AKVERIFYEXEC(modifyJob);
     waitForIt();
-    QCOMPARE(mCalendar->model()->rowCount(), anz+1);
+    QCOMPARE(mCalendar->model()->rowCount(), anz + 1);
 }
 
 void ETMCalendarTest::waitForIt()
@@ -593,7 +590,7 @@ void ETMCalendarTest::waitForIt()
 
 void ETMCalendarTest::checkExitLoop()
 {
-    //qDebug() << "checkExitLoop: current state: " << mIncidencesToDelete << mIncidencesToAdd << mIncidencesToChange;
+    // qDebug() << "checkExitLoop: current state: " << mIncidencesToDelete << mIncidencesToAdd << mIncidencesToChange;
     if (mIncidencesToDelete == 0 && mIncidencesToAdd == 0 && mIncidencesToChange == 0) {
         QTestEventLoop::instance().exitLoop();
     }

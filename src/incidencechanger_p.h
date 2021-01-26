@@ -11,23 +11,24 @@
 #ifndef AKONADI_INCIDENCECHANGER_P_H
 #define AKONADI_INCIDENCECHANGER_P_H
 
+#include "history.h"
 #include "incidencechanger.h"
 #include "itiphandlerhelper_p.h"
-#include "history.h"
 
-#include <item.h>
 #include <collection.h>
+#include <item.h>
 #include <transactionsequence.h>
 
-#include <QSet>
 #include <QObject>
 #include <QPointer>
+#include <QSet>
 #include <QVector>
 
 class KJob;
 class QWidget;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class TransactionSequence;
 class CollectionFetchJob;
 
@@ -128,7 +129,7 @@ public:
 
     ~CreationChange() override
     {
-        //qCDebug(AKONADICALENDAR_LOG) << "CreationChange::~ will emit signal with " << resultCode;
+        // qCDebug(AKONADICALENDAR_LOG) << "CreationChange::~ will emit signal with " << resultCode;
         if (!parentChange) {
             emitCompletionSignal();
         }
@@ -151,7 +152,7 @@ public:
 
     ~DeletionChange() override
     {
-        //qCDebug(AKONADICALENDAR_LOG) << "DeletionChange::~ will emit signal with " << resultCode;
+        // qCDebug(AKONADICALENDAR_LOG) << "DeletionChange::~ will emit signal with " << resultCode;
         if (!parentChange) {
             emitCompletionSignal();
         }
@@ -182,7 +183,7 @@ public:
 
     ~AtomicOperation()
     {
-        //qCDebug(AKONADICALENDAR_LOG) << "AtomicOperation::~ " << wasRolledback << changes.count();
+        // qCDebug(AKONADICALENDAR_LOG) << "AtomicOperation::~ " << wasRolledback << changes.count();
         if (m_wasRolledback) {
             for (int i = 0; i < m_changes.count(); ++i) {
                 // When a job that can finish successfully is aborted because the transaction failed
@@ -206,7 +207,7 @@ public:
 
     void setRolledback()
     {
-        //qCDebug(AKONADICALENDAR_LOG) << "AtomicOperation::setRolledBack()";
+        // qCDebug(AKONADICALENDAR_LOG) << "AtomicOperation::setRolledBack()";
         m_wasRolledback = true;
         transaction()->rollback();
     }
@@ -249,7 +250,7 @@ public:
     explicit Private(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *mIncidenceChanger);
     ~Private();
 
-    void loadCollections();  // async-loading of list of writable collections
+    void loadCollections(); // async-loading of list of writable collections
     bool isLoadingCollections() const;
     Collection::List collectionsForMimeType(const QString &mimeType, const Collection::List &collections);
 
@@ -280,7 +281,8 @@ public:
 
     void handleInvitationsBeforeChange(const Change::Ptr &change);
     void handleInvitationsAfterChange(const Change::Ptr &change);
-    static bool myAttendeeStatusChanged(const KCalendarCore::Incidence::Ptr &newIncidence, const KCalendarCore::Incidence::Ptr &oldIncidence, const QStringList &myEmails);
+    static bool
+    myAttendeeStatusChanged(const KCalendarCore::Incidence::Ptr &newIncidence, const KCalendarCore::Incidence::Ptr &oldIncidence, const QStringList &myEmails);
 
 public Q_SLOTS:
     void handleCreateJobResult(KJob *job);
@@ -344,11 +346,12 @@ public:
 
     Akonadi::CollectionFetchJob *m_collectionFetchJob = nullptr;
 
-    QMap<KJob *, QSet<KCalendarCore::IncidenceBase::Field> > mDirtyFieldsByJob;
+    QMap<KJob *, QSet<KCalendarCore::IncidenceBase::Field>> mDirtyFieldsByJob;
 
     IncidenceChanger::InvitationPolicy m_invitationPolicy;
 
     ITIPHandlerComponentFactory *mFactory = nullptr;
+
 private:
     IncidenceChanger *q = nullptr;
 };

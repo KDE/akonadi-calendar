@@ -12,15 +12,16 @@
 
 #include <QObject>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 
 /**
-* @short Class to delete completed to-dos.
-*
-* @author Sérgio Martins <iamsergio@gmail.com>
-* @since 4.12
-*/
+ * @short Class to delete completed to-dos.
+ *
+ * @author Sérgio Martins <iamsergio@gmail.com>
+ * @since 4.12
+ */
 class AKONADI_CALENDAR_EXPORT TodoPurger : public QObject
 {
     Q_OBJECT

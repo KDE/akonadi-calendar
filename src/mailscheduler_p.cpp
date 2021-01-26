@@ -6,15 +6,14 @@
 */
 
 #include "mailscheduler_p.h"
-#include "calendarsettings.h"
 #include "calendarbase.h"
+#include "calendarsettings.h"
 #include "utils_p.h"
-
 
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/ScheduleMessage>
-#include <identitymanager.h>
 #include <identity.h>
+#include <identitymanager.h>
 
 #include <KLocalizedString>
 #include <QStandardPaths>
@@ -31,7 +30,8 @@ public:
     MailClient *m_mailer = nullptr;
 };
 
-MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent) : Scheduler(parent)
+MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent)
+    : Scheduler(parent)
     , d(new Private())
 {
     d->m_identityManager = KIdentityManagement::IdentityManager::self();
@@ -64,7 +64,9 @@ void MailScheduler::publish(const KCalendarCore::IncidenceBase::Ptr &incidence, 
     d->m_mailer->mailTo(incidence,
                         d->identityForIncidence(incidence),
                         CalendarUtils::email(),
-                        CalendarSettings::self()->bcc(), recipients, messageText,
+                        CalendarSettings::self()->bcc(),
+                        recipients,
+                        messageText,
                         CalendarSettings::self()->mailTransport());
 }
 
@@ -80,7 +82,8 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
                         d->identityForIncidence(incidence),
                         Akonadi::CalendarUtils::email(),
                         CalendarSettings::self()->bcc(),
-                        recipients, messageText,
+                        recipients,
+                        messageText,
                         CalendarSettings::self()->mailTransport());
 }
 
@@ -93,13 +96,12 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
 
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
 
-    if (method == KCalendarCore::iTIPRequest
-        || method == KCalendarCore::iTIPCancel
-        || method == KCalendarCore::iTIPAdd
+    if (method == KCalendarCore::iTIPRequest || method == KCalendarCore::iTIPCancel || method == KCalendarCore::iTIPAdd
         || method == KCalendarCore::iTIPDeclineCounter) {
         d->m_mailer->mailAttendees(incidence,
                                    d->identityForIncidence(incidence),
-                                   CalendarSettings::self()->bcc(), messageText,
+                                   CalendarSettings::self()->bcc(),
+                                   messageText,
                                    CalendarSettings::self()->mailTransport());
     } else {
         QString subject;
@@ -112,7 +114,9 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
                                    d->identityForIncidence(incidence),
                                    CalendarUtils::email(),
                                    CalendarSettings::self()->bcc(),
-                                   messageText, subject, CalendarSettings::self()->mailTransport());
+                                   messageText,
+                                   subject,
+                                   CalendarSettings::self()->mailTransport());
     }
 }
 
@@ -121,7 +125,7 @@ QString MailScheduler::freeBusyDir() const
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusy");
 }
 
-//TODO: AKONADI_PORT review following code
+// TODO: AKONADI_PORT review following code
 void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::CalendarBase::Ptr &calendar)
 {
     Q_ASSERT(incidence);
@@ -136,7 +140,7 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
         if (exIncidence) {
             exInc = calendar->item(exIncidence);
         }
-        //exInc = exIncItem.isValid() && exIncItem.hasPayload<KCalendarCore::Incidence::Ptr>() ?
+        // exInc = exIncItem.isValid() && exIncItem.hasPayload<KCalendarCore::Incidence::Ptr>() ?
         //        exIncItem.payload<KCalendarCore::Incidence::Ptr>() : KCalendarCore::Incidence::Ptr();
     }
 

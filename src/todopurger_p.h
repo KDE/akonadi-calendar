@@ -7,13 +7,14 @@
 #ifndef TODOPURGER_P_H
 #define TODOPURGER_P_H
 
-#include "todopurger.h"
 #include "incidencechanger.h"
+#include "todopurger.h"
 
-#include <QString>
 #include <QObject>
+#include <QString>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 
 class Q_DECL_HIDDEN TodoPurger::Private : public QObject
@@ -33,9 +34,8 @@ public:
 
 public Q_SLOTS:
     void onCalendarLoaded(bool success, const QString &message);
-    void onItemsDeleted(int changeId, const QVector<Akonadi::Item::Id> &deletedItems,
-                        Akonadi::IncidenceChanger::ResultCode,
-                        const QString &message);
+    void onItemsDeleted(int changeId, const QVector<Akonadi::Item::Id> &deletedItems, Akonadi::IncidenceChanger::ResultCode, const QString &message);
+
 private:
     TodoPurger *const q;
 };

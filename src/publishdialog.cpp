@@ -44,39 +44,35 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     d->mUI.mRemove->setEnabled(false);
     d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QStringLiteral("view-pim-contacts")));
-    connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged,
-            d, &Private::updateInput);
-    connect(d->mUI.mNew, &QAbstractButton::clicked,
-            d, &Private::addItem);
-    connect(d->mUI.mRemove, &QAbstractButton::clicked,
-            d, &Private::removeItem);
-    connect(d->mUI.mSelectAddressee, &QAbstractButton::clicked,
-            d, &Private::openAddressbook);
-    connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged,
-            d, &Private::updateItem);
-    connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged,
-            d, &Private::updateItem);
+    connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged, d, &Private::updateInput);
+    connect(d->mUI.mNew, &QAbstractButton::clicked, d, &Private::addItem);
+    connect(d->mUI.mRemove, &QAbstractButton::clicked, d, &Private::removeItem);
+    connect(d->mUI.mSelectAddressee, &QAbstractButton::clicked, d, &Private::openAddressbook);
+    connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged, d, &Private::updateItem);
+    connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged, d, &Private::updateItem);
 
-    QDialogButtonBox *buttonBox
-        = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     layout->addWidget(buttonBox);
 
     okButton->setToolTip(i18n("Send email to these recipients"));
-    okButton->setWhatsThis(i18n("Clicking the <b>Ok</b> button will cause "
-                                "an email to be sent to the recipients you "
-                                "have entered."));
+    okButton->setWhatsThis(
+        i18n("Clicking the <b>Ok</b> button will cause "
+             "an email to be sent to the recipients you "
+             "have entered."));
 
     QPushButton *cancelButton = buttonBox->button(QDialogButtonBox::Cancel);
     cancelButton->setToolTip(i18n("Cancel recipient selection and the email"));
-    cancelButton->setWhatsThis(i18n("Clicking the <b>Cancel</b> button will "
-                                    "cause the email operation to be terminated."));
+    cancelButton->setWhatsThis(
+        i18n("Clicking the <b>Cancel</b> button will "
+             "cause the email operation to be terminated."));
 
     QPushButton *helpButton = buttonBox->button(QDialogButtonBox::Help);
-    helpButton->setWhatsThis(i18n("Click the <b>Help</b> button to read "
-                                  "more information about Group Scheduling."));
+    helpButton->setWhatsThis(
+        i18n("Click the <b>Help</b> button to read "
+             "more information about Group Scheduling."));
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &PublishDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &PublishDialog::reject);
@@ -123,8 +119,7 @@ QString PublishDialog::addresses() const
 void PublishDialog::accept()
 {
     QString badAddress;
-    const KEmailAddress::EmailParseResult addressOk
-        = KEmailAddress::isValidAddressList(addresses(), badAddress);
+    const KEmailAddress::EmailParseResult addressOk = KEmailAddress::isValidAddressList(addresses(), badAddress);
     if (addressOk != KEmailAddress::AddressOk) {
         KMessageBox::sorry(this,
                            i18n("Unable to publish the calendar incidence due to an "

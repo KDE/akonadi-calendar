@@ -21,14 +21,14 @@
  *
  * @since 4.12
  */
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 
 class AKONADI_CALENDAR_EXPORT ICalImporter : public QObject
 {
     Q_OBJECT
 public:
-
     /**
      * Constructs a new ICalImporter object. Use a different ICalImporter instance for each file you want to import.
      *

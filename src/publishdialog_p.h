@@ -11,7 +11,8 @@
 #include "ui_publishdialog_base.h"
 #include <KContacts/Addressee>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Q_DECL_HIDDEN PublishDialog::Private : public QObject
 {
     Q_OBJECT
