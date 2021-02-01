@@ -160,6 +160,23 @@ public:
     Q_REQUIRED_RESULT int createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
     /**
+      * Creates a new incidence.
+      *
+      * @param item Item containing the incidence to create and metadata, such as tags.
+      * @param collection Collection where the incidence will be created. If invalid, one according
+      *                   to the DestinationPolicy will be used. You can know which collection was
+      *                   used by calling lastCollectionUsed();
+      * @param parent widget parent to be used in dialogs.
+      *
+      * @return Returns an integer which identifies this change. This identifier is useful
+      *         to correlate this operation with the IncidenceChanger::createFinished() signal.
+      *
+      *         Returns -1 if @p item is invalid. The createFinished() signal
+      *         won't be emitted in this case.
+      */
+    Q_REQUIRED_RESULT int createFromItem(const Akonadi::Item &item, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
+
+    /**
       * Deletes an incidence. If it's recurring, all occurrences are deleted.
       *
       * @param item Item to delete. Item must be valid.

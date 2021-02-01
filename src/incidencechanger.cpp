@@ -700,14 +700,8 @@ IncidenceChanger::~IncidenceChanger()
     delete d;
 }
 
-int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence, const Collection &collection, QWidget *parent)
+int IncidenceChanger::createFromItem(const Item &item, const Collection &collection, QWidget *parent)
 {
-    if (!incidence) {
-        qCWarning(AKONADICALENDAR_LOG) << "An invalid payload is not allowed.";
-        d->cancelTransaction();
-        return -1;
-    }
-
     const uint atomicOperationId = d->mBatchOperationInProgress ? d->mLatestAtomicOperationId : 0;
 
     const Change::Ptr change(new CreationChange(this, ++d->mLatestChangeId,
@@ -724,15 +718,26 @@ int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence, const Col
         return changeId;
     }
 
-    Item item;
-    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
-    item.setMimeType(incidence->mimeType());
-
     change->newItem = item;
 
     d->step1DetermineDestinationCollection(change, collection);
 
     return change->id;
+}
+
+int IncidenceChanger::createIncidence(const Incidence::Ptr &incidence, const Collection &collection, QWidget *parent)
+{
+    if (!incidence) {
+        qCWarning(AKONADICALENDAR_LOG) << "An invalid payload is not allowed.";
+        d->cancelTransaction();
+        return -1;
+    }
+
+    Item item;
+    item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
+    item.setMimeType(incidence->mimeType());
+
+    return createFromItem(item, collection, parent);
 }
 
 int IncidenceChanger::deleteIncidence(const Item &item, QWidget *parent)
