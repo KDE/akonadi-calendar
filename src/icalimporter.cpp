@@ -74,7 +74,7 @@ void ICalImporter::Private::setErrorMessage(const QString &message)
 
 void ICalImporter::Private::resourceCreated(KJob *job)
 {
-    auto *createjob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
+    auto createjob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
 
     Q_ASSERT(createjob);
     m_working = false;
