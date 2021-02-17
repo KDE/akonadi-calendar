@@ -58,8 +58,7 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item item(const QString &uid) const;
 
     /**
-     * Returns the Item containing the incidence with uid @p uid or an invalid Item
-     * if the incidence isn't found.
+     * Returns the Item containing @p incidence or an invalid Item if the incidence isn't found.
      */
     Q_REQUIRED_RESULT Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
 
