@@ -266,8 +266,6 @@ public:
 
     QString showErrorDialog(Akonadi::IncidenceChanger::ResultCode, QWidget *parent);
 
-    void setChangeInternal(int changeId);
-
     void adjustRecurrence(const KCalendarCore::Incidence::Ptr &originalIncidence, const KCalendarCore::Incidence::Ptr &incidence);
 
     bool hasRights(const Akonadi::Collection &collection, IncidenceChanger::ChangeType) const;

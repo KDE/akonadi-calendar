@@ -68,7 +68,6 @@ public:
     void doIt(OperationType);
     void stackEntry(const Entry::Ptr &entry, uint atomicOperationId);
     void updateIds(Item::Id oldId, Item::Id newId);
-    void finishOperation(int changeId, History::ResultCode, const QString &errorString);
     QStack<Entry::Ptr> &destinationStack();
     QStack<Entry::Ptr> &stack(OperationType);
     QStack<Entry::Ptr> &stack();
@@ -77,8 +76,6 @@ public:
     void emitDone(OperationType, History::ResultCode);
     void setEnabled(bool enabled);
 
-    bool isUndoAvailable() const;
-    bool isRedoAvailable() const;
 
     int redoCount() const;
     int undoCount() const;

@@ -121,9 +121,6 @@ public:
     */
     ITIPHandlerHelper::SendResult sendCounterProposal(const KCalendarCore::Incidence::Ptr &oldIncidence, const KCalendarCore::Incidence::Ptr &newIncidence);
 
-    // Frees calendar if it doesn't have jobs running
-    void calendarJobFinished(bool success, const QString &errorString);
-
 Q_SIGNALS:
     void finished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage);
 
