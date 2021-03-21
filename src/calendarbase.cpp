@@ -597,6 +597,9 @@ bool CalendarBase::deleteIncidence(const KCalendarCore::Incidence::Ptr &incidenc
 {
     Q_D(CalendarBase);
     Q_ASSERT(incidence);
+    if (!incidence->hasRecurrenceId() && incidence->recurs()) {
+        deleteIncidenceInstances(incidence);
+    }
     Akonadi::Item item_ = item(incidence->instanceIdentifier());
     return -1 != d->mIncidenceChanger->deleteIncidence(item_);
 }
