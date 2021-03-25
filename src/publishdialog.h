@@ -3,8 +3,7 @@
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef AKONADI_PUBLISHDIALOG_H
-#define AKONADI_PUBLISHDIALOG_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -54,4 +53,3 @@ private:
 };
 }
 
-#endif

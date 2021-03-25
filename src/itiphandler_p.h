@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_CALENDAR_ITIP_HANDLER_P_H
-#define AKONADI_CALENDAR_ITIP_HANDLER_P_H
+#pragma once
 
 #include "calendarbase.h"
 #include "itiphandler.h"
@@ -78,4 +77,3 @@ private:
     void onCounterProposalDelegateFinished(bool success, const QString &errorMessage);
 };
 }
-#endif

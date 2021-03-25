@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ICALIMPORTER_P_H
-#define ICALIMPORTER_P_H
+#pragma once
 
 #include "icalimporter.h"
 #include "incidencechanger.h"
@@ -52,4 +51,3 @@ public Q_SLOTS:
     void onIncidenceCreated(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 };
 }
-#endif // ICALIMPORTER_P_H

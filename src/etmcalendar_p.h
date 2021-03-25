@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_ETMCALENDAR_P_H
-#define AKONADI_ETMCALENDAR_P_H
+#pragma once
 
 #include "calendarbase_p.h"
 #include "calendarmodel_p.h"
@@ -127,4 +126,3 @@ private:
 };
 }
 
-#endif

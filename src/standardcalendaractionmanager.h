@@ -6,8 +6,7 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-#ifndef AKONADI_STANDARDCALENDARACTIONMANAGER_H
-#define AKONADI_STANDARDCALENDARACTIONMANAGER_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -182,4 +181,3 @@ private:
 };
 }
 
-#endif

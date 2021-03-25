@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_FREEBUSYPROVIDERBASEPRIVATE_H
-#define AKONADI_FREEBUSYPROVIDERBASEPRIVATE_H
+#pragma once
 
 #include "freebusyproviderbase.h"
 
@@ -66,4 +65,3 @@ private:
 };
 }
 
-#endif // AKONADI_FREEBUSYPROVIDERBASEPRIVATE_H

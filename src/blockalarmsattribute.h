@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_BLOCKALARMSATTRIBUTE_H
-#define AKONADI_BLOCKALARMSATTRIBUTE_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 #include <KCalendarCore/Alarm>
@@ -83,4 +82,3 @@ private:
 };
 }
 
-#endif

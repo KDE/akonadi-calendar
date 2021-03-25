@@ -4,8 +4,7 @@
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef AKONADI_CALENDAR_MAILSCHEDULER_P_H
-#define AKONADI_CALENDAR_MAILSCHEDULER_P_H
+#pragma once
 
 #include "mailclient_p.h"
 #include "scheduler_p.h"
@@ -63,4 +62,3 @@ private:
 };
 }
 
-#endif

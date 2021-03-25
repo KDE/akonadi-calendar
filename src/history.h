@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_HISTORY_H
-#define AKONADI_HISTORY_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 #include "incidencechanger.h"
@@ -243,4 +242,3 @@ private:
 };
 }
 
-#endif

@@ -4,8 +4,7 @@
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef AKONADI_CALENDAR_SCHEDULER_P_H
-#define AKONADI_CALENDAR_SCHEDULER_P_H
+#pragma once
 
 #include "calendarbase.h"
 
@@ -165,4 +164,3 @@ private:
 };
 }
 
-#endif

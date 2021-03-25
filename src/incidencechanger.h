@@ -4,8 +4,7 @@
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef AKONADI_INCIDENCECHANGER_H
-#define AKONADI_INCIDENCECHANGER_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -462,4 +461,3 @@ Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::DestinationPolicy)
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::ResultCode)
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::ChangeType)
 
-#endif

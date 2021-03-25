@@ -8,8 +8,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_CALENDAR_ITIP_HANDLERHELPER_P_H
-#define AKONADI_CALENDAR_ITIP_HANDLERHELPER_P_H
+#pragma once
 
 #include "itiphandler.h"
 #include "mailscheduler_p.h"
@@ -162,4 +161,3 @@ private:
 };
 }
 
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_FREEBUSYPROVIDERBASE_H
-#define AKONADI_FREEBUSYPROVIDERBASE_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -140,4 +139,3 @@ private:
 };
 }
 
-#endif // AKONADI_FREEBUSYPROVIDERBASE_H

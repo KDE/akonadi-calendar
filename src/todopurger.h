@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TODOPURGER_H
-#define TODOPURGER_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 #include "calendarbase.h"
@@ -70,4 +69,3 @@ private:
 };
 }
 
-#endif

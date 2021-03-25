@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TODOPURGER_TEST_H_
-#define TODOPURGER_TEST_H_
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -50,4 +49,3 @@ private:
     Akonadi::TodoPurger *m_todoPurger = nullptr;
 };
 
-#endif

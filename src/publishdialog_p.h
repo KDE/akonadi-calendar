@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_PUBLISHDIALOG_P_H
-#define AKONADI_PUBLISHDIALOG_P_H
+#pragma once
 
 #include "publishdialog.h"
 #include "ui_publishdialog_base.h"
@@ -32,4 +31,3 @@ public:
     PublishDialog *q = nullptr;
 };
 }
-#endif

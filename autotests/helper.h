@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef HELPER_H_
-#define HELPER_H_
+#pragma once
 
 #include <collection.h>
 #include <item.h>
@@ -17,4 +16,3 @@ bool confirmDoesntExist(const Akonadi::Item &item);
 Akonadi::Collection fetchCollection();
 }
 
-#endif

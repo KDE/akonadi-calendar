@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_FREEBUSYMANAGER_P_H
-#define AKONADI_FREEBUSYMANAGER_P_H
+#pragma once
 
 #include "etmcalendar.h"
 #include "mailscheduler_p.h"
@@ -126,4 +125,3 @@ private:
 };
 }
 
-#endif // FREEBUSYMANAGER_P_H

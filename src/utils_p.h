@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_CALENDAR_UTILS_P_
-#define AKONADI_CALENDAR_UTILS_P_
+#pragma once
 
 #include <KCalendarCore/Incidence>
 #include <collection.h>
@@ -41,4 +40,3 @@ selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes,
 }
 }
 
-#endif

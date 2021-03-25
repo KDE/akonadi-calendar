@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ITIPHANDLER_TEST_H
-#define ITIPHANDLER_TEST_H
+#pragma once
 
 #include "incidencechanger.h"
 #include "itiphandler.h"
@@ -71,4 +70,3 @@ private:
     bool m_cancelExpected = false;
 };
 
-#endif

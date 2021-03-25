@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CALENDARBASE_TEST_H_
-#define CALENDARBASE_TEST_H_
+#pragma once
 
 #include <collection.h>
 #include <item.h>
@@ -50,4 +49,3 @@ private:
     QString mOneIncidenceUid;
 };
 
-#endif

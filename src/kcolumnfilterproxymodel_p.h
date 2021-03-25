@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-#ifndef AKONADI_KCOLUMNFILTERPROXYMODEL_P_H
-#define AKONADI_KCOLUMNFILTERPROXYMODEL_P_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -58,4 +57,3 @@ private:
 };
 }
 
-#endif // KCOLUMNFILTERPROXYMODEL_H

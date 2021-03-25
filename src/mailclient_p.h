@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_MAILCLIENT_P_H
-#define AKONADI_MAILCLIENT_P_H
+#pragma once
 
 #include "akonadi-calendar_tests_export.h"
 #include "itiphandler.h"
@@ -115,4 +114,3 @@ public:
 
 Q_DECLARE_METATYPE(Akonadi::MailClient::Result)
 
-#endif

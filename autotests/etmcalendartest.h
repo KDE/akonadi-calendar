@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ETMCALENDAR_TEST_H_
-#define ETMCALENDAR_TEST_H_
+#pragma once
 
 #include <QObject>
 #include <collection.h>
@@ -67,4 +66,3 @@ private:
     QString mLastChangedUid;
 };
 
-#endif

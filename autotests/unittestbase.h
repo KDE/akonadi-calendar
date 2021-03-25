@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef UNITTEST_BASE_H
-#define UNITTEST_BASE_H
+#pragma once
 
 #include <collection.h>
 #include <item.h>
@@ -44,4 +43,3 @@ protected:
     Akonadi::IncidenceChanger *mChanger = nullptr;
 };
 
-#endif

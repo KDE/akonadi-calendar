@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef _AKONADI_CALENDAR_CLIPBOARD_P_H
-#define _AKONADI_CALENDAR_CLIPBOARD_P_H
+#pragma once
 
 #include "calendarbase.h"
 #include "calendarclipboard.h"
@@ -71,4 +70,3 @@ public:
 };
 }
 
-#endif

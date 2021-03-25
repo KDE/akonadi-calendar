@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ICALIMPORTER_H
-#define ICALIMPORTER_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -89,4 +88,3 @@ private:
 };
 }
 
-#endif // ICALIMPORTER_H

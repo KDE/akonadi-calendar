@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_CALFILTERPARTSTATUSPROXYMODEL_P_H
-#define AKONADI_CALFILTERPARTSTATUSPROXYMODEL_P_H
+#pragma once
 
 #include <KCalendarCore/Attendee>
 #include <QSortFilterProxyModel>
@@ -39,4 +38,3 @@ private Q_SLOTS:
 };
 }
 
-#endif

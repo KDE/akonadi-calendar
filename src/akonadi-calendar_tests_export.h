@@ -1,5 +1,4 @@
-#ifndef AKONADICALENDARTEST_EXPORT_H
-#define AKONADICALENDARTEST_EXPORT_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -12,4 +11,3 @@
 #define AKONADI_CALENDAR_TESTS_EXPORT
 #endif
 
-#endif

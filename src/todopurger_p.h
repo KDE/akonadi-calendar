@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TODOPURGER_P_H
-#define TODOPURGER_P_H
+#pragma once
 
 #include "incidencechanger.h"
 #include "todopurger.h"
@@ -41,4 +40,3 @@ private:
 };
 }
 
-#endif
