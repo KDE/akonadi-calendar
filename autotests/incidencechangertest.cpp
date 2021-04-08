@@ -1013,13 +1013,8 @@ private Q_SLOTS:
         days.fill(false);
         days.setBit(dtStart.date().dayOfWeek() - 1);
         expectedDays.setBit(dtStart.addSecs(one_day).date().dayOfWeek() - 1);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        QTest::newRow("weekly allday") << true << QDateTime(dtStart.date()) << QDateTime(dtEnd.date()) << one_day << 1 << KCalendarCore::RecurrenceRule::rWeekly
-                                       << days << expectedDays << QDate() << QDate();
-#else
         QTest::newRow("weekly allday") << true << QDateTime(dtStart.date().startOfDay()) << QDateTime(dtEnd.date().startOfDay()) << one_day << 1
                                        << KCalendarCore::RecurrenceRule::rWeekly << days << expectedDays << QDate() << QDate();
-#endif
         //-------------------------------------------------------------------------
         // Here nothing should change
         days.fill(false);
