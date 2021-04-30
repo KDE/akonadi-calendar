@@ -157,8 +157,7 @@ public:
      *         Returns -1 if @p incidence is invalid. The createFinished() signal
      *         won't be emitted in this case.
      */
-    Q_REQUIRED_RESULT int
-    createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
+    int createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
     /**
       * Creates a new incidence.
@@ -175,8 +174,7 @@ public:
       *         Returns -1 if @p item is invalid. The createFinished() signal
       *         won't be emitted in this case.
       */
-    Q_REQUIRED_RESULT int
-    createFromItem(const Akonadi::Item &item, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
+    int createFromItem(const Akonadi::Item &item, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
     /**
      * Deletes an incidence. If it's recurring, all occurrences are deleted.
@@ -190,7 +188,7 @@ public:
      *         Returns -1 if item is invalid. The deleteFinished() signal won't be emitted in this
      *         case.
      */
-    Q_REQUIRED_RESULT int deleteIncidence(const Akonadi::Item &item, QWidget *parent = nullptr);
+    int deleteIncidence(const Akonadi::Item &item, QWidget *parent = nullptr);
 
     /**
      * Deletes a list of Items.
@@ -203,7 +201,7 @@ public:
      *         Returns -1 if any item is invalid or if @p items is empty. The deleteFinished() signal
      *         won't be emitted in this case.
      */
-    Q_REQUIRED_RESULT int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = nullptr);
+    int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = nullptr);
 
     /**
      * Modifies an incidence.
@@ -220,7 +218,7 @@ public:
      *         Returns -1 if the item doesn't have a valid payload. The modifyFinished() signal
      *         won't be emitted in this case.
      */
-    Q_REQUIRED_RESULT int modifyIncidence(const Akonadi::Item &item,
+    int modifyIncidence(const Akonadi::Item &item,
                                           const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
                                           QWidget *parent = nullptr);
 
