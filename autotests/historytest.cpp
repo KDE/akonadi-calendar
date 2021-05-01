@@ -538,7 +538,7 @@ void HistoryTest::createFinished(int changeId, const Akonadi::Item &item, Akonad
         QVERIFY(item.parentCollection().isValid());
         mItemByChangeId.insert(changeId, item);
         QVERIFY(item.hasPayload());
-        Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
+        auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
         // mItemIdByUid.insert(incidence->uid(), item.id());
     } else {
         qDebug() << "Error string is " << errorString;

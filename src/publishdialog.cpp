@@ -51,7 +51,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged, d, &Private::updateItem);
     connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged, d, &Private::updateItem);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

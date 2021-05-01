@@ -56,7 +56,7 @@ public:
     {
         if (role == Qt::CheckStateRole) {
             // Don't show the checkbox if the collection can't contain incidences
-            const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+            const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
             if (isStructuralCollection(collection)) {
                 return QVariant();
             }

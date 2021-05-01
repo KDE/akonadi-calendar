@@ -148,7 +148,7 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
     Result result = ResultSuccess;
 
     if (exInc.isValid() && exInc.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-        KCalendarCore::Incidence::Ptr exIncPtr = exInc.payload<KCalendarCore::Incidence::Ptr>();
+        auto exIncPtr = exInc.payload<KCalendarCore::Incidence::Ptr>();
         incidence->setRevision(qMax(incidence->revision(), exIncPtr->revision() + 1));
         // some stuff we don't want to change, just to be safe
         incidence->setSchedulingID(exIncPtr->schedulingID());

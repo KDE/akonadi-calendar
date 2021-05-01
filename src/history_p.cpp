@@ -77,7 +77,7 @@ CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &descripti
 {
     mLatestRevisionByItemId.insert(item.id(), item.revision());
     Q_ASSERT(mItems.count() == 1);
-    const Incidence::Ptr incidence = mItems.constFirst().payload<KCalendarCore::Incidence::Ptr>();
+    const auto incidence = mItems.constFirst().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
         mDescription = i18nc("%1 is event, todo or journal", "%1 creation", KCalUtils::Stringify::incidenceType(incidence->type()));
     }
@@ -145,7 +145,7 @@ void CreationEntry::onCreateFinished(int changeId, const Akonadi::Item &item, Ak
 DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &description, History *q)
     : Entry(items, description, q)
 {
-    const Incidence::Ptr incidence = items.constFirst().payload<KCalendarCore::Incidence::Ptr>();
+    const auto incidence = items.constFirst().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
         mDescription = i18nc("%1 is event, todo or journal", "%1 deletion", KCalUtils::Stringify::incidenceType(incidence->type()));
     }
@@ -227,7 +227,7 @@ ModificationEntry::ModificationEntry(const Akonadi::Item &item, const Incidence:
     : Entry(item, description, q)
     , mOriginalPayload(originalPayload->clone())
 {
-    const Incidence::Ptr incidence = mItems.constFirst().payload<KCalendarCore::Incidence::Ptr>();
+    const auto incidence = mItems.constFirst().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
         mDescription = i18nc("%1 is event, todo or journal", "%1 modification", KCalUtils::Stringify::incidenceType(incidence->type()));
     }

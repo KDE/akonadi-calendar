@@ -219,7 +219,7 @@ void ITIPHandlerTest::testProcessITIPMessage()
     processItip(iCalData, receiver, action, expectedNumIncidences, items);
 
     if (expectedNumIncidences == 1) {
-        KCalendarCore::Incidence::Ptr incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
+        auto incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
         QVERIFY(incidence);
         QCOMPARE(incidence->schedulingID(), incidenceUid);
         QVERIFY(incidence->schedulingID() != incidence->uid());
@@ -345,7 +345,7 @@ void ITIPHandlerTest::testProcessITIPMessageCancel()
     Item::List items;
     processItip(iCalData, receiver, QStringLiteral("accepted"), 1, items);
 
-    KCalendarCore::Incidence::Ptr incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
+    auto incidence = items.first().payload<KCalendarCore::Incidence::Ptr>();
     QVERIFY(incidence);
 
     // good, now accept the invitation that has the CANCEL
@@ -488,7 +488,7 @@ void ITIPHandlerTest::testOutgoingInvitations()
     QFETCH(int, expectedEmailCount);
     QFETCH(IncidenceChanger::InvitationPolicy, invitationPolicy);
     QFETCH(bool, userCancels);
-    KCalendarCore::Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
+    auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
 
     m_pendingIncidenceChangerSignal = 1;
     FakeMessageQueueJob::sUnitTestResults.clear();

@@ -252,7 +252,7 @@ Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstra
 
 Akonadi::Item ETMCalendarPrivate::itemFromIndex(const QModelIndex &idx)
 {
-    Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    auto item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     item.setParentCollection(idx.data(Akonadi::EntityTreeModel::ParentCollectionRole).value<Akonadi::Collection>());
     return item;
 }

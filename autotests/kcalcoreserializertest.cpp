@@ -65,7 +65,7 @@ private Q_SLOTS:
         item.setPayloadFromData(serialized);
 
         QVERIFY(item.hasPayload<Event::Ptr>());
-        const Event::Ptr event = item.payload<Event::Ptr>();
+        const auto event = item.payload<Event::Ptr>();
         QVERIFY(event != nullptr);
 
         QCOMPARE(event->summary(), QStringLiteral("Test event"));
@@ -110,7 +110,7 @@ private Q_SLOTS:
         item2.setMimeType(mimeType);
         item2.setPayloadFromData(bytes);
 
-        Event::Ptr event2 = item2.payload<Event::Ptr>();
+        auto event2 = item2.payload<Event::Ptr>();
         QVERIFY(event2 != nullptr);
         QVERIFY(event2->summary().toUtf8() == QByteArray(utf_umlaut));
         QVERIFY(event2->summary().toLatin1() == QByteArray(latin1_umlaut));

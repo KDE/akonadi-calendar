@@ -114,7 +114,7 @@ void SerializerPluginKCalCore::serialize(const Item &item, const QByteArray &lab
     if (label != Item::FullPayload || !item.hasPayload<Incidence::Ptr>()) {
         return;
     }
-    Incidence::Ptr i = item.payload<Incidence::Ptr>();
+    auto i = item.payload<Incidence::Ptr>();
 
     // Using an env variable for now while testing
     if (qgetenv("KCALCORE_BINARY_SERIALIZER") == QByteArray("1")) {
@@ -324,8 +324,8 @@ void SerializerPluginKCalCore::compare(Akonadi::AbstractDifferencesReporter *rep
     Q_ASSERT(leftItem.hasPayload<Incidence::Ptr>());
     Q_ASSERT(rightItem.hasPayload<Incidence::Ptr>());
 
-    const Incidence::Ptr leftIncidencePtr = leftItem.payload<Incidence::Ptr>();
-    const Incidence::Ptr rightIncidencePtr = rightItem.payload<Incidence::Ptr>();
+    const auto leftIncidencePtr = leftItem.payload<Incidence::Ptr>();
+    const auto rightIncidencePtr = rightItem.payload<Incidence::Ptr>();
 
     if (leftIncidencePtr->type() == Incidence::TypeEvent) {
         reporter->setLeftPropertyValueTitle(i18n("Changed Event"));

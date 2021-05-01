@@ -79,7 +79,7 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
         return false;
     }
 
-    const Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {
         return false;
     }
@@ -90,7 +90,7 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     }
 
     // Incidences from virtual collections are always ok
-    const Akonadi::Collection col = idx.data(Akonadi::EntityTreeModel::ParentCollectionRole).value<Akonadi::Collection>();
+    const auto col = idx.data(Akonadi::EntityTreeModel::ParentCollectionRole).value<Akonadi::Collection>();
     if (!d->mFilterVirtual && col.isVirtual()) {
         return true;
     }

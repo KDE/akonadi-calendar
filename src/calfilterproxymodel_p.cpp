@@ -64,7 +64,7 @@ bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &so
         return false;
     }
 
-    const Akonadi::Item item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {
         return false;
     }

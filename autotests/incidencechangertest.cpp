@@ -206,7 +206,7 @@ private Q_SLOTS:
                 QVERIFY(retrievedItem.hasPayload());
                 QVERIFY(retrievedItem.hasPayload<KCalendarCore::Event::Ptr>());
                 QVERIFY(retrievedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
-                Incidence::Ptr incidence = retrievedItem.payload<KCalendarCore::Incidence::Ptr>();
+                auto incidence = retrievedItem.payload<KCalendarCore::Incidence::Ptr>();
                 QCOMPARE(incidence->summary(), summary);
                 QCOMPARE(incidence->uid(), uid);
             }
@@ -331,7 +331,7 @@ private Q_SLOTS:
             Item fetchedItem = fetchJob->items().constFirst();
             QVERIFY(fetchedItem.isValid());
             QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
-            Incidence::Ptr incidence = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
+            auto incidence = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
             QCOMPARE(incidence->summary(), newSummary);
             QCOMPARE(incidence->revision(), expectedRevision);
             delete fetchJob;
@@ -374,7 +374,7 @@ private Q_SLOTS:
         Item fetchedItem = fetchJob->items().constFirst();
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
-        Incidence::Ptr incidence2 = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
+        auto incidence2 = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
         QCOMPARE(incidence2->alarms().count(), 1);
         QCOMPARE(incidence2->revision(), 0);
         delete fetchJob;
@@ -528,7 +528,7 @@ private Q_SLOTS:
 
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalendarCore::Event::Ptr>());
-        Event::Ptr incidence = fetchedItem.payload<KCalendarCore::Event::Ptr>();
+        auto incidence = fetchedItem.payload<KCalendarCore::Event::Ptr>();
 
         QCOMPARE(incidence->revision(), revision + 1);
 
@@ -589,7 +589,7 @@ private Q_SLOTS:
 
         int changeId = -1;
         for (int i = 0; i < numberOfModifications; ++i) {
-            Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
+            auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             Q_ASSERT(incidence);
             incidence->setSummary(QString::number(i));
             changeId = mChanger->modifyIncidence(item);
@@ -943,7 +943,7 @@ private Q_SLOTS:
             case IncidenceChanger::ChangeTypeCreate:
                 if (expectedSuccess) {
                     QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
-                    Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
+                    auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
                     QVERIFY(incidence);
                     QVERIFY(!incidence->uid().isEmpty());
                     QVERIFY(mItemIdByUid.contains(incidence->uid()));
@@ -1174,7 +1174,7 @@ public Q_SLOTS:
             QVERIFY(item.parentCollection().isValid());
             mItemIdByChangeId.insert(changeId, item.id());
             QVERIFY(item.hasPayload());
-            Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
+            auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             mItemIdByUid.insert(incidence->uid(), item.id());
             mLastItemCreated = item;
         } else {
