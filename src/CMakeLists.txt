@@ -42,7 +42,7 @@ ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_d
 kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
-qt5_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
+qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
 add_library(KF5AkonadiCalendar ${akonadicalendar_LIB_SRC})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5AkonadiCalendar PROPERTIES UNITY_BUILD ON)
