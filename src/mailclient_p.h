@@ -15,7 +15,7 @@
 #include <kmime/kmime_message.h>
 
 struct UnitTestResult {
-    using List = QList<UnitTestResult>;
+    using List = QVector<UnitTestResult>;
     QString from;
     QStringList to;
     QStringList cc;
