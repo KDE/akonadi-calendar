@@ -1,7 +1,8 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
 
-
-set(akonadicalendar_LIB_SRC
+add_library(KF5AkonadiCalendar)
+add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
+target_sources(KF5AkonadiCalendar PRIVATE
   blockalarmsattribute.cpp
   calendarbase.cpp
   calendarclipboard.cpp
@@ -33,7 +34,7 @@ set(akonadicalendar_LIB_SRC
   calfilterpartstatusproxymodel_p.cpp
 )
 
-ecm_qt_declare_logging_category(akonadicalendar_LIB_SRC HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar
+ecm_qt_declare_logging_category(KF5AkonadiCalendar HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar
         DESCRIPTION "akonadicalendar (pim lib)"
         OLD_CATEGORY_NAMES log_akonadicalendar
         EXPORT AKONADI-CALENDAR
@@ -43,13 +44,12 @@ kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
-add_library(KF5AkonadiCalendar ${akonadicalendar_LIB_SRC})
+target_sources(KF5AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5AkonadiCalendar PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5AkonadiCalendar BASE_NAME akonadi-calendar)
 
-add_library(KF5::AkonadiCalendar ALIAS KF5AkonadiCalendar)
 
 target_include_directories(KF5AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/Akonadi/Calendar;${KDE_INSTALL_INCLUDEDIR_KF5}/akonadi/calendar>")
 target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src>")
