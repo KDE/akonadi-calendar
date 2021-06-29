@@ -285,11 +285,12 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem, const Ak
     mItemIdByUid[newIdentifier] = newItem.id();
 
     // Get the real pointer
-    oldIncidence = q->MemoryCalendar::incidence(oldIncidence->uid());
+    const QString oldUid = oldIncidence->uid();
+    oldIncidence = q->MemoryCalendar::incidence(oldUid);
 
     if (!oldIncidence) {
         q->MemoryCalendar::reload();
-        oldIncidence = q->MemoryCalendar::incidence(oldIncidence->uid());
+        oldIncidence = q->MemoryCalendar::incidence(oldUid);
         if (!oldIncidence) {
             // How can this happen ?
             qCWarning(AKONADICALENDAR_LOG) << "Couldn't find old incidence";
@@ -304,7 +305,6 @@ void CalendarBasePrivate::handleUidChange(const Akonadi::Item &oldItem, const Ak
     }
 
     mItemIdByUid.remove(oldIncidence->instanceIdentifier());
-    const QString oldUid = oldIncidence->uid();
 
     if (mParentUidToChildrenUid.contains(oldUid)) {
         Q_ASSERT(!mParentUidToChildrenUid.contains(newIdentifier));
