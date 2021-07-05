@@ -220,7 +220,7 @@ public:
     {
         if (change->type == IncidenceChanger::ChangeTypeDelete) {
             DeletionChange::Ptr deletion = change.staticCast<DeletionChange>();
-            for (Akonadi::Item::Id id : qAsConst(deletion->mItemIds)) {
+            for (Akonadi::Item::Id id : std::as_const(deletion->mItemIds)) {
                 Q_ASSERT(!m_itemIdsInOperation.contains(id));
                 m_itemIdsInOperation.insert(id);
             }

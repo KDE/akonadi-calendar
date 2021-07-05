@@ -159,7 +159,7 @@ bool DeletionEntry::undo()
     mErrorString.clear();
     const bool useAtomicOperation = mItems.count() > 1;
     bool success = true;
-    for (const Akonadi::Item &item : qAsConst(mItems)) {
+    for (const Akonadi::Item &item : std::as_const(mItems)) {
         if (useAtomicOperation) {
             mChanger->startAtomicOperation();
         }
@@ -318,7 +318,7 @@ bool MultiEntry::redo()
     mOperationInProgress = TypeRedo;
     Q_ASSERT(!mEntries.isEmpty());
     mFinishedEntries = 0;
-    for (const Entry::Ptr &entry : qAsConst(mEntries)) {
+    for (const Entry::Ptr &entry : std::as_const(mEntries)) {
         entry->doIt(TypeRedo);
     }
     mChanger->endAtomicOperation();

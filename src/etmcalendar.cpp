@@ -606,7 +606,7 @@ bool ETMCalendar::isLoaded() const
         return false;
     }
 
-    for (const Akonadi::Collection &collection : qAsConst(d->mCollectionMap)) {
+    for (const Akonadi::Collection &collection : std::as_const(d->mCollectionMap)) {
         if (!entityTreeModel()->isCollectionPopulated(collection.id())) {
             return false;
         }

@@ -262,7 +262,7 @@ private Q_SLOTS:
 
             if (expectedResultCode == IncidenceChanger::ResultCodeSuccess) {
                 // Check that the incidence was really deleted
-                for (const Akonadi::Item &item : qAsConst(items)) {
+                for (const Akonadi::Item &item : std::as_const(items)) {
                     auto fetchJob = new ItemFetchJob(item, this);
                     fetchJob->fetchScope().fetchFullPayload();
                     QVERIFY(!fetchJob->exec());
@@ -1153,7 +1153,7 @@ public Q_SLOTS:
             qDebug() << "Error string is " << errorMessage;
         } else {
             QVERIFY(!deletedIds.isEmpty());
-            for (Akonadi::Item::Id id : qAsConst(deletedIds)) {
+            for (Akonadi::Item::Id id : std::as_const(deletedIds)) {
                 QVERIFY(id != -1);
             }
         }

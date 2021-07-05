@@ -211,7 +211,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
         const IncidenceChanger::DestinationPolicy policySaved = d->m_changer->destinationPolicy();
         d->m_changer->startAtomicOperation(i18n("Merge ical file into existing calendar."));
         d->m_changer->setDestinationPolicy(IncidenceChanger::DestinationPolicyNeverAsk);
-        for (const Incidence::Ptr &incidence : qAsConst(incidences)) {
+        for (const Incidence::Ptr &incidence : std::as_const(incidences)) {
             Q_ASSERT(incidence);
             if (!incidence) {
                 continue;

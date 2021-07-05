@@ -128,7 +128,7 @@ void CalendarBaseTest::cleanupTestCase()
 
 void CalendarBaseTest::testItem()
 {
-    for (const QString &uid : qAsConst(mUids)) {
+    for (const QString &uid : std::as_const(mUids)) {
         const Item item1 = mCalendar->item(uid);
         const Item item2 = mCalendar->item(item1.id());
         QVERIFY(item1.isValid());

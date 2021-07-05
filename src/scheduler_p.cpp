@@ -472,7 +472,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         incidence->setAttendees(attendeesEv);
 
         bool attendeeAdded = false;
-        for (const auto &attNew : qAsConst(attendeesNew)) {
+        for (const auto &attNew : std::as_const(attendeesNew)) {
             QString msg = i18nc("@info", "%1 wants to attend %2 but was not invited.", attNew.fullName(), incidence->summary());
             if (!attNew.delegator().isEmpty()) {
                 msg = i18nc("@info", "%1 wants to attend %2 on behalf of %3.", attNew.fullName(), incidence->summary(), attNew.delegator());

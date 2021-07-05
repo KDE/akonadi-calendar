@@ -166,7 +166,7 @@ void HistoryTest::testDeletion()
     waitForSignals();
 
     // Check that it doesn't exist anymore
-    for (const Akonadi::Item &item : qAsConst(items)) {
+    for (const Akonadi::Item &item : std::as_const(items)) {
         QVERIFY(Helper::confirmDoesntExist(item));
     }
 
@@ -514,7 +514,7 @@ void HistoryTest::deleteFinished(int changeId,
         qDebug() << "Error string is " << errorMessage;
     } else {
         QVERIFY(!deletedIds.isEmpty());
-        for (Akonadi::Item::Id id : qAsConst(deletedIds)) {
+        for (Akonadi::Item::Id id : std::as_const(deletedIds)) {
             QVERIFY(id != -1);
         }
     }

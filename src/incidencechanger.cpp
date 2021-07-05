@@ -469,7 +469,7 @@ void IncidenceChanger::Private::handleInvitationsBeforeChange(const Change::Ptr 
 
             connect(handler, &ITIPHandlerHelper::finished, change.data(), &Change::emitUserDialogClosedBeforeChange);
 
-            for (const Akonadi::Item &item : qAsConst(change->originalItems)) {
+            for (const Akonadi::Item &item : std::as_const(change->originalItems)) {
                 Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
                 Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 if (!incidence->supportsGroupwareCommunication()) {
@@ -579,7 +579,7 @@ void IncidenceChanger::Private::handleInvitationsAfterChange(const Change::Ptr &
             handler->deleteLater();
             handler = nullptr;
             Q_ASSERT(!change->originalItems.isEmpty());
-            for (const Akonadi::Item &item : qAsConst(change->originalItems)) {
+            for (const Akonadi::Item &item : std::as_const(change->originalItems)) {
                 Q_ASSERT(item.hasPayload());
                 Incidence::Ptr incidence = CalendarUtils::incidence(item);
                 Q_ASSERT(incidence);
@@ -831,7 +831,7 @@ void IncidenceChanger::Private::deleteIncidences2(int changeId, ITIPHandlerHelpe
     }
 
     mDeletedItemIds.reserve(mDeletedItemIds.count() + change->originalItems.count());
-    for (const Item &item : qAsConst(change->originalItems)) {
+    for (const Item &item : std::as_const(change->originalItems)) {
         mDeletedItemIds << item.id();
     }
 
@@ -1273,7 +1273,7 @@ bool IncidenceChanger::Private::allowAtomicOperation(int atomicOperationId, cons
             allow = !operation->m_itemIdsInOperation.contains(change->newItem.id());
         } else if (change->type == ChangeTypeDelete) {
             DeletionChange::Ptr deletion = change.staticCast<DeletionChange>();
-            for (Akonadi::Item::Id id : qAsConst(deletion->mItemIds)) {
+            for (Akonadi::Item::Id id : std::as_const(deletion->mItemIds)) {
                 if (operation->m_itemIdsInOperation.contains(id)) {
                     allow = false;
                     break;

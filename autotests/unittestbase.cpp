@@ -102,7 +102,7 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
     const Incidence::List expectedIncidences = expectedCalendar->incidences();
 
     // First, replace the randomly generated UIDs with the UID that came in the invitation e-mail...
-    for (const KCalendarCore::Incidence::Ptr &incidence : qAsConst(incidences)) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : std::as_const(incidences)) {
         incidence->setUid(incidence->schedulingID());
         qDebug() << "We have incidece with uid=" << incidence->uid() << "; instanceidentifier=" << incidence->instanceIdentifier();
         auto attendees = incidence->attendees();
