@@ -33,8 +33,8 @@ class IncidenceChanger;
 
    @code
       Akonadi::IncidenceChanger *myIncidenceChanger = new Akonadi::IncidenceChanger();
-      connect( undoAction, SIGNAL(triggered()), myIncidenceChanger->history(), SLOT(undo()) );
-      connect( redoAction, SIGNAL(triggered()), myIncidenceChanger->history(), SLOT(redo()) );
+      connect(undoAction, &QAction::triggered, myIncidenceChanger->history(), &Akonadi::IncidenceChanger::undo);
+      connect(redoAction, &QAction::triggered, myIncidenceChanger->history(), &Akonadi::IncidenceChanger::redo);
    @endcode
 
    @author Sérgio Martins <iamsergio@gmail.com>
