@@ -420,7 +420,7 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod me
                                                      KGuiItem(i18nc("@action:button dialog positive answer", "Send Update")));
             return;
         } else {
-            // We did not accept the event before and delete it from our calendar agian,
+            // We did not accept the event before and delete it from our calendar again,
             // so there is no need to notify people.
             Q_EMIT sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
             Q_EMIT finished(ITIPHandlerHelper::ResultNoSendingNeeded, QString());

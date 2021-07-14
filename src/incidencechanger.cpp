@@ -54,7 +54,7 @@ static bool weAreOrganizer(const Incidence::Ptr &incidence)
 
 static bool allowedModificationsWithoutRevisionUpdate(const Incidence::Ptr &incidence)
 {
-    // Modifications that are per user allowd without getting outofsync with organisator
+    // Modifications that are per user allowed without getting outofsync with organisator
     // * if only alarm settings are modified.
     const QSet<KCalendarCore::IncidenceBase::Field> dirtyFields = incidence->dirtyFields();
     QSet<KCalendarCore::IncidenceBase::Field> alarmOnlyModify;
@@ -330,7 +330,7 @@ void IncidenceChanger::Private::handleDeleteJobResult(KJob *job)
         }
 
         for (const Item &item : items) {
-            // Werent deleted due to error
+            // Weren't deleted due to error
             mDeletedItemIds.remove(mDeletedItemIds.indexOf(item.id()));
         }
         mChangeById.remove(change->id);

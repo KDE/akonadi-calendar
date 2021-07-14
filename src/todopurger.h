@@ -43,7 +43,7 @@ public:
     void setCalendar(const CalendarBase::Ptr &calendar);
 
     /**
-     * Deletes completed to-dos. A to-do with uncomplete children won't be deleted.
+     * Deletes completed to-dos. A to-do with incomplete children won't be deleted.
      * @see purgeCompletedTodos()
      */
     void purgeCompletedTodos();
@@ -59,7 +59,7 @@ Q_SIGNALS:
      * @param success    True if the operation could be completed. @see lastError()
      * @param numDeleted Number of to-dos that were deleted.
      * @param numIgnored Number of completed to-dos that weren't deleted because they are read-only
-     *                   or have uncomplete or read-only children.
+     *                   or have incomplete or read-only children.
      */
     void todosPurged(bool success, int numDeleted, int numIgnored);
 

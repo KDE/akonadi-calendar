@@ -158,7 +158,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     QTest::newRow("invited us4") << data_filename << action << receiver << incidenceUid << expectedResult << expectedNumIncidences << expectedPartStat;
     //----------------------------------------------------------------------------------------------
     // Process a REQUEST without having the incidence in our calendar.
-    // itiphandler should return success and add the rquest to a calendar
+    // itiphandler should return success and add the request to a calendar
     expectedResult = ITIPHandler::ResultSuccess;
     data_filename = QStringLiteral("invited_us");
     expectedNumIncidences = 1;
@@ -299,7 +299,7 @@ void ITIPHandlerTest::testProcessITIPMessages()
     KCalendarCore::MemoryCalendar::Ptr expectedCalendar = KCalendarCore::MemoryCalendar::Ptr(new KCalendarCore::MemoryCalendar(QTimeZone::utc()));
     KCalendarCore::ICalFormat format;
     format.fromString(expectedCalendar, expectedICalData);
-    compareCalendars(expectedCalendar); // Here's where the cool and complex comparations are done
+    compareCalendars(expectedCalendar); // Here's where the cool and complex comparisons are done
 
     cleanup();
 }
@@ -307,7 +307,7 @@ void ITIPHandlerTest::testProcessITIPMessages()
 void ITIPHandlerTest::testProcessITIPMessageCancel_data()
 {
     QTest::addColumn<QString>("creation_data_filename"); // filename to create incidence
-    QTest::addColumn<QString>("cancel_data_filename"); // filename with incidence cancelation
+    QTest::addColumn<QString>("cancel_data_filename"); // filename with incidence cancellation
     QTest::addColumn<QString>("incidenceUid"); // uid of incidence in invitation
 
     QString creation_data_filename;
@@ -426,7 +426,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     expectedEmailCount = 1;
     QTest::newRow("Modification. We organizd.") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
-    // We delete an event that we organized, and has attendees, who wont be notified.
+    // We delete an event that we organized, and has attendees, who won't be notified.
     changeType = IncidenceChanger::ChangeTypeModify;
     item = generateIncidence(uid, /**organizer=*/ourEmail);
     incidence = item.payload<KCalendarCore::Incidence::Ptr>();
@@ -444,7 +444,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     us.setStatus(Attendee::Accepted); // TODO: Test without accepted status
     incidence->addAttendee(us); // TODO: test that attendees didn't receive the REPLY
     expectedEmailCount = 1; // REPLY is always sent, there are no dialogs to control this. Dialogs only control REQUEST and CANCEL. Bug or feature ?
-    QTest::newRow("Deletion. We didnt organize.") << item << changeType << expectedEmailCount << invitationPolicyDontSend << userDoesntCancel;
+    QTest::newRow("Deletion. We didn't organize.") << item << changeType << expectedEmailCount << invitationPolicyDontSend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
     // We delete an event which we're not the organizer of. Organizer gets REPLY with PartState=Declined
     changeType = IncidenceChanger::ChangeTypeDelete;
@@ -455,7 +455,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     us.setStatus(Attendee::Accepted); // TODO: Test without accepted status
     incidence->addAttendee(us);
     expectedEmailCount = 1;
-    QTest::newRow("Deletion. We didnt organize.2") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
+    QTest::newRow("Deletion. We didn't organize.2") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "yes".
     changeType = IncidenceChanger::ChangeTypeModify;
@@ -466,7 +466,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     us.setStatus(Attendee::Accepted);
     incidence->addAttendee(us);
     expectedEmailCount = 0;
-    QTest::newRow("Modification. We didnt organize") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
+    QTest::newRow("Modification. We didn't organize") << item << changeType << expectedEmailCount << invitationPolicySend << userDoesntCancel;
     //----------------------------------------------------------------------------------------------
     // We modified an event which we're not the organizer of. And, when the "do you really want to modify", we choose "no".
     changeType = IncidenceChanger::ChangeTypeModify;
@@ -477,7 +477,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     us.setStatus(Attendee::Accepted);
     incidence->addAttendee(us);
     expectedEmailCount = 0;
-    QTest::newRow("Modification. We didnt organize.2") << item << changeType << expectedEmailCount << invitationPolicyDontSend << userCancels;
+    QTest::newRow("Modification. We didn't organize.2") << item << changeType << expectedEmailCount << invitationPolicyDontSend << userCancels;
     //----------------------------------------------------------------------------------------------
 }
 

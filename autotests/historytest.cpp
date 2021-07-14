@@ -392,7 +392,7 @@ void HistoryTest::testMix_data()
     items << i << i << i;
     changeTypes.clear();
     changeTypes << IncidenceChanger::ChangeTypeCreate << IncidenceChanger::ChangeTypeModify << IncidenceChanger::ChangeTypeDelete;
-    QTest::newRow("create then modify then deelte") << items << changeTypes;
+    QTest::newRow("create then modify then delete") << items << changeTypes;
 }
 
 void HistoryTest::testMix()

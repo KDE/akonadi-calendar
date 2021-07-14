@@ -325,7 +325,7 @@ public:
 
     /**
      * Enable or disable history.
-     * With history enabled all changes are recored into the undo/redo stack.
+     * With history enabled all changes are recorded into the undo/redo stack.
      *
      * @see history()
      * @see historyEnabled()
@@ -349,7 +349,7 @@ public:
     History *history() const;
 
     /**
-     * For performance reasons, IncidenceChanger internaly caches the ids of the last deleted items,
+     * For performance reasons, IncidenceChanger internally caches the ids of the last deleted items,
      * to avoid creating useless delete jobs.
      *
      * This function exposes that functionality so it can be used in other scenarios.

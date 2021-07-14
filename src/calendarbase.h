@@ -80,28 +80,28 @@ public:
 
     /**
      * Returns the child incidences of the parent identified by @p parentUid.
-     * Only the direct childs are returned
+     * Only the direct children are returned
      * @param parentUid identifier of the parent incidence
      *///TODO: unit-test
     Q_REQUIRED_RESULT KCalendarCore::Incidence::List childIncidences(const QString &parentUid) const;
 
     /**
      * Returns the child incidences of the parent identified by @p parentId.
-     * Only the direct childs are returned
+     * Only the direct children are returned
      * @param parentId identifier of the parent item
      */
     Q_REQUIRED_RESULT KCalendarCore::Incidence::List childIncidences(Item::Id parentId) const;
 
     /**
      * Returns the child items of the parent identified by @p parentUid.
-     * Only the direct childs are returned
+     * Only the direct children are returned
      * @param parentUid identifier of the parent incidence
      */
     Q_REQUIRED_RESULT Akonadi::Item::List childItems(const QString &parentUid) const;
 
     /**
      * Returns the child items of the parent identified by @p parentId.
-     * Only the direct childs are returned
+     * Only the direct children are returned
      * @param parentId identifier of the parent item
      */
     Q_REQUIRED_RESULT Akonadi::Item::List childItems(Item::Id parentId) const;
@@ -171,7 +171,7 @@ public:
     void startBatchAdding() override;
 
     /**
-     * Tells the Calendar that you stoped adding a batch of incidences.
+     * Tells the Calendar that you stopped adding a batch of incidences.
      * @see startBatchAdding()
      */
     void endBatchAdding() override;

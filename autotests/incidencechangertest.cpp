@@ -690,7 +690,7 @@ private Q_SLOTS:
 
         QTest::newRow("try delete,create") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // Creation succeeds but deletion doesn't ( valid, inexistant item case )
+        // Creation succeeds but deletion doesn't ( valid, inexistent item case )
         items.clear();
         items << item() << Item(10101010);
         changeTypes.clear();
@@ -704,7 +704,7 @@ private Q_SLOTS:
 
         QTest::newRow("create,try delete v2") << items << changeTypes << failureExpectedList << expectedResults << rights << false;
         //------------------------------------------------------------------------------------------
-        // deletion doesn't succeed, but creation does ( valid, inexistant item case )
+        // deletion doesn't succeed, but creation does ( valid, inexistent item case )
         items.clear();
         items << Item(10101010) << item();
         changeTypes.clear();

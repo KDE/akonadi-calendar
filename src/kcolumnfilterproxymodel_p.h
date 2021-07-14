@@ -28,7 +28,7 @@ public:
     ~KColumnFilterProxyModel() override;
 
     /**
-      Returns a vector containing the visible columns. If the vector is empy, all
+      Returns a vector containing the visible columns. If the vector is empty, all
       columns are visible.
     */
     Q_REQUIRED_RESULT QVector<int> visbileColumns() const;

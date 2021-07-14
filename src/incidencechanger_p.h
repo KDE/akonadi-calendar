@@ -187,7 +187,7 @@ public:
             for (int i = 0; i < m_changes.count(); ++i) {
                 // When a job that can finish successfully is aborted because the transaction failed
                 // because of some other job, akonadi is returning an Unknown error
-                // which isnt very specific
+                // which isn't very specific
                 if (m_changes[i]->completed
                     && (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess
                         || (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError

@@ -50,7 +50,7 @@ public:
       to download our own freebusy information.
 
       This method will first try to find Akonadi resource that have the
-      'FreeBusyProvider' capablity set. If none is found then there is a fallback
+      'FreeBusyProvider' capability set. If none is found then there is a fallback
       on the URL mechanism (see below). If at least one is found then it will
       be first queried over D-Bus to know if it can handle free-busy information
       for that email address. If true then it will be queried for the free-busy

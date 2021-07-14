@@ -475,7 +475,7 @@ Akonadi::Item::List CalendarBase::itemList(const KCalendarCore::Incidence::List 
 KCalendarCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id parentId) const
 {
     Q_D(const CalendarBase);
-    KCalendarCore::Incidence::List childs;
+    KCalendarCore::Incidence::List children;
 
     if (d->mItemById.contains(parentId)) {
         const Akonadi::Item item = d->mItemById.value(parentId);
@@ -483,13 +483,13 @@ KCalendarCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id p
         KCalendarCore::Incidence::Ptr parent = CalendarUtils::incidence(item);
 
         if (parent) {
-            childs = childIncidences(parent->uid());
+            children = childIncidences(parent->uid());
         } else {
             Q_ASSERT(false);
         }
     }
 
-    return childs;
+    return children;
 }
 
 KCalendarCore::Incidence::List CalendarBase::childIncidences(const QString &parentUid) const
@@ -511,7 +511,7 @@ KCalendarCore::Incidence::List CalendarBase::childIncidences(const QString &pare
 Akonadi::Item::List CalendarBase::childItems(Akonadi::Item::Id parentId) const
 {
     Q_D(const CalendarBase);
-    Akonadi::Item::List childs;
+    Akonadi::Item::List children;
 
     if (d->mItemById.contains(parentId)) {
         const Akonadi::Item item = d->mItemById.value(parentId);
@@ -519,13 +519,13 @@ Akonadi::Item::List CalendarBase::childItems(Akonadi::Item::Id parentId) const
         KCalendarCore::Incidence::Ptr parent = CalendarUtils::incidence(item);
 
         if (parent) {
-            childs = childItems(parent->uid());
+            children = childItems(parent->uid());
         } else {
             Q_ASSERT(false);
         }
     }
 
-    return childs;
+    return children;
 }
 
 Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const

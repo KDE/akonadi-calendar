@@ -43,7 +43,7 @@ CalendarClipboard::Private::~Private()
 
 void CalendarClipboard::Private::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence, QStringList &uids)
 {
-    // protecion against looping hierarchies
+    // protection against looping hierarchies
     if (incidence && !uids.contains(incidence->uid())) {
         const KCalendarCore::Incidence::List immediateChildren = m_calendar->childIncidences(incidence->uid());
 
@@ -83,14 +83,14 @@ void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::Ptr &incide
 void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
-    const KCalendarCore::Incidence::List childs = m_calendar->childIncidences(incidence->uid());
+    const KCalendarCore::Incidence::List children = m_calendar->childIncidences(incidence->uid());
 
-    if (childs.isEmpty()) {
+    if (children.isEmpty()) {
         cut(incidence);
     } else {
         m_pendingChangeIds.clear();
         m_abortCurrentOperation = false;
-        for (const KCalendarCore::Incidence::Ptr &child : childs) {
+        for (const KCalendarCore::Incidence::Ptr &child : children) {
             Akonadi::Item childItem = m_calendar->item(incidence);
             if (!childItem.isValid()) {
                 Q_EMIT q->cutFinished(/**success=*/false, i18n("Can't find item: %1", childItem.id()));

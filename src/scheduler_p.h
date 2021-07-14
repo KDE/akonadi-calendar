@@ -77,7 +77,7 @@ public:
 
       @param incidence the incidence for the transaction. Must be valid.
       @param method the iTIP transaction method to use.
-      @param recipients the receipients of the transaction.
+      @param recipients the recipients of the transaction.
     */
     virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &recipients) = 0;
 

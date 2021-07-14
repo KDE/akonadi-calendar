@@ -38,7 +38,7 @@ public:
 
     /**
      * Copies all these incidences to clipboard. Deletes them.
-     * This function assumes the caller already unparented all childs ( made them independent ).
+     * This function assumes the caller already unparented all children ( made them independent ).
      */
     void cut(const KCalendarCore::Incidence::List &incidences);
 
@@ -48,7 +48,7 @@ public:
     void cut(const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
-     * All immediate childs of @p incidence are made independent.
+     * All immediate children of @p incidence are made independent.
      * Their RELATED-TO field is cleared.
      *
      * After it's done, signal makeChildsIndependentFinished() is emitted.

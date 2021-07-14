@@ -160,24 +160,24 @@ void TodoPurgerTest::createTree()
     createTodo(tr("c1.2"), tr("c1"), true); // Will be deleted
 
     // Root completed but children not completed
-    createTodo(tr("d"), QString(), true); // Will be ignored (uncomplete children)
+    createTodo(tr("d"), QString(), true); // Will be ignored (incomplete children)
     createTodo(tr("d1"), tr("d"), false); // Won't be deleted
     createTodo(tr("d1.1"), tr("d1"), false); // Won't be deleted
     createTodo(tr("d1.2"), tr("d1"), false); // Won't be deleted
 
-    // Root uncomplete with children complete
+    // Root incomplete with children complete
     createTodo(tr("e"), QString(), false); // Won't be deleted
     createTodo(tr("e1"), tr("e"), true); // Will be deleted
     createTodo(tr("e1.1"), tr("e1"), true); // Will be deleted
     createTodo(tr("e1.2"), tr("e1"), true); // Will be deleted
 
-    // Recurring uncomplete
+    // Recurring incomplete
     createTodo(tr("f"), QString(), false, true); // Won't be deleted
 
     // Recurring complete, this one is not deleted because recurrence didn't end
     createTodo(tr("g"), QString(), true, true); // Won't be deleted
 
-    createTodo(tr("h"), QString(), true); // Will be ignored (uncomplete children)
+    createTodo(tr("h"), QString(), true); // Will be ignored (incomplete children)
     createTodo(tr("h1"), tr("h"), false); // Won't be deleted
     createTodo(tr("h1.1"), tr("h1"), true); // Will be deleted
     createTodo(tr("h1.2"), tr("h1"), true); // Will be deleted

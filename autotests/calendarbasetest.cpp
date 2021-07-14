@@ -145,12 +145,12 @@ void CalendarBaseTest::testChildIncidences_data()
     QTest::addColumn<Akonadi::Item::Id>("parentId");
     QTest::addColumn<QStringList>("childrenUids");
 
-    QTest::newRow("Invalid parent") << "doesnt exist" << Item::Id(404) << QStringList();
+    QTest::newRow("Invalid parent") << "doesn't exist" << Item::Id(404) << QStringList();
     Item::Id id = createTodo(tr("parent1"));
     QVERIFY(id > -1);
     QVERIFY(createTodo(tr("child1"), tr("parent1")) > -1);
     QVERIFY(createTodo(tr("child2"), tr("parent1")) > -1);
-    QTest::newRow("2 childs") << "parent1" << id << (QStringList() << tr("child1") << tr("child2"));
+    QTest::newRow("2 children") << "parent1" << id << (QStringList() << tr("child1") << tr("child2"));
 }
 
 void CalendarBaseTest::testChildIncidences()
@@ -158,10 +158,10 @@ void CalendarBaseTest::testChildIncidences()
     QFETCH(QString, parentUid);
     QFETCH(Akonadi::Item::Id, parentId);
     QFETCH(QStringList, childrenUids);
-    KCalendarCore::Incidence::List childs = mCalendar->childIncidences(parentId);
-    QVERIFY(compareUids(childrenUids, childs));
-    childs = mCalendar->childIncidences(parentUid);
-    QVERIFY(compareUids(childrenUids, childs));
+    KCalendarCore::Incidence::List children = mCalendar->childIncidences(parentId);
+    QVERIFY(compareUids(childrenUids, children));
+    children = mCalendar->childIncidences(parentUid);
+    QVERIFY(compareUids(childrenUids, children));
 }
 
 void CalendarBaseTest::testDelete()

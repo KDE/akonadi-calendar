@@ -63,12 +63,12 @@ class AKONADI_CALENDAR_EXPORT ITIPHandlerDialogDelegate : public QObject
 public:
     // Possible default actions
     enum Action {
-        ActionAsk, /**< Ask the user for a descision */
+        ActionAsk, /**< Ask the user for a decision */
         ActionSendMessage, /**< Answer with Yes */
         ActionDontSendMessage /**< Answer with No */
     };
 
-    // How will reveive the mail afterwards
+    // How will receive the mail afterwards
     enum Recipient {
         Organizer, /**< the organizer of the incidence */
         Attendees /**< the attendees of the incidence */
@@ -214,7 +214,7 @@ public:
 };
 
 /**
- * @short Handles sending of iTip messages aswell as processing incoming ones.
+ * @short Handles sending of iTip messages as well as processing incoming ones.
  * @since 4.11
  */
 class AKONADI_CALENDAR_EXPORT ITIPHandler : public QObject
@@ -223,7 +223,7 @@ class AKONADI_CALENDAR_EXPORT ITIPHandler : public QObject
 public:
     enum Result {
         ResultError, /**< An unexpected error occurred */
-        ResultSuccess, /**< The invitation was successfuly handled. */
+        ResultSuccess, /**< The invitation was successfully handled. */
         ResultCancelled /**< User cancelled the operation. @since 4.12 */
     };
 
@@ -311,7 +311,7 @@ Q_SIGNALS:
      *
      * @param result success of the operation.
      * @param errorMessage translated error message suitable for user dialogs.
-     *                     Empty if the operation was successul
+     *                     Empty if the operation was successful
      */
     void iTipMessageProcessed(Akonadi::ITIPHandler::Result result, const QString &errorMessage);
 

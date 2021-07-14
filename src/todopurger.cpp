@@ -100,12 +100,12 @@ bool TodoPurger::Private::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
         return false;
     }
 
-    const KCalendarCore::Incidence::List childs = m_calendar->childIncidences(todo->uid());
-    if (childs.isEmpty()) {
+    const KCalendarCore::Incidence::List children = m_calendar->childIncidences(todo->uid());
+    if (children.isEmpty()) {
         return true;
     }
 
-    for (const KCalendarCore::Incidence::Ptr &child : childs) {
+    for (const KCalendarCore::Incidence::Ptr &child : children) {
         KCalendarCore::Todo::Ptr childTodo = child.dynamicCast<KCalendarCore::Todo>();
 
         if (!childTodo) {

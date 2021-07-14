@@ -125,7 +125,7 @@ public:
      * KCalendarCore filtering and doesn't honour any collection selection.
      *
      * This method is exposed for performance reasons only, so you can reuse it,
-     * since it's resource savy.
+     * since it's resource savvy.
      *
      * @see model()
      */
