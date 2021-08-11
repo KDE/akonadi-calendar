@@ -98,6 +98,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     Q_ASSERT(!path.isEmpty());
 
     iface.call(QStringLiteral("setPath"), path);
+    iface.call(QStringLiteral("save"));
     instance.reconfigure();
 
     Q_EMIT q->importIntoNewFinished(true);
