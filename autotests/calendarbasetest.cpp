@@ -46,7 +46,7 @@ void CalendarBaseTest::fetchCollection()
     AKVERIFYEXEC(job);
 
     // Find our collection
-    Collection::List collections = job->collections();
+    const Collection::List collections = job->collections();
     QVERIFY(!collections.isEmpty());
     mCollection = collections.first();
 

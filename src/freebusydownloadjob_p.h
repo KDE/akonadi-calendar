@@ -26,15 +26,15 @@ public:
 
     void start() override;
 
-    QUrl url() const;
-    QByteArray rawFreeBusyData() const;
+    Q_REQUIRED_RESULT QUrl url() const;
+    Q_REQUIRED_RESULT QByteArray rawFreeBusyData() const;
 
 private Q_SLOTS:
     void slotData(KIO::Job *, const QByteArray &data);
     void slotResult(KJob *job);
 
 private:
-    QUrl mUrl;
+    const QUrl mUrl;
     QByteArray mFreeBusyData;
     QWidget *const mParent;
 };

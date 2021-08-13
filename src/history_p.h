@@ -89,14 +89,14 @@ public:
     Entry::Ptr mEntryInProgress;
 
     QString mLastErrorString;
-    bool mUndoAllInProgress;
+    bool mUndoAllInProgress = false;
 
     /**
      * When recordCreation/Deletion/Modification is called and an undo operation is already in progress
      * the entry is added here.
      */
     QVector<Entry::Ptr> mQueuedEntries;
-    bool mEnabled;
+    bool mEnabled = true;
     QPointer<QWidget> mCurrentParent;
 
 public Q_SLOTS:

@@ -26,8 +26,6 @@ History::~History()
 History::Private::Private(History *qq)
     : mChanger(new IncidenceChanger(/*history=*/false, qq))
     , mOperationTypeInProgress(TypeNone)
-    , mUndoAllInProgress(false)
-    , mEnabled(true)
     , q(qq)
 {
     mChanger->setObjectName(QStringLiteral("changer")); // for auto-connects

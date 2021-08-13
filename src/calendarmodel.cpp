@@ -74,19 +74,20 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
     }
 
     switch (role) {
-    case Qt::DecorationRole:
+    case Qt::DecorationRole: {
         if (column != Summary) {
             return QVariant();
         }
-        if (inc->type() == KCalendarCore::IncidenceBase::TypeTodo) {
+        const auto incType{inc->type()};
+        if (incType == KCalendarCore::IncidenceBase::TypeTodo) {
             return QIcon::fromTheme(QStringLiteral("view-pim-tasks"));
-        } else if (inc->type() == KCalendarCore::IncidenceBase::TypeJournal) {
+        } else if (incType == KCalendarCore::IncidenceBase::TypeJournal) {
             return QIcon::fromTheme(QStringLiteral("view-pim-journal"));
-        } else if (inc->type() == KCalendarCore::IncidenceBase::TypeEvent) {
+        } else if (incType == KCalendarCore::IncidenceBase::TypeEvent) {
             return QIcon::fromTheme(QStringLiteral("view-calendar"));
         }
         return QIcon::fromTheme(QStringLiteral("network-wired"));
-
+    }
     case Qt::DisplayRole:
         switch (column) {
         case Summary:

@@ -26,8 +26,6 @@ public:
     Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardCalendarActionManager *parent)
         : mActionCollection(actionCollection)
         , mParentWidget(parentWidget)
-        , mCollectionSelectionModel(nullptr)
-        , mItemSelectionModel(nullptr)
         , mParent(parent)
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
