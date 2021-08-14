@@ -57,7 +57,8 @@ QString Akonadi::CalendarUtils::fullName()
     // Quote the username as it might contain commas and other quotable chars.
     tusername = KEmailAddress::quoteNameIfNecessary(tusername);
 
-    QString tname, temail;
+    QString tname;
+    QString temail;
     // ignore the return value from extractEmailAddressAndName() because
     // it will always be false since tusername does not contain "@domain".
     KEmailAddress::extractEmailAddressAndName(tusername, temail, tname);

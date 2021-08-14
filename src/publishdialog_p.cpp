@@ -140,7 +140,8 @@ void PublishDialog::Private::updateInput()
     mUI.mEmailLineEdit->setEnabled(true);
 
     QListWidgetItem *item = mUI.mListWidget->selectedItems().at(0);
-    QString mail, name;
+    QString mail;
+    QString name;
     KEmailAddress::extractEmailAddressAndName(item->text(), mail, name);
     mUI.mNameLineEdit->setText(name);
     mUI.mEmailLineEdit->setText(mail);
