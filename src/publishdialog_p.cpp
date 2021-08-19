@@ -6,7 +6,7 @@
 */
 
 #include "publishdialog_p.h"
-
+#include "kcoreaddons_version.h"
 #include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <KCalendarCore/Person>
@@ -90,10 +90,19 @@ void PublishDialog::Private::insertAddresses(const KContacts::Addressee::List &l
 void PublishDialog::Private::openAddressbook()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
+
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
     KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
     KPluginFactory *factory = loader.factory();
     if (factory) {
         dialog = factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(q);
+#else
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("libksieve/imapfoldercompletionplugin"));
+
+    const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin);
+    if (result) {
+        dialog = result.plugin;
+#endif
     } else {
         dialog = new Akonadi::EmailAddressSelectionDialog(q);
     }
