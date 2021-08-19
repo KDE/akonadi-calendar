@@ -99,7 +99,7 @@ void PublishDialog::Private::openAddressbook()
 #else
     const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
 
-    const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin);
+    const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin, q);
     if (result) {
         dialog = result.plugin;
 #endif
