@@ -97,7 +97,7 @@ void PublishDialog::Private::openAddressbook()
     if (factory) {
         dialog = factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(q);
 #else
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("libksieve/imapfoldercompletionplugin"));
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin);
     if (result) {
