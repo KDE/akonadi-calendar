@@ -46,7 +46,7 @@ void ETMCalendarPrivate::init()
         auto monitor = new Akonadi::Monitor(q);
         monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
         connect(monitor,
-                QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Monitor::collectionChanged),
+                qOverload<const Akonadi::Collection &, const QSet<QByteArray> &>(&Monitor::collectionChanged),
                 this,
                 [this](const Akonadi::Collection &cols, const QSet<QByteArray> &set) {
                     onCollectionChanged(cols, set);
@@ -454,7 +454,7 @@ ETMCalendar::ETMCalendar(Monitor *monitor, QObject *parent)
 
     if (monitor) {
         QObject::connect(monitor,
-                         QOverload<const Akonadi::Collection &, const QSet<QByteArray> &>::of(&Akonadi::Monitor::collectionChanged),
+                         qOverload<const Akonadi::Collection &, const QSet<QByteArray> &>(&Akonadi::Monitor::collectionChanged),
                          d,
                          &ETMCalendarPrivate::onCollectionChanged);
         d->mETM = CalendarModel::create(monitor);

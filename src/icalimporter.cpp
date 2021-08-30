@@ -230,7 +230,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collecti
     } else {
         d->m_collection = collection;
         KIO::StoredTransferJob *job = KIO::storedGet(url);
-        connect(job, QOverload<KIO::Job *, const QByteArray &>::of(&KIO::TransferJob::data), d, [this](KIO::Job *job, const QByteArray &ba) {
+        connect(job, qOverload<KIO::Job *, const QByteArray &>(&KIO::TransferJob::data), d, [this](KIO::Job *job, const QByteArray &ba) {
             d->remoteDownloadFinished(job, ba);
         });
     }
