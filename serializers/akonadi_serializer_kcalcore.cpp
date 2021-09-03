@@ -155,7 +155,7 @@ static QString toString(const Attachment &)
     return QString();
 }
 
-static QString toString(const QDate &date)
+static QString toString(QDate date)
 {
     return date.toString();
 }

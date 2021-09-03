@@ -56,9 +56,9 @@ QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
     }
 
     QString saveStr = url.path();
-    saveStr.replace(QRegularExpression(QStringLiteral("%email%"), QRegularExpression::CaseInsensitiveOption), email);
-    saveStr.replace(QRegularExpression(QStringLiteral("%name%"), QRegularExpression::CaseInsensitiveOption), emailName);
-    saveStr.replace(QRegularExpression(QStringLiteral("%server%"), QRegularExpression::CaseInsensitiveOption), emailHost);
+    saveStr.replace(QStringLiteral("%email%"), email, Qt::CaseInsensitive);
+    saveStr.replace(QStringLiteral("%name%"), emailName, Qt::CaseInsensitive);
+    saveStr.replace(QStringLiteral("%server%"), emailHost, Qt::CaseInsensitive);
 
     QUrl retUrl(url);
     retUrl.setPath(saveStr);
@@ -547,8 +547,9 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
     for (const QString &provider : providers) {
         FreeBusyProviderRequest request(provider);
 
-        connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString, bool)), this, SLOT(onHandlesFreeBusy(QString, bool)));
-
+        // clang-format off
+        connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString,bool)), this, SLOT(onHandlesFreeBusy(QString,bool)));
+        // clang-format on
         request.mInterface->call(QStringLiteral("canHandleFreeBusy"), email);
         request.mRequestStatus = FreeBusyProviderRequest::HandlingRequested;
         mProvidersRequestsByEmail[email].mRequests << request;
@@ -570,7 +571,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
         return;
     }
 
-    auto iface = dynamic_cast<QDBusInterface *>(sender());
+    auto iface = qobject_cast<QDBusInterface *>(sender());
     if (!iface) {
         return;
     }
@@ -590,9 +591,9 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
     if (requestIndex == -1) {
         return;
     }
-
-    disconnect(iface, SIGNAL(handlesFreeBusy(QString, bool)), this, SLOT(onHandlesFreeBusy(QString, bool)));
-
+    // clang-format off
+    disconnect(iface, SIGNAL(handlesFreeBusy(QString,bool)), this, SLOT(onHandlesFreeBusy(QString,bool)));
+    // clang-format on
     if (!handles) {
         queue->mRequests.removeAt(requestIndex);
         // If no more requests are left and no handler responded
@@ -603,7 +604,9 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
         }
     } else {
         ++queue->mHandlersCount;
-        connect(iface, SIGNAL(freeBusyRetrieved(QString, QString, bool, QString)), this, SLOT(onFreeBusyRetrieved(QString, QString, bool, QString)));
+        // clang-format off
+        connect(iface, SIGNAL(freeBusyRetrieved(QString,QString,bool,QString)), this, SLOT(onFreeBusyRetrieved(QString,QString,bool,QString)));
+        // clang-format on
         iface->call(QStringLiteral("retrieveFreeBusy"), email, queue->mStartTime, queue->mEndTime);
         queue->mRequests[requestIndex].mRequestStatus = FreeBusyProviderRequest::FreeBusyRequested;
     }
@@ -651,9 +654,9 @@ void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email, const QSt
     if (requestIndex == -1) {
         return;
     }
-
-    disconnect(iface, SIGNAL(freeBusyRetrieved(QString, QString, bool, QString)), this, SLOT(onFreeBusyRetrieved(QString, QString, bool, QString)));
-
+    // clang-format off
+    disconnect(iface, SIGNAL(freeBusyRetrieved(QString,QString,bool,QString)), this, SLOT(onFreeBusyRetrieved(QString,QString,bool,QString)));
+    // clang-format on
     queue->mRequests.removeAt(requestIndex);
 
     if (success) {

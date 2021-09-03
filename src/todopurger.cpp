@@ -154,7 +154,9 @@ void TodoPurger::purgeCompletedTodos()
         d->deleteTodos();
     } else {
         d->m_calendar = FetchJobCalendar::Ptr(new FetchJobCalendar(this));
-        connect(d->m_calendar.data(), SIGNAL(loadFinished(bool, QString)), d, SLOT(onCalendarLoaded(bool, QString)));
+        // clang-format off
+        connect(d->m_calendar.data(), SIGNAL(loadFinished(bool,QString)), d, SLOT(onCalendarLoaded(bool,QString)));
+        // clang-format on
     }
 }
 

@@ -80,7 +80,7 @@ public Q_SLOTS:
      *
      *         true if the import job was started. importIntoExistingFinished() signal will be emitted in this case.
      */
-    bool importIntoExistingResource(const QUrl &url, Collection collection);
+    bool importIntoExistingResource(const QUrl &url, Akonadi::Collection collection);
 
 private:
     class Private;

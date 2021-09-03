@@ -155,7 +155,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
     return true;
 }
 
-bool ICalImporter::importIntoExistingResource(const QUrl &url, Akonadi::Collection collection)
+bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collection)
 {
     d->m_lastErrorMessage.clear();
 
