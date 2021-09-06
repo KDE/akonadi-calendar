@@ -6,8 +6,8 @@ Dependencies:
   'require':
     'frameworks/kcontacts' : '@latest'
     'frameworks/kcalendarcore' : '@latest'
-    'kde/pim/akonadi' : '@latest'
-    'kde/pim/akonadi-contacts' : '@latest'
-    'kde/pim/kcalutils' : '@latest'
-    'kde/pim/kidentitymanagement' : '@latest'
-    'kde/pim/kmailtransport' : '@latest'
+    'kde/pim/akonadi' : '@same'
+    'kde/pim/akonadi-contacts' : '@same'
+    'kde/pim/kcalutils' : '@same'
+    'kde/pim/kidentitymanagement' : '@same'
+    'kde/pim/kmailtransport' : '@same'
