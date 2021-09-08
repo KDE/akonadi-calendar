@@ -9,9 +9,9 @@
 */
 
 #include "blockalarmsattribute.h"
+#include <Akonadi/AttributeFactory>
 #include <QByteArray>
 #include <QDataStream>
-#include <attributefactory.h>
 
 using namespace Akonadi;
 

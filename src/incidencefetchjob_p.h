@@ -9,8 +9,8 @@
 
 #include <Akonadi/Item>
 #include <Akonadi/Job>
+#include <Akonadi/MimeTypeChecker>
 #include <KCalendarCore/Incidence>
-#include <mimetypechecker.h>
 
 namespace Akonadi
 {

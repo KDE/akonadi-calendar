@@ -12,7 +12,7 @@
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemModifyJob>
-#include <transactionsequence.h>
+#include <Akonadi/TransactionSequence>
 
 #include <KGuiItem>
 #include <KJob>

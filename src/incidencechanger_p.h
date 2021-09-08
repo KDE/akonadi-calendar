@@ -16,7 +16,7 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/Item>
-#include <transactionsequence.h>
+#include <Akonadi/TransactionSequence>
 
 #include <QObject>
 #include <QPointer>
