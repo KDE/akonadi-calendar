@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KCalendarCore/Event>
 #include <QObject>
 #include <QTest>

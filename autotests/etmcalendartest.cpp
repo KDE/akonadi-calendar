@@ -8,15 +8,15 @@
 
 #include "../src/etmcalendar.h"
 #include "../src/utils_p.h"
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/CollectionModifyJob>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemDeleteJob>
+#include <Akonadi/ItemModifyJob>
 #include <KCheckableProxyModel>
 #include <KEMailSettings>
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <collectionmodifyjob.h>
-#include <itemcreatejob.h>
-#include <itemdeletejob.h>
-#include <itemmodifyjob.h>
-#include <qtest_akonadi.h>
+#include <akonadi/qtest_akonadi.h>
 
 #include <QSignalSpy>
 #include <QTestEventLoop>

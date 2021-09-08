@@ -9,10 +9,10 @@
 #include "helper.h"
 #include "mailclient_p.h"
 
+#include <Akonadi/ItemCreateJob>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/ICalFormat>
 #include <incidencechanger.h>
-#include <itemcreatejob.h>
 #include <itiphandler.h>
 
 #include <QByteArray>

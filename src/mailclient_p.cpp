@@ -10,7 +10,7 @@
 
 #include "akonadi-calendar-version.h"
 
-#include <collection.h>
+#include <Akonadi/Collection>
 
 #include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Attendee>

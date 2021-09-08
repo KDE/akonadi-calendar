@@ -7,9 +7,9 @@
 #include "calfilterpartstatusproxymodel_p.h"
 #include "utils_p.h"
 
-#include <collection.h>
-#include <entitytreemodel.h>
-#include <item.h>
+#include <Akonadi/Collection>
+#include <Akonadi/EntityTreeModel>
+#include <Akonadi/Item>
 
 #include <KCalendarCore/Incidence>
 // #include <email.h>

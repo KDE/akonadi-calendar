@@ -10,7 +10,7 @@
 #include "akonadi-calendar_export.h"
 #include "calendarbase.h"
 
-#include <collection.h>
+#include <Akonadi/Collection>
 
 class QAbstractItemModel;
 class KCheckableProxyModel;

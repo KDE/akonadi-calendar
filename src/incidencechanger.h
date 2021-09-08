@@ -9,8 +9,8 @@
 #include "akonadi-calendar_export.h"
 
 #include "itiphandler.h"
-#include <collection.h>
-#include <item.h>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 
 #include <KCalendarCore/Incidence>
 

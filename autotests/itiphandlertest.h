@@ -10,8 +10,8 @@
 #include "itiphandler.h"
 #include "unittestbase.h"
 
-#include <collection.h>
-#include <item.h>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 
 #include <QHash>
 

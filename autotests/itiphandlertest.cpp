@@ -10,14 +10,14 @@
 #include "mailclient_p.h"
 #include "utils_p.h"
 
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ItemDeleteJob>
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/ICalFormat>
 #include <MailTransportAkonadi/MessageQueueJob>
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <itemdeletejob.h>
-#include <itemfetchscope.h>
-#include <qtest_akonadi.h>
+#include <akonadi/itemfetchscope.h>
+#include <akonadi/qtest_akonadi.h>
 
 #include <KCalendarCore/Event>
 

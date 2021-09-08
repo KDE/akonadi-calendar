@@ -13,15 +13,15 @@
 #include "etmcalendar_p.h"
 #include "kcolumnfilterproxymodel_p.h"
 #include "utils_p.h"
+#include <Akonadi/Item>
+#include <Akonadi/Monitor>
+#include <Akonadi/Session>
 #include <KDescendantsProxyModel>
 #include <KSelectionProxyModel>
+#include <akonadi/entitydisplayattribute.h>
+#include <akonadi/itemfetchscope.h>
 #include <collectionfilterproxymodel.h>
-#include <entitydisplayattribute.h>
 #include <entitymimetypefiltermodel.h>
-#include <item.h>
-#include <itemfetchscope.h>
-#include <monitor.h>
-#include <session.h>
 
 #include <QItemSelectionModel>
 #include <QTreeView>

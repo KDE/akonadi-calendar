@@ -10,7 +10,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <collection.h>
+#include <Akonadi/Collection>
 
 #include <QObject>
 #include <QString>

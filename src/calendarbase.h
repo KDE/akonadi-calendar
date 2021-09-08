@@ -9,10 +9,10 @@
 
 #include "akonadi-calendar_export.h"
 
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 #include <KCalendarCore/MemoryCalendar>
-#include <collection.h>
-#include <item.h>
 
 namespace Akonadi
 {

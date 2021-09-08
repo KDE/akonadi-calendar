@@ -7,9 +7,9 @@
 
 #pragma once
 
+#include <Akonadi/Item>
+#include <Akonadi/Job>
 #include <KCalendarCore/Incidence>
-#include <item.h>
-#include <job.h>
 #include <mimetypechecker.h>
 
 namespace Akonadi

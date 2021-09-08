@@ -6,16 +6,16 @@
 
 #include "../src/incidencechanger.h"
 
-#include <collection.h>
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <qtest_akonadi.h>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <akonadi/qtest_akonadi.h>
 
-#include <item.h>
-#include <itemcreatejob.h>
-#include <itemdeletejob.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemDeleteJob>
+#include <Akonadi/ItemFetchJob>
+#include <akonadi/itemfetchscope.h>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>

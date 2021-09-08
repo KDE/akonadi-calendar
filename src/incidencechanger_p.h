@@ -14,8 +14,8 @@
 #include "incidencechanger.h"
 #include "itiphandlerhelper_p.h"
 
-#include <collection.h>
-#include <item.h>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <transactionsequence.h>
 
 #include <QObject>

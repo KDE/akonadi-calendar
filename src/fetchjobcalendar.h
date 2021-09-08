@@ -10,7 +10,7 @@
 #include "akonadi-calendar_export.h"
 #include "calendarbase.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 
 namespace Akonadi
 {

@@ -9,11 +9,11 @@
 #include "calendarmodel_p.h"
 
 #include "utils_p.h"
+#include <Akonadi/Monitor>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
-#include <itemfetchscope.h>
+#include <akonadi/itemfetchscope.h>
 #include <kcalendarcore/todo.h>
-#include <monitor.h>
 
 #include <KLocalizedString>
 

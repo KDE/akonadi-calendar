@@ -13,7 +13,7 @@
 #include <KIdentityManagement/Identity>
 #include <MailTransportAkonadi/MessageQueueJob>
 
-#include <qtest_akonadi.h>
+#include <akonadi/qtest_akonadi.h>
 
 #include <QObject>
 #include <QTestEventLoop>

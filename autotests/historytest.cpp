@@ -7,13 +7,13 @@
 #include "historytest.h"
 #include "helper.h"
 
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemFetchJob>
 #include <KCalendarCore/Event>
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <itemcreatejob.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <qtest_akonadi.h>
+#include <akonadi/itemfetchscope.h>
+#include <akonadi/qtest_akonadi.h>
 
 #include <QTestEventLoop>
 

@@ -6,9 +6,9 @@
 
 #include "akonadi_serializer_kcalcore.h"
 
-#include <AkonadiCore/AbstractDifferencesReporter>
+#include <Akonadi/AbstractDifferencesReporter>
+#include <Akonadi/Item>
 #include <AkonadiCore/Collection>
-#include <AkonadiCore/Item>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>

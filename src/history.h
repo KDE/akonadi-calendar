@@ -9,9 +9,9 @@
 #include "akonadi-calendar_export.h"
 #include "incidencechanger.h"
 
+#include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 #include <QWidget>
-#include <item.h>
 
 class HistoryTest;
 

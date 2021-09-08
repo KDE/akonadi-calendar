@@ -9,9 +9,9 @@
 #include "incidencechanger_p.h"
 #include "mailscheduler_p.h"
 #include "utils_p.h"
-#include <itemcreatejob.h>
-#include <itemdeletejob.h>
-#include <itemmodifyjob.h>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemDeleteJob>
+#include <Akonadi/ItemModifyJob>
 #include <transactionsequence.h>
 
 #include <KGuiItem>

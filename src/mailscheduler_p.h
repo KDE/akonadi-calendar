@@ -9,8 +9,8 @@
 #include "mailclient_p.h"
 #include "scheduler_p.h"
 
+#include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
-#include <item.h>
 
 namespace Akonadi
 {

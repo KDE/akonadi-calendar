@@ -11,8 +11,8 @@
 #include "etmcalendar.h"
 #include "incidencechanger.h"
 
+#include <Akonadi/EntityTreeModel>
 #include <KCheckableProxyModel>
-#include <entitytreemodel.h>
 
 #include <QModelIndex>
 #include <QSet>

@@ -7,9 +7,9 @@
 
 #include "utils_p.h"
 #include "akonadicalendar_debug.h"
+#include <Akonadi/CollectionDialog>
 #include <KEMailSettings>
 #include <KEmailAddress>
-#include <collectiondialog.h>
 #include <identity.h>
 #include <identitymanager.h>
 #include <kidentitymanagement/utils.h>

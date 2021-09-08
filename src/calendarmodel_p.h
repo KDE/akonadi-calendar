@@ -7,10 +7,10 @@
 
 #pragma once
 
+#include <Akonadi/EntityTreeModel>
+#include <Akonadi/Monitor>
 #include <QSharedPointer>
 #include <QWeakPointer>
-#include <entitytreemodel.h>
-#include <monitor.h>
 
 namespace Akonadi
 {

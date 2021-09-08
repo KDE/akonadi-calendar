@@ -10,7 +10,7 @@
 
 #include "akonadi-calendar_export.h"
 
-#include <AkonadiWidgets/StandardActionManager>
+#include <Akonadi/StandardActionManager>
 #include <kcalendarcore/todo.h>
 
 #include <QObject>

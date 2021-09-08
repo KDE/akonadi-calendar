@@ -8,7 +8,7 @@
 
 #include "standardcalendaractionmanager.h"
 
-#include <entitytreemodel.h>
+#include <Akonadi/EntityTreeModel>
 
 #include <KActionCollection>
 #include <KCalendarCore/Event>

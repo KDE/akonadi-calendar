@@ -8,8 +8,8 @@
 
 #include "history.h"
 #include "incidencechanger.h"
+#include <Akonadi/Collection>
 #include <KCalendarCore/Incidence>
-#include <collection.h>
 
 #include <QPointer>
 #include <QStack>

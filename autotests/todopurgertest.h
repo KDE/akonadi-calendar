@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include <Akonadi/Collection>
 #include <QObject>
 #include <QString>
-#include <collection.h>
 #include <kcalendarcore/calendar.h>
 
 namespace Akonadi

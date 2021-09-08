@@ -10,7 +10,7 @@
 #include "akonadi-calendar_export.h"
 #include <KCalendarCore/Alarm>
 
-#include <attribute.h>
+#include <akonadi/attribute.h>
 
 namespace Akonadi
 {

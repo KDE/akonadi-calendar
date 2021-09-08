@@ -11,9 +11,9 @@
 #include "icalimporter_p.h"
 #include "utils_p.h"
 
-#include <AkonadiCore/AgentInstanceCreateJob>
-#include <AkonadiCore/AgentManager>
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentManager>
+#include <Akonadi/ServerManager>
 
 #include <KCalendarCore/FileStorage>
 

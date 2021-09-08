@@ -6,12 +6,12 @@
 */
 
 #include "incidencefetchjob_p.h"
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ItemFetchJob>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
+#include <akonadi/itemfetchscope.h>
 #include <kcalendarcore/todo.h>
 
 using namespace Akonadi;

@@ -10,7 +10,7 @@
 #include "calendarbase_p.h"
 #include "incidencechanger.h"
 #include "utils_p.h"
-#include <collectionfetchjob.h>
+#include <Akonadi/CollectionFetchJob>
 
 #include <KLocalizedString>
 #include <QTimeZone>

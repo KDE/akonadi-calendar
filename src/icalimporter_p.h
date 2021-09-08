@@ -11,8 +11,8 @@
 #include "icalimporter.h"
 #include "incidencechanger.h"
 
-#include <collection.h>
-#include <item.h>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 
 #include <QList>
 #include <QObject>

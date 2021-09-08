@@ -9,7 +9,7 @@
 #include "akonadicalendar_debug.h"
 #include "fetchjobcalendar_p.h"
 #include "incidencefetchjob_p.h"
-#include <collection.h>
+#include <Akonadi/Collection>
 
 using namespace Akonadi;
 using namespace KCalendarCore;

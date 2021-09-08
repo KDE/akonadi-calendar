@@ -5,11 +5,11 @@
 */
 
 #include "../src/fetchjobcalendar.h"
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <itemcreatejob.h>
-#include <itemfetchjob.h>
-#include <qtest_akonadi.h>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemFetchJob>
+#include <akonadi/qtest_akonadi.h>
 
 using namespace Akonadi;
 using namespace KCalendarCore;

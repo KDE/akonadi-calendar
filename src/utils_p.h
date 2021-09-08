@@ -7,9 +7,9 @@
 
 #pragma once
 
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
-#include <collection.h>
-#include <item.h>
 
 #include <QString>
 #include <QStringList>

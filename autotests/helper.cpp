@@ -6,9 +6,9 @@
 
 #include "helper.h"
 
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <itemfetchjob.h>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ItemFetchJob>
 
 #include <QStringList>
 

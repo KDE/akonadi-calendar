@@ -7,12 +7,12 @@
 #include "incidencechanger_p.h"
 #include "akonadicalendar_debug.h"
 #include "utils_p.h"
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ItemCreateJob>
 #include <KCalendarCore/Incidence>
 #include <QDialog>
 #include <QString>
-#include <collectionfetchjob.h>
-#include <collectionfetchscope.h>
-#include <itemcreatejob.h>
 
 using namespace Akonadi;
 
