@@ -14,14 +14,14 @@
 #include "kcolumnfilterproxymodel_p.h"
 #include "utils_p.h"
 #include <Akonadi/CollectionFilterProxyModel>
+#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/EntityMimeTypeFilterModel>
 #include <Akonadi/Item>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
 #include <KDescendantsProxyModel>
 #include <KSelectionProxyModel>
-#include <akonadi/entitydisplayattribute.h>
-#include <akonadi/itemfetchscope.h>
 
 #include <QItemSelectionModel>
 #include <QTreeView>

@@ -9,9 +9,9 @@
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
-#include <akonadi/itemfetchscope.h>
 #include <kcalendarcore/todo.h>
 
 using namespace Akonadi;

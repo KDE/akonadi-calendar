@@ -15,7 +15,7 @@
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemFetchJob>
-#include <akonadi/itemfetchscope.h>
+#include <Akonadi/ItemFetchScope>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>

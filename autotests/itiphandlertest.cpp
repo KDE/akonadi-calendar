@@ -13,10 +13,10 @@
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemDeleteJob>
+#include <Akonadi/ItemFetchScope>
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/ICalFormat>
 #include <MailTransportAkonadi/MessageQueueJob>
-#include <akonadi/itemfetchscope.h>
 #include <akonadi/qtest_akonadi.h>
 
 #include <KCalendarCore/Event>

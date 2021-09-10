@@ -11,8 +11,8 @@
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <KCalendarCore/Event>
-#include <akonadi/itemfetchscope.h>
 #include <akonadi/qtest_akonadi.h>
 
 #include <QTestEventLoop>

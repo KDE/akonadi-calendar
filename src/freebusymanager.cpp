@@ -13,8 +13,8 @@
 #include "publishdialog.h"
 #include "utils_p.h"
 
-#include <akonadi/agentinstance.h>
-#include <akonadi/agentmanager.h>
+#include <Akonadi/AgentInstance>
+#include <Akonadi/AgentManager>
 #include <contactsearchjob.h>
 
 #include <KCalendarCore/Event>
