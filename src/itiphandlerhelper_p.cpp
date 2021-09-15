@@ -15,10 +15,10 @@
 #include "akonadicalendar_debug.h"
 #include <KCalUtils/IncidenceFormatter>
 #include <KCalUtils/Stringify>
+#include <KCalendarCore/Calendar>
 #include <KCalendarCore/ICalFormat>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcalendarcore/calendar.h>
 
 #include <QWidget>
 

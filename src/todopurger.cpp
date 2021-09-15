@@ -9,7 +9,7 @@
 #include "todopurger_p.h"
 #include "utils_p.h"
 
-#include <kcalendarcore/todo.h>
+#include <KCalendarCore/Todo>
 
 #include <KLocalizedString>
 using namespace Akonadi;

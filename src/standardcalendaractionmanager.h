@@ -11,7 +11,7 @@
 #include "akonadi-calendar_export.h"
 
 #include <Akonadi/StandardActionManager>
-#include <kcalendarcore/todo.h>
+#include <KCalendarCore/Todo>
 
 #include <QObject>
 

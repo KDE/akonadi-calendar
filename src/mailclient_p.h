@@ -11,8 +11,8 @@
 #include "akonadi-calendar_tests_export.h"
 #include "itiphandler.h"
 #include <KCalendarCore/IncidenceBase>
+#include <KMime/KMimeMessage>
 #include <QObject>
-#include <kmime/kmime_message.h>
 
 struct UnitTestResult {
     using List = QVector<UnitTestResult>;

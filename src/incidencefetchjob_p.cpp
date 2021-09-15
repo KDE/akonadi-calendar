@@ -12,7 +12,7 @@
 #include <Akonadi/ItemFetchScope>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
-#include <kcalendarcore/todo.h>
+#include <KCalendarCore/Todo>
 
 using namespace Akonadi;
 

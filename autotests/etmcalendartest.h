@@ -7,8 +7,8 @@
 #pragma once
 
 #include <Akonadi/Collection>
+#include <KCalendarCore/Calendar>
 #include <QObject>
-#include <kcalendarcore/calendar.h>
 
 namespace Akonadi
 {

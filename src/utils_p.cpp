@@ -10,10 +10,10 @@
 #include <Akonadi/CollectionDialog>
 #include <KEMailSettings>
 #include <KEmailAddress>
+#include <KIdentityManagement/Utils>
+#include <KMime/HeaderParsing>
 #include <identity.h>
 #include <identitymanager.h>
-#include <kidentitymanagement/utils.h>
-#include <kmime/kmime_header_parsing.h>
 
 #include <QPointer>
 #include <QWidget>

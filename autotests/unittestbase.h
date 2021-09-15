@@ -8,7 +8,7 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/Item>
-#include <kcalendarcore/calendar.h>
+#include <KCalendarCore/Calendar>
 
 #include <QObject>
 #include <QString>
