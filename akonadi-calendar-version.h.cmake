@@ -3,10 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef AKONADI_CALENDAR_VERSION_H
-#define AKONADI_CALENDAR_VERSION_H
-
-
+#pragma once
 #define AKONADI_CALENDAR_VERSION "@AKONADICALENDAR_LIB_VERSION@"
 
-#endif
