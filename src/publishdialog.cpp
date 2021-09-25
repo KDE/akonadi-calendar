@@ -13,7 +13,7 @@
 
 #include <KCalendarCore/Person>
 
-#include <KCodecs/KEmailAddress>
+#include <KEmailAddress>
 
 #include <KLocalizedString>
 #include <KMessageBox>
