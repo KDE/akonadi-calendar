@@ -168,9 +168,7 @@ CalendarClipboard::CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar,
 {
 }
 
-CalendarClipboard::~CalendarClipboard()
-{
-}
+CalendarClipboard::~CalendarClipboard() = default;
 
 void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode)
 {

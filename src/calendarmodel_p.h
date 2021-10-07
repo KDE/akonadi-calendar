@@ -12,6 +12,8 @@
 #include <QSharedPointer>
 #include <QWeakPointer>
 
+#include <memory>
+
 namespace Akonadi
 {
 class CalendarModel : public Akonadi::EntityTreeModel
@@ -42,7 +44,7 @@ public:
 private:
     explicit CalendarModel(Akonadi::Monitor *monitor);
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

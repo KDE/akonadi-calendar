@@ -25,6 +25,8 @@
 #include <QString>
 #include <QWidget>
 
+#include <memory>
+
 namespace MailTransport
 {
 class MessageQueueJob;
@@ -333,7 +335,7 @@ Q_SIGNALS:
 private:
     Q_DISABLE_COPY(ITIPHandler)
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

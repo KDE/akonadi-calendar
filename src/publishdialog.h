@@ -10,6 +10,8 @@
 #include <KCalendarCore/Attendee>
 #include <QDialog>
 
+#include <memory>
+
 // TODO: documentation
 // Uses akonadi-contact, so don't move this class to KCalUtils.
 namespace Akonadi
@@ -48,7 +50,7 @@ private:
     void slotHelp();
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

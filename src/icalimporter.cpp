@@ -125,9 +125,7 @@ ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer, QObject *parent)
 {
 }
 
-ICalImporter::~ICalImporter()
-{
-}
+ICalImporter::~ICalImporter() = default;
 
 QString ICalImporter::errorMessage() const
 {
@@ -149,7 +147,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     auto job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
-    connect(job, &KJob::result, d, &Private::resourceCreated);
+    connect(job, &KJob::result, d.get(), &Private::resourceCreated);
     job->start();
 
     return true;
@@ -230,7 +228,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
     } else {
         d->m_collection = collection;
         KIO::StoredTransferJob *job = KIO::storedGet(url);
-        connect(job, qOverload<KIO::Job *, const QByteArray &>(&KIO::TransferJob::data), d, [this](KIO::Job *job, const QByteArray &ba) {
+        connect(job, qOverload<KIO::Job *, const QByteArray &>(&KIO::TransferJob::data), d.get(), [this](KIO::Job *job, const QByteArray &ba) {
             d->remoteDownloadFinished(job, ba);
         });
     }

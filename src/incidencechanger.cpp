@@ -680,10 +680,7 @@ IncidenceChanger::IncidenceChanger(bool enableHistory, QObject *parent)
 {
 }
 
-IncidenceChanger::~IncidenceChanger()
-{
-    delete d;
-}
+IncidenceChanger::~IncidenceChanger() = default;
 
 int IncidenceChanger::createFromItem(const Item &item, const Collection &collection, QWidget *parent)
 {
@@ -808,7 +805,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     d->mChangeById.insert(changeId, change);
 
     if (d->mGroupwareCommunication) {
-        connect(change.data(), &Change::dialogClosedBeforeChange, d, &Private::deleteIncidences2);
+        connect(change.data(), &Change::dialogClosedBeforeChange, d.get(), &Private::deleteIncidences2);
         d->handleInvitationsBeforeChange(change);
     } else {
         d->deleteIncidences2(changeId, ITIPHandlerHelper::ResultSuccess);
@@ -1022,7 +1019,7 @@ void IncidenceChanger::startAtomicOperation(const QString &operationDescription)
     ++d->mLatestAtomicOperationId;
     d->mBatchOperationInProgress = true;
 
-    auto atomicOperation = new AtomicOperation(d, d->mLatestAtomicOperationId);
+    auto atomicOperation = new AtomicOperation(d.get(), d->mLatestAtomicOperationId);
     atomicOperation->m_description = operationDescription;
     d->mAtomicOperations.insert(d->mLatestAtomicOperationId, atomicOperation);
 }
@@ -1116,7 +1113,7 @@ void IncidenceChanger::setHistoryEnabled(bool enable)
     if (d->mUseHistory != enable) {
         d->mUseHistory = enable;
         if (enable && !d->mHistory) {
-            d->mHistory = new History(d);
+            d->mHistory = new History(d.get());
         }
     }
 }

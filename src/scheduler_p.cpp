@@ -44,7 +44,6 @@ Scheduler::Scheduler(QObject *parent)
 Scheduler::~Scheduler()
 {
     delete mFormat;
-    delete d;
 }
 
 void Scheduler::setShowDialogs(bool enable)

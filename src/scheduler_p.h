@@ -14,6 +14,8 @@
 #include <QObject>
 #include <QString>
 
+#include <memory>
+
 namespace KCalendarCore
 {
 class ICalFormat;
@@ -160,7 +162,7 @@ private:
     void connectCalendar(const Akonadi::CalendarBase::Ptr &calendar);
     Q_DISABLE_COPY(Scheduler)
     struct Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

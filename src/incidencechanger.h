@@ -16,6 +16,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace Akonadi
 {
 class EntityTreeModel;
@@ -450,7 +452,7 @@ private:
     // used internally by the History class
     explicit IncidenceChanger(bool enableHistory, QObject *parent = nullptr);
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

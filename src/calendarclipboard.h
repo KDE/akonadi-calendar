@@ -12,6 +12,8 @@
 #include <KCalendarCore/Incidence>
 #include <QObject>
 
+#include <memory>
+
 namespace Akonadi
 {
 class IncidenceChanger;
@@ -78,7 +80,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

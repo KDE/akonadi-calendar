@@ -51,10 +51,7 @@ CalendarModel::Ptr CalendarModel::create(Monitor *monitor)
     return modelPtr;
 }
 
-CalendarModel::~CalendarModel()
-{
-    delete d;
-}
+CalendarModel::~CalendarModel() = default;
 
 QWeakPointer<CalendarModel> CalendarModel::weakPointer() const
 {

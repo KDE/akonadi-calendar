@@ -15,6 +15,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 // needed for windows ce, its defined somewhere
 #undef CreateEvent
 
@@ -176,7 +178,7 @@ Q_SIGNALS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

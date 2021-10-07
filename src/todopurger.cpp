@@ -126,17 +126,14 @@ TodoPurger::TodoPurger(QObject *parent)
 {
 }
 
-TodoPurger::~TodoPurger()
-{
-    delete d;
-}
+TodoPurger::~TodoPurger() = default;
 
 void TodoPurger::setIncidenceChager(IncidenceChanger *changer)
 {
     d->m_changer = changer;
     d->m_currentChangeId = -1;
     if (changer) {
-        connect(changer, &IncidenceChanger::deleteFinished, d, &Private::onItemsDeleted);
+        connect(changer, &IncidenceChanger::deleteFinished, d.get(), &Private::onItemsDeleted);
     }
 }
 
@@ -155,7 +152,7 @@ void TodoPurger::purgeCompletedTodos()
     } else {
         d->m_calendar = FetchJobCalendar::Ptr(new FetchJobCalendar(this));
         // clang-format off
-        connect(d->m_calendar.data(), SIGNAL(loadFinished(bool,QString)), d, SLOT(onCalendarLoaded(bool,QString)));
+        connect(d->m_calendar.data(), SIGNAL(loadFinished(bool,QString)), d.get(), SLOT(onCalendarLoaded(bool,QString)));
         // clang-format on
     }
 }

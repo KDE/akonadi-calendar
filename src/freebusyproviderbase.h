@@ -10,6 +10,8 @@
 
 #include <QString>
 
+#include <memory>
+
 class QDateTime;
 
 namespace Akonadi
@@ -134,7 +136,7 @@ public:
 private:
     //@cond PRIVATE
     Q_DISABLE_COPY(FreeBusyProviderBase)
-    FreeBusyProviderBasePrivate *const d;
+    std::unique_ptr<FreeBusyProviderBasePrivate> const d;
     //@endcond
 };
 }

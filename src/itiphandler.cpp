@@ -88,10 +88,7 @@ ITIPHandler::ITIPHandler(ITIPHandlerComponentFactory *factory, QObject *parent)
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
 }
 
-ITIPHandler::~ITIPHandler()
-{
-    delete d;
-}
+ITIPHandler::~ITIPHandler() = default;
 
 void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCal, const QString &action)
 {
@@ -362,7 +359,7 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
         const QString messageText = format.createScheduleMessage(incidence, KCalendarCore::iTIPRequest);
         auto mailer = new MailClient(d->m_factory);
         d->m_queuedInvitation.incidence = incidence;
-        connect(mailer, &MailClient::finished, d, [this](Akonadi::MailClient::Result result, const QString &str) {
+        connect(mailer, &MailClient::finished, d.get(), [this](Akonadi::MailClient::Result result, const QString &str) {
             d->finishSendAsICalendar(result, str);
         });
 

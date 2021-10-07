@@ -44,12 +44,12 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     d->mUI.mRemove->setEnabled(false);
     d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QStringLiteral("view-pim-contacts")));
-    connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged, d, &Private::updateInput);
-    connect(d->mUI.mNew, &QAbstractButton::clicked, d, &Private::addItem);
-    connect(d->mUI.mRemove, &QAbstractButton::clicked, d, &Private::removeItem);
-    connect(d->mUI.mSelectAddressee, &QAbstractButton::clicked, d, &Private::openAddressbook);
-    connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged, d, &Private::updateItem);
-    connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged, d, &Private::updateItem);
+    connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged, d.get(), &Private::updateInput);
+    connect(d->mUI.mNew, &QAbstractButton::clicked, d.get(), &Private::addItem);
+    connect(d->mUI.mRemove, &QAbstractButton::clicked, d.get(), &Private::removeItem);
+    connect(d->mUI.mSelectAddressee, &QAbstractButton::clicked, d.get(), &Private::openAddressbook);
+    connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged, d.get(), &Private::updateItem);
+    connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged, d.get(), &Private::updateItem);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -79,10 +79,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &PublishDialog::slotHelp);
 }
 
-PublishDialog::~PublishDialog()
-{
-    delete d;
-}
+PublishDialog::~PublishDialog() = default;
 
 void PublishDialog::slotHelp()
 {

@@ -42,10 +42,7 @@ FreeBusyProviderBase::FreeBusyProviderBase()
 {
 }
 
-FreeBusyProviderBase::~FreeBusyProviderBase()
-{
-    delete d;
-}
+FreeBusyProviderBase::~FreeBusyProviderBase() = default;
 
 void FreeBusyProviderBase::handlesFreeBusy(const QString &email, bool handles) const
 {

@@ -33,10 +33,7 @@ CalFilterProxyModel::CalFilterProxyModel(QObject *parent)
     setFilterKeyColumn(0);
 }
 
-CalFilterProxyModel::~CalFilterProxyModel()
-{
-    delete d;
-}
+CalFilterProxyModel::~CalFilterProxyModel() = default;
 
 KCalendarCore::CalFilter *CalFilterProxyModel::filter() const
 {

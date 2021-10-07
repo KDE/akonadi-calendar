@@ -46,10 +46,7 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
                      &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }
 
-CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel()
-{
-    delete d;
-}
+CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel() = default;
 
 const QList<KCalendarCore::Attendee::PartStat> &CalFilterPartStatusProxyModel::blockedStatusList() const
 {

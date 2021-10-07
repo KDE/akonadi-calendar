@@ -476,10 +476,7 @@ Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCol
 {
 }
 
-StandardCalendarActionManager::~StandardCalendarActionManager()
-{
-    delete d;
-}
+StandardCalendarActionManager::~StandardCalendarActionManager() = default;
 
 void StandardCalendarActionManager::setCollectionSelectionModel(QItemSelectionModel *selectionModel)
 {

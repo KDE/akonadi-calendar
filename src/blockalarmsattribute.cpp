@@ -29,10 +29,7 @@ BlockAlarmsAttribute::BlockAlarmsAttribute()
 {
 }
 
-BlockAlarmsAttribute::~BlockAlarmsAttribute()
-{
-    delete d;
-}
+BlockAlarmsAttribute::~BlockAlarmsAttribute() = default;
 
 void BlockAlarmsAttribute::blockAlarmType(KCalendarCore::Alarm::Type type, bool block)
 {

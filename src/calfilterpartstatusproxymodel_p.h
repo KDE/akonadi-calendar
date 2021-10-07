@@ -9,6 +9,8 @@
 #include <KCalendarCore/Attendee>
 #include <QSortFilterProxyModel>
 
+#include <memory>
+
 namespace Akonadi
 {
 class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
@@ -30,7 +32,7 @@ protected:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 
     //@endcond
 private Q_SLOTS:

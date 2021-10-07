@@ -15,6 +15,8 @@
 #include <QObject>
 #include <QString>
 
+#include <memory>
+
 /**
  * A class to import ical calendar files into akonadi.
  *
@@ -84,7 +86,7 @@ public Q_SLOTS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

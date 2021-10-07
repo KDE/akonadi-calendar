@@ -13,6 +13,8 @@
 #include <KCalendarCore/Incidence>
 #include <QWidget>
 
+#include <memory>
+
 class HistoryTest;
 
 namespace Akonadi
@@ -237,7 +239,7 @@ private:
 
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

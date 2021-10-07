@@ -43,7 +43,6 @@ MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *pare
 MailScheduler::~MailScheduler()
 {
     delete d->m_mailer;
-    delete d;
 }
 
 KIdentityManagement::Identity MailScheduler::Private::identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const

@@ -12,6 +12,8 @@
 #include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 
+#include <memory>
+
 namespace Akonadi
 {
 /*
@@ -57,7 +59,7 @@ private:
     //@cond PRIVATE
     Q_DISABLE_COPY(MailScheduler)
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

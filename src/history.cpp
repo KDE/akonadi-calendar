@@ -18,10 +18,7 @@ History::History(QObject *parent)
 {
 }
 
-History::~History()
-{
-    delete d;
-}
+History::~History() = default;
 
 History::Private::Private(History *qq)
     : mChanger(new IncidenceChanger(/*history=*/false, qq))
