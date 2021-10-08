@@ -698,10 +698,7 @@ FreeBusyManager::FreeBusyManager()
     connect(CalendarSettings::self(), SIGNAL(configChanged()), SLOT(checkFreeBusyUrl()));
 }
 
-FreeBusyManager::~FreeBusyManager()
-{
-    delete d_ptr;
-}
+FreeBusyManager::~FreeBusyManager() = default;
 
 FreeBusyManager *FreeBusyManager::self()
 {

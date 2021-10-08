@@ -13,6 +13,9 @@
 #include "etmcalendar.h"
 
 #include <KCalendarCore/FreeBusyCache>
+
+#include <memory>
+
 // TODO: document
 namespace Akonadi
 {
@@ -133,7 +136,7 @@ private:
 private:
     friend class FreeBusyManagerStatic;
 
-    FreeBusyManagerPrivate *const d_ptr;
+    std::unique_ptr<FreeBusyManagerPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(FreeBusyManager)
     Q_DISABLE_COPY(FreeBusyManager)
     Q_PRIVATE_SLOT(d_ptr, void checkFreeBusyUrl())

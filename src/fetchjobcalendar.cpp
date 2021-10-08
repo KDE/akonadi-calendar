@@ -72,7 +72,7 @@ FetchJobCalendar::~FetchJobCalendar()
 
 bool FetchJobCalendar::isLoaded() const
 {
-    auto d = static_cast<FetchJobCalendarPrivate *>(d_ptr.data());
+    auto d = static_cast<FetchJobCalendarPrivate *>(d_ptr.get());
     return d->m_isLoaded;
 }
 

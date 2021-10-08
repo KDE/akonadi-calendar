@@ -14,6 +14,8 @@
 #include <KCalendarCore/Incidence>
 #include <KCalendarCore/MemoryCalendar>
 
+#include <memory>
+
 namespace Akonadi
 {
 class CalendarBasePrivate;
@@ -222,7 +224,7 @@ Q_SIGNALS:
 
 protected:
     Q_DECLARE_PRIVATE(CalendarBase)
-    QScopedPointer<CalendarBasePrivate> d_ptr;
+    std::unique_ptr<CalendarBasePrivate> const d_ptr;
     CalendarBase(CalendarBasePrivate *const d, QObject *parent);
 
     friend class Scheduler;
