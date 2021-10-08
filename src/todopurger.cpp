@@ -14,12 +14,12 @@
 #include <KLocalizedString>
 using namespace Akonadi;
 
-TodoPurger::Private::Private(TodoPurger *q)
+TodoPurgerPrivate::TodoPurgerPrivate(TodoPurger *q)
     : q(q)
 {
 }
 
-void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
+void TodoPurgerPrivate::onCalendarLoaded(bool success, const QString &message)
 {
     if (success) {
         deleteTodos();
@@ -32,7 +32,7 @@ void TodoPurger::Private::onCalendarLoaded(bool success, const QString &message)
     }
 }
 
-void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &deletedItems, IncidenceChanger::ResultCode result, const QString &message)
+void TodoPurgerPrivate::onItemsDeleted(int changeId, const QVector<Item::Id> &deletedItems, IncidenceChanger::ResultCode result, const QString &message)
 {
     if (changeId != m_currentChangeId) {
         return; // Not ours.
@@ -45,7 +45,7 @@ void TodoPurger::Private::onItemsDeleted(int changeId, const QVector<Item::Id> &
     Q_EMIT q->todosPurged(result == IncidenceChanger::ResultCodeSuccess, deletedItems.count(), m_ignoredItems);
 }
 
-void TodoPurger::Private::deleteTodos()
+void TodoPurgerPrivate::deleteTodos()
 {
     if (!m_changer) {
         q->setIncidenceChager(new IncidenceChanger(this));
@@ -92,7 +92,7 @@ void TodoPurger::Private::deleteTodos()
     m_changer->setGroupwareCommunication(oldGroupware);
 }
 
-bool TodoPurger::Private::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
+bool TodoPurgerPrivate::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
 {
     Q_ASSERT(todo);
 
@@ -122,7 +122,7 @@ bool TodoPurger::Private::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
 
 TodoPurger::TodoPurger(QObject *parent)
     : QObject(parent)
-    , d(new Private(this))
+    , d(new TodoPurgerPrivate(this))
 {
 }
 
@@ -133,7 +133,7 @@ void TodoPurger::setIncidenceChager(IncidenceChanger *changer)
     d->m_changer = changer;
     d->m_currentChangeId = -1;
     if (changer) {
-        connect(changer, &IncidenceChanger::deleteFinished, d.get(), &Private::onItemsDeleted);
+        connect(changer, &IncidenceChanger::deleteFinished, d.get(), &TodoPurgerPrivate::onItemsDeleted);
     }
 }
 

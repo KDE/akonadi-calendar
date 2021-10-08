@@ -21,9 +21,10 @@
 using namespace KCalendarCore;
 using namespace Akonadi;
 
-struct Akonadi::Scheduler::Private {
+class Akonadi::SchedulerPrivate
+{
 public:
-    Private(Scheduler *qq)
+    explicit SchedulerPrivate(Scheduler *qq)
         : q(qq)
     {
     }
@@ -35,7 +36,7 @@ public:
 
 Scheduler::Scheduler(QObject *parent)
     : QObject(parent)
-    , d(new Akonadi::Scheduler::Private(this))
+    , d(new SchedulerPrivate(this))
 {
     mFormat = new ICalFormat();
     mFormat->setTimeZone(QTimeZone::systemTimeZone());

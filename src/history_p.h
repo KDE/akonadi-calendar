@@ -55,12 +55,12 @@ private:
     Q_DISABLE_COPY(Entry)
 };
 
-class AKONADI_CALENDAR_EXPORT History::Private : public QObject
+class AKONADI_CALENDAR_EXPORT HistoryPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(History *qq);
-    ~Private()
+    explicit HistoryPrivate(History *qq);
+    ~HistoryPrivate()
     {
     }
 

@@ -26,7 +26,7 @@ void Change::emitUserDialogClosedBeforeChange(Akonadi::ITIPHandlerHelper::SendRe
     Q_EMIT dialogClosedBeforeChange(id, status);
 }
 
-void IncidenceChanger::Private::loadCollections()
+void IncidenceChangerPrivate::loadCollections()
 {
     if (isLoadingCollections()) {
         // Collections are already loading
@@ -36,11 +36,11 @@ void IncidenceChanger::Private::loadCollections()
     m_collectionFetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
     m_collectionFetchJob->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
-    connect(m_collectionFetchJob, &KJob::result, this, &IncidenceChanger::Private::onCollectionsLoaded);
+    connect(m_collectionFetchJob, &KJob::result, this, &IncidenceChangerPrivate::onCollectionsLoaded);
     m_collectionFetchJob->start();
 }
 
-Collection::List IncidenceChanger::Private::collectionsForMimeType(const QString &mimeType, const Collection::List &collections)
+Collection::List IncidenceChangerPrivate::collectionsForMimeType(const QString &mimeType, const Collection::List &collections)
 {
     Collection::List result;
     for (const Akonadi::Collection &collection : collections) {
@@ -52,7 +52,7 @@ Collection::List IncidenceChanger::Private::collectionsForMimeType(const QString
     return result;
 }
 
-void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
+void IncidenceChangerPrivate::onCollectionsLoaded(KJob *job)
 {
     Q_ASSERT(!mPendingCreations.isEmpty());
     if (job->error() != 0 || !m_collectionFetchJob) {
@@ -81,17 +81,17 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         mPendingCreations.removeAll(change);
 
         if (canceled) {
-            change->resultCode = ResultCodeUserCanceled;
+            change->resultCode = IncidenceChanger::ResultCodeUserCanceled;
             continue;
         }
 
         if (noAcl) {
-            change->resultCode = ResultCodePermissions;
+            change->resultCode = IncidenceChanger::ResultCodePermissions;
             continue;
         }
 
         if (invalidCollection) {
-            change->resultCode = ResultCodeInvalidUserCollection;
+            change->resultCode = IncidenceChanger::ResultCodeInvalidUserCollection;
             continue;
         }
 
@@ -119,16 +119,16 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         collectionToUse = CalendarUtils::selectCollection(parent, /*by-ref*/ dialogCode, mimeTypes, mDefaultCollection);
         if (dialogCode != QDialog::Accepted) {
             qCDebug(AKONADICALENDAR_LOG) << "User canceled collection choosing";
-            change->resultCode = ResultCodeUserCanceled;
+            change->resultCode = IncidenceChanger::ResultCodeUserCanceled;
             canceled = true;
             cancelTransaction();
             continue;
         }
 
-        if (collectionToUse.isValid() && !hasRights(collectionToUse, ChangeTypeCreate)) {
+        if (collectionToUse.isValid() && !hasRights(collectionToUse, IncidenceChanger::ChangeTypeCreate)) {
             qCWarning(AKONADICALENDAR_LOG) << "No ACLs for incidence creation";
-            const QString errorMessage = showErrorDialog(ResultCodePermissions, parent);
-            change->resultCode = ResultCodePermissions;
+            const QString errorMessage = showErrorDialog(IncidenceChanger::ResultCodePermissions, parent);
+            change->resultCode = IncidenceChanger::ResultCodePermissions;
             change->errorString = errorMessage;
             noAcl = true;
             cancelTransaction();
@@ -138,8 +138,8 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
         // TODO: add unit test for these two situations after reviewing API
         if (!collectionToUse.isValid()) {
             qCritical() << "Invalid collection selected. Can't create incidence.";
-            change->resultCode = ResultCodeInvalidUserCollection;
-            const QString errorString = showErrorDialog(ResultCodeInvalidUserCollection, parent);
+            change->resultCode = IncidenceChanger::ResultCodeInvalidUserCollection;
+            const QString errorString = showErrorDialog(IncidenceChanger::ResultCodeInvalidUserCollection, parent);
             change->errorString = errorString;
             invalidCollection = true;
             cancelTransaction();
@@ -150,41 +150,42 @@ void IncidenceChanger::Private::onCollectionsLoaded(KJob *job)
     }
 }
 
-bool IncidenceChanger::Private::isLoadingCollections() const
+bool IncidenceChangerPrivate::isLoadingCollections() const
 {
     return m_collectionFetchJob != nullptr;
 }
 
-void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change::Ptr &change, const Akonadi::Collection &collection)
+void IncidenceChangerPrivate::step1DetermineDestinationCollection(const Change::Ptr &change, const Akonadi::Collection &collection)
 {
     QWidget *parent = change->parentWidget.data();
-    if (collection.isValid() && hasRights(collection, ChangeTypeCreate)) {
+    if (collection.isValid() && hasRights(collection, IncidenceChanger::ChangeTypeCreate)) {
         // The collection passed always has priority
         step2CreateIncidence(change, collection);
     } else {
         switch (mDestinationPolicy) {
-        case DestinationPolicyDefault:
-            if (mDefaultCollection.isValid() && hasRights(mDefaultCollection, ChangeTypeCreate)) {
+        case IncidenceChanger::DestinationPolicyDefault:
+            if (mDefaultCollection.isValid() && hasRights(mDefaultCollection, IncidenceChanger::ChangeTypeCreate)) {
                 step2CreateIncidence(change, mDefaultCollection);
                 break;
             }
             qCWarning(AKONADICALENDAR_LOG) << "Destination policy is to use the default collection."
                                            << "But it's invalid or doesn't have proper ACLs."
-                                           << "isValid = " << mDefaultCollection.isValid() << "has ACLs = " << hasRights(mDefaultCollection, ChangeTypeCreate);
+                                           << "isValid = " << mDefaultCollection.isValid()
+                                           << "has ACLs = " << hasRights(mDefaultCollection, IncidenceChanger::ChangeTypeCreate);
             // else fallthrough, and ask the user.
             Q_FALLTHROUGH();
-        case DestinationPolicyAsk:
+        case IncidenceChanger::DestinationPolicyAsk:
             mPendingCreations << change;
             loadCollections(); // Now we wait, collections are being loaded async
             break;
-        case DestinationPolicyNeverAsk: {
-            const bool hasRights = this->hasRights(mDefaultCollection, ChangeTypeCreate);
+        case IncidenceChanger::DestinationPolicyNeverAsk: {
+            const bool hasRights = this->hasRights(mDefaultCollection, IncidenceChanger::ChangeTypeCreate);
             if (mDefaultCollection.isValid() && hasRights) {
                 step2CreateIncidence(change, mDefaultCollection);
             } else {
-                const QString errorString = showErrorDialog(ResultCodeInvalidDefaultCollection, parent);
+                const QString errorString = showErrorDialog(IncidenceChanger::ResultCodeInvalidDefaultCollection, parent);
                 qCritical() << errorString << "; rights are " << hasRights;
-                change->resultCode = hasRights ? ResultCodeInvalidDefaultCollection : ResultCodePermissions;
+                change->resultCode = hasRights ? IncidenceChanger::ResultCodeInvalidDefaultCollection : IncidenceChanger::ResultCodePermissions;
                 change->errorString = errorString;
                 cancelTransaction();
             }
@@ -198,7 +199,7 @@ void IncidenceChanger::Private::step1DetermineDestinationCollection(const Change
     }
 }
 
-void IncidenceChanger::Private::step2CreateIncidence(const Change::Ptr &change, const Akonadi::Collection &collection)
+void IncidenceChangerPrivate::step2CreateIncidence(const Change::Ptr &change, const Akonadi::Collection &collection)
 {
     Q_ASSERT(change);
 
@@ -214,7 +215,7 @@ void IncidenceChanger::Private::step2CreateIncidence(const Change::Ptr &change, 
     }
 
     // QueuedConnection because of possible sync exec calls.
-    connect(createJob, &KJob::result, this, &IncidenceChanger::Private::handleCreateJobResult, Qt::QueuedConnection);
+    connect(createJob, &KJob::result, this, &IncidenceChangerPrivate::handleCreateJobResult, Qt::QueuedConnection);
 
     mChangeById.insert(change->id, change);
 }

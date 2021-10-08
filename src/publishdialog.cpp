@@ -28,7 +28,7 @@ using namespace Akonadi;
 
 PublishDialog::PublishDialog(QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
+    , d(new PublishDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Select Addresses"));
     auto layout = new QVBoxLayout(this);
@@ -44,12 +44,12 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     d->mUI.mRemove->setEnabled(false);
     d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QStringLiteral("view-pim-contacts")));
-    connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged, d.get(), &Private::updateInput);
-    connect(d->mUI.mNew, &QAbstractButton::clicked, d.get(), &Private::addItem);
-    connect(d->mUI.mRemove, &QAbstractButton::clicked, d.get(), &Private::removeItem);
-    connect(d->mUI.mSelectAddressee, &QAbstractButton::clicked, d.get(), &Private::openAddressbook);
-    connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged, d.get(), &Private::updateItem);
-    connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged, d.get(), &Private::updateItem);
+    connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged, d.get(), &PublishDialogPrivate::updateInput);
+    connect(d->mUI.mNew, &QAbstractButton::clicked, d.get(), &PublishDialogPrivate::addItem);
+    connect(d->mUI.mRemove, &QAbstractButton::clicked, d.get(), &PublishDialogPrivate::removeItem);
+    connect(d->mUI.mSelectAddressee, &QAbstractButton::clicked, d.get(), &PublishDialogPrivate::openAddressbook);
+    connect(d->mUI.mNameLineEdit, &QLineEdit::textChanged, d.get(), &PublishDialogPrivate::updateItem);
+    connect(d->mUI.mEmailLineEdit, &QLineEdit::textChanged, d.get(), &PublishDialogPrivate::updateItem);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

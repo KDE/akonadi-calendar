@@ -12,11 +12,11 @@
 
 namespace Akonadi
 {
-class Q_DECL_HIDDEN PublishDialog::Private : public QObject
+class PublishDialogPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(PublishDialog *q);
+    explicit PublishDialogPrivate(PublishDialog *q);
     void insertAddresses(const KContacts::Addressee::List &list);
 
 public Q_SLOTS:

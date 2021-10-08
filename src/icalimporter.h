@@ -25,6 +25,7 @@
 namespace Akonadi
 {
 class IncidenceChanger;
+class ICalImporterPrivate;
 
 class AKONADI_CALENDAR_EXPORT ICalImporter : public QObject
 {
@@ -85,8 +86,7 @@ public Q_SLOTS:
     bool importIntoExistingResource(const QUrl &url, Akonadi::Collection collection);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ICalImporterPrivate> const d;
 };
 }
 

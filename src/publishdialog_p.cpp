@@ -19,13 +19,13 @@
 using namespace KCalendarCore;
 using namespace Akonadi;
 
-PublishDialog::Private::Private(PublishDialog *qq)
+PublishDialogPrivate::PublishDialogPrivate(PublishDialog *qq)
     : QObject()
     , q(qq)
 {
 }
 
-void PublishDialog::Private::addItem()
+void PublishDialogPrivate::addItem()
 {
     mUI.mNameLineEdit->setEnabled(true);
     mUI.mEmailLineEdit->setEnabled(true);
@@ -47,7 +47,7 @@ void PublishDialog::Private::addItem()
     mUI.mRemove->setEnabled(true);
 }
 
-void PublishDialog::Private::removeItem()
+void PublishDialogPrivate::removeItem()
 {
     if (mUI.mListWidget->selectedItems().isEmpty()) {
         return;
@@ -72,7 +72,7 @@ void PublishDialog::Private::removeItem()
     mUI.mListWidget->setCurrentRow(row);
 }
 
-void PublishDialog::Private::insertAddresses(const KContacts::Addressee::List &list)
+void PublishDialogPrivate::insertAddresses(const KContacts::Addressee::List &list)
 {
     for (const KContacts::Addressee &contact : list) {
         mUI.mNameLineEdit->setEnabled(true);
@@ -85,7 +85,7 @@ void PublishDialog::Private::insertAddresses(const KContacts::Addressee::List &l
     }
 }
 
-void PublishDialog::Private::openAddressbook()
+void PublishDialogPrivate::openAddressbook()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
 
@@ -99,7 +99,7 @@ void PublishDialog::Private::openAddressbook()
     }
 
     dialog->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
-    connect(dialog.data(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &PublishDialog::Private::insertAddresses);
+    connect(dialog.data(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &PublishDialogPrivate::insertAddresses);
     if (dialog->exec() == QDialog::Accepted) {
         const Akonadi::EmailAddressSelection::List selections = dialog->selectedAddresses();
         if (!selections.isEmpty()) {
@@ -119,7 +119,7 @@ void PublishDialog::Private::openAddressbook()
     delete dialog;
 }
 
-void PublishDialog::Private::updateItem()
+void PublishDialogPrivate::updateItem()
 {
     if (mUI.mListWidget->selectedItems().isEmpty()) {
         return;
@@ -130,7 +130,7 @@ void PublishDialog::Private::updateItem()
     item->setText(person.fullName());
 }
 
-void PublishDialog::Private::updateInput()
+void PublishDialogPrivate::updateInput()
 {
     if (mUI.mListWidget->selectedItems().isEmpty()) {
         return;

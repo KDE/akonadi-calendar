@@ -16,6 +16,8 @@
 // Uses akonadi-contact, so don't move this class to KCalUtils.
 namespace Akonadi
 {
+class PublishDialogPrivate;
+
 class AKONADI_CALENDAR_EXPORT PublishDialog : public QDialog
 {
     Q_OBJECT
@@ -49,8 +51,7 @@ public Q_SLOTS:
 private:
     void slotHelp();
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<PublishDialogPrivate> const d;
     //@endcond
 };
 }

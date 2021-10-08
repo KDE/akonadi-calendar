@@ -39,6 +39,8 @@ class Identity;
 
 namespace Akonadi
 {
+class ITIPHandlerPrivate;
+
 /**
  * @short Ui delegate for editing counter proposals.
  * @since 4.11
@@ -334,8 +336,7 @@ Q_SIGNALS:
 
 private:
     Q_DISABLE_COPY(ITIPHandler)
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ITIPHandlerPrivate> const d;
 };
 }
 

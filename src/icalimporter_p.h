@@ -28,12 +28,12 @@ class Job;
 
 namespace Akonadi
 {
-class Q_DECL_HIDDEN ICalImporter::Private : public QObject
+class ICalImporterPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(Akonadi::IncidenceChanger *changer, ICalImporter *qq);
-    ~Private();
+    ICalImporterPrivate(Akonadi::IncidenceChanger *changer, ICalImporter *qq);
+    ~ICalImporterPrivate();
     void setErrorMessage(const QString &message);
 
     ICalImporter *const q;

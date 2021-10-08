@@ -16,7 +16,7 @@
 
 using namespace Akonadi;
 
-CalendarClipboard::Private::Private(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq)
+CalendarClipboardPrivate::CalendarClipboardPrivate(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq)
     : QObject(qq)
     , m_calendar(calendar)
     , m_changer(changer)
@@ -31,17 +31,17 @@ CalendarClipboard::Private::Private(const Akonadi::CalendarBase::Ptr &calendar, 
 
     m_dndfactory = new KCalUtils::DndFactory(m_calendar);
 
-    connect(m_changer, &IncidenceChanger::modifyFinished, this, &CalendarClipboard::Private::slotModifyFinished);
+    connect(m_changer, &IncidenceChanger::modifyFinished, this, &CalendarClipboardPrivate::slotModifyFinished);
 
-    connect(m_changer, &IncidenceChanger::deleteFinished, this, &CalendarClipboard::Private::slotDeleteFinished);
+    connect(m_changer, &IncidenceChanger::deleteFinished, this, &CalendarClipboardPrivate::slotDeleteFinished);
 }
 
-CalendarClipboard::Private::~Private()
+CalendarClipboardPrivate::~CalendarClipboardPrivate()
 {
     delete m_dndfactory;
 }
 
-void CalendarClipboard::Private::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence, QStringList &uids)
+void CalendarClipboardPrivate::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence, QStringList &uids)
 {
     // protection against looping hierarchies
     if (incidence && !uids.contains(incidence->uid())) {
@@ -54,7 +54,7 @@ void CalendarClipboard::Private::getIncidenceHierarchy(const KCalendarCore::Inci
     }
 }
 
-void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::List &incidences)
+void CalendarClipboardPrivate::cut(const KCalendarCore::Incidence::List &incidences)
 {
     const bool result = m_dndfactory->copyIncidences(incidences);
     m_pendingChangeIds.clear();
@@ -73,14 +73,14 @@ void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::List &incid
     }
 }
 
-void CalendarClipboard::Private::cut(const KCalendarCore::Incidence::Ptr &incidence)
+void CalendarClipboardPrivate::cut(const KCalendarCore::Incidence::Ptr &incidence)
 {
     KCalendarCore::Incidence::List incidences;
     incidences << incidence;
     cut(incidences);
 }
 
-void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Incidence::Ptr &incidence)
+void CalendarClipboardPrivate::makeChildsIndependent(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
     const KCalendarCore::Incidence::List children = m_calendar->childIncidences(incidence->uid());
@@ -114,10 +114,7 @@ void CalendarClipboard::Private::makeChildsIndependent(const KCalendarCore::Inci
     }
 }
 
-void CalendarClipboard::Private::slotModifyFinished(int changeId,
-                                                    const Akonadi::Item &item,
-                                                    IncidenceChanger::ResultCode resultCode,
-                                                    const QString &errorMessage)
+void CalendarClipboardPrivate::slotModifyFinished(int changeId, const Akonadi::Item &item, IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     if (!m_pendingChangeIds.contains(changeId)) {
         return; // Not ours, someone else deleted something, not our business.
@@ -143,10 +140,10 @@ void CalendarClipboard::Private::slotModifyFinished(int changeId,
     }
 }
 
-void CalendarClipboard::Private::slotDeleteFinished(int changeId,
-                                                    const QVector<Akonadi::Item::Id> &ids,
-                                                    Akonadi::IncidenceChanger::ResultCode result,
-                                                    const QString &errorMessage)
+void CalendarClipboardPrivate::slotDeleteFinished(int changeId,
+                                                  const QVector<Akonadi::Item::Id> &ids,
+                                                  Akonadi::IncidenceChanger::ResultCode result,
+                                                  const QString &errorMessage)
 {
     if (!m_pendingChangeIds.contains(changeId)) {
         return; // Not ours, someone else deleted something, not our business.
@@ -164,7 +161,7 @@ void CalendarClipboard::Private::slotDeleteFinished(int changeId,
 
 CalendarClipboard::CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, QObject *parent)
     : QObject(parent)
-    , d(new Private(calendar, changer, this))
+    , d(new CalendarClipboardPrivate(calendar, changer, this))
 {
 }
 

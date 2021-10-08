@@ -16,6 +16,8 @@
 
 namespace Akonadi
 {
+class BlockAlarmsAttributePrivate;
+
 /**
  * @short An Attribute that marks that alarms from a calendar collection are blocked.
  *
@@ -79,8 +81,7 @@ public:
 
 private:
     Q_DISABLE_COPY(BlockAlarmsAttribute)
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<BlockAlarmsAttributePrivate> const d;
 };
 }
 

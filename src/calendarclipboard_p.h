@@ -22,13 +22,13 @@ namespace Akonadi
 {
 class IncidenceChanger;
 
-class Q_DECL_HIDDEN CalendarClipboard::Private : public QObject
+class CalendarClipboardPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq);
+    CalendarClipboardPrivate(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq);
 
-    ~Private();
+    ~CalendarClipboardPrivate();
 
     /**
      * Returns all uids of incidenes having @p incidence has their parent (or grand parent, etc.)

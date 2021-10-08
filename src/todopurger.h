@@ -16,6 +16,7 @@
 namespace Akonadi
 {
 class IncidenceChanger;
+class TodoPurgerPrivate;
 
 /**
  * @short Class to delete completed to-dos.
@@ -66,8 +67,7 @@ Q_SIGNALS:
     void todosPurged(bool success, int numDeleted, int numIgnored);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<TodoPurgerPrivate> const d;
 };
 }
 

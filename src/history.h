@@ -20,6 +20,7 @@ class HistoryTest;
 namespace Akonadi
 {
 class IncidenceChanger;
+class HistoryPrivate;
 
 /**
    @short History class for implementing undo/redo of calendar operations
@@ -229,6 +230,7 @@ Q_SIGNALS:
 private:
     friend class ::HistoryTest;
     friend class IncidenceChanger;
+    friend class IncidenceChangerPrivate;
     friend class Entry;
 
     // Only IncidenceChanger can create History classes
@@ -237,9 +239,9 @@ private:
     // Used by unit-tests
     Akonadi::IncidenceChanger *incidenceChanger() const;
 
+private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<HistoryPrivate> const d;
     //@endcond
 };
 }

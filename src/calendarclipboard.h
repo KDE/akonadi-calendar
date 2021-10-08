@@ -17,6 +17,7 @@
 namespace Akonadi
 {
 class IncidenceChanger;
+class CalendarClipboardPrivate;
 
 /**
  * @short Class to copy or cut calendar incidences.
@@ -79,8 +80,7 @@ Q_SIGNALS:
     void cutFinished(bool success, const QString &errorMessage);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<CalendarClipboardPrivate> const d;
 };
 }
 

@@ -26,7 +26,7 @@
 using namespace KCalendarCore;
 using namespace Akonadi;
 
-ICalImporter::Private::Private(IncidenceChanger *changer, ICalImporter *qq)
+ICalImporterPrivate::ICalImporterPrivate(IncidenceChanger *changer, ICalImporter *qq)
     : QObject(qq)
     , q(qq)
     , m_changer(changer)
@@ -34,18 +34,18 @@ ICalImporter::Private::Private(IncidenceChanger *changer, ICalImporter *qq)
     if (!changer) {
         m_changer = new IncidenceChanger(q);
     }
-    connect(m_changer, &IncidenceChanger::createFinished, this, &ICalImporter::Private::onIncidenceCreated);
+    connect(m_changer, &IncidenceChanger::createFinished, this, &ICalImporterPrivate::onIncidenceCreated);
 }
 
-ICalImporter::Private::~Private()
+ICalImporterPrivate::~ICalImporterPrivate()
 {
     delete m_temporaryFile;
 }
 
-void ICalImporter::Private::onIncidenceCreated(int changeId,
-                                               const Akonadi::Item &item,
-                                               Akonadi::IncidenceChanger::ResultCode resultCode,
-                                               const QString &errorString)
+void ICalImporterPrivate::onIncidenceCreated(int changeId,
+                                             const Akonadi::Item &item,
+                                             Akonadi::IncidenceChanger::ResultCode resultCode,
+                                             const QString &errorString)
 {
     Q_UNUSED(item)
 
@@ -66,13 +66,13 @@ void ICalImporter::Private::onIncidenceCreated(int changeId,
     }
 }
 
-void ICalImporter::Private::setErrorMessage(const QString &message)
+void ICalImporterPrivate::setErrorMessage(const QString &message)
 {
     m_lastErrorMessage = message;
     qCritical() << message;
 }
 
-void ICalImporter::Private::resourceCreated(KJob *job)
+void ICalImporterPrivate::resourceCreated(KJob *job)
 {
     auto createjob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
 
@@ -104,7 +104,7 @@ void ICalImporter::Private::resourceCreated(KJob *job)
     Q_EMIT q->importIntoNewFinished(true);
 }
 
-void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArray &data)
+void ICalImporterPrivate::remoteDownloadFinished(KIO::Job *job, const QByteArray &data)
 {
     const bool success = job->error() == 0;
     m_working = false;
@@ -121,7 +121,7 @@ void ICalImporter::Private::remoteDownloadFinished(KIO::Job *job, const QByteArr
 
 ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer, QObject *parent)
     : QObject(parent)
-    , d(new Private(changer, this))
+    , d(new ICalImporterPrivate(changer, this))
 {
 }
 
@@ -147,7 +147,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     auto job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
-    connect(job, &KJob::result, d.get(), &Private::resourceCreated);
+    connect(job, &KJob::result, d.get(), &ICalImporterPrivate::resourceCreated);
     job->start();
 
     return true;

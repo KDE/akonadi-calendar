@@ -20,10 +20,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN StandardCalendarActionManager::Private
+class Akonadi::StandardCalendarActionManagerPrivate
 {
 public:
-    Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardCalendarActionManager *parent)
+    StandardCalendarActionManagerPrivate(KActionCollection *actionCollection, QWidget *parentWidget, StandardCalendarActionManager *parent)
         : mActionCollection(actionCollection)
         , mParentWidget(parentWidget)
         , mParent(parent)
@@ -34,7 +34,7 @@ public:
         mGenericManager->setCapabilityFilter(QStringList() << QStringLiteral("Resource"));
     }
 
-    ~Private()
+    ~StandardCalendarActionManagerPrivate()
     {
         delete mGenericManager;
     }
@@ -472,7 +472,7 @@ public:
 
 Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent)
     : QObject(parent)
-    , d(new Private(actionCollection, parent, this))
+    , d(new StandardCalendarActionManagerPrivate(actionCollection, parent, this))
 {
 }
 

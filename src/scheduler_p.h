@@ -24,6 +24,8 @@ class FreeBusyCache;
 
 namespace Akonadi
 {
+class SchedulerPrivate;
+
 /**
   This class provides an encapsulation of iTIP transactions (RFC 2446).
   It is an abstract base class for inheritance by implementations of the
@@ -161,8 +163,7 @@ private Q_SLOTS:
 private:
     void connectCalendar(const Akonadi::CalendarBase::Ptr &calendar);
     Q_DISABLE_COPY(Scheduler)
-    struct Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<SchedulerPrivate> const d;
 };
 }
 

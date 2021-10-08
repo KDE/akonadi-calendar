@@ -21,7 +21,7 @@
 using namespace Akonadi;
 using namespace KIdentityManagement;
 
-class Q_DECL_HIDDEN MailScheduler::Private
+class Akonadi::MailSchedulerPrivate
 {
 public:
     KIdentityManagement::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
@@ -32,7 +32,7 @@ public:
 
 MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent)
     : Scheduler(parent)
-    , d(new Private())
+    , d(new MailSchedulerPrivate())
 {
     d->m_identityManager = KIdentityManagement::IdentityManager::self();
     d->m_mailer = new MailClient(factory, parent);
@@ -45,7 +45,7 @@ MailScheduler::~MailScheduler()
     delete d->m_mailer;
 }
 
-KIdentityManagement::Identity MailScheduler::Private::identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const
+KIdentityManagement::Identity MailSchedulerPrivate::identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const
 {
     const auto organizer = incidence->organizer();
     const QString organizerEmail = !organizer.isEmpty() ? organizer.email() : CalendarUtils::email();

@@ -16,6 +16,8 @@
 
 namespace Akonadi
 {
+class MailSchedulerPrivate;
+
 /*
   This class implements the iTIP interface using the email interface specified
   as Mail.
@@ -58,8 +60,7 @@ private:
 private:
     //@cond PRIVATE
     Q_DISABLE_COPY(MailScheduler)
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<MailSchedulerPrivate> const d;
     //@endcond
 };
 }

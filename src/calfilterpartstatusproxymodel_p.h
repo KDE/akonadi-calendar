@@ -13,6 +13,8 @@
 
 namespace Akonadi
 {
+class CalFilterPartStatusProxyModelPrivate;
+
 class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -31,8 +33,7 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<CalFilterPartStatusProxyModelPrivate> const d;
 
     //@endcond
 private Q_SLOTS:

@@ -18,10 +18,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN CalFilterPartStatusProxyModel::Private
+class Akonadi::CalFilterPartStatusProxyModelPrivate
 {
 public:
-    explicit Private()
+    explicit CalFilterPartStatusProxyModelPrivate()
         : mIdentityManager(KIdentityManagement::IdentityManager::self())
     {
     }
@@ -38,7 +38,7 @@ void CalFilterPartStatusProxyModel::slotIdentitiesChanged()
 
 CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-    , d(new Private())
+    , d(new CalFilterPartStatusProxyModelPrivate())
 {
     QObject::connect(d->mIdentityManager,
                      qOverload<>(&KIdentityManagement::IdentityManager::changed),

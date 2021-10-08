@@ -16,10 +16,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN CalFilterProxyModel::Private
+class Akonadi::CalFilterProxyModelPrivate
 {
 public:
-    explicit Private()
+    explicit CalFilterProxyModelPrivate()
     {
     }
 
@@ -28,7 +28,7 @@ public:
 
 CalFilterProxyModel::CalFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-    , d(new Private)
+    , d(new CalFilterProxyModelPrivate)
 {
     setFilterKeyColumn(0);
 }

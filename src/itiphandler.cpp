@@ -76,14 +76,14 @@ ITIPHandlerComponentFactory::createITIPHanderDialogDelegate(const KCalendarCore:
 
 ITIPHandler::ITIPHandler(QObject *parent)
     : QObject(parent)
-    , d(new Private(/*factory=*/nullptr, this))
+    , d(new ITIPHandlerPrivate(/*factory=*/nullptr, this))
 {
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
 }
 
 ITIPHandler::ITIPHandler(ITIPHandlerComponentFactory *factory, QObject *parent)
     : QObject(parent)
-    , d(new Private(factory, this))
+    , d(new ITIPHandlerPrivate(factory, this))
 {
     qRegisterMetaType<Akonadi::ITIPHandler::Result>("Akonadi::ITIPHandler::Result");
 }

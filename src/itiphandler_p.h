@@ -34,11 +34,11 @@ struct Invitation {
  */
 enum Operation { OperationNone, OperationProcessiTIPMessage, OperationSendiTIPMessage, OperationPublishInformation, OperationSendAsICalendar };
 
-class Q_DECL_HIDDEN ITIPHandler::Private : public QObject
+class ITIPHandlerPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(ITIPHandlerComponentFactory *factory, ITIPHandler *q);
+    ITIPHandlerPrivate(ITIPHandlerComponentFactory *factory, ITIPHandler *q);
 
     void finishProcessiTIPMessage(Akonadi::MailScheduler::Result, const QString &errorMessage);
     void finishSendiTIPMessage(Akonadi::MailScheduler::Result, const QString &errorMessage);

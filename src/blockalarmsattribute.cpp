@@ -15,7 +15,7 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN BlockAlarmsAttribute::Private
+class Akonadi::BlockAlarmsAttributePrivate
 {
 public:
     int audio = 1;
@@ -25,7 +25,7 @@ public:
 };
 
 BlockAlarmsAttribute::BlockAlarmsAttribute()
-    : d(new Private)
+    : d(new BlockAlarmsAttributePrivate)
 {
 }
 

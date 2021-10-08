@@ -26,10 +26,10 @@ static KCalendarCore::Todo::Ptr todo(const Akonadi::Item &item)
     return item.hasPayload<KCalendarCore::Todo::Ptr>() ? item.payload<KCalendarCore::Todo::Ptr>() : KCalendarCore::Todo::Ptr();
 }
 
-class Q_DECL_HIDDEN CalendarModel::Private
+class Akonadi::CalendarModelPrivate
 {
 public:
-    Private()
+    CalendarModelPrivate()
     {
     }
 
@@ -38,7 +38,7 @@ public:
 
 CalendarModel::CalendarModel(Akonadi::Monitor *monitor)
     : EntityTreeModel(monitor)
-    , d(new Private())
+    , d(new CalendarModelPrivate())
 {
     monitor->itemFetchScope().fetchAllAttributes(true);
 }

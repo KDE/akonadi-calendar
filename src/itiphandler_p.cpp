@@ -12,7 +12,7 @@
 #include <KMessageBox>
 using namespace Akonadi;
 
-ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler *qq)
+ITIPHandlerPrivate::ITIPHandlerPrivate(ITIPHandlerComponentFactory *factory, ITIPHandler *qq)
     : m_factory(factory ? factory : new ITIPHandlerComponentFactory(this))
     , m_scheduler(new MailScheduler(m_factory, qq))
     , m_method(KCalendarCore::iTIPNoMethod)
@@ -22,14 +22,14 @@ ITIPHandler::Private::Private(ITIPHandlerComponentFactory *factory, ITIPHandler 
     , q(qq)
 {
     m_helper->setParent(this);
-    connect(m_scheduler, &Scheduler::transactionFinished, this, &ITIPHandler::Private::onSchedulerFinished);
+    connect(m_scheduler, &Scheduler::transactionFinished, this, &ITIPHandlerPrivate::onSchedulerFinished);
 
-    connect(m_helper, &ITIPHandlerHelper::finished, this, &ITIPHandler::Private::onHelperFinished);
+    connect(m_helper, &ITIPHandlerHelper::finished, this, &ITIPHandlerPrivate::onHelperFinished);
 
-    connect(m_helper, &ITIPHandlerHelper::sendIncidenceModifiedMessageFinished, this, &ITIPHandler::Private::onHelperModifyDialogClosed);
+    connect(m_helper, &ITIPHandlerHelper::sendIncidenceModifiedMessageFinished, this, &ITIPHandlerPrivate::onHelperModifyDialogClosed);
 }
 
-void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result, const QString &errorMessage)
+void ITIPHandlerPrivate::onSchedulerFinished(Akonadi::Scheduler::Result result, const QString &errorMessage)
 {
     if (m_currentOperation == OperationNone) {
         qCritical() << "Operation can't be none!" << result << errorMessage;
@@ -51,7 +51,7 @@ void ITIPHandler::Private::onSchedulerFinished(Akonadi::Scheduler::Result result
     }
 }
 
-void ITIPHandler::Private::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage)
+void ITIPHandlerPrivate::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage)
 {
     const bool success = result == ITIPHandlerHelper::ResultSuccess;
 
@@ -59,18 +59,18 @@ void ITIPHandler::Private::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResu
         MailScheduler::Result result2 = success ? MailScheduler::ResultSuccess : MailScheduler::ResultGenericError;
         finishProcessiTIPMessage(result2, i18n("Error: %1", errorMessage));
     } else {
-        Q_EMIT q->iTipMessageSent(success ? ResultSuccess : ResultError, success ? QString() : i18n("Error: %1", errorMessage));
+        Q_EMIT q->iTipMessageSent(success ? ITIPHandler::ResultSuccess : ITIPHandler::ResultError, success ? QString() : i18n("Error: %1", errorMessage));
     }
 }
 
-void ITIPHandler::Private::onCounterProposalDelegateFinished(bool success, const QString &errorMessage)
+void ITIPHandlerPrivate::onCounterProposalDelegateFinished(bool success, const QString &errorMessage)
 {
     Q_UNUSED(success)
     Q_UNUSED(errorMessage)
     // This will be used when we make editing counter proposals async.
 }
 
-void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMessage)
+void ITIPHandlerPrivate::onLoadFinished(bool success, const QString &errorMessage)
 {
     if (m_currentOperation == OperationProcessiTIPMessage) {
         if (success) {
@@ -79,7 +79,7 @@ void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMess
             m_currentOperation = OperationNone;
             q->processiTIPMessage(m_queuedInvitation.receiver, m_queuedInvitation.iCal, m_queuedInvitation.action);
         } else {
-            Q_EMIT q->iTipMessageProcessed(ResultError, i18n("Error loading calendar: %1", errorMessage));
+            Q_EMIT q->iTipMessageProcessed(ITIPHandler::ResultError, i18n("Error loading calendar: %1", errorMessage));
         }
     } else if (m_currentOperation == OperationSendiTIPMessage) {
         q->sendiTIPMessage(m_queuedInvitation.method, m_queuedInvitation.incidence, m_parentWidget);
@@ -88,11 +88,11 @@ void ITIPHandler::Private::onLoadFinished(bool success, const QString &errorMess
     }
 }
 
-void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Result result, const QString &errorMessage)
+void ITIPHandlerPrivate::finishProcessiTIPMessage(Akonadi::MailScheduler::Result result, const QString &errorMessage)
 {
     // Handle when user cancels on the collection selection dialog
     if (result == MailScheduler::ResultUserCancelled) {
-        Q_EMIT q->iTipMessageProcessed(ResultCancelled, QString());
+        Q_EMIT q->iTipMessageProcessed(ITIPHandler::ResultCancelled, QString());
         return;
     }
 
@@ -113,19 +113,19 @@ void ITIPHandler::Private::finishProcessiTIPMessage(Akonadi::MailScheduler::Resu
         }
     }
 
-    Q_EMIT q->iTipMessageProcessed(success ? ResultSuccess : ResultError, success ? QString() : i18n("Error: %1", errorMessage));
+    Q_EMIT q->iTipMessageProcessed(success ? ITIPHandler::ResultSuccess : ITIPHandler::ResultError, success ? QString() : i18n("Error: %1", errorMessage));
 }
 
-void ITIPHandler::Private::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult,
-                                                      KCalendarCore::iTIPMethod /*method*/,
-                                                      const KCalendarCore::Incidence::Ptr &)
+void ITIPHandlerPrivate::onHelperModifyDialogClosed(ITIPHandlerHelper::SendResult sendResult,
+                                                    KCalendarCore::iTIPMethod /*method*/,
+                                                    const KCalendarCore::Incidence::Ptr &)
 {
     if (sendResult == ITIPHandlerHelper::ResultNoSendingNeeded || sendResult == ITIPHandlerHelper::ResultCanceled) {
-        Q_EMIT q->iTipMessageSent(ResultSuccess, QString());
+        Q_EMIT q->iTipMessageSent(ITIPHandler::ResultSuccess, QString());
     }
 }
 
-void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result result, const QString &errorMessage)
+void ITIPHandlerPrivate::finishSendiTIPMessage(Akonadi::MailScheduler::Result result, const QString &errorMessage)
 {
     if (result == Scheduler::ResultSuccess) {
         if (m_parentWidget) {
@@ -153,7 +153,7 @@ void ITIPHandler::Private::finishSendiTIPMessage(Akonadi::MailScheduler::Result 
     }
 }
 
-void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Result result, const QString &errorMessage)
+void ITIPHandlerPrivate::finishPublishInformation(Akonadi::MailScheduler::Result result, const QString &errorMessage)
 {
     if (result == Scheduler::ResultSuccess) {
         if (m_parentWidget) {
@@ -173,7 +173,7 @@ void ITIPHandler::Private::finishPublishInformation(Akonadi::MailScheduler::Resu
     }
 }
 
-void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result result, const QString &errorMessage)
+void ITIPHandlerPrivate::finishSendAsICalendar(Akonadi::MailClient::Result result, const QString &errorMessage)
 {
     if (result == MailClient::ResultSuccess) {
         if (m_parentWidget) {
@@ -194,11 +194,11 @@ void ITIPHandler::Private::finishSendAsICalendar(Akonadi::MailClient::Result res
     sender()->deleteLater(); // Delete the mailer
 }
 
-CalendarBase::Ptr ITIPHandler::Private::calendar()
+CalendarBase::Ptr ITIPHandlerPrivate::calendar()
 {
     if (!m_calendar) {
         FetchJobCalendar::Ptr fetchJobCalendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
-        connect(fetchJobCalendar.data(), &FetchJobCalendar::loadFinished, this, &Private::onLoadFinished);
+        connect(fetchJobCalendar.data(), &FetchJobCalendar::loadFinished, this, &ITIPHandlerPrivate::onLoadFinished);
 
         m_calendar = fetchJobCalendar;
     }
@@ -206,7 +206,7 @@ CalendarBase::Ptr ITIPHandler::Private::calendar()
     return m_calendar;
 }
 
-bool ITIPHandler::Private::isLoaded()
+bool ITIPHandlerPrivate::isLoaded()
 {
     FetchJobCalendar::Ptr fetchJobCalendar = calendar().dynamicCast<Akonadi::FetchJobCalendar>();
     if (fetchJobCalendar) {

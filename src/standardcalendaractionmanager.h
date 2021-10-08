@@ -28,6 +28,8 @@ class QWidget;
 namespace Akonadi
 {
 class Item;
+class StandardCalendarActionManagerPrivate;
+
 /**
  * @short Manages calendar specific actions for collection and item views.
  *
@@ -177,8 +179,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<StandardCalendarActionManagerPrivate> const d;
     //@endcond
 };
 }

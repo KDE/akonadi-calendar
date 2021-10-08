@@ -21,6 +21,8 @@
 namespace Akonadi
 {
 class EntityTreeModel;
+class IncidenceChangerPrivate;
+
 /**
  * @short IncidenceChanger is the preferred way to easily create, modify and delete incidences.
  *
@@ -447,12 +449,12 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    friend class History;
+    friend class HistoryPrivate;
     friend class AtomicOperation;
     // used internally by the History class
     explicit IncidenceChanger(bool enableHistory, QObject *parent = nullptr);
-    class Private;
-    std::unique_ptr<Private> const d;
+
+    std::unique_ptr<IncidenceChangerPrivate> const d;
     //@endcond
 };
 }

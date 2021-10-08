@@ -16,11 +16,11 @@ namespace Akonadi
 {
 class IncidenceChanger;
 
-class Q_DECL_HIDDEN TodoPurger::Private : public QObject
+class TodoPurgerPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(TodoPurger *q);
+    explicit TodoPurgerPrivate(TodoPurger *q);
     IncidenceChanger *m_changer = nullptr;
     QString m_lastError;
     CalendarBase::Ptr m_calendar;

@@ -14,13 +14,13 @@ using namespace Akonadi;
 
 History::History(QObject *parent)
     : QObject(parent)
-    , d(new Private(this))
+    , d(new HistoryPrivate(this))
 {
 }
 
 History::~History() = default;
 
-History::Private::Private(History *qq)
+HistoryPrivate::HistoryPrivate(History *qq)
     : mChanger(new IncidenceChanger(/*history=*/false, qq))
     , mOperationTypeInProgress(TypeNone)
     , q(qq)
@@ -145,7 +145,7 @@ bool History::redoAvailable() const
     return !d->mRedoStack.isEmpty() && d->mOperationTypeInProgress == TypeNone;
 }
 
-void History::Private::updateIds(Item::Id oldId, Item::Id newId)
+void HistoryPrivate::updateIds(Item::Id oldId, Item::Id newId)
 {
     mEntryInProgress->updateIds(oldId, newId);
 
@@ -158,18 +158,18 @@ void History::Private::updateIds(Item::Id oldId, Item::Id newId)
     }
 }
 
-void History::Private::doIt(OperationType type)
+void HistoryPrivate::doIt(OperationType type)
 {
     mOperationTypeInProgress = type;
     Q_EMIT q->changed(); // Application will disable undo/redo buttons because operation is in progress
     Q_ASSERT(!stack().isEmpty());
     mEntryInProgress = stack().pop();
 
-    connect(mEntryInProgress.data(), &Entry::finished, this, &Private::handleFinished, Qt::UniqueConnection);
+    connect(mEntryInProgress.data(), &Entry::finished, this, &HistoryPrivate::handleFinished, Qt::UniqueConnection);
     mEntryInProgress->doIt(type);
 }
 
-void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult, const QString &errorString)
+void HistoryPrivate::handleFinished(IncidenceChanger::ResultCode changerResult, const QString &errorString)
 {
     Q_ASSERT(mOperationTypeInProgress != TypeNone);
     Q_ASSERT(!(mUndoAllInProgress && mOperationTypeInProgress == TypeRedo));
@@ -202,7 +202,7 @@ void History::Private::handleFinished(IncidenceChanger::ResultCode changerResult
     Q_EMIT q->changed();
 }
 
-void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationId)
+void HistoryPrivate::stackEntry(const Entry::Ptr &entry, uint atomicOperationId)
 {
     const bool useMultiEntry = (atomicOperationId > 0);
 
@@ -243,7 +243,7 @@ void History::Private::stackEntry(const Entry::Ptr &entry, uint atomicOperationI
     }
 }
 
-void History::Private::undoOrRedo(OperationType type, QWidget *parent)
+void HistoryPrivate::undoOrRedo(OperationType type, QWidget *parent)
 {
     // Don't call undo() without the previous one finishing
     Q_ASSERT(mOperationTypeInProgress == TypeNone);
@@ -260,39 +260,39 @@ void History::Private::undoOrRedo(OperationType type, QWidget *parent)
     }
 }
 
-QStack<Entry::Ptr> &History::Private::stack(OperationType type)
+QStack<Entry::Ptr> &HistoryPrivate::stack(OperationType type)
 {
     // Entries from the undo stack go to the redo stack, and vice-versa
     return type == TypeUndo ? mUndoStack : mRedoStack;
 }
 
-void History::Private::setEnabled(bool enabled)
+void HistoryPrivate::setEnabled(bool enabled)
 {
     mEnabled = enabled;
 }
 
-int History::Private::redoCount() const
+int HistoryPrivate::redoCount() const
 {
     return mRedoStack.count();
 }
 
-int History::Private::undoCount() const
+int HistoryPrivate::undoCount() const
 {
     return mUndoStack.count();
 }
 
-QStack<Entry::Ptr> &History::Private::stack()
+QStack<Entry::Ptr> &HistoryPrivate::stack()
 {
     return stack(mOperationTypeInProgress);
 }
 
-QStack<Entry::Ptr> &History::Private::destinationStack()
+QStack<Entry::Ptr> &HistoryPrivate::destinationStack()
 {
     // Entries from the undo stack go to the redo stack, and vice-versa
     return mOperationTypeInProgress == TypeRedo ? mUndoStack : mRedoStack;
 }
 
-void History::Private::emitDone(OperationType type, History::ResultCode resultCode)
+void HistoryPrivate::emitDone(OperationType type, History::ResultCode resultCode)
 {
     if (type == TypeUndo) {
         Q_EMIT q->undone(resultCode);

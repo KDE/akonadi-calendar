@@ -178,7 +178,7 @@ public:
     QString m_description;
     bool m_transactionCompleted;
 
-    AtomicOperation(IncidenceChanger::Private *icp, uint ident);
+    AtomicOperation(IncidenceChangerPrivate *icp, uint ident);
 
     ~AtomicOperation()
     {
@@ -239,15 +239,15 @@ private:
     QVector<Change::Ptr> m_changes;
     bool m_wasRolledback = false;
     Akonadi::TransactionSequence *m_transaction = nullptr; // constructed in first use
-    IncidenceChanger::Private *m_incidenceChangerPrivate = nullptr;
+    IncidenceChangerPrivate *m_incidenceChangerPrivate = nullptr;
 };
 
-class Q_DECL_HIDDEN IncidenceChanger::Private : public QObject
+class IncidenceChangerPrivate : public QObject
 {
     Q_OBJECT
 public:
-    explicit Private(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *mIncidenceChanger);
-    ~Private();
+    explicit IncidenceChangerPrivate(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *mIncidenceChanger);
+    ~IncidenceChangerPrivate();
 
     void loadCollections(); // async-loading of list of writable collections
     bool isLoadingCollections() const;
@@ -301,7 +301,7 @@ public:
     bool mShowDialogsOnError = false;
     Akonadi::Collection mDefaultCollection;
     Akonadi::EntityTreeModel *mEntityTreeModel = nullptr;
-    DestinationPolicy mDestinationPolicy;
+    IncidenceChanger::DestinationPolicy mDestinationPolicy;
     QVector<Akonadi::Item::Id> mDeletedItemIds;
     Change::List mPendingCreations; // Creations waiting for collections to be loaded
 

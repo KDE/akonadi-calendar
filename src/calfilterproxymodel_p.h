@@ -18,6 +18,8 @@ class CalFilter;
 
 namespace Akonadi
 {
+class CalFilterProxyModelPrivate;
+
 class CalFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -32,8 +34,7 @@ protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<CalFilterProxyModelPrivate> const d;
 };
 }
 

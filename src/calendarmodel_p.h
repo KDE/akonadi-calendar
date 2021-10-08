@@ -16,6 +16,8 @@
 
 namespace Akonadi
 {
+class CalendarModelPrivate;
+
 class CalendarModel : public Akonadi::EntityTreeModel
 {
     Q_OBJECT
@@ -43,8 +45,8 @@ public:
 
 private:
     explicit CalendarModel(Akonadi::Monitor *monitor);
-    class Private;
-    std::unique_ptr<Private> const d;
+
+    std::unique_ptr<CalendarModelPrivate> const d;
 };
 }
 
