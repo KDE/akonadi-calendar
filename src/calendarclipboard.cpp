@@ -17,7 +17,7 @@
 using namespace Akonadi;
 
 CalendarClipboardPrivate::CalendarClipboardPrivate(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq)
-    : QObject(qq)
+    : QObject()
     , m_calendar(calendar)
     , m_changer(changer)
     , q(qq)
