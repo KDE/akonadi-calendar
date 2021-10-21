@@ -49,7 +49,7 @@ public:
     QHash<KJob *, Akonadi::Collection::Id> mCollectionJobs;
     QHash<QString, Akonadi::Item::Id> mItemIdByUid;
     QHash<Akonadi::Item::Id, Akonadi::Item> mItemById;
-    Akonadi::IncidenceChanger *mIncidenceChanger = nullptr;
+    Akonadi::IncidenceChanger *const mIncidenceChanger;
     QHash<QString, QStringList> mParentUidToChildrenUid;
     Akonadi::Collection mCollectionForBatchInsertion;
     bool mBatchInsertionCancelled = false;

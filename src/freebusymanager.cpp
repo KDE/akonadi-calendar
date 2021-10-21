@@ -132,8 +132,7 @@ FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const Q
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue()
-    : mHandlersCount(0)
-    , mResultingFreeBusy(nullptr)
+    : mResultingFreeBusy(nullptr)
 {
     // Set the start of the period to today 00:00:00
     mStartTime = QDateTime(QDate::currentDate(), QTime());
@@ -142,8 +141,7 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 }
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(const QDateTime &start, const QDateTime &end)
-    : mHandlersCount(0)
-    , mResultingFreeBusy(nullptr)
+    : mResultingFreeBusy(nullptr)
 {
     mStartTime = start;
     mEndTime = end;
@@ -155,9 +153,6 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
     : QObject()
     , q_ptr(q)
-    , mTimerID(0)
-    , mUploadingFreeBusy(false)
-    , mBrokenUrl(false)
     , mParentWidgetForRetrieval(nullptr)
 {
     connect(this, &FreeBusyManagerPrivate::freeBusyUrlRetrieved, this, &FreeBusyManagerPrivate::finishProcessRetrieveQueue);
@@ -170,7 +165,7 @@ QString FreeBusyManagerPrivate::freeBusyDir() const
 
 void FreeBusyManagerPrivate::checkFreeBusyUrl()
 {
-    QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
+    const QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
     mBrokenUrl = targetURL.isEmpty() || !targetURL.isValid();
 }
 
@@ -354,8 +349,8 @@ KCalendarCore::FreeBusy::Ptr FreeBusyManagerPrivate::iCalToFreeBusy(const QByteA
 
 KCalendarCore::FreeBusy::Ptr FreeBusyManagerPrivate::ownerFreeBusy()
 {
-    QDateTime start = QDateTime::currentDateTimeUtc();
-    QDateTime end = start.addDays(CalendarSettings::self()->freeBusyPublishDays());
+    const QDateTime start = QDateTime::currentDateTimeUtc();
+    const QDateTime end = start.addDays(CalendarSettings::self()->freeBusyPublishDays());
 
     KCalendarCore::Event::List events = mCalendar ? mCalendar->rawEvents(start.date(), end.date()) : KCalendarCore::Event::List();
     KCalendarCore::FreeBusy::Ptr freebusy(new KCalendarCore::FreeBusy(events, start, end));
@@ -439,10 +434,10 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
         return;
     }
 
-    QString email = mRetrieveQueue.takeFirst();
+    const QString email = mRetrieveQueue.takeFirst();
 
     // First, try to find all agents that are free-busy providers
-    QStringList providers = getFreeBusyProviders();
+    const QStringList providers = getFreeBusyProviders();
     qCDebug(AKONADICALENDAR_LOG) << "Got the following FreeBusy providers: " << providers;
 
     // If some free-busy providers were found let's query them first and ask them

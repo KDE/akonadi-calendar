@@ -52,7 +52,7 @@ public: /// Structs
         QDateTime mStartTime;
         QDateTime mEndTime;
         QList<FreeBusyProviderRequest> mRequests;
-        int mHandlersCount;
+        int mHandlersCount = 0;
         KCalendarCore::FreeBusy::Ptr mResultingFreeBusy;
     };
 
@@ -66,9 +66,9 @@ public:
 
     // Free/Busy uploading
     QDateTime mNextUploadTime;
-    int mTimerID;
-    bool mUploadingFreeBusy;
-    bool mBrokenUrl;
+    int mTimerID = 0;
+    bool mUploadingFreeBusy = false;
+    bool mBrokenUrl = false;
 
     QPointer<QWidget> mParentWidgetForMailling;
 

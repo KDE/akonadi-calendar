@@ -50,7 +50,6 @@ CalendarBasePrivate::CalendarBasePrivate(CalendarBase *qq)
 CalendarBasePrivate::~CalendarBasePrivate()
 {
     delete mIncidenceChanger;
-    mIncidenceChanger = nullptr;
 }
 
 void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
