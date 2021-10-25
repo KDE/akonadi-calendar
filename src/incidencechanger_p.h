@@ -51,7 +51,7 @@ public:
     {
     }
 
-    virtual ~Change()
+    ~Change() override
     {
         if (parentChange) {
             parentChange->childAboutToDie(this);
@@ -247,7 +247,7 @@ class IncidenceChangerPrivate : public QObject
     Q_OBJECT
 public:
     explicit IncidenceChangerPrivate(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *mIncidenceChanger);
-    ~IncidenceChangerPrivate();
+    ~IncidenceChangerPrivate() override;
 
     void loadCollections(); // async-loading of list of writable collections
     bool isLoadingCollections() const;

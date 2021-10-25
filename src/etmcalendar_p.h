@@ -70,7 +70,7 @@ class ETMCalendarPrivate : public CalendarBasePrivate
     Q_OBJECT
 public:
     explicit ETMCalendarPrivate(ETMCalendar *qq);
-    ~ETMCalendarPrivate();
+    ~ETMCalendarPrivate() override;
 
     void init();
     void setupFilteredETM();

@@ -46,7 +46,7 @@ public:
     enum Result { ResultSuccess, ResultNoAttendees, ResultReallyNoAttendees, ResultErrorCreatingTransport, ResultErrorFetchingTransport, ResultQueueJobError };
 
     explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
-    ~MailClient();
+    ~MailClient() override;
 
     void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,

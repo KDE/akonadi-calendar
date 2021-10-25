@@ -144,7 +144,7 @@ public:
     /**
      * Destroys this IncidenceChanger instance.
      */
-    ~IncidenceChanger();
+    ~IncidenceChanger() override;
 
     /**
      * Creates a new incidence.

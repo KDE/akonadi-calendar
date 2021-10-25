@@ -60,7 +60,7 @@ class AKONADI_CALENDAR_EXPORT HistoryPrivate : public QObject
     Q_OBJECT
 public:
     explicit HistoryPrivate(History *qq);
-    ~HistoryPrivate()
+    ~HistoryPrivate() override
     {
     }
 

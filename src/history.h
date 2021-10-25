@@ -63,7 +63,7 @@ public:
     /**
      * Destroys the History instance.
      */
-    ~History();
+    ~History() override;
 
     /**
      * Pushes an incidence creation onto the undo stack. The creation can be

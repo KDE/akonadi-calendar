@@ -19,7 +19,7 @@ class CalendarBasePrivate : public QObject
     Q_OBJECT
 public:
     explicit CalendarBasePrivate(CalendarBase *qq);
-    ~CalendarBasePrivate();
+    ~CalendarBasePrivate() override;
 
     void internalInsert(const Akonadi::Item &item);
     void internalRemove(const Akonadi::Item &item);

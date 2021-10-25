@@ -28,7 +28,7 @@ class CalendarClipboardPrivate : public QObject
 public:
     CalendarClipboardPrivate(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq);
 
-    ~CalendarClipboardPrivate();
+    ~CalendarClipboardPrivate() override;
 
     /**
      * Returns all uids of incidenes having @p incidence has their parent (or grand parent, etc.)

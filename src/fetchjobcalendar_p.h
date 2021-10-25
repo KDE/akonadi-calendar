@@ -18,7 +18,7 @@ class FetchJobCalendarPrivate : public CalendarBasePrivate
     Q_OBJECT
 public:
     explicit FetchJobCalendarPrivate(FetchJobCalendar *qq);
-    ~FetchJobCalendarPrivate();
+    ~FetchJobCalendarPrivate() override;
 
 public Q_SLOTS:
     void slotSearchJobFinished(KJob *job);

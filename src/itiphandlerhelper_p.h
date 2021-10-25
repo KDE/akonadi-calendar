@@ -48,7 +48,7 @@ class ITIPHandlerHelper : public QObject
     Q_OBJECT
 public:
     explicit ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent = nullptr);
-    ~ITIPHandlerHelper();
+    ~ITIPHandlerHelper() override;
 
     enum SendResult {
         ResultCanceled, /**< Sending was canceled by the user, meaning there are

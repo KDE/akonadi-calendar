@@ -246,7 +246,7 @@ public:
     /**
      * Destroys this instance.
      */
-    ~ITIPHandler();
+    ~ITIPHandler() override;
 
     /**
      * Processes a received iTip message.

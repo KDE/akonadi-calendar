@@ -46,7 +46,7 @@ public:
     /**
      * Destroys the CalendarClipboard instance.
      */
-    ~CalendarClipboard();
+    ~CalendarClipboard() override;
 
     /**
      * Copies the specified incidence into the clipboard and then deletes it from akonadi.

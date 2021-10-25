@@ -33,7 +33,7 @@ class ICalImporterPrivate : public QObject
     Q_OBJECT
 public:
     ICalImporterPrivate(Akonadi::IncidenceChanger *changer, ICalImporter *qq);
-    ~ICalImporterPrivate();
+    ~ICalImporterPrivate() override;
     void setErrorMessage(const QString &message);
 
     ICalImporter *const q;

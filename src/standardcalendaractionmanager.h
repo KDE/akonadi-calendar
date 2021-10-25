@@ -63,7 +63,7 @@ public:
     /**
      * Destroys the standard calendar action manager.
      */
-    ~StandardCalendarActionManager();
+    ~StandardCalendarActionManager() override;
 
     /**
      * Sets the collection selection model based on which the collection
