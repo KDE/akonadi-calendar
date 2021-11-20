@@ -262,7 +262,7 @@ public:
         return false;
     }
 
-    bool hasWritableCollection(const QString &mimeType) const
+    Q_REQUIRED_RESULT bool hasWritableCollection(const QString &mimeType) const
     {
         if (!mCollectionSelectionModel) {
             return false;

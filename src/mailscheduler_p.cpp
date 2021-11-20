@@ -24,7 +24,7 @@ using namespace KIdentityManagement;
 class Akonadi::MailSchedulerPrivate
 {
 public:
-    KIdentityManagement::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
+    Q_REQUIRED_RESULT KIdentityManagement::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
 
     KIdentityManagement::IdentityManager *m_identityManager = nullptr;
     MailClient *m_mailer = nullptr;
