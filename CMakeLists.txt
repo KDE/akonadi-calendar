@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(PIM_VERSION "5.18.80")
+set(PIM_VERSION "5.18.90")
 project(Akonadi-Calendar  VERSION ${PIM_VERSION})
 
 # ECM setup
