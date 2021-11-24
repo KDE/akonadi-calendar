@@ -21,9 +21,7 @@ FreeBusyDownloadJob::FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget)
     setObjectName(QStringLiteral("FreeBusyDownloadJob"));
 }
 
-FreeBusyDownloadJob::~FreeBusyDownloadJob()
-{
-}
+FreeBusyDownloadJob::~FreeBusyDownloadJob() = default;
 
 void FreeBusyDownloadJob::start()
 {

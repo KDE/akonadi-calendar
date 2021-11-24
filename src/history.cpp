@@ -79,7 +79,7 @@ QString History::nextUndoDescription() const
     if (!d->mUndoStack.isEmpty()) {
         return d->mUndoStack.top()->mDescription;
     } else {
-        return QString();
+        return {};
     }
 }
 
@@ -88,7 +88,7 @@ QString History::nextRedoDescription() const
     if (!d->mRedoStack.isEmpty()) {
         return d->mRedoStack.top()->mDescription;
     } else {
-        return QString();
+        return {};
     }
 }
 

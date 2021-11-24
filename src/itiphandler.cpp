@@ -46,18 +46,14 @@ GroupwareUiDelegate::GroupwareUiDelegate(QObject *parent)
 {
 }
 
-GroupwareUiDelegate::~GroupwareUiDelegate()
-{
-}
+GroupwareUiDelegate::~GroupwareUiDelegate() = default;
 
 ITIPHandlerComponentFactory::ITIPHandlerComponentFactory(QObject *parent)
     : QObject(parent)
 {
 }
 
-ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory()
-{
-}
+ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory() = default;
 
 MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                                                                    const KIdentityManagement::Identity &identity,

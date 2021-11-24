@@ -19,9 +19,7 @@ using namespace Akonadi;
 class Akonadi::CalFilterProxyModelPrivate
 {
 public:
-    explicit CalFilterProxyModelPrivate()
-    {
-    }
+    explicit CalFilterProxyModelPrivate() = default;
 
     KCalendarCore::CalFilter *filter = nullptr;
 };

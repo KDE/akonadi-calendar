@@ -932,12 +932,12 @@ KCalendarCore::FreeBusy::Ptr FreeBusyManager::loadFreeBusy(const QString &email)
     QFile f(fbd + QLatin1Char('/') + email + QStringLiteral(".ifb"));
     if (!f.exists()) {
         qCDebug(AKONADICALENDAR_LOG) << f.fileName() << "doesn't exist.";
-        return KCalendarCore::FreeBusy::Ptr();
+        return {};
     }
 
     if (!f.open(QIODevice::ReadOnly)) {
         qCDebug(AKONADICALENDAR_LOG) << "Unable to open file" << f.fileName();
-        return KCalendarCore::FreeBusy::Ptr();
+        return {};
     }
 
     QTextStream ts(&f);

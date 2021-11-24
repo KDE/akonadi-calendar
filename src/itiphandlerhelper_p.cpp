@@ -178,9 +178,7 @@ ITIPHandlerHelper::ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidg
     connect(m_scheduler, &MailScheduler::transactionFinished, this, &ITIPHandlerHelper::onSchedulerFinished);
 }
 
-ITIPHandlerHelper::~ITIPHandlerHelper()
-{
-}
+ITIPHandlerHelper::~ITIPHandlerHelper() = default;
 
 void ITIPHandlerHelper::setDialogParent(QWidget *parent)
 {

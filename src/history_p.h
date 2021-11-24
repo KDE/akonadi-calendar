@@ -60,9 +60,7 @@ class AKONADI_CALENDAR_EXPORT HistoryPrivate : public QObject
     Q_OBJECT
 public:
     explicit HistoryPrivate(History *qq);
-    ~HistoryPrivate() override
-    {
-    }
+    ~HistoryPrivate() override = default;
 
     void doIt(OperationType);
     void stackEntry(const Entry::Ptr &entry, uint atomicOperationId);

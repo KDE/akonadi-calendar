@@ -172,9 +172,7 @@ void ETMCalendarPrivate::setupFilteredETM()
 #endif
 }
 
-ETMCalendarPrivate::~ETMCalendarPrivate()
-{
-}
+ETMCalendarPrivate::~ETMCalendarPrivate() = default;
 
 void ETMCalendarPrivate::loadFromETM()
 {
@@ -465,9 +463,7 @@ ETMCalendar::ETMCalendar(Monitor *monitor, QObject *parent)
     d->init();
 }
 
-ETMCalendar::~ETMCalendar()
-{
-}
+ETMCalendar::~ETMCalendar() = default;
 
 // TODO: move this up?
 Akonadi::Collection ETMCalendar::collection(Akonadi::Collection::Id id) const

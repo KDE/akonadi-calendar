@@ -35,9 +35,7 @@ MailClient::MailClient(ITIPHandlerComponentFactory *factory, QObject *parent)
 {
 }
 
-MailClient::~MailClient()
-{
-}
+MailClient::~MailClient() = default;
 
 void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                const KIdentityManagement::Identity &identity,

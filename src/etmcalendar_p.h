@@ -58,7 +58,7 @@ public:
             // Don't show the checkbox if the collection can't contain incidences
             const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
             if (isStructuralCollection(collection)) {
-                return QVariant();
+                return {};
             }
         }
         return KCheckableProxyModel::data(index, role);

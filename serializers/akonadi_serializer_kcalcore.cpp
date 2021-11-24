@@ -24,9 +24,7 @@ using namespace KCalendarCore;
 using namespace KCalUtils;
 using namespace Akonadi;
 
-SerializerPluginKCalCore::SerializerPluginKCalCore()
-{
-}
+SerializerPluginKCalCore::SerializerPluginKCalCore() = default;
 
 //// ItemSerializerPlugin interface
 
@@ -147,12 +145,12 @@ static QString toString(const Attendee &attendee)
 
 static QString toString(const Alarm::Ptr &)
 {
-    return QString();
+    return {};
 }
 
 static QString toString(const Attachment &)
 {
-    return QString();
+    return {};
 }
 
 static QString toString(QDate date)
@@ -356,7 +354,7 @@ void SerializerPluginKCalCore::compare(Akonadi::AbstractDifferencesReporter *rep
 QString SerializerPluginKCalCore::extractGid(const Item &item) const
 {
     if (!item.hasPayload<Incidence::Ptr>()) {
-        return QString();
+        return {};
     }
     return item.payload<Incidence::Ptr>()->instanceIdentifier();
 }

@@ -155,7 +155,7 @@ QByteArray UnitTestBase::readFile(const QString &filename)
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qWarning() << "File could not be opened for reading:" << filename;
-        return QByteArray();
+        return {};
     }
 
     return file.readAll();

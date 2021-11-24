@@ -390,9 +390,7 @@ CalendarBase::CalendarBase(CalendarBasePrivate *const dd, QObject *parent)
     setDeletionTracking(false);
 }
 
-CalendarBase::~CalendarBase()
-{
-}
+CalendarBase::~CalendarBase() = default;
 
 Akonadi::Item CalendarBase::item(Akonadi::Item::Id id) const
 {

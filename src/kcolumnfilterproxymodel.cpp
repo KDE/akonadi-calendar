@@ -17,9 +17,7 @@ KColumnFilterProxyModel::KColumnFilterProxyModel(QObject *parent)
 {
 }
 
-KColumnFilterProxyModel::~KColumnFilterProxyModel()
-{
-}
+KColumnFilterProxyModel::~KColumnFilterProxyModel() = default;
 
 QVector<int> KColumnFilterProxyModel::visbileColumns() const
 {

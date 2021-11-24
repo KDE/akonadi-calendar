@@ -29,9 +29,7 @@ static KCalendarCore::Todo::Ptr todo(const Akonadi::Item &item)
 class Akonadi::CalendarModelPrivate
 {
 public:
-    CalendarModelPrivate()
-    {
-    }
+    CalendarModelPrivate() = default;
 
     QWeakPointer<CalendarModel> m_weakPointer;
 };
@@ -67,13 +65,13 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
 {
     const KCalendarCore::Incidence::Ptr inc = CalendarUtils::incidence(item);
     if (!inc) {
-        return QVariant();
+        return {};
     }
 
     switch (role) {
     case Qt::DecorationRole: {
         if (column != Summary) {
-            return QVariant();
+            return {};
         }
         const auto incType{inc->type()};
         if (incType == KCalendarCore::IncidenceBase::TypeTodo) {
@@ -100,21 +98,21 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->dtDue().toString();
             } else {
-                return QVariant();
+                return {};
             }
 
         case Priority:
             if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->priority();
             } else {
-                return QVariant();
+                return {};
             }
 
         case PercentComplete:
             if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->percentComplete();
             } else {
-                return QVariant();
+                return {};
             }
 
         case Type:
@@ -123,7 +121,7 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             break;
         }
 
-        return QVariant();
+        return {};
     case SortRole:
         switch (column) {
         case Summary:
@@ -139,21 +137,21 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->dtDue().toUTC();
             } else {
-                return QVariant();
+                return {};
             }
 
         case Priority:
             if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->priority();
             } else {
-                return QVariant();
+                return {};
             }
 
         case PercentComplete:
             if (KCalendarCore::Todo::Ptr t = todo(item)) {
                 return t->percentComplete();
             } else {
-                return QVariant();
+                return {};
             }
 
         case Type:
@@ -163,13 +161,13 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             break;
         }
 
-        return QVariant();
+        return {};
 
     case RecursRole:
         return inc->recurs();
 
     default:
-        return QVariant();
+        return {};
     }
 }
 
@@ -190,7 +188,7 @@ int CalendarModel::entityColumnCount(EntityTreeModel::HeaderGroup headerSet) con
 QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientation, int role, EntityTreeModel::HeaderGroup headerSet) const
 {
     if (role != Qt::DisplayRole || orientation != Qt::Horizontal) {
-        return QVariant();
+        return {};
     }
 
     if (headerSet == EntityTreeModel::ItemListHeaders) {
@@ -210,7 +208,7 @@ QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientatio
         case PercentComplete:
             return i18nc("@title:column todo item completion in percent", "Complete");
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -219,8 +217,8 @@ QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientatio
         case CollectionTitle:
             return i18nc("@title:column calendar title", "Calendar");
         default:
-            return QVariant();
+            return {};
         }
     }
-    return QVariant();
+    return {};
 }

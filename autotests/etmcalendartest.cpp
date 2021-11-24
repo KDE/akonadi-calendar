@@ -33,7 +33,7 @@ KCalendarCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::I
     try {
         return item.payload<KCalendarCore::Incidence::Ptr>();
     } catch (const Akonadi::PayloadException &) {
-        return KCalendarCore::Incidence::Ptr();
+        return {};
     }
 }
 

@@ -23,9 +23,7 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     connect(this, &CalendarBasePrivate::fetchFinished, this, &FetchJobCalendarPrivate::slotFetchJobFinished);
 }
 
-FetchJobCalendarPrivate::~FetchJobCalendarPrivate()
-{
-}
+FetchJobCalendarPrivate::~FetchJobCalendarPrivate() = default;
 
 void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 {
@@ -66,9 +64,7 @@ FetchJobCalendar::FetchJobCalendar(QObject *parent)
 {
 }
 
-FetchJobCalendar::~FetchJobCalendar()
-{
-}
+FetchJobCalendar::~FetchJobCalendar() = default;
 
 bool FetchJobCalendar::isLoaded() const
 {
