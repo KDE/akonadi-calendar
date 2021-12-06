@@ -522,26 +522,9 @@ KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from, const QDat
 
         KCalendarCore::Incidence::Ptr incidence;
         if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-            incidence = KCalendarCore::Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
-        } else {
-            continue;
+            incidence = item.payload<KCalendarCore::Incidence::Ptr>();
         }
-
-        if (!incidence) {
-            continue;
-        }
-
-        if (blockedAttr) {
-            // Remove all blocked types of alarms
-            const auto alarmsLst = incidence->alarms();
-            for (const KCalendarCore::Alarm::Ptr &alarm : alarmsLst) {
-                if (blockedAttr->isAlarmTypeBlocked(alarm->type())) {
-                    incidence->removeAlarm(alarm);
-                }
-            }
-        }
-
-        if (incidence->alarms().isEmpty()) {
+        if (!incidence || incidence->alarms().isEmpty()) {
             continue;
         }
 
@@ -552,13 +535,15 @@ KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from, const QDat
             appendAlarms(tmpList, incidence, from, to);
         }
 
-        // We need to tag them with the incidence uid in case
-        // the caller will need it, because when we get out of
-        // this scope the incidence will be destroyed.
-        QVectorIterator<Alarm::Ptr> a(tmpList);
-        while (a.hasNext()) {
-            a.next()->setCustomProperty("ETMCalendar", "parentUid", incidence->uid());
+        if (blockedAttr) {
+            tmpList.erase(std::remove_if(tmpList.begin(),
+                                         tmpList.end(),
+                                         [blockedAttr](const auto &alarm) {
+                                             return blockedAttr->isAlarmTypeBlocked(alarm->type());
+                                         }),
+                          tmpList.end());
         }
+
         alarmList += tmpList;
     }
     return alarmList;
