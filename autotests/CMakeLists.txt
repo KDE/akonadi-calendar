@@ -4,7 +4,7 @@
 include(ECMMarkAsTest)
 include(ECMAddTests)
 
-find_package(Qt5Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
+find_package(Qt${QT_MAJOR_VERSION}Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
 
 
@@ -35,6 +35,6 @@ endif()
 ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_autotest_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer)
 
 ecm_add_test(kcalcoreserializertest.cpp ../serializers/akonadi_serializer_kcalcore.cpp ${akonadi_serializer_kcalcore_autotest_SRCS}
-    LINK_LIBRARIES KF5::CalendarUtils KF5::CalendarCore KF5::AkonadiCore KF5::I18n Qt::Test
+    LINK_LIBRARIES KF5::CalendarUtils KF5::CalendarCore KF5::AkonadiCore KF5::I18n Qt${QT_MAJOR_VERSION}::Test
     TEST_NAME kcalcoreserializertest
 )
