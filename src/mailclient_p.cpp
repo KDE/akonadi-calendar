@@ -18,9 +18,9 @@
 #include <KEmailAddress>
 #include <identity.h>
 
-#include <mailtransport/transport.h>
-#include <mailtransport/transportmanager.h>
-#include <mailtransportakonadi/messagequeuejob.h>
+#include <MailTransport/Transport>
+#include <MailTransport/TransportManager>
+#include <MailTransportAkonadi/MessageQueueJob>
 
 #include "akonadicalendar_debug.h"
 #include <KJob>
