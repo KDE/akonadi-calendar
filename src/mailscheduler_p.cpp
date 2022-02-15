@@ -12,8 +12,8 @@
 
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/ScheduleMessage>
-#include <identity.h>
-#include <identitymanager.h>
+#include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
 
 #include <KLocalizedString>
 #include <QStandardPaths>

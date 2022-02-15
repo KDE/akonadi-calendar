@@ -14,7 +14,7 @@
 #include <KCalendarCore/Incidence>
 // #include <email.h>
 
-#include <identitymanager.h>
+#include <KIdentityManagement/IdentityManager>
 
 using namespace Akonadi;
 

@@ -16,7 +16,7 @@
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/Incidence>
 #include <KEmailAddress>
-#include <identity.h>
+#include <KIdentityManagement/Identity>
 
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>

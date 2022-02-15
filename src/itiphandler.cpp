@@ -22,9 +22,9 @@
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/ICalFormat>
 
+#include <KIdentityManagement/IdentityManager>
 #include <MailTransport/TransportManager>
 #include <MailTransportAkonadi/MessageQueueJob>
-#include <identitymanager.h>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
