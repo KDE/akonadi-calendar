@@ -19,6 +19,7 @@
 
 #include "serializer_debug.h"
 #include <QDate>
+#include <QIODevice>
 
 using namespace KCalendarCore;
 using namespace KCalUtils;

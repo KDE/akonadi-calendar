@@ -12,6 +12,7 @@
 #include <Akonadi/AttributeFactory>
 #include <QByteArray>
 #include <QDataStream>
+#include <QIODevice>
 
 using namespace Akonadi;
 
