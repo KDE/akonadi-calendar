@@ -15,7 +15,7 @@
 
 #include <Akonadi/AgentInstance>
 #include <Akonadi/AgentManager>
-#include <contactsearchjob.h>
+#include <Akonadi/ContactSearchJob>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/FreeBusy>

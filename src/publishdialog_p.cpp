@@ -6,8 +6,8 @@
 */
 
 #include "publishdialog_p.h"
-#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
-#include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <Akonadi/AbstractEmailAddressSelectionDialog>
+#include <Akonadi/EmailAddressSelectionDialog>
 #include <KCalendarCore/Person>
 #include <KEmailAddress>
 
