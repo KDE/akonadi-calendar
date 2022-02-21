@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(PIM_VERSION "5.19.41")
+set(PIM_VERSION "5.19.42")
 project(Akonadi-Calendar  VERSION ${PIM_VERSION})
 
 # ECM setup
@@ -107,7 +107,7 @@ install(EXPORT KF5AkonadiCalendarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}AkonadiCalendar COMPONENT Devel
 )
 ecm_qt_install_logging_categories(
         EXPORT AKONADI-CALENDAR
