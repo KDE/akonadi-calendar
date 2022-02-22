@@ -10,7 +10,7 @@
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
 #include <KIO/TransferJob>
-#include <KJobWidgets/KJobWidgets>
+#include <KJobWidgets>
 
 using namespace Akonadi;
 

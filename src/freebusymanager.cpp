@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <QUrl>
 
-#include <KJobWidgets/KJobWidgets>
+#include <KJobWidgets>
 #include <QDir>
 #include <QFile>
 #include <QRegularExpression>
