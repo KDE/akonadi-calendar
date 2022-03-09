@@ -2,11 +2,27 @@
 IconName=appointment-reminder
 DesktopEntry=org.kde.kalendar
 Comment=Reminders about calendar events and tasks
+Comment[ca]=Recordatoris dels esdeveniments i les tasques del calendari
+Comment[nl]=Herinneringen over agenda-afspraken en taken
+Comment[uk]=Нагадування щодо подій та завдань з календаря
+Comment[x-test]=xxReminders about calendar events and tasksxx
 Name=Calendar Reminders
+Name[ca]=Recordatoris del calendari
+Name[nl]=Agendaherinneringen
+Name[uk]=Нагадування календаря
+Name[x-test]=xxCalendar Remindersxx
 
 [Event/alarm]
 Name=Alarm
+Name[ca]=Alarma
+Name[nl]=Alarm
+Name[uk]=Нагадування
+Name[x-test]=xxAlarmxx
 Contexts=uid
 Comment=Alarm Notification
+Comment[ca]=Notificació de l'alarma
+Comment[nl]=Alarmmelding
+Comment[uk]=Сповіщення для нагадування
+Comment[x-test]=xxAlarm Notificationxx
 Action=Popup|Sound
 Sound=freedesktop/stereo/bell.oga
