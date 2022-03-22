@@ -53,7 +53,7 @@ install(FILES
     DESTINATION ${KDE_INSTALL_AUTOSTARTDIR}
     )
 
-install(FILES kalendarac.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
+install(FILES kalendarac.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
 set(SERV_EXEC ${KDE_INSTALL_FULL_BINDIR}/kalendarac)
 configure_file(org.kde.kalendarac.service.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kalendarac.service)
