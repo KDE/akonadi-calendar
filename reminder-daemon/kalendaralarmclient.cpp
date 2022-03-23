@@ -6,7 +6,6 @@
 #include "calendarinterface.h"
 #include "logging.h"
 
-#include <akonadi-calendar_version.h>
 
 #include <KIO/ApplicationLauncherJob>
 
@@ -243,11 +242,7 @@ void KalendarAlarmClient::checkAlarms()
     // look for new alarms
     const Alarm::List alarms = mCalendar->alarms(from, mLastChecked, true /* exclude blocked alarms */);
     for (const Alarm::Ptr &alarm : alarms) {
-#if AKONADICALENDAR_VERSION < QT_VERSION_CHECK(5, 19, 41)
-        const QString uid = alarm->customProperty("ETMCalendar", "parentUid");
-#else
         const QString uid = alarm->parentUid();
-#endif
         const auto incidence = mCalendar->incidence(uid);
         const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
         addNotification(uid, alarm->text(), occurrence, mLastChecked);
