@@ -61,4 +61,3 @@ private:
     QVector<int> m_visibleColumns;
 };
 }
-

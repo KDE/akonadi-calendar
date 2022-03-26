@@ -37,4 +37,3 @@ private:
     std::unique_ptr<CalFilterProxyModelPrivate> const d;
 };
 }
-

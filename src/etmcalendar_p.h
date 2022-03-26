@@ -125,4 +125,3 @@ private:
     ETMCalendar *const q;
 };
 }
-

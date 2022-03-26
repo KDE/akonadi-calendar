@@ -15,4 +15,3 @@
 #else /* not compiling tests */
 #define AKONADI_CALENDAR_TESTS_EXPORT
 #endif
-

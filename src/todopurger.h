@@ -70,4 +70,3 @@ private:
     std::unique_ptr<TodoPurgerPrivate> const d;
 };
 }
-

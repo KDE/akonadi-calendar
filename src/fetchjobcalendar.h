@@ -62,4 +62,3 @@ private:
     Q_DECLARE_PRIVATE(FetchJobCalendar)
 };
 }
-

@@ -36,4 +36,3 @@ private:
     KCalendarCore::ICalFormat mFormat;
 };
 }
-

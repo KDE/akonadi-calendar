@@ -15,4 +15,3 @@ bool confirmExists(const Akonadi::Item &item);
 bool confirmDoesntExist(const Akonadi::Item &item);
 Akonadi::Collection fetchCollection();
 }
-

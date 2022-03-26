@@ -65,4 +65,3 @@ private:
     QString mLastDeletedUid;
     QString mLastChangedUid;
 };
-

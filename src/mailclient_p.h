@@ -113,4 +113,3 @@ public:
 }
 
 Q_DECLARE_METATYPE(Akonadi::MailClient::Result)
-

@@ -6,7 +6,6 @@
 #include "calendarinterface.h"
 #include "logging.h"
 
-
 #include <KIO/ApplicationLauncherJob>
 
 #include <KCheckableProxyModel>

@@ -166,4 +166,3 @@ private:
     std::unique_ptr<SchedulerPrivate> const d;
 };
 }
-

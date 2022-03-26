@@ -353,4 +353,3 @@ private:
     IncidenceChanger *q = nullptr;
 };
 }
-

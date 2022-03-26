@@ -89,4 +89,3 @@ private:
     std::unique_ptr<ICalImporterPrivate> const d;
 };
 }
-

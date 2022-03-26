@@ -33,4 +33,3 @@ private:
     bool m_success;
 };
 }
-

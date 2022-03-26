@@ -73,7 +73,6 @@ public:
     void emitDone(OperationType, History::ResultCode);
     void setEnabled(bool enabled);
 
-
     int redoCount() const;
     int undoCount() const;
 
@@ -190,4 +189,3 @@ private:
     Q_DISABLE_COPY(MultiEntry)
 };
 }
-

@@ -56,4 +56,3 @@ public Q_SLOTS:
     void handleUndone(Akonadi::History::ResultCode result);
     void maybeQuitEventLoop();
 };
-

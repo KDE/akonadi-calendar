@@ -191,4 +191,3 @@ private:
     Q_DECLARE_PRIVATE(ETMCalendar)
 };
 }
-

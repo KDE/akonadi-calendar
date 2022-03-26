@@ -161,23 +161,24 @@ public:
      *         Returns -1 if @p incidence is invalid. The createFinished() signal
      *         won't be emitted in this case.
      */
-    int createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
+    int
+    createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
     /**
-      * Creates a new incidence.
-      *
-      * @param item Item containing the incidence to create and metadata, such as tags.
-      * @param collection Collection where the incidence will be created. If invalid, one according
-      *                   to the DestinationPolicy will be used. You can know which collection was
-      *                   used by calling lastCollectionUsed();
-      * @param parent widget parent to be used in dialogs.
-      *
-      * @return Returns an integer which identifies this change. This identifier is useful
-      *         to correlate this operation with the IncidenceChanger::createFinished() signal.
-      *
-      *         Returns -1 if @p item is invalid. The createFinished() signal
-      *         won't be emitted in this case.
-      */
+     * Creates a new incidence.
+     *
+     * @param item Item containing the incidence to create and metadata, such as tags.
+     * @param collection Collection where the incidence will be created. If invalid, one according
+     *                   to the DestinationPolicy will be used. You can know which collection was
+     *                   used by calling lastCollectionUsed();
+     * @param parent widget parent to be used in dialogs.
+     *
+     * @return Returns an integer which identifies this change. This identifier is useful
+     *         to correlate this operation with the IncidenceChanger::createFinished() signal.
+     *
+     *         Returns -1 if @p item is invalid. The createFinished() signal
+     *         won't be emitted in this case.
+     */
     int createFromItem(const Akonadi::Item &item, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
     /**
@@ -223,8 +224,8 @@ public:
      *         won't be emitted in this case.
      */
     int modifyIncidence(const Akonadi::Item &item,
-                                          const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
-                                          QWidget *parent = nullptr);
+                        const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
+                        QWidget *parent = nullptr);
 
     /**
      * Some incidence operations require more than one change. Like dissociating
@@ -462,4 +463,3 @@ private:
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::DestinationPolicy)
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::ResultCode)
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::ChangeType)
-

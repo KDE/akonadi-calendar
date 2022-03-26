@@ -48,4 +48,3 @@ private:
     QString mOneJournalUid;
     QString mOneIncidenceUid;
 };
-

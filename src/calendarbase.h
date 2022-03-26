@@ -230,4 +230,3 @@ protected:
     friend class Scheduler;
 };
 }
-

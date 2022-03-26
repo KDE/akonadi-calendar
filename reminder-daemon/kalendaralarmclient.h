@@ -7,9 +7,9 @@
 #include <QHash>
 #include <QTimer>
 
+#include <Akonadi/ETMCalendar>
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/ServerManager>
-#include <Akonadi/ETMCalendar>
 
 class AlarmNotification;
 

@@ -178,7 +178,8 @@ static QString toString(bool value)
     }
 }
 
-template<class C> static void compareList(AbstractDifferencesReporter *reporter, const QString &id, const C &left, const C &right)
+template<class C>
+static void compareList(AbstractDifferencesReporter *reporter, const QString &id, const C &left, const C &right)
 {
     for (typename C::const_iterator it = left.begin(), end = left.end(); it != end; ++it) {
         if (!right.contains(*it)) {

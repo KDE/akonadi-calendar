@@ -83,4 +83,3 @@ private:
     std::unique_ptr<CalendarClipboardPrivate> const d;
 };
 }
-

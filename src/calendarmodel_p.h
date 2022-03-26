@@ -49,4 +49,3 @@ private:
     std::unique_ptr<CalendarModelPrivate> const d;
 };
 }
-

@@ -48,4 +48,3 @@ private:
 
     Akonadi::TodoPurger *m_todoPurger = nullptr;
 };
-

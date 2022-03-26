@@ -339,4 +339,3 @@ private:
     std::unique_ptr<ITIPHandlerPrivate> const d;
 };
 }
-

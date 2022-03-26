@@ -69,4 +69,3 @@ private:
     Akonadi::IncidenceChanger *m_changer = nullptr;
     bool m_cancelExpected = false;
 };
-

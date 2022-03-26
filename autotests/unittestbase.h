@@ -42,4 +42,3 @@ protected:
     Akonadi::Collection mCollection;
     Akonadi::IncidenceChanger *mChanger = nullptr;
 };
-

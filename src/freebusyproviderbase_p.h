@@ -64,4 +64,3 @@ private:
     FreeBusyProviderBase *const q;
 };
 }
-

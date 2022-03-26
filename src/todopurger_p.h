@@ -39,4 +39,3 @@ private:
     TodoPurger *const q;
 };
 }
-

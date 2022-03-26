@@ -40,4 +40,3 @@ private Q_SLOTS:
     void slotIdentitiesChanged();
 };
 }
-

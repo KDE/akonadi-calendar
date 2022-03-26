@@ -39,4 +39,3 @@ Q_REQUIRED_RESULT Akonadi::Collection
 selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }
 }
-

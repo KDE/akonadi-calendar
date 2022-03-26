@@ -38,4 +38,3 @@ private:
     int m_jobCount = 0;
 };
 }
-
