@@ -47,6 +47,9 @@ target_sources(KF5AkonadiCalendar PRIVATE
     incidencechanger_p.h
     incidencefetchjob_p.cpp
     incidencefetchjob_p.h
+    incidencetreemodel.cpp
+    incidencetreemodel.h
+    incidencetreemodel_p.h
     itiphandler.cpp
     itiphandler.h
     itiphandlerhelper_p.cpp
@@ -143,6 +146,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   History
   ICalImporter
   IncidenceChanger
+  IncidenceTreeModel
   ITIPHandler
   PublishDialog
   StandardCalendarActionManager
