@@ -5,6 +5,7 @@
 Name=Calendar Reminders
 Name[ca]=Recordatoris del calendari
 Name[ca@valencia]=Recordatoris del calendari
+Name[en_GB]=Calendar Reminders
 Name[es]=Recordatorios de calendarios
 Name[fr]=Rappels d'agenda
 Name[ia]=Mementos de calendario
@@ -23,6 +24,7 @@ Categories=Qt;KDE;
 GenericName=Reminder Daemon Client
 GenericName[ca]=Client del dimoni de recordatoris
 GenericName[ca@valencia]=Client del dimoni de recordatoris
+GenericName[en_GB]=Reminder Daemon Client
 GenericName[es]=Cliente del demonio de recordatorios
 GenericName[fr]=Client de démon pour les rappels
 GenericName[ia]=Cliente Daemon pro rememoration 
