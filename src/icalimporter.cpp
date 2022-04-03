@@ -20,6 +20,7 @@
 #include <KIO/Job>
 
 #include <QDBusInterface>
+#include <QFileInfo>
 #include <QTemporaryFile>
 #include <QTimeZone>
 
@@ -173,8 +174,9 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
     }
 
     if (url.isLocalFile()) {
-        if (!QFile::exists(url.path())) {
-            d->setErrorMessage(i18n("The specified file doesn't exist, aborting import."));
+        QFileInfo f {url.path()};
+        if (!f.exists() || !f.isFile() || !f.isReadable()) {
+            d->setErrorMessage(i18n("The selected file is not a readable file."));
             return false;
         }
         MemoryCalendar::Ptr temporaryCalendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
@@ -182,7 +184,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
         storage.setFileName(url.path());
         bool success = storage.load();
         if (!success) {
-            d->setErrorMessage(i18n("Failed to load ical file, check permissions."));
+            d->setErrorMessage(i18n("The selected file is not properly formatted, or in a format not supported by this software."));
             return false;
         }
 
@@ -190,7 +192,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
         const Incidence::List incidences = temporaryCalendar->incidences();
 
         if (incidences.isEmpty()) {
-            d->setErrorMessage(i18n("The ical file to merge is empty."));
+            d->setErrorMessage(i18n("The selected file is empty."));
             return false;
         }
 
