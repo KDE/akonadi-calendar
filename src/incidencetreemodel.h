@@ -18,7 +18,7 @@ namespace Akonadi
 
 class IncidenceTreeModelPrivate;
 
-/** Hierachical incidence model.
+/** Hierarchical incidence model.
  *  Useful as a source for TodoModel for example.
  */
 class AKONADI_CALENDAR_EXPORT IncidenceTreeModel : public QAbstractProxyModel
