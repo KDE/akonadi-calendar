@@ -8,8 +8,8 @@
 #include "calendarbase.h"
 #include "akonadicalendar_debug.h"
 #include "calendarbase_p.h"
+#include "calendarutils.h"
 #include "incidencechanger.h"
-#include "utils_p.h"
 #include <Akonadi/CollectionFetchJob>
 
 #include <KLocalizedString>

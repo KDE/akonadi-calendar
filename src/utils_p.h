@@ -33,8 +33,6 @@ Q_REQUIRED_RESULT bool thatIsMe(const KCalendarCore::Attendee &attendee);
 
 Q_REQUIRED_RESULT QStringList allEmails();
 
-Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence(const Akonadi::Item &item);
-
 Q_REQUIRED_RESULT Akonadi::Collection
 selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }

@@ -5,9 +5,9 @@
 */
 
 #include "todopurger.h"
+#include "calendarutils.h"
 #include "fetchjobcalendar.h"
 #include "todopurger_p.h"
-#include "utils_p.h"
 
 #include <KCalendarCore/Todo>
 
@@ -63,7 +63,7 @@ void TodoPurgerPrivate::deleteTodos()
     Akonadi::Item::List toDelete;
     m_ignoredItems = 0;
     for (const Akonadi::Item &item : items) {
-        KCalendarCore::Todo::Ptr todo = CalendarUtils::incidence(item).dynamicCast<KCalendarCore::Todo>();
+        KCalendarCore::Todo::Ptr todo = CalendarUtils::todo(item);
 
         if (!todo || !todo->isCompleted()) {
             continue;

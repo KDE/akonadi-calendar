@@ -5,6 +5,7 @@
 */
 
 #include "calfilterpartstatusproxymodel_p.h"
+#include "calendarutils.h"
 #include "utils_p.h"
 
 #include <Akonadi/Collection>

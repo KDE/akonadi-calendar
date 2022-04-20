@@ -7,7 +7,7 @@
 #include "etmcalendartest.h"
 
 #include "../src/etmcalendar.h"
-#include "../src/utils_p.h"
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/CollectionModifyJob>
@@ -25,17 +25,6 @@ using namespace Akonadi;
 using namespace KCalendarCore;
 
 Q_DECLARE_METATYPE(QSet<QByteArray>)
-
-KCalendarCore::Incidence::Ptr Akonadi::CalendarUtils::incidence(const Akonadi::Item &item)
-{
-    // With this try-catch block, we get a 2x performance improvement in retrieving the payload
-    // since we don't call hasPayload()
-    try {
-        return item.payload<KCalendarCore::Incidence::Ptr>();
-    } catch (const Akonadi::PayloadException &) {
-        return {};
-    }
-}
 
 void ETMCalendarTest::createIncidence(const QString &uid)
 {

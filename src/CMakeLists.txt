@@ -16,6 +16,8 @@ target_sources(KF5AkonadiCalendar PRIVATE
     calendarclipboard_p.h
     calendarmodel.cpp
     calendarmodel_p.h
+    calendarutils.cpp
+    calendarutils.h
     calfilterpartstatusproxymodel_p.cpp
     calfilterpartstatusproxymodel_p.h
     calfilterproxymodel_p.cpp
@@ -139,6 +141,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   BlockAlarmsAttribute
   CalendarBase
   CalendarClipboard
+  CalendarUtils
   ETMCalendar
   FetchJobCalendar
   FreeBusyManager

@@ -8,11 +8,11 @@
 #include "akonadicalendar_debug.h"
 #include "blockalarmsattribute.h"
 #include "calendarmodel_p.h"
+#include "calendarutils.h"
 #include "calfilterpartstatusproxymodel_p.h"
 #include "calfilterproxymodel_p.h"
 #include "etmcalendar_p.h"
 #include "kcolumnfilterproxymodel_p.h"
-#include "utils_p.h"
 #include <Akonadi/CollectionFilterProxyModel>
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/EntityMimeTypeFilterModel>

@@ -6,6 +6,7 @@
 */
 #include "incidencechanger.h"
 #include "akonadicalendar_debug.h"
+#include "calendarutils.h"
 #include "incidencechanger_p.h"
 #include "mailscheduler_p.h"
 #include "utils_p.h"

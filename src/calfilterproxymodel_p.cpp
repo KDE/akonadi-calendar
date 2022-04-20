@@ -6,7 +6,7 @@
 */
 
 #include "calfilterproxymodel_p.h"
-#include "utils_p.h"
+#include "calendarutils.h"
 
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/Item>

@@ -8,7 +8,7 @@
 
 #include "calendarmodel_p.h"
 
-#include "utils_p.h"
+#include "calendarutils.h"
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
 #include <KCalendarCore/Event>
@@ -20,11 +20,6 @@
 #include <QIcon>
 
 using namespace Akonadi;
-
-static KCalendarCore::Todo::Ptr todo(const Akonadi::Item &item)
-{
-    return item.hasPayload<KCalendarCore::Todo::Ptr>() ? item.payload<KCalendarCore::Todo::Ptr>() : KCalendarCore::Todo::Ptr();
-}
 
 class Akonadi::CalendarModelPrivate
 {
@@ -95,21 +90,21 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             return inc->dateTime(KCalendarCore::Incidence::RoleEndTimeZone).toString();
 
         case DateTimeDue:
-            if (KCalendarCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = CalendarUtils::todo(item)) {
                 return t->dtDue().toString();
             } else {
                 return {};
             }
 
         case Priority:
-            if (KCalendarCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = CalendarUtils::todo(item)) {
                 return t->priority();
             } else {
                 return {};
             }
 
         case PercentComplete:
-            if (KCalendarCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = CalendarUtils::todo(item)) {
                 return t->percentComplete();
             } else {
                 return {};
@@ -134,21 +129,21 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
             return inc->dateTime(KCalendarCore::Incidence::RoleEndTimeZone).toUTC();
 
         case DateTimeDue:
-            if (KCalendarCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = CalendarUtils::todo(item)) {
                 return t->dtDue().toUTC();
             } else {
                 return {};
             }
 
         case Priority:
-            if (KCalendarCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = CalendarUtils::todo(item)) {
                 return t->priority();
             } else {
                 return {};
             }
 
         case PercentComplete:
-            if (KCalendarCore::Todo::Ptr t = todo(item)) {
+            if (KCalendarCore::Todo::Ptr t = CalendarUtils::todo(item)) {
                 return t->percentComplete();
             } else {
                 return {};
