@@ -20,6 +20,8 @@
 namespace Akonadi
 {
 
+class Collection;
+class ETMCalendar;
 class Item;
 
 /** Utility methods for dealing with calendar content in Akonadi items.
@@ -47,6 +49,11 @@ AKONADI_CALENDAR_EXPORT KCalendarCore::Todo::Ptr todo(const Akonadi::Item &item)
  */
 AKONADI_CALENDAR_EXPORT KCalendarCore::Journal::Ptr journal(const Akonadi::Item &item);
 
+/**
+ * Returns a suitable display name for the calendar (or calendar folder) @p collection.
+ * This takes backend-specific special cases into account.
+ */
+AKONADI_CALENDAR_EXPORT QString displayName(Akonadi::ETMCalendar *calendar, const Akonadi::Collection &collection);
 }
 
 }
