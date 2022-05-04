@@ -13,7 +13,6 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
-#include <QDateTime>
 #include <QFileInfo>
 
 using namespace KCalendarCore;
