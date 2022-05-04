@@ -316,12 +316,14 @@ void FreeBusyManagerPrivate::fbCheckerJobFinished(KJob *job)
     const QString email = job->property("email").toString();
     if (!job->error()) {
         auto checkerJob = static_cast<FbCheckerJob *>(job);
-        QUrl dirURL = checkerJob->validUrl();
-        // write the URL to the cache
-        KConfig cfg(configFile());
-        KConfigGroup group = cfg.group(email);
-        group.writeEntry("url", dirURL.toDisplayString()); // prettyURL() does not write user nor password
-        qCDebug(AKONADICALENDAR_LOG) << "Found url email=" << email << "; url=" << dirURL;
+        const QUrl dirURL = checkerJob->validUrl();
+        if (dirURL.isValid()) {
+            // write the URL to the cache
+            KConfig cfg(configFile());
+            KConfigGroup group = cfg.group(email);
+            group.writeEntry("url", dirURL.toDisplayString()); // prettyURL() does not write user nor password
+            qCDebug(AKONADICALENDAR_LOG) << "Found url email=" << email << "; url=" << dirURL;
+        }
         Q_EMIT freeBusyUrlRetrieved(email, dirURL);
     } else {
         qCDebug(AKONADICALENDAR_LOG) << "Returning invalid url";
