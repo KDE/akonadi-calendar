@@ -13,7 +13,9 @@
 #include "calfilterproxymodel_p.h"
 #include "etmcalendar_p.h"
 #include "kcolumnfilterproxymodel_p.h"
+
 #include <Akonadi/CollectionFilterProxyModel>
+#include <Akonadi/CollectionUtils>
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/EntityMimeTypeFilterModel>
 #include <Akonadi/Item>
@@ -234,7 +236,7 @@ Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstra
     int row = start;
     QModelIndex i = model->index(row, 0, parentIndex);
     while (row <= endRow) {
-        const Akonadi::Collection collection = collectionFromIndex(i);
+        const Akonadi::Collection collection = CollectionUtils::fromIndex(i);
         if (collection.isValid()) {
             collections << collection;
             QModelIndex childIndex = model->index(0, 0, i);
@@ -279,11 +281,6 @@ void ETMCalendarPrivate::itemsRemoved(const Akonadi::Item::List &items)
     Q_EMIT q->calendarChanged();
 }
 
-Akonadi::Collection ETMCalendarPrivate::collectionFromIndex(const QModelIndex &index)
-{
-    return index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
-}
-
 void ETMCalendarPrivate::onRowsInserted(const QModelIndex &index, int start, int end)
 {
     const Akonadi::Collection::List collections = collectionsFromModel(mETM.data(), index, start, end);
@@ -321,7 +318,7 @@ void ETMCalendarPrivate::onDataChanged(const QModelIndex &topLeft, const QModelI
     Q_ASSERT(topLeft.row() <= bottomRight.row());
     const int endRow = bottomRight.row();
     for (int row = topLeft.row(); row <= endRow; ++row) {
-        const Akonadi::Collection col = collectionFromIndex(topLeft.sibling(row, 0));
+        const Akonadi::Collection col = CollectionUtils::fromIndex(topLeft.sibling(row, 0));
         if (col.isValid()) {
             // Attributes might have changed, store the new collection and discard the old one
             mCollectionMap.insert(col.id(), col);

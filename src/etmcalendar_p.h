@@ -88,7 +88,6 @@ public Q_SLOTS:
     void clear();
     void updateItem(const Akonadi::Item &item);
     Akonadi::Item itemFromIndex(const QModelIndex &idx);
-    Akonadi::Collection collectionFromIndex(const QModelIndex &index);
     void itemsAdded(const Akonadi::Item::List &items);
     void itemsRemoved(const Akonadi::Item::List &items);
 
