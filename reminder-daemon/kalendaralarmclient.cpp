@@ -249,8 +249,12 @@ void KalendarAlarmClient::checkAlarms()
         const QString uid = alarm->parentUid();
 #endif
         const auto incidence = mCalendar->incidence(uid);
-        const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
-        addNotification(uid, alarm->text(), occurrence, mLastChecked);
+        if (incidence) {
+            const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
+            addNotification(uid, alarm->text(), occurrence, mLastChecked);
+        } else {
+            qCDebug(Log) << "Alarm points" << alarm << "to an nonexisting incidence" << uid;
+        }
     }
 
     // execute or update active alarms
