@@ -39,6 +39,7 @@ int main(int argc, char **argv)
                         i18nc("@info:credit", "Maintainer"),
                         QStringLiteral("claudio.cambra@gmail.com"),
                         QStringLiteral("https://claudiocambra.com"));
+    aboutData.setProductName("Reminder Daemon/general"); // Bugzilla product/component name
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
