@@ -107,7 +107,7 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     m_notification->setIconName(incidence->type() == KCalendarCore::Incidence::TypeTodo ? QStringLiteral("view-task")
                                                                                         : QStringLiteral("view-calendar-upcoming"));
 
-    QStringList actions = {i18n("Remind in 5 mins"), i18n("Dismiss")};
+    QStringList actions = {i18n("Remind in 5 mins"), i18nc("dismiss a reminder notification for an event", "Dismiss")};
     const auto contextAction = determineContextAction(incidence);
     if (!contextAction.isEmpty()) {
         actions.push_back(contextAction);
