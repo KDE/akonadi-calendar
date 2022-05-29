@@ -23,7 +23,7 @@ if (AKONADI_ICAL_RESOURCE)
     add_akonadi_isolated_test_advanced( incidencechangertest.cpp "" "KF5::AkonadiCalendar" )
     add_akonadi_isolated_test_advanced( calendarbasetest.cpp "" "KF5::AkonadiCalendar" )
     add_akonadi_isolated_test_advanced( fetchjobcalendartest.cpp "" "KF5::AkonadiCalendar" )
-    add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KF5::AkonadiCalendar" )
+    add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KF5::AkonadiCalendar;KF5::ConfigCore" )
 
     add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${common_libs};KF5::MailTransportAkonadi")
     add_akonadi_isolated_test_advanced( mailclienttest.cpp "" "KF5::AkonadiCalendar;KF5::Mime;KF5::MailTransportAkonadi;KF5::IdentityManagement")
