@@ -15,15 +15,16 @@
 
 AlarmNotification::AlarmNotification(const QString &uid)
     : m_uid{uid}
-    , m_remind_at{QDateTime()}
 {
 }
 
 AlarmNotification::~AlarmNotification()
 {
-    // don't delete immediately, in case we end up here as a result
-    // of a signal from m_notification itself
-    m_notification->deleteLater();
+    if (m_notification) {
+        // don't delete immediately, in case we end up here as a result
+        // of a signal from m_notification itself
+        m_notification->deleteLater();
+    }
 }
 
 void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::Incidence::Ptr &incidence)
@@ -46,6 +47,9 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
         QObject::connect(m_notification, &KNotification::action1Activated, client, [this, client]() {
             client->suspend(this);
             QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+        });
+        QObject::connect(m_notification, &KNotification::action2Activated, client, [this, client]() {
+            client->dismiss(this);
         });
         QObject::connect(m_notification, &KNotification::action3Activated, client, [this]() {
             QDesktopServices::openUrl(m_contextAction);
