@@ -13,6 +13,8 @@
 #include <QRegularExpression>
 #include <QUrlQuery>
 
+using namespace std::chrono_literals;
+
 AlarmNotification::AlarmNotification(const QString &uid)
     : m_uid{uid}
 {
@@ -40,18 +42,27 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
         QObject::connect(m_notification, &KNotification::closed, client, [this, client]() {
             client->dismiss(this);
         });
-        QObject::connect(m_notification, &KNotification::defaultActivated, client, [this, client, startTime]() {
-            client->showIncidence(uid(), startTime, m_notification->xdgActivationToken());
-        });
-        QObject::connect(m_notification, &KNotification::action1Activated, client, [this, client]() {
-            client->suspend(this);
-            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        });
-        QObject::connect(m_notification, &KNotification::action2Activated, client, [this, client]() {
-            client->dismiss(this);
-        });
-        QObject::connect(m_notification, &KNotification::action3Activated, client, [this]() {
-            QDesktopServices::openUrl(m_contextAction);
+        QObject::connect(m_notification, &KNotification::activated, client, [this, client, startTime](unsigned int action) {
+            switch (action) {
+            case 0: // default
+                client->showIncidence(uid(), startTime, m_notification->xdgActivationToken());
+                break;
+            case 1: // suspend 5m
+                client->suspend(this, 5min);
+                QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+                break;
+            case 2: // suspend 1h
+                client->suspend(this, 1h);
+                QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+                break;
+            case 3: // dismiss
+                client->dismiss(this);
+                QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+                break;
+            case 4: // openurl
+                QDesktopServices::openUrl(m_contextAction);
+                break;
+            }
         });
     }
 
@@ -118,7 +129,7 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     m_notification->setIconName(incidence->type() == KCalendarCore::Incidence::TypeTodo ? QStringLiteral("view-task")
                                                                                         : QStringLiteral("view-calendar-upcoming"));
 
-    QStringList actions = {i18n("Remind in 5 mins"), i18nc("dismiss a reminder notification for an event", "Dismiss")};
+    QStringList actions = {i18n("Remind in 5 mins"), i18n("Remind in 1 hour"), i18nc("dismiss a reminder notification for an event", "Dismiss")};
     const auto contextAction = determineContextAction(incidence);
     if (!contextAction.isEmpty()) {
         actions.push_back(contextAction);

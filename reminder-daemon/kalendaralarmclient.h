@@ -11,6 +11,8 @@
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/ServerManager>
 
+#include <chrono>
+
 class AlarmNotification;
 
 class KalendarAlarmClient : public QObject
@@ -24,7 +26,7 @@ public:
     /** Dismisses any further notification display for the alarm \p notification. */
     void dismiss(AlarmNotification *notification);
     /** Suspends the display of the alarm \p notification. */
-    void suspend(AlarmNotification *notification);
+    void suspend(AlarmNotification *notification, std::chrono::seconds sec);
     /** Show incidence in the calendar application. */
     void showIncidence(const QString &uid, const QDateTime &occurrence, const QString &xdgActivationToken);
 

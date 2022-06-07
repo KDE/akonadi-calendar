@@ -117,10 +117,10 @@ void KalendarAlarmClient::dismiss(AlarmNotification *notification)
     delete notification;
 }
 
-void KalendarAlarmClient::suspend(AlarmNotification *notification)
+void KalendarAlarmClient::suspend(AlarmNotification *notification, std::chrono::seconds sec)
 {
     qCDebug(Log) << "Alarm " << notification->uid() << "suspended";
-    notification->setRemindAt(QDateTime(QDateTime::currentDateTime()).addSecs(5 * 60)); // 5 minutes is hardcoded in the suspend action text
+    notification->setRemindAt(QDateTime(QDateTime::currentDateTime()).addSecs(sec.count()));
     storeNotification(notification);
 }
 
