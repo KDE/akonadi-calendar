@@ -165,7 +165,9 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
     KConfigGroup notificationGroup(&suspendedGroup, notification->uid());
     notificationGroup.writeEntry("UID", notification->uid());
     notificationGroup.writeEntry("Text", notification->text());
-    notificationGroup.writeEntry("Occurrence", notification->occurrence());
+    if (notification->occurrence().isValid()) {
+        notificationGroup.writeEntry("Occurrence", notification->occurrence());
+    }
     notificationGroup.writeEntry("RemindAt", notification->remindAt());
     KSharedConfig::openConfig()->sync();
 }
