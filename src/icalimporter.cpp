@@ -174,7 +174,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
     }
 
     if (url.isLocalFile()) {
-        QFileInfo f {url.path()};
+        QFileInfo f{url.path()};
         if (!f.exists() || !f.isFile() || !f.isReadable()) {
             d->setErrorMessage(i18n("The selected file is not a readable file."));
             return false;
