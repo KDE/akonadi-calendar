@@ -21,8 +21,8 @@ public:
     explicit CalendarBasePrivate(CalendarBase *qq);
     ~CalendarBasePrivate() override;
 
-    void internalInsert(const Akonadi::Item &item);
-    void internalRemove(const Akonadi::Item &item);
+    AKONADI_CALENDAR_EXPORT void internalInsert(const Akonadi::Item &item);
+    AKONADI_CALENDAR_EXPORT void internalRemove(const Akonadi::Item &item);
 
     void deleteAllIncidencesOfType(const QString &mimeType);
 
