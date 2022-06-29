@@ -48,16 +48,16 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
                 client->showIncidence(uid(), startTime, m_notification->xdgActivationToken());
                 break;
             case 1: // suspend 5m
-                client->suspend(this, 5min);
                 QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+                client->suspend(this, 5min);
                 break;
             case 2: // suspend 1h
-                client->suspend(this, 1h);
                 QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+                client->suspend(this, 1h);
                 break;
             case 3: // dismiss
-                client->dismiss(this);
                 QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+                client->dismiss(this);
                 break;
             case 4: // openurl
                 QDesktopServices::openUrl(m_contextAction);
