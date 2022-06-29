@@ -4,11 +4,13 @@
 */
 
 #include "akonadicalendarplugin.h"
+#include "akonadicalendarplugin_debug.h"
 #include "singlecollectioncalendar.h"
 
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Monitor>
+#include <Akonadi/ServerManager>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
@@ -24,6 +26,13 @@ static bool filterCollection(const Akonadi::Collection &col)
 AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList &args)
     : KCalendarCore::CalendarPlugin(parent, args)
 {
+    // don't automatically start Akonadi if that's explicitly forbidden
+    // (useful in e.g. the CI environment)
+    if (qEnvironmentVariableIsSet("AKONADI_CALENDAR_KCALENDARCORE_PLUGIN_NO_AUTO_LAUNCH") && !Akonadi::ServerManager::isRunning()) {
+        qCWarning(AKONADICALENDARPLUGIN_LOG) << "Akonadi is not running, but auto-launch is disabled!";
+        return;
+    }
+
     auto job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive, this);
     job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::finished, this, [this, job]() {

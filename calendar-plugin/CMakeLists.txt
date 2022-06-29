@@ -7,6 +7,14 @@ target_sources(akonadicalendarplugin PRIVATE
     singlecollectioncalendar.cpp
 )
 
+ecm_qt_declare_logging_category(akonadicalendarplugin
+    HEADER akonadicalendarplugin_debug.h
+    IDENTIFIER AKONADICALENDARPLUGIN_LOG
+    CATEGORY_NAME org.kde.kcalendarcore.akonadiplugin
+    DESCRIPTION "KCalendarCore (Akonadi plugin)"
+    EXPORT AKONADI-CALENDAR
+)
+
 target_link_libraries(akonadicalendarplugin PRIVATE
     KF5::CalendarCore
     KF5::AkonadiCalendar
