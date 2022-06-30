@@ -45,8 +45,8 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
             client->showIncidence(uid(), startTime, m_notification->xdgActivationToken());
         });
         QObject::connect(m_notification, &KNotification::action1Activated, client, [this, client]() {
-            client->suspend(this);
             QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->suspend(this);
         });
         QObject::connect(m_notification, &KNotification::action2Activated, client, [this, client]() {
             client->dismiss(this);
