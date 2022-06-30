@@ -252,14 +252,30 @@ void KalendarAlarmClient::checkAlarms()
         }
     }
 
+    QVector<QString> nullAlarmNotificationIds;
+
     // execute or update active alarms
     for (auto it = m_notifications.begin(); it != m_notifications.end(); ++it) {
-        if (it.value()->remindAt() <= mLastChecked) {
-            const auto incidence = mCalendar->incidence(it.value()->uid());
+        const auto notification = it.value();
+
+        // Protect against null ptr
+        if(!notification) {
+            qCDebug(Log) << "Found null active alarm with id: " << it.key() << "Skipping.";
+	    nullAlarmNotificationIds.append(it.key());
+	    continue;
+        }
+
+        if (notification->remindAt() <= mLastChecked) {
+            const auto incidence = mCalendar->incidence(notification->uid());
             if (incidence) { // can still be null when we get here during the early stages of loading/restoring
-                it.value()->send(this, incidence);
+                notification->send(this, incidence);
             }
         }
+    }
+
+    // Remove the null alarm notification ptrs from our notifications
+    for(const auto &nullAlarmId : nullAlarmNotificationIds) {
+	m_notifications.remove(nullAlarmId);
     }
 
     saveLastCheckTime();
