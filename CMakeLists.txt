@@ -71,7 +71,7 @@ find_package(KF5AkonadiContact ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 ########### Targets ###########
 
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.95.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.96.0)
 
 
 
