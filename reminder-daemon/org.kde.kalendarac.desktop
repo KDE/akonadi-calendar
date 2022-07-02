@@ -3,6 +3,7 @@
 
 [Desktop Entry]
 Name=Calendar Reminders
+Name[bg]=Напомняния на Календар
 Name[ca]=Recordatoris del calendari
 Name[ca@valencia]=Recordatoris del calendari
 Name[de]=Kalender-Erinnerungen
@@ -29,6 +30,7 @@ Icon=appointment-reminder
 Type=Application
 Categories=Qt;KDE;
 GenericName=Reminder Daemon Client
+GenericName[bg]=Клиент за демона за напомняне
 GenericName[ca]=Client del dimoni de recordatoris
 GenericName[ca@valencia]=Client del dimoni de recordatoris
 GenericName[de]=Dienst für das Erinnerungsprogramm

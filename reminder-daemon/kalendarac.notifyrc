@@ -2,6 +2,7 @@
 IconName=appointment-reminder
 DesktopEntry=org.kde.kalendar
 Comment=Reminders about calendar events and tasks
+Comment[bg]=Напомняния за календарни събития и задачи
 Comment[ca]=Recordatoris dels esdeveniments i les tasques del calendari
 Comment[ca@valencia]=Recordatoris dels esdeveniments i les tasques del calendari
 Comment[de]=Erinnerungen an Termine und Aufgaben im Kalender
@@ -24,6 +25,7 @@ Comment[uk]=Нагадування щодо подій та завдань з к
 Comment[x-test]=xxReminders about calendar events and tasksxx
 Comment[zh_CN]=日历事件和任务的提醒
 Name=Calendar Reminders
+Name[bg]=Напомняния на Календар
 Name[ca]=Recordatoris del calendari
 Name[ca@valencia]=Recordatoris del calendari
 Name[de]=Kalender-Erinnerungen
@@ -48,6 +50,7 @@ Name[zh_CN]=日历提醒
 
 [Event/alarm]
 Name=Alarm
+Name[bg]=Аларма
 Name[ca]=Alarma
 Name[ca@valencia]=Alarma
 Name[cs]=Alarm
@@ -72,6 +75,7 @@ Name[x-test]=xxAlarmxx
 Name[zh_CN]=闹钟
 Contexts=uid
 Comment=Alarm Notification
+Comment[bg]=Известия на Аларма
 Comment[ca]=Notificació de l'alarma
 Comment[ca@valencia]=Notificació de l'alarma
 Comment[de]=Erinnerungs-Benachrichtigung
