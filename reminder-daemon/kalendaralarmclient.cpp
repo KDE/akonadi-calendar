@@ -260,16 +260,19 @@ void KalendarAlarmClient::checkAlarms()
     }
 
     QVector<QString> nullAlarmNotificationIds;
+    // We need a copy of the notifications hash as some may get dismissed as we iterate over them, causing a crash
+    // BUG: 455902
+    const auto notificationsCopy = m_notifications;
 
     // execute or update active alarms
-    for (auto it = m_notifications.begin(); it != m_notifications.end(); ++it) {
+    for (auto it = notificationsCopy.constBegin(); it != notificationsCopy.constEnd(); ++it) {
         const auto notification = it.value();
 
         // Protect against null ptr
         if(!notification) {
             qCDebug(Log) << "Found null active alarm with id: " << it.key() << "Skipping.";
-	    nullAlarmNotificationIds.append(it.key());
-	    continue;
+            nullAlarmNotificationIds.append(it.key());
+            continue;
         }
 
         if (notification->remindAt() <= mLastChecked) {
@@ -282,7 +285,7 @@ void KalendarAlarmClient::checkAlarms()
 
     // Remove the null alarm notification ptrs from our notifications
     for(const auto &nullAlarmId : nullAlarmNotificationIds) {
-	m_notifications.remove(nullAlarmId);
+        m_notifications.remove(nullAlarmId);
     }
 
     saveLastCheckTime();
