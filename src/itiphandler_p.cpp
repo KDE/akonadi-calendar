@@ -210,7 +210,7 @@ bool ITIPHandlerPrivate::isLoaded()
 {
     FetchJobCalendar::Ptr fetchJobCalendar = calendar().dynamicCast<Akonadi::FetchJobCalendar>();
     if (fetchJobCalendar) {
-        return fetchJobCalendar->isLoaded();
+        return !fetchJobCalendar->isLoading();
     }
 
     // If it's an ETMCalendar, set through setCalendar(), then it's already loaded, it's a requirement of setCalendar().

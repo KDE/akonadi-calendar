@@ -652,7 +652,7 @@ void CalendarBase::endBatchAdding()
 
 bool CalendarBase::isLoaded() const
 {
-    return true;
+    return !isLoading();
 }
 
 #include "moc_calendarbase.cpp"

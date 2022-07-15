@@ -18,6 +18,7 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     : CalendarBasePrivate(qq)
     , q(qq)
 {
+    q->setIsLoading(true);
     auto job = new IncidenceFetchJob();
     connect(job, &KJob::result, this, &FetchJobCalendarPrivate::slotSearchJobFinished);
     connect(this, &CalendarBasePrivate::fetchFinished, this, &FetchJobCalendarPrivate::slotFetchJobFinished);
@@ -54,7 +55,7 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
 
 void FetchJobCalendarPrivate::slotFetchJobFinished()
 {
-    m_isLoaded = true;
+    q->setIsLoading(false);
     // Q_EMIT loadFinished() in a delayed manner, due to freezes because of execs.
     QMetaObject::invokeMethod(q, "loadFinished", Qt::QueuedConnection, Q_ARG(bool, m_success), Q_ARG(QString, m_errorMessage));
 }
@@ -65,12 +66,6 @@ FetchJobCalendar::FetchJobCalendar(QObject *parent)
 }
 
 FetchJobCalendar::~FetchJobCalendar() = default;
-
-bool FetchJobCalendar::isLoaded() const
-{
-    auto d = static_cast<FetchJobCalendarPrivate *>(d_ptr.get());
-    return d->m_isLoaded;
-}
 
 #include "moc_fetchjobcalendar.cpp"
 #include "moc_fetchjobcalendar_p.cpp"

@@ -12,8 +12,6 @@
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
 
-#include <kcalendarcore_version.h>
-
 SingleCollectionCalendar::SingleCollectionCalendar(const Akonadi::Collection &col, QObject *parent)
     : Akonadi::CalendarBase(parent)
 {
@@ -22,10 +20,8 @@ SingleCollectionCalendar::SingleCollectionCalendar(const Akonadi::Collection &co
     incidenceChanger()->setDefaultCollection(col);
     incidenceChanger()->setGroupwareCommunication(false);
     incidenceChanger()->setDestinationPolicy(Akonadi::IncidenceChanger::DestinationPolicyNeverAsk);
-
-#if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(5, 96, 0)
     setIsLoading(true);
-#endif
+
     // here and below for monitoring: ensure items have a parent collection
     // before calling internalInsert to prevent an extra collection fetch job
     auto job = new Akonadi::ItemFetchJob(col, this);
@@ -37,9 +33,7 @@ SingleCollectionCalendar::SingleCollectionCalendar(const Akonadi::Collection &co
             item.setParentCollection(m_collection);
             d->internalInsert(item);
         }
-#if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(5, 96, 0)
         setIsLoading(false);
-#endif
     });
 
     auto monitor = new Akonadi::Monitor(this);

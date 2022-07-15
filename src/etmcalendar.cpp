@@ -94,6 +94,7 @@ void ETMCalendarPrivate::init()
     connect(mFilteredETM, &QAbstractItemModel::rowsAboutToBeRemoved, this, &ETMCalendarPrivate::onRowsAboutToBeRemovedInFilteredModel);
 
     loadFromETM();
+    updateLoadingState();
 }
 
 void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &attributeNames)
@@ -298,6 +299,7 @@ void ETMCalendarPrivate::onCollectionPopulated(Akonadi::Collection::Id id)
 {
     mPopulatedCollectionIds.insert(id);
     Q_EMIT q->calendarChanged();
+    updateLoadingState();
 }
 
 void ETMCalendarPrivate::onRowsRemoved(const QModelIndex &index, int start, int end)
@@ -576,21 +578,19 @@ bool ETMCalendar::collectionFilteringEnabled() const
     return d->mCollectionFilteringEnabled;
 }
 
-bool ETMCalendar::isLoaded() const
+void ETMCalendarPrivate::updateLoadingState()
 {
-    Q_D(const ETMCalendar);
-
-    if (!entityTreeModel()->isCollectionTreeFetched()) {
-        return false;
+    if (!q->entityTreeModel()->isCollectionTreeFetched()) {
+        return q->setIsLoading(true);
     }
 
-    for (const Akonadi::Collection &collection : std::as_const(d->mCollectionMap)) {
-        if (!entityTreeModel()->isCollectionPopulated(collection.id())) {
-            return false;
+    for (const Akonadi::Collection &collection : std::as_const(mCollectionMap)) {
+        if (!q->entityTreeModel()->isCollectionPopulated(collection.id())) {
+            return q->setIsLoading(true);
         }
     }
 
-    return true;
+    q->setIsLoading(false);
 }
 
 #include "moc_etmcalendar.cpp"

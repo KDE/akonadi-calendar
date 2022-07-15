@@ -104,6 +104,8 @@ public Q_SLOTS:
     void onCollectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &attributeNames);
     void onCollectionPopulated(Akonadi::Collection::Id);
 
+    void updateLoadingState();
+
 public:
     Akonadi::CalendarModel::Ptr mETM;
     Akonadi::EntityMimeTypeFilterModel *mFilteredETM = nullptr;

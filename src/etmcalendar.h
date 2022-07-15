@@ -154,11 +154,6 @@ public:
      */
     Q_REQUIRED_RESULT bool collectionFilteringEnabled() const;
 
-    /**
-     * Returns if the calendar already finished loading.
-     */
-    Q_REQUIRED_RESULT bool isLoaded() const override;
-
 Q_SIGNALS:
     /**
      * This signal is emitted if a collection has been changed (properties or attributes).

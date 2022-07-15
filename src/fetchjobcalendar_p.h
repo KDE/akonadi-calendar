@@ -24,9 +24,6 @@ public Q_SLOTS:
     void slotSearchJobFinished(KJob *job);
     void slotFetchJobFinished();
 
-public:
-    bool m_isLoaded = false;
-
 private:
     FetchJobCalendar *const q;
     QString m_errorMessage;
