@@ -373,7 +373,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
     Q_ASSERT(job);
     if (job->error()) {
         qCritical() << "Error downloading freebusy" << _job->errorString();
-        KMessageBox::sorry(mParentWidgetForRetrieval,
+        KMessageBox::error(mParentWidgetForRetrieval,
                            i18n("Failed to download free/busy data from: %1\nReason: %2", job->url().toDisplayString(), job->errorText()),
                            i18n("Free/busy retrieval error"));
 
@@ -396,7 +396,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
             Q_EMIT q->freeBusyRetrieved(fb, email);
         } else {
             qCritical() << "Error downloading freebusy, invalid fb.";
-            KMessageBox::sorry(mParentWidgetForRetrieval,
+            KMessageBox::error(mParentWidgetForRetrieval,
                                i18n("Failed to parse free/busy information that was retrieved from: %1", job->url().toDisplayString()),
                                i18n("Free/busy retrieval error"));
         }
@@ -411,7 +411,7 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
 {
     auto job = static_cast<KIO::FileCopyJob *>(_job);
     if (job->error()) {
-        KMessageBox::sorry(nullptr,
+        KMessageBox::error(nullptr,
                            i18n("<qt><p>The software could not upload your free/busy list to "
                                 "the URL '%1'. There might be a problem with the access "
                                 "rights, or you specified an incorrect URL. The system said: "
@@ -740,7 +740,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
     QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
     if (targetURL.isEmpty()) {
-        KMessageBox::sorry(parentWidget,
+        KMessageBox::error(parentWidget,
                            i18n("<qt><p>No URL configured for uploading your free/busy list. "
                                 "Please set it in KOrganizer's configuration dialog, on the "
                                 "\"Free/Busy\" page.</p>"
@@ -755,7 +755,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         return;
     }
     if (!targetURL.isValid()) {
-        KMessageBox::sorry(parentWidget, i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()), i18n("Invalid URL"));
+        KMessageBox::error(parentWidget, i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()), i18n("Invalid URL"));
         d->mBrokenUrl = true;
         return;
     }

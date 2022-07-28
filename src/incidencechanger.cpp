@@ -248,7 +248,7 @@ void IncidenceChangerPrivate::handleCreateJobResult(KJob *job)
         item = change->newItem;
         qCritical() << errorString;
         if (mShowDialogsOnError) {
-            KMessageBox::sorry(change->parentWidget, i18n("Error while trying to create calendar item. Error was: %1", errorString));
+            KMessageBox::error(change->parentWidget, i18n("Error while trying to create calendar item. Error was: %1", errorString));
         }
         mChangeById.remove(change->id);
         change->errorString = errorString;
@@ -327,7 +327,7 @@ void IncidenceChangerPrivate::handleDeleteJobResult(KJob *job)
         qCritical() << errorString;
 
         if (mShowDialogsOnError) {
-            KMessageBox::sorry(change->parentWidget, i18n("Error while trying to delete calendar item. Error was: %1", errorString));
+            KMessageBox::error(change->parentWidget, i18n("Error while trying to delete calendar item. Error was: %1", errorString));
         }
 
         for (const Item &item : items) {
@@ -399,7 +399,7 @@ void IncidenceChangerPrivate::handleModifyJobResult(KJob *job)
             qCritical() << errorString;
         }
         if (mShowDialogsOnError) {
-            KMessageBox::sorry(change->parentWidget, i18n("Error while trying to modify calendar item. Error was: %1", errorString));
+            KMessageBox::error(change->parentWidget, i18n("Error while trying to modify calendar item. Error was: %1", errorString));
         }
         mChangeById.remove(change->id);
         change->errorString = errorString;
@@ -1197,7 +1197,7 @@ QString IncidenceChangerPrivate::showErrorDialog(IncidenceChanger::ResultCode re
     }
 
     if (mShowDialogsOnError) {
-        KMessageBox::sorry(parent, errorString);
+        KMessageBox::error(parent, errorString);
     }
 
     return errorString;

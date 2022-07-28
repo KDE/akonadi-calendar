@@ -118,7 +118,7 @@ void PublishDialog::accept()
     QString badAddress;
     const KEmailAddress::EmailParseResult addressOk = KEmailAddress::isValidAddressList(addresses(), badAddress);
     if (addressOk != KEmailAddress::AddressOk) {
-        KMessageBox::sorry(this,
+        KMessageBox::error(this,
                            i18n("Unable to publish the calendar incidence due to an "
                                 "invalid recipients string. %1",
                                 emailParseResultToString(addressOk)),
