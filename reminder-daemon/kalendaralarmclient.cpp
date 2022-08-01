@@ -315,12 +315,8 @@ void KalendarAlarmClient::saveLastCheckTime()
 QDateTime
 KalendarAlarmClient::occurrenceForAlarm(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Alarm::Ptr &alarm, const QDateTime &from) const
 {
-    if (!incidence->recurs()) {
-        return {};
-    }
-
     // recurring alarms not handled here for simplicity
-    if (alarm->repeatCount()) {
+    if (incidence.isNull() || !incidence->recurs() || alarm->repeatCount()) {
         return {};
     }
 
