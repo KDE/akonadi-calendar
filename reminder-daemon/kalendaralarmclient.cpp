@@ -161,9 +161,14 @@ void KalendarAlarmClient::showIncidence(const QString &uid, const QDateTime &occ
 
 void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
 {
+    // Work around crashing when feeding a QString to the KConfigGroup constructor for the config group name
+    // BUG: 456157
+    const auto notificationUidUtf8 = notification->uid().toUtf8();
+    const auto notificationUidData = notificationUidUtf8.constData();
+
     KConfigGroup suspendedGroup(KSharedConfig::openConfig(), "Suspended");
-    KConfigGroup notificationGroup(&suspendedGroup, notification->uid());
-    notificationGroup.writeEntry("UID", notification->uid());
+    KConfigGroup notificationGroup(&suspendedGroup, notificationUidData);
+    notificationGroup.writeEntry("UID", notificationUidData);
     notificationGroup.writeEntry("Text", notification->text());
     if (notification->occurrence().isValid()) {
         notificationGroup.writeEntry("Occurrence", notification->occurrence());
@@ -174,8 +179,13 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
 
 void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
 {
+    // Work around crashing when feeding a QString to the KConfigGroup constructor for the config group name
+    // BUG: 456157
+    const auto notificationUidUtf8 = notification->uid().toUtf8();
+    const auto notificationUidData = notificationUidUtf8.constData();
+
     KConfigGroup suspendedGroup(KSharedConfig::openConfig(), "Suspended");
-    KConfigGroup notificationGroup(&suspendedGroup, notification->uid());
+    KConfigGroup notificationGroup(&suspendedGroup, notificationUidData);
     notificationGroup.deleteGroup();
     KSharedConfig::openConfig()->sync();
 }
