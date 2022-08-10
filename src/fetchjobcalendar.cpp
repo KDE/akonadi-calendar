@@ -18,7 +18,6 @@ FetchJobCalendarPrivate::FetchJobCalendarPrivate(FetchJobCalendar *qq)
     : CalendarBasePrivate(qq)
     , q(qq)
 {
-    q->setIsLoading(true);
     auto job = new IncidenceFetchJob();
     connect(job, &KJob::result, this, &FetchJobCalendarPrivate::slotSearchJobFinished);
     connect(this, &CalendarBasePrivate::fetchFinished, this, &FetchJobCalendarPrivate::slotFetchJobFinished);
@@ -63,6 +62,7 @@ void FetchJobCalendarPrivate::slotFetchJobFinished()
 FetchJobCalendar::FetchJobCalendar(QObject *parent)
     : CalendarBase(new FetchJobCalendarPrivate(this), parent)
 {
+    setIsLoading(true);
 }
 
 FetchJobCalendar::~FetchJobCalendar() = default;
