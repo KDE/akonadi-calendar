@@ -62,7 +62,6 @@ GenericName[tr]=Anımsatıcı Ardalan Süreci İstemcisi
 GenericName[uk]=Клієнт фонової служби нагадувань
 GenericName[x-test]=xxReminder Daemon Clientxx
 GenericName[zh_CN]=提醒守护程序客户端
-Terminal=false
 X-KDE-autostart-phase=2
 X-KDE-autostart-condition=kalendaracrc:General:Autostart:true
 X-DBUS-StartupType=Unique
