@@ -19,8 +19,6 @@
 #include <MailTransportAkonadi/MessageQueueJob>
 #include <akonadi/qtest_akonadi.h>
 
-#include <KCalendarCore/Event>
-
 #include <QString>
 #include <QTimeZone>
 

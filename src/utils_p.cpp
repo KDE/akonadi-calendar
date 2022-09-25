@@ -11,7 +11,6 @@
 #include <KEMailSettings>
 #include <KEmailAddress>
 #include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Utils>
 #include <KMime/HeaderParsing>
 

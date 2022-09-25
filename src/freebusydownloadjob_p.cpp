@@ -8,7 +8,6 @@
 #include "freebusydownloadjob_p.h"
 
 #include <KIO/Job>
-#include <KIO/JobUiDelegate>
 #include <KIO/TransferJob>
 #include <KJobWidgets>
 

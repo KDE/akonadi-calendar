@@ -25,7 +25,6 @@
 #include <KMessageBox>
 
 #include <KIO/Job>
-#include <KIO/JobUiDelegate>
 #include <KLocalizedString>
 #include <QUrl>
 

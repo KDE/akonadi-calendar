@@ -8,7 +8,6 @@
 #include "kalendaralarmclient.h"
 #include <KLocalizedString>
 
-#include <QDebug>
 #include <QDesktopServices>
 #include <QRegularExpression>
 #include <QUrlQuery>

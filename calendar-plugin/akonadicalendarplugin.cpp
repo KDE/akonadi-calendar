@@ -12,12 +12,6 @@
 #include <Akonadi/Monitor>
 #include <Akonadi/ServerManager>
 
-#include <KCalendarCore/Event>
-#include <KCalendarCore/Journal>
-#include <KCalendarCore/Todo>
-
-#include <QDebug>
-
 static bool filterCollection(const Akonadi::Collection &col)
 {
     return !col.isVirtual();

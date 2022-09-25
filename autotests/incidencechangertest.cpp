@@ -18,8 +18,6 @@
 #include <Akonadi/ItemFetchScope>
 
 #include <KCalendarCore/Event>
-#include <KCalendarCore/Journal>
-#include <KCalendarCore/Todo>
 
 #include <QBitArray>
 

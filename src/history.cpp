@@ -7,7 +7,6 @@
 #include "history.h"
 #include "akonadicalendar_debug.h"
 #include "history_p.h"
-#include <KCalUtils/Stringify>
 
 using namespace KCalendarCore;
 using namespace Akonadi;
