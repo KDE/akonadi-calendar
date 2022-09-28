@@ -5,7 +5,6 @@
 */
 
 #include "etmcalendar.h"
-#include "akonadicalendar_debug.h"
 #include "blockalarmsattribute.h"
 #include "calendarmodel_p.h"
 #include "calendarutils.h"

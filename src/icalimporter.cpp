@@ -7,7 +7,6 @@
 */
 
 #include "icalimporter.h"
-#include "akonadicalendar_debug.h"
 #include "icalimporter_p.h"
 #include "utils_p.h"
 

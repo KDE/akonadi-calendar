@@ -5,7 +5,6 @@
 */
 
 #include "itiphandler_p.h"
-#include "akonadicalendar_debug.h"
 #include "fetchjobcalendar.h"
 #include <KCalendarCore/Incidence>
 #include <KLocalizedString>
