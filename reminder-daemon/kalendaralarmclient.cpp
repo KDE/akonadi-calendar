@@ -272,7 +272,7 @@ void KalendarAlarmClient::checkAlarms()
         const auto notification = it.value();
 
         // Protect against null ptr
-        if(!notification) {
+        if (!notification) {
             qCDebug(Log) << "Found null active alarm with id: " << it.key() << "Skipping.";
             nullAlarmNotificationIds.append(it.key());
             continue;
@@ -287,7 +287,7 @@ void KalendarAlarmClient::checkAlarms()
     }
 
     // Remove the null alarm notification ptrs from our notifications
-    for(const auto &nullAlarmId : nullAlarmNotificationIds) {
+    for (const auto &nullAlarmId : nullAlarmNotificationIds) {
         m_notifications.remove(nullAlarmId);
     }
 
