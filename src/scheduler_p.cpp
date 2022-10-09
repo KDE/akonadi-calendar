@@ -294,7 +294,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                                         "<item>you no longer have access to the calendar containing the invitation</item>"
                                         "</list></para>"
                                         "<para>This is not a problem, but we thought you should know.</para>"),
-                                 i18nc("@title", "Cannot find invitation to be updated"),
+                                 i18nc("@title:window", "Cannot Find Invitation to be Updated"),
                                  QStringLiteral("AcceptCantFindIncidence"));
     }
     qCDebug(AKONADICALENDAR_LOG) << "Storing new incidence with scheduling uid=" << schedulingUid << " and uid=" << incidence->uid();
@@ -479,7 +479,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
             }
             if (KMessageBox::questionYesNo(nullptr,
                                            msg,
-                                           i18nc("@title", "Uninvited attendee"),
+                                           i18nc("@title:window", "Uninvited Attendee"),
                                            KGuiItem(i18nc("@option", "Accept Attendance")),
                                            KGuiItem(i18nc("@option", "Reject Attendance")))
                 != KMessageBox::Yes) {
@@ -507,7 +507,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
                                            i18nc("@info",
                                                  "An attendee was added to the incidence. "
                                                  "Do you want to email the attendees an update message?"),
-                                           i18nc("@title", "Attendee Added"),
+                                           i18nc("@title:window", "Attendee Added"),
                                            KGuiItem(i18nc("@option", "Send Messages")),
                                            KGuiItem(i18nc("@option", "Do Not Send")))
                 == KMessageBox::Yes) {

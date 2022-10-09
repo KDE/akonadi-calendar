@@ -54,7 +54,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18n("Calendar folder creation failed"));
+                                            i18nc("@title:window", "Calendar Folder Creation Failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setProperty("ContentMimeTypes",
                               QStringList() << QStringLiteral("inode/directory") << QStringLiteral("application/x-vnd.akonadi.calendar.todo")
@@ -78,7 +78,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteCollections,
                                             StandardActionManager::MessageBoxTitle,
-                                            ki18ncp("@title:window", "Delete calendar folder?", "Delete calendar folders?"));
+                                            ki18ncp("@title:window", "Delete Calendar Folder?", "Delete Calendar Folders?"));
 
             mGenericManager->setContextText(StandardActionManager::DeleteCollections,
                                             StandardActionManager::ErrorMessageText,
@@ -86,7 +86,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteCollections,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18n("Calendar folder deletion failed"));
+                                            i18nc("@title:window", "Calendar Folder Deletion Failed"));
 
             break;
         case Akonadi::StandardActionManager::SynchronizeCollections:
@@ -125,7 +125,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageText, ki18n("Could not delete event: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageTitle, i18n("Event deletion failed"));
+            mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageTitle, i18nc("@title:window", "Event Deletion Failed"));
             break;
 
         case Akonadi::StandardActionManager::CutItems:
@@ -144,7 +144,7 @@ public:
                                             StandardActionManager::ErrorMessageText,
                                             ki18n("Could not create calendar: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::CreateResource, StandardActionManager::ErrorMessageTitle, i18n("Calendar creation failed"));
+            mGenericManager->setContextText(StandardActionManager::CreateResource, StandardActionManager::ErrorMessageTitle, i18nc("@title:window", "Calendar Creation Failed"));
 
             break;
         case Akonadi::StandardActionManager::DeleteResources:
@@ -185,7 +185,7 @@ public:
         case StandardActionManager::Paste:
             mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageText, ki18n("Could not paste event: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageTitle, i18n("Paste failed"));
+            mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageTitle, i18nc("@title:window", "Paste Failed"));
             break;
         case Akonadi::StandardActionManager::SynchronizeCollectionTree:
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollectionTree)->setText(i18n("Update Available Calendars"));

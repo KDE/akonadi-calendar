@@ -1327,7 +1327,7 @@ void IncidenceChanger::cancelAttendees( const Akonadi::Item &aitem )
            0,
            i18n( "Some attendees were removed from the incidence. "
                  "Shall cancel messages be sent to these attendees?" ),
-           i18n( "Attendees Removed" ), KGuiItem( i18n( "Send Messages" ) ),
+           i18nc("@title:window", "Attendees Removed" ), KGuiItem( i18n( "Send Messages" ) ),
            KGuiItem( i18n( "Do Not Send" ) ) ) == KMessageBox::Yes ) {
       // don't use Akonadi::Groupware::sendICalMessage here, because that asks just
       // a very general question "Other people are involved, send message to

@@ -374,7 +374,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
         qCritical() << "Error downloading freebusy" << _job->errorString();
         KMessageBox::error(mParentWidgetForRetrieval,
                            i18n("Failed to download free/busy data from: %1\nReason: %2", job->url().toDisplayString(), job->errorText()),
-                           i18n("Free/busy retrieval error"));
+                           i18nc("@title:window", "Free/Busy Retrieval Error"));
 
         // TODO: Ask for a retry? (i.e. queue  the email again when the user wants it).
 
@@ -397,7 +397,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
             qCritical() << "Error downloading freebusy, invalid fb.";
             KMessageBox::error(mParentWidgetForRetrieval,
                                i18n("Failed to parse free/busy information that was retrieved from: %1", job->url().toDisplayString()),
-                               i18n("Free/busy retrieval error"));
+                               i18nc("@title:window", "Free/Busy Retrieval Error"));
         }
     }
 
@@ -613,7 +613,7 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
     if (result == Scheduler::ResultSuccess) {
         KMessageBox::information(mParentWidgetForMailling,
                                  i18n("The free/busy information was successfully sent."),
-                                 i18n("Sending Free/Busy"),
+                                 i18nc("@title:window", "Sending Free/Busy"),
                                  QStringLiteral("FreeBusyPublishSuccess"));
     } else {
         KMessageBox::error(mParentWidgetForMailling, i18n("Unable to publish the free/busy data: %1", errorMsg));
@@ -745,7 +745,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
                                 "\"Free/Busy\" page.</p>"
                                 "<p>Contact your system administrator for the exact URL and the "
                                 "account details.</p></qt>"),
-                           i18n("No Free/Busy Upload URL"));
+                           i18nc("@title:window", "No Free/Busy Upload URL"));
         return;
     }
 
@@ -754,7 +754,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         return;
     }
     if (!targetURL.isValid()) {
-        KMessageBox::error(parentWidget, i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()), i18n("Invalid URL"));
+        KMessageBox::error(parentWidget, i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()), i18nc("@title:window", "Invalid URL"));
         d->mBrokenUrl = true;
         return;
     }

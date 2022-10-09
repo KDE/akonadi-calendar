@@ -64,7 +64,7 @@ int ITIPHandlerDialogDelegate::askUserIfNeeded(const QString &question, Action a
     case ActionDontSendMessage:
         return KMessageBox::No;
     default:
-        return KMessageBox::questionYesNo(mParent, question, i18n("Group Scheduling Email"), buttonYes, buttonNo);
+        return KMessageBox::questionYesNo(mParent, question, i18nc("@title:window", "Group Scheduling Email"), buttonYes, buttonNo);
     }
 }
 

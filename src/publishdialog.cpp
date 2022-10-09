@@ -122,7 +122,7 @@ void PublishDialog::accept()
                            i18n("Unable to publish the calendar incidence due to an "
                                 "invalid recipients string. %1",
                                 emailParseResultToString(addressOk)),
-                           i18n("Publishing Error"));
+                           i18nc("@title:window", "Publishing Error"));
     } else {
         QDialog::accept();
     }

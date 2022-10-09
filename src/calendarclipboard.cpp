@@ -177,7 +177,7 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
                                                              "make all its sub-to-dos independent, or "
                                                              "cut the to-do with all its sub-to-dos?",
                                                              incidence->summary()),
-                                                        i18n("KOrganizer Confirmation"),
+                                                        i18nc("@title:window", "KOrganizer Confirmation"),
                                                         KGuiItem(i18n("Cut Only This")),
                                                         KGuiItem(i18n("Cut All")));
 
@@ -216,7 +216,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
                                                              "Do you want to copy just this item or "
                                                              "copy the to-do with all its sub-to-dos?",
                                                              incidence->summary()),
-                                                        i18n("KOrganizer Confirmation"),
+                                                        i18nc("@title:window", "KOrganizer Confirmation"),
                                                         KGuiItem(i18n("Copy Only This")),
                                                         KGuiItem(i18n("Copy All")));
         if (km == KMessageBox::Cancel) {
