@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2014-09-25 01:00-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -55,6 +55,7 @@ msgstr ""
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr ""
 
@@ -361,7 +362,8 @@ msgstr ""
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
 #, kde-format
-msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr ""
 
 #: freebusymanager.cpp:399
@@ -385,6 +387,7 @@ msgstr ""
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
 #, kde-format
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr ""
 
@@ -403,6 +406,7 @@ msgstr ""
 
 #: freebusymanager.cpp:748
 #, kde-format
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr ""
 
@@ -413,6 +417,7 @@ msgstr ""
 
 #: freebusymanager.cpp:757
 #, kde-format
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr ""
 
@@ -603,6 +608,7 @@ msgstr ""
 
 #: itiphandler.cpp:275
 #, kde-format
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr ""
 
@@ -652,6 +658,7 @@ msgstr ""
 
 #: itiphandler_p.cpp:161
 #, kde-format
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr ""
 
@@ -662,6 +669,7 @@ msgstr ""
 
 #: itiphandler_p.cpp:181
 #, kde-format
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr ""
 
@@ -672,6 +680,7 @@ msgstr ""
 
 #: itiphandler_p.cpp:187
 #, kde-format
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr ""
 
@@ -682,6 +691,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr ""
 
@@ -879,6 +889,7 @@ msgstr ""
 
 #: publishdialog.cpp:125
 #, kde-format
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr ""
 
@@ -1036,8 +1047,8 @@ msgstr ""
 
 #: scheduler_p.cpp:297
 #, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr ""
 
 #: scheduler_p.cpp:304
@@ -1086,8 +1097,8 @@ msgstr ""
 
 #: scheduler_p.cpp:482
 #, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr ""
 
 #: scheduler_p.cpp:483
@@ -1118,7 +1129,7 @@ msgstr ""
 
 #: scheduler_p.cpp:510
 #, kde-format
-msgctxt "@title"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr ""
 
@@ -1174,8 +1185,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "カレンダーフォルダを作成できませんでした: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "カレンダーフォルダの作成に失敗"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1216,10 +1229,13 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "カレンダーフォルダを削除？"
 msgstr[1] "カレンダーフォルダを削除？"
 
@@ -1229,8 +1245,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "カレンダーフォルダを削除できませんでした: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "カレンダーフォルダの削除に失敗"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1322,8 +1340,10 @@ msgid "Could not delete event: %1"
 msgstr "イベントを削除できませんでした: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "イベントの削除に失敗"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1362,8 +1382,10 @@ msgid "Could not create calendar: %1"
 msgstr "カレンダーを作成できませんでした: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "カレンダーの作成に失敗"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1443,8 +1465,10 @@ msgid "Could not paste event: %1"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "貼り付けに失敗"
 
 #: standardcalendaractionmanager.cpp:191

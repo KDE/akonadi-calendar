@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-05-08 11:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -62,7 +62,9 @@ msgstr ""
 "işler ile birlikte bu ögeyi mi kesmek istersiniz?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer Onayı"
 
@@ -383,8 +385,10 @@ msgstr ""
 "Neden: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Uygun/Meşgul edinme hatası"
 
 #: freebusymanager.cpp:399
@@ -411,7 +415,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Uygun/Meşgul bilgisi başarıyla gönderildi."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Uygun/Meşgul Gönderiliyor"
 
@@ -433,7 +439,9 @@ msgstr ""
 "yöneticinizle görüşün.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Uygun/Meşgul Yükleme Adresi Yok"
 
@@ -443,7 +451,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Hedef URL '%1' geçersiz.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Geçersiz Adres"
 
@@ -636,7 +646,9 @@ msgstr ""
 "%1 ögesinin katılımcısı yok. Bu nedenle grup yazılımı iletileri gönderilecek."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "İleti gönderilmedi."
 
@@ -689,7 +701,9 @@ msgid "The item information was successfully sent."
 msgstr "Öge bilgisi başarıyla gönderildi."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Yayıncılık"
 
@@ -699,7 +713,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "'%1' ögesi yayımlanamıyor"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Yönlendirme"
 
@@ -709,7 +725,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "%1 yönlendirilemiyor"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Yönlendirme hatası"
 
@@ -719,7 +737,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Önerilen yeni toplantı zamanı: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Group Zamanlama E-postası"
 
@@ -941,7 +961,9 @@ msgid ""
 msgstr "Geçersiz bir alıcı dizisinden dolayı takvim olayı yayımlanamıyor. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Yayımlama Hatası"
 
@@ -1109,9 +1131,11 @@ msgstr ""
 "değil ama bilmek isteyeceğinizi düşündük.</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Güncellenecek davet bulunamadı"
 
 #: scheduler_p.cpp:304
@@ -1160,9 +1184,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1, %3 adına %2 etkinliğine katılmak istiyor"
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Davet edilmemiş katılımcı"
 
 #: scheduler_p.cpp:483
@@ -1194,8 +1220,10 @@ msgstr ""
 "göndermek ister misiniz?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Katılımcı Eklendi"
 
@@ -1248,8 +1276,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Takvim dizini oluşturulamadı: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Takvim dizini oluşturma işlemi başarısız oldu"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1290,10 +1320,13 @@ msgstr[1] ""
 "misiniz?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Takvim klasörü silinsin mi?"
 msgstr[1] "Takvim klasörleri silinsin mi?"
 
@@ -1303,8 +1336,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Takvim dizini silinemedi: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Takvim dizini silme işlemi başarısız oldu"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1393,8 +1428,10 @@ msgid "Could not delete event: %1"
 msgstr "Etkinlik silinemedi: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Etkinlik silme işlemi başarısız"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1435,8 +1472,10 @@ msgid "Could not create calendar: %1"
 msgstr "Takvim oluşturulamadı: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Takvim oluşturma işlemi başarısız"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1518,8 +1557,10 @@ msgid "Could not paste event: %1"
 msgstr "Etkinlik yapıştırılamadı :%1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Yapıştırma işlemi başarısız"
 
 #: standardcalendaractionmanager.cpp:191

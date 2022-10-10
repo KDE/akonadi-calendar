@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-07-07 08:20+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -60,7 +60,9 @@ msgstr ""
 "semua subrencananya?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Konfirmasi KOrganizer"
 
@@ -380,8 +382,10 @@ msgstr ""
 "Alasannya: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Galat pengambilan senggang/sibuk"
 
 #: freebusymanager.cpp:399
@@ -408,7 +412,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Informasi senggang/sibuk berhasil dikirim."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Mengirim Senggang/Sibuk"
 
@@ -430,7 +436,9 @@ msgstr ""
 "detail URL dan akun.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Tidak Ada Senggang/Sibuk URL Yang Diunggah"
 
@@ -440,7 +448,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Target URL '%1' yang disediakan tidak valid.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "URL tidak valid"
 
@@ -634,7 +644,9 @@ msgstr ""
 "grup yang akan dikirim."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Pesan Tidak Dikirim"
 
@@ -687,7 +699,9 @@ msgid "The item information was successfully sent."
 msgstr "Informasi item telah berhasil dikirim."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Melansir"
 
@@ -697,7 +711,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Tak bisa melansir item '%1'"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Meneruskan"
 
@@ -707,7 +723,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Tak bisa meneruskan item '%1'"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Galas Meneruskan"
 
@@ -717,7 +735,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Waktu rapat baru yang diajukan: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Email Penjadwalan Grup"
 
@@ -942,7 +962,9 @@ msgstr ""
 "Tak bisa melansir insiden kalender karena string penerima tidak valid. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Pelansiran Galat"
 
@@ -1114,9 +1136,11 @@ msgstr ""
 "masalah, tapi kami pikir kamu harus tau.</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Tidak dapat menemukan undangan yang mau diperbarui"
 
 #: scheduler_p.cpp:304
@@ -1165,9 +1189,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 ingin menghadiri %2 untuk kepentingan %3."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Perserta yang tidak diundang"
 
 #: scheduler_p.cpp:483
@@ -1199,8 +1225,10 @@ msgstr ""
 "dalam sebuah pesan pembaruan?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Peserta Ditambahkan"
 
@@ -1255,8 +1283,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Tidak dapat membuat folder kalender: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Pembuatan folder kalender gagal"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1297,10 +1327,13 @@ msgstr[1] ""
 "subfoldernya?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Hapus folder kalender?"
 msgstr[1] "Hapus folder-folder kalender?"
 
@@ -1310,8 +1343,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Tidak dapat menghapus folder kalender: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Penghapusan folder kalender gagal"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1400,8 +1435,10 @@ msgid "Could not delete event: %1"
 msgstr "Tidak dapat menghapus acara: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Penghapusan acara gagal"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1442,8 +1479,10 @@ msgid "Could not create calendar: %1"
 msgstr "Tidak dapat membuat kalender: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Pambuatan kalender gagal"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1525,8 +1564,10 @@ msgid "Could not paste event: %1"
 msgstr "Tidak dapat menempel acara: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Gagal tempel"
 
 #: standardcalendaractionmanager.cpp:191

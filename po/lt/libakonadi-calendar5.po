@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2015-08-30 15:57+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -64,7 +64,9 @@ msgstr ""
 "priklausančius darbus?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer patvirtinimas"
 
@@ -377,8 +379,10 @@ msgstr ""
 "Priežastis: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Užimtumo gavimo klaida"
 
 #: freebusymanager.cpp:399
@@ -401,7 +405,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Užimtumo informacija buvo sėkmingai išsiųsta."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Siunčiamas užimtumas"
 
@@ -419,7 +425,9 @@ msgid ""
 msgstr ""
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Nėra užimtumo publikavimo URL"
 
@@ -429,7 +437,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Duotas URL „%1“ yra netvarkingas.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Neteisingas URL"
 
@@ -618,7 +628,9 @@ msgid ""
 msgstr ""
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Žinutė neišsiųsta"
 
@@ -667,7 +679,9 @@ msgid "The item information was successfully sent."
 msgstr "Įrašo informacija sėkmingai išsiųsta."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publikavimas"
 
@@ -677,7 +691,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Nepavyksta publikuoti elemento „%1“"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Persiuntimas"
 
@@ -687,7 +703,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Negalima persiųsti įrašo „%1“"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Persiuntimo klaida"
 
@@ -698,6 +716,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr ""
 
@@ -896,6 +915,7 @@ msgstr ""
 #: publishdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Publikavimas"
 
@@ -1054,8 +1074,8 @@ msgstr ""
 
 #: scheduler_p.cpp:297
 #, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr ""
 
 #: scheduler_p.cpp:304
@@ -1103,9 +1123,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 nori dalyvauti %2 vietoje %3."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Nekviestas dalyvis"
 
 #: scheduler_p.cpp:483
@@ -1135,8 +1157,10 @@ msgid ""
 msgstr ""
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Dalyviai pridėti"
 
@@ -1193,8 +1217,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Nepavyko sukurti kalendoriaus aplanko: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Nepavyko sukurti kalendoriaus aplanko"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1245,10 +1271,13 @@ msgstr[3] ""
 "Ar tikrai norite šalinti %1 kalendoriaus aplanką ir visus jų poaplankius?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Pašalinti kalendoriaus aplanką?"
 msgstr[1] "Pašalinti kalendoriaus aplankus?"
 msgstr[2] "Pašalinti kalendoriaus aplankus?"
@@ -1260,8 +1289,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Nepavyksta pašalinti kalendoriaus aplanko: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Kalendoriaus aplanko pašalinti nepavyko"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1365,8 +1396,10 @@ msgid "Could not delete event: %1"
 msgstr "Nepavyko pašalinti įvykio: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Įvykio pašalinimas nepavyko"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1409,8 +1442,10 @@ msgid "Could not create calendar: %1"
 msgstr "Nepavyko sukurti kalendoriaus: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Kalendoriaus sukūrimas nepavyko"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1500,8 +1535,10 @@ msgid "Could not paste event: %1"
 msgstr "Nepavyko įklijuoti įvykio: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Įdėti nepavyko"
 
 #: standardcalendaractionmanager.cpp:191

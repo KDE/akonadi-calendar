@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-05-15 22:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -58,7 +58,9 @@ msgstr ""
 "항목으로 만들거나, 하위 할 일도 같이 잘라내시겠습니까?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 확인"
 
@@ -376,8 +378,10 @@ msgstr ""
 "이유: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "바쁨/한가함 가져오기 오류"
 
 #: freebusymanager.cpp:399
@@ -404,7 +408,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "바쁨/한가함 정보를 보냈습니다."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "바쁨/한가함 보내는 중"
 
@@ -425,7 +431,9 @@ msgstr ""
 "정 정보는 시스템 관리자에게 문의하십시오.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "바쁨/한가함 업로드 URL이 없음"
 
@@ -435,7 +443,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>입력한 대상 URL '%1'이(가) 잘못되었습니다.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "잘못된 URL"
 
@@ -627,7 +637,9 @@ msgid ""
 msgstr "항목 '%1'에 참가자가 없습니다. 그룹웨어 메시지를 보내지 않습니다."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "메시지 보내지 않음"
 
@@ -680,7 +692,9 @@ msgid "The item information was successfully sent."
 msgstr "항목 정보를 성공적으로 보냈습니다."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "공개"
 
@@ -690,7 +704,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "항목 '%1'을(를) 공개할 수 없음"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "전달"
 
@@ -700,7 +716,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "항목 '%1'을(를) 전달할 수 없음"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "전달 오류"
 
@@ -710,7 +728,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "새 미팅 시간 제안됨: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "그룹 약속 결정 이메일"
 
@@ -927,7 +947,9 @@ msgstr ""
 "받는 사람 문자열이 잘못되어 반복되는 캘린더 항목을 게시할 수 없습니다. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "게시 오류"
 
@@ -1091,9 +1113,11 @@ msgstr ""
 "것은 아니지만 알아 두어야 할 정보입니다.</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "업데이트할 초대장을 찾을 수 없음"
 
 #: scheduler_p.cpp:304
@@ -1142,9 +1166,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 님이 %3 님 대신 %2에 참가하려고 합니다."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "초대받지 않은 참석자"
 
 #: scheduler_p.cpp:483
@@ -1176,8 +1202,10 @@ msgstr ""
 "시겠습니까?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "참석자 추가됨"
 
@@ -1230,8 +1258,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "캘린더 폴더를 만들 수 없음: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "캘린더 폴더를 만들 수 없음"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1265,10 +1295,13 @@ msgid_plural ""
 msgstr[0] "캘린더 폴더 %1개와 하위 폴더를 삭제하시겠습니까?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "캘린더 폴더 삭제?"
 
 #: standardcalendaractionmanager.cpp:85
@@ -1277,8 +1310,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "캘린더 폴더를 삭제할 수 없음: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "캘린더 폴더 삭제 실패"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1360,8 +1395,10 @@ msgid "Could not delete event: %1"
 msgstr "이벤트를 삭제할 수 없음: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "이벤트 삭제 실패"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1400,8 +1437,10 @@ msgid "Could not create calendar: %1"
 msgstr "캘린더를 만들 수 없음: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "캘린더 생성 실패"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1479,8 +1518,10 @@ msgid "Could not paste event: %1"
 msgstr "이벤트를 붙여넣을 수 없음: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "붙여넣기 실패"
 
 #: standardcalendaractionmanager.cpp:191

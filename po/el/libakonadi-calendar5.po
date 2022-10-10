@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2020-10-28 11:47+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -60,7 +60,9 @@ msgstr ""
 "την εργασία και όλες τις υπο-εργασίες της;"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Επιβεβαίωση του KOrganizer"
 
@@ -391,8 +393,10 @@ msgstr ""
 "Αιτία: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Σφάλμα ανάκτησης διαθεσιμότητας"
 
 #: freebusymanager.cpp:399
@@ -419,7 +423,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Οι πληροφορίες διαθεσιμότητας εστάλησαν με επιτυχία."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Αποστολή διαθεσιμότητας"
 
@@ -441,7 +447,9 @@ msgstr ""
 "το σωστό URL και τις λεπτομέρεις του λογαριασμού.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Κανένα URL για την αποστολή διαθεσιμότητας"
 
@@ -451,7 +459,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Το URL '%1' του προορισμού που δόθηκε δεν είναι έγκυρο.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Μη έγκυρο URL"
 
@@ -652,7 +662,9 @@ msgstr ""
 "ομαδικό μήνυμα."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Το μήνυμα δεν εστάλη"
 
@@ -705,7 +717,9 @@ msgid "The item information was successfully sent."
 msgstr "Η πληροφορία για το αντικείμενο εστάλη επιτυχώς."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Δημοσίευση"
 
@@ -715,7 +729,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Αδυναμία δημοσίευσης του αντικειμένου '%1'"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Προώθηση"
 
@@ -725,7 +741,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Αδυναμία προώθησης του αντικειμένου '%1'"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Σφάλμα προώθησης"
 
@@ -735,7 +753,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Προτάθηκε νέα ώρα συνάντησης: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Αλληλογραφία χρονοπρογραμματισμού ομάδων"
 
@@ -962,7 +982,9 @@ msgstr ""
 "συμβολοσειράς παραληπτών. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Σφάλμα δημοσίευσης"
 
@@ -1133,9 +1155,11 @@ msgstr ""
 "ότι πρέπει να το γνωρίζετε.</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Αδυναμία εύρεσης πρόσκλησης για ενημέρωση"
 
 #: scheduler_p.cpp:304
@@ -1184,9 +1208,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "Ο χρήστης %1 θέλει να παρακολουθήσει το %2 εκ μέρους του %3."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Απρόσκλητος συμμετέχων"
 
 #: scheduler_p.cpp:483
@@ -1218,8 +1244,10 @@ msgstr ""
 "συμμετέχοντες με αλληλογραφία;"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Προστέθηκε συμμετέχων"
 
@@ -1274,8 +1302,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Αδυναμία δημιουργίας φακέλου ημερολογίου: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Η δημιουργία φακέλου ημερολογίου απέτυχε"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1315,10 +1345,13 @@ msgstr[1] ""
 "Θέλετε πράγματι να διαγραφούν %1 φάκελοι ημερολογίου και όλοι οι υποφάκελοι;"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Να διαγραφεί ο φάκελος ημερολογίου;"
 msgstr[1] "Να διαγραφούν οι φάκελοι ημερολογίου;"
 
@@ -1328,8 +1361,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Αδυναμία διαγραφής φακέλου ημερολογίου: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Η διαγραφή του φακέλου ημερολογίου απέτυχε"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1419,8 +1454,10 @@ msgid "Could not delete event: %1"
 msgstr "Αδυναμία διαγραφής γεγονότος: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Η διαγραφή γεγονότος απέτυχε"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1461,8 +1498,10 @@ msgid "Could not create calendar: %1"
 msgstr "Αδυναμία δημιουργίας ημερολογίου: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Η δημιουργία του ημερολογίου απέτυχε"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1548,8 +1587,10 @@ msgid "Could not paste event: %1"
 msgstr "Αδυναμία επικόλλησης γεγονότος: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Η επικόλληση απέτυχε"
 
 #: standardcalendaractionmanager.cpp:191

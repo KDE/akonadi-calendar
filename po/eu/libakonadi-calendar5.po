@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-07-14 16:54+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -62,7 +62,9 @@ msgstr ""
 "zeregina bere azpi-zeregin guztiekin ebaki nahi duzu?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer-en berrespena"
 
@@ -384,8 +386,10 @@ msgstr ""
 "Arrazoia: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Libre/Lanpetuta berreskuratze errorea"
 
 #: freebusymanager.cpp:399
@@ -414,7 +418,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Libre/Lanpetuta informazioa ondo bidali da."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Libre/Lanpetuta bidaltzen"
 
@@ -436,7 +442,9 @@ msgstr ""
 "harremanetan URL eta kontu xehetasun zehatzak jakiteko.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ez dago Libre/Lanpetuta zama-igotzeko URLrik"
 
@@ -446,7 +454,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Hornitutako jomugako «%1» URLa baliogabea da.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "URL baliogabea"
 
@@ -640,7 +650,9 @@ msgstr ""
 "bidaliko."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Mezua ez da bidali"
 
@@ -693,7 +705,9 @@ msgid "The item information was successfully sent."
 msgstr "Elementuaren informazioa ondo bidali da."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Argitaratzea"
 
@@ -703,7 +717,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Ezin da argitaratu «%1» elementua"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Birbideratzea"
 
@@ -713,7 +729,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Ezin da birbideratu «%1» elementua"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Birbideratze errorea"
 
@@ -723,7 +741,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Bilera-ordu berria proposatu da: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Taldea antolatzeko e-posta"
 
@@ -952,7 +972,9 @@ msgstr ""
 "ondorioz. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Argitalpen-errorea"
 
@@ -1122,9 +1144,11 @@ msgstr ""
 "para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Ezin da aurkitu eguneratu beharreko gonbidapena"
 
 #: scheduler_p.cpp:304
@@ -1173,9 +1197,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1(e)k %2(e)ra joan nahi du %3(e)ren izenean."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Gonbidatu gabeko partaidea"
 
 #: scheduler_p.cpp:483
@@ -1207,8 +1233,10 @@ msgstr ""
 "posta bidali nahi diezu?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Hartzailea gehitu da"
 
@@ -1261,8 +1289,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Ezin izan da egutegi-karpeta sortu: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Egutegi-karpeta sortzea huts egin du"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1302,10 +1332,13 @@ msgstr[1] ""
 "Benetan ezabatu nahi dituzu %1 egutegi-karpeta eta haien azpikarpeta guztiak?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Ezabatu egutegi-karpeta?"
 msgstr[1] "Ezabatu egutegi-karpetak?"
 
@@ -1315,8 +1348,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Ezin izan da egutegi-karpeta ezabatu: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Egutegi-karpeta ezabatzea huts egin du"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1406,8 +1441,10 @@ msgid "Could not delete event: %1"
 msgstr "Ezin izan da ekitaldia ezabatu: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Ekitaldia ezabatzea huts egin du"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1448,8 +1485,10 @@ msgid "Could not create calendar: %1"
 msgstr "Ezin izan da egutegia sortu: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Egutegia sortzea huts egin du"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1533,8 +1572,10 @@ msgid "Could not paste event: %1"
 msgstr "Ezin izan du ekitaldia itsatsi: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Itsastea huts egin du"
 
 #: standardcalendaractionmanager.cpp:191

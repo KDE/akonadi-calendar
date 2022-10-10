@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-06-15 06:16+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -65,7 +65,9 @@ msgstr ""
 "z njegovimi podopravili?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Potrditev KOrganizerja"
 
@@ -386,8 +388,10 @@ msgstr ""
 "Vzrok: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Napaka pridobivanja podatkov o prostosti/zaposlenosti"
 
 #: freebusymanager.cpp:399
@@ -416,7 +420,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Podatki o prostosti/zaposlenosti so bili uspešno poslani."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Pošiljanje podatkov o prostosti/zaposlenosti"
 
@@ -438,7 +444,9 @@ msgstr ""
 "računu stopite v stik z vašim sistemskim skrbnikom.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ni URL-ja za pošiljanje prostosti/zaposlenosti"
 
@@ -448,7 +456,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Podan ciljni URL »%1« ni veljaven.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Neveljaven URL"
 
@@ -643,7 +653,9 @@ msgstr ""
 "skupinsko delo."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Sporočilo ni bilo poslano"
 
@@ -696,7 +708,9 @@ msgid "The item information was successfully sent."
 msgstr "Podatki o predmetu so bili uspešno poslani."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Objavljanje"
 
@@ -706,7 +720,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče objaviti"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Posredovanje"
 
@@ -716,7 +732,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče posredovati"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Napaka posredovanja"
 
@@ -726,7 +744,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Predlagan nov čas srečanja: %1-%2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-pošta za razporejanje skupin"
 
@@ -944,7 +964,9 @@ msgstr ""
 "prejemnika. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Napaka med objavo"
 
@@ -1111,9 +1133,11 @@ msgstr ""
 "</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Povabila za posodobitev ni mogoče najti"
 
 #: scheduler_p.cpp:304
@@ -1162,9 +1186,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 se želi v imenu %3 udeležiti %2."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Nepovabljen udeleženec"
 
 #: scheduler_p.cpp:483
@@ -1196,8 +1222,10 @@ msgstr ""
 "posodobitvijo?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Udeleženec je dodan"
 
@@ -1250,8 +1278,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Koledarske mape ni bilo mogoče ustvariti: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Ustvarjanje koledarske mape ni uspelo"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1294,10 +1324,13 @@ msgstr[2] "Ali res želite izbrisati %1 koledarske mape in vse podmape?"
 msgstr[3] "Ali res želite izbrisati %1 koledarskih map in vse podmape?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Izbrišem koledarsko mapo?"
 msgstr[1] "Izbrišem koledarski mapi?"
 msgstr[2] "Izbrišem koledarske mape?"
@@ -1309,8 +1342,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Koledarske mape ni bilo mogoče izbrisati: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Brisanje koledarske mape ni uspelo"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1410,8 +1445,10 @@ msgid "Could not delete event: %1"
 msgstr "Dogodka ni bilo mogoče izbrisati: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Brisanje dogodka ni uspelo"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1454,8 +1491,10 @@ msgid "Could not create calendar: %1"
 msgstr "Koledarja ni bilo mogoče ustvariti: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Ustvarjanje koledarja ni uspelo"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1545,8 +1584,10 @@ msgid "Could not paste event: %1"
 msgstr "Dogodka ni bilo mogoče prilepiti: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Lepljenje ni uspelo"
 
 #: standardcalendaractionmanager.cpp:191

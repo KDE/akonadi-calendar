@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-04-07 17:45+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -57,7 +57,9 @@ msgstr ""
 "podúlohami?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer Potvrdenie"
 
@@ -383,8 +385,10 @@ msgstr ""
 "Dôvod: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Chyba pri získavaní voľný/zaneprázdnený"
 
 #: freebusymanager.cpp:399
@@ -412,7 +416,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Informácia voľný/zaneprázdnený bola úspešne odoslaná."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Posielanie voľný/zaneprázdnený"
 
@@ -434,7 +440,9 @@ msgstr ""
 "presné URL a podrobnosti o účte.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Žiadne URL pre nahratie voľný/zaneprázdnený"
 
@@ -444,7 +452,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Poskytnuté cieľové URL '%1' je neplatné.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Neplatné URL"
 
@@ -636,7 +646,9 @@ msgstr ""
 "správa."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Správa neposlaná"
 
@@ -689,7 +701,9 @@ msgid "The item information was successfully sent."
 msgstr "Informácia položky bola úspešne odoslaná."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publikovanie"
 
@@ -699,7 +713,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Nemožno publikovať položku '%1'"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Preposlanie"
 
@@ -709,7 +725,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Nemožno preposlať položku '%1'"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Chyba preposlania"
 
@@ -719,7 +737,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Navrhnutý nový čas stretnutia: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-mail skupinového plánovania"
 
@@ -940,7 +960,9 @@ msgstr ""
 "Nemožno zverejniť udalosť kalendára kvôli neplatnému reťazcu príjemcov. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Chyba publikovania"
 
@@ -1110,9 +1132,11 @@ msgstr ""
 "vedeli.</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Nemôžem nájsť pozvánku na aktualizáciu"
 
 #: scheduler_p.cpp:304
@@ -1161,9 +1185,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 sa chce zúčastniť %2 menom %3."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Nepozvaný účastník"
 
 #: scheduler_p.cpp:483
@@ -1195,8 +1221,10 @@ msgstr ""
 "správu e-mailom?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Účastník pridaný"
 
@@ -1250,8 +1278,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Nemôžem vytvoriť priečinok kalendára: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Vymazanie priečinka kalendára zlyhalo"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1294,10 +1324,13 @@ msgstr[2] ""
 "Naozaj chcete vymazať %1 priečinkov kalendára a všetky ich podpriečinky?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Vymazať priečinok kalendára?"
 msgstr[1] "Vymazať priečinky kalendára?"
 msgstr[2] "Vymazať priečinky kalendára?"
@@ -1308,8 +1341,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Nemôžem vymazať priečinok kalendára: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Vymazanie priečinka kalendára zlyhalo"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1403,8 +1438,10 @@ msgid "Could not delete event: %1"
 msgstr "Nemôžem vymazať udalosť: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Vymazanie udalosti zlyhalo"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1446,8 +1483,10 @@ msgid "Could not create calendar: %1"
 msgstr "Nemôžem vytvoriť kalendár: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Vytvorenie kalendára zlyhalo"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1533,8 +1572,10 @@ msgid "Could not paste event: %1"
 msgstr "Nemôžem vložiť udalosť: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Vloženie sa nepodarilo"
 
 #: standardcalendaractionmanager.cpp:191

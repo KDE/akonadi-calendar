@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2022-07-29 11:20+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -61,7 +61,9 @@ msgstr ""
 "tehdä alitehtävistä itsenäisiä vai leikata tehtävän kaikkine alitehtävineen?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer-vahvistus"
 
@@ -383,8 +385,10 @@ msgstr ""
 "Syy: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Varaustiedon noutovirhe"
 
 #: freebusymanager.cpp:399
@@ -411,7 +415,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "Varaustiedot lähetettiin onnistuneesti."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Lähetetään varaustietoja"
 
@@ -432,7 +438,9 @@ msgstr ""
 "tilin tiedot saat järjestelmäsi ylläpitäjältä.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ei varaustietojen lähetysosoitetta"
 
@@ -442,7 +450,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Annettu kohdeverkko-osoite ”%1” on virheellinen.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Virheellinen verkko-osoite"
 
@@ -635,7 +645,9 @@ msgstr ""
 "Tietueella ”%1” ei ole osallistujia, joten työryhmäviestiä ei lähetetä."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Viestiä ei lähetetty"
 
@@ -688,7 +700,9 @@ msgid "The item information was successfully sent."
 msgstr "Tietueen tiedot lähetettiin onnistuneesti."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Julkaistaan"
 
@@ -698,7 +712,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "Ei saada julkaistuksi tietuetta ”%1”"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Välitetään"
 
@@ -708,7 +724,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Ei saada välitetyksi tietuetta ”%1”"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Välitysvirhe"
 
@@ -718,7 +736,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Ehdotettu uusi tapaamisaika: %1–%2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Ryhmän aikataulusuunnitelmaviesti"
 
@@ -940,7 +960,9 @@ msgstr ""
 "oli virheitä. %1"
 
 #: publishdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing Error"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Julkaisuvirhe"
 
@@ -1108,9 +1130,11 @@ msgstr ""
 "mutta halusit ehkä tietää.</para>"
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Päivitettävää kutsua ei löydy"
 
 #: scheduler_p.cpp:304
@@ -1159,9 +1183,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 haluaa osallistua tapahtumaan %2 henkilön %3 puolesta."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Kutsumaton osallistuja"
 
 #: scheduler_p.cpp:483
@@ -1193,8 +1219,10 @@ msgstr ""
 "päivitysviestin?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Osallistuja lisätty"
 
@@ -1247,8 +1275,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Kalenterikansion luonti epäonnistui: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Kalenterikansion luonti epäonnistui"
 
 #: standardcalendaractionmanager.cpp:66
@@ -1285,10 +1315,13 @@ msgstr[0] "Haluatko varmasti poistaa tämän kalenterikansion alikansioineen?"
 msgstr[1] "Haluatko varmasti poistaa %1 kalenterikansiota alikansioineen?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Poistetaanko kalenterikansio?"
 msgstr[1] "Poistetaanko kalenterikansiot?"
 
@@ -1298,8 +1331,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Kalenterikansiota ei voitu poistaa: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Kalenterikansion poisto epäonnistui"
 
 #: standardcalendaractionmanager.cpp:93
@@ -1387,8 +1422,10 @@ msgid "Could not delete event: %1"
 msgstr "Tapahtumaa ei voitu poistaa: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Tapahtuman poisto epäonnistui"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1429,8 +1466,10 @@ msgid "Could not create calendar: %1"
 msgstr "Kalenteria ei voitu luoda: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Kalenterin luonti epäonnistui"
 
 #: standardcalendaractionmanager.cpp:152
@@ -1512,8 +1551,10 @@ msgid "Could not paste event: %1"
 msgstr "Tapahtumaa ei voitu liittää: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Liittäminen epäonnistui"
 
 #: standardcalendaractionmanager.cpp:191

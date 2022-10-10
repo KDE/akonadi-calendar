@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -62,7 +62,9 @@ msgstr ""
 "knippen?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KOrganizer Confirmation"
+msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Beglöven - KOrganizer"
 
@@ -387,8 +389,10 @@ msgstr ""
 "Grund: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, kde-format
-msgid "Free/busy retrieval error"
+#, fuzzy, kde-format
+#| msgid "Free/busy retrieval error"
+msgctxt "@title:window"
+msgid "Free/Busy Retrieval Error"
 msgstr "Free-/Bunnen-Afhaal-Fehler"
 
 #: freebusymanager.cpp:399
@@ -415,7 +419,9 @@ msgid "The free/busy information was successfully sent."
 msgstr "De Free-/Bunnen-Daten wöörn mit Spood loosstüert."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sending Free/Busy"
+msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Free-/Bunnen-Daten warrt loosstüert"
 
@@ -437,7 +443,9 @@ msgstr ""
 "qt>"
 
 #: freebusymanager.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No Free/Busy Upload URL"
+msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Keen Free-/Bunnen-Hoochlaad-URL"
 
@@ -447,7 +455,9 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>De angeven Teel-URL \"%1\" is leeg.</qt>"
 
 #: freebusymanager.cpp:757
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invalid URL"
+msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Leeg URL"
 
@@ -640,7 +650,9 @@ msgstr ""
 "loosstüert."
 
 #: itiphandler.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Message Not Sent"
+msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Naricht nich loosstüert"
 
@@ -693,7 +705,9 @@ msgid "The item information was successfully sent."
 msgstr "De Indrag-Informatschoon wöör mit Spood loosstüert."
 
 #: itiphandler_p.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Apenmaken"
 
@@ -703,7 +717,9 @@ msgid "Unable to publish the item '%1'"
 msgstr "De Indrag \"%1\" lett sik nich apenmaken"
 
 #: itiphandler_p.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding"
+msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Wiederledden"
 
@@ -713,7 +729,9 @@ msgid "Unable to forward the item '%1'"
 msgstr "Indrag \"%1\" lett sik nich wiederledden"
 
 #: itiphandler_p.cpp:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forwarding Error"
+msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Wiederledden-Fehler"
 
@@ -723,7 +741,9 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Vörslagen nieg Mööttiet: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Koppelplaan-Nettbreef"
 
@@ -945,6 +965,7 @@ msgstr ""
 #: publishdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Publishing"
+msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Apenmaken"
 
@@ -1110,9 +1131,11 @@ msgid ""
 msgstr ""
 
 #: scheduler_p.cpp:297
-#, kde-format
-msgctxt "@title"
-msgid "Cannot find invitation to be updated"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot find invitation to be updated"
+msgctxt "@title:window"
+msgid "Cannot Find Invitation to be Updated"
 msgstr "Keen Inladen funnen, de sik opfrischen lett"
 
 #: scheduler_p.cpp:304
@@ -1161,9 +1184,11 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 will för %3 bi %2 dorbi wesen."
 
 #: scheduler_p.cpp:482
-#, kde-format
-msgctxt "@title"
-msgid "Uninvited attendee"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Uninvited attendee"
+msgctxt "@title:window"
+msgid "Uninvited Attendee"
 msgstr "Nich inlaadt Deelnehmer"
 
 #: scheduler_p.cpp:483
@@ -1195,8 +1220,10 @@ msgstr ""
 "Nettpost en Opfrischnaricht tostüern?"
 
 #: scheduler_p.cpp:510
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Attendee Added"
+msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Deelnehmer toföögt"
 
@@ -1252,8 +1279,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Kalennerorner \"%1\" lett sik nich opstellen."
 
 #: standardcalendaractionmanager.cpp:57
-#, kde-format
-msgid "Calendar folder creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder creation failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Creation Failed"
 msgstr "Kalennerorner lett sik nich opstellen."
 
 #: standardcalendaractionmanager.cpp:66
@@ -1296,10 +1325,13 @@ msgstr[1] ""
 "Wullt Du disse %1 Kalennerornern un all ehr Ünnerornern redig wegdoon?"
 
 #: standardcalendaractionmanager.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete calendar folder?"
+#| msgid_plural "Delete calendar folders?"
 msgctxt "@title:window"
-msgid "Delete calendar folder?"
-msgid_plural "Delete calendar folders?"
+msgid "Delete Calendar Folder?"
+msgid_plural "Delete Calendar Folders?"
 msgstr[0] "Kalennerorner wegdoon?"
 msgstr[1] "Kalennerorner wegdoon?"
 
@@ -1309,8 +1341,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Kalennerorner \"%1\" lett sik nich wegdoon."
 
 #: standardcalendaractionmanager.cpp:89
-#, kde-format
-msgid "Calendar folder deletion failed"
+#, fuzzy, kde-format
+#| msgid "Calendar folder deletion failed"
+msgctxt "@title:window"
+msgid "Calendar Folder Deletion Failed"
 msgstr "Kalennerorner lett sik nich wegdoon."
 
 #: standardcalendaractionmanager.cpp:93
@@ -1404,8 +1438,10 @@ msgid "Could not delete event: %1"
 msgstr "Begeefnis \"%1\" lett sik nich wegdoon."
 
 #: standardcalendaractionmanager.cpp:128
-#, kde-format
-msgid "Event deletion failed"
+#, fuzzy, kde-format
+#| msgid "Event deletion failed"
+msgctxt "@title:window"
+msgid "Event Deletion Failed"
 msgstr "Wegdoon vun dat Begeefnis fehlslaan"
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
@@ -1446,8 +1482,10 @@ msgid "Could not create calendar: %1"
 msgstr "Kalenner \"%1\" lett sik nich opstellen."
 
 #: standardcalendaractionmanager.cpp:147
-#, kde-format
-msgid "Calendar creation failed"
+#, fuzzy, kde-format
+#| msgid "Calendar creation failed"
+msgctxt "@title:window"
+msgid "Calendar Creation Failed"
 msgstr "Kalenner lett sik nich opstellen."
 
 #: standardcalendaractionmanager.cpp:152
@@ -1531,8 +1569,10 @@ msgid "Could not paste event: %1"
 msgstr "Begeefnis \"%1\" lett sik nich infögen."
 
 #: standardcalendaractionmanager.cpp:188
-#, kde-format
-msgid "Paste failed"
+#, fuzzy, kde-format
+#| msgid "Paste failed"
+msgctxt "@title:window"
+msgid "Paste Failed"
 msgstr "Infögen fehlslaan"
 
 #: standardcalendaractionmanager.cpp:191
