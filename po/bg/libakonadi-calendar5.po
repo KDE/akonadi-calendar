@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2022-06-28 09:53+0200\n"
+"PO-Revision-Date: 2022-10-12 22:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -60,8 +60,7 @@ msgstr ""
 "подзадачи?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Потвърждение KOrganizer"
@@ -385,8 +384,7 @@ msgstr ""
 "Причина: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Грешка при извличане на свободен/зает"
@@ -417,11 +415,10 @@ msgid "The free/busy information was successfully sent."
 msgstr "Информацията за заетостта е изпратена успешно."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr "Изпращане заетост"
+msgstr "Изпращане на заетост"
 
 #: freebusymanager.cpp:619
 #, kde-format
@@ -441,11 +438,10 @@ msgstr ""
 "за точен URL адрес и подробности за профила. </p></qt>"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr "Без URL за качване на заетост"
+msgstr "Няма URL за качване на заетост"
 
 #: freebusymanager.cpp:757
 #, kde-format
@@ -453,11 +449,10 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt> Предоставеният целеви URL адрес \"%1\" е невалиден. </qt>"
 
 #: freebusymanager.cpp:757
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
-msgstr "Неправилен адрес"
+msgstr "Невалиден адрес"
 
 #: history_p.cpp:71
 #, kde-format
@@ -651,8 +646,7 @@ msgstr ""
 "групово съобщение."
 
 #: itiphandler.cpp:275
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Съобщението не е изпратено"
@@ -706,11 +700,10 @@ msgid "The item information was successfully sent."
 msgstr "Информацията за елемента беше изпратена успешно."
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
-msgstr "Издателска дейност"
+msgstr "Публикуване"
 
 #: itiphandler_p.cpp:166
 #, kde-format
@@ -718,8 +711,7 @@ msgid "Unable to publish the item '%1'"
 msgstr "Елементът \"%1\" не може да бъде публикуван"
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Препращане"
@@ -730,8 +722,7 @@ msgid "Unable to forward the item '%1'"
 msgstr "Не може да се препрати елементът \"%1\""
 
 #: itiphandler_p.cpp:187
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Грешка при препращане"
@@ -742,8 +733,7 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Предложено ново време за среща: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, fuzzy, kde-format
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Имейл за групово планиране"
@@ -973,8 +963,7 @@ msgstr ""
 "получателите. %1"
 
 #: publishdialog.cpp:125
-#, fuzzy, kde-format
-#| msgid "Publishing Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Грешка при публикуване"
@@ -1145,12 +1134,10 @@ msgstr ""
 "проблем, но сметнахме, че трябва да знаете.</para>"
 
 #: scheduler_p.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cannot find invitation to be updated"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Не мога да намеря покана за актуализация"
+msgstr "Не може да се намери покана за качване"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1198,12 +1185,10 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 иска да присъства на %2 от името на %3."
 
 #: scheduler_p.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr "Поканен участник"
+msgstr "Непоканен участник"
 
 #: scheduler_p.cpp:483
 #, kde-format
@@ -1234,9 +1219,7 @@ msgstr ""
 "съобщение за актуализация по имейл?"
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Добавен участник"
@@ -1291,8 +1274,7 @@ msgid "Could not create calendar folder: %1"
 msgstr "Не може да се създаде папка на календара: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
 msgstr "Създаването на папка на календара е неуспешно"
@@ -1334,10 +1316,7 @@ msgstr[1] ""
 "Наистина ли искате да изтриете %1 папки в календара и всички техни подпапки?"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
@@ -1350,8 +1329,7 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Не може да се изтрие папка на календара: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
 msgstr "Изтриването на папка в календара е неуспешно"
@@ -1443,8 +1421,7 @@ msgid "Could not delete event: %1"
 msgstr "Не можа да се изтрие събитие: %1"
 
 #: standardcalendaractionmanager.cpp:128
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
 msgstr "Изтриването на събитие е неуспешно"
@@ -1487,8 +1464,7 @@ msgid "Could not create calendar: %1"
 msgstr "Не може да се създаде календар: %1"
 
 #: standardcalendaractionmanager.cpp:147
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
 msgstr "Създаването на календара е неуспешно"
@@ -1573,8 +1549,7 @@ msgid "Could not paste event: %1"
 msgstr "Не може да се постави събитие: %1"
 
 #: standardcalendaractionmanager.cpp:188
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
 msgstr "Поставянето е неуспешно"
