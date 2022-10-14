@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2022-06-26 12:20+0530\n"
+"PO-Revision-Date: 2022-10-13 21:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -25,17 +25,17 @@ msgstr ""
 #: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
-msgstr ""
+msgstr "நீக்குவதில் சிக்கல்."
 
 #: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
-msgstr ""
+msgstr "நகலெடுப்பதில் சிக்கல்."
 
 #: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
-msgstr ""
+msgstr "உருப்பிடியைக் கண்டுபிடிக்க முடியவில்லை: %1"
 
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
