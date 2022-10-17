@@ -17,6 +17,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QTimeZone>
+#include <kwidgetsaddons_version.h>
 
 using namespace KCalendarCore;
 using namespace Akonadi;
@@ -477,12 +478,21 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
             if (!attNew.delegator().isEmpty()) {
                 msg = i18nc("@info", "%1 wants to attend %2 on behalf of %3.", attNew.fullName(), incidence->summary(), attNew.delegator());
             }
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::questionTwoActions(nullptr,
+#else
             if (KMessageBox::questionYesNo(nullptr,
-                                           msg,
-                                           i18nc("@title:window", "Uninvited Attendee"),
-                                           KGuiItem(i18nc("@option", "Accept Attendance")),
-                                           KGuiItem(i18nc("@option", "Reject Attendance")))
+
+#endif
+                                                msg,
+                                                i18nc("@title:window", "Uninvited Attendee"),
+                                                KGuiItem(i18nc("@option", "Accept Attendance")),
+                                                KGuiItem(i18nc("@option", "Reject Attendance")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                != KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 != KMessageBox::Yes) {
+#endif
                 Incidence::Ptr cancel = incidence;
                 cancel->addComment(i18nc("@info", "The organizer rejected your attendance at this meeting."));
                 performTransaction(incidenceBase, iTIPCancel, attNew.fullName());
@@ -503,14 +513,23 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         // send update about new participants
         if (attendeeAdded) {
             bool sendMail = false;
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::questionTwoActions(nullptr,
+#else
             if (KMessageBox::questionYesNo(nullptr,
-                                           i18nc("@info",
-                                                 "An attendee was added to the incidence. "
-                                                 "Do you want to email the attendees an update message?"),
-                                           i18nc("@title:window", "Attendee Added"),
-                                           KGuiItem(i18nc("@option", "Send Messages")),
-                                           KGuiItem(i18nc("@option", "Do Not Send")))
+
+#endif
+                                                i18nc("@info",
+                                                      "An attendee was added to the incidence. "
+                                                      "Do you want to email the attendees an update message?"),
+                                                i18nc("@title:window", "Attendee Added"),
+                                                KGuiItem(i18nc("@option", "Send Messages")),
+                                                KGuiItem(i18nc("@option", "Do Not Send")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                == KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 == KMessageBox::Yes) {
+#endif
                 sendMail = true;
             }
 

@@ -21,6 +21,7 @@
 #include <KMessageBox>
 
 #include <QBitArray>
+#include <kwidgetsaddons_version.h>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -1323,12 +1324,21 @@ void IncidenceChanger::cancelAttendees( const Akonadi::Item &aitem )
   const KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence( aitem );
   Q_ASSERT( incidence );
   if ( KCalPrefs::instance()->mUseGroupwareCommunication ) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (KMessageBox::questionTwoActions(
+#else
     if ( KMessageBox::questionYesNo(
+
+#endif
            0,
            i18n( "Some attendees were removed from the incidence. "
                  "Shall cancel messages be sent to these attendees?" ),
            i18nc("@title:window", "Attendees Removed" ), KGuiItem( i18n( "Send Messages" ) ),
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+           KGuiItem( i18n( "Do Not Send" ) ) ) == KMessageBox::ButtonCode::PrimaryAction) {
+#else
            KGuiItem( i18n( "Do Not Send" ) ) ) == KMessageBox::Yes ) {
+#endif
       // don't use Akonadi::Groupware::sendICalMessage here, because that asks just
       // a very general question "Other people are involved, send message to
       // them?", which isn't helpful at all in this situation. Afterwards, it

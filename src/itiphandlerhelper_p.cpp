@@ -19,6 +19,7 @@
 #include <KMessageBox>
 
 #include <QWidget>
+#include <kwidgetsaddons_version.h>
 
 using namespace Akonadi;
 
@@ -60,11 +61,28 @@ int ITIPHandlerDialogDelegate::askUserIfNeeded(const QString &question, Action a
 
     switch (action) {
     case ActionSendMessage:
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        return KMessageBox::ButtonCode::PrimaryAction;
+#else
         return KMessageBox::Yes;
+#endif
     case ActionDontSendMessage:
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        return KMessageBox::ButtonCode::SecondaryAction;
+#else
         return KMessageBox::No;
+#endif
     default:
-        return KMessageBox::questionYesNo(mParent, question, i18nc("@title:window", "Group Scheduling Email"), buttonYes, buttonNo);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        return KMessageBox::questionTwoActionsCancel(
+#else
+        return KMessageBox::questionYesNo(
+#endif
+            mParent,
+            question,
+            i18nc("@title:window", "Group Scheduling Email"),
+            buttonYes,
+            buttonNo);
     }
 }
 
@@ -118,7 +136,11 @@ ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode, const KCalendarCore:
     // Where the email contains an invitation, modification notification or
     // deletion notification.
 
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (messageBoxReturnCode == KMessageBox::ButtonCode::PrimaryAction) {
+#else
     if (messageBoxReturnCode == KMessageBox::Yes) {
+#endif
         // We will be sending out a message here. Now make sure there is some summary
         // Yes, we do modify the incidence here, but we still keep the Ptr
         // semantics, because this change is only for sending and not stored int the
@@ -132,7 +154,11 @@ ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode, const KCalendarCore:
         m_status = StatusSendingInvitation;
         m_scheduler->performTransaction(_incidence, method);
         return ITIPHandlerHelper::ResultSuccess;
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    } else if (messageBoxReturnCode == KMessageBox::ButtonCode::SecondaryAction) {
+#else
     } else if (messageBoxReturnCode == KMessageBox::No) {
+#endif
         Q_EMIT finished(ITIPHandlerHelper::ResultCanceled, QString());
         return ITIPHandlerHelper::ResultCanceled;
     } else {
@@ -247,8 +273,13 @@ bool ITIPHandlerHelper::handleIncidenceAboutToBeModified(const KCalendarCore::In
                 "You are not the organizer of this event. Editing it will "
                 "bring your calendar out of sync with the organizer's calendar. "
                 "Do you really want to edit it?");
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            const int messageBoxReturnCode = KMessageBox::warningTwoActions(mParent, question, {}, KStandardGuiItem::ok(), KStandardGuiItem::cancel());
+            return messageBoxReturnCode != KMessageBox::ButtonCode::SecondaryAction;
+#else
             const int messageBoxReturnCode = KMessageBox::warningYesNo(mParent, question);
             return messageBoxReturnCode != KMessageBox::No;
+#endif
             break;
         }
         case KCalendarCore::Incidence::TypeJournal:
@@ -322,7 +353,11 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                       KGuiItem(i18n("Send Update")));
             return;
         } else {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            slotIncidenceModifiedDialogClosed(KMessageBox::ButtonCode::PrimaryAction, method, incidence);
+#else
             slotIncidenceModifiedDialogClosed(KMessageBox::Yes, method, incidence);
+#endif
             delete askDelegator;
             return;
         }
@@ -455,9 +490,17 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sendCounterProposal(const KCale
         tmp->setDescription(newEvent->description());
         tmp->addComment(proposalComment(newEvent));
 
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, tmp, KCalendarCore::iTIPReply);
+#else
         return sentInvitation(KMessageBox::Yes, tmp, KCalendarCore::iTIPReply);
+#endif
     } else {
-        return sentInvitation(KMessageBox::Yes, newEvent, KCalendarCore::iTIPCounter);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newEvent, KCalendarCore::iTIPReply);
+#else
+        return sentInvitation(KMessageBox::Yes, newEvent, KCalendarCore::iTIPReply);
+#endif
     }
 }
 
@@ -490,7 +533,11 @@ void ITIPHandlerHelper::slotSchedulerFinishDialog(const int result, KCalendarCor
 {
     Q_UNUSED(method)
     Q_UNUSED(incidence)
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (result == KMessageBox::ButtonCode::PrimaryAction) {
+#else
     if (result == KMessageBox::Yes) {
+#endif
         Q_EMIT finished(ResultFailAbortUpdate, QString());
     } else {
         Q_EMIT finished(ResultFailKeepUpdate, QString());
