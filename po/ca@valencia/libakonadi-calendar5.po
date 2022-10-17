@@ -254,7 +254,7 @@ msgstr ""
 #, kde-format
 msgid "Mail transport to use for sending e-mail messages"
 msgstr ""
-"Transport de correu que s'utilitzarà per a enviar missatges de correu "
+"Transport de correu que s'ha d'utilitzar per a enviar missatges de correu "
 "electrònic"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
@@ -512,7 +512,7 @@ msgstr "Nom de fitxer buit. No s'importarà el fitxer ical."
 #: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
-msgstr "L'URL que s'ha d'importar està amb format incorrecte."
+msgstr "L'URL que s'importarà està amb format incorrecte."
 
 #: icalimporter.cpp:178
 #, kde-format
