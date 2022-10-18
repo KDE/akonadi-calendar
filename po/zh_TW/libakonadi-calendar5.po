@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:46+0000\n"
+"POT-Creation-Date: 2022-10-18 00:45+0000\n"
 "PO-Revision-Date: 2020-09-17 13:53+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -24,32 +24,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "找不到要更新的事件。可能已被刪除。"
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:68
 #, kde-format
 msgid "Error performing deletion."
 msgstr "執行刪除時發生錯誤。"
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:73
 #, kde-format
 msgid "Error performing copy."
 msgstr "執行複製時發生錯誤。"
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:97
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "找不到項目：%1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
 #, kde-format
 msgid "Error while removing relations."
 msgstr "移除關聯時發生錯誤。"
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:159
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "刪除事件時發生錯誤：%1"
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:180
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -58,36 +58,36 @@ msgstr ""
 "項目 %1 有子待辦事項。您要只剪下此項目，並讓所有的子待辦事項獨立出來，還是連"
 "同子待辦事項一起剪下？"
 
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:185 calendarclipboard.cpp:232
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 確認"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:186
 #, kde-format
 msgid "Cut Only This"
 msgstr "只剪下此項目"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:187
 #, kde-format
 msgid "Cut All"
 msgstr "全部剪下"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:228
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr "項目 %1 有子待辦事項。您要只複製此項目，還是連同子待辦事項一起複製？"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:233
 #, kde-format
 msgid "Copy Only This"
 msgstr "只複製此項目"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:234
 #, kde-format
 msgid "Copy All"
 msgstr "全部複製"
@@ -526,43 +526,43 @@ msgstr "要合併的 ical 檔是空的。"
 msgid "Merge ical file into existing calendar."
 msgstr "合併 ical 檔到現有的行事曆。"
 
-#: incidencechanger.cpp:251
+#: incidencechanger.cpp:252
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "建立行事曆項目時發生錯誤：%1"
 
-#: incidencechanger.cpp:330
+#: incidencechanger.cpp:331
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "刪除行事曆項目時發生錯誤：%1"
 
-#: incidencechanger.cpp:365
+#: incidencechanger.cpp:366
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "發生未知的錯誤"
 
-#: incidencechanger.cpp:402
+#: incidencechanger.cpp:403
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "變更行事曆項目時發生錯誤：%1"
 
-#: incidencechanger.cpp:796 incidencechanger.cpp:920
+#: incidencechanger.cpp:797 incidencechanger.cpp:921
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "行事曆項目已被刪除，或正在被刪除。"
 
-#: incidencechanger.cpp:1176
+#: incidencechanger.cpp:1177
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "因為存取權限的限制，無法執行操作"
 
-#: incidencechanger.cpp:1179
+#: incidencechanger.cpp:1180
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "選取的收藏不合法"
 
-#: incidencechanger.cpp:1183
+#: incidencechanger.cpp:1184
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -570,19 +570,19 @@ msgid ""
 msgstr ""
 "預設的收藏不合法，或是沒有正確的存取權限卻使用了 DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1187
+#: incidencechanger.cpp:1188
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "在群組操作時複製項目代碼"
 
-#: incidencechanger.cpp:1191
+#: incidencechanger.cpp:1192
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr "群組變更中的某一個變更失敗。所有變更都將回復。"
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Unknown error"
 msgstr "未知的錯誤"
@@ -653,7 +653,7 @@ msgid "Do Not Send"
 msgstr "不要傳送"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:486
+#: itiphandlerhelper_p.cpp:529
 #, kde-format
 msgid "Error: %1"
 msgstr "錯誤：%1"
@@ -719,24 +719,24 @@ msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "轉寄錯誤"
 
-#: itiphandlerhelper_p.cpp:35
+#: itiphandlerhelper_p.cpp:36
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
 msgstr "提出新的會議時間：%1 - %2"
 
-#: itiphandlerhelper_p.cpp:67
+#: itiphandlerhelper_p.cpp:83
 #, fuzzy, kde-format
 #| msgid "Group Scheduling Email"
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "群組排程電子郵件"
 
-#: itiphandlerhelper_p.cpp:128
+#: itiphandlerhelper_p.cpp:150
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>沒有給定摘要</placeholder>"
 
-#: itiphandlerhelper_p.cpp:213
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -745,7 +745,7 @@ msgstr ""
 "事件 %1 包含了其它人。\n"
 "您要對參加者發出邀請嗎？"
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:244
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -754,14 +754,14 @@ msgstr ""
 "待辦事項 %1 包含了其它人。\n"
 "您要對參加者發出邀請嗎？"
 
-#: itiphandlerhelper_p.cpp:223
+#: itiphandlerhelper_p.cpp:249
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "此事件包含了其他人。要將這封電子郵件發送給參加者嗎？"
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:273
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -770,7 +770,7 @@ msgstr ""
 "您不是此事件的發起者。編輯此事件會讓您的行事曆與發起者的行事曆不同步。您確定"
 "要編輯嗎？"
 
-#: itiphandlerhelper_p.cpp:280
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -779,25 +779,25 @@ msgstr ""
 "您已變更邀請 %1。\n"
 "您要對參加者發出更新訊息嗎？"
 
-#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
-#: itiphandlerhelper_p.cpp:322
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:340
+#: itiphandlerhelper_p.cpp:353
 #, kde-format
 msgid "Send Update"
 msgstr "傳送更新"
 
-#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:334 itiphandlerhelper_p.cpp:422
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "您要將狀態變更傳送到此工作的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:315
+#: itiphandlerhelper_p.cpp:346
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr "您在此事件的參加者狀態已變更。您要送出狀態變更資訊給此事件的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:358
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -806,7 +806,7 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此事件已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:363
+#: itiphandlerhelper_p.cpp:398
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -815,7 +815,7 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此待辦事項已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:368
+#: itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -824,18 +824,18 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此日誌已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:425
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "您要將狀態變更傳送到此日誌的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
+#: itiphandlerhelper_p.cpp:430 itiphandlerhelper_p.cpp:451
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "傳送更新"
 
-#: itiphandlerhelper_p.cpp:410
+#: itiphandlerhelper_p.cpp:445
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -843,17 +843,17 @@ msgid ""
 msgstr ""
 "您已接受此事件的邀請。您要送出狀態變更資訊給此事件的發起者，告訴他您拒絕嗎？"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:489 mailscheduler_p.cpp:109
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "反提案：%1"
 
-#: itiphandlerhelper_p.cpp:471
+#: itiphandlerhelper_p.cpp:514
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "傳送群組排程電子郵件失敗。"
 
-#: itiphandlerhelper_p.cpp:479
+#: itiphandlerhelper_p.cpp:522
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1065,22 +1065,22 @@ msgstr "（空白名稱）"
 msgid "(EmptyEmail)"
 msgstr "（空的電子郵件）"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:239
+#: scheduler_p.cpp:133 scheduler_p.cpp:240
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "錯誤：指定了不同的事件型態。"
 
-#: scheduler_p.cpp:223 scheduler_p.cpp:272
+#: scheduler_p.cpp:224 scheduler_p.cpp:273
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "這不是更新。找到的事件已在最近變更過。"
 
-#: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
+#: scheduler_p.cpp:264 scheduler_p.cpp:553 scheduler_p.cpp:568
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "變更事件時發生錯誤"
 
-#: scheduler_p.cpp:288
+#: scheduler_p.cpp:289
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1099,7 +1099,7 @@ msgstr ""
 "item> <item>您無法再存取包含此邀請的行事曆</item></list> </para> <para>這其實"
 "不是什麼問題，不過我們覺得您應該要知道原因。</para>"
 
-#: scheduler_p.cpp:297
+#: scheduler_p.cpp:298
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Cannot find invitation to be updated"
@@ -1107,22 +1107,22 @@ msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "找不到需要被更新的邀請"
 
-#: scheduler_p.cpp:304
+#: scheduler_p.cpp:305
 #, kde-format
 msgid "Error adding incidence"
 msgstr "新增事件時發生錯誤"
 
-#: scheduler_p.cpp:338
+#: scheduler_p.cpp:339
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "找不到要刪除的事件。"
 
-#: scheduler_p.cpp:391
+#: scheduler_p.cpp:392
 #, kde-format
 msgid "Error recording exception"
 msgstr "紀錄例外時發生錯誤"
 
-#: scheduler_p.cpp:408
+#: scheduler_p.cpp:409
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1133,25 +1133,25 @@ msgstr ""
 "此事件或工作無法從您的行事曆中移除。也許它已被移除，或是不屬於您所有，或是該"
 "行事曆設為唯讀或已被關閉。"
 
-#: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
-#: scheduler_p.cpp:574
+#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:587
+#: scheduler_p.cpp:593
 #, kde-format
 msgid "Generic Error"
 msgstr "一般錯誤"
 
-#: scheduler_p.cpp:476
+#: scheduler_p.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 想參加 %2，但是未接獲邀請。"
 
-#: scheduler_p.cpp:478
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 想代表 %3 參加 %2。"
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Uninvited attendee"
@@ -1159,25 +1159,25 @@ msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "未接受邀請的與會者"
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "接受參與"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "拒絕參與"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:497
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "會議發起者拒絕您參與此會議。"
 
-#: scheduler_p.cpp:508
+#: scheduler_p.cpp:523
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1185,7 +1185,7 @@ msgid ""
 "an update message?"
 msgstr "一名參加者已加入此事件。您要寄發變更訊息給其他參加者嗎？"
 
-#: scheduler_p.cpp:510
+#: scheduler_p.cpp:525
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Attendee Added"
@@ -1193,29 +1193,29 @@ msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "參加者已加入"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:526
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "傳送訊息"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:527
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "不要傳送"
 
-#: scheduler_p.cpp:558
+#: scheduler_p.cpp:577
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "沒有事件可排程。"
 
-#: scheduler_p.cpp:581
+#: scheduler_p.cpp:600
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "沒有行程快取"
 
-#: scheduler_p.cpp:600
+#: scheduler_p.cpp:619
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "儲存行程物件時發生錯誤"

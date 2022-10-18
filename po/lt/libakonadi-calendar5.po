@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:46+0000\n"
+"POT-Creation-Date: 2022-10-18 00:45+0000\n"
 "PO-Revision-Date: 2015-08-30 15:57+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -27,33 +27,33 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:68
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Klaida vykdant trynimą."
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:73
 #, kde-format
 msgid "Error performing copy."
 msgstr "Klaida vykdant kopijavimą."
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:97
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Nepavyksta rasti elemento: %1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Klaida pašalinant ryšius."
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:159
 #, fuzzy, kde-format
 #| msgid "Edit the selected incidence."
 msgid "Error while deleting incidences: %1"
 msgstr "Keisti pažymėtą incidentą."
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:180
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -63,24 +63,24 @@ msgstr ""
 "ir jam priklausančius padaryti nepriklausomais, ar pašalinti šį ir visus jam "
 "priklausančius darbus?"
 
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:185 calendarclipboard.cpp:232
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer patvirtinimas"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:186
 #, kde-format
 msgid "Cut Only This"
 msgstr "Pašalinti tik šį"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:187
 #, kde-format
 msgid "Cut All"
 msgstr "Pašalinti visus"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:228
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -89,12 +89,12 @@ msgstr ""
 "Darbas „%1“ turi jam priklausančių darbų. Ar norite nukopijuoti tik šį darbą "
 "ar ir visus jam priklausančius darbus?"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:233
 #, kde-format
 msgid "Copy Only This"
 msgstr "Kopijuoti tik šį"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:234
 #, kde-format
 msgid "Copy All"
 msgstr "Kopijuoti viską"
@@ -519,62 +519,62 @@ msgstr ""
 msgid "Merge ical file into existing calendar."
 msgstr ""
 
-#: incidencechanger.cpp:251
+#: incidencechanger.cpp:252
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Klaida bandant sukurti kalendoriaus elementą. Klaida buvo: %1"
 
-#: incidencechanger.cpp:330
+#: incidencechanger.cpp:331
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Klaida bandant ištrinti kalendoriaus elementą. Klaida buvo: %1"
 
-#: incidencechanger.cpp:365
+#: incidencechanger.cpp:366
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Įvyko nežinoma klaida"
 
-#: incidencechanger.cpp:402
+#: incidencechanger.cpp:403
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Klaida bandant keisti kalendoriaus elementą. Klaida buvo: %1"
 
-#: incidencechanger.cpp:796 incidencechanger.cpp:920
+#: incidencechanger.cpp:797 incidencechanger.cpp:921
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr ""
 
-#: incidencechanger.cpp:1176
+#: incidencechanger.cpp:1177
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr ""
 
-#: incidencechanger.cpp:1179
+#: incidencechanger.cpp:1180
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr ""
 
-#: incidencechanger.cpp:1183
+#: incidencechanger.cpp:1184
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
 
-#: incidencechanger.cpp:1187
+#: incidencechanger.cpp:1188
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr ""
 
-#: incidencechanger.cpp:1191
+#: incidencechanger.cpp:1192
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Unknown error"
 msgstr "Nežinoma klaida"
@@ -647,7 +647,7 @@ msgid "Do Not Send"
 msgstr "Nesiųsti"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:486
+#: itiphandlerhelper_p.cpp:529
 #, kde-format
 msgid "Error: %1"
 msgstr "Klaida: %1"
@@ -709,125 +709,125 @@ msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Persiuntimo klaida"
 
-#: itiphandlerhelper_p.cpp:35
+#: itiphandlerhelper_p.cpp:36
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:67
+#: itiphandlerhelper_p.cpp:83
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:128
+#: itiphandlerhelper_p.cpp:150
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Nėra santraukos</placeholder>"
 
-#: itiphandlerhelper_p.cpp:213
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:244
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:223
+#: itiphandlerhelper_p.cpp:249
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:273
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:280
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
-#: itiphandlerhelper_p.cpp:322
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:340
+#: itiphandlerhelper_p.cpp:353
 #, kde-format
 msgid "Send Update"
 msgstr "Išsiųsti atnaujinimą"
 
-#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:334 itiphandlerhelper_p.cpp:422
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:315
+#: itiphandlerhelper_p.cpp:346
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:358
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:363
+#: itiphandlerhelper_p.cpp:398
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:368
+#: itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:425
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
+#: itiphandlerhelper_p.cpp:430 itiphandlerhelper_p.cpp:451
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Išsiųsti atnaujinimą"
 
-#: itiphandlerhelper_p.cpp:410
+#: itiphandlerhelper_p.cpp:445
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:489 mailscheduler_p.cpp:109
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Kontrapasiūlymas: %1"
 
-#: itiphandlerhelper_p.cpp:471
+#: itiphandlerhelper_p.cpp:514
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:479
+#: itiphandlerhelper_p.cpp:522
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1042,23 +1042,23 @@ msgstr "(be vardo)"
 msgid "(EmptyEmail)"
 msgstr "(Tuščias E.Adresas)"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:239
+#: scheduler_p.cpp:133 scheduler_p.cpp:240
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr ""
 
-#: scheduler_p.cpp:223 scheduler_p.cpp:272
+#: scheduler_p.cpp:224 scheduler_p.cpp:273
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 
-#: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
+#: scheduler_p.cpp:264 scheduler_p.cpp:553 scheduler_p.cpp:568
 #, fuzzy, kde-format
 #| msgid "Edit the selected incidence."
 msgid "Error modifying incidence"
 msgstr "Keisti pažymėtą incidentą."
 
-#: scheduler_p.cpp:288
+#: scheduler_p.cpp:289
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1072,30 +1072,30 @@ msgid ""
 "you should know.</para>"
 msgstr ""
 
-#: scheduler_p.cpp:297
+#: scheduler_p.cpp:298
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr ""
 
-#: scheduler_p.cpp:304
+#: scheduler_p.cpp:305
 #, fuzzy, kde-format
 #| msgid "Edit the selected incidence."
 msgid "Error adding incidence"
 msgstr "Keisti pažymėtą incidentą."
 
-#: scheduler_p.cpp:338
+#: scheduler_p.cpp:339
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr ""
 
-#: scheduler_p.cpp:391
+#: scheduler_p.cpp:392
 #, fuzzy, kde-format
 #| msgid "Error performing deletion."
 msgid "Error recording exception"
 msgstr "Klaida vykdant trynimą."
 
-#: scheduler_p.cpp:408
+#: scheduler_p.cpp:409
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1104,25 +1104,25 @@ msgid ""
 "only or disabled calendar."
 msgstr ""
 
-#: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
-#: scheduler_p.cpp:574
+#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:587
+#: scheduler_p.cpp:593
 #, kde-format
 msgid "Generic Error"
 msgstr "Bendra klaida"
 
-#: scheduler_p.cpp:476
+#: scheduler_p.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 nori dalyvauti %2 bet nebuvo pakviesta(-s)."
 
-#: scheduler_p.cpp:478
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 nori dalyvauti %2 vietoje %3."
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Uninvited attendee"
@@ -1130,25 +1130,25 @@ msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nekviestas dalyvis"
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Priimti dalyvavimą"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Atmesti dalyvavimą"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:497
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Organizatorius jūsų pasiūlymą dalyvauti susitikime atmetė."
 
-#: scheduler_p.cpp:508
+#: scheduler_p.cpp:523
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1156,7 +1156,7 @@ msgid ""
 "an update message?"
 msgstr ""
 
-#: scheduler_p.cpp:510
+#: scheduler_p.cpp:525
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Attendee Added"
@@ -1164,29 +1164,29 @@ msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Dalyviai pridėti"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:526
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Siųsti žinutes"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:527
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Nesiųsti"
 
-#: scheduler_p.cpp:558
+#: scheduler_p.cpp:577
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr ""
 
-#: scheduler_p.cpp:581
+#: scheduler_p.cpp:600
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Nėra užimtumo podėlio"
 
-#: scheduler_p.cpp:600
+#: scheduler_p.cpp:619
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr ""
