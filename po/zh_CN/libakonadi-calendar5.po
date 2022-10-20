@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:45+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:21\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -58,8 +58,7 @@ msgstr ""
 "目及其全部子待办事项？"
 
 #: calendarclipboard.cpp:185 calendarclipboard.cpp:232
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 确认"
@@ -374,11 +373,10 @@ msgstr ""
 "原因： %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr "空闲/忙碌信息获取错误"
+msgstr ""
 
 #: freebusymanager.cpp:399
 #, kde-format
@@ -403,8 +401,7 @@ msgid "The free/busy information was successfully sent."
 msgstr "空闲/忙碌信息已成功发送。"
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "正在发送空闲/忙碌信息"
@@ -426,8 +423,7 @@ msgstr ""
 "户细节。</p></qt>"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "无空闲/忙碌信息上传 URL"
@@ -438,8 +434,7 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>提供的目标“%1”无效。</qt>"
 
 #: freebusymanager.cpp:757
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "无效的 URL"
@@ -627,8 +622,7 @@ msgid ""
 msgstr "项目“%1”没有参与者。因此没有要发送的群件信息。"
 
 #: itiphandler.cpp:275
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "未发出信息"
@@ -682,8 +676,7 @@ msgid "The item information was successfully sent."
 msgstr "该项目信息已经成功发送。"
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "发布"
@@ -694,8 +687,7 @@ msgid "Unable to publish the item '%1'"
 msgstr "无法发布项目“%1”"
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "转发"
@@ -706,8 +698,7 @@ msgid "Unable to forward the item '%1'"
 msgstr "无法转发项目“%1”"
 
 #: itiphandler_p.cpp:187
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "转发错误"
@@ -718,8 +709,7 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "建议的新会议时间：%1 - %2"
 
 #: itiphandlerhelper_p.cpp:83
-#, fuzzy, kde-format
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "分组日程安排邮件"
@@ -931,8 +921,7 @@ msgid ""
 msgstr "由于收件人无效，无法发布日历事件。 %1"
 
 #: publishdialog.cpp:125
-#, fuzzy, kde-format
-#| msgid "Publishing Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "发布错误"
@@ -1093,12 +1082,10 @@ msgstr ""
 "有什么问题，但我们认为您应该知道。</para>"
 
 #: scheduler_p.cpp:298
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cannot find invitation to be updated"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "无法找到需更新的邀请"
+msgstr ""
 
 #: scheduler_p.cpp:305
 #, kde-format
@@ -1145,12 +1132,10 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 想代表 %3 参加 %2。"
 
 #: scheduler_p.cpp:488
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr "未邀请的参与者"
+msgstr ""
 
 #: scheduler_p.cpp:489
 #, kde-format
@@ -1179,9 +1164,7 @@ msgid ""
 msgstr "一个参与者已经被添加到事件中。您想要向所有参与者发送通知信件吗？"
 
 #: scheduler_p.cpp:525
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "参与者已添加"
@@ -1235,11 +1218,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "无法创建日历文件夹：%1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr "日历文件夹创建失败"
+msgstr ""
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
@@ -1272,14 +1254,11 @@ msgid_plural ""
 msgstr[0] "您确定要删除 %1 个日历文件夹及其子文件夹吗？"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] "删除日历文件夹吗？"
+msgstr[0] ""
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
@@ -1287,11 +1266,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "无法删除日历文件夹：%1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr "日历文件夹删除失败"
+msgstr ""
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
@@ -1372,11 +1350,10 @@ msgid "Could not delete event: %1"
 msgstr "无法删除事件：%1"
 
 #: standardcalendaractionmanager.cpp:128
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr "事件删除失败"
+msgstr ""
 
 #: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
 #, kde-format
@@ -1413,11 +1390,10 @@ msgid "Could not create calendar: %1"
 msgstr "无法创建日历：%1"
 
 #: standardcalendaractionmanager.cpp:147
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr "日历创建失败"
+msgstr ""
 
 #: standardcalendaractionmanager.cpp:152
 #, kde-format
@@ -1493,11 +1469,10 @@ msgid "Could not paste event: %1"
 msgstr "无法粘贴事件：%1"
 
 #: standardcalendaractionmanager.cpp:188
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "粘贴失败"
+msgstr ""
 
 #: standardcalendaractionmanager.cpp:191
 #, kde-format
