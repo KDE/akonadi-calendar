@@ -966,7 +966,7 @@ msgstr ""
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr ""
-"Cliqueu el botó <b>Ajuda</b> per a llegir més informació quant a la "
+"Cliqueu en el botó <b>Ajuda</b> per a llegir més informació quant a la "
 "planificació de grup."
 
 #: publishdialog.cpp:122
