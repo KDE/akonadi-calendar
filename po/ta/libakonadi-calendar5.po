@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:45+0000\n"
-"PO-Revision-Date: 2022-10-13 21:41+0530\n"
+"PO-Revision-Date: 2022-10-27 19:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -97,43 +97,43 @@ msgstr ""
 #, kde-format
 msgctxt "@title:column calendar event start date and time"
 msgid "Start Date and Time"
-msgstr ""
+msgstr "துவக்க தேதியும் நேரமும்"
 
 #: calendarmodel.cpp:196
 #, kde-format
 msgctxt "@title:column calendar event end date and time"
 msgid "End Date and Time"
-msgstr ""
+msgstr "முடியும் தேதியும் நேரமும்"
 
 #: calendarmodel.cpp:198
 #, kde-format
 msgctxt "@title:column calendar event type"
 msgid "Type"
-msgstr ""
+msgstr "வகை"
 
 #: calendarmodel.cpp:200
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
-msgstr ""
+msgstr "உரிய தேதியும் நேரமும்"
 
 #: calendarmodel.cpp:202
 #, kde-format
 msgctxt "@title:column todo item priority"
 msgid "Priority"
-msgstr ""
+msgstr "முக்கியத்துவம்"
 
 #: calendarmodel.cpp:204
 #, kde-format
 msgctxt "@title:column todo item completion in percent"
 msgid "Complete"
-msgstr ""
+msgstr "முடிந்த‍து"
 
 #: calendarmodel.cpp:213
 #, kde-format
 msgctxt "@title:column calendar title"
 msgid "Calendar"
-msgstr ""
+msgstr "நாள்காட்டி"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:23
