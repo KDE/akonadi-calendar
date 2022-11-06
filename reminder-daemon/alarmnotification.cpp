@@ -30,7 +30,7 @@ AlarmNotification::~AlarmNotification()
 
 void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::Incidence::Ptr &incidence)
 {
-    const QDateTime startTime = m_occurrence.isValid() ? m_occurrence : incidence->dtStart();
+    const QDateTime startTime = m_occurrence.isValid() ? m_occurrence.toLocalTime() : incidence->dtStart().toLocalTime();
     const bool notificationExists = m_notification;
     if (!notificationExists) {
         m_notification = new KNotification(QStringLiteral("alarm"));
