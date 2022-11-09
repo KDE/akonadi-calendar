@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:45+0000\n"
-"PO-Revision-Date: 2022-10-27 19:54+0530\n"
+"PO-Revision-Date: 2022-11-08 21:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -321,36 +321,36 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr ""
+msgstr "%1, %2-இல்"
 
 #: calendarutils.cpp:180
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr ""
+msgstr "%1-இன் கூகுள் %2"
 
 #: calendarutils.cpp:182
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
-msgstr ""
+msgstr "%1-இன் %2"
 
 #: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr ""
+msgstr "கூகுள் %1"
 
 #: calendarutils.cpp:193
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "என் %1"
 
 #: calendarutils.cpp:197
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #: freebusymanager.cpp:376
 #, kde-format
@@ -430,24 +430,24 @@ msgstr "பொதுவான சிக்கல்"
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 creation"
-msgstr ""
+msgstr "%1 தனை உருவாக்கியது"
 
 #: history_p.cpp:150
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
-msgstr ""
+msgstr "%1 தனை நீக்கியது"
 
 #: history_p.cpp:232
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
-msgstr ""
+msgstr "%1 தனை மாற்றியது"
 
 #: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr ""
+msgstr "ical உருப்படியை உருவாக்குவதில் சிக்கல்: %1"
 
 #: icalimporter.cpp:92
 #, kde-format
@@ -457,7 +457,7 @@ msgstr ""
 #: icalimporter.cpp:117
 #, kde-format
 msgid "Could not download remote file."
-msgstr ""
+msgstr "தொலை கோப்பை பதிவிறக்க முடியவில்லை."
 
 #: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
@@ -467,17 +467,17 @@ msgstr ""
 #: icalimporter.cpp:166
 #, kde-format
 msgid "Empty filename. Will not import ical file."
-msgstr ""
+msgstr "கோப்புப்பெயர் காலியாக உள்ளது. ical கோப்பு இறக்குமதி செய்யப்படாது."
 
 #: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
-msgstr ""
+msgstr "இறக்குமதிக்கான முகவரி முறையற்றது."
 
 #: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள கோப்பைப் படிக்க முடியாது."
 
 #: icalimporter.cpp:186
 #, kde-format
@@ -606,30 +606,30 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr ""
+msgstr "அஞ்சல் அனுப்பப்படவில்லை"
 
 #: itiphandler.h:99 itiphandler.h:117 itiphandler.h:133 itiphandler.h:146
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
-msgstr ""
+msgstr "அஞ்சலை அனுப்பு"
 
 #: itiphandler.h:100 itiphandler.h:118 itiphandler.h:134 itiphandler.h:147
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
-msgstr ""
+msgstr "அனுப்பாதே"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
 #: itiphandlerhelper_p.cpp:529
 #, kde-format
 msgid "Error: %1"
-msgstr ""
+msgstr "சிக்கல்: %1"
 
 #: itiphandler_p.cpp:81
 #, kde-format
 msgid "Error loading calendar: %1"
-msgstr ""
+msgstr "நாள்காட்டியை ஏற்றுவதில் சிக்கல்: %1"
 
 #: itiphandler_p.cpp:132
 #, kde-format
@@ -667,18 +667,18 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr ""
+msgstr "முன்னனுப்புவது"
 
 #: itiphandler_p.cpp:187
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr ""
+msgstr "'%1' என்பதை முன்னனுப்ப முடியவில்லை"
 
 #: itiphandler_p.cpp:187
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr ""
+msgstr "முன்னனுப்புவதில் சிக்கல்"
 
 #: itiphandlerhelper_p.cpp:36
 #, kde-format
@@ -837,18 +837,18 @@ msgstr ""
 #: mailscheduler_p.cpp:188
 #, kde-format
 msgid "Error sending e-mail: "
-msgstr ""
+msgstr "அஞ்சலை அனுப்புவதில் சிக்கல்: "
 
 #: publishdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
-msgstr ""
+msgstr "முகவரிகளைத் தேர்ந்தெடுங்கள்"
 
 #: publishdialog.cpp:60
 #, kde-format
 msgid "Send email to these recipients"
-msgstr ""
+msgstr "இவர்களுக்கு அஞ்சலனுப்பு"
 
 #: publishdialog.cpp:62
 #, kde-format
@@ -892,7 +892,7 @@ msgstr ""
 #: publishdialog_base.ui:38
 #, kde-format
 msgid "The list of addressees to receive the invitation"
-msgstr ""
+msgstr "அழைப்பைப் பெற வேண்டியவர்களின் முகவரிகள்"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:41
@@ -906,7 +906,7 @@ msgstr ""
 #: publishdialog_base.ui:52
 #, kde-format
 msgid "Create a new recipient"
-msgstr ""
+msgstr "புதிய பெறுநரை சேர்க்கும்"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mNew)
 #: publishdialog_base.ui:55
@@ -920,7 +920,7 @@ msgstr ""
 #: publishdialog_base.ui:58
 #, kde-format
 msgid "&New"
-msgstr ""
+msgstr "&புதியவர்"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:65
@@ -939,7 +939,7 @@ msgstr ""
 #: publishdialog_base.ui:71
 #, kde-format
 msgid "&Remove"
-msgstr ""
+msgstr "&நீக்கு"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:78
@@ -959,14 +959,14 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select..."
-msgstr ""
+msgstr "&தேர்ந்தெடு..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
 #, kde-format
 msgctxt "recipient name"
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mNameLineEdit)
 #: publishdialog_base.ui:123
@@ -985,7 +985,7 @@ msgstr ""
 #, kde-format
 msgctxt "recipient email"
 msgid "E&mail:"
-msgstr ""
+msgstr "&மின்னஞ்சல்:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:146
@@ -1090,19 +1090,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr ""
+msgstr "அழைக்கப்படா பங்கேற்பாளர்"
 
 #: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
-msgstr ""
+msgstr "பங்கேற்பை ஏற்றுகொள்"
 
 #: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
-msgstr ""
+msgstr "பங்கேற்பை மறு"
 
 #: scheduler_p.cpp:497
 #, kde-format
@@ -1122,19 +1122,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr ""
+msgstr "பங்கேற்பவர் சேர்க்கப்பட்டார்"
 
 #: scheduler_p.cpp:526
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
-msgstr ""
+msgstr "அஞ்சல்களை அனுப்பு"
 
 #: scheduler_p.cpp:527
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
-msgstr ""
+msgstr "அனுப்பாதே"
 
 #: scheduler_p.cpp:577
 #, kde-format
@@ -1154,7 +1154,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
-msgstr ""
+msgstr "அடைவை சேர்..."
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1165,7 +1165,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
-msgstr ""
+msgstr "புதிய அடைவு"
 
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
@@ -1182,8 +1182,8 @@ msgstr ""
 #, kde-format
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "அடைவை நகலெடு"
+msgstr[1] "%1 அடைவுகளை நகலெடு"
 
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
@@ -1194,8 +1194,8 @@ msgstr ""
 #, kde-format
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "அடைவை நீக்கு"
+msgstr[1] "%1 அடைவுகளை நீக்கு"
 
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
