@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:45+0000\n"
+"POT-Creation-Date: 2022-11-10 00:47+0000\n"
 "PO-Revision-Date: 2022-04-09 15:16+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -118,35 +118,35 @@ msgstr "Otvoriť URL"
 msgid "Map"
 msgstr "Mapa"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:29
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "Pripomienky"
 
-#: kalendaracmain.cpp:29
+#: kalendaracmain.cpp:32
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "Služba pripomienok kalendára"
 
-#: kalendaracmain.cpp:33
+#: kalendaracmain.cpp:36
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
 msgstr "(c) KDE komunita 2021-2022"
 
-#: kalendaracmain.cpp:34
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:35 kalendaracmain.cpp:39
+#: kalendaracmain.cpp:38 kalendaracmain.cpp:42
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "Správca"
 
-#: kalendaracmain.cpp:38
+#: kalendaracmain.cpp:41
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
