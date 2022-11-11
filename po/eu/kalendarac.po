@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:45+0000\n"
+"POT-Creation-Date: 2022-11-11 02:33+0000\n"
 "PO-Revision-Date: 2022-07-14 17:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -120,35 +120,35 @@ msgstr "Ireki URLa"
 msgid "Map"
 msgstr "Mapa"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:29
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "Oroigarriak"
 
-#: kalendaracmain.cpp:29
+#: kalendaracmain.cpp:32
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "Egutegiko oroigarri zerbitzua"
 
-#: kalendaracmain.cpp:33
+#: kalendaracmain.cpp:36
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
 msgstr "(c) KDE Community 2021-2022"
 
-#: kalendaracmain.cpp:34
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:35 kalendaracmain.cpp:39
+#: kalendaracmain.cpp:38 kalendaracmain.cpp:42
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "Mantentzailea"
 
-#: kalendaracmain.cpp:38
+#: kalendaracmain.cpp:41
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"

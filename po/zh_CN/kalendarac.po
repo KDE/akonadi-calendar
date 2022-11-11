@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:45+0000\n"
+"POT-Creation-Date: 2022-11-11 02:33+0000\n"
 "PO-Revision-Date: 2022-11-06 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -116,35 +116,35 @@ msgstr "打开 URL"
 msgid "Map"
 msgstr "地图"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:29
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "提醒"
 
-#: kalendaracmain.cpp:29
+#: kalendaracmain.cpp:32
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "日历提醒服务"
 
-#: kalendaracmain.cpp:33
+#: kalendaracmain.cpp:36
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
 msgstr "(c) KDE Community 2021-2022"
 
-#: kalendaracmain.cpp:34
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:35 kalendaracmain.cpp:39
+#: kalendaracmain.cpp:38 kalendaracmain.cpp:42
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "维护者"
 
-#: kalendaracmain.cpp:38
+#: kalendaracmain.cpp:41
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
