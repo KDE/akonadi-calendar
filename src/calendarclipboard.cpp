@@ -13,7 +13,6 @@
 
 #include <QApplication>
 #include <QClipboard>
-#include <kwidgetsaddons_version.h>
 
 using namespace Akonadi;
 
@@ -172,11 +171,7 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
     if (mode == AskMode && hasChildren) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int km = KMessageBox::questionTwoActionsCancel(nullptr,
-#else
-        const int km = KMessageBox::questionYesNoCancel(nullptr,
-#endif
                                                              i18n("The item \"%1\" has sub-to-dos. "
                                                                   "Do you want to cut just this item and "
                                                                   "make all its sub-to-dos independent, or "
@@ -190,11 +185,7 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
             Q_EMIT cutFinished(/*success=*/true, QString());
             return;
         }
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         mode = km == KMessageBox::ButtonCode::PrimaryAction ? SingleMode : RecursiveMode;
-#else
-        mode = km == KMessageBox::Yes ? SingleMode : RecursiveMode;
-#endif
     } else if (mode == AskMode) {
         mode = SingleMode; // Doesn't have children, don't ask
     }
@@ -220,11 +211,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
 {
     const bool hasChildren = !d->m_calendar->childIncidences(incidence->uid()).isEmpty();
     if (mode == AskMode && hasChildren) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int km = KMessageBox::questionTwoActionsCancel(nullptr,
-#else
-        const int km = KMessageBox::questionYesNoCancel(nullptr,
-#endif
                                                              i18n("The item \"%1\" has sub-to-dos. "
                                                                   "Do you want to copy just this item or "
                                                                   "copy the to-do with all its sub-to-dos?",
@@ -235,11 +222,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
         if (km == KMessageBox::Cancel) {
             return true;
         }
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         mode = km == KMessageBox::ButtonCode::PrimaryAction ? SingleMode : RecursiveMode;
-#else
-        mode = km == KMessageBox::Yes ? SingleMode : RecursiveMode;
-#endif
     } else if (mode == AskMode) {
         mode = SingleMode; // Doesn't have children, don't ask
     }
