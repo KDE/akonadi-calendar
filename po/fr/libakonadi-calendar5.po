@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2022-10-10 21:14+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -32,32 +32,32 @@ msgstr ""
 "Impossible de trouver l'incidence à mettre à jour, elle a probablement été "
 "effacée récemment."
 
-#: calendarclipboard.cpp:68
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Erreur en effectuant la suppression."
 
-#: calendarclipboard.cpp:73
+#: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
 msgstr "Erreur en effectuant la copie."
 
-#: calendarclipboard.cpp:97
+#: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Impossible de trouver cet élément : %1"
 
-#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
+#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Erreur en supprimant les relations."
 
-#: calendarclipboard.cpp:159
+#: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Erreur pendant la suppression des incidences : %1"
 
-#: calendarclipboard.cpp:180
+#: calendarclipboard.cpp:175
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -67,23 +67,23 @@ msgstr ""
 "rendre toutes ses sous-tâches indépendante ou couper la tâche avec toutes "
 "ses sous-tâches ?"
 
-#: calendarclipboard.cpp:185 calendarclipboard.cpp:232
+#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Configuration de KOrganizer"
 
-#: calendarclipboard.cpp:186
+#: calendarclipboard.cpp:181
 #, kde-format
 msgid "Cut Only This"
 msgstr "Ne couper que ceci"
 
-#: calendarclipboard.cpp:187
+#: calendarclipboard.cpp:182
 #, kde-format
 msgid "Cut All"
 msgstr "Tout couper"
 
-#: calendarclipboard.cpp:228
+#: calendarclipboard.cpp:215
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -92,12 +92,12 @@ msgstr ""
 "L'élément « %1 » possède des sous-tâches. Voulez-vous copier seulement cet "
 "élément ou copier la tâche avec toutes ses sous-tâches ?"
 
-#: calendarclipboard.cpp:233
+#: calendarclipboard.cpp:220
 #, kde-format
 msgid "Copy Only This"
 msgstr "Ne copier que ceci"
 
-#: calendarclipboard.cpp:234
+#: calendarclipboard.cpp:221
 #, kde-format
 msgid "Copy All"
 msgstr "Tout copier"
@@ -691,7 +691,7 @@ msgid "Do Not Send"
 msgstr "Ne pas envoyer"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:529
+#: itiphandlerhelper_p.cpp:486
 #, kde-format
 msgid "Error: %1"
 msgstr "Erreur : %1"
@@ -755,23 +755,23 @@ msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Erreur de transfert"
 
-#: itiphandlerhelper_p.cpp:36
+#: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
 msgstr "Nouvelle heure de réunion proposée : %1 - %2"
 
-#: itiphandlerhelper_p.cpp:83
+#: itiphandlerhelper_p.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Courrier électronique de planification de groupe"
 
-#: itiphandlerhelper_p.cpp:150
+#: itiphandlerhelper_p.cpp:128
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Aucun résumé indiqué</placeholder>"
 
-#: itiphandlerhelper_p.cpp:239
+#: itiphandlerhelper_p.cpp:213
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -781,7 +781,7 @@ msgstr ""
 "Voulez-vous prévenir les participants par courrier électronique "
 "d'invitation ?"
 
-#: itiphandlerhelper_p.cpp:244
+#: itiphandlerhelper_p.cpp:218
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -791,7 +791,7 @@ msgstr ""
 "Voulez-vous prévenir les participants par courrier électronique "
 "d'invitation ?"
 
-#: itiphandlerhelper_p.cpp:249
+#: itiphandlerhelper_p.cpp:223
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -800,7 +800,7 @@ msgstr ""
 "Cette incidence inclut d'autres personnes. Faut-il envoyer un courrier "
 "électronique aux participants ?"
 
-#: itiphandlerhelper_p.cpp:273
+#: itiphandlerhelper_p.cpp:247
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -810,7 +810,7 @@ msgstr ""
 "désynchronisera votre agenda de celui de l'organisateur. Voulez-vous "
 "vraiment le modifier ?"
 
-#: itiphandlerhelper_p.cpp:311
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -820,20 +820,20 @@ msgstr ""
 "Voulez-vous prévenir les participants par courrier électronique que "
 "l'évènement a été mis à jour ?"
 
-#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:340
-#: itiphandlerhelper_p.cpp:353
+#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
+#: itiphandlerhelper_p.cpp:322
 #, kde-format
 msgid "Send Update"
 msgstr "Envoyer une mise à jour"
 
-#: itiphandlerhelper_p.cpp:334 itiphandlerhelper_p.cpp:422
+#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "Voulez-vous envoyer une mise à jour de l'état à l'organisateur de cette "
 "tâche ?"
 
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:315
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -842,7 +842,7 @@ msgstr ""
 "Votre état en tant que participant à cet évènement a changé. Voulez-vous "
 "envoyer une mise à jour d'état à l'organisateur de l'évènement ?"
 
-#: itiphandlerhelper_p.cpp:393
+#: itiphandlerhelper_p.cpp:358
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -852,7 +852,7 @@ msgstr ""
 "Voulez-vous prévenir les participants par courrier électronique que "
 "l'évènement est annulé ?"
 
-#: itiphandlerhelper_p.cpp:398
+#: itiphandlerhelper_p.cpp:363
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -862,7 +862,7 @@ msgstr ""
 "Voulez-vous prévenir les participants par courrier électronique que la tâche "
 "est annulée ?"
 
-#: itiphandlerhelper_p.cpp:403
+#: itiphandlerhelper_p.cpp:368
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -872,20 +872,20 @@ msgstr ""
 "Voulez-vous prévenir les participants par courrier électronique que le "
 "journal est annulé ?"
 
-#: itiphandlerhelper_p.cpp:425
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Voulez-vous envoyer une mise à jour de l'état à l'organisateur de ce "
 "journal ?"
 
-#: itiphandlerhelper_p.cpp:430 itiphandlerhelper_p.cpp:451
+#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Envoyer une mise à jour"
 
-#: itiphandlerhelper_p.cpp:445
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -894,17 +894,17 @@ msgstr ""
 "Vous avez précédemment accepté une invitation à cet évènement. Voulez-vous "
 "envoyer à l'organisateur une réponse mise à jour pour décliner l'invitation ?"
 
-#: itiphandlerhelper_p.cpp:489 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Contre-proposition : %1"
 
-#: itiphandlerhelper_p.cpp:514
+#: itiphandlerhelper_p.cpp:471
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "L'envoi du courrier électronique de planification de groupe a échoué."
 
-#: itiphandlerhelper_p.cpp:522
+#: itiphandlerhelper_p.cpp:479
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1136,24 +1136,24 @@ msgstr "(Nom Vide)"
 msgid "(EmptyEmail)"
 msgstr "(Adresse Vide)"
 
-#: scheduler_p.cpp:133 scheduler_p.cpp:240
+#: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Erreur : assignation de différents types d'incidence"
 
-#: scheduler_p.cpp:224 scheduler_p.cpp:273
+#: scheduler_p.cpp:223 scheduler_p.cpp:272
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Ceci n'est pas une mise à jour. L'incidence trouvée a été modifiée plus "
 "récemment."
 
-#: scheduler_p.cpp:264 scheduler_p.cpp:553 scheduler_p.cpp:568
+#: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Erreur pendant la modification de l'incidence"
 
-#: scheduler_p.cpp:289
+#: scheduler_p.cpp:288
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1176,28 +1176,28 @@ msgstr ""
 "list></para><para>Ce n'est pas un problème mais il est bon de le savoir.</"
 "para>"
 
-#: scheduler_p.cpp:298
+#: scheduler_p.cpp:297
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Impossible de trouver l'invitation à mettre à jour"
 
-#: scheduler_p.cpp:305
+#: scheduler_p.cpp:304
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Erreur pendant l'ajout de l'incidence"
 
-#: scheduler_p.cpp:339
+#: scheduler_p.cpp:338
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Impossible de trouver l'incidence à supprimer."
 
-#: scheduler_p.cpp:392
+#: scheduler_p.cpp:391
 #, kde-format
 msgid "Error recording exception"
 msgstr "Erreur pendant l'enregistrement de l'exception"
 
-#: scheduler_p.cpp:409
+#: scheduler_p.cpp:408
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1209,49 +1209,49 @@ msgstr ""
 "t-il été déjà supprimé ou bien appartient-il à quelqu'un d'autre ? À moins "
 "qu'il n'appartienne à un agenda désactivé ou en lecture seule."
 
-#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:587
-#: scheduler_p.cpp:593
+#: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
+#: scheduler_p.cpp:574
 #, kde-format
 msgid "Generic Error"
 msgstr "Erreur générique"
 
-#: scheduler_p.cpp:477
+#: scheduler_p.cpp:476
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 souhaite inviter %2 mais celui-ci n'est pas invité."
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 souhaite inviter %2 au nom de %3."
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Participant non invité"
 
-#: scheduler_p.cpp:489
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Accepter la présence"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Refuser la présence"
 
-#: scheduler_p.cpp:497
+#: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "L'organisateur a refusé votre présence à cette réunion."
 
-#: scheduler_p.cpp:523
+#: scheduler_p.cpp:508
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1261,35 +1261,35 @@ msgstr ""
 "Un participant a été ajouté à l'évènement. Voulez-vous envoyer un courrier "
 "électronique aux autres participants pour les prévenir ?"
 
-#: scheduler_p.cpp:525
+#: scheduler_p.cpp:510
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Participant ajouté"
 
-#: scheduler_p.cpp:526
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Envoyer des messages"
 
-#: scheduler_p.cpp:527
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Ne pas envoyer"
 
-#: scheduler_p.cpp:577
+#: scheduler_p.cpp:558
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Aucune incidence pour la planification."
 
-#: scheduler_p.cpp:600
+#: scheduler_p.cpp:581
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Aucun cache de disponibilité"
 
-#: scheduler_p.cpp:619
+#: scheduler_p.cpp:600
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Erreur lors de l'enregistrement de l'objet de disponibilité"

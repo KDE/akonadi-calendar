@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2022-05-15 22:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,32 +23,32 @@ msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
 "업데이트할 반복 항목을 찾을 수 없습니다. 최근에 삭제되었을 수 있습니다."
 
-#: calendarclipboard.cpp:68
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
 msgstr "삭제 수행 중 오류가 발생했습니다."
 
-#: calendarclipboard.cpp:73
+#: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
 msgstr "복사 수행 중 오류가 발생했습니다."
 
-#: calendarclipboard.cpp:97
+#: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "항목을 찾을 수 없음: %1"
 
-#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
+#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
 msgstr "관계를 삭제하는 중 오류가 발생했습니다."
 
-#: calendarclipboard.cpp:159
+#: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "반복 항목을 삭제하는 중 오류 발생: %1"
 
-#: calendarclipboard.cpp:180
+#: calendarclipboard.cpp:175
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -57,24 +57,24 @@ msgstr ""
 "항목 \"%1\"에 하위 할 일이 있습니다. 이 항목만 잘라내고 하위 할 일을 독립된 "
 "항목으로 만들거나, 하위 할 일도 같이 잘라내시겠습니까?"
 
-#: calendarclipboard.cpp:185 calendarclipboard.cpp:232
+#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 확인"
 
-#: calendarclipboard.cpp:186
+#: calendarclipboard.cpp:181
 #, kde-format
 msgid "Cut Only This"
 msgstr "이것만 잘라내기"
 
-#: calendarclipboard.cpp:187
+#: calendarclipboard.cpp:182
 #, kde-format
 msgid "Cut All"
 msgstr "모두 잘라내기"
 
-#: calendarclipboard.cpp:228
+#: calendarclipboard.cpp:215
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -83,12 +83,12 @@ msgstr ""
 "항목 \"%1\"에 하위 할 일이 있습니다. 이 항목만 복사하거나, 하위 할 일도 같이 "
 "복사하시겠습니까?"
 
-#: calendarclipboard.cpp:233
+#: calendarclipboard.cpp:220
 #, kde-format
 msgid "Copy Only This"
 msgstr "이것만 복사"
 
-#: calendarclipboard.cpp:234
+#: calendarclipboard.cpp:221
 #, kde-format
 msgid "Copy All"
 msgstr "모두 복사"
@@ -656,7 +656,7 @@ msgid "Do Not Send"
 msgstr "보내지 않음"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:529
+#: itiphandlerhelper_p.cpp:486
 #, kde-format
 msgid "Error: %1"
 msgstr "오류: %1"
@@ -722,24 +722,24 @@ msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "전달 오류"
 
-#: itiphandlerhelper_p.cpp:36
+#: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
 msgstr "새 미팅 시간 제안됨: %1 - %2"
 
-#: itiphandlerhelper_p.cpp:83
+#: itiphandlerhelper_p.cpp:67
 #, fuzzy, kde-format
 #| msgid "Group Scheduling Email"
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "그룹 약속 결정 이메일"
 
-#: itiphandlerhelper_p.cpp:150
+#: itiphandlerhelper_p.cpp:128
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>요약 없음</placeholder>"
 
-#: itiphandlerhelper_p.cpp:239
+#: itiphandlerhelper_p.cpp:213
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -748,7 +748,7 @@ msgstr ""
 "\"%1\" 이벤트에 다른 사람이 있습니다.\n"
 "참석자에게 초대장을 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:244
+#: itiphandlerhelper_p.cpp:218
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -757,14 +757,14 @@ msgstr ""
 "\"%1\" 할 일에 다른 사람이 있습니다.\n"
 "참석자에게 초대장을 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:249
+#: itiphandlerhelper_p.cpp:223
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "이 반복 항목에 다른 사람이 있습니다. 참석자에게 메일을 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:273
+#: itiphandlerhelper_p.cpp:247
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -773,7 +773,7 @@ msgstr ""
 "이 이벤트의 주최자가 아닙니다. 항목을 편집하면 주최자의 캘린더와 데이터가 달"
 "라집니다. 그래도 편집하시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:311
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -782,18 +782,18 @@ msgstr ""
 "\"%1\" 초대장의 내용을 변경했습니다.\n"
 "참석자들에게 업데이트된 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:340
-#: itiphandlerhelper_p.cpp:353
+#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
+#: itiphandlerhelper_p.cpp:322
 #, kde-format
 msgid "Send Update"
 msgstr "업데이트 보내기"
 
-#: itiphandlerhelper_p.cpp:334 itiphandlerhelper_p.cpp:422
+#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "이 작업의 주최자에게 상태 업데이트를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:315
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -802,7 +802,7 @@ msgstr ""
 "이 이벤트의 참가 상태가 변경되었습니다. 이벤트 주최자에게 상태 업데이트를 보"
 "내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:393
+#: itiphandlerhelper_p.cpp:358
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -811,7 +811,7 @@ msgstr ""
 "\"%1\" 초대장을 삭제했습니다.\n"
 "참석자들에게 이벤트 취소 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:398
+#: itiphandlerhelper_p.cpp:363
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -820,7 +820,7 @@ msgstr ""
 "\"%1\" 초대장을 삭제했습니다.\n"
 "참석자들에게 할 일 취소 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:403
+#: itiphandlerhelper_p.cpp:368
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -829,18 +829,18 @@ msgstr ""
 "\"%1\" 초대장을 삭제했습니다.\n"
 "참석자들에게 저널 취소 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:425
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "이 저널의 주최자에게 상태 업데이트를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:430 itiphandlerhelper_p.cpp:451
+#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "업데이트 보내기"
 
-#: itiphandlerhelper_p.cpp:445
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -849,17 +849,17 @@ msgstr ""
 "이 이벤트 초대장을 이전에 수락했습니다. 주최자에게 초대 거절 메시지를 보내시"
 "겠습니까?"
 
-#: itiphandlerhelper_p.cpp:489 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "역제안: %1"
 
-#: itiphandlerhelper_p.cpp:514
+#: itiphandlerhelper_p.cpp:471
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "그룹 약속 결정 이메일을 보낼 수 없습니다."
 
-#: itiphandlerhelper_p.cpp:522
+#: itiphandlerhelper_p.cpp:479
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1077,22 +1077,22 @@ msgstr "(빈이름)"
 msgid "(EmptyEmail)"
 msgstr "(빈이메일)"
 
-#: scheduler_p.cpp:133 scheduler_p.cpp:240
+#: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "오류: 서로 다른 반복 형식을 할당합니다."
 
-#: scheduler_p.cpp:224 scheduler_p.cpp:273
+#: scheduler_p.cpp:223 scheduler_p.cpp:272
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "업데이트가 아닙니다. 찾은 반복 항목은 더 최근에 수정되었습니다."
 
-#: scheduler_p.cpp:264 scheduler_p.cpp:553 scheduler_p.cpp:568
+#: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "반복 항목을 수정할 수 없음"
 
-#: scheduler_p.cpp:289
+#: scheduler_p.cpp:288
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1112,7 +1112,7 @@ msgstr ""
 "어 있는 캘린더에 접근할 수 없음</item></list></para><para>반드시 문제가 있는 "
 "것은 아니지만 알아 두어야 할 정보입니다.</para>"
 
-#: scheduler_p.cpp:298
+#: scheduler_p.cpp:297
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Cannot find invitation to be updated"
@@ -1120,22 +1120,22 @@ msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "업데이트할 초대장을 찾을 수 없음"
 
-#: scheduler_p.cpp:305
+#: scheduler_p.cpp:304
 #, kde-format
 msgid "Error adding incidence"
 msgstr "반복 항목을 추가할 수 없음"
 
-#: scheduler_p.cpp:339
+#: scheduler_p.cpp:338
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "삭제할 반복 항목을 찾을 수 없습니다."
 
-#: scheduler_p.cpp:392
+#: scheduler_p.cpp:391
 #, kde-format
 msgid "Error recording exception"
 msgstr "예외를 기록할 수 없음"
 
-#: scheduler_p.cpp:409
+#: scheduler_p.cpp:408
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1147,25 +1147,25 @@ msgstr ""
 "러분이 아닐 수도 있습니다. 읽기 전용이나 비활성화된 캘린더에 있을 수도 있습니"
 "다."
 
-#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:587
-#: scheduler_p.cpp:593
+#: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
+#: scheduler_p.cpp:574
 #, kde-format
 msgid "Generic Error"
 msgstr "일반 오류"
 
-#: scheduler_p.cpp:477
+#: scheduler_p.cpp:476
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 님이 %2에 참가하려고 하지만 초대받지 않았습니다."
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 님이 %3 님 대신 %2에 참가하려고 합니다."
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Uninvited attendee"
@@ -1173,25 +1173,25 @@ msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "초대받지 않은 참석자"
 
-#: scheduler_p.cpp:489
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "참석 수락"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "참석 거부"
 
-#: scheduler_p.cpp:497
+#: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "주최자가 참석 요청을 거부했습니다."
 
-#: scheduler_p.cpp:523
+#: scheduler_p.cpp:508
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1201,7 +1201,7 @@ msgstr ""
 "참석자가 반복 목록에 추가되었습니다. 다른 참석자들에게 업데이트 메시지를 보내"
 "시겠습니까?"
 
-#: scheduler_p.cpp:525
+#: scheduler_p.cpp:510
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Attendee Added"
@@ -1209,29 +1209,29 @@ msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "참석자 추가됨"
 
-#: scheduler_p.cpp:526
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "메시지 보내기"
 
-#: scheduler_p.cpp:527
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "보내지 않음"
 
-#: scheduler_p.cpp:577
+#: scheduler_p.cpp:558
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "반복 항목이 없습니다."
 
-#: scheduler_p.cpp:600
+#: scheduler_p.cpp:581
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "바쁨 한가함 캐시가 없음"
 
-#: scheduler_p.cpp:619
+#: scheduler_p.cpp:600
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "바쁨 한가함 객체를 저장할 수 없음"
