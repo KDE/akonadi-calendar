@@ -125,7 +125,9 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageText, ki18n("Could not delete event: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::DeleteItems, StandardActionManager::ErrorMessageTitle, i18nc("@title:window", "Event Deletion Failed"));
+            mGenericManager->setContextText(StandardActionManager::DeleteItems,
+                                            StandardActionManager::ErrorMessageTitle,
+                                            i18nc("@title:window", "Event Deletion Failed"));
             break;
 
         case Akonadi::StandardActionManager::CutItems:
@@ -144,7 +146,9 @@ public:
                                             StandardActionManager::ErrorMessageText,
                                             ki18n("Could not create calendar: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::CreateResource, StandardActionManager::ErrorMessageTitle, i18nc("@title:window", "Calendar Creation Failed"));
+            mGenericManager->setContextText(StandardActionManager::CreateResource,
+                                            StandardActionManager::ErrorMessageTitle,
+                                            i18nc("@title:window", "Calendar Creation Failed"));
 
             break;
         case Akonadi::StandardActionManager::DeleteResources:

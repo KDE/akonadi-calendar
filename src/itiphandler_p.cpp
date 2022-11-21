@@ -184,7 +184,9 @@ void ITIPHandlerPrivate::finishSendAsICalendar(Akonadi::MailClient::Result resul
         Q_EMIT q->sentAsICalendar(ITIPHandler::ResultSuccess, QString());
     } else {
         if (m_parentWidget) {
-            KMessageBox::error(m_parentWidget, i18n("Unable to forward the item '%1'", m_queuedInvitation.incidence->summary()), i18nc("@title:window", "Forwarding Error"));
+            KMessageBox::error(m_parentWidget,
+                               i18n("Unable to forward the item '%1'", m_queuedInvitation.incidence->summary()),
+                               i18nc("@title:window", "Forwarding Error"));
         }
         qCritical() << "Sent as iCalendar failed." << errorMessage;
         Q_EMIT q->sentAsICalendar(ITIPHandler::ResultError, errorMessage);

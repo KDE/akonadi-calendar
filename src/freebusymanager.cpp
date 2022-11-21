@@ -754,7 +754,9 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         return;
     }
     if (!targetURL.isValid()) {
-        KMessageBox::error(parentWidget, i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()), i18nc("@title:window", "Invalid URL"));
+        KMessageBox::error(parentWidget,
+                           i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()),
+                           i18nc("@title:window", "Invalid URL"));
         d->mBrokenUrl = true;
         return;
     }
