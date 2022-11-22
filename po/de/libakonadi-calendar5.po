@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:46+0000\n"
 "PO-Revision-Date: 2022-11-13 23:07+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -446,12 +446,12 @@ msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Keine Adresse zur Veröffentlichung von Frei/Belegt-Informationen"
 
-#: freebusymanager.cpp:757
+#: freebusymanager.cpp:758
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Die angegebene Zieladresse „%1“ ist ungültig</qt>"
 
-#: freebusymanager.cpp:757
+#: freebusymanager.cpp:759
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -724,12 +724,12 @@ msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Weiterleiten"
 
-#: itiphandler_p.cpp:187
+#: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Eintrag „%1“ kann nicht weitergeleitet werden."
 
-#: itiphandler_p.cpp:187
+#: itiphandler_p.cpp:189
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -1391,7 +1391,7 @@ msgctxt "@title:window"
 msgid "Properties of Calendar Folder %1"
 msgstr "Eigenschaften des Kalenderordners „%1“"
 
-#: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:295
+#: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:299
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
@@ -1403,7 +1403,7 @@ msgstr[1] "%1 Termine kopieren"
 msgid "Copy the selected events to the clipboard."
 msgstr "Die ausgewählten Termine in die Zwischenablage kopieren."
 
-#: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:306
+#: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
@@ -1435,30 +1435,30 @@ msgstr[1] "Termine löschen?"
 msgid "Could not delete event: %1"
 msgstr "Der Termin kann nicht gelöscht werden: %1"
 
-#: standardcalendaractionmanager.cpp:128
+#: standardcalendaractionmanager.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
 msgstr "Das Löschen des Termins ist fehlgeschlagen"
 
-#: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
+#: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
 msgstr[0] "Termin ausschneiden"
 msgstr[1] "%1 Termine ausschneiden"
 
-#: standardcalendaractionmanager.cpp:133
+#: standardcalendaractionmanager.cpp:135
 #, kde-format
 msgid "Cut the selected events from the calendar."
 msgstr "Die ausgewählten Termine aus dem Kalender ausschneiden."
 
-#: standardcalendaractionmanager.cpp:136
+#: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
 msgstr "&Kalender hinzufügen ..."
 
-#: standardcalendaractionmanager.cpp:138
+#: standardcalendaractionmanager.cpp:140
 #, kde-format
 msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
@@ -1467,31 +1467,31 @@ msgstr ""
 "Einen neuen Kalender hinzufügen<p>Ihnen wird ein Dialog angezeigt, in dem "
 "Sie die Art des hinzuzufügenden Kalenders auswählen können.</p>"
 
-#: standardcalendaractionmanager.cpp:141
+#: standardcalendaractionmanager.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Calendar"
 msgstr "Kalender hinzufügen"
 
-#: standardcalendaractionmanager.cpp:145
+#: standardcalendaractionmanager.cpp:147
 #, kde-format
 msgid "Could not create calendar: %1"
 msgstr "Der Kalender kann nicht erstellt werden: %1"
 
-#: standardcalendaractionmanager.cpp:147
+#: standardcalendaractionmanager.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
 msgstr "Die Erstellung des Kalenders ist fehlgeschlagen"
 
-#: standardcalendaractionmanager.cpp:152
+#: standardcalendaractionmanager.cpp:156
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
 msgstr[0] "Kalender &löschen"
 msgstr[1] "%1 Kalender &löschen"
 
-#: standardcalendaractionmanager.cpp:154
+#: standardcalendaractionmanager.cpp:158
 #, kde-format
 msgid ""
 "Delete the selected calendars<p>The currently selected calendars will be "
@@ -1500,14 +1500,14 @@ msgstr ""
 "Die ausgewählten Kalender löschen<p>Die aktuell ausgewählten Kalender und "
 "alle darin enthaltenen Termine, Aufgaben und Journale werden gelöscht.</p>"
 
-#: standardcalendaractionmanager.cpp:159
+#: standardcalendaractionmanager.cpp:163
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
 msgstr[0] "Möchten Sie diesen Kalender wirklich löschen?"
 msgstr[1] "Möchten Sie die %1 Kalender wirklich löschen?"
 
-#: standardcalendaractionmanager.cpp:163
+#: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
@@ -1515,204 +1515,204 @@ msgid_plural "Delete Calendars?"
 msgstr[0] "Kalender löschen?"
 msgstr[1] "Kalender löschen?"
 
-#: standardcalendaractionmanager.cpp:167
+#: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
 msgstr "Kalender-Eigenschaften ..."
 
-#: standardcalendaractionmanager.cpp:169
+#: standardcalendaractionmanager.cpp:173
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
 msgstr ""
 "Einen Dialog zur Bearbeitung der Eigenschaften des ausgewählten Kalenders "
 "öffnen."
 
-#: standardcalendaractionmanager.cpp:173
+#: standardcalendaractionmanager.cpp:177
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
 msgstr[0] "Kalender aktualisieren"
 msgstr[1] "%1 Kalender aktualisieren"
 
-#: standardcalendaractionmanager.cpp:175
+#: standardcalendaractionmanager.cpp:179
 #, kde-format
 msgid "Updates the content of all folders of the selected calendars."
 msgstr "Den Inhalt sämtlicher Ordner der ausgewählten Kalender aktualisieren."
 
-#: standardcalendaractionmanager.cpp:178
+#: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
 msgstr "In Kalender k&opieren"
 
-#: standardcalendaractionmanager.cpp:179
+#: standardcalendaractionmanager.cpp:183
 #, kde-format
 msgid "Copy the selected event to a different calendar."
 msgstr "Den ausgewählten Termin in einen anderen Kalender kopieren."
 
-#: standardcalendaractionmanager.cpp:182
+#: standardcalendaractionmanager.cpp:186
 #, kde-format
 msgid "&Move to Calendar"
 msgstr "In Kalender &verschieben"
 
-#: standardcalendaractionmanager.cpp:183
+#: standardcalendaractionmanager.cpp:187
 #, kde-format
 msgid "Move the selected event to a different calendar."
 msgstr "Den ausgewählten Termin in einen anderen Kalender verschieben."
 
-#: standardcalendaractionmanager.cpp:186
+#: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
 msgstr "Der Termin kann nicht eingefügt werden: %1"
 
-#: standardcalendaractionmanager.cpp:188
+#: standardcalendaractionmanager.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
 msgstr "Das Einfügen des Termins ist fehlgeschlagen"
 
-#: standardcalendaractionmanager.cpp:191
+#: standardcalendaractionmanager.cpp:195
 #, kde-format
 msgid "Update Available Calendars"
 msgstr "Verfügbare Kalender aktualisieren"
 
-#: standardcalendaractionmanager.cpp:192
+#: standardcalendaractionmanager.cpp:196
 #, kde-format
 msgid "Updates the tree of available calendars."
 msgstr "Aktualisiert die Baumansicht der ausgewählten Kalender."
 
-#: standardcalendaractionmanager.cpp:299 standardcalendaractionmanager.cpp:303
+#: standardcalendaractionmanager.cpp:303 standardcalendaractionmanager.cpp:307
 #, kde-format
 msgid "Copy Event To"
 msgstr "Termin kopieren nach"
 
-#: standardcalendaractionmanager.cpp:313 standardcalendaractionmanager.cpp:317
+#: standardcalendaractionmanager.cpp:317 standardcalendaractionmanager.cpp:321
 #, kde-format
 msgid "Move Event To"
 msgstr "Termin verschieben nach"
 
-#: standardcalendaractionmanager.cpp:321
+#: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
 msgstr "Termine bearbeiten ..."
 
-#: standardcalendaractionmanager.cpp:325
+#: standardcalendaractionmanager.cpp:329
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
 msgstr[0] "Aufgabe kopieren"
 msgstr[1] "%1 Aufgaben kopieren"
 
-#: standardcalendaractionmanager.cpp:329 standardcalendaractionmanager.cpp:333
+#: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
 msgstr "Aufgabe kopieren nach"
 
-#: standardcalendaractionmanager.cpp:336
+#: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
 msgstr[0] "Aufgabe löschen"
 msgstr[1] "%1 Aufgaben löschen"
 
-#: standardcalendaractionmanager.cpp:339
+#: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
 msgstr[0] "Aufgabe ausschneiden"
 msgstr[1] "%1 Aufgaben ausschneiden"
 
-#: standardcalendaractionmanager.cpp:343 standardcalendaractionmanager.cpp:347
+#: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
 msgstr "Aufgabe verschieben nach"
 
-#: standardcalendaractionmanager.cpp:351
+#: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
 msgstr "Aufgabe bearbeiten ..."
 
-#: standardcalendaractionmanager.cpp:355
+#: standardcalendaractionmanager.cpp:359
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
 msgstr[0] "Journal kopieren"
 msgstr[1] "%1 Journale kopieren"
 
-#: standardcalendaractionmanager.cpp:359 standardcalendaractionmanager.cpp:363
+#: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
 msgstr "Journal kopieren nach"
 
-#: standardcalendaractionmanager.cpp:366
+#: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
 msgstr[0] "Journal löschen"
 msgstr[1] "%1 Journale löschen"
 
-#: standardcalendaractionmanager.cpp:369
+#: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
 msgstr[0] "Journal ausschneiden"
 msgstr[1] "%1 Journale ausschneiden"
 
-#: standardcalendaractionmanager.cpp:373 standardcalendaractionmanager.cpp:377
+#: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
 msgstr "Journal verschieben nach"
 
-#: standardcalendaractionmanager.cpp:381
+#: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
 msgstr "Journal bearbeiten ..."
 
-#: standardcalendaractionmanager.cpp:521
+#: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
 msgstr "Neuer &Termin ..."
 
-#: standardcalendaractionmanager.cpp:522
+#: standardcalendaractionmanager.cpp:526
 #, kde-format
 msgid "Create a new event"
 msgstr "Einen neuen Termin erstellen"
 
-#: standardcalendaractionmanager.cpp:532
+#: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
 msgstr "Neue &Aufgabe ..."
 
-#: standardcalendaractionmanager.cpp:533
+#: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Eine neue Aufgabe erstellen"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
 msgstr "Neue &Unteraufgabe ..."
 
-#: standardcalendaractionmanager.cpp:543
+#: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Eine neue Unteraufgabe erstellen"
 
-#: standardcalendaractionmanager.cpp:553
+#: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
 msgstr "&Neues Journal ..."
 
-#: standardcalendaractionmanager.cpp:554
+#: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Ein neues Journal erstellen"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
 msgstr "&Bearbeiten ..."
 
-#: standardcalendaractionmanager.cpp:564
+#: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Das ausgewählte Ereignis bearbeiten."

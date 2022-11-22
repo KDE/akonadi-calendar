@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:46+0000\n"
 "PO-Revision-Date: 2022-11-15 09:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -446,12 +446,12 @@ msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ni URL-ja za pošiljanje prostosti/zaposlenosti"
 
-#: freebusymanager.cpp:757
+#: freebusymanager.cpp:758
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Podan ciljni URL »%1« ni veljaven.</qt>"
 
-#: freebusymanager.cpp:757
+#: freebusymanager.cpp:759
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -718,12 +718,12 @@ msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Posredovanje"
 
-#: itiphandler_p.cpp:187
+#: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče posredovati"
 
-#: itiphandler_p.cpp:187
+#: itiphandler_p.cpp:189
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -1370,7 +1370,7 @@ msgctxt "@title:window"
 msgid "Properties of Calendar Folder %1"
 msgstr "Lastnosti koledarske mape %1"
 
-#: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:295
+#: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:299
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
@@ -1384,7 +1384,7 @@ msgstr[3] "Kopiraj %1 dogodkov"
 msgid "Copy the selected events to the clipboard."
 msgstr "Kopiraj izbrane dogodke na odložišče."
 
-#: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:306
+#: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
@@ -1422,13 +1422,13 @@ msgstr[3] "Izbrišem dogodke?"
 msgid "Could not delete event: %1"
 msgstr "Dogodka ni bilo mogoče izbrisati: %1"
 
-#: standardcalendaractionmanager.cpp:128
+#: standardcalendaractionmanager.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
 msgstr "Brisanje dogodka ni uspelo"
 
-#: standardcalendaractionmanager.cpp:132 standardcalendaractionmanager.cpp:309
+#: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
@@ -1437,17 +1437,17 @@ msgstr[1] "Izreži %1 dogodka"
 msgstr[2] "Izreži %1 dogodke"
 msgstr[3] "Izreži %1 dogodkov"
 
-#: standardcalendaractionmanager.cpp:133
+#: standardcalendaractionmanager.cpp:135
 #, kde-format
 msgid "Cut the selected events from the calendar."
 msgstr "Izreži izbrane dogodke s koledarja."
 
-#: standardcalendaractionmanager.cpp:136
+#: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
 msgstr "Dodaj &koledar ..."
 
-#: standardcalendaractionmanager.cpp:138
+#: standardcalendaractionmanager.cpp:140
 #, kde-format
 msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
@@ -1456,24 +1456,24 @@ msgstr ""
 "Dodaj nov koledar<p>Odprlo se bo pogovorno okno, kjer boste lahko izbrali "
 "vrsto dodanega koledarja.</p>"
 
-#: standardcalendaractionmanager.cpp:141
+#: standardcalendaractionmanager.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Calendar"
 msgstr "Dodaj koledar"
 
-#: standardcalendaractionmanager.cpp:145
+#: standardcalendaractionmanager.cpp:147
 #, kde-format
 msgid "Could not create calendar: %1"
 msgstr "Koledarja ni bilo mogoče ustvariti: %1"
 
-#: standardcalendaractionmanager.cpp:147
+#: standardcalendaractionmanager.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
 msgstr "Ustvarjanje koledarja ni uspelo"
 
-#: standardcalendaractionmanager.cpp:152
+#: standardcalendaractionmanager.cpp:156
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
@@ -1482,7 +1482,7 @@ msgstr[1] "Iz&briši %1 koledarja"
 msgstr[2] "Iz&briši %1 koledarje"
 msgstr[3] "Iz&briši %1 koledarjev"
 
-#: standardcalendaractionmanager.cpp:154
+#: standardcalendaractionmanager.cpp:158
 #, kde-format
 msgid ""
 "Delete the selected calendars<p>The currently selected calendars will be "
@@ -1491,7 +1491,7 @@ msgstr ""
 "Izbriši izbrane koledarje<p>Trenutno izbrani koledarji bodo izbrisani skupaj "
 "z vsebovanimi dogodki, opravili in dnevniki.</p>"
 
-#: standardcalendaractionmanager.cpp:159
+#: standardcalendaractionmanager.cpp:163
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
@@ -1500,7 +1500,7 @@ msgstr[1] "Ali res želite izbrisati %1 koledarja?"
 msgstr[2] "Ali res želite izbrisati %1 koledarje?"
 msgstr[3] "Ali res želite izbrisati %1 koledarjev?"
 
-#: standardcalendaractionmanager.cpp:163
+#: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
@@ -1510,17 +1510,17 @@ msgstr[1] "Izbrišem koledarja?"
 msgstr[2] "Izbrišem koledarje?"
 msgstr[3] "Izbrišem koledarje?"
 
-#: standardcalendaractionmanager.cpp:167
+#: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
 msgstr "Lastnosti koledarja ..."
 
-#: standardcalendaractionmanager.cpp:169
+#: standardcalendaractionmanager.cpp:173
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
 msgstr "Odpri pogovorno okno za urejanje lastnosti izbranega koledarja."
 
-#: standardcalendaractionmanager.cpp:173
+#: standardcalendaractionmanager.cpp:177
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
@@ -1529,68 +1529,68 @@ msgstr[1] "Posodobi %1 koledarja"
 msgstr[2] "Posodobi %1 koledarje"
 msgstr[3] "Posodobi %1 koledarjev"
 
-#: standardcalendaractionmanager.cpp:175
+#: standardcalendaractionmanager.cpp:179
 #, kde-format
 msgid "Updates the content of all folders of the selected calendars."
 msgstr "Posodobi vsebino vseh map izbranih koledarjev."
 
-#: standardcalendaractionmanager.cpp:178
+#: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
 msgstr "&Kopiraj na koledar"
 
-#: standardcalendaractionmanager.cpp:179
+#: standardcalendaractionmanager.cpp:183
 #, kde-format
 msgid "Copy the selected event to a different calendar."
 msgstr "Kopiraj izbrani dogodek na drug koledar."
 
-#: standardcalendaractionmanager.cpp:182
+#: standardcalendaractionmanager.cpp:186
 #, kde-format
 msgid "&Move to Calendar"
 msgstr "Pre&makni na koledar"
 
-#: standardcalendaractionmanager.cpp:183
+#: standardcalendaractionmanager.cpp:187
 #, kde-format
 msgid "Move the selected event to a different calendar."
 msgstr "Premakni izbrani dogodek na drug koledar."
 
-#: standardcalendaractionmanager.cpp:186
+#: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
 msgstr "Dogodka ni bilo mogoče prilepiti: %1"
 
-#: standardcalendaractionmanager.cpp:188
+#: standardcalendaractionmanager.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
 msgstr "Lepljenje ni uspelo"
 
-#: standardcalendaractionmanager.cpp:191
+#: standardcalendaractionmanager.cpp:195
 #, kde-format
 msgid "Update Available Calendars"
 msgstr "Posodobi razpoložljive koledarje"
 
-#: standardcalendaractionmanager.cpp:192
+#: standardcalendaractionmanager.cpp:196
 #, kde-format
 msgid "Updates the tree of available calendars."
 msgstr "Posodobi drevo razpoložljivih koledarjev."
 
-#: standardcalendaractionmanager.cpp:299 standardcalendaractionmanager.cpp:303
+#: standardcalendaractionmanager.cpp:303 standardcalendaractionmanager.cpp:307
 #, kde-format
 msgid "Copy Event To"
 msgstr "Kopiraj dogodek na"
 
-#: standardcalendaractionmanager.cpp:313 standardcalendaractionmanager.cpp:317
+#: standardcalendaractionmanager.cpp:317 standardcalendaractionmanager.cpp:321
 #, kde-format
 msgid "Move Event To"
 msgstr "Premakni dogodek na"
 
-#: standardcalendaractionmanager.cpp:321
+#: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
 msgstr "Uredi dogodek ..."
 
-#: standardcalendaractionmanager.cpp:325
+#: standardcalendaractionmanager.cpp:329
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
@@ -1599,12 +1599,12 @@ msgstr[1] "Kopiraj %1 opravili"
 msgstr[2] "Kopiraj %1 opravila"
 msgstr[3] "Kopiraj %1 opravil"
 
-#: standardcalendaractionmanager.cpp:329 standardcalendaractionmanager.cpp:333
+#: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
 msgstr "Kopiraj opravilo na"
 
-#: standardcalendaractionmanager.cpp:336
+#: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
@@ -1613,7 +1613,7 @@ msgstr[1] "Izbriši %1 opravili"
 msgstr[2] "Izbriši %1 opravila"
 msgstr[3] "Izbriši %1 opravil"
 
-#: standardcalendaractionmanager.cpp:339
+#: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
@@ -1622,17 +1622,17 @@ msgstr[1] "Izreži %1 opravili"
 msgstr[2] "Izreži %1 opravila"
 msgstr[3] "Izreži %1 opravil"
 
-#: standardcalendaractionmanager.cpp:343 standardcalendaractionmanager.cpp:347
+#: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
 msgstr "Premakni opravilo na"
 
-#: standardcalendaractionmanager.cpp:351
+#: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
 msgstr "Uredi opravilo ..."
 
-#: standardcalendaractionmanager.cpp:355
+#: standardcalendaractionmanager.cpp:359
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
@@ -1641,12 +1641,12 @@ msgstr[1] "Kopiraj %1 dnevnika"
 msgstr[2] "Kopiraj %1 dnevnike"
 msgstr[3] "Kopiraj %1 dnevnikov"
 
-#: standardcalendaractionmanager.cpp:359 standardcalendaractionmanager.cpp:363
+#: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
 msgstr "Kopiraj dnevnik na"
 
-#: standardcalendaractionmanager.cpp:366
+#: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
@@ -1655,7 +1655,7 @@ msgstr[1] "Izbriši %1 dnevnika"
 msgstr[2] "Izbriši %1 dnevnike"
 msgstr[3] "Izbriši %1 dnevnikov"
 
-#: standardcalendaractionmanager.cpp:369
+#: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
@@ -1664,62 +1664,62 @@ msgstr[1] "Izreži %1 dnevnika"
 msgstr[2] "Izreži %1 dnevnike"
 msgstr[3] "Izreži %1 dnevnikov"
 
-#: standardcalendaractionmanager.cpp:373 standardcalendaractionmanager.cpp:377
+#: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
 msgstr "Premakni dnevnik na"
 
-#: standardcalendaractionmanager.cpp:381
+#: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
 msgstr "Uredi dnevnik ..."
 
-#: standardcalendaractionmanager.cpp:521
+#: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
 msgstr "Nov &dogodek ..."
 
-#: standardcalendaractionmanager.cpp:522
+#: standardcalendaractionmanager.cpp:526
 #, kde-format
 msgid "Create a new event"
 msgstr "Ustvari nov dogodek"
 
-#: standardcalendaractionmanager.cpp:532
+#: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
 msgstr "Novo &opravilo ..."
 
-#: standardcalendaractionmanager.cpp:533
+#: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Ustvari novo opravilo"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
 msgstr "Novo po&dopravilo ..."
 
-#: standardcalendaractionmanager.cpp:543
+#: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Ustvari novo podopravilo"
 
-#: standardcalendaractionmanager.cpp:553
+#: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
 msgstr "Nov &dnevnik ..."
 
-#: standardcalendaractionmanager.cpp:554
+#: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Ustvari nov dnevnik"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
 msgstr "&Uredi ..."
 
-#: standardcalendaractionmanager.cpp:564
+#: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Uredi izbrano pojavitev."
