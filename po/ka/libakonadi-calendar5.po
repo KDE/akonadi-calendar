@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:46+0000\n"
-"PO-Revision-Date: 2022-10-11 06:47+0200\n"
+"PO-Revision-Date: 2022-11-22 06:25+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -544,7 +544,7 @@ msgstr ""
 #: incidencechanger.cpp:1188
 #, kde-format
 msgid "Duplicate item id in a group operation"
-msgstr ""
+msgstr "ჯგუფურ ოპერაციაში აღმოჩენილია ჩანაწერის დუბლირებული id"
 
 #: incidencechanger.cpp:1192
 #, kde-format
@@ -571,12 +571,12 @@ msgstr "შეცდომის შეტყობინება: %1"
 #: itiphandler.cpp:120
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr ""
+msgstr "უცნობი შეცდომა iCal მოსაწვევის დამუშავებისას"
 
 #: itiphandler.cpp:126
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr ""
+msgstr "მოსაწვევის ან განახლების დამუშავების შეცდომა."
 
 #: itiphandler.cpp:143
 #, kde-format
@@ -591,7 +591,7 @@ msgstr "არასწორი ქმედება: %1"
 #: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr ""
+msgstr "მთვლელის შეთავაზების გაგზავნის შეცდომა"
 
 #: itiphandler.cpp:241
 #, kde-format
@@ -687,7 +687,7 @@ msgstr "გადაგზავნის შეცდომა"
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr ""
+msgstr "შეხვედრის ახალი დრო: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
@@ -795,7 +795,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
 #, kde-format
 msgid "Counter proposal: %1"
-msgstr ""
+msgstr "მთვლელის შეთავაზება: %1"
 
 #: itiphandlerhelper_p.cpp:471
 #, kde-format
@@ -852,7 +852,7 @@ msgstr "აირჩიეთ მისამართები"
 #: publishdialog.cpp:60
 #, kde-format
 msgid "Send email to these recipients"
-msgstr ""
+msgstr "ამ მიმღებებისთვის ელფოსტის გაგზავნა"
 
 #: publishdialog.cpp:62
 #, kde-format
@@ -864,7 +864,7 @@ msgstr ""
 #: publishdialog.cpp:67
 #, kde-format
 msgid "Cancel recipient selection and the email"
-msgstr ""
+msgstr "მიმღების შერჩევისა და ელფოსტის გაუქმება"
 
 #: publishdialog.cpp:69
 #, kde-format
@@ -1213,7 +1213,9 @@ msgid ""
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
 msgstr[0] ""
+"მართლა გნებავთ, წაშალოთ ეს კალენდარის საქაღალდე და ყველა მისი ქვესაქაღალდე?"
 msgstr[1] ""
+"მართლა გნებავთ, წაშალოთ %1 კალენდარის საქაღალდე და ყველა მისი ქვესაქაღალდე?"
 
 #: standardcalendaractionmanager.cpp:81
 #, kde-format
@@ -1244,7 +1246,7 @@ msgstr[1] "%1 საქაღალდის განახლება"
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
 msgid "Update the content of the selected calendar folders."
-msgstr ""
+msgstr "მონიშნული ალენდარის საქაღალდეების შემცველობის განახლება."
 
 #: standardcalendaractionmanager.cpp:99
 #, kde-format
@@ -1256,7 +1258,7 @@ msgstr[1] "%1 საქაღალდის ამოჭრა"
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
 msgid "Cut the selected calendar folders from the calendar."
-msgstr ""
+msgstr "მონიშნული კალენდარის საქაღალდეების კალენდარიდან ამოჭრა."
 
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
