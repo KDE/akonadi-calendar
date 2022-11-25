@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:46+0000\n"
-"PO-Revision-Date: 2022-11-21 21:54+0300\n"
+"PO-Revision-Date: 2022-11-24 16:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1511,7 +1511,7 @@ msgstr "Seçili takvimlerin tüm klasörlerinin içeriğini günceller."
 #: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
-msgstr "Takvime &Kopyala"
+msgstr "Takvime Ko&pyala"
 
 #: standardcalendaractionmanager.cpp:183
 #, kde-format
