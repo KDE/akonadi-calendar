@@ -21,7 +21,6 @@
 #include <KMessageBox>
 
 #include <QBitArray>
-#include <kwidgetsaddons_version.h>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
