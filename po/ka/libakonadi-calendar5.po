@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:46+0000\n"
-"PO-Revision-Date: 2022-11-22 06:25+0100\n"
+"PO-Revision-Date: 2022-12-02 16:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
-msgstr ""
+msgstr "გასაახლებელი გავლენა ვერ ვიპოვე. ალბათ ახლახანს წაშალეთ."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -46,7 +46,7 @@ msgstr "ურთიერთობების წაშლის შეცდ�
 #: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
-msgstr ""
+msgstr "შეცდომა გავლენის წაშლისას: %1"
 
 #: calendarclipboard.cpp:175
 #, kde-format
@@ -54,6 +54,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
+"ელემენტი \"%1\" ქვეგანრიგებს შეიცავს. გნებავთ ამოჭრათ მხოლოდ ეს ელემენტი და "
+"მისი ქვეგანრიგები დამოუკიდებლები გახადოთ, თუ თავისი ქვეგანრიგებით ამოვჭრა?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
@@ -77,6 +79,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
+"ელემენტს \"%1\" ქვეგანრიგები გააჩნია. გნებავთ დავაკოპირო მხოლოდ ეს ელემენტი "
+"თუ თავისი ქვეგანრიგების ჩათვლით?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
@@ -116,7 +120,7 @@ msgstr "ტიპი"
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
-msgstr ""
+msgstr "გადაცილების თარიღი და დრო"
 
 #: calendarmodel.cpp:202
 #, kde-format
@@ -193,6 +197,10 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
+"ამ პარამეტრით შეგიძლიათ სერვერიდან გამოსათხოვი ფაილის სახელი შეცვალოთ. თუ ეს "
+"ჩართულია, ის გადმოწერს თავისუფალი/დაკავებულობის ფაილს, სახელით user@domain."
+"ifb, მაგალითად nn@kde.org. თუ ეს დაყენებული არაა, გადმოწერილი იქნება user."
+"ifb, მაგალითად nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
@@ -222,7 +230,7 @@ msgstr "თავისუფალი/დაკავებულის მი�
 #: calendarsettings.kcfg:76
 #, kde-format
 msgid "Send copy to owner when mailing events"
-msgstr ""
+msgstr "ელფოსტის მოვლენების დაგზავნისას ასლის მფლობელისთვის გადაგზავნა"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:77
@@ -231,6 +239,8 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
+"ჩართეთ, თუ KOrganizer-ის მიერ მოვლენის წევრებისათვის გაგზავნილი ელფოსტების "
+"ასლების მიღება გნებავთ."
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:82
@@ -245,18 +255,21 @@ msgid ""
 "If specified all, groupware e-mails will use this transport. Otherwise, the "
 "default one will be used."
 msgstr ""
+"თუ მითითებულია ყველა, ამ ტრანსპორტს ჯგუფური ელფოსტები გამოიყენებენ. "
+"წინააღმდეგ შემთხვევაში გამოყენებული იქნება ნაგულისხმები."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr ""
+msgstr "Outlook-ის მსგავსი ფსევდო-პირიქით შეთავაზების გაგზავნა"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:96
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
+"შეამოწმეთ, ჰოსტის სახელი და მიმღები ელფოსტის მისამართი ერთმანეთს თუ ემთხვევა"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:97
@@ -415,7 +428,7 @@ msgstr "თავისუფალი/დაკავებულის ატ�
 #: freebusymanager.cpp:758
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr ""
+msgstr "<qt>სამიზნე URL '%1' არასწორია.</qt>"
 
 #: freebusymanager.cpp:759
 #, kde-format
@@ -454,7 +467,7 @@ msgstr "შეცდომა ical რესურსის შექმნი�
 #: icalimporter.cpp:92
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
-msgstr ""
+msgstr "შეცდომა დაშორებული კონფიგურაციისთვის D-Bus-ის ინტერფეისის მიღებისას."
 
 #: icalimporter.cpp:117
 #, kde-format
@@ -487,6 +500,8 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
+"მონიშნული ფაილის ფორმატი არასწორია ან ეს ფორმატი ამ პროგრამის მიერ "
+"მხარდაჭერილი არაა."
 
 #: icalimporter.cpp:194
 #, kde-format
@@ -501,12 +516,12 @@ msgstr "არსებულ კალენდარში ical ფაილ�
 #: incidencechanger.cpp:252
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
-msgstr ""
+msgstr "კალენდარის ელემენტის შექმნა შეუძლებელია. შეცდომა: %1"
 
 #: incidencechanger.cpp:331
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
-msgstr ""
+msgstr "კალენდარის ელემენტის წაშლა შეუძლებელია. შეცდომა: %1"
 
 #: incidencechanger.cpp:366
 #, kde-format
@@ -517,12 +532,12 @@ msgstr "უცნობი შეცდომა"
 #: incidencechanger.cpp:403
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr ""
+msgstr "კალენდარის ელემენტის ჩასწორება შეუძლებელია. შეცდომა: %1"
 
 #: incidencechanger.cpp:797 incidencechanger.cpp:921
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr ""
+msgstr "კალენარის ჩანაწერი უკვე წაშლილია ან მისი წაშლა ახლა მიმდინარეობს."
 
 #: incidencechanger.cpp:1177
 #, kde-format
@@ -540,6 +555,8 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
+"ნაგულისხმები კოლექცია არასწორია ან გამოყენებული ACL-ები და "
+"DestinationPolicyNeverAsk არასწორია"
 
 #: incidencechanger.cpp:1188
 #, kde-format
@@ -581,7 +598,7 @@ msgstr "მოსაწვევის ან განახლების დ
 #: itiphandler.cpp:143
 #, kde-format
 msgid "Invalid incidence"
-msgstr ""
+msgstr "არასწორი გავლენა"
 
 #: itiphandler.cpp:211
 #, kde-format
@@ -591,18 +608,19 @@ msgstr "არასწორი ქმედება: %1"
 #: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr "მთვლელის შეთავაზების გაგზავნის შეცდომა"
+msgstr "პირიქით შეთავაზების გაგზავნის შეცდომა"
 
 #: itiphandler.cpp:241
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr ""
+msgstr "პირიქით შეთავაზების ჩასასწორებლად რედაქტორის გაშვების შეცდომა"
 
 #: itiphandler.cpp:272
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
+"ელემენტს '%1' დამსწრეები არ ჰყავს. ამიტომ ჯგუფური ელფოსტა არ გაიგზავნება."
 
 #: itiphandler.cpp:275
 #, kde-format
@@ -639,6 +657,8 @@ msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
+"ჯგუფური შეტყობინება ელემენტისთვის \"%1\" წარმატებით გაიგზავნა.\n"
+"მეთოდი: %2"
 
 #: itiphandler_p.cpp:144
 #, kde-format
@@ -654,7 +674,7 @@ msgstr ""
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr ""
+msgstr "ელემენტის ინფორმაცია წარმატებით გაიგზავნა."
 
 #: itiphandler_p.cpp:161
 #, kde-format
@@ -693,12 +713,12 @@ msgstr "შეხვედრის ახალი დრო: %1 - %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr ""
+msgstr "ჯგუფური დაგეგმილი ელფოსტა"
 
 #: itiphandlerhelper_p.cpp:128
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr ""
+msgstr "<placeholder>მიმოხილვა მითითებული არაა</placeholder>"
 
 #: itiphandlerhelper_p.cpp:213
 #, kde-format
@@ -706,6 +726,8 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
+"მოვლენა \"%1\" სხვა ხალხს შეიცავს.\n"
+"გნებავთ დამსწრეებს მოსაწვევი ელფოსტით გაუგზავნოთ?"
 
 #: itiphandlerhelper_p.cpp:218
 #, kde-format
@@ -713,13 +735,15 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
+"განრიგი \"%1\" სხვა ხალხს შეიცავს.\n"
+"გნებავთ დამსწრეებს მოსაწვევი ელფოსტით გაუგზავნოთ?"
 
 #: itiphandlerhelper_p.cpp:223
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
-msgstr ""
+msgstr "ეს გავლენა სხვა ხალხსაც შეიცავს. გავუგზავნოთ ელფოსტა დამსწრეებს?"
 
 #: itiphandlerhelper_p.cpp:247
 #, kde-format
@@ -744,7 +768,7 @@ msgstr "განახლების გაგზავნა"
 #: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
-msgstr ""
+msgstr "გნებავთ ამ ამოცანის ორგანიზატორს სტატუსის განახლება გაუგზავნოთ?"
 
 #: itiphandlerhelper_p.cpp:315
 #, kde-format
@@ -759,6 +783,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
+"თქვენ \"%1\"-ის მოსაწვევი წაშალეთ.\n"
+"გნებავთ დამსწრეებისთვის ელფოსტის გაგზავნა მოვლენის გაუქმების შესახებ "
+"შეტყობინების მიზნით?"
 
 #: itiphandlerhelper_p.cpp:363
 #, kde-format
@@ -766,6 +793,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
+"თქვენ \"%1\"-ის მოსაწვევი წაშალეთ.\n"
+"გნებავთ დამსწრეებისთვის ელფოსტის გაგზავნა განრიგის გაუქმების შესახებ "
+"შეტყობინების მიზნით?"
 
 #: itiphandlerhelper_p.cpp:368
 #, kde-format
@@ -773,11 +803,14 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
+"თქვენ \"%1\"-ის მოსაწვევი წაშალეთ.\n"
+"გნებავთ დამსწრეებისთვის ელფოსტის გაგზავნა ჟურნალის გაუქმების შესახებ "
+"შეტყობინების მიზნით?"
 
 #: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr ""
+msgstr "გნებავთ ამ ჟურნალის ორგანიზატორს სტატუსის განახლება გაუგზავნოთ?"
 
 #: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
 #, kde-format
@@ -795,12 +828,12 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
 #, kde-format
 msgid "Counter proposal: %1"
-msgstr "მთვლელის შეთავაზება: %1"
+msgstr "პირიქით შეთავაზება: %1"
 
 #: itiphandlerhelper_p.cpp:471
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr ""
+msgstr "ჯგუფური დაგეგმილი ელფოსტის გაგზავნის შეცდომა."
 
 #: itiphandlerhelper_p.cpp:479
 #, kde-format
@@ -811,7 +844,7 @@ msgstr "განახლების გაუქმება"
 #: mailclient_p.cpp:50 mailclient_p.cpp:85
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr ""
+msgstr "ამ ელფოსტას დამსწრეები არ ჰყავს"
 
 #: mailclient_p.cpp:102
 #, kde-format
@@ -836,7 +869,7 @@ msgstr "ტრანსპორტის გამოთხოვის შე�
 #: mailclient_p.cpp:347
 #, kde-format
 msgid "Error queuing message in outbox: %1"
-msgstr ""
+msgstr "ელფოსტის გამავლების სიაში ჩასმის შეცდომა: %1"
 
 #: mailscheduler_p.cpp:188
 #, kde-format
@@ -885,6 +918,8 @@ msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string. %1"
 msgstr ""
+"კალენდარის გავლენის გამოქვეყნება შეუძლებელია მიმღებების სიის სტრიქონის "
+"არასწორობის გამო. %1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -910,7 +945,7 @@ msgstr ""
 #: publishdialog_base.ui:52
 #, kde-format
 msgid "Create a new recipient"
-msgstr ""
+msgstr "ახალი მიმღების შექმნა"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mNew)
 #: publishdialog_base.ui:55
@@ -919,6 +954,8 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
+"დააწკაპუნეთ ამ ღილაკზე და თქვენ შესაძლებლობა გექნებათ შეიყვანოთ სახელი და "
+"ელფოსტა ახალი მისამართისთვის, მიმღებების სიაში ჩასამატებლად"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
@@ -930,14 +967,14 @@ msgstr "&ახალი"
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr ""
+msgstr "ამჟამად მონიშნული მიმღების წაშლა"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
 #, kde-format
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
-msgstr ""
+msgstr "დააწკაპუნეთ ამ ღილაკზე სიიდან ამჟამად მონიშნული მიმღების წასაშლელად"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
@@ -949,7 +986,7 @@ msgstr "&წაშლა"
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr ""
+msgstr "მიმღების თქვენი მისამართების წიგნაკიდან არჩევა"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -982,7 +1019,7 @@ msgstr "მიმღების სახელი"
 #: publishdialog_base.ui:126
 #, kde-format
 msgid "This field contains the name of the recipient"
-msgstr ""
+msgstr "ეს ველი მიმღების სახელს შეიცავს"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: publishdialog_base.ui:136
@@ -1001,7 +1038,7 @@ msgstr "მიმღების ელფოსტის მისამარ�
 #: publishdialog_base.ui:149
 #, kde-format
 msgid "This field contains the email address of the recipient"
-msgstr ""
+msgstr "ეს ველი მიმღების ელფოსტის მისამართს შეიცავს"
 
 #: publishdialog_p.cpp:44
 #, kde-format
@@ -1016,17 +1053,17 @@ msgstr "(ცარიელიელფოსტა)"
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
 msgid "Error: Assigning different incidence types."
-msgstr ""
+msgstr "შეცდომა: მინიჭებული გავლენის ტიპები განსხვავდება."
 
 #: scheduler_p.cpp:223 scheduler_p.cpp:272
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
-msgstr ""
+msgstr "ეს განახლება არაა. ნაპოვნი გავლენა უფრო ახალია."
 
 #: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
 #, kde-format
 msgid "Error modifying incidence"
-msgstr ""
+msgstr "გავლენის ჩასწორების შეცდომა"
 
 #: scheduler_p.cpp:288
 #, kde-kuit-format
@@ -1051,12 +1088,12 @@ msgstr "გასაახლებელი მოსაწვევი არ 
 #: scheduler_p.cpp:304
 #, kde-format
 msgid "Error adding incidence"
-msgstr ""
+msgstr "გავლენის დამატების შეცდომა"
 
 #: scheduler_p.cpp:338
 #, kde-format
 msgid "Could not find incidence to delete."
-msgstr ""
+msgstr "წასაშლელად გავლენის პოვნა შეუძლებელია."
 
 #: scheduler_p.cpp:391
 #, kde-format
@@ -1082,13 +1119,13 @@ msgstr "ზოგადი შეცდომა"
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
-msgstr ""
+msgstr "%1-ს უნდა დასწრება, მაგრამ %2 მოწვეული არ იყო."
 
 #: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
-msgstr ""
+msgstr "%1-ს უნდა დასწრება %2-ზე %3-ის მაგიერ."
 
 #: scheduler_p.cpp:482
 #, kde-format
@@ -1112,7 +1149,7 @@ msgstr "დამსწრის უარყოფა"
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr ""
+msgstr "ორგანიზატორმა უარი გითხრათ ამ შეხვედრაზე დასწრებაზე."
 
 #: scheduler_p.cpp:508
 #, kde-format
@@ -1143,7 +1180,7 @@ msgstr "არ გააგზავნო"
 #: scheduler_p.cpp:558
 #, kde-format
 msgid "No incidence for scheduling."
-msgstr ""
+msgstr "დასაგეგმი გავლენის გარეშე."
 
 #: scheduler_p.cpp:581
 #, kde-format
@@ -1164,6 +1201,7 @@ msgstr "საქაღალდის დამატება…"
 #, kde-format
 msgid "Add a new calendar folder to the currently selected calendar folder."
 msgstr ""
+"ამჟამად მონიშნულ კალენდარის საქაღალდეში ახალი კალენდარის საქაღალდის დამატება."
 
 #: standardcalendaractionmanager.cpp:49
 #, kde-format
@@ -1192,7 +1230,7 @@ msgstr[1] "%1 საქაღალდის კოპირება"
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
 msgid "Copy the selected calendar folders to the clipboard."
-msgstr ""
+msgstr "მონიშნული კალენდარის საქაღალდეების ბუფერში კოპირება."
 
 #: standardcalendaractionmanager.cpp:71
 #, kde-format
@@ -1204,7 +1242,7 @@ msgstr[1] "%1 საქაღალდის წაშლა"
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
 msgid "Delete the selected calendar folders from the calendar."
-msgstr ""
+msgstr "მონიშნული კალენდარის საქაღალდეების კალენდარიდან წაშლა."
 
 #: standardcalendaractionmanager.cpp:76
 #, kde-format
@@ -1349,6 +1387,8 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
+"ახალი კალენდარის დამატება<p>გავხსნით ფანჯარას, სადაც დასამატებელი კალენდარის "
+"ტიპის არჩევა შეგეძლებათ.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
@@ -1478,37 +1518,37 @@ msgstr "მოვლენის ჩასწორება..."
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "განრიგის წაშლა"
+msgstr[1] "%1 განრიგის წაშლა"
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
-msgstr ""
+msgstr "განრიგის კოპირება"
 
 #: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "განრიგის წაშლა"
+msgstr[1] "%1 განრიგის წაშლა"
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "განრიგის ამოჭრა"
+msgstr[1] "%1 განრიგის ამოჭრა"
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
-msgstr ""
+msgstr "განრიგის გადატანა"
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
-msgstr ""
+msgstr "განრიგის ჩასწორება..."
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1520,7 +1560,7 @@ msgstr[1] "%1 ჟურნალის კოპირება"
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr ""
+msgstr "ჟურნალის კოპირება"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
@@ -1539,7 +1579,7 @@ msgstr[1] "%1 ჟურნალის ამოჭრა"
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
-msgstr ""
+msgstr "ჟურნალის გადატანა"
 
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
@@ -1559,22 +1599,22 @@ msgstr "ახალი მოვლენის შექმნა"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr ""
+msgstr "&ახალი განრიგი..."
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
-msgstr ""
+msgstr "ახალი განრიგის შექმნა"
 
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
-msgstr ""
+msgstr "ახალი &ქვეგანრიგი..."
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
-msgstr ""
+msgstr "ახალი ქვეგანრიგის შექმნა"
 
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
@@ -1594,9 +1634,9 @@ msgstr "&ჩასწორება..."
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
-msgstr ""
+msgstr "მონიშნული გავლენის ჩასწორება."
 
 #: todopurger.cpp:61
 #, kde-format
 msgid "Purging completed to-dos"
-msgstr ""
+msgstr "დასრულებული განრიგის წაშლა"
