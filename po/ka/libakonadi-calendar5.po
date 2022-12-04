@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:46+0000\n"
+"POT-Creation-Date: 2022-12-04 00:46+0000\n"
 "PO-Revision-Date: 2022-12-02 16:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -513,43 +513,43 @@ msgstr "მონიშნული ფაილი ცარიელია."
 msgid "Merge ical file into existing calendar."
 msgstr "არსებულ კალენდარში ical ფაილის შერწყმა."
 
-#: incidencechanger.cpp:252
+#: incidencechanger.cpp:251
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "კალენდარის ელემენტის შექმნა შეუძლებელია. შეცდომა: %1"
 
-#: incidencechanger.cpp:331
+#: incidencechanger.cpp:330
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "კალენდარის ელემენტის წაშლა შეუძლებელია. შეცდომა: %1"
 
-#: incidencechanger.cpp:366
+#: incidencechanger.cpp:365
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "უცნობი შეცდომა"
 
-#: incidencechanger.cpp:403
+#: incidencechanger.cpp:402
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "კალენდარის ელემენტის ჩასწორება შეუძლებელია. შეცდომა: %1"
 
-#: incidencechanger.cpp:797 incidencechanger.cpp:921
+#: incidencechanger.cpp:796 incidencechanger.cpp:920
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "კალენარის ჩანაწერი უკვე წაშლილია ან მისი წაშლა ახლა მიმდინარეობს."
 
-#: incidencechanger.cpp:1177
+#: incidencechanger.cpp:1176
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ოპერაციის შესრულება შეუძლებელია ACL-ებით შეზღუდვების გამო"
 
-#: incidencechanger.cpp:1180
+#: incidencechanger.cpp:1179
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "არჩეული კოლექცია არასწორია"
 
-#: incidencechanger.cpp:1184
+#: incidencechanger.cpp:1183
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -558,19 +558,19 @@ msgstr ""
 "ნაგულისხმები კოლექცია არასწორია ან გამოყენებული ACL-ები და "
 "DestinationPolicyNeverAsk არასწორია"
 
-#: incidencechanger.cpp:1188
+#: incidencechanger.cpp:1187
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "ჯგუფურ ოპერაციაში აღმოჩენილია ჩანაწერის დუბლირებული id"
 
-#: incidencechanger.cpp:1192
+#: incidencechanger.cpp:1191
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1196
 #, kde-format
 msgid "Unknown error"
 msgstr "უცნობი შეცდომა"

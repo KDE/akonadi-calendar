@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:46+0000\n"
+"POT-Creation-Date: 2022-12-04 00:46+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -537,43 +537,43 @@ msgstr "De ICal-Datei, de Du tosamenföhren wullt, is leddig."
 msgid "Merge ical file into existing calendar."
 msgstr "ICal-Datei mit vörhannen Kalenner tosamenföhren"
 
-#: incidencechanger.cpp:252
+#: incidencechanger.cpp:251
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Fehler bi't Opstellen vun en Kalennerindrag. De Fehler weer: %1"
 
-#: incidencechanger.cpp:331
+#: incidencechanger.cpp:330
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Fehler bi't Wegdoon vun en Kalennerindrag. De Fehler weer: %1"
 
-#: incidencechanger.cpp:366
+#: incidencechanger.cpp:365
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Dat geev en nich begäng Fehler."
 
-#: incidencechanger.cpp:403
+#: incidencechanger.cpp:402
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Fehler bi't Ännern vun en Kalennerindrag. De Fehler weer: %1"
 
-#: incidencechanger.cpp:797 incidencechanger.cpp:921
+#: incidencechanger.cpp:796 incidencechanger.cpp:920
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "De Kalennerindrag weer al wegmaakt oder wöör jüst wegdaan."
 
-#: incidencechanger.cpp:1177
+#: incidencechanger.cpp:1176
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Akschoon lett sik nich utföhren, de TVL lett dat nich to."
 
-#: incidencechanger.cpp:1180
+#: incidencechanger.cpp:1179
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "De utsöchte Sammeln gellt nich."
 
-#: incidencechanger.cpp:1184
+#: incidencechanger.cpp:1183
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -582,12 +582,12 @@ msgstr ""
 "De Standardsammeln is leeg oder hett keen propper TVL, un de Teelregel "
 "\"Nienich Fragen\" wöör bruukt."
 
-#: incidencechanger.cpp:1188
+#: incidencechanger.cpp:1187
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Dubbelt Indrag-ID binnen en Koppel-Akschoon"
 
-#: incidencechanger.cpp:1192
+#: incidencechanger.cpp:1191
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -596,7 +596,7 @@ msgstr ""
 "Een Ännern, de en Koppel vun Ännern tohöör, is fehlslaan. All Ännern warrt "
 "torüchdreiht."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1196
 #, kde-format
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"

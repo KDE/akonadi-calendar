@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:46+0000\n"
+"POT-Creation-Date: 2022-12-04 00:46+0000\n"
 "PO-Revision-Date: 2022-10-12 22:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -531,45 +531,45 @@ msgstr "Избраният файл е празен."
 msgid "Merge ical file into existing calendar."
 msgstr "Обединяване на ical файл в съществуващ календар."
 
-#: incidencechanger.cpp:252
+#: incidencechanger.cpp:251
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Грешка при опит за създаване на елемент от календара. Грешка беше: %1"
 
-#: incidencechanger.cpp:331
+#: incidencechanger.cpp:330
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr ""
 "Грешка при опит за изтриване на елемент от календара. Грешката беше: %1"
 
-#: incidencechanger.cpp:366
+#: incidencechanger.cpp:365
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Възникна неизвестна грешка"
 
-#: incidencechanger.cpp:403
+#: incidencechanger.cpp:402
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
 "Грешка при опит за модифициране на елемент от календара. Грешка беше: %1"
 
-#: incidencechanger.cpp:797 incidencechanger.cpp:921
+#: incidencechanger.cpp:796 incidencechanger.cpp:920
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Този ​​елемент от календара вече беше изтрит или в момента се изтрива."
 
-#: incidencechanger.cpp:1177
+#: incidencechanger.cpp:1176
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Операцията не може да се извърши поради ограничения за ACL"
 
-#: incidencechanger.cpp:1180
+#: incidencechanger.cpp:1179
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Избраната колекция е невалидна"
 
-#: incidencechanger.cpp:1184
+#: incidencechanger.cpp:1183
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -578,12 +578,12 @@ msgstr ""
 "Колекцията по подразбиране е невалидна или няма подходящи ACL и е използван "
 "DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1188
+#: incidencechanger.cpp:1187
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Дублиран идентификатор на елемент в групова операция"
 
-#: incidencechanger.cpp:1192
+#: incidencechanger.cpp:1191
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -592,7 +592,7 @@ msgstr ""
 "Една промяна, принадлежаща към група промени, е неуспешна. Всички промени се "
 "връщат обратно."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1196
 #, kde-format
 msgid "Unknown error"
 msgstr "Неизвестна грешка"

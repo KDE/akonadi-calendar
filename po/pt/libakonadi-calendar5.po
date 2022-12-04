@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:46+0000\n"
+"POT-Creation-Date: 2022-12-04 00:46+0000\n"
 "PO-Revision-Date: 2022-10-11 19:24+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -527,43 +527,43 @@ msgstr "O ficheiro seleccionado está vazio."
 msgid "Merge ical file into existing calendar."
 msgstr "Junta o ficheiro iCal com um calendário existente."
 
-#: incidencechanger.cpp:252
+#: incidencechanger.cpp:251
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Erro ao tentar criar o item do calendário. O erro foi: %1"
 
-#: incidencechanger.cpp:331
+#: incidencechanger.cpp:330
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Erro ao tentar apagar o item do calendário. O erro foi: %1"
 
-#: incidencechanger.cpp:366
+#: incidencechanger.cpp:365
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Ocorreu um erro desconhecido"
 
-#: incidencechanger.cpp:403
+#: incidencechanger.cpp:402
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Erro ao tentar modificar o item do calendário. O erro foi: %1"
 
-#: incidencechanger.cpp:797 incidencechanger.cpp:921
+#: incidencechanger.cpp:796 incidencechanger.cpp:920
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Este item do calendário já foi ou está a ser removido."
 
-#: incidencechanger.cpp:1177
+#: incidencechanger.cpp:1176
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Não é possível efectuar a operação devido a restrições da ACL"
 
-#: incidencechanger.cpp:1180
+#: incidencechanger.cpp:1179
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "A colecção escolhida é inválida"
 
-#: incidencechanger.cpp:1184
+#: incidencechanger.cpp:1183
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -572,12 +572,12 @@ msgstr ""
 "A colecção predefinida é inválida ou não tem ACL's adequadas; para além "
 "disso, o 'DestinationPolicyNeverAsk' foi usado"
 
-#: incidencechanger.cpp:1188
+#: incidencechanger.cpp:1187
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "ID de item duplicado numa operação de grupo"
 
-#: incidencechanger.cpp:1192
+#: incidencechanger.cpp:1191
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -586,7 +586,7 @@ msgstr ""
 "Uma das alterações do grupo foi mal-sucedida. Todas as alterações estão a "
 "ser anuladas."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1196
 #, kde-format
 msgid "Unknown error"
 msgstr "Erro desconhecido"
