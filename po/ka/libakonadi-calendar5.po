@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2022-12-02 16:05+0100\n"
+"PO-Revision-Date: 2022-12-04 06:21+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -384,7 +384,7 @@ msgstr "თავისუფალი/დაკავებულის მი�
 #: freebusymanager.cpp:399
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr ""
+msgstr "შეცდომა თავისუფალი/დაკავებულობის ინფორმაციის დამუშავებისას. წყარო: %1"
 
 #: freebusymanager.cpp:414
 #, kde-format
