@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2022-12-04 06:21+0100\n"
+"PO-Revision-Date: 2022-12-07 07:18+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -569,6 +569,8 @@ msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
+"ერთი ცვლილება, ცვლილებათა ჯგუფიდან, ავარიულად დასრულდა. ყველა ცვლილება "
+"დაბრუნდება."
 
 #: incidencechanger.cpp:1196
 #, kde-format
@@ -758,6 +760,8 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
+"თქვენ შეცვალეთ მოსაწვევი \"%1\".\n"
+"გნებავთ დამსწრეების გაფრთხილება შეტყობინების განახლების შესახებ?"
 
 #: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
 #: itiphandlerhelper_p.cpp:322
