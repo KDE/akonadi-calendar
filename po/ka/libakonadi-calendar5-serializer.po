@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-27 00:45+0000\n"
-"PO-Revision-Date: 2022-09-10 09:49+0200\n"
+"PO-Revision-Date: 2022-12-13 06:38+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: akonadi_serializer_kcalcore.cpp:175
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "კატეგორიები"
 #: akonadi_serializer_kcalcore.cpp:252
 #, kde-format
 msgid "Alarms"
-msgstr ""
+msgstr "მაღვიძარა"
 
 #: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "გააჩნია დაწყების თარიღი"
 #: akonadi_serializer_kcalcore.cpp:295
 #, kde-format
 msgid "Has Due Date"
-msgstr ""
+msgstr "გააჩნია გადაცილების თარიღი"
 
 #: akonadi_serializer_kcalcore.cpp:299
 #, kde-format
@@ -186,9 +186,9 @@ msgstr "მოვლენის კონფლიქტი"
 #: akonadi_serializer_kcalcore.cpp:334
 #, kde-format
 msgid "Changed Todo"
-msgstr ""
+msgstr "შეცვლილი განრიგი"
 
 #: akonadi_serializer_kcalcore.cpp:335
 #, kde-format
 msgid "Conflicting Todo"
-msgstr ""
+msgstr "კონფლიქტური განრიგი"
