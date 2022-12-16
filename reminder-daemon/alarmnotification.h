@@ -32,12 +32,12 @@ public:
     /**
      * @return The uid of the Incidence of the alarm of the notification
      */
-    QString uid() const;
+    Q_REQUIRED_RESULT QString uid() const;
 
     /**
      * @brief The text of the notification that should be displayed
      */
-    QString text() const;
+    Q_REQUIRED_RESULT QString text() const;
 
     /**
      * @brief Sets the to-be-displayed text of the notification
@@ -45,13 +45,13 @@ public:
     void setText(const QString &alarmText);
 
     /** Occurrence time in case of recurring incidences. */
-    QDateTime occurrence() const;
+    Q_REQUIRED_RESULT QDateTime occurrence() const;
     void setOccurrence(const QDateTime &occurrence);
 
     /**
      * @return In case of a suspended notification, the time that the notification should be displayed. Otherwise, it is empty.
      */
-    QDateTime remindAt() const;
+    Q_REQUIRED_RESULT QDateTime remindAt() const;
 
     /**
      * @brief Sets the time that should be displayed a suspended notification
@@ -60,7 +60,7 @@ public:
 
 private:
     bool hasValidContextAction() const;
-    QString determineContextAction(const KCalendarCore::Incidence::Ptr &incidence);
+    Q_REQUIRED_RESULT QString determineContextAction(const KCalendarCore::Incidence::Ptr &incidence);
 
     QPointer<KNotification> m_notification;
     QString m_uid;

@@ -40,7 +40,9 @@ private:
     void setupAkonadi();
     Q_REQUIRED_RESULT bool collectionsAvailable() const;
     void saveLastCheckTime();
-    QDateTime occurrenceForAlarm(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Alarm::Ptr &alarm, const QDateTime &from) const;
+    Q_REQUIRED_RESULT QDateTime occurrenceForAlarm(const KCalendarCore::Incidence::Ptr &incidence,
+                                                   const KCalendarCore::Alarm::Ptr &alarm,
+                                                   const QDateTime &from) const;
 
     Akonadi::ETMCalendar::Ptr mCalendar;
     Akonadi::EntityTreeModel *mETM = nullptr;
