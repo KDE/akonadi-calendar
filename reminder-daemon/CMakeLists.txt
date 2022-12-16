@@ -34,7 +34,7 @@ target_link_libraries(kalendarac
 
 ecm_qt_declare_logging_category(kalendarac
     HEADER logging.h
-    IDENTIFIER Log
+    IDENTIFIER REMINDER_DAEMON_LOG
     CATEGORY_NAME org.kde.kalendarac
     DESCRIPTION "Reminder daemon"
     EXPORT REMINDER_DAEMON

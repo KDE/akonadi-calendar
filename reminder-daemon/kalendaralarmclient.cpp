@@ -80,7 +80,7 @@ void KalendarAlarmClient::deferredInit()
         return;
     }
 
-    qCDebug(Log) << "Performing delayed initialization.";
+    qCDebug(REMINDER_DAEMON_LOG) << "Performing delayed initialization.";
 
     KCheckableProxyModel *checkableModel = mCalendar->checkableProxyModel();
     checkAllItems(checkableModel);
@@ -91,7 +91,7 @@ void KalendarAlarmClient::deferredInit()
 
 void KalendarAlarmClient::restoreSuspendedFromConfig()
 {
-    qCDebug(Log) << "Restore suspended alarms from config";
+    qCDebug(REMINDER_DAEMON_LOG) << "Restore suspended alarms from config";
     const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), "Suspended");
     const auto suspendedAlarms = suspendedGroup.groupList();
 
@@ -101,7 +101,7 @@ void KalendarAlarmClient::restoreSuspendedFromConfig()
         const QString txt = suspendedAlarm.readEntry("Text");
         const QDateTime occurrence = suspendedAlarm.readEntry("Occurrence", QDateTime());
         const QDateTime remindAt = suspendedAlarm.readEntry("RemindAt", QDateTime());
-        qCDebug(Log) << "restoreSuspendedFromConfig: Restoring alarm" << uid << "," << txt << "," << remindAt;
+        qCDebug(REMINDER_DAEMON_LOG) << "restoreSuspendedFromConfig: Restoring alarm" << uid << "," << txt << "," << remindAt;
 
         if (!uid.isEmpty() && remindAt.isValid()) {
             addNotification(uid, txt, occurrence, remindAt);
@@ -111,7 +111,7 @@ void KalendarAlarmClient::restoreSuspendedFromConfig()
 
 void KalendarAlarmClient::dismiss(AlarmNotification *notification)
 {
-    qCDebug(Log) << "Alarm" << notification->uid() << "dismissed";
+    qCDebug(REMINDER_DAEMON_LOG) << "Alarm" << notification->uid() << "dismissed";
     removeNotification(notification);
     m_notifications.remove(notification->uid());
     delete notification;
@@ -119,7 +119,7 @@ void KalendarAlarmClient::dismiss(AlarmNotification *notification)
 
 void KalendarAlarmClient::suspend(AlarmNotification *notification, std::chrono::seconds sec)
 {
-    qCDebug(Log) << "Alarm " << notification->uid() << "suspended";
+    qCDebug(REMINDER_DAEMON_LOG) << "Alarm " << notification->uid() << "suspended";
     notification->setRemindAt(QDateTime(QDateTime::currentDateTime()).addSecs(sec.count()));
     storeNotification(notification);
 }
@@ -206,7 +206,7 @@ void KalendarAlarmClient::addNotification(const QString &uid, const QString &tex
     }
 
     // we either have no notification for this event yet, or one that is scheduled for later and that should be replaced
-    qCDebug(Log) << "Adding notification, uid:" << uid << "text:" << text << "remindTime:" << remindTime;
+    qCDebug(REMINDER_DAEMON_LOG) << "Adding notification, uid:" << uid << "text:" << text << "remindTime:" << remindTime;
     notification->setText(text);
     notification->setOccurrence(occurrence);
     notification->setRemindAt(remindTime);
@@ -240,14 +240,14 @@ void KalendarAlarmClient::checkAlarms()
     // We do not want to miss any reminders, so don't perform check unless
     // the collections are available and populated.
     if (!collectionsAvailable()) {
-        qCDebug(Log) << "Collections are not available; aborting check.";
+        qCDebug(REMINDER_DAEMON_LOG) << "Collections are not available; aborting check.";
         return;
     }
 
     const QDateTime from = mLastChecked.addSecs(1);
     mLastChecked = QDateTime::currentDateTime();
 
-    qCDebug(Log) << "Check:" << from.toString() << " -" << mLastChecked.toString();
+    qCDebug(REMINDER_DAEMON_LOG) << "Check:" << from.toString() << " -" << mLastChecked.toString();
 
     // look for new alarms
     const Alarm::List alarms = mCalendar->alarms(from, mLastChecked, true /* exclude blocked alarms */);
@@ -258,7 +258,7 @@ void KalendarAlarmClient::checkAlarms()
             const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
             addNotification(uid, alarm->text(), occurrence, mLastChecked);
         } else {
-            qCDebug(Log) << "Alarm points" << alarm << "to an nonexisting incidence" << uid;
+            qCDebug(REMINDER_DAEMON_LOG) << "Alarm points" << alarm << "to an nonexisting incidence" << uid;
         }
     }
 
@@ -273,7 +273,7 @@ void KalendarAlarmClient::checkAlarms()
 
         // Protect against null ptr
         if (!notification) {
-            qCDebug(Log) << "Found null active alarm with id: " << it.key() << "Skipping.";
+            qCDebug(REMINDER_DAEMON_LOG) << "Found null active alarm with id: " << it.key() << "Skipping.";
             nullAlarmNotificationIds.append(it.key());
             continue;
         }
