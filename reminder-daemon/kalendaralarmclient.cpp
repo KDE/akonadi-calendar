@@ -16,6 +16,10 @@
 #include <QFileInfo>
 
 using namespace KCalendarCore;
+namespace
+{
+static const char mySuspensedGroupName[] = "Suspended";
+}
 
 KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
     : QObject(parent)
@@ -92,7 +96,7 @@ void KalendarAlarmClient::deferredInit()
 void KalendarAlarmClient::restoreSuspendedFromConfig()
 {
     qCDebug(REMINDER_DAEMON_LOG) << "Restore suspended alarms from config";
-    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), "Suspended");
+    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), mySuspensedGroupName);
     const auto suspendedAlarms = suspendedGroup.groupList();
 
     for (const auto &s : suspendedAlarms) {
@@ -166,7 +170,7 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), "Suspended");
+    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), mySuspensedGroupName);
     KConfigGroup notificationGroup(&suspendedGroup, notificationUidData);
     notificationGroup.writeEntry("UID", notificationUidData);
     notificationGroup.writeEntry("Text", notification->text());
@@ -184,7 +188,7 @@ void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), "Suspended");
+    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), mySuspensedGroupName);
     KConfigGroup notificationGroup(&suspendedGroup, notificationUidData);
     notificationGroup.deleteGroup();
     KSharedConfig::openConfig()->sync();
