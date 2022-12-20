@@ -118,7 +118,11 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
         const auto eventEndTime = startTime.addSecs(event->dtStart().secsTo(event->dtEnd()));
         eventHasEnded = eventEndTime < QDateTime::currentDateTime();
     }
-    m_notification->setFlags(eventHasEnded ? KNotification::CloseOnTimeout : KNotification::Persistent);
+    if (m_wasSuspended) {
+        m_notification->setFlags(KNotification::Persistent);
+    } else {
+        m_notification->setFlags(eventHasEnded ? KNotification::CloseOnTimeout : KNotification::Persistent);
+    }
 
     if (!m_text.isEmpty() && m_text != incidence->summary()) { // MS Teams sometimes repeats the summary as the alarm text, we don't need that
         text = m_text + QLatin1Char('\n') + text;
@@ -221,4 +225,14 @@ QString AlarmNotification::determineContextAction(const KCalendarCore::Incidence
     }
 
     return QString();
+}
+
+bool AlarmNotification::wasSuspended() const
+{
+    return m_wasSuspended;
+}
+
+void AlarmNotification::setWasSuspended(bool newWasSuspended)
+{
+    m_wasSuspended = newWasSuspended;
 }

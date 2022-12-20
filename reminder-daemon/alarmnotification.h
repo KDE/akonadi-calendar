@@ -58,6 +58,13 @@ public:
      */
     void setRemindAt(const QDateTime &remindAtDt);
 
+    /**
+     * @return true if we suspended alarm notification.
+     */
+    Q_REQUIRED_RESULT bool wasSuspended() const;
+
+    void setWasSuspended(bool newWasSuspended);
+
 private:
     bool hasValidContextAction() const;
     Q_REQUIRED_RESULT QString determineContextAction(const KCalendarCore::Incidence::Ptr &incidence);
@@ -68,4 +75,5 @@ private:
     QDateTime m_occurrence;
     QDateTime m_remind_at;
     QUrl m_contextAction;
+    bool m_wasSuspended = false;
 };

@@ -125,6 +125,7 @@ void KalendarAlarmClient::suspend(AlarmNotification *notification, std::chrono::
 {
     qCDebug(REMINDER_DAEMON_LOG) << "Alarm " << notification->uid() << "suspended";
     notification->setRemindAt(QDateTime(QDateTime::currentDateTime()).addSecs(sec.count()));
+    notification->setWasSuspended(true);
     storeNotification(notification);
 }
 
