@@ -8,7 +8,7 @@
 #include <QCommandLineParser>
 #include <QGuiApplication>
 
-#include <akonadi-calendar_version.h>
+#include "akonadi-calendar_version.h"
 
 int main(int argc, char **argv)
 {
