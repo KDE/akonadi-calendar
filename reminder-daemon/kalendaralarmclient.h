@@ -35,7 +35,7 @@ private:
     void restoreSuspendedFromConfig();
     void storeNotification(AlarmNotification *notification);
     void removeNotification(AlarmNotification *notification);
-    void addNotification(const QString &uid, const QString &text, const QDateTime &occurrence, const QDateTime &remindTime);
+    void addNotification(const QString &uid, const QString &text, const QDateTime &occurrence, const QDateTime &remindTime, bool wasSuspended);
     void checkAlarms();
     void setupAkonadi();
     Q_REQUIRED_RESULT bool collectionsAvailable() const;

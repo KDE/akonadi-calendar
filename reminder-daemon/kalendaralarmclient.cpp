@@ -105,10 +105,11 @@ void KalendarAlarmClient::restoreSuspendedFromConfig()
         const QString txt = suspendedAlarm.readEntry("Text");
         const QDateTime occurrence = suspendedAlarm.readEntry("Occurrence", QDateTime());
         const QDateTime remindAt = suspendedAlarm.readEntry("RemindAt", QDateTime());
+        const bool wasSuspended = suspendedAlarm.readEntry("WasSuspensed", false);
         qCDebug(REMINDER_DAEMON_LOG) << "restoreSuspendedFromConfig: Restoring alarm" << uid << "," << txt << "," << remindAt;
 
         if (!uid.isEmpty() && remindAt.isValid()) {
-            addNotification(uid, txt, occurrence, remindAt);
+            addNotification(uid, txt, occurrence, remindAt, wasSuspended);
         }
     }
 }
@@ -179,6 +180,7 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
         notificationGroup.writeEntry("Occurrence", notification->occurrence());
     }
     notificationGroup.writeEntry("RemindAt", notification->remindAt());
+    notificationGroup.writeEntry("WasSuspensed", notification->wasSuspended());
     KSharedConfig::openConfig()->sync();
 }
 
@@ -195,7 +197,7 @@ void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
     KSharedConfig::openConfig()->sync();
 }
 
-void KalendarAlarmClient::addNotification(const QString &uid, const QString &text, const QDateTime &occurrence, const QDateTime &remindTime)
+void KalendarAlarmClient::addNotification(const QString &uid, const QString &text, const QDateTime &occurrence, const QDateTime &remindTime, bool wasSuspended)
 {
     AlarmNotification *notification = nullptr;
     const auto it = m_notifications.constFind(uid);
@@ -215,6 +217,7 @@ void KalendarAlarmClient::addNotification(const QString &uid, const QString &tex
     notification->setText(text);
     notification->setOccurrence(occurrence);
     notification->setRemindAt(remindTime);
+    notification->setWasSuspended(wasSuspended);
     m_notifications[notification->uid()] = notification;
     storeNotification(notification);
 }
@@ -261,7 +264,7 @@ void KalendarAlarmClient::checkAlarms()
         const auto incidence = mCalendar->incidence(uid);
         if (incidence) {
             const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
-            addNotification(uid, alarm->text(), occurrence, mLastChecked);
+            addNotification(uid, alarm->text(), occurrence, mLastChecked, false);
         } else {
             qCDebug(REMINDER_DAEMON_LOG) << "Alarm points" << alarm << "to an nonexisting incidence" << uid;
         }
