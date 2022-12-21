@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-21 00:47+0000\n"
 "PO-Revision-Date: 2022-11-15 09:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -94,28 +94,28 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 je začel na %2"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Opomnik v 5 minutah"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgid "Remind in 1 hour"
 msgstr "Opomnik v 1 uri"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Sprosti"
 
-#: alarmnotification.cpp:202
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "Odpri URL"
 
-#: alarmnotification.cpp:220
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "Zemljevid"

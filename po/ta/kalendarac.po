@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-21 00:47+0000\n"
 "PO-Revision-Date: 2022-08-07 11:49+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -91,28 +91,28 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 %2 அன்று தொடங்கியது"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "5 நிமிடங்களில் நினைவூட்டு"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgid "Remind in 1 hour"
 msgstr "1 மணிநேரத்தில் நினைவூட்டு"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "மறை"
 
-#: alarmnotification.cpp:202
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "முகவரியை திற"
 
-#: alarmnotification.cpp:220
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "நிலப்படம்"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-21 00:47+0000\n"
 "PO-Revision-Date: 2022-04-09 15:16+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -90,30 +90,30 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 začalo o %2"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Pripomienka o 5 minút"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, fuzzy, kde-format
 #| msgid "Remind in 5 mins"
 msgid "Remind in 1 hour"
 msgstr "Pripomienka o 5 minút"
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:135
 #, fuzzy, kde-format
 #| msgid "Dismiss"
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Zamietnuť"
 
-#: alarmnotification.cpp:202
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "Otvoriť URL"
 
-#: alarmnotification.cpp:220
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "Mapa"
