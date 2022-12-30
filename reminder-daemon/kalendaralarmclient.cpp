@@ -6,6 +6,7 @@
 #include "calendarinterface.h"
 #include "logging.h"
 
+#include <Akonadi/IncidenceChanger>
 #include <KIO/ApplicationLauncherJob>
 
 #include <KCheckableProxyModel>
@@ -52,6 +53,8 @@ void KalendarAlarmClient::setupAkonadi()
     const QStringList mimeTypes{Event::eventMimeType(), Todo::todoMimeType()};
     mCalendar = Akonadi::ETMCalendar::Ptr(new Akonadi::ETMCalendar(mimeTypes));
     mCalendar->setObjectName(QStringLiteral("KalendarAC's calendar"));
+    Akonadi::IncidenceChanger *changer = mCalendar->incidenceChanger();
+    changer->setShowDialogsOnError(false);
     mETM = mCalendar->entityTreeModel();
 
     connect(&mCheckTimer, &QTimer::timeout, this, &KalendarAlarmClient::checkAlarms);
