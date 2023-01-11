@@ -5,13 +5,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:45+0000\n"
-"PO-Revision-Date: 2022-11-24 16:57+0300\n"
+"PO-Revision-Date: 2023-01-10 20:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -66,7 +66,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "KOrganizer Onayı"
+msgstr "K Organizatör Onayı"
 
 #: calendarclipboard.cpp:186
 #, kde-format
@@ -245,7 +245,7 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
-"Etkinlik katılımcılarına KOrganizer tarafından gönderilen bütün istek "
+"Etkinlik katılımcılarına K Organizatör tarafından gönderilen bütün istek "
 "iletilerinin e-posta adreslerinin bir kopyasını almak için bunu işaretleyin."
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
@@ -432,7 +432,7 @@ msgid ""
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
 "<qt><p>Uygun/meşgul listenizi yüklemek için bir adres yapılandırılmadı. "
-"Lütfen bunu KOrganizer'ın yapılandırma penceresindeki \"Uygun/Meşgul\" "
+"Lütfen bunu K Organizatör'ün yapılandırma penceresindeki \"Uygun/Meşgul\" "
 "sayfasından ayarlayın.</p><p>Adres ve hesap ayrıntıları için sistem "
 "yöneticinizle görüşün.</p></qt>"
 
