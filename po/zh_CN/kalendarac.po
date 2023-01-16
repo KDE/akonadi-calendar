@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-11 02:33+0000\n"
-"PO-Revision-Date: 2023-01-12 10:35\n"
+"PO-Revision-Date: 2023-01-15 15:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Shi Lei"
+msgstr "Shi Lei, Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "slreycn@outlook.com"
+msgstr "slreycn@outlook.com, tysontan@tysontan.com"
 
 #: alarmnotification.cpp:71
 #, kde-format
@@ -98,7 +98,7 @@ msgstr "5分钟后提醒"
 #: alarmnotification.cpp:131
 #, kde-format
 msgid "Remind in 1 hour"
-msgstr ""
+msgstr "1 小时后提醒"
 
 #: alarmnotification.cpp:131
 #, kde-format
