@@ -5,6 +5,8 @@ add_library(akonadicalendarplugin)
 target_sources(akonadicalendarplugin PRIVATE
     akonadicalendarplugin.cpp
     singlecollectioncalendar.cpp
+    akonadicalendarplugin.h
+    singlecollectioncalendar.h
 )
 
 ecm_qt_declare_logging_category(akonadicalendarplugin
