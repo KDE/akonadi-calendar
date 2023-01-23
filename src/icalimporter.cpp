@@ -111,7 +111,7 @@ void ICalImporterPrivate::remoteDownloadFinished(KIO::Job *job, const QByteArray
     if (success) {
         delete m_temporaryFile;
         m_temporaryFile = new QTemporaryFile();
-        m_temporaryFile->write(data.constData(), data.count());
+        m_temporaryFile->write(data.constData(), data.size());
         q->importIntoExistingResource(QUrl(m_temporaryFile->fileName()), m_collection);
     } else {
         setErrorMessage(i18n("Could not download remote file."));
