@@ -19,15 +19,15 @@ target_sources(kalendarac PRIVATE
 
 target_include_directories(kalendarac PRIVATE ${CMAKE_BINARY_DIR})
 target_link_libraries(kalendarac
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::CalendarCore
-    KF5::DBusAddons
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::CalendarCore
+    KF${KF_MAJOR_VERSION}::DBusAddons
     KF5::AkonadiCore
     KF5::AkonadiCalendar
-    KF5::KIOGui
-    KF5::I18n
-    KF5::Notifications
+    KF${KF_MAJOR_VERSION}::KIOGui
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Notifications
     Qt::Core
     Qt::DBus
     )

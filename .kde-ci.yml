@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: CC0-1.0
 
 Dependencies:
-- 'on': ['@all']
+- 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
   'require':
     'frameworks/extra-cmake-modules': '@latest'
     'frameworks/kcontacts' : '@latest'
@@ -14,6 +14,19 @@ Dependencies:
     'pim/kcalutils' : '@same'
     'pim/kidentitymanagement' : '@same'
     'pim/kmailtransport' : '@same'
+
+- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
+  'require':
+    'frameworks/extra-cmake-modules': '@latest-kf6'
+    'frameworks/kcontacts' : '@latest-kf6'
+    'frameworks/kcalendarcore' : '@latest-kf6'
+    'frameworks/knotifications' : '@latest-kf6'
+    'frameworks/kdbusaddons' : '@latest-kf6'
+    'pim/akonadi' : '@latest-kf6'
+    'pim/akonadi-contacts' : '@latest-kf6'
+    'pim/kcalutils' : '@latest-kf6'
+    'pim/kidentitymanagement' : '@latest-kf6'
+    'pim/kmailtransport' : '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      

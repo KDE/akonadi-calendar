@@ -18,7 +18,7 @@ ecm_qt_declare_logging_category(akonadicalendarplugin
 )
 
 target_link_libraries(akonadicalendarplugin PRIVATE
-    KF5::CalendarCore
+    KF${KF_MAJOR_VERSION}::CalendarCore
     KF5::AkonadiCalendar
 )
 

@@ -102,20 +102,20 @@ target_include_directories(KF5AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonad
 target_link_libraries(KF5AkonadiCalendar
 PUBLIC
     KF5::AkonadiCore
-    KF5::CalendarCore
-    KF5::WidgetsAddons
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::CalendarCore
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::I18n
 PRIVATE
-    KF5::Codecs
-    KF5::KIOWidgets
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::Codecs
+    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::XmlGui
     KF5::AkonadiContact
     KF5::CalendarUtils
     KF5::AkonadiWidgets
     KF5::MailTransportAkonadi
     KF5::MailTransport
     KF5::IdentityManagement
-    KF5::Codecs
+    KF${KF_MAJOR_VERSION}::Codecs
 )
 
 set_target_properties(KF5AkonadiCalendar PROPERTIES

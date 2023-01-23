@@ -34,7 +34,7 @@ KCalendarCore::Event::Ptr CalendarUtils::event(const Akonadi::Item &item)
 {
     try {
         auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
-        if (incidence && incidence->type() == KCalCore::Incidence::TypeEvent) {
+        if (incidence && incidence->type() == KCalendarCore::Incidence::TypeEvent) {
             return item.payload<KCalendarCore::Event::Ptr>();
         }
     } catch (const Akonadi::PayloadException &) {
@@ -47,7 +47,7 @@ KCalendarCore::Todo::Ptr CalendarUtils::todo(const Akonadi::Item &item)
 {
     try {
         auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
-        if (incidence && incidence->type() == KCalCore::Incidence::TypeTodo) {
+        if (incidence && incidence->type() == KCalendarCore::Incidence::TypeTodo) {
             return item.payload<KCalendarCore::Todo::Ptr>();
         }
     } catch (const Akonadi::PayloadException &) {
@@ -60,7 +60,7 @@ KCalendarCore::Journal::Ptr CalendarUtils::journal(const Akonadi::Item &item)
 {
     try {
         auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
-        if (incidence && incidence->type() == KCalCore::Incidence::TypeJournal) {
+        if (incidence && incidence->type() == KCalendarCore::Incidence::TypeJournal) {
             return item.payload<KCalendarCore::Journal::Ptr>();
         }
     } catch (const Akonadi::PayloadException &) {
