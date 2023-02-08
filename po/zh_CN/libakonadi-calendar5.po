@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2023-01-12 10:29\n"
+"PO-Revision-Date: 2023-02-07 11:01\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -376,7 +376,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr ""
+msgstr "空闲/忙碌信息获取错误"
 
 #: freebusymanager.cpp:399
 #, kde-format
@@ -1085,7 +1085,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr ""
+msgstr "无法找到需更新的邀请"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1135,7 +1135,7 @@ msgstr "%1 想代表 %3 参加 %2。"
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr ""
+msgstr "未邀请的参与者"
 
 #: scheduler_p.cpp:483
 #, kde-format
@@ -1221,7 +1221,7 @@ msgstr "无法创建日历文件夹：%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr ""
+msgstr "日历文件夹创建失败"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
@@ -1258,7 +1258,7 @@ msgstr[0] "您确定要删除 %1 个日历文件夹及其子文件夹吗？"
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] ""
+msgstr[0] "删除日历文件夹？"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
@@ -1269,7 +1269,7 @@ msgstr "无法删除日历文件夹：%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr ""
+msgstr "日历文件夹删除失败"
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
@@ -1353,7 +1353,7 @@ msgstr "无法删除事件：%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr ""
+msgstr "事件删除失败"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
@@ -1393,7 +1393,7 @@ msgstr "无法创建日历：%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr ""
+msgstr "日历创建失败"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
@@ -1472,7 +1472,7 @@ msgstr "无法粘贴事件：%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr ""
+msgstr "粘贴失败"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
