@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# Vit Pelcak <vit@pelcak.org>, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-21 00:47+0000\n"
-"PO-Revision-Date: 2022-03-15 16:51+0100\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-02-08 14:23+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -65,7 +65,7 @@ msgstr "%1 začíná v %2"
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
-msgstr ""
+msgstr "%1 zahájeno v %2"
 
 #: alarmnotification.cpp:94
 #, kde-format
@@ -83,7 +83,7 @@ msgstr ""
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
-msgstr ""
+msgstr "%1 začíná v %2"
 
 #: alarmnotification.cpp:111
 #, kde-format
@@ -99,13 +99,13 @@ msgstr "Připomenout za 5 minut"
 #: alarmnotification.cpp:135
 #, kde-format
 msgid "Remind in 1 hour"
-msgstr ""
+msgstr "Připomenout za 1 hodinu"
 
 #: alarmnotification.cpp:135
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
-msgstr ""
+msgstr "Zahodit"
 
 #: alarmnotification.cpp:206
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "Upomínky"
 #: kalendaracmain.cpp:32
 #, kde-format
 msgid "Calendar Reminder Service"
-msgstr ""
+msgstr "Služba upomínek kalendáře"
 
 #: kalendaracmain.cpp:36
 #, kde-format

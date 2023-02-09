@@ -3,14 +3,14 @@
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2021-09-15 22:44+0200\n"
+"PO-Revision-Date: 2023-02-08 14:22+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -507,7 +507,7 @@ msgstr ""
 #: icalimporter.cpp:194
 #, kde-format
 msgid "The selected file is empty."
-msgstr ""
+msgstr "Zvolená cesta je prázdná."
 
 #: icalimporter.cpp:212
 #, kde-format
@@ -624,7 +624,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr ""
+msgstr "Zpráva nebyla odeslána"
 
 #: itiphandler.h:99 itiphandler.h:117 itiphandler.h:133 itiphandler.h:146
 #, kde-format
@@ -678,7 +678,7 @@ msgstr "Informace o položce byla úspěšně odeslána."
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
-msgstr ""
+msgstr "Publikování"
 
 #: itiphandler_p.cpp:166
 #, kde-format
@@ -689,7 +689,7 @@ msgstr "Nelze publikovat položku '%1'"
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr ""
+msgstr "Přeposílání"
 
 #: itiphandler_p.cpp:188
 #, kde-format
@@ -700,7 +700,7 @@ msgstr "Nelze předat položku '%1'"
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr ""
+msgstr "Chyba přeposílání"
 
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
@@ -923,7 +923,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
-msgstr ""
+msgstr "Chyba publikování"
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:38
@@ -1079,7 +1079,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr ""
+msgstr "Nelze najít pozvánku k aktualizaci"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1127,7 +1127,7 @@ msgstr "%1 se chce zúčastnit %2 ve jménu %3."
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr ""
+msgstr "Nepozvaný účastník"
 
 #: scheduler_p.cpp:483
 #, kde-format
@@ -1159,7 +1159,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr ""
+msgstr "Účastník přidán"
 
 #: scheduler_p.cpp:511
 #, kde-format
@@ -1213,7 +1213,7 @@ msgstr "Nelze vytvořit složku kalendáře: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr ""
+msgstr "Vytvoření složky kalendáře selhalo"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
@@ -1261,9 +1261,9 @@ msgstr[2] ""
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Smazat složku kalendáře?"
+msgstr[1] "Smazat složky kalendáře?"
+msgstr[2] "Smazat složky kalendáře?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
@@ -1274,7 +1274,7 @@ msgstr "Nelze smazat složku kalendáře: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr ""
+msgstr "Smazání složky kalendáře selhalo"
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
@@ -1370,7 +1370,7 @@ msgstr "Nelze smazat událost: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr ""
+msgstr "Smazání události selhalo"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
@@ -1412,7 +1412,7 @@ msgstr "Nelze vytvořit kalendář: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr ""
+msgstr "Vytváření kalendáře selhalo"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
