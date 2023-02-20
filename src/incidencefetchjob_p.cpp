@@ -16,18 +16,18 @@
 
 using namespace Akonadi;
 
-Akonadi::IncidenceFetchJob::IncidenceFetchJob(QObject *parent)
+IncidenceFetchJob::IncidenceFetchJob(QObject *parent)
     : Job(parent)
 {
     m_mimeTypeChecker.addWantedMimeType(QStringLiteral("text/calendar"));
 }
 
-Item::List Akonadi::IncidenceFetchJob::items() const
+Item::List IncidenceFetchJob::items() const
 {
     return m_items;
 }
 
-void Akonadi::IncidenceFetchJob::doStart()
+void IncidenceFetchJob::doStart()
 {
     auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
     job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("text/calendar") << KCalendarCore::Event::eventMimeType()
@@ -35,7 +35,7 @@ void Akonadi::IncidenceFetchJob::doStart()
     connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 
-void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob *job)
+void IncidenceFetchJob::collectionFetchResult(KJob *job)
 {
     if (job->error()) { // handled in base class
         return;
@@ -60,7 +60,7 @@ void Akonadi::IncidenceFetchJob::collectionFetchResult(KJob *job)
     }
 }
 
-void Akonadi::IncidenceFetchJob::itemFetchResult(KJob *job)
+void IncidenceFetchJob::itemFetchResult(KJob *job)
 {
     if (job->error()) { // handled in base class
         return;
