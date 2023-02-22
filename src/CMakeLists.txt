@@ -114,8 +114,8 @@ PRIVATE
     KF5::AkonadiContact
     KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF5::AkonadiWidgets
-    KF5::MailTransportAkonadi
-    KF5::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF${KF_MAJOR_VERSION}::Codecs
 )
