@@ -53,7 +53,7 @@ set(IDENTITYMANAGEMENT_LIB_VERSION "5.22.40")
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiCalendarConfigVersion.cmake"
+                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiCalendarConfigVersion.cmake"
                         SOVERSION 5
 )
 
@@ -104,33 +104,62 @@ if (BUILD_TESTING)
 endif ()
 
 ########### CMake Config Files ###########
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiCalendar")
-
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}AkonadiCalendar")
+set(AKONADICALENDAR_KF5_COMPAT FALSE)
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5AkonadiCalendarConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiCalendarConfig.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiCalendarConfig.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiCalendarConfig.cmake"
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiCalendarConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiCalendarConfigVersion.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiCalendarConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiCalendarConfigVersion.cmake"
   DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
   COMPONENT Devel
 )
 
-install(EXPORT KF5AkonadiCalendarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5AkonadiCalendarTargets.cmake NAMESPACE KF5::)
+install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/AkonadiCalendar COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiCalendar COMPONENT Devel
 )
 ecm_qt_install_logging_categories(
         EXPORT AKONADI-CALENDAR
         FILE akonadi-calendar.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
+
+
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+##
+# TODO: Backwards compatiblity. Remove in next major version
+##
+set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5AkonadiCalendar")
+set(AKONADICALENDAR_KF5_COMPAT TRUE)
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiCalendarConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiCalendarConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5AkonadiCalendarConfig.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}AkonadiCalendarConfigVersion.cmake"
+    RENAME "KF5AkonadiCalendarConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    FILE KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets.cmake
+    NAMESPACE KF5::
+)
 ki18n_install(po)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
