@@ -110,11 +110,11 @@ PRIVATE
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
     KF5::AkonadiContact
-    KF5::CalendarUtils
+    KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF5::AkonadiWidgets
     KF5::MailTransportAkonadi
     KF5::MailTransport
-    KF5::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF${KF_MAJOR_VERSION}::Codecs
 )
 
