@@ -111,7 +111,7 @@ PRIVATE
     KF${KF_MAJOR_VERSION}::Codecs
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
-    KF5::AkonadiContact
+    KPim${KF_MAJOR_VERSION}::AkonadiContact
     KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF5::AkonadiWidgets
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
