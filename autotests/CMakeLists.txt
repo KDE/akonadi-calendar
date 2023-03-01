@@ -14,7 +14,7 @@ set( PREVIOUS_EXEC_OUTPUT_PATH ../../tests )
 set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 set(common_sources unittestbase.cpp helper.cpp ${Akonadi-Calendar_BINARY_DIR}/src/akonadicalendar_debug.cpp ${Akonadi-Calendar_SOURCE_DIR}/src/utils_p.cpp)
-set(common_libs "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KF${KF_MAJOR_VERSION}::CalendarCore;KPim${KF_MAJOR_VERSION}::Mime;KPim${KF_MAJOR_VERSION}::IdentityManagement;KF5::AkonadiWidgets;KF${KF_MAJOR_VERSION}::Codecs")
+set(common_libs "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KF${KF_MAJOR_VERSION}::CalendarCore;KPim${KF_MAJOR_VERSION}::Mime;KPim${KF_MAJOR_VERSION}::IdentityManagement;KPim${KF_MAJOR_VERSION}::AkonadiWidgets;KF${KF_MAJOR_VERSION}::Codecs")
 
 # the tests need the ical resource, which we might not have at this point (e.g. on the CI)
 find_program(AKONADI_ICAL_RESOURCE NAMES akonadi_ical_resource)
@@ -35,6 +35,6 @@ endif()
 ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_autotest_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer)
 
 ecm_add_test(kcalcoreserializertest.cpp ../serializers/akonadi_serializer_kcalcore.cpp ${akonadi_serializer_kcalcore_autotest_SRCS}
-    LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::CalendarUtils KF${KF_MAJOR_VERSION}::CalendarCore KF5::AkonadiCore KF${KF_MAJOR_VERSION}::I18n Qt::Test
+    LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::CalendarUtils KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::AkonadiCore KF${KF_MAJOR_VERSION}::I18n Qt::Test
     TEST_NAME kcalcoreserializertest
 )

@@ -23,7 +23,7 @@ target_link_libraries(kalendarac
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF${KF_MAJOR_VERSION}::DBusAddons
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KPim${KF_MAJOR_VERSION}::AkonadiCalendar
     KF${KF_MAJOR_VERSION}::KIOGui
     KF${KF_MAJOR_VERSION}::I18n

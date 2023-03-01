@@ -103,7 +103,7 @@ target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiCalendar PUBLIC "$<BUIL
 
 target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiCalendar
 PUBLIC
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::I18n
@@ -113,7 +113,7 @@ PRIVATE
     KF${KF_MAJOR_VERSION}::XmlGui
     KPim${KF_MAJOR_VERSION}::AkonadiContact
     KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KF5::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::IdentityManagement
