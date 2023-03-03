@@ -58,6 +58,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
 )
 
 configure_file(akonadi-calendar-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/akonadi-calendar-version.h @ONLY)
+option(BUILD_WITH_COMPAT_LIBS "Generate compat cmake file (Set at false will allow to co-install lib)" ON)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
@@ -133,6 +134,7 @@ ecm_qt_install_logging_categories(
 
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+if (BUILD_WITH_COMPAT_LIBS)
 if (QT_MAJOR_VERSION STREQUAL "5")
 ##
 # TODO: Backwards compatiblity. Remove in next major version
@@ -161,6 +163,7 @@ install(EXPORT KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets
     FILE KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets.cmake
     NAMESPACE KF5::
 )
+endif()
 endif()
 ki18n_install(po)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
