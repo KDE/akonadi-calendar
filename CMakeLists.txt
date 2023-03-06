@@ -84,7 +84,7 @@ find_package(KPim${KF_MAJOR_VERSION}AkonadiContact ${AKONADICONTACT_LIB_VERSION}
 ########### Targets ###########
 
 
-ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.103.0)
+ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.104.0)
 
 
 
