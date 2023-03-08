@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:45+0000\n"
-"PO-Revision-Date: 2023-01-10 20:55+0300\n"
+"PO-Revision-Date: 2023-03-07 19:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -150,13 +150,13 @@ msgstr "Takvim"
 #: calendarsettings.kcfg:23
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr "Uygun/Meşgul Yayınlama Adresi"
+msgstr "Uygun/Meşgul Yayınlama URL'si"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr "Uygun/Meşgul bilgisini yayınlama adresi"
+msgstr "Uygun/Meşgul bilgisini yayınlama URL'si"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
@@ -212,7 +212,7 @@ msgstr ""
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr "Uygun/Meşgul bilgisi edinme adresi"
+msgstr "Uygun/Meşgul Alma URL'si"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
@@ -285,7 +285,7 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
-"Bu ayarla uygun/meşgul adresindeki alan bölümüyle aradığınız kullanıcı "
+"Bu ayarla uygun/meşgul URL'sindeki alan bölümüyle aradığınız kullanıcı "
 "kimliğinin alan bölümünün eşleşmesini yapılandırabilirsiniz. Örneğin, eğer "
 "bu seçenek seçilmişse ve joe@mydomain.com adresinin uygun/meşgul verisini "
 "arıyorsanız www.yourdomain.com adresi başarısız olacaktır."
@@ -403,9 +403,9 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p>Yazılım, uygun/meşgul listenizi '%1' adresine yükleyemedi. Erişim "
+"<qt><p>Yazılım, uygun/meşgul listenizi '%1' URL'sine yükleyemedi. Erişim "
 "haklarıyla veya adresle ilgili bir sorun olabilir. Sistem iletisi: <em>%2</"
-"em>.</p><p>Lütfen adresi denetleyin veya sistem yöneticinizle bağlantıya "
+"em>.</p><p>Lütfen URL'yi denetleyin veya sistem yöneticinizle bağlantıya "
 "geçin.</p></qt>"
 
 #: freebusymanager.cpp:615
@@ -431,9 +431,9 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
-"<qt><p>Uygun/meşgul listenizi yüklemek için bir adres yapılandırılmadı. "
-"Lütfen bunu K Organizatör'ün yapılandırma penceresindeki \"Uygun/Meşgul\" "
-"sayfasından ayarlayın.</p><p>Adres ve hesap ayrıntıları için sistem "
+"<qt><p>Uygun/meşgul listenizi yüklemek için bir URL yapılandırılmadı. Lütfen "
+"bunu K Organizatör'ün yapılandırma penceresindeki \"Uygun/Meşgul\" "
+"sayfasından ayarlayın.</p><p>URL ve hesap ayrıntıları için sistem "
 "yöneticinizle görüşün.</p></qt>"
 
 #: freebusymanager.cpp:748
@@ -504,7 +504,7 @@ msgstr "Boş dosya adı. ical dosyası içe aktarılmayacak."
 #: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
-msgstr "Adresi içe aktarma hatalı."
+msgstr "İçe aktarılacak URL hatalı oluşturulmuş."
 
 #: icalimporter.cpp:178
 #, kde-format
