@@ -5,7 +5,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
 
 add_library(KPim${KF_MAJOR_VERSION}AkonadiCalendar)
 add_library(KPim${KF_MAJOR_VERSION}::AkonadiCalendar ALIAS KPim${KF_MAJOR_VERSION}AkonadiCalendar)
-add_library(KF5::AkonadiCalendar ALIAS KPim${KF_MAJOR_VERSION}AkonadiCalendar)
 
 target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE
     blockalarmsattribute.cpp
