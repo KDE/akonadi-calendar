@@ -134,7 +134,7 @@ install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 install(TARGETS
     KPim${KF_MAJOR_VERSION}AkonadiCalendar
-    EXPORT KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
