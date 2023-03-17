@@ -14,7 +14,7 @@ set( PREVIOUS_EXEC_OUTPUT_PATH ../../tests )
 set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 set(common_sources unittestbase.cpp helper.cpp ${Akonadi-Calendar_BINARY_DIR}/src/akonadicalendar_debug.cpp ${Akonadi-Calendar_SOURCE_DIR}/src/utils_p.cpp)
-set(common_libs "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KF${KF_MAJOR_VERSION}::CalendarCore;KPim${KF_MAJOR_VERSION}::Mime;KPim${KF_MAJOR_VERSION}::IdentityManagement;KPim${KF_MAJOR_VERSION}::AkonadiWidgets;KF${KF_MAJOR_VERSION}::Codecs")
+set(common_libs "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KF${KF_MAJOR_VERSION}::CalendarCore;KPim${KF_MAJOR_VERSION}::Mime;KPim${KF_MAJOR_VERSION}::IdentityManagement;KPim${KF_MAJOR_VERSION}::AkonadiWidgets;KF${KF_MAJOR_VERSION}::Codecs;KF${KF_MAJOR_VERSION}::ConfigCore")
 
 # the tests need the ical resource, which we might not have at this point (e.g. on the CI)
 find_program(AKONADI_ICAL_RESOURCE NAMES akonadi_ical_resource)
