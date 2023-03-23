@@ -20,3 +20,4 @@ endif()
 
 
 include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@AkonadiCalendarTargets.cmake")
+@PACKAGE_INCLUDE_QCHTARGETS@
