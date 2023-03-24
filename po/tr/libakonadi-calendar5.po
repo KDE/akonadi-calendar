@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2023-03-07 19:17+0300\n"
+"PO-Revision-Date: 2023-03-23 14:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -108,13 +108,13 @@ msgstr "Özet"
 #, kde-format
 msgctxt "@title:column calendar event start date and time"
 msgid "Start Date and Time"
-msgstr "Başlangıç Tarihi ve Saati"
+msgstr "Başlangıç Tarihi ve Zamanı"
 
 #: calendarmodel.cpp:196
 #, kde-format
 msgctxt "@title:column calendar event end date and time"
 msgid "End Date and Time"
-msgstr "Bitiş Tarihi ve Saati"
+msgstr "Bitiş Tarihi ve Zamanı"
 
 #: calendarmodel.cpp:198
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "Tür"
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
-msgstr "Sonlanma Tarihi ve Saati"
+msgstr "Sonlanma Tarihi ve Zamanı"
 
 #: calendarmodel.cpp:202
 #, kde-format
