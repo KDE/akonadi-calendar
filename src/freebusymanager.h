@@ -130,7 +130,7 @@ private:
       Creates a new FreeBusyManager, private because FreeBusyManager is a
       Singleton
       */
-    FreeBusyManager();
+    AKONADI_CALENDAR_NO_EXPORT FreeBusyManager();
     ~FreeBusyManager() override;
 
 private:

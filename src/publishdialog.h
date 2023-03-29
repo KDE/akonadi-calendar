@@ -49,7 +49,7 @@ public Q_SLOTS:
     void accept() override;
 
 private:
-    void slotHelp();
+    AKONADI_CALENDAR_NO_EXPORT void slotHelp();
     //@cond PRIVATE
     std::unique_ptr<PublishDialogPrivate> const d;
     //@endcond
