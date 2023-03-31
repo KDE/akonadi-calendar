@@ -13,9 +13,13 @@
 
 #include "akonadi-calendar_export.h"
 
+#include <Akonadi/Item>
+
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
+
+class QMimeData;
 
 namespace Akonadi
 {
@@ -54,6 +58,12 @@ AKONADI_CALENDAR_EXPORT KCalendarCore::Journal::Ptr journal(const Akonadi::Item 
  * This takes backend-specific special cases into account.
  */
 AKONADI_CALENDAR_EXPORT QString displayName(Akonadi::ETMCalendar *calendar, const Akonadi::Collection &collection);
+
+/**
+ * Creates a MIME data object for dragging Akonadi items containing calendar incidences.
+ * @since 5.23.41
+ */
+AKONADI_CALENDAR_EXPORT QMimeData *createMimeData(const Akonadi::Item::List &items);
 }
 
 }

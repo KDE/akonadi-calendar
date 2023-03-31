@@ -13,9 +13,12 @@
 
 #include <Akonadi/AgentManager>
 #include <Akonadi/Collection>
-#include <Akonadi/Item>
+
+#include <KCalUtils/ICalDrag>
 
 #include <KLocalizedString>
+
+#include <QMimeData>
 
 using namespace Akonadi;
 
@@ -195,5 +198,40 @@ QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi
         return fullCollection.name();
     } else {
         return i18nc("unknown resource", "Unknown");
+    }
+}
+
+QMimeData *CalendarUtils::createMimeData(const Akonadi::Item::List &items)
+{
+    if (items.isEmpty()) {
+        return nullptr;
+    }
+
+    KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+
+    QList<QUrl> urls;
+    int incidencesFound = 0;
+    for (const Akonadi::Item &item : items) {
+        const KCalendarCore::Incidence::Ptr incidence(CalendarUtils::incidence(item));
+        if (!incidence) {
+            continue;
+        }
+        ++incidencesFound;
+        urls.push_back(item.url());
+        KCalendarCore::Incidence::Ptr i(incidence->clone());
+        cal->addIncidence(i);
+    }
+
+    if (incidencesFound == 0) {
+        return nullptr;
+    }
+
+    auto mimeData = std::make_unique<QMimeData>();
+    mimeData->setUrls(urls);
+
+    if (KCalUtils::ICalDrag::populateMimeData(mimeData.get(), cal)) {
+        return mimeData.release();
+    } else {
+        return nullptr;
     }
 }
