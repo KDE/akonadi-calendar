@@ -110,6 +110,7 @@ PUBLIC
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::I18n
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
 PRIVATE
     KF${KF_MAJOR_VERSION}::Codecs
     KF${KF_MAJOR_VERSION}::KIOWidgets
@@ -119,7 +120,6 @@ PRIVATE
     KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KPim${KF_MAJOR_VERSION}::MailTransport
-    KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF${KF_MAJOR_VERSION}::Codecs
 )
 
