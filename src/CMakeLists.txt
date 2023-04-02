@@ -75,6 +75,8 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE
     searchcollectionhelper.h
     standardcalendaractionmanager.cpp
     standardcalendaractionmanager.h
+    todomodel.cpp
+    todomodel.h
     todopurger.cpp
     todopurger.h
     todopurger_p.h
@@ -157,6 +159,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   PublishDialog
   StandardCalendarActionManager
   SearchCollectionHelper
+  TodoModel
   TodoPurger
   REQUIRED_HEADERS AkonadiCalendar_HEADERS
   PREFIX Akonadi
