@@ -27,7 +27,7 @@
 
 #include <memory>
 
-namespace MailTransport
+namespace Akonadi
 {
 class MessageQueueJob;
 }
@@ -180,7 +180,7 @@ protected:
 };
 
 /**
- * @short Factory to create MailTransport::MessageQueueJob jobs or ITIPHandlerDialogDelegate objects.
+ * @short Factory to create Akonadi::MessageQueueJob jobs or ITIPHandlerDialogDelegate objects.
  * @since 4.15
  */
 class AKONADI_CALENDAR_EXPORT ITIPHandlerComponentFactory : public QObject
@@ -198,12 +198,12 @@ public:
     ~ITIPHandlerComponentFactory() override;
 
     /*
-     * @return A new MailTransport::MessageQueueJob object
+     * @return A new Akonadi::MessageQueueJob object
      * @param incidence related to the mail
      * @param identity that is the mail sender
-     * @param parent of the MailTransport::MessageQueueJob object
+     * @param parent of the Akonadi::MessageQueueJob object
      */
-    virtual MailTransport::MessageQueueJob *
+    virtual Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr);
 
     /*

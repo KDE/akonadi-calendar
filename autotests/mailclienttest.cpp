@@ -8,10 +8,10 @@
 
 #include "mailclient_p.h"
 
+#include <Akonadi/MessageQueueJob>
 #include <KCalendarCore/FreeBusy>
 #include <KCalendarCore/Incidence>
 #include <KIdentityManagement/Identity>
-#include <MailTransportAkonadi/MessageQueueJob>
 
 #include <akonadi/qtest_akonadi.h>
 
@@ -25,11 +25,11 @@ using namespace Akonadi;
 Q_DECLARE_METATYPE(KIdentityManagement::Identity)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 
-class FakeMessageQueueJob : public MailTransport::MessageQueueJob
+class FakeMessageQueueJob : public Akonadi::MessageQueueJob
 {
 public:
     explicit FakeMessageQueueJob(QObject *parent = nullptr)
-        : MailTransport::MessageQueueJob(parent)
+        : Akonadi::MessageQueueJob(parent)
     {
     }
 
@@ -63,7 +63,7 @@ public:
     {
     }
 
-    MailTransport::MessageQueueJob *
+    Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
     {
         Q_UNUSED(incidence)

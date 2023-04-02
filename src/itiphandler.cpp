@@ -22,9 +22,9 @@
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/ICalFormat>
 
+#include <Akonadi/MessageQueueJob>
 #include <KIdentityManagement/IdentityManager>
 #include <MailTransport/TransportManager>
-#include <MailTransportAkonadi/MessageQueueJob>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
@@ -55,13 +55,13 @@ ITIPHandlerComponentFactory::ITIPHandlerComponentFactory(QObject *parent)
 
 ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory() = default;
 
-MailTransport::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                                                                   const KIdentityManagement::Identity &identity,
-                                                                                   QObject *parent)
+Akonadi::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                                                             const KIdentityManagement::Identity &identity,
+                                                                             QObject *parent)
 {
     Q_UNUSED(incidence)
     Q_UNUSED(identity)
-    return new MailTransport::MessageQueueJob(parent);
+    return new Akonadi::MessageQueueJob(parent);
 }
 
 ITIPHandlerDialogDelegate *

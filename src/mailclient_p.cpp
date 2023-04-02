@@ -18,9 +18,9 @@
 #include <KEmailAddress>
 #include <KIdentityManagement/Identity>
 
+#include <Akonadi/MessageQueueJob>
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
-#include <MailTransportAkonadi/MessageQueueJob>
 
 #include "akonadicalendar_debug.h"
 #include <KJob>
@@ -295,17 +295,17 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
     message->assemble();
 
     // Put the newly created item in the MessageQueueJob.
-    MailTransport::MessageQueueJob *qjob = mFactory->createMessageQueueJob(incidence, identity, this);
+    Akonadi::MessageQueueJob *qjob = mFactory->createMessageQueueJob(incidence, identity, this);
 
     if (identity.disabledFcc()) {
-        qjob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+        qjob->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::Delete);
     } else {
         const Akonadi::Collection sentCollection(identity.fcc().toLongLong());
         if (sentCollection.isValid()) {
-            qjob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToCollection);
+            qjob->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::MoveToCollection);
             qjob->sentBehaviourAttribute().setMoveToCollection(sentCollection);
         } else {
-            qjob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
+            qjob->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::MoveToDefaultSentCollection);
         }
     }
     qjob->transportAttribute().setTransportId(transportId);

@@ -14,9 +14,9 @@
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemFetchScope>
+#include <Akonadi/MessageQueueJob>
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/ICalFormat>
-#include <MailTransportAkonadi/MessageQueueJob>
 #include <akonadi/qtest_akonadi.h>
 
 #include <QString>
@@ -34,11 +34,11 @@ Q_DECLARE_METATYPE(QList<int>)
 static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 static const char *s_outEmail2 = "identity2@kde.org";
 
-class FakeMessageQueueJob : public MailTransport::MessageQueueJob
+class FakeMessageQueueJob : public Akonadi::MessageQueueJob
 {
 public:
     explicit FakeMessageQueueJob(QObject *parent = nullptr)
-        : MailTransport::MessageQueueJob(parent)
+        : Akonadi::MessageQueueJob(parent)
     {
     }
 
@@ -72,7 +72,7 @@ public:
     {
     }
 
-    MailTransport::MessageQueueJob *
+    Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
     {
         Q_UNUSED(incidence)
