@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-01 00:51+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2022-10-10 18:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -294,6 +294,7 @@ msgstr ""
 "ваш_домен.com зазнає невдачі."
 
 #: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
+#: todomodel.cpp:458
 #, kde-format
 msgid "Calendar"
 msgstr "Календар"
@@ -1261,6 +1262,20 @@ msgstr "Немає кешу даних щодо вільного/зайнято�
 msgid "Error saving freebusy object"
 msgstr "Помилка під час спроби збереження запису щодо вільного/зайнятого часу"
 
+#: searchcollectionhelper.cpp:113
+#, fuzzy, kde-format
+#| msgid "Send &Invitations"
+msgctxt "A collection of all declined invidations."
+msgid "Declined Invitations"
+msgstr "Надіслати &запрошення"
+
+#: searchcollectionhelper.cpp:121
+#, fuzzy, kde-format
+#| msgid "Send &Invitations"
+msgctxt "A collection of all open invidations."
+msgid "Open Invitations"
+msgstr "Надіслати &запрошення"
+
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
@@ -1747,6 +1762,89 @@ msgstr "&Змінити..."
 msgid "Edit the selected incidence."
 msgstr "Змінити параметри позначеного запису події."
 
+#: todomodel.cpp:140 todomodel.cpp:176
+#, kde-format
+msgctxt "yes, an exception to a recurring to-do"
+msgid "Exception"
+msgstr ""
+
+#: todomodel.cpp:142 todomodel.cpp:178
+#, kde-format
+msgctxt "yes, recurring to-do"
+msgid "Yes"
+msgstr ""
+
+#: todomodel.cpp:145 todomodel.cpp:181
+#, kde-format
+msgctxt "no, not a recurring to-do"
+msgid "No"
+msgstr ""
+
+#: todomodel.cpp:159 todomodel.cpp:197
+#, kde-format
+msgctxt "delimiter for joining category/tag names"
+msgid ","
+msgstr ""
+
+#: todomodel.cpp:440
+#, fuzzy, kde-format
+#| msgctxt "@title:column calendar event summary"
+#| msgid "Summary"
+msgid "Summary"
+msgstr "Резюме"
+
+#: todomodel.cpp:442
+#, kde-format
+msgid "Recurs"
+msgstr ""
+
+#: todomodel.cpp:444
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item priority"
+#| msgid "Priority"
+msgid "Priority"
+msgstr "Пріоритет"
+
+#: todomodel.cpp:446
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item completion in percent"
+#| msgid "Complete"
+msgctxt "@title:column percent complete"
+msgid "Complete"
+msgstr "Виконано"
+
+#: todomodel.cpp:448
+#, fuzzy, kde-format
+#| msgctxt "@title:column calendar event start date and time"
+#| msgid "Start Date and Time"
+msgid "Start Date"
+msgstr "Дата і час початку"
+
+#: todomodel.cpp:450
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item due date and time"
+#| msgid "Due Date and Time"
+msgid "Due Date"
+msgstr "Дата і час призначення"
+
+#: todomodel.cpp:452
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item completion in percent"
+#| msgid "Complete"
+msgctxt "@title:column date completed"
+msgid "Completed"
+msgstr "Виконано"
+
+#: todomodel.cpp:454
+#, kde-format
+msgid "Tags"
+msgstr ""
+
+#: todomodel.cpp:456
+#, kde-format
+msgid "Description"
+msgstr ""
+
 #: todopurger.cpp:61
 #, kde-format
 msgid "Purging completed to-dos"
@@ -1814,9 +1912,6 @@ msgstr "Вилучаємо записи виконаних завдань"
 
 #~ msgid "FIXME Publishes the items information."
 #~ msgstr "Оприлюднити дані записів."
-
-#~ msgid "Send &Invitations"
-#~ msgstr "Надіслати &запрошення"
 
 #~ msgid "FIXME Send Invitations"
 #~ msgstr "Надіслати запрошення"

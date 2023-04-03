@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-01 00:51+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2022-11-08 21:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -268,6 +268,7 @@ msgid ""
 msgstr ""
 
 #: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
+#: todomodel.cpp:458
 #, kde-format
 msgid "Calendar"
 msgstr "நாள்காட்டி"
@@ -1151,6 +1152,18 @@ msgstr ""
 msgid "Error saving freebusy object"
 msgstr ""
 
+#: searchcollectionhelper.cpp:113
+#, kde-format
+msgctxt "A collection of all declined invidations."
+msgid "Declined Invitations"
+msgstr ""
+
+#: searchcollectionhelper.cpp:121
+#, kde-format
+msgctxt "A collection of all open invidations."
+msgid "Open Invitations"
+msgstr ""
+
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
@@ -1588,6 +1601,87 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
+msgstr ""
+
+#: todomodel.cpp:140 todomodel.cpp:176
+#, kde-format
+msgctxt "yes, an exception to a recurring to-do"
+msgid "Exception"
+msgstr ""
+
+#: todomodel.cpp:142 todomodel.cpp:178
+#, kde-format
+msgctxt "yes, recurring to-do"
+msgid "Yes"
+msgstr ""
+
+#: todomodel.cpp:145 todomodel.cpp:181
+#, kde-format
+msgctxt "no, not a recurring to-do"
+msgid "No"
+msgstr ""
+
+#: todomodel.cpp:159 todomodel.cpp:197
+#, kde-format
+msgctxt "delimiter for joining category/tag names"
+msgid ","
+msgstr ""
+
+#: todomodel.cpp:440
+#, kde-format
+msgid "Summary"
+msgstr ""
+
+#: todomodel.cpp:442
+#, kde-format
+msgid "Recurs"
+msgstr ""
+
+#: todomodel.cpp:444
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item priority"
+#| msgid "Priority"
+msgid "Priority"
+msgstr "முக்கியத்துவம்"
+
+#: todomodel.cpp:446
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item completion in percent"
+#| msgid "Complete"
+msgctxt "@title:column percent complete"
+msgid "Complete"
+msgstr "முடிந்த‍து"
+
+#: todomodel.cpp:448
+#, fuzzy, kde-format
+#| msgctxt "@title:column calendar event start date and time"
+#| msgid "Start Date and Time"
+msgid "Start Date"
+msgstr "துவக்க தேதியும் நேரமும்"
+
+#: todomodel.cpp:450
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item due date and time"
+#| msgid "Due Date and Time"
+msgid "Due Date"
+msgstr "உரிய தேதியும் நேரமும்"
+
+#: todomodel.cpp:452
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item completion in percent"
+#| msgid "Complete"
+msgctxt "@title:column date completed"
+msgid "Completed"
+msgstr "முடிந்த‍து"
+
+#: todomodel.cpp:454
+#, kde-format
+msgid "Tags"
+msgstr ""
+
+#: todomodel.cpp:456
+#, kde-format
+msgid "Description"
 msgstr ""
 
 #: todopurger.cpp:61

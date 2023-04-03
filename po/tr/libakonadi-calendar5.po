@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-01 00:51+0000\n"
-"PO-Revision-Date: 2023-03-23 14:16+0300\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"PO-Revision-Date: 2023-04-02 17:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -252,7 +252,7 @@ msgstr ""
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Mail transport to use for sending e-mail messages"
-msgstr "E-posta iletilerini göndermek için posta aktarımı kullanımı"
+msgstr "E-posta iletilerini göndermek için kullanılacak posta taşıması"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:83
@@ -261,8 +261,8 @@ msgid ""
 "If specified all, groupware e-mails will use this transport. Otherwise, the "
 "default one will be used."
 msgstr ""
-"Her şey belirtildiyse, grup yazılımı e-postaları bu aracı kullanacak. Aksi "
-"halde, öntanımlı kullanılmış olacak."
+"Her şey belirtildiyse grup yazılımı e-postaları bu taşımayı kullanacak. Aksi "
+"halde öntanımlı olan kullanılır."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:91
@@ -291,6 +291,7 @@ msgstr ""
 "arıyorsanız www.yourdomain.com adresi başarısız olacaktır."
 
 #: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
+#: todomodel.cpp:458
 #, kde-format
 msgid "Calendar"
 msgstr "Takvim"
@@ -1238,6 +1239,18 @@ msgstr "Uygun/Meşgul Önbelleği Yok"
 msgid "Error saving freebusy object"
 msgstr "Uygun/Meşgul nesnesini kaydederken hata"
 
+#: searchcollectionhelper.cpp:113
+#, kde-format
+msgctxt "A collection of all declined invidations."
+msgid "Declined Invitations"
+msgstr ""
+
+#: searchcollectionhelper.cpp:121
+#, kde-format
+msgctxt "A collection of all open invidations."
+msgid "Open Invitations"
+msgstr ""
+
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
@@ -1685,6 +1698,89 @@ msgstr "Dü&zenle..."
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Seçilmiş olayı düzenle."
+
+#: todomodel.cpp:140 todomodel.cpp:176
+#, kde-format
+msgctxt "yes, an exception to a recurring to-do"
+msgid "Exception"
+msgstr ""
+
+#: todomodel.cpp:142 todomodel.cpp:178
+#, kde-format
+msgctxt "yes, recurring to-do"
+msgid "Yes"
+msgstr ""
+
+#: todomodel.cpp:145 todomodel.cpp:181
+#, kde-format
+msgctxt "no, not a recurring to-do"
+msgid "No"
+msgstr ""
+
+#: todomodel.cpp:159 todomodel.cpp:197
+#, kde-format
+msgctxt "delimiter for joining category/tag names"
+msgid ","
+msgstr ""
+
+#: todomodel.cpp:440
+#, fuzzy, kde-format
+#| msgctxt "@title:column calendar event summary"
+#| msgid "Summary"
+msgid "Summary"
+msgstr "Özet"
+
+#: todomodel.cpp:442
+#, kde-format
+msgid "Recurs"
+msgstr ""
+
+#: todomodel.cpp:444
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item priority"
+#| msgid "Priority"
+msgid "Priority"
+msgstr "Öncelik"
+
+#: todomodel.cpp:446
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item completion in percent"
+#| msgid "Complete"
+msgctxt "@title:column percent complete"
+msgid "Complete"
+msgstr "Tamamlanan"
+
+#: todomodel.cpp:448
+#, fuzzy, kde-format
+#| msgctxt "@title:column calendar event start date and time"
+#| msgid "Start Date and Time"
+msgid "Start Date"
+msgstr "Başlangıç Tarihi ve Zamanı"
+
+#: todomodel.cpp:450
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item due date and time"
+#| msgid "Due Date and Time"
+msgid "Due Date"
+msgstr "Sonlanma Tarihi ve Zamanı"
+
+#: todomodel.cpp:452
+#, fuzzy, kde-format
+#| msgctxt "@title:column todo item completion in percent"
+#| msgid "Complete"
+msgctxt "@title:column date completed"
+msgid "Completed"
+msgstr "Tamamlanan"
+
+#: todomodel.cpp:454
+#, kde-format
+msgid "Tags"
+msgstr ""
+
+#: todomodel.cpp:456
+#, kde-format
+msgid "Description"
+msgstr ""
 
 #: todopurger.cpp:61
 #, kde-format
