@@ -24,7 +24,6 @@
 
 #include <Akonadi/MessageQueueJob>
 #include <KIdentityManagement/IdentityManager>
-#include <MailTransport/TransportManager>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
@@ -359,13 +358,7 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
             d->finishSendAsICalendar(result, str);
         });
 
-        mailer->mailTo(incidence,
-                       KIdentityManagement::IdentityManager::self()->identityForAddress(from),
-                       from,
-                       bccMe,
-                       recipients,
-                       messageText,
-                       MailTransport::TransportManager::self()->defaultTransportName());
+        mailer->mailTo(incidence, KIdentityManagement::IdentityManager::self()->identityForAddress(from), from, bccMe, recipients, messageText);
     }
     delete publishdlg;
 }
