@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2023-03-23 14:16+0300\n"
+"PO-Revision-Date: 2023-04-02 17:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -252,7 +252,7 @@ msgstr ""
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Mail transport to use for sending e-mail messages"
-msgstr "E-posta iletilerini göndermek için posta aktarımı kullanımı"
+msgstr "E-posta iletilerini göndermek için kullanılacak posta taşıması"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:83
@@ -261,8 +261,8 @@ msgid ""
 "If specified all, groupware e-mails will use this transport. Otherwise, the "
 "default one will be used."
 msgstr ""
-"Her şey belirtildiyse, grup yazılımı e-postaları bu aracı kullanacak. Aksi "
-"halde, öntanımlı kullanılmış olacak."
+"Her şey belirtildiyse grup yazılımı e-postaları bu taşımayı kullanacak. Aksi "
+"halde öntanımlı olan kullanılır."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:91
