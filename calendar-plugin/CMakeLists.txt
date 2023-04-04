@@ -22,4 +22,4 @@ target_link_libraries(akonadicalendarplugin PRIVATE
     KPim6::AkonadiCalendar
 )
 
-install(TARGETS akonadicalendarplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/org.kde.kcalendarcore.calendars/)
+install(TARGETS akonadicalendarplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/org.kde.kcalendarcore.calendars/)
