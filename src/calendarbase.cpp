@@ -379,9 +379,6 @@ CalendarBase::CalendarBase(QObject *parent)
     , d_ptr(new CalendarBasePrivate(this))
 {
     setParent(parent);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    setDeletionTracking(false);
-#endif
 }
 
 CalendarBase::CalendarBase(CalendarBasePrivate *const dd, QObject *parent)
@@ -389,9 +386,6 @@ CalendarBase::CalendarBase(CalendarBasePrivate *const dd, QObject *parent)
     , d_ptr(dd)
 {
     setParent(parent);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    setDeletionTracking(false);
-#endif
 }
 
 CalendarBase::~CalendarBase() = default;
