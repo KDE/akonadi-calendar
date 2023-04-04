@@ -113,7 +113,8 @@ PUBLIC
     KPim${KF_MAJOR_VERSION}::IdentityManagement
 PRIVATE
     KF${KF_MAJOR_VERSION}::Codecs
-    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::JobWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
     KPim${KF_MAJOR_VERSION}::AkonadiContact
     KPim${KF_MAJOR_VERSION}::AkonadiMime
