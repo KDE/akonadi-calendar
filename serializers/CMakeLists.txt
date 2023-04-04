@@ -15,10 +15,10 @@ ecm_qt_declare_logging_category(akonadi_serializer_kcalcore HEADER serializer_de
 
 
 target_link_libraries(akonadi_serializer_kcalcore
-    KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KF${KF_MAJOR_VERSION}::CalendarCore
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KF${KF_MAJOR_VERSION}::I18n
+    KPim6::CalendarUtils
+    KF6::CalendarCore
+    KPim6::AkonadiCore
+    KF6::I18n
 )
 install(TARGETS akonadi_serializer_kcalcore
     DESTINATION ${KDE_INSTALL_PLUGINDIR}

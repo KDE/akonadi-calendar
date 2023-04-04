@@ -11,8 +11,8 @@ deprecated: false
 release: false
 libraries:
  - qmake: AkonadiCalendar 
-   cmake: "KF5::AkonadiCalendar"
-cmakename: KF5AkonadiCalendar
+   cmake: "KPim6::AkonadiCalendar"
+cmakename: KPim6AkonadiCalendar
 
 public_lib: true
 group: kdepim

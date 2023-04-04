@@ -3,10 +3,10 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
 
-add_library(KPim${KF_MAJOR_VERSION}AkonadiCalendar)
-add_library(KPim${KF_MAJOR_VERSION}::AkonadiCalendar ALIAS KPim${KF_MAJOR_VERSION}AkonadiCalendar)
+add_library(KPim6AkonadiCalendar)
+add_library(KPim6::AkonadiCalendar ALIAS KPim6AkonadiCalendar)
 
-target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE
+target_sources(KPim6AkonadiCalendar PRIVATE
     blockalarmsattribute.cpp
     blockalarmsattribute.h
     calendarbase.cpp
@@ -84,7 +84,7 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE
     utils_p.h
 )
 
-ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}AkonadiCalendar HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar
+ecm_qt_declare_logging_category(KPim6AkonadiCalendar HEADER akonadicalendar_debug.h IDENTIFIER AKONADICALENDAR_LOG CATEGORY_NAME org.kde.pim.akonadicalendar
         DESCRIPTION "akonadicalendar (pim lib)"
         OLD_CATEGORY_NAMES log_akonadicalendar
         EXPORT AKONADI-CALENDAR
@@ -94,53 +94,52 @@ kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
-target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
+target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiCalendar PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6AkonadiCalendar PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim${KF_MAJOR_VERSION}AkonadiCalendar BASE_NAME akonadi-calendar)
+generate_export_header(KPim6AkonadiCalendar BASE_NAME akonadi-calendar)
 
 
-target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiCalendar>")
-target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src>")
+target_include_directories(KPim6AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar>")
+target_include_directories(KPim6AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar_BINARY_DIR}/src>")
 
-target_link_libraries(KPim${KF_MAJOR_VERSION}AkonadiCalendar
+target_link_libraries(KPim6AkonadiCalendar
 PUBLIC
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KF${KF_MAJOR_VERSION}::CalendarCore
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::IdentityManagement
+    KPim6::AkonadiCore
+    KF6::CalendarCore
+    KF6::WidgetsAddons
+    KF6::I18n
+    KPim6::IdentityManagement
 PRIVATE
-    KF${KF_MAJOR_VERSION}::Codecs
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::JobWidgets
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KPim${KF_MAJOR_VERSION}::AkonadiContact
-    KPim${KF_MAJOR_VERSION}::AkonadiMime
-    KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-    KPim${KF_MAJOR_VERSION}::MailTransport
-    KPim${KF_MAJOR_VERSION}::Mime
-    KF${KF_MAJOR_VERSION}::Codecs
+    KF6::Codecs
+    KF6::KIOCore
+    KF6::JobWidgets
+    KF6::XmlGui
+    KPim6::AkonadiContact
+    KPim6::AkonadiMime
+    KPim6::CalendarUtils
+    KPim6::AkonadiWidgets
+    KPim6::MailTransport
+    KPim6::Mime
 )
 
-set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiCalendar PROPERTIES
+set_target_properties(KPim6AkonadiCalendar PROPERTIES
     VERSION ${AKONADICALENDAR_VERSION}
     SOVERSION ${AKONADICALENDAR_SOVERSION}
     EXPORT_NAME AkonadiCalendar
 )
 
 ecm_generate_pri_file(BASE_NAME AkonadiCalendar
-    LIB_NAME KPim${KF_MAJOR_VERSION}AkonadiCalendar
+    LIB_NAME KPim6AkonadiCalendar
     DEPS "AkonadiCore KCalendarCore" FILENAME_VAR PRI_FILENAME
 )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 install(TARGETS
-    KPim${KF_MAJOR_VERSION}AkonadiCalendar
-    EXPORT KPim${KF_MAJOR_VERSION}AkonadiCalendarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6AkonadiCalendar
+    EXPORT KPim6AkonadiCalendarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
@@ -169,21 +168,21 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
 
 install( FILES
   ${AkonadiCalendar_CamelCase_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiCalendar/Akonadi COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar/Akonadi COMPONENT Devel
 )
 install( FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
   ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiCalendar/akonadi COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar/akonadi COMPONENT Devel
 )
 
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim${KF_MAJOR_VERSION}AkonadiCalendar_QCH
+        KPim6AkonadiCalendar_QCH
         NAME AkonadiCalendar
-        BASE_NAME KPim${KF_MAJOR_VERSION}AkonadiCalendar
+        BASE_NAME KPim6AkonadiCalendar
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -191,7 +190,7 @@ if (BUILD_QCH)
         MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt${QT_MAJOR_VERSION}Core_QCH
+            Qt6Core_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
