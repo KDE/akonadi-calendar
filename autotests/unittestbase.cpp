@@ -27,7 +27,7 @@ UnitTestBase::UnitTestBase()
 {
     qRegisterMetaType<Akonadi::Item>("Akonadi::Item");
     qRegisterMetaType<QList<Akonadi::IncidenceChanger::ChangeType>>("QList<Akonadi::IncidenceChanger::ChangeType>");
-    qRegisterMetaType<QVector<Akonadi::Item::Id>>("QVector<Akonadi::Item::Id>");
+    qRegisterMetaType<QList<Akonadi::Item::Id>>("QList<Akonadi::Item::Id>");
     qRegisterMetaType<Akonadi::MailClient::Result>("Akonadi::MailClient::Result");
 
     mChanger = new IncidenceChanger(this);

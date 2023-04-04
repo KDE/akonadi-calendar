@@ -8,7 +8,7 @@
 
 #include "kcolumnfilterproxymodel_p.h"
 
-#include <QVector>
+#include <QList>
 
 using namespace Akonadi;
 
@@ -19,17 +19,17 @@ KColumnFilterProxyModel::KColumnFilterProxyModel(QObject *parent)
 
 KColumnFilterProxyModel::~KColumnFilterProxyModel() = default;
 
-QVector<int> KColumnFilterProxyModel::visbileColumns() const
+QList<int> KColumnFilterProxyModel::visbileColumns() const
 {
     return m_visibleColumns;
 }
 
 void KColumnFilterProxyModel::setVisibleColumn(int column)
 {
-    setVisibleColumns(QVector<int>() << column);
+    setVisibleColumns(QList<int>() << column);
 }
 
-void KColumnFilterProxyModel::setVisibleColumns(const QVector<int> &visibleColumns)
+void KColumnFilterProxyModel::setVisibleColumns(const QList<int> &visibleColumns)
 {
     m_visibleColumns = visibleColumns;
     invalidateFilter();

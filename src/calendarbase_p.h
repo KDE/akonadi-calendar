@@ -9,8 +9,8 @@
 #include "calendarbase.h"
 #include "incidencechanger.h"
 
+#include <QList>
 #include <QMultiHash>
-#include <QVector>
 
 namespace Akonadi
 {
@@ -32,7 +32,7 @@ public:
     void handleParentChanged(const KCalendarCore::Incidence::Ptr &incidence);
 
 public Q_SLOTS:
-    void slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &itemIds, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);
+    void slotDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &itemIds, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);
 
     void slotCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);
 

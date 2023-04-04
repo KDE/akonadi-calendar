@@ -10,8 +10,8 @@
 #include "calendarclipboard.h"
 #include "incidencechanger.h"
 #include <KCalendarCore/Incidence>
+#include <QList>
 #include <QSet>
-#include <QVector>
 
 namespace KCalUtils
 {
@@ -58,7 +58,7 @@ public:
 public Q_SLOTS:
     void slotModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
-    void slotDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &ids, Akonadi::IncidenceChanger::ResultCode result, const QString &errorMessage);
+    void slotDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &ids, Akonadi::IncidenceChanger::ResultCode result, const QString &errorMessage);
 
 public:
     Akonadi::CalendarBase::Ptr m_calendar;

@@ -141,7 +141,7 @@ void CalendarClipboardPrivate::slotModifyFinished(int changeId, const Akonadi::I
 }
 
 void CalendarClipboardPrivate::slotDeleteFinished(int changeId,
-                                                  const QVector<Akonadi::Item::Id> &ids,
+                                                  const QList<Akonadi::Item::Id> &ids,
                                                   Akonadi::IncidenceChanger::ResultCode result,
                                                   const QString &errorMessage)
 {

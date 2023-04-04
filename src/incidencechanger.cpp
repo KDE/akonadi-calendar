@@ -97,7 +97,7 @@ emitModifyFinished(IncidenceChanger *changer, int changeId, const Akonadi::Item 
 // Does a queued emit, with QMetaObject::invokeMethod
 static void emitDeleteFinished(IncidenceChanger *changer,
                                int changeId,
-                               const QVector<Akonadi::Item::Id> &itemIdList,
+                               const QList<Akonadi::Item::Id> &itemIdList,
                                IncidenceChanger::ResultCode resultCode,
                                const QString &errorString)
 {
@@ -105,7 +105,7 @@ static void emitDeleteFinished(IncidenceChanger *changer,
                               "deleteFinished",
                               Qt::QueuedConnection,
                               Q_ARG(int, changeId),
-                              Q_ARG(QVector<Akonadi::Item::Id>, itemIdList),
+                              Q_ARG(QList<Akonadi::Item::Id>, itemIdList),
                               Q_ARG(Akonadi::IncidenceChanger::ResultCode, resultCode),
                               Q_ARG(QString, errorString));
 }
@@ -131,7 +131,7 @@ IncidenceChangerPrivate::IncidenceChangerPrivate(bool enableHistory, ITIPHandler
     m_collectionFetchJob = nullptr;
     m_invitationPolicy = IncidenceChanger::InvitationPolicyAsk;
 
-    qRegisterMetaType<QVector<Akonadi::Item::Id>>("QVector<Akonadi::Item::Id>");
+    qRegisterMetaType<QList<Akonadi::Item::Id>>("QList<Akonadi::Item::Id>");
     qRegisterMetaType<Akonadi::Item::Id>("Akonadi::Item::Id");
     qRegisterMetaType<Akonadi::Item>("Akonadi::Item");
     qRegisterMetaType<Akonadi::IncidenceChanger::ResultCode>("Akonadi::IncidenceChanger::ResultCode");
@@ -790,7 +790,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     }
 
     if (itemsToDelete.isEmpty()) {
-        QVector<Akonadi::Item::Id> itemIdList;
+        QList<Akonadi::Item::Id> itemIdList;
         itemIdList.append(Item().id());
         qCDebug(AKONADICALENDAR_LOG) << "Items already deleted or being deleted, skipping";
         const QString errorMessage = i18n("That calendar item was already deleted, or currently being deleted.");

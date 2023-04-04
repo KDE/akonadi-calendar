@@ -273,7 +273,7 @@ void KalendarAlarmClient::checkAlarms()
         }
     }
 
-    QVector<QString> nullAlarmNotificationIds;
+    QList<QString> nullAlarmNotificationIds;
     // We need a copy of the notifications hash as some may get dismissed as we iterate over them, causing a crash
     // BUG: 455902
     const auto notificationsCopy = m_notifications;

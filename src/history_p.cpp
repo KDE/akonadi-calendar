@@ -112,7 +112,7 @@ bool CreationEntry::redo()
 }
 
 void CreationEntry::onDeleteFinished(int changeId,
-                                     const QVector<Akonadi::Item::Id> &deletedIds,
+                                     const QList<Akonadi::Item::Id> &deletedIds,
                                      Akonadi::IncidenceChanger::ResultCode resultCode,
                                      const QString &errorString)
 {
@@ -191,7 +191,7 @@ bool DeletionEntry::redo()
 }
 
 void DeletionEntry::onDeleteFinished(int changeId,
-                                     const QVector<Akonadi::Item::Id> &deletedIds,
+                                     const QList<Akonadi::Item::Id> &deletedIds,
                                      Akonadi::IncidenceChanger::ResultCode resultCode,
                                      const QString &errorString)
 {

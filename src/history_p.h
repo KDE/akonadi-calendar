@@ -11,9 +11,9 @@
 #include <Akonadi/Collection>
 #include <KCalendarCore/Incidence>
 
+#include <QList>
 #include <QPointer>
 #include <QStack>
-#include <QVector>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -29,7 +29,7 @@ class Entry : public QObject
     Q_OBJECT
 public:
     using Ptr = QSharedPointer<Entry>;
-    using List = QVector<Entry::Ptr>;
+    using List = QList<Entry::Ptr>;
     Entry(const Akonadi::Item &item, const QString &description, History *qq);
     Entry(const Akonadi::Item::List &items, const QString &description, History *qq);
     virtual void updateIds(Item::Id oldId, Item::Id newId);
@@ -48,7 +48,7 @@ protected:
     IncidenceChanger *mChanger = nullptr;
     QHash<Akonadi::Item::Id, int> mLatestRevisionByItemId;
     History *q = nullptr;
-    QVector<int> mChangeIds;
+    QList<int> mChangeIds;
 
 private:
     void init(const QString &description, History *qq);
@@ -92,7 +92,7 @@ public:
      * When recordCreation/Deletion/Modification is called and an undo operation is already in progress
      * the entry is added here.
      */
-    QVector<Entry::Ptr> mQueuedEntries;
+    QList<Entry::Ptr> mQueuedEntries;
     bool mEnabled = true;
     QPointer<QWidget> mCurrentParent;
 
@@ -115,7 +115,7 @@ public:
 
 private Q_SLOTS:
     void
-    onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    onDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
@@ -133,7 +133,7 @@ public:
 
 private Q_SLOTS:
     void
-    onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    onDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 

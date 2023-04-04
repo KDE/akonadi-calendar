@@ -16,8 +16,8 @@ public:
     explicit AkonadiCalendarPlugin(QObject *parent = nullptr, const QVariantList &args = {});
     ~AkonadiCalendarPlugin() override;
 
-    QVector<KCalendarCore::Calendar::Ptr> calendars() const override;
+    QList<KCalendarCore::Calendar::Ptr> calendars() const override;
 
 private:
-    QVector<KCalendarCore::Calendar::Ptr> m_calendars;
+    QList<KCalendarCore::Calendar::Ptr> m_calendars;
 };

@@ -1140,8 +1140,7 @@ public Q_SLOTS:
         QVERIFY(mChangeToWaitFor == -1);
     }
 
-    void
-    deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
+    void deleteFinished(int changeId, const QList<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
     {
         QVERIFY(changeId != -1);
         mChangeToWaitFor = -1;

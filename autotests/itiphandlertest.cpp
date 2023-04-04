@@ -657,7 +657,7 @@ void ITIPHandlerTest::onCreateFinished(int changeId, const Item &item, Incidence
 }
 
 void ITIPHandlerTest::onDeleteFinished(int changeId,
-                                       const QVector<Akonadi::Item::Id> &deletedIds,
+                                       const QList<Akonadi::Item::Id> &deletedIds,
                                        IncidenceChanger::ResultCode resultCode,
                                        const QString &errorString)
 {

@@ -497,7 +497,7 @@ void HistoryTest::waitForSignals()
 }
 
 void HistoryTest::deleteFinished(int changeId,
-                                 const QVector<Akonadi::Item::Id> &deletedIds,
+                                 const QList<Akonadi::Item::Id> &deletedIds,
                                  Akonadi::IncidenceChanger::ResultCode resultCode,
                                  const QString &errorMessage)
 {

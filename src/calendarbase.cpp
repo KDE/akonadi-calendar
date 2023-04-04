@@ -214,7 +214,7 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
 }
 
 void CalendarBasePrivate::slotDeleteFinished(int changeId,
-                                             const QVector<Akonadi::Item::Id> &itemIds,
+                                             const QList<Akonadi::Item::Id> &itemIds,
                                              IncidenceChanger::ResultCode resultCode,
                                              const QString &errorMessage)
 {

@@ -46,8 +46,8 @@ class IncidenceChangerPrivate;
  *          SLOT(slotCreateFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)) );
  *
  * connect( changer,
- *          SIGNAL(deleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
- *          SLOT(slotDeleteFinished(int,QVector<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)) );
+ *          SIGNAL(deleteFinished(int,QList<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)),
+ *          SLOT(slotDeleteFinished(int,QList<Akonadi::Item::Id>,Akonadi::IncidenceChanger::ResultCode,QString)) );
  *
  * connect( changer,SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
  *          SLOT(slotModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)) );
@@ -445,8 +445,7 @@ Q_SIGNALS:
      * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
      *        message. If you enabled error dialogs, this string was already presented to the user.
      */
-    void
-    deleteFinished(int changeId, const QVector<Akonadi::Item::Id> &itemIdList, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    void deleteFinished(int changeId, const QList<Akonadi::Item::Id> &itemIdList, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
 private:
     //@cond PRIVATE

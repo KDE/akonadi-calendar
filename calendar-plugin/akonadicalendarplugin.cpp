@@ -72,7 +72,7 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
 
 AkonadiCalendarPlugin::~AkonadiCalendarPlugin() = default;
 
-QVector<KCalendarCore::Calendar::Ptr> AkonadiCalendarPlugin::calendars() const
+QList<KCalendarCore::Calendar::Ptr> AkonadiCalendarPlugin::calendars() const
 {
     return m_calendars;
 }

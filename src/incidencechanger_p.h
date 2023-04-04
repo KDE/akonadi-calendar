@@ -18,10 +18,10 @@
 #include <Akonadi/Item>
 #include <Akonadi/TransactionSequence>
 
+#include <QList>
 #include <QObject>
 #include <QPointer>
 #include <QSet>
-#include <QVector>
 
 class KJob;
 class QWidget;
@@ -36,7 +36,7 @@ class Change : public QObject
     Q_OBJECT
 public:
     using Ptr = QSharedPointer<Change>;
-    using List = QVector<Ptr>;
+    using List = QList<Ptr>;
     Change(IncidenceChanger *incidenceChanger, int changeId, IncidenceChanger::ChangeType changeType, uint operationId, QWidget *parent)
         : id(changeId)
         , type(changeType)
@@ -159,7 +159,7 @@ public:
 
     void emitCompletionSignal() override;
 
-    QVector<Akonadi::Item::Id> mItemIds;
+    QList<Akonadi::Item::Id> mItemIds;
 };
 
 class AtomicOperation
@@ -236,7 +236,7 @@ public:
 
 private:
     Q_DISABLE_COPY(AtomicOperation)
-    QVector<Change::Ptr> m_changes;
+    QList<Change::Ptr> m_changes;
     bool m_wasRolledback = false;
     Akonadi::TransactionSequence *m_transaction = nullptr; // constructed in first use
     IncidenceChangerPrivate *m_incidenceChangerPrivate = nullptr;
@@ -302,7 +302,7 @@ public:
     Akonadi::Collection mDefaultCollection;
     Akonadi::EntityTreeModel *mEntityTreeModel = nullptr;
     IncidenceChanger::DestinationPolicy mDestinationPolicy;
-    QVector<Akonadi::Item::Id> mDeletedItemIds;
+    QList<Akonadi::Item::Id> mDeletedItemIds;
     Change::List mPendingCreations; // Creations waiting for collections to be loaded
 
     History *mHistory = nullptr;

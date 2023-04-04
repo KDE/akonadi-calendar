@@ -15,7 +15,7 @@
 #include <QObject>
 
 struct UnitTestResult {
-    using List = QVector<UnitTestResult>;
+    using List = QList<UnitTestResult>;
     QString from;
     QStringList to;
     QStringList cc;
