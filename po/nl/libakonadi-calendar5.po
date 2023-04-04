@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2022-10-10 10:15+0200\n"
+"PO-Revision-Date: 2023-04-03 09:32+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -1247,18 +1247,16 @@ msgid "Error saving freebusy object"
 msgstr "Fout bij opslaan van vrij/bezet-object"
 
 #: searchcollectionhelper.cpp:113
-#, fuzzy, kde-format
-#| msgid "Send &Invitations"
+#, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr "U&itnodigingen verzenden"
+msgstr "Afgeslagen uitnodigingen"
 
 #: searchcollectionhelper.cpp:121
-#, fuzzy, kde-format
-#| msgid "Send &Invitations"
+#, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr "U&itnodigingen verzenden"
+msgstr "Openstaande uitnodigingen"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1712,71 +1710,59 @@ msgstr "Het geselecteerde voorval bewerken."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Uitzondering"
 
 #: todomodel.cpp:142 todomodel.cpp:178
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: todomodel.cpp:145 todomodel.cpp:181
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Nee"
 
 #: todomodel.cpp:159 todomodel.cpp:197
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Samenvatting"
 
 #: todomodel.cpp:442
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Herhalingen"
 
 #: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Prioriteit"
 
 #: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Voltooid"
 
 #: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Startdatum en tijd"
+msgstr "Begindatum"
 
 #: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Datum en tijd gereed"
+msgstr "Einddatum"
 
 #: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Voltooid"
@@ -1784,12 +1770,12 @@ msgstr "Voltooid"
 #: todomodel.cpp:454
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: todomodel.cpp:456
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Beschrijving"
 
 #: todopurger.cpp:61
 #, kde-format
