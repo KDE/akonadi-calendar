@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2022-11-13 23:07+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -605,48 +605,48 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Unbekannter Fehler"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Fehler beim Laden des  Kalenders."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Fehlermeldung: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Unbekannter Fehler beim Einlesen der iCal-Einladung"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Fehler beim Verarbeiten der Einladung oder Aktualisierung"
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Ungültiges Ereignis"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Ungültige Aktion: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Fehler beim Senden des Gegenvorschlags"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr ""
 "Es kann kein Editor zur Bearbeitung des Gegenvorschlags gestartet werden"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -654,7 +654,7 @@ msgstr ""
 "Der Eintrag „%1“ hat keine Teilnehmer. Daher wird keine Groupware-Nachricht "
 "versendet."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -905,14 +905,14 @@ msgstr "Frei/Belegt-Nachricht"
 msgid "Error while creating transport"
 msgstr "Fehler beim Erstellen des Versandwegs"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr ""
 "Fehler beim Abholen des Versandwegs, Einladungen können nicht versendet "
 "werden"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr ""

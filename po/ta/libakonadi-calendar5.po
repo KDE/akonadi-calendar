@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2022-11-08 21:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -557,53 +557,53 @@ msgstr ""
 msgid "Unknown error"
 msgstr ""
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr ""
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr ""
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr ""
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr ""
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr ""
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr ""
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr ""
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr ""
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -825,12 +825,12 @@ msgstr ""
 msgid "Error while creating transport"
 msgstr ""
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr ""
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr ""

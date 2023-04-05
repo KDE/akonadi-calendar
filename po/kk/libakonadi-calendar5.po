@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -597,53 +597,53 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Беймәлім қате"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Күнтізбе жүктелмеді"
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Қатенің хабарламасы: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "iCal шақыруын талдау беймәлім қатесі"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Шақыру не жаңартуды өңдеу кезінде қате орын алды."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Жарамсыз оқиға"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Жарамсыз әрекет: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Қарсы ұсынысты жіберу қатесі"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Қарсы ұсынысты өзгерту үшін редактор жегілмеді"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr "'%1' дегенде қатысушылары жоқ. Сондықтан топтық хат жіберілмеді."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -898,12 +898,12 @@ msgstr "Бос/Істе хабарламасы"
 msgid "Error while creating transport"
 msgstr "Тасымалдауын құру кездегі қате"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Тасымалдау қатесі. Шақырулар жіберілмеді"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Хатты шығыс жәшігіне кезекке қою қатесі: %1"

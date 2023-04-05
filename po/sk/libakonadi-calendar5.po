@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2022-04-07 17:45+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -598,47 +598,47 @@ msgstr "Jedna zmena patriaca skupine zmien zlyhala. Všetky zmeny budú vráten�
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Chyba pri načítavaní kalendára."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Chybová správa: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Neznáma chyba počas spracovania pozvánky iCal"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Chyba počas spracovávania pozvania alebo aktualizácie."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Neplatný výskyt"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Neplatná akcia: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Chyba posielania protinávrhu"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Nemôžem spustiť editor na úpravu protinávrhu"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -646,7 +646,7 @@ msgstr ""
 "Položka '%1' nemá žiadnych účastníkov. Teda nebude poslaná žiadna groupware "
 "správa."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -897,12 +897,12 @@ msgstr "Správa voľný zaneprázdnený"
 msgid "Error while creating transport"
 msgstr "Chyba počas vytvárania prenosu"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Chyba naťahovania prenosu. Nemôžem poslať pozvánky"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Chyba zaraďovania správy na poslanie: %1"

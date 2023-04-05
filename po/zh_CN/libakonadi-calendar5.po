@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2023-03-27 11:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -576,53 +576,53 @@ msgstr "更改失败，它属于一组更改。所有更改正在回滚。"
 msgid "Unknown error"
 msgstr "未知错误"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "加载日历时出错。"
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "错误信息：%1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "解析 iCal 邀请时发生未知错误"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "处理邀请或更新时出现错误。"
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "无效事件"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "无效操作：%1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "发送对案出错"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "无法启动编辑器以编辑对案"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr "项目“%1”没有参与者。因此没有要发送的群件信息。"
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -863,12 +863,12 @@ msgstr "忙碌空闲消息"
 msgid "Error while creating transport"
 msgstr "创建传输时出错"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "获取传输时出错。无法发送邀请。"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "消息排队出错，位于发件箱： %1"

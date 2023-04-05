@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2023-01-16 23:38-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -597,47 +597,47 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Erro desconhecido"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Erro ao carregar o calendário."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Mensagem de erro: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Ocorreu um erro desconhecido ao processar o convite iCal"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Ocorreu um erro ao processar um convite ou atualização."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Incidência inválida"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Ação inválida: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Erro ao enviar a contraproposta"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Não foi possível iniciar o editor para editar a contraproposta"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -645,7 +645,7 @@ msgstr ""
 "O item '%1' não possui participantes. Sendo assim, nenhuma mensagem de "
 "groupware será enviada."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -891,12 +891,12 @@ msgstr "Mensagem de Livre/Ocupado"
 msgid "Error while creating transport"
 msgstr "Erro ao criar o transporte"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Erro ao obter o transporte. Não foi possível enviar os convites"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Erro ao colocar a mensagem em espera na caixa de saída: %1"

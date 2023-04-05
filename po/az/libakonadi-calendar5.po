@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2022-07-03 14:28+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -601,47 +601,47 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Naməlum xəta"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Təqvimin yüklənməsində xəta."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Xəta ismarıcı: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "İCal dəvətini təhlil edərkən naməlum xəta"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Təhlil və yenilənmə zamanı xəta."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Səhv tədbir"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Səhv əməl: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Əks təklif göndərilməsində xəta"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Əks təklifə düzəliş üçün redaktor başladıla bilmədi"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -649,7 +649,7 @@ msgstr ""
 "\"%1\" elementində iştirak edən yoxdur. Buna görə heç bir qrup üçün ismarıc "
 "göndərilmir."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -900,12 +900,12 @@ msgstr "Sərbəst/Məşğul ismarıcı"
 msgid "Error while creating transport"
 msgstr "Köçürülmə yaradılmasında xəta"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Köçürülmənin alınmasında xəta. Dəvətlər göndərilə bilmədi"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "İsmarıcı göndərmə növbəsində yerləşdiilməsində xəta: %1"

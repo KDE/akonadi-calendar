@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2022-12-08 11:21+0100\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"PO-Revision-Date: 2023-04-04 06:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -590,54 +590,54 @@ msgstr ""
 msgid "Unknown error"
 msgstr "უცნობი შეცდომა"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "კალენდრის ჩატვირთვის შეცდომა."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "შეცდომის შეტყობინება: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "უცნობი შეცდომა iCal მოსაწვევის დამუშავებისას"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "მოსაწვევის ან განახლების დამუშავების შეცდომა."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "არასწორი გავლენა"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "არასწორი ქმედება: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "პირიქით შეთავაზების გაგზავნის შეცდომა"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "პირიქით შეთავაზების ჩასასწორებლად რედაქტორის გაშვების შეცდომა"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
 "ელემენტს '%1' დამსწრეები არ ჰყავს. ამიტომ ჯგუფური ელფოსტა არ გაიგზავნება."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -885,12 +885,12 @@ msgstr "თავისუფალი/დაკავებულის შე�
 msgid "Error while creating transport"
 msgstr "ტრანსპორტის შექმნის შეცდომა"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "ტრანსპორტის გამოთხოვის შეცდომა. მოსაწვევების გაგზავნა შეუძლებელია"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "ელფოსტის გამავლების სიაში ჩასმის შეცდომა: %1"
@@ -1239,13 +1239,13 @@ msgstr "თავისუფალი/დაკავებულის ობ�
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "უარყოფილი მოსაწვევები"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "მოსაწვევების გახსნა"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1697,71 +1697,59 @@ msgstr "მონიშნული გავლენის ჩასწორ�
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "გამონაკლისი"
 
 #: todomodel.cpp:142 todomodel.cpp:178
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "კი"
 
 #: todomodel.cpp:145 todomodel.cpp:181
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "არა"
 
 #: todomodel.cpp:159 todomodel.cpp:197
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "შეჯამება"
 
 #: todomodel.cpp:442
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "რეკურს"
 
 #: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "პრიორიტეტი"
 
 #: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "დასრულებულია"
 
 #: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "საწყისი თარიღი და დრო"
+msgstr "დაწყების თარიღი"
 
 #: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "გადაცილების თარიღი და დრო"
+msgstr "თარიღამდე"
 
 #: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "დასრულებულია"
@@ -1769,12 +1757,12 @@ msgstr "დასრულებულია"
 #: todomodel.cpp:454
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "ჭდეები"
 
 #: todomodel.cpp:456
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "აღწერა"
 
 #: todopurger.cpp:61
 #, kde-format

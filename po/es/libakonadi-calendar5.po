@@ -4,13 +4,13 @@
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
 # Javier Vinal <fjvinal@gmail.com>, 2011, 2013, 2014, 2015, 2016, 2018.
 # Javier Viñal <francisco-javie.vinal@seg-social.es>, 2013.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2022-10-10 23:45+0200\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"PO-Revision-Date: 2023-04-04 03:32+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.03.80\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -600,47 +600,47 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Error desconocido"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Error al cargar calendario."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Mensaje de error: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Error desconocido al analizar una invitación iCal"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Error al procesar una invitación o actualización."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Incidencia no válida"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Acción no válida: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Error al enviar contrapropuesta"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "No se ha podido iniciar el editor para editar la contrapropuesta"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -648,7 +648,7 @@ msgstr ""
 "El elemento «%1» no tiene asistentes. Por lo tanto, no se enviará ningún "
 "mensaje de colaboración."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -902,12 +902,12 @@ msgstr "Mensaje de disponibilidad"
 msgid "Error while creating transport"
 msgstr "Error en la creación del transporte"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Error al recuperar transporte. No es posible enviar invitaciones"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Error al encolar mensaje en la bandeja de salida: %1"
@@ -1264,13 +1264,13 @@ msgstr "Error al guardar objeto de disponibilidad"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Invitaciones declinadas"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Invitaciones abiertas"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1728,84 +1728,72 @@ msgstr "Editar la incidencia seleccionada."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Excepción"
 
 #: todomodel.cpp:142 todomodel.cpp:178
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: todomodel.cpp:145 todomodel.cpp:181
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: todomodel.cpp:159 todomodel.cpp:197
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Resumen"
 
 #: todomodel.cpp:442
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Se repite"
 
 #: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Prioridad"
 
 #: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
-msgstr "Terminada"
+msgstr "% completo"
 
 #: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Fecha y hora inicial"
+msgstr "Fecha de inicio"
 
 #: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Fecha y hora de vencimiento"
+msgstr "Fecha de vencimiento"
 
 #: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "Terminada"
+msgstr "Completada"
 
 #: todomodel.cpp:454
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Etiquetas"
 
 #: todomodel.cpp:456
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: todopurger.cpp:61
 #, kde-format

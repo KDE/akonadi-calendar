@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2022-12-29 16:16+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -605,47 +605,47 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Άγνωστο σφάλμα"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Σφάλμα φόρτωσης ημερολογίου."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Μήνυμα σφάλματος: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Άγνωστο σφάλμα στην ανάλυση πρόσκλησης iCal"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Σφάλμα στην επεξεργασία μιας πρόσκλησης ή στην ενημέρωση."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Μη έγκυρο περιστατικό"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Μη έγκυρη ενέργεια: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Σφάλμα αποστολής αντιπρότασης"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Αδυναμία εκκίνησης κειμενογράφου για την επεξεργασία της αντιπρότασης"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -653,7 +653,7 @@ msgstr ""
 "Το αντικείμενο '%1' δεν έχει συμμετέχοντες. Συνεπώς δεν θα σταλεί κανένα "
 "ομαδικό μήνυμα."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -904,12 +904,12 @@ msgstr "Μήνυμα διαθεσιμότητας"
 msgid "Error while creating transport"
 msgstr "Σφάλμα κατά τη δημιουργία μετσφοράς"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Σφάλμα προσκόμισης μεταφοράς. Αδυναμία αποστολής προσκλήσεων"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Σφάλμα εισαγωγής μηνύματος στη λίστα εξερχομένων: %1"

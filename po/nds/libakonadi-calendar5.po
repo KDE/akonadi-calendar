@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-05 00:48+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -602,47 +602,47 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Fehler bi't Laden vun en Kalenner"
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Fehlermellen: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Fehler bi't Inlesen vun en ICal-Inladen"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Fehler bi't Verarbeiden vun en Inladen oder Opfrischen."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Leeg Begeefnis"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Leeg Akschoon: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Fehler bi't Loosstüern vun en Gegenvörslag"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Editor för't Bewerken vun en Gegenvörslag lett sik nich opropen"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -650,7 +650,7 @@ msgstr ""
 "De Indrag \"%1\" hett keen Deelnehmers, keen Arbeitkoppel-Naricht warrt "
 "loosstüert."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -902,12 +902,12 @@ msgstr "Free-/Bunnen-Naricht"
 msgid "Error while creating transport"
 msgstr "Fehler bi't Opstellen vun en Överdreegmetood"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Överdreegmetood lett sik nich halen. Inladen laat sik nich loosstüern"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Fehler bi't Inregen vun en Naricht na den Postutgang: %1"
