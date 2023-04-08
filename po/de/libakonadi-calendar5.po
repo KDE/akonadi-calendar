@@ -1,7 +1,7 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Felix Schweighofer <felix.schweighofer@googlemail.com>, 2010.
 # Burkhard Lück <lueck@hube-lueck.de>, 2010, 2013, 2014, 2015, 2017, 2018, 2020.
-# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2013, 2016, 2020, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2013, 2016, 2020, 2022, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # Intevation GmbH, 2010.
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
