@@ -110,7 +110,6 @@ if (BUILD_QCH)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiCalendarQchTargets.cmake\")")
 endif()
 
-set(AKONADICALENDAR_KF6_COMPAT FALSE)
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiCalendarConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfig.cmake"
