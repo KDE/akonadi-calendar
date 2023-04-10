@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-05 00:48+0000\n"
-"PO-Revision-Date: 2022-10-10 18:28+0400\n"
+"PO-Revision-Date: 2023-04-06 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1212,13 +1212,13 @@ msgstr "خطأ أثناء حفظ كائن متفرّغ/مشغول"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "الدعوات المرفوضة"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "الدعوات المفتوحة"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1752,84 +1752,72 @@ msgstr "حرّر الحدوث المحدّد."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "استثناء"
 
 #: todomodel.cpp:142 todomodel.cpp:178
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "نعم"
 
 #: todomodel.cpp:145 todomodel.cpp:181
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "لا"
 
 #: todomodel.cpp:159 todomodel.cpp:197
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr "،"
 
 #: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
-msgstr "ملخّص"
+msgstr "الملخّص"
 
 #: todomodel.cpp:442
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "تتكرّر"
 
 #: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "الأولويّة"
 
 #: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "الاكتمال"
 
 #: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "تاريخ ووقت البدء"
+msgstr "تاريخ البدء"
 
 #: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "تاريخ الاستحقاق ووقته"
+msgstr "تاريخ الاستحقاق"
 
 #: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "الاكتمال"
+msgstr "اكتمل"
 
 #: todomodel.cpp:454
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "الوسوم"
 
 #: todomodel.cpp:456
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "الوصف"
 
 #: todopurger.cpp:61
 #, kde-format
