@@ -40,8 +40,7 @@ MailClient::~MailClient() = default;
 void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                const KIdentityManagement::Identity &identity,
                                bool bccMe,
-                               const QString &attachment,
-                               const QString &mailTransport)
+                               const QString &attachment)
 {
     Q_ASSERT(incidence);
     KCalendarCore::Attendee::List attendees = incidence->attendees();
@@ -104,7 +103,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
 
     const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
 
-    send(incidence, identity, from, to, cc, subject, body, false, bccMe, attachment, mailTransport);
+    send(incidence, identity, from, to, cc, subject, body, false, bccMe, attachment);
 }
 
 void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
@@ -112,8 +111,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
                                const QString &from,
                                bool bccMe,
                                const QString &attachment,
-                               const QString &sub,
-                               const QString &mailTransport)
+                               const QString &sub)
 {
     const QString to = incidence->organizer().fullName();
     QString subject = sub;
@@ -129,7 +127,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
 
     const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
 
-    send(incidence, identity, from, to, QString(), subject, body, false, bccMe, attachment, mailTransport);
+    send(incidence, identity, from, to, QString(), subject, body, false, bccMe, attachment);
 }
 
 void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
@@ -137,8 +135,7 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                         const QString &from,
                         bool bccMe,
                         const QString &recipients,
-                        const QString &attachment,
-                        const QString &mailTransport)
+                        const QString &attachment)
 {
     QString subject;
 
@@ -151,7 +148,7 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
 
     const QString body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
 
-    send(incidence, identity, from, recipients, QString(), subject, body, false, bccMe, attachment, mailTransport);
+    send(incidence, identity, from, recipients, QString(), subject, body, false, bccMe, attachment);
 }
 
 static QStringList extractEmailAndNormalize(const QString &email)
@@ -175,8 +172,7 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
                       const QString &body,
                       bool hidden,
                       bool bccMe,
-                      const QString &attachment,
-                      const QString &mailTransport)
+                      const QString &attachment)
 {
     Q_UNUSED(hidden)
     if (!MailTransport::TransportManager::self()->showTransportCreationDialog(nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
@@ -193,11 +189,11 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
     }
     qCDebug(AKONADICALENDAR_LOG) << "\nFrom:" << from << "\nTo:" << to << "\nCC:" << cc << "\nSubject:" << subject << "\nBody: \n"
                                  << body << "\nAttachment:\n"
-                                 << attachment << "\nmailTransport: " << mailTransport;
+                                 << attachment;
 
-    MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportByName(mailTransport);
+    MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportById(0, false); // get default transport if available
     if (!transport) {
-        qCritical() << "Error fetching transport; mailTransport" << mailTransport << MailTransport::TransportManager::self()->defaultTransportName();
+        qCritical() << "no mail transport configuration found!";
         Q_EMIT finished(ResultErrorFetchingTransport, i18n("Error fetching transport. Unable to send invitations"));
         return;
     }

@@ -51,24 +51,21 @@ public:
     void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,
                        bool bccMe,
-                       const QString &attachment = QString(),
-                       const QString &mailTransport = QString());
+                       const QString &attachment = QString());
 
     void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagement::Identity &identity,
                        const QString &from,
                        bool bccMe,
                        const QString &attachment = QString(),
-                       const QString &sub = QString(),
-                       const QString &mailTransport = QString());
+                       const QString &sub = QString());
 
     void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                 const KIdentityManagement::Identity &identity,
                 const QString &from,
                 bool bccMe,
                 const QString &recipients,
-                const QString &attachment = QString(),
-                const QString &mailTransport = QString());
+                const QString &attachment = QString());
 
     /**
       Sends mail with specified from, to and subject field and body as text.
@@ -85,8 +82,6 @@ public:
       without opening a composer window.
       @param bcc if true, send a blind carbon copy to the message sender
       @param attachment optional attachment (raw data)
-      @param mailTransport defines the mail transport method. See here the
-      kdepimlibs/mailtransport library.
     */
     void send(const KCalendarCore::IncidenceBase::Ptr &incidence,
               const KIdentityManagement::Identity &identity,
@@ -97,8 +92,7 @@ public:
               const QString &body,
               bool hidden = false,
               bool bccMe = false,
-              const QString &attachment = QString(),
-              const QString &mailTransport = QString());
+              const QString &attachment = QString());
 
 private:
     void handleQueueJobFinished(KJob *job);

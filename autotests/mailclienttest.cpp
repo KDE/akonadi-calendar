@@ -104,7 +104,6 @@ private Q_SLOTS:
         QTest::addColumn<KIdentityManagement::Identity>("identity");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
-        QTest::addColumn<QString>("transport");
         QTest::addColumn<MailClient::Result>("expectedResult");
         QTest::addColumn<int>("expectedTransportId");
         QTest::addColumn<QString>("expectedFrom");
@@ -116,7 +115,6 @@ private Q_SLOTS:
         KIdentityManagement::Identity identity;
         bool bccMe;
         QString attachment;
-        QString transport;
         MailClient::Result expectedResult = MailClient::ResultNoAttendees;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         const QString expectedFrom = QStringLiteral("unittests@dev.nul"); // from tests/unittestenv/kdehome/share/config/emailidentities
@@ -126,16 +124,15 @@ private Q_SLOTS:
         QStringList toCcList;
         QStringList toBccList;
         //----------------------------------------------------------------------------------------------
-        QTest::newRow("No attendees") << incidence << identity << bccMe << attachment << transport << expectedResult << -1 << QString() << toList << toCcList
-                                      << toBccList;
+        QTest::newRow("No attendees") << incidence << identity << bccMe << attachment << expectedResult << -1 << QString() << toList << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One attendee, but without e-mail
         KCalendarCore::Attendee attendee(QStringLiteral("name1"), QString());
         incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->addAttendee(attendee);
         expectedResult = MailClient::ResultReallyNoAttendees;
-        QTest::newRow("No attendees with email") << incidence << identity << bccMe << attachment << transport << expectedResult << -1 << QString() << toList
-                                                 << toCcList << toBccList;
+        QTest::newRow("No attendees with email") << incidence << identity << bccMe << attachment << expectedResult << -1 << QString() << toList << toCcList
+                                                 << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
@@ -144,19 +141,18 @@ private Q_SLOTS:
         incidence->setOrganizer(organizer);
         expectedResult = MailClient::ResultSuccess;
         toList << QStringLiteral("test@foo.org");
-        QTest::newRow("One attendee") << incidence << identity << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                                      << toList << toCcList << toBccList;
+        QTest::newRow("One attendee") << incidence << identity << bccMe << attachment << expectedResult << expectedTransportId << expectedFrom << toList
+                                      << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
         incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
-        QString invalidTransport = QStringLiteral("foo");
         expectedResult = MailClient::ResultSuccess;
         // Should default to the default transport
-        QTest::newRow("Invalid transport") << incidence << identity << bccMe << attachment << invalidTransport << expectedResult << expectedTransportId
-                                           << expectedFrom << toList << toCcList << toBccList;
+        QTest::newRow("Invalid transport") << incidence << identity << bccMe << attachment << expectedResult << expectedTransportId << expectedFrom << toList
+                                           << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // One valid attendee, and bcc me
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
@@ -167,8 +163,8 @@ private Q_SLOTS:
         // Should default to the default transport
         toBccList.clear();
         toBccList << QStringLiteral("unittests@dev.nul");
-        QTest::newRow("Test bcc") << incidence << identity << /*bccMe*/ true << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                                  << toList << toCcList << toBccList;
+        QTest::newRow("Test bcc") << incidence << identity << /*bccMe*/ true << attachment << expectedResult << expectedTransportId << expectedFrom << toList
+                                  << toCcList << toBccList;
         //----------------------------------------------------------------------------------------------
         // Test CC list
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
@@ -188,8 +184,8 @@ private Q_SLOTS:
 
         toCcList.clear();
         toCcList << QStringLiteral("optional@foo.org") << QStringLiteral("non@foo.org");
-        QTest::newRow("Test cc") << incidence << identity << /*bccMe*/ true << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                                 << toList << toCcList << toBccList;
+        QTest::newRow("Test cc") << incidence << identity << /*bccMe*/ true << attachment << expectedResult << expectedTransportId << expectedFrom << toList
+                                 << toCcList << toBccList;
     }
 
     void testMailAttendees()
@@ -198,7 +194,6 @@ private Q_SLOTS:
         QFETCH(KIdentityManagement::Identity, identity);
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
-        QFETCH(QString, transport);
         QFETCH(MailClient::Result, expectedResult);
         QFETCH(int, expectedTransportId);
         QFETCH(QString, expectedFrom);
@@ -209,7 +204,7 @@ private Q_SLOTS:
         FakeMessageQueueJob::sUnitTestResults.clear();
 
         mPendingSignals = 1;
-        mMailClient->mailAttendees(incidence, identity, bccMe, attachment, transport);
+        mMailClient->mailAttendees(incidence, identity, bccMe, attachment);
         waitForSignals();
 
         if (mLastResult != expectedResult) {
@@ -243,7 +238,6 @@ private Q_SLOTS:
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
         QTest::addColumn<QString>("subject");
-        QTest::addColumn<QString>("transport");
         QTest::addColumn<MailClient::Result>("expectedResult");
         QTest::addColumn<int>("expectedTransportId");
         QTest::addColumn<QString>("expectedFrom");
@@ -257,7 +251,6 @@ private Q_SLOTS:
         bool bccMe;
         QString attachment;
         QString subject = QStringLiteral("subject1");
-        QString transport;
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
@@ -270,14 +263,14 @@ private Q_SLOTS:
         QString expectedSubject;
         //----------------------------------------------------------------------------------------------
         expectedSubject = subject;
-        QTest::newRow("test1") << incidence << identity << from << bccMe << attachment << subject << transport << expectedResult << expectedTransportId
-                               << expectedFrom << toList << toBccList << expectedSubject;
+        QTest::newRow("test1") << incidence << identity << from << bccMe << attachment << subject << expectedResult << expectedTransportId << expectedFrom
+                               << toList << toBccList << expectedSubject;
         //----------------------------------------------------------------------------------------------
         expectedSubject = QStringLiteral("Free Busy Message");
         incidence = KCalendarCore::IncidenceBase::Ptr(new KCalendarCore::FreeBusy());
         incidence->setOrganizer(organizer);
-        QTest::newRow("FreeBusy") << incidence << identity << from << bccMe << attachment << subject << transport << expectedResult << expectedTransportId
-                                  << expectedFrom << toList << toBccList << expectedSubject;
+        QTest::newRow("FreeBusy") << incidence << identity << from << bccMe << attachment << subject << expectedResult << expectedTransportId << expectedFrom
+                                  << toList << toBccList << expectedSubject;
     }
 
     void testMailOrganizer()
@@ -288,7 +281,6 @@ private Q_SLOTS:
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
         QFETCH(QString, subject);
-        QFETCH(QString, transport);
         QFETCH(MailClient::Result, expectedResult);
         QFETCH(int, expectedTransportId);
         QFETCH(QString, expectedFrom);
@@ -298,7 +290,7 @@ private Q_SLOTS:
         FakeMessageQueueJob::sUnitTestResults.clear();
 
         mPendingSignals = 1;
-        mMailClient->mailOrganizer(incidence, identity, from, bccMe, attachment, subject, transport);
+        mMailClient->mailOrganizer(incidence, identity, from, bccMe, attachment, subject);
         waitForSignals();
         QCOMPARE(mLastResult, expectedResult);
 
@@ -321,7 +313,6 @@ private Q_SLOTS:
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("recipients");
         QTest::addColumn<QString>("attachment");
-        QTest::addColumn<QString>("transport");
         QTest::addColumn<MailClient::Result>("expectedResult");
         QTest::addColumn<int>("expectedTransportId");
         QTest::addColumn<QString>("expectedFrom");
@@ -334,7 +325,6 @@ private Q_SLOTS:
         bool bccMe;
         const QString recipients = QStringLiteral("unittests@dev.nul");
         QString attachment;
-        QString transport;
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
@@ -343,8 +333,8 @@ private Q_SLOTS:
         toList << QLatin1String(s_ourEmail);
         QStringList toBccList;
         //----------------------------------------------------------------------------------------------
-        QTest::newRow("test1") << incidence << identity << from << bccMe << recipients << attachment << transport << expectedResult << expectedTransportId
-                               << expectedFrom << toList << toBccList;
+        QTest::newRow("test1") << incidence << identity << from << bccMe << recipients << attachment << expectedResult << expectedTransportId << expectedFrom
+                               << toList << toBccList;
     }
 
     void testMailTo()
@@ -355,7 +345,6 @@ private Q_SLOTS:
         QFETCH(bool, bccMe);
         QFETCH(QString, recipients);
         QFETCH(QString, attachment);
-        QFETCH(QString, transport);
         QFETCH(MailClient::Result, expectedResult);
         QFETCH(int, expectedTransportId);
         QFETCH(QString, expectedFrom);
@@ -364,7 +353,7 @@ private Q_SLOTS:
         FakeMessageQueueJob::sUnitTestResults.clear();
 
         mPendingSignals = 1;
-        mMailClient->mailTo(incidence, identity, from, bccMe, recipients, attachment, transport);
+        mMailClient->mailTo(incidence, identity, from, bccMe, recipients, attachment);
         waitForSignals();
         QCOMPARE(mLastResult, expectedResult);
         UnitTestResult unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
