@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2022-05-15 22:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -241,36 +241,20 @@ msgid ""
 msgstr ""
 "KOrganizer가 이벤트 참석자들에게 보낼 메일의 복사본을 받으려면 선택하십시오."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "이메일 메시지를 보낼 때 사용할 전송 방법"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"지정하면 모든 그룹웨어 이메일을 다음 전송 방법으로 보냅니다. 지정하지 않으면 "
-"기본값을 사용합니다."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Outlook 스타일 역제안 보내기"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "호스트 이름과 가져오기 메일 주소 일치 여부 확인"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -850,7 +834,7 @@ msgstr ""
 "이 이벤트 초대장을 이전에 수락했습니다. 주최자에게 초대 거절 메시지를 보내시"
 "겠습니까?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "역제안: %1"
@@ -896,7 +880,7 @@ msgstr "전송 방식을 가져올 수 없습니다. 초대장을 보낼 수 없
 msgid "Error queuing message in outbox: %1"
 msgstr "보낼 편지함에 메시지를 추가할 수 없음: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "이메일 보내기 오류: "
@@ -1765,6 +1749,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "완료된 할 일 비우는 중"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "이메일 메시지를 보낼 때 사용할 전송 방법"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "지정하면 모든 그룹웨어 이메일을 다음 전송 방법으로 보냅니다. 지정하지 않으"
+#~ "면 기본값을 사용합니다."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "지정한 파일이 없어서 가져오기를 중단합니다."

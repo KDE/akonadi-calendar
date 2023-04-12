@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2023-04-10 14:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -239,34 +239,20 @@ msgid ""
 "your request to event attendees."
 msgstr "勾选此框获取 KOrganizer 按照您的要求发送给参与者的所有邮件消息的副本。"
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "用于发送邮件消息的邮件传输"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr "如果制定所有，群发邮件将会使用此传输。否则将使用默认传输。"
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "发送类似 Outlook 的拟对案"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "检查主机名和检索电子邮件地址是否匹配"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -827,7 +813,7 @@ msgid ""
 msgstr ""
 "您之前接受了此活动的邀请。您想要向该活动的组织者重新发送拒绝邀请的回复吗？"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "对案：%1"
@@ -873,7 +859,7 @@ msgstr "获取传输时出错。无法发送邀请。"
 msgid "Error queuing message in outbox: %1"
 msgstr "消息排队出错，位于发件箱： %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "发送邮件时出错："
@@ -1703,3 +1689,11 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "正在删除已完成待办事项"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "用于发送邮件消息的邮件传输"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr "如果制定所有，群发邮件将会使用此传输。否则将使用默认传输。"

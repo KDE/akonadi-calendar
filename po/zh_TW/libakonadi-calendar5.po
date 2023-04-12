@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2023-01-07 04:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -241,34 +241,20 @@ msgstr ""
 "勾選此選項的話，KOrganizer 送出電子郵件給事件參加者時，也會送一份複本給擁有"
 "者。"
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "用來發送電子郵件的傳送"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr "如果全部指定，群組電子郵件會使用此傳送。否則，會使用預設的。"
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "送出類似 Outlook 虛擬反提案"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "檢查主機名稱與接收到的電子郵件地址是否相符"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -829,7 +815,7 @@ msgid ""
 msgstr ""
 "您已接受此事件的邀請。您要送出狀態變更資訊給此事件的發起者，告訴他您拒絕嗎？"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "反提案：%1"
@@ -875,7 +861,7 @@ msgstr "取得傳輸時發生錯誤。無法送出邀請"
 msgid "Error queuing message in outbox: %1"
 msgstr "將信件放入寄件匣時發生錯誤：%1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "傳送郵件時發生錯誤："
@@ -1718,6 +1704,14 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "清除已完成的待辦事項"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "用來發送電子郵件的傳送"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr "如果全部指定，群組電子郵件會使用此傳送。否則，會使用預設的。"
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "指定的檔案不存在。匯入中止。"

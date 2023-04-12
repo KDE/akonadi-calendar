@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2022-04-07 17:45+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -242,37 +242,21 @@ msgstr ""
 "Zaškrtnite toto pole, ak chcete dostať kópiu všetkých e-mailových správ, "
 "ktoré KOrganizer odošle na vašu požiadavku účastníkom udalosti."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "Prenos pošty na použitie pre posielanie e-mailových správ"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Ak je určené všetko, groupware e-maily použijú tento prenos. Inak sa použije "
-"predvolený."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Poslať pseudo protinávrhy v štýle Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
 "Skontrolovať, či zodpovedá názov hostiteľa a e-mailová adresa získavania"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -861,7 +845,7 @@ msgstr ""
 "Predtým ste prijali pozvanie na túto akciu. Chcete poslať aktualizovanú "
 "odpoveď odmietajúcu pozvanie organizátorovi ?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Protinávrh: %1"
@@ -907,7 +891,7 @@ msgstr "Chyba naťahovania prenosu. Nemôžem poslať pozvánky"
 msgid "Error queuing message in outbox: %1"
 msgstr "Chyba zaraďovania správy na poslanie: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Chyba posielania e-mailu: "
@@ -1831,6 +1815,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Čistím dokončené úlohy"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "Prenos pošty na použitie pre posielanie e-mailových správ"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Ak je určené všetko, groupware e-maily použijú tento prenos. Inak sa "
+#~ "použije predvolený."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Určený súbor neexistuje, ruším import."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -246,37 +246,21 @@ msgstr ""
 "Označite ovu kućicu da dobijete kopiju poruka elektronske pošte koje vam "
 "KOrganizer šalje na zahtjev učesnicima događaja"
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "Transport pošte za slanje poruka elektronske pošte"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Ako je navedeno sve, grupna pošta će koristiti ovaj transport, U protivnom "
-"se koristi podrazumijevana"
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Pošalji pseudo kontra prijedloge u Outlook stilu"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
 "Provjeri da li se slažu ime računara i adresa elektronske pošte za odgovor"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -869,7 +853,7 @@ msgstr ""
 "Prethodno ste prihvatili poziv na ovaj događaj. Želite li poslati ažurirani "
 "odgovor organizatoru da odbijate poziv?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Kontra prijedlog %1"
@@ -916,7 +900,7 @@ msgstr "Greška u dohvatanju transporta. Ne može se poslati poziv"
 msgid "Error queuing message in outbox: %1"
 msgstr "Greška u stavljanju u red poruke u odlaznoj pošti %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Gerška slanaj elektronske pošte "
@@ -1861,6 +1845,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Ukloni završene zadatke"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "Transport pošte za slanje poruka elektronske pošte"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Ako je navedeno sve, grupna pošta će koristiti ovaj transport, U "
+#~ "protivnom se koristi podrazumijevana"
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Naznaceni file nepostoji,obustavi uvoz"

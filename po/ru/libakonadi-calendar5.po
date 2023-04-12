@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2022-10-07 16:20+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -252,36 +252,20 @@ msgstr ""
 "Отметьте этот флажок, чтобы получать копии всех почтовых сообщений-запросов, "
 "которые KOrganizer посылает участникам событий."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "Почтовый транспорт для отправки сообщений"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Если определён, этот транспорт будет использоваться для групповой рассылки. "
-"В противном случае будет задействован транспорт по умолчанию."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Посылать контрпредложения как это делает Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Проверять, соответствует ли адрес сервера почтовому адресу получателя"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -879,7 +863,7 @@ msgstr ""
 "Ранее вы приняли приглашение на это событие. Отправить изменённый ответ "
 "организатору, отменившему приглашение?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Встречное предложение: %1"
@@ -925,7 +909,7 @@ msgstr "Ошибка получения транспорта. Отправить
 msgid "Error queuing message in outbox: %1"
 msgstr "Ошибка помещения сообщения в очередь на отправку: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Ошибка отправки сообщения: "
@@ -1864,6 +1848,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Удаление выполненных задач"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "Почтовый транспорт для отправки сообщений"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Если определён, этот транспорт будет использоваться для групповой "
+#~ "рассылки. В противном случае будет задействован транспорт по умолчанию."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Указанный файл не существует, импорт прерывается."

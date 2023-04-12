@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2022-05-08 19:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -247,36 +247,20 @@ msgstr ""
 "Markera rutan för att få en kopia av all e-post som Korganizer skickar på "
 "begäran av dig till deltagare i händelser."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "Brevöverföring att använda för att skicka e-post"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Om angiven, kommer alla grupprogrambrev använda den här överföringen. Annars "
-"används standardöverföringen."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Skicka Outlook-liknande pseudomotförslag"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Kontrollera om värddatornamn och e-postadress för hämtning stämmer"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -863,7 +847,7 @@ msgstr ""
 "Du har tidigare accepterat en inbjudan till aktiviteten. Vill du skicka ett "
 "uppdaterat svar till händelsens organisatör som avböjer inbjudan?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Motförslag: %1"
@@ -909,7 +893,7 @@ msgstr "Fel när överföring skulle hämtas. Kan inte skicka inbjudningarna"
 msgid "Error queuing message in outbox: %1"
 msgstr "Fel när brev skulle köas i utkorg: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Fel när e-post skulle skickas: "
@@ -1821,6 +1805,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Rensar färdiga uppgifter"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "Brevöverföring att använda för att skicka e-post"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Om angiven, kommer alla grupprogrambrev använda den här överföringen. "
+#~ "Annars används standardöverföringen."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Den angivna filen finns inte. Avbryter import."
