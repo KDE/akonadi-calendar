@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2022-07-03 14:28+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -242,36 +242,20 @@ msgstr ""
 "KOrganizer-in sorğunuza görə tədbir iştirakçılarına göndərdiyi bütün e-poçt "
 "mesajlarının surətini əldə etmək üçün bu xananı seçin."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "E-poçt mesajları göndərmək üçün poçt köçürməsi"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Hamısı göstərilibsə, qrup proqramları elektron poçtları bu köçürmədən "
-"istifadə edəcək. Əks təqdirdə, standart olan istifadə ediləcəkdir."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Outlook-da olduğu kimi təkliflərin həqiqi olmayan sayını göndərin"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Serverin ünvanının poçt ünvanı ilə uyğunluğunu yoxlayın"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -864,7 +848,7 @@ msgstr ""
 "Daha əvvəl bu tədbirə dəvətnamə qəbul etmisiniz. Dəvətini qəbul etmədiyiniz "
 "təşkilatçıya yenilənmiş cavab göndərmək istəyirsiniz?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Qarşılıqlı təklif: %1"
@@ -910,7 +894,7 @@ msgstr "Köçürülmənin alınmasında xəta. Dəvətlər göndərilə bilmədi
 msgid "Error queuing message in outbox: %1"
 msgstr "İsmarıcı göndərmə növbəsində yerləşdiilməsində xəta: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "E-poçt göndərilməsində xəta: "
@@ -1814,6 +1798,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "İcra olunmuş tapşırıqların təmizlənməsi"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "E-poçt mesajları göndərmək üçün poçt köçürməsi"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Hamısı göstərilibsə, qrup proqramları elektron poçtları bu köçürmədən "
+#~ "istifadə edəcək. Əks təqdirdə, standart olan istifadə ediləcəkdir."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Göstərilən fayl mövcud deyil, idxal ləğv edilir."

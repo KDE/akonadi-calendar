@@ -9,18 +9,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
-"PO-Revision-Date: 2023-04-03 08:56+0200\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
+"PO-Revision-Date: 2023-04-13 09:53+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -249,37 +249,21 @@ msgstr ""
 "Označite to polje, da boste prejeli kopijo vseh sporočil, ki jih KOrganizer "
 "na vašo zahtevo pošlje udeležencem dogodka."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "Prenos pošte uporabljen za pošiljanje e-poštnih sporočil"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Če je prenos naveden, ga bodo uporabljala vsa e-poštna sporočila programov "
-"za skupinsko delo. V nasprotnem primeru bo uporabljen privzet."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Pošlji navidezne nasprotne predloge, podobne tistim iz Outlooka"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
 "Preveri ali se ujemata ime gostitelja in e-poštni naslov za pridobivanje"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -857,7 +841,7 @@ msgstr ""
 "Predhodno ste že sprejeli vabilo na ta dogodek. Ali želite organizatorju "
 "poslati posodobljen odgovor, da zavračate povabilo?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Nasprotni predlog: %1"
@@ -903,7 +887,7 @@ msgstr "Napaka med pridobivanjem prenosa. Povabil ni mogoče poslati"
 msgid "Error queuing message in outbox: %1"
 msgstr "Napaka postavljanja sporočila v čakalno vrsto odhajajočih: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Napaka med pošiljanjem pošte: "
@@ -1812,6 +1796,16 @@ msgstr "Opis"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Čiščenje zaključenih opravil"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "Prenos pošte uporabljen za pošiljanje e-poštnih sporočil"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Če je prenos naveden, ga bodo uporabljala vsa e-poštna sporočila "
+#~ "programov za skupinsko delo. V nasprotnem primeru bo uporabljen privzet."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Navedena datoteka ne obstaja. Prekinjanje uvažanja."

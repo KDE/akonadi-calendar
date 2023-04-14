@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# Kishore G <kishore96@gmail.com>, 2022.
+# Kishore G <kishore96@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
-"PO-Revision-Date: 2022-11-08 21:42+0530\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
+"PO-Revision-Date: 2023-04-09 12:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,12 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.03.90\n"
 
 #: calendarbase.cpp:264
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
+"புதுப்பிக்க வேண்டிய நிகழ்வைக் கண்டுபிடிக்க முடியவில்லை. அது சமீபத்தில் நீக்கப்பட்டிருக்கக் "
+"கூடும்."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -45,7 +47,7 @@ msgstr ""
 #: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
-msgstr ""
+msgstr "நிகழ்வுகளை நீக்குவதில் சிக்கல்: %1"
 
 #: calendarclipboard.cpp:175
 #, kde-format
@@ -53,12 +55,14 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
+"\"%1\" என்பதில் சார்ந்த செய்யவேண்டியவை உள்ளன. இதை மட்டும் வெட்டி சார்ந்தவற்றை சுயசார்பாக்க "
+"வேண்டுமா, அல்லது சார்ந்தவற்றுடன் சேர்த்து இதை வெட்ட வேண்டுமா?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr ""
+msgstr "கேயார்கனைசர் உறுதிப்பாடு"
 
 #: calendarclipboard.cpp:181
 #, kde-format
@@ -76,6 +80,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
+"\"%1\" என்பதில் சார்ந்த செய்யவேண்டியவை உள்ளன. இதை மட்டும் நகலெடுக்க வேண்டுமா, அல்லது "
+"சார்ந்தவற்றுடன் சேர்த்து இதை நகலெடுக்க வேண்டுமா?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
@@ -91,7 +97,7 @@ msgstr "அனைத்தையும் நகலெடு"
 #, kde-format
 msgctxt "@title:column calendar event summary"
 msgid "Summary"
-msgstr ""
+msgstr "விவரணம்"
 
 #: calendarmodel.cpp:194
 #, kde-format
@@ -139,49 +145,49 @@ msgstr "நாள்காட்டி"
 #: calendarsettings.kcfg:23
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா அறிவிப்பு முகவரி"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லாத விவரங்களை அறிவிப்பதற்கான முகவரி"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
 #, kde-format
 msgid "Free/Busy Publish Username"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா அறிவிப்பு பயனர்ப்பெயர்"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:29
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லாத விவரங்களை அறிவிப்பதற்கான பயனர்ப்பெயர்"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:33
 #, kde-format
 msgid "Free/Busy Publish Password"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா அறிவிப்பு கடவுச்சொல்"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லாத விவரங்களை அறிவிப்பதற்கான கடவுச்சொல்"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லாத நேர விவரங்களை தானாக பெறு"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:50
 #, kde-format
 msgid "Use full email address for retrieval"
-msgstr ""
+msgstr "பெறுவதற்கு முழு மின்னஞ்சல் முகவரியை பயன்படுத்து"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:51
@@ -197,31 +203,31 @@ msgstr ""
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா பதிவிறக்க முகவரி"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
 #, kde-format
 msgid "Free/Busy Retrieval Username"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா பதிவிறக்க பயனர்ப்பெயர்"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:64
 #, kde-format
 msgid "Free/Busy Retrieval Password"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா பதிவிறக்க கடவுச்சொல்"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:65
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லாத விவரங்களைப் பெறுவதற்கான கடவுச்சொல்"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:76
 #, kde-format
 msgid "Send copy to owner when mailing events"
-msgstr ""
+msgstr "நிகழ்வுகளைப் பற்றி அஞ்சலனுப்பும்போது உரிமையாளருக்கும் நகலனுப்பு"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:77
@@ -231,34 +237,20 @@ msgid ""
 "your request to event attendees."
 msgstr ""
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr ""
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr ""
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
-msgstr ""
+msgstr "புரவன் பெயரும் மின்னஞ்சல் முகவரியும் ஒத்துப்போவதை கட்டாயப்படுத்து"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -359,17 +351,19 @@ msgid ""
 "Failed to download free/busy data from: %1\n"
 "Reason: %2"
 msgstr ""
+"வேலையுள்ள/இல்லா விவரங்களை இங்கிருந்து பெறுவது தோல்வியடைந்த‍து: %1\n"
+"காரணம்: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr ""
+msgstr "வேலையுள்ள/இல்லா பதிவிறக்க சிக்கல்"
 
 #: freebusymanager.cpp:399
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr ""
+msgstr "பின்வருவது வழங்கிய விவரங்களைப் புரிந்துகொள்ள முடியவில்லை: %1"
 
 #: freebusymanager.cpp:414
 #, kde-format
@@ -789,7 +783,7 @@ msgid ""
 "an updated response to the organizer declining the invitation?"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr ""
@@ -835,7 +829,7 @@ msgstr ""
 msgid "Error queuing message in outbox: %1"
 msgstr ""
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "அஞ்சலை அனுப்புவதில் சிக்கல்: "
@@ -1688,3 +1682,6 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr ""
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "மின்னஞ்சல்களை அனுப்ப பயன்படுத்தவேண்டிய அஞ்சல் கணக்கு"

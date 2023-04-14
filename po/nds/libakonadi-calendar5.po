@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -247,36 +247,20 @@ msgstr ""
 "Maak dit an, wenn Du en Kopie vun all Nettbreven hebben wullt, de KOrganizer "
 "för Di de Deelnehmers vun Begeefnissen tostüert."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "Överdreegmetood, de Du för't Loosstüern vun Nettbreven bruken wullt"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Wenn angeven, bruukt Arbeitkoppel-Nettbreven disse Överdreegmetood, anners "
-"de Standardmetood."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "As-wenn-Gegenvörslääg loosstüern, so as Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Kieken, wat Reeknernaam un Afhaaladress tosamenpasst"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -866,7 +850,7 @@ msgstr ""
 "Du hest en Inladen för dit Begeefnis vördem al annahmen. Wullt Du den "
 "Utrichter de opfrischte Anter tostüern, Du wiest de Inladen af?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Gegenvörslag: %1"
@@ -912,7 +896,7 @@ msgstr "Överdreegmetood lett sik nich halen. Inladen laat sik nich loosstüern"
 msgid "Error queuing message in outbox: %1"
 msgstr "Fehler bi't Inregen vun en Naricht na den Postutgang: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Fehler bi't Loosstüern vun Nettpost: "
@@ -1825,6 +1809,16 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Afslaten Opgaven warrt oprüümt"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "Överdreegmetood, de Du för't Loosstüern vun Nettbreven bruken wullt"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "Wenn angeven, bruukt Arbeitkoppel-Nettbreven disse Överdreegmetood, "
+#~ "anners de Standardmetood."
 
 #~ msgid "The specified file doesn't exist, aborting import."
 #~ msgstr "Dat gifft de angeven Datei nich, Import warrt afbraken."

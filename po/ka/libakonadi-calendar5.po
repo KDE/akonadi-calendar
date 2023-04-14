@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2023-04-04 06:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -242,37 +242,21 @@ msgstr ""
 "ჩართეთ, თუ KOrganizer-ის მიერ მოვლენის წევრებისათვის გაგზავნილი ელფოსტების "
 "ასლების მიღება გნებავთ."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "ელფოსტის გასაგზავნად გამოყენებული ტრანსპორტი"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"თუ მითითებულია ყველა, ამ ტრანსპორტს ჯგუფური ელფოსტები გამოიყენებენ. "
-"წინააღმდეგ შემთხვევაში გამოყენებული იქნება ნაგულისხმები."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Outlook-ის მსგავსი ფსევდო-პირიქით შეთავაზების გაგზავნა"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
 "შეამოწმეთ, ჰოსტის სახელი და მიმღები ელფოსტის მისამართი ერთმანეთს თუ ემთხვევა"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -849,7 +833,7 @@ msgstr ""
 "ამ მოვლენის მოსაწვევს უკვე დაეთანხმეთ. გნებავთ ორგანიზატორს უარყოფის შესახებ "
 "განახლებული შეტყობინება გაუგზავნოთ?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "პირიქით შეთავაზება: %1"
@@ -895,7 +879,7 @@ msgstr "ტრანსპორტის გამოთხოვის შე�
 msgid "Error queuing message in outbox: %1"
 msgstr "ელფოსტის გამავლების სიაში ჩასმის შეცდომა: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "ელფოსტის გაგზავნის შეცდომა: "
@@ -1768,3 +1752,13 @@ msgstr "აღწერა"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "დასრულებული განრიგის წაშლა"
+
+#~ msgid "Mail transport to use for sending e-mail messages"
+#~ msgstr "ელფოსტის გასაგზავნად გამოყენებული ტრანსპორტი"
+
+#~ msgid ""
+#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
+#~ "the default one will be used."
+#~ msgstr ""
+#~ "თუ მითითებულია ყველა, ამ ტრანსპორტს ჯგუფური ელფოსტები გამოიყენებენ. "
+#~ "წინააღმდეგ შემთხვევაში გამოყენებული იქნება ნაგულისხმები."
