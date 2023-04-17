@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:46+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2013-12-02 20:08+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -246,36 +246,20 @@ msgstr ""
 "Kryss av i denne boksen for å få en kopi av alle de e-postene som KOrganizer "
 "på din oppfordring sender til hendelsesdeltakerne."
 
-#. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:82
-#, kde-format
-msgid "Mail transport to use for sending e-mail messages"
-msgstr "E-posttransport som skal brukes for å sende e-postmeldinger"
-
-#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:83
-#, kde-format
-msgid ""
-"If specified all, groupware e-mails will use this transport. Otherwise, the "
-"default one will be used."
-msgstr ""
-"Hvis dette er oppgitt vil alle e-poster fra gruppevare bruke denne "
-"transporten, ellers brukes standardtransporten."
-
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:85
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Send pseudo-motforslag som likner Outlooks"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:96
+#: calendarsettings.kcfg:90
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Sjekk at vertsnavn stemmer med e-postadressen for henting"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:97
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
@@ -288,86 +272,87 @@ msgstr ""
 "For eksempel. hvis dette er slått på, så virker det ikke å lete etter ledig/"
 "opptatt-informasjon for per@mittdomene.no på tjeneren  www.dittdomene.no."
 
-#: calendarutils.cpp:97 calendarutils.cpp:115 calendarutils.cpp:163
+#: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
+#: todomodel.cpp:458
 #, kde-format
 msgid "Calendar"
 msgstr ""
 
-#: calendarutils.cpp:103 calendarutils.cpp:115 calendarutils.cpp:165
+#: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
 #, kde-format
 msgid "Tasks"
 msgstr ""
 
-#: calendarutils.cpp:108 calendarutils.cpp:115 calendarutils.cpp:167
+#: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
 #, kde-format
 msgid "Journal"
 msgstr ""
 
-#: calendarutils.cpp:113 calendarutils.cpp:115 calendarutils.cpp:169
+#: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
 #, kde-format
 msgid "Notes"
 msgstr ""
 
-#: calendarutils.cpp:128
+#: calendarutils.cpp:131
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:131
+#: calendarutils.cpp:134
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr ""
 
-#: calendarutils.cpp:134
+#: calendarutils.cpp:137
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr ""
 
-#: calendarutils.cpp:136
+#: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr ""
 
-#: calendarutils.cpp:140
+#: calendarutils.cpp:143
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:147
+#: calendarutils.cpp:150
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr ""
 
-#: calendarutils.cpp:180
+#: calendarutils.cpp:183
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr ""
 
-#: calendarutils.cpp:182
+#: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr ""
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:188
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr ""
 
-#: calendarutils.cpp:193
+#: calendarutils.cpp:196
 #, kde-format
 msgid "My %1"
 msgstr ""
 
-#: calendarutils.cpp:197
+#: calendarutils.cpp:200
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -592,47 +577,47 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Ukjent feil"
 
-#: itiphandler.cpp:111
+#: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Feil ved lasting av kalender."
 
-#: itiphandler.cpp:119
+#: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
 msgstr "Feilmelding: %1"
 
-#: itiphandler.cpp:120
+#: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Ukjent feil under tolking av iCal-invitasjon"
 
-#: itiphandler.cpp:126
+#: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
 msgstr "Feil under behandling av en invitasjon eller oppdatering."
 
-#: itiphandler.cpp:143
+#: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Ugyldig forekomst"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Ugyldig handling: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Feil under sending av motforslag"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Klarte ikke å starte redigeringsprogram for å redigere motforslag"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -640,7 +625,7 @@ msgstr ""
 "Hendelsen «%1» har ingen deltakere, derfor blir det ikke sendt ut en "
 "gruppemelding."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -850,7 +835,7 @@ msgstr ""
 "Du ar tidligere tatt imot en invitasjon til denne hendelsen. Vil du sende et "
 "oppdatert svar til arrangøren av denne hendelsen?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:109
+#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Motforslag: %1"
@@ -886,17 +871,17 @@ msgstr "Ledig/opptatt-melding"
 msgid "Error while creating transport"
 msgstr "Feil ved oppretting av transport"
 
-#: mailclient_p.cpp:206
+#: mailclient_p.cpp:201
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Feil når transport ble hentet. Kan ikke sende invitasjoner"
 
-#: mailclient_p.cpp:347
+#: mailclient_p.cpp:342
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Feil mens melding ble lagt i ut-boksen: %1"
 
-#: mailscheduler_p.cpp:188
+#: mailscheduler_p.cpp:168
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Feil under sending av e-post: "
@@ -1229,6 +1214,18 @@ msgstr "Ikke noe mellomlager for ledig/opptatt"
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Feil ved lagring av ledig/opptatt-objekt"
+
+#: searchcollectionhelper.cpp:113
+#, kde-format
+msgctxt "A collection of all declined invidations."
+msgid "Declined Invitations"
+msgstr ""
+
+#: searchcollectionhelper.cpp:121
+#, kde-format
+msgctxt "A collection of all open invidations."
+msgid "Open Invitations"
+msgstr ""
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1678,6 +1675,77 @@ msgstr "&Rediger …"
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Rediger den valgte forekomsten."
+
+#: todomodel.cpp:140 todomodel.cpp:176
+#, kde-format
+msgctxt "yes, an exception to a recurring to-do"
+msgid "Exception"
+msgstr ""
+
+#: todomodel.cpp:142 todomodel.cpp:178
+#, kde-format
+msgctxt "yes, recurring to-do"
+msgid "Yes"
+msgstr ""
+
+#: todomodel.cpp:145 todomodel.cpp:181
+#, kde-format
+msgctxt "no, not a recurring to-do"
+msgid "No"
+msgstr ""
+
+#: todomodel.cpp:159 todomodel.cpp:197
+#, kde-format
+msgctxt "delimiter for joining category/tag names"
+msgid ","
+msgstr ""
+
+#: todomodel.cpp:440
+#, kde-format
+msgid "Summary"
+msgstr ""
+
+#: todomodel.cpp:442
+#, kde-format
+msgid "Recurs"
+msgstr ""
+
+#: todomodel.cpp:444
+#, kde-format
+msgid "Priority"
+msgstr ""
+
+#: todomodel.cpp:446
+#, kde-format
+msgctxt "@title:column percent complete"
+msgid "Complete"
+msgstr ""
+
+#: todomodel.cpp:448
+#, kde-format
+msgid "Start Date"
+msgstr ""
+
+#: todomodel.cpp:450
+#, kde-format
+msgid "Due Date"
+msgstr ""
+
+#: todomodel.cpp:452
+#, kde-format
+msgctxt "@title:column date completed"
+msgid "Completed"
+msgstr ""
+
+#: todomodel.cpp:454
+#, kde-format
+msgid "Tags"
+msgstr ""
+
+#: todomodel.cpp:456
+#, kde-format
+msgid "Description"
+msgstr ""
 
 #: todopurger.cpp:61
 #, kde-format
