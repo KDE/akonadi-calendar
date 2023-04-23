@@ -77,7 +77,7 @@ find_package(KPim6AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
 ########### Targets ###########
 
 
-ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.240.0)
+ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 
 
