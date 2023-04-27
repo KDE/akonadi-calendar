@@ -6,7 +6,8 @@ include(ECMAddTests)
 
 find_package(Qt${QT_MAJOR_VERSION}Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
-
+add_subdirectory(gnupg_home)
+include(${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_add_gpg_crypto_test.cmake)
 
 set( KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE )
 
@@ -26,8 +27,21 @@ if (AKONADI_ICAL_RESOURCE)
     add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KF${KF_MAJOR_VERSION}::ConfigCore" )
 
     add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${common_libs};KPim${KF_MAJOR_VERSION}::AkonadiMime")
-    add_akonadi_isolated_test_advanced( mailclienttest.cpp "" "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KPim${KF_MAJOR_VERSION}::Mime;KPim${KF_MAJOR_VERSION}::AkonadiMime;KPim${KF_MAJOR_VERSION}::IdentityManagement")
 
+    add_executable( mailclienttest )
+    target_sources( mailclienttest PRIVATE mailclienttest.cpp )
+    target_link_libraries( mailclienttest PRIVATE
+        Qt${QT_MAJOR_VERSION}::DBus
+        Qt${QT_MAJOR_VERSION}::Test
+        KPim${KF_MAJOR_VERSION}::AkonadiCalendar
+        KPim${KF_MAJOR_VERSION}::Mime
+        KF${KF_MAJOR_VERSION}::Contacts
+        KPim${KF_MAJOR_VERSION}::AkonadiMime
+        KPim${KF_MAJOR_VERSION}::IdentityManagement
+        KPim${KF_MAJOR_VERSION}::MessageComposer
+        -lgpgmepp
+    )
+    add_gpg_crypto_akonadi_test( mailclienttest "mailclienttest" )
 endif()
 
 

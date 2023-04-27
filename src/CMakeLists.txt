@@ -122,6 +122,9 @@ PRIVATE
     KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::Mime
+    KPim${KF_MAJOR_VERSION}::MessageCore
+    KPim${KF_MAJOR_VERSION}::MessageComposer
+    KPim${KF_MAJOR_VERSION}::Libkleo
     KF${KF_MAJOR_VERSION}::Codecs
 )
 
