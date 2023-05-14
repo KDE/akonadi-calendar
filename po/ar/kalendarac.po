@@ -136,7 +136,7 @@ msgstr "خدمة تذكير التقويم"
 #: kalendaracmain.cpp:36
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
-msgstr "(c)  مجتمع كِيدِي ٢٠٢١-٢٠٢٢"
+msgstr "(c)  مجتمع كِيدِي 2021-2022"
 
 #: kalendaracmain.cpp:37
 #, kde-format
