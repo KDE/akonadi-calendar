@@ -110,7 +110,7 @@ PUBLIC
     KF6::CalendarCore
     KF6::WidgetsAddons
     KF6::I18n
-    KPim6::IdentityManagement
+    KPim6::IdentityManagementCore
 PRIVATE
     KF6::Codecs
     KF6::KIOCore

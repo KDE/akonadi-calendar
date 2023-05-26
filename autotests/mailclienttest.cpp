@@ -11,7 +11,7 @@
 #include <Akonadi/MessageQueueJob>
 #include <KCalendarCore/FreeBusy>
 #include <KCalendarCore/Incidence>
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 
 #include <akonadi/qtest_akonadi.h>
 
@@ -22,7 +22,7 @@ static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlib
 
 using namespace Akonadi;
 
-Q_DECLARE_METATYPE(KIdentityManagement::Identity)
+Q_DECLARE_METATYPE(KIdentityManagementCore::Identity)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 
 class FakeMessageQueueJob : public Akonadi::MessageQueueJob
@@ -63,8 +63,9 @@ public:
     {
     }
 
-    Akonadi::MessageQueueJob *
-    createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr) override
+    Akonadi::MessageQueueJob *createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                                    const KIdentityManagementCore::Identity &identity,
+                                                    QObject *parent = nullptr) override
     {
         Q_UNUSED(incidence)
         Q_UNUSED(identity)
@@ -101,7 +102,7 @@ private Q_SLOTS:
     void testMailAttendees_data()
     {
         QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
-        QTest::addColumn<KIdentityManagement::Identity>("identity");
+        QTest::addColumn<KIdentityManagementCore::Identity>("identity");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
         QTest::addColumn<QString>("transport");
@@ -113,7 +114,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedBccList");
 
         KCalendarCore::Incidence::Ptr incidence(new KCalendarCore::Event());
-        KIdentityManagement::Identity identity;
+        KIdentityManagementCore::Identity identity;
         bool bccMe;
         QString attachment;
         QString transport;
@@ -195,7 +196,7 @@ private Q_SLOTS:
     void testMailAttendees()
     {
         QFETCH(KCalendarCore::Incidence::Ptr, incidence);
-        QFETCH(KIdentityManagement::Identity, identity);
+        QFETCH(KIdentityManagementCore::Identity, identity);
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
         QFETCH(QString, transport);
@@ -238,7 +239,7 @@ private Q_SLOTS:
     void testMailOrganizer_data()
     {
         QTest::addColumn<KCalendarCore::IncidenceBase::Ptr>("incidence");
-        QTest::addColumn<KIdentityManagement::Identity>("identity");
+        QTest::addColumn<KIdentityManagementCore::Identity>("identity");
         QTest::addColumn<QString>("from");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("attachment");
@@ -252,7 +253,7 @@ private Q_SLOTS:
         QTest::addColumn<QString>("expectedSubject");
 
         KCalendarCore::IncidenceBase::Ptr incidence(new KCalendarCore::Event());
-        KIdentityManagement::Identity identity;
+        KIdentityManagementCore::Identity identity;
         const QString from = QLatin1String(s_ourEmail);
         bool bccMe;
         QString attachment;
@@ -283,7 +284,7 @@ private Q_SLOTS:
     void testMailOrganizer()
     {
         QFETCH(KCalendarCore::IncidenceBase::Ptr, incidence);
-        QFETCH(KIdentityManagement::Identity, identity);
+        QFETCH(KIdentityManagementCore::Identity, identity);
         QFETCH(QString, from);
         QFETCH(bool, bccMe);
         QFETCH(QString, attachment);
@@ -316,7 +317,7 @@ private Q_SLOTS:
     void testMailTo_data()
     {
         QTest::addColumn<KCalendarCore::IncidenceBase::Ptr>("incidence");
-        QTest::addColumn<KIdentityManagement::Identity>("identity");
+        QTest::addColumn<KIdentityManagementCore::Identity>("identity");
         QTest::addColumn<QString>("from");
         QTest::addColumn<bool>("bccMe");
         QTest::addColumn<QString>("recipients");
@@ -329,7 +330,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedBccList");
 
         KCalendarCore::IncidenceBase::Ptr incidence(new KCalendarCore::Event());
-        KIdentityManagement::Identity identity;
+        KIdentityManagementCore::Identity identity;
         const QString from = QLatin1String(s_ourEmail);
         bool bccMe;
         const QString recipients = QStringLiteral("unittests@dev.nul");
@@ -350,7 +351,7 @@ private Q_SLOTS:
     void testMailTo()
     {
         QFETCH(KCalendarCore::IncidenceBase::Ptr, incidence);
-        QFETCH(KIdentityManagement::Identity, identity);
+        QFETCH(KIdentityManagementCore::Identity, identity);
         QFETCH(QString, from);
         QFETCH(bool, bccMe);
         QFETCH(QString, recipients);

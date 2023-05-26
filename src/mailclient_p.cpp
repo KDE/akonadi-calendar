@@ -16,7 +16,7 @@
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/Incidence>
 #include <KEmailAddress>
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 
 #include <Akonadi/MessageQueueJob>
 #include <MailTransport/Transport>
@@ -38,7 +38,7 @@ MailClient::MailClient(ITIPHandlerComponentFactory *factory, QObject *parent)
 MailClient::~MailClient() = default;
 
 void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                               const KIdentityManagement::Identity &identity,
+                               const KIdentityManagementCore::Identity &identity,
                                bool bccMe,
                                const QString &attachment,
                                const QString &mailTransport)
@@ -108,7 +108,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
 }
 
 void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                               const KIdentityManagement::Identity &identity,
+                               const KIdentityManagementCore::Identity &identity,
                                const QString &from,
                                bool bccMe,
                                const QString &attachment,
@@ -133,7 +133,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
 }
 
 void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                        const KIdentityManagement::Identity &identity,
+                        const KIdentityManagementCore::Identity &identity,
                         const QString &from,
                         bool bccMe,
                         const QString &recipients,
@@ -167,7 +167,7 @@ static QStringList extractEmailAndNormalize(const QString &email)
 }
 
 void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                      const KIdentityManagement::Identity &identity,
+                      const KIdentityManagementCore::Identity &identity,
                       const QString &from,
                       const QString &_to,
                       const QString &cc,

@@ -32,7 +32,7 @@ namespace Akonadi
 class MessageQueueJob;
 }
 
-namespace KIdentityManagement
+namespace KIdentityManagementCore
 {
 class Identity;
 }
@@ -204,7 +204,7 @@ public:
      * @param parent of the Akonadi::MessageQueueJob object
      */
     virtual Akonadi::MessageQueueJob *
-    createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent = nullptr);
+    createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, QObject *parent = nullptr);
 
     /*
      * @return A new ITIPHandlerDialogDelegate object

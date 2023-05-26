@@ -23,7 +23,7 @@
 #include <KCalendarCore/ICalFormat>
 
 #include <Akonadi/MessageQueueJob>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/IdentityManager>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
@@ -55,7 +55,7 @@ ITIPHandlerComponentFactory::ITIPHandlerComponentFactory(QObject *parent)
 ITIPHandlerComponentFactory::~ITIPHandlerComponentFactory() = default;
 
 Akonadi::MessageQueueJob *ITIPHandlerComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                                                             const KIdentityManagement::Identity &identity,
+                                                                             const KIdentityManagementCore::Identity &identity,
                                                                              QObject *parent)
 {
     Q_UNUSED(incidence)
@@ -358,7 +358,7 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
             d->finishSendAsICalendar(result, str);
         });
 
-        mailer->mailTo(incidence, KIdentityManagement::IdentityManager::self()->identityForAddress(from), from, bccMe, recipients, messageText);
+        mailer->mailTo(incidence, KIdentityManagementCore::IdentityManager::self()->identityForAddress(from), from, bccMe, recipients, messageText);
     }
     delete publishdlg;
 }

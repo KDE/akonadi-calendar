@@ -28,7 +28,7 @@ struct UnitTestResult {
     }
 };
 
-namespace KIdentityManagement
+namespace KIdentityManagementCore
 {
 class Identity;
 }
@@ -49,13 +49,13 @@ public:
     ~MailClient() override;
 
     void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       const KIdentityManagement::Identity &identity,
+                       const KIdentityManagementCore::Identity &identity,
                        bool bccMe,
                        const QString &attachment = QString(),
                        const QString &mailTransport = QString());
 
     void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                       const KIdentityManagement::Identity &identity,
+                       const KIdentityManagementCore::Identity &identity,
                        const QString &from,
                        bool bccMe,
                        const QString &attachment = QString(),
@@ -63,7 +63,7 @@ public:
                        const QString &mailTransport = QString());
 
     void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                const KIdentityManagement::Identity &identity,
+                const KIdentityManagementCore::Identity &identity,
                 const QString &from,
                 bool bccMe,
                 const QString &recipients,
@@ -89,7 +89,7 @@ public:
       kdepimlibs/mailtransport library.
     */
     void send(const KCalendarCore::IncidenceBase::Ptr &incidence,
-              const KIdentityManagement::Identity &identity,
+              const KIdentityManagementCore::Identity &identity,
               const QString &from,
               const QString &to,
               const QString &cc,

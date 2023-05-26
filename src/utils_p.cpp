@@ -10,8 +10,8 @@
 #include <Akonadi/CollectionDialog>
 #include <KEMailSettings>
 #include <KEmailAddress>
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Utils>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Utils>
 #include <KMime/HeaderParsing>
 
 #include <QPointer>
@@ -72,7 +72,7 @@ QString Akonadi::CalendarUtils::email()
 
 bool Akonadi::CalendarUtils::thatIsMe(const KCalendarCore::Attendee &attendee)
 {
-    return KIdentityManagement::thatIsMe(attendee.email());
+    return KIdentityManagementCore::thatIsMe(attendee.email());
 }
 
 bool Akonadi::CalendarUtils::thatIsMe(const QString &_email)
@@ -84,13 +84,13 @@ bool Akonadi::CalendarUtils::thatIsMe(const QString &_email)
     KMime::HeaderParsing::parseMailbox(cursor, end, mbox);
     const QString email = mbox.addrSpec().asString();
 
-    return KIdentityManagement::thatIsMe(email);
+    return KIdentityManagementCore::thatIsMe(email);
 }
 
 QStringList Akonadi::CalendarUtils::allEmails()
 {
     QStringList emails;
-    const QSet<QString> &allEmails = KIdentityManagement::allEmails();
+    const QSet<QString> &allEmails = KIdentityManagementCore::allEmails();
     emails.reserve(allEmails.count());
     for (const QString &email : allEmails) {
         emails.append(email);

@@ -15,7 +15,7 @@
 #include <KCalendarCore/Incidence>
 // #include <email.h>
 
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/IdentityManager>
 
 using namespace Akonadi;
 
@@ -23,12 +23,12 @@ class Akonadi::CalFilterPartStatusProxyModelPrivate
 {
 public:
     explicit CalFilterPartStatusProxyModelPrivate()
-        : mIdentityManager(KIdentityManagement::IdentityManager::self())
+        : mIdentityManager(KIdentityManagementCore::IdentityManager::self())
     {
     }
 
     QList<KCalendarCore::Attendee::PartStat> mBlockedStatusList;
-    KIdentityManagement::IdentityManager *const mIdentityManager;
+    KIdentityManagementCore::IdentityManager *const mIdentityManager;
     bool mFilterVirtual = false;
 };
 
@@ -42,7 +42,7 @@ CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     , d(new CalFilterPartStatusProxyModelPrivate())
 {
     QObject::connect(d->mIdentityManager,
-                     qOverload<>(&KIdentityManagement::IdentityManager::changed),
+                     qOverload<>(&KIdentityManagementCore::IdentityManager::changed),
                      this,
                      &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
 }

@@ -12,21 +12,21 @@
 
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/ScheduleMessage>
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 
 #include <KLocalizedString>
 #include <QStandardPaths>
 
 using namespace Akonadi;
-using namespace KIdentityManagement;
+using namespace KIdentityManagementCore;
 
 class Akonadi::MailSchedulerPrivate
 {
 public:
-    Q_REQUIRED_RESULT KIdentityManagement::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
+    Q_REQUIRED_RESULT KIdentityManagementCore::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
 
-    KIdentityManagement::IdentityManager *m_identityManager = nullptr;
+    KIdentityManagementCore::IdentityManager *m_identityManager = nullptr;
     MailClient *m_mailer = nullptr;
 };
 
@@ -34,7 +34,7 @@ MailScheduler::MailScheduler(ITIPHandlerComponentFactory *factory, QObject *pare
     : Scheduler(parent)
     , d(new MailSchedulerPrivate())
 {
-    d->m_identityManager = KIdentityManagement::IdentityManager::self();
+    d->m_identityManager = KIdentityManagementCore::IdentityManager::self();
     d->m_mailer = new MailClient(factory, parent);
 
     connect(d->m_mailer, &MailClient::finished, this, &MailScheduler::onMailerFinished);
@@ -45,7 +45,7 @@ MailScheduler::~MailScheduler()
     delete d->m_mailer;
 }
 
-KIdentityManagement::Identity MailSchedulerPrivate::identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const
+KIdentityManagementCore::Identity MailSchedulerPrivate::identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const
 {
     const auto organizer = incidence->organizer();
     const QString organizerEmail = !organizer.isEmpty() ? organizer.email() : CalendarUtils::email();
