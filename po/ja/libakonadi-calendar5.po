@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -1196,8 +1196,7 @@ msgstr "カレンダーフォルダの作成に失敗"
 #| msgid_plural "Copy %1 Calendar Folders"
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] "カレンダーフォルダをコピー"
-msgstr[1] "カレンダーフォルダ %1 個をコピー"
+msgstr[0] "カレンダーフォルダ %1 個をコピー"
 
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
@@ -1210,8 +1209,7 @@ msgstr "選択したカレンダーフォルダをクリップボードにコピ
 #| msgid_plural "Delete %1 Calendar Folders"
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] "カレンダーフォルダを削除"
-msgstr[1] "カレンダーフォルダ %1 個を削除"
+msgstr[0] "カレンダーフォルダ %1 個を削除"
 
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
@@ -1225,7 +1223,6 @@ msgid ""
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:81
 #, fuzzy, kde-format
@@ -1236,7 +1233,6 @@ msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
 msgstr[0] "カレンダーフォルダを削除？"
-msgstr[1] "カレンダーフォルダを削除？"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
@@ -1256,8 +1252,7 @@ msgstr "カレンダーフォルダの削除に失敗"
 #| msgid_plural "Update %1 Calendar Folders"
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] "カレンダーフォルダを更新"
-msgstr[1] "カレンダーフォルダ %1 個を更新"
+msgstr[0] "カレンダーフォルダ %1 個を更新"
 
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
@@ -1270,8 +1265,7 @@ msgstr "選択したカレンダーフォルダの中身を更新。"
 #| msgid_plural "Cut %1 Calendar Folders"
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] "カレンダーフォルダを切り取る"
-msgstr[1] "カレンダーフォルダ %1 個を切り取る"
+msgstr[0] "カレンダーフォルダ %1 個を切り取る"
 
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
@@ -1298,8 +1292,7 @@ msgstr "カレンダーフォルダ %1 のプロパティ"
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
-msgstr[0] "イベントをコピー"
-msgstr[1] "イベント %1 個をコピー"
+msgstr[0] "イベント %1 個をコピー"
 
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
@@ -1310,8 +1303,7 @@ msgstr "選択したイベントをクリップボードにコピー。"
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] "イベントを削除"
-msgstr[1] "イベント %1 個を削除"
+msgstr[0] "イベント %1 個を削除"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
@@ -1323,7 +1315,6 @@ msgstr "選択したイベントをカレンダーから削除。"
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
@@ -1331,7 +1322,6 @@ msgctxt "@title:window"
 msgid "Delete Event?"
 msgid_plural "Delete Events?"
 msgstr[0] "イベントを削除？"
-msgstr[1] "イベントを削除？"
 
 #: standardcalendaractionmanager.cpp:126
 #, kde-format
@@ -1349,8 +1339,7 @@ msgstr "イベントの削除に失敗"
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
-msgstr[0] "イベントを切り取る"
-msgstr[1] "イベント %1 個を切り取る"
+msgstr[0] "イベント %1 個を切り取る"
 
 #: standardcalendaractionmanager.cpp:135
 #, kde-format
@@ -1391,8 +1380,7 @@ msgstr "カレンダーの作成に失敗"
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] "カレンダーを削除(&D)"
-msgstr[1] "カレンダー %1 個を削除(&D)"
+msgstr[0] "カレンダー %1 個を削除(&D)"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1405,8 +1393,7 @@ msgstr ""
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] "このカレンダーを本当に削除しますか？"
-msgstr[1] "カレンダー %1 個を本当に削除しますか？"
+msgstr[0] "カレンダー %1 個を本当に削除しますか？"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
@@ -1414,7 +1401,6 @@ msgctxt "@title:window"
 msgid "Delete Calendar?"
 msgid_plural "Delete Calendars?"
 msgstr[0] "カレンダーを削除？"
-msgstr[1] "カレンダーを削除？"
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
@@ -1430,8 +1416,7 @@ msgstr "選択したカレンダーのプロパティを編集。"
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
-msgstr[0] "カレンダーを更新"
-msgstr[1] "カレンダー %1 個を更新"
+msgstr[0] "カレンダー %1 個を更新"
 
 #: standardcalendaractionmanager.cpp:179
 #, kde-format
@@ -1503,7 +1488,6 @@ msgstr "イベントを編集..."
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
@@ -1515,14 +1499,12 @@ msgstr ""
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
@@ -1539,7 +1521,6 @@ msgstr ""
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
@@ -1551,14 +1532,12 @@ msgstr ""
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
 msgstr[0] ""
-msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
