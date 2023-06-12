@@ -1,23 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Xosé <xosecalvo@gmail.com>, 2011.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2018-04-22 16:16+0100\n"
-"Last-Translator: Adrian Chaves <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-06-11 21:21+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -29,7 +30,7 @@ msgstr ""
 #: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
-msgstr "Erro ao realizaar a eliminación."
+msgstr "Erro ao realizar a eliminación."
 
 #: calendarclipboard.cpp:72
 #, kde-format
@@ -62,8 +63,7 @@ msgstr ""
 "elementos que o integran?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Confirmación de KOrganizer"
@@ -278,94 +278,89 @@ msgstr ""
 
 #: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
 #: todomodel.cpp:458
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar title"
-#| msgid "Calendar"
+#, kde-format
 msgid "Calendar"
 msgstr "Calendario"
 
 #: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Tarefas"
 
 #: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
-#, fuzzy, kde-format
-#| msgid "Cut Journal"
-#| msgid_plural "Cut %1 Journals"
+#, kde-format
 msgid "Journal"
-msgstr "Recortar o diario"
+msgstr "Diario"
 
 #: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "Notas"
 
 #: calendarutils.cpp:131
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
-msgstr ""
+msgstr "Kolab persoal %1"
 
 #: calendarutils.cpp:134
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
-msgstr ""
+msgstr "Kolab compartido %1 %2"
 
 #: calendarutils.cpp:137
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr ""
+msgstr "Kolab %2 de %1"
 
 #: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
-msgstr ""
+msgstr "Kolab %3 do %2 de %1"
 
 #: calendarutils.cpp:143
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
-msgstr ""
+msgstr "Kolab %1"
 
 #: calendarutils.cpp:150
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr ""
+msgstr "%1 en %2"
 
 #: calendarutils.cpp:183
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr ""
+msgstr "Google %2 de %1"
 
 #: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
-msgstr ""
+msgstr "%2 de %1"
 
 #: calendarutils.cpp:188
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr ""
+msgstr "Google %1"
 
 #: calendarutils.cpp:196
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "%1 persoal"
 
 #: calendarutils.cpp:200
-#, fuzzy, kde-format
-#| msgid "Unknown error"
+#, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr "Erro descoñecido"
+msgstr "Descoñecido"
 
 #: freebusymanager.cpp:376
 #, kde-format
@@ -377,8 +372,7 @@ msgstr ""
 "Motivo: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Erro de obtención da dispoñibilidade"
@@ -408,8 +402,7 @@ msgid "The free/busy information was successfully sent."
 msgstr "A información da dispoñibilidade enviouse correctamente."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Estase a enviar a dispoñibilidade"
@@ -432,8 +425,7 @@ msgstr ""
 "coñecer o URL exacto e os detalles da conta.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Non hai URL de envío da dispoñibilidade"
@@ -444,11 +436,10 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>O URL obxectivo «%1» que se forneceu é incorrecto.</qt>"
 
 #: freebusymanager.cpp:759
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
-msgstr "URL incorrecto"
+msgstr "O URL é incorrecto"
 
 #: history_p.cpp:71
 #, kde-format
@@ -507,7 +498,7 @@ msgstr "O URL para importa está mal formado."
 #: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr ""
+msgstr "O ficheiro seleccionado non é lexíbel."
 
 #: icalimporter.cpp:186
 #, kde-format
@@ -515,12 +506,13 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
+"O ficheiro seleccionado non está ben formatado, ou está nun formato que este "
+"software non admite."
 
 #: icalimporter.cpp:194
-#, fuzzy, kde-format
-#| msgid "The ical file to merge is empty."
+#, kde-format
 msgid "The selected file is empty."
-msgstr "O ficheiro ical para fusionar está baleiro."
+msgstr "O ficheiro seleccionado está baleiro."
 
 #: icalimporter.cpp:212
 #, kde-format
@@ -645,8 +637,7 @@ msgstr ""
 "enviar ningunha mensaxe."
 
 #: itiphandler.cpp:274
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Mensaxe non enviada"
@@ -701,8 +692,7 @@ msgid "The item information was successfully sent."
 msgstr "A información do elemento enviouse correctamente."
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publicación"
@@ -713,8 +703,7 @@ msgid "Unable to publish the item '%1'"
 msgstr "Non se pode publicar o elemento «%1»"
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Reenvío"
@@ -725,8 +714,7 @@ msgid "Unable to forward the item '%1'"
 msgstr "Non se pode reenviar o elemento «%1»"
 
 #: itiphandler_p.cpp:189
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Erro de reenvío"
@@ -737,8 +725,7 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Propúxose unha hora nova para a reunión: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, fuzzy, kde-format
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Correo de planificación de grupo"
@@ -915,8 +902,7 @@ msgid "Error sending e-mail: "
 msgstr "Produciuse un erro ao enviar o correo: "
 
 #: publishdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Select Addresses"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
 msgstr "Seleccione enderezos"
@@ -966,8 +952,7 @@ msgstr ""
 "destinatarios é incorrecta. %1"
 
 #: publishdialog.cpp:125
-#, fuzzy, kde-format
-#| msgid "Publishing Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Erro de publicación"
@@ -1139,12 +1124,10 @@ msgstr ""
 "debería sabelo.</para>"
 
 #: scheduler_p.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cannot find invitation to be updated"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Non se pode atopar o convite que actualizar"
+msgstr "Non se pode atopar a invitación para actualizar"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1192,12 +1175,10 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 quere asistir a %2 en representación de %3."
 
 #: scheduler_p.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr "Asistente non convidado"
+msgstr "Asistente sen invitación"
 
 #: scheduler_p.cpp:483
 #, kde-format
@@ -1228,9 +1209,7 @@ msgstr ""
 "mensaxe de actualización?"
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Engadiuse un asistente"
@@ -1266,19 +1245,18 @@ msgstr "Produciuse un erro ao gardar un obxecto freebusy"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Invitacións rexeitadas"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Invitacións abertas"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Calendar Folder..."
+#, kde-format
 msgid "Add Folder..."
-msgstr "Engadir un cartafol de calendario…"
+msgstr "Engadir un cartafol…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1287,12 +1265,10 @@ msgstr ""
 "Engadir un cartafol de calendario novo ao cartafol de calendario escollido."
 
 #: standardcalendaractionmanager.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "New Calendar Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
-msgstr "Novo cartafol de calendario"
+msgstr "Novo cartafol"
 
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
@@ -1300,19 +1276,16 @@ msgid "Could not create calendar folder: %1"
 msgstr "Non se puido crear o cartafol de calendario: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
 msgstr "Fallou a creación do cartafol de calendario"
 
 #: standardcalendaractionmanager.cpp:66
-#, fuzzy, kde-format
-#| msgid "Copy Calendar Folder"
-#| msgid_plural "Copy %1 Calendar Folders"
+#, kde-format
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] "Copiar o cartafol de calendario"
+msgstr[0] "Copiar o cartafol"
 msgstr[1] "Copiar %1 cartafoles de calendario"
 
 #: standardcalendaractionmanager.cpp:68
@@ -1321,12 +1294,10 @@ msgid "Copy the selected calendar folders to the clipboard."
 msgstr "Copiar os cartafoles de calendario seleccionados para o portapapeis."
 
 #: standardcalendaractionmanager.cpp:71
-#, fuzzy, kde-format
-#| msgid "Delete Calendar Folder"
-#| msgid_plural "Delete %1 Calendar Folders"
+#, kde-format
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] "Eliminar o cartafol de calendario"
+msgstr[0] "Eliminar o cartafol"
 msgstr[1] "Eliminar %1 cartafoles de calendario"
 
 #: standardcalendaractionmanager.cpp:73
@@ -1348,15 +1319,12 @@ msgstr[1] ""
 "subcartafoles?"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] "Eliminar este cartafol de calendario?"
-msgstr[1] "Eliminar estes cartafoles de calendario?"
+msgstr[0] "Eliminar o cartafol de calendario?"
+msgstr[1] "Eliminar os cartafoles de calendario?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
@@ -1364,19 +1332,16 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Non se puido eliminar o cartafol de calendario: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
 msgstr "Fallou a eliminación do cartafol de calendario"
 
 #: standardcalendaractionmanager.cpp:93
-#, fuzzy, kde-format
-#| msgid "Update Calendar Folder"
-#| msgid_plural "Update %1 Calendar Folders"
+#, kde-format
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] "Actualizar o cartafol de calendario"
+msgstr[0] "Actualizar o cartafol"
 msgstr[1] "Actualizar %1 cartafoles de calendario"
 
 #: standardcalendaractionmanager.cpp:95
@@ -1385,12 +1350,10 @@ msgid "Update the content of the selected calendar folders."
 msgstr "Actualizar o contido dos cartafoles de calendario escollidos."
 
 #: standardcalendaractionmanager.cpp:99
-#, fuzzy, kde-format
-#| msgid "Cut Calendar Folder"
-#| msgid_plural "Cut %1 Calendar Folders"
+#, kde-format
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] "Recortar o cartafol de calendario"
+msgstr[0] "Recortar o cartafol"
 msgstr[1] "Recortar %1 cartafoles de calendario"
 
 #: standardcalendaractionmanager.cpp:100
@@ -1461,8 +1424,7 @@ msgid "Could not delete event: %1"
 msgstr "Non se puido eliminar o evento: %1"
 
 #: standardcalendaractionmanager.cpp:130
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
 msgstr "Fallou a eliminación do evento"
@@ -1505,8 +1467,7 @@ msgid "Could not create calendar: %1"
 msgstr "Non se puido crear o calendario: %1"
 
 #: standardcalendaractionmanager.cpp:151
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
 msgstr "Fallou a creación do calendario"
@@ -1592,11 +1553,10 @@ msgid "Could not paste event: %1"
 msgstr "Non se puido pegar o evento: %1"
 
 #: standardcalendaractionmanager.cpp:192
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "Pegar fallou."
+msgstr "Pegar fallou"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
@@ -1749,71 +1709,59 @@ msgstr "Editar a incidencia seleccionada."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Excepción"
 
 #: todomodel.cpp:142 todomodel.cpp:178
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: todomodel.cpp:145 todomodel.cpp:181
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: todomodel.cpp:159 todomodel.cpp:197
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Resumo"
 
 #: todomodel.cpp:442
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Repítese"
 
 #: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Prioridade"
 
 #: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
-msgstr "Completado"
+msgstr "Completo"
 
 #: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Data e hora de inicio"
+msgstr "Data inicial"
 
 #: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Data e hora de vencemento"
+msgstr "Data límite"
 
 #: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Completado"
@@ -1821,12 +1769,12 @@ msgstr "Completado"
 #: todomodel.cpp:454
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Etiquetas"
 
 #: todomodel.cpp:456
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Descrición"
 
 #: todopurger.cpp:61
 #, kde-format
