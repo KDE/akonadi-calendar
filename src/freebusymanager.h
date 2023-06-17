@@ -41,12 +41,12 @@ public:
       @see KCalPrefBase::freeBusyPublishUrl()
       @see KCalPrefBase::freeBusyPublishDays();
       */
-    void publishFreeBusy(QWidget *parentWidget = nullptr);
+    Q_INVOKABLE void publishFreeBusy(QWidget *parentWidget = nullptr);
 
     /**
       Mail the freebusy information.
       */
-    void mailFreeBusy(int daysToPublish = 30, QWidget *parentWidget = nullptr);
+    Q_INVOKABLE void mailFreeBusy(int daysToPublish = 30, QWidget *parentWidget = nullptr);
 
     /**
       Retrieve the freebusy information of somebody else, i.e. it will not try
@@ -81,7 +81,7 @@ public:
               retrieval of freebusy information is disabled in the configuration.
       @return true if a download is initiated, and false otherwise
     */
-    bool retrieveFreeBusy(const QString &email, bool forceDownload, QWidget *parentWidget = nullptr);
+    Q_INVOKABLE bool retrieveFreeBusy(const QString &email, bool forceDownload, QWidget *parentWidget = nullptr);
 
     /**
       Clears the retrieval queue, i.e. all retrieval request that are not started
