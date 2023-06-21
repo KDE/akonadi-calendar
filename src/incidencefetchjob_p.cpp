@@ -79,3 +79,5 @@ void IncidenceFetchJob::itemFetchResult(KJob *job)
         emitResult();
     }
 }
+
+#include "moc_incidencefetchjob_p.cpp"

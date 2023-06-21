@@ -149,3 +149,5 @@ void SearchCollectionHelper::modifyResult(KJob *job)
         qCDebug(AKONADICALENDAR_LOG) << "modify was successful";
     }
 }
+
+#include "moc_searchcollectionhelper.cpp"

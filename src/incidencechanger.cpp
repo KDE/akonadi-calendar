@@ -1368,3 +1368,5 @@ Akonadi::TransactionSequence *AtomicOperation::transaction()
 
     return m_transaction;
 }
+
+#include "moc_incidencechanger.cpp"

@@ -217,3 +217,5 @@ QVariant CalendarModel::entityHeaderData(int section, Qt::Orientation orientatio
     }
     return {};
 }
+
+#include "moc_calendarmodel_p.cpp"

@@ -220,3 +220,5 @@ void IncidenceChangerPrivate::step2CreateIncidence(const Change::Ptr &change, co
 
     mChangeById.insert(change->id, change);
 }
+
+#include "moc_incidencechanger_p.cpp"

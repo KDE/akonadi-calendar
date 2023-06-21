@@ -586,3 +586,5 @@ void ETMCalendarTest::checkExitLoop()
 }
 
 QTEST_AKONADIMAIN(ETMCalendarTest)
+
+#include "moc_etmcalendartest.cpp"

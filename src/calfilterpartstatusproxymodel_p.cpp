@@ -107,3 +107,5 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     // We are not attendee, so we accept the incidence
     return true;
 }
+
+#include "moc_calfilterpartstatusproxymodel_p.cpp"

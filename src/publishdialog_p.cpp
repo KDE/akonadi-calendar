@@ -146,3 +146,5 @@ void PublishDialogPrivate::updateInput()
     mUI.mNameLineEdit->setText(name);
     mUI.mEmailLineEdit->setText(mail);
 }
+
+#include "moc_publishdialog_p.cpp"

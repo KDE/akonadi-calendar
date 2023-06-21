@@ -334,3 +334,5 @@ void MultiEntry::onEntryFinished(Akonadi::IncidenceChanger::ResultCode resultCod
         Q_EMIT finished(resultCode, errorString);
     }
 }
+
+#include "moc_history_p.cpp"

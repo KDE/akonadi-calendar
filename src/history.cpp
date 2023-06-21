@@ -308,4 +308,3 @@ Akonadi::IncidenceChanger *History::incidenceChanger() const
 }
 
 #include "moc_history.cpp"
-#include "moc_history_p.cpp"

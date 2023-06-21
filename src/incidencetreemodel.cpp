@@ -862,3 +862,7 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
     --level;
     return s;
 }
+
+#include "moc_incidencetreemodel_p.cpp"
+
+#include "moc_incidencetreemodel.cpp"

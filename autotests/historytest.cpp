@@ -593,3 +593,5 @@ void HistoryTest::maybeQuitEventLoop()
 }
 
 QTEST_AKONADIMAIN(HistoryTest)
+
+#include "moc_historytest.cpp"

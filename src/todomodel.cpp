@@ -661,3 +661,5 @@ QHash<int, QByteArray> TodoModel::roleNames() const
         {Qt::CheckStateRole, QByteArrayLiteral("checked")},
     };
 }
+
+#include "moc_todomodel.cpp"

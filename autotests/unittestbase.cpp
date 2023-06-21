@@ -183,3 +183,5 @@ Item UnitTestBase::generateIncidence(const QString &uid, const QString &organize
 
     return item;
 }
+
+#include "moc_unittestbase.cpp"

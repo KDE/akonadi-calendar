@@ -76,3 +76,5 @@ QList<KCalendarCore::Calendar::Ptr> AkonadiCalendarPlugin::calendars() const
 {
     return m_calendars;
 }
+
+#include "moc_akonadicalendarplugin.cpp"

@@ -127,3 +127,5 @@ void PublishDialog::accept()
         QDialog::accept();
     }
 }
+
+#include "moc_publishdialog.cpp"

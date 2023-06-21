@@ -53,3 +53,5 @@ void FreeBusyDownloadJob::slotResult(KJob *job)
 
     emitResult();
 }
+
+#include "moc_freebusydownloadjob_p.cpp"

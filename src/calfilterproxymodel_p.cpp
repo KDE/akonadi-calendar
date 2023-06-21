@@ -71,3 +71,5 @@ bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &so
 
     return d->filter->filterIncidence(incidence);
 }
+
+#include "moc_calfilterproxymodel_p.cpp"

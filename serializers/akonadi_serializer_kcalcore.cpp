@@ -360,3 +360,5 @@ QString SerializerPluginKCalCore::extractGid(const Item &item) const
     }
     return item.payload<Incidence::Ptr>()->instanceIdentifier();
 }
+
+#include "moc_akonadi_serializer_kcalcore.cpp"

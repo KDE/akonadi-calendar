@@ -188,3 +188,5 @@ void TodoPurgerTest::createTree()
 }
 
 QTEST_AKONADIMAIN(TodoPurgerTest, GUI)
+
+#include "moc_todopurgertest.cpp"

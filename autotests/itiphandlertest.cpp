@@ -689,3 +689,5 @@ void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item, Incidence
 }
 
 QTEST_AKONADIMAIN(ITIPHandlerTest)
+
+#include "moc_itiphandlertest.cpp"

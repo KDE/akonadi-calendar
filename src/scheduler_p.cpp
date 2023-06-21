@@ -628,3 +628,5 @@ void Scheduler::connectCalendar(const Akonadi::CalendarBase::Ptr &calendar)
     connect(calendar.data(), &CalendarBase::modifyFinished, this, &Scheduler::handleModifyFinished, Qt::UniqueConnection);
     connect(calendar.data(), &CalendarBase::deleteFinished, this, &Scheduler::handleDeleteFinished, Qt::UniqueConnection);
 }
+
+#include "moc_scheduler_p.cpp"

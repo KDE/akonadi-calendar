@@ -169,3 +169,5 @@ void MailScheduler::onMailerFinished(Akonadi::MailClient::Result result, const Q
         Q_EMIT transactionFinished(ResultGenericError, message);
     }
 }
+
+#include "moc_mailscheduler_p.cpp"

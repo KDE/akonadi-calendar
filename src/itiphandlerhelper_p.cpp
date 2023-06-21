@@ -496,3 +496,5 @@ void ITIPHandlerHelper::slotSchedulerFinishDialog(const int result, KCalendarCor
         Q_EMIT finished(ResultFailKeepUpdate, QString());
     }
 }
+
+#include "moc_itiphandlerhelper_p.cpp"

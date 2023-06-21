@@ -384,3 +384,5 @@ Akonadi::CalendarBase::Ptr ITIPHandler::calendar() const
 {
     return d->m_calendar;
 }
+
+#include "moc_itiphandler.cpp"

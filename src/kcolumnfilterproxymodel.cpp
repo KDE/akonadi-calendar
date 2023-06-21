@@ -44,3 +44,5 @@ bool KColumnFilterProxyModel::filterAcceptsColumn(int column, const QModelIndex 
 
     return QSortFilterProxyModel::filterAcceptsColumn(column, parent);
 }
+
+#include "moc_kcolumnfilterproxymodel_p.cpp"

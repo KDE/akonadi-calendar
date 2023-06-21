@@ -349,3 +349,5 @@ KalendarAlarmClient::occurrenceForAlarm(const KCalendarCore::Incidence::Ptr &inc
     // Find the next occurrence from the earliest possible alarm time
     return incidence->recurrence()->getNextDateTime(baseStart.addSecs(-1));
 }
+
+#include "moc_kalendaralarmclient.cpp"

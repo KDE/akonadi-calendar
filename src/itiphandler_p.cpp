@@ -218,3 +218,5 @@ bool ITIPHandlerPrivate::isLoaded()
     // ETM doesn't have any way to check if it's already populated, so we have to require loaded calendars.
     return true;
 }
+
+#include "moc_itiphandler_p.cpp"

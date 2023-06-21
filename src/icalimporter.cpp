@@ -237,3 +237,7 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
     d->m_working = true;
     return true;
 }
+
+#include "moc_icalimporter_p.cpp"
+
+#include "moc_icalimporter.cpp"

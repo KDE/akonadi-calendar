@@ -161,3 +161,7 @@ QString TodoPurger::lastError() const
 {
     return d->m_lastError;
 }
+
+#include "moc_todopurger_p.cpp"
+
+#include "moc_todopurger.cpp"

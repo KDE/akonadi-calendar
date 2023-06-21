@@ -249,3 +249,7 @@ bool CalendarClipboard::pasteAvailable() const
 {
     return KCalUtils::ICalDrag::canDecode(QApplication::clipboard()->mimeData());
 }
+
+#include "moc_calendarclipboard.cpp"
+
+#include "moc_calendarclipboard_p.cpp"

@@ -270,3 +270,5 @@ Item::Id CalendarBaseTest::createTodo(const QString &uid, const QString &parentU
 
     return mCalendar->item(uid).id();
 }
+
+#include "moc_calendarbasetest.cpp"
