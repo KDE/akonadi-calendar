@@ -127,6 +127,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     }
 
     incidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
+    incidence->setCustomProperty("VOLATILE", "COLLECTION-ID", QString::number(item.storageCollectionId()));
     // Must be the last one due to re-entrancy
     const bool result = q->MemoryCalendar::addIncidence(incidence);
     if (!result) {

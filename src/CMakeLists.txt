@@ -23,6 +23,8 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE
     calfilterpartstatusproxymodel_p.h
     calfilterproxymodel_p.cpp
     calfilterproxymodel_p.h
+    collectioncalendar.cpp
+    collectioncalendar.h
     etmcalendar.cpp
     etmcalendar.h
     etmcalendar_p.h
@@ -156,6 +158,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   CalendarBase
   CalendarClipboard
   CalendarUtils
+  CollectionCalendar
   ETMCalendar
   FetchJobCalendar
   FreeBusyManager
