@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2023-06-19 11:43+0200\n"
+"PO-Revision-Date: 2023-06-23 20:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -1018,7 +1018,7 @@ msgstr "&Retirar"
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr "Escolle un destinatario do caderno de enderezos"
+msgstr "Escolle un destinatario da axenda de enderezos."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1028,7 +1028,7 @@ msgid ""
 "recipient from your address book"
 msgstr ""
 "Prema este botón para amosar outro diálogo onde ha poder escoller un "
-"destinatario do caderno de enderezos"
+"destinatario da axenda de enderezos."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
@@ -1452,8 +1452,8 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
-"Engadir un calendario novo<p>Aparece un diálogo no que se pode escoller o "
-"tipo de calendario que se desexa engadir.</p>"
+"Engadir un calendario novo<p>Aparece un diálogo no que pode escoller o tipo "
+"de calendario que quere engadir.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
