@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2023-06-11 21:21+0200\n"
+"PO-Revision-Date: 2023-06-23 20:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -204,7 +204,7 @@ msgid ""
 msgstr ""
 "Con este parámetro pode cambiar o nome do ficheiro que se ha obter do "
 "servidor. Se marca esta opción ha obter un ficheiro chamado usuario@dominio."
-"ifb, p.ex. trasno@kde.org.ifb. Se non o escolle ha descargar usuario.ifb, p."
+"ifb, p.ex. trasno@kde.org.ifb. Se non o define ha descargar usuario.ifb, p."
 "ex. trasno.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
@@ -244,8 +244,8 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
-"Marque esta opción para obter unha copia dos correos que envíe KOrganizer "
-"aos asistentes a eventos."
+"Marque esta opción para obter unha copia das mensaxes que KOrganizer envíe "
+"no seu nome ás asistentes a eventos."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:85
@@ -392,8 +392,8 @@ msgid ""
 "contact your system administrator.</p></qt>"
 msgstr ""
 "<qt><p>O software non puido enviar a súa lista de dispoñibilidade ao URL "
-"«%1». Isto pode ser un problema cos dereitos de acceso, ou que especificase "
-"un URL incorrecto. O sistema dixo: <em>%2</em>.</p><p>Comprobe o URL ou "
+"«%1». Isto pode ser un problema cos dereitos de acceso, ou que indicase un "
+"URL incorrecto. O sistema dixo: <em>%2</em>.</p><p>Comprobe o URL ou "
 "contacte co administrador do sistema.</p></qt>"
 
 #: freebusymanager.cpp:615
@@ -420,7 +420,7 @@ msgid ""
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
 "<qt><p>Non se configurou ningún URL para enviar a súa lista de "
-"dispoñibilidade. Estabelézao no diálogo de configuración de KOrganizer, na "
+"dispoñibilidade. Defínao no diálogo de configuración de KOrganizer, na "
 "páxina de «Dispoñibilidade».</p><p>Contacte co administrador do sistema para "
 "coñecer o URL exacto e os detalles da conta.</p></qt>"
 
@@ -1018,7 +1018,7 @@ msgstr "&Retirar"
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr "Escolle un destinatario do caderno de enderezos"
+msgstr "Escolle un destinatario da axenda de enderezos."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1027,8 +1027,8 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Prema este botón para mostrar outro diálogo onde ha poder escoller un "
-"destinatario do caderno de enderezos"
+"Prema este botón para amosar outro diálogo onde ha poder escoller un "
+"destinatario da axenda de enderezos."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
@@ -1116,10 +1116,10 @@ msgid ""
 msgstr ""
 "<para>Engadiu unha actualización dunha invitación, pero non se puido atopar "
 "ningunha versión anterior no calendario.</para><para>Isto puido ocorrer "
-"porque:<list><item>o organizador non o/a incluíu a vostede no convite "
-"orixinal</item><item>vostede aínda non aceptou o convite orixinal</"
-"item><item>vostede eliminou do calendario o convite orixinal</"
-"item><item>vostede xa non ten acceso ao calendario que contén o convite</"
+"porque:<list><item>o organizador non o/a incluíu a vostede na invitación "
+"orixinal</item><item>vostede aínda non aceptou a invitación orixinal</"
+"item><item>vostede eliminou do calendario a invitación orixinal</"
+"item><item>vostede xa non ten acceso ao calendario que contén a invitación</"
 "item></list></para><para>Isto non é ningún problema, pero consideramos que "
 "debería sabelo.</para>"
 
@@ -1452,8 +1452,8 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
-"Engadir un calendario novo<p>Aparece un diálogo no que se pode escoller o "
-"tipo de calendario que se desexa engadir.</p>"
+"Engadir un calendario novo<p>Aparece un diálogo no que pode escoller o tipo "
+"de calendario que quere engadir.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
