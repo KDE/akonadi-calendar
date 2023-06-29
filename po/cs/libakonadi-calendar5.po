@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2023-02-08 14:22+0100\n"
+"PO-Revision-Date: 2023-06-28 15:45+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -166,13 +166,13 @@ msgstr "Uživatelské jméno pro publikování informací o aktivitě"
 #: calendarsettings.kcfg:33
 #, kde-format
 msgid "Free/Busy Publish Password"
-msgstr "Heslo pro publikování aktivity"
+msgstr "Heslo pro publikování zaneprázdněnosti"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr "Heslo pro publikování informací o aktivitě"
+msgstr "Heslo pro publikování informací o zaneprázdněnosti"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
@@ -216,13 +216,13 @@ msgstr "Uživatelské jméno pro získání informací o aktivitě"
 #: calendarsettings.kcfg:64
 #, kde-format
 msgid "Free/Busy Retrieval Password"
-msgstr "Heslo pro získání informací o aktivitě"
+msgstr "Heslo pro získání informací o zaneprázdněnosti"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:65
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr "Heslo pro získání informací o aktivitě"
+msgstr "Heslo pro získání informací o zaneprázdněnosti"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:76
@@ -379,7 +379,7 @@ msgstr ""
 #: freebusymanager.cpp:399
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr "Analýza informací o aktivitě získaných z %1 selhala"
+msgstr "Analýza informací o zaneprázdněnosti získaných z %1 selhala"
 
 #: freebusymanager.cpp:414
 #, kde-format
@@ -397,7 +397,7 @@ msgstr ""
 #: freebusymanager.cpp:615
 #, kde-format
 msgid "The free/busy information was successfully sent."
-msgstr "Informace o aktivitě byly úspěšně odeslány."
+msgstr "Informace o zaneprázdněnosti byly úspěšně odeslány."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
 #, kde-format
@@ -417,10 +417,10 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
-"<qt> <p>Nebylo zadáno žádné URL pro uložení seznamu aktivit. Prosím zadejte "
-"požadované informace v konfiguračním dialogu programu KOrganizer, v záložce "
-"\"Aktivita\".</p><p>Kontaktujte administrátora vašeho systému pro přesné "
-"zadání URL a podrobnosti účtu.</p></qt>"
+"<qt> <p>Nebylo zadáno žádné URL pro uložení seznamu zaneprázdněnosti. Prosím "
+"zadejte požadované informace v konfiguračním dialogu programu KOrganizer, v "
+"záložce \"Zaneprázdněnost\".</p><p>Kontaktujte administrátora vašeho systému "
+"pro přesné zadání URL a podrobnosti účtu.</p></qt>"
 
 #: freebusymanager.cpp:748
 #, kde-format
