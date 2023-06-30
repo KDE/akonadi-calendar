@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-21 00:47+0000\n"
-"PO-Revision-Date: 2023-02-08 14:23+0100\n"
+"PO-Revision-Date: 2023-06-29 13:42+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,8 +52,9 @@ msgstr "Termín úlohy %1"
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
 msgid_plural "%2 starts in %1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 začíná za %1 minutu"
+msgstr[1] "%2 začíná za %1 minuty"
+msgstr[2] "%2 začíná za %1 minut"
 
 #: alarmnotification.cpp:86
 #, kde-format
@@ -71,13 +72,13 @@ msgstr "%1 zahájeno v %2"
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
-msgstr ""
+msgstr "%1 začíná v %2 v %3"
 
 #: alarmnotification.cpp:100
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
-msgstr ""
+msgstr "%1 zahájeno v %2 v %3"
 
 #: alarmnotification.cpp:109
 #, kde-format
@@ -89,7 +90,7 @@ msgstr "%1 začíná v %2"
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
-msgstr ""
+msgstr "%1 zahájeno v %2"
 
 #: alarmnotification.cpp:135
 #, kde-format
