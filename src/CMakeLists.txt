@@ -98,7 +98,12 @@ target_sources(KPim${KF_MAJOR_VERSION}AkonadiCalendar PRIVATE ${akonadicalendar_
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiCalendar PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim${KF_MAJOR_VERSION}AkonadiCalendar BASE_NAME akonadi-calendar)
+
+ecm_generate_export_header(KPim${KF_MAJOR_VERSION}AkonadiCalendar
+    VERSION ${PIM_VERSION}
+    BASE_NAME akonadi_calendar
+    EXPORT_FILE_NAME akonadi-calendar_export.h
+)
 
 
 target_include_directories(KPim${KF_MAJOR_VERSION}AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/AkonadiCalendar>")
