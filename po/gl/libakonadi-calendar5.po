@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2023-06-23 20:56+0200\n"
+"PO-Revision-Date: 2023-06-24 10:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -961,7 +961,7 @@ msgstr "Erro de publicación"
 #: publishdialog_base.ui:38
 #, kde-format
 msgid "The list of addressees to receive the invitation"
-msgstr "A lista de destinatarios que han recibir a invitación"
+msgstr "A lista de destinatarios que han recibir a invitación."
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:41
@@ -977,7 +977,7 @@ msgstr ""
 #: publishdialog_base.ui:52
 #, kde-format
 msgid "Create a new recipient"
-msgstr "Crear un novo destinatario"
+msgstr "Crear un novo destinatario."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mNew)
 #: publishdialog_base.ui:55
@@ -999,7 +999,7 @@ msgstr "&Novo"
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr "Retira o destinatario que está escollido"
+msgstr "Retira o destinatario que está escollido."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
@@ -1047,7 +1047,7 @@ msgstr "Nome:"
 #: publishdialog_base.ui:123
 #, kde-format
 msgid "The recipient's name"
-msgstr "O nome do destinatario"
+msgstr "O nome do destinatario."
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mNameLineEdit)
 #: publishdialog_base.ui:126
@@ -1066,7 +1066,7 @@ msgstr "&Correo electrónico:"
 #: publishdialog_base.ui:146
 #, kde-format
 msgid "The recipient's email address"
-msgstr "O enderezo de correo do destinatario"
+msgstr "O enderezo de correo do destinatario."
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:149
