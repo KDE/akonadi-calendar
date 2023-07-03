@@ -15,6 +15,7 @@ Dependencies:
     'pim/kcalutils' : '@same'
     'pim/kidentitymanagement' : '@same'
     'pim/kmailtransport' : '@same'
+    'pim/messagelib' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
