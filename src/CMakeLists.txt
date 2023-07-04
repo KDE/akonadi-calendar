@@ -116,7 +116,7 @@ PRIVATE
     KF6::KIOCore
     KF6::JobWidgets
     KF6::XmlGui
-    KPim6::AkonadiContact
+    KPim6::AkonadiContactCore
     KPim6::AkonadiMime
     KPim6::CalendarUtils
     KPim6::AkonadiWidgets
