@@ -14,6 +14,8 @@
 #include <KMime/KMimeMessage>
 #include <QObject>
 
+#include <optional>
+
 struct UnitTestResult {
     using List = QList<UnitTestResult>;
     QString from;
@@ -33,6 +35,27 @@ namespace KIdentityManagementCore
 class Identity;
 }
 
+namespace Kleo
+{
+class KeyResolver;
+}
+
+namespace MessageComposer
+{
+class Composer;
+class ContactPreference;
+}
+
+namespace MailTransport
+{
+class Transport;
+}
+
+namespace GpgME
+{
+class Key;
+}
+
 class KJob;
 
 namespace Akonadi
@@ -42,6 +65,20 @@ class ITIPHandlerComponentFactory;
 class AKONADI_CALENDAR_TESTS_EXPORT MailClient : public QObject
 {
     Q_OBJECT
+
+    struct MessageData {
+        QString from;
+        QStringList to;
+        QStringList cc;
+        QString subject;
+        QString body;
+        bool hidden = false;
+        bool bccMe = false;
+        QString attachment;
+    };
+
+    bool mAkonadiLookupEnabled = true;
+
 public:
     enum Result { ResultSuccess, ResultNoAttendees, ResultReallyNoAttendees, ResultErrorCreatingTransport, ResultErrorFetchingTransport, ResultQueueJobError };
 
@@ -90,14 +127,7 @@ public:
     */
     void send(const KCalendarCore::IncidenceBase::Ptr &incidence,
               const KIdentityManagementCore::Identity &identity,
-              const QString &from,
-              const QString &to,
-              const QString &cc,
-              const QString &subject,
-              const QString &body,
-              bool hidden = false,
-              bool bccMe = false,
-              const QString &attachment = QString(),
+              const MessageData &msg,
               const QString &mailTransport = QString());
 
 private:
@@ -109,6 +139,53 @@ Q_SIGNALS:
 public:
     // For unit-test usage, since we can't depend on kdepim-runtime on jenkins
     ITIPHandlerComponentFactory *mFactory = nullptr;
+
+protected:
+    /** Allows to disable Akonadi lookup in KeyResolver (for tests) */
+    void setAkonadiLookupEnabled(bool enabled);
+    /** Allows to override KeyResolver contact preferences (useful for tests) */
+    virtual std::optional<MessageComposer::ContactPreference> contactPreference(const QString &email);
+
+    /** Whether to show key approval dialog or not. **/
+    virtual bool showKeyApprovalDialog() const;
+
+private:
+    std::vector<std::unique_ptr<MessageComposer::Composer>>
+    buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const MessageData &msg);
+
+    void populateComposer(MessageComposer::Composer *composer, const MessageData &msg);
+
+    bool determineWhetherToSign(bool doSignCompletely,
+                                Kleo::KeyResolver *keyResolver,
+                                ITIPHandlerDialogDelegate *dialogDelegate,
+                                const KIdentityManagement::Identity &identity,
+                                bool signSomething,
+                                bool &signAttachments,
+                                bool &result,
+                                bool &canceled);
+
+    bool determineWhetherToEncrypt(bool doEncryptCompletely,
+                                   Kleo::KeyResolver *keyResolver,
+                                   ITIPHandlerDialogDelegate *dialogDelegate,
+                                   const KIdentityManagement::Identity &identity,
+                                   bool encryptSomething,
+                                   bool signSomething,
+                                   bool &encryptAttachments,
+                                   bool &result,
+                                   bool &canceled);
+
+    bool addKeysToContext(const QString &gnupgHome,
+                          const QVector<QPair<QStringList, std::vector<GpgME::Key>>> &data,
+                          const std::map<QByteArray, QString> &autocrypt);
+
+    void queueMessage(const MailTransport::Transport *transport,
+                      const MessageComposer::Composer *composer,
+                      const KCalendarCore::IncidenceBase::Ptr &incidence,
+                      const KIdentityManagement::Identity &identity,
+                      const MessageData &msg,
+                      const KMime::Message::Ptr &message);
+
+    void populateKeyResolverContactsPreferences(Kleo::KeyResolver &keyResolver, const QStringList &addresses);
 };
 }
 

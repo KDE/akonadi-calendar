@@ -122,6 +122,10 @@ PRIVATE
     KPim6::AkonadiWidgets
     KPim6::MailTransport
     KPim6::Mime
+    KPim6::MessageCore
+    KPim6::MessageComposer
+    KPim6::Libkleo
+    KF6::Codecs
 )
 
 set_target_properties(KPim6AkonadiCalendar PROPERTIES

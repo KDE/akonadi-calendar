@@ -6,7 +6,8 @@ include(ECMAddTests)
 
 find_package(Qt6Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
-
+add_subdirectory(gnupg_home)
+include(${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_add_gpg_crypto_test.cmake)
 
 set( KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE )
 
@@ -26,8 +27,21 @@ if (AKONADI_ICAL_RESOURCE)
     add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KPim6::AkonadiCalendar;KF6::ConfigCore" )
 
     add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${common_libs};KPim6::AkonadiMime")
-    add_akonadi_isolated_test_advanced( mailclienttest.cpp "" "KPim6::AkonadiCalendar;KPim6::Mime;KPim6::AkonadiMime;KPim6::IdentityManagementCore")
 
+    add_executable( mailclienttest )
+    target_sources( mailclienttest PRIVATE mailclienttest.cpp )
+    target_link_libraries( mailclienttest PRIVATE
+        Qt6::DBus
+        Qt6::Test
+        KPim6::AkonadiCalendar
+        KPim6::Mime
+        KF6::Contacts
+        KPim6::AkonadiMime
+        KPim6::IdentityManagement
+        KPim6::MessageComposer
+        -lgpgmepp
+    )
+    add_gpg_crypto_akonadi_test( mailclienttest "mailclienttest" )
 endif()
 
 

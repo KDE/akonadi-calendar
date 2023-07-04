@@ -109,6 +109,20 @@ void ITIPHandlerDialogDelegate::openDialogSchedulerFinished(const QString &quest
     Q_EMIT dialogClosed(messageBoxReturnCode, mMethod, mIncidence);
 }
 
+int ITIPHandlerDialogDelegate::warningContinueCancel(const QString &text, const QString &title, const KGuiItem &buttonContinue, const KGuiItem &buttonCancel)
+{
+    return KMessageBox::warningContinueCancel(mParent, text, title, buttonContinue, buttonCancel);
+}
+
+int ITIPHandlerDialogDelegate::warningTwoActionsCancel(const QString &text,
+                                                       const QString &title,
+                                                       const KGuiItem &primaryAction,
+                                                       const KGuiItem &secondaryAction,
+                                                       const KGuiItem &cancelAction)
+{
+    return KMessageBox::warningTwoActionsCancel(mParent, text, title, primaryAction, secondaryAction, cancelAction);
+}
+
 ITIPHandlerHelper::SendResult
 ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode, const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method)
 {

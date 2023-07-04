@@ -20,6 +20,7 @@
 
 #include <KGuiItem>
 #include <KLocalizedString>
+#include <KStandardGuiItem>
 
 #include <QObject>
 #include <QString>
@@ -77,6 +78,8 @@ public:
         Organizer, /**< the organizer of the incidence */
         Attendees /**< the attendees of the incidence */
     };
+
+    enum DialogAction { OkAction = 1, CancelAction = 2, PrimaryAction = 3, SecondaryAction = 4, ContinueAction = 5 };
 
     /**
      * Creates a new AskDelegator
@@ -145,6 +148,33 @@ public:
                                              Action action = ActionAsk,
                                              const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
                                              const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
+
+    /**
+     * Opens a warning message box with two accept actions and cancel action.
+     * @param text: dialog's text
+     * @param title: dialog's title
+     * @param primaryAction: dialog's primary action
+     * @param secondaryAction: dialog's secondary action
+     * @param cancelAction: dialog's cancel action
+     * @returns The button clicked by the user (KMessageBox::ButtonCode)
+     */
+    virtual int warningTwoActionsCancel(const QString &text,
+                                        const QString &title,
+                                        const KGuiItem &primaryAction,
+                                        const KGuiItem &secondaryAction,
+                                        const KGuiItem &cancelAction = KStandardGuiItem::cancel());
+    /**
+     * Opens a warning message box with a Continue and Cancel actions
+     * @param text: dialog's text
+     * @param title: dialog's title
+     * @param buttonContinue: dialog's continue answer
+     * @param buttonCancel: dialog's cancel answer.
+     * @returns The button clicked by the user (KMessageBox::ButtonCode)
+     */
+    virtual int warningContinueCancel(const QString &text,
+                                      const QString &title,
+                                      const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                      const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
 
 Q_SIGNALS:
     /*
