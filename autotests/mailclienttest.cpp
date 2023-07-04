@@ -231,7 +231,7 @@ private Q_SLOTS:
         KIdentityManagementCore::Identity identity;
         identity.setPrimaryEmailAddress(s_ourEmail);
 
-        KIdentityManagement::Identity cryptoIdentity = identity;
+        KIdentityManagementCore::Identity cryptoIdentity = identity;
         cryptoIdentity.setPGPSigningKey(s_ourGpgKey);
         cryptoIdentity.setPGPEncryptionKey(s_ourGpgKey);
         cryptoIdentity.setPgpAutoSign(true);

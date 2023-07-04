@@ -151,14 +151,14 @@ protected:
 
 private:
     std::vector<std::unique_ptr<MessageComposer::Composer>>
-    buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const MessageData &msg);
+    buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, const MessageData &msg);
 
     void populateComposer(MessageComposer::Composer *composer, const MessageData &msg);
 
     bool determineWhetherToSign(bool doSignCompletely,
                                 Kleo::KeyResolver *keyResolver,
                                 ITIPHandlerDialogDelegate *dialogDelegate,
-                                const KIdentityManagement::Identity &identity,
+                                const KIdentityManagementCore::Identity &identity,
                                 bool signSomething,
                                 bool &signAttachments,
                                 bool &result,
@@ -167,7 +167,7 @@ private:
     bool determineWhetherToEncrypt(bool doEncryptCompletely,
                                    Kleo::KeyResolver *keyResolver,
                                    ITIPHandlerDialogDelegate *dialogDelegate,
-                                   const KIdentityManagement::Identity &identity,
+                                   const KIdentityManagementCore::Identity &identity,
                                    bool encryptSomething,
                                    bool signSomething,
                                    bool &encryptAttachments,
@@ -181,7 +181,7 @@ private:
     void queueMessage(const MailTransport::Transport *transport,
                       const MessageComposer::Composer *composer,
                       const KCalendarCore::IncidenceBase::Ptr &incidence,
-                      const KIdentityManagement::Identity &identity,
+                      const KIdentityManagementCore::Identity &identity,
                       const MessageData &msg,
                       const KMime::Message::Ptr &message);
 

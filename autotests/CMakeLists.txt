@@ -37,7 +37,7 @@ if (AKONADI_ICAL_RESOURCE)
         KPim6::Mime
         KF6::Contacts
         KPim6::AkonadiMime
-        KPim6::IdentityManagement
+	KPim6::IdentityManagementCore
         KPim6::MessageComposer
         -lgpgmepp
     )

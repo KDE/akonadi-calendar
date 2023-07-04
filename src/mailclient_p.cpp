@@ -91,7 +91,7 @@ static Kleo::chrono::days encryptChainCertNearExpiryWarningThresholdInDays()
     return Kleo::chrono::days{qMax(1, num)};
 }
 
-static bool cryptoWarningUnsigned(const KIdentityManagement::Identity &identity)
+static bool cryptoWarningUnsigned(const KIdentityManagementCore::Identity &identity)
 {
     if (identity.encryptionOverride()) {
         return identity.warnNotSign();
@@ -99,7 +99,7 @@ static bool cryptoWarningUnsigned(const KIdentityManagement::Identity &identity)
     return MessageComposer::MessageComposerSettings::self()->cryptoWarningUnsigned();
 }
 
-static bool cryptoWarningUnencrypted(const KIdentityManagement::Identity &identity)
+static bool cryptoWarningUnencrypted(const KIdentityManagementCore::Identity &identity)
 {
     if (identity.encryptionOverride()) {
         return identity.warnNotEncrypt();
@@ -139,7 +139,7 @@ void MailClient::populateKeyResolverContactsPreferences(Kleo::KeyResolver &keyRe
     }
 }
 
-static bool populateKeyResolverEncryptionKeys(Kleo::KeyResolver &keyResolver, const KIdentityManagement::Identity &identity)
+static bool populateKeyResolverEncryptionKeys(Kleo::KeyResolver &keyResolver, const KIdentityManagementCore::Identity &identity)
 {
     QStringList encryptToSelfKeys;
     if (!identity.pgpEncryptionKey().isEmpty()) {
@@ -156,7 +156,7 @@ static bool populateKeyResolverEncryptionKeys(Kleo::KeyResolver &keyResolver, co
     return true;
 }
 
-static bool populateKeyResolverSigningKeys(Kleo::KeyResolver &keyResolver, const KIdentityManagement::Identity &identity)
+static bool populateKeyResolverSigningKeys(Kleo::KeyResolver &keyResolver, const KIdentityManagementCore::Identity &identity)
 {
     QStringList signingKeys;
     if (!identity.pgpSigningKey().isEmpty()) {
@@ -175,7 +175,7 @@ static bool populateKeyResolverSigningKeys(Kleo::KeyResolver &keyResolver, const
 }
 
 std::vector<std::unique_ptr<MessageComposer::Composer>>
-MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, const MessageData &msg)
+MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, const MessageData &msg)
 {
     // TODO: Those should be set based on whether the user selects "Sign" or "Encrypt" options
     // in the incidence editor (similar to the "Sign" and "Encrypt" actions in KMail composer).
@@ -316,7 +316,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
 void MailClient::queueMessage(const MailTransport::Transport *transport,
                               const MessageComposer::Composer *composer,
                               const KCalendarCore::IncidenceBase::Ptr &incidence,
-                              const KIdentityManagement::Identity &identity,
+                              const KIdentityManagementCore::Identity &identity,
                               const MessageData &msg,
                               const KMime::Message::Ptr &message)
 {
@@ -604,7 +604,7 @@ bool MailClient::addKeysToContext(const QString &gnupgHome,
 }
 
 void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                      const KIdentityManagement::Identity &identity,
+                      const KIdentityManagementCore::Identity &identity,
                       const MessageData &_msg,
                       const QString &mailTransport)
 {
@@ -659,7 +659,7 @@ void MailClient::handleQueueJobFinished(KJob *job)
 bool MailClient::determineWhetherToSign(bool doSignCompletely,
                                         Kleo::KeyResolver *keyResolver,
                                         ITIPHandlerDialogDelegate *dialogDelegate,
-                                        const KIdentityManagement::Identity &identity,
+                                        const KIdentityManagementCore::Identity &identity,
                                         bool signSomething,
                                         bool &signAttachments,
                                         bool &result,
@@ -774,7 +774,7 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
 bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
                                            Kleo::KeyResolver *keyResolver,
                                            ITIPHandlerDialogDelegate *dialogDelegate,
-                                           const KIdentityManagement::Identity &identity,
+                                           const KIdentityManagementCore::Identity &identity,
                                            bool encryptSomething,
                                            bool signSomething,
                                            bool &encryptAttachments,
