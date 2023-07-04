@@ -12,8 +12,8 @@
 #include <Akonadi/MessageQueueJob>
 #include <KCalendarCore/FreeBusy>
 #include <KCalendarCore/Incidence>
-#include <KIdentityManagementCore/Identity>
 #include <KContacts/Addressee>
+#include <KIdentityManagementCore/Identity>
 #include <MessageComposer/ContactPreference>
 
 #include <gpgme++/context.h>
