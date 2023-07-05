@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 00:50+0000\n"
+"POT-Creation-Date: 2023-07-05 01:01+0000\n"
 "PO-Revision-Date: 2023-01-07 04:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -616,20 +616,20 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "訊息未送出"
 
-#: itiphandler.h:99 itiphandler.h:117 itiphandler.h:133 itiphandler.h:146
+#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "傳送電子郵件"
 
-#: itiphandler.h:100 itiphandler.h:118 itiphandler.h:134 itiphandler.h:147
+#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "不要傳送"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:486
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgid "Error: %1"
 msgstr "錯誤：%1"
@@ -703,12 +703,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "群組排程電子郵件"
 
-#: itiphandlerhelper_p.cpp:128
+#: itiphandlerhelper_p.cpp:142
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>沒有給定摘要</placeholder>"
 
-#: itiphandlerhelper_p.cpp:213
+#: itiphandlerhelper_p.cpp:227
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -717,7 +717,7 @@ msgstr ""
 "事件 %1 包含了其它人。\n"
 "您要對參加者發出邀請嗎？"
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:232
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -726,14 +726,14 @@ msgstr ""
 "待辦事項 %1 包含了其它人。\n"
 "您要對參加者發出邀請嗎？"
 
-#: itiphandlerhelper_p.cpp:223
+#: itiphandlerhelper_p.cpp:237
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "此事件包含了其他人。要將這封電子郵件發送給參加者嗎？"
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:261
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -742,7 +742,7 @@ msgstr ""
 "您不是此事件的發起者。編輯此事件會讓您的行事曆與發起者的行事曆不同步。您確定"
 "要編輯嗎？"
 
-#: itiphandlerhelper_p.cpp:280
+#: itiphandlerhelper_p.cpp:294
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -751,25 +751,25 @@ msgstr ""
 "您已變更邀請 %1。\n"
 "您要對參加者發出更新訊息嗎？"
 
-#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
-#: itiphandlerhelper_p.cpp:322
+#: itiphandlerhelper_p.cpp:302 itiphandlerhelper_p.cpp:323
+#: itiphandlerhelper_p.cpp:336
 #, kde-format
 msgid "Send Update"
 msgstr "傳送更新"
 
-#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:317 itiphandlerhelper_p.cpp:401
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "您要將狀態變更傳送到此工作的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:315
+#: itiphandlerhelper_p.cpp:329
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr "您在此事件的參加者狀態已變更。您要送出狀態變更資訊給此事件的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:358
+#: itiphandlerhelper_p.cpp:372
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -778,7 +778,7 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此事件已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:363
+#: itiphandlerhelper_p.cpp:377
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -787,7 +787,7 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此待辦事項已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:368
+#: itiphandlerhelper_p.cpp:382
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -796,18 +796,18 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此日誌已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:404
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "您要將狀態變更傳送到此日誌的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
+#: itiphandlerhelper_p.cpp:409 itiphandlerhelper_p.cpp:430
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "傳送更新"
 
-#: itiphandlerhelper_p.cpp:410
+#: itiphandlerhelper_p.cpp:424
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -815,51 +815,243 @@ msgid ""
 msgstr ""
 "您已接受此事件的邀請。您要送出狀態變更資訊給此事件的發起者，告訴他您拒絕嗎？"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:468 mailscheduler_p.cpp:94
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "反提案：%1"
 
-#: itiphandlerhelper_p.cpp:471
+#: itiphandlerhelper_p.cpp:485
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "傳送群組排程電子郵件失敗。"
 
-#: itiphandlerhelper_p.cpp:479
+#: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "中止更新"
 
-#: mailclient_p.cpp:50 mailclient_p.cpp:85
+#: mailclient_p.cpp:376 mailclient_p.cpp:413
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "沒有參加者加入電子郵件"
 
-#: mailclient_p.cpp:102
+#: mailclient_p.cpp:422
 #, kde-format
 msgid "Free Busy Object"
 msgstr "行程物件"
 
-#: mailclient_p.cpp:127 mailclient_p.cpp:149
+#: mailclient_p.cpp:451 mailclient_p.cpp:477
 #, kde-format
 msgid "Free Busy Message"
 msgstr "行程訊息"
 
-#: mailclient_p.cpp:184
+#: mailclient_p.cpp:613
 #, kde-format
 msgid "Error while creating transport"
 msgstr "建立傳輸時發生錯誤"
 
-#: mailclient_p.cpp:201
+#: mailclient_p.cpp:631
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "取得傳輸時發生錯誤。無法送出邀請"
 
-#: mailclient_p.cpp:342
+#: mailclient_p.cpp:653
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "將信件放入寄件匣時發生錯誤：%1"
+
+#: mailclient_p.cpp:685
+#, kde-format
+msgid ""
+"Examination of the recipient's signing preferences yielded that you be asked "
+"whether or not to sign this message.\n"
+"Sign this message?"
+msgstr ""
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, fuzzy, kde-format
+#| msgctxt "@option"
+#| msgid "Send Messages"
+msgid "Sign Message?"
+msgstr "傳送訊息"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgctxt "to sign"
+msgid "&Sign"
+msgstr ""
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, fuzzy, kde-format
+#| msgctxt "@action:button dialog negative answer"
+#| msgid "Do Not Send"
+msgid "Do &Not Sign"
+msgstr "不要傳送"
+
+#: mailclient_p.cpp:709
+#, kde-format
+msgid ""
+"There are conflicting signing preferences for these recipients.\n"
+"Sign this message?"
+msgstr ""
+
+#: mailclient_p.cpp:731
+#, kde-format
+msgid ""
+"You have requested to sign this message, but no valid signing keys have been "
+"configured for this identity."
+msgstr ""
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send Unsigned?"
+msgstr ""
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send &Unsigned"
+msgstr ""
+
+#: mailclient_p.cpp:747
+#, kde-format
+msgid ""
+"Some parts of this message will not be signed.\n"
+"Sending only partially signed messages might violate site policy.\n"
+"Sign all parts instead?"
+msgstr ""
+
+#: mailclient_p.cpp:751
+#, kde-format
+msgid ""
+"This message will not be signed.\n"
+"Sending unsigned message might violate site policy.\n"
+"Sign message instead?"
+msgstr ""
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign All Parts"
+msgstr ""
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign"
+msgstr ""
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Unsigned-Message Warning"
+msgstr ""
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Send &As Is"
+msgstr ""
+
+#: mailclient_p.cpp:808
+#, kde-format
+msgid ""
+"Valid trusted encryption keys were found for all recipients.\n"
+"Encrypt this message?"
+msgstr ""
+
+#: mailclient_p.cpp:811
+#, kde-format
+msgid ""
+"Examination of the recipient's encryption preferences yielded that you be "
+"asked whether or not to encrypt this message.\n"
+"Encrypt this message?"
+msgstr ""
+
+#: mailclient_p.cpp:816 mailclient_p.cpp:841
+#, fuzzy, kde-format
+#| msgctxt "@option"
+#| msgid "Send Messages"
+msgid "Encrypt Message?"
+msgstr "傳送訊息"
+
+#: mailclient_p.cpp:817
+#, kde-format
+msgid "Sign && &Encrypt"
+msgstr ""
+
+#: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt"
+msgstr ""
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Sign Only"
+msgstr ""
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Send As-Is"
+msgstr ""
+
+#: mailclient_p.cpp:838
+#, kde-format
+msgid ""
+"There are conflicting encryption preferences for these recipients.\n"
+"Encrypt this message?"
+msgstr ""
+
+#: mailclient_p.cpp:841
+#, fuzzy, kde-format
+#| msgctxt "@action:button dialog negative answer"
+#| msgid "Do Not Send"
+msgid "Do &Not Encrypt"
+msgstr "不要傳送"
+
+#: mailclient_p.cpp:860
+#, kde-format
+msgid ""
+"You have requested to encrypt this message, and to encrypt a copy to "
+"yourself, but no valid trusted encryption keys have been configured for this "
+"identity."
+msgstr ""
+
+#: mailclient_p.cpp:864
+#, fuzzy, kde-format
+#| msgid "Send Update"
+msgid "Send Unencrypted?"
+msgstr "傳送更新"
+
+#: mailclient_p.cpp:864
+#, fuzzy, kde-format
+#| msgid "Send Update"
+msgid "Send &Unencrypted"
+msgstr "傳送更新"
+
+#: mailclient_p.cpp:878
+#, kde-format
+msgid ""
+"Some parts of this message will not be encrypted.\n"
+"Sending only partially encrypted messages might violate site policy and/or "
+"leak sensitive information.\n"
+"Encrypt all parts instead?"
+msgstr ""
+
+#: mailclient_p.cpp:883
+#, kde-format
+msgid ""
+"This message will not be encrypted.\n"
+"Sending unencrypted messages might violate site policy and/or leak sensitive "
+"information.\n"
+"Encrypt messages instead?"
+msgstr ""
+
+#: mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt All Parts"
+msgstr ""
+
+#: mailclient_p.cpp:889
+#, kde-format
+msgid "Unencrypted Message Warning"
+msgstr ""
 
 #: mailscheduler_p.cpp:168
 #, kde-format
