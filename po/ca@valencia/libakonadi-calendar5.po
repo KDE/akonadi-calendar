@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:01+0000\n"
-"PO-Revision-Date: 2023-04-03 10:26+0200\n"
+"PO-Revision-Date: 2023-07-05 15:07+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -912,26 +912,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"L'anàlisi de les preferències de signatura dels destinataris ha determinat "
+"que s'ha de preguntar si se signa o no este missatge.\n"
+"Voleu signar este missatge?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Envia els missatges"
+msgstr "Voleu signar el missatge?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Signa"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "No l'envies"
+msgstr "&No signes"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -939,6 +938,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Hi ha conflictes de preferència de signatura per a estos destinataris.\n"
+"Voleu signar este missatge?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -946,16 +947,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Heu sol·licitat signar este missatge, però no s'ha configurat cap clau de "
+"signatura vàlida per a esta identitat."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Voleu enviar sense signar?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Envia &sense signar"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -964,6 +967,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Algunes parts d'este missatge no se signaran.\n"
+"L'enviament de missatges només parcialment signats podria infringir la "
+"política del lloc.\n"
+"Voleu signar totes les parts?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -972,26 +979,30 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Este missatge no se signarà.\n"
+"L'enviament de missatges sense signar podria infringir la política del "
+"lloc.\n"
+"Voleu signar el missatge?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Signa totes les parts"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Signa"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Avís de missatge sense signar"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "Envia t&al qual"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -999,6 +1010,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"S'han trobat claus d'encriptació vàlides per a tots els destinataris.\n"
+"Voleu encriptar este missatge?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -1007,33 +1020,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"L'anàlisi de les preferències d'encriptació dels destinataris ha determinat "
+"que s'ha de preguntar si s'encripta o no este missatge.\n"
+"Voleu encriptar este missatge?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Envia els missatges"
+msgstr "Voleu encriptar el missatge?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Signa i &encripta"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Encripta"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Només &signa"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "En&via tal qual"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1041,13 +1055,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Hi ha conflictes de preferència de l'encriptació per a estos destinataris.\n"
+"Voleu encriptar este missatge?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "No l'envies"
+msgstr "&No l'encriptes"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1056,18 +1070,19 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Heu sol·licitat encriptar este missatge, i encriptar una còpia per a vós, "
+"però no s'ha configurat cap clau fiable d'encriptació vàlida per a esta "
+"identitat."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Envia l'actualització"
+msgstr "Voleu enviar sense encriptar?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Envia l'actualització"
+msgstr "Envia se&nse encriptar"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1077,6 +1092,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Algunes parts d'este missatge no s'encriptaran.\n"
+"L'enviament de missatges només parcialment encriptats podria infringir la "
+"política del lloc.\n"
+"Voleu encriptar totes les parts?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1086,16 +1105,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Este missatge no s'encriptarà.\n"
+"L'enviament de missatges sense encriptar podria infringir la política del "
+"lloc i/o perdre informació confidencial.\n"
+"Voleu encriptar totes les parts?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Encripta totes les parts"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Avís de missatge sense encriptar"
 
 #: mailscheduler_p.cpp:168
 #, kde-format
@@ -1982,15 +2005,3 @@ msgstr "Descripció"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "S'estan netejant les tasques pendents finalitzades"
-
-#~ msgid "Mail transport to use for sending e-mail messages"
-#~ msgstr ""
-#~ "Transport de correu que s'ha d'utilitzar per a enviar missatges de correu "
-#~ "electrònic"
-
-#~ msgid ""
-#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
-#~ "the default one will be used."
-#~ msgstr ""
-#~ "Si s'indica tot, els correus electrònics de treball en grup utilitzaran "
-#~ "este transport. En cas contrari, s'utilitzarà el predeterminat."

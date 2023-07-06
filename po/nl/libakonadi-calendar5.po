@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:01+0000\n"
-"PO-Revision-Date: 2023-04-03 09:32+0200\n"
+"PO-Revision-Date: 2023-07-05 23:05+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -892,26 +892,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Onderzoek van de ondertekeningsvoorkeuren van de ontvanger gaf aan dat u "
+"gevraagd wordt of dit bericht al dan niet moet worden ondertekend.\n"
+"Dit bericht ondertekenen?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Berichten verzenden"
+msgstr "Bericht ondertekenen?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Ondertekenen"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Niet verzenden"
+msgstr "&Niet ondertekenen"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -919,6 +918,9 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Er zijn voorkeuren voor ondertekening van deze ontvangers met elkaar in "
+"conflict.\n"
+"Dit bericht ondertekenen?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -926,16 +928,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"U hebt gevraagd om dit bericht te ondertekenen, maar er is geen geldige "
+"ondertekeningssleutel ingesteld voor deze identiteit."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Niet-ondertekend verzenden?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "&Niet-ondertekend verzenden"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -944,6 +948,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Sommige delen van dit bericht zullen niet ondertekend worden.\n"
+"Het verzenden van gedeeltelijk ondertekende berichten kan tegen het geldige "
+"beleid zijn.\n"
+"Alle delen toch ondertekenen?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -952,27 +960,30 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Dit bericht zal niet ondertekend worden.\n"
+"Het verzenden van niet ondertekende berichten kan tegen het geldige beleid "
+"zijn.\n"
+"Het bericht toch ondertekenen?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "Alle delen &ondertekenen"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Ondertekenen"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Waarschuwing voor niet-ondertekend"
 
 #: mailclient_p.cpp:755
-#, fuzzy, kde-format
-#| msgid "Send as I&Cal"
+#, kde-format
 msgid "Send &As Is"
-msgstr "Als I&Cal verzenden"
+msgstr "Zo &verzenden"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -980,6 +991,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Geldige vertrouwde encryptiesleutels zijn voor alle ontvangers gevonden.\n"
+"Dit bericht versleutelen?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -988,33 +1001,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Onderzoek van de versleutelingsvoorkeuren van de ontvanger gaf aan dat u "
+"gevraagd wordt of dit bericht al dan niet moet worden versleuteld.\n"
+"Dit bericht versleutelen?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Berichten verzenden"
+msgstr "Bericht versleutelen?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Ondertekenen && &versleutelen"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "V&ersleutelen"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Alleen &ondertekenen"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "Zo &verzenden"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1022,13 +1036,14 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Er zijn voorkeuren voor versleuteling van deze ontvangers met elkaar in "
+"conflict.\n"
+"Dit bericht versleutelen?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Niet verzenden"
+msgstr "&Niet versleutelen"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1037,18 +1052,19 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"U hebt gevraagd om dit bericht te versleutelen en een versleutelde kopie "
+"naar uzelf te sturen, maar er is geen geldige vertrouwde encryptiesleutel "
+"ingesteld voor deze identiteit."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Update verzenden"
+msgstr "Onversleuteld verzenden?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Update verzenden"
+msgstr "&Onversleuteld verzenden"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1058,6 +1074,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Sommige delen van dit bericht zullen niet versleuteld worden.\n"
+"Gedeeltelijk versleutelde berichten verzenden kan tegen tegen het geldige "
+"beleid zijn en/of gevoelige informatie lekken.\n"
+"Alle delen toch versleutelen?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1067,16 +1087,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Dit bericht zal niet versleuteld worden.\n"
+"Niet versleutelde berichten verzenden kan tegen tegen het geldige beleid "
+"zijn en/of gevoelige informatie lekken.\n"
+"Bericht toch versleutelen?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "Alle delen &versleutelen"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Waarschuwing voor niet-versleuteld bericht"
 
 #: mailscheduler_p.cpp:168
 #, kde-format

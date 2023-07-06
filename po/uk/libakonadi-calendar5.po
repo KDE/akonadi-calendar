@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:01+0000\n"
-"PO-Revision-Date: 2023-04-03 14:07+0300\n"
+"PO-Revision-Date: 2023-07-05 15:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -905,26 +905,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"В результаті дослідження вподобань з підписування повідомлень для адресатів "
+"виявлено, що слід визначитися, чи варто підписувати це повідомлення.\n"
+"Підписати це повідомлення?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Надіслати повідомлення"
+msgstr "Підписати повідомлення?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Підписати"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Не надсилати"
+msgstr "&Не підписувати"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -932,6 +931,9 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Адресати мають протиріччя у вподобаннях з підписування повідомлень "
+"надісланих до них.\n"
+"Підписати це повідомлення?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -939,16 +941,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Ви запитали на підписування цього повідомлення, але для цього профілю не "
+"вказано жодного ключа для підписування."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Надіслати без підпису?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Надіслати &без підпису"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -957,6 +961,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Деякі частини повідомлення не буде підписано.\n"
+"Надсилання частково підписаних повідомлень може порушити правила "
+"листування.\n"
+"Підписати всі частини?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -965,27 +973,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Повідомлення не буде підписане.\n"
+"Надсилання непідписаних повідомлень може порушити правила листування.\n"
+"Підписати повідомлення?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Підписати всі частини"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Підписати"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Попередження щодо непідписаного повідомлення"
 
 #: mailclient_p.cpp:755
-#, fuzzy, kde-format
-#| msgid "Send as I&Cal"
+#, kde-format
 msgid "Send &As Is"
-msgstr "На&діслати як ICal"
+msgstr "Надіслати &як є"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -993,6 +1003,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Для всіх адресатів було знайдено дійсні ключі, що мають довіру.\n"
+"Чи зашифрувати це повідомлення?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -1001,33 +1013,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"В результаті дослідження вподобань з шифрування повідомлень для адресатів "
+"виявлено, що слід визначитися, чи слід шифрувати це повідомлення.\n"
+"Зашифрувати це повідомлення?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Надіслати повідомлення"
+msgstr "Зашифрувати повідомлення?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Підписати та &зашифрувати"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "За&шифрувати"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Т&ільки підписати"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Надіслати як є"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1035,13 +1048,14 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Запис адресатів містять суперечливі параметри шифрування повідомлень "
+"надісланих до них.\n"
+"Зашифрувати це повідомлення?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Не надсилати"
+msgstr "&Не зашифровувати"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1050,18 +1064,19 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Ви вказали зашифрувати це повідомлення, та зашифрувати його копію для себе, "
+"але для цього профілю не встановлено чинних ключів для шифрування, що мають "
+"довіру."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Надіслати оновлення"
+msgstr "Надіслати незашифрованим?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Надіслати оновлення"
+msgstr "Надіслати &незашифрованим"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1071,6 +1086,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Деякі частини повідомлення не буде зашифровано.\n"
+"Надсилання частково зашифрованих повідомлень може порушити правила "
+"листування.\n"
+"Зашифрувати всі частини?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1080,16 +1099,19 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Повідомлення не буде зашифроване.\n"
+"Надсилання незашифрованих повідомлень може порушити правила листування.\n"
+"Зашифрувати повідомлення?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Зашифровувати всі частини"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Попередження щодо незашифрованогоповідомлення"
 
 #: mailscheduler_p.cpp:168
 #, kde-format

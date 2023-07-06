@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:01+0000\n"
-"PO-Revision-Date: 2023-04-04 03:32+0200\n"
+"PO-Revision-Date: 2023-07-05 18:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.80\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -903,26 +903,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"El examen de las preferencias de firma del destinatario indica que se le "
+"debe preguntar si quiere firmar este mensaje.\n"
+"¿Desea firmar este mensaje?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Enviar mensajes"
+msgstr "¿Desea firmar el mensaje?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Firmar"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "No enviar"
+msgstr "&No firmar"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -930,6 +929,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Existen preferencia de firma en conflicto para estos destinatarios.\n"
+"¿Desea firmar este mensaje?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -937,16 +938,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Ha solicitado que quiere firmar este mensaje, aunque todavía no ha "
+"configurado ninguna clave válida para firmar con esta identidad."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "¿Enviar sin firmar?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Enviar &sin firmar"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -955,6 +958,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Algunas partes de este mensaje no se firmarán.\n"
+"El envío de mensajes firmados parcialmente puede infringir la política de "
+"este sitio.\n"
+"¿Desea firmar todas las partes del mensaje?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -963,26 +970,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Este mensaje no se firmará.\n"
+"El envío de mensajes sin firmar puede infringir la política de este sitio.\n"
+"¿Desea firmar el mensaje?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Firmar todas las partes"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Firmar"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Advertencia de mensaje sin firmar"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "&Enviar como está"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -990,6 +1000,9 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Se han encontrado claves de cifrado de confianza para todos los "
+"destinatarios.\n"
+"¿Desea cifrar este mensaje?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -998,33 +1011,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"El examen de las preferencias de cifrado del destinatario indica que se le "
+"debe preguntar si quiere cifrar este mensaje.\n"
+"¿Desea cifrar este mensaje?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Enviar mensajes"
+msgstr "¿Desea cifrar el mensaje?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Firmar y &cifrar"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Cifrar"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "&Solo firmar"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Enviar como está"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1032,13 +1046,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Existen preferencias de cifrado en conflicto para estos destinatarios.\n"
+"¿Desea cifrar este mensaje?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "No enviar"
+msgstr "&No cifrar"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1047,18 +1061,19 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Ha solicitado que se debe cifrar este mensaje y que se cifre una copia para "
+"usted, aunque no se ha encontrado ninguna clave de cifrado de confianza "
+"válida para esta identidad."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Enviar actualización"
+msgstr "¿Enviar sin cifrar?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Enviar actualización"
+msgstr "Enviar &sin cifrar"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1068,6 +1083,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Algunas partes de este mensaje no se cifrarán.\n"
+"El envío de mensajes cifrados parcialmente puede infringir la política de "
+"este sitio o filtrar información sensible.\n"
+"¿Desea cifrar todas las partes?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1077,16 +1096,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Este mensaje no se cifrará.\n"
+"El envío de mensajes sin cifrar puede infringir la política de este sitio o "
+"filtrar información sensible.\n"
+"¿Desea cifrar el mensaje?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Cifrar todas las partes"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Advertencia de mensaje sin cifrar"
 
 #: mailscheduler_p.cpp:168
 #, kde-format
