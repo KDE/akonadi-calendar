@@ -125,7 +125,6 @@ PRIVATE
     KPim${KF_MAJOR_VERSION}::MessageCore
     KPim${KF_MAJOR_VERSION}::MessageComposer
     KPim${KF_MAJOR_VERSION}::Libkleo
-    KF${KF_MAJOR_VERSION}::Codecs
 )
 
 set_target_properties(KPim${KF_MAJOR_VERSION}AkonadiCalendar PROPERTIES
