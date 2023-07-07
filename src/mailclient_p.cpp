@@ -277,7 +277,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
             auto composer = std::make_unique<MessageComposer::Composer>();
 
             if (encryptSomething || identity.autocryptEnabled()) {
-                QVector<QPair<QStringList, std::vector<GpgME::Key>>> data;
+                QList<QPair<QStringList, std::vector<GpgME::Key>>> data;
                 data.reserve(encData.size());
                 for (const auto &info : encData) {
                     data.push_back(qMakePair(info.recipients, info.keys));
@@ -521,7 +521,7 @@ void MailClient::populateComposer(MessageComposer::Composer *composer, const Mes
 }
 
 bool MailClient::addKeysToContext(const QString &gnupgHome,
-                                  const QVector<QPair<QStringList, std::vector<GpgME::Key>>> &data,
+                                  const QList<QPair<QStringList, std::vector<GpgME::Key>>> &data,
                                   const std::map<QByteArray, QString> &autocryptMap)
 {
     bool needSpecialContext = false;

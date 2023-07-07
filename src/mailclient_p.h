@@ -174,9 +174,8 @@ private:
                                    bool &result,
                                    bool &canceled);
 
-    bool addKeysToContext(const QString &gnupgHome,
-                          const QVector<QPair<QStringList, std::vector<GpgME::Key>>> &data,
-                          const std::map<QByteArray, QString> &autocrypt);
+    bool
+    addKeysToContext(const QString &gnupgHome, const QList<QPair<QStringList, std::vector<GpgME::Key>>> &data, const std::map<QByteArray, QString> &autocrypt);
 
     void queueMessage(const MailTransport::Transport *transport,
                       const MessageComposer::Composer *composer,

@@ -47,7 +47,7 @@ using namespace Akonadi;
 Q_DECLARE_METATYPE(KIdentityManagementCore::Identity)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 Q_DECLARE_METATYPE(CryptoState)
-Q_DECLARE_METATYPE(QVector<ExpectedDialog>)
+Q_DECLARE_METATYPE(QList<ExpectedDialog>)
 Q_DECLARE_METATYPE(ContactPreferences)
 
 class FakeMessageQueueJob : public Akonadi::MessageQueueJob
@@ -88,7 +88,7 @@ public:
     {
     }
 
-    static QVector<ExpectedDialog> expectedWarningTwoActionsCancelDialogs;
+    static QList<ExpectedDialog> expectedWarningTwoActionsCancelDialogs;
 
 protected:
     int warningTwoActionsCancel(const QString &text, const QString &title, const KGuiItem &, const KGuiItem &, const KGuiItem &) override
@@ -115,7 +115,7 @@ protected:
     }
 };
 
-QVector<ExpectedDialog> FakeITIPHandlerDialogDelegate::expectedWarningTwoActionsCancelDialogs;
+QList<ExpectedDialog> FakeITIPHandlerDialogDelegate::expectedWarningTwoActionsCancelDialogs;
 
 class FakeITIPHandlerComponentFactory : public ITIPHandlerComponentFactory
 {
@@ -224,7 +224,7 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedCcList");
         QTest::addColumn<QStringList>("expectedBccList");
         QTest::addColumn<CryptoState>("expectedCrypto");
-        QTest::addColumn<QVector<ExpectedDialog>>("expectedDialogs");
+        QTest::addColumn<QList<ExpectedDialog>>("expectedDialogs");
         QTest::addColumn<ContactPreferences>("contactPreferences");
 
         KCalendarCore::Incidence::Ptr incidence(new KCalendarCore::Event());
@@ -250,7 +250,7 @@ private Q_SLOTS:
         QStringList toBccList;
         //----------------------------------------------------------------------------------------------
         QTest::newRow("No attendees") << incidence << identity << bccMe << attachment << transport << expectedResult << -1 << QString() << toList << toCcList
-                                      << toBccList << CryptoState::Plain << QVector<ExpectedDialog>{} << ContactPreferences{};
+                                      << toBccList << CryptoState::Plain << QList<ExpectedDialog>{} << ContactPreferences{};
         //----------------------------------------------------------------------------------------------
         // One attendee, but without e-mail
         KCalendarCore::Attendee attendee(QStringLiteral("name1"), QString());
@@ -258,7 +258,7 @@ private Q_SLOTS:
         incidence->addAttendee(attendee);
         expectedResult = MailClient::ResultReallyNoAttendees;
         QTest::newRow("No attendees with email") << incidence << identity << bccMe << attachment << transport << expectedResult << -1 << QString() << toList
-                                                 << toCcList << toBccList << CryptoState::Plain << QVector<ExpectedDialog>{} << ContactPreferences{};
+                                                 << toCcList << toBccList << CryptoState::Plain << QList<ExpectedDialog>{} << ContactPreferences{};
         //----------------------------------------------------------------------------------------------
         // One valid attendee
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
@@ -268,7 +268,7 @@ private Q_SLOTS:
         expectedResult = MailClient::ResultSuccess;
         toList << QStringLiteral("test@foo.org");
         QTest::newRow("One attendee") << incidence << identity << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                                      << toList << toCcList << toBccList << CryptoState::Plain << QVector<ExpectedDialog>{} << ContactPreferences{};
+                                      << toList << toCcList << toBccList << CryptoState::Plain << QList<ExpectedDialog>{} << ContactPreferences{};
         //----------------------------------------------------------------------------------------------
         // One valid attendee
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
@@ -279,7 +279,7 @@ private Q_SLOTS:
         expectedResult = MailClient::ResultSuccess;
         // Should default to the default transport
         QTest::newRow("Invalid transport") << incidence << identity << bccMe << attachment << invalidTransport << expectedResult << expectedTransportId
-                                           << expectedFrom << toList << toCcList << toBccList << CryptoState::Plain << QVector<ExpectedDialog>{}
+                                           << expectedFrom << toList << toCcList << toBccList << CryptoState::Plain << QList<ExpectedDialog>{}
                                            << ContactPreferences{};
 
         //----------------------------------------------------------------------------------------------
@@ -291,7 +291,7 @@ private Q_SLOTS:
 
             QTest::newRow("One attendee, identity wants to sign")
                 << incidence << ident << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom << toList << toCcList
-                << toBccList << CryptoState::Signed << QVector<ExpectedDialog>{} << ContactPreferences{};
+                << toBccList << CryptoState::Signed << QList<ExpectedDialog>{} << ContactPreferences{};
         }
 
         //----------------------------------------------------------------------------------------------
@@ -304,7 +304,7 @@ private Q_SLOTS:
 
             QTest::newRow("One attendee, identity wants to encrypt")
                 << inc << cryptoIdentity << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                << QStringList({s_testEmail}) << toCcList << toBccList << CryptoState::Encrypted << QVector<ExpectedDialog>{} << ContactPreferences{};
+                << QStringList({s_testEmail}) << toCcList << toBccList << CryptoState::Encrypted << QList<ExpectedDialog>{} << ContactPreferences{};
         }
 
         //----------------------------------------------------------------------------------------------
@@ -320,7 +320,7 @@ private Q_SLOTS:
 
             QTest::newRow("One attendee, attendee wants to encrypt")
                 << inc << ident << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom << QStringList({s_testEmail})
-                << toCcList << toBccList << CryptoState::Encrypted << QVector<ExpectedDialog>{}
+                << toCcList << toBccList << CryptoState::Encrypted << QList<ExpectedDialog>{}
                 << ContactPreferences{{s_testEmail, createPreference(s_testGpgKey, Kleo::AlwaysEncrypt, Kleo::AlwaysSign)}};
         }
 
@@ -337,8 +337,8 @@ private Q_SLOTS:
             QTest::newRow("Two attendees, one wants encryption, one has no key")
                 << inc << ident << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom
                 << QStringList({QStringLiteral("test@foo.org"), s_testEmail}) << toCcList << toBccList << CryptoState::Plain
-                << QVector<ExpectedDialog>{{QStringLiteral("conflicting encryption preferences"),
-                                            ITIPHandlerDialogDelegate::SecondaryAction /* do not encrypt */}}
+                << QList<ExpectedDialog>{{QStringLiteral("conflicting encryption preferences"),
+                                          ITIPHandlerDialogDelegate::SecondaryAction /* do not encrypt */}}
                 << ContactPreferences{{s_testEmail, createPreference(s_testGpgKey, Kleo::AlwaysEncrypt)}};
         }
 
@@ -356,7 +356,7 @@ private Q_SLOTS:
 
             QTest::newRow("Two attendees, both have keys but only one explicitly wants encryption")
                 << inc << ident << bccMe << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                << QStringList({s_testEmail, s_test2Email}) << toCcList << toBccList << CryptoState::Encrypted << QVector<ExpectedDialog>{}
+                << QStringList({s_testEmail, s_test2Email}) << toCcList << toBccList << CryptoState::Encrypted << QList<ExpectedDialog>{}
                 << ContactPreferences{{s_test2Email, createPreference(s_test2GpgKey, Kleo::AlwaysEncrypt)}};
         }
 
@@ -371,7 +371,7 @@ private Q_SLOTS:
         toBccList.clear();
         toBccList << s_ourEmail;
         QTest::newRow("Test bcc") << incidence << identity << /*bccMe*/ true << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                                  << toList << toCcList << toBccList << CryptoState::Plain << QVector<ExpectedDialog>{} << ContactPreferences{};
+                                  << toList << toCcList << toBccList << CryptoState::Plain << QList<ExpectedDialog>{} << ContactPreferences{};
         //----------------------------------------------------------------------------------------------
         // Test CC list
         attendee = KCalendarCore::Attendee(QStringLiteral("name1"), QStringLiteral("test@foo.org"));
@@ -392,7 +392,7 @@ private Q_SLOTS:
         toCcList.clear();
         toCcList << QStringLiteral("optional@foo.org") << QStringLiteral("non@foo.org");
         QTest::newRow("Test cc") << incidence << identity << /*bccMe*/ true << attachment << transport << expectedResult << expectedTransportId << expectedFrom
-                                 << toList << toCcList << toBccList << CryptoState::Plain << QVector<ExpectedDialog>{} << ContactPreferences{};
+                                 << toList << toCcList << toBccList << CryptoState::Plain << QList<ExpectedDialog>{} << ContactPreferences{};
     }
 
     void testMailAttendees()
@@ -409,7 +409,7 @@ private Q_SLOTS:
         QFETCH(QStringList, expectedCcList);
         QFETCH(QStringList, expectedBccList);
         QFETCH(CryptoState, expectedCrypto);
-        QFETCH(QVector<ExpectedDialog>, expectedDialogs);
+        QFETCH(QList<ExpectedDialog>, expectedDialogs);
         QFETCH(ContactPreferences, contactPreferences);
 
         FakeMessageQueueJob::sUnitTestResults.clear();
