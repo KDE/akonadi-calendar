@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:01+0000\n"
-"PO-Revision-Date: 2023-05-29 22:24+0400\n"
+"PO-Revision-Date: 2023-07-07 14:36+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -891,26 +891,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Qəbul edənin imza tərcihlərinin araşdırılması belə nəticə verdi ki, sizdən "
+"bu məktubun imzalanıb imzalanmamayacağı soruşulacaq.\n"
+"Bu  məktub imzalansın?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "İsmarıclar göndərmək"
+msgstr "Məktub imzalansın?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&İmzalamaq"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Göndərməmək"
+msgstr "İ&mzalamamaq"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -918,6 +917,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Bu alıcılar üçün imzalama tərcihləri ziddiyyət təşkil edir.Bu məktub "
+"imzalansın?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -925,16 +926,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Sİz bu məktubu imzalamağı xahis etmisiniz, Lakim bu kimlik üçün etibarlı "
+"imzalama açarları yoxdur."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "İmzalamadan göndərək?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "İ&mzalamadan göndərilsin"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -943,6 +946,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Bu məktubun bəzi hissələri imzalanmayacaq.\n"
+"Yalnız bir hissəsi imzalanmış məktubların göndərilməsi saytın qaydalarını "
+"poza bilər.\n"
+"Əvəzinə bütün hissələr imzalansın?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -951,26 +958,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Bu məktub imzalanmayacaq.\n"
+"İmzalanmamış məktubun göndərilməi saytın qaydalarını poza bilər.\n"
+"Əvəzinə məktub imzalansın?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "Bütün hissələri &imzalamaq"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&İmzalayın"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "İmzalanmamış məktub xəbərdarlığı"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "&Olduğu kimi göndərin"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -978,6 +988,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Bütün alıcılar üçün doğru etibarlı şifrələmə açarları tapıldı.\n"
+"Bu məktubu şifrələyək?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -986,33 +998,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Alıcıların şifrələmə tərcihlərinin araşdırması o nəticəni verdi ki, sizdən "
+"bu məktubun şifrələnib şifrələnməməyəcəyi soruşulacaq.\n"
+"Bu məktub şifrələnsin?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "İsmarıclar göndərmək"
+msgstr "Məktubu şifrələyək?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "İmzalamaq və &şifrələmək"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Şifrələmək"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Yalnız &imzalamaq"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Olduğu kimi göndərin"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1020,13 +1033,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Bu alıcılar üçün şifrələmə tərcihləri ziddiyyət təşkil edir.\n"
+"Bu məktub şifrələnsin?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Göndərməmək"
+msgstr "Şifrələ&məmək"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1035,18 +1048,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Bu məktubu və özünüz üçün onun surətini şifrələməyi tələb etdiniz, lakin bu "
+"kimlik üçün tənzimlənmiş doğru etibarlı şifrələmə açarları tapılmadı."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Yenilənməni göndərmək"
+msgstr "Şifrələnməmiş göndərək?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Yenilənməni göndərmək"
+msgstr "Şifrələ&nməmiş göndərmək"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1056,6 +1069,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Bu məktubub bəzi hissələri şifrələnməyəcək.\n"
+"Bəzi hissələri şifrələnməmiş məktubun göndərilməsi saytın qaydalarının "
+"pozulmasına və ya həssas məlumatların sızılmasına səbəb ola bilər.\n"
+"Əvəzinə bütün hissələr şifrələnsin?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1065,16 +1082,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Bu məktub şifrələnməyəcək.\n"
+"Şifrələnməmiş məktubların göndərilməsi saytın qaydalarının pozulmasına və ya "
+"həssas məlimatların sızılmasına səbəb ola bilər.\n"
+"Əvəzinə məktublar şifrələnsin?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "Bütün hissələri &şifrələmək"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Şifrələnməmiş məktub xəbərdarlığı"
 
 #: mailscheduler_p.cpp:168
 #, kde-format

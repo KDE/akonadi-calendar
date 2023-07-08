@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:01+0000\n"
-"PO-Revision-Date: 2023-04-04 16:49+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-07-06 09:49+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -937,24 +937,20 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Envoyer des messages"
+msgstr "Signer ce message ?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Signer"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Ne pas envoyer"
+msgstr "&Ne pas signer"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -962,6 +958,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Il y a des paramètres incohérents de signature pour ces destinataires.\n"
+"Signer ce message ?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -973,12 +971,12 @@ msgstr ""
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Envoyer non signé ?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Envoyer &non signé"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -999,22 +997,22 @@ msgstr ""
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Signer toutes les parties"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Signer"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Alarme de message non signé"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "Env&oyer tel quel"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -1022,6 +1020,9 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Des clés de chiffrement fiables et valables ont été trouvées pour tous les "
+"destinataires.  \n"
+"Chiffrer ce message ?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -1032,31 +1033,29 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Envoyer des messages"
+msgstr "Chiffrer ce message ?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Signer et chiffrer"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "Chiffr&er"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "&Signer uniquement"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "En&voyez tel quel"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1064,13 +1063,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Il y a des paramètres incohérents de chiffrement pour ces destinataires.\n"
+"Chiffrer ce message ?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Ne pas envoyer"
+msgstr "&Ne pas chiffrer"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1081,16 +1080,14 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Envoyer une mise à jour"
+msgstr "Envoyer de façon non chiffrée ?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Envoyer une mise à jour"
+msgstr "Env&oyer de façon non chiffrée ?"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1113,12 +1110,12 @@ msgstr ""
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "Chiffr&er toutes les parties"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Alarme de message non chiffré"
 
 #: mailscheduler_p.cpp:168
 #, kde-format
