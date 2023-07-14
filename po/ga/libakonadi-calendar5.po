@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 01:01+0000\n"
+"POT-Creation-Date: 2023-07-14 00:48+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -253,7 +253,7 @@ msgid ""
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
 
-#: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
+#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
 #: todomodel.cpp:458
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
@@ -261,83 +261,83 @@ msgstr ""
 msgid "Calendar"
 msgstr "Féilire"
 
-#: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
+#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
 #, kde-format
 msgid "Tasks"
 msgstr ""
 
-#: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
 #, fuzzy, kde-format
 #| msgid "Cut Journal"
 #| msgid_plural "Cut %1 Journals"
 msgid "Journal"
 msgstr "Gearr Dialann"
 
-#: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
 msgid "Notes"
 msgstr ""
 
-#: calendarutils.cpp:131
+#: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:134
+#: calendarutils.cpp:135
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr ""
 
-#: calendarutils.cpp:137
+#: calendarutils.cpp:138
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr ""
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr ""
 
-#: calendarutils.cpp:143
+#: calendarutils.cpp:144
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:150
+#: calendarutils.cpp:151
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr ""
 
-#: calendarutils.cpp:183
+#: calendarutils.cpp:184
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr ""
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:186
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr ""
 
-#: calendarutils.cpp:188
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr ""
 
-#: calendarutils.cpp:196
+#: calendarutils.cpp:197
 #, kde-format
 msgid "My %1"
 msgstr ""
 
-#: calendarutils.cpp:200
+#: calendarutils.cpp:201
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"

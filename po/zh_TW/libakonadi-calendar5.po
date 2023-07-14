@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 01:01+0000\n"
+"POT-Creation-Date: 2023-07-14 00:48+0000\n"
 "PO-Revision-Date: 2023-01-07 04:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -266,87 +266,87 @@ msgstr ""
 "網域部份相不相符。如果設定了此項目，則在伺服器 www.yourdomain.com 上的行程資"
 "料尋找 joe@mydomain.com 會失敗。"
 
-#: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
+#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
 #: todomodel.cpp:458
 #, kde-format
 msgid "Calendar"
 msgstr "行事曆"
 
-#: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
+#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
 #, kde-format
 msgid "Tasks"
 msgstr "工作"
 
-#: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
 #, kde-format
 msgid "Journal"
 msgstr "日誌"
 
-#: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
 msgid "Notes"
 msgstr "筆記"
 
-#: calendarutils.cpp:131
+#: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "我的 Kolab %1"
 
-#: calendarutils.cpp:134
+#: calendarutils.cpp:135
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "共享的 Kolab %1 %2"
 
-#: calendarutils.cpp:137
+#: calendarutils.cpp:138
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "%1 的 Kolab %2"
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "%1 的 Kolab %2 %3"
 
-#: calendarutils.cpp:143
+#: calendarutils.cpp:144
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "Kolab %1"
 
-#: calendarutils.cpp:150
+#: calendarutils.cpp:151
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 內的 %2"
 
-#: calendarutils.cpp:183
+#: calendarutils.cpp:184
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "%1 的 Google %2"
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:186
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%1 的 %2"
 
-#: calendarutils.cpp:188
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "Google %1"
 
-#: calendarutils.cpp:196
+#: calendarutils.cpp:197
 #, kde-format
 msgid "My %1"
 msgstr "我的 %1"
 
-#: calendarutils.cpp:200
+#: calendarutils.cpp:201
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
