@@ -67,7 +67,7 @@ void SingleCollectionCalendar::setCollection(const Akonadi::Collection &c)
     Q_ASSERT(c.id() == m_collection.id() || !m_collection.isValid());
     m_collection = c;
 
-    setName(Akonadi::CalendarUtils::displayName(nullptr, m_collection));
+    setName(Akonadi::CalendarUtils::displayName(m_collection));
     setAccessMode((m_collection.rights() & (Akonadi::Collection::CanCreateItem | Akonadi::Collection::CanChangeItem)) ? KCalendarCore::ReadWrite
                                                                                                                       : KCalendarCore::ReadOnly);
 }

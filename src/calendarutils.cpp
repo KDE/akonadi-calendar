@@ -13,6 +13,7 @@
 
 #include <Akonadi/AgentManager>
 #include <Akonadi/Collection>
+#include <Akonadi/EntityTreeModel>
 
 #include <KCalUtils/ICalDrag>
 
@@ -72,13 +73,13 @@ KCalendarCore::Journal::Ptr CalendarUtils::journal(const Akonadi::Item &item)
     return {};
 }
 
-QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi::Collection &c)
+static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akonadi::Collection &c)
 {
-    Akonadi::Collection fullCollection;
-    if (calendar && calendar->collection(c.id()).isValid()) {
-        fullCollection = calendar->collection(c.id());
-    } else {
-        fullCollection = c;
+    Akonadi::Collection fullCollection = c;
+    if (model) {
+        if (const auto col = Akonadi::EntityTreeModel::updatedCollection(model, c); col.isValid()) {
+            fullCollection = col;
+        }
     }
 
     QString cName = fullCollection.name();
@@ -89,10 +90,10 @@ QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi
         QString typeStr = cName; // contents type: "Calendar", "Tasks", etc
         QString ownerStr; // folder owner: "fred", "ethel", etc
         QString nameStr; // folder name: "Public", "Test", etc
-        if (calendar) {
+        if (model) {
             Akonadi::Collection p = c.parentCollection();
             while (p != Akonadi::Collection::root()) {
-                Akonadi::Collection tCol = calendar->collection(p.id());
+                Akonadi::Collection tCol = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()});
                 const QString tName = tCol.name();
                 if (tName.startsWith(QLatin1String("shared.cal"), Qt::CaseInsensitive)) {
                     ownerStr = QStringLiteral("Shared");
@@ -153,9 +154,9 @@ QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi
     // Google
     if (resourceName.contains(QLatin1String("google"))) {
         QString ownerStr; // folder owner: "user@gmail.com"
-        if (calendar) {
+        if (model) {
             Akonadi::Collection p = c.parentCollection();
-            ownerStr = calendar->collection(p.id()).displayName();
+            ownerStr = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()}).displayName();
         }
 
         const QString nameStr = c.displayName(); // folder name: can be anything
@@ -199,6 +200,21 @@ QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi
     } else {
         return i18nc("unknown resource", "Unknown");
     }
+}
+
+QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi::Collection &c)
+{
+    return displayNameImpl(calendar ? calendar->entityTreeModel() : nullptr, c);
+}
+
+QString CalendarUtils::displayName(const Akonadi::EntityTreeModel *model, const Akonadi::Collection &c)
+{
+    return displayNameImpl(model, c);
+}
+
+QString CalendarUtils::displayName(const Akonadi::Collection &c)
+{
+    return displayNameImpl(nullptr, c);
 }
 
 QMimeData *CalendarUtils::createMimeData(const Akonadi::Item::List &items)
