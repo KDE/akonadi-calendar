@@ -39,7 +39,6 @@ if (AKONADI_ICAL_RESOURCE)
         KPim6::AkonadiMime
 	KPim6::IdentityManagementCore
         KPim6::MessageComposer
-        -lgpgmepp
     )
     add_gpg_crypto_akonadi_test( mailclienttest "mailclienttest" )
 endif()
