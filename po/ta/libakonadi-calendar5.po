@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:46+0000\n"
-"PO-Revision-Date: 2023-04-09 12:56+0530\n"
+"PO-Revision-Date: 2023-07-16 15:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.90\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -198,6 +198,10 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
+"இத்தேர்வு, பதிவிறக்கப்படும் கோப்பின் பெயரை மாற்றும். இது குறிக்கப்பட்டிருந்தால், வேலையுள்ள/"
+"இல்லா விவரங்களைக் கொண்ட பயனர்@ஆள்களம்.ifb (எ.கா. nn@kde.org.ifb) என்ற கோப்பை இது "
+"பதிவிறக்கும். இத்தேர்வு குறிக்கப்படாத பட்சத்தில், பயனர்.ifb (எ.கா. nn.ifb) என்ற கோப்பு "
+"பதிவிறக்கப்படும்."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
@@ -1178,13 +1182,13 @@ msgstr "புதிய அடைவு"
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
 msgid "Could not create calendar folder: %1"
-msgstr ""
+msgstr "நாள்காட்டி அடைவை உருவாக்க முடியவில்லை: %1"
 
 #: standardcalendaractionmanager.cpp:57
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr ""
+msgstr "நாள்காட்டி அடைவு உருவாக்கம் தோல்வியடைந்தது"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
@@ -1196,7 +1200,7 @@ msgstr[1] "%1 அடைவுகளை நகலெடு"
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
 msgid "Copy the selected calendar folders to the clipboard."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள நாள்காட்டி அடைவுகளை பிடிப்புப்பலகைக்கு நகலெடுக்கும்."
 
 #: standardcalendaractionmanager.cpp:71
 #, kde-format
@@ -1208,7 +1212,7 @@ msgstr[1] "%1 அடைவுகளை நீக்கு"
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
 msgid "Delete the selected calendar folders from the calendar."
-msgstr ""
+msgstr "நாள்காட்டியிலுருந்து தேர்ந்தெடுத்துள்ள அடைவுகளை நீக்கும்."
 
 #: standardcalendaractionmanager.cpp:76
 #, kde-format
@@ -1216,134 +1220,135 @@ msgid ""
 "Do you really want to delete this calendar folder and all its sub-folders?"
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
-msgstr[0] ""
+msgstr[0] "இந்த நாள்காட்டி அடைவையும் அதில் சார்ந்துள்ள அனைத்தையும் உறுதியாக நீக்க வேண்டுமா?"
 msgstr[1] ""
+"இந்த %1 நாள்காட்டி அடைவுகளையும் அவற்றில் சார்ந்துள்ள அனைத்தையும் உறுதியாக நீக்க வேண்டுமா?"
 
 #: standardcalendaractionmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நாள்காட்டி அடைவை நீக்கலாமா?"
+msgstr[1] "நாள்காட்டி அடைவுகளை நீக்கலாமா?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
 msgid "Could not delete calendar folder: %1"
-msgstr ""
+msgstr "நாள்காட்டி அடைவை நீக்க முடியவில்லை: %1"
 
 #: standardcalendaractionmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr ""
+msgstr "நாள்காட்டி அடைவை நீக்குவது தோல்வியடைந்தது"
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "அடைவை புதுப்பி"
+msgstr[1] "%1 அடைவுகளை புதுப்பி"
 
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
 msgid "Update the content of the selected calendar folders."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள நாள்காட்டி அடைவுகளின் உள்ளடக்கத்தை புதுப்பிக்கும்."
 
 #: standardcalendaractionmanager.cpp:99
 #, kde-format
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "அடைவை வெட்டு"
+msgstr[1] "%1 அடைவுகளை வெட்டு"
 
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
 msgid "Cut the selected calendar folders from the calendar."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள நாள்காட்டி அடைவுகளை நாள்காட்டியிலிருந்து வெட்டும்."
 
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties..."
-msgstr ""
+msgstr "அடைவின் பண்புகள்..."
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
 msgid "Open a dialog to edit the properties of the selected calendar folder."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள நாள்காட்டி அடைவின் பண்புகளைத் திருத்தவிடும் சாளரத்தைத் திறக்கும்."
 
 #: standardcalendaractionmanager.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Calendar Folder %1"
-msgstr ""
+msgstr "%1 நாள்காட்டி அடைவின் பண்புகள்"
 
 #: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:299
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நிகழ்வை நகலெடு"
+msgstr[1] "%1 நிகழ்வுகளை நகலெடு"
 
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
 msgid "Copy the selected events to the clipboard."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள நிகழ்வுகளை பிடிப்புப்பலகைக்கு நகலெடுக்கும்."
 
 #: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நிகழ்வை நீக்கு"
+msgstr[1] "%1 நிகழ்வுகளை நீக்கு"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
 msgid "Delete the selected events from the calendar."
-msgstr ""
+msgstr "தேரந்தெடுத்துள்ள நிகழ்வுகளை நாள்காட்டியிலிருந்து நீக்கும்"
 
 #: standardcalendaractionmanager.cpp:120
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "தேர்ந்தெடுத்துள்ள நிகழ்வை உறுதியாக நீக்க வேண்டுமா?"
+msgstr[1] "தேரந்தெடுத்து %1 நிகழ்வுகளை உறுதியாக நீக்க வேண்டுமா?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Event?"
 msgid_plural "Delete Events?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நிகழ்வை நீக்கலாமா?"
+msgstr[1] "நிகழ்வுகளை நீக்கலாமா?"
 
 #: standardcalendaractionmanager.cpp:126
 #, kde-format
 msgid "Could not delete event: %1"
-msgstr ""
+msgstr "நிகழ்வை நீக்க முடியவில்லை: %1"
 
 #: standardcalendaractionmanager.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr ""
+msgstr "நிகழ்வை நீக்குவது தோல்வியடைந்தது"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நிகழ்வை வெட்டு"
+msgstr[1] "%1 நிகழ்வுகளை வெட்டு"
 
 #: standardcalendaractionmanager.cpp:135
 #, kde-format
 msgid "Cut the selected events from the calendar."
-msgstr ""
+msgstr "தேரந்தெடுத்துள்ள நிகழ்வுகளை நாள்காட்டியிலிருந்து வெட்டும்"
 
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
-msgstr ""
+msgstr "&நாள்காட்டியை சேர்..."
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1351,30 +1356,32 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
+"புதிய நாள்காட்டியை சேர்க்கும்<p>சேர்க்க வேண்டிய நாள்காட்டியின் வகையைத் தேர்ந்தெடுக்க விடும் "
+"இன்னொரு சாளரம் காட்டப்படும்.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Calendar"
-msgstr ""
+msgstr "நாள்காட்டியை சேர்ப்பது"
 
 #: standardcalendaractionmanager.cpp:147
 #, kde-format
 msgid "Could not create calendar: %1"
-msgstr ""
+msgstr "நாள்காட்டியை சேர்க்க முடியவில்லை: %1"
 
 #: standardcalendaractionmanager.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr ""
+msgstr "நாள்காட்டி உருவாக்கம் தோல்வியடைந்தது"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "&நாள்காட்டியை நீக்கு"
+msgstr[1] "%1 &நாள்காட்டிகளை நீக்கு"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1387,33 +1394,33 @@ msgstr ""
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "இந்த நாள்காட்டியை உறுதியாக நீக்க வேண்டுமா?"
+msgstr[1] "இந்த %1 நாள்காட்டிகளை உறுதியாக நீக்க வேண்டுமா?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
 msgid_plural "Delete Calendars?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நாள்காட்டியை நீக்கலாமா?"
+msgstr[1] "நாள்காட்டிகளை நீக்கலாமா?"
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
-msgstr ""
+msgstr "நாள்காட்டியின் பண்புகள்..."
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள நாள்காட்டியின் பண்புகளைத் திருத்தவிடும் சாளரத்தைத் திறக்கும்."
 
 #: standardcalendaractionmanager.cpp:177
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நாள்காட்டியை புதுப்பி"
+msgstr[1] "%1 நாள்காட்டிகளை புதுப்பி"
 
 #: standardcalendaractionmanager.cpp:179
 #, kde-format
@@ -1423,7 +1430,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
-msgstr ""
+msgstr "நாள்காட்டிக்கு ந&கலெடு"
 
 #: standardcalendaractionmanager.cpp:183
 #, kde-format
@@ -1433,7 +1440,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:186
 #, kde-format
 msgid "&Move to Calendar"
-msgstr ""
+msgstr "நாள்காட்டிக்கு நக&ற்று"
 
 #: standardcalendaractionmanager.cpp:187
 #, kde-format
@@ -1443,18 +1450,18 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
-msgstr ""
+msgstr "நிகழ்வை ஒட்ட முடியவில்லை: %1"
 
 #: standardcalendaractionmanager.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr ""
+msgstr "ஒட்டுவது தோல்வியடைந்தது"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
 msgid "Update Available Calendars"
-msgstr ""
+msgstr "இருக்கின்ற நாள்காட்டிகளை புதுப்பி"
 
 #: standardcalendaractionmanager.cpp:196
 #, kde-format
@@ -1464,17 +1471,17 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:303 standardcalendaractionmanager.cpp:307
 #, kde-format
 msgid "Copy Event To"
-msgstr ""
+msgstr "நிகழ்வை இங்கு நகலெடு"
 
 #: standardcalendaractionmanager.cpp:317 standardcalendaractionmanager.cpp:321
 #, kde-format
 msgid "Move Event To"
-msgstr ""
+msgstr "நிகழ்வை இங்கு நகர்த்து"
 
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
-msgstr ""
+msgstr "நிகழ்வை திருத்து..."
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1551,17 +1558,17 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
-msgstr ""
+msgstr "&புதிய நிகழ்வு"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
 msgid "Create a new event"
-msgstr ""
+msgstr "புதிய நிகழ்வை உருவாக்கும்"
 
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr ""
+msgstr "புதிய &செய்யவேண்டியது…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1571,7 +1578,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
-msgstr ""
+msgstr "புதிய சா&ர்-செய்யவேண்டியது…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1581,7 +1588,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr ""
+msgstr "புதிய நா&ளேடு..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1591,7 +1598,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
-msgstr ""
+msgstr "&திருத்து..."
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
@@ -1601,4 +1608,4 @@ msgstr ""
 #: todopurger.cpp:61
 #, kde-format
 msgid "Purging completed to-dos"
-msgstr ""
+msgstr "முடிந்துள்ள செய்யவேண்டியவை நீக்கப்படுகின்றன"
