@@ -1021,7 +1021,7 @@ msgid ""
 "Encrypt this message?"
 msgstr ""
 "Des clés de chiffrement fiables et valables ont été trouvées pour tous les "
-"destinataires.  \n"
+"destinataires.\n"
 "Chiffrer ce message ?"
 
 #: mailclient_p.cpp:811
