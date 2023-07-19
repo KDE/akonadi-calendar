@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-14 00:48+0000\n"
-"PO-Revision-Date: 2023-07-03 11:38\n"
+"PO-Revision-Date: 2023-07-18 11:14\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/akonadi-calendar/libakonadi-calendar5."
+"X-Crowdin-File: /kf5-stable/messages/akonadi-calendar/libakonadi-calendar5."
 "pot\n"
-"X-Crowdin-File-ID: 3808\n"
+"X-Crowdin-File-ID: 3173\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -868,11 +868,9 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "发送信件"
+msgstr ""
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
@@ -881,11 +879,9 @@ msgid "&Sign"
 msgstr ""
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "不发送"
+msgstr ""
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -963,11 +959,9 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "发送信件"
+msgstr ""
 
 #: mailclient_p.cpp:817
 #, kde-format
@@ -997,11 +991,9 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "不发送"
+msgstr ""
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1012,16 +1004,14 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "发送更新"
+msgstr ""
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "发送更新"
+msgstr ""
 
 #: mailclient_p.cpp:878
 #, kde-format
