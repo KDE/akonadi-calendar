@@ -90,7 +90,7 @@ ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}AkonadiCalendar HEADER ak
         EXPORT AKONADI-CALENDAR
     )
 
-kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
+kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}AkonadiCalendar GENERATE_MOC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
