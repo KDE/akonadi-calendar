@@ -78,6 +78,7 @@ public:
 
     Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation, int role) const override;
 
+    AKONADI_CALENDAR_DECL_DEPRECATED_TEXT("Setting calendar is no longer necessary.")
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);

@@ -90,7 +90,7 @@ ecm_qt_declare_logging_category(KPim6AkonadiCalendar HEADER akonadicalendar_debu
         EXPORT AKONADI-CALENDAR
     )
 
-kconfig_add_kcfg_files(akonadicalendar_LIB_SRC calendarsettings.kcfgc)
+kconfig_add_kcfg_files(KPim6AkonadiCalendar GENERATE_MOC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
@@ -98,7 +98,11 @@ target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6AkonadiCalendar PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim6AkonadiCalendar BASE_NAME akonadi-calendar)
+ecm_generate_export_header(KPim6AkonadiCalendar
+    VERSION ${PIM_VERSION}
+    BASE_NAME akonadi_calendar
+    EXPORT_FILE_NAME akonadi-calendar_export.h
+)
 
 
 target_include_directories(KPim6AkonadiCalendar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar>")

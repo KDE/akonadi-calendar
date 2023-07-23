@@ -34,15 +34,34 @@ class TodoModelPrivate
 public:
     TodoModelPrivate(TodoModel *qq);
 
+    Akonadi::EntityTreeModel *etm()
+    {
+        if (!mEtm) {
+            auto *model = q->sourceModel();
+            while (model) {
+                if (auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy) {
+                    model = proxy->sourceModel();
+                } else if (auto *etm = qobject_cast<Akonadi::EntityTreeModel *>(model); etm) {
+                    mEtm = etm;
+                    break;
+                } else {
+                    return nullptr;
+                }
+            }
+        }
+
+        return mEtm;
+    }
+
     // TODO: O(N) complexity, see if the profiler complains about this
     Akonadi::Item findItemByUid(const QString &uid, const QModelIndex &parent) const;
 
-    Akonadi::ETMCalendar::Ptr m_calendar;
     Akonadi::IncidenceChanger *m_changer = nullptr;
 
     void onDataChanged(const QModelIndex &begin, const QModelIndex &end);
 
     TodoModel *const q;
+    Akonadi::EntityTreeModel *mEtm = nullptr;
 };
 }
 
@@ -102,7 +121,7 @@ TodoModel::~TodoModel() = default;
 QVariant TodoModel::data(const QModelIndex &index, int role) const
 {
     Q_ASSERT(index.isValid());
-    if (!index.isValid() || !d->m_calendar) {
+    if (!index.isValid()) {
         return {};
     }
 
@@ -155,13 +174,12 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalTime().date(), QLocale::ShortFormat) : QString();
     case DueDateRole:
         return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalTime().date(), QLocale::ShortFormat) : QString();
-    case CategoriesRole: {
+    case CategoriesRole:
         return todo->categories().join(i18nc("delimiter for joining category/tag names", ","));
-    }
     case DescriptionRole:
         return todo->description();
     case CalendarRole:
-        return Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection());
+        return Akonadi::CalendarUtils::displayName(d->etm(), item.parentCollection());
     default:
         break; // column based model handling
     }
@@ -200,7 +218,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DescriptionColumn:
             return QVariant(todo->description());
         case CalendarColumn:
-            return QVariant(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()));
+            return QVariant(Akonadi::CalendarUtils::displayName(d->etm(), item.parentCollection()));
         }
         return {};
     }
@@ -226,7 +244,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DescriptionColumn:
             return QVariant(todo->description());
         case CalendarColumn:
-            return QVariant(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()));
+            return QVariant(Akonadi::CalendarUtils::displayName(d->etm(), item.parentCollection()));
         }
         return {};
     }
@@ -331,7 +349,8 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
         return false;
     }
 
-    if (d->m_calendar->hasRight(item, Akonadi::Collection::CanChangeItem)) {
+    const auto parentCol = Akonadi::EntityTreeModel::updatedCollection(d->etm(), item.parentCollection());
+    if (parentCol.rights() & Akonadi::Collection::CanChangeItem) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         if (role == Qt::CheckStateRole && index.column() == 0) {
             const bool checked = static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked;
@@ -478,7 +497,8 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
 
 void TodoModel::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
 {
-    d->m_calendar = calendar;
+    Q_UNUSED(calendar);
+    // Deprecated, no longer does anything
 }
 
 Qt::DropActions TodoModel::supportedDropActions() const
@@ -518,8 +538,9 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
         return false;
     }
 
-    if (d->m_calendar && d->m_changer && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
-        KCalUtils::DndFactory dndFactory(d->m_calendar);
+    if (d->m_changer && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
+        // DndFactory only needs a valid calendar for drag event, not for drop event.
+        KCalUtils::DndFactory dndFactory(KCalendarCore::Calendar::Ptr{});
         KCalendarCore::Todo::Ptr t = dndFactory.createDropTodo(data);
         KCalendarCore::Event::Ptr e = dndFactory.createDropEvent(data);
 
@@ -534,16 +555,25 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                 if (parentItem.isValid()) {
                     destTodo = Akonadi::CalendarUtils::todo(parentItem);
                 }
-            }
 
-            KCalendarCore::Incidence::Ptr tmp = destTodo;
-            while (tmp) {
-                if (tmp->uid() == todo->uid()) { // correct, don't use instanceIdentifier() here
-                    Q_EMIT dropOnSelfRejected();
-                    return false;
+                auto tmpParent = parent;
+                while (tmpParent.isValid()) {
+                    const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+                    if (!parentItem.isValid()) {
+                        break;
+                    }
+                    const auto parentTodo = Akonadi::CalendarUtils::todo(parentItem);
+                    if (!parentTodo) {
+                        break;
+                    }
+
+                    if (parentTodo->uid() == todo->uid()) { // correct, don't use instanceIdentifier() here
+                        Q_EMIT dropOnSelfRejected();
+                        return false;
+                    }
+
+                    tmpParent = tmpParent.parent();
                 }
-                const QString parentUid = tmp->relatedTo();
-                tmp = Akonadi::CalendarUtils::incidence(d->m_calendar->item(parentUid));
             }
 
             if (!destTodo || !destTodo->hasRecurrenceId()) {
@@ -618,7 +648,8 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 
     const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
 
-    if (d->m_calendar->hasRight(item, Akonadi::Collection::CanChangeItem)) {
+    const auto parentCol = Akonadi::EntityTreeModel::updatedCollection(d->etm(), item.parentCollection());
+    if (parentCol.rights() & Akonadi::Collection::CanChangeItem) {
         // the following columns are editable:
         switch (index.column()) {
         case SummaryColumn:
