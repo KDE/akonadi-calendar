@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-07-24 07:35+0000\n"
 "PO-Revision-Date: 2022-04-07 17:45+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -270,7 +270,7 @@ msgstr ""
 "zaneprázdnený pre joe@mydomain.com na serveri www.yourdomain.com zlyhá."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
-#: todomodel.cpp:458
+#: todomodel.cpp:477
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
 #| msgid "Calendar"
@@ -1920,50 +1920,50 @@ msgstr "&Upraviť..."
 msgid "Edit the selected incidence."
 msgstr "Upraviť vybraný výskyt."
 
-#: todomodel.cpp:140 todomodel.cpp:176
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr ""
 
-#: todomodel.cpp:142 todomodel.cpp:178
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr ""
 
-#: todomodel.cpp:145 todomodel.cpp:181
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr ""
 
-#: todomodel.cpp:159 todomodel.cpp:197
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:440
+#: todomodel.cpp:459
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "Súhrn"
 
-#: todomodel.cpp:442
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:444
+#: todomodel.cpp:463
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "Priorita"
 
-#: todomodel.cpp:446
+#: todomodel.cpp:465
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -1971,21 +1971,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Dokončené"
 
-#: todomodel.cpp:448
+#: todomodel.cpp:467
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "Počiatočný dátum a čas"
 
-#: todomodel.cpp:450
+#: todomodel.cpp:469
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "Dátum a čas splnenia"
 
-#: todomodel.cpp:452
+#: todomodel.cpp:471
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -1993,12 +1993,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Dokončené"
 
-#: todomodel.cpp:454
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:456
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-07-24 07:35+0000\n"
 "PO-Revision-Date: 2022-12-29 16:16+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -276,7 +276,7 @@ msgstr ""
 "www.yourdomain.com θα αποτύχει."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
-#: todomodel.cpp:458
+#: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "Ημερολόγιο"
@@ -1899,50 +1899,50 @@ msgstr "&Επεξεργασία..."
 msgid "Edit the selected incidence."
 msgstr "Επεξεργασία του επιλεγμένου περιστατικού."
 
-#: todomodel.cpp:140 todomodel.cpp:176
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr ""
 
-#: todomodel.cpp:142 todomodel.cpp:178
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr ""
 
-#: todomodel.cpp:145 todomodel.cpp:181
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr ""
 
-#: todomodel.cpp:159 todomodel.cpp:197
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:440
+#: todomodel.cpp:459
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "Σύνοψη"
 
-#: todomodel.cpp:442
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:444
+#: todomodel.cpp:463
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "Προτεραιότητα"
 
-#: todomodel.cpp:446
+#: todomodel.cpp:465
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -1950,21 +1950,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Ολοκληρωμένο"
 
-#: todomodel.cpp:448
+#: todomodel.cpp:467
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "Ημερομηνία και ώρα έναρξης"
 
-#: todomodel.cpp:450
+#: todomodel.cpp:469
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "Ημερομηνία και ώρα που απομένει"
 
-#: todomodel.cpp:452
+#: todomodel.cpp:471
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -1972,12 +1972,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Ολοκληρωμένο"
 
-#: todomodel.cpp:454
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:456
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
 msgstr ""
