@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-14 00:48+0000\n"
-"PO-Revision-Date: 2023-04-21 23:10+0200\n"
+"PO-Revision-Date: 2023-07-18 13:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -877,26 +877,24 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"받는 사람의 서명 선호도 검사 결과, 메시지에 서명 여부를 선택할 수 있습니다.\n"
+"이 메시지에 서명하시겠습니까?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "메시지 보내기"
+msgstr "메시지에 서명하기?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "서명(&S)"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "보내지 않음"
+msgstr "서명하지 않음(&N)"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -904,23 +902,25 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"다음 수신자에 대한 서명 선호가 충돌합니다.\n"
+"이 메시지에 서명하시겠습니까?"
 
 #: mailclient_p.cpp:731
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
-msgstr ""
+msgstr "메시지 서명을 요청했지만 프로필에 대한 올바른 서명 키가 없습니다."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "서명하지 않고 보내기?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "서명하지 않고 보내기(&U)"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -929,6 +929,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"이 메시지의 일부를 서명하지 않습니다.\n"
+"부분적으로 서명한 메시지는 사이트 정책을 위반할 수도 있습니다.\n"
+"모든 부분에 서명하시겠습니까?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -937,26 +940,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"이 메시지를 서명하지 않습니다.\n"
+"서명하지 않은 메시지는 사이트 정책을 위반할 수도 있습니다.\n"
+"메시지에 서명하시겠습니까?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "모두 서명하기(&S)"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "서명(&S)"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "서명 없는 메시지 경고"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "그대로 보내기(&A)"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -964,6 +970,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"모든 수신자의 올바른 신뢰할 수 있는 암호 키를 찾았습니다.\n"
+"메시지를 암호화하시겠습니까?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -972,33 +980,33 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"받는 사람의 암호화 선호도 검사 결과, 암호화 여부를 선택할 수 있습니다.\n"
+"이 메시지를 암호화하시겠습니까?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "메시지 보내기"
+msgstr "메시지 암호화?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "서명 및 암호화(&E)"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "암호화(&E)"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "서명만(&S)"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "그대로 보내기(&S)"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1006,13 +1014,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"다음 수신자에 대한 암호화 선호가 충돌합니다.\n"
+"이 메시지를 암호화하시겠습니까?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "보내지 않음"
+msgstr "암호화하지 않음(&N)"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1021,18 +1029,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"메시지 암호화를 요청했고 자기 자신에게 복사본을 보내기로 했지만 이 프로필에 "
+"대한 올바른 신뢰할 수 있는 암호화 키를 찾지 못했습니다."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "업데이트 보내기"
+msgstr "암호화하지 않고 보내기?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "업데이트 보내기"
+msgstr "암호화하지 않고 보냄(&U)"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1042,6 +1050,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"이 메시지의 일부를 암호화하지 않습니다.\n"
+"부분적으로 암호화된 메시지는 사이트 정책을 위반하거나 민감한 정보를 누출시킬 "
+"수 있습니다.\n"
+"모든 부분을 암호화하시겠습니까?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1051,16 +1063,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"이 메시지를 암호화하지 않습니다.\n"
+"암호화되지 않은 메시지는 사이트 정책을 위반하거나 민감한 정보를 누출시킬 수 "
+"있습니다.\n"
+"메시지를 암호화하시겠습니까?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "모두 암호화(&E)"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "암호화되지 않은 메시지 경고"
 
 #: mailscheduler_p.cpp:168
 #, kde-format
