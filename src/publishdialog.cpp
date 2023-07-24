@@ -120,7 +120,7 @@ void PublishDialog::accept()
     if (addressOk != KEmailAddress::AddressOk) {
         KMessageBox::error(this,
                            i18n("Unable to publish the calendar incidence due to an "
-                                "invalid recipients string. %1",
+                                "invalid recipients string.\n%1",
                                 emailParseResultToString(addressOk)),
                            i18nc("@title:window", "Publishing Error"));
     } else {
