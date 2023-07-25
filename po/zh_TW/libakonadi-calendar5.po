@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-07-25 02:31+0000\n"
 "PO-Revision-Date: 2023-01-07 04:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -1095,10 +1095,14 @@ msgid ""
 msgstr "點擊<b>說明</b>鍵可以讀關於群組排程的詳情"
 
 #: publishdialog.cpp:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string. %1"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr "由於收件人的字串無效，因而無法發布行事曆事件。%1"
 
 #: publishdialog.cpp:125

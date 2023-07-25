@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-07-25 02:31+0000\n"
 "PO-Revision-Date: 2020-11-09 15:25+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1134,10 +1134,14 @@ msgstr ""
 "tervezésről."
 
 #: publishdialog.cpp:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string. %1"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr "Érvénytelen címzett miatt nem lehet közzétenni a naptáreseményt. %1"
 
 #: publishdialog.cpp:125

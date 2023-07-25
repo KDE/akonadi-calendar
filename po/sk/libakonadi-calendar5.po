@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-07-25 02:31+0000\n"
 "PO-Revision-Date: 2022-04-07 17:45+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1129,10 +1129,14 @@ msgstr ""
 "Kliknite na tlačidlo <b>Pomoc</b>pre viac informácií o skupinovom plánovaní."
 
 #: publishdialog.cpp:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string. %1"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr ""
 "Nemožno zverejniť udalosť kalendára kvôli neplatnému reťazcu príjemcov. %1"
 
