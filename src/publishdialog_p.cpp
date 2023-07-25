@@ -109,7 +109,7 @@ void PublishDialogPrivate::openAddressbook()
                 auto item = new QListWidgetItem(mUI.mListWidget);
                 item->setSelected(true);
                 mUI.mNameLineEdit->setText(selection.name());
-                mUI.mEmailLineEdit->setText(selection.email());
+                mUI.mEmailLineEdit->setText(KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(selection.email())));
                 mUI.mListWidget->addItem(item);
             }
 

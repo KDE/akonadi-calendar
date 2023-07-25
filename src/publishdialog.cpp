@@ -106,7 +106,7 @@ QString PublishDialog::addresses() const
     for (int i = 0; i < count; ++i) {
         QListWidgetItem *item = d->mUI.mListWidget->item(i);
         if (!item->text().isEmpty()) {
-            toList << item->text();
+            toList << KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(item->text()));
         }
     }
 
