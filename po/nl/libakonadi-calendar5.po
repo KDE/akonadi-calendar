@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 00:46+0000\n"
-"PO-Revision-Date: 2023-07-05 23:05+0200\n"
+"PO-Revision-Date: 2023-07-25 13:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -1148,17 +1148,15 @@ msgid ""
 msgstr "Klik op de knop <b>Help</b> voor meer informatie over groepsplanning."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
 "Kon de agendagebeurtenis niet publiceren vanwege een ongeldige tekenreeks "
-"met ontvangers. %1"
+"met ontvangers.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
