@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:31+0000\n"
-"PO-Revision-Date: 2023-04-12 12:51+0300\n"
+"PO-Revision-Date: 2023-07-24 21:54+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -887,26 +887,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Vastaanottajien allekirjoitustoiveiden tutkinnassa päädyttiin siihen, että "
+"sinulta on kysyttävä.\n"
+"Allekirjoitetaanko viesti?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Lähetä viestit"
+msgstr "Allekirjoitetaanko viesti?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Allekirjoita"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Älä lähetä"
+msgstr "&Älä allekirjoita"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -914,6 +913,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Näillä vastaanottajilla allekirjoitustoiveissa on ristiriitoja.\n"
+"Allekirjoitetaanko viesti?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -921,16 +922,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Pyysit allekirjoittamaan viestin, mutta tälle henkilöydelle ei ole asetettu "
+"kelvollisia allekirjoitusavaimia."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Lähetetäänkö allekirjoittamatta?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Lähetä &allekirjoittamatta"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -939,6 +942,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Joitakin viestin osia ei allekirjoiteta.\n"
+"Osin allekirjoitettujen viestien lähettäminen voi rikkoa "
+"palvelinkäytänteitä.\n"
+"Allekirjoitetaanko kaikki osat?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -947,26 +954,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Tätä viestiä ei allekirjoiteta.\n"
+"Allekirjoittamattoman viestin lähettäminen voi rikkoa palvelinkäytänteitä.\n"
+"Allekirjoitetaanko viesti?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "Allekirjoita &kaikki osat"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Allekirjoita"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Varoitus allekirjoittamattomasta viestistä"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "Lähetä s&ellaisenaan"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -974,6 +984,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Kaikille vastaanottajille ei löytynyt kelvollisia luotettuja salausavaimia.\n"
+"Salataanko viesti?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -982,33 +994,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Vastaanottajien salaustoiveiden tutkinnassa päädyttiin siihen, että sinulta "
+"on kysyttävä.\n"
+"Salataanko viesti?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Lähetä viestit"
+msgstr "Salataanko viesti?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Allekirjoita ja &salaa"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Salaa"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "A&inoastaan allekirjoita"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "Lähetä s&ellaisenaan"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1016,13 +1029,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Näillä vastaanottajilla salaustoiveissa on ristiriitoja.\n"
+"Salataanko viesti?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Älä lähetä"
+msgstr "&Älä salaa"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1031,18 +1044,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Pyysit salaamaan viestin sekä kopion itsellesi, mutta tälle henkilöydelle ei "
+"ole asetettu kelvollisia luotettuja salausavaimia."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Lähetä päivitys"
+msgstr "Lähetetäänkö salaamatta?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Lähetä päivitys"
+msgstr "Lähetä &salaamatta"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1052,6 +1065,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Joitakin viestin osia ei salata.\n"
+"Vain osin salattujen viestien lähettäminen voi rikkoa palvelinkäytänteitä "
+"tai paljastaa arkaluontoista tietoa.\n"
+"Salataanko sen sijaan kaikki osat?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1061,16 +1078,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Tätä viestiä ei salata.\n"
+"Salaamattomien viestien lähettäminen voi rikkoa palvelinkäytänteitä tai "
+"paljastaa arkaluontoista tietoa.\n"
+"Salataanko viestit sen sijaan?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "Salaa &kaikki osat"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Varoitus salaamattomasta viestistä"
 
 #: mailscheduler_p.cpp:168
 #, kde-format
