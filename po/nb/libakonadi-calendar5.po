@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-07-25 02:31+0000\n"
 "PO-Revision-Date: 2013-12-02 20:08+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -1112,7 +1112,8 @@ msgstr "Trykk <b>Hjelp</b> knappen for å lese mer om Gruppeplanlegging."
 #, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr ""
 
 #: publishdialog.cpp:125
