@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 00:46+0000\n"
-"PO-Revision-Date: 2023-07-10 14:33+0200\n"
+"PO-Revision-Date: 2023-07-28 10:38+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -1151,17 +1151,15 @@ msgstr ""
 "груповото планиране."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
 "Не може да се публикува събитие на календара поради невалиден низ на "
-"получателите. %1"
+"получателите.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
