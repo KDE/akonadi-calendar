@@ -25,6 +25,7 @@ if (AKONADI_ICAL_RESOURCE)
     add_akonadi_isolated_test_advanced( calendarbasetest.cpp "" "KPim${KF_MAJOR_VERSION}::AkonadiCalendar" )
     add_akonadi_isolated_test_advanced( fetchjobcalendartest.cpp "" "KPim${KF_MAJOR_VERSION}::AkonadiCalendar" )
     add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KF${KF_MAJOR_VERSION}::ConfigCore" )
+    add_akonadi_isolated_test_advanced( collectioncalendartest.cpp "" "KPim${KF_MAJOR_VERSION}::AkonadiCalendar;KPim${KF_MAJOR_VERSION}::AkonadiPrivate" )
 
     add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${common_libs};KPim${KF_MAJOR_VERSION}::AkonadiMime")
 

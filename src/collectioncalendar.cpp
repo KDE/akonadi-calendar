@@ -117,13 +117,6 @@ private:
             }
         });
         connect(m_etm, &EntityTreeModel::layoutChanged, this, &CollectionCalendarPrivate::populateFromETM);
-        connect(m_etm, &EntityTreeModel::collectionPopulated, this, [this](Collection::Id collectionId) {
-            if (collectionId != m_collection.id()) {
-                return;
-            }
-
-            populateFromETM();
-        });
 
         populateFromETM();
     }
@@ -181,37 +174,48 @@ private:
     void populateFromETM()
     {
         if (m_populatedFromEtm) {
+            qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar not populating from ETM - already populated";
             return;
         }
         m_populatedFromEtm = true;
 
         if (!m_etm->isCollectionTreeFetched()) {
+            qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar not populating from ETM - collection tree not fetched";
             return;
         }
 
         if (!m_etm->isCollectionPopulated(m_collection.id())) {
+            qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar not populating from ETM - target collection not populated yet";
             return;
         }
+
+        qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar populating from ETM";
 
         q->setIsLoading(true);
         const auto colIdx = EntityTreeModel::modelIndexForCollection(m_etm, m_collection);
         Q_ASSERT(colIdx.isValid());
         if (!colIdx.isValid()) {
+            qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar failed to populate from ETM - couldn't find model index for our Collection"
+                                         << m_collection.id();
             return;
         }
 
         q->startBatchAdding();
         auto idx = m_etm->index(0, 0, colIdx);
+        std::size_t itemCount = 0;
         while (idx.isValid()) {
             const auto item = m_etm->data(idx, EntityTreeModel::ItemRole).value<Item>();
             if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                 internalInsert(item);
+                ++itemCount;
             }
             idx = idx.siblingAtRow(idx.row() + 1);
         }
         q->endBatchAdding();
 
         q->setIsLoading(false);
+
+        qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar for Collection" << m_collection.id() << "populated from ETM with" << itemCount << "incidences";
     }
 
     EntityTreeModel *createEtm()
