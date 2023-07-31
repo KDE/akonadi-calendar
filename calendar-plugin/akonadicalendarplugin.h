@@ -7,6 +7,12 @@
 
 #include <KCalendarCore/CalendarPlugin>
 
+namespace Akonadi
+{
+class EntityTreeModel;
+class Collection;
+}
+
 /** Akonadi platform calendar plugin for KCalendarCore. */
 class AkonadiCalendarPlugin : public KCalendarCore::CalendarPlugin
 {
@@ -19,5 +25,10 @@ public:
     QVector<KCalendarCore::Calendar::Ptr> calendars() const override;
 
 private:
+    void addCalendar(const Akonadi::Collection &collection);
+    void removeCalendar(const Akonadi::Collection &collection);
+    void updateCalendar(const Akonadi::Collection &collection);
+
     QVector<KCalendarCore::Calendar::Ptr> m_calendars;
+    Akonadi::EntityTreeModel *m_etm = nullptr;
 };

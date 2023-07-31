@@ -36,8 +36,14 @@ public:
             return;
         }
 
-        Q_ASSERT(!m_collection.isValid());
+        const bool wasValid = m_collection.isValid();
+        Q_ASSERT(!m_collection.isValid() || m_collection.id() == col.id());
         m_collection = col;
+
+        // Fine, we updated the already stored collection, no need to re-populate the model
+        if (wasValid) {
+            return;
+        }
 
         if (m_monitor) {
             m_monitor->setCollectionMonitored(m_collection);
@@ -263,24 +269,19 @@ Akonadi::Collection CollectionCalendar::collection() const
     return d->m_collection;
 }
 
-void CollectionCalendar::setCollection(const Akonadi::Collection &c)
+void CollectionCalendar::setCollection(const Akonadi::Collection &collection)
 {
     Q_D(CollectionCalendar);
 
-    if (c.id() == d->m_collection.id()) {
+    if (d->m_collection.isValid() && collection.id() != d->m_collection.id()) {
+        qCWarning(AKONADICALENDAR_LOG) << "Trying to change Collection of CollectionCalendar";
         return;
     }
 
-    Q_ASSERT(!d->m_collection.isValid());
-    if (d->m_collection.isValid()) {
-        qCWarning(AKONADICALENDAR_LOG) << "Cannot change collection of CollectionCalendar at runtime yet, sorry.";
-        return;
-    }
-
-    setName(Akonadi::CalendarUtils::displayName(d->m_etm, c));
-    setAccessMode((c.rights() & (Akonadi::Collection::CanCreateItem | Akonadi::Collection::CanChangeItem)) ? KCalendarCore::ReadWrite
-                                                                                                           : KCalendarCore::ReadOnly);
-    d->setCollection(c);
+    setName(Akonadi::CalendarUtils::displayName(d->m_etm, collection));
+    const bool isReadWrite = collection.rights() & (Akonadi::Collection::CanCreateItem | Akonadi::Collection::CanChangeItem);
+    setAccessMode(isReadWrite ? KCalendarCore::ReadWrite : KCalendarCore::ReadOnly);
+    d->setCollection(collection);
 }
 
 Akonadi::EntityTreeModel *CollectionCalendar::model() const

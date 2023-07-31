@@ -1,14 +1,16 @@
 /*
     SPDX-FileCopyrightText: 2022 Volker Krause <vkrause@kde.org>
+    SPDX-FileCopytightText: 2023 Daniel Vrátil <dvratil@kde.org>
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "akonadicalendarplugin.h"
 #include "akonadicalendarplugin_debug.h"
-#include "singlecollectioncalendar.h"
+#include "collectioncalendar.h"
 
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/Monitor>
 #include <Akonadi/ServerManager>
 
@@ -27,47 +29,63 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
         return;
     }
 
-    auto job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive, this);
-    job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
-    connect(job, &Akonadi::CollectionFetchJob::finished, this, [this, job]() {
-        const auto results = job->collections();
-        for (const auto &col : results) {
-            if (!filterCollection(col)) {
-                continue;
-            }
-            KCalendarCore::Calendar::Ptr cal(new SingleCollectionCalendar(col));
-            m_calendars.push_back(cal);
-        }
-    });
-
     auto monitor = new Akonadi::Monitor(this);
-    monitor->setCollectionFetchScope(job->fetchScope());
-    connect(monitor, &Akonadi::Monitor::collectionAdded, this, [this](const Akonadi::Collection &c) {
-        if (!filterCollection(c)) {
-            return;
+    monitor->collectionFetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
+    m_etm = new Akonadi::EntityTreeModel(monitor, this);
+    connect(m_etm, &Akonadi::EntityTreeModel::collectionTreeFetched, this, [this](const Akonadi::Collection::List &collectionTree) {
+        for (const auto &col : collectionTree) {
+            addCalendar(col);
         }
-        m_calendars.push_back(KCalendarCore::Calendar::Ptr(new SingleCollectionCalendar(c)));
         Q_EMIT calendarsChanged();
     });
-    connect(monitor, &Akonadi::Monitor::collectionRemoved, this, [this](const Akonadi::Collection &c) {
-        m_calendars.erase(std::remove_if(m_calendars.begin(),
-                                         m_calendars.end(),
-                                         [c](const KCalendarCore::Calendar::Ptr &cal) {
-                                             return cal.staticCast<SingleCollectionCalendar>()->collection().id() == c.id();
-                                         }),
-                          m_calendars.end());
+    connect(monitor, &Akonadi::Monitor::collectionAdded, this, [this](const auto &collection) {
+        addCalendar(collection);
         Q_EMIT calendarsChanged();
     });
-    connect(monitor, qOverload<const Akonadi::Collection &>(&Akonadi::Monitor::collectionChanged), this, [this](const Akonadi::Collection &col) {
-        for (const auto &c : m_calendars) {
-            const auto cal = c.staticCast<SingleCollectionCalendar>();
-            if (cal->collection().id() == col.id()) {
-                cal->setCollection(col);
-                Q_EMIT calendarsChanged();
-                return;
-            }
-        }
+    connect(monitor, &Akonadi::Monitor::collectionRemoved, this, [this](const auto &collection) {
+        removeCalendar(collection);
+        Q_EMIT calendarsChanged();
     });
+    connect(monitor, qOverload<const Akonadi::Collection &>(&Akonadi::Monitor::collectionChanged), this, [this](const auto &collection) {
+        updateCalendar(collection);
+        Q_EMIT calendarsChanged();
+    });
+}
+
+void AkonadiCalendarPlugin::addCalendar(const Akonadi::Collection &collection)
+{
+    if (!filterCollection(collection)) {
+        return;
+    }
+
+    m_calendars.push_back(Akonadi::CollectionCalendar::Ptr::create(m_etm, collection));
+}
+
+namespace
+{
+
+auto matchByCollection(const Akonadi::Collection &collection)
+{
+    return [collection](const KCalendarCore::Calendar::Ptr &calendar) {
+        return calendar.staticCast<Akonadi::CollectionCalendar>()->collection() == collection;
+    };
+}
+
+}
+
+void AkonadiCalendarPlugin::removeCalendar(const Akonadi::Collection &collection)
+{
+    m_calendars.erase(std::remove_if(m_calendars.begin(), m_calendars.end(), matchByCollection(collection)), m_calendars.end());
+}
+
+void AkonadiCalendarPlugin::updateCalendar(const Akonadi::Collection &collection)
+{
+    auto calendar = std::find_if(m_calendars.begin(), m_calendars.end(), matchByCollection(collection));
+    if (calendar == m_calendars.end()) {
+        return;
+    }
+
+    calendar->staticCast<Akonadi::CollectionCalendar>()->setCollection(collection);
 }
 
 AkonadiCalendarPlugin::~AkonadiCalendarPlugin() = default;
