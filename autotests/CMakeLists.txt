@@ -25,6 +25,7 @@ if (AKONADI_ICAL_RESOURCE)
     add_akonadi_isolated_test_advanced( calendarbasetest.cpp "" "KPim6::AkonadiCalendar" )
     add_akonadi_isolated_test_advanced( fetchjobcalendartest.cpp "" "KPim6::AkonadiCalendar" )
     add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KPim6::AkonadiCalendar;KF6::ConfigCore" )
+    add_akonadi_isolated_test_advanced( collectioncalendartest.cpp "" "KPim6::AkonadiCalendar;KPim6::AkonadiPrivate" )
 
     add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${common_libs};KPim6::AkonadiMime")
 
