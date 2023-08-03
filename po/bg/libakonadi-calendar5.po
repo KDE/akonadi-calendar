@@ -1987,14 +1987,3 @@ msgstr "Описание"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Пречистване на завършени задачи"
-
-#~ msgid "Mail transport to use for sending e-mail messages"
-#~ msgstr ""
-#~ "Пощенски транспорт, който да се използва за изпращане на имейл съобщения"
-
-#~ msgid ""
-#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
-#~ "the default one will be used."
-#~ msgstr ""
-#~ "Ако е посочено всички, груповите имейли ще използват този транспорт. В "
-#~ "противен случай ще се използва стандартният."
