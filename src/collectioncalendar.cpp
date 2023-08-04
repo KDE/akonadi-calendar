@@ -332,3 +332,4 @@ bool CollectionCalendar::hasRight(Akonadi::Collection::Right right) const
 }
 
 #include "collectioncalendar.moc"
+#include "moc_collectioncalendar.cpp"

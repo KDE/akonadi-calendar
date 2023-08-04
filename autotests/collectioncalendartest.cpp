@@ -399,3 +399,4 @@ void CollectionCalendarTest::testUnrelatedItemIsNotSeen()
 QTEST_AKONADIMAIN(CollectionCalendarTest)
 
 #include "collectioncalendartest.moc"
+#include "moc_collectioncalendartest.cpp"
