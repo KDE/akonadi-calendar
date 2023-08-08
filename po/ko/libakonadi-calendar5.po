@@ -455,7 +455,7 @@ msgstr "%1 수정"
 #: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr "iCal 자원을 만드는 중 오류 발생: %1"
+msgstr "iCal 리소스를 만드는 중 오류 발생: %1"
 
 #: icalimporter.cpp:92
 #, kde-format
