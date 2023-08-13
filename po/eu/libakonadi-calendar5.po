@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:31+0000\n"
-"PO-Revision-Date: 2023-08-02 11:38+0200\n"
+"PO-Revision-Date: 2023-08-12 20:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -828,7 +828,7 @@ msgstr ""
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
-"Egunerako honen antolatzaileari egoeraren eguneratze bat bidali nahi diozu?"
+"Egunkari honen antolatzaileari egoeraren eguneratze bat bidali nahi diozu?"
 
 #: itiphandlerhelper_p.cpp:409 itiphandlerhelper_p.cpp:430
 #, kde-format
@@ -1695,7 +1695,7 @@ msgid ""
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
 "Ezabatu hautatutako egutegiak<p>Unean hautatuta dauden egutegiak ezabatuko "
-"dira, dituzten ekitaldi, zeregin eta eguneroko guztiekin batera.</p>"
+"dira, dituzten ekitaldi, zeregin eta egunkari guztiekin batera.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
@@ -1832,37 +1832,37 @@ msgstr "Editatu zeregina..."
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] "Kopiatu egunerokoa"
-msgstr[1] "Kopiatu %1 eguneroko"
+msgstr[0] "Kopiatu egunkaria"
+msgstr[1] "Kopiatu %1 egunkari"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr "Kopiatu egunerokoa hona,"
+msgstr "Kopiatu egunkaria hona,"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] "Ezabatu egunerokoa"
-msgstr[1] "Ezabatu %1 eguneroko"
+msgstr[0] "Ezabatu egunkaria"
+msgstr[1] "Ezabatu %1 egunkari"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Ebaki egunerakoa"
-msgstr[1] "Ebaki %1 eguneroko"
+msgstr[0] "Ebaki egunkaria"
+msgstr[1] "Ebaki %1 egunkari"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
-msgstr "Eman egunerakoa hona, "
+msgstr "Eraman egunkaria hona, "
 
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Editatu egunerokoa..."
+msgstr "Editatu egunkaria..."
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
@@ -1897,12 +1897,12 @@ msgstr "Sortu azpi-zeregin berria"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "E&guneroko berria..."
+msgstr "E&gunkari berria..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
-msgstr "Sortu egunerako berri bat"
+msgstr "Sortu egunkari berri bat"
 
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
