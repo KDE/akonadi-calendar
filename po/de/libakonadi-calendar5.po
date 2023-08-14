@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:31+0000\n"
-"PO-Revision-Date: 2023-07-09 01:02+0200\n"
+"PO-Revision-Date: 2023-08-13 16:23+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -1169,17 +1169,15 @@ msgstr ""
 "Gruppenplanung erhalten."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
 "Der Kalendereintrag kann wegen einer ungültigen Empfängeradresse nicht "
-"veröffentlicht werden. %1"
+"veröffentlicht werden.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
