@@ -123,8 +123,10 @@ int ITIPHandlerDialogDelegate::warningTwoActionsCancel(const QString &text,
     return KMessageBox::warningTwoActionsCancel(mParent, text, title, primaryAction, secondaryAction, cancelAction);
 }
 
-ITIPHandlerHelper::SendResult
-ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode, const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method)
+ITIPHandlerHelper::SendResult ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode,
+                                                                const KCalendarCore::Incidence::Ptr &incidence,
+                                                                KCalendarCore::iTIPMethod method,
+                                                                const QString &sender)
 {
     // The value represented by messageBoxReturnCode is the answer on a question
     // which is a variant of: Do you want to send an email to the attendees?
@@ -144,7 +146,7 @@ ITIPHandlerHelper::sentInvitation(int messageBoxReturnCode, const KCalendarCore:
 
         // Send the mail
         m_status = StatusSendingInvitation;
-        m_scheduler->performTransaction(_incidence, method);
+        m_scheduler->performTransaction(_incidence, method, sender);
         return ITIPHandlerHelper::ResultSuccess;
     } else if (messageBoxReturnCode == KMessageBox::ButtonCode::SecondaryAction) {
         Q_EMIT finished(ITIPHandlerHelper::ResultCanceled, QString());
@@ -453,8 +455,8 @@ void ITIPHandlerHelper::slotIncidenceDeletedDialogClosed(const int messageBoxRet
     Q_EMIT sendIncidenceDeletedMessageFinished(status, method, incidence);
 }
 
-ITIPHandlerHelper::SendResult ITIPHandlerHelper::sendCounterProposal(const KCalendarCore::Incidence::Ptr &oldEvent,
-                                                                     const KCalendarCore::Incidence::Ptr &newEvent)
+ITIPHandlerHelper::SendResult
+ITIPHandlerHelper::sendCounterProposal(const QString &receiver, const KCalendarCore::Incidence::Ptr &oldEvent, const KCalendarCore::Incidence::Ptr &newEvent)
 {
     Q_ASSERT(oldEvent);
     Q_ASSERT(newEvent);
@@ -469,9 +471,9 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sendCounterProposal(const KCale
         tmp->setDescription(newEvent->description());
         tmp->addComment(proposalComment(newEvent));
 
-        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, tmp, KCalendarCore::iTIPReply);
+        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, tmp, KCalendarCore::iTIPReply, receiver);
     } else {
-        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newEvent, KCalendarCore::iTIPReply);
+        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newEvent, KCalendarCore::iTIPReply, receiver);
     }
 }
 
