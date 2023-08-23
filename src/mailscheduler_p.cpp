@@ -25,6 +25,7 @@ class Akonadi::MailSchedulerPrivate
 {
 public:
     Q_REQUIRED_RESULT KIdentityManagement::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
+    Q_REQUIRED_RESULT KIdentityManagement::Identity identityForAddress(const QString &address) const;
 
     KIdentityManagement::IdentityManager *m_identityManager = nullptr;
     MailClient *m_mailer = nullptr;
@@ -52,6 +53,11 @@ KIdentityManagement::Identity MailSchedulerPrivate::identityForIncidence(const K
     return m_identityManager->identityForAddress(organizerEmail);
 }
 
+KIdentityManagement::Identity MailSchedulerPrivate::identityForAddress(const QString &address) const
+{
+    return m_identityManager->identityForAddress(address);
+}
+
 void MailScheduler::publish(const KCalendarCore::IncidenceBase::Ptr &incidence, const QString &recipients)
 {
     Q_ASSERT(incidence);
@@ -63,7 +69,10 @@ void MailScheduler::publish(const KCalendarCore::IncidenceBase::Ptr &incidence, 
     d->m_mailer->mailTo(incidence, d->identityForIncidence(incidence), CalendarUtils::email(), CalendarSettings::self()->bcc(), recipients, messageText);
 }
 
-void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &recipients)
+void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                       KCalendarCore::iTIPMethod method,
+                                       const QString &recipients,
+                                       const QString &sender)
 {
     Q_ASSERT(incidence);
     if (!incidence) {
@@ -71,11 +80,12 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
     }
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
 
-    d->m_mailer
-        ->mailTo(incidence, d->identityForIncidence(incidence), Akonadi::CalendarUtils::email(), CalendarSettings::self()->bcc(), recipients, messageText);
+    const auto identity = sender.isEmpty() ? d->identityForIncidence(incidence) : d->identityForAddress(sender);
+
+    d->m_mailer->mailTo(incidence, identity, Akonadi::CalendarUtils::email(), CalendarSettings::self()->bcc(), recipients, messageText);
 }
 
-void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method)
+void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender)
 {
     Q_ASSERT(incidence);
     if (!incidence) {
@@ -83,10 +93,11 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
     }
 
     const QString messageText = mFormat->createScheduleMessage(incidence, method);
+    const auto identity = sender.isEmpty() ? d->identityForIncidence(incidence) : d->identityForAddress(sender);
 
     if (method == KCalendarCore::iTIPRequest || method == KCalendarCore::iTIPCancel || method == KCalendarCore::iTIPAdd
         || method == KCalendarCore::iTIPDeclineCounter) {
-        d->m_mailer->mailAttendees(incidence, d->identityForIncidence(incidence), CalendarSettings::self()->bcc(), messageText);
+        d->m_mailer->mailAttendees(incidence, identity, CalendarSettings::self()->bcc(), messageText);
     } else {
         QString subject;
         KCalendarCore::Incidence::Ptr inc = incidence.dynamicCast<KCalendarCore::Incidence>();
@@ -94,8 +105,9 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
             subject = i18n("Counter proposal: %1", inc->summary());
         }
 
-        d->m_mailer
-            ->mailOrganizer(incidence, d->identityForIncidence(incidence), CalendarUtils::email(), CalendarSettings::self()->bcc(), messageText, subject);
+        const auto from = sender.isEmpty() ? CalendarUtils::email() : sender;
+
+        d->m_mailer->mailOrganizer(incidence, identity, sender, CalendarSettings::self()->bcc(), messageText, subject);
     }
 }
 

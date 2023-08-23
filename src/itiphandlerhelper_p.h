@@ -115,10 +115,12 @@ public:
 
     /**
       Send counter proposal message.
+      @param receiver Recipient email of the original invitation.
       @param oldIncidence The original event provided in the invitations.
       @param newIncidence The new event as edited by the user.
     */
-    ITIPHandlerHelper::SendResult sendCounterProposal(const KCalendarCore::Incidence::Ptr &oldIncidence, const KCalendarCore::Incidence::Ptr &newIncidence);
+    ITIPHandlerHelper::SendResult
+    sendCounterProposal(const QString &receiver, const KCalendarCore::Incidence::Ptr &oldIncidence, const KCalendarCore::Incidence::Ptr &newIncidence);
 
 Q_SIGNALS:
     void finished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage);
@@ -137,7 +139,8 @@ private Q_SLOTS:
     void slotSchedulerFinishDialog(const int result, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
 private:
-    ITIPHandlerHelper::SendResult sentInvitation(int messageBoxReturnCode, const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method);
+    ITIPHandlerHelper::SendResult
+    sentInvitation(int messageBoxReturnCode, const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender = {});
 
     /**
       We are the organizer. If there is more than one attendee, or if there is
