@@ -116,6 +116,13 @@ private:
                 }
             }
         });
+        connect(m_etm, &EntityTreeModel::modelReset, this, [this]() {
+            for (const auto &item : q->items()) {
+                internalRemove(item);
+            }
+            m_populatedFromEtm = false;
+            populateFromETM();
+        });
         connect(m_etm, &EntityTreeModel::layoutChanged, this, &CollectionCalendarPrivate::populateFromETM);
 
         populateFromETM();
