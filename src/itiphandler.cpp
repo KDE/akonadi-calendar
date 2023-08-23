@@ -227,7 +227,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
             if (*newIncidence == *d->m_incidence) {
                 emitiTipMessageProcessed(this, ResultCancelled, QString());
             } else {
-                ITIPHandlerHelper::SendResult result = d->m_helper->sendCounterProposal(d->m_incidence, newIncidence);
+                ITIPHandlerHelper::SendResult result = d->m_helper->sendCounterProposal(receiver, d->m_incidence, newIncidence);
                 if (result != ITIPHandlerHelper::ResultSuccess) {
                     // It gives success in all paths, this never happens
                     emitiTipMessageProcessed(this, ResultError, i18n("Error sending counter proposal"));

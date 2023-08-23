@@ -34,9 +34,12 @@ public:
 
     void publish(const KCalendarCore::IncidenceBase::Ptr &incidence, const QString &recipients) override;
 
-    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method) override;
+    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender = {}) override;
 
-    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &recipients) override;
+    void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                            KCalendarCore::iTIPMethod method,
+                            const QString &recipients,
+                            const QString &sender) override;
 
     /** Returns the directory where the free-busy information is stored */
     Q_REQUIRED_RESULT QString freeBusyDir() const override;
