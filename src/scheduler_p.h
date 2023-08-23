@@ -72,9 +72,8 @@ public:
 
       @param incidence the incidence for the transaction. Must be valid.
       @param method the iTIP transaction method to use.
-      @param sender email address of the identity to use for sending - if empty, the identity is chosen based on the incidence organizer.
     */
-    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender = {}) = 0;
+    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method) = 0;
 
     /**
       Performs iTIP transaction on incidence to specified recipient(s).
@@ -83,12 +82,8 @@ public:
       @param incidence the incidence for the transaction. Must be valid.
       @param method the iTIP transaction method to use.
       @param recipients the recipients of the transaction.
-      @param sender email address of the identity to use for sending - if empty, the identity is chosen based on the incidence organizer.
     */
-    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                    KCalendarCore::iTIPMethod method,
-                                    const QString &recipients,
-                                    const QString &sender) = 0;
+    virtual void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &recipients) = 0;
 
     /**
       Accepts the transaction. The incidence argument specifies the iCal
