@@ -1,27 +1,28 @@
 # translation of libakonadi-calendar.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2013, 2020, 2022, 2023 xavier <xavier.besnard@neuf.fr>
 # Joëlle Cornavin <jcornavin@laposte.net>, 2010, 2011.
 # Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2013.
-# SPDX-FileCopyrightText: 2013, 2020, 2022, 2023 xavier <xavier.besnard@neuf.fr>
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
+# Valentin Poupon <valentin.poupon@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-02 00:48+0000\n"
-"PO-Revision-Date: 2023-08-20 17:22+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: fr\n"
+"PO-Revision-Date: 2023-08-20 22:37+0200\n"
+"Last-Translator: Valentin Poupon <valentin.poupon@gmail.com>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.90\n"
+"X-Generator: Lokalize 23.04.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -790,7 +791,7 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
-"Vous n'êtes pas l'organisateur de cet évènement. Sa modifications "
+"Vous n'êtes pas l'organisateur de cet évènement. Sa modification "
 "désynchronisera votre agenda de celui de l'organisateur. Voulez-vous "
 "vraiment le modifier ?"
 
@@ -935,6 +936,9 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"L'examen des préférences de signature du destinataire conduit à vous "
+"demander  si ce message doit être signé.\n"
+"Voulez-vous signer ce message ?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
@@ -985,6 +989,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Certaines parties de ce message ne seront pas signées.\n"
+"L'envoi de messages seulement partiellement signés pourrait enfreindre la "
+"politique du site.\n"
+"Voulez-vous plutôt signer toutes les parties du message ?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -993,8 +1001,8 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
-"Ce message ne sera pas signé. \n"
-"L’envoi d’un message non signé pourrait enfreindre la politique du site. \n"
+"Ce message ne sera pas signé.\n"
+"L’envoi d’un message non signé pourrait enfreindre la politique du site.\n"
 "Voulez-vous signer le message à la place ?"
 
 #: mailclient_p.cpp:754
@@ -1034,8 +1042,8 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
-"L’examen des préférences de chiffrement du destinataire a conclus qu'on vous "
-"demandera de chiffrer ou non ce message. \n"
+"L’examen des préférences de chiffrement du destinataire a conclu qu'on vous "
+"demandera de chiffrer ou non ce message.\n"
 "Voulez-vous chiffrer ce message ?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
@@ -1106,7 +1114,7 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
-"Certaines parties de ce message ne seront pas chiffrées. \n"
+"Certaines parties de ce message ne seront pas chiffrées.\n"
 "L’envoi de messages partiellement chiffrés peut violer la politique du site "
 "et / ou faire fuiter des informations sensibles.\n"
 "Voulez-vous chiffrer toutes les parties du message à la place ?"
@@ -1121,7 +1129,7 @@ msgid ""
 msgstr ""
 "Ce message ne sera pas chiffré.\n"
 "L’envoi de messages non chiffrés pourrait violer la politique du site et / "
-"ou faire fuiter des informations sensibles.  \n"
+"ou faire fuiter des informations sensibles.\n"
 "Voulez-vous chiffrer les messages à la place ?"
 
 #: mailclient_p.cpp:887
