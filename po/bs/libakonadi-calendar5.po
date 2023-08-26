@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:31+0000\n"
+"POT-Creation-Date: 2023-08-26 02:27+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -658,7 +658,7 @@ msgid "Do Not Send"
 msgstr "Nemoj slati"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:500
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "Greška: %1"
@@ -736,12 +736,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Pošta za grupno zakazivanje"
 
-#: itiphandlerhelper_p.cpp:142
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Nema datog rezimea</placeholder>"
 
-#: itiphandlerhelper_p.cpp:227
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -750,7 +750,7 @@ msgstr ""
 "Događaj \"%1\" uključuje druge ljude.\n"
 "Želite li poslati poštu učesnicima?"
 
-#: itiphandlerhelper_p.cpp:232
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -759,14 +759,14 @@ msgstr ""
 "Zadatak \"%1\" uključuje druge ljude.\n"
 "Želite li poslati poštu učesnicima?"
 
-#: itiphandlerhelper_p.cpp:237
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "Incident uključuje druge ljude. Treba li poslati poštu učesnicima?"
 
-#: itiphandlerhelper_p.cpp:261
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -776,7 +776,7 @@ msgstr ""
 "sinhribnizaciju vašeg kalendara s organizatorovim. Da li zaista želite da ga "
 "uredite?"
 
-#: itiphandlerhelper_p.cpp:294
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -785,18 +785,18 @@ msgstr ""
 "Promijenili ste poziv \"%1\".\n"
 "Želite li poslati učesnicima poruku ažuriranja?"
 
-#: itiphandlerhelper_p.cpp:302 itiphandlerhelper_p.cpp:323
-#: itiphandlerhelper_p.cpp:336
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "Požalji ažuriranje"
 
-#: itiphandlerhelper_p.cpp:317 itiphandlerhelper_p.cpp:401
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Želite li poslati promjenu statusa organizatoru ovog zadatka?"
 
-#: itiphandlerhelper_p.cpp:329
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -805,7 +805,7 @@ msgstr ""
 "Vaš status kao učesnika ovog događaja se promijenio. Želite li poslati "
 "ažuriranje statusa organizatoru događaja?"
 
-#: itiphandlerhelper_p.cpp:372
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -814,7 +814,7 @@ msgstr ""
 "Uklonili ste poziv \"%1\".\n"
 "Želite li poslati poštu učesnicima da je događaj otkazan?"
 
-#: itiphandlerhelper_p.cpp:377
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -823,7 +823,7 @@ msgstr ""
 "Uklonili ste poziv \"%1\".\n"
 "Želite li poslati poštu učesnicima da je zadatak otkazan?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -832,19 +832,19 @@ msgstr ""
 "Uklonili ste poziv \"%1\".\n"
 "Želite li poslati poštu učesnicima da je dnevnik otkazan?"
 
-#: itiphandlerhelper_p.cpp:404
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Želite li poslati ažuriranje statusa organizatoru ovog dnevnika?"
 
-#: itiphandlerhelper_p.cpp:409 itiphandlerhelper_p.cpp:430
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, fuzzy, kde-format
 #| msgid "Send Update"
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Požalji ažuriranje"
 
-#: itiphandlerhelper_p.cpp:424
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -853,17 +853,17 @@ msgstr ""
 "Prethodno ste prihvatili poziv na ovaj događaj. Želite li poslati ažurirani "
 "odgovor organizatoru da odbijate poziv?"
 
-#: itiphandlerhelper_p.cpp:468 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Kontra prijedlog %1"
 
-#: itiphandlerhelper_p.cpp:485
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Slanje grupne pošte za zakazivanje nije uspjelo"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:495
 #, fuzzy, kde-format
 #| msgid "Abort Update"
 msgctxt "@action:button dialog positive answer to abort question"
@@ -1090,7 +1090,7 @@ msgstr ""
 msgid "Unencrypted Message Warning"
 msgstr ""
 
-#: mailscheduler_p.cpp:168
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Gerška slanaj elektronske pošte "

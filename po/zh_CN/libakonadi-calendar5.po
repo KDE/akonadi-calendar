@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:31+0000\n"
+"POT-Creation-Date: 2023-08-26 02:27+0000\n"
 "PO-Revision-Date: 2023-08-02 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -627,7 +627,7 @@ msgid "Do Not Send"
 msgstr "不发送"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:500
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "错误：%1"
@@ -701,12 +701,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "分组日程安排邮件"
 
-#: itiphandlerhelper_p.cpp:142
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>无摘要</placeholder>"
 
-#: itiphandlerhelper_p.cpp:227
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -715,7 +715,7 @@ msgstr ""
 "事件“%1”中还包括其他人。\n"
 "您想要向这些参与者们邮寄邀请信吗？"
 
-#: itiphandlerhelper_p.cpp:232
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -724,14 +724,14 @@ msgstr ""
 "待办“%1”中还包括其他人。\n"
 "您想要向这些参与者们邮寄邀请信吗？"
 
-#: itiphandlerhelper_p.cpp:237
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "此事件包括了其他人。是否要向参与者们发送信件？"
 
-#: itiphandlerhelper_p.cpp:261
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -740,7 +740,7 @@ msgstr ""
 "您不是事件的组织者，因此编辑本事件会使得它与组织者的日程不同步。您确认要编辑"
 "它吗？"
 
-#: itiphandlerhelper_p.cpp:294
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -749,25 +749,25 @@ msgstr ""
 "您已经更改了邀请“%1”。\n"
 "您想要向参与者们发送通知信件吗？"
 
-#: itiphandlerhelper_p.cpp:302 itiphandlerhelper_p.cpp:323
-#: itiphandlerhelper_p.cpp:336
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "发送更新"
 
-#: itiphandlerhelper_p.cpp:317 itiphandlerhelper_p.cpp:401
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "您想要向任务的组织者发送状态更新通知信吗？"
 
-#: itiphandlerhelper_p.cpp:329
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr "您在此事件中的参与状态已经改变。您想要向事件组织者发送通知信吗？"
 
-#: itiphandlerhelper_p.cpp:372
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -776,7 +776,7 @@ msgstr ""
 "您已经删除了邀请“%1”。\n"
 "您想要向参与者们发送事件取消通知信吗？"
 
-#: itiphandlerhelper_p.cpp:377
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -785,7 +785,7 @@ msgstr ""
 "您已经删除了邀请“%1”。\n"
 "您想要向参与者们发送待办取消通知信吗？"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -794,18 +794,18 @@ msgstr ""
 "您已经删除了邀请“%1”。\n"
 "您想要向参与者们发送日记取消通知信吗？"
 
-#: itiphandlerhelper_p.cpp:404
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "您想要向日记的组织者发送状态更新通知信吗？"
 
-#: itiphandlerhelper_p.cpp:409 itiphandlerhelper_p.cpp:430
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "发送更新"
 
-#: itiphandlerhelper_p.cpp:424
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -813,17 +813,17 @@ msgid ""
 msgstr ""
 "您之前接受了此活动的邀请。您想要向该活动的组织者重新发送拒绝邀请的回复吗？"
 
-#: itiphandlerhelper_p.cpp:468 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "对案：%1"
 
-#: itiphandlerhelper_p.cpp:485
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "发送分组日程安排邮件失败。"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1041,7 +1041,7 @@ msgstr ""
 msgid "Unencrypted Message Warning"
 msgstr ""
 
-#: mailscheduler_p.cpp:168
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "发送邮件时出错："
