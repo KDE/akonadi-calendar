@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-26 00:46+0000\n"
 "PO-Revision-Date: 2023-07-26 18:27+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -654,7 +654,7 @@ msgid "Do Not Send"
 msgstr "Non invia"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:500
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "Error: %1"
@@ -728,12 +728,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-Posta de e-gruppo planificate"
 
-#: itiphandlerhelper_p.cpp:142
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Nulle summario date</placeholder>"
 
-#: itiphandlerhelper_p.cpp:227
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -742,7 +742,7 @@ msgstr ""
 "Le evento \"%1\" include altere personas.\n"
 "Tu vole inviar per e-posta le invitation al participantes?"
 
-#: itiphandlerhelper_p.cpp:232
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -751,7 +751,7 @@ msgstr ""
 "Le cosa de facer \"%1\" include altere personas.\n"
 "Tu vole inviar per e-posta le invitation al participantes?"
 
-#: itiphandlerhelper_p.cpp:237
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -760,7 +760,7 @@ msgstr ""
 "iste incidentia include altere personas. On debera inviar un e-posta al "
 "participantes?"
 
-#: itiphandlerhelper_p.cpp:261
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -770,7 +770,7 @@ msgstr ""
 "essera foras de synchronisation con le calendario de organisator. Tu "
 "vermente vole modificar lo?"
 
-#: itiphandlerhelper_p.cpp:294
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -779,18 +779,18 @@ msgstr ""
 "Tu modificava le invitation \"%1\".\n"
 "Tu vole inviar per e-posta a participantes un message de actualisation?"
 
-#: itiphandlerhelper_p.cpp:302 itiphandlerhelper_p.cpp:323
-#: itiphandlerhelper_p.cpp:336
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "Invia actualisation"
 
-#: itiphandlerhelper_p.cpp:317 itiphandlerhelper_p.cpp:401
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Tu vole inviar un actualisation de stato al organisator de iste carga?"
 
-#: itiphandlerhelper_p.cpp:329
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -799,7 +799,7 @@ msgstr ""
 "Tu stato como participante a iste evento cambiava. Tu vole inviar un "
 "actualisation de stato al organisator de evento?"
 
-#: itiphandlerhelper_p.cpp:372
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -809,7 +809,7 @@ msgstr ""
 "Tu vole inviar per e-posta le aviso al participantes que le evento es "
 "cancellate?"
 
-#: itiphandlerhelper_p.cpp:377
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -819,7 +819,7 @@ msgstr ""
 "Tu vole inviar per e-posta a participantes un aviso que le action o cosa de "
 "facer es cancellate?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -828,19 +828,19 @@ msgstr ""
 "Tu removeva le invitation \"%1\".\n"
 "Tu vole avisar per e-posta le participantes que le jornal es cancellate?"
 
-#: itiphandlerhelper_p.cpp:404
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Tu vole inviar un actualisation de stato al organisator de iste jornal?"
 
-#: itiphandlerhelper_p.cpp:409 itiphandlerhelper_p.cpp:430
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Invia actualisation"
 
-#: itiphandlerhelper_p.cpp:424
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -849,17 +849,17 @@ msgstr ""
 "Tu previemente dava acceptation a un invitation pro iste evento. Tu vole "
 "inviar un responsa actualisate al organisator declinante le invitation?"
 
-#: itiphandlerhelper_p.cpp:468 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Contra proposition: %1"
 
-#: itiphandlerhelper_p.cpp:485
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Il falleva a inviar e-posta de gruppo planificate"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1109,7 +1109,7 @@ msgstr "Cr&ypta omne partes"
 msgid "Unencrypted Message Warning"
 msgstr "Aviso de message nonn cryptate"
 
-#: mailscheduler_p.cpp:168
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Error quando on inviava e-posta: "

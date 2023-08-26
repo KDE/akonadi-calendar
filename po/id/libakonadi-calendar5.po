@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-26 00:46+0000\n"
 "PO-Revision-Date: 2022-07-07 08:20+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -648,7 +648,7 @@ msgid "Do Not Send"
 msgstr "Jangan Kirim"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:500
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "Galat: %1"
@@ -726,12 +726,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Email Penjadwalan Grup"
 
-#: itiphandlerhelper_p.cpp:142
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Tidak ada ringkasan yang diberikan</placeholder>"
 
-#: itiphandlerhelper_p.cpp:227
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -740,7 +740,7 @@ msgstr ""
 "Acara \"%1\" termasuk orang lain.\n"
 "Apakah kamu ingin mengemail undangan kepada peserta?"
 
-#: itiphandlerhelper_p.cpp:232
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -749,7 +749,7 @@ msgstr ""
 "Rencana \"%1\" termasuk orang lain.\n"
 "Apakah kamu ingin mengemail undangan kepada peserta?"
 
-#: itiphandlerhelper_p.cpp:237
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -757,7 +757,7 @@ msgid ""
 msgstr ""
 "Insiden termasuk orang lain. Apakah email harus dikirimkan kepada peserta?"
 
-#: itiphandlerhelper_p.cpp:261
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -767,7 +767,7 @@ msgstr ""
 "tak tersinkronisasikan dengan kalender penyelenggara. Apakah kamu benar-"
 "benar ingin mengeditnya?"
 
-#: itiphandlerhelper_p.cpp:294
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -776,19 +776,19 @@ msgstr ""
 "Kamu mengubah undangan  \"%1\".\n"
 "Apakah kamu ingin mengemail kepada peserta dalam sebuah pesan pembaruan?"
 
-#: itiphandlerhelper_p.cpp:302 itiphandlerhelper_p.cpp:323
-#: itiphandlerhelper_p.cpp:336
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "Kirim Pembaruan"
 
-#: itiphandlerhelper_p.cpp:317 itiphandlerhelper_p.cpp:401
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "Apakah kamu ingin mengirim pembaruan status ke penyelenggara pada tugas ini?"
 
-#: itiphandlerhelper_p.cpp:329
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -797,7 +797,7 @@ msgstr ""
 "Statusmu sebagai peserta acara ini berubah. Apakah kamu ingin mengirim "
 "pembaruan status ke penyelenggara acara?"
 
-#: itiphandlerhelper_p.cpp:372
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -806,7 +806,7 @@ msgstr ""
 "Kamu menghapus undangan \"%1\".\n"
 "Apakah kamu ingin mengirim email kepada peserta bahwa acara dibatalkan?"
 
-#: itiphandlerhelper_p.cpp:377
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -816,7 +816,7 @@ msgstr ""
 "Apakah kamu ingin mengirim email kepada para peserta bahwa rencana itu "
 "dibatalkan?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -825,19 +825,19 @@ msgstr ""
 "Kamu menghapus undangan \"%1\".\n"
 "Apakah kamu ingin mengirim email kepada peserta bahwa jurnal dibatalkan?"
 
-#: itiphandlerhelper_p.cpp:404
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Apakah kamu ingin mengirim pembaruan status ke penyelenggara jurnal ini?"
 
-#: itiphandlerhelper_p.cpp:409 itiphandlerhelper_p.cpp:430
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Kirim Pembaruan"
 
-#: itiphandlerhelper_p.cpp:424
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -846,17 +846,17 @@ msgstr ""
 "Kamu sebelumnya telah menerima undangan ke acara ini. Apakah kamu ingin "
 "mengirim tanggapan terbaru kepada penyelenggara yang menolak undangan?"
 
-#: itiphandlerhelper_p.cpp:468 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Usulan: %1"
 
-#: itiphandlerhelper_p.cpp:485
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Mengirim email penjadwalan grup gagal."
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1084,7 +1084,7 @@ msgstr ""
 msgid "Unencrypted Message Warning"
 msgstr ""
 
-#: mailscheduler_p.cpp:168
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Galat mengirim email: "
