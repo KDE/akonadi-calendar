@@ -8,8 +8,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_CALENDARUTILS_H
-#define AKONADI_CALENDARUTILS_H
+#pragma once
 
 #include "akonadi-calendar_export.h"
 
@@ -70,5 +69,3 @@ AKONADI_CALENDAR_EXPORT QMimeData *createMimeData(const Akonadi::Item::List &ite
 }
 
 }
-
-#endif // AKONADI_CALENDARUTILS_H
