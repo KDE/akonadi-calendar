@@ -44,7 +44,6 @@ using ContactPreferences = QMap<QString, MessageComposer::ContactPreference>;
 
 using namespace Akonadi;
 
-Q_DECLARE_METATYPE(KIdentityManagementCore::Identity)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 Q_DECLARE_METATYPE(CryptoState)
 Q_DECLARE_METATYPE(QList<ExpectedDialog>)
