@@ -53,7 +53,7 @@ KIdentityManagementCore::Identity MailSchedulerPrivate::identityForIncidence(con
     return m_identityManager->identityForAddress(organizerEmail);
 }
 
-KIdentityManagement::Identity MailSchedulerPrivate::identityForAddress(const QString &address) const
+KIdentityManagementCore::Identity MailSchedulerPrivate::identityForAddress(const QString &address) const
 {
     return m_identityManager->identityForAddress(address);
 }
