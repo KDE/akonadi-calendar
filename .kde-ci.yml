@@ -9,13 +9,13 @@ Dependencies:
     'frameworks/kcalendarcore' : '@latest-kf6'
     'frameworks/knotifications' : '@latest-kf6'
     'frameworks/kdbusaddons' : '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-mime' : '@latest-kf6'
-    'pim/akonadi-contacts' : '@latest-kf6'
-    'pim/kcalutils' : '@latest-kf6'
-    'pim/kidentitymanagement' : '@latest-kf6'
-    'pim/kmailtransport' : '@latest-kf6'
-    'pim/messagelib' : '@latest-kf6'
+    'pim/akonadi' : '@same'
+    'pim/akonadi-mime' : '@same'
+    'pim/akonadi-contacts' : '@same'
+    'pim/kcalutils' : '@same'
+    'pim/kidentitymanagement' : '@same'
+    'pim/kmailtransport' : '@same'
+    'pim/messagelib' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
