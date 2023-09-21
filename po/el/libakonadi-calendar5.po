@@ -3,22 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Stelios <sstavra@gmail.com>, 2012, 2020, 2022.
+# George Stefanakis <george.stefanakis@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2022-12-29 16:16+0200\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"POT-Creation-Date: 2023-08-26 00:46+0000\n"
+"PO-Revision-Date: 2023-08-21 22:29+0300\n"
+"Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
-#: calendarbase.cpp:264
+#: calendarbase.cpp:265
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
@@ -275,87 +276,87 @@ msgstr ""
 "αναζήτηση για δεδομένα διαθεσιμότητας του joe@mydomain.com στον εξυπηρετητή "
 "www.yourdomain.com θα αποτύχει."
 
-#: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
-#: todomodel.cpp:458
+#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
+#: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "Ημερολόγιο"
 
-#: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
+#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
 #, kde-format
 msgid "Tasks"
 msgstr "Εργασίες"
 
-#: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
 #, kde-format
 msgid "Journal"
 msgstr "χρονικό"
 
-#: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
 msgid "Notes"
 msgstr "Σημειώσεις"
 
-#: calendarutils.cpp:131
+#: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "My Kolab %1"
 
-#: calendarutils.cpp:134
+#: calendarutils.cpp:135
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "Κοινόχρηστο Kolab %1 %2"
 
-#: calendarutils.cpp:137
+#: calendarutils.cpp:138
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "Kolab %2 του %1"
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "%2 Kolab %3 του %1"
 
-#: calendarutils.cpp:143
+#: calendarutils.cpp:144
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "Kolab %1"
 
-#: calendarutils.cpp:150
+#: calendarutils.cpp:151
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 στο %2"
 
-#: calendarutils.cpp:183
+#: calendarutils.cpp:184
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "Google %2 του %1"
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:186
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%2 του %1"
 
-#: calendarutils.cpp:188
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "Google %1"
 
-#: calendarutils.cpp:196
+#: calendarutils.cpp:197
 #, kde-format
 msgid "My %1"
 msgstr "Το δικό μου %1"
 
-#: calendarutils.cpp:200
+#: calendarutils.cpp:201
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -642,20 +643,20 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Το μήνυμα δεν εστάλη"
 
-#: itiphandler.h:99 itiphandler.h:117 itiphandler.h:133 itiphandler.h:146
+#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "Να αποσταλεί μήνυμα"
 
-#: itiphandler.h:100 itiphandler.h:118 itiphandler.h:134 itiphandler.h:147
+#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Να μην αποσταλεί"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:486
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "Σφάλμα: %1"
@@ -729,12 +730,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Αλληλογραφία χρονοπρογραμματισμού ομάδων"
 
-#: itiphandlerhelper_p.cpp:128
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Δεν δόθηκε περίληψη</placeholder>"
 
-#: itiphandlerhelper_p.cpp:213
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -743,7 +744,7 @@ msgstr ""
 "Το γεγονός «%1» περιλαμβάνει και άλλα άτομα.\n"
 "Θέλετε να στείλετε με μήνυμα την πρόσκληση στους συμμετέχοντες;"
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -752,7 +753,7 @@ msgstr ""
 "Η λίστα μελλοντικών εργασιών «%1» περιλαμβάνει και άλλα άτομα.\n"
 "Θέλετε να στείλετε με μήνυμα την πρόσκληση στους συμμετέχοντες;"
 
-#: itiphandlerhelper_p.cpp:223
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -761,7 +762,7 @@ msgstr ""
 "Αυτό το περιστατικό περιλαμβάνει και άλλα άτομα. Να σταλεί μήνυμα "
 "αλληλογραφίας στους συμμετέχοντες;"
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -771,7 +772,7 @@ msgstr ""
 "ημερολόγιό σας δεν θα είναι συγχρονισμένο με το ημερολόγιο του διοργανωτή. "
 "Θέλετε πράγματι να το επεξεργαστείτε;"
 
-#: itiphandlerhelper_p.cpp:280
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -780,20 +781,20 @@ msgstr ""
 "Αλλάξατε την πρόσκληση «%1».\n"
 "Θέλετε να στείλετε στους συμμετέχοντες ένα ενημερωτικό μήνυμα;"
 
-#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
-#: itiphandlerhelper_p.cpp:322
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "Αποστολή ενημέρωσης"
 
-#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "Θέλετε να στείλετε μια ενημέρωση κατάστασης στο διοργανωτή αυτής της "
 "εργασίας;"
 
-#: itiphandlerhelper_p.cpp:315
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -802,7 +803,7 @@ msgstr ""
 "Η κατάστασή σας ως συμμετέχων αυτού του γεγονότος έχει αλλάξει. Θέλετε να "
 "στείλετε μια ενημέρωση κατάστασης στον διοργανωτή αυτού του γεγονότος;"
 
-#: itiphandlerhelper_p.cpp:358
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -811,7 +812,7 @@ msgstr ""
 "Αφαιρέσατε την πρόσκληση «%1».\n"
 "Θέλετε να στείλετε μήνυμα στους συμμετέχοντες ότι το γεγονός ακυρώθηκε;"
 
-#: itiphandlerhelper_p.cpp:363
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -820,7 +821,7 @@ msgstr ""
 "Αφαιρέσατε την πρόσκληση «%1».\n"
 "Θέλετε να στείλετε μήνυμα στους συμμετέχοντες ότι η εργασία ακυρώθηκε;"
 
-#: itiphandlerhelper_p.cpp:368
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -829,20 +830,20 @@ msgstr ""
 "Αφαιρέσατε την πρόσκληση «%1».\n"
 "Θέλετε να στείλετε μήνυμα στους συμμετέχοντες ότι το χρονικό ακυρώθηκε;"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Θέλετε να στείλετε μια ενημέρωση κατάστασης στον διοργανωτή αυτού του "
 "χρονικού;"
 
-#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Να αποσταλεί ενημέρωση"
 
-#: itiphandlerhelper_p.cpp:410
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -851,53 +852,268 @@ msgstr ""
 "Έχετε αποδεχθεί μια πρόσκληση για αυτό το γεγονός. Θέλετε να στείλετε μια "
 "ενημερωτική απάντηση στον διοργανωτή απορρίπτοντας την πρόσκληση;"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Αντιπρόταση: %1"
 
-#: itiphandlerhelper_p.cpp:471
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Αποτυχία αποστολής μηνύματος χρονοπρογραμματισμού ομάδας."
 
-#: itiphandlerhelper_p.cpp:479
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Να εγκαταλειφθεί η ενημέρωση"
 
-#: mailclient_p.cpp:50 mailclient_p.cpp:85
+#: mailclient_p.cpp:376 mailclient_p.cpp:413
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Δεν υππαρχουν συμμετέχοντες στην αλληλογραφία"
 
-#: mailclient_p.cpp:102
+#: mailclient_p.cpp:422
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Αντικείμενο διαθεσιμότητας"
 
-#: mailclient_p.cpp:127 mailclient_p.cpp:149
+#: mailclient_p.cpp:451 mailclient_p.cpp:477
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Μήνυμα διαθεσιμότητας"
 
-#: mailclient_p.cpp:184
+#: mailclient_p.cpp:613
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Σφάλμα κατά τη δημιουργία μετσφοράς"
 
-#: mailclient_p.cpp:201
+#: mailclient_p.cpp:631
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Σφάλμα προσκόμισης μεταφοράς. Αδυναμία αποστολής προσκλήσεων"
 
-#: mailclient_p.cpp:342
+#: mailclient_p.cpp:653
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Σφάλμα εισαγωγής μηνύματος στη λίστα εξερχομένων: %1"
 
-#: mailscheduler_p.cpp:168
+#: mailclient_p.cpp:685
+#, kde-format
+msgid ""
+"Examination of the recipient's signing preferences yielded that you be asked "
+"whether or not to sign this message.\n"
+"Sign this message?"
+msgstr ""
+"Η εξέταση των προτιμήσεων υπογραφής παραλήπτη έδειξε ότι σας απευθύνεται η "
+"ερώτηση αν θα υπογράψετε ή όχι αυτό το μήνυμα.\n"
+"Θα το υπογράψετε αυτό το μήνυμα;"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgid "Sign Message?"
+msgstr "Υπογραφή μηνύματος;"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgctxt "to sign"
+msgid "&Sign"
+msgstr "&Υπογραφή"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgid "Do &Not Sign"
+msgstr "Να μη&ν υπογραφεί"
+
+#: mailclient_p.cpp:709
+#, kde-format
+msgid ""
+"There are conflicting signing preferences for these recipients.\n"
+"Sign this message?"
+msgstr ""
+"Υπάρχει σύγκρουση προτιμήσεων υπογραφών για αυτούς τους παραλήπτες.\n"
+"Υπογραφή αυτού του μηνύματος;"
+
+#: mailclient_p.cpp:731
+#, kde-format
+msgid ""
+"You have requested to sign this message, but no valid signing keys have been "
+"configured for this identity."
+msgstr ""
+"Ζητήσατε να υπογράψετε αυτό το μήνυμα, αλλά δεν έχουν διαμορφωθεί έγκυρα "
+"κλειδιά υπογραφής για αυτή την ταυτότητα ."
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send Unsigned?"
+msgstr "Αποστολή Χωρίς Υπογραφή;"
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send &Unsigned"
+msgstr "Αποστολή &χωρίς υπογραφή"
+
+#: mailclient_p.cpp:747
+#, kde-format
+msgid ""
+"Some parts of this message will not be signed.\n"
+"Sending only partially signed messages might violate site policy.\n"
+"Sign all parts instead?"
+msgstr ""
+"Ορισμένα τμήματα αυτού του μηνύματος δεν θα υπογραφούν.\n"
+"Η αποστολή, μερικώς μόνο υπογεγραμμένων μηνυμάτων, ίσως παραβιάζει την "
+"πολιτική του ιστοχώρου.\n"
+"Να υπογραφούν όλα τα τμήματα;"
+
+#: mailclient_p.cpp:751
+#, kde-format
+msgid ""
+"This message will not be signed.\n"
+"Sending unsigned message might violate site policy.\n"
+"Sign message instead?"
+msgstr ""
+"Αυτό το μήνυμα δεν θα φέρει υπογραφή.\n"
+"Η αποστολή ανυπόγραφων μηνυμάτων ίσως παραβιάζει την πολιτική του "
+"ιστοχώρου.\n"
+"Να υπογραφεί το μήνυμα;"
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign All Parts"
+msgstr "Να &υπογραφούν όλα τα τμήματα"
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign"
+msgstr "&Υπογραφή"
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Unsigned-Message Warning"
+msgstr "Προειδοποίηση ανυπόγραφου μηνύματος"
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Send &As Is"
+msgstr "&Αποστολή ως έχει"
+
+#: mailclient_p.cpp:808
+#, kde-format
+msgid ""
+"Valid trusted encryption keys were found for all recipients.\n"
+"Encrypt this message?"
+msgstr ""
+"Έγκυρα έμπιστα κλειδιά κρυπτογράφησης βρέθηκαν για όλους τους παραλήπτες.\n"
+"Να κρυπτογραφηθεί αυτό το μήνυμα;"
+
+#: mailclient_p.cpp:811
+#, kde-format
+msgid ""
+"Examination of the recipient's encryption preferences yielded that you be "
+"asked whether or not to encrypt this message.\n"
+"Encrypt this message?"
+msgstr ""
+"Η εξέταση των προτιμήσεων κρυπτογράφησης παραλήπτη έδειξε ότι σας "
+"απευθύνεται η ερώτηση αν θα κρυπτογραφήσετε ή όχι αυτό το μήνυμα.\n"
+"Να κρυπτογραφηθεί αυτό το μήνυμα;"
+
+#: mailclient_p.cpp:816 mailclient_p.cpp:841
+#, kde-format
+msgid "Encrypt Message?"
+msgstr "Να κρυπτογραφηθεί το μήνυμα;"
+
+#: mailclient_p.cpp:817
+#, kde-format
+msgid "Sign && &Encrypt"
+msgstr "Υπογραφή && &Κρυπτογράφηση"
+
+#: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt"
+msgstr "&Κρυπτογράφηση"
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Sign Only"
+msgstr "&Υπογραφή μόνο"
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Send As-Is"
+msgstr "Απο&στολή ως έχει"
+
+#: mailclient_p.cpp:838
+#, kde-format
+msgid ""
+"There are conflicting encryption preferences for these recipients.\n"
+"Encrypt this message?"
+msgstr ""
+"Υπάρχει σύγκρουση προτιμήσεων κρυπτογράφησης για αυτούς τους παραλήπτες.\n"
+"Να κρυπτογραφηθεί αυτό το μήνυμα;"
+
+#: mailclient_p.cpp:841
+#, kde-format
+msgid "Do &Not Encrypt"
+msgstr "Να μη&ν κρυπτογραφηθεί"
+
+#: mailclient_p.cpp:860
+#, kde-format
+msgid ""
+"You have requested to encrypt this message, and to encrypt a copy to "
+"yourself, but no valid trusted encryption keys have been configured for this "
+"identity."
+msgstr ""
+"Ζητήσατε να κρυπτογραφηθεί αυτό το μήνυμα, και να κρυπτογραφηθεί και ένα "
+"αντίγραφο για εσάς, αλλά δεν έχουν διαμορφωθεί έγκυρα έμπιστα κλειδιά "
+"κρυπτογράφησης για αυτήν την ταυτότητα."
+
+#: mailclient_p.cpp:864
+#, kde-format
+msgid "Send Unencrypted?"
+msgstr "Να αποσταλεί μη κρυπτογραφημένο;"
+
+#: mailclient_p.cpp:864
+#, kde-format
+msgid "Send &Unencrypted"
+msgstr "Αποστολή μη κρυπτογρ&αφημένου"
+
+#: mailclient_p.cpp:878
+#, kde-format
+msgid ""
+"Some parts of this message will not be encrypted.\n"
+"Sending only partially encrypted messages might violate site policy and/or "
+"leak sensitive information.\n"
+"Encrypt all parts instead?"
+msgstr ""
+"Μερικά τμήματα αυτού του μηνύματος δεν θα κρυπτογραφηθούν.\n"
+"Η αποστολή μερικώς μόνο κρυπτογραφημένων μηνυμάτων ίσως παραβιάζει την "
+"πολιτική του ιστοχώρου ή/και συμβάλλει στη διαρροή ευαίσθητων πληροφοριών.\n"
+"Να κρυπτογραφηθούν όλα τα τμήματα;"
+
+#: mailclient_p.cpp:883
+#, kde-format
+msgid ""
+"This message will not be encrypted.\n"
+"Sending unencrypted messages might violate site policy and/or leak sensitive "
+"information.\n"
+"Encrypt messages instead?"
+msgstr ""
+"Αυτό το μήνυμα δεν θα κρυπτογραφηθεί. \n"
+"Η αποστολή ακρυπτογράφητων μηνυμάτων μπορεί να παραβιάζει την πολιτική του "
+"ιστοχώρου και/η να διαρρεύσει ευαίσθητες πληροφορίες. \n"
+"Να κρυπτογραφήσω το μήνυμα;"
+
+#: mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt All Parts"
+msgstr "Να &κρυπτογραφηθούν όλα τα τμήματα"
+
+#: mailclient_p.cpp:889
+#, kde-format
+msgid "Unencrypted Message Warning"
+msgstr "Προειδοποίηση ακρυπτογράφητου μηνύματος"
+
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Σφάλμα αποστολής μηνύματος αλληλογραφίας: "
@@ -946,10 +1162,12 @@ msgstr ""
 #, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr ""
 "Αδυναμία δημοσίευσης του περιστατικού ημερολογίου εξαιτίας μη έγκυρης "
-"συμβολοσειράς παραληπτών. %1"
+"συμβολοσειράς παραληπτών.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1245,13 +1463,13 @@ msgstr "Σφάλμα αποθήκευσης αντικειμένου διαθε�
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Απορριφθείσες προσκλήσεις"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Ανοικτές προσκλήσεις"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1707,88 +1925,76 @@ msgstr "&Επεξεργασία..."
 msgid "Edit the selected incidence."
 msgstr "Επεξεργασία του επιλεγμένου περιστατικού."
 
-#: todomodel.cpp:140 todomodel.cpp:176
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Εξαίρεση"
 
-#: todomodel.cpp:142 todomodel.cpp:178
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Ναι"
 
-#: todomodel.cpp:145 todomodel.cpp:181
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Όχι"
 
-#: todomodel.cpp:159 todomodel.cpp:197
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
-#: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#: todomodel.cpp:459
+#, kde-format
 msgid "Summary"
 msgstr "Σύνοψη"
 
-#: todomodel.cpp:442
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Επανεμφάνιση"
 
-#: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#: todomodel.cpp:463
+#, kde-format
 msgid "Priority"
 msgstr "Προτεραιότητα"
 
-#: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#: todomodel.cpp:465
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Ολοκληρωμένο"
 
-#: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#: todomodel.cpp:467
+#, kde-format
 msgid "Start Date"
-msgstr "Ημερομηνία και ώρα έναρξης"
+msgstr "Ημερομηνία έναρξης"
 
-#: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#: todomodel.cpp:469
+#, kde-format
 msgid "Due Date"
-msgstr "Ημερομηνία και ώρα που απομένει"
+msgstr "Ημερομηνία λήξης"
 
-#: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#: todomodel.cpp:471
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Ολοκληρωμένο"
 
-#: todomodel.cpp:454
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
-#: todomodel.cpp:456
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: todopurger.cpp:61
 #, kde-format

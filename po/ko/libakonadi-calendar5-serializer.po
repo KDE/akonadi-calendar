@@ -100,7 +100,7 @@ msgstr "알람"
 #: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
 msgid "Resources"
-msgstr "자원"
+msgstr "리소스"
 
 #: akonadi_serializer_kcalcore.cpp:254
 #, kde-format

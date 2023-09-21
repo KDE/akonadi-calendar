@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2023-04-06 18:19+0200\n"
+"POT-Creation-Date: 2023-08-26 00:46+0000\n"
+"PO-Revision-Date: 2023-07-28 10:38+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,9 +15,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
-#: calendarbase.cpp:264
+#: calendarbase.cpp:265
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
@@ -272,87 +272,87 @@ msgstr ""
 "опция, тогава търсите данните за заетостта и заетостта на joe@mydomain.com "
 "на сървъра www.yourdomain.com ще се провали."
 
-#: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
-#: todomodel.cpp:458
+#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
+#: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "Календар"
 
-#: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
+#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
 #, kde-format
 msgid "Tasks"
 msgstr "Задачи"
 
-#: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
 #, kde-format
 msgid "Journal"
 msgstr "Дневник"
 
-#: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
 msgid "Notes"
 msgstr "Бележки"
 
-#: calendarutils.cpp:131
+#: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "Моят Kolab %1"
 
-#: calendarutils.cpp:134
+#: calendarutils.cpp:135
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "Споделени Kolab %1 %2"
 
-#: calendarutils.cpp:137
+#: calendarutils.cpp:138
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "Kolab %2 на %1"
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "%2 на %1 Kolab %3"
 
-#: calendarutils.cpp:143
+#: calendarutils.cpp:144
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "Kolab %1"
 
-#: calendarutils.cpp:150
+#: calendarutils.cpp:151
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 в %2"
 
-#: calendarutils.cpp:183
+#: calendarutils.cpp:184
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "Google %2 на %1"
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:186
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%2 на %1"
 
-#: calendarutils.cpp:188
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "Google %1"
 
-#: calendarutils.cpp:196
+#: calendarutils.cpp:197
 #, kde-format
 msgid "My %1"
 msgstr "Моят %1"
 
-#: calendarutils.cpp:200
+#: calendarutils.cpp:201
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -635,20 +635,20 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Съобщението не е изпратено"
 
-#: itiphandler.h:99 itiphandler.h:117 itiphandler.h:133 itiphandler.h:146
+#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "Изпращане на имейл"
 
-#: itiphandler.h:100 itiphandler.h:118 itiphandler.h:134 itiphandler.h:147
+#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Да не се изпраща"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:486
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "Грешка: %1"
@@ -722,12 +722,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Имейл за групово планиране"
 
-#: itiphandlerhelper_p.cpp:128
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder> Не е дадено резюме </placeholder>"
 
-#: itiphandlerhelper_p.cpp:213
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -736,7 +736,7 @@ msgstr ""
 "Събитието \"%1\" включва други хора. \n"
 "Искате ли да изпратите поканата по имейл до присъстващите?"
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -745,7 +745,7 @@ msgstr ""
 "Заданието \"%1 \"включва други хора. \n"
 "Искате ли да изпратите поканата по имейл до присъстващите?"
 
-#: itiphandlerhelper_p.cpp:223
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -754,7 +754,7 @@ msgstr ""
 "Този случай включва други хора. Трябва ли да се изпрати имейл до "
 "присъстващите?"
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -764,7 +764,7 @@ msgstr ""
 "несинхронизиране на календара ви с календара на организатора. Наистина ли "
 "искате да го редактирате?"
 
-#: itiphandlerhelper_p.cpp:280
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -773,20 +773,20 @@ msgstr ""
 "Променихте поканата \"%1\". \n"
 "Искате ли да изпратите на участниците съобщение за актуализация по имейл?"
 
-#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
-#: itiphandlerhelper_p.cpp:322
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "Изпращане на актуализация"
 
-#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "Искате ли да изпратите актуализация на състоянието на организатора на тази "
 "задача?"
 
-#: itiphandlerhelper_p.cpp:315
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -795,7 +795,7 @@ msgstr ""
 "Състоянието ви като участник в това събитие се промени. Искате ли да "
 "изпратите актуализация на състоянието на организатора на събитието?"
 
-#: itiphandlerhelper_p.cpp:358
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -804,7 +804,7 @@ msgstr ""
 "Премахнахте поканата \"%1 \". \n"
 "Искате ли да изпратите имейл до присъстващите, че събитието е отменено?"
 
-#: itiphandlerhelper_p.cpp:363
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -813,7 +813,7 @@ msgstr ""
 "Премахнахте поканата \"%1 \". \n"
 "Искате ли да изпратите имейл до присъстващите, че заданието е отменено?"
 
-#: itiphandlerhelper_p.cpp:368
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -822,20 +822,20 @@ msgstr ""
 "Премахнахте поканата \"%1 \". \n"
 "Искате ли да изпратите имейл до присъстващите, че списанието е отменено?"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Искате ли да изпратите актуализация на състоянието на организатора на това "
 "списание?"
 
-#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Изпращане на актуализация"
 
-#: itiphandlerhelper_p.cpp:410
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -844,53 +844,266 @@ msgstr ""
 "По-рано сте приели покана за това събитие. Искате ли да изпратите "
 "актуализиран отговор на организатора, който отказва поканата?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Броячно предложение: %1"
 
-#: itiphandlerhelper_p.cpp:471
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Изпращането на имейл за планиране на група е неуспешно."
 
-#: itiphandlerhelper_p.cpp:479
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Прекъсване на актуализацията"
 
-#: mailclient_p.cpp:50 mailclient_p.cpp:85
+#: mailclient_p.cpp:376 mailclient_p.cpp:413
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Няма участници в имейла"
 
-#: mailclient_p.cpp:102
+#: mailclient_p.cpp:422
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Безплатен зает обект"
 
-#: mailclient_p.cpp:127 mailclient_p.cpp:149
+#: mailclient_p.cpp:451 mailclient_p.cpp:477
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Безплатно заето съобщение"
 
-#: mailclient_p.cpp:184
+#: mailclient_p.cpp:613
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Грешка при създаване на транспорт"
 
-#: mailclient_p.cpp:201
+#: mailclient_p.cpp:631
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Грешка при извличането на транспорта. Не може да се изпратят покани"
 
-#: mailclient_p.cpp:342
+#: mailclient_p.cpp:653
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Грешка при изпращане на съобщение на опашка в изходящи: %1"
 
-#: mailscheduler_p.cpp:168
+#: mailclient_p.cpp:685
+#, kde-format
+msgid ""
+"Examination of the recipient's signing preferences yielded that you be asked "
+"whether or not to sign this message.\n"
+"Sign this message?"
+msgstr ""
+"Проверката на предпочитанията за подписване на получателя даде резултат да "
+"бъдете попитани дали да подпишете това съобщение или не. \n"
+"Искате ли да подпишете това съобщение?"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgid "Sign Message?"
+msgstr "Подписване на писмото?"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgctxt "to sign"
+msgid "&Sign"
+msgstr "&Подписване"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgid "Do &Not Sign"
+msgstr "Без подписване"
+
+#: mailclient_p.cpp:709
+#, kde-format
+msgid ""
+"There are conflicting signing preferences for these recipients.\n"
+"Sign this message?"
+msgstr ""
+"Има противоречиви предпочитания за подписване за тези получатели. \n"
+"Искате ли да подпишете това съобщение?"
+
+#: mailclient_p.cpp:731
+#, kde-format
+msgid ""
+"You have requested to sign this message, but no valid signing keys have been "
+"configured for this identity."
+msgstr ""
+"Поискахте да подпишете това съобщение, но не са конфигурирани валидни "
+"ключове за подписване за тази самоличност."
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send Unsigned?"
+msgstr "Изпращане без подпис?"
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send &Unsigned"
+msgstr "Изпращане и неподписано"
+
+#: mailclient_p.cpp:747
+#, kde-format
+msgid ""
+"Some parts of this message will not be signed.\n"
+"Sending only partially signed messages might violate site policy.\n"
+"Sign all parts instead?"
+msgstr ""
+"Някои части от това съобщение няма да бъдат подписани. \n"
+"Изпращането само на частично подписани съобщения може да наруши правилата на "
+"сайта. \n"
+"Вместо това да подпишете всички части?"
+
+#: mailclient_p.cpp:751
+#, kde-format
+msgid ""
+"This message will not be signed.\n"
+"Sending unsigned message might violate site policy.\n"
+"Sign message instead?"
+msgstr ""
+"Това съобщение няма да бъде подписано. \n"
+"Изпращането на неподписано съобщение може да наруши правилата на сайта. \n"
+"Вместо това да подпишете съобщение?"
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign All Parts"
+msgstr "&Подписване на всички части"
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign"
+msgstr "&Подписване"
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Unsigned-Message Warning"
+msgstr "Предупреждение за неподписано съобщение"
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Send &As Is"
+msgstr "Изпращане &както е"
+
+#: mailclient_p.cpp:808
+#, kde-format
+msgid ""
+"Valid trusted encryption keys were found for all recipients.\n"
+"Encrypt this message?"
+msgstr ""
+"Намерени са валидни надеждни ключове за шифроване за всички получатели. \n"
+"Шифроване на това съобщение?"
+
+#: mailclient_p.cpp:811
+#, kde-format
+msgid ""
+"Examination of the recipient's encryption preferences yielded that you be "
+"asked whether or not to encrypt this message.\n"
+"Encrypt this message?"
+msgstr ""
+"Проучването на предпочитанията за криптиране на получателя доведе до това, "
+"че ще бъдете попитани дали да шифровате това съобщение или не. \n"
+"Шифроване на това съобщение?"
+
+#: mailclient_p.cpp:816 mailclient_p.cpp:841
+#, kde-format
+msgid "Encrypt Message?"
+msgstr "Шифроване на писмото?"
+
+#: mailclient_p.cpp:817
+#, kde-format
+msgid "Sign && &Encrypt"
+msgstr "Подписване &&& криптиране"
+
+#: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt"
+msgstr "&Шифроване"
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Sign Only"
+msgstr "&Подписване само на"
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Send As-Is"
+msgstr "&Изпращане както е"
+
+#: mailclient_p.cpp:838
+#, kde-format
+msgid ""
+"There are conflicting encryption preferences for these recipients.\n"
+"Encrypt this message?"
+msgstr ""
+"Има противоречиви предпочитания за криптиране за тези получатели. \n"
+"Шифроване на това съобщение?"
+
+#: mailclient_p.cpp:841
+#, kde-format
+msgid "Do &Not Encrypt"
+msgstr "Без &шифриране"
+
+#: mailclient_p.cpp:860
+#, kde-format
+msgid ""
+"You have requested to encrypt this message, and to encrypt a copy to "
+"yourself, but no valid trusted encryption keys have been configured for this "
+"identity."
+msgstr ""
+"Поискахте да шифровате това съобщение и да шифровате копие до себе си, но за "
+"тази самоличност не са конфигурирани валидни надеждни ключове за криптиране."
+
+#: mailclient_p.cpp:864
+#, kde-format
+msgid "Send Unencrypted?"
+msgstr "Изпращане нешифровано?"
+
+#: mailclient_p.cpp:864
+#, kde-format
+msgid "Send &Unencrypted"
+msgstr "Изпращане &нешифровано"
+
+#: mailclient_p.cpp:878
+#, kde-format
+msgid ""
+"Some parts of this message will not be encrypted.\n"
+"Sending only partially encrypted messages might violate site policy and/or "
+"leak sensitive information.\n"
+"Encrypt all parts instead?"
+msgstr ""
+"Някои части от това съобщение няма да бъдат криптирани. \n"
+"Изпращането само на частично шифровани съобщения може да наруши политиката "
+"на сайта и/или да изтече чувствителна информация. \n"
+"Вместо това да шифровате всички части?"
+
+#: mailclient_p.cpp:883
+#, kde-format
+msgid ""
+"This message will not be encrypted.\n"
+"Sending unencrypted messages might violate site policy and/or leak sensitive "
+"information.\n"
+"Encrypt messages instead?"
+msgstr ""
+"Това съобщение няма да бъде криптирано. \n"
+"Изпращането на нешифровани съобщения може да наруши политиката на сайта и/"
+"или да изведе чувствителна информация. \n"
+"Вместо това да шифрова съобщения?"
+
+#: mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt All Parts"
+msgstr "&Шифроване на всички части"
+
+#: mailclient_p.cpp:889
+#, kde-format
+msgid "Unencrypted Message Warning"
+msgstr "Предупреждение за нешифровано съобщение"
+
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Грешка при изпращане на имейл: "
@@ -941,10 +1154,12 @@ msgstr ""
 #, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr ""
 "Не може да се публикува събитие на календара поради невалиден низ на "
-"получателите. %1"
+"получателите.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1697,73 +1912,73 @@ msgstr "&Редактиране..."
 msgid "Edit the selected incidence."
 msgstr "Редактиране на избраното събитие."
 
-#: todomodel.cpp:140 todomodel.cpp:176
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Изключение"
 
-#: todomodel.cpp:142 todomodel.cpp:178
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Да"
 
-#: todomodel.cpp:145 todomodel.cpp:181
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Не"
 
-#: todomodel.cpp:159 todomodel.cpp:197
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:440
+#: todomodel.cpp:459
 #, kde-format
 msgid "Summary"
 msgstr "Обобщение"
 
-#: todomodel.cpp:442
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
 msgstr "Повтаря се"
 
-#: todomodel.cpp:444
+#: todomodel.cpp:463
 #, kde-format
 msgid "Priority"
 msgstr "Приоритет"
 
-#: todomodel.cpp:446
+#: todomodel.cpp:465
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Завършено"
 
-#: todomodel.cpp:448
+#: todomodel.cpp:467
 #, kde-format
 msgid "Start Date"
 msgstr "Начална дата"
 
-#: todomodel.cpp:450
+#: todomodel.cpp:469
 #, kde-format
 msgid "Due Date"
 msgstr "Дата на падеж"
 
-#: todomodel.cpp:452
+#: todomodel.cpp:471
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Завършено"
 
-#: todomodel.cpp:454
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
 msgstr "Етикети"
 
-#: todomodel.cpp:456
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
 msgstr "Описание"
@@ -1772,14 +1987,3 @@ msgstr "Описание"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Пречистване на завършени задачи"
-
-#~ msgid "Mail transport to use for sending e-mail messages"
-#~ msgstr ""
-#~ "Пощенски транспорт, който да се използва за изпращане на имейл съобщения"
-
-#~ msgid ""
-#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
-#~ "the default one will be used."
-#~ msgstr ""
-#~ "Ако е посочено всички, груповите имейли ще използват този транспорт. В "
-#~ "противен случай ще се използва стандартният."

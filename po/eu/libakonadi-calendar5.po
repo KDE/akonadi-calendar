@@ -1,16 +1,16 @@
 # Translation for libakonadi-calendar5.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2022, This file is copyright:
+# Copyright (C) 2020-2023 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 00:50+0000\n"
-"PO-Revision-Date: 2022-10-10 07:39+0200\n"
+"POT-Creation-Date: 2023-08-26 00:46+0000\n"
+"PO-Revision-Date: 2023-08-12 20:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,9 +18,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
-#: calendarbase.cpp:264
+#: calendarbase.cpp:265
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
@@ -274,87 +274,87 @@ msgstr ""
 "zerbitzarian jone@niredomeinua.com-en Libre/Lanpetuta datuak bilatzea huts "
 "egingo du."
 
-#: calendarutils.cpp:100 calendarutils.cpp:118 calendarutils.cpp:166
-#: todomodel.cpp:458
+#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
+#: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "Egutegia"
 
-#: calendarutils.cpp:106 calendarutils.cpp:118 calendarutils.cpp:168
+#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
 #, kde-format
 msgid "Tasks"
 msgstr "Zereginak"
 
-#: calendarutils.cpp:111 calendarutils.cpp:118 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
 #, kde-format
 msgid "Journal"
 msgstr "Egunkaria"
 
-#: calendarutils.cpp:116 calendarutils.cpp:118 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
 msgid "Notes"
 msgstr "Oharrak"
 
-#: calendarutils.cpp:131
+#: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "Nire Kolab %1"
 
-#: calendarutils.cpp:134
+#: calendarutils.cpp:135
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "Partekatutako Kolab %1 %2"
 
-#: calendarutils.cpp:137
+#: calendarutils.cpp:138
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "%1(e)ren Kolab %2"
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "%1(e)ren %2 Kolab %3"
 
-#: calendarutils.cpp:143
+#: calendarutils.cpp:144
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "Kolab %1"
 
-#: calendarutils.cpp:150
+#: calendarutils.cpp:151
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 %2(e)an"
 
-#: calendarutils.cpp:183
+#: calendarutils.cpp:184
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "%1(e)n Google %2"
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:186
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%1(r)en %2"
 
-#: calendarutils.cpp:188
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "Google %1"
 
-#: calendarutils.cpp:196
+#: calendarutils.cpp:197
 #, kde-format
 msgid "My %1"
 msgstr "Nire %1"
 
-#: calendarutils.cpp:200
+#: calendarutils.cpp:201
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -635,20 +635,20 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Mezua ez da bidali"
 
-#: itiphandler.h:99 itiphandler.h:117 itiphandler.h:133 itiphandler.h:146
+#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "Bidali e-posta"
 
-#: itiphandler.h:100 itiphandler.h:118 itiphandler.h:134 itiphandler.h:147
+#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Ez bidali"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:486
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgid "Error: %1"
 msgstr "Errorea: %1"
@@ -722,12 +722,12 @@ msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Taldea antolatzeko e-posta"
 
-#: itiphandlerhelper_p.cpp:128
+#: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Ez du laburpenik eman</placeholder>"
 
-#: itiphandlerhelper_p.cpp:213
+#: itiphandlerhelper_p.cpp:229
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -736,7 +736,7 @@ msgstr ""
 "«%1» ekitaldiak beste pertsona batzuk ere baditu.\n"
 "Partaideei gonbidapena e-posta bidez bidali nahi diezu?"
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:234
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -745,7 +745,7 @@ msgstr ""
 "«%1» zereginak beste pertsona batzuk ere baditu.\n"
 "Partaideei gonbidapena e-posta bidez bidali nahi diezu?"
 
-#: itiphandlerhelper_p.cpp:223
+#: itiphandlerhelper_p.cpp:239
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -754,7 +754,7 @@ msgstr ""
 "Gertakizun horretan beste pertsona batzuk ere sartzen dira. Partaideei e-"
 "posta bat bidali beharko litzaieke?"
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:263
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -763,7 +763,7 @@ msgstr ""
 "Ez zara ekitaldi honen antolatzailea. Editatzen baduzu, zure egutegia ez da "
 "antolatzailearenarekin sinkronizatuta egongo. Benetan editatu nahi duzu?"
 
-#: itiphandlerhelper_p.cpp:280
+#: itiphandlerhelper_p.cpp:296
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -773,19 +773,19 @@ msgstr ""
 "Zeregina bertan behera utzi dela jakinarazteko parte hartzaileei e-posta "
 "bidatzea nahi duzu?"
 
-#: itiphandlerhelper_p.cpp:288 itiphandlerhelper_p.cpp:309
-#: itiphandlerhelper_p.cpp:322
+#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgid "Send Update"
 msgstr "Bidali eguneratzea"
 
-#: itiphandlerhelper_p.cpp:303 itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "Zeregin honen antolatzaileari egoeraren eguneratze bat bidali nahi diozu?"
 
-#: itiphandlerhelper_p.cpp:315
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -794,7 +794,7 @@ msgstr ""
 "Ekitaldi honetako parte hartzaile gisa zure egoera aldatu da. Ekitaldiaren "
 "antolatzaileari egoeraren eguneratze bat bidali nahi diozu?"
 
-#: itiphandlerhelper_p.cpp:358
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -804,7 +804,7 @@ msgstr ""
 "Ekitaldia bertan behera utzi dela jakinarazteko, parte hartzaileei e-posta "
 "bidatzea nahi duzu?"
 
-#: itiphandlerhelper_p.cpp:363
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -814,7 +814,7 @@ msgstr ""
 "Zeregina bertan behera utzi dela jakinarazteko parte hartzaileei e-posta "
 "bidatzea nahi duzu?"
 
-#: itiphandlerhelper_p.cpp:368
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -824,19 +824,19 @@ msgstr ""
 "Egunerakoa bertan behera utzi dela jakinarazteko parte hartzaileei e-posta "
 "bidatzea nahi duzu?"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
-"Egunerako honen antolatzaileari egoeraren eguneratze bat bidali nahi diozu?"
+"Egunkari honen antolatzaileari egoeraren eguneratze bat bidali nahi diozu?"
 
-#: itiphandlerhelper_p.cpp:395 itiphandlerhelper_p.cpp:416
+#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Bidali eguneratzea"
 
-#: itiphandlerhelper_p.cpp:410
+#: itiphandlerhelper_p.cpp:426
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -845,53 +845,268 @@ msgstr ""
 "Aurrez onartua zenuen ekitaldi honetarako gonbita. Antolatzaileari gonbitari "
 "uko eginez erantzun eguneratu bat bidali nahi diozu?"
 
-#: itiphandlerhelper_p.cpp:454 mailscheduler_p.cpp:94
+#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Ordezko proposamena: %1"
 
-#: itiphandlerhelper_p.cpp:471
+#: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Talde antolaketako e-posta bidaltzea huts egin du."
 
-#: itiphandlerhelper_p.cpp:479
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Galarazi eguneratzea"
 
-#: mailclient_p.cpp:50 mailclient_p.cpp:85
+#: mailclient_p.cpp:376 mailclient_p.cpp:413
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Ez dago e-posta bidaltzeko hartzailerik"
 
-#: mailclient_p.cpp:102
+#: mailclient_p.cpp:422
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Libre/Lanpetuta objektua"
 
-#: mailclient_p.cpp:127 mailclient_p.cpp:149
+#: mailclient_p.cpp:451 mailclient_p.cpp:477
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Libre/Lanpetuta mezua"
 
-#: mailclient_p.cpp:184
+#: mailclient_p.cpp:613
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Errorea garraioa sortzean"
 
-#: mailclient_p.cpp:201
+#: mailclient_p.cpp:631
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Errorea garraioa ekartzean. Ezin gonbidapenak bidali"
 
-#: mailclient_p.cpp:342
+#: mailclient_p.cpp:653
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Errorea mezua irteerako ontziko ilaran jartzean: %1"
 
-#: mailscheduler_p.cpp:168
+#: mailclient_p.cpp:685
+#, kde-format
+msgid ""
+"Examination of the recipient's signing preferences yielded that you be asked "
+"whether or not to sign this message.\n"
+"Sign this message?"
+msgstr ""
+"Hartzailearen sinatzeko hobespenen azterketak, mezu hau sinatu behar den edo "
+"ez zuri galdetzeko beharra eman du.\n"
+"Mezua sinatu?"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgid "Sign Message?"
+msgstr "Mezua sinatu?"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgctxt "to sign"
+msgid "&Sign"
+msgstr "&Sinatu"
+
+#: mailclient_p.cpp:689 mailclient_p.cpp:712
+#, kde-format
+msgid "Do &Not Sign"
+msgstr "E&z sinatu"
+
+#: mailclient_p.cpp:709
+#, kde-format
+msgid ""
+"There are conflicting signing preferences for these recipients.\n"
+"Sign this message?"
+msgstr ""
+"Hartzaile hauetarako sinadura hobespen kontraesankorrak daude.\n"
+"Mezua sinatu?"
+
+#: mailclient_p.cpp:731
+#, kde-format
+msgid ""
+"You have requested to sign this message, but no valid signing keys have been "
+"configured for this identity."
+msgstr ""
+"Mezua sinatzea eskatu duzu, baina nortasun honetarako ez dira sinatzeko gako "
+"baliodunak konfiguratu."
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send Unsigned?"
+msgstr "Sinatu gabe bidali?"
+
+#: mailclient_p.cpp:734
+#, kde-format
+msgid "Send &Unsigned"
+msgstr "Bidali sinatu &gabe"
+
+#: mailclient_p.cpp:747
+#, kde-format
+msgid ""
+"Some parts of this message will not be signed.\n"
+"Sending only partially signed messages might violate site policy.\n"
+"Sign all parts instead?"
+msgstr ""
+"Mezu honetako atal batzuk ez dira sinatuko.\n"
+"Atal batzuetan bakarrik sinatutako mezuak bidaltzeak gunearen gidalerroak "
+"urra ditzake.\n"
+"Hori ekiditeko, atal guztiak sinatu?"
+
+#: mailclient_p.cpp:751
+#, kde-format
+msgid ""
+"This message will not be signed.\n"
+"Sending unsigned message might violate site policy.\n"
+"Sign message instead?"
+msgstr ""
+"Mezu hau ez da sinatuko.\n"
+"Sinatu gabeko mezua bidaltzeak guneko gidalerroak urra ditzake.\n"
+"Hori ekiditeko, mezua sinatu?"
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign All Parts"
+msgstr "&Sinatu atal guztiak"
+
+#: mailclient_p.cpp:754
+#, kde-format
+msgid "&Sign"
+msgstr "&Sinatu"
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Unsigned-Message Warning"
+msgstr "Sinatu gabeko mezuaren Abisua"
+
+#: mailclient_p.cpp:755
+#, kde-format
+msgid "Send &As Is"
+msgstr "Bidali dagoen bez&ala"
+
+#: mailclient_p.cpp:808
+#, kde-format
+msgid ""
+"Valid trusted encryption keys were found for all recipients.\n"
+"Encrypt this message?"
+msgstr ""
+"Hartzaile guztientzako konfiantzazko zifratzeko gako baliodunak aurkitu "
+"dira.\n"
+"Mezu hau zifratu?"
+
+#: mailclient_p.cpp:811
+#, kde-format
+msgid ""
+"Examination of the recipient's encryption preferences yielded that you be "
+"asked whether or not to encrypt this message.\n"
+"Encrypt this message?"
+msgstr ""
+"Hartzailearen zifratzeko hobespenen azterketak, mezu hau zifratu behar den "
+"edo ez zuri galdetzeko beharra eman du.\n"
+"Mezua zifratu?"
+
+#: mailclient_p.cpp:816 mailclient_p.cpp:841
+#, kde-format
+msgid "Encrypt Message?"
+msgstr "Mezua zifratu?"
+
+#: mailclient_p.cpp:817
+#, kde-format
+msgid "Sign && &Encrypt"
+msgstr "Sinatu eta &zifratu"
+
+#: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt"
+msgstr "&Zifratu"
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Sign Only"
+msgstr "&Sinatu bakarrik"
+
+#: mailclient_p.cpp:818 mailclient_p.cpp:891
+#, kde-format
+msgid "&Send As-Is"
+msgstr "&Bidali dagoen bezala"
+
+#: mailclient_p.cpp:838
+#, kde-format
+msgid ""
+"There are conflicting encryption preferences for these recipients.\n"
+"Encrypt this message?"
+msgstr ""
+"Hartzaile hauetarako zifratzeko hobespen kontraesankorrak daude.\n"
+"Mezu hau zifratu?"
+
+#: mailclient_p.cpp:841
+#, kde-format
+msgid "Do &Not Encrypt"
+msgstr "E&z zifratu"
+
+#: mailclient_p.cpp:860
+#, kde-format
+msgid ""
+"You have requested to encrypt this message, and to encrypt a copy to "
+"yourself, but no valid trusted encryption keys have been configured for this "
+"identity."
+msgstr ""
+"Mezu hau zifratzea eskatu duzu, baita zeure buruarentzako kopia bat "
+"zifratzea ere, baina nortasun honetarako ez da konfiantzazko zifratzeko gako "
+"baliodunik konfiguratu."
+
+#: mailclient_p.cpp:864
+#, kde-format
+msgid "Send Unencrypted?"
+msgstr "Bidali zifratu gabe?"
+
+#: mailclient_p.cpp:864
+#, kde-format
+msgid "Send &Unencrypted"
+msgstr "Bidali zifratu &gabe"
+
+#: mailclient_p.cpp:878
+#, kde-format
+msgid ""
+"Some parts of this message will not be encrypted.\n"
+"Sending only partially encrypted messages might violate site policy and/or "
+"leak sensitive information.\n"
+"Encrypt all parts instead?"
+msgstr ""
+"Mezu honetako atal batzuk ez dira zifratuko.\n"
+"Osotasunean zifratu gabeko mezuak bidaltzea guneko gidalerroak urratu eta/"
+"edo babes bereziko informazioaren ihesa eragin dezake.\n"
+"Hori ekiditeko, atal guztiak sinatu?"
+
+#: mailclient_p.cpp:883
+#, kde-format
+msgid ""
+"This message will not be encrypted.\n"
+"Sending unencrypted messages might violate site policy and/or leak sensitive "
+"information.\n"
+"Encrypt messages instead?"
+msgstr ""
+"Mezu hau ez da zifratuko.\n"
+"Zifratu gabeko mezuak bidaltzea leku-gidalerroak urratu eta/edo babes "
+"bereziko informazioaren ihesa eragin dezake.\n"
+"Hori ekiditeko, mezuak zifratu?"
+
+#: mailclient_p.cpp:887
+#, kde-format
+msgid "&Encrypt All Parts"
+msgstr "&Zifratu atal guztiak"
+
+#: mailclient_p.cpp:889
+#, kde-format
+msgid "Unencrypted Message Warning"
+msgstr "Zifratu gabeko mezuaren abisua"
+
+#: mailscheduler_p.cpp:180
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Errorea e-posta bidaltzean: "
@@ -941,10 +1156,12 @@ msgstr ""
 #, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
-"string. %1"
+"string.\n"
+"%1"
 msgstr ""
-"Ezin da egutegiko gertakizuna argitaratu hartzaile kate baliogabe baten "
-"ondorioz. %1"
+"Ezin du egutegiko gertakizuna argitaratu hartzaile-kate baliogabe baten "
+"ondorioz.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1239,13 +1456,13 @@ msgstr "Errorea Libre/Lanpetuta objektua gordetzean"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Uko egindako gonbidapenak"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Irekitako gonbidapenak"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1478,7 +1695,7 @@ msgid ""
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
 "Ezabatu hautatutako egutegiak<p>Unean hautatuta dauden egutegiak ezabatuko "
-"dira, dituzten ekitaldi, zeregin eta eguneroko guztiekin batera.</p>"
+"dira, dituzten ekitaldi, zeregin eta egunkari guztiekin batera.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
@@ -1615,37 +1832,37 @@ msgstr "Editatu zeregina..."
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] "Kopiatu egunerokoa"
-msgstr[1] "Kopiatu %1 eguneroko"
+msgstr[0] "Kopiatu egunkaria"
+msgstr[1] "Kopiatu %1 egunkari"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr "Kopiatu egunerokoa hona,"
+msgstr "Kopiatu egunkaria hona,"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] "Ezabatu egunerokoa"
-msgstr[1] "Ezabatu %1 eguneroko"
+msgstr[0] "Ezabatu egunkaria"
+msgstr[1] "Ezabatu %1 egunkari"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Ebaki egunerakoa"
-msgstr[1] "Ebaki %1 eguneroko"
+msgstr[0] "Ebaki egunkaria"
+msgstr[1] "Ebaki %1 egunkari"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
-msgstr "Eman egunerakoa hona, "
+msgstr "Eraman egunkaria hona, "
 
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Editatu egunerokoa..."
+msgstr "Editatu egunkaria..."
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
@@ -1680,12 +1897,12 @@ msgstr "Sortu azpi-zeregin berria"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "E&guneroko berria..."
+msgstr "E&gunkari berria..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
-msgstr "Sortu egunerako berri bat"
+msgstr "Sortu egunkari berri bat"
 
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
@@ -1697,88 +1914,76 @@ msgstr "&Editatu..."
 msgid "Edit the selected incidence."
 msgstr "Editatu hautatutako gertakizuna."
 
-#: todomodel.cpp:140 todomodel.cpp:176
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Salbuespena"
 
-#: todomodel.cpp:142 todomodel.cpp:178
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Bai"
 
-#: todomodel.cpp:145 todomodel.cpp:181
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Ez"
 
-#: todomodel.cpp:159 todomodel.cpp:197
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
-#: todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#: todomodel.cpp:459
+#, kde-format
 msgid "Summary"
 msgstr "Laburpena"
 
-#: todomodel.cpp:442
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Errepikatzen da"
 
-#: todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#: todomodel.cpp:463
+#, kde-format
 msgid "Priority"
 msgstr "Lehentasuna"
 
-#: todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#: todomodel.cpp:465
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Osatuta"
 
-#: todomodel.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#: todomodel.cpp:467
+#, kde-format
 msgid "Start Date"
-msgstr "Haserako data eta ordua"
+msgstr "Haserako data"
 
-#: todomodel.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#: todomodel.cpp:469
+#, kde-format
 msgid "Due Date"
-msgstr "Muga-eguna eta -ordua"
+msgstr "Mugaeguna"
 
-#: todomodel.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#: todomodel.cpp:471
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Osatuta"
 
-#: todomodel.cpp:454
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Etiketak"
 
-#: todomodel.cpp:456
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Deskribapena"
 
 #: todopurger.cpp:61
 #, kde-format
