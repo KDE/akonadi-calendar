@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-26 00:46+0000\n"
-"PO-Revision-Date: 2023-09-24 20:40+0100\n"
+"PO-Revision-Date: 2023-09-25 23:06+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -91,49 +91,43 @@ msgid "Copy All"
 msgstr ""
 
 #: calendarmodel.cpp:192
-#, fuzzy, kde-format
-#| msgid "Summary"
+#, kde-format
 msgctxt "@title:column calendar event summary"
 msgid "Summary"
 msgstr "Resumo"
 
 #: calendarmodel.cpp:194
-#, fuzzy, kde-format
-#| msgid "Start time"
+#, kde-format
 msgctxt "@title:column calendar event start date and time"
 msgid "Start Date and Time"
-msgstr "Komenca tempo"
+msgstr "Komenca Dato kaj Horo"
 
 #: calendarmodel.cpp:196
-#, fuzzy, kde-format
-#| msgid "End Date"
+#, kde-format
 msgctxt "@title:column calendar event end date and time"
 msgid "End Date and Time"
-msgstr "Findato"
+msgstr "Fina Dato kaj Horo"
 
 #: calendarmodel.cpp:198
 #, kde-format
 msgctxt "@title:column calendar event type"
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: calendarmodel.cpp:200
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
-msgstr "Limdato"
+msgstr "Lima Dato kaj Horo"
 
 #: calendarmodel.cpp:202
-#, fuzzy, kde-format
-#| msgid "Priority"
+#, kde-format
 msgctxt "@title:column todo item priority"
 msgid "Priority"
 msgstr "Prioritato"
 
 #: calendarmodel.cpp:204
-#, fuzzy, kde-format
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column todo item completion in percent"
 msgid "Complete"
 msgstr "Kompleta"
@@ -142,7 +136,7 @@ msgstr "Kompleta"
 #, kde-format
 msgctxt "@title:column calendar title"
 msgid "Calendar"
-msgstr ""
+msgstr "Kalendaro"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:23
@@ -422,24 +416,22 @@ msgid "General error"
 msgstr ""
 
 #: history_p.cpp:82
-#, fuzzy, kde-format
-#| msgid "Duration"
+#, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 creation"
-msgstr "Daŭro"
+msgstr "kreo de %1"
 
 #: history_p.cpp:150
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
-msgstr ""
+msgstr "forigo de %1"
 
 #: history_p.cpp:232
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
-msgstr "Loko"
+msgstr "modifo de %1"
 
 #: icalimporter.cpp:82
 #, kde-format
@@ -1299,23 +1291,22 @@ msgid ""
 msgstr ""
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgid "Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr "Ĉeestantoj"
+msgstr "Aldonis Ĉeestanton"
 
 #: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
-msgstr ""
+msgstr "Sendi Mesaĝojn"
 
 #: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
-msgstr ""
+msgstr "Ne Sendi"
 
 #: scheduler_p.cpp:558
 #, kde-format
@@ -1464,12 +1455,11 @@ msgid "Properties of Calendar Folder %1"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:299
-#, fuzzy, kde-format
-#| msgid "Changed Event"
+#, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
-msgstr[0] "Ŝanĝita Evento"
-msgstr[1] "Ŝanĝita Evento"
+msgstr[0] "Kopii Eventon"
+msgstr[1] "Kopii %1 Eventojn"
 
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
@@ -1480,8 +1470,8 @@ msgstr ""
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Forigi Eventon"
+msgstr[1] "Forigi %1 Eventojn"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
@@ -1515,12 +1505,11 @@ msgid "Event Deletion Failed"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
-#, fuzzy, kde-format
-#| msgid "Changed Event"
+#, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
-msgstr[0] "Ŝanĝita Evento"
-msgstr[1] "Ŝanĝita Evento"
+msgstr[0] "Tondi Eventon"
+msgstr[1] "Tondi %1 Eventojn"
 
 #: standardcalendaractionmanager.cpp:135
 #, kde-format
@@ -1786,22 +1775,19 @@ msgid "Edit the selected incidence."
 msgstr ""
 
 #: todomodel.cpp:159 todomodel.cpp:194
-#, fuzzy, kde-format
-#| msgid "Exception Dates"
+#, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr "Esceptaj Datoj"
+msgstr "Escepto"
 
 #: todomodel.cpp:161 todomodel.cpp:196
-#, fuzzy, kde-format
-#| msgid "Yes"
+#, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Jes"
 
 #: todomodel.cpp:164 todomodel.cpp:199
-#, fuzzy, kde-format
-#| msgid "No"
+#, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Ne"
@@ -1810,7 +1796,7 @@ msgstr "Ne"
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:459
 #, kde-format
@@ -1828,17 +1814,15 @@ msgid "Priority"
 msgstr "Prioritato"
 
 #: todomodel.cpp:465
-#, fuzzy, kde-format
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Kompleta"
 
 #: todomodel.cpp:467
-#, fuzzy, kde-format
-#| msgid "Has Start Date"
+#, kde-format
 msgid "Start Date"
-msgstr "Havas Komencan Daton"
+msgstr "Komenca Dato"
 
 #: todomodel.cpp:469
 #, kde-format
@@ -1846,8 +1830,7 @@ msgid "Due Date"
 msgstr "Limdato"
 
 #: todomodel.cpp:471
-#, fuzzy, kde-format
-#| msgid "Completed"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Kompletigita"
@@ -1855,7 +1838,7 @@ msgstr "Kompletigita"
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Etikedoj"
 
 #: todomodel.cpp:475
 #, kde-format
@@ -1866,60 +1849,3 @@ msgstr "Priskribo"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr ""
-
-#~ msgid "Organizer"
-#~ msgstr "Organizanto"
-
-#~ msgid "UID"
-#~ msgstr "UID"
-
-#~ msgid "Is all-day"
-#~ msgstr "Estas tuttaga"
-
-#~ msgid "Has duration"
-#~ msgstr "Havas daŭron"
-
-#~ msgid "Status"
-#~ msgstr "Statuso"
-
-#~ msgid "Secrecy"
-#~ msgstr "Sekreteco"
-
-#~ msgid "Categories"
-#~ msgstr "Kategorioj"
-
-#~ msgid "Alarms"
-#~ msgstr "Alarmoj"
-
-#~ msgid "Resources"
-#~ msgstr "Rimedoj"
-
-#~ msgid "Attachments"
-#~ msgstr "Aldonaĵoj"
-
-#~ msgid "Exception Times"
-#~ msgstr "Esceptaj Tempoj"
-
-#~ msgid "Created"
-#~ msgstr "Kreita"
-
-#~ msgid "Related Uid"
-#~ msgstr "Rilata Uid"
-
-#~ msgid "Has End Date"
-#~ msgstr "Havas Finan Daton"
-
-#~ msgid "Has Due Date"
-#~ msgstr "Havas Limdaton"
-
-#~ msgid "Has Complete Date"
-#~ msgstr "Havas Kompletan Daton"
-
-#~ msgid "Conflicting Event"
-#~ msgstr "Konfliktanta Evento"
-
-#~ msgid "Changed Todo"
-#~ msgstr "Ŝanĝita Farendo"
-
-#~ msgid "Conflicting Todo"
-#~ msgstr "Konfliktanta Farendo"
