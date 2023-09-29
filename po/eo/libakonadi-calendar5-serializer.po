@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-27 00:45+0000\n"
-"PO-Revision-Date: 2023-09-24 23:18+0100\n"
+"PO-Revision-Date: 2023-09-28 21:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -23,174 +23,174 @@ msgstr ""
 #: akonadi_serializer_kcalcore.cpp:175
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "Jes"
 
 #: akonadi_serializer_kcalcore.cpp:177
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: akonadi_serializer_kcalcore.cpp:199
 #, kde-format
 msgid "Attendees"
-msgstr ""
+msgstr "Ĉeestantoj"
 
 #: akonadi_serializer_kcalcore.cpp:202
 #, kde-format
 msgid "Organizer"
-msgstr ""
+msgstr "Organizanto"
 
 #: akonadi_serializer_kcalcore.cpp:206
 #, kde-format
 msgid "UID"
-msgstr ""
+msgstr "UID"
 
 #: akonadi_serializer_kcalcore.cpp:210
 #, kde-format
 msgid "Is all-day"
-msgstr ""
+msgstr "Estas tuttaga"
 
 #: akonadi_serializer_kcalcore.cpp:214
 #, kde-format
 msgid "Has duration"
-msgstr ""
+msgstr "Havas daŭron"
 
 #: akonadi_serializer_kcalcore.cpp:219
 #, kde-format
 msgid "Duration"
-msgstr ""
+msgstr "Daŭro"
 
 #: akonadi_serializer_kcalcore.cpp:228
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Priskribo"
 
 #: akonadi_serializer_kcalcore.cpp:232
 #, kde-format
 msgid "Summary"
-msgstr ""
+msgstr "Resumo"
 
 #: akonadi_serializer_kcalcore.cpp:236
 #, kde-format
 msgid "Status"
-msgstr ""
+msgstr "Statuso"
 
 #: akonadi_serializer_kcalcore.cpp:240
 #, kde-format
 msgid "Secrecy"
-msgstr ""
+msgstr "Sekreteco"
 
 #: akonadi_serializer_kcalcore.cpp:244
 #, kde-format
 msgid "Priority"
-msgstr ""
+msgstr "Prioritato"
 
 #: akonadi_serializer_kcalcore.cpp:248
 #, kde-format
 msgid "Location"
-msgstr ""
+msgstr "Loko"
 
 #: akonadi_serializer_kcalcore.cpp:251
 #, kde-format
 msgid "Categories"
-msgstr ""
+msgstr "Kategorioj"
 
 #: akonadi_serializer_kcalcore.cpp:252
 #, kde-format
 msgid "Alarms"
-msgstr ""
+msgstr "Alarmoj"
 
 #: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
 msgid "Resources"
-msgstr ""
+msgstr "Rimedoj"
 
 #: akonadi_serializer_kcalcore.cpp:254
 #, kde-format
 msgid "Attachments"
-msgstr ""
+msgstr "Kunsendaĵoj"
 
 #: akonadi_serializer_kcalcore.cpp:255
 #, kde-format
 msgid "Exception Dates"
-msgstr ""
+msgstr "Esceptaj Datoj"
 
 #: akonadi_serializer_kcalcore.cpp:256
 #, kde-format
 msgid "Exception Times"
-msgstr ""
+msgstr "Esceptaj Horoj"
 
 #: akonadi_serializer_kcalcore.cpp:260
 #, kde-format
 msgid "Created"
-msgstr ""
+msgstr "Kreita"
 
 #: akonadi_serializer_kcalcore.cpp:264
 #, kde-format
 msgid "Related Uid"
-msgstr ""
+msgstr "Rilata Uid"
 
 #: akonadi_serializer_kcalcore.cpp:271
 #, kde-format
 msgid "Start time"
-msgstr ""
+msgstr "Komenca horo"
 
 #: akonadi_serializer_kcalcore.cpp:275
 #, kde-format
 msgid "Has End Date"
-msgstr ""
+msgstr "Havas Findaton"
 
 #: akonadi_serializer_kcalcore.cpp:279
 #, kde-format
 msgid "End Date"
-msgstr ""
+msgstr "Findato"
 
 #: akonadi_serializer_kcalcore.cpp:289
 #, kde-format
 msgid "Has Start Date"
-msgstr ""
+msgstr "Havas Komencan Daton"
 
 #: akonadi_serializer_kcalcore.cpp:295
 #, kde-format
 msgid "Has Due Date"
-msgstr ""
+msgstr "Havas Limdaton"
 
 #: akonadi_serializer_kcalcore.cpp:299
 #, kde-format
 msgid "Due Date"
-msgstr ""
+msgstr "Limdato"
 
 #: akonadi_serializer_kcalcore.cpp:304
 #, kde-format
 msgid "Has Complete Date"
-msgstr ""
+msgstr "Havas Kompletan Daton"
 
 #: akonadi_serializer_kcalcore.cpp:311
 #, kde-format
 msgid "Complete"
-msgstr ""
+msgstr "Kompleta"
 
 #: akonadi_serializer_kcalcore.cpp:317
 #, kde-format
 msgid "Completed"
-msgstr ""
+msgstr "Plenumita"
 
 #: akonadi_serializer_kcalcore.cpp:331
 #, kde-format
 msgid "Changed Event"
-msgstr ""
+msgstr "Ŝanĝita Evento"
 
 #: akonadi_serializer_kcalcore.cpp:332
 #, kde-format
 msgid "Conflicting Event"
-msgstr ""
+msgstr "Konfliktanta Evento"
 
 #: akonadi_serializer_kcalcore.cpp:334
 #, kde-format
 msgid "Changed Todo"
-msgstr ""
+msgstr "Ŝanĝita Farendo"
 
 #: akonadi_serializer_kcalcore.cpp:335
 #, kde-format
 msgid "Conflicting Todo"
-msgstr ""
+msgstr "Konfliktanta Farendo"
