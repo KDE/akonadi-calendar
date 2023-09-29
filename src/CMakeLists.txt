@@ -140,13 +140,6 @@ set_target_properties(KPim6AkonadiCalendar PROPERTIES
     EXPORT_NAME AkonadiCalendar
 )
 
-ecm_generate_pri_file(BASE_NAME AkonadiCalendar
-    LIB_NAME KPim6AkonadiCalendar
-    DEPS "AkonadiCore KCalendarCore" FILENAME_VAR PRI_FILENAME
-)
-
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
 install(TARGETS
     KPim6AkonadiCalendar
     EXPORT KPim6AkonadiCalendarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
