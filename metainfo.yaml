@@ -13,8 +13,7 @@ portingAid: false
 deprecated: false
 release: false
 libraries:
- - qmake: AkonadiCalendar 
-   cmake: "KPim6::AkonadiCalendar"
+ - cmake: "KPim6::AkonadiCalendar"
 cmakename: KPim6AkonadiCalendar
 
 public_lib: true
