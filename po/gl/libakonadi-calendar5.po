@@ -24,8 +24,8 @@ msgstr ""
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
-"Non se puido atopar a incidencia para actualizala, posibelmente se eliminase "
-"recentemente."
+"Non foi posíbel atopar a incidencia para actualizala, posibelmente se "
+"eliminase recentemente."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -368,7 +368,7 @@ msgid ""
 "Failed to download free/busy data from: %1\n"
 "Reason: %2"
 msgstr ""
-"Non se puideron descargar os datos de dispoñibilidade de: %1\n"
+"Non foi posíbel descargar os datos de dispoñibilidade de: %1\n"
 "Motivo: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
@@ -381,7 +381,7 @@ msgstr "Erro de obtención da dispoñibilidade"
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
-"Non se puido analizar a información de dispoñibilidade obtida desde: %1"
+"Non foi posíbel analizar a información de dispoñibilidade obtida desde: %1"
 
 #: freebusymanager.cpp:414
 #, kde-format
@@ -405,12 +405,12 @@ msgstr "A información da dispoñibilidade enviouse correctamente."
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr "Estase a enviar a dispoñibilidade"
+msgstr "Enviando a dispoñibilidade"
 
 #: freebusymanager.cpp:619
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Non se poden publicar os datos de dispoñibilidade: %1"
+msgstr "Non é posíbel publicar os datos de dispoñibilidade: %1"
 
 #: freebusymanager.cpp:743
 #, kde-format
@@ -473,12 +473,12 @@ msgstr "Produciuse un erro ao crear o recurso de ical: %1"
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr ""
-"Non se puido obter a interface D-Bus para facer unha configuración remota."
+"Non foi posíbel obter a interface D-Bus para facer unha configuración remota."
 
 #: icalimporter.cpp:117
 #, kde-format
 msgid "Could not download remote file."
-msgstr "Non se puido descargar o ficheiro remoto."
+msgstr "Non foi posíbel descargar o ficheiro remoto."
 
 #: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
@@ -626,7 +626,7 @@ msgstr "Produciuse un erro ao enviar a contraproposta"
 #: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr "Non se puido iniciar o editor para editar a contraproposta"
+msgstr "Non foi posíbel iniciar o editor para editar a contraproposta"
 
 #: itiphandler.cpp:271
 #, kde-format
@@ -683,7 +683,7 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
-"Non se pode enviar o elemento «%1».\n"
+"Non é posíbel enviar o elemento «%1».\n"
 "Método: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
@@ -700,7 +700,7 @@ msgstr "Publicación"
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr "Non se pode publicar o elemento «%1»"
+msgstr "Non é posíbel publicar o elemento «%1»"
 
 #: itiphandler_p.cpp:181
 #, kde-format
@@ -711,7 +711,7 @@ msgstr "Reenvío"
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr "Non se pode reenviar o elemento «%1»"
+msgstr "Non é posíbel reenviar o elemento «%1»"
 
 #: itiphandler_p.cpp:189
 #, kde-format
@@ -1323,7 +1323,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Non se pode atopar a invitación para actualizar"
+msgstr "Non é posíbel atopar a invitación para actualizar"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1333,7 +1333,7 @@ msgstr "Produciuse un erro ao engadir a incidencia"
 #: scheduler_p.cpp:338
 #, kde-format
 msgid "Could not find incidence to delete."
-msgstr "Non se puido atopar a incidencia para eliminala."
+msgstr "Non foi posíbel atopar a incidencia para eliminala."
 
 #: scheduler_p.cpp:391
 #, kde-format
@@ -1348,7 +1348,7 @@ msgid ""
 "already been deleted or is not owned by you. Or it might belong to a read-"
 "only or disabled calendar."
 msgstr ""
-"Non se puido retirar do calendario o evento ou tarefa. Pode que xa se "
+"Non foi posíbel retirar do calendario o evento ou tarefa. Pode que xa se "
 "eliminase ou que vostede non sexa o dono. Ou podería pertencer a un "
 "calendario só para ler ou desactivado."
 
@@ -1469,7 +1469,7 @@ msgstr "Novo cartafol"
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
 msgid "Could not create calendar folder: %1"
-msgstr "Non se puido crear o cartafol de calendario: %1"
+msgstr "Non foi posíbel crear o cartafol de calendario: %1"
 
 #: standardcalendaractionmanager.cpp:57
 #, kde-format
@@ -1525,7 +1525,7 @@ msgstr[1] "Eliminar os cartafoles de calendario?"
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
 msgid "Could not delete calendar folder: %1"
-msgstr "Non se puido eliminar o cartafol de calendario: %1"
+msgstr "Non foi posíbel eliminar o cartafol de calendario: %1"
 
 #: standardcalendaractionmanager.cpp:89
 #, kde-format
@@ -1617,7 +1617,7 @@ msgstr[1] "Eliminar os eventos?"
 #: standardcalendaractionmanager.cpp:126
 #, kde-format
 msgid "Could not delete event: %1"
-msgstr "Non se puido eliminar o evento: %1"
+msgstr "Non foi posíbel eliminar o evento: %1"
 
 #: standardcalendaractionmanager.cpp:130
 #, kde-format
@@ -1660,7 +1660,7 @@ msgstr "Engadir un calendario"
 #: standardcalendaractionmanager.cpp:147
 #, kde-format
 msgid "Could not create calendar: %1"
-msgstr "Non se puido crear o calendario: %1"
+msgstr "Non foi posíbel crear o calendario: %1"
 
 #: standardcalendaractionmanager.cpp:151
 #, kde-format
@@ -1746,7 +1746,7 @@ msgstr "Mover o evento escollido a un calendario distinto."
 #: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
-msgstr "Non se puido pegar o evento: %1"
+msgstr "Non foi posíbel pegar o evento: %1"
 
 #: standardcalendaractionmanager.cpp:192
 #, kde-format
