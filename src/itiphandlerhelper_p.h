@@ -62,6 +62,9 @@ public:
         ResultPending /**< The user has been asked about one detail, waiting for the answer */
     };
 
+    enum MessagePrivacy { MessagePrivacyPlain = 0, MessagePrivacySign = 1, MessagePrivacyEncrypt = 2 };
+    Q_DECLARE_FLAGS(MessagePrivacyFlags, MessagePrivacy)
+
     /**
       When an Incidence is created/modified/deleted the user can choose to send
       an ICal message to the other participants. By default the user will be asked
@@ -72,6 +75,11 @@ public:
       @param action the action to set as default
      */
     void setDefaultAction(ITIPHandlerDialogDelegate::Action action);
+
+    /**
+     * Sets the default privacy rules for the message.
+     */
+    void setMessagePrivacy(MessagePrivacyFlags messagePrivacy);
 
     /**
       Before an invitation is sent the user is asked for confirmation by means of
@@ -161,5 +169,8 @@ private:
     ITIPHandlerComponentFactory *m_factory = nullptr;
     MailScheduler *m_scheduler = nullptr;
     Status m_status;
+    MessagePrivacyFlags m_messagePrivacy = MessagePrivacyPlain;
 };
 }
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(Akonadi::ITIPHandlerHelper::MessagePrivacyFlags)

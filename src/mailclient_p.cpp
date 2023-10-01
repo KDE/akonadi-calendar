@@ -182,8 +182,10 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
     // Right now we do NOT have those actions in the UI, so we keep the values to false so that
     // signing/encryption depends purely on current identity and attendee signing and encryption
     // preferences.
-    const bool doSignCompletely = false;
-    const bool doEncryptCompletely = false;
+    bool signSomething = msg.sign;
+    const bool doSignCompletely = msg.sign;
+    bool encryptSomething = msg.encrypt;
+    const bool doEncryptCompletely = msg.encrypt;
 
     std::unique_ptr<ITIPHandlerDialogDelegate> dialogDelegate(
         mFactory->createITIPHanderDialogDelegate(qSharedPointerCast<KCalendarCore::Incidence>(incidence), KCalendarCore::iTIPMethod::iTIPNoMethod));
@@ -211,8 +213,6 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
         return {};
     }
 
-    bool signSomething = !identity.pgpSigningKey().isEmpty() && identity.pgpAutoSign();
-    bool encryptSomething = !identity.pgpEncryptionKey().isEmpty() && identity.pgpAutoEncrypt();
     bool result = true;
     bool canceled = false;
     bool signAttachments = false;
@@ -368,7 +368,8 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
                                KCalendarCore::iTIPMethod method,
                                bool bccMe,
                                const QString &attachment,
-                               const QString &mailTransport)
+                               const QString &mailTransport,
+                               MailPrivacyFlags mailPrivacy)
 {
     Q_ASSERT(incidence);
     KCalendarCore::Attendee::List attendees = incidence->attendees();
@@ -425,6 +426,8 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     }
 
     msg.body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
+    msg.sign = (mailPrivacy & MailPrivacySign) == MailPrivacySign;
+    msg.encrypt = (mailPrivacy & MailPrivacyEncrypt) == MailPrivacyEncrypt;
 
     send(incidence, identity, msg, mailTransport);
 }
@@ -436,7 +439,8 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
                                bool bccMe,
                                const QString &attachment,
                                const QString &sub,
-                               const QString &mailTransport)
+                               const QString &mailTransport,
+                               MailPrivacyFlags mailPrivacy)
 {
     MessageData msg;
     msg.from = from;
@@ -456,6 +460,8 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
     }
 
     msg.body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
+    msg.sign = (mailPrivacy & MailPrivacySign) == MailPrivacySign;
+    msg.encrypt = (mailPrivacy & MailPrivacyEncrypt) == MailPrivacyEncrypt;
 
     send(incidence, identity, msg, mailTransport);
 }
@@ -467,7 +473,8 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                         bool bccMe,
                         const QString &recipients,
                         const QString &attachment,
-                        const QString &mailTransport)
+                        const QString &mailTransport,
+                        MailPrivacyFlags mailPrivacy)
 {
     MessageData msg;
     msg.to = extractEmailAndNormalize(recipients);
@@ -484,6 +491,8 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
     }
 
     msg.body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
+    msg.sign = (mailPrivacy & MailPrivacySign) == MailPrivacySign;
+    msg.encrypt = (mailPrivacy & MailPrivacyEncrypt) == MailPrivacyEncrypt;
 
     send(incidence, identity, msg, mailTransport);
 }

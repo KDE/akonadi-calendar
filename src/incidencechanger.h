@@ -14,6 +14,7 @@
 
 #include <KCalendarCore/Incidence>
 
+#include <QFlags>
 #include <QWidget>
 
 #include <memory>
@@ -115,6 +116,16 @@ public:
         InvitationPolicyAsk, ///< The user is asked if an e-mail should be sent. This is the default.
         InvitationPolicyDontSend ///< E-mails aren't sent
     };
+
+    /**
+     * Flags describing whether invitation emails should signed and/or encrypted.
+     */
+    enum InvitationPrivacy {
+        InvitationPrivacyPlain = 0, ///< Invitation emails are not signed or encrpyted
+        InvitationPrivacySign = 1, ///< Invitation emails are signed
+        InvitationPrivacyEncrypt = 2 //< Invitation emails are encrypted
+    };
+    Q_DECLARE_FLAGS(InvitationPrivacyFlags, InvitationPrivacy)
 
     /**
      * This enum describes change types.
@@ -414,6 +425,17 @@ public:
      */
     Q_REQUIRED_RESULT Akonadi::Collection lastCollectionUsed() const;
 
+    /**
+     * Sets the invitation privacy flags.
+     */
+    void setInvitationPrivacy(InvitationPrivacyFlags invitationPrivacy);
+
+    /**
+     * Returns the invitation privacy policy.
+     * Default value is InvitationPrivacyPlain.
+     */
+    Q_REQUIRED_RESULT InvitationPrivacyFlags invitationPrivacy() const;
+
 Q_SIGNALS:
     /**
      * Emitted when IncidenceChanger creates an Incidence in akonadi.
@@ -458,6 +480,8 @@ private:
     //@endcond
 };
 }
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(Akonadi::IncidenceChanger::InvitationPrivacyFlags)
 
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::DestinationPolicy)
 Q_DECLARE_METATYPE(Akonadi::IncidenceChanger::ResultCode)

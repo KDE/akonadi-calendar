@@ -76,12 +76,17 @@ class AKONADI_CALENDAR_TESTS_EXPORT MailClient : public QObject
         QString method;
         bool hidden = false;
         bool bccMe = false;
+        bool sign = false;
+        bool encrypt = false;
     };
 
     bool mAkonadiLookupEnabled = true;
 
 public:
     enum Result { ResultSuccess, ResultNoAttendees, ResultReallyNoAttendees, ResultErrorCreatingTransport, ResultErrorFetchingTransport, ResultQueueJobError };
+
+    enum MailPrivacy { MailPrivacyPlain = 0, MailPrivacySign = 1, MailPrivacyEncrypt = 2 };
+    Q_DECLARE_FLAGS(MailPrivacyFlags, MailPrivacy)
 
     explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailClient() override;
@@ -91,7 +96,8 @@ public:
                        KCalendarCore::iTIPMethod method,
                        bool bccMe,
                        const QString &attachment = QString(),
-                       const QString &mailTransport = QString());
+                       const QString &mailTransport = QString(),
+                       MailPrivacyFlags mailPrivacy = MailPrivacyPlain);
 
     void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagementCore::Identity &identity,
@@ -100,7 +106,8 @@ public:
                        bool bccMe,
                        const QString &attachment = QString(),
                        const QString &sub = QString(),
-                       const QString &mailTransport = QString());
+                       const QString &mailTransport = QString(),
+                       MailPrivacyFlags mailPrivacy = MailPrivacyPlain);
 
     void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                 const KIdentityManagementCore::Identity &identity,
@@ -109,7 +116,8 @@ public:
                 bool bccMe,
                 const QString &recipients,
                 const QString &attachment = QString(),
-                const QString &mailTransport = QString());
+                const QString &mailTransport = QString(),
+                MailPrivacyFlags mailPrivacy = MailPrivacyPlain);
 
     /**
       Sends mail with specified from, to and subject field and body as text.

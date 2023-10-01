@@ -63,6 +63,15 @@ static bool allowedModificationsWithoutRevisionUpdate(const Incidence::Ptr &inci
     return dirtyFields == alarmOnlyModify;
 }
 
+static void updateHandlerPrivacyPolicy(ITIPHandlerHelper *helper, IncidenceChanger::InvitationPrivacyFlags flags)
+{
+    ITIPHandlerHelper::MessagePrivacyFlags helperFlags;
+    helperFlags.setFlag(ITIPHandlerHelper::MessagePrivacySign, (flags & IncidenceChanger::InvitationPrivacySign) == IncidenceChanger::InvitationPrivacySign);
+    helperFlags.setFlag(ITIPHandlerHelper::MessagePrivacyEncrypt,
+                        (flags & IncidenceChanger::InvitationPrivacyEncrypt) == IncidenceChanger::InvitationPrivacyEncrypt);
+    helper->setMessagePrivacy(helperFlags);
+}
+
 namespace Akonadi
 {
 // Does a queued emit, with QMetaObject::invokeMethod
@@ -459,6 +468,7 @@ void IncidenceChangerPrivate::handleInvitationsBeforeChange(const Change::Ptr &c
 
             auto handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
             handler->setParent(this);
+            updateHandlerPrivacyPolicy(handler, m_invitationPrivacy);
 
             if (m_invitationPolicy == IncidenceChanger::InvitationPolicySend) {
                 handler->setDefaultAction(ITIPHandlerDialogDelegate::ActionSendMessage);
@@ -556,6 +566,7 @@ void IncidenceChangerPrivate::handleInvitationsAfterChange(const Change::Ptr &ch
         auto handler = new ITIPHandlerHelper(mFactory, change->parentWidget);
         connect(handler, &ITIPHandlerHelper::finished, change.data(), &Change::emitUserDialogClosedAfterChange);
         handler->setParent(this);
+        updateHandlerPrivacyPolicy(handler, m_invitationPrivacy);
 
         const bool alwaysSend = (m_invitationPolicy == IncidenceChanger::InvitationPolicySend);
         const bool neverSend = (m_invitationPolicy == IncidenceChanger::InvitationPolicyDontSend);
@@ -1166,6 +1177,16 @@ IncidenceChanger::InvitationPolicy IncidenceChanger::invitationPolicy() const
 Akonadi::Collection IncidenceChanger::lastCollectionUsed() const
 {
     return d->mLastCollectionUsed;
+}
+
+void IncidenceChanger::setInvitationPrivacy(IncidenceChanger::InvitationPrivacyFlags invitationPrivacy)
+{
+    d->m_invitationPrivacy = invitationPrivacy;
+}
+
+IncidenceChanger::InvitationPrivacyFlags IncidenceChanger::invitationPrivacy() const
+{
+    return d->m_invitationPrivacy;
 }
 
 QString IncidenceChangerPrivate::showErrorDialog(IncidenceChanger::ResultCode resultCode, QWidget *parent)

@@ -204,6 +204,12 @@ void ITIPHandlerHelper::setDefaultAction(ITIPHandlerDialogDelegate::Action actio
     mDefaultAction = action;
 }
 
+void ITIPHandlerHelper::setMessagePrivacy(MessagePrivacyFlags messagePrivacy)
+{
+    m_scheduler->setSign((messagePrivacy & ITIPHandlerHelper::MessagePrivacySign) == ITIPHandlerHelper::MessagePrivacySign);
+    m_scheduler->setEncrypt((messagePrivacy & ITIPHandlerHelper::MessagePrivacyEncrypt) == ITIPHandlerHelper::MessagePrivacyEncrypt);
+}
+
 void ITIPHandlerHelper::sendIncidenceCreatedMessage(KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence)
 {
     /// When we created the incidence, we *must* be the organizer.

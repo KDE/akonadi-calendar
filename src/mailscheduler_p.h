@@ -32,6 +32,10 @@ public:
     explicit MailScheduler(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);
     ~MailScheduler() override;
 
+    void setEncrypt(bool encrypt);
+
+    void setSign(bool sign);
+
     void publish(const KCalendarCore::IncidenceBase::Ptr &incidence, const QString &recipients) override;
 
     void performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender = {}) override;

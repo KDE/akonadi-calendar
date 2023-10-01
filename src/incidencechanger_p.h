@@ -346,6 +346,7 @@ public:
     QMap<KJob *, QSet<KCalendarCore::IncidenceBase::Field>> mDirtyFieldsByJob;
 
     IncidenceChanger::InvitationPolicy m_invitationPolicy;
+    IncidenceChanger::InvitationPrivacyFlags m_invitationPrivacy = IncidenceChanger::InvitationPrivacyPlain;
 
     ITIPHandlerComponentFactory *mFactory = nullptr;
 
