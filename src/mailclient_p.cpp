@@ -365,6 +365,7 @@ MailClient::~MailClient() = default;
 
 void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                const KIdentityManagementCore::Identity &identity,
+                               KCalendarCore::iTIPMethod method,
                                bool bccMe,
                                const QString &attachment,
                                const QString &mailTransport)
@@ -381,6 +382,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     msg.bccMe = bccMe;
     msg.attachment = attachment;
     msg.from = incidence->organizer().fullName();
+    msg.method = KCalendarCore::ScheduleMessage::methodName(method);
 
     const QString organizerEmail = incidence->organizer().email();
 
@@ -430,6 +432,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
 void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                const KIdentityManagementCore::Identity &identity,
                                const QString &from,
+                               KCalendarCore::iTIPMethod method,
                                bool bccMe,
                                const QString &attachment,
                                const QString &sub,
@@ -441,6 +444,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
     msg.bccMe = bccMe;
     msg.subject = sub;
     msg.attachment = attachment;
+    msg.method = KCalendarCore::ScheduleMessage::methodName(method);
 
     if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
         KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
@@ -459,6 +463,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
 void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                         const KIdentityManagementCore::Identity &identity,
                         const QString &from,
+                        KCalendarCore::iTIPMethod method,
                         bool bccMe,
                         const QString &recipients,
                         const QString &attachment,
@@ -469,6 +474,7 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
     msg.from = from;
     msg.bccMe = bccMe;
     msg.attachment = attachment;
+    msg.method = KCalendarCore::ScheduleMessage::methodName(method);
 
     if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
         KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
@@ -518,6 +524,7 @@ void MailClient::populateComposer(MessageComposer::Composer *composer, const Mes
     itipPart->setOutlookConformInvitation(outlookConformInvitation);
     itipPart->setInvitationBody(msg.body);
     itipPart->setInvitation(msg.attachment);
+    itipPart->setMethod(msg.method);
 }
 
 bool MailClient::addKeysToContext(const QString &gnupgHome,

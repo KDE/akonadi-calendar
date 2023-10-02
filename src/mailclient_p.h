@@ -72,9 +72,10 @@ class AKONADI_CALENDAR_TESTS_EXPORT MailClient : public QObject
         QStringList cc;
         QString subject;
         QString body;
+        QString attachment;
+        QString method;
         bool hidden = false;
         bool bccMe = false;
-        QString attachment;
     };
 
     bool mAkonadiLookupEnabled = true;
@@ -87,6 +88,7 @@ public:
 
     void mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagementCore::Identity &identity,
+                       KCalendarCore::iTIPMethod method,
                        bool bccMe,
                        const QString &attachment = QString(),
                        const QString &mailTransport = QString());
@@ -94,6 +96,7 @@ public:
     void mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidence,
                        const KIdentityManagementCore::Identity &identity,
                        const QString &from,
+                       KCalendarCore::iTIPMethod method,
                        bool bccMe,
                        const QString &attachment = QString(),
                        const QString &sub = QString(),
@@ -102,6 +105,7 @@ public:
     void mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
                 const KIdentityManagementCore::Identity &identity,
                 const QString &from,
+                KCalendarCore::iTIPMethod method,
                 bool bccMe,
                 const QString &recipients,
                 const QString &attachment = QString(),

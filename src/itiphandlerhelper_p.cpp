@@ -473,7 +473,7 @@ ITIPHandlerHelper::sendCounterProposal(const QString &receiver, const KCalendarC
 
         return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, tmp, KCalendarCore::iTIPReply, receiver);
     } else {
-        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newEvent, KCalendarCore::iTIPReply, receiver);
+        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newEvent, KCalendarCore::iTIPCounter, receiver);
     }
 }
 

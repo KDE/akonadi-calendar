@@ -417,7 +417,7 @@ private Q_SLOTS:
         TestableMailClient::preferences = contactPreferences;
 
         mPendingSignals = 1;
-        mMailClient->mailAttendees(incidence, identity, bccMe, attachment, transport);
+        mMailClient->mailAttendees(incidence, identity, KCalendarCore::iTIPRequest, bccMe, attachment, transport);
         waitForSignals();
 
         if (mLastResult != expectedResult) {
@@ -521,7 +521,7 @@ private Q_SLOTS:
         FakeMessageQueueJob::sUnitTestResults.clear();
 
         mPendingSignals = 1;
-        mMailClient->mailOrganizer(incidence, identity, from, bccMe, attachment, subject, transport);
+        mMailClient->mailOrganizer(incidence, identity, from, KCalendarCore::iTIPReply, bccMe, attachment, subject, transport);
         waitForSignals();
         QCOMPARE(mLastResult, expectedResult);
 
@@ -587,7 +587,7 @@ private Q_SLOTS:
         FakeMessageQueueJob::sUnitTestResults.clear();
 
         mPendingSignals = 1;
-        mMailClient->mailTo(incidence, identity, from, bccMe, recipients, attachment, transport);
+        mMailClient->mailTo(incidence, identity, from, KCalendarCore::iTIPRequest, bccMe, recipients, attachment, transport);
         waitForSignals();
         QCOMPARE(mLastResult, expectedResult);
         UnitTestResult unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();

@@ -358,7 +358,13 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
             d->finishSendAsICalendar(result, str);
         });
 
-        mailer->mailTo(incidence, KIdentityManagementCore::IdentityManager::self()->identityForAddress(from), from, bccMe, recipients, messageText);
+        mailer->mailTo(incidence,
+                       KIdentityManagementCore::IdentityManager::self()->identityForAddress(from),
+                       from,
+                       KCalendarCore::iTIPRequest,
+                       bccMe,
+                       recipients,
+                       messageText);
     }
     delete publishdlg;
 }

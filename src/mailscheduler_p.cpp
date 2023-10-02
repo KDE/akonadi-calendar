@@ -66,7 +66,13 @@ void MailScheduler::publish(const KCalendarCore::IncidenceBase::Ptr &incidence, 
     }
 
     const QString messageText = mFormat->createScheduleMessage(incidence, KCalendarCore::iTIPPublish);
-    d->m_mailer->mailTo(incidence, d->identityForIncidence(incidence), CalendarUtils::email(), CalendarSettings::self()->bcc(), recipients, messageText);
+    d->m_mailer->mailTo(incidence,
+                        d->identityForIncidence(incidence),
+                        CalendarUtils::email(),
+                        KCalendarCore::iTIPPublish,
+                        CalendarSettings::self()->bcc(),
+                        recipients,
+                        messageText);
 }
 
 void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence,
@@ -82,7 +88,7 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
 
     const auto identity = sender.isEmpty() ? d->identityForIncidence(incidence) : d->identityForAddress(sender);
 
-    d->m_mailer->mailTo(incidence, identity, Akonadi::CalendarUtils::email(), CalendarSettings::self()->bcc(), recipients, messageText);
+    d->m_mailer->mailTo(incidence, identity, Akonadi::CalendarUtils::email(), method, CalendarSettings::self()->bcc(), recipients, messageText);
 }
 
 void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender)
@@ -97,7 +103,7 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
 
     if (method == KCalendarCore::iTIPRequest || method == KCalendarCore::iTIPCancel || method == KCalendarCore::iTIPAdd
         || method == KCalendarCore::iTIPDeclineCounter) {
-        d->m_mailer->mailAttendees(incidence, identity, CalendarSettings::self()->bcc(), messageText);
+        d->m_mailer->mailAttendees(incidence, identity, method, CalendarSettings::self()->bcc(), messageText);
     } else {
         QString subject;
         KCalendarCore::Incidence::Ptr inc = incidence.dynamicCast<KCalendarCore::Incidence>();
@@ -107,7 +113,7 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
 
         const auto from = sender.isEmpty() ? CalendarUtils::email() : sender;
 
-        d->m_mailer->mailOrganizer(incidence, identity, sender, CalendarSettings::self()->bcc(), messageText, subject);
+        d->m_mailer->mailOrganizer(incidence, identity, sender, method, CalendarSettings::self()->bcc(), messageText, subject);
     }
 }
 
