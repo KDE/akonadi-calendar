@@ -149,13 +149,13 @@ public:
      * Returns the list of collections that are currently selected.
      * The list is empty if no collection is currently selected.
      */
-    Q_REQUIRED_RESULT Akonadi::Collection::List selectedCollections() const;
+    [[nodiscard]] Akonadi::Collection::List selectedCollections() const;
 
     /**
      * Returns the list of items that are currently selected.
      * The list is empty if no item is currently selected.
      */
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedItems() const;
+    [[nodiscard]] Akonadi::Item::List selectedItems() const;
 
     /**
      * Sets the @p text of the action @p type for the given @p context.

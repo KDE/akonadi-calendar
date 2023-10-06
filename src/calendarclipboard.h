@@ -69,7 +69,7 @@ public:
     /**
      * Returns if there's any ical mime data available for pasting.
      */
-    Q_REQUIRED_RESULT bool pasteAvailable() const;
+    [[nodiscard]] bool pasteAvailable() const;
 
 Q_SIGNALS:
     /**

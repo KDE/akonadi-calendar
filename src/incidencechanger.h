@@ -291,7 +291,7 @@ public:
      * @see setDefaultCollection()
      * @see DestinationPolicy
      */
-    Q_REQUIRED_RESULT Akonadi::Collection defaultCollection() const;
+    [[nodiscard]] Akonadi::Collection defaultCollection() const;
 
     /**
      * Sets the destination policy to use. The destination policy determines the
@@ -308,7 +308,7 @@ public:
      * @see setDestinationPolicy()
      * @see DestinationPolicy
      */
-    Q_REQUIRED_RESULT DestinationPolicy destinationPolicy() const;
+    [[nodiscard]] DestinationPolicy destinationPolicy() const;
 
     /**
      * Sets if IncidenceChanger should show error dialogs.
@@ -321,7 +321,7 @@ public:
      *
      * @see setShowDialogsOnError()
      */
-    Q_REQUIRED_RESULT bool showDialogsOnError() const;
+    [[nodiscard]] bool showDialogsOnError() const;
 
     /**
      * Sets if IncidenceChanger should honour collection's ACLs by disallowing changes if
@@ -337,7 +337,7 @@ public:
      * @see setRespectsCollectionRights()
      * @see ResultCode::ResultCodePermissions
      */
-    Q_REQUIRED_RESULT bool respectsCollectionRights() const;
+    [[nodiscard]] bool respectsCollectionRights() const;
 
     /**
      * Enable or disable history.
@@ -355,7 +355,7 @@ public:
      * @see history()
      * @see historyEnabled()
      */
-    Q_REQUIRED_RESULT bool historyEnabled() const;
+    [[nodiscard]] bool historyEnabled() const;
 
     /**
      * Returns a pointer to the history object.
@@ -375,7 +375,7 @@ public:
      *
      * @return true if the item was deleted recently, false otherwise.
      */
-    Q_REQUIRED_RESULT bool deletedRecently(Akonadi::Item::Id) const;
+    [[nodiscard]] bool deletedRecently(Akonadi::Item::Id) const;
 
     /**
      * Enables or disabled groupware communication.
@@ -389,7 +389,7 @@ public:
      * Default is false.
      * @see setGroupwareCommuniation()
      */
-    Q_REQUIRED_RESULT bool groupwareCommunication() const;
+    [[nodiscard]] bool groupwareCommunication() const;
 
     /**
      * Makes modifyIncidence() adjust recurrence parameters when modifying DTSTART.
@@ -400,7 +400,7 @@ public:
      * True if recurrence parameters are adjusted when modifying DTSTART.
      * Default is true.
      */
-    Q_REQUIRED_RESULT bool autoAdjustRecurrence() const;
+    [[nodiscard]] bool autoAdjustRecurrence() const;
 
     /**
      * Sets the invitation policy.
@@ -415,7 +415,7 @@ public:
      *
      * @since 4.12
      */
-    Q_REQUIRED_RESULT InvitationPolicy invitationPolicy() const;
+    [[nodiscard]] InvitationPolicy invitationPolicy() const;
 
     /**
      * Returns the collection that the last createIncidence() used.
@@ -423,7 +423,7 @@ public:
      *
      * @see createIncidence().
      */
-    Q_REQUIRED_RESULT Akonadi::Collection lastCollectionUsed() const;
+    [[nodiscard]] Akonadi::Collection lastCollectionUsed() const;
 
     /**
      * Sets the invitation privacy flags.
@@ -434,7 +434,7 @@ public:
      * Returns the invitation privacy policy.
      * Default value is InvitationPrivacyPlain.
      */
-    Q_REQUIRED_RESULT InvitationPrivacyFlags invitationPrivacy() const;
+    [[nodiscard]] InvitationPrivacyFlags invitationPrivacy() const;
 
 Q_SIGNALS:
     /**

@@ -24,16 +24,16 @@ namespace Akonadi
 {
 namespace CalendarUtils
 {
-Q_REQUIRED_RESULT QString fullName();
-Q_REQUIRED_RESULT QString email();
-Q_REQUIRED_RESULT bool thatIsMe(const QString &email);
+[[nodiscard]] QString fullName();
+[[nodiscard]] QString email();
+[[nodiscard]] bool thatIsMe(const QString &email);
 
 // faster version, because we know that attendee->email() is only the email address
-Q_REQUIRED_RESULT bool thatIsMe(const KCalendarCore::Attendee &attendee);
+[[nodiscard]] bool thatIsMe(const KCalendarCore::Attendee &attendee);
 
-Q_REQUIRED_RESULT QStringList allEmails();
+[[nodiscard]] QStringList allEmails();
 
-Q_REQUIRED_RESULT Akonadi::Collection
+[[nodiscard]] Akonadi::Collection
 selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }
 }

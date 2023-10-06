@@ -32,16 +32,16 @@ public:
     static Akonadi::CalendarModel::Ptr create(Akonadi::Monitor *monitor);
     ~CalendarModel() override;
 
-    Q_REQUIRED_RESULT QWeakPointer<CalendarModel> weakPointer() const;
+    [[nodiscard]] QWeakPointer<CalendarModel> weakPointer() const;
     void setWeakPointer(const QWeakPointer<CalendarModel> &weakPointer);
 
-    Q_REQUIRED_RESULT QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const override;
 
-    Q_REQUIRED_RESULT QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const override;
 
-    Q_REQUIRED_RESULT int entityColumnCount(EntityTreeModel::HeaderGroup headerSet) const override;
+    [[nodiscard]] int entityColumnCount(EntityTreeModel::HeaderGroup headerSet) const override;
 
-    Q_REQUIRED_RESULT QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, EntityTreeModel::HeaderGroup headerSet) const override;
+    [[nodiscard]] QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, EntityTreeModel::HeaderGroup headerSet) const override;
 
 private:
     explicit CalendarModel(Akonadi::Monitor *monitor);

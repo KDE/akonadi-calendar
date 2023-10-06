@@ -23,7 +23,7 @@ public:
     ~CalFilterPartStatusProxyModel() override;
 
     void setFilterVirtual(bool filterVirtual);
-    Q_REQUIRED_RESULT bool filterVirtual() const;
+    [[nodiscard]] bool filterVirtual() const;
 
     void setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList);
     const QList<KCalendarCore::Attendee::PartStat> &blockedStatusList() const;

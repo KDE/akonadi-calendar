@@ -46,7 +46,7 @@ public:
                             const QString &sender) override;
 
     /** Returns the directory where the free-busy information is stored */
-    Q_REQUIRED_RESULT QString freeBusyDir() const override;
+    [[nodiscard]] QString freeBusyDir() const override;
 
     /**
      * Accepts a counter proposal.

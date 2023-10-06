@@ -29,7 +29,7 @@ public:
     bool m_calendarOwnership = true; // If false it's not ours.
 
     void deleteTodos();
-    Q_REQUIRED_RESULT bool treeIsDeletable(const KCalendarCore::Todo::Ptr &todo);
+    [[nodiscard]] bool treeIsDeletable(const KCalendarCore::Todo::Ptr &todo);
 
 public Q_SLOTS:
     void onCalendarLoaded(bool success, const QString &message);

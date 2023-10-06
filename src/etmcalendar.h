@@ -83,12 +83,12 @@ public:
      * Use this instead of creating a new collection, the returned collection will have
      * the correct right, name, display name, etc all set.
      */
-    Q_REQUIRED_RESULT Akonadi::Collection collection(Akonadi::Collection::Id) const;
+    [[nodiscard]] Akonadi::Collection collection(Akonadi::Collection::Id) const;
 
     /**
      * Returns true if the collection owning incidence @p has righ @p right
      */
-    Q_REQUIRED_RESULT bool hasRight(const Akonadi::Item &item, Akonadi::Collection::Right right) const;
+    [[nodiscard]] bool hasRight(const Akonadi::Item &item, Akonadi::Collection::Right right) const;
 
     /**
      * This is an overloaded function.
@@ -96,7 +96,7 @@ public:
      * @param right the access right to check for
      * @see hasRight()
      */
-    Q_REQUIRED_RESULT bool hasRight(const QString &uid, Akonadi::Collection::Right right) const;
+    [[nodiscard]] bool hasRight(const QString &uid, Akonadi::Collection::Right right) const;
 
     /**
      * Returns the KCheckableProxyModel used to select from which collections should
@@ -152,7 +152,7 @@ public:
      * Returns whether collection filtering is enabled. Default is true.
      * @see setCollectionFilteringEnabled()
      */
-    Q_REQUIRED_RESULT bool collectionFilteringEnabled() const;
+    [[nodiscard]] bool collectionFilteringEnabled() const;
 
 Q_SIGNALS:
     /**

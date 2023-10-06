@@ -24,8 +24,8 @@ using namespace KIdentityManagementCore;
 class Akonadi::MailSchedulerPrivate
 {
 public:
-    Q_REQUIRED_RESULT KIdentityManagementCore::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
-    Q_REQUIRED_RESULT KIdentityManagementCore::Identity identityForAddress(const QString &address) const;
+    [[nodiscard]] KIdentityManagementCore::Identity identityForIncidence(const KCalendarCore::IncidenceBase::Ptr &incidence) const;
+    [[nodiscard]] KIdentityManagementCore::Identity identityForAddress(const QString &address) const;
 
     MailClient::MailPrivacyFlags privacyFlags() const
     {

@@ -266,7 +266,7 @@ public:
         return false;
     }
 
-    Q_REQUIRED_RESULT bool hasWritableCollection(const QString &mimeType) const
+    [[nodiscard]] bool hasWritableCollection(const QString &mimeType) const
     {
         if (!mCollectionSelectionModel) {
             return false;

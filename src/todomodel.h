@@ -67,33 +67,33 @@ public:
 
     ~TodoModel() override;
 
-    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
     QVariant extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role = Qt::DisplayRole) const override;
 
-    Q_REQUIRED_RESULT bool setData(const QModelIndex &index, const QVariant &value, int role) override;
+    [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation, int role) const override;
+    [[nodiscard]] QVariant headerData(int section, Qt::Orientation, int role) const override;
 
     AKONADI_CALENDAR_DECL_DEPRECATED_TEXT("Setting calendar is no longer necessary.")
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
 
-    Q_REQUIRED_RESULT QMimeData *mimeData(const QModelIndexList &indexes) const override;
+    [[nodiscard]] QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
-    Q_REQUIRED_RESULT bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
+    [[nodiscard]] bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
-    Q_REQUIRED_RESULT QStringList mimeTypes() const override;
+    [[nodiscard]] QStringList mimeTypes() const override;
 
-    Q_REQUIRED_RESULT Qt::DropActions supportedDropActions() const override;
+    [[nodiscard]] Qt::DropActions supportedDropActions() const override;
 
-    Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
+    [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
 Q_SIGNALS:
     /** Emitted when dropMimeData() rejected a drop

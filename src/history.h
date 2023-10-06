@@ -128,7 +128,7 @@ public:
      *
      * The message is translated.
      */
-    Q_REQUIRED_RESULT QString lastErrorString() const;
+    [[nodiscard]] QString lastErrorString() const;
 
     /**
      * Reverts every change in the undo stack.
@@ -141,12 +141,12 @@ public:
     /**
      * Returns true if there are changes that can be undone.
      */
-    Q_REQUIRED_RESULT bool undoAvailable() const;
+    [[nodiscard]] bool undoAvailable() const;
 
     /**
      * Returns true if there are changes that can be redone.
      */
-    Q_REQUIRED_RESULT bool redoAvailable() const;
+    [[nodiscard]] bool redoAvailable() const;
 
     /**
      * Returns the description of the next undo.
@@ -156,7 +156,7 @@ public:
      *
      * @see nextRedoDescription()
      */
-    Q_REQUIRED_RESULT QString nextUndoDescription() const;
+    [[nodiscard]] QString nextUndoDescription() const;
 
     /**
      * Returns the description of the next redo.
@@ -166,7 +166,7 @@ public:
      *
      * @see nextUndoDescription()
      */
-    Q_REQUIRED_RESULT QString nextRedoDescription() const;
+    [[nodiscard]] QString nextRedoDescription() const;
 
 public Q_SLOTS:
     /**
