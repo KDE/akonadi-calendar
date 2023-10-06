@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:39+0000\n"
+"POT-Creation-Date: 2023-10-06 01:41+0000\n"
 "PO-Revision-Date: 2023-07-25 13:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -512,43 +512,43 @@ msgstr "Het geselecteerde bestand is leeg."
 msgid "Merge ical file into existing calendar."
 msgstr "Voeg ical-bestand in in bestaande agenda."
 
-#: incidencechanger.cpp:251
+#: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Fout bij het aanmaken van een agenda-item. Fout was: %1"
 
-#: incidencechanger.cpp:330
+#: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Fout bij het verwijderen van een agenda-item. Fout was: %1"
 
-#: incidencechanger.cpp:365
+#: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Er is een onbekende fout opgetreden"
 
-#: incidencechanger.cpp:402
+#: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Fout bij het wijzigen van een agenda-item. Fout was: %1"
 
-#: incidencechanger.cpp:796 incidencechanger.cpp:920
+#: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Dat agenda-item was al verwijderd of wordt nu verwijderd."
 
-#: incidencechanger.cpp:1176
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Bewerking kan niet worden uitgevoerd vanwege ACL-restricties"
 
-#: incidencechanger.cpp:1179
+#: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "De gekozen verzameling is ongeldig"
 
-#: incidencechanger.cpp:1183
+#: incidencechanger.cpp:1204
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -557,12 +557,12 @@ msgstr ""
 "De standaard verzameling is ongeldig of heeft niet de juiste ACL's en "
 "DestinationPolicyNeverAsk is gebruikt"
 
-#: incidencechanger.cpp:1187
+#: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Dubbel item-id in een groepsbewerking"
 
-#: incidencechanger.cpp:1191
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -571,7 +571,7 @@ msgstr ""
 "Één wijziging behorende bij een groep wijzigingen is mislukt. Alle "
 "wijzigingen worden teruggedraaid."
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
 msgstr "Onbekende fout"
@@ -645,7 +645,7 @@ msgid "Do Not Send"
 msgstr "Niet verzenden"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:502
+#: itiphandlerhelper_p.cpp:508
 #, kde-format
 msgid "Error: %1"
 msgstr "Fout: %1"
@@ -724,7 +724,7 @@ msgstr "Groepsplanning e-mail"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Geen samenvatting opgegeven</placeholder>"
 
-#: itiphandlerhelper_p.cpp:229
+#: itiphandlerhelper_p.cpp:235
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -733,7 +733,7 @@ msgstr ""
 "Aan activiteit \"%1\" nemen nog andere personen deel.\n"
 "Wilt u de deelnemers per e-mail uitnodigen?"
 
-#: itiphandlerhelper_p.cpp:234
+#: itiphandlerhelper_p.cpp:240
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -742,7 +742,7 @@ msgstr ""
 "Aan taak \"%1\" nemen nog andere personen deel.\n"
 "Wilt u de deelnemers per e-mail uitnodigen?"
 
-#: itiphandlerhelper_p.cpp:239
+#: itiphandlerhelper_p.cpp:245
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -751,7 +751,7 @@ msgstr ""
 "Aan deze gebeurtenis doen andere mensen mee. Moet er een e-mail verstuurd "
 "worden naar de deelnemers?"
 
-#: itiphandlerhelper_p.cpp:263
+#: itiphandlerhelper_p.cpp:269
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -761,7 +761,7 @@ msgstr ""
 "agenda niet meer overeenstemmen met die van de organisator. Wilt u die "
 "werkelijk bewerken?"
 
-#: itiphandlerhelper_p.cpp:296
+#: itiphandlerhelper_p.cpp:302
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -770,18 +770,18 @@ msgstr ""
 "De uitnodiging \"%1\" is door u gewijzigd.\n"
 "Wilt u de deelnemers een e-mailbericht sturen?"
 
-#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
-#: itiphandlerhelper_p.cpp:338
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:344
 #, kde-format
 msgid "Send Update"
 msgstr "Update verzenden"
 
-#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
+#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Wilt u een statusupdate naar de organisator van deze taak verzenden?"
 
-#: itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:337
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -790,7 +790,7 @@ msgstr ""
 "Uw status als deelnemer van deze activiteit is veranderd. Wilt u een "
 "statusupdate naar de organisator van deze activiteit sturen?"
 
-#: itiphandlerhelper_p.cpp:374
+#: itiphandlerhelper_p.cpp:380
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -799,7 +799,7 @@ msgstr ""
 "De uitnodiging \"%1\" is door u verplaatst.\n"
 "Wilt u de deelnemers berichten dat de activiteit niet doorgaat?"
 
-#: itiphandlerhelper_p.cpp:379
+#: itiphandlerhelper_p.cpp:385
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -808,7 +808,7 @@ msgstr ""
 "De uitnodiging \"%1\" is door u verplaatst.\n"
 "Wilt u de deelnemers berichten dat de taak niet doorgaat?"
 
-#: itiphandlerhelper_p.cpp:384
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -817,19 +817,19 @@ msgstr ""
 "De uitnodiging \"%1\" is door u verwijderd.\n"
 "Wilt u de deelnemers berichten dat het journaal niet doorgaat?"
 
-#: itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:412
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Wilt u een statusupdate naar de organisator van dit journaal verzenden?"
 
-#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Update verzenden"
 
-#: itiphandlerhelper_p.cpp:426
+#: itiphandlerhelper_p.cpp:432
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -839,53 +839,53 @@ msgstr ""
 "een nader antwoord sturen aan de organisator waarin u de uitnodiging niet "
 "aanvaardt?"
 
-#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:111
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Tegenvoorstel: %1"
 
-#: itiphandlerhelper_p.cpp:487
+#: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Verzenden groepsplanning e-mail mislukt."
 
-#: itiphandlerhelper_p.cpp:495
+#: itiphandlerhelper_p.cpp:501
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Update afbreken"
 
-#: mailclient_p.cpp:377 mailclient_p.cpp:415
+#: mailclient_p.cpp:378 mailclient_p.cpp:416
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Er zijn geen deelnemers om een e-mail naar te verzenden"
 
-#: mailclient_p.cpp:424
+#: mailclient_p.cpp:425
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Vrij/bezet-object"
 
-#: mailclient_p.cpp:455 mailclient_p.cpp:483
+#: mailclient_p.cpp:459 mailclient_p.cpp:490
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Vrij/bezet-bericht"
 
-#: mailclient_p.cpp:620
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Fout bij aanmaken van transport"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Fout bij ophalen van transport. Kan geen uitnodigingen verzenden"
 
-#: mailclient_p.cpp:660
+#: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Fout bij het bericht in de wachtrij van postvak uit zetten: %1"
 
-#: mailclient_p.cpp:692
+#: mailclient_p.cpp:701
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -896,23 +896,23 @@ msgstr ""
 "gevraagd wordt of dit bericht al dan niet moet worden ondertekend.\n"
 "Dit bericht ondertekenen?"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Sign Message?"
 msgstr "Bericht ondertekenen?"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Ondertekenen"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
 msgstr "&Niet ondertekenen"
 
-#: mailclient_p.cpp:716
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -922,7 +922,7 @@ msgstr ""
 "conflict.\n"
 "Dit bericht ondertekenen?"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -931,17 +931,17 @@ msgstr ""
 "U hebt gevraagd om dit bericht te ondertekenen, maar er is geen geldige "
 "ondertekeningssleutel ingesteld voor deze identiteit."
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
 msgstr "Niet-ondertekend verzenden?"
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
 msgstr "&Niet-ondertekend verzenden"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:763
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -953,7 +953,7 @@ msgstr ""
 "beleid zijn.\n"
 "Alle delen toch ondertekenen?"
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -965,27 +965,27 @@ msgstr ""
 "zijn.\n"
 "Het bericht toch ondertekenen?"
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Alle delen &ondertekenen"
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
 msgstr "&Ondertekenen"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr "Waarschuwing voor niet-ondertekend"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
 msgstr "Zo &verzenden"
 
-#: mailclient_p.cpp:815
+#: mailclient_p.cpp:824
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -994,7 +994,7 @@ msgstr ""
 "Geldige vertrouwde encryptiesleutels zijn voor alle ontvangers gevonden.\n"
 "Dit bericht versleutelen?"
 
-#: mailclient_p.cpp:818
+#: mailclient_p.cpp:827
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1005,32 +1005,32 @@ msgstr ""
 "gevraagd wordt of dit bericht al dan niet moet worden versleuteld.\n"
 "Dit bericht versleutelen?"
 
-#: mailclient_p.cpp:823 mailclient_p.cpp:848
+#: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Bericht versleutelen?"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Ondertekenen && &versleutelen"
 
-#: mailclient_p.cpp:824 mailclient_p.cpp:848 mailclient_p.cpp:894
+#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
 msgstr "V&ersleutelen"
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
 msgstr "Alleen &ondertekenen"
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Zo &verzenden"
 
-#: mailclient_p.cpp:845
+#: mailclient_p.cpp:854
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1040,12 +1040,12 @@ msgstr ""
 "conflict.\n"
 "Dit bericht versleutelen?"
 
-#: mailclient_p.cpp:848
+#: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
 msgstr "&Niet versleutelen"
 
-#: mailclient_p.cpp:867
+#: mailclient_p.cpp:876
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1056,17 +1056,17 @@ msgstr ""
 "naar uzelf te sturen, maar er is geen geldige vertrouwde encryptiesleutel "
 "ingesteld voor deze identiteit."
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Onversleuteld verzenden?"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
 msgstr "&Onversleuteld verzenden"
 
-#: mailclient_p.cpp:885
+#: mailclient_p.cpp:894
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1079,7 +1079,7 @@ msgstr ""
 "beleid zijn en/of gevoelige informatie lekken.\n"
 "Alle delen toch versleutelen?"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:899
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1092,17 +1092,17 @@ msgstr ""
 "zijn en/of gevoelige informatie lekken.\n"
 "Bericht toch versleutelen?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Alle delen &versleutelen"
 
-#: mailclient_p.cpp:896
+#: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Waarschuwing voor niet-versleuteld bericht"
 
-#: mailscheduler_p.cpp:186
+#: mailscheduler_p.cpp:198
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Fout bij het verzenden van e-mail: "

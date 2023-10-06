@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:39+0000\n"
+"POT-Creation-Date: 2023-10-06 01:41+0000\n"
 "PO-Revision-Date: 2023-07-26 06:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -510,43 +510,43 @@ msgstr "მონიშნული ფაილი ცარიელია."
 msgid "Merge ical file into existing calendar."
 msgstr "არსებულ კალენდარში ical ფაილის შერწყმა."
 
-#: incidencechanger.cpp:251
+#: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "კალენდარის ელემენტის შექმნა შეუძლებელია. შეცდომა: %1"
 
-#: incidencechanger.cpp:330
+#: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "კალენდარის ელემენტის წაშლა შეუძლებელია. შეცდომა: %1"
 
-#: incidencechanger.cpp:365
+#: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "უცნობი შეცდომა"
 
-#: incidencechanger.cpp:402
+#: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "კალენდარის ელემენტის ჩასწორება შეუძლებელია. შეცდომა: %1"
 
-#: incidencechanger.cpp:796 incidencechanger.cpp:920
+#: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "კალენარის ჩანაწერი უკვე წაშლილია ან მისი წაშლა ახლა მიმდინარეობს."
 
-#: incidencechanger.cpp:1176
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ოპერაციის შესრულება შეუძლებელია ACL-ებით შეზღუდვების გამო"
 
-#: incidencechanger.cpp:1179
+#: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "არჩეული კოლექცია არასწორია"
 
-#: incidencechanger.cpp:1183
+#: incidencechanger.cpp:1204
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -555,12 +555,12 @@ msgstr ""
 "ნაგულისხმები კოლექცია არასწორია ან გამოყენებული ACL-ები და "
 "DestinationPolicyNeverAsk არასწორია"
 
-#: incidencechanger.cpp:1187
+#: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "ჯგუფურ ოპერაციაში აღმოჩენილია ჩანაწერის დუბლირებული id"
 
-#: incidencechanger.cpp:1191
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -569,7 +569,7 @@ msgstr ""
 "ერთი ცვლილება, ცვლილებათა ჯგუფიდან, ავარიულად დასრულდა. ყველა ცვლილება "
 "დაბრუნდება."
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
 msgstr "უცნობი შეცდომა"
@@ -640,7 +640,7 @@ msgid "Do Not Send"
 msgstr "არ გააგზავნო"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:502
+#: itiphandlerhelper_p.cpp:508
 #, kde-format
 msgid "Error: %1"
 msgstr "შეცდომა: %1"
@@ -719,7 +719,7 @@ msgstr "ჯგუფური დაგეგმილი ელფოსტა"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>მიმოხილვა მითითებული არაა</placeholder>"
 
-#: itiphandlerhelper_p.cpp:229
+#: itiphandlerhelper_p.cpp:235
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -728,7 +728,7 @@ msgstr ""
 "მოვლენა \"%1\" სხვა ხალხს შეიცავს.\n"
 "გნებავთ დამსწრეებს მოსაწვევი ელფოსტით გაუგზავნოთ?"
 
-#: itiphandlerhelper_p.cpp:234
+#: itiphandlerhelper_p.cpp:240
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -737,14 +737,14 @@ msgstr ""
 "განრიგი \"%1\" სხვა ხალხს შეიცავს.\n"
 "გნებავთ დამსწრეებს მოსაწვევი ელფოსტით გაუგზავნოთ?"
 
-#: itiphandlerhelper_p.cpp:239
+#: itiphandlerhelper_p.cpp:245
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "ეს გავლენა სხვა ხალხსაც შეიცავს. გავუგზავნოთ ელფოსტა დამსწრეებს?"
 
-#: itiphandlerhelper_p.cpp:263
+#: itiphandlerhelper_p.cpp:269
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -754,7 +754,7 @@ msgstr ""
 "კალენდარს ორგანიზატორის კალენდარისგან სინქრონიზაციიდან ამოაგდებს. მართლა "
 "გნებავთ, ჩაასწოროთ ის?"
 
-#: itiphandlerhelper_p.cpp:296
+#: itiphandlerhelper_p.cpp:302
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -763,18 +763,18 @@ msgstr ""
 "თქვენ შეცვალეთ მოსაწვევი \"%1\".\n"
 "გნებავთ დამსწრეების გაფრთხილება შეტყობინების განახლების შესახებ?"
 
-#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
-#: itiphandlerhelper_p.cpp:338
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:344
 #, kde-format
 msgid "Send Update"
 msgstr "განახლების გაგზავნა"
 
-#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
+#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "გნებავთ ამ ამოცანის ორგანიზატორს სტატუსის განახლება გაუგზავნოთ?"
 
-#: itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:337
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -783,7 +783,7 @@ msgstr ""
 "თქვენი, როგორც ამ მოვლენაზე დამსწრის, სტატუსი შეიცვალა. გნებავთ მოვლენის "
 "ორგანიზატორებისთვის სტატუსის განახლების შეტყობინების გაგზავნა?"
 
-#: itiphandlerhelper_p.cpp:374
+#: itiphandlerhelper_p.cpp:380
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -793,7 +793,7 @@ msgstr ""
 "გნებავთ დამსწრეებისთვის ელფოსტის გაგზავნა მოვლენის გაუქმების შესახებ "
 "შეტყობინების მიზნით?"
 
-#: itiphandlerhelper_p.cpp:379
+#: itiphandlerhelper_p.cpp:385
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -803,7 +803,7 @@ msgstr ""
 "გნებავთ დამსწრეებისთვის ელფოსტის გაგზავნა განრიგის გაუქმების შესახებ "
 "შეტყობინების მიზნით?"
 
-#: itiphandlerhelper_p.cpp:384
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -813,18 +813,18 @@ msgstr ""
 "გნებავთ დამსწრეებისთვის ელფოსტის გაგზავნა ჟურნალის გაუქმების შესახებ "
 "შეტყობინების მიზნით?"
 
-#: itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:412
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "გნებავთ ამ ჟურნალის ორგანიზატორს სტატუსის განახლება გაუგზავნოთ?"
 
-#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "განახლების გაგზავნა"
 
-#: itiphandlerhelper_p.cpp:426
+#: itiphandlerhelper_p.cpp:432
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -833,53 +833,53 @@ msgstr ""
 "ამ მოვლენის მოსაწვევს უკვე დაეთანხმეთ. გნებავთ ორგანიზატორს უარყოფის შესახებ "
 "განახლებული შეტყობინება გაუგზავნოთ?"
 
-#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:111
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "პირიქით შეთავაზება: %1"
 
-#: itiphandlerhelper_p.cpp:487
+#: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "ჯგუფური დაგეგმილი ელფოსტის გაგზავნის შეცდომა."
 
-#: itiphandlerhelper_p.cpp:495
+#: itiphandlerhelper_p.cpp:501
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "განახლების გაუქმება"
 
-#: mailclient_p.cpp:377 mailclient_p.cpp:415
+#: mailclient_p.cpp:378 mailclient_p.cpp:416
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "ამ ელფოსტას დამსწრეები არ ჰყავს"
 
-#: mailclient_p.cpp:424
+#: mailclient_p.cpp:425
 #, kde-format
 msgid "Free Busy Object"
 msgstr "თავისუფალი/დაკავებულის ობიექტი"
 
-#: mailclient_p.cpp:455 mailclient_p.cpp:483
+#: mailclient_p.cpp:459 mailclient_p.cpp:490
 #, kde-format
 msgid "Free Busy Message"
 msgstr "თავისუფალი/დაკავებულის შეტყობინება"
 
-#: mailclient_p.cpp:620
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "ტრანსპორტის შექმნის შეცდომა"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "ტრანსპორტის გამოთხოვის შეცდომა. მოსაწვევების გაგზავნა შეუძლებელია"
 
-#: mailclient_p.cpp:660
+#: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "ელფოსტის გამავლების სიაში ჩასმის შეცდომა: %1"
 
-#: mailclient_p.cpp:692
+#: mailclient_p.cpp:701
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -890,23 +890,23 @@ msgstr ""
 "შეტყობინების ხელმოწერა, თუ არა.\n"
 "მოვაწერო ხელი ამ შეტყობინებაზე?"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Sign Message?"
 msgstr "მოვაწერო ხელი შეტყობინებას?"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&ხელმოწერა"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
 msgstr "&ხელმოწერის გარეშე"
 
-#: mailclient_p.cpp:716
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -915,7 +915,7 @@ msgstr ""
 "ამ მიმღებებისთვის ურთიერთგამომრიცხავი ხელმოწერის პარამეტრებია არჩეული.\n"
 "მოვაწერო ხელი ამ შეტყობინებას?"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -924,17 +924,17 @@ msgstr ""
 "მოითხოვეთ ამ შეტყობინების ხელმოწერა, მაგრამ ამ ანგარიშისთვის სწორი "
 "ხელმოწერის გასაღებები მითითებული არაა."
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
 msgstr "გავაგზავნო ხელმოწერის გარეშე?"
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
 msgstr "&ხელმოწერის გარეშე გაგზავნა"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:763
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -945,7 +945,7 @@ msgstr ""
 "ნაწილობრივ ხელმოწერილი შეტყობინების გაზავნა კი შეიძლება აკრძალული იყოს.\n"
 "მოხდეს ყველა ნაწილის ხელმოწერა?"
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -956,27 +956,27 @@ msgstr ""
 "ხელმოუწერელი შეტყობინების გაგზავნით შეიძლება წესები დაარღვიოთ.\n"
 "მოვაწერო ხელი შეტყობინებას?"
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&ყველა ნაწილის ხელმოწერა"
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
 msgstr "&ხელმოწერა"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr "გაფრთხილება ხელმოუწერელი შეტყობინების შესახებ"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
 msgstr "&გაგზავნა, როგორც არის"
 
-#: mailclient_p.cpp:815
+#: mailclient_p.cpp:824
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -985,7 +985,7 @@ msgstr ""
 "ყველა მიმღებისთვის აღმოჩენილია სწორი დაშიფვრის გასაღებები.\n"
 "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:818
+#: mailclient_p.cpp:827
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -996,32 +996,32 @@ msgstr ""
 "ეს შეტყობინება, თუ არა.\n"
 "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:823 mailclient_p.cpp:848
+#: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "დაშიფვრა და ხელმოწერა"
 
-#: mailclient_p.cpp:824 mailclient_p.cpp:848 mailclient_p.cpp:894
+#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
 msgstr "&დაშიფვრა"
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
 msgstr "&მხოლოდ ხელმოწერა"
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&გაგზავნა, როგორც არის"
 
-#: mailclient_p.cpp:845
+#: mailclient_p.cpp:854
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1030,12 +1030,12 @@ msgstr ""
 "ამ მიმღებებისთვის ურთიერთგამომრიცხავი დაშიფვრის პარამეტრებია არჩეული.\n"
 "მოვაწერო ხელი ამ შეტყობინებას?"
 
-#: mailclient_p.cpp:848
+#: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
 msgstr "&არ დაშიფრო"
 
-#: mailclient_p.cpp:867
+#: mailclient_p.cpp:876
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1045,17 +1045,17 @@ msgstr ""
 "მოითხოვეთ ამ შეტყობინების დაშიფვრა და რომ თქვენი ასლიც დაიშიფროს, მაგრამ ამ "
 "ანგარიშისთვის სწორი დაშიფვრის გასაღებები მითითებული არაა."
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "გავაგზავნო დაუშიფრავად?"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
 msgstr "&დაუშიფრავად გაგზავნა"
 
-#: mailclient_p.cpp:885
+#: mailclient_p.cpp:894
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1068,7 +1068,7 @@ msgstr ""
 "მოხდეს ინფორმაციის გაჟონვა.\n"
 "დავშიფრო მთლიანად?"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:899
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1081,17 +1081,17 @@ msgstr ""
 "ინფორმაციის გაჟონვა.\n"
 "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&ყველა ნაწილის დაშიფვრა"
 
-#: mailclient_p.cpp:896
+#: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "გაფრთხილება დაუშიფრავი შეტყობინების შესახებ"
 
-#: mailscheduler_p.cpp:186
+#: mailscheduler_p.cpp:198
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "ელფოსტის გაგზავნის შეცდომა: "

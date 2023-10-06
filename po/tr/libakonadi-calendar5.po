@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:39+0000\n"
+"POT-Creation-Date: 2023-10-06 01:41+0000\n"
 "PO-Revision-Date: 2023-09-03 21:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -515,43 +515,43 @@ msgstr "Seçili dosya boş."
 msgid "Merge ical file into existing calendar."
 msgstr "Ical dosyasını mevcut takvimle birleştir."
 
-#: incidencechanger.cpp:251
+#: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Takvim ögesi oluşturulmaya çalışılırken hata oluştu. Hata: %1"
 
-#: incidencechanger.cpp:330
+#: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Takvim ögesi silinmeye çalışılırken hata oluştu. Hata: %1"
 
-#: incidencechanger.cpp:365
+#: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Bilinmeyen bir hata oluştu"
 
-#: incidencechanger.cpp:402
+#: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Takvim ögesi değiştirilmeye çalışılırken hata oluştu. Hata: %1"
 
-#: incidencechanger.cpp:796 incidencechanger.cpp:920
+#: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Takvim ögesi zaten silinmişti, ya da şu anda silindi."
 
-#: incidencechanger.cpp:1176
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ACL kısıtlamaları nedeniyle işlem uygulanamadı"
 
-#: incidencechanger.cpp:1179
+#: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Seçilen derleme geçersiz"
 
-#: incidencechanger.cpp:1183
+#: incidencechanger.cpp:1204
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -560,12 +560,12 @@ msgstr ""
 "Öntanımlı seçki ya geçersiz ya da uygun ACL'leri sahip değil ve "
 "DestinationPolicyNeverAsk kullanılmış"
 
-#: incidencechanger.cpp:1187
+#: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Bir grup işleminde aynı öge birden çok kez kullanılmış"
 
-#: incidencechanger.cpp:1191
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -574,7 +574,7 @@ msgstr ""
 "Bir değişim bir grup değişikliğin başarısız olmasına neden oluyor. Tüm "
 "değişiklikler geri alınıyor."
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
 msgstr "Bilinmeyen hata"
@@ -645,7 +645,7 @@ msgid "Do Not Send"
 msgstr "Gönderme"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:502
+#: itiphandlerhelper_p.cpp:508
 #, kde-format
 msgid "Error: %1"
 msgstr "Hata: %1"
@@ -724,7 +724,7 @@ msgstr "Grup Zamanlama E-postası"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Özet verilmedi</placeholder>"
 
-#: itiphandlerhelper_p.cpp:229
+#: itiphandlerhelper_p.cpp:235
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -733,7 +733,7 @@ msgstr ""
 "\"%1\" olayı diğer insanları içerir.\n"
 "Bu katılımcılara da e-posta göndermek istiyor musunuz?"
 
-#: itiphandlerhelper_p.cpp:234
+#: itiphandlerhelper_p.cpp:240
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -742,7 +742,7 @@ msgstr ""
 "\"%1\" yapılacakları diğer insanları da içeriyor.\n"
 "Bu katılımcılara da davet e-postası göndermek ister misiniz?"
 
-#: itiphandlerhelper_p.cpp:239
+#: itiphandlerhelper_p.cpp:245
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -750,7 +750,7 @@ msgid ""
 msgstr ""
 "Bu toplantı başka kişileri de içeriyor. Katılımcılara e-posta gönderilsin mi?"
 
-#: itiphandlerhelper_p.cpp:263
+#: itiphandlerhelper_p.cpp:269
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -760,7 +760,7 @@ msgstr ""
 "düzenleyicinin takvimiyle senkronizasyon olma dışında şeyler getirecek. "
 "Gerçekten olayı düzenlemek istiyor musun?"
 
-#: itiphandlerhelper_p.cpp:296
+#: itiphandlerhelper_p.cpp:302
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -769,18 +769,18 @@ msgstr ""
 "\"%1\" davetini değiştirdiniz.\n"
 "Katılımcılara güncelleme iletisi için e-posta göndermek istiyor musunuz?"
 
-#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
-#: itiphandlerhelper_p.cpp:338
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:344
 #, kde-format
 msgid "Send Update"
 msgstr "Güncelleme Gönder"
 
-#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
+#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Bu görevin düzenleyicisine durum güncellemesi göndermek istiyor musun?"
 
-#: itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:337
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -789,7 +789,7 @@ msgstr ""
 "Bu olayın bir katılımcısı olarak durumun değişti. Bu olayın düzenleyicisine "
 "durum güncellemesi göndermek istiyor musun?"
 
-#: itiphandlerhelper_p.cpp:374
+#: itiphandlerhelper_p.cpp:380
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -798,7 +798,7 @@ msgstr ""
 "\"%1\" davetini kaldırdın.\n"
 "Bu olayın iptal edildiğini katılımcılara e-posta ile bildirmek ister misin?"
 
-#: itiphandlerhelper_p.cpp:379
+#: itiphandlerhelper_p.cpp:385
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -808,7 +808,7 @@ msgstr ""
 "Yapılacakların iptal edildiğini katılımcılara e-posta ile bildirmek ister "
 "misin?"
 
-#: itiphandlerhelper_p.cpp:384
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -817,19 +817,19 @@ msgstr ""
 "\"%1\" davetini sildiniz.\n"
 "Katılımcılara e-posta ile iptali haber vermek ister misiniz?"
 
-#: itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:412
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Bu davetin düzenleyicisine bir durum güncellemesi göndermek ister misiniz?"
 
-#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Güncelleme Gönder"
 
-#: itiphandlerhelper_p.cpp:426
+#: itiphandlerhelper_p.cpp:432
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -838,53 +838,53 @@ msgstr ""
 "Bu olayın bir davetini daha önceden kabul ettin. Düzenleyene davetini "
 "reddeden güncellenmiş bir cevap göndermek ister misin?"
 
-#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:111
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Karşıt öneri: %1"
 
-#: itiphandlerhelper_p.cpp:487
+#: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Grup programına e-posta gönderimi başarısız oldu."
 
-#: itiphandlerhelper_p.cpp:495
+#: itiphandlerhelper_p.cpp:501
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Güncellemeyi Durdur"
 
-#: mailclient_p.cpp:377 mailclient_p.cpp:415
+#: mailclient_p.cpp:378 mailclient_p.cpp:416
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Bu e-postayı alacak katılımcı yok"
 
-#: mailclient_p.cpp:424
+#: mailclient_p.cpp:425
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Uygun Meşgul Nesnesi"
 
-#: mailclient_p.cpp:455 mailclient_p.cpp:483
+#: mailclient_p.cpp:459 mailclient_p.cpp:490
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Uygun Meşgul İletisi"
 
-#: mailclient_p.cpp:620
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Taşıma oluşturulurken hata"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Taşımayı getirirken hata oluştu. Davetler gönderilemiyor"
 
-#: mailclient_p.cpp:660
+#: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Giden kutusunda hata kuyruklama iletisi: %1"
 
-#: mailclient_p.cpp:692
+#: mailclient_p.cpp:701
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -895,23 +895,23 @@ msgstr ""
 "imzalanmaması gerektiğinin sorulmasını gerektiriyor.\n"
 "Bu ileti imzalansın mı?"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Sign Message?"
 msgstr "İleti İmzalansın mı?"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "İ&mzala"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
 msgstr "İm&zalama"
 
-#: mailclient_p.cpp:716
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -920,7 +920,7 @@ msgstr ""
 "Bu alıcılar için çakışan imzalama tercihleri var.\n"
 "Bu ileti imzalansın mı?"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -929,17 +929,17 @@ msgstr ""
 "Bu iletinin imzalanmasını istediniz; ancak bu kimlik için geçerli bir "
 "imzalama anahtarı yapılandırılmamış."
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
 msgstr "İmzalanmamış Olarak Gönderilsin mi?"
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
 msgstr "İm&zalanmamış Olarak Gönder"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:763
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -951,7 +951,7 @@ msgstr ""
 "olabilir.\n"
 "Bunun yerine tüm kısımlar imzalansın mı?"
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -962,27 +962,27 @@ msgstr ""
 "İmzalanmamış iletiler göndermek site politikasına karşı olabilir.\n"
 "Bunun yerine ileti imzalansın mı?"
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Tüm Kısımları İmzala"
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
 msgstr "İ&mzala"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr "İmzalanmamış İleti Uyarısı"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
 msgstr "Olduğu &Gibi Gönder"
 
-#: mailclient_p.cpp:815
+#: mailclient_p.cpp:824
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -991,7 +991,7 @@ msgstr ""
 "Tüm alıcılar için geçerli şifreleme anahtarları bulundu.\n"
 "Bu ileti şifrelensin mi?"
 
-#: mailclient_p.cpp:818
+#: mailclient_p.cpp:827
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1002,32 +1002,32 @@ msgstr ""
 "şifrelenmemesi gerektiğinin sorulmasını gerektiriyor.\n"
 "Bu ileti şifrelensin mı?"
 
-#: mailclient_p.cpp:823 mailclient_p.cpp:848
+#: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "İleti Şifrelensin mi?"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "İmzala ve Ş&ifrele"
 
-#: mailclient_p.cpp:824 mailclient_p.cpp:848 mailclient_p.cpp:894
+#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
 msgstr "Ş&ifrele"
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
 msgstr "Yalnızca İ&mzala"
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Olduğu &Gibi Gönder"
 
-#: mailclient_p.cpp:845
+#: mailclient_p.cpp:854
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1036,12 +1036,12 @@ msgstr ""
 "Bu alıcılar için çakışan şifreleme tercihleri var.\n"
 "Bu ileti şifrelensin mı?"
 
-#: mailclient_p.cpp:848
+#: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
 msgstr "Ş&ifreleme"
 
-#: mailclient_p.cpp:867
+#: mailclient_p.cpp:876
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1052,17 +1052,17 @@ msgstr ""
 "istediniz; ancak bu kimlik için geçerli güvenilir bir şifreleme anahtarı "
 "yapılandırılmamış."
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Şifrelenmemiş Olarak Gönderilsin mi?"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
 msgstr "Şi&frelenmemiş Olarak Gönder"
 
-#: mailclient_p.cpp:885
+#: mailclient_p.cpp:894
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1075,7 +1075,7 @@ msgstr ""
 "olabilir ve/veya hassas bilgiler sızdırabilir.\n"
 "Bunun yerine tüm kısımlar şifrelensin mı?"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:899
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1088,17 +1088,17 @@ msgstr ""
 "hassas bilgiler sızdırabilir.\n"
 "Bunun yerine ileti şifrelensin mı?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Tüm Kısımları Ş&ifrele"
 
-#: mailclient_p.cpp:896
+#: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Şifrelenmemiş İleti Uyarısı"
 
-#: mailscheduler_p.cpp:186
+#: mailscheduler_p.cpp:198
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "E-posta gönderilirken hata: "

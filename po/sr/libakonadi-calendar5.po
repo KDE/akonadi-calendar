@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:39+0000\n"
+"POT-Creation-Date: 2023-10-06 01:41+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -526,46 +526,46 @@ msgstr "И‑календарски фајл за стапање је праза
 msgid "Merge ical file into existing calendar."
 msgstr "Стапам и‑календарски фајл у постојећи календар."
 
-#: incidencechanger.cpp:251
+#: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Грешка при покушају стварања календарске ставке: %1"
 
-#: incidencechanger.cpp:330
+#: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Грешка при покушају брисања календарске ставке: %1"
 
-#: incidencechanger.cpp:365
+#: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Непозната грешка."
 
-#: incidencechanger.cpp:402
+#: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Грешка при покушају мењања календарске ставке: %1"
 
-#: incidencechanger.cpp:796 incidencechanger.cpp:920
+#: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Та календарска ставка већ је обрисана, или је брисање у току."
 
 # >> @info
-#: incidencechanger.cpp:1176
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Поступак не може да се изврши због АЦЛ ограничења."
 
 # >> @info
-#: incidencechanger.cpp:1179
+#: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Изабран збирка је лоша."
 
 # >> @info
-#: incidencechanger.cpp:1183
+#: incidencechanger.cpp:1204
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -575,13 +575,13 @@ msgstr ""
 "DestinationPolicyNeverAsk."
 
 # >> @info
-#: incidencechanger.cpp:1187
+#: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Удвостручени ИД ставке у групном поступку."
 
 # >> @info
-#: incidencechanger.cpp:1191
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -589,7 +589,7 @@ msgid ""
 msgstr "Једна од измена из групе измена није прошла. Враћају се све измене."
 
 # >> @info
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
 msgstr "Непозната грешка."
@@ -661,7 +661,7 @@ msgid "Do Not Send"
 msgstr "Не шаљи"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:502
+#: itiphandlerhelper_p.cpp:508
 #, kde-format
 msgid "Error: %1"
 msgstr "Грешка: %1"
@@ -749,7 +749,7 @@ msgstr "Порука за групно заказивање"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Нема сажетка</placeholder>"
 
-#: itiphandlerhelper_p.cpp:229
+#: itiphandlerhelper_p.cpp:235
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -758,7 +758,7 @@ msgstr ""
 "Догађај „%1“ укључује друге људе.\n"
 "Желите ли да присутнима пошаљете позивницу е‑поштом?"
 
-#: itiphandlerhelper_p.cpp:234
+#: itiphandlerhelper_p.cpp:240
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -768,14 +768,14 @@ msgstr ""
 "Желите ли да присутнима пошаљете позивницу е‑поштом?"
 
 # rewrite-msgid: /email/message/
-#: itiphandlerhelper_p.cpp:239
+#: itiphandlerhelper_p.cpp:245
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "Овај случај укључује друге људе. Треба ли присутнима послати поруку?"
 
-#: itiphandlerhelper_p.cpp:263
+#: itiphandlerhelper_p.cpp:269
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -784,7 +784,7 @@ msgstr ""
 "Ви нисте организатор овог догађаја. Ако га уредите, ваш календар ће се "
 "разићи са организаторовим. Желите ли заиста да га уредите?"
 
-#: itiphandlerhelper_p.cpp:296
+#: itiphandlerhelper_p.cpp:302
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -793,18 +793,18 @@ msgstr ""
 "Изменили сте позивницу „%1“.\n"
 "Желите ли да присутнима пошаљете допуну е‑поштом?"
 
-#: itiphandlerhelper_p.cpp:304 itiphandlerhelper_p.cpp:325
-#: itiphandlerhelper_p.cpp:338
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:344
 #, kde-format
 msgid "Send Update"
 msgstr "Пошаљи допуну"
 
-#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
+#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Желите ли да пошаљете допуну статуса организатору овог задатка?"
 
-#: itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:337
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -813,7 +813,7 @@ msgstr ""
 "Измењен је ваш статус као присутног у овом догађају. Желите ли да пошаљете "
 "допуну статуса организатору догађаја?"
 
-#: itiphandlerhelper_p.cpp:374
+#: itiphandlerhelper_p.cpp:380
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -822,7 +822,7 @@ msgstr ""
 "Уклонили сте позивницу „%1“.\n"
 "Желите ли да присутне обавестите е‑поштом да је догађај отказан?"
 
-#: itiphandlerhelper_p.cpp:379
+#: itiphandlerhelper_p.cpp:385
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -831,7 +831,7 @@ msgstr ""
 "Уклонили сте позивницу „%1“.\n"
 "Желите ли да присутне обавестите е‑поштом да је обавеза отказана?"
 
-#: itiphandlerhelper_p.cpp:384
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -840,18 +840,18 @@ msgstr ""
 "Уклонили сте позивницу „%1“.\n"
 "Желите ли да присутне обавестите е‑поштом да је дневник отказан?"
 
-#: itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:412
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Желите ли да пошаљете допуну статуса организатору овог дневника?"
 
-#: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Пошаљи допуну"
 
-#: itiphandlerhelper_p.cpp:426
+#: itiphandlerhelper_p.cpp:432
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -860,54 +860,54 @@ msgstr ""
 "Раније сте прихватили позивницу за овај догађај. Желите ли да пошаљете "
 "допунски одговор организатору којим одбијате позивницу?"
 
-#: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:111
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Противпредлог: %1"
 
 # rewrite-msgid: /email/message/
-#: itiphandlerhelper_p.cpp:487
+#: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Слање поруке за групно заказивање није прошло."
 
-#: itiphandlerhelper_p.cpp:495
+#: itiphandlerhelper_p.cpp:501
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Обустави ажурирање"
 
-#: mailclient_p.cpp:377 mailclient_p.cpp:415
+#: mailclient_p.cpp:378 mailclient_p.cpp:416
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Нема присутних којим треба писати."
 
-#: mailclient_p.cpp:424
+#: mailclient_p.cpp:425
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Објекат слободно-заузето"
 
-#: mailclient_p.cpp:455 mailclient_p.cpp:483
+#: mailclient_p.cpp:459 mailclient_p.cpp:490
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Порука слободно-заузето"
 
-#: mailclient_p.cpp:620
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Грешка при стварању транспорта."
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Грешка при добављању транспорта. Не могу да шаљем позивнице."
 
-#: mailclient_p.cpp:660
+#: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Грешка при стављању поруке у ред одлазног: %1"
 
-#: mailclient_p.cpp:692
+#: mailclient_p.cpp:701
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -916,51 +916,51 @@ msgid ""
 msgstr ""
 
 # >! @action:button
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, fuzzy, kde-format
 #| msgctxt "@option"
 #| msgid "Send Messages"
 msgid "Sign Message?"
 msgstr "Пошаљи поруке"
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr ""
 
-#: mailclient_p.cpp:696 mailclient_p.cpp:719
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
 msgid "Do &Not Sign"
 msgstr "Не шаљи"
 
-#: mailclient_p.cpp:716
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
 msgstr ""
 
-#: mailclient_p.cpp:741
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
 msgstr ""
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:763
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -968,7 +968,7 @@ msgid ""
 "Sign all parts instead?"
 msgstr ""
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -976,34 +976,34 @@ msgid ""
 "Sign message instead?"
 msgstr ""
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
 msgstr ""
 
-#: mailclient_p.cpp:761
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
 msgstr ""
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr ""
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
 msgstr ""
 
-#: mailclient_p.cpp:815
+#: mailclient_p.cpp:824
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
 
-#: mailclient_p.cpp:818
+#: mailclient_p.cpp:827
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1012,48 +1012,48 @@ msgid ""
 msgstr ""
 
 # >! @action:button
-#: mailclient_p.cpp:823 mailclient_p.cpp:848
+#: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, fuzzy, kde-format
 #| msgctxt "@option"
 #| msgid "Send Messages"
 msgid "Encrypt Message?"
 msgstr "Пошаљи поруке"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:824 mailclient_p.cpp:848 mailclient_p.cpp:894
+#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
 msgstr ""
 
-#: mailclient_p.cpp:825 mailclient_p.cpp:898
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
 msgstr ""
 
-#: mailclient_p.cpp:845
+#: mailclient_p.cpp:854
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
 
-#: mailclient_p.cpp:848
+#: mailclient_p.cpp:857
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
 msgid "Do &Not Encrypt"
 msgstr "Не шаљи"
 
-#: mailclient_p.cpp:867
+#: mailclient_p.cpp:876
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1061,19 +1061,19 @@ msgid ""
 "identity."
 msgstr ""
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, fuzzy, kde-format
 #| msgid "Send Update"
 msgid "Send Unencrypted?"
 msgstr "Пошаљи допуну"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:880
 #, fuzzy, kde-format
 #| msgid "Send Update"
 msgid "Send &Unencrypted"
 msgstr "Пошаљи допуну"
 
-#: mailclient_p.cpp:885
+#: mailclient_p.cpp:894
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1082,7 +1082,7 @@ msgid ""
 "Encrypt all parts instead?"
 msgstr ""
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:899
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1091,17 +1091,17 @@ msgid ""
 "Encrypt messages instead?"
 msgstr ""
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr ""
 
-#: mailclient_p.cpp:896
+#: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr ""
 
-#: mailscheduler_p.cpp:186
+#: mailscheduler_p.cpp:198
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Грешка при слању е‑поште: "
