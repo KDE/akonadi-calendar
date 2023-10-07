@@ -1070,7 +1070,7 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
-"Heu sol·licitat encriptar este missatge, i encriptar una còpia per a vós, "
+"Heu sol·licitat encriptar este missatge, i encriptar una còpia per a tu, "
 "però no s'ha configurat cap clau fiable d'encriptació vàlida per a esta "
 "identitat."
 
