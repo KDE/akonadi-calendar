@@ -817,7 +817,7 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
     case Kleo::AskOpportunistic:
         opportunistic = true;
         // fall through...
-        Q_FALLTHROUGH();
+        [[fallthrough]];
     case Kleo::Ask: {
         // the user wants to be asked or has to be asked
         const QString msg = opportunistic ? i18n(

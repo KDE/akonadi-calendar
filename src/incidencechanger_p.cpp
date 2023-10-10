@@ -174,7 +174,7 @@ void IncidenceChangerPrivate::step1DetermineDestinationCollection(const Change::
                                            << "isValid = " << mDefaultCollection.isValid()
                                            << "has ACLs = " << hasRights(mDefaultCollection, IncidenceChanger::ChangeTypeCreate);
             // else fallthrough, and ask the user.
-            Q_FALLTHROUGH();
+            [[fallthrough]];
         case IncidenceChanger::DestinationPolicyAsk:
             mPendingCreations << change;
             loadCollections(); // Now we wait, collections are being loaded async
