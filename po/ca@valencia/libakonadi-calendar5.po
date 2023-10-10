@@ -605,7 +605,9 @@ msgstr "Missatge d'error: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr "S'ha produït un error desconegut en analitzar una invitació d'iCal"
+msgstr ""
+"S'ha produït un error desconegut en l'anàlisi sintàctica d'una invitació "
+"d'iCal"
 
 #: itiphandler.cpp:125
 #, kde-format
