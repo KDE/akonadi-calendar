@@ -1,14 +1,15 @@
 # translation of libakonadi-calendar5.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2014, 2015, 2016, 2022.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:41+0000\n"
-"PO-Revision-Date: 2022-04-07 17:45+0200\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"PO-Revision-Date: 2023-10-11 18:44+0200\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,11 +58,10 @@ msgstr ""
 "podúlohami?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "KOrganizer Potvrdenie"
+msgstr "Potvrdenie KOrganizer"
 
 #: calendarclipboard.cpp:181
 #, kde-format
@@ -271,94 +271,89 @@ msgstr ""
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
 #: todomodel.cpp:477
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar title"
-#| msgid "Calendar"
+#, kde-format
 msgid "Calendar"
 msgstr "Kalendár"
 
 #: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Úlohy"
 
 #: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cut Journal"
-#| msgid_plural "Cut %1 Journals"
+#, kde-format
 msgid "Journal"
-msgstr "Vystrihnúť žurnál"
+msgstr "Žurnál"
 
 #: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "Poznámky"
 
 #: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
-msgstr ""
+msgstr "Môj Kolab %1"
 
 #: calendarutils.cpp:135
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
-msgstr ""
+msgstr "Zdieľané Kolab %1 %2"
 
 #: calendarutils.cpp:138
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr ""
+msgstr "Kolab %2 od %1"
 
 #: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
-msgstr ""
+msgstr "%2 Kolab %3 od %1"
 
 #: calendarutils.cpp:144
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
-msgstr ""
+msgstr "Kolab %1"
 
 #: calendarutils.cpp:151
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr ""
+msgstr "%1 v %2"
 
 #: calendarutils.cpp:184
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr ""
+msgstr "Google %2 od %1"
 
 #: calendarutils.cpp:186
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
-msgstr ""
+msgstr "%2 od %1"
 
 #: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr ""
+msgstr "Google %1"
 
 #: calendarutils.cpp:197
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "Moje %1"
 
 #: calendarutils.cpp:201
-#, fuzzy, kde-format
-#| msgid "Unknown error"
+#, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr "Neznáma chyba"
+msgstr "Neznámy"
 
 #: freebusymanager.cpp:376
 #, kde-format
@@ -370,8 +365,7 @@ msgstr ""
 "Dôvod: %2"
 
 #: freebusymanager.cpp:377 freebusymanager.cpp:400
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Chyba pri získavaní voľný/zaneprázdnený"
@@ -401,8 +395,7 @@ msgid "The free/busy information was successfully sent."
 msgstr "Informácia voľný/zaneprázdnený bola úspešne odoslaná."
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Posielanie voľný/zaneprázdnený"
@@ -425,8 +418,7 @@ msgstr ""
 "presné URL a podrobnosti o účte.</p></qt>"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Žiadne URL pre nahratie voľný/zaneprázdnený"
@@ -437,8 +429,7 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Poskytnuté cieľové URL '%1' je neplatné.</qt>"
 
 #: freebusymanager.cpp:759
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Neplatné URL"
@@ -631,11 +622,10 @@ msgstr ""
 "správa."
 
 #: itiphandler.cpp:274
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr "Správa neposlaná"
+msgstr "Správa neodoslaná"
 
 #: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
@@ -686,8 +676,7 @@ msgid "The item information was successfully sent."
 msgstr "Informácia položky bola úspešne odoslaná."
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publikovanie"
@@ -698,11 +687,10 @@ msgid "Unable to publish the item '%1'"
 msgstr "Nemožno publikovať položku '%1'"
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr "Preposlanie"
+msgstr "Preposielanie"
 
 #: itiphandler_p.cpp:188
 #, kde-format
@@ -710,11 +698,10 @@ msgid "Unable to forward the item '%1'"
 msgstr "Nemožno preposlať položku '%1'"
 
 #: itiphandler_p.cpp:189
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr "Chyba preposlania"
+msgstr "Chyba preposielania"
 
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
@@ -722,8 +709,7 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Navrhnutý nový čas stretnutia: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:67
-#, fuzzy, kde-format
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-mail skupinového plánovania"
@@ -898,26 +884,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Preskúmaním podpisových predvolieb príjemcu sa zistilo, že máte byť "
+"požiadaní, aby ste túto správu podpísali alebo nie.\n"
+"Podpísať túto správu?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Poslať správy"
+msgstr "Podpísať správu?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "Podpí&sať"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Neposielať"
+msgstr "&Nepodpisovať"
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -925,6 +910,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Pre týchto príjemcov existujú protichodné podpisové predvoľby.\n"
+"Podpísať túto správu?"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -932,16 +919,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Požiadali ste o podpísanie tejto správy, ale pre túto identitu neboli "
+"nakonfigurované žiadne platné podpisové kľúče."
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Poslať nepodpísané?"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Poslať nepodpísané"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -950,6 +939,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Niektoré časti tejto správy nebudú podpísané.\n"
+"Posielanie len čiastočne podpísaných správ môže byť v rozpore so zásadami "
+"lokality.\n"
+"Podpísať namiesto toho všetky časti?"
 
 #: mailclient_p.cpp:767
 #, kde-format
@@ -958,26 +951,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Táto správa nebude podpísaná.\n"
+"Odoslanie nepodpísanej správy môže byť v rozpore so zásadami lokality.\n"
+"Podpísať správu namiesto toho?"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "Podpí&sať všetky časti"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "Podpí&sať"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Upozornenie na nepodpísanú správu"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "Posl&ať ako je"
 
 #: mailclient_p.cpp:824
 #, kde-format
@@ -985,6 +981,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Pre všetkých príjemcov boli nájdené platné dôveryhodné šifrovacie kľúče.\n"
+"Šifrovať túto správu?"
 
 #: mailclient_p.cpp:827
 #, kde-format
@@ -993,33 +991,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Preskúmaním šifrovacích predvolieb príjemcu sa zistilo, že máte byť "
+"požiadaní, aby ste túto správu zašifrovali alebo nie.\n"
+"Šifrovať túto správu?"
 
 #: mailclient_p.cpp:832 mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Poslať správy"
+msgstr "Šifrovať správu?"
 
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Podpísať a zašifrovať"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "Šifrovať"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Iba podpísať"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Posl&ať ako je"
 
 #: mailclient_p.cpp:854
 #, kde-format
@@ -1027,13 +1026,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Pre týchto príjemcov existujú protichodné šifrovacie predvoľby.\n"
+"Šifrovať túto správu?"
 
 #: mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Neposielať"
+msgstr "&Nešifrovať"
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1042,18 +1041,19 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Požiadali ste o zašifrovanie tejto správy a zašifrovanie kópie pre seba, ale "
+"pre túto identitu neboli nakonfigurované žiadne platné dôveryhodné "
+"šifrovacie kľúče."
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Poslať aktualizáciu"
+msgstr "Poslať nezašifrované?"
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Poslať aktualizáciu"
+msgstr "Poslať nezašifrované"
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1063,6 +1063,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Niektoré časti tejto správy nebudú šifrované.\n"
+"Posielanie len čiastočne zašifrovaných správ môže byť v rozpore so zásadami "
+"lokality a/alebo spôsobiť únik citlivých informácií.\n"
+"Šifrovať namiesto toho všetky časti?"
 
 #: mailclient_p.cpp:899
 #, kde-format
@@ -1072,16 +1076,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Táto správa nebude šifrovaná.\n"
+"Odoslanie nezašifrovanej správy môže byť v rozpore so zásadami lokality a/"
+"alebo spôsobiť únik citlivých informácií..\n"
+"Šifrovať správy namiesto toho?"
 
 #: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "Šifrovať všetky časti"
 
 #: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Upozornenie na nezašifrovanú správu"
 
 #: mailscheduler_p.cpp:198
 #, kde-format
@@ -1129,20 +1137,17 @@ msgstr ""
 "Kliknite na tlačidlo <b>Pomoc</b>pre viac informácií o skupinovom plánovaní."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
-"Nemožno zverejniť udalosť kalendára kvôli neplatnému reťazcu príjemcov. %1"
+"Nemožno publikovať udalosť kalendára kvôli neplatnému reťazcu príjemcov.\n"
+"%1"
 
 #: publishdialog.cpp:125
-#, fuzzy, kde-format
-#| msgid "Publishing Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Chyba publikovania"
@@ -1313,12 +1318,10 @@ msgstr ""
 "vedeli.</para>"
 
 #: scheduler_p.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cannot find invitation to be updated"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Nemôžem nájsť pozvánku na aktualizáciu"
+msgstr "Nie je možné nájsť pozvánku na aktualizáciu"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1366,9 +1369,7 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 sa chce zúčastniť %2 menom %3."
 
 #: scheduler_p.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nepozvaný účastník"
@@ -1402,9 +1403,7 @@ msgstr ""
 "správu e-mailom?"
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Účastník pridaný"
@@ -1440,13 +1439,13 @@ msgstr "Chyba ukladania objekty freebusy"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Odmietnuté pozvánky"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Otvorené pozvánky"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1471,11 +1470,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Nemôžem vytvoriť priečinok kalendára: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr "Vymazanie priečinka kalendára zlyhalo"
+msgstr "Vytvorenie priečinka kalendára zlyhalo"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
@@ -1517,10 +1515,7 @@ msgstr[2] ""
 "Naozaj chcete vymazať %1 priečinkov kalendára a všetky ich podpriečinky?"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
@@ -1534,8 +1529,7 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Nemôžem vymazať priečinok kalendára: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
 msgstr "Vymazanie priečinka kalendára zlyhalo"
@@ -1631,8 +1625,7 @@ msgid "Could not delete event: %1"
 msgstr "Nemôžem vymazať udalosť: %1"
 
 #: standardcalendaractionmanager.cpp:130
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
 msgstr "Vymazanie udalosti zlyhalo"
@@ -1676,8 +1669,7 @@ msgid "Could not create calendar: %1"
 msgstr "Nemôžem vytvoriť kalendár: %1"
 
 #: standardcalendaractionmanager.cpp:151
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
 msgstr "Vytvorenie kalendára zlyhalo"
@@ -1765,11 +1757,10 @@ msgid "Could not paste event: %1"
 msgstr "Nemôžem vložiť udalosť: %1"
 
 #: standardcalendaractionmanager.cpp:192
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "Vloženie sa nepodarilo"
+msgstr "Vloženie zlyhalo"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
@@ -1928,71 +1919,59 @@ msgstr "Upraviť vybraný výskyt."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Výnimka"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Áno"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Súhrn"
 
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Opakuje sa"
 
 #: todomodel.cpp:463
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Priorita"
 
 #: todomodel.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Dokončené"
 
 #: todomodel.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Počiatočný dátum a čas"
+msgstr "Dátum začiatku"
 
 #: todomodel.cpp:469
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Dátum a čas splnenia"
+msgstr "Termín splnenia"
 
 #: todomodel.cpp:471
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Dokončené"
@@ -2000,12 +1979,12 @@ msgstr "Dokončené"
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Značky"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: todopurger.cpp:61
 #, kde-format
