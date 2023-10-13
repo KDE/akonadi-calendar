@@ -3,14 +3,14 @@
 # Xosé <xosecalvo@gmail.com>, 2011.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-26 02:27+0000\n"
-"PO-Revision-Date: 2023-06-24 10:33+0200\n"
+"PO-Revision-Date: 2023-10-12 23:45+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "URL de publicación da dispoñibilidade"
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr "O URL onde publicar a información de dispoñíbel/ocupado"
+msgstr "O URL onde publicar a información de dispoñíbel/ocupado."
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
@@ -167,7 +167,7 @@ msgstr "Nome de usuaria de publicación da dispoñibilidade"
 #: calendarsettings.kcfg:29
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr "O nome de usuaria que publica a información de dispoñíbel/ocupado"
+msgstr "O nome de usuaria que publica a información de dispoñíbel/ocupado."
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:33
@@ -179,7 +179,7 @@ msgstr "Contrasinal de publicación da dispoñibilidade"
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr "O contrasinal onde publicar a información de dispoñíbel/ocupado"
+msgstr "O contrasinal onde publicar a información de dispoñíbel/ocupado."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
@@ -203,9 +203,9 @@ msgid ""
 "download user.ifb, for example nn.ifb."
 msgstr ""
 "Con este parámetro pode cambiar o nome do ficheiro que se ha obter do "
-"servidor. Se marca esta opción ha obter un ficheiro chamado usuario@dominio."
-"ifb, p.ex. trasno@kde.org.ifb. Se non o define ha descargar usuario.ifb, p."
-"ex. trasno.ifb."
+"servidor. Se marca esta opción ha obter un ficheiro chamado usuaria@dominio."
+"exemplo, p. ex. trasno@kde.org.exemplo. Se non o define ha descargar usuaria."
+"exemplo, p .ex. trasno.exemplo."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
@@ -229,7 +229,7 @@ msgstr "Contrasinal para obter a dispoñibilidade"
 #: calendarsettings.kcfg:65
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr "Contrasinal para obter a dispoñibilidade"
+msgstr "Contrasinal para obter a dispoñibilidade."
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:76
@@ -271,10 +271,10 @@ msgid ""
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
 "Con este parámetro pode configurar se a parte do dominio do URL de "
-"dispoñibilidade debe coincidir co dominio do ID de usuario que está a "
+"dispoñibilidade debe coincidir co dominio do ID de persoa usuaria que está a "
 "buscar. Por exemplo, se activa esta opción cando busque os datos de "
-"dispoñibilidade de pepe@undominio.com no servidor www.outrodominio.com ha "
-"fallar."
+"dispoñibilidade de pepe@undominio.example no servidor www.outrodominio."
+"example ha fallar."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
 #: todomodel.cpp:458
@@ -391,10 +391,10 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p>O software non puido enviar a súa lista de dispoñibilidade ao URL "
-"«%1». Isto pode ser un problema cos dereitos de acceso, ou que indicase un "
-"URL incorrecto. O sistema dixo: <em>%2</em>.</p><p>Comprobe o URL ou "
-"contacte co administrador do sistema.</p></qt>"
+"<qt><p>O soporte lóxico non puido enviar a súa lista de dispoñibilidade ao "
+"URL «%1». Isto pode ser un problema cos dereitos de acceso, ou que indicase "
+"un URL incorrecto. O sistema dixo: <em>%2</em>.</p><p>Comprobe o URL ou "
+"contacte co equipo administrador do sistema.</p></qt>"
 
 #: freebusymanager.cpp:615
 #, kde-format
@@ -421,8 +421,8 @@ msgid ""
 msgstr ""
 "<qt><p>Non se configurou ningún URL para enviar a súa lista de "
 "dispoñibilidade. Defínao no diálogo de configuración de KOrganizer, na "
-"páxina de «Dispoñibilidade».</p><p>Contacte co administrador do sistema para "
-"coñecer o URL exacto e os detalles da conta.</p></qt>"
+"páxina de «Dispoñibilidade».</p><p>Contacte coa administración do sistema "
+"para coñecer o URL exacto e os detalles da conta.</p></qt>"
 
 #: freebusymanager.cpp:748
 #, kde-format
@@ -507,7 +507,7 @@ msgid ""
 "this software."
 msgstr ""
 "O ficheiro seleccionado non está ben formatado, ou está nun formato que este "
-"software non admite."
+"soporte lóxico non admite."
 
 #: icalimporter.cpp:194
 #, kde-format
@@ -553,7 +553,7 @@ msgstr "Ese elemento do calendario xa estaba eliminado, ou está a eliminarse."
 #: incidencechanger.cpp:1176
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr "A operación non se pode efectuar debido a restricións na ACL"
+msgstr "Non é posíbel realizar a operación por restricións na ACL."
 
 #: incidencechanger.cpp:1179
 #, kde-format
@@ -574,6 +574,7 @@ msgstr ""
 msgid "Duplicate item id in a group operation"
 msgstr "ID de elemento duplicado nunha operación de grupo"
 
+# skip-rule: trasno-expression_failed.
 #: incidencechanger.cpp:1191
 #, kde-format
 msgid ""
@@ -601,7 +602,7 @@ msgstr "Mensaxe de erro: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr "Erro descoñecido ao analizar a invitación de iCal"
+msgstr "Produciuse un erro descoñecido ao analizar a invitación de iCal."
 
 #: itiphandler.cpp:125
 #, kde-format
@@ -722,7 +723,7 @@ msgstr "Erro de reenvío"
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr "Propúxose unha hora nova para a reunión: %1 - %2"
+msgstr "Propúxose unha hora nova para a reunión: %1 — %2"
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
@@ -742,7 +743,7 @@ msgid ""
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 "O evento «%1» inclúe outra xente.\n"
-"Quere enviarlles aos asistentes un correo coa invitación?"
+"Quere escribir un correo aos asistentes coa invitación?"
 
 #: itiphandlerhelper_p.cpp:234
 #, kde-format
@@ -751,7 +752,7 @@ msgid ""
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 "A tarefa pendente «%1» inclúe outra xente.\n"
-"Quere enviarlles aos asistentes un correo coa invitación?"
+"Quere escribir un correo aos asistentes coa invitación?"
 
 #: itiphandlerhelper_p.cpp:239
 #, kde-format
@@ -768,8 +769,8 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
-"Non é o organizador deste evento. Se o edita fará que o seu calendario non "
-"estea sincronizado co do organizador. Seguro que quere editalo?"
+"Non organiza este evento. Se o edita fará que o seu calendario non estea "
+"sincronizado co de quen o organiza. Seguro que quere editalo?"
 
 #: itiphandlerhelper_p.cpp:296
 #, kde-format
@@ -789,7 +790,7 @@ msgstr "Enviar unha actualización"
 #: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:403
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
-msgstr "Quere enviar unha actualización do estado ao organizador desta tarefa?"
+msgstr "Quere enviar unha actualización do estado a quen organiza a tarefa?"
 
 #: itiphandlerhelper_p.cpp:331
 #, kde-format
@@ -798,7 +799,7 @@ msgid ""
 "status update to the event organizer?"
 msgstr ""
 "Cambiou o seu estado como asistente a este evento. Quere enviar unha "
-"actualización do estado ao organizador?"
+"actualización do estado a quen organiza o evento?"
 
 #: itiphandlerhelper_p.cpp:374
 #, kde-format
@@ -827,12 +828,13 @@ msgid ""
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
 "Retirou a invitación «%1».\n"
-"Quere enviar un correo aos asistentes notificando a cancelación do diario?"
+"Quere escribir aos asistentes por correo electrónico para notificarlles a "
+"cancelación do diario?"
 
 #: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr "Quere enviar unha actualización do estado ao organizador deste diario?"
+msgstr "Quere enviar unha actualización do estado a quen organiza o diario?"
 
 #: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
@@ -847,7 +849,7 @@ msgid ""
 "an updated response to the organizer declining the invitation?"
 msgstr ""
 "Anteriormente aceptara unha invitación a este evento. Quere enviar unha "
-"resposta actualizada ao organizador rexeitando a invitación?"
+"resposta actualizada a quen organiza o evento rexeitando a invitación?"
 
 #: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
@@ -857,7 +859,7 @@ msgstr "Contraproposta: %1"
 #: itiphandlerhelper_p.cpp:487
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr "Fallou o envío do correo de planificación de grupo."
+msgstr "Produciuse un erro ao enviar a mensaxe de planificación de grupo."
 
 #: itiphandlerhelper_p.cpp:495
 #, kde-format
@@ -868,7 +870,7 @@ msgstr "Interromper a actualización"
 #: mailclient_p.cpp:376 mailclient_p.cpp:413
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr "Non hai asistentes aos que enviarlles un correo"
+msgstr "Non hai asistentes a quen escribir por correo electrónico"
 
 #: mailclient_p.cpp:422
 #, kde-format
@@ -889,7 +891,8 @@ msgstr "Producise un erro ao crear o transporte"
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr ""
-"Produciuse un erro ao obter o transporte. Non se poden enviar as invitacións"
+"Produciuse un erro ao obter o transporte. Non é posíbel enviar as "
+"invitacións."
 
 #: mailclient_p.cpp:653
 #, kde-format
@@ -903,26 +906,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Tras examinar as preferencias de sinatura do destinatario, toca preguntarlle "
+"a vostede se quere asinar a mensaxe.\n"
+"Quere asinala?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Enviar mensaxes"
+msgstr "Asinar a mensaxe?"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Asinar"
 
 #: mailclient_p.cpp:689 mailclient_p.cpp:712
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Non enviar"
+msgstr "&Non asinar"
 
 #: mailclient_p.cpp:709
 #, kde-format
@@ -930,6 +932,9 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Existen preferencias en conflito sobre as sinaturas para estes "
+"destinatarios.\n"
+"Quere asinar a mensaxe?"
 
 #: mailclient_p.cpp:731
 #, kde-format
@@ -937,16 +942,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Solicitou asinar a mensaxe, pero non hai chaves de sinatura correctas "
+"configuradas para esta identidade."
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Enviar &sen asinar?"
 
 #: mailclient_p.cpp:734
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Enviar &sen asinar"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -955,6 +962,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Hai partes da mensaxe que non se van asinar.\n"
+"O envío de mensaxes que só están asinadas de maneira parcial podería violar "
+"as normas do sitio.\n"
+"Quere proceder a firmar toda a mensaxe?"
 
 #: mailclient_p.cpp:751
 #, kde-format
@@ -963,26 +974,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Non se vai asinar a mensaxe.\n"
+"Enviar mensaxes sen asinar podería violar as normas di sitio.\n"
+"Prefire asinar a mensaxe?"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Asinala toda"
 
 #: mailclient_p.cpp:754
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Asinar"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Aviso de mensaxe sen asinar"
 
 #: mailclient_p.cpp:755
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "&Enviar como está"
 
 #: mailclient_p.cpp:808
 #, kde-format
@@ -990,6 +1004,9 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Atopáronse chaves de cifrado de confianza e correctas para todos os "
+"destinatarios.\n"
+"Quere cifrar a mensaxe?"
 
 #: mailclient_p.cpp:811
 #, kde-format
@@ -998,33 +1015,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Tras examinar as preferencias de cifrado do destinatario, toca preguntarlle "
+"a vostede se quere cifrar a mensaxe.\n"
+"Quere cifrala?"
 
 #: mailclient_p.cpp:816 mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Enviar mensaxes"
+msgstr "Cifrar a mensaxe?"
 
 #: mailclient_p.cpp:817
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Asinar e &cifrar"
 
 #: mailclient_p.cpp:817 mailclient_p.cpp:841 mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Cifrar"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Só &asinar"
 
 #: mailclient_p.cpp:818 mailclient_p.cpp:891
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Enviar como está"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1032,13 +1050,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Existen preferencias en conflito sobre o cifrado para estes destinatarios.\n"
+"Quere cifrar a mensaxe?"
 
 #: mailclient_p.cpp:841
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Non enviar"
+msgstr "&Non cifrar"
 
 #: mailclient_p.cpp:860
 #, kde-format
@@ -1047,18 +1065,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Solicitou cifrar a mensaxe, e cifrar unha copia para vostede, pero non hai "
+"chaves de cifrado correctas configuradas para esta identidade."
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Enviar unha actualización"
+msgstr "Enviar &sen cifrar?"
 
 #: mailclient_p.cpp:864
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Enviar unha actualización"
+msgstr "Enviar &sen cifrar"
 
 #: mailclient_p.cpp:878
 #, kde-format
@@ -1068,6 +1086,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Hai partes da mensaxe que non se van cifrar.\n"
+"O envío de mensaxes que só están cifradas de maneira parcial podería violar "
+"as normas do sitio, e filtrar información privada.\n"
+"Quere proceder a cifrar toda a mensaxe?"
 
 #: mailclient_p.cpp:883
 #, kde-format
@@ -1077,16 +1099,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Non se vai cifrar a mensaxe.\n"
+"O envío de mensaxes sen cifrar podería violar as normas do sitio, e filtrar "
+"información privada.\n"
+"Prefire cifrar a mensaxe?"
 
 #: mailclient_p.cpp:887
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Cifrala toda"
 
 #: mailclient_p.cpp:889
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Aviso de mensaxe sen cifrar"
 
 #: mailscheduler_p.cpp:180
 #, kde-format
@@ -1135,17 +1161,15 @@ msgstr ""
 "de grupos."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
-"Non se pode publicar a incidencia de calendario porque a cadea dos "
-"destinatarios é incorrecta. %1"
+"Non é posíbel publicar a incidencia de calendario porque a cadea dos "
+"destinatarios é incorrecta.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1214,7 +1238,7 @@ msgstr "&Retirar"
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr "Escolle un destinatario da axenda de enderezos."
+msgstr "Escolla un destinatario da axenda de enderezos."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1270,15 +1294,17 @@ msgstr "O enderezo de correo do destinatario."
 msgid "This field contains the email address of the recipient"
 msgstr "Este campo contén o enderezo de correo do destinatario"
 
+# skip-rule: trasno-empty2_reverse
 #: publishdialog_p.cpp:44
 #, kde-format
 msgid "(EmptyName)"
-msgstr "(Nome baleiro)"
+msgstr "(nome baleiro)"
 
+# skip-rule: trasno-empty2_reverse
 #: publishdialog_p.cpp:45
 #, kde-format
 msgid "(EmptyEmail)"
-msgstr "(Correo baleiro)"
+msgstr "(mensaxe baleira)"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
@@ -1310,11 +1336,11 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
-"<para>Engadiu unha actualización dunha invitación, pero non se puido atopar "
-"ningunha versión anterior no calendario.</para><para>Isto puido ocorrer "
-"porque:<list><item>o organizador non o/a incluíu a vostede na invitación "
-"orixinal</item><item>vostede aínda non aceptou a invitación orixinal</"
-"item><item>vostede eliminou do calendario a invitación orixinal</"
+"<para>Engadiu unha actualización dunha invitación, pero non foi posíbel "
+"atopar ningunha versión anterior do elemento no calendario.</para><para>Isto "
+"puido ocorrer porque:<list><item>quen organiza non o/a incluíu a vostede na "
+"invitación orixinal</item><item>vostede aínda non aceptou a invitación "
+"orixinal</item><item>vostede eliminou do calendario a invitación orixinal</"
 "item><item>vostede xa non ten acceso ao calendario que contén a invitación</"
 "item></list></para><para>Isto non é ningún problema, pero consideramos que "
 "debería sabelo.</para>"
@@ -1392,7 +1418,7 @@ msgstr "Rexeitar a asistencia"
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr "O organizador rexeitou a súa asistencia a esta reunión."
+msgstr "Quen organiza rexeitou a súa asistencia a esta reunión."
 
 #: scheduler_p.cpp:508
 #, kde-format
@@ -1401,8 +1427,8 @@ msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
 msgstr ""
-"Engadiuse un asistente á incidencia. Quere enviarlles aos asistentes unha "
-"mensaxe de actualización?"
+"Engadiuse un asistente á incidencia. Quere mandar aos asistentes unha "
+"mensaxe de actualización por correo electrónico?"
 
 #: scheduler_p.cpp:510
 #, kde-format
