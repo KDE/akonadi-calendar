@@ -1769,7 +1769,7 @@ msgstr "Copia l'esdeveniment seleccionat a un calendari diferent."
 #: standardcalendaractionmanager.cpp:186
 #, kde-format
 msgid "&Move to Calendar"
-msgstr "&Mou a un calendari"
+msgstr "&Mou cap a un calendari"
 
 #: standardcalendaractionmanager.cpp:187
 #, kde-format
@@ -1841,7 +1841,7 @@ msgstr[1] "Retalla %1 tasques pendents"
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
-msgstr "Mou la tasca pendent a"
+msgstr "Mou la tasca pendent cap a"
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
