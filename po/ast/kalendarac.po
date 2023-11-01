@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-10-25 12:46+0200\n"
+"PO-Revision-Date: 2023-10-31 20:07+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -131,7 +131,7 @@ msgstr ""
 #: kalendaracmain.cpp:29
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
-msgstr ""
+msgstr "(c) 2021-2022, La comunidá KDE"
 
 #: kalendaracmain.cpp:30
 #, kde-format
