@@ -5,13 +5,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-26 02:27+0000\n"
-"PO-Revision-Date: 2023-09-03 21:43+0300\n"
+"PO-Revision-Date: 2023-11-02 13:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "Görevler"
 #: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
 #, kde-format
 msgid "Journal"
-msgstr "Günlük"
+msgstr "Günce"
 
 #: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
 #, kde-format
@@ -795,8 +795,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"\"%1\" davetini kaldırdın.\n"
-"Bu olayın iptal edildiğini katılımcılara e-posta ile bildirmek ister misin?"
+"\"%1\" davetini kaldırdınız.\n"
+"Bu etkinliğin iptal edildiğini katılımcılara e-posta ile bildirmek ister "
+"misiniz?"
 
 #: itiphandlerhelper_p.cpp:379
 #, kde-format
@@ -804,9 +805,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"\"%1\" davetini kaldırdın.\n"
-"Yapılacakların iptal edildiğini katılımcılara e-posta ile bildirmek ister "
-"misin?"
+"\"%1\" davetini kaldırdınız.\n"
+"Yapılacağın iptal edildiğini katılımcılara e-posta ile bildirmek ister "
+"misiniz?"
 
 #: itiphandlerhelper_p.cpp:384
 #, kde-format
@@ -815,13 +816,13 @@ msgid ""
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
 "\"%1\" davetini sildiniz.\n"
-"Katılımcılara e-posta ile iptali haber vermek ister misiniz?"
+"Güncenin iptal edildiğini katılımcılara e-posta ile bildirmek ister misiniz?"
 
 #: itiphandlerhelper_p.cpp:406
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
-"Bu davetin düzenleyicisine bir durum güncellemesi göndermek ister misiniz?"
+"Bu güncenin düzenleyicisine bir durum güncellemesi göndermek ister misiniz?"
 
 #: itiphandlerhelper_p.cpp:411 itiphandlerhelper_p.cpp:432
 #, kde-format
@@ -835,8 +836,8 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
-"Bu olayın bir davetini daha önceden kabul ettin. Düzenleyene davetini "
-"reddeden güncellenmiş bir cevap göndermek ister misin?"
+"Bu olayın bir davetini daha önceden kabul ettiniz. Düzenleyene davetini "
+"reddeden güncellenmiş bir yanıt göndermek ister misiniz?"
 
 #: itiphandlerhelper_p.cpp:470 mailscheduler_p.cpp:105
 #, kde-format
@@ -1683,7 +1684,7 @@ msgid ""
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
 "Seçili takvimleri sil<p>Seçili takvimler, içlerindeki tüm etkinlik, "
-"yapılacak ögeleri ve günlükleriyle beraber silinecektir.</p>"
+"yapılacak ögeleri ve günceleriyle birlikte silinecektir.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
@@ -1818,37 +1819,37 @@ msgstr "&Yapılacak Ögesini Düzenle..."
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] "Günlüğü Kopyala"
-msgstr[1] "%1 Günlüğü Kopyala"
+msgstr[0] "Günceyi Kopyala"
+msgstr[1] "%1 Günceyi Kopyala"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr "Günlüğü Kopyala"
+msgstr "Günceyi Kopyala"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] "Günlüğü Sil"
-msgstr[1] "%1 Günlüğü Sil"
+msgstr[0] "Günceyi Sil"
+msgstr[1] "%1 Günceyi Sil"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Günlüğü Kes"
-msgstr[1] "%1 Günlüğü Kes"
+msgstr[0] "Günceyi Kes"
+msgstr[1] "%1 Günceyi Kes"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
-msgstr "Günlüğü Taşı"
+msgstr "Günceyi Şuraya Taşı"
 
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Günlüğü Düzenle..."
+msgstr "Günceyi Düzenle..."
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
@@ -1883,12 +1884,12 @@ msgstr "Yeni bir alt yapılacak ögesi oluştur"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "Yeni &Günlük..."
+msgstr "Yeni &Günce..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
-msgstr "Yeni günlük oluştur"
+msgstr "Yeni günce oluştur"
 
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
