@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-11-04 16:52+0000\n"
 "PO-Revision-Date: 2023-01-07 04:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,91 +30,91 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mail@kisaragi-hiu.com"
 
-#: alarmnotification.cpp:71
+#: alarmnotification.cpp:50
 #, kde-format
 msgid "View"
 msgstr "檢視"
 
-#: alarmnotification.cpp:75
+#: alarmnotification.cpp:57
 #, kde-format
 msgid "Task"
 msgstr "工作"
 
-#: alarmnotification.cpp:75
+#: alarmnotification.cpp:57
 #, kde-format
 msgid "Event"
 msgstr "事件"
 
-#: alarmnotification.cpp:78
+#: alarmnotification.cpp:60
 #, kde-format
 msgid "Task due at %1"
 msgstr "工作預定於 %1 完成"
 
-#: alarmnotification.cpp:82
+#: alarmnotification.cpp:64
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
 msgid_plural "%2 starts in %1 minutes"
 msgstr[0] "%2 將於 %1 分後開始"
 
-#: alarmnotification.cpp:86
+#: alarmnotification.cpp:68
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "%1 將於 %2 開始"
 
-#: alarmnotification.cpp:88
+#: alarmnotification.cpp:70
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "%1 於 %2 開始"
 
-#: alarmnotification.cpp:94
+#: alarmnotification.cpp:76
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "%1 將於 %2 %3 開始"
 
-#: alarmnotification.cpp:100
+#: alarmnotification.cpp:82
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "%1 於 %2 %3 開始"
 
-#: alarmnotification.cpp:109
+#: alarmnotification.cpp:91
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "%1 將於 %2 開始"
 
-#: alarmnotification.cpp:111
+#: alarmnotification.cpp:93
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 於 %2 開始"
 
-#: alarmnotification.cpp:135
+#: alarmnotification.cpp:117
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "5 分鐘後提醒"
 
-#: alarmnotification.cpp:135
+#: alarmnotification.cpp:123
 #, kde-format
 msgid "Remind in 1 hour"
 msgstr "1 小時後提醒"
 
-#: alarmnotification.cpp:135
+#: alarmnotification.cpp:129
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "忽略"
 
-#: alarmnotification.cpp:206
+#: alarmnotification.cpp:207
 #, kde-format
 msgid "Open URL"
 msgstr "開啟網址"
 
-#: alarmnotification.cpp:224
+#: alarmnotification.cpp:225
 #, kde-format
 msgid "Map"
 msgstr "地圖"
