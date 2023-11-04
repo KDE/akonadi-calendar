@@ -48,7 +48,6 @@
 #include <KJob>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KProtocolManager>
 
 #include <QTemporaryDir>
 
