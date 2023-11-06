@@ -177,7 +177,7 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
 
     KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
     KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
-    notificationGroup.writeEntry("UID", QLatin1String(notificationUidData));
+    notificationGroup.writeEntry("UID", notificationUidData);
     notificationGroup.writeEntry("Text", notification->text());
     if (notification->occurrence().isValid()) {
         notificationGroup.writeEntry("Occurrence", notification->occurrence());
