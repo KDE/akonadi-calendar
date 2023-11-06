@@ -44,7 +44,7 @@ KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
         });
     }
 
-    KConfigGroup alarmGroup(KSharedConfig::openConfig(), "Alarms");
+    KConfigGroup alarmGroup(KSharedConfig::openConfig(), QLatin1String("Alarms"));
     mLastChecked = alarmGroup.readEntry("CalendarsLastChecked", QDateTime::currentDateTime().addDays(-9));
 
     restoreSuspendedFromConfig();
@@ -99,7 +99,7 @@ void KalendarAlarmClient::deferredInit()
 void KalendarAlarmClient::restoreSuspendedFromConfig()
 {
     qCDebug(REMINDER_DAEMON_LOG) << "Restore suspended alarms from config";
-    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), mySuspensedGroupName);
+    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
     const auto suspendedAlarms = suspendedGroup.groupList();
 
     for (const auto &s : suspendedAlarms) {
@@ -175,9 +175,9 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), mySuspensedGroupName);
-    KConfigGroup notificationGroup(&suspendedGroup, notificationUidData);
-    notificationGroup.writeEntry("UID", notificationUidData);
+    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
+    KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
+    notificationGroup.writeEntry("UID", QLatin1String(notificationUidData));
     notificationGroup.writeEntry("Text", notification->text());
     if (notification->occurrence().isValid()) {
         notificationGroup.writeEntry("Occurrence", notification->occurrence());
@@ -194,8 +194,8 @@ void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), mySuspensedGroupName);
-    KConfigGroup notificationGroup(&suspendedGroup, notificationUidData);
+    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
+    KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
     notificationGroup.deleteGroup();
     KSharedConfig::openConfig()->sync();
 }
@@ -310,7 +310,7 @@ void KalendarAlarmClient::checkAlarms()
 
 void KalendarAlarmClient::saveLastCheckTime()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), "Alarms");
+    KConfigGroup cg(KSharedConfig::openConfig(), QLatin1String("Alarms"));
     cg.writeEntry("CalendarsLastChecked", mLastChecked);
     KSharedConfig::openConfig()->sync();
 }
