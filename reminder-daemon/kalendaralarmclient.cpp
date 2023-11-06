@@ -44,7 +44,7 @@ KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
         });
     }
 
-    KConfigGroup alarmGroup(KSharedConfig::openConfig(), QLatin1String("Alarms"));
+    KConfigGroup alarmGroup(KSharedConfig::openConfig(), QStringLiteral("Alarms"));
     mLastChecked = alarmGroup.readEntry("CalendarsLastChecked", QDateTime::currentDateTime().addDays(-9));
 
     restoreSuspendedFromConfig();
@@ -310,7 +310,7 @@ void KalendarAlarmClient::checkAlarms()
 
 void KalendarAlarmClient::saveLastCheckTime()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), QLatin1String("Alarms"));
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Alarms"));
     cg.writeEntry("CalendarsLastChecked", mLastChecked);
     KSharedConfig::openConfig()->sync();
 }
