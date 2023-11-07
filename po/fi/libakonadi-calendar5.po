@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 01:08+0000\n"
-"PO-Revision-Date: 2023-07-24 21:54+0300\n"
+"PO-Revision-Date: 2023-09-29 09:35+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -1139,17 +1139,15 @@ msgstr ""
 "aikataulusuunnittelusta."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
 "Kalenteritapahtumaa ei saatu julkaistuksi, koska vastaanottajien luettelossa "
-"oli virheitä. %1"
+"oli virheitä.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
