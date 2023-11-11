@@ -25,6 +25,7 @@ target_link_libraries(kalendarac
     KF6::DBusAddons
     KPim6::AkonadiCore
     KPim6::AkonadiCalendar
+    KPim6::IdentityManagementCore
     KF6::KIOGui
     KF6::I18n
     KF6::Notifications

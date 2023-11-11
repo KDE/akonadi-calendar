@@ -2,12 +2,14 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "kalendaralarmclient.h"
+#include "../src/calendarsettings.h"
 #include "alarmnotification.h"
 #include "calendarinterface.h"
 #include "logging.h"
 
 #include <Akonadi/IncidenceChanger>
 #include <KIO/ApplicationLauncherJob>
+#include <KIdentityManagementCore/Utils>
 
 #include <KCheckableProxyModel>
 #include <KConfigGroup>
@@ -17,6 +19,7 @@
 #include <QFileInfo>
 
 using namespace KCalendarCore;
+
 namespace
 {
 static const char mySuspensedGroupName[] = "Suspended";
@@ -246,6 +249,33 @@ bool KalendarAlarmClient::collectionsAvailable() const
     return true;
 }
 
+namespace
+{
+
+bool shouldNotify(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::CalendarSettings *settings)
+{
+    if (settings->onlyShowRemindersForMyEvents()) {
+        const auto isMe = [](const auto &person) -> bool {
+            return KIdentityManagementCore::thatIsMe(person.email());
+        };
+
+        const auto attendees = incidence->attendees();
+        if (std::any_of(attendees.cbegin(), attendees.cend(), isMe)) {
+            return true;
+        }
+
+        if (isMe(incidence->organizer())) {
+            return true;
+        }
+
+        return false;
+    }
+
+    return true;
+}
+
+} // namespace
+
 void KalendarAlarmClient::checkAlarms()
 {
     // We do not want to miss any reminders, so don't perform check unless
@@ -260,14 +290,21 @@ void KalendarAlarmClient::checkAlarms()
 
     qCDebug(REMINDER_DAEMON_LOG) << "Check:" << from.toString() << " -" << mLastChecked.toString();
 
+    auto settings = Akonadi::CalendarSettings::self();
+    settings->load(); // make sure we register changes to the config file
+
     // look for new alarms
     const Alarm::List alarms = mCalendar->alarms(from, mLastChecked, true /* exclude blocked alarms */);
     for (const Alarm::Ptr &alarm : alarms) {
         const QString uid = alarm->parentUid();
         const auto incidence = mCalendar->incidence(uid);
         if (incidence) {
-            const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
-            addNotification(uid, alarm->text(), occurrence, mLastChecked, false);
+            if (shouldNotify(incidence, settings)) {
+                const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
+                addNotification(uid, alarm->text(), occurrence, mLastChecked, false);
+            } else {
+                qCDebug(REMINDER_DAEMON_LOG) << "Alarm for incidence " << uid << "skipped, because we are not an organizer or attendee.";
+            }
         } else {
             qCDebug(REMINDER_DAEMON_LOG) << "Alarm points" << alarm << "to an nonexisting incidence" << uid;
         }
