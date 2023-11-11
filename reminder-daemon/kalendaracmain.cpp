@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 {
     QGuiApplication app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
+    app.setQuitLockEnabled(false);
 
     KAboutData aboutData(
         // The program name used internally.
