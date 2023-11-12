@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:52+0000\n"
+"POT-Creation-Date: 2023-11-12 01:37+0000\n"
 "PO-Revision-Date: 2022-08-16 21:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -122,35 +122,35 @@ msgstr "افتح الرابط"
 msgid "Map"
 msgstr "الخريطة"
 
-#: kalendaracmain.cpp:22
+#: kalendaracmain.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "التّذكيرات"
 
-#: kalendaracmain.cpp:25
+#: kalendaracmain.cpp:26
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "خدمة تذكير التقويم"
 
-#: kalendaracmain.cpp:29
+#: kalendaracmain.cpp:30
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
 msgstr "(c)  مجتمع كِيدِي 2021-2022"
 
-#: kalendaracmain.cpp:30
+#: kalendaracmain.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:31 kalendaracmain.cpp:35
+#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "المشرف"
 
-#: kalendaracmain.cpp:34
+#: kalendaracmain.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:52+0000\n"
+"POT-Creation-Date: 2023-11-12 01:37+0000\n"
 "PO-Revision-Date: 2022-06-15 13:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -114,35 +114,35 @@ msgstr "Ouvrir une URL"
 msgid "Map"
 msgstr "Carte"
 
-#: kalendaracmain.cpp:22
+#: kalendaracmain.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "Rappels"
 
-#: kalendaracmain.cpp:25
+#: kalendaracmain.cpp:26
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "Service de rappel pour agenda"
 
-#: kalendaracmain.cpp:29
+#: kalendaracmain.cpp:30
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
 msgstr "(c) Communauté KDE 2021 - 2022"
 
-#: kalendaracmain.cpp:30
+#: kalendaracmain.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:31 kalendaracmain.cpp:35
+#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "Mainteneur"
 
-#: kalendaracmain.cpp:34
+#: kalendaracmain.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
