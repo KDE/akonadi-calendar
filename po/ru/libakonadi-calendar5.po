@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 01:08+0000\n"
+"POT-Creation-Date: 2023-11-13 01:38+0000\n"
 "PO-Revision-Date: 2023-04-15 13:45+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -251,20 +251,34 @@ msgstr ""
 "Отметьте этот флажок, чтобы получать копии всех почтовых сообщений-запросов, "
 "которые KOrganizer посылает участникам событий."
 
-#. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
+#. i18n: ectx: label, entry, group (Reminders)
+#: calendarsettings.kcfg:84
+#, kde-format
+msgid "Only show reminders for events I organize or attend"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
+#, kde-format
+msgid ""
+"Check this to only receive reminders for events that you are the organizer "
+"of or that you are attending."
+msgstr ""
+
+#. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
+#: calendarsettings.kcfg:93
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Посылать контрпредложения как это делает Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:90
+#: calendarsettings.kcfg:98
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Проверять, соответствует ли адрес сервера почтовому адресу получателя"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:99
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "

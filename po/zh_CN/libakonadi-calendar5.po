@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 01:08+0000\n"
+"POT-Creation-Date: 2023-11-13 01:38+0000\n"
 "PO-Revision-Date: 2023-11-11 07:20\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -239,20 +239,34 @@ msgid ""
 "your request to event attendees."
 msgstr "勾选此框获取 KOrganizer 按照您的要求发送给参与者的所有邮件消息的副本。"
 
-#. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
+#. i18n: ectx: label, entry, group (Reminders)
+#: calendarsettings.kcfg:84
+#, kde-format
+msgid "Only show reminders for events I organize or attend"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
+#, kde-format
+msgid ""
+"Check this to only receive reminders for events that you are the organizer "
+"of or that you are attending."
+msgstr ""
+
+#. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
+#: calendarsettings.kcfg:93
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "发送类似 Outlook 的拟对案"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:90
+#: calendarsettings.kcfg:98
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "检查主机名和检索电子邮件地址是否匹配"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:99
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "

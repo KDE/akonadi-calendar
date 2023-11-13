@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 01:08+0000\n"
+"POT-Creation-Date: 2023-11-13 01:38+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -247,20 +247,34 @@ msgstr ""
 "Maak dit an, wenn Du en Kopie vun all Nettbreven hebben wullt, de KOrganizer "
 "för Di de Deelnehmers vun Begeefnissen tostüert."
 
-#. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
+#. i18n: ectx: label, entry, group (Reminders)
+#: calendarsettings.kcfg:84
+#, kde-format
+msgid "Only show reminders for events I organize or attend"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
+#, kde-format
+msgid ""
+"Check this to only receive reminders for events that you are the organizer "
+"of or that you are attending."
+msgstr ""
+
+#. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
+#: calendarsettings.kcfg:93
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "As-wenn-Gegenvörslääg loosstüern, so as Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:90
+#: calendarsettings.kcfg:98
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Kieken, wat Reeknernaam un Afhaaladress tosamenpasst"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:99
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
