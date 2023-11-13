@@ -570,6 +570,7 @@ bool MailClient::addKeysToContext(const QString &gnupgHome,
                 auto exportJob = proto->publicKeyExportJob(false);
                 connect(exportJob,
                         &QGpgME::ExportJob::result,
+                        exportJob,
                         [&gnupgHome, &proto, &runningJobs, &loop, &k](const GpgME::Error &result,
                                                                       const QByteArray &keyData,
                                                                       const QString &auditLogAsHtml,
