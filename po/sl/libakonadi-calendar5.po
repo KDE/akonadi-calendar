@@ -9,18 +9,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 01:38+0000\n"
-"PO-Revision-Date: 2023-07-25 05:23+0200\n"
+"POT-Creation-Date: 2023-11-14 01:38+0000\n"
+"PO-Revision-Date: 2023-11-13 09:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -253,7 +253,7 @@ msgstr ""
 #: calendarsettings.kcfg:84
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
-msgstr ""
+msgstr "Prikazuj samo opomnike za dogodke, ki jih organiziram ali obiskujem"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
@@ -262,6 +262,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Potrdite to, da sprejemate samo opomnike za dogodke za katere ste "
+"organizator ali jih obiskujete."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:93
@@ -886,22 +888,22 @@ msgstr "Predmet prostosti/zaposlenosti"
 msgid "Free Busy Message"
 msgstr "Sporočilo prostosti/zaposlenosti"
 
-#: mailclient_p.cpp:628
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Napaka med ustvarjanjem prenosa"
 
-#: mailclient_p.cpp:646
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Napaka med pridobivanjem prenosa. Povabil ni mogoče poslati"
 
-#: mailclient_p.cpp:668
+#: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Napaka postavljanja sporočila v čakalno vrsto odhajajočih: %1"
 
-#: mailclient_p.cpp:700
+#: mailclient_p.cpp:701
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -912,23 +914,23 @@ msgstr ""
 "ali naj to sporočilo podpiše ali ne.\n"
 "Naj podpišem to sporočilo?"
 
-#: mailclient_p.cpp:704 mailclient_p.cpp:727
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Sign Message?"
 msgstr "Naj podpišem sporočilo?"
 
-#: mailclient_p.cpp:704 mailclient_p.cpp:727
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "Podpiši"
 
-#: mailclient_p.cpp:704 mailclient_p.cpp:727
+#: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
 msgstr "Ne podpiši"
 
-#: mailclient_p.cpp:724
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -937,7 +939,7 @@ msgstr ""
 "Za te prejemnike obstajajo nasprotujoče si nastavitve podpisovanja.\n"
 "Naj podpišem to sporočilo?"
 
-#: mailclient_p.cpp:746
+#: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -946,17 +948,17 @@ msgstr ""
 "Zahtevali ste podpis tega sporočila, vendar ni konfiguriran noben veljaven "
 "ključev podpisovanja za to identiteto."
 
-#: mailclient_p.cpp:749
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
 msgstr "Naj pošljem nepodpisano?"
 
-#: mailclient_p.cpp:749
+#: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
 msgstr "Pošlji podpisano"
 
-#: mailclient_p.cpp:762
+#: mailclient_p.cpp:763
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -968,7 +970,7 @@ msgstr ""
 "mesta.\n"
 "Naj namesto tega podpišem vse dele?"
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -979,27 +981,27 @@ msgstr ""
 "Pošiljanje nepodpisanih sporočil lahko krši pravilnik spletnega mesta.\n"
 "Naj namesto tega sporočilo podpišem?"
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Podpiši vse dele"
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
 msgstr "Podpiši"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr "Opozorilo o nepodpisanem sporočilu"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
 msgstr "Pošlji kot je"
 
-#: mailclient_p.cpp:823
+#: mailclient_p.cpp:824
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1008,7 +1010,7 @@ msgstr ""
 "Za vse prejemnike so bili najdeni veljavni zaupanja vredni šifrirni ključi.\n"
 "Naj šifriram to sporočilo?"
 
-#: mailclient_p.cpp:826
+#: mailclient_p.cpp:827
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1019,32 +1021,32 @@ msgstr ""
 "ali naj se to sporočilo šifrira ali ne.\n"
 "Naj šifriram to sporočilo?"
 
-#: mailclient_p.cpp:831 mailclient_p.cpp:856
+#: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Naj šifriram sporočilo?"
 
-#: mailclient_p.cpp:832
+#: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Podpiši in šifriraj"
 
-#: mailclient_p.cpp:832 mailclient_p.cpp:856 mailclient_p.cpp:902
+#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
 msgstr "Šifriraj"
 
-#: mailclient_p.cpp:833 mailclient_p.cpp:906
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
 msgstr "Samo podpiši"
 
-#: mailclient_p.cpp:833 mailclient_p.cpp:906
+#: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Pošlji kot je"
 
-#: mailclient_p.cpp:853
+#: mailclient_p.cpp:854
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1053,12 +1055,12 @@ msgstr ""
 "Za te prejemnike obstajajo nasprotujoče si nastavitve šifriranja.\n"
 "Naj šifriram to sporočilo?"
 
-#: mailclient_p.cpp:856
+#: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
 msgstr "Ne šifriraj"
 
-#: mailclient_p.cpp:875
+#: mailclient_p.cpp:876
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1069,17 +1071,17 @@ msgstr ""
 "identiteto niso bili konfigurirani nobeni veljavni zaupanja vredni šifrirni "
 "ključi."
 
-#: mailclient_p.cpp:879
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Naj pošljem nešifrirano?"
 
-#: mailclient_p.cpp:879
+#: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
 msgstr "Pošlji nešifrirano"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:894
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1092,7 +1094,7 @@ msgstr ""
 "mesta in/aliuhajanje občutljivih informacij.\n"
 "Naj namesto tega šifriram vse dele?"
 
-#: mailclient_p.cpp:898
+#: mailclient_p.cpp:899
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1105,12 +1107,12 @@ msgstr ""
 "aliuhajanje občutljivih informacij.\n"
 "Naj namesto tega šifriram sporočilo?"
 
-#: mailclient_p.cpp:902
+#: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Šifriraj vse dele"
 
-#: mailclient_p.cpp:904
+#: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Opozorilo o nešifriranem sporočilu"
