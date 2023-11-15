@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:38+0000\n"
-"PO-Revision-Date: 2023-07-25 21:27+0200\n"
+"PO-Revision-Date: 2023-11-13 13:06+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -249,7 +249,7 @@ msgstr ""
 #: calendarsettings.kcfg:84
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
-msgstr ""
+msgstr "Mostra promemoria solo per eventi che ho organizzato o a cui partecipo"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
@@ -258,6 +258,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Spunta questo per ricevere i promemoria solo per eventi di cui sei "
+"l'organizzatore o a cui partecipi."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:93

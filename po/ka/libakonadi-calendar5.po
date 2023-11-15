@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:38+0000\n"
-"PO-Revision-Date: 2023-07-26 06:59+0200\n"
+"PO-Revision-Date: 2023-11-14 05:50+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -247,6 +247,8 @@ msgstr ""
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"შეხსენებების, მხოლოდ, იმ მოვლენებისთვის ჩვენება, რომლებიც მე დავაორგანიზე ან "
+"ვესწრები"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
@@ -255,6 +257,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"ჩართეთ, რომ, მხოლოდ, იმ მოვლენებისთვის გაგაფრთხილოთ, რომელიც თქვენ "
+"დააორგანიზეთ ან ესწრებით."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:93
