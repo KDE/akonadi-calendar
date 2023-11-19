@@ -402,8 +402,8 @@ private Q_SLOTS:
         item.setMimeType(Event::eventMimeType());
         Event::Ptr incidence = Event::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
-        incidence->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), Qt::UTC));
-        incidence->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), Qt::UTC));
+        incidence->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), QTimeZone::utc()));
+        incidence->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), QTimeZone::utc()));
         incidence->setAllDay(false);
         incidence->setLocation(QStringLiteral("location"));
         incidence->setOrganizer(Person(QString(), s_ourEmail));
@@ -416,14 +416,14 @@ private Q_SLOTS:
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
-            event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
+            event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:start Date") << item << event << true;
         }
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence));
-            event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
+            event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:end Date") << item << event << true;
         }
@@ -454,8 +454,8 @@ private Q_SLOTS:
         item2.setMimeType(Event::eventMimeType());
         Event::Ptr incidence2 = Event::Ptr(new Event());
         incidence2->setUid(QStringLiteral("test123uid"));
-        incidence2->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), Qt::UTC));
-        incidence2->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), Qt::UTC));
+        incidence2->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), QTimeZone::utc()));
+        incidence2->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), QTimeZone::utc()));
         incidence2->setAllDay(false);
         incidence2->setLocation(QStringLiteral("location"));
         incidence2->setOrganizer(Person(QStringLiteral("External organizator"), QStringLiteral("exorga@dev.nul")));
@@ -468,13 +468,13 @@ private Q_SLOTS:
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
-            event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
+            event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QTest::newRow("attendee:start Date") << item2 << event << false;
         }
 
         {
             Event::Ptr event = Event::Ptr(new Event(*incidence2));
-            event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), Qt::UTC));
+            event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QTest::newRow("attendee:end Date") << item2 << event << false;
         }
 
