@@ -45,7 +45,7 @@ void ETMCalendarPrivate::init()
     if (!mETM) {
         auto session = new Akonadi::Session("ETMCalendar", q);
         auto monitor = new Akonadi::Monitor(q);
-        monitor->setObjectName(QStringLiteral("ETMCalendarMonitor"));
+        monitor->setObjectName(QLatin1StringView("ETMCalendarMonitor"));
         connect(monitor,
                 qOverload<const Akonadi::Collection &, const QSet<QByteArray> &>(&Monitor::collectionChanged),
                 this,
@@ -72,7 +72,7 @@ void ETMCalendarPrivate::init()
         }
 
         mETM = CalendarModel::create(monitor);
-        mETM->setObjectName(QStringLiteral("ETM"));
+        mETM->setObjectName(QLatin1StringView("ETM"));
         mETM->setListFilter(Akonadi::CollectionFetchScope::Display);
     }
 
@@ -121,10 +121,10 @@ void ETMCalendarPrivate::setupFilteredETM()
     auto columnFilterProxy = new KColumnFilterProxyModel(this);
     columnFilterProxy->setSourceModel(mETM.data());
     columnFilterProxy->setVisibleColumn(CalendarModel::CollectionTitle);
-    columnFilterProxy->setObjectName(QStringLiteral("Remove columns"));
+    columnFilterProxy->setObjectName(QLatin1StringView("Remove columns"));
 
     mCollectionProxyModel = new Akonadi::CollectionFilterProxyModel(this);
-    mCollectionProxyModel->setObjectName(QStringLiteral("Only show collections"));
+    mCollectionProxyModel->setObjectName(QLatin1StringView("Only show collections"));
     mCollectionProxyModel->setDynamicSortFilter(true);
     mCollectionProxyModel->addMimeTypeFilter(QStringLiteral("text/calendar"));
     mCollectionProxyModel->setExcludeVirtualCollections(false);
@@ -133,23 +133,23 @@ void ETMCalendarPrivate::setupFilteredETM()
 
     // Keep track of selected items.
     auto selectionModel = new QItemSelectionModel(mCollectionProxyModel);
-    selectionModel->setObjectName(QStringLiteral("Calendar Selection Model"));
+    selectionModel->setObjectName(QLatin1StringView("Calendar Selection Model"));
 
     // Make item selection work by means of checkboxes.
     mCheckableProxyModel = new CheckableProxyModel(this);
     mCheckableProxyModel->setSelectionModel(selectionModel);
     mCheckableProxyModel->setSourceModel(mCollectionProxyModel);
-    mCheckableProxyModel->setObjectName(QStringLiteral("Add checkboxes"));
+    mCheckableProxyModel->setObjectName(QLatin1StringView("Add checkboxes"));
 
     mSelectionProxy = new KSelectionProxyModel(selectionModel, /**parent=*/this);
-    mSelectionProxy->setObjectName(QStringLiteral("Only show items of selected collection"));
+    mSelectionProxy->setObjectName(QLatin1StringView("Only show items of selected collection"));
     mSelectionProxy->setFilterBehavior(KSelectionProxyModel::ChildrenOfExactSelection);
     mSelectionProxy->setSourceModel(mETM.data());
 
     mCalFilterProxyModel = new CalFilterProxyModel(this);
     mCalFilterProxyModel->setFilter(q->filter());
     mCalFilterProxyModel->setSourceModel(mSelectionProxy);
-    mCalFilterProxyModel->setObjectName(QStringLiteral("KCalendarCore::CalFilter filtering"));
+    mCalFilterProxyModel->setObjectName(QLatin1StringView("KCalendarCore::CalFilter filtering"));
 
     mCalFilterPartStatusProxyModel = new CalFilterPartStatusProxyModel(this);
     mCalFilterPartStatusProxyModel->setFilterVirtual(false);
@@ -159,13 +159,13 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCalFilterPartStatusProxyModel->setDynamicSortFilter(true);
     mCalFilterPartStatusProxyModel->setBlockedStatusList(blockedStatusList);
     mCalFilterPartStatusProxyModel->setSourceModel(mCalFilterProxyModel);
-    mCalFilterPartStatusProxyModel->setObjectName(QStringLiteral("PartStatus filtering"));
+    mCalFilterPartStatusProxyModel->setObjectName(QLatin1StringView("PartStatus filtering"));
 
     mFilteredETM = new Akonadi::EntityMimeTypeFilterModel(this);
     mFilteredETM->setSourceModel(mCalFilterPartStatusProxyModel);
     mFilteredETM->setHeaderGroup(Akonadi::EntityTreeModel::ItemListHeaders);
     mFilteredETM->setSortRole(CalendarModel::SortRole);
-    mFilteredETM->setObjectName(QStringLiteral("Show headers"));
+    mFilteredETM->setObjectName(QLatin1StringView("Show headers"));
 
 #ifdef AKONADI_CALENDAR_DEBUG_MODEL
     QTreeView *view = new QTreeView;
@@ -454,7 +454,7 @@ ETMCalendar::ETMCalendar(Monitor *monitor, QObject *parent)
                          d,
                          &ETMCalendarPrivate::onCollectionChanged);
         d->mETM = CalendarModel::create(monitor);
-        d->mETM->setObjectName(QStringLiteral("ETM"));
+        d->mETM->setObjectName(QLatin1StringView("ETM"));
         d->mETM->setListFilter(Akonadi::CollectionFetchScope::Display);
     }
 

@@ -33,7 +33,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Select Addresses"));
     auto layout = new QVBoxLayout(this);
     auto widget = new QWidget(this);
-    widget->setObjectName(QStringLiteral("PublishFreeBusy"));
+    widget->setObjectName(QLatin1StringView("PublishFreeBusy"));
     d->mUI.setupUi(widget);
     layout->addWidget(widget);
     d->mUI.mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);

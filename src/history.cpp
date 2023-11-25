@@ -24,7 +24,7 @@ HistoryPrivate::HistoryPrivate(History *qq)
     , mOperationTypeInProgress(TypeNone)
     , q(qq)
 {
-    mChanger->setObjectName(QStringLiteral("changer")); // for auto-connects
+    mChanger->setObjectName(QLatin1StringView("changer")); // for auto-connects
 }
 
 void History::recordCreation(const Akonadi::Item &item, const QString &description, const uint atomicOperationId)

@@ -17,7 +17,7 @@ FreeBusyDownloadJob::FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget)
     : mUrl(url)
     , mParent(parentWidget)
 {
-    setObjectName(QStringLiteral("FreeBusyDownloadJob"));
+    setObjectName(QLatin1StringView("FreeBusyDownloadJob"));
 }
 
 FreeBusyDownloadJob::~FreeBusyDownloadJob() = default;

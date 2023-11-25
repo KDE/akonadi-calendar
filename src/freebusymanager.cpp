@@ -690,7 +690,7 @@ Q_GLOBAL_STATIC(FreeBusyManagerStatic, sManagerInstance)
 FreeBusyManager::FreeBusyManager()
     : d_ptr(new FreeBusyManagerPrivate(this))
 {
-    setObjectName(QStringLiteral("FreeBusyManager"));
+    setObjectName(QLatin1StringView("FreeBusyManager"));
     connect(CalendarSettings::self(), SIGNAL(configChanged()), SLOT(checkFreeBusyUrl()));
 }
 

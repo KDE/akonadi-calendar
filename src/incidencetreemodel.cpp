@@ -629,14 +629,14 @@ IncidenceTreeModel::IncidenceTreeModel(QObject *parent)
     : QAbstractProxyModel(parent)
     , d(new IncidenceTreeModelPrivate(this, QStringList()))
 {
-    setObjectName(QStringLiteral("IncidenceTreeModel"));
+    setObjectName(QLatin1StringView("IncidenceTreeModel"));
 }
 
 IncidenceTreeModel::IncidenceTreeModel(const QStringList &mimeTypes, QObject *parent)
     : QAbstractProxyModel(parent)
     , d(new IncidenceTreeModelPrivate(this, mimeTypes))
 {
-    setObjectName(QStringLiteral("IncidenceTreeModel"));
+    setObjectName(QLatin1StringView("IncidenceTreeModel"));
 }
 
 IncidenceTreeModel::~IncidenceTreeModel() = default;

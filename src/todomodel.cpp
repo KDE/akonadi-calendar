@@ -113,7 +113,7 @@ TodoModel::TodoModel(QObject *parent)
     : KExtraColumnsProxyModel(parent)
     , d(new TodoModelPrivate(this))
 {
-    setObjectName(QStringLiteral("TodoModel"));
+    setObjectName(QLatin1StringView("TodoModel"));
 }
 
 TodoModel::~TodoModel() = default;
