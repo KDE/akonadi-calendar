@@ -1,7 +1,7 @@
 # Translation for libakonadi-calendar5.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2023 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-26 02:27+0000\n"
-"PO-Revision-Date: 2023-08-12 20:02+0200\n"
+"PO-Revision-Date: 2023-11-25 18:25+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: calendarbase.cpp:264
 #, kde-format
@@ -820,9 +820,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"«%1» gonbidapena kendu duzu.\n"
-"Egunerakoa bertan behera utzi dela jakinarazteko parte hartzaileei e-posta "
-"bidatzea nahi duzu?"
+"\"%1\" gonbidapena kendu duzu.\n"
+"Parte hartzaileei, egunkaria bertan behera utzi dela jakinarazteko e-posta "
+"bidali nahi diezu?"
 
 #: itiphandlerhelper_p.cpp:406
 #, kde-format
