@@ -83,7 +83,7 @@ find_package(KPim6AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
 
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.6  KF 5.245.0)
+ecm_set_disabled_deprecation_versions(QT 6.6  KF 5.246.0)
 
 
 
