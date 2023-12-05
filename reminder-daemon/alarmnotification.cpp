@@ -113,33 +113,32 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     m_notification->setIconName(incidence->type() == KCalendarCore::Incidence::TypeTodo ? QStringLiteral("view-task")
                                                                                         : QStringLiteral("view-calendar-upcoming"));
 
-    auto remindIn5MAction = m_notification->addAction(i18n("Remind in 5 mins"));
-    QObject::connect(remindIn5MAction, &KNotificationAction::activated, remindIn5MAction, [this, client] {
-        QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        client->suspend(this, 5min);
-    });
-
-    auto remindIn1hAction = m_notification->addAction(i18n("Remind in 1 hour"));
-    QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client] {
-        QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        client->suspend(this, 5min);
-    });
-
-    auto dismissAction = m_notification->addAction(i18nc("dismiss a reminder notification for an event", "Dismiss"));
-    QObject::connect(dismissAction, &KNotificationAction::activated, dismissAction, [this, client] {
-        QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        client->dismiss(this);
-    });
-
-    const auto contextActionString = determineContextAction(incidence);
-    if (!contextActionString.isEmpty()) {
-        auto contextAction = m_notification->addAction(contextActionString);
-        QObject::connect(contextAction, &KNotificationAction::activated, contextAction, [this] {
-            QDesktopServices::openUrl(m_contextAction);
-        });
-    }
-
     if (!notificationExists) {
+        auto remindIn5MAction = m_notification->addAction(i18n("Remind in 5 mins"));
+        QObject::connect(remindIn5MAction, &KNotificationAction::activated, remindIn5MAction, [this, client] {
+            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->suspend(this, 5min);
+        });
+
+        auto remindIn1hAction = m_notification->addAction(i18n("Remind in 1 hour"));
+        QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client] {
+            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->suspend(this, 5min);
+        });
+
+        auto dismissAction = m_notification->addAction(i18nc("dismiss a reminder notification for an event", "Dismiss"));
+        QObject::connect(dismissAction, &KNotificationAction::activated, dismissAction, [this, client] {
+            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->dismiss(this);
+        });
+
+        const auto contextActionString = determineContextAction(incidence);
+        if (!contextActionString.isEmpty()) {
+            auto contextAction = m_notification->addAction(contextActionString);
+            QObject::connect(contextAction, &KNotificationAction::activated, contextAction, [this] {
+                QDesktopServices::openUrl(m_contextAction);
+            });
+        }
         m_notification->sendEvent();
     }
 }
