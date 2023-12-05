@@ -64,3 +64,7 @@ ecm_qt_install_logging_categories(
     FILE org_kde_kalendarac.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
+
+if (BUILD_TESTING)
+    add_subdirectory(tests)
+endif ()
