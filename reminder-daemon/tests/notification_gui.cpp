@@ -8,6 +8,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
+#include <QTimer>
 
 int main(int argc, char **argv)
 {
@@ -20,6 +21,13 @@ int main(int argc, char **argv)
 
     NotificationObject *obj = new NotificationObject;
     obj->sendNotification(QStringLiteral("ff"), QStringLiteral("ddsdfsf"));
+    QTimer *timer = new QTimer;
+    timer->setInterval(5000);
+    QObject::connect(timer, &QTimer::timeout, [obj, timer]() {
+        obj->sendNotification(QStringLiteral("ff"), QStringLiteral("ddsdfsf"));
+        timer->start();
+    });
+    timer->start();
 
     // TODO
     return app.exec();
