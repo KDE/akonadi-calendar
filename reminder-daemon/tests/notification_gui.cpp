@@ -24,8 +24,10 @@ int main(int argc, char **argv)
     QTimer *timer = new QTimer;
     timer->setInterval(5000);
     QObject::connect(timer, &QTimer::timeout, [obj, timer]() {
-        obj->sendNotification(QStringLiteral("ff"), QStringLiteral("ddsdfsf"));
+        static int value = 0;
+        obj->sendNotification(QStringLiteral("title %1").arg(value), QStringLiteral("message %1").arg(value));
         timer->start();
+        value++;
     });
     timer->start();
 
