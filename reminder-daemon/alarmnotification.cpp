@@ -45,7 +45,6 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
 
     // change the content unconditionally, that will also update already existing notifications
     m_notification->setTitle(incidence->summary());
-    m_notification->setText(m_text);
 
     auto defaultAction = m_notification->addDefaultAction(i18n("View"));
     QObject::connect(defaultAction, &KNotificationAction::activated, client, [this, client, startTime] {
