@@ -1,18 +1,18 @@
 # translation of kalendarac.po to Slovak
-# Roman Paholík <wizzardsk@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Roman Paholík <wizzardsk@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-21 00:47+0000\n"
-"PO-Revision-Date: 2022-04-09 15:16+0200\n"
+"PO-Revision-Date: 2023-12-04 17:11+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -96,14 +96,12 @@ msgid "Remind in 5 mins"
 msgstr "Pripomienka o 5 minút"
 
 #: alarmnotification.cpp:135
-#, fuzzy, kde-format
-#| msgid "Remind in 5 mins"
+#, kde-format
 msgid "Remind in 1 hour"
-msgstr "Pripomienka o 5 minút"
+msgstr "Pripomenúť o 1 hodinu"
 
 #: alarmnotification.cpp:135
-#, fuzzy, kde-format
-#| msgid "Dismiss"
+#, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Zamietnuť"
