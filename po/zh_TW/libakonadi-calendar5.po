@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:38+0000\n"
-"PO-Revision-Date: 2023-01-07 04:23+0900\n"
+"PO-Revision-Date: 2023-12-15 21:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 24.01.80\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -245,7 +245,7 @@ msgstr ""
 #: calendarsettings.kcfg:84
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
-msgstr ""
+msgstr "只顯示我發起或參加的事件的提醒"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
@@ -253,7 +253,7 @@ msgstr ""
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
-msgstr ""
+msgstr "勾選此選項來僅接收您是發起人或是您會參加的事件的提醒。"
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:93
@@ -882,26 +882,24 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"收件人的簽署設定要求您確認是否要簽署此信件。\n"
+"要簽署此信件嗎？"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "傳送訊息"
+msgstr "要簽署信件嗎？"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "簽署(&S)"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "不要傳送"
+msgstr "不要簽署(&N)"
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -909,23 +907,25 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"這些收件人的簽署設定有衝突。\n"
+"要簽署信件嗎？"
 
 #: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
-msgstr ""
+msgstr "您已要求簽署此信件，但是此身份沒有設定合法的簽署金鑰。"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "不簽署直接傳送嗎？"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "不簽署直接傳送(&U)"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -934,6 +934,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"此信件的某些部份將不會被簽署。\n"
+"不過部份簽署的信件有可能會違反站台政策。\n"
+"您要改成簽署整份信件嗎？"
 
 #: mailclient_p.cpp:767
 #, kde-format
@@ -942,26 +945,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"此信件將不會被簽署。\n"
+"不過傳送未簽署的信件有可能會違反站台政策。\n"
+"您要改成簽署信件嗎？"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "簽署整份信件(&S)"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "簽署(&S)"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "未簽署信件警告"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "就這樣送吧(&A)"
 
 #: mailclient_p.cpp:824
 #, kde-format
@@ -969,6 +975,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"所有的收件人都有合法受信任的加密金鑰。\n"
+"要加密此信件嗎？"
 
 #: mailclient_p.cpp:827
 #, kde-format
@@ -977,33 +985,33 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"收件人的加密設定要求您確認是否要加密此信件。\n"
+"要加密此信件嗎？"
 
 #: mailclient_p.cpp:832 mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "傳送訊息"
+msgstr "要加密信件嗎？"
 
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "簽署並加密(&E)"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "加密(&E)"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "只簽署(&S)"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "就這樣送吧(&S)"
 
 #: mailclient_p.cpp:854
 #, kde-format
@@ -1011,13 +1019,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"這些收件人的加密設定有衝突。\n"
+"要加密此信件嗎？"
 
 #: mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "不要傳送"
+msgstr "不要加密(&N)"
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1026,18 +1034,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"您已要求加密此信件，並傳送加密過的複本給您自己，但是此身份沒有設定合法受信任"
+"的加密金鑰。"
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "傳送更新"
+msgstr "不加密直接傳送嗎？"
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "傳送更新"
+msgstr "不加密直接傳送(&U)"
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1047,6 +1055,9 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"此信件的某些部份將不會被加密。\n"
+"不過部份加密的信件有可能會違反站台政策，並且可能洩露敏感資訊。\n"
+"您要改成加密整份信件嗎？"
 
 #: mailclient_p.cpp:899
 #, kde-format
@@ -1056,16 +1067,19 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"此信件的將不會被加密。\n"
+"不過傳送未加密的信件有可能會違反站台政策，並且可能洩露敏感資訊。\n"
+"您要改成加密信件嗎？"
 
 #: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "加密整份信件(&E)"
 
 #: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "未加密信件警告"
 
 #: mailscheduler_p.cpp:198
 #, kde-format
@@ -1109,15 +1123,14 @@ msgid ""
 msgstr "點擊<b>說明</b>鍵可以讀關於群組排程的詳情"
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
-msgstr "由於收件人的字串無效，因而無法發布行事曆事件。%1"
+msgstr ""
+"由於收件人的字串無效，因而無法發布行事曆事件。\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1399,13 +1412,13 @@ msgstr "儲存行程物件時發生錯誤"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "已拒絕的邀請"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "等待中的邀請"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
@@ -1831,84 +1844,72 @@ msgstr "編輯選取的事件。"
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "例外"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "摘要"
 
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "重複"
 
 #: todomodel.cpp:463
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "優先權"
 
 #: todomodel.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
-msgstr "完成"
+msgstr "已完成"
 
 #: todomodel.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "開始日期與時間"
+msgstr "開始日期"
 
 #: todomodel.cpp:469
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "到期日期與時間"
+msgstr "到期日期"
 
 #: todomodel.cpp:471
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "完成"
+msgstr "已完成"
 
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "標籤"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: todopurger.cpp:61
 #, kde-format
