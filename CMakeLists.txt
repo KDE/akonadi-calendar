@@ -10,7 +10,7 @@ project(Akonadi-Calendar  VERSION ${PIM_VERSION})
 set(KF_MIN_VERSION "5.246.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
-set(QT_REQUIRED_VERSION "6.5.0")
+set(QT_REQUIRED_VERSION "6.6.0")
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
