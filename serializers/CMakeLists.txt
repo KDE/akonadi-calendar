@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5-serializer\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar6-serializer\")
 add_library(akonadi_serializer_kcalcore MODULE)
 
 target_sources(akonadi_serializer_kcalcore PRIVATE

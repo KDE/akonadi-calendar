@@ -1,3 +1,3 @@
 #!/bin/sh
-$XGETTEXT *.cpp -o $podir/libakonadi-calendar5-serializer.pot
+$XGETTEXT *.cpp -o $podir/libakonadi-calendar6-serializer.pot
 

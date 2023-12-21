@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar6\")
 
 add_library(KPim6AkonadiCalendar)
 add_library(KPim6::AkonadiCalendar ALIAS KPim6AkonadiCalendar)
