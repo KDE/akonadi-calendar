@@ -1,200 +1,224 @@
-# translation of akonadi_serializer_plugins.po to Français
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcornavin@laposte.net>, 2010.
-# xavier <xavier.besnard@kde.org>, 2013.
-# Maxime Corteel <mcorteel@gmail.com>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: akonadi_serializer_plugins\n"
+"Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-27 00:45+0000\n"
-"PO-Revision-Date: 2015-01-25 19:11+0100\n"
-"Last-Translator: Maxime Corteel <mcorteel@gmail.com>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-12-22 05:30+0100\n"
+"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
+"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 1.5\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
 
 #: akonadi_serializer_kcalcore.cpp:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Yes"
 msgid "Yes"
 msgstr "Oui"
 
 #: akonadi_serializer_kcalcore.cpp:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No"
 msgid "No"
 msgstr "Non"
 
 #: akonadi_serializer_kcalcore.cpp:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendees"
 msgid "Attendees"
 msgstr "Participants"
 
 #: akonadi_serializer_kcalcore.cpp:202
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Organizer"
 msgid "Organizer"
 msgstr "Organisateur"
 
 #: akonadi_serializer_kcalcore.cpp:206
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "UID"
 msgid "UID"
 msgstr "UID"
 
 #: akonadi_serializer_kcalcore.cpp:210
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Is all-day"
 msgid "Is all-day"
 msgstr "Dure toute la journée"
 
 #: akonadi_serializer_kcalcore.cpp:214
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Has duration"
 msgid "Has duration"
 msgstr "Comporte une durée"
 
 #: akonadi_serializer_kcalcore.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duration"
 msgid "Duration"
 msgstr "Durée"
 
 #: akonadi_serializer_kcalcore.cpp:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description"
 msgid "Description"
 msgstr "Description"
 
 #: akonadi_serializer_kcalcore.cpp:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Summary"
 msgid "Summary"
 msgstr "Résumé"
 
 #: akonadi_serializer_kcalcore.cpp:236
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Status"
 msgid "Status"
 msgstr "État"
 
 #: akonadi_serializer_kcalcore.cpp:240
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Secrecy"
 msgid "Secrecy"
 msgstr "Confidentialité"
 
 #: akonadi_serializer_kcalcore.cpp:244
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Priority"
 msgid "Priority"
 msgstr "Priorité"
 
 #: akonadi_serializer_kcalcore.cpp:248
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Location"
 msgid "Location"
 msgstr "Lieu"
 
 #: akonadi_serializer_kcalcore.cpp:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories"
 msgid "Categories"
 msgstr "Catégories"
 
 #: akonadi_serializer_kcalcore.cpp:252
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alarms"
 msgid "Alarms"
 msgstr "Alarmes"
 
 #: akonadi_serializer_kcalcore.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resources"
 msgid "Resources"
 msgstr "Ressources"
 
 #: akonadi_serializer_kcalcore.cpp:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attachments"
 msgid "Attachments"
 msgstr "Pièces jointes"
 
 #: akonadi_serializer_kcalcore.cpp:255
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Exception Dates"
 msgid "Exception Dates"
 msgstr "Dates d'exception"
 
 #: akonadi_serializer_kcalcore.cpp:256
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Exception Times"
 msgid "Exception Times"
 msgstr "Heures d'exception"
 
 #: akonadi_serializer_kcalcore.cpp:260
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Created"
 msgid "Created"
 msgstr "Créé"
 
 #: akonadi_serializer_kcalcore.cpp:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Related Uid"
 msgid "Related Uid"
 msgstr "UID apparenté"
 
 #: akonadi_serializer_kcalcore.cpp:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start time"
 msgid "Start time"
 msgstr "Heure de début"
 
 #: akonadi_serializer_kcalcore.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Has End Date"
 msgid "Has End Date"
 msgstr "Comporte une date de fin"
 
 #: akonadi_serializer_kcalcore.cpp:279
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End Date"
 msgid "End Date"
 msgstr "Date de fin"
 
 #: akonadi_serializer_kcalcore.cpp:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Has Start Date"
 msgid "Has Start Date"
 msgstr "Comporte une date de début"
 
 #: akonadi_serializer_kcalcore.cpp:295
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Has Due Date"
 msgid "Has Due Date"
 msgstr "Comporte une date d'échéance"
 
 #: akonadi_serializer_kcalcore.cpp:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Due Date"
 msgid "Due Date"
 msgstr "Date d'échéance"
 
 #: akonadi_serializer_kcalcore.cpp:304
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Has Complete Date"
 msgid "Has Complete Date"
 msgstr "Comporte une date complète"
 
 #: akonadi_serializer_kcalcore.cpp:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Complete"
 msgid "Complete"
 msgstr "Complet"
 
 #: akonadi_serializer_kcalcore.cpp:317
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Completed"
 msgid "Completed"
 msgstr "Achevé"
 
 #: akonadi_serializer_kcalcore.cpp:331
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Changed Event"
 msgid "Changed Event"
 msgstr "Évènement modifié"
 
 #: akonadi_serializer_kcalcore.cpp:332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Conflicting Event"
 msgid "Conflicting Event"
 msgstr "Évènement en conflit"
 
 #: akonadi_serializer_kcalcore.cpp:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Changed Todo"
 msgid "Changed Todo"
 msgstr "Tâche à faire modifiée"
 
 #: akonadi_serializer_kcalcore.cpp:335
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Conflicting Todo"
 msgid "Conflicting Todo"
 msgstr "Tâche à faire en conflit"
 

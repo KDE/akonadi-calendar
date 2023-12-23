@@ -4,14 +4,14 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2015.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Александр Яворский <yavorsky.a@t-rosta.com>, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2022, 2023 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:38+0000\n"
-"PO-Revision-Date: 2023-04-15 13:45+0300\n"
+"PO-Revision-Date: 2023-12-22 21:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -922,24 +922,20 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Отправить сообщения"
+msgstr "Подписать письмо?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Подписать"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Не отправлять"
+msgstr "&Не подписывать"
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -947,6 +943,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Для этих получателей определены несогласованные параметры подписывания.\n"
+"Подписать это письмо?"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -954,16 +952,17 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Для подписи этого письма в профиле не настроены действительные ключи подписи."
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Отправить неподписанным?"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Отправить &неподписанным"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -972,6 +971,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Некоторые части этого письма не будут подписаны.\n"
+"Отправка писем, подписанных лишь частично, может нарушать установленные "
+"правила.\n"
+"Подписать все части?"
 
 #: mailclient_p.cpp:767
 #, kde-format
@@ -980,26 +983,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Это сообщение не будет подписано.\n"
+"Отправка неподписанного сообщения может нарушать правила сайта.\n"
+"Подписать сообщение?"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Подписать все части"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Подписать"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Предупреждение о неподписанном письме"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "Отправить &как есть"
 
 #: mailclient_p.cpp:824
 #, kde-format
@@ -1007,6 +1013,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Для всех получателей были найдены ключи, подходящие для шифрования.\n"
+"Зашифровать это письмо?"
 
 #: mailclient_p.cpp:827
 #, kde-format
@@ -1015,33 +1023,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Исходя из предпочтений получателя относительно шифрования, необходимо "
+"указать, следует ли шифровать данное письмо.\n"
+"Зашифровать письмо?"
 
 #: mailclient_p.cpp:832 mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Отправить сообщения"
+msgstr "Зашифровать письмо?"
 
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Подписать && &зашифровать"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "За&шифровать"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "&Только подписать"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "Отправить &как есть"
 
 #: mailclient_p.cpp:854
 #, kde-format
@@ -1049,13 +1058,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Для этих получателей определены несогласованные параметры шифрования.\n"
+"Зашифровать письмо?"
 
 #: mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Не отправлять"
+msgstr "&Не шифровать"
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1064,18 +1073,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Для шифрования этого письма и личной копии в профиле не настроены доверенные "
+"ключи шифрования."
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Отправить обновление"
+msgstr "Отправить незашифрованным?"
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Отправить обновление"
+msgstr "Отправить &незашифрованным"
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1085,6 +1094,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Некоторые части этого письма не будут зашифрованы.\n"
+"Отправка писем, зашифрованных лишь частично, может нарушать установленные "
+"правила и/или привести к утечке важной информации.\n"
+"Зашифровать все части?"
 
 #: mailclient_p.cpp:899
 #, kde-format
@@ -1094,16 +1107,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Это письмо не будет зашифровано.\n"
+"Отправка незашифрованных писем может нарушать установленные правила и/или "
+"привести к утечке важной информации.\n"
+"Зашифровать письмо?"
 
 #: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Зашифровать все части"
 
 #: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Предупреждение о незашифрованном письме"
 
 #: mailscheduler_p.cpp:198
 #, kde-format
@@ -1150,16 +1167,14 @@ msgstr ""
 "Нажмите кнопку <b>Справка</b>, чтобы узнать больше о групповом планировании."
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
-"Не удалось опубликовать мероприятие: некорректная строка получателей. %1"
+"Не удалось опубликовать мероприятие: некорректная строка получателей.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1950,71 +1965,59 @@ msgstr "Изменить выбранное событие, задачу или 
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Исключение"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Сводка"
 
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Повторяется"
 
 #: todomodel.cpp:463
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Приоритет"
 
 #: todomodel.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
-msgstr "Выполнено"
+msgstr "Выполнение"
 
 #: todomodel.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Дата и время начала"
+msgstr "Дата начала"
 
 #: todomodel.cpp:469
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Срок к исполнению"
+msgstr "Дата завершения"
 
 #: todomodel.cpp:471
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Выполнено"
@@ -2022,12 +2025,12 @@ msgstr "Выполнено"
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Метки"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: todopurger.cpp:61
 #, kde-format
