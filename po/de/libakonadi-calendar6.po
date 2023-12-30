@@ -4,7 +4,6 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2013, 2016, 2020, 2022, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # Intevation GmbH, 2010.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
