@@ -1537,7 +1537,8 @@ msgstr[1] "Copia %1 carpetes"
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
 msgid "Copy the selected calendar folders to the clipboard."
-msgstr "Copia les carpetes de calendari seleccionades al porta-retalls."
+msgstr ""
+"Copia les carpetes de calendari seleccionades a dins del porta-retalls."
 
 #: standardcalendaractionmanager.cpp:71
 #, kde-format
@@ -1635,7 +1636,7 @@ msgstr[1] "Copia %1 esdeveniments"
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
 msgid "Copy the selected events to the clipboard."
-msgstr "Copia els esdeveniments seleccionats al porta-retalls."
+msgstr "Copia els esdeveniments seleccionats a dins del porta-retalls."
 
 #: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
