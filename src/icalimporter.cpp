@@ -17,6 +17,7 @@
 #include <KCalendarCore/FileStorage>
 
 #include <KIO/Job>
+#include <KIO/StoredTransferJob>
 
 #include <QDBusInterface>
 #include <QFileInfo>

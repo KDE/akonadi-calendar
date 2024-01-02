@@ -24,7 +24,9 @@
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
 
+#include <KIO/FileCopyJob>
 #include <KIO/Job>
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <QUrl>
 
