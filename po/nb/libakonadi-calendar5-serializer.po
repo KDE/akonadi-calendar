@@ -1,4 +1,4 @@
-# Translation of libakonadi-calendar5-serializer to Norwegian Bokmål
+# Translation of libakonadi-calendar6-serializer to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2010, 2011, 2014.
 msgid ""

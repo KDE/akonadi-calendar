@@ -1,4 +1,4 @@
-# Translation of libakonadi-calendar5 to Norwegian Bokmål
+# Translation of libakonadi-calendar6 to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2010, 2013, 2014.
 msgid ""
