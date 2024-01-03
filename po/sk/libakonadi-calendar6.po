@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:38+0000\n"
+"POT-Creation-Date: 2024-01-03 01:36+0000\n"
 "PO-Revision-Date: 2023-10-11 18:44+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -369,7 +369,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Neznámy"
 
-#: freebusymanager.cpp:376
+#: freebusymanager.cpp:378
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -378,19 +378,19 @@ msgstr ""
 "Zlyhalo stiahnutie dát voľný/zaneprázdnený z: %1\n"
 "Dôvod: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:379 freebusymanager.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Chyba pri získavaní voľný/zaneprázdnený"
 
-#: freebusymanager.cpp:399
+#: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
 "Zlyhalo spracovanie informácií voľný/zaneprázdnený, ktoré boli získané z: %1"
 
-#: freebusymanager.cpp:414
+#: freebusymanager.cpp:416
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -403,23 +403,23 @@ msgstr ""
 "Systém odpovedal: <em>%2</em>.</p><p>Prosím, skontrolujte URL alebo sa "
 "obráťte na vášho správcu systému.</p></qt>"
 
-#: freebusymanager.cpp:615
+#: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Informácia voľný/zaneprázdnený bola úspešne odoslaná."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:136
+#: freebusymanager.cpp:618 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Posielanie voľný/zaneprázdnený"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Nemožno publikovať dáta voľný/zaneprázdnený: %1"
 
-#: freebusymanager.cpp:743
+#: freebusymanager.cpp:745
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -431,18 +431,18 @@ msgstr ""
 "stránke \"Voľný/Zaneprázdnený\". </p><p>Obráťte sa na správcu systému pre "
 "presné URL a podrobnosti o účte.</p></qt>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:750
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Žiadne URL pre nahratie voľný/zaneprázdnený"
 
-#: freebusymanager.cpp:758
+#: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Poskytnuté cieľové URL '%1' je neplatné.</qt>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:761
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -471,42 +471,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 zmena"
 
-#: icalimporter.cpp:82
+#: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Chyba vytvárania zdroja ical: %1"
 
-#: icalimporter.cpp:92
+#: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "Zlyhalo získanie rozhrania D-Bus pre vzdialené nastavenie."
 
-#: icalimporter.cpp:117
+#: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Nepodarilo sa stiahnuť vzdialený súbor."
 
-#: icalimporter.cpp:140 icalimporter.cpp:161
+#: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Beží už iná úloha importu."
 
-#: icalimporter.cpp:166
+#: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Prázdny názov súboru. Neimportujem ical súbor."
 
-#: icalimporter.cpp:171
+#: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "Url na import je znetvorené."
 
-#: icalimporter.cpp:178
+#: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "Vybraný súbor nie je čitateľný súbor."
 
-#: icalimporter.cpp:186
+#: icalimporter.cpp:187
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -515,12 +515,12 @@ msgstr ""
 "Vybraný súbor nie je správne naformátovaný alebo jeho formát nie je "
 "softvérom podporovaný."
 
-#: icalimporter.cpp:194
+#: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
 msgstr "Vybraný súbor je prázdny."
 
-#: icalimporter.cpp:212
+#: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Zlúčiť ical súbor do existujúceho kalendára."

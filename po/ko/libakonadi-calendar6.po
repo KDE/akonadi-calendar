@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:38+0000\n"
+"POT-Creation-Date: 2024-01-03 01:36+0000\n"
 "PO-Revision-Date: 2023-08-06 19:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -366,7 +366,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: freebusymanager.cpp:376
+#: freebusymanager.cpp:378
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -375,18 +375,18 @@ msgstr ""
 "바쁨/한가함 데이터를 다운로드할 수 없음: %1\n"
 "이유: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:379 freebusymanager.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "바쁨/한가함 가져오기 오류"
 
-#: freebusymanager.cpp:399
+#: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr "다음에서 가져온 바쁨/한가함 정보를 해석할 수 없음: %1"
 
-#: freebusymanager.cpp:414
+#: freebusymanager.cpp:416
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -399,23 +399,23 @@ msgstr ""
 "같습니다: <em>%2</em></p><p>URL을 다시 한 번 확인해 본 후 시스템 관리자에게 "
 "문의하십시오.</p></qt>"
 
-#: freebusymanager.cpp:615
+#: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "바쁨/한가함 정보를 보냈습니다."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:136
+#: freebusymanager.cpp:618 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "바쁨/한가함 보내는 중"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "바쁨/한가함 데이터를 공개할 수 없음: %1"
 
-#: freebusymanager.cpp:743
+#: freebusymanager.cpp:745
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -426,18 +426,18 @@ msgstr ""
 "정 대화 상자의 \"바쁨/한가함\" 페이지에 설정하십시오.</p><p>정확한 URL 및 계"
 "정 정보는 시스템 관리자에게 문의하십시오.</p></qt>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:750
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "바쁨/한가함 업로드 URL이 없음"
 
-#: freebusymanager.cpp:758
+#: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>입력한 대상 URL '%1'이(가) 잘못되었습니다.</qt>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:761
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -466,42 +466,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 수정"
 
-#: icalimporter.cpp:82
+#: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "iCal 리소스를 만드는 중 오류 발생: %1"
 
-#: icalimporter.cpp:92
+#: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "원격으로 설정할 D-Bus 인터페이스를 가져올 수 없습니다."
 
-#: icalimporter.cpp:117
+#: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
 msgstr "원격 파일을 다운로드할 수 없습니다."
 
-#: icalimporter.cpp:140 icalimporter.cpp:161
+#: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "중요한 작업이 이미 진행 중입니다."
 
-#: icalimporter.cpp:166
+#: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "파일 이름이 비어 있습니다. 로컬 iCal 파일을 가져오지 않습니다."
 
-#: icalimporter.cpp:171
+#: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "가져올 URL이 잘못되었습니다."
 
-#: icalimporter.cpp:178
+#: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "선택한 파일을 읽을 수 없습니다."
 
-#: icalimporter.cpp:186
+#: icalimporter.cpp:187
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -510,12 +510,12 @@ msgstr ""
 "선택한 파일의 형식이 올바르지 않거나, 소프트웨어에서 형식을 지원하지 않습니"
 "다."
 
-#: icalimporter.cpp:194
+#: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
 msgstr "선택한 파일이 비어 있습니다."
 
-#: icalimporter.cpp:212
+#: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "iCal 파일을 존재하는 캘린더로 합칩니다."

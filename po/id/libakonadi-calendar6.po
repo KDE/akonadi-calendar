@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:38+0000\n"
+"POT-Creation-Date: 2024-01-03 01:36+0000\n"
 "PO-Revision-Date: 2022-07-07 08:20+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -371,7 +371,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Tak diketahui"
 
-#: freebusymanager.cpp:376
+#: freebusymanager.cpp:378
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -380,19 +380,19 @@ msgstr ""
 "Gagal mengunduh data senggang/sibuk dari: %1\n"
 "Alasannya: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:379 freebusymanager.cpp:402
 #, fuzzy, kde-format
 #| msgid "Free/busy retrieval error"
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Galat pengambilan senggang/sibuk"
 
-#: freebusymanager.cpp:399
+#: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr "Gagal mengurai informasi senggang/sibuk yang telah diambil dari: %1"
 
-#: freebusymanager.cpp:414
+#: freebusymanager.cpp:416
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -405,24 +405,24 @@ msgstr ""
 "tentukan salah. Sistem bilang: <em>%2</em>.</p><p>Silakan periksa URL atau "
 "hubungi administrator sistem kamu.</p></qt>"
 
-#: freebusymanager.cpp:615
+#: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Informasi senggang/sibuk berhasil dikirim."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:136
+#: freebusymanager.cpp:618 itiphandler_p.cpp:136
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Mengirim Senggang/Sibuk"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Tak bisa melansir data senggang/sibuk: %1"
 
-#: freebusymanager.cpp:743
+#: freebusymanager.cpp:745
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -434,19 +434,19 @@ msgstr ""
 "\"Senggang/Sibuk\".</p><p>Hubungi admisistrator sistem kamu untuk menepatkan "
 "detail URL dan akun.</p></qt>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:750
 #, fuzzy, kde-format
 #| msgid "No Free/Busy Upload URL"
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Tidak Ada Senggang/Sibuk URL Yang Diunggah"
 
-#: freebusymanager.cpp:758
+#: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Target URL '%1' yang disediakan tidak valid.</qt>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:761
 #, fuzzy, kde-format
 #| msgid "Invalid URL"
 msgctxt "@title:window"
@@ -476,42 +476,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "Modifikasi %1"
 
-#: icalimporter.cpp:82
+#: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Galat membuat sumberdaya ical: %1"
 
-#: icalimporter.cpp:92
+#: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "Gagal memperoleh antarmuka D-Bus untuk konfigurasi jarak jauh."
 
-#: icalimporter.cpp:117
+#: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Tidak bisa mengunduh file jarak jauh."
 
-#: icalimporter.cpp:140 icalimporter.cpp:161
+#: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Sebuah tugas impor sedang dalam progres."
 
-#: icalimporter.cpp:166
+#: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Nama file kosong. Tidak akan mengimpor file ical."
 
-#: icalimporter.cpp:171
+#: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "Url untuk mengimpor formatnya salah."
 
-#: icalimporter.cpp:178
+#: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "File yang dipilih bukanlah sebuah file yang bisa dibaca."
 
-#: icalimporter.cpp:186
+#: icalimporter.cpp:187
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -520,12 +520,12 @@ msgstr ""
 "File yang dipilih tidak diformat secara benar, atau dalam sebuah format yang "
 "tidak didukung oleh perangkat lunak ini."
 
-#: icalimporter.cpp:194
+#: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
 msgstr "File yang dipilih adalah kosong."
 
-#: icalimporter.cpp:212
+#: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Gabungkan file ical ke dalam kalender yang ada."

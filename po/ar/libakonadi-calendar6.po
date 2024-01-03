@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:38+0000\n"
+"POT-Creation-Date: 2024-01-03 01:36+0000\n"
 "PO-Revision-Date: 2023-04-06 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -367,7 +367,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "مجهول"
 
-#: freebusymanager.cpp:376
+#: freebusymanager.cpp:378
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -376,18 +376,18 @@ msgstr ""
 "فشل تنزيل بيانات متفرّغ/مشغول من: %1\n"
 "السّبب: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:379 freebusymanager.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "خطأ في جلب متفرّغ/مشغول"
 
-#: freebusymanager.cpp:399
+#: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr "فشل تحليل معلومات متفرّغ/مشغول التي جُلبت من: %1"
 
-#: freebusymanager.cpp:414
+#: freebusymanager.cpp:416
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -400,23 +400,23 @@ msgstr ""
 "صحيح. قال النّظام: <em>%2</em>.</p><p>رجاءً افحص المسار أو تواصل مع مدير "
 "النّظام.</p></html>"
 
-#: freebusymanager.cpp:615
+#: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "أُرسلت معلومات متفرّغ/مشغول بنجاح."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:136
+#: freebusymanager.cpp:618 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "يُرسل متفرّغ/مشغول"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "تعذّر نشر بيانات متفرّغ/مشغول: %1"
 
-#: freebusymanager.cpp:743
+#: freebusymanager.cpp:745
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -427,18 +427,18 @@ msgstr ""
 "حواريّ ضبط «منظّمك»، في صفحة ”متفرّغ/مشغول“.</p><p>راسل مدير النّظام لتعرف "
 "المسار بالضّبط وتفاصيل الحساب.</p></html>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:750
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "لا مسار رفع متفرّغ/مشغول"
 
-#: freebusymanager.cpp:758
+#: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<html dir=\"rtl\"> مسار ’%1‘ الهدف الموفّر غير صالح.</html>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:761
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -467,54 +467,54 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "تعديل %1"
 
-#: icalimporter.cpp:82
+#: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "تعذّر إنشاء مورد iCal: ‏%1"
 
-#: icalimporter.cpp:92
+#: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "فشل أخذ واجهة D-Bus للضّبط البعيد."
 
-#: icalimporter.cpp:117
+#: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
 msgstr "تعذّر تنزيل الملفّ البعيد."
 
-#: icalimporter.cpp:140 icalimporter.cpp:161
+#: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "ثمّة مهمّة استيراد تجري بالفعل."
 
-#: icalimporter.cpp:166
+#: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "اسم الملفّ فارغ. لن أستورد ملفّ iCal."
 
-#: icalimporter.cpp:171
+#: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "المسار الذي سيُستورد مشوّه."
 
-#: icalimporter.cpp:178
+#: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "الملف المحدد لا يمكن قراءته."
 
-#: icalimporter.cpp:186
+#: icalimporter.cpp:187
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr "الملف المحدد لم يهيئ بشكل صحيح أو هيئ بنسق غير مدعوم بهذا التطبيق."
 
-#: icalimporter.cpp:194
+#: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
 msgstr "الملف المحدد فارغ."
 
-#: icalimporter.cpp:212
+#: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "ادمج ملفّ iCal في تقويم موجود."

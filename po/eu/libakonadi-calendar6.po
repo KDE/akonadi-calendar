@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:38+0000\n"
+"POT-Creation-Date: 2024-01-03 01:36+0000\n"
 "PO-Revision-Date: 2023-11-25 18:25+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -378,7 +378,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: freebusymanager.cpp:376
+#: freebusymanager.cpp:378
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -387,20 +387,20 @@ msgstr ""
 "Hemendik Libre/Lanpetu datuak zama-jaistea huts egin du: %1\n"
 "Arrazoia: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:379 freebusymanager.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Libre/Lanpetuta berreskuratze errorea"
 
-#: freebusymanager.cpp:399
+#: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
 "«%1»(e)tik berreskuratutako Libre/Lanpetuta informazioaren azterketa "
 "sintaktikoak huts egin du"
 
-#: freebusymanager.cpp:414
+#: freebusymanager.cpp:416
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -413,23 +413,23 @@ msgstr ""
 "zehaztu duzu. Sistemak adierazi du: <em>%2</em>.</p><p>URLa egiazta ezazu "
 "edo jar zaitez harremanetan zure sistemaren administratzailearekin.</p></qt>"
 
-#: freebusymanager.cpp:615
+#: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Libre/Lanpetuta informazioa ondo bidali da."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:136
+#: freebusymanager.cpp:618 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Libre/Lanpetuta bidaltzen"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Ezin Libre/Lanpetuta datuak argitaratu: %1"
 
-#: freebusymanager.cpp:743
+#: freebusymanager.cpp:745
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -441,18 +441,18 @@ msgstr ""
 "Lanpetuta» orrian.</p><p>Jar zaitez zure sistemaren administratzailearekin "
 "harremanetan URL eta kontu xehetasun zehatzak jakiteko.</p></qt>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:750
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ez dago Libre/Lanpetuta zama-igotzeko URLrik"
 
-#: freebusymanager.cpp:758
+#: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Hornitutako jomugako «%1» URLa baliogabea da.</qt>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:761
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -481,42 +481,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 aldatzea"
 
-#: icalimporter.cpp:82
+#: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Errorea ical baliabidea sortzen: %1"
 
-#: icalimporter.cpp:92
+#: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "Ezin izan da lortu urrunetik konfiguratzeko D-Bus interfazea."
 
-#: icalimporter.cpp:117
+#: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Ezin da urruneko fitxategia zama-jaitsi."
 
-#: icalimporter.cpp:140 icalimporter.cpp:161
+#: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Zeregin garrantzitsu bat dagoeneko abian da."
 
-#: icalimporter.cpp:166
+#: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Fitxategi-izena hutsik. Ez du ical fitxategia inportatuko."
 
-#: icalimporter.cpp:171
+#: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "Inportatu beharreko URLa gaizki eratuta dago."
 
-#: icalimporter.cpp:178
+#: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "Hautatutako fitxategia ez da fitxategi irakurgarri bat."
 
-#: icalimporter.cpp:186
+#: icalimporter.cpp:187
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -525,12 +525,12 @@ msgstr ""
 "Hautatutako fitxategia ez dago ondo eratua, ez behintzat software honek "
 "onartzen duen formatu batean."
 
-#: icalimporter.cpp:194
+#: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
 msgstr "Hautatutako fitxategia hutsik dago."
 
-#: icalimporter.cpp:212
+#: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Bateratu ical fitxategia existitzen den egutegian."
