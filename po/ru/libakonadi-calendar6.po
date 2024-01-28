@@ -4,14 +4,14 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2015.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Александр Яворский <yavorsky.a@t-rosta.com>, 2018.
-# SPDX-FileCopyrightText: 2020, 2022, 2023 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-03 01:36+0000\n"
-"PO-Revision-Date: 2023-12-22 21:33+0300\n"
+"PO-Revision-Date: 2024-01-27 15:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -256,6 +256,8 @@ msgstr ""
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"Показывать напоминания только о событиях, в которых я организатор или "
+"участник"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
@@ -264,6 +266,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Используйте этот параметр, чтобы получать напоминания только о тех событиях, "
+"в которых вы являетесь организатором или в которых принимаете участие."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:93
@@ -920,6 +924,9 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Согласно параметрам подписания сообщений, установленным для этого адресата, "
+"вам предоставляется возможность подписать это сообщение.\n"
+"Подписать это сообщение?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
@@ -1468,13 +1475,13 @@ msgstr "Ошибка сохранения данных о занятости"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Отклонённые приглашения"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Открытые приглашения"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
