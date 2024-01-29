@@ -529,7 +529,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
     QStringList providers;
     const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
     for (const Akonadi::AgentInstance &agent : agents) {
-        if (agent.type().capabilities().contains(QLatin1String("FreeBusyProvider"))) {
+        if (agent.type().capabilities().contains(QLatin1StringView("FreeBusyProvider"))) {
             providers << agent.identifier();
         }
     }
@@ -803,7 +803,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         if (CalendarSettings::self()->publishKolab()) {
             // we use Kolab
             QString server;
-            if (CalendarSettings::self()->publishKolabServer() == QLatin1String("%SERVER%")
+            if (CalendarSettings::self()->publishKolabServer() == QLatin1StringView("%SERVER%")
                 || CalendarSettings::self()->publishKolabServer().isEmpty()) {
                 server = emailHost;
             } else {

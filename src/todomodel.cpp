@@ -605,7 +605,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
 
                 KCalendarCore::Todo::Ptr oldTodo = KCalendarCore::Todo::Ptr(destTodo->clone());
 
-                if (text.startsWith(QLatin1String("file:"))) {
+                if (text.startsWith(QLatin1StringView("file:"))) {
                     destTodo->addAttachment(KCalendarCore::Attachment(text));
                 } else {
                     QStringList emails = KEmailAddress::splitAddressList(text);

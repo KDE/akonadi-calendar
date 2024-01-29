@@ -116,7 +116,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     QString data_filename;
     QString action = QStringLiteral("accepted");
     QString incidenceUid = QStringLiteral("uosj936i6arrtl9c2i5r2mfuvg");
-    QString receiver = QLatin1String(s_ourEmail);
+    QString receiver = QLatin1StringView(s_ourEmail);
     Akonadi::ITIPHandler::Result expectedResult;
     int expectedNumIncidences = 0;
     KCalendarCore::Attendee::PartStat expectedPartStat;
@@ -279,7 +279,7 @@ void ITIPHandlerTest::testProcessITIPMessages()
     QFETCH(QString, expected_filename);
     QFETCH(QStringList, actions);
 
-    const QString receiver = QLatin1String(s_ourEmail);
+    const QString receiver = QLatin1StringView(s_ourEmail);
 
     FakeMessageQueueJob::sUnitTestResults.clear();
     createITIPHandler();
@@ -333,7 +333,7 @@ void ITIPHandlerTest::testProcessITIPMessageCancel()
     QFETCH(QString, cancel_data_filename);
     QFETCH(QString, incidenceUid);
 
-    const QString receiver = QLatin1String(s_ourEmail);
+    const QString receiver = QLatin1StringView(s_ourEmail);
     FakeMessageQueueJob::sUnitTestResults.clear();
     createITIPHandler();
 
@@ -372,7 +372,7 @@ void ITIPHandlerTest::testOutgoingInvitations_data()
     int expectedEmailCount = 0;
     Q_UNUSED(invitationPolicyAsk)
 
-    const QString ourEmail = QLatin1String(s_ourEmail);
+    const QString ourEmail = QLatin1StringView(s_ourEmail);
     Attendee us(QString(), ourEmail);
     const Attendee mia(QStringLiteral("Mia Wallace"), QStringLiteral("mia@dev.nul"));
     const Attendee vincent(QStringLiteral("Vincent"), QStringLiteral("vincent@dev.nul"));
@@ -543,11 +543,11 @@ void ITIPHandlerTest::testIdentity_data()
     QTest::addColumn<QString>("email");
     QTest::addColumn<bool>("expectedResult");
 
-    const QString myEmail = QLatin1String(s_ourEmail);
+    const QString myEmail = QLatin1StringView(s_ourEmail);
     QString myEmail2 = QStringLiteral("Some name <%1>").arg(myEmail);
 
     const QString myAlias1 = QStringLiteral("alias1@kde.org"); // hardcoded in emailidentities, do not change
-    const QString myIdentity2 = QLatin1String(s_outEmail2);
+    const QString myIdentity2 = QLatin1StringView(s_outEmail2);
 
     QTest::newRow("Me") << myEmail << true;
     QTest::newRow("Also me") << myEmail2 << true;
@@ -589,7 +589,7 @@ void ITIPHandlerTest::createITIPHandler()
 
 QString ITIPHandlerTest::icalData(const QString &data_filename)
 {
-    QString absolutePath = QFINDTESTDATA(QLatin1String("itip_data/") + data_filename);
+    QString absolutePath = QFINDTESTDATA(QLatin1StringView("itip_data/") + data_filename);
     return QString::fromLatin1(readFile(absolutePath));
 }
 
@@ -620,7 +620,7 @@ Attendee ITIPHandlerTest::ourAttendee(const KCalendarCore::Incidence::Ptr &incid
     const KCalendarCore::Attendee::List attendees = incidence->attendees();
     KCalendarCore::Attendee me;
     for (const KCalendarCore::Attendee &attendee : attendees) {
-        if (attendee.email() == QLatin1String(s_ourEmail)) {
+        if (attendee.email() == QLatin1StringView(s_ourEmail)) {
             me = attendee;
             break;
         }

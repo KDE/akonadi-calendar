@@ -161,7 +161,7 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sentInvitation(int messageBoxRe
 bool ITIPHandlerHelper::weAreOrganizerOf(const KCalendarCore::Incidence::Ptr &incidence)
 {
     const QString email = incidence->organizer().email();
-    return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty() || email == QLatin1String("invalid@email.address");
+    return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty() || email == QLatin1StringView("invalid@email.address");
 }
 
 bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalendarCore::Incidence::Ptr &incidence)

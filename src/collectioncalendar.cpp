@@ -300,7 +300,7 @@ bool CollectionCalendar::addEvent(const KCalendarCore::Event::Ptr &event)
 {
     Q_D(CollectionCalendar);
 
-    if (d->m_collection.contentMimeTypes().contains(event->mimeType()) || d->m_collection.contentMimeTypes().contains(QLatin1String("text/calendar"))) {
+    if (d->m_collection.contentMimeTypes().contains(event->mimeType()) || d->m_collection.contentMimeTypes().contains(QLatin1StringView("text/calendar"))) {
         return CalendarBase::addEvent(event);
     }
     return false;
@@ -310,7 +310,7 @@ bool CollectionCalendar::addTodo(const KCalendarCore::Todo::Ptr &todo)
 {
     Q_D(CollectionCalendar);
 
-    if (d->m_collection.contentMimeTypes().contains(todo->mimeType()) || d->m_collection.contentMimeTypes().contains(QLatin1String("text/calendar"))) {
+    if (d->m_collection.contentMimeTypes().contains(todo->mimeType()) || d->m_collection.contentMimeTypes().contains(QLatin1StringView("text/calendar"))) {
         return CalendarBase::addTodo(todo);
     }
     return false;
@@ -320,7 +320,7 @@ bool CollectionCalendar::addJournal(const KCalendarCore::Journal::Ptr &journal)
 {
     Q_D(CollectionCalendar);
 
-    if (d->m_collection.contentMimeTypes().contains(journal->mimeType()) || d->m_collection.contentMimeTypes().contains(QLatin1String("text/calendar"))) {
+    if (d->m_collection.contentMimeTypes().contains(journal->mimeType()) || d->m_collection.contentMimeTypes().contains(QLatin1StringView("text/calendar"))) {
         return CalendarBase::addJournal(journal);
     }
     return false;

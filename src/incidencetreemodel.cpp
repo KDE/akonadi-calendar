@@ -660,7 +660,7 @@ int IncidenceTreeModel::rowCount(const QModelIndex &parent) const
         Q_ASSERT(parent.model() == this);
         Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
         Q_ASSERT(parentNode);
-        d->assert_and_dump(!d->m_removedNodes.contains(parentNode), QString::number((quintptr)parentNode, 16) + QLatin1String(" was already deleted"));
+        d->assert_and_dump(!d->m_removedNodes.contains(parentNode), QString::number((quintptr)parentNode, 16) + QLatin1StringView(" was already deleted"));
 
         const int count = parentNode->directChilds.count();
         return count;
@@ -852,7 +852,7 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
     static int level = 0;
     ++level;
     QString padding = QString(level - 1, QLatin1Char(' '));
-    s << padding + QLatin1String("node") << node.data() << QStringLiteral(";uid=") << node->uid << QStringLiteral(";id=") << node->id
+    s << padding + QLatin1StringView("node") << node.data() << QStringLiteral(";uid=") << node->uid << QStringLiteral(";id=") << node->id
       << QStringLiteral(";parentUid=") << node->parentUid << QStringLiteral(";parentNode=") << (void *)(node->parentNode.data()) << '\n';
 
     for (const Node::Ptr &child : std::as_const(node->directChilds)) {

@@ -102,7 +102,7 @@ void KalendarAlarmClient::deferredInit()
 void KalendarAlarmClient::restoreSuspendedFromConfig()
 {
     qCDebug(REMINDER_DAEMON_LOG) << "Restore suspended alarms from config";
-    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
+    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1StringView(mySuspensedGroupName));
     const auto suspendedAlarms = suspendedGroup.groupList();
 
     for (const auto &s : suspendedAlarms) {
@@ -155,8 +155,8 @@ void KalendarAlarmClient::showIncidence(const QString &uid, const QDateTime &occ
     job->setStartupId(xdgActivationToken.toUtf8());
     connect(job, &KJob::finished, this, [appId, kontactPlugin, uid, occurrence, xdgActivationToken]() {
         // if running inside Kontact, select the right plugin
-        if (appId == QLatin1String("org.kde.kontact")) {
-            const QString objectName = QLatin1Char('/') + kontactPlugin + QLatin1String("_PimApplication");
+        if (appId == QLatin1StringView("org.kde.kontact")) {
+            const QString objectName = QLatin1Char('/') + kontactPlugin + QLatin1StringView("_PimApplication");
             QDBusInterface iface(appId, objectName, QStringLiteral("org.kde.PIMUniqueApplication"), QDBusConnection::sessionBus());
             if (iface.isValid()) {
                 QStringList arguments({kontactPlugin});
@@ -178,8 +178,8 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
-    KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
+    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1StringView(mySuspensedGroupName));
+    KConfigGroup notificationGroup(&suspendedGroup, QLatin1StringView(notificationUidData));
     notificationGroup.writeEntry("UID", notificationUidData);
     notificationGroup.writeEntry("Text", notification->text());
     if (notification->occurrence().isValid()) {
@@ -197,8 +197,8 @@ void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
-    KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
+    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1StringView(mySuspensedGroupName));
+    KConfigGroup notificationGroup(&suspendedGroup, QLatin1StringView(notificationUidData));
     notificationGroup.deleteGroup();
     KSharedConfig::openConfig()->sync();
 }
