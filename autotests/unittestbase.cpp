@@ -9,11 +9,11 @@
 #include "helper.h"
 #include "mailclient_p.h"
 
+#include "incidencechanger.h"
+#include "itiphandler.h"
 #include <Akonadi/ItemCreateJob>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/ICalFormat>
-#include <incidencechanger.h>
-#include <itiphandler.h>
 
 #include <QByteArray>
 #include <QFile>
