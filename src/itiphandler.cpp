@@ -143,8 +143,8 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         return;
     }
 
-    if (action.startsWith(QLatin1StringView("accepted")) || action.startsWith(QLatin1String("tentative")) || action.startsWith(QLatin1String("delegated"))
-        || action.startsWith(QLatin1StringView("counter"))) {
+    if (action.startsWith(QLatin1StringView("accepted")) || action.startsWith(QLatin1StringView("tentative"))
+        || action.startsWith(QLatin1StringView("delegated")) || action.startsWith(QLatin1StringView("counter"))) {
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
         KCalendarCore::Attendee::List attendees = d->m_incidence->attendees();

@@ -180,7 +180,7 @@ void AlarmNotification::setRemindAt(const QDateTime &remindAtDt)
 
 bool AlarmNotification::hasValidContextAction() const
 {
-    return m_contextAction.isValid() && (m_contextAction.scheme() == QLatin1StringView("https") || m_contextAction.scheme() == QLatin1String("geo"));
+    return m_contextAction.isValid() && (m_contextAction.scheme() == QLatin1StringView("https") || m_contextAction.scheme() == QLatin1StringView("geo"));
 }
 
 QString AlarmNotification::determineContextAction(const KCalendarCore::Incidence::Ptr &incidence)

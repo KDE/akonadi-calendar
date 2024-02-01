@@ -130,7 +130,8 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
         if (!ownerStr.isEmpty()) {
             if (!ownerStr.compare(QLatin1StringView("INBOX"), Qt::CaseInsensitive)) {
                 return i18nc("%1 is folder contents", "My Kolab %1", typeStr);
-            } else if (!ownerStr.compare(QLatin1StringView("SHARED"), Qt::CaseInsensitive) || !ownerStr.compare(QLatin1String("CALENDAR"), Qt::CaseInsensitive)
+            } else if (!ownerStr.compare(QLatin1StringView("SHARED"), Qt::CaseInsensitive)
+                       || !ownerStr.compare(QLatin1StringView("CALENDAR"), Qt::CaseInsensitive)
                        || !ownerStr.compare(QLatin1StringView("RESOURCES"), Qt::CaseInsensitive)) {
                 return i18nc("%1 is folder name, %2 is folder contents", "Shared Kolab %1 %2", nameStr, typeStr);
             } else {
