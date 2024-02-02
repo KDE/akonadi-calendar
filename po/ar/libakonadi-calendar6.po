@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:36+0000\n"
+"POT-Creation-Date: 2024-02-02 00:38+0000\n"
 "PO-Revision-Date: 2023-04-06 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -281,23 +281,23 @@ msgstr ""
 "النّطاق لمعرّف المستخدم الذي تبحث عنه. فمثلًا (إن ضُبط هذا الخيار) البحث عنه "
 "بيانات متفرّغ/مشغول لِ‍ joe@mydomain.com على الخادوم www.yourdomain.com سيفشل."
 
-#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:167
+#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
 #: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "تقويم"
 
-#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:169
+#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
 msgstr "مهام"
 
-#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:171
+#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
 msgstr "يوميات"
 
-#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:173
+#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
 msgstr "ملاحظات"
@@ -308,60 +308,60 @@ msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "%1 كلوبي"
 
-#: calendarutils.cpp:135
+#: calendarutils.cpp:136
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "%2 %1 المشارك على كلوب"
 
-#: calendarutils.cpp:138
+#: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "%2 %1 على كلوب"
 
-#: calendarutils.cpp:140
+#: calendarutils.cpp:141
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "%3 %1 في %2 على كلوب"
 
-#: calendarutils.cpp:144
+#: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "%1 كلوب"
 
-#: calendarutils.cpp:151
+#: calendarutils.cpp:152
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 في %2"
 
-#: calendarutils.cpp:184
+#: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "%2 %1 على غوغل"
 
-#: calendarutils.cpp:186
+#: calendarutils.cpp:187
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%2 %1"
 
-#: calendarutils.cpp:189
+#: calendarutils.cpp:190
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "%1 غوغل"
 
-#: calendarutils.cpp:197
+#: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
 msgstr "%1 الخاص بي"
 
-#: calendarutils.cpp:201
+#: calendarutils.cpp:202
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
