@@ -1,63 +1,53 @@
-# translation of libakonadi-calendar.po to Français
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2020, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
-# Joëlle Cornavin <jcornavin@laposte.net>, 2010, 2011.
-# Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2013.
-# Vincent Pinon <vpinon@kde.org>, 2017, 2018.
-# Simon Depiets <sdepiets@gmail.com>, 2019.
-# Xavier Besnard <xavier.besnard@kde.org>, 2023.
-# Valentin Poupon <valentin.poupon@gmail.com>, 2023.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar package.
 #
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: libakonadi-calendar\n"
+"Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:38+0000\n"
-"PO-Revision-Date: 2023-11-14 17:20+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2024-02-02 17:31+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: calendarbase.cpp:265
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
-"Impossible de trouver l'incidence à mettre à jour, elle a probablement été "
-"effacée récemment."
+"Neizdevās atrast notikumu atjaunināšanai, iespējams, tas ir nesen izdzēsts."
 
 #: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
-msgstr "Erreur en effectuant la suppression."
+msgstr "Kļūda dzēšot."
 
 #: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
-msgstr "Erreur en effectuant la copie."
+msgstr "Kļūda kopējot."
 
 #: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
-msgstr "Impossible de trouver cet élément : %1"
+msgstr "Nevar atrast vienumu: %1"
 
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
-msgstr "Erreur en supprimant les relations."
+msgstr "Kļūda, noņemot saistības."
 
 #: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
-msgstr "Erreur pendant la suppression des incidences : %1"
+msgstr "Kļūda, dzēšot notikumus: %1"
 
 #: calendarclipboard.cpp:175
 #, kde-format
@@ -65,25 +55,25 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"L'élément « %1 » possède des sous-tâches. Voulez-vous couper cet élément et "
-"rendre toutes ses sous-tâches indépendante ou couper la tâche avec toutes "
-"ses sous-tâches ?"
+"Vienumam „%1“ ir apakšuzdevumi. Vai vēlaties izgriezt tikai šo vienumu un "
+"visus tā apakšuzdevumus padarīt neatkarīgus, vai arī izgriezt šo darāmo "
+"uzdevumu ar visiem tā apakšuzdevumiem?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "Configuration de KOrganizer"
+msgstr "„KOrganizer“ apstiprinājums"
 
 #: calendarclipboard.cpp:181
 #, kde-format
 msgid "Cut Only This"
-msgstr "Ne couper que ceci"
+msgstr "Izgriezt tikai šo"
 
 #: calendarclipboard.cpp:182
 #, kde-format
 msgid "Cut All"
-msgstr "Tout couper"
+msgstr "Izgriezt visu"
 
 #: calendarclipboard.cpp:215
 #, kde-format
@@ -91,118 +81,114 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"L'élément « %1 » possède des sous-tâches. Voulez-vous copier seulement cet "
-"élément ou copier la tâche avec toutes ses sous-tâches ?"
+"Vienumam „%1“ ir apakšuzdvumi. Vai vēlaties kopāt tikai šo vienumu vai kopēt "
+"visus darāmos uzdevumus kopā ar apakšuzdevumiem?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
 msgid "Copy Only This"
-msgstr "Ne copier que ceci"
+msgstr "Kopēt tikai šo"
 
 #: calendarclipboard.cpp:221
 #, kde-format
 msgid "Copy All"
-msgstr "Tout copier"
+msgstr "Kopēt visu"
 
 #: calendarmodel.cpp:192
 #, kde-format
 msgctxt "@title:column calendar event summary"
 msgid "Summary"
-msgstr "Résumé"
+msgstr "Kopsavilkums"
 
 #: calendarmodel.cpp:194
 #, kde-format
 msgctxt "@title:column calendar event start date and time"
 msgid "Start Date and Time"
-msgstr "Date et heure de début"
+msgstr "Sākuma datums un laiks"
 
 #: calendarmodel.cpp:196
 #, kde-format
 msgctxt "@title:column calendar event end date and time"
 msgid "End Date and Time"
-msgstr "Date et heure de fin"
+msgstr "Beigu datums un laiks"
 
 #: calendarmodel.cpp:198
 #, kde-format
 msgctxt "@title:column calendar event type"
 msgid "Type"
-msgstr "Type"
+msgstr "Tips"
 
 #: calendarmodel.cpp:200
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
-msgstr "Date et heure d'échéance"
+msgstr "Termiņš un laiks"
 
 #: calendarmodel.cpp:202
 #, kde-format
 msgctxt "@title:column todo item priority"
 msgid "Priority"
-msgstr "Priorité"
+msgstr "Prioritāte"
 
 #: calendarmodel.cpp:204
 #, kde-format
 msgctxt "@title:column todo item completion in percent"
 msgid "Complete"
-msgstr "Terminé"
+msgstr "Pabeigts"
 
 #: calendarmodel.cpp:213
 #, kde-format
 msgctxt "@title:column calendar title"
 msgid "Calendar"
-msgstr "Agenda"
+msgstr "Kalendārs"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:23
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr "URL de publication des informations de disponibilité"
+msgstr "Aizņemtības publicēšanas URL"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr "URL employée la publication des informations de disponibilité"
+msgstr "Adrese informācijas publicēšanai par aizņemtības statusu"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
 #, kde-format
 msgid "Free/Busy Publish Username"
-msgstr ""
-"Nom d'utilisateur pour la publication des informations de disponibilité"
+msgstr "Aizņemtības publicēšanas lietotājvārds"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:29
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr ""
-"Nom d'utilisateur employé pour la publication des informations de "
-"disponibilité"
+msgstr "Lietotājvārds, publicējot informāciju par aizņemtību"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:33
 #, kde-format
 msgid "Free/Busy Publish Password"
-msgstr "Mot de passe pour la publication des informations de disponibilité"
+msgstr "Aizņemtības publicēšanas parole"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr ""
-"Mot de passe employé pour la publication des informations de disponibilité"
+msgstr "Parole, lai publicētu informāciju par aizņemtības statusu"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr "Activer l'extraction automatique des informations de disponibilité"
+msgstr "Ieslēgt automātisku aizņemtības izgūšanu"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:50
 #, kde-format
 msgid "Use full email address for retrieval"
-msgstr "Utiliser l'adresse de courrier électronique complète pour l'extraction"
+msgstr "Izgūšanai izmantot pilnu e-pasta adresi"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:51
@@ -213,42 +199,41 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
-"Avec ce paramètre, vous pouvez changer le nom de fichier qui sera extrait du "
-"serveur. S'il est sélectionné, il téléchargera un fichier de disponibilité "
-"appelé « utilisateur@domaine.ifb », par exemple « nn@kde.org.ifb ». Sans ce "
-"réglage, il téléchargera « utilisateur.ifb », par exemple « nn.ifb »."
+"Šis iestatījums ļauj mainīt datnes nosaukumu, kas tiks iegūta no servera. Ja "
+"šī iespēja ir atzīmēta, tiks lejupielādēta aizņemtības statusa datne ar "
+"nosaukumu „lietotājs@domēns.ifb“, piemēram, „nn@kde.org.ifb“. Šai iespējai "
+"esot izslēgtai, tiks lejupielādēta lietotāja „.ifb“ datne, piemēram, „nn."
+"ifb“."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr "URL d'extraction des informations de disponibilité"
+msgstr "Aizņemtības izgūšanas URL"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
 #, kde-format
 msgid "Free/Busy Retrieval Username"
-msgstr "Nom d'utilisateur pour l'extraction des informations de disponibilité"
+msgstr "Aizņemtības izgūšanas lietotājvārds"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:64
 #, kde-format
 msgid "Free/Busy Retrieval Password"
-msgstr "Mot de passe pour l'extraction des informations de disponibilité"
+msgstr "Aizņemtības izgūšanas parole"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:65
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr "Mot de passe pour l'extraction des informations de disponibilité"
+msgstr "Parole aizņemtības informācijas izgūšanai"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:76
 #, kde-format
 msgid "Send copy to owner when mailing events"
-msgstr ""
-"Envoyer une copie au propriétaire lors de l'envoi de courriers électroniques "
-"concernant des évènements"
+msgstr "Nosūtīt kopiju īpašniekam par pasta notikumiem"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:77
@@ -257,16 +242,16 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
-"Cochez cette case pour obtenir une copie de tous les courriers électroniques "
-"que KOrganizer envoie à votre demande aux participants d'un évènement."
+"Atzīmējiet šo lauciņu, lai iegūtu visu e-pasta ziņojumu kopijas, kad "
+"„KOrganizer“ pēc jūsu lūguma nosaka pieprasījumu notikuma apmeklētājiem."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:84
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
-"N'afficher que les rappels des évènements que j'organise ou auxquels je "
-"participe"
+"Rādīt atgādinājumus tikai par tiem notikumiem, kurus es organizēju vai "
+"apmeklēju"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:85
@@ -275,23 +260,20 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
-"Cochez cette option pour ne recevoir que les rappels des évènements dont "
-"vous êtes l'organisateur ou auxquels vous participez."
+"Atzīmējiet šo, lai saņemtu atgādinājumus tikai par notikumiem, kurus "
+"organizējat vai apmeklējat."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:93
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr ""
-"Envoyer des propositions de pseudo compteur dans le style de « Outlook »"
+msgstr "Nosūtīt „Outlook“ līdzīgus pseido pretpriekšlikumus."
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:98
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
-msgstr ""
-"Vérifier si le nom d'hôte et l'adresse de courrier électronique pour "
-"l'extraction correspondent"
+msgstr "Pārbaudiet, vai atbilst datora nosaukums un izgūšanas e-pasta adrese"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:99
@@ -302,56 +284,55 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
-"Avec ce paramètre, vous pouvez décider si la partie domaine de l'URL "
-"d'informations de disponibilité doit ou non correspondre à la partie domaine "
-"de l'identifiant utilisateur que vous cherchez. Par exemple, si cette option "
-"est sélectionnée, la recherche des données de disponibilité "
-"« joseph@mondomaine.com » sur le serveur « www.votre-domaine.com » échouera."
+"Šis iestatījums ļauj konfigurēt, vai aizņemtības URL domēna daļa atbilst "
+"meklētā lietotāja ID domēna daļai. Piemēram, ja šī iespēja ir ieslēgta, "
+"meklējot aizņemtības datumu lietotājam „janis@mansdomens.lv“ serverī „www."
+"tavsdomens.lv“, rādīsies kļūda."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
 #: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
-msgstr "Agenda"
+msgstr "Kalendārs"
 
 #: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
-msgstr "Tâches"
+msgstr "Uzdevumi"
 
 #: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
-msgstr "Journal"
+msgstr "Žurnāli"
 
 #: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
-msgstr "Notes"
+msgstr "Piezīmes"
 
 #: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
-msgstr "Mon Kolab %1"
+msgstr "Mans „Kolab“ %1"
 
 #: calendarutils.cpp:136
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
-msgstr "Kolab partagé %1 %2"
+msgstr "Kopīgots „Kolab“ %1 %2"
 
 #: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr "Kolab %2 de %1"
+msgstr "Lietotāja %1 „Kolab“ %2"
 
 #: calendarutils.cpp:141
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
-msgstr " %2 Kolab %3 de %1"
+msgstr "Lietotāja „%1“ %2 „Kolab“ %3"
 
 #: calendarutils.cpp:145
 #, kde-format
@@ -363,36 +344,36 @@ msgstr "Kolab %1"
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr "%1 dans %2"
+msgstr "„%1“, kas atrodas %2"
 
 #: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr "Google %2 de %1"
+msgstr "Lietotāja %1 „Google“ %2"
 
 #: calendarutils.cpp:187
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
-msgstr "%2 de %1"
+msgstr "Lietotāja %1 %2"
 
 #: calendarutils.cpp:190
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr "Google %1"
+msgstr "„Google“ %1"
 
 #: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
-msgstr "Mon %1"
+msgstr "Mans %1"
 
 #: calendarutils.cpp:202
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr "Inconnu"
+msgstr "Nezināms"
 
 #: freebusymanager.cpp:378
 #, kde-format
@@ -400,20 +381,19 @@ msgid ""
 "Failed to download free/busy data from: %1\n"
 "Reason: %2"
 msgstr ""
-"Impossible de télécharger les données de disponibilité depuis : %1\n"
-"Raison : %2"
+"Neizdevās lejupielādēt „brīvs/aizņemts“ datus no: %1\n"
+"Iemesls: %2"
 
 #: freebusymanager.cpp:379 freebusymanager.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr "Erreur lors de l'extraction des informations de disponibilité"
+msgstr "Aizņemtības izgūšanas kļūda"
 
 #: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr ""
-"Impossible d'analyser les informations de disponibilité extraites de : %1"
+msgstr "Neizdevās parsēt aizņemtības informāciju, kas ir iegūta no: %1"
 
 #: freebusymanager.cpp:416
 #, kde-format
@@ -423,27 +403,26 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p>Impossible pour le logiciel d'envoyer votre liste d'informations de "
-"disponibilité vers l'URL « %1 ». Il pourrait s'agir d'un problème avec les "
-"droits d'accès ou peut-être avez-vous spécifié une URL incorrecte. Le "
-"système a répondu : <em>%2</em>.</p><p>Veuillez vérifier l'URL ou contacter "
-"votre administrateur système.</p></qt>"
+"<qt><p>Programmatūrai nav izdevies augšupielādēt jūsu aizņemtības sarakstu "
+"uz URL „%1“. Iespējams, ka pastāv kāda problēma ar piekļuves tiesībām, vai "
+"arī norādījāt nepareizu URL adresi. Sistēma atbildēja: <em>%2</em>.</"
+"p><p>Pārbaudiet URL vai sazinieties ar sistēmas administratoru.</p></qt>"
 
 #: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
-msgstr "Les informations de disponibilité ont été envoyées avec succès."
+msgstr "Aizņemtības informācija ir nosūtīta."
 
 #: freebusymanager.cpp:618 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr "Envoi des informations de disponibilité"
+msgstr "Nosūta aizņemtības statusu"
 
 #: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Impossible de publier les données de disponibilité : %1"
+msgstr "Neizdodas publicēt aizņemtības datus: %1"
 
 #: freebusymanager.cpp:745
 #, kde-format
@@ -452,87 +431,85 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
-"<qt><p>Aucune URL n'est configurée pour envoyer votre liste d'informations "
-"de disponibilité. Veuillez la définir dans la boîte de dialogue de "
-"configuration de KOrganizer, sur la page « Disponibilité ».</p><p>Contactez "
-"votre administrateur système pour connaître l'URL exacte et les détails du "
-"compte.</p></qt>"
+"<qt><p>Aizņemtības sarakstam nav konfigurēta URL adrese. Iestatiet to "
+"„KOrganizer“ aizņemtības lapas konfigurācijas lodziņā.</p><p>Sazinieties ar "
+"savas sistēmas administratoru, lai iegūtu precīzu URL adresi un konta "
+"informāciju.</p></qt>"
 
 #: freebusymanager.cpp:750
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr "Aucune URL pour l'envoi des informations de disponibilité"
+msgstr "Nav aizņemtības augšupielādes URL"
 
 #: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<qt>L'URL cible « %1 » fournie est non valable.</qt>"
+msgstr "<qt>Mērķa URL „%1“ nav norādīta vai nav derīga.</qt>"
 
 #: freebusymanager.cpp:761
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
-msgstr "URL mal formée"
+msgstr "Nederīgs URL"
 
 #: history_p.cpp:71
 #, kde-format
 msgid "General error"
-msgstr "Erreur générale"
+msgstr "Vispārīga kļūda"
 
 #: history_p.cpp:82
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 creation"
-msgstr "Création de %1"
+msgstr "%1 izveide"
 
 #: history_p.cpp:150
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
-msgstr "Suppression de %1"
+msgstr "%1 dzēšana"
 
 #: history_p.cpp:232
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
-msgstr "Modification de %1"
+msgstr "%1 rediģēšana"
 
 #: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr "Erreur lors de la création de la ressource ical : %1"
+msgstr "Kļūda, veidojot „ical“ resursu: %1"
 
 #: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
-msgstr ""
-"Impossible d'obtenir l'interface D-Bus pour la configuration à distance."
+msgstr "Neizdevās iegūt „D-Bus“ saskarni attālinātai konfigurācijai."
 
 #: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
-msgstr "Impossible de télécharger le fichier distant."
+msgstr "Neizdevās lejupielādēt attālināto datni."
 
 #: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
-msgstr "Une tâche d'importation est déjà en cour."
+msgstr "Jau tiek veikts svarīgs uzdevums."
 
 #: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
-msgstr "Nom de fichier vide. Le fichier ical ne sera pas importé."
+msgstr "Tukšs datnes nosaukums. „ical“ datne netiks importēta."
 
 #: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
-msgstr "L'URL à importer est mal-formée."
+msgstr "Importēšanas URL ir nepareizi formatēts."
 
 #: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr "Le fichier sélectionné n'est pas un fichier lisible."
+msgstr "Atlasītā datne nav lasāma."
 
 #: icalimporter.cpp:187
 #, kde-format
@@ -540,63 +517,54 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
-"Le fichier sélectionné n'est pas formaté correctement ou dans un format non "
-"pris en compte par ce logiciel."
+"Atlasītā datne ir nepareizi formatēta vai šī programma neatbalsta tās "
+"formātu."
 
 #: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
-msgstr "Le fichier sélectionné est vide."
+msgstr "Atlasītā datne ir tukša."
 
 #: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
-msgstr "Fusionner le fichier ical dans un calendrier existant."
+msgstr "Ievietot „ical“ datni esošā kalendārā."
 
 #: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
-msgstr ""
-"Erreur lors de la tentative de création d'un élément de calendrier. L'erreur "
-"était : %1"
+msgstr "Kļūda, veidojot kalendāra vienumu. Kļūda: %1"
 
 #: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
-msgstr ""
-"Erreur lors de la tentative de suppression d'un élément de calendrier. "
-"L'erreur était : %1"
+msgstr "Kļūda, dzēšot kalendāra vienumu. Kļūda: %1"
 
 #: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
-msgstr "Une erreur inconnue est survenue"
+msgstr "Nezināma kļūda"
 
 #: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr ""
-"Erreur lors de la tentative de modification d'un élément de calendrier. "
-"L'erreur était : %1"
+msgstr "Kļūda, rediģējot kalendāra vienumu. Kļūda: %1"
 
 #: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr ""
-"Cet élément de calendrier a déjà été effacé ou est en cours d'effacement."
+msgstr "Šis kalendāra vienums ir jau dzēsts vai šobrīd tiek dzēsts."
 
 #: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr ""
-"L'opération ne peut être effectuée en raison de restrictions des listes de "
-"contrôlé d'accès (ACL)"
+msgstr "Darbība nevar tikt veikta ACL ierobežojumu dēļ"
 
 #: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
-msgstr "La collection choisie est non valable"
+msgstr "Izvēlētā kolekcija nav derīga"
 
 #: incidencechanger.cpp:1204
 #, kde-format
@@ -604,13 +572,13 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
-"La connexion par défaut est non valable ou ne possède pas ses propres listes "
-"de droits d'accès alors que « DestinationPolicyNeverAsk » était utilisé"
+"Noklusējuma kolekcija nav derīga vai tai nav pareizi ACL un "
+"„DestinationPolicyNeverAsk“"
 
 #: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
-msgstr "Identifiant d'élément dupliqué dans une opération de groupe"
+msgstr "Grupas darbībā atkārtojas vienuma ID"
 
 #: incidencechanger.cpp:1212
 #, kde-format
@@ -618,91 +586,90 @@ msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
-"Une modification appartenant à un groupe de modification a échoué. Toutes "
-"les modifications déjà effectuées vont être annulées."
+"Neizdevās veikt vienu izmaiņu no izmaiņu grupas. Tiek atsauktas visas "
+"izmaiņas."
 
 #: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
-msgstr "Erreur inconnue"
+msgstr "Nezināma kļūda"
 
 #: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
-msgstr "Erreur lors du chargement de l'agenda."
+msgstr "Kļūda, ielādējot kalendāru."
 
 #: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
-msgstr "Message d'erreur : %1"
+msgstr "Kļūdas ziņojums: %1"
 
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr "Erreur inconnue pendant l'analyse de l'invitation « iCal »"
+msgstr "Nezināma kļūda, parsējot „iCal“ ielūgumu"
 
 #: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr "Erreur lors du traitement d'une invitation ou d'une mise à jour."
+msgstr "Kļūda, apstrādājot ielūgumu vai atjauninājumu."
 
 #: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
-msgstr "Incidence non valable"
+msgstr "Nederīgs notikums"
 
 #: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
-msgstr "Action non valable : %1"
+msgstr "Nederīga darbība: %1"
 
 #: itiphandler.cpp:233
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr "Erreur lors de l'envoi de la proposition de compteur"
+msgstr "Kļūda, nosūtot pretpriekšlikumu"
 
 #: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr ""
-"Impossible de démarrer l'éditeur pour modifier la proposition de compteur"
+msgstr "Neizdevās palaist redaktoru, lai rediģētu pretpriekšlikumu"
 
 #: itiphandler.cpp:271
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
-"L'élément « %1 » ne comporte aucun participant. Par conséquent, aucun "
-"message de logiciel de groupe de travail ne sera envoyé."
+"Vienumam „%1“ nav apmeklētāju, tāpēc nav nosūtīts grupprogrammatūras "
+"ziņojums."
 
 #: itiphandler.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr "Message non envoyé"
+msgstr "Ziņojums nav nosūtīts"
 
 #: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
-msgstr "Envoyer le courrier électronique"
+msgstr "Nosūtīt e-pasta vēstuli"
 
 #: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
-msgstr "Ne pas envoyer"
+msgstr "Nesūtīt"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
 #: itiphandlerhelper_p.cpp:508
 #, kde-format
 msgid "Error: %1"
-msgstr "Erreur : %1"
+msgstr "Kļūda: %1"
 
 #: itiphandler_p.cpp:81
 #, kde-format
 msgid "Error loading calendar: %1"
-msgstr "Erreur lors du chargement de l'agenda : %1"
+msgstr "Kļūda, ielādējot kalendāru: %1"
 
 #: itiphandler_p.cpp:132
 #, kde-format
@@ -710,9 +677,8 @@ msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
-"Le message du logiciel de groupe de travail pour l'élément « %1 » a été "
-"envoyé avec succès.\n"
-"Méthode : %2"
+"Grupprogrammatūras ziņojums par vienumu „%1“ ir veiksmīgi nosūtīts.\n"
+"Metode: %2"
 
 #: itiphandler_p.cpp:144
 #, kde-format
@@ -722,57 +688,57 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
-"Impossible d'envoyer l'élément « %1 ».\n"
-"Méthode : %2"
+"Neizdodas nosūtīt vienumu „%1“.\n"
+"Metode: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr "Les informations de l'élément ont été envoyées avec succès."
+msgstr "Vienuma informācija ir veiksmīgi nosūtīta."
 
 #: itiphandler_p.cpp:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
-msgstr "Publication"
+msgstr "Publiskošana"
 
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr "Impossible de publier l'élément « %1 »"
+msgstr "Neizdodas publiskos vienumu „%1“"
 
 #: itiphandler_p.cpp:181
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr "Transfert"
+msgstr "Pārsūtīšana"
 
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr "Impossible de faire suivre l'élément « %1 »"
+msgstr "Neizdodas pārsūtīt vienumu „%1“"
 
 #: itiphandler_p.cpp:189
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr "Erreur de transfert"
+msgstr "Pārsūtīšanas kļūda"
 
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr "Nouvelle heure de réunion proposée : %1 - %2"
+msgstr "Priekšlikums par jaunu tikšanā laiku: %1 — %2"
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr "Courrier électronique de planification de groupe"
+msgstr "Grupēt ieplānotās e-pasta vēstules"
 
 #: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr "<placeholder>Aucun résumé indiqué</placeholder>"
+msgstr "<placeholder>Nav norādīts kopsavilkums</placeholder>"
 
 #: itiphandlerhelper_p.cpp:235
 #, kde-format
@@ -780,9 +746,8 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"L'évènement « %1 » inclut d'autres personnes.\n"
-"Voulez-vous prévenir les participants par courrier électronique "
-"d'invitation ?"
+"Notikums „%1“ satur citus cilvēkus.\n"
+"Vai tiešām vēlaties e-pastā nosūtīt ielūgumu apmeklētājiem?"
 
 #: itiphandlerhelper_p.cpp:240
 #, kde-format
@@ -790,9 +755,8 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"La tâche « %1 » inclut d'autres personnes.\n"
-"Voulez-vous prévenir les participants par courrier électronique "
-"d'invitation ?"
+"Darāmais uzdevums „%1“ satur citus cilvēkus.\n"
+"Vai tiešām vēlaties e-pastā nosūtīt ielūgumu apmeklētājiem?"
 
 #: itiphandlerhelper_p.cpp:245
 #, kde-format
@@ -800,8 +764,7 @@ msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr ""
-"Cette incidence inclut d'autres personnes. Faut-il envoyer un courrier "
-"électronique aux participants ?"
+"Šis notikums satur citus cilvēkus. Vai apmeklētājiem nosūtīt e-pasta vēstuli?"
 
 #: itiphandlerhelper_p.cpp:269
 #, kde-format
@@ -809,9 +772,8 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
-"Vous n'êtes pas l'organisateur de cet évènement. Sa modification "
-"désynchronisera votre agenda de celui de l'organisateur. Voulez-vous "
-"vraiment le modifier ?"
+"Jūs neorganizējat šo notikumu. Rediģēšana novedīs pie tā, ka jūsu kalendārs "
+"nesinhronizēsies ar organizatora kalendāru. Vai tiešām vēlaties to rediģēt?"
 
 #: itiphandlerhelper_p.cpp:302
 #, kde-format
@@ -819,22 +781,19 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
-"Vous avez modifié l'invitation « %1 ».\n"
-"Voulez-vous prévenir les participants par courrier électronique que "
-"l'évènement a été mis à jour ?"
+"Jūs izmainījāt ielūgumu „%1“.\n"
+"Vai vēlaties apmeklētājiem nosūtīt atjauninātu e-pasta vēstuli?"
 
 #: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
 #: itiphandlerhelper_p.cpp:344
 #, kde-format
 msgid "Send Update"
-msgstr "Envoyer une mise à jour"
+msgstr "Nosūt atjauninājumu"
 
 #: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
-msgstr ""
-"Voulez-vous envoyer une mise à jour de l'état à l'organisateur de cette "
-"tâche ?"
+msgstr "Vai vēlaties uzdevuma organizatoram nosūtīt statusa atjauninājumu?"
 
 #: itiphandlerhelper_p.cpp:337
 #, kde-format
@@ -842,8 +801,8 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
-"Votre état en tant que participant à cet évènement a changé. Voulez-vous "
-"envoyer une mise à jour d'état à l'organisateur de l'évènement ?"
+"Ir mainījies šīs notikuma jūsu apmeklētāja statuss. Vai vēlaties nosūtīt "
+"atjauninājumu notikuma organizētājam?"
 
 #: itiphandlerhelper_p.cpp:380
 #, kde-format
@@ -851,9 +810,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"Vous avez supprimé l'invitation « %1 ».\n"
-"Voulez-vous prévenir les participants par courrier électronique que "
-"l'évènement est annulé ?"
+"Jūs noņēmāt ielūgumu „%1“.\n"
+"Vai vēlaties nosūtīt e-pasta vēstuli apmeklētājiem, ka notikums ir atcelts?"
 
 #: itiphandlerhelper_p.cpp:385
 #, kde-format
@@ -861,9 +819,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"Vous avez supprimé l'invitation « %1 ».\n"
-"Voulez-vous prévenir les participants par courrier électronique que la tâche "
-"est annulée ?"
+"Jūs noņēmāt ielūgumu „%1“.\n"
+"Vai vēlaties nosūtīt e-pasta vēstuli apmeklētājiem, ka uzdevums ir atcelts?"
 
 #: itiphandlerhelper_p.cpp:390
 #, kde-format
@@ -871,22 +828,19 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"Vous avez supprimé l'invitation « %1 ».\n"
-"Voulez-vous prévenir les participants par courrier électronique que le "
-"journal est annulé ?"
+"Jūs noņēmāt ielūgumu „%1“.\n"
+"Vai vēlaties nosūtīt e-pasta vēstuli apmeklētājiem, ka žurnāls ir atcelts?"
 
 #: itiphandlerhelper_p.cpp:412
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr ""
-"Voulez-vous envoyer une mise à jour de l'état à l'organisateur de ce "
-"journal ?"
+msgstr "Vai vēlaties žurnāla organizatoram nosūtīt statusa atjauninājumu?"
 
 #: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
-msgstr "Envoyer une mise à jour"
+msgstr "Nosūtīt atjauninājumu"
 
 #: itiphandlerhelper_p.cpp:432
 #, kde-format
@@ -894,58 +848,54 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
-"Vous avez précédemment accepté une invitation à cet évènement. Voulez-vous "
-"envoyer à l'organisateur une réponse mise à jour pour décliner l'invitation ?"
+"Jūs iepriekš apstiprinājāt uzaicinājumu uz šo pasākumu. Vai vēlaties nosūtīt "
+"atjauninātu atbildi organizatoram, noraidot šo ielūgumu?"
 
 #: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
 #, kde-format
 msgid "Counter proposal: %1"
-msgstr "Contre-proposition : %1"
+msgstr "Pretpriekšlikums: %1"
 
 #: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr "L'envoi du courrier électronique de planification de groupe a échoué."
+msgstr "Neizdevās grupas plānošanas vēstules nosūtīšana."
 
 #: itiphandlerhelper_p.cpp:501
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
-msgstr "Annuler la mise à jour"
+msgstr "Atcelt atjauninājumu"
 
 #: mailclient_p.cpp:377 mailclient_p.cpp:415
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr "Il n'y a aucun participant à qui envoyer un courrier électronique"
+msgstr "Šim e-pastam nav apmeklētāju"
 
 #: mailclient_p.cpp:424
 #, kde-format
 msgid "Free Busy Object"
-msgstr "Objet de disponibilité"
+msgstr "Aizņemtības objekts"
 
 #: mailclient_p.cpp:458 mailclient_p.cpp:489
 #, kde-format
 msgid "Free Busy Message"
-msgstr "Message de disponibilité"
+msgstr "Aizņemtības vēstule"
 
 #: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
-msgstr "Erreur lors de la création du transport"
+msgstr "Kļūda, veidojot transportu"
 
 #: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
-msgstr ""
-"Erreur lors de l'obtention du transport. Impossible d'envoyer des "
-"invitations."
+msgstr "Kļūda, iegūstot transportu. Neizdodas nosūtīt ielūgumus."
 
 #: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
-msgstr ""
-"Erreur lors de la mise en file d'attente des messages dans la boîte "
-"d'envoi : %1"
+msgstr "Kļūda, rindojot vēstules izsūtnē: %1"
 
 #: mailclient_p.cpp:701
 #, kde-format
@@ -954,25 +904,25 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
-"L'examen des préférences de signature du destinataire conduit à vous "
-"demander si ce message doit être signé.\n"
-"Voulez-vous signer ce message ?"
+"Saņēmēju parakstīšanas priekšrokas pārbaudes rezultāts atklāja, ka jums "
+"lūgs, vai parakstīt šo vēstuli.\n"
+"Vai vēlaties parakstīt vēstuli?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Sign Message?"
-msgstr "Signer ce message ?"
+msgstr "Vai parakstīt vēstuli?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr "&Signer"
+msgstr "&Parakstīt"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
-msgstr "&Ne pas signer"
+msgstr "&Neparakstīt"
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -980,8 +930,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
-"Il y a des paramètres incohérents de signature pour ces destinataires.\n"
-"Signer ce message ?"
+"Šiem saņēmējiem ir konfliktējoši parakstīšanas iestatījumi.\n"
+"Vai parakstīt vēstuli?"
 
 #: mailclient_p.cpp:747
 #, kde-format
@@ -989,18 +939,18 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
-"Vous avez demandé à signer ce message. Cependant, aucune clé de signature "
-"valable n'a été configurée pour cette identité."
+"Jums pieprasīja parakstīt šo ziņojumu, tomēr šai identitātei nav "
+"konfigurētas derīgas paraksta atslēgas."
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
-msgstr "Envoyer non signé ?"
+msgstr "Vai nosūtīt neparakstītu?"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr "Envoyer &non signé"
+msgstr "&Nosūtīt neparakstītu"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -1009,10 +959,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
-"Certaines parties de ce message ne seront pas signées.\n"
-"L'envoi de messages seulement partiellement signés pourrait enfreindre la "
-"politique du site.\n"
-"Voulez-vous plutôt signer toutes les parties du message ?"
+"Dažas vēstules daļas nebūs parakstītas.\n"
+"Daļēji parakstītas vēstules sūtīšana var pārkāpt vietnes politiku.\n"
+"Vai tā vietā parakstīt visas daļas?"
 
 #: mailclient_p.cpp:767
 #, kde-format
@@ -1021,29 +970,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
-"Ce message ne sera pas signé.\n"
-"L'envoi d'un message non signé pourrait enfreindre la politique du site.\n"
-"Voulez-vous signer le message à la place ?"
+"Šīs vēstule netiks parakstīta.\n"
+"Neparakstītas vēstules nosūtīšana var pārkāpt vietas politiku.\n"
+"Vai tomēr parakstīt vēstuli?"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
-msgstr "&Signer toutes les parties"
+msgstr "&Parakstīt visas daļas"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
-msgstr "&Signer"
+msgstr "&Parakstīt"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr "Alarme de message non signé"
+msgstr "Neparakstītas vēstules brīdinājums"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
-msgstr "Env&oyer tel quel"
+msgstr "N&osūtīt bez izmaiņām"
 
 #: mailclient_p.cpp:824
 #, kde-format
@@ -1051,9 +1000,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
-"Des clés de chiffrement fiables et valables ont été trouvées pour tous les "
-"destinataires.\n"
-"Chiffrer ce message ?"
+"Visiem saņēmējiem ir atrastas derīgas šifrēšanas atslēgas.\n"
+"Vai šifrēt šo vēstuli?"
 
 #: mailclient_p.cpp:827
 #, kde-format
@@ -1062,34 +1010,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
-"L'examen des préférences de chiffrement du destinataire a conclu qu'on vous "
-"demandera de chiffrer ou non ce message.\n"
-"Voulez-vous chiffrer ce message ?"
+"Saņēmēju šifrēšanas priekšroku pārbaude atklāja, ka jums prasīs, vai "
+"vēlaties vai nevēlaties šifrēt šo vēstuli.\n"
+"Vai šifrēt šo vēstuli?"
 
 #: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, kde-format
 msgid "Encrypt Message?"
-msgstr "Chiffrer ce message ?"
+msgstr "Vai šifrēt vēstuli?"
 
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr "Signer et chiffrer"
+msgstr "Paraksts un š&ifrēšana"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
-msgstr "Chiffr&er"
+msgstr "Š&ifrēt"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
-msgstr "&Signer uniquement"
+msgstr "&Tikai parakstīt"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
-msgstr "En&voyez tel quel"
+msgstr "&Sūtīt bez izmaiņām"
 
 #: mailclient_p.cpp:854
 #, kde-format
@@ -1097,13 +1045,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
-"Il y a des paramètres incohérents de chiffrement pour ces destinataires.\n"
-"Chiffrer ce message ?"
+"Šiem saņēmējiem ir konfliktējoši šifrēšanas iestatījumi.\n"
+"Vai šifrēt šo vēstuli?"
 
 #: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
-msgstr "&Ne pas chiffrer"
+msgstr "N&ešifrēt"
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1112,19 +1060,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
-"Vous avez demandé à chiffrer ce message et à chiffrer une copie pour vous-"
-"même. Cependant, aucune clé de chiffrement fiable valable n'a été configurée "
-"pour cette identité."
+"Jums ir lūgts šifrēt šo vēstuli un arī savu kopiju, tomēr šai identitātei "
+"nav konfigurētas uzticamas šifrēšanas atslēgas."
 
 #: mailclient_p.cpp:880
 #, kde-format
 msgid "Send Unencrypted?"
-msgstr "Envoyer de façon non chiffrée ?"
+msgstr "Sūtīt nešifrētu?"
 
 #: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
-msgstr "Env&oyer de façon non chiffrée ?"
+msgstr "&Sūtīt nešifrētu"
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1134,10 +1081,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
-"Certaines parties de ce message ne seront pas chiffrées.\n"
-"L'envoi de messages partiellement chiffrés peut violer la politique du site "
-"et / ou faire fuiter des informations sensibles.\n"
-"Voulez-vous chiffrer toutes les parties du message à la place ?"
+"Atsevišķas šīs vēstules daļas nebūs šifrētas.\n"
+"Tikai daļēji šifrētas vēstules sūtīšana var pārkāpt vietnes politiku un/vai "
+"atklāt sensitīvu informāciju.\n"
+"Vai tomēr šifrēt visas daļas?"
 
 #: mailclient_p.cpp:899
 #, kde-format
@@ -1147,36 +1094,36 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
-"Ce message ne sera pas chiffré.\n"
-"L'envoi de messages non chiffrés pourrait violer la politique du site et / "
-"ou faire fuiter des informations sensibles.\n"
-"Voulez-vous chiffrer les messages à la place ?"
+"Šī vēstules netiks šifrēta.\n"
+"Nešifrētas vēstules sūtīšana var pārkāpt vietnes politiku un/vai atklāt "
+"sensitīvu informāciju.\n"
+"Vai tomēr šifrēt vēstules?"
 
 #: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr "Chiffr&er toutes les parties"
+msgstr "Šifrēt visas &daļas"
 
 #: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr "Alarme de message non chiffré"
+msgstr "Nešifrētas vēstules brīdinājums"
 
 #: mailscheduler_p.cpp:198
 #, kde-format
 msgid "Error sending e-mail: "
-msgstr "Erreur lors de l'envoi du courrier électronique : "
+msgstr "Kļūda, nosūtot e-pastu: "
 
 #: publishdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
-msgstr "Sélectionner des adresses"
+msgstr "Atlasīt adreses"
 
 #: publishdialog.cpp:60
 #, kde-format
 msgid "Send email to these recipients"
-msgstr "Envoyer un courrier électronique à ces destinataires"
+msgstr "Nosūtīt e-pastu šiem saņēmējiem"
 
 #: publishdialog.cpp:62
 #, kde-format
@@ -1184,13 +1131,12 @@ msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
 "recipients you have entered."
 msgstr ""
-"Un clic sur le bouton <b>Ok</b> déclenchera l'envoi d'un courrier "
-"électronique aux destinataires que vous avez saisis."
+"Spiežot uz <b>Labi</b>, e-pasta vēstuli nosūtīsiet norādītajiem saņēmējiem."
 
 #: publishdialog.cpp:67
 #, kde-format
 msgid "Cancel recipient selection and the email"
-msgstr "Annuler la sélection des destinataires et le courrier électronique"
+msgstr "Atcelt saņēmēju atlasi un e-pasta sūtīšanu"
 
 #: publishdialog.cpp:69
 #, kde-format
@@ -1198,16 +1144,16 @@ msgid ""
 "Clicking the <b>Cancel</b> button will cause the email operation to be "
 "terminated."
 msgstr ""
-"Un clic sur le bouton <b>Annuler</b> interrompra l'envoi du courrier "
-"électronique."
+"Spiežot uz <b>Atcelt</b> pogas, tika izbeigtas visas uzsāktās e-pasta "
+"darbības."
 
 #: publishdialog.cpp:74
 #, kde-format
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr ""
-"Cliquez sur le bouton <b>Aide</b> pour obtenir plus d'informations sur la "
-"planification de groupe."
+"Spiežot uz <b>Palīdzība</b> pogas, varēsiet uzzināt vairāk par grupu "
+"plānošanu."
 
 #: publishdialog.cpp:122
 #, kde-format
@@ -1216,21 +1162,20 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
-"Impossible de publier l'incidence d'agenda à cause d'une chaîne de "
-"destinataire non valable.\n"
+"Neizdodas publicēta kalendāra notikumu nederīgas saņēmēju virknes dēļ.\n"
 "%1"
 
 #: publishdialog.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
-msgstr "Erreur de publication"
+msgstr "Publiskošanas kļūda"
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:38
 #, kde-format
 msgid "The list of addressees to receive the invitation"
-msgstr "La liste des adresses qui recevront l'invitation"
+msgstr "Saraksts ar adresātiem, kas saņems šo ielūgumu"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:41
@@ -1239,14 +1184,13 @@ msgid ""
 "This is a list of all the addresses you have currently selected to receive "
 "the iCalendar invitation."
 msgstr ""
-"Ceci est une liste de toutes les adresses que vous avez actuellement "
-"sélectionnées pour recevoir l'invitation « iCalendar »."
+"Šis ar adresātu saraksts, kurus atlasījāt „iCalendar“ ielūguma saņemšanai."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mNew)
 #: publishdialog_base.ui:52
 #, kde-format
 msgid "Create a new recipient"
-msgstr "Créer un nouveau destinataire"
+msgstr "Izveidot jaunu saņēmēju"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mNew)
 #: publishdialog_base.ui:55
@@ -1255,42 +1199,39 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
-"Un clic sur ce bouton vous permettra de saisir le nom et l'adresse de "
-"courrier électronique d'un nouveau destinataire pour son ajout à la liste "
-"des destinataires"
+"Spiediet uz šīs pogas, lai ievadītu jaunā saņēmēja vārdu un e-pasta adresi "
+"un viņu pievienotu saņēmēju sarakstam"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
 #, kde-format
 msgid "&New"
-msgstr "&Nouveau"
+msgstr "&Jauns"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr "Effacer le destinataire actuellement sélectionné"
+msgstr "Noņemt atlasīto saņēmēju"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
 #, kde-format
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
-msgstr ""
-"Cliquez sur ce bouton pour supprimer le destinataire actuellement "
-"sélectionnée de la liste"
+msgstr "Spiediet uz šīs pogas, lai no saraksta noņemtu atlasīto saņēmēju"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
 #, kde-format
 msgid "&Remove"
-msgstr "Efface&r"
+msgstr "&Noņemt"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr "Sélectionner un destinataire depuis votre carnet d'adresses"
+msgstr "Atlasiet adrešu grāmatā saņēmēju"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1299,79 +1240,77 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Cliquez sur ce bouton pour afficher une autre boîte de dialogue où vous "
-"pourrez choisir un destinataire dans votre carnet d'adresses"
+"Spiediet uz šīs pogas, lai atvērtu jaunu lodziņu, kurā varēsiet atlasīt "
+"saņēmēju no adrešu grāmatas"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select..."
-msgstr "&Sélectionner..."
+msgstr "%Atlasīt..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
 #, kde-format
 msgctxt "recipient name"
 msgid "Name:"
-msgstr "Nom :"
+msgstr "Vārds:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mNameLineEdit)
 #: publishdialog_base.ui:123
 #, kde-format
 msgid "The recipient's name"
-msgstr "Le nom du destinataire"
+msgstr "Saņēmēja vārds"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mNameLineEdit)
 #: publishdialog_base.ui:126
 #, kde-format
 msgid "This field contains the name of the recipient"
-msgstr "Ce champ contient le nom du destinataire"
+msgstr "Šis lauciņš satur saņēmēja vārdu"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: publishdialog_base.ui:136
 #, kde-format
 msgctxt "recipient email"
 msgid "E&mail:"
-msgstr "Adresse de courrier électronique :"
+msgstr "E-&pasta adrese:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:146
 #, kde-format
 msgid "The recipient's email address"
-msgstr "L'adresse de courrier électronique du destinataire"
+msgstr "Saņēmēja e-pasta adrese"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:149
 #, kde-format
 msgid "This field contains the email address of the recipient"
-msgstr "Ce champ contient l'adresse de courrier électronique du destinataire"
+msgstr "Šis lauciņš satur saņēmēja e-pasta adresi"
 
 #: publishdialog_p.cpp:44
 #, kde-format
 msgid "(EmptyName)"
-msgstr "(Nom Vide)"
+msgstr "(Tukšs vārds)"
 
 #: publishdialog_p.cpp:45
 #, kde-format
 msgid "(EmptyEmail)"
-msgstr "(Adresse Vide)"
+msgstr "(Tukšs e-pasts)"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
 msgid "Error: Assigning different incidence types."
-msgstr "Erreur : assignation de différents types d'incidence"
+msgstr "Kļūda: Piešķirti atšķirīgi notikuma tipi."
 
 #: scheduler_p.cpp:223 scheduler_p.cpp:272
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
-msgstr ""
-"Ceci n'est pas une mise à jour. L'incidence trouvée a été modifiée plus "
-"récemment."
+msgstr "Šis nav atjauninājums. Atrastais notikums nesen ir rediģēts."
 
 #: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
 #, kde-format
 msgid "Error modifying incidence"
-msgstr "Erreur pendant la modification de l'incidence"
+msgstr "Kļūda, rediģējot notikumu"
 
 #: scheduler_p.cpp:288
 #, kde-kuit-format
@@ -1386,36 +1325,34 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
-"<para>Vous avez ajouté la mise à jour d'une invitation mais il est "
-"impossible de trouver une version antérieure de l'élément dans votre agenda."
-"</para><para>Ce problème peut survenir parce que : "
-"<list><item>l'organisateur ne vous a pas inclus dans l'invitation originelle,"
-"</item><item>vous n'avez pas encore accepté l'invitation originelle,</"
-"item><item>vous avez supprimé l'invitation originelle de votre agenda,</"
-"item><item>vous n'avez plus accès à l'agenda contenant l'invitation.</item></"
-"list></para><para>Ce n'est pas un problème mais il est bon de le savoir.</"
-"para>"
+"<para>Pievienojāt ielūguma atjauninājumu, tomēr jūsu kalendārā nav atrasta "
+"vienuma jaunāka versija.</para><para>Tam var būt vairāki cēloņi:"
+"<list><item>organizators jūs nav iekļāvis sākotnējā ielūgumā</item><item>jūs "
+"vēl nepieņēmāt sākotnējo ielūgumu</item><item>jūs savā kalendārā izdzēsāt "
+"sākotnējo ielūgumu</item><item>jums vairs nav pieejas pie kalendāra, kas "
+"satur ielūgumu</item></list></para><para>Tā nav problēma, bet vēlējāmies par "
+"to informēt.</para>"
 
 #: scheduler_p.cpp:297
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Impossible de trouver l'invitation à mettre à jour"
+msgstr "Nevar atrast atjaunināmo ielūgumu"
 
 #: scheduler_p.cpp:304
 #, kde-format
 msgid "Error adding incidence"
-msgstr "Erreur pendant l'ajout de l'incidence"
+msgstr "Kļūda, pievienojot notikumu"
 
 #: scheduler_p.cpp:338
 #, kde-format
 msgid "Could not find incidence to delete."
-msgstr "Impossible de trouver l'incidence à supprimer."
+msgstr "Neizdevās atrast notikumu, ko dzēst."
 
 #: scheduler_p.cpp:391
 #, kde-format
 msgid "Error recording exception"
-msgstr "Erreur pendant l'enregistrement de l'exception"
+msgstr "Kļūda, reģistrējot izņēmumu"
 
 #: scheduler_p.cpp:408
 #, kde-format
@@ -1425,51 +1362,51 @@ msgid ""
 "already been deleted or is not owned by you. Or it might belong to a read-"
 "only or disabled calendar."
 msgstr ""
-"Impossible de supprimer l'évènement ou la tâche de votre agenda. Peut-être a-"
-"t-il été déjà supprimé ou bien appartient-il à quelqu'un d'autre ? À moins "
-"qu'il n'appartienne à un agenda désactivé ou en lecture seule."
+"Notikums vai uzdevums nav noņemams no kalendāra. Iespējams, ka tas ir jau "
+"dzēsts vai jums nepieder. Tāpat arī tas varētu būt tikai lasāms vai to "
+"varētu būt izslēdzis kalendārs."
 
 #: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
 #: scheduler_p.cpp:574
 #, kde-format
 msgid "Generic Error"
-msgstr "Erreur générique"
+msgstr "Vispārīga kļūda"
 
 #: scheduler_p.cpp:476
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
-msgstr "%1 souhaite inviter %2 mais celui-ci n'est pas invité."
+msgstr "%1 vēlas apmeklēt „%2“, bet netika uzaicināts."
 
 #: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
-msgstr "%1 souhaite inviter %2 au nom de %3."
+msgstr "%1 vēlas apmeklēt „%2“, pārstāvot %3."
 
 #: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr "Participant non invité"
+msgstr "Neuzaicināts apmeklētājs"
 
 #: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
-msgstr "Accepter la présence"
+msgstr "Pieņemt apmeklējumu"
 
 #: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
-msgstr "Refuser la présence"
+msgstr "Noraidīt apmeklējumu"
 
 #: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr "L'organisateur a refusé votre présence à cette réunion."
+msgstr "Organizators noraidīja jūsu apmeklējumu šai sapulcei."
 
 #: scheduler_p.cpp:508
 #, kde-format
@@ -1478,106 +1415,106 @@ msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
 msgstr ""
-"Un participant a été ajouté à l'évènement. Voulez-vous envoyer un courrier "
-"électronique aux autres participants pour les prévenir ?"
+"Notikumam ir pievienots apmeklētājs. Vai vēlaties apmeklētājiem nosūtīt e-"
+"pasta vēstuli ar atjauninājumu?"
 
 #: scheduler_p.cpp:510
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr "Participant ajouté"
+msgstr "Apmeklētājs ir pievienots"
 
 #: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
-msgstr "Envoyer des messages"
+msgstr "Nosūtīt vēstules"
 
 #: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
-msgstr "Ne pas envoyer"
+msgstr "Nesūtīt"
 
 #: scheduler_p.cpp:558
 #, kde-format
 msgid "No incidence for scheduling."
-msgstr "Aucune incidence pour la planification."
+msgstr "Nav notikuma plānošanai"
 
 #: scheduler_p.cpp:581
 #, kde-format
 msgid "No Free Busy Cache"
-msgstr "Aucun cache de disponibilité"
+msgstr "Nav aizņemtības kešatmiņas"
 
 #: scheduler_p.cpp:600
 #, kde-format
 msgid "Error saving freebusy object"
-msgstr "Erreur lors de l'enregistrement de l'objet de disponibilité"
+msgstr "Kļūda, saglabājot aizņemtības objektu"
 
 #: searchcollectionhelper.cpp:113
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr "Invitations refusées"
+msgstr "Noraidīt uzaicinājumus"
 
 #: searchcollectionhelper.cpp:121
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr "Ouvrir les invitations"
+msgstr "Atvērt uzaicinājumus"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
-msgstr "Ajouter un dossier..."
+msgstr "Pievienot mapi..."
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
 msgid "Add a new calendar folder to the currently selected calendar folder."
-msgstr ""
-"Ajoute un nouveau dossier de calendriers au dossier de calendrier "
-"actuellement sélectionné."
+msgstr "Pievienot jaunu kalendāra mapi šobrīd atlasītajai kalendāra mapei."
 
 #: standardcalendaractionmanager.cpp:49
 #, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
-msgstr "Nouveau dossier"
+msgstr "Jauna mape"
 
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
 msgid "Could not create calendar folder: %1"
-msgstr "Impossible de créer le dossier de calendriers : %1"
+msgstr "Neizdevās atvērt kalendāra mapi: %1"
 
 #: standardcalendaractionmanager.cpp:57
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr "La création du dossier de calendriers a échoué"
+msgstr "Kalendāra mapes izveidošana neizdevās"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] "Copier un dossier"
-msgstr[1] "Copier %1 dossiers"
+msgstr[0] "Kopēt %1 mapi"
+msgstr[1] "Kopēt %1 mapes"
+msgstr[2] "Kopēt %1 mapju"
 
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
 msgid "Copy the selected calendar folders to the clipboard."
-msgstr "Copie les dossiers de calendriers sélectionnés dans le presse-papier."
+msgstr "Kopēt starpliktuvē atlasītās kalendāra mapes."
 
 #: standardcalendaractionmanager.cpp:71
 #, kde-format
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] "Supprimer un dossier"
-msgstr[1] "Supprimer %1 dossiers"
+msgstr[0] "Dzēst %1 mapi"
+msgstr[1] "Dzēst %1 mapes"
+msgstr[2] "Dzēst %1 mapju"
 
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
 msgid "Delete the selected calendar folders from the calendar."
-msgstr "Supprime du calendrier les dossiers de calendriers sélectionnés."
+msgstr "Dzēst atlasītās kalendāra mapes no kalendāra."
 
 #: standardcalendaractionmanager.cpp:76
 #, kde-format
@@ -1586,139 +1523,145 @@ msgid ""
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
 msgstr[0] ""
-"Voulez-vous vraiment supprimer ce dossier de calendriers et tous ses sous-"
-"dossiers ?"
+"Vai tiešām vēlaties dzēst šo %1 kalendāra mapi un visas tās apakšmapes?"
 msgstr[1] ""
-"Voulez-vous vraiment supprimer ces %1 dossiers de calendriers et tous leurs "
-"sous-dossiers ?"
+"Vai tiešām vēlaties dzēst šīs %1 kalendāra mapes un visas to apakšmapes?"
+msgstr[2] ""
+"Vai tiešām vēlaties dzēst šīs %1 kalendāra mapes un visas to apakšmapes?"
 
 #: standardcalendaractionmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] "Supprimer un dossier de calendriers ?"
-msgstr[1] "Supprimer des dossiers de calendriers ?"
+msgstr[0] "Vai dzēst kalendāra mapi?"
+msgstr[1] "Vai dzēst kalendāra mapes?"
+msgstr[2] "Vai dzēst kalendāra mapes?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
 msgid "Could not delete calendar folder: %1"
-msgstr "Impossible de supprimer un dossier de calendriers : %1"
+msgstr "Neizdevās dzēst kalendāra mapi: %1"
 
 #: standardcalendaractionmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr "La suppression du dossier de calendriers a échoué"
+msgstr "Kalendāra mapes dzēšana neizdevās"
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] "Mettre à jour un dossier"
-msgstr[1] "Mettre à jour %1 dossiers de calendriers"
+msgstr[0] "Atjaunināt %1 mapi"
+msgstr[1] "Atjaunināt %1 mapes"
+msgstr[2] "Atjaunināt %1 mapju"
 
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
 msgid "Update the content of the selected calendar folders."
-msgstr "Met à jour le contenu des dossiers de calendriers sélectionnés."
+msgstr "Atjaunināt atlasīto kalendāra mapju saturu."
 
 #: standardcalendaractionmanager.cpp:99
 #, kde-format
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] "Couper un dossier "
-msgstr[1] "Couper %1 dossiers"
+msgstr[0] "Izgriezt %1 mapi"
+msgstr[1] "Izgriezt %1 mapes"
+msgstr[2] "Izgriezt %1 mapju"
 
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
 msgid "Cut the selected calendar folders from the calendar."
-msgstr "Coupe du calendrier les dossiers de calendriers sélectionnés."
+msgstr "Izgriezt atlasītās kalendāra mapes no kalendāra."
 
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Propriétés du dossier..."
+msgstr "Mapes īpašības..."
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
 msgid "Open a dialog to edit the properties of the selected calendar folder."
-msgstr ""
-"Ouvre une boîte de dialogue pour modifier les propriétés du dossier de "
-"calendriers sélectionné."
+msgstr "Atvērt lodziņu, lai rediģēt atlasītās kalendāra mapes īpašības."
 
 #: standardcalendaractionmanager.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Calendar Folder %1"
-msgstr "Propriétés du dossier de calendriers %1"
+msgstr "Kalendāra mapes „%1“ īpašības"
 
 #: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:299
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
-msgstr[0] "Copier un évènement"
-msgstr[1] "Copier %1 évènements"
+msgstr[0] "Kopēt %1 notikumu"
+msgstr[1] "Kopēt %1 notikumus"
+msgstr[2] "Kopēt %1 notikumu"
 
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
 msgid "Copy the selected events to the clipboard."
-msgstr "Copie les évènements sélectionnés dans le presse-papier."
+msgstr "Kopēt starpliktuvē atlasītos notikumus."
 
 #: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] "Supprimer un évènement"
-msgstr[1] "Supprimer %1 évènements"
+msgstr[0] "Dzēst %1 notikumu"
+msgstr[1] "Dzēst %1 notikumus"
+msgstr[2] "Dzēst %1 notikumu"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
 msgid "Delete the selected events from the calendar."
-msgstr "Supprime du calendrier les évènements sélectionnés."
+msgstr "Dzēst atlasīto notikumu no kalendāra."
 
 #: standardcalendaractionmanager.cpp:120
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] "Voulez-vous vraiment supprimer l'évènement sélectionné ?"
-msgstr[1] "Voulez-vous vraiment supprimer %1 évènements ?"
+msgstr[0] "Vai tiešām vēlaties dzēst %1 atlasīto notikumu?"
+msgstr[1] "Vai tiešām vēlaties dzēst %1 atlasītos notikumus?"
+msgstr[2] "Vai tiešām vēlaties dzēst %1 atlasīto notikumu?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Event?"
 msgid_plural "Delete Events?"
-msgstr[0] "Supprimer l'évènement ?"
-msgstr[1] "Supprimer les évènements ?"
+msgstr[0] "Vai dzēst notikumu?"
+msgstr[1] "Vai dzēst notikumus?"
+msgstr[2] "Vai dzēst notikumus?"
 
 #: standardcalendaractionmanager.cpp:126
 #, kde-format
 msgid "Could not delete event: %1"
-msgstr "Impossible de supprimer un évènement : %1"
+msgstr "Neizdevās izdzēst notikumu: %1"
 
 #: standardcalendaractionmanager.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr "La suppression de l'évènement a échoué"
+msgstr "Notika dzēšana neizdevās"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
-msgstr[0] "Couper un évènement"
-msgstr[1] "Couper %1 évènements"
+msgstr[0] "Izgriezt %1 notikumu"
+msgstr[1] "Izgriezt %1 notikumus"
+msgstr[2] "Izgriezt %1 notikumu"
 
 #: standardcalendaractionmanager.cpp:135
 #, kde-format
 msgid "Cut the selected events from the calendar."
-msgstr "Coupe du calendrier les évènements sélectionnés."
+msgstr "Izgriezt atlasītos notikumus no kalendāra."
 
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
-msgstr "Ajouter un &calendrier..."
+msgstr "Pievienot &kalendāru..."
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1726,32 +1669,33 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
-"Ajoute un nouveau calendrier<p>Une boîte de dialogue apparaît dans laquelle "
-"vous pouvez sélectionner le type du calendrier devant être ajouté.</p>"
+"Pievienot jaunu kalendāru<p>Atvērsies lodziņš, kurā varēsiet izvēlēties "
+"jaunā kalendāra tipu.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Calendar"
-msgstr "Ajouter un calendrier"
+msgstr "Pievienot kalendāru"
 
 #: standardcalendaractionmanager.cpp:147
 #, kde-format
 msgid "Could not create calendar: %1"
-msgstr "Impossible de créer le calendrier : %1"
+msgstr "Neizdevās izveidot kalendāru: %1"
 
 #: standardcalendaractionmanager.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr "La création du calendrier a échoué"
+msgstr "Kalendāra izveide neizdevās"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] "&Supprimer un calendrier"
-msgstr[1] "&Supprimer %1 calendriers"
+msgstr[0] "&Izdzēst %1 kalendāru"
+msgstr[1] "&Izdzēst %1 kalendārus"
+msgstr[2] "&Izdzēst %1 kalendāru"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1759,245 +1703,250 @@ msgid ""
 "Delete the selected calendars<p>The currently selected calendars will be "
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
-"Supprime les calendriers sélectionnés<p>Les calendriers actuellement "
-"sélectionnés seront supprimés, ainsi que tous les évènements, tâches et "
-"journaux qu'ils contiennent.</p>"
+"Izdzēst atlasītos kalendārus<p>Atlasītie kalendāri tiks izdzēsti kopā ar "
+"visiem tajos esošajiem pasākumiem, darāmajiem uzdevumiem un žurnāliem.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] "Voulez-vous vraiment supprimer ce calendrier ?"
-msgstr[1] "Voulez-vous vraiment supprimer %1 calendriers ?"
+msgstr[0] "Vai tiešām vēlaties izdzēst šo %1 kalendāru?"
+msgstr[1] "Vai tiešām vēlaties izdzēst šos %1 kalendārus?"
+msgstr[2] "Vai tiešām vēlaties izdzēst šos %1 kalendārus?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
 msgid_plural "Delete Calendars?"
-msgstr[0] "Supprimer le calendrier ?"
-msgstr[1] "Supprimer les calendriers ?"
+msgstr[0] "Vai izdzēst kalendāru?"
+msgstr[1] "Vai izdzēst kalendārus?"
+msgstr[2] "Vai izdzēst kalendārus?"
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
-msgstr "Propriétés du calendrier..."
+msgstr "Kalendāra īpašības..."
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
-msgstr ""
-"Ouvre une boîte de dialogue pour modifier les propriétés du calendrier "
-"sélectionné."
+msgstr "Atver lodziņu, kurā varat rediģēt atlasītā kalendāra īpašības."
 
 #: standardcalendaractionmanager.cpp:177
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
-msgstr[0] "Mettre à jour un calendrier"
-msgstr[1] "Mettre à jour %1 calendriers"
+msgstr[0] "Atjaunināt %1 kalendāru"
+msgstr[1] "Atjaunināt %1 kalendārus"
+msgstr[2] "Atjaunināt %1 kalendāru"
 
 #: standardcalendaractionmanager.cpp:179
 #, kde-format
 msgid "Updates the content of all folders of the selected calendars."
-msgstr ""
-"Met à jour le contenu de tous les dossiers des calendriers sélectionnés."
+msgstr "Atjaunināt visu atlasīto kalendāru mapju saturu."
 
 #: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
-msgstr "&Copier dans un calendrier"
+msgstr "&Kopēt uz kalendāru"
 
 #: standardcalendaractionmanager.cpp:183
 #, kde-format
 msgid "Copy the selected event to a different calendar."
-msgstr "Copie l'évènement sélectionné dans un calendrier différent."
+msgstr "Kopē atlasīto notikumu uz citu kalendāru."
 
 #: standardcalendaractionmanager.cpp:186
 #, kde-format
 msgid "&Move to Calendar"
-msgstr "&Déplacer dans un calendrier"
+msgstr "&Pārvietot uz kalendāru"
 
 #: standardcalendaractionmanager.cpp:187
 #, kde-format
 msgid "Move the selected event to a different calendar."
-msgstr "Déplace l'évènement sélectionné dans un calendrier différent."
+msgstr "Pārvieto atlasīto notikumu uz citu kalendāru."
 
 #: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
-msgstr "Impossible de coller un évènement : %1"
+msgstr "Neizdevās ielīmēt notikumu: %1"
 
 #: standardcalendaractionmanager.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "Le collage a échoué"
+msgstr "Ielīmēšana neizdevās"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
 msgid "Update Available Calendars"
-msgstr "Mettre à jour les calendriers disponibles"
+msgstr "Atjaunināt pieejamos kalendārus"
 
 #: standardcalendaractionmanager.cpp:196
 #, kde-format
 msgid "Updates the tree of available calendars."
-msgstr "Met à jour l'arborescence des calendriers sélectionnés."
+msgstr "Atjaunina pieejamo kalendāru koku."
 
 #: standardcalendaractionmanager.cpp:303 standardcalendaractionmanager.cpp:307
 #, kde-format
 msgid "Copy Event To"
-msgstr "Copier un évènement dans"
+msgstr "Kopēt notikumu uz"
 
 #: standardcalendaractionmanager.cpp:317 standardcalendaractionmanager.cpp:321
 #, kde-format
 msgid "Move Event To"
-msgstr "Déplacer un évènement dans"
+msgstr "Pārvietot notikumu uz"
 
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
-msgstr "Modifier un évènement..."
+msgstr "Rediģēt notikumu..."
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
-msgstr[0] "Copier une tâche"
-msgstr[1] "Copier %1 tâches"
+msgstr[0] "Kopēt %1 uzdevumu"
+msgstr[1] "Kopēt %1 uzdevumus"
+msgstr[2] "Kopēt %1 uzdevumu"
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
-msgstr "Copier une tâche dans"
+msgstr "Kopēt uzdevumu uz"
 
 #: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
-msgstr[0] "Supprimer une tâche"
-msgstr[1] "Supprimer %1 tâches"
+msgstr[0] "Izdzēst %1 uzdevumu"
+msgstr[1] "Izdzēst %1 uzdevumus"
+msgstr[2] "Izdzēst %1 uzdevumu"
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
-msgstr[0] "Couper une tâche"
-msgstr[1] "Couper %1 tâches"
+msgstr[0] "Izgriezt %1 uzdevumu"
+msgstr[1] "Izgriezt %1 uzdevumus"
+msgstr[2] "Izgriezt %1 uzdevumu"
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
-msgstr "Déplacer une tâche dans"
+msgstr "Pārvietot uzdevumu uz"
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
-msgstr "Modifier une tâche..."
+msgstr "Rediģēt uzdevumu..."
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] "Copier un journal"
-msgstr[1] "Copier %1 journaux"
+msgstr[0] "Kopēt %1 žurnālu"
+msgstr[1] "Kopēt %1 žurnālus"
+msgstr[2] "Kopēt %1 žurnālu"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr "Copier un journal dans"
+msgstr "Kopēt žurnālu uz"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] "Supprimer un journal"
-msgstr[1] "Supprimer %1 journaux"
+msgstr[0] "Izdzēst %1 žurnālu"
+msgstr[1] "Izdzēst %1 žurnālus"
+msgstr[2] "Izdzēst %1 žurnālu"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Couper un journal"
-msgstr[1] "Couper %1 journaux"
+msgstr[0] "Izgriezt %1 žurnālu"
+msgstr[1] "Izgriezt %1 žurnālus"
+msgstr[2] "Izgriezt %1 žurnālu"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
-msgstr "Déplacer un journal dans"
+msgstr "Pārvietot žurnālu uz"
 
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Modifier un journal..."
+msgstr "Rediģēt žurnālu..."
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
-msgstr "Nouvel é&vènement..."
+msgstr "Jauns notik&ums..."
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
 msgid "Create a new event"
-msgstr "Créer un nouvel évènement"
+msgstr "Izveidot jaunu notikumu"
 
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr "Nouvelle &tâche..."
+msgstr "Jauns &uzdevums"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
-msgstr "Créer une nouvelle tâche"
+msgstr "Izveidot jaunu uzdevumu"
 
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
-msgstr "Nouvelle s&ous-tâche..."
+msgstr "Jauns &apakšuzdevums"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
-msgstr "Créer une nouvelle sous-tâche"
+msgstr "Izveidot jaunu apakšuzdevumu"
 
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "Nouveau &journal..."
+msgstr "Jauns žu&rnāls..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
-msgstr "Créer un nouveau journal"
+msgstr "Izveidot jaunu žurnālu"
 
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
-msgstr "Modifi&er..."
+msgstr "&Rediģēt..."
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
-msgstr "Modifier l'incidence sélectionnée."
+msgstr "Rediģēt atlasīto notikumu."
 
 #: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr "Exception"
+msgstr "Izņēmums"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr "Oui"
+msgstr "Jā"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr "Non"
+msgstr "Nē"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
@@ -2008,69 +1957,51 @@ msgstr ","
 #: todomodel.cpp:459
 #, kde-format
 msgid "Summary"
-msgstr "Résumé"
+msgstr "Kopsavilkums"
 
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr "Se reproduit"
+msgstr "Atkārtojošs"
 
 #: todomodel.cpp:463
 #, kde-format
 msgid "Priority"
-msgstr "Priorité"
+msgstr "Prioritāte"
 
 #: todomodel.cpp:465
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
-msgstr "Terminer"
+msgstr "Pabeigts"
 
 #: todomodel.cpp:467
 #, kde-format
 msgid "Start Date"
-msgstr "Date de début"
+msgstr "Sākums"
 
 #: todomodel.cpp:469
 #, kde-format
 msgid "Due Date"
-msgstr "Date d'échéance"
+msgstr "Termiņš"
 
 #: todomodel.cpp:471
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "Terminé"
+msgstr "Pabeigts"
 
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr "Étiquettes"
+msgstr "Birkas"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr "Description"
+msgstr "Apraksts"
 
 #: todopurger.cpp:61
 #, kde-format
 msgid "Purging completed to-dos"
-msgstr "Purge des tâches terminées"
-
-#~ msgid "Mail transport to use for sending e-mail messages"
-#~ msgstr ""
-#~ "Système de messagerie à utiliser pour envoyer des courriers électroniques"
-
-#~ msgid ""
-#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
-#~ "the default one will be used."
-#~ msgstr ""
-#~ "Si « Tout » est sélectionné, les courriers électroniques du logiciel de "
-#~ "groupe de travail utiliseront ce transport. Sinon, celui par défaut sera "
-#~ "utilisé."
-
-#~ msgid "The specified file doesn't exist, aborting import."
-#~ msgstr "Le fichier spécifié n'existe pas, annulation de l'import."
-
-#~ msgid "Failed to load ical file, check permissions."
-#~ msgstr "Impossible de charger le fichier ical, vérifiez les permissions."
+msgstr "Noņemt pabeigtos uzdevumus"

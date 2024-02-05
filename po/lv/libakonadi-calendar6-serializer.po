@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Einars Sprugis <einars8@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-27 00:45+0000\n"
-"PO-Revision-Date: 2012-07-12 23:17+0300\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-02-02 17:38+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: akonadi_serializer_kcalcore.cpp:175
 #, kde-format
@@ -46,7 +47,7 @@ msgstr "UID"
 #: akonadi_serializer_kcalcore.cpp:210
 #, kde-format
 msgid "Is all-day"
-msgstr "Ir visu dienu"
+msgstr "Visu dienu"
 
 #: akonadi_serializer_kcalcore.cpp:214
 #, kde-format
@@ -96,7 +97,7 @@ msgstr "Kategorijas"
 #: akonadi_serializer_kcalcore.cpp:252
 #, kde-format
 msgid "Alarms"
-msgstr "Trauksmes"
+msgstr "Signāli"
 
 #: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
@@ -126,7 +127,7 @@ msgstr "Izveidots"
 #: akonadi_serializer_kcalcore.cpp:264
 #, kde-format
 msgid "Related Uid"
-msgstr "Saistītais Uid"
+msgstr "Saistītais UID"
 
 #: akonadi_serializer_kcalcore.cpp:271
 #, kde-format
@@ -151,12 +152,12 @@ msgstr "Ir sākuma datums"
 #: akonadi_serializer_kcalcore.cpp:295
 #, kde-format
 msgid "Has Due Date"
-msgstr "Ir termiņa beigu datums"
+msgstr "Ir termiņš"
 
 #: akonadi_serializer_kcalcore.cpp:299
 #, kde-format
 msgid "Due Date"
-msgstr "Termiņa beigu datums"
+msgstr "Termiņš"
 
 #: akonadi_serializer_kcalcore.cpp:304
 #, kde-format
@@ -166,7 +167,7 @@ msgstr "Ir pabeigšanas datums"
 #: akonadi_serializer_kcalcore.cpp:311
 #, kde-format
 msgid "Complete"
-msgstr "Pabeigts"
+msgstr "Pabeigt"
 
 #: akonadi_serializer_kcalcore.cpp:317
 #, kde-format
@@ -186,12 +187,12 @@ msgstr "Konfliktējošs notikums"
 #: akonadi_serializer_kcalcore.cpp:334
 #, kde-format
 msgid "Changed Todo"
-msgstr "Izmainīts darāmais"
+msgstr "Izmainīts uzdevums"
 
 #: akonadi_serializer_kcalcore.cpp:335
 #, kde-format
 msgid "Conflicting Todo"
-msgstr "Konfliktējošs darāmais"
+msgstr "Konfliktējošs uzdevums"
 
 #~ msgid "Changed Contact"
 #~ msgstr "Mainīts kontakts"
