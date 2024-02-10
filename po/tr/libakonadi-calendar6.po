@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Serdar Soytetir <tulliana@gmail.com>, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:38+0000\n"
-"PO-Revision-Date: 2023-11-13 05:15+0300\n"
+"PO-Revision-Date: 2024-02-09 20:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -151,13 +151,13 @@ msgstr "Takvim"
 #: calendarsettings.kcfg:23
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr "Uygun/Meşgul Yayınlama URL'si"
+msgstr "Uygun/Meşgul Yayınlama URL’si"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr "Uygun/Meşgul bilgisini yayınlama URL'si"
+msgstr "Uygun/Meşgul bilgisini yayınlama URL’si"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
@@ -213,7 +213,7 @@ msgstr ""
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr "Uygun/Meşgul Alma URL'si"
+msgstr "Uygun/Meşgul Alma URL’si"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
@@ -288,7 +288,7 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
-"Bu ayarla uygun/meşgul URL'sindeki alan bölümüyle aradığınız kullanıcı "
+"Bu ayarla uygun/meşgul URL’sindeki alan bölümüyle aradığınız kullanıcı "
 "kimliğinin alan bölümünün eşleşmesini yapılandırabilirsiniz. Örneğin, eğer "
 "bu seçenek seçilmişse ve joe@mydomain.com adresinin uygun/meşgul verisini "
 "arıyorsanız www.yourdomain.com adresi başarısız olacaktır."
@@ -407,9 +407,9 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p>Yazılım, uygun/meşgul listenizi '%1' URL'sine yükleyemedi. Erişim "
+"<qt><p>Yazılım, uygun/meşgul listenizi ‘%1’ URL’sine yükleyemedi. Erişim "
 "haklarıyla veya adresle ilgili bir sorun olabilir. Sistem iletisi: <em>%2</"
-"em>.</p><p>Lütfen URL'yi denetleyin veya sistem yöneticinizle bağlantıya "
+"em>.</p><p>Lütfen URL’yi denetleyin veya sistem yöneticinizle bağlantıya "
 "geçin.</p></qt>"
 
 #: freebusymanager.cpp:617
@@ -444,7 +444,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr "Uygun/Meşgul Karşıya Yükleme URL'si Yok"
+msgstr "Uygun/Meşgul Karşıya Yükleme URL’si Yok"
 
 #: freebusymanager.cpp:760
 #, kde-format
@@ -576,7 +576,7 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
-"Öntanımlı seçki ya geçersiz ya da uygun ACL'leri sahip değil ve "
+"Öntanımlı seçki ya geçersiz ya da uygun ACL’leri sahip değil ve "
 "DestinationPolicyNeverAsk kullanılmış"
 
 #: incidencechanger.cpp:1208
