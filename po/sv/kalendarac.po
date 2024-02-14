@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:38+0000\n"
+"POT-Creation-Date: 2024-02-14 00:38+0000\n"
 "PO-Revision-Date: 2022-06-15 21:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,27 +27,27 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: alarmnotification.cpp:49
+#: alarmnotification.cpp:50
 #, kde-format
 msgid "View"
 msgstr "Visa"
 
-#: alarmnotification.cpp:56
+#: alarmnotification.cpp:57
 #, kde-format
 msgid "Task"
 msgstr "Uppgift"
 
-#: alarmnotification.cpp:56
+#: alarmnotification.cpp:57
 #, kde-format
 msgid "Event"
 msgstr "Händelse"
 
-#: alarmnotification.cpp:59
+#: alarmnotification.cpp:60
 #, kde-format
 msgid "Task due at %1"
 msgstr "Uppgift färdig %1"
 
-#: alarmnotification.cpp:63
+#: alarmnotification.cpp:64
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
@@ -55,64 +55,66 @@ msgid_plural "%2 starts in %1 minutes"
 msgstr[0] "%2 startar om %1 minut"
 msgstr[1] "%2 startar om %1 minuter"
 
-#: alarmnotification.cpp:67
+#: alarmnotification.cpp:68
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "%1 startar %2"
 
-#: alarmnotification.cpp:69
+#: alarmnotification.cpp:70
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "%1 startade %2"
 
-#: alarmnotification.cpp:75
+#: alarmnotification.cpp:76
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "%1 startar %2 %3"
 
-#: alarmnotification.cpp:81
+#: alarmnotification.cpp:82
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "%1 startade %2 %3"
 
-#: alarmnotification.cpp:90
+#: alarmnotification.cpp:91
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "%1 startar %2"
 
-#: alarmnotification.cpp:92
+#: alarmnotification.cpp:93
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 startade %2"
 
-#: alarmnotification.cpp:117
+#: alarmnotification.cpp:118
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Påminn om 5 min"
 
-#: alarmnotification.cpp:123
-#, kde-format
-msgid "Remind in 1 hour"
-msgstr "Påminn om 1 timma"
+#: alarmnotification.cpp:124
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Reminders"
+msgid "Remind later..."
+msgstr "Påminnelser"
 
-#: alarmnotification.cpp:129
+#: alarmnotification.cpp:130
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Stäng"
 
-#: alarmnotification.cpp:205
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "Öppna webbadress"
 
-#: alarmnotification.cpp:223
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "Karta"
@@ -150,3 +152,106 @@ msgstr "Underhåll"
 msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
+
+#: suspenddialog.cpp:76
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr ""
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr ""
+
+#: suspenddialog.cpp:85
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr ""
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr ""
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr ""
+
+#: suspenddialog.cpp:96
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr ""
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr ""
+
+#: suspenddialog.cpp:99
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+
+#: suspenddialog.cpp:112
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Reminders"
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "Påminnelser"
+
+#: suspenddialog.cpp:113
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr ""
+
+#: suspenddialog.cpp:114
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: suspenddialog.cpp:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr ""
+
+#: suspenddialog.cpp:120
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr ""
+
+#~ msgid "Remind in 1 hour"
+#~ msgstr "Påminn om 1 timma"
