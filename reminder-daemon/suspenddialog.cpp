@@ -70,7 +70,6 @@ SuspendDialog::SuspendDialog(const KSharedConfig::Ptr &config, const QString &ti
 
     auto suspendBox = new QWidget(this);
     auto suspendBoxHBoxLayout = new QHBoxLayout(suspendBox);
-    // suspendBoxHBoxLayout->setContentsMargins({});
     mainLayout->addWidget(suspendBox);
 
     auto label = new QLabel(i18nc("@label:spinbox", "Suspend &duration:"), suspendBox);
