@@ -35,3 +35,5 @@ void NotificationObject::sendNotification(const QString &title, const QString &s
         m_notification->sendEvent();
     }
 }
+
+#include "moc_notificationobject.cpp"
