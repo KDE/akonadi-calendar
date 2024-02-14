@@ -29,15 +29,16 @@ public:
     explicit SearchCollectionHelper(QObject *parent = nullptr);
 
 private:
-    void onSearchCollectionsFetched(KJob *job);
-    void updateOpenInvitation();
-    void updateDeclinedInvitation();
+    AKONADI_CALENDAR_NO_EXPORT void onSearchCollectionsFetched(KJob *job);
+    AKONADI_CALENDAR_NO_EXPORT void updateOpenInvitation();
+    AKONADI_CALENDAR_NO_EXPORT void updateDeclinedInvitation();
 
-    void createSearchJobFinished(KJob *job);
-    void modifyResult(KJob *job);
+    AKONADI_CALENDAR_NO_EXPORT void createSearchJobFinished(KJob *job);
+    AKONADI_CALENDAR_NO_EXPORT void modifyResult(KJob *job);
 
-    void setupSearchCollections();
-    void updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
+    AKONADI_CALENDAR_NO_EXPORT void setupSearchCollections();
+    AKONADI_CALENDAR_NO_EXPORT void
+    updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
 
 private:
     KIdentityManagementCore::IdentityManager *const mIdentityManager;
