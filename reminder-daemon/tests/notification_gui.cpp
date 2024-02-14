@@ -30,7 +30,5 @@ int main(int argc, char **argv)
         value++;
     });
     timer->start();
-
-    // TODO
     return app.exec();
 }
