@@ -26,11 +26,10 @@ void NotificationObject::sendNotification(const QString &title, const QString &s
     m_notification->setText(summary);
 
     if (!notificationExists) {
-        auto action = m_notification->addDefaultAction(QStringLiteral("View"));
-        auto remindIn5MAction = m_notification->addAction(QStringLiteral("Remind in 5 mins"));
-        auto remindIn1hAction = m_notification->addAction(QStringLiteral("Remind in 1 hour"));
+        (void)m_notification->addAction(QStringLiteral("Remind in 5 mins"));
+        (void)m_notification->addAction(QStringLiteral("Remind in 1 hour"));
 
-        auto dismissAction = m_notification->addAction(QStringLiteral("Dismiss"));
+        (void)m_notification->addAction(QStringLiteral("Dismiss"));
         qDebug() << " send event ";
         m_notification->sendEvent();
     }
