@@ -26,7 +26,6 @@
 #include <QIcon>
 #include <QMimeData>
 
-
 namespace Akonadi
 {
 class TodoModelPrivate

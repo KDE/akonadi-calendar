@@ -106,4 +106,3 @@ private:
     std::unique_ptr<TodoModelPrivate> const d;
 };
 }
-

@@ -100,7 +100,8 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
 
     const auto identity = sender.isEmpty() ? d->identityForIncidence(incidence) : d->identityForAddress(sender);
 
-    d->m_mailer->mailTo(incidence, identity, Akonadi::CalendarUtils::email(), method, CalendarSettings::self()->bcc(), recipients, messageText, {}, d->privacyFlags());
+    d->m_mailer
+        ->mailTo(incidence, identity, Akonadi::CalendarUtils::email(), method, CalendarSettings::self()->bcc(), recipients, messageText, {}, d->privacyFlags());
 }
 
 void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &incidence, KCalendarCore::iTIPMethod method, const QString &sender)
