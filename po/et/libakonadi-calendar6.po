@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
 "PO-Revision-Date: 2020-04-20 11:38+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -285,7 +285,7 @@ msgstr ""
 "jaan@minudomeen.ee kohta serverist www.sinudomeen.ee ei anna tulemust."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
 #| msgid "Calendar"
@@ -857,7 +857,7 @@ msgstr ""
 "Sa oled vastu võtnud selle sündmuse kutse. Kas soovid saata värskendatud "
 "vastuse korraldajale ja lükata kutse tagasi?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Vastuettepanek: %1"
@@ -1096,7 +1096,7 @@ msgstr ""
 msgid "Unencrypted Message Warning"
 msgstr ""
 
-#: mailscheduler_p.cpp:198
+#: mailscheduler_p.cpp:199
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Tõrge kirja saatmisel: "
@@ -1908,50 +1908,50 @@ msgstr "&Muuda..."
 msgid "Edit the selected incidence."
 msgstr "Valitud sündmuse muutmine."
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:158 todomodel.cpp:193
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr ""
 
-#: todomodel.cpp:161 todomodel.cpp:196
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr ""
 
-#: todomodel.cpp:164 todomodel.cpp:199
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr ""
 
-#: todomodel.cpp:178 todomodel.cpp:215
+#: todomodel.cpp:177 todomodel.cpp:214
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:459
+#: todomodel.cpp:458
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "Kokkuvõte"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:460
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:463
+#: todomodel.cpp:462
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "Tähtsus"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:464
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -1959,21 +1959,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Valmis"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "Alguse kuupäev ja kellaaeg"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "Tähtaja kuupäev ja kellaaeg"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -1981,12 +1981,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Valmis"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Description"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
 "PO-Revision-Date: 2024-02-02 17:31+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -290,7 +290,7 @@ msgstr ""
 "tavsdomens.lv“, rādīsies kļūda."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Calendar"
 msgstr "Kalendārs"
@@ -851,7 +851,7 @@ msgstr ""
 "Jūs iepriekš apstiprinājāt uzaicinājumu uz šo pasākumu. Vai vēlaties nosūtīt "
 "atjauninātu atbildi organizatoram, noraidot šo ielūgumu?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Pretpriekšlikums: %1"
@@ -1109,7 +1109,7 @@ msgstr "Šifrēt visas &daļas"
 msgid "Unencrypted Message Warning"
 msgstr "Nešifrētas vēstules brīdinājums"
 
-#: mailscheduler_p.cpp:198
+#: mailscheduler_p.cpp:199
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Kļūda, nosūtot e-pastu: "
@@ -1930,73 +1930,73 @@ msgstr "&Rediģēt..."
 msgid "Edit the selected incidence."
 msgstr "Rediģēt atlasīto notikumu."
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:158 todomodel.cpp:193
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Izņēmums"
 
-#: todomodel.cpp:161 todomodel.cpp:196
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Jā"
 
-#: todomodel.cpp:164 todomodel.cpp:199
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Nē"
 
-#: todomodel.cpp:178 todomodel.cpp:215
+#: todomodel.cpp:177 todomodel.cpp:214
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:458
 #, kde-format
 msgid "Summary"
 msgstr "Kopsavilkums"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:460
 #, kde-format
 msgid "Recurs"
 msgstr "Atkārtojošs"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:462
 #, kde-format
 msgid "Priority"
 msgstr "Prioritāte"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:464
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Pabeigts"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Start Date"
 msgstr "Sākums"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Due Date"
 msgstr "Termiņš"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Pabeigts"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgid "Tags"
 msgstr "Birkas"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Description"
 msgstr "Apraksts"

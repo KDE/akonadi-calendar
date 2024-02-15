@@ -1,16 +1,16 @@
 # Translation for kalendarac.po to Euskara/Basque (eu).
-# Copyright (C) 2022, This file is copyright:
+# Copyright (C) 2022-2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
-"PO-Revision-Date: 2022-07-14 17:11+0200\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"PO-Revision-Date: 2024-02-14 23:42+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -100,11 +100,9 @@ msgid "Remind in 5 mins"
 msgstr "Oroitarazi 5 minutu barru"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Oroigarriak"
+msgstr "Gogorarazi geroago..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -156,19 +154,19 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:76
+#: suspenddialog.cpp:75
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "Eten irau&pena:"
 
-#: suspenddialog.cpp:83
+#: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Eten oroigarriak denbora tarte horretan"
 
-#: suspenddialog.cpp:85
+#: suspenddialog.cpp:84
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -176,38 +174,41 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Hautatutako gorabeheren oroigarrietako bakoitza denbora unitate horren "
+"arabera etengo da. Ondoko hautatzailean denbora unitateak (normalean "
+"minutuak) hauta ditzakezu."
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "minutu"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "ordu"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "egun"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "aste"
 
-#: suspenddialog.cpp:97
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Eten oroigarriak denbora unitate hori erabiliz"
 
-#: suspenddialog.cpp:99
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -215,46 +216,49 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Hautatutako gorabeheren oroigarrietako bakoitza denbora unitate hori "
+"erabiliz etengo da. Zenbakiak sartzeko ondoko sarreran denbora-unitate "
+"kopurua ezar dezakezu."
 
-#: suspenddialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#: suspenddialog.cpp:111
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Oroigarriak"
+msgstr "Gogorarazi geroago"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Gogorarazi berriz adierazitako tartea igarotakoan"
 
-#: suspenddialog.cpp:114
+#: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Sakatu botoi hori, zehaztutako denbora tartea igarotakoan gorabehera horri "
+"buruz berriz gogorarazteko."
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Utzi"
 
-#: suspenddialog.cpp:119
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "Utzi geroago gogoraraztea, adib. oroigarria betiko baztertu"
 
-#: suspenddialog.cpp:120
+#: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "Sakatu botoi hori oroigarria betiko isilarazteko."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Oroitarazi ordu 1 barru"

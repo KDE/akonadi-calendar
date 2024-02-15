@@ -1,15 +1,15 @@
 # Translation of kalendarac.po to Catalan
-# Copyright (C) 2022-2023 This_file_is_part_of_KDE
+# Copyright (C) 2022-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
-"PO-Revision-Date: 2023-09-25 12:26+0200\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"PO-Revision-Date: 2024-02-14 10:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -99,11 +99,9 @@ msgid "Remind in 5 mins"
 msgstr "Recorda d'aquí a 5 min"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Recordatoris"
+msgstr "Recorda més tard..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -155,19 +153,19 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:76
+#: suspenddialog.cpp:75
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "&Durada de la suspensió:"
 
-#: suspenddialog.cpp:83
+#: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Els recordatoris se suspendran segons aquesta quantitat de temps"
 
-#: suspenddialog.cpp:85
+#: suspenddialog.cpp:84
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -175,38 +173,41 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Cada recordatori de les incidències seleccionades se suspendrà d'acord amb "
+"aquest nombre d'unitats de temps. Podeu triar les unitats de temps "
+"(normalment minuts) al selector adjacent."
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "minut/s"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "hora/es"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "dia/es"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "setmana/es"
 
-#: suspenddialog.cpp:97
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Suspèn els recordatoris utilitzant aquesta unitat de temps"
 
-#: suspenddialog.cpp:99
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -214,46 +215,51 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Cada recordatori de les incidències seleccionades se suspendrà fent servir "
+"aquesta unitat de temps. Podeu establir el nombre d'unitats de temps a "
+"l'entrada de nombre adjacent."
 
-#: suspenddialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#: suspenddialog.cpp:111
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Recordatoris"
+msgstr "Recorda més tard"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Torna a recordar més tard després de l'interval especificat"
 
-#: suspenddialog.cpp:114
+#: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Premeu aquest botó per a tornar a recordar aquesta incidència després de la "
+"quantitat especificada de temps."
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
-#: suspenddialog.cpp:119
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgstr ""
+"Cancel·la el recordatori més tard, és a dir, descarta el recordatori per "
+"sempre"
 
-#: suspenddialog.cpp:120
+#: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "Premeu aquest botó per a silenciar el recordatori per sempre."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Recorda d'aquí a 1 hora"

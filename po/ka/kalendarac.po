@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
-"PO-Revision-Date: 2022-09-12 09:48+0200\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"PO-Revision-Date: 2024-02-14 05:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -98,11 +98,9 @@ msgid "Remind in 5 mins"
 msgstr "5 წუთში შემახსენე"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "შეხსენებები"
+msgstr "მოგვიანებით შეხსენება..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -154,19 +152,19 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "კლაუ კამბრა"
 
-#: suspenddialog.cpp:76
+#: suspenddialog.cpp:75
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "შეჩერების ხ&ანგრძლივობა:"
 
-#: suspenddialog.cpp:83
+#: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "შემხსენებლების შეჩერება ამ ხანგრძლივობით"
 
-#: suspenddialog.cpp:85
+#: suspenddialog.cpp:84
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -174,38 +172,41 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"თითოეული შემხსენებელი მონიშნული მოვლენებისთვის შეჩერდება ამ დროის ერთეულის "
+"რაოდენობით. დროის ერთეულის (ჩვეულებრივ, წუთები) ახლომდებარე ამომრჩევში "
+"შეგიძლიათ."
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "წუთი"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "საათი"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "დღე"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "კვირა"
 
-#: suspenddialog.cpp:97
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "შემხსენებლების შეჩერება ამ დროის ერთეულით"
 
-#: suspenddialog.cpp:99
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -213,46 +214,48 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"თითოეულ შემხსენებელი არჩეული მოვლენებისთვის შეჩერდება ამ დროის ერთეულით. "
+"დროის ერთეულების რაოდენობა ახლომდებარე რიცხვის შეყვანის ზოლში შეგიძლიათ."
 
-#: suspenddialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#: suspenddialog.cpp:111
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "შეხსენებები"
+msgstr "მოგვიანებით შეხსენება"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "შემახსენე კიდევ ერთხელ, მითითებული ინტერვალის შემდეგ"
 
-#: suspenddialog.cpp:114
+#: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"დააწექით ამ ღილაკს, რომ ამ მოვლენის შესახებ კიდევ ერთხელ შეგატყობინოთ, როცა "
+"მითითებული რაოდენობის დრო გავა."
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
-#: suspenddialog.cpp:119
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "მოგვიანებით შეხსენების გაუქმება, ანუ შემხსენებლის სამუდამოდ მოცილება"
 
-#: suspenddialog.cpp:120
+#: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "დააწკაპუნეთ ამ ღილაკზე შემხსენებლის სამუდამოდ დასადუმებლად."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "1 საათში შემახსენე"

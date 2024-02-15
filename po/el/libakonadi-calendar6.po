@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
 "PO-Revision-Date: 2023-08-21 22:29+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -291,7 +291,7 @@ msgstr ""
 "www.yourdomain.com θα αποτύχει."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Calendar"
 msgstr "Ημερολόγιο"
@@ -866,7 +866,7 @@ msgstr ""
 "Έχετε αποδεχθεί μια πρόσκληση για αυτό το γεγονός. Θέλετε να στείλετε μια "
 "ενημερωτική απάντηση στον διοργανωτή απορρίπτοντας την πρόσκληση;"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Αντιπρόταση: %1"
@@ -1127,7 +1127,7 @@ msgstr "Να &κρυπτογραφηθούν όλα τα τμήματα"
 msgid "Unencrypted Message Warning"
 msgstr "Προειδοποίηση ακρυπτογράφητου μηνύματος"
 
-#: mailscheduler_p.cpp:198
+#: mailscheduler_p.cpp:199
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Σφάλμα αποστολής μηνύματος αλληλογραφίας: "
@@ -1939,73 +1939,73 @@ msgstr "&Επεξεργασία..."
 msgid "Edit the selected incidence."
 msgstr "Επεξεργασία του επιλεγμένου περιστατικού."
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:158 todomodel.cpp:193
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Εξαίρεση"
 
-#: todomodel.cpp:161 todomodel.cpp:196
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Ναι"
 
-#: todomodel.cpp:164 todomodel.cpp:199
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Όχι"
 
-#: todomodel.cpp:178 todomodel.cpp:215
+#: todomodel.cpp:177 todomodel.cpp:214
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:458
 #, kde-format
 msgid "Summary"
 msgstr "Σύνοψη"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:460
 #, kde-format
 msgid "Recurs"
 msgstr "Επανεμφάνιση"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:462
 #, kde-format
 msgid "Priority"
 msgstr "Προτεραιότητα"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:464
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Ολοκληρωμένο"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Start Date"
 msgstr "Ημερομηνία έναρξης"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Due Date"
 msgstr "Ημερομηνία λήξης"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Ολοκληρωμένο"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgid "Tags"
 msgstr "Ετικέτες"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Description"
 msgstr "Περιγραφή"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:37+0000\n"
 "PO-Revision-Date: 2023-11-13 13:06+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -291,7 +291,7 @@ msgstr ""
 "pippo@miodominio.it sul server www.tuodominio.it."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Calendar"
 msgstr "Calendario"
@@ -862,7 +862,7 @@ msgstr ""
 "Prima avevi accettato un invito per questo evento. Vuoi inviare una risposta "
 "aggiornata all'organizzatore per rifiutare l'invito?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:123
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Controproposta: %1"
@@ -1123,7 +1123,7 @@ msgstr "&Cifra tutte le parti"
 msgid "Unencrypted Message Warning"
 msgstr "Avvertimento di messaggio non cifrato"
 
-#: mailscheduler_p.cpp:198
+#: mailscheduler_p.cpp:199
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Errore nell'invio della posta: "
@@ -1933,73 +1933,73 @@ msgstr "&Modifica..."
 msgid "Edit the selected incidence."
 msgstr "Modifica l'occorrenza selezionata."
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:158 todomodel.cpp:193
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Eccezione"
 
-#: todomodel.cpp:161 todomodel.cpp:196
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Si"
 
-#: todomodel.cpp:164 todomodel.cpp:199
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "No"
 
-#: todomodel.cpp:178 todomodel.cpp:215
+#: todomodel.cpp:177 todomodel.cpp:214
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:458
 #, kde-format
 msgid "Summary"
 msgstr "Sommario"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:460
 #, kde-format
 msgid "Recurs"
 msgstr "Ricor"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:462
 #, kde-format
 msgid "Priority"
 msgstr "Priorità"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:464
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Completato"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Start Date"
 msgstr "Data di inizio"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Due Date"
 msgstr "Data di scadenza"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Completato"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgid "Tags"
 msgstr "Etichette"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Description"
 msgstr "Descrizione"
