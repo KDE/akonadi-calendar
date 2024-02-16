@@ -9,6 +9,7 @@
 #include "searchcollectionhelper.h"
 #include "akonadicalendar_debug.h"
 
+#include <Akonadi/CollectionDeleteJob>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/CollectionModifyJob>
@@ -29,15 +30,42 @@ SearchCollectionHelper::SearchCollectionHelper(QObject *parent)
     : QObject(parent)
     , mIdentityManager(KIdentityManagementCore::IdentityManager::self())
 {
-    setupSearchCollections();
-    connect(mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateOpenInvitation);
-    connect(mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateDeclinedInvitation);
-
-    updateOpenInvitation();
-    updateDeclinedInvitation();
+    fetchSearchCollections();
 }
 
-void SearchCollectionHelper::setupSearchCollections()
+void SearchCollectionHelper::setEnabled(bool enabled)
+{
+    if (mEnabled == enabled) {
+        return;
+    }
+
+    mEnabled = enabled;
+    if (mEnabled) {
+        init();
+    } else {
+        deinit();
+    }
+}
+
+bool SearchCollectionHelper::enabled() const
+{
+    return mEnabled;
+}
+
+void SearchCollectionHelper::init()
+{
+    fetchSearchCollections();
+    connect(mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateOpenInvitation);
+    connect(mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateDeclinedInvitation);
+}
+
+void SearchCollectionHelper::deinit()
+{
+    mIdentityManager->disconnect(this);
+    removeSearchCollections();
+}
+
+void SearchCollectionHelper::fetchSearchCollections()
 {
     // Collection "Search", has always ID 1
     auto fetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection(1), Akonadi::CollectionFetchJob::FirstLevel);
@@ -61,8 +89,14 @@ void SearchCollectionHelper::onSearchCollectionsFetched(KJob *job)
             }
         }
     }
-    updateOpenInvitation();
-    updateDeclinedInvitation();
+
+    if (mEnabled) {
+        updateOpenInvitation();
+        updateDeclinedInvitation();
+    } else {
+        // When disabled, make sure the collections are not shown
+        removeSearchCollections();
+    }
 }
 
 void SearchCollectionHelper::updateSearchCollection(Akonadi::Collection col,
@@ -102,6 +136,18 @@ void SearchCollectionHelper::updateSearchCollection(Akonadi::Collection col,
         connect(job, &Akonadi::CollectionModifyJob::result, this, &SearchCollectionHelper::modifyResult);
         qCDebug(AKONADICALENDAR_LOG) << "updating " << name << " (" << col.id() << ") virtual Collection";
         qCDebug(AKONADICALENDAR_LOG) << "query" << query.toJSON();
+    }
+}
+
+void SearchCollectionHelper::removeSearchCollections()
+{
+    if (mOpenInvitationCollection.isValid()) {
+        new Akonadi::CollectionDeleteJob(mOpenInvitationCollection, this);
+        mOpenInvitationCollection = {};
+    }
+    if (mDeclineCollection.isValid()) {
+        new Akonadi::CollectionDeleteJob(mDeclineCollection, this);
+        mDeclineCollection = {};
     }
 }
 

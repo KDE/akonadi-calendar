@@ -26,23 +26,36 @@ class AKONADI_CALENDAR_EXPORT SearchCollectionHelper : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Construct a new Search Collection Helper object.
+     *
+     * Note that helper is disabled by default. Call setEnabled(true) to enable it.
+     *
+     * @param parent
+     */
     explicit SearchCollectionHelper(QObject *parent = nullptr);
+
+    void setEnabled(bool enabled);
+    bool enabled() const;
 
 private:
     AKONADI_CALENDAR_NO_EXPORT void onSearchCollectionsFetched(KJob *job);
     AKONADI_CALENDAR_NO_EXPORT void updateOpenInvitation();
     AKONADI_CALENDAR_NO_EXPORT void updateDeclinedInvitation();
+    AKONADI_CALENDAR_NO_EXPORT void init();
+    AKONADI_CALENDAR_NO_EXPORT void deinit();
 
     AKONADI_CALENDAR_NO_EXPORT void createSearchJobFinished(KJob *job);
     AKONADI_CALENDAR_NO_EXPORT void modifyResult(KJob *job);
 
-    AKONADI_CALENDAR_NO_EXPORT void setupSearchCollections();
-    AKONADI_CALENDAR_NO_EXPORT void
-    updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
+    AKONADI_CALENDAR_NO_EXPORT void fetchSearchCollections();
+    AKONADI_CALENDAR_NO_EXPORT void updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
+    AKONADI_CALENDAR_NO_EXPORT void removeSearchCollections();
 
 private:
     KIdentityManagementCore::IdentityManager *const mIdentityManager;
     Akonadi::Collection mOpenInvitationCollection;
     Akonadi::Collection mDeclineCollection;
+    bool mEnabled = false;
 };
 }
