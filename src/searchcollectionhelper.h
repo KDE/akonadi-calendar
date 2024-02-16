@@ -15,13 +15,13 @@
 
 #include <Akonadi/Collection>
 #include <KCalendarCore/Attendee>
-#include <KIdentityManagementCore/IdentityManager>
 
 class KJob;
 
 namespace Akonadi
 {
 /// Helper class to initialise the search collections
+class SearchCollectionHelperPrivate;
 class AKONADI_CALENDAR_EXPORT SearchCollectionHelper : public QObject
 {
     Q_OBJECT
@@ -34,6 +34,7 @@ public:
      * @param parent
      */
     explicit SearchCollectionHelper(QObject *parent = nullptr);
+    ~SearchCollectionHelper() override;
 
     void setEnabled(bool enabled);
     bool enabled() const;
@@ -53,9 +54,6 @@ private:
     AKONADI_CALENDAR_NO_EXPORT void removeSearchCollections();
 
 private:
-    KIdentityManagementCore::IdentityManager *const mIdentityManager;
-    Akonadi::Collection mOpenInvitationCollection;
-    Akonadi::Collection mDeclineCollection;
-    bool mEnabled = false;
+    std::unique_ptr<SearchCollectionHelperPrivate> const d;
 };
 }
