@@ -27,7 +27,7 @@ public:
     CollectionCalendar(Akonadi::EntityTreeModel *model, const Akonadi::Collection &col, QObject *parent = nullptr);
     ~CollectionCalendar() override;
 
-    Akonadi::Collection collection() const;
+    [[nodiscard]] Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &c);
 
     Akonadi::EntityTreeModel *model() const;
@@ -36,7 +36,7 @@ public:
     bool addTodo(const KCalendarCore::Todo::Ptr &todo) override;
     bool addJournal(const KCalendarCore::Journal::Ptr &journal) override;
 
-    bool hasRight(Akonadi::Collection::Right right) const;
+    [[nodiscard]] bool hasRight(Akonadi::Collection::Right right) const;
 
 Q_SIGNALS:
     /**

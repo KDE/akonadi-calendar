@@ -14,7 +14,7 @@ public:
     explicit SingleCollectionCalendar(const Akonadi::Collection &col, QObject *parent = nullptr);
     ~SingleCollectionCalendar() override;
 
-    Akonadi::Collection collection() const;
+    [[nodiscard]] Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &c);
 
     bool addEvent(const KCalendarCore::Event::Ptr &event) override;
