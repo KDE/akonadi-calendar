@@ -26,22 +26,36 @@ class AKONADI_CALENDAR_EXPORT SearchCollectionHelper : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Construct a new Search Collection Helper object.
+     *
+     * Note that helper is disabled by default. Call setEnabled(true) to enable it.
+     *
+     * @param parent
+     */
     explicit SearchCollectionHelper(QObject *parent = nullptr);
+
+    void setEnabled(bool enabled);
+    bool enabled() const;
 
 private:
     void onSearchCollectionsFetched(KJob *job);
     void updateOpenInvitation();
     void updateDeclinedInvitation();
+    void init();
+    void deinit();
 
     void createSearchJobFinished(KJob *job);
     void modifyResult(KJob *job);
 
-    void setupSearchCollections();
+    void fetchSearchCollections();
     void updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
+    void removeSearchCollections();
 
 private:
     KIdentityManagementCore::IdentityManager *const mIdentityManager;
     Akonadi::Collection mOpenInvitationCollection;
     Akonadi::Collection mDeclineCollection;
+    bool mEnabled = false;
 };
 }
