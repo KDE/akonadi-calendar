@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:37+0000\n"
-"PO-Revision-Date: 2022-11-15 09:59+0100\n"
+"PO-Revision-Date: 2024-02-16 18:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.1.1\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -100,11 +100,9 @@ msgid "Remind in 5 mins"
 msgstr "Opomnik v 5 minutah"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Opomniki"
+msgstr "Opomni pozneje..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -160,13 +158,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "Trajanje prekinitve"
 
 #: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Prekini opomnike za ta čas"
 
 #: suspenddialog.cpp:84
 #, kde-format
@@ -176,36 +174,38 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Vsak opomnik za izbrane dogodke bo prekinjen za to število časovnih enot. V "
+"sosednjem izbirniku lahko izberete časovne enote (običajno minute)."
 
 #: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "minut"
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "ur"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "dni"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "tednov"
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Prekini opomnike s to časovno enoto"
 
 #: suspenddialog.cpp:98
 #, kde-format
@@ -215,20 +215,20 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Vsak opomnik za izbrane dogodke bo prekinjen z uporabo te časovne enote. V "
+"sosednjem vnosu številke lahko nastavite število časovnih enot."
 
 #: suspenddialog.cpp:111
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Opomniki"
+msgstr "Opomni kasneje"
 
 #: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Ponovno me opomni po določenem intervalu"
 
 #: suspenddialog.cpp:113
 #, kde-format
@@ -237,24 +237,25 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Pritisnite ta gumb, da vas po določenem času ponovno opozori na ta dogodek."
 
 #: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Prekliči"
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "Prekliči opomin pozneje, tj. opusti opomnik za vedno"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "Pritisnite ta gumb, da za vedno utišate opomnik."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Opomnik v 1 uri"

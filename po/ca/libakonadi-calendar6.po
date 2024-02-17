@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
 "PO-Revision-Date: 2024-01-12 12:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1480,13 +1480,13 @@ msgstr "No hi ha memòria cau de lliure/ocupat"
 msgid "Error saving freebusy object"
 msgstr "Error en desar un objecte de lliure/ocupat"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:177
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Invitacions refusades"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:185
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

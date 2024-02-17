@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
 "PO-Revision-Date: 2023-11-25 18:25+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1470,13 +1470,13 @@ msgstr "Ez dago Libre/Lanpetua cacherik"
 msgid "Error saving freebusy object"
 msgstr "Errorea Libre/Lanpetuta objektua gordetzean"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:177
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Uko egindako gonbidapenak"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:185
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

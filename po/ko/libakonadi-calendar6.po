@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
 "PO-Revision-Date: 2024-02-10 22:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1430,13 +1430,13 @@ msgstr "바쁨 한가함 캐시가 없음"
 msgid "Error saving freebusy object"
 msgstr "바쁨 한가함 객체를 저장할 수 없음"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:177
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "거절한 초대장"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:185
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

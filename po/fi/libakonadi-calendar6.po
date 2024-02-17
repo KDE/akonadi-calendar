@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
 "PO-Revision-Date: 2023-12-27 11:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1453,13 +1453,13 @@ msgstr "Ei varaustietovälimuistia"
 msgid "Error saving freebusy object"
 msgstr "Virhe tallennettaessa varaustietokohdetta"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:177
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Hylätyt kutsut"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:185
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"POT-Creation-Date: 2024-02-17 00:38+0000\n"
 "PO-Revision-Date: 2020-04-20 11:38+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -1443,14 +1443,14 @@ msgstr "Vaba/hõivatud puhver puudub"
 msgid "Error saving freebusy object"
 msgstr "Tõrge vaba/hõivatud objekti salvestamisel"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:177
 #, fuzzy, kde-format
 #| msgid "Send &Invitations"
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Saa&da kutsed"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:185
 #, fuzzy, kde-format
 #| msgid "Send &Invitations"
 msgctxt "A collection of all open invidations."
