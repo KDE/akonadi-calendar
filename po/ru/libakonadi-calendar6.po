@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:36+0000\n"
+"POT-Creation-Date: 2024-02-17 02:26+0000\n"
 "PO-Revision-Date: 2024-02-10 13:15+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1471,13 +1471,13 @@ msgstr "Нет кэша данных о занятости"
 msgid "Error saving freebusy object"
 msgstr "Ошибка сохранения данных о занятости"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:159
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Отклонённые приглашения"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:167
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

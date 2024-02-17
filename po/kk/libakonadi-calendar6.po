@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:36+0000\n"
+"POT-Creation-Date: 2024-02-17 02:26+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -1454,13 +1454,13 @@ msgstr "Бос/Істе кэші жоқ"
 msgid "Error saving freebusy object"
 msgstr "Бос/Істе нысаның сақтау қатесі"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:159
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr ""
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:167
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

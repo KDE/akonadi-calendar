@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:36+0000\n"
+"POT-Creation-Date: 2024-02-17 02:26+0000\n"
 "PO-Revision-Date: 2023-11-13 09:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1456,13 +1456,13 @@ msgstr "Ni predpomnilnika prostosti/zaposlenosti"
 msgid "Error saving freebusy object"
 msgstr "Napaka med shranjevanjem predmeta prostosti/zaposlenosti"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:159
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Zavrnjena povabila"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:167
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

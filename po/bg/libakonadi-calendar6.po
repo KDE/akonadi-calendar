@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:36+0000\n"
+"POT-Creation-Date: 2024-02-17 02:26+0000\n"
 "PO-Revision-Date: 2023-11-13 13:38+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -1468,13 +1468,13 @@ msgstr "Без кеш за заетост"
 msgid "Error saving freebusy object"
 msgstr "Грешка при запазване на обект със свободен заем"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:159
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Отхвърлени покани"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:167
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:36+0000\n"
+"POT-Creation-Date: 2024-02-17 02:26+0000\n"
 "PO-Revision-Date: 2023-11-14 05:50+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1451,13 +1451,13 @@ msgstr "თავისუფალი/დაკავებულის ქე�
 msgid "Error saving freebusy object"
 msgstr "თავისუფალი/დაკავებულის ობიექტის შენახვის შეცდომა"
 
-#: searchcollectionhelper.cpp:113
+#: searchcollectionhelper.cpp:159
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "უარყოფილი მოსაწვევები"
 
-#: searchcollectionhelper.cpp:121
+#: searchcollectionhelper.cpp:167
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
