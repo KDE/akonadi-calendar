@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kalendar package.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-17 02:26+0000\n"
-"PO-Revision-Date: 2022-06-15 14:45+0200\n"
+"PO-Revision-Date: 2024-02-14 14:25+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vincenzo Reale"
+msgstr " Vincenzo Reale"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -97,11 +97,9 @@ msgid "Remind in 5 mins"
 msgstr "Ricordami tra 5 minuti"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Promemoria"
+msgstr "Ricordamelo più tardi..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -157,13 +155,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "Durata &della sospensione:"
 
 #: suspenddialog.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Sospendi i promemoria per questo periodo di tempo"
 
 #: suspenddialog.cpp:85
 #, kde-format
@@ -173,36 +171,39 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Ogni promemoria per le occorrenze selezionate sarà sospeso per questo numero "
+"di unità di tempo. Puoi scegliere le unità di tempo (tipicamente minuti) nel "
+"selettore adiacente."
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "minuto/i"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "ora/e"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "giorno/i"
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "settimana/e"
 
 #: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Sospendi i promemoria utilizzando questa unità di tempo"
 
 #: suspenddialog.cpp:99
 #, kde-format
@@ -212,20 +213,21 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Ogni promemoria per le occorrenze selezionate sarà sospeso utilizzando "
+"questa unità di tempo. È possibile impostare il numero di unità di tempo nel "
+"campo di inserimento numerico adiacente."
 
 #: suspenddialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Promemoria"
+msgstr "Ricordamelo più tardi"
 
 #: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Ricordamelo di nuovo dopo l'intervallo specificato"
 
 #: suspenddialog.cpp:114
 #, kde-format
@@ -234,24 +236,28 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Premi questo pulsante per ricevere nuovamente un promemoria di questa "
+"occorrenza dopo il periodo di tempo specificato."
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgstr ""
+"Annulla il promemoria in un secondo momento, ovvero elimina il promemoria "
+"per sempre"
 
 #: suspenddialog.cpp:120
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "Premi questo pulsante per silenziare il promemoria per sempre."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Ricordami tra 1 ora"

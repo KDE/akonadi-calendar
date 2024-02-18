@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-17 02:26+0000\n"
-"PO-Revision-Date: 2022-06-14 11:09+0300\n"
+"PO-Revision-Date: 2024-02-17 14:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -97,11 +97,9 @@ msgid "Remind in 5 mins"
 msgstr "5 dakika sonra anımsat"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Anımsatıcılar"
+msgstr "Daha Sonra Anımsat…"
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -157,13 +155,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "Askıya alma &süresi:"
 
 #: suspenddialog.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Anımsatıcıları bu süre kadar askıya al"
 
 #: suspenddialog.cpp:85
 #, kde-format
@@ -173,36 +171,39 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Seçili olaylara ilişkin her anımsatıcı bu sayıda zaman birimi kadar askıya "
+"alınır. Bitişikteki seçiciden zaman birimlerini (genelde dakika) "
+"seçebilirsiniz."
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "dakika"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "saat"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "gün"
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "hafta"
 
 #: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Anımsatıcıları bu zaman birimini kullanarak askıya al"
 
 #: suspenddialog.cpp:99
 #, kde-format
@@ -212,20 +213,21 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Seçili olaylara ilişkin her anımsatıcı bu zaman birimi kullanılarak askıya "
+"alınır. Bitişikteki seçiciden zaman birimlerini (genelde dakika) "
+"seçebilirsiniz."
 
 #: suspenddialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Anımsatıcılar"
+msgstr "Daha Sonra Anımsat"
 
 #: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Belirtilen aralıktan sonra yeniden anımsat"
 
 #: suspenddialog.cpp:114
 #, kde-format
@@ -234,24 +236,22 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Belirtilen süre sonunda bu olayın tekrar anımsatılması için bu düğmeye basın."
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "Daha sonra anımsatmayı iptal et, yani anımsatıcıyı tümüyle kapat"
 
 #: suspenddialog.cpp:120
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
-
-#~ msgid "Remind in 1 hour"
-#~ msgstr "1 saat sonra anımsat"
+msgstr "Anımsatıcıyı sonsuza kadar susturmak için bu düğmeye basın."
