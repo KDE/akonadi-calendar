@@ -255,6 +255,3 @@ msgstr "Daha sonra anımsatmayı iptal et, yani anımsatıcıyı tümüyle kapat
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
 msgstr "Anımsatıcıyı sonsuza kadar susturmak için bu düğmeye basın."
-
-#~ msgid "Remind in 1 hour"
-#~ msgstr "1 saat sonra anımsat"

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:37+0000\n"
-"PO-Revision-Date: 2024-02-15 13:17+0100\n"
+"PO-Revision-Date: 2024-02-16 10:15+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -168,6 +168,9 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Chaque rappel aux fréquences sélectionnées sera suspendu par ce nombre "
+"d'unités de temps.Vous pouvez choisir les unités de temps (généralement des "
+"minutes) dans le sélecteur adjacent."
 
 #: suspenddialog.cpp:92
 #, kde-format
@@ -207,6 +210,9 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Chaque rappel aux fréquences sélectionnées sera suspendu à l'aide de cette "
+"unité de temps.Vous pouvez définir le nombre d'unités de temps en saisissant "
+"une entrée adjacente du numéro ."
 
 #: suspenddialog.cpp:111
 #, kde-format
@@ -227,6 +233,8 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Appuyez sur ce bouton pour vous rappeler à nouveau à cette fréquence après "
+"la durée spécifiée."
 
 #: suspenddialog.cpp:117
 #, kde-format
