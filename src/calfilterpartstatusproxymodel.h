@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "akonadi-calendar_export.h"
+
 #include <KCalendarCore/Attendee>
 #include <QSortFilterProxyModel>
 
@@ -15,7 +17,7 @@ namespace Akonadi
 {
 class CalFilterPartStatusProxyModelPrivate;
 
-class CalFilterPartStatusProxyModel : public QSortFilterProxyModel
+class AKONADI_CALENDAR_EXPORT CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
@@ -33,10 +35,10 @@ protected:
 
 private:
     //@cond PRIVATE
+    AKONADI_CALENDAR_NO_EXPORT void slotIdentitiesChanged();
+
     std::unique_ptr<CalFilterPartStatusProxyModelPrivate> const d;
 
     //@endcond
-private Q_SLOTS:
-    void slotIdentitiesChanged();
 };
 }

@@ -4,7 +4,8 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "calfilterpartstatusproxymodel_p.h"
+#include "calfilterpartstatusproxymodel.h"
+#include "akonadicalendar_debug.h"
 #include "calendarutils.h"
 #include "utils_p.h"
 
@@ -34,17 +35,16 @@ public:
 
 void CalFilterPartStatusProxyModel::slotIdentitiesChanged()
 {
-    invalidate();
+    invalidateRowsFilter();
 }
 
 CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new CalFilterPartStatusProxyModelPrivate())
 {
-    QObject::connect(d->mIdentityManager,
-                     qOverload<>(&KIdentityManagementCore::IdentityManager::changed),
-                     this,
-                     &CalFilterPartStatusProxyModel::slotIdentitiesChanged);
+    QObject::connect(d->mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, [this]() {
+        slotIdentitiesChanged();
+    });
 }
 
 CalFilterPartStatusProxyModel::~CalFilterPartStatusProxyModel() = default;
@@ -56,7 +56,10 @@ const QList<KCalendarCore::Attendee::PartStat> &CalFilterPartStatusProxyModel::b
 
 void CalFilterPartStatusProxyModel::setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList)
 {
-    d->mBlockedStatusList = blockStatusList;
+    if (d->mBlockedStatusList != blockStatusList) {
+        d->mBlockedStatusList = blockStatusList;
+        invalidateRowsFilter();
+    }
 }
 
 bool CalFilterPartStatusProxyModel::filterVirtual() const
@@ -66,7 +69,10 @@ bool CalFilterPartStatusProxyModel::filterVirtual() const
 
 void CalFilterPartStatusProxyModel::setFilterVirtual(bool filterVirtual)
 {
-    d->mFilterVirtual = filterVirtual;
+    if (d->mFilterVirtual != filterVirtual) {
+        d->mFilterVirtual = filterVirtual;
+        invalidateRowsFilter();
+    }
 }
 
 bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
@@ -77,8 +83,9 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     }
 
     const auto item = idx.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    // If it's not an item, accept it: it's not our business to filter out collections...
     if (!item.isValid()) {
-        return false;
+        return true;
     }
 
     const KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
@@ -108,4 +115,4 @@ bool CalFilterPartStatusProxyModel::filterAcceptsRow(int source_row, const QMode
     return true;
 }
 
-#include "moc_calfilterpartstatusproxymodel_p.cpp"
+#include "moc_calfilterpartstatusproxymodel.cpp"
