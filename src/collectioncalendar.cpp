@@ -14,18 +14,43 @@
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
 
+#include <QAbstractProxyModel>
+
 using namespace KCalendarCore;
 
 namespace Akonadi
 {
 
+namespace
+{
+
+Akonadi::EntityTreeModel *findETM(QAbstractItemModel *model)
+{
+    while (model) {
+        if (auto etm = qobject_cast<Akonadi::EntityTreeModel *>(model); etm != nullptr) {
+            return etm;
+        }
+        if (auto proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
+            model = proxy->sourceModel();
+        } else {
+            break;
+        }
+    }
+
+    Q_ASSERT_X(false, "CollectionCalendar", "Model is not ETM or a proxy on top of an ETM!");
+    return nullptr;
+}
+
+}
+
 class CollectionCalendarPrivate : public CalendarBasePrivate
 {
     Q_OBJECT
 public:
-    CollectionCalendarPrivate(EntityTreeModel *etm, CollectionCalendar *qq)
+    CollectionCalendarPrivate(QAbstractItemModel *model, CollectionCalendar *qq)
         : CalendarBasePrivate(qq)
-        , m_etm(etm)
+        , m_model(model)
+        , m_etm(findETM(model))
         , q(qq)
     {
     }
@@ -47,7 +72,8 @@ public:
     }
 
     Collection m_collection;
-    EntityTreeModel *m_etm = nullptr;
+    QAbstractItemModel *m_model = nullptr;
+    Akonadi::EntityTreeModel *m_etm = nullptr;
     Monitor *m_monitor = nullptr;
     bool m_populatedFromEtm = false;
 
@@ -60,19 +86,19 @@ private:
             return;
         }
 
-        if (!m_etm) {
-            m_etm = createEtm();
+        if (!m_model) {
+            m_model = createEtm();
         }
 
-        connect(m_etm, &EntityTreeModel::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
+        connect(m_model, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
             if (!isMatchingCollection(parent)) {
                 return;
             }
 
             handleRowsInsertedUnchecked(parent, first, last);
         });
-        connect(m_etm,
-                &EntityTreeModel::rowsAboutToBeMoved,
+        connect(m_model,
+                &QAbstractItemModel::rowsAboutToBeMoved,
                 this,
                 [this](const QModelIndex &parent, int start, int end, const QModelIndex &newParent, int row) {
                     Q_UNUSED(newParent);
@@ -85,7 +111,7 @@ private:
 
                     handleRowsRemovedUnchecked(parent, start, end);
                 });
-        connect(m_etm, &EntityTreeModel::rowsMoved, this, [this](const QModelIndex &parent, int start, int end, const QModelIndex &newParent, int row) {
+        connect(m_model, &QAbstractItemModel::rowsMoved, this, [this](const QModelIndex &parent, int start, int end, const QModelIndex &newParent, int row) {
             Q_UNUSED(parent);
             // If rows were moved into the collection we monitor, it's like they were added.
             // Rows being moved from the collection we monitor is handled in rowsAboutToBeRemoved signal handler.
@@ -95,14 +121,14 @@ private:
 
             handleRowsInsertedUnchecked(newParent, row, row + (end - start));
         });
-        connect(m_etm, &EntityTreeModel::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int first, int last) {
+        connect(m_model, &QAbstractItemModel::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int first, int last) {
             if (!isMatchingCollection(parent)) {
                 return;
             }
 
             handleRowsRemovedUnchecked(parent, first, last);
         });
-        connect(m_etm, &EntityTreeModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight) {
+        connect(m_model, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight) {
             if (!isMatchingCollection(topLeft.parent())) {
                 return;
             }
@@ -110,20 +136,20 @@ private:
             auto index = topLeft;
             for (int row = topLeft.row(); row <= bottomRight.row(); ++row) {
                 index = index.sibling(row, 0);
-                const auto item = m_etm->data(index, EntityTreeModel::ItemRole).value<Item>();
+                const auto item = m_model->data(index, EntityTreeModel::ItemRole).value<Item>();
                 if (item.isValid() || item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                     updateItem(item);
                 }
             }
         });
-        connect(m_etm, &EntityTreeModel::modelReset, this, [this]() {
+        connect(m_model, &QAbstractItemModel::modelReset, this, [this]() {
             for (const auto &item : q->items()) {
                 internalRemove(item);
             }
             m_populatedFromEtm = false;
             populateFromETM();
         });
-        connect(m_etm, &EntityTreeModel::layoutChanged, this, &CollectionCalendarPrivate::populateFromETM);
+        connect(m_model, &QAbstractItemModel::layoutChanged, this, &CollectionCalendarPrivate::populateFromETM);
 
         populateFromETM();
     }
@@ -131,8 +157,8 @@ private:
     void handleRowsRemovedUnchecked(const QModelIndex &parent, int first, int last)
     {
         for (int row = first; row <= last; ++row) {
-            const auto index = m_etm->index(row, 0, parent);
-            const auto item = m_etm->data(index, EntityTreeModel::ItemRole).value<Item>();
+            const auto index = m_model->index(row, 0, parent);
+            const auto item = m_model->data(index, EntityTreeModel::ItemRole).value<Item>();
             if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                 m_itemById.remove(item.id());
                 internalRemove(item);
@@ -143,8 +169,8 @@ private:
     void handleRowsInsertedUnchecked(const QModelIndex &parent, int first, int last)
     {
         for (int row = first; row <= last; ++row) {
-            const auto index = m_etm->index(row, 0, parent);
-            const auto item = m_etm->data(index, EntityTreeModel::ItemRole).value<Item>();
+            const auto index = m_model->index(row, 0, parent);
+            const auto item = m_model->data(index, EntityTreeModel::ItemRole).value<Item>();
             if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                 m_itemById.insert(item.id(), item);
                 internalInsert(item);
@@ -154,7 +180,7 @@ private:
 
     bool isMatchingCollection(const QModelIndex &index) const
     {
-        const auto colId = m_etm->data(index, EntityTreeModel::CollectionIdRole).toLongLong();
+        const auto colId = m_model->data(index, EntityTreeModel::CollectionIdRole).toLongLong();
         return colId == m_collection.id();
     }
 
@@ -199,7 +225,7 @@ private:
         qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar populating from ETM";
 
         q->setIsLoading(true);
-        const auto colIdx = EntityTreeModel::modelIndexForCollection(m_etm, m_collection);
+        const auto colIdx = EntityTreeModel::modelIndexForCollection(m_model, m_collection);
         Q_ASSERT(colIdx.isValid());
         if (!colIdx.isValid()) {
             qCDebug(AKONADICALENDAR_LOG) << "CollectionCalendar failed to populate from ETM - couldn't find model index for our Collection"
@@ -208,10 +234,10 @@ private:
         }
 
         q->startBatchAdding();
-        auto idx = m_etm->index(0, 0, colIdx);
+        auto idx = m_model->index(0, 0, colIdx);
         std::size_t itemCount = 0;
         while (idx.isValid()) {
-            const auto item = m_etm->data(idx, EntityTreeModel::ItemRole).value<Item>();
+            const auto item = m_model->data(idx, EntityTreeModel::ItemRole).value<Item>();
             if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                 internalInsert(item);
                 ++itemCount;
@@ -256,8 +282,8 @@ CollectionCalendar::CollectionCalendar(const Akonadi::Collection &col, QObject *
     incidenceChanger()->setDestinationPolicy(Akonadi::IncidenceChanger::DestinationPolicyNeverAsk);
 }
 
-CollectionCalendar::CollectionCalendar(Akonadi::EntityTreeModel *etm, const Akonadi::Collection &col, QObject *parent)
-    : Akonadi::CalendarBase(new CollectionCalendarPrivate(etm, this), parent)
+CollectionCalendar::CollectionCalendar(QAbstractItemModel *model, const Akonadi::Collection &col, QObject *parent)
+    : Akonadi::CalendarBase(new CollectionCalendarPrivate(model, this), parent)
 {
     setCollection(col);
 }
@@ -329,7 +355,7 @@ bool CollectionCalendar::addJournal(const KCalendarCore::Journal::Ptr &journal)
 bool CollectionCalendar::hasRight(Akonadi::Collection::Right right) const
 {
     Q_D(const CollectionCalendar);
-    const auto fullCollection = Akonadi::EntityTreeModel::updatedCollection(d->m_etm, d->m_collection);
+    const auto fullCollection = Akonadi::EntityTreeModel::updatedCollection(d->m_model, d->m_collection);
     Q_ASSERT(fullCollection.isValid());
     if (!fullCollection.isValid()) {
         return false;

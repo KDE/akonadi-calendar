@@ -9,6 +9,8 @@
 #include "akonadi-calendar_export.h"
 #include "calendarbase.h"
 
+class QAbstractItemModel;
+
 namespace Akonadi
 {
 class Collection;
@@ -24,7 +26,7 @@ public:
     using Ptr = QSharedPointer<CollectionCalendar>;
 
     explicit CollectionCalendar(const Akonadi::Collection &col, QObject *parent = nullptr);
-    CollectionCalendar(Akonadi::EntityTreeModel *model, const Akonadi::Collection &col, QObject *parent = nullptr);
+    CollectionCalendar(QAbstractItemModel *model, const Akonadi::Collection &col, QObject *parent = nullptr);
     ~CollectionCalendar() override;
 
     [[nodiscard]] Akonadi::Collection collection() const;
