@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# Kishore G <kishore96@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:37+0000\n"
-"PO-Revision-Date: 2022-08-07 11:49+0530\n"
+"PO-Revision-Date: 2024-02-18 17:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.90\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -97,11 +97,9 @@ msgid "Remind in 5 mins"
 msgstr "5 நிமிடங்களில் நினைவூட்டு"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "நினைவூட்டல்கள்"
+msgstr "பின்னர் நினைவூட்டு…"
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -157,13 +155,13 @@ msgstr "க்லாவ் காம்பிரா"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "இவ்வளவு &நேரத்திற்கு ஒத்திவை:"
 
 #: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "நினைவூட்டல்களை இவ்வளவு நேரத்திற்கு ஒத்திவைக்கும்"
 
 #: suspenddialog.cpp:84
 #, kde-format
@@ -173,36 +171,38 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட நிகழ்வுகளுக்கான நினைவூட்டல்கள் இவ்வளவு நேரத்திற்கு ஒத்திவைக்கப்படும். நேர "
+"அலகை (எ.கா. நிமிடங்கள்) பக்கத்திலுள்ள தேர்வுப்பெட்டியில் தேர்ந்தெடுக்கலாம்."
 
 #: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "நிமிடம்"
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "மணிநேரம்"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "நாள்"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "வாரம்"
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "நினைவூட்டல்களை ஒத்திவைக்கும் நேரத்திற்கு இந்த அலகை பயன்படுத்து"
 
 #: suspenddialog.cpp:98
 #, kde-format
@@ -212,20 +212,20 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட நிகழ்வுகளுக்கான நினைவூட்டல்கள் இந்த அலகைக் கொண்டு ஒத்திவைக்கப்படும். நேர "
+"அளவை பக்கத்திலுள்ள உள்ளீட்டுப்பெட்டியில் தேர்ந்தெடுக்கலாம்."
 
 #: suspenddialog.cpp:111
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "நினைவூட்டல்கள்"
+msgstr "பின்னர் நினைவூட்டு…"
 
 #: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "குறிப்பிட்ட இடைவெளிக்கு பிறகு மறுபடியும் நினைவூட்டும்"
 
 #: suspenddialog.cpp:113
 #, kde-format
@@ -234,24 +234,26 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"குறிப்பிட்ட நேர இடைவெளிக்குப் பிறகு மறுபடியும் இதைப் பற்றி நினைவூட்டலைத் தூண்ட இப்பட்டனை "
+"அழுத்தலாம்."
 
 #: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்து செய்"
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "பின்னர் நினைவூட்டுவதை ரத்து செய்யும், அதாவது நினைவூட்டல் காலாவதியாகும்"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "நினைவூட்டலை நிரந்தரமாக அடக்க இப்பட்டனை அழுத்தலாம்"
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "1 மணிநேரத்தில் நினைவூட்டு"
