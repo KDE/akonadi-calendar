@@ -30,5 +30,7 @@ int main(int argc, char **argv)
         value++;
     });
     timer->start();
-    return app.exec();
+    const int returnValue = app.exec();
+    delete timer;
+    return returnValue;
 }
