@@ -32,8 +32,8 @@ if (AKONADI_ICAL_RESOURCE)
     add_executable( mailclienttest )
     target_sources( mailclienttest PRIVATE mailclienttest.cpp )
     target_link_libraries( mailclienttest PRIVATE
-        Qt6::DBus
-        Qt6::Test
+        Qt::DBus
+        Qt::Test
         KPim6::AkonadiCalendar
         KPim6::Mime
         KF6::Contacts
