@@ -32,7 +32,7 @@ public:
     [[nodiscard]] Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &c);
 
-    Akonadi::EntityTreeModel *model() const;
+    [[nodiscard]] Akonadi::EntityTreeModel *model() const;
 
     bool addEvent(const KCalendarCore::Event::Ptr &event) override;
     bool addTodo(const KCalendarCore::Todo::Ptr &todo) override;

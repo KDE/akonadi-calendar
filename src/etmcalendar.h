@@ -102,7 +102,7 @@ public:
      * Returns the KCheckableProxyModel used to select from which collections should
      * the calendar be populated from.
      */
-    KCheckableProxyModel *checkableProxyModel() const;
+    [[nodiscard]] KCheckableProxyModel *checkableProxyModel() const;
 
     /**
      * Convenience method to access the contents of this KCalendarCore::Calendar through
@@ -114,7 +114,7 @@ public:
      * @see checkableProxyModel()
      * @see entityTreeModel()
      */
-    QAbstractItemModel *model() const;
+    [[nodiscard]] QAbstractItemModel *model() const;
 
     /**
      * Returns the underlying EntityTreeModel.
@@ -129,7 +129,7 @@ public:
      *
      * @see model()
      */
-    Akonadi::EntityTreeModel *entityTreeModel() const;
+    [[nodiscard]] Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /**
      * Returns all alarms occurring in a specified time interval.
@@ -137,7 +137,7 @@ public:
      * @param to end data of interval
      * @param excludeBlockedAlarms if true, alarms belonging to blocked collections aren't returned.
      */
-    KCalendarCore::Alarm::List alarms(const QDateTime &from, const QDateTime &to, bool excludeBlockedAlarms = false) const override;
+    [[nodiscard]] KCalendarCore::Alarm::List alarms(const QDateTime &from, const QDateTime &to, bool excludeBlockedAlarms = false) const override;
 
     /**
      * Enable or disable collection filtering.
