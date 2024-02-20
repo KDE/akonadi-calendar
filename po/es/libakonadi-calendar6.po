@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-20 00:38+0000\n"
 "PO-Revision-Date: 2023-11-14 18:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -247,15 +247,29 @@ msgstr ""
 "Marque esta casilla para obtener una copia de los mensajes de correo que "
 "KOrganizer envía a petición suya a los asistentes al evento."
 
+#. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:82
+#, fuzzy, kde-format
+#| msgctxt "A collection of all declined invidations."
+#| msgid "Declined Invitations"
+msgid "Hide declined invitations"
+msgstr "Invitaciones declinadas"
+
+#. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:83
+#, kde-format
+msgid "Check this box to hide declined invitations in event views."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Reminders)
-#: calendarsettings.kcfg:84
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
 "Mostrar recordatorios solo de eventos que yo organice o a los que asista"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
-#: calendarsettings.kcfg:85
+#: calendarsettings.kcfg:92
 #, kde-format
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
@@ -265,19 +279,19 @@ msgstr ""
 "que sea organizador o a los que asista."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:93
+#: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Enviar propuestas de seudocontrarestar tipo Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:98
+#: calendarsettings.kcfg:105
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Comprobar si el servidor y la dirección de correo recuperada coinciden"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:99
+#: calendarsettings.kcfg:106
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "

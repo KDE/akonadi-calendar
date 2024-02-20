@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-20 00:38+0000\n"
 "PO-Revision-Date: 2023-11-13 13:38+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -245,8 +245,22 @@ msgstr ""
 "съобщения, които KOrganizer изпраща по ваше искане до участниците в "
 "събитието."
 
+#. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:82
+#, fuzzy, kde-format
+#| msgctxt "A collection of all declined invidations."
+#| msgid "Declined Invitations"
+msgid "Hide declined invitations"
+msgstr "Отхвърлени покани"
+
+#. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:83
+#, kde-format
+msgid "Check this box to hide declined invitations in event views."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Reminders)
-#: calendarsettings.kcfg:84
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
@@ -254,7 +268,7 @@ msgstr ""
 "присъствам"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
-#: calendarsettings.kcfg:85
+#: calendarsettings.kcfg:92
 #, kde-format
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
@@ -264,19 +278,19 @@ msgstr ""
 "които сте организатор. или на които присъствате."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:93
+#: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Изпращане на предложения за псевдо брояч, подобни на Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:98
+#: calendarsettings.kcfg:105
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Проверете дали име на хост и имейл адрес за извличане съвпадат"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:99
+#: calendarsettings.kcfg:106
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "

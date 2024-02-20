@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-20 00:38+0000\n"
 "PO-Revision-Date: 2023-12-15 21:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -241,14 +241,28 @@ msgstr ""
 "勾選此選項的話，KOrganizer 送出電子郵件給事件參加者時，也會送一份複本給擁有"
 "者。"
 
+#. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:82
+#, fuzzy, kde-format
+#| msgctxt "A collection of all declined invidations."
+#| msgid "Declined Invitations"
+msgid "Hide declined invitations"
+msgstr "已拒絕的邀請"
+
+#. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:83
+#, kde-format
+msgid "Check this box to hide declined invitations in event views."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Reminders)
-#: calendarsettings.kcfg:84
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr "只顯示我發起或參加的事件的提醒"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
-#: calendarsettings.kcfg:85
+#: calendarsettings.kcfg:92
 #, kde-format
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
@@ -256,19 +270,19 @@ msgid ""
 msgstr "勾選此選項來僅接收您是發起人或是您會參加的事件的提醒。"
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:93
+#: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "送出類似 Outlook 虛擬反提案"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:98
+#: calendarsettings.kcfg:105
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "檢查主機名稱與接收到的電子郵件地址是否相符"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:99
+#: calendarsettings.kcfg:106
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "

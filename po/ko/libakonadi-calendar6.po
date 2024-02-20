@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:38+0000\n"
+"POT-Creation-Date: 2024-02-20 00:38+0000\n"
 "PO-Revision-Date: 2024-02-10 22:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -240,14 +240,28 @@ msgid ""
 msgstr ""
 "KOrganizer가 이벤트 참석자들에게 보낼 메일의 복사본을 받으려면 선택하십시오."
 
+#. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:82
+#, fuzzy, kde-format
+#| msgctxt "A collection of all declined invidations."
+#| msgid "Declined Invitations"
+msgid "Hide declined invitations"
+msgstr "거절한 초대장"
+
+#. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
+#: calendarsettings.kcfg:83
+#, kde-format
+msgid "Check this box to hide declined invitations in event views."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Reminders)
-#: calendarsettings.kcfg:84
+#: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr "내가 참석하거나 주최하는 이벤트만 알림 표시"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
-#: calendarsettings.kcfg:85
+#: calendarsettings.kcfg:92
 #, kde-format
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
@@ -257,19 +271,19 @@ msgstr ""
 "다."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:93
+#: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Outlook 스타일 역제안 보내기"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:98
+#: calendarsettings.kcfg:105
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "호스트 이름과 가져오기 메일 주소 일치 여부 확인"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:99
+#: calendarsettings.kcfg:106
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
