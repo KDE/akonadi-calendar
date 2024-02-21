@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2024-02-09 20:03+0300\n"
+"PO-Revision-Date: 2024-02-20 16:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -59,9 +59,9 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"\"%1\" ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi keserek bütün "
-"alt yapılacak işleri bağımsız mı yapmak istersiniz, yoksa bütün alt "
-"yapılacak işler ile birlikte bu ögeyi mi kesmek istersiniz?"
+"‘%1’ ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi keserek bütün alt "
+"yapılacak işleri bağımsız mı yapmak istersiniz, yoksa bütün alt yapılacak "
+"işler ile birlikte bu ögeyi mi kesmek istersiniz?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
@@ -85,7 +85,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"\"%1\" ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi mi kopyalamak "
+"‘%1’ ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi mi kopyalamak "
 "istersiniz yoksa bütün alt yapılacak işlerle birlikte bu ögeyi mi kopyalamak "
 "istersiniz?"
 
@@ -251,17 +251,17 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Reddedilen Davetler"
+msgstr "Reddedilen davetleri gizle"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Etkinlik görünümlerinde reddedilen davetleri gizlemek için bu onay kutusunu "
+"işaretleyin."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -450,9 +450,9 @@ msgid ""
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
 "<qt><p>Uygun/meşgul listenizi yüklemek için bir URL yapılandırılmadı. Lütfen "
-"bunu K Organizatör'ün yapılandırma penceresindeki \"Uygun/Meşgul\" "
-"sayfasından ayarlayın.</p><p>URL ve hesap ayrıntıları için sistem "
-"yöneticinizle görüşün.</p></qt>"
+"bunu K Organizatör’ün yapılandırma penceresindeki ‘Uygun/Meşgul’ sayfasından "
+"ayarlayın.</p><p>URL ve hesap ayrıntıları için sistem yöneticinizle görüşün."
+"</p></qt>"
 
 #: freebusymanager.cpp:750
 #, kde-format
@@ -463,7 +463,7 @@ msgstr "Uygun/Meşgul Karşıya Yükleme URL’si Yok"
 #: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<qt>Hedef URL '%1' geçersiz.</qt>"
+msgstr "<qt>Hedef URL ‘%1’ geçersiz.</qt>"
 
 #: freebusymanager.cpp:761
 #, kde-format
@@ -705,7 +705,7 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
-"'%1' ögesi gönderilemedi.\n"
+"‘%1’ ögesi gönderilemiyor.\n"
 "Yöntem: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
@@ -722,7 +722,7 @@ msgstr "Yayıncılık"
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr "'%1' ögesi yayımlanamıyor"
+msgstr "‘%1’ ögesi yayımlanamıyor"
 
 #: itiphandler_p.cpp:181
 #, kde-format
@@ -763,7 +763,7 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"\"%1\" olayı diğer insanları içerir.\n"
+"‘%1’ olayı diğer insanları içerir.\n"
 "Bu katılımcılara da e-posta göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:240
@@ -772,8 +772,8 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"\"%1\" yapılacakları diğer insanları da içeriyor.\n"
-"Bu katılımcılara da davet e-postası göndermek ister misiniz?"
+"‘%1’ yapılacakları diğer kişileri de içeriyor.\n"
+"Bu katılımcılara da davet e-postası göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:245
 #, kde-format
@@ -799,8 +799,8 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
-"\"%1\" davetini değiştirdiniz.\n"
-"Katılımcılara güncelleme iletisi için e-posta göndermek istiyor musunuz?"
+"‘%1’ davetini değiştirdiniz.\n"
+"Katılımcılara bir güncelleme iletisi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
 #: itiphandlerhelper_p.cpp:344
@@ -828,9 +828,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"\"%1\" davetini kaldırdınız.\n"
-"Bu etkinliğin iptal edildiğini katılımcılara e-posta ile bildirmek ister "
-"misiniz?"
+"‘%1’ davetini kaldırdınız.\n"
+"Bu etkinliğin iptal edildiğini katılımcılara e-posta ile bildirmek istiyor "
+"musunuz?"
 
 #: itiphandlerhelper_p.cpp:385
 #, kde-format
@@ -838,9 +838,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"\"%1\" davetini kaldırdınız.\n"
-"Yapılacağın iptal edildiğini katılımcılara e-posta ile bildirmek ister "
-"misiniz?"
+"‘%1’ davetini kaldırdınız.\n"
+"Yapılacak ögesinin iptal edildiğini katılımcılara e-posta ile bildirmek "
+"istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:390
 #, kde-format
@@ -848,8 +848,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"\"%1\" davetini sildiniz.\n"
-"Güncenin iptal edildiğini katılımcılara e-posta ile bildirmek ister misiniz?"
+"‘%1’ davetini sildiniz.\n"
+"Güncenin iptal edildiğini katılımcılara e-posta ile bildirmek istiyor "
+"musunuz?"
 
 #: itiphandlerhelper_p.cpp:412
 #, kde-format
@@ -1270,7 +1271,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select..."
-msgstr "&Seç..."
+msgstr "&Seç…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1489,7 +1490,7 @@ msgstr "Açık Davetler"
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
-msgstr "Klasör Ekle..."
+msgstr "Klasör Ekle…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1596,7 +1597,7 @@ msgstr "Seçili takvim klasörünü takvimden kes."
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Klasör Özellikleri..."
+msgstr "Klasör Özellikleri…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1675,7 +1676,7 @@ msgstr "Seçili etkinlikleri takvimden kes."
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
-msgstr "&Takvim Ekle..."
+msgstr "&Takvim Ekle…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1737,7 +1738,7 @@ msgstr[1] "Takvimler Silinsin mi?"
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
-msgstr "Takvim Özellikleri..."
+msgstr "Takvim Özellikleri…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1810,7 +1811,7 @@ msgstr "Etkinliği Taşı"
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
-msgstr "Etkinliği Düzenle..."
+msgstr "Etkinliği Düzenle…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1846,7 +1847,7 @@ msgstr "Yapılacak Ögeyi Taşı"
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
-msgstr "&Yapılacak Ögesini Düzenle..."
+msgstr "&Yapılacak Ögesini Düzenle…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1882,12 +1883,12 @@ msgstr "Günceyi Şuraya Taşı"
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Günceyi Düzenle..."
+msgstr "Günceyi Düzenle…"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
-msgstr "Yeni &Etkinlik..."
+msgstr "Yeni &Etkinlik…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1897,7 +1898,7 @@ msgstr "Yeni etkinlik oluştur"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr "Ye&ni Yapılacak Ögesi..."
+msgstr "Ye&ni Yapılacak Ögesi…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1907,7 +1908,7 @@ msgstr "Yeni Yapılacak Ögesi oluştur"
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
-msgstr "Y&eni Alt Yapılacak Ögesi..."
+msgstr "Y&eni Alt Yapılacak Ögesi…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1917,7 +1918,7 @@ msgstr "Yeni bir alt yapılacak ögesi oluştur"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "Yeni &Günce..."
+msgstr "Yeni &Günce…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1927,7 +1928,7 @@ msgstr "Yeni günce oluştur"
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
-msgstr "Dü&zenle..."
+msgstr "Dü&zenle…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
