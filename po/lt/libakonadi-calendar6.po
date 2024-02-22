@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2015-08-30 15:57+0200\n"
+"PO-Revision-Date: 2024-02-21 23:59+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,22 +20,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
+"Nepavyko rasti įvykio, kurį atnaujinti, jis, tikriausiai, buvo neseniai "
+"ištrintas."
 
 #: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
-msgstr "Klaida vykdant trynimą."
+msgstr "Klaida atliekant ištrynimą."
 
 #: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
-msgstr "Klaida vykdant kopijavimą."
+msgstr "Klaida atliekant kopijavimą."
 
 #: calendarclipboard.cpp:96
 #, kde-format
@@ -45,27 +47,25 @@ msgstr "Nepavyksta rasti elemento: %1"
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
-msgstr "Klaida pašalinant ryšius."
+msgstr "Klaida šalinant ryšius."
 
 #: calendarclipboard.cpp:158
-#, fuzzy, kde-format
-#| msgid "Edit the selected incidence."
+#, kde-format
 msgid "Error while deleting incidences: %1"
-msgstr "Keisti pažymėtą incidentą."
+msgstr "Klaida ištrinant įvykius: %1"
 
 #: calendarclipboard.cpp:175
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"Darbas „%1“ turi jam priklausančių darbų. Ar norite pašalinti tik šį darbą "
-"ir jam priklausančius padaryti nepriklausomais, ar pašalinti šį ir visus jam "
-"priklausančius darbus?"
+"Elementas „%1“ turi jam priklausančių užduočių. Ar norite iškirpti tik šį "
+"elementą ir jam priklausančius padaryti nepriklausomais, ar iškirpti šį ir "
+"visas jam priklausančias užduotis?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer patvirtinimas"
@@ -73,21 +73,21 @@ msgstr "KOrganizer patvirtinimas"
 #: calendarclipboard.cpp:181
 #, kde-format
 msgid "Cut Only This"
-msgstr "Pašalinti tik šį"
+msgstr "Iškirpti tik šį"
 
 #: calendarclipboard.cpp:182
 #, kde-format
 msgid "Cut All"
-msgstr "Pašalinti visus"
+msgstr "Iškirpti visus"
 
 #: calendarclipboard.cpp:215
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"Darbas „%1“ turi jam priklausančių darbų. Ar norite nukopijuoti tik šį darbą "
-"ar ir visus jam priklausančius darbus?"
+"Elementas „%1“ turi jam priklausančių užduočių. Ar norite nukopijuoti tik šį "
+"elementą ar ir visas jam priklausančias užduotis?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Kopijuoti tik šį"
 #: calendarclipboard.cpp:221
 #, kde-format
 msgid "Copy All"
-msgstr "Kopijuoti viską"
+msgstr "Kopijuoti visus"
 
 #: calendarmodel.cpp:192
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "Tipas"
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
-msgstr "Numatyta įvykdymo data ir laikas"
+msgstr "Galutinio termino data ir laikas"
 
 #: calendarmodel.cpp:202
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "Užimtumo publikavimo URL"
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr "URL publikuoti užimtumo informaciją"
+msgstr "URL, skirtas publikuoti informaciją apie užimtumą"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
@@ -169,7 +169,7 @@ msgstr "Užimtumo publikavimo naudotojo vardas"
 #: calendarsettings.kcfg:29
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr "Naudotojo vardas publikuoti užimtumo informaciją"
+msgstr "Naudotojo vardas, skirtas publikuoti informaciją apie užimtumą"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:33
@@ -181,19 +181,19 @@ msgstr "Užimtumo publikavimo slaptažodis"
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr "Slaptažodis publikuoti užimtumo informaciją"
+msgstr "Slaptažodis, skirtas publikuoti informaciją apie užimtumą"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr "Įgalinti automatinį užimtumo gavimą"
+msgstr "Įjungti automatinį informacijos apie užimtumą gavimą"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:50
 #, kde-format
 msgid "Use full email address for retrieval"
-msgstr "Atsisiuntimui naudoti visą el. pašto adresą"
+msgstr "Gavimui naudoti visą el. pašto adresą"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:51
@@ -227,13 +227,13 @@ msgstr "Užimtumo gavimo slaptažodis"
 #: calendarsettings.kcfg:65
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr "Slaptažodis gauti užimtumo informaciją"
+msgstr "Slaptažodis, skirtas gauti informaciją apie užimtumą"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:76
 #, kde-format
 msgid "Send copy to owner when mailing events"
-msgstr "Siųsti kopiją savininkui siunčiant įvykius"
+msgstr "Siunčiant įvykius, siųsti kopiją savininkui"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:77
@@ -293,9 +293,7 @@ msgstr ""
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
 #: todomodel.cpp:476
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar title"
-#| msgid "Calendar"
+#, kde-format
 msgid "Calendar"
 msgstr "Kalendorius"
 
@@ -305,11 +303,9 @@ msgid "Tasks"
 msgstr ""
 
 #: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:172
-#, fuzzy, kde-format
-#| msgid "Cut Journal"
-#| msgid_plural "Cut %1 Journals"
+#, kde-format
 msgid "Journal"
-msgstr "Iškirpti žurnalą"
+msgstr "Dienynas"
 
 #: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:174
 #, kde-format
@@ -376,11 +372,10 @@ msgid "My %1"
 msgstr ""
 
 #: calendarutils.cpp:202
-#, fuzzy, kde-format
-#| msgid "Unknown error"
+#, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr "Nežinoma klaida"
+msgstr "Nežinomas"
 
 #: freebusymanager.cpp:378
 #, kde-format
@@ -392,8 +387,7 @@ msgstr ""
 "Priežastis: %2"
 
 #: freebusymanager.cpp:379 freebusymanager.cpp:402
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Užimtumo gavimo klaida"
@@ -401,7 +395,7 @@ msgstr "Užimtumo gavimo klaida"
 #: freebusymanager.cpp:401
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr "Nepavyko apdoroti užimtumo informacijos gautos iš: %1"
+msgstr "Nepavyko išnagrinėti informacijos apie užimtumą, gautos iš: %1"
 
 #: freebusymanager.cpp:416
 #, kde-format
@@ -415,11 +409,10 @@ msgstr ""
 #: freebusymanager.cpp:617
 #, kde-format
 msgid "The free/busy information was successfully sent."
-msgstr "Užimtumo informacija buvo sėkmingai išsiųsta."
+msgstr "Informacija apie užimtumą buvo sėkmingai išsiųsta."
 
 #: freebusymanager.cpp:618 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Siunčiamas užimtumas"
@@ -427,7 +420,7 @@ msgstr "Siunčiamas užimtumas"
 #: freebusymanager.cpp:621
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Nepavyksta publikuoti užimtumo duomenų: %1"
+msgstr "Nepavyko publikuoti užimtumo duomenų: %1"
 
 #: freebusymanager.cpp:745
 #, kde-format
@@ -438,20 +431,18 @@ msgid ""
 msgstr ""
 
 #: freebusymanager.cpp:750
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr "Nėra užimtumo publikavimo URL"
+msgstr "Nėra užimtumo išsiuntimo URL"
 
 #: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<qt>Duotas URL „%1“ yra netvarkingas.</qt>"
+msgstr "<qt>Nurodytas paskirties URL „%1“ yra neteisingas.</qt>"
 
 #: freebusymanager.cpp:761
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Neteisingas URL"
@@ -471,29 +462,28 @@ msgstr "%1 sukūrimas"
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
-msgstr "%1 pašalinimas"
+msgstr "%1 ištrynimas"
 
 #: history_p.cpp:232
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
-msgstr "%1 pakeitimas"
+msgstr "%1 modifikavimas"
 
 #: icalimporter.cpp:83
-#, fuzzy, kde-format
-#| msgid "Error loading calendar: %1"
+#, kde-format
 msgid "Error creating ical resource: %1"
-msgstr "Klaida įkeliant kalendorių: %1"
+msgstr "Klaida kuriant ical išteklių: %1"
 
 #: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
-msgstr "Nepavyko pasiekti D-Bus sąsajos nutolusiai sąrankai."
+msgstr "Nepavyko gauti D-Bus sąsajos, skirtos nuotolinei konfigūracijai."
 
 #: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
-msgstr "Neina atsisiųsti nutolusio failo."
+msgstr "Nepavyko atsisiųsti nuotolinio failo."
 
 #: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
@@ -551,7 +541,7 @@ msgstr "Įvyko nežinoma klaida"
 #: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr "Klaida bandant keisti kalendoriaus elementą. Klaida buvo: %1"
+msgstr "Klaida bandant modifikuoti kalendoriaus elementą. Klaida buvo: %1"
 
 #: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
@@ -613,21 +603,19 @@ msgid "Error while processing an invitation or update."
 msgstr ""
 
 #: itiphandler.cpp:142
-#, fuzzy, kde-format
-#| msgid "Invalid action: %1"
+#, kde-format
 msgid "Invalid incidence"
-msgstr "Klaidingas veiksmas: %1"
+msgstr "Neteisingas įvykis"
 
 #: itiphandler.cpp:210
 #, kde-format
 msgid "Invalid action: %1"
-msgstr "Klaidingas veiksmas: %1"
+msgstr "Neteisingas veiksmas: %1"
 
 #: itiphandler.cpp:233
-#, fuzzy, kde-format
-#| msgid "Error sending e-mail: "
+#, kde-format
 msgid "Error sending counter proposal"
-msgstr "Klaida siunčiant el. laišką: "
+msgstr "Klaida siunčiant kontrapasiūlymą"
 
 #: itiphandler.cpp:240
 #, kde-format
@@ -641,8 +629,7 @@ msgid ""
 msgstr ""
 
 #: itiphandler.cpp:274
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Žinutė neišsiųsta"
@@ -689,11 +676,10 @@ msgstr ""
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr "Įrašo informacija sėkmingai išsiųsta."
+msgstr "Elemento informacija sėkmingai išsiųsta."
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publikavimas"
@@ -704,8 +690,7 @@ msgid "Unable to publish the item '%1'"
 msgstr "Nepavyksta publikuoti elemento „%1“"
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Persiuntimas"
@@ -713,11 +698,10 @@ msgstr "Persiuntimas"
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr "Negalima persiųsti įrašo „%1“"
+msgstr "Nepavyko persiųsti elemento „%1“"
 
 #: itiphandler_p.cpp:189
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Persiuntimo klaida"
@@ -736,7 +720,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:144
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr "<placeholder>Nėra santraukos</placeholder>"
+msgstr "<placeholder>Santrauka nenurodyta</placeholder>"
 
 #: itiphandlerhelper_p.cpp:235
 #, kde-format
@@ -777,7 +761,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:344
 #, kde-format
 msgid "Send Update"
-msgstr "Išsiųsti atnaujinimą"
+msgstr "Siųsti atnaujinimą"
 
 #: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
@@ -821,7 +805,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
-msgstr "Išsiųsti atnaujinimą"
+msgstr "Siųsti atnaujinimą"
 
 #: itiphandlerhelper_p.cpp:432
 #, kde-format
@@ -844,7 +828,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
-msgstr "Atšaukti atnaujinimą"
+msgstr "Nutraukti atnaujinimą"
 
 #: mailclient_p.cpp:377 mailclient_p.cpp:415
 #, kde-format
@@ -885,11 +869,9 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Siųsti žinutes"
+msgstr "Pasirašyti žinutę?"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
@@ -898,11 +880,9 @@ msgid "&Sign"
 msgstr ""
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Sign"
-msgstr "Nesiųsti"
+msgstr "&Nepasirašyti"
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -980,11 +960,9 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:832 mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Siųsti žinutes"
+msgstr "Šifruoti žinutę?"
 
 #: mailclient_p.cpp:833
 #, kde-format
@@ -1014,11 +992,9 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgid "Do &Not Encrypt"
-msgstr "Nesiųsti"
+msgstr "&Nešifruoti"
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1029,16 +1005,14 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Išsiųsti atnaujinimą"
+msgstr "Siųsti nešifruotą?"
 
 #: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send &Unencrypted"
-msgstr "Išsiųsti atnaujinimą"
+msgstr "Siųsti &nešifruotą"
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1074,16 +1048,15 @@ msgid "Error sending e-mail: "
 msgstr "Klaida siunčiant el. laišką: "
 
 #: publishdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Select Addresses"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
-msgstr "Pasirinkti adresus"
+msgstr "Pasirinkti adresatus"
 
 #: publishdialog.cpp:60
 #, kde-format
 msgid "Send email to these recipients"
-msgstr "Siųsti laišką šiems adresatams"
+msgstr "Siųsti el. laišką šiems gavėjams"
 
 #: publishdialog.cpp:62
 #, kde-format
@@ -1095,7 +1068,7 @@ msgstr ""
 #: publishdialog.cpp:67
 #, kde-format
 msgid "Cancel recipient selection and the email"
-msgstr "Atšaukti adresatų pasirinkimą ir el. laišką"
+msgstr "Atsisakyti adresatų žymėjimo ir el. laiško"
 
 #: publishdialog.cpp:69
 #, kde-format
@@ -1119,11 +1092,10 @@ msgid ""
 msgstr ""
 
 #: publishdialog.cpp:125
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
-msgstr "Publikavimas"
+msgstr "Publikavimo klaida"
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:38
@@ -1163,7 +1135,7 @@ msgstr "&Naujas"
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr "Pašalinti pažymėtą gavėją"
+msgstr "Pašalinti šiuo metu pažymėtą gavėją"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
@@ -1176,13 +1148,13 @@ msgstr ""
 #: publishdialog_base.ui:71
 #, kde-format
 msgid "&Remove"
-msgstr "&Pašalinti"
+msgstr "Ša&linti"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr "Pažymėkite dalyvį iš jūsų adresų knygutės"
+msgstr "Pažymėkite gavėją iš savo adresų knygos"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1196,7 +1168,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select..."
-msgstr "&Pažymėti..."
+msgstr "Ž&ymėti..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1215,28 +1187,26 @@ msgstr "Gavėjo vardas"
 #: publishdialog_base.ui:126
 #, kde-format
 msgid "This field contains the name of the recipient"
-msgstr "Šis laukas turi gavėjo vardą"
+msgstr "Šiame lauke yra gavėjo vardas"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: publishdialog_base.ui:136
-#, fuzzy, kde-format
-#| msgctxt "recipient email"
-#| msgid "Email:"
+#, kde-format
 msgctxt "recipient email"
 msgid "E&mail:"
-msgstr "El. paštas:"
+msgstr "E&l. paštas:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:146
 #, kde-format
 msgid "The recipient's email address"
-msgstr "Gavėjo el. pašto adresai"
+msgstr "Gavėjo el. pašto adresas"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:149
 #, kde-format
 msgid "This field contains the email address of the recipient"
-msgstr "Šis laukas turi gavėjo el. pašto adresus"
+msgstr "Šiame lauke yra gavėjo el. pašto adresas"
 
 #: publishdialog_p.cpp:44
 #, kde-format
@@ -1246,7 +1216,7 @@ msgstr "(be vardo)"
 #: publishdialog_p.cpp:45
 #, kde-format
 msgid "(EmptyEmail)"
-msgstr "(Tuščias E.Adresas)"
+msgstr "(be el.pašto)"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
@@ -1259,10 +1229,9 @@ msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 
 #: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
-#, fuzzy, kde-format
-#| msgid "Edit the selected incidence."
+#, kde-format
 msgid "Error modifying incidence"
-msgstr "Keisti pažymėtą incidentą."
+msgstr "Klaida modifikuojant įvykį"
 
 #: scheduler_p.cpp:288
 #, kde-kuit-format
@@ -1285,10 +1254,9 @@ msgid "Cannot Find Invitation to be Updated"
 msgstr ""
 
 #: scheduler_p.cpp:304
-#, fuzzy, kde-format
-#| msgid "Edit the selected incidence."
+#, kde-format
 msgid "Error adding incidence"
-msgstr "Keisti pažymėtą incidentą."
+msgstr "Klaida pridedant įvykį"
 
 #: scheduler_p.cpp:338
 #, kde-format
@@ -1296,10 +1264,9 @@ msgid "Could not find incidence to delete."
 msgstr ""
 
 #: scheduler_p.cpp:391
-#, fuzzy, kde-format
-#| msgid "Error performing deletion."
+#, kde-format
 msgid "Error recording exception"
-msgstr "Klaida vykdant trynimą."
+msgstr "Klaida įrašant išimtį"
 
 #: scheduler_p.cpp:408
 #, kde-format
@@ -1314,24 +1281,22 @@ msgstr ""
 #: scheduler_p.cpp:574
 #, kde-format
 msgid "Generic Error"
-msgstr "Bendra klaida"
+msgstr "Bendrinė klaida"
 
 #: scheduler_p.cpp:476
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
-msgstr "%1 nori dalyvauti %2 bet nebuvo pakviesta(-s)."
+msgstr "%1 nori dalyvauti %2, bet nebuvo pakviesta(s)."
 
 #: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
-msgstr "%1 nori dalyvauti %2 vietoje %3."
+msgstr "%1 nori %3 vardu dalyvauti %2."
 
 #: scheduler_p.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nekviestas dalyvis"
@@ -1352,7 +1317,7 @@ msgstr "Atmesti dalyvavimą"
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr "Organizatorius jūsų pasiūlymą dalyvauti susitikime atmetė."
+msgstr "Organizatorius atmetė jūsų dalyvavimą šiame susitikime."
 
 #: scheduler_p.cpp:508
 #, kde-format
@@ -1363,12 +1328,10 @@ msgid ""
 msgstr ""
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr "Dalyviai pridėti"
+msgstr "Dalyvis pridėtas"
 
 #: scheduler_p.cpp:511
 #, kde-format
@@ -1410,24 +1373,21 @@ msgid "Open Invitations"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Calendar Folder..."
+#, kde-format
 msgid "Add Folder..."
-msgstr "Pridėti kalendoriaus aplanką..."
+msgstr "Pridėti aplanką..."
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
 msgid "Add a new calendar folder to the currently selected calendar folder."
 msgstr ""
-"Pridėti naują kalendoriaus aplanką į dabar pasirinktą kalendoriaus aplanką."
+"Pridėti naują kalendoriaus aplanką į šiuo metu pažymėtą kalendoriaus aplanką."
 
 #: standardcalendaractionmanager.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "New Calendar Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
-msgstr "Naujas kalendoriaus aplankas"
+msgstr "Naujas aplankas"
 
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
@@ -1435,38 +1395,33 @@ msgid "Could not create calendar folder: %1"
 msgstr "Nepavyko sukurti kalendoriaus aplanko: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
 msgstr "Nepavyko sukurti kalendoriaus aplanko"
 
 #: standardcalendaractionmanager.cpp:66
-#, fuzzy, kde-format
-#| msgid "Copy Calendar Folder"
-#| msgid_plural "Copy %1 Calendar Folders"
+#, kde-format
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] "Kopijuoti kalendoriaus aplanką"
-msgstr[1] "Kopijuoti %1 kalendoriaus aplankus"
-msgstr[2] "Kopijuoti %1 kalendoriaus aplankų"
-msgstr[3] "Kopijuoti %1 kalendoriaus aplanką"
+msgstr[0] "Kopijuoti aplanką"
+msgstr[1] "Kopijuoti %1 aplankus"
+msgstr[2] "Kopijuoti %1 aplankų"
+msgstr[3] "Kopijuoti %1 aplanką"
 
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
 msgid "Copy the selected calendar folders to the clipboard."
-msgstr "Kopijuoti parinktus kalendoriaus aplankus į iškarpinę."
+msgstr "Kopijuoti pažymėtus kalendoriaus aplankus į iškarpinę."
 
 #: standardcalendaractionmanager.cpp:71
-#, fuzzy, kde-format
-#| msgid "Delete Calendar Folder"
-#| msgid_plural "Delete %1 Calendar Folders"
+#, kde-format
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] "Pašalinti kalendoriaus aplanką"
-msgstr[1] "Pašalinti %1 kalendoriaus aplankus"
-msgstr[2] "Pašalinti %1 kalendoriaus aplankų"
-msgstr[3] "Pašalinti %1 kalendoriaus aplanką"
+msgstr[0] "Ištrinti aplanką"
+msgstr[1] "Ištrinti %1 aplankus"
+msgstr[2] "Ištrinti %1 aplankų"
+msgstr[3] "Ištrinti %1 aplanką"
 
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
@@ -1480,65 +1435,57 @@ msgid ""
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
 msgstr[0] ""
-"Ar tikrai norite šalinti šį kalendoriaus aplanką ir visus jo poaplankius?"
+"Ar tikrai norite ištrinti šį kalendoriaus aplanką ir visus jo poaplankius?"
 msgstr[1] ""
-"Ar tikrai norite šalinti %1 kalendoriaus aplankus ir visus jų poaplankius?"
+"Ar tikrai norite ištrinti %1 kalendoriaus aplankus ir visus jų poaplankius?"
 msgstr[2] ""
-"Ar tikrai norite šalinti %1 kalendoriaus aplankų ir visus jų poaplankius?"
+"Ar tikrai norite ištrinti %1 kalendoriaus aplankų ir visus jų poaplankius?"
 msgstr[3] ""
-"Ar tikrai norite šalinti %1 kalendoriaus aplanką ir visus jų poaplankius?"
+"Ar tikrai norite ištrinti %1 kalendoriaus aplanką ir visus jų poaplankius?"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] "Pašalinti kalendoriaus aplanką?"
-msgstr[1] "Pašalinti kalendoriaus aplankus?"
-msgstr[2] "Pašalinti kalendoriaus aplankus?"
-msgstr[3] "Pašalinti kalendoriaus aplankus?"
+msgstr[0] "Ištrinti kalendoriaus aplanką?"
+msgstr[1] "Ištrinti kalendoriaus aplankus?"
+msgstr[2] "Ištrinti kalendoriaus aplankus?"
+msgstr[3] "Ištrinti kalendoriaus aplankus?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
 msgid "Could not delete calendar folder: %1"
-msgstr "Nepavyksta pašalinti kalendoriaus aplanko: %1"
+msgstr "Nepavyko ištrinti kalendoriaus aplanko: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr "Kalendoriaus aplanko pašalinti nepavyko"
+msgstr "Nepavyko ištrinti kalendoriaus aplanko"
 
 #: standardcalendaractionmanager.cpp:93
-#, fuzzy, kde-format
-#| msgid "Update Calendar Folder"
-#| msgid_plural "Update %1 Calendar Folders"
+#, kde-format
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] "Atnaujinti kalendoriaus aplanką"
-msgstr[1] "Atnaujinti %1 kalendoriaus aplankus"
-msgstr[2] "Atnaujinti %1 kalendoriaus aplankų"
-msgstr[3] "Atnaujinti %1 kalendoriaus aplanką"
+msgstr[0] "Atnaujinti aplanką"
+msgstr[1] "Atnaujinti %1 aplankus"
+msgstr[2] "Atnaujinti %1 aplankų"
+msgstr[3] "Atnaujinti %1 aplanką"
 
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
 msgid "Update the content of the selected calendar folders."
-msgstr "Atnaujinti turinį pažymėtų kalendoriaus aplankų."
+msgstr "Atnaujinti pažymėtų kalendoriaus aplankų turinį."
 
 #: standardcalendaractionmanager.cpp:99
-#, fuzzy, kde-format
-#| msgid "Cut Calendar Folder"
-#| msgid_plural "Cut %1 Calendar Folders"
+#, kde-format
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] "Iškirpti kalendoriaus aplanką"
-msgstr[1] "Iškirpti %1 kalendoriaus aplankus"
-msgstr[2] "Iškirpti %1 kalendoriaus aplankų"
-msgstr[3] "Iškirpti %1 kalendoriaus aplanką"
+msgstr[0] "Iškirpti aplanką"
+msgstr[1] "Iškirpti %1 aplankus"
+msgstr[2] "Iškirpti %1 aplankų"
+msgstr[3] "Iškirpti %1 aplanką"
 
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
@@ -1553,7 +1500,7 @@ msgstr "Aplanko savybės..."
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
 msgid "Open a dialog to edit the properties of the selected calendar folder."
-msgstr "Atverti dialogą pasirinkto kalendoriaus aplanko savybėms keisti."
+msgstr "Atverti dialogą, skirtą taisyti pažymėto kalendoriaus aplanko savybes."
 
 #: standardcalendaractionmanager.cpp:108
 #, kde-format
@@ -1573,52 +1520,51 @@ msgstr[3] "Kopijuoti %1 įvykį"
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
 msgid "Copy the selected events to the clipboard."
-msgstr "Kopijuoti parinktus įvykius į iškarpinę."
+msgstr "Kopijuoti pažymėtus įvykius į iškarpinę."
 
 #: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] "Pašalinti įvykį"
-msgstr[1] "Pašalinti %1 įvykius"
-msgstr[2] "Pašalinti %1 įvykių"
-msgstr[3] "Pašalinti %1 įvykį"
+msgstr[0] "Ištrinti įvykį"
+msgstr[1] "Ištrinti %1 įvykius"
+msgstr[2] "Ištrinti %1 įvykių"
+msgstr[3] "Ištrinti %1 įvykį"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
 msgid "Delete the selected events from the calendar."
-msgstr "Pašalinti pažymėtus įvykius iš kalendoriaus."
+msgstr "Ištrinti pažymėtus įvykius iš kalendoriaus."
 
 #: standardcalendaractionmanager.cpp:120
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] "Ar tikrai norite pašalintį pažymėtą įvykį?"
-msgstr[1] "Ar tikrai norite pašalintį pažymėtus %1 įvykius?"
-msgstr[2] "Ar tikrai norite pašalintį pažymėtus %1 įvykių?"
-msgstr[3] "Ar tikrai norite pašalintį pažymėtus %1 įvykį?"
+msgstr[0] "Ar tikrai norite ištrinti pažymėtą įvykį?"
+msgstr[1] "Ar tikrai norite ištrinti %1 pažymėtus įvykius?"
+msgstr[2] "Ar tikrai norite ištrinti %1 pažymėtų įvykių?"
+msgstr[3] "Ar tikrai norite ištrinti %1 pažymėtą įvykį?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Event?"
 msgid_plural "Delete Events?"
-msgstr[0] "Pašalinti įvykį?"
-msgstr[1] "Pašalinti įvykius?"
-msgstr[2] "Pašalinti įvykius?"
-msgstr[3] "Pašalinti įvykius?"
+msgstr[0] "Ištrinti įvykį?"
+msgstr[1] "Ištrinti įvykius?"
+msgstr[2] "Ištrinti įvykius?"
+msgstr[3] "Ištrinti įvykius?"
 
 #: standardcalendaractionmanager.cpp:126
 #, kde-format
 msgid "Could not delete event: %1"
-msgstr "Nepavyko pašalinti įvykio: %1"
+msgstr "Nepavyko ištrinti įvykio: %1"
 
 #: standardcalendaractionmanager.cpp:130
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr "Įvykio pašalinimas nepavyko"
+msgstr "Nepavyko ištrinti įvykio"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
@@ -1645,8 +1591,8 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
-"Pridėti naują kalendorių<p>Jus pasitiks dialogas kur galėsite pasirinkti "
-"tipą kalendoriaus, kuris turi būti pridėtas.</p>"
+"Pridėti naują kalendorių<p>Jums bus pateiktas dialogas, kuriame galėsite "
+"pasirinkti kalendoriaus, kuris turi būti pridėtas, tipą.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
@@ -1660,20 +1606,19 @@ msgid "Could not create calendar: %1"
 msgstr "Nepavyko sukurti kalendoriaus: %1"
 
 #: standardcalendaractionmanager.cpp:151
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr "Kalendoriaus sukūrimas nepavyko"
+msgstr "Nepavyko sukurti kalendoriaus"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] "&Pašalinti kalendorių"
-msgstr[1] "&Pašalinti %1 kalendorius"
-msgstr[2] "&Pašalinti %1 kalendorių"
-msgstr[3] "&Pašalinti %1 kalendorių"
+msgstr[0] "Iš&trinti kalendorių"
+msgstr[1] "Iš&trinti %1 kalendorius"
+msgstr[2] "Iš&trinti %1 kalendorių"
+msgstr[3] "Iš&trinti %1 kalendorių"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1681,27 +1626,28 @@ msgid ""
 "Delete the selected calendars<p>The currently selected calendars will be "
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
-"Šalinti parinktus kalendorius<p>Dabar pasirinkti kalendoriai bus pašalinti, "
-"kartu su visais įvykiais, darbais r žurnalais, kuriuos jie turi.</p>"
+"Ištrinti pažymėtus kalendorius<p>Šiuo metu pažymėti kalendoriai bus "
+"ištrinti, kartu su visais juose esančiais įvykiais, užduotimis ir dienynais."
+"</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] "Ar tikrai norite pašalinti šį kalendorių?"
-msgstr[1] "Ar tikrai norite pašalinti %1 kalendorius?"
-msgstr[2] "Ar tikrai norite pašalinti %1 kalendorių?"
-msgstr[3] "Ar tikrai norite pašalinti %1 kalendorių?"
+msgstr[0] "Ar tikrai norite ištrinti šį kalendorių?"
+msgstr[1] "Ar tikrai norite ištrinti %1 kalendorius?"
+msgstr[2] "Ar tikrai norite ištrinti %1 kalendorių?"
+msgstr[3] "Ar tikrai norite ištrinti %1 kalendorių?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
 msgid_plural "Delete Calendars?"
-msgstr[0] "Pašalinti kalendorių?"
-msgstr[1] "Pašalinti kalendorius?"
-msgstr[2] "Pašalinti kalendorius?"
-msgstr[3] "Pašalinti kalendorius?"
+msgstr[0] "Ištrinti kalendorių?"
+msgstr[1] "Ištrinti kalendorius?"
+msgstr[2] "Ištrinti kalendorius?"
+msgstr[3] "Ištrinti kalendorius?"
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
@@ -1711,7 +1657,7 @@ msgstr "Kalendoriaus savybės..."
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
-msgstr "Atverti dialogą pasirinkto kalendoriaus savybėms keisti."
+msgstr "Atverti dialogą, skirtą taisyti pažymėto kalendoriaus savybes."
 
 #: standardcalendaractionmanager.cpp:177
 #, kde-format
@@ -1725,7 +1671,7 @@ msgstr[3] "Atnaujinti %1 kalendorių"
 #: standardcalendaractionmanager.cpp:179
 #, kde-format
 msgid "Updates the content of all folders of the selected calendars."
-msgstr "Atnaujina visų pasirinktų aplankų ir kalendorių turinį."
+msgstr "Atnaujina visų pažymėtų kalendorių aplankų turinį."
 
 #: standardcalendaractionmanager.cpp:182
 #, kde-format
@@ -1735,7 +1681,7 @@ msgstr "&Kopijuoti į kalendorių"
 #: standardcalendaractionmanager.cpp:183
 #, kde-format
 msgid "Copy the selected event to a different calendar."
-msgstr "Kopijuoti parinktą įvykį į kitą kalendorių."
+msgstr "Kopijuoti pasirinktą įvykį į kitą kalendorių."
 
 #: standardcalendaractionmanager.cpp:186
 #, kde-format
@@ -1745,32 +1691,28 @@ msgstr "&Perkelti į kalendorių"
 #: standardcalendaractionmanager.cpp:187
 #, kde-format
 msgid "Move the selected event to a different calendar."
-msgstr "Perkelti parinktą įvykį į kitą kalendorių."
+msgstr "Perkelti pasirinktą įvykį į kitą kalendorių."
 
 #: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
-msgstr "Nepavyko įklijuoti įvykio: %1"
+msgstr "Nepavyko įdėti įvykio: %1"
 
 #: standardcalendaractionmanager.cpp:192
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "Įdėti nepavyko"
+msgstr "Nepavyko įdėti"
 
 #: standardcalendaractionmanager.cpp:195
-#, fuzzy, kde-format
-#| msgid "Update Calendar"
-#| msgid_plural "Update %1 Calendars"
+#, kde-format
 msgid "Update Available Calendars"
-msgstr "Atnaujinti kalendorių"
+msgstr "Atnaujinti prieinamus kalendorius"
 
 #: standardcalendaractionmanager.cpp:196
-#, fuzzy, kde-format
-#| msgid "Updates the content of all folders of the selected calendars."
+#, kde-format
 msgid "Updates the tree of available calendars."
-msgstr "Atnaujina visų pasirinktų aplankų ir kalendorių turinį."
+msgstr "Atnaujina prieinamų kalendorių medį."
 
 #: standardcalendaractionmanager.cpp:303 standardcalendaractionmanager.cpp:307
 #, kde-format
@@ -1785,81 +1727,81 @@ msgstr "Perkelti įvykį į"
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
-msgstr "R&edaguoti įvykį..."
+msgstr "Taisyti įvykį..."
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
-msgstr[0] "Kopijuoti darbą"
-msgstr[1] "Kopijuoti %1 darbus"
-msgstr[2] "Kopijuoti %1 darbų"
-msgstr[3] "Kopijuoti %1 darbą"
+msgstr[0] "Kopijuoti užduotį"
+msgstr[1] "Kopijuoti %1 užduotis"
+msgstr[2] "Kopijuoti %1 užduočių"
+msgstr[3] "Kopijuoti %1 užduotį"
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
-msgstr "Kopijuoti darbą į"
+msgstr "Kopijuoti užduotį į"
 
 #: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
-msgstr[0] "Pašalinti darbą"
-msgstr[1] "Pašalinti %1 darbus"
-msgstr[2] "Pašalinti %1 darbų"
-msgstr[3] "Pašalinti %1 darbą"
+msgstr[0] "Ištrinti užduotį"
+msgstr[1] "Ištrinti %1 užduotis"
+msgstr[2] "Ištrinti %1 užduočių"
+msgstr[3] "Ištrinti %1 užduotį"
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
-msgstr[0] "Iškirpti darbą"
-msgstr[1] "Iškirpti %1 darbus"
-msgstr[2] "Iškirpti %1 darbų"
-msgstr[3] "Iškirpti %1 darbą"
+msgstr[0] "Iškirpti užduotį"
+msgstr[1] "Iškirpti %1 užduotis"
+msgstr[2] "Iškirpti %1 užduočių"
+msgstr[3] "Iškirpti %1 užduotį"
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
-msgstr "Perkelti darbą į"
+msgstr "Perkelti užduotį į"
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
-msgstr "Keisti darbą..."
+msgstr "Taisyti užduotį..."
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] "Kopijuoti žurnalą"
-msgstr[1] "Kopijuoti %1 žurnalus"
-msgstr[2] "Kopijuoti %1 žurnalų"
-msgstr[3] "Kopijuoti %1 žurnalą"
+msgstr[0] "Kopijuoti dienyną"
+msgstr[1] "Kopijuoti %1 dienynus"
+msgstr[2] "Kopijuoti %1 dienynų"
+msgstr[3] "Kopijuoti %1 dienyną"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr "Kopijuoti žurnalą į"
+msgstr "Kopijuoti dienyną į"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] "Pašalinti žurnalą"
-msgstr[1] "Pašalinti %1 žurnalus"
-msgstr[2] "Pašalinti %1 žurnalų"
-msgstr[3] "Pašalinti %1 žurnalą"
+msgstr[0] "Ištrinti dienyną"
+msgstr[1] "Ištrinti %1 dienynus"
+msgstr[2] "Ištrinti %1 dienynų"
+msgstr[3] "Ištrinti %1 dienyną"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Iškirpti žurnalą"
-msgstr[1] "Iškirpti %1 žurnalus"
-msgstr[2] "Iškirpti %1 žurnalų"
-msgstr[3] "Iškirpti %1 žurnalą"
+msgstr[0] "Iškirpti dienyną"
+msgstr[1] "Iškirpti %1 dienynus"
+msgstr[2] "Iškirpti %1 dienynų"
+msgstr[3] "Iškirpti %1 dienyną"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
@@ -1869,7 +1811,7 @@ msgstr "Perkelti dienyną į"
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Keisti dienyną"
+msgstr "Taisyti dienyną..."
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
@@ -1884,20 +1826,20 @@ msgstr "Sukurti naują įvykį"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr "Naujas &darbas..."
+msgstr "Nauja &užduotis..."
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
-msgstr "Sukurti naują darbą"
+msgstr "Sukurti naują užduotį"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
+#, fuzzy, kde-format
 msgid "New Su&b-to-do..."
 msgstr "Naujas sudedamasis darbas..."
 
 #: standardcalendaractionmanager.cpp:547
-#, kde-format
+#, fuzzy, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Sukurti naują sudedamąjį darbą"
 
@@ -1914,12 +1856,12 @@ msgstr "Sukurti naują dienyną"
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
-msgstr "&Keisti..."
+msgstr "&Taisyti..."
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
-msgstr "Keisti pažymėtą incidentą."
+msgstr "Taisyti pažymėtą įvykį."
 
 #: todomodel.cpp:158 todomodel.cpp:193
 #, kde-format
@@ -1946,9 +1888,7 @@ msgid ","
 msgstr ""
 
 #: todomodel.cpp:458
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Santrauka"
 
@@ -1958,38 +1898,28 @@ msgid "Recurs"
 msgstr ""
 
 #: todomodel.cpp:462
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Prioritetas"
 
 #: todomodel.cpp:464
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Užbaigta"
 
 #: todomodel.cpp:466
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Pradžios data ir laikas"
+msgstr "Pradžios data"
 
 #: todomodel.cpp:468
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Numatyta įvykdymo data ir laikas"
+msgstr "Galutinio termino data"
 
 #: todomodel.cpp:470
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Užbaigta"

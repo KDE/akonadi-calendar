@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:37+0000\n"
-"PO-Revision-Date: 2022-12-21 00:47+0000\n"
+"PO-Revision-Date: 2024-02-21 23:41+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,153 +17,155 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: alarmnotification.cpp:50
 #, kde-format
 msgid "View"
-msgstr ""
+msgstr "Rodyti"
 
 #: alarmnotification.cpp:57
 #, kde-format
 msgid "Task"
-msgstr ""
+msgstr "Užduotis"
 
 #: alarmnotification.cpp:57
 #, kde-format
 msgid "Event"
-msgstr ""
+msgstr "Įvykis"
 
 #: alarmnotification.cpp:60
 #, kde-format
 msgid "Task due at %1"
-msgstr ""
+msgstr "Galutinis užduoties terminas %1"
 
 #: alarmnotification.cpp:64
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
 msgid_plural "%2 starts in %1 minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%2 prasideda po %1 minutės"
+msgstr[1] "%2 prasideda po %1 minučių"
+msgstr[2] "%2 prasideda po %1 minučių"
+msgstr[3] "%2 prasideda po %1 minutės"
 
 #: alarmnotification.cpp:68
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
-msgstr ""
+msgstr "%1 prasideda %2"
 
 #: alarmnotification.cpp:70
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
-msgstr ""
+msgstr "%1 prasidėjo %2"
 
 #: alarmnotification.cpp:76
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
-msgstr ""
+msgstr "%1 prasideda %2, %3"
 
 #: alarmnotification.cpp:82
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
-msgstr ""
+msgstr "%1 prasidėjo %2, %3"
 
 #: alarmnotification.cpp:91
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
-msgstr ""
+msgstr "%1 prasideda %2"
 
 #: alarmnotification.cpp:93
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
-msgstr ""
+msgstr "%1 prasidėjo %2"
 
 #: alarmnotification.cpp:118
 #, kde-format
 msgid "Remind in 5 mins"
-msgstr ""
+msgstr "Priminti po 5 min."
 
 #: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind later..."
-msgstr ""
+msgstr "Priminti vėliau..."
 
 #: alarmnotification.cpp:130
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
-msgstr ""
+msgstr "Atmesti"
 
 #: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
-msgstr ""
+msgstr "Atverti URL"
 
 #: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
-msgstr ""
+msgstr "Žemėlapis"
 
 #: kalendaracmain.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
-msgstr ""
+msgstr "Priminimai"
 
 #: kalendaracmain.cpp:26
 #, kde-format
 msgid "Calendar Reminder Service"
-msgstr ""
+msgstr "Kalendoriaus priminimų tarnyba"
 
 #: kalendaracmain.cpp:30
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
-msgstr ""
+msgstr "(c) KDE bendruomenė 2021–2022"
 
 #: kalendaracmain.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
-msgstr ""
+msgstr "Carl Schwan"
 
 #: kalendaracmain.cpp:32 kalendaracmain.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
-msgstr ""
+msgstr "Prižiūrėtojas"
 
 #: kalendaracmain.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
-msgstr ""
+msgstr "Clau Cambra"
 
 #: suspenddialog.cpp:75
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "Pristabdymo &trukmė:"
 
 #: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Pristabdyti priminimus šiam laiko kiekiui"
 
 #: suspenddialog.cpp:84
 #, kde-format
@@ -173,36 +175,39 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Kiekvienas priminimas pažymėtiems įvykiams bus pristabdytas šiam laiko "
+"vienetų skaičiui. Gretimame parinkiklyje galite pasirinkti laiko vienetus "
+"(įprastai, minutes)."
 
 #: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "min."
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "val."
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "d."
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "sav."
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Pristabdyti priminimus naudojant šį laiko vienetą"
 
 #: suspenddialog.cpp:98
 #, kde-format
@@ -212,18 +217,21 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Kiekvienas priminimas pažymėtiems įvykiams bus pristabdytas naudojant šį "
+"laiko vienetą. Gretimoje skaičiaus įrašo įvestyje galite pasirinkti laiko "
+"vienetų skaičių."
 
 #: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr ""
+msgstr "Priminti vėliau"
 
 #: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Po nurodyto intervalo priminti dar kartą"
 
 #: suspenddialog.cpp:113
 #, kde-format
@@ -232,21 +240,23 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Paspauskite šį mygtuką, kad po nurodyto laiko būtų vėl priminta apie šį "
+"įvykį."
 
 #: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "Atsisakyti priminimo vėliau, t.y. atmesti priminimą visam laikui"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "Paspauskite šį mygtuką, norėdami visam laikui nutildyti priminimą."

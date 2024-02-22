@@ -1,16 +1,16 @@
 # Translation for libakonadi-calendar5.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2023 This file is copyright:
+# Copyright (C) 2020-2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2023-11-25 18:25+0100\n"
+"PO-Revision-Date: 2024-02-21 23:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -248,17 +248,16 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Uko egindako gonbidapenak"
+msgstr "Ezkutatu uko egindako gonbidapenak"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Markatu lauki hori uko egindako gonbidapenak ekitaldi-ikuspegian ezkutatzeko."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -275,7 +274,7 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
-"Markatu hori, antolatu edo parte hartuko duzun ekitaldietarakooroigarriak "
+"Markatu hori, antolatu edo parte hartuko duzun ekitaldietarako oroigarriak "
 "bakarrik, jasotzeko."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
