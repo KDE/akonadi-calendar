@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrej Vernekar <andrej.vernekar@gmail.com>, 2010, 2012.
-# Jure Repinc <jlp@holodeck1.com>, 2012.
+# SPDX-FileCopyrightText: 2012, 2024 Jure Repinc <jlp@holodeck1.com>
 # Andrej Mernik <andrejm@ubuntu.si>, 2015, 2016, 2018.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022, 2023.
 msgid ""
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-17 02:26+0000\n"
-"PO-Revision-Date: 2023-11-13 09:31+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-02-26 18:17+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -1252,7 +1252,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select..."
-msgstr "&Izberi ..."
+msgstr "&Izbor …"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1471,7 +1471,7 @@ msgstr "Odprta vabila"
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
-msgstr "Dodaj mapo..."
+msgstr "Dodaj mapo …"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1499,10 +1499,10 @@ msgstr "Ustvarjanje koledarske mape ni uspelo"
 #, kde-format
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] "Kopiraj %1 mapo"
-msgstr[1] "Kopiraj %1 mapi"
-msgstr[2] "Kopiraj %1 mape"
-msgstr[3] "Kopiraj %1 map"
+msgstr[0] "Kopiraj %1 map"
+msgstr[1] "Kopiraj %1 mapo"
+msgstr[2] "Kopiraj %1 mapi"
+msgstr[3] "Kopiraj %1 mape"
 
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
@@ -1513,10 +1513,10 @@ msgstr "Kopiraj izbrane koledarske mape na odložišče."
 #, kde-format
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] "Izbriši %1 mapo"
-msgstr[1] "Izbriši %1 mapi"
-msgstr[2] "Izbriši %1 mape"
-msgstr[3] "Izbriši %1 map"
+msgstr[0] "Izbriši %1 map"
+msgstr[1] "Izbriši %1 mapo"
+msgstr[2] "Izbriši %1 mapi"
+msgstr[3] "Izbriši %1 mape"
 
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
@@ -1529,19 +1529,19 @@ msgid ""
 "Do you really want to delete this calendar folder and all its sub-folders?"
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
-msgstr[0] "Ali res želite izbrisati %1 koledarsko mapo in vse podmape?"
-msgstr[1] "Ali res želite izbrisati %1 koledarski mapi in vse podmape?"
-msgstr[2] "Ali res želite izbrisati %1 koledarske mape in vse podmape?"
-msgstr[3] "Ali res želite izbrisati %1 koledarskih map in vse podmape?"
+msgstr[0] "Ali res želite izbrisati %1 koledarskih map in vse podmape?"
+msgstr[1] "Ali res želite izbrisati %1 koledarsko mapo in vse podmape?"
+msgstr[2] "Ali res želite izbrisati %1 koledarski mapi in vse podmape?"
+msgstr[3] "Ali res želite izbrisati %1 koledarske mape in vse podmape?"
 
 #: standardcalendaractionmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] "Naj izbrišem koledarsko mapo?"
-msgstr[1] "Naj izbrišem koledarski mapi?"
-msgstr[2] "Naj izbrišem koledarske mape?"
+msgstr[0] "Naj izbrišem koledarske mape?"
+msgstr[1] "Naj izbrišem koledarsko mapo?"
+msgstr[2] "Naj izbrišem koledarski mapi?"
 msgstr[3] "Naj izbrišem koledarske mape?"
 
 #: standardcalendaractionmanager.cpp:85
@@ -1559,10 +1559,10 @@ msgstr "Brisanje koledarske mape ni uspelo"
 #, kde-format
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] "Posodobi %1 mapo"
-msgstr[1] "Posodobi %1 mapi"
-msgstr[2] "Posodobi %1 mape"
-msgstr[3] "Posodobi %1 map"
+msgstr[0] "Posodobi %1 map"
+msgstr[1] "Posodobi %1 mapo"
+msgstr[2] "Posodobi %1 mapi"
+msgstr[3] "Posodobi %1 mape"
 
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
@@ -1573,10 +1573,10 @@ msgstr "Posodobi vsebino izbranih koledarskih map."
 #, kde-format
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] "Izreži %1 mapo"
-msgstr[1] "Izreži %1 mapi"
-msgstr[2] "Izreži %1 mape"
-msgstr[3] "Izreži %1 map"
+msgstr[0] "Izreži %1 map"
+msgstr[1] "Izreži %1 mapo"
+msgstr[2] "Izreži %1 mapi"
+msgstr[3] "Izreži %1 mape"
 
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
@@ -1586,7 +1586,7 @@ msgstr "Izreži izbrane koledarske mape s koledarja."
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Lastnosti mape ..."
+msgstr "Lastnosti mape …"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1603,10 +1603,10 @@ msgstr "Lastnosti koledarske mape %1"
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
-msgstr[0] "Kopiraj %1 dogodek"
-msgstr[1] "Kopiraj %1 dogodka"
-msgstr[2] "Kopiraj %1 dogodke"
-msgstr[3] "Kopiraj %1 dogodkov"
+msgstr[0] "Kopiraj %1 dogodkov"
+msgstr[1] "Kopiraj %1 dogodek"
+msgstr[2] "Kopiraj %1 dogodka"
+msgstr[3] "Kopiraj %1 dogodke"
 
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
@@ -1617,10 +1617,10 @@ msgstr "Kopiraj izbrane dogodke na odložišče."
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] "Izbriši %1 dogodek"
-msgstr[1] "Izbriši %1 dogodka"
-msgstr[2] "Izbriši %1 dogodke"
-msgstr[3] "Izbriši %1 dogodkov"
+msgstr[0] "Izbriši %1 dogodkov"
+msgstr[1] "Izbriši %1 dogodek"
+msgstr[2] "Izbriši %1 dogodka"
+msgstr[3] "Izbriši %1 dogodke"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
@@ -1631,19 +1631,19 @@ msgstr "Izbriši izbrane dogodke s koledarja."
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] "Ali res želite izbrisati %1 izbran dogodek?"
-msgstr[1] "Ali res želite izbrisati %1 izbrana dogodka?"
-msgstr[2] "Ali res želite izbrisati %1 izbrane dogodke?"
-msgstr[3] "Ali res želite izbrisati %1 izbranih dogodkov?"
+msgstr[0] "Ali res želite izbrisati %1 izbranih dogodkov?"
+msgstr[1] "Ali res želite izbrisati %1 izbran dogodek?"
+msgstr[2] "Ali res želite izbrisati %1 izbrana dogodka?"
+msgstr[3] "Ali res želite izbrisati %1 izbrane dogodke?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Event?"
 msgid_plural "Delete Events?"
-msgstr[0] "Izbrišem dogodek?"
-msgstr[1] "Izbrišem dogodka?"
-msgstr[2] "Izbrišem dogodke?"
+msgstr[0] "Izbrišem dogodke?"
+msgstr[1] "Izbrišem dogodek?"
+msgstr[2] "Izbrišem dogodka?"
 msgstr[3] "Izbrišem dogodke?"
 
 #: standardcalendaractionmanager.cpp:126
@@ -1661,10 +1661,10 @@ msgstr "Brisanje dogodka ni uspelo"
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
-msgstr[0] "Izreži %1 dogodek"
-msgstr[1] "Izreži %1 dogodka"
-msgstr[2] "Izreži %1 dogodke"
-msgstr[3] "Izreži %1 dogodkov"
+msgstr[0] "Izreži %1 dogodkov"
+msgstr[1] "Izreži %1 dogodek"
+msgstr[2] "Izreži %1 dogodka"
+msgstr[3] "Izreži %1 dogodke"
 
 #: standardcalendaractionmanager.cpp:135
 #, kde-format
@@ -1674,7 +1674,7 @@ msgstr "Izreži izbrane dogodke s koledarja."
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
-msgstr "Dodaj &koledar ..."
+msgstr "Dodaj &koledar …"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1706,10 +1706,10 @@ msgstr "Ustvarjanje koledarja ni uspelo"
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] "Iz&briši %1 koledar"
-msgstr[1] "Iz&briši %1 koledarja"
-msgstr[2] "Iz&briši %1 koledarje"
-msgstr[3] "Iz&briši %1 koledarjev"
+msgstr[0] "Iz&briši %1 koledarjev"
+msgstr[1] "Iz&briši %1 koledar"
+msgstr[2] "Iz&briši %1 koledarja"
+msgstr[3] "Iz&briši %1 koledarje"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1724,25 +1724,25 @@ msgstr ""
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] "Ali res želite izbrisati %1 koledar?"
-msgstr[1] "Ali res želite izbrisati %1 koledarja?"
-msgstr[2] "Ali res želite izbrisati %1 koledarje?"
-msgstr[3] "Ali res želite izbrisati %1 koledarjev?"
+msgstr[0] "Ali res želite izbrisati %1 koledarjev?"
+msgstr[1] "Ali res želite izbrisati %1 koledar?"
+msgstr[2] "Ali res želite izbrisati %1 koledarja?"
+msgstr[3] "Ali res želite izbrisati %1 koledarje?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
 msgid_plural "Delete Calendars?"
-msgstr[0] "Izbrišem koledar?"
-msgstr[1] "Izbrišem koledarja?"
-msgstr[2] "Izbrišem koledarje?"
+msgstr[0] "Izbrišem koledarje?"
+msgstr[1] "Izbrišem koledar?"
+msgstr[2] "Izbrišem koledarja?"
 msgstr[3] "Izbrišem koledarje?"
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
-msgstr "Lastnosti koledarja ..."
+msgstr "Lastnosti koledarja …"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1753,10 +1753,10 @@ msgstr "Odpri pogovorno okno za urejanje lastnosti izbranega koledarja."
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
-msgstr[0] "Posodobi %1 koledar"
-msgstr[1] "Posodobi %1 koledarja"
-msgstr[2] "Posodobi %1 koledarje"
-msgstr[3] "Posodobi %1 koledarjev"
+msgstr[0] "Posodobi %1 koledarjev"
+msgstr[1] "Posodobi %1 koledar"
+msgstr[2] "Posodobi %1 koledarja"
+msgstr[3] "Posodobi %1 koledarje"
 
 #: standardcalendaractionmanager.cpp:179
 #, kde-format
@@ -1817,16 +1817,16 @@ msgstr "Premakni dogodek na"
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
-msgstr "Uredi dogodek ..."
+msgstr "Uredi dogodek …"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
-msgstr[0] "Kopiraj %1 opravilo"
-msgstr[1] "Kopiraj %1 opravili"
-msgstr[2] "Kopiraj %1 opravila"
-msgstr[3] "Kopiraj %1 opravil"
+msgstr[0] "Kopiraj %1 opravil"
+msgstr[1] "Kopiraj %1 opravilo"
+msgstr[2] "Kopiraj %1 opravili"
+msgstr[3] "Kopiraj %1 opravila"
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
@@ -1837,19 +1837,19 @@ msgstr "Kopiraj opravilo na"
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
-msgstr[0] "Izbriši %1 opravilo"
-msgstr[1] "Izbriši %1 opravili"
-msgstr[2] "Izbriši %1 opravila"
-msgstr[3] "Izbriši %1 opravil"
+msgstr[0] "Izbriši %1 opravil"
+msgstr[1] "Izbriši %1 opravilo"
+msgstr[2] "Izbriši %1 opravili"
+msgstr[3] "Izbriši %1 opravila"
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
-msgstr[0] "Izreži %1 opravilo"
-msgstr[1] "Izreži %1 opravili"
-msgstr[2] "Izreži %1 opravila"
-msgstr[3] "Izreži %1 opravil"
+msgstr[0] "Izreži %1 opravil"
+msgstr[1] "Izreži %1 opravilo"
+msgstr[2] "Izreži %1 opravili"
+msgstr[3] "Izreži %1 opravila"
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
@@ -1859,16 +1859,16 @@ msgstr "Premakni opravilo na"
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
-msgstr "Uredi opravilo ..."
+msgstr "Uredi opravilo …"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] "Kopiraj %1 dnevnik"
-msgstr[1] "Kopiraj %1 dnevnika"
-msgstr[2] "Kopiraj %1 dnevnike"
-msgstr[3] "Kopiraj %1 dnevnikov"
+msgstr[0] "Kopiraj %1 dnevnikov"
+msgstr[1] "Kopiraj %1 dnevnik"
+msgstr[2] "Kopiraj %1 dnevnika"
+msgstr[3] "Kopiraj %1 dnevnike"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
@@ -1879,19 +1879,19 @@ msgstr "Kopiraj dnevnik na"
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] "Izbriši %1 dnevnik"
-msgstr[1] "Izbriši %1 dnevnika"
-msgstr[2] "Izbriši %1 dnevnike"
-msgstr[3] "Izbriši %1 dnevnikov"
+msgstr[0] "Izbriši %1 dnevnikov"
+msgstr[1] "Izbriši %1 dnevnik"
+msgstr[2] "Izbriši %1 dnevnika"
+msgstr[3] "Izbriši %1 dnevnike"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Izreži %1 dnevnik"
-msgstr[1] "Izreži %1 dnevnika"
-msgstr[2] "Izreži %1 dnevnike"
-msgstr[3] "Izreži %1 dnevnikov"
+msgstr[0] "Izreži %1 dnevnikov"
+msgstr[1] "Izreži %1 dnevnik"
+msgstr[2] "Izreži %1 dnevnika"
+msgstr[3] "Izreži %1 dnevnike"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
@@ -1901,12 +1901,12 @@ msgstr "Premakni dnevnik na"
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Uredi dnevnik ..."
+msgstr "Uredi dnevnik …"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
-msgstr "Nov &dogodek ..."
+msgstr "Nov &dogodek …"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1916,7 +1916,7 @@ msgstr "Ustvari nov dogodek"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr "Novo &opravilo ..."
+msgstr "Novo &opravilo …"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1926,7 +1926,7 @@ msgstr "Ustvari novo opravilo"
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
-msgstr "Novo po&dopravilo ..."
+msgstr "Novo po&dopravilo …"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1936,7 +1936,7 @@ msgstr "Ustvari novo podopravilo"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "Nov &dnevnik ..."
+msgstr "Nov &dnevnik …"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1946,7 +1946,7 @@ msgstr "Ustvari nov dnevnik"
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
-msgstr "&Uredi ..."
+msgstr "&Uredi …"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
@@ -2028,6 +2028,14 @@ msgstr "Opis"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Čiščenje zaključenih opravil"
+
+#~ msgid "Hide declined invitations"
+#~ msgstr "Skrij zavrnjena povabila"
+
+#~ msgid "Check this box to hide declined invitations in event views."
+#~ msgstr ""
+#~ "Potrdite to polje, če želite skriti zavrnjena povabila v pogledih "
+#~ "dogodkov."
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "Prenos pošte uporabljen za pošiljanje e-poštnih sporočil"
