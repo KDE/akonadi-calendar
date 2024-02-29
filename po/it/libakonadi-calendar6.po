@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2011, 2013, 2014.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2017, 2019, 2020, 2022, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2017, 2019, 2020, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2023-11-13 13:06+0100\n"
+"PO-Revision-Date: 2024-02-20 13:53+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -247,17 +247,16 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Inviti declinati"
+msgstr "Nascondi inviti declinati"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Spunta questa casella per nascondere gli inviti declinati nella vista eventi."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
