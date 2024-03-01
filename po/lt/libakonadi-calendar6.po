@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2024-02-21 23:59+0200\n"
+"PO-Revision-Date: 2024-02-29 23:28+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -204,6 +204,10 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
+"Naudodami šią nuostatą galite keisti failo, kuris bus gautas iš serverio, "
+"pavadinimą. Kai ši nuostata pažymėta, bus atsiunčiamas užimtumo failas, "
+"pavadinimu, naudotojas@sritis.ifb, pavyzdžiui, nn@kde.org.ifb. Kai ši "
+"nuostata nepažymėta, bus atsiunčiamas naudotojas.ifb, pavyzdžiui, nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
@@ -242,24 +246,27 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
+"Pažymėkite šį langelį, kad gautumėte visų el. laiškų, kuriuos KOrganizer "
+"jūsų prašymu siųs įvykių dalyviams, kopijas."
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Hide declined invitations"
-msgstr ""
+msgstr "Slėpti atmestus pakvietimus"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Pažymėkite šį langelį norėdami slėpti atmestus pakvietimus įvykių rodiniuose."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
-msgstr ""
+msgstr "Rodyti priminimus tik apie mano organizuojamus ar lankomus įvykius"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -268,18 +275,20 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Pažymėkite tai norėdami gauti priminimus tik apie įvykius, kurių "
+"organizatorius esate arba, kuriuos lankote."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr ""
+msgstr "Siųsti Outlook pavidalo tariamus kontrapasiūlymus"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:105
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
-msgstr ""
+msgstr "Patikrinkite ar sutampa mazgo vardas ir užklausos el. pašto adresas"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:106
@@ -290,6 +299,10 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
+"Naudodami šią nuostatą galite konfigūruoti, ar užimtumo URL srities dalis "
+"turi atitikti jūsų ieškomo naudotojo ID srities dalį. Pavyzdžiui, jei ši "
+"parinktis nustatyta, tuomet jonas@manosritis.com užimtumo duomenų paieška "
+"serveryje www.jūsųsritis.com patirs nesėkmę."
 
 #: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
 #: todomodel.cpp:476
@@ -300,7 +313,7 @@ msgstr "Kalendorius"
 #: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Darbai"
 
 #: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:172
 #, kde-format
@@ -310,19 +323,19 @@ msgstr "Dienynas"
 #: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "Pastabos"
 
 #: calendarutils.cpp:132
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
-msgstr ""
+msgstr "Mano „Kolab“ %1"
 
 #: calendarutils.cpp:136
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
-msgstr ""
+msgstr "Bendrinama „Kolab“ %1 %2"
 
 #: calendarutils.cpp:139
 #, kde-format
@@ -340,7 +353,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
-msgstr ""
+msgstr "„Kolab“ %1"
 
 #: calendarutils.cpp:152
 #, kde-format
@@ -364,12 +377,12 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr ""
+msgstr "„Google“ %1"
 
 #: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "Mano %1"
 
 #: calendarutils.cpp:202
 #, kde-format
@@ -405,6 +418,10 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
+"<qt><p>Programinei įrangai nepavyko išsiųsti jūsų užimtumo sąrašo į URL "
+"„%1“. Gali būti, jog yra problemų su prieigos teisėmis arba nurodėte "
+"neteisingą URL. Sistema pranešė: <em>%2</em>.</p><p>Patikrinkite URL adresą "
+"arba susisiekite su sistemos administratoriumi.</p></qt>"
 
 #: freebusymanager.cpp:617
 #, kde-format
@@ -488,22 +505,22 @@ msgstr "Nepavyko atsisiųsti nuotolinio failo."
 #: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
-msgstr ""
+msgstr "Importavimo užduotis jau vykdoma."
 
 #: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
-msgstr ""
+msgstr "Tuščias failo pavadinimas. Nebus importuojamas ical failas."
 
 #: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
-msgstr ""
+msgstr "URL, kurį importuoti, yra netaisyklingas."
 
 #: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr ""
+msgstr "Pasirinktas failas yra neperskaitomas failas."
 
 #: icalimporter.cpp:187
 #, kde-format
@@ -511,16 +528,18 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
+"Pasirinktas failas nėra tinkamai formatuotas arba yra tokio formato, kurio "
+"ši programinė įranga nepalaiko."
 
 #: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
-msgstr ""
+msgstr "Pasirinktas failas yra tuščias."
 
 #: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
-msgstr ""
+msgstr "Sulieti ical failą į esamą kalendorių."
 
 #: incidencechanger.cpp:260
 #, kde-format
@@ -547,16 +566,17 @@ msgstr "Klaida bandant modifikuoti kalendoriaus elementą. Klaida buvo: %1"
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr ""
+"Tas kalendoriaus elementas jau buvo ištrintas arba šiuo metu yra ištrinamas."
 
 #: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr ""
+msgstr "Operacija negali būti atlikta dėl ACL apribojimų"
 
 #: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
-msgstr ""
+msgstr "Pasirinktas rinkinys yra neteisingas"
 
 #: incidencechanger.cpp:1204
 #, kde-format
@@ -564,11 +584,13 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
+"Numatytasis rinkinys yra neteisingas arba jame nėra tinkamų ACL ir buvo "
+"naudota „DestinationPolicyNeverAsk“"
 
 #: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
-msgstr ""
+msgstr "Besidubliuojantis elemento ID grupės operacijoje"
 
 #: incidencechanger.cpp:1212
 #, kde-format
@@ -576,6 +598,8 @@ msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
+"Vienas pakeitimas, priklausantis pakeitimų grupei, patyrė nesėkmę. Visi "
+"pakeitimai grąžinami į pradinę būseną."
 
 #: incidencechanger.cpp:1217
 #, kde-format
@@ -595,12 +619,12 @@ msgstr "Klaidos pranešimas: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr ""
+msgstr "Nežinoma klaida nagrinėjant iCal pakvietimą"
 
 #: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr ""
+msgstr "Klaida apdorojant pakvietimą ar atnaujinimą."
 
 #: itiphandler.cpp:142
 #, kde-format
@@ -620,13 +644,15 @@ msgstr "Klaida siunčiant kontrapasiūlymą"
 #: itiphandler.cpp:240
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr ""
+msgstr "Nepavyko paleisti redaktoriaus, skirto taisyti kontrapasiūlymą"
 
 #: itiphandler.cpp:271
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
+"Elemente „%1“ nėra dalyvių. Štai kodėl bus išsiųsta grupinio darbo "
+"programinės įrangos žinutė."
 
 #: itiphandler.cpp:274
 #, kde-format
@@ -658,11 +684,14 @@ msgid "Error loading calendar: %1"
 msgstr "Klaida įkeliant kalendorių: %1"
 
 #: itiphandler_p.cpp:132
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
+"Grupinio darbo programinės įrangos žinutė, skirta elementui „%1“, buvo "
+"sėkmingai išsiųsta.\n"
+"Metodas: %2"
 
 #: itiphandler_p.cpp:144
 #, kde-format
@@ -672,6 +701,8 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
+"Nepavyko išsiųsti elemento „%1“.\n"
+"Metodas: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
@@ -709,7 +740,7 @@ msgstr "Persiuntimo klaida"
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr ""
+msgstr "Pasiūlytas naujas susitikimo laikas: %1 – %2"
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
@@ -877,7 +908,7 @@ msgstr "Pasirašyti žinutę?"
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "Pa&sirašyti"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
@@ -901,12 +932,12 @@ msgstr ""
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Siųsti nepasirašytą?"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "Siųsti n&epasirašytą"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -932,7 +963,7 @@ msgstr ""
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "Pa&sirašyti"
 
 #: mailclient_p.cpp:771
 #, kde-format
@@ -967,17 +998,17 @@ msgstr "Šifruoti žinutę?"
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Pasirašyti ir š&ifruoti"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "Š&ifruoti"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "Tik pa&sirašyti"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
@@ -1873,19 +1904,19 @@ msgstr ""
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Taip"
 
 #: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: todomodel.cpp:177 todomodel.cpp:214
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:458
 #, kde-format
@@ -1927,12 +1958,12 @@ msgstr "Užbaigta"
 #: todomodel.cpp:472
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Žymės"
 
 #: todomodel.cpp:474
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Aprašas"
 
 #: todopurger.cpp:61
 #, kde-format
