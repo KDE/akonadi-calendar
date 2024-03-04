@@ -1,15 +1,15 @@
 # Translation of kalendarac.po to Catalan (Valencian)
-# Copyright (C) 2022-2023 This_file_is_part_of_KDE
+# Copyright (C) 2022-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-17 02:26+0000\n"
-"PO-Revision-Date: 2023-09-25 12:26+0200\n"
+"PO-Revision-Date: 2024-02-17 11:36+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -99,11 +99,9 @@ msgid "Remind in 5 mins"
 msgstr "Recorda d'ací a 5 min"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Recordatoris"
+msgstr "Recorda més tard..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -159,13 +157,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "&Duració de la suspensió:"
 
 #: suspenddialog.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Els recordatoris se suspendran segons esta quantitat de temps"
 
 #: suspenddialog.cpp:85
 #, kde-format
@@ -175,36 +173,39 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Cada recordatori de les incidències seleccionades se suspendrà d'acord amb "
+"este nombre d'unitats de temps. Podeu triar les unitats de temps (normalment "
+"minuts) al selector adjacent."
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "minuts"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "hores"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "dies"
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "setmanes"
 
 #: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Suspén els recordatoris utilitzant esta unitat de temps"
 
 #: suspenddialog.cpp:99
 #, kde-format
@@ -214,20 +215,21 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Cada recordatori de les incidències seleccionades se suspendrà fent servir "
+"esta unitat de temps. Podeu establir el nombre d'unitats de temps a "
+"l'entrada de nombre adjacent."
 
 #: suspenddialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Recordatoris"
+msgstr "Recorda més tard"
 
 #: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Torna a recordar més tard després de l'interval especificat"
 
 #: suspenddialog.cpp:114
 #, kde-format
@@ -236,24 +238,25 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Premeu este botó per a tornar a recordar esta incidència després de la "
+"quantitat especificada de temps."
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgstr ""
+"Cancel·la el recordatori més tard, és a dir, descarta el recordatori per "
+"sempre"
 
 #: suspenddialog.cpp:120
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
-
-#~ msgid "Remind in 1 hour"
-#~ msgstr "Recorda d'ací a 1 hora"
+msgstr "Premeu este botó per a silenciar el recordatori per sempre."
