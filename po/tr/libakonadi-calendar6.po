@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2024-02-20 16:58+0300\n"
+"PO-Revision-Date: 2024-03-08 18:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -744,7 +744,7 @@ msgstr "Yönlendirme Hatası"
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr "Önerilen yeni toplantı zamanı: %1 - %2"
+msgstr "Önerilen yeni toplantı zamanı: %1 — %2"
 
 #: itiphandlerhelper_p.cpp:67
 #, kde-format
@@ -789,9 +789,9 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
-"Bu olayın düzenleyicisi değilsin. Bu olayı düzenlemek takvimine "
-"düzenleyicinin takvimiyle senkronizasyon olma dışında şeyler getirecek. "
-"Gerçekten olayı düzenlemek istiyor musun?"
+"Bu etkinliğin organizatörü değilsiniz. Düzenlemek, takviminizin "
+"organizatörün takvimiyle eşzamanlamasını bozacaktır. Düzenlemeyi gerçekten "
+"istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:302
 #, kde-format
@@ -1319,7 +1319,7 @@ msgstr "(Adsız)"
 #: publishdialog_p.cpp:45
 #, kde-format
 msgid "(EmptyEmail)"
-msgstr "(BoşE-posta)"
+msgstr "(Boş E-posta)"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
@@ -1545,11 +1545,11 @@ msgid ""
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
 msgstr[0] ""
-"Bu takvim klasörünü ve tüm alt klasörlerini silmek istediğinizden emin "
-"misiniz?"
+"Bu takvim klasörünü ve tüm alt klasörlerini silmeyi gerçekten istiyor "
+"musunuz?"
 msgstr[1] ""
-"%1 takvim klasörünü ve tüm alt klasörlerini silmek istediğinizden emin "
-"misiniz?"
+"%1 takvim klasörünü ve tüm alt klasörlerini silmeyi gerçekten istiyor "
+"musunuz?"
 
 #: standardcalendaractionmanager.cpp:81
 #, kde-format
@@ -1639,8 +1639,8 @@ msgstr "Seçili etkinlikleri takvimden sil."
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] "Bu etkinliği gerçekten silmek istiyor musunuz?"
-msgstr[1] "%1 etkinliği gerçekten silmek istiyor musunuz?"
+msgstr[0] "Bu etkinliği silmeyi gerçekten istiyor musunuz?"
+msgstr[1] "%1 etkinliği silmeyi gerçekten istiyor musunuz?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
@@ -1724,8 +1724,8 @@ msgstr ""
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] "Bu takvimi gerçekten silmek istiyor musunuz?"
-msgstr[1] "%1 takvimi gerçekten silmek istiyor musunuz?"
+msgstr[0] "Bu takvimi silmeyi gerçekten istiyor musunuz?"
+msgstr[1] "%1 takvimi silmeyi gerçekten istiyor musunuz?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
