@@ -5,14 +5,14 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedString>
+#include <QApplication>
 #include <QCommandLineParser>
-#include <QGuiApplication>
 
 #include "akonadi-calendar_version.h"
 
 int main(int argc, char **argv)
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
     app.setQuitLockEnabled(false);
 

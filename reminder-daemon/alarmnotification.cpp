@@ -31,6 +31,7 @@ AlarmNotification::~AlarmNotification()
 void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::Incidence::Ptr &incidence)
 {
     const QDateTime startTime = m_occurrence.isValid() ? m_occurrence.toLocalTime() : incidence->dtStart().toLocalTime();
+    const auto title = incidence->summary();
     const bool notificationExists = m_notification;
     if (!notificationExists) {
         m_notification = new KNotification(QStringLiteral("alarm"));
@@ -44,7 +45,7 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     }
 
     // change the content unconditionally, that will also update already existing notifications
-    m_notification->setTitle(incidence->summary());
+    m_notification->setTitle(title);
 
     auto defaultAction = m_notification->addDefaultAction(i18n("View"));
     QObject::connect(defaultAction, &KNotificationAction::activated, client, [this, client, startTime] {
@@ -120,10 +121,10 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
             client->suspend(this, 5min);
         });
 
-        auto remindIn1hAction = m_notification->addAction(i18n("Remind in 1 hour"));
-        QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client] {
+        auto remindIn1hAction = m_notification->addAction(i18n("Remind later..."));
+        QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client, title] {
             QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-            client->suspend(this, 5min);
+            client->askAndSuspend(this, title, m_text);
         });
 
         auto dismissAction = m_notification->addAction(i18nc("dismiss a reminder notification for an event", "Dismiss"));
