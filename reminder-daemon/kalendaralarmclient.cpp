@@ -6,6 +6,7 @@
 #include "alarmnotification.h"
 #include "calendarinterface.h"
 #include "logging.h"
+#include "suspenddialog.h"
 
 #include <Akonadi/IncidenceChanger>
 #include <KIO/ApplicationLauncherJob>
@@ -27,6 +28,7 @@ static const char mySuspensedGroupName[] = "Suspended";
 
 KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
     : QObject(parent)
+    , m_config(KSharedConfig::openConfig())
 {
     mCheckTimer.setSingleShot(true);
     mCheckTimer.setTimerType(Qt::VeryCoarseTimer);
@@ -47,7 +49,7 @@ KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
         });
     }
 
-    KConfigGroup alarmGroup(KSharedConfig::openConfig(), QStringLiteral("Alarms"));
+    KConfigGroup alarmGroup(m_config, QStringLiteral("Alarms"));
     mLastChecked = alarmGroup.readEntry("CalendarsLastChecked", QDateTime::currentDateTime().addDays(-9));
 
     restoreSuspendedFromConfig();
@@ -136,6 +138,20 @@ void KalendarAlarmClient::suspend(AlarmNotification *notification, std::chrono::
     storeNotification(notification);
 }
 
+void KalendarAlarmClient::askAndSuspend(AlarmNotification *notification, const QString &title, const QString &text)
+{
+    auto dialog = new SuspendDialog(m_config, title, text, nullptr);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->show();
+    dialog->activateWindow(); // don't let focus prevention get in the way
+    QObject::connect(dialog, &SuspendDialog::suspendRequested, this, [this, notification](std::chrono::seconds seconds) {
+        suspend(notification, seconds);
+    });
+    QObject::connect(dialog, &SuspendDialog::dismissRequested, this, [this, notification]() {
+        dismiss(notification);
+    });
+}
+
 void KalendarAlarmClient::showIncidence(const QString &uid, const QDateTime &occurrence, const QString &xdgActivationToken)
 {
     KConfig cfg(QStringLiteral("defaultcalendarrc"));
@@ -178,7 +194,7 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
+    KConfigGroup suspendedGroup(m_config, QLatin1String(mySuspensedGroupName));
     KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
     notificationGroup.writeEntry("UID", notificationUidData);
     notificationGroup.writeEntry("Text", notification->text());
@@ -197,7 +213,7 @@ void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
     const auto notificationUidUtf8 = notification->uid().toUtf8();
     const auto notificationUidData = notificationUidUtf8.constData();
 
-    KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1String(mySuspensedGroupName));
+    KConfigGroup suspendedGroup(m_config, QLatin1String(mySuspensedGroupName));
     KConfigGroup notificationGroup(&suspendedGroup, QLatin1String(notificationUidData));
     notificationGroup.deleteGroup();
     KSharedConfig::openConfig()->sync();
@@ -347,9 +363,9 @@ void KalendarAlarmClient::checkAlarms()
 
 void KalendarAlarmClient::saveLastCheckTime()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("Alarms"));
+    KConfigGroup cg(m_config, QStringLiteral("Alarms"));
     cg.writeEntry("CalendarsLastChecked", mLastChecked);
-    KSharedConfig::openConfig()->sync();
+    m_config->sync();
 }
 
 // based on KCalendarCore::Calendar::appendRecurringAlarms()

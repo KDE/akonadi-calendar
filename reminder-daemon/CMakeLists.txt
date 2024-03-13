@@ -14,6 +14,8 @@ target_sources(kalendarac PRIVATE
     kalendaralarmclient.h
     alarmnotification.h
     kalendaracmain.cpp
+    suspenddialog.h
+    suspenddialog.cpp
     ${kalendarac_SRCS}
     )
 

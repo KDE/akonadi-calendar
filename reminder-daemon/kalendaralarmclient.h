@@ -10,6 +10,7 @@
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/ServerManager>
+#include <KSharedConfig>
 
 #include <chrono>
 
@@ -30,6 +31,8 @@ public:
     /** Show incidence in the calendar application. */
     void showIncidence(const QString &uid, const QDateTime &occurrence, const QString &xdgActivationToken);
 
+    void askAndSuspend(AlarmNotification *notification, const QString &title, const QString &text);
+
 private:
     void deferredInit();
     void restoreSuspendedFromConfig();
@@ -49,4 +52,5 @@ private:
     QDateTime mLastChecked;
     QTimer mCheckTimer;
     QHash<QString, AlarmNotification *> m_notifications;
+    KSharedConfig::Ptr m_config;
 };
