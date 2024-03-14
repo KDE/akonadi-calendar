@@ -27,7 +27,7 @@ int main(int argc, char **argv)
         // The license this code is released under.
         KAboutLicense::GPL,
         // Copyright Statement.
-        i18n("(c) KDE Community 2021-2022"));
+        i18n("(c) KDE Community 2021-2024"));
     aboutData.addAuthor(i18nc("@info:credit", "Carl Schwan"),
                         i18nc("@info:credit", "Maintainer"),
                         QStringLiteral("carl@carlschwan.eu"),
