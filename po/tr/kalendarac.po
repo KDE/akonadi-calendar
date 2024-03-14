@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-17 02:26+0000\n"
-"PO-Revision-Date: 2024-02-17 14:06+0300\n"
+"PO-Revision-Date: 2024-03-13 19:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -131,7 +131,7 @@ msgstr "Takvim Anımsatıcı Hizmeti"
 #: kalendaracmain.cpp:30
 #, kde-format
 msgid "(c) KDE Community 2021-2022"
-msgstr "(c) KDE Topluluğu 2021-2022"
+msgstr "(c) KDE Topluluğu 2021–2022"
 
 #: kalendaracmain.cpp:31
 #, kde-format
