@@ -72,7 +72,7 @@ public:
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
     [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
-    QVariant extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QVariant extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role = Qt::DisplayRole) const override;
 
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 

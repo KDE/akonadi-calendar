@@ -37,7 +37,7 @@ public:
     ~SearchCollectionHelper() override;
 
     void setEnabled(bool enabled);
-    bool enabled() const;
+    [[nodiscard]] bool enabled() const;
 
 private:
     AKONADI_CALENDAR_NO_EXPORT void onSearchCollectionsFetched(KJob *job);
