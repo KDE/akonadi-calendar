@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
+"POT-Creation-Date: 2024-03-15 00:38+0000\n"
 "PO-Revision-Date: 2022-08-16 21:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -136,8 +136,9 @@ msgid "Calendar Reminder Service"
 msgstr "خدمة تذكير التقويم"
 
 #: kalendaracmain.cpp:30
-#, kde-format
-msgid "(c) KDE Community 2021-2022"
+#, fuzzy, kde-format
+#| msgid "(c) KDE Community 2021-2022"
+msgid "(c) KDE Community 2021-2024"
 msgstr "(c)  مجتمع كِيدِي 2021-2022"
 
 #: kalendaracmain.cpp:31

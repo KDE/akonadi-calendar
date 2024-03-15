@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:37+0000\n"
-"PO-Revision-Date: 2024-03-13 20:04\n"
+"POT-Creation-Date: 2024-03-15 00:38+0000\n"
+"PO-Revision-Date: 2024-03-14 19:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -128,8 +128,9 @@ msgid "Calendar Reminder Service"
 msgstr "日历提醒服务"
 
 #: kalendaracmain.cpp:30
-#, kde-format
-msgid "(c) KDE Community 2021-2022"
+#, fuzzy, kde-format
+#| msgid "(c) KDE Community 2021-2022"
+msgid "(c) KDE Community 2021-2024"
 msgstr "(c) KDE Community 2021-2022"
 
 #: kalendaracmain.cpp:31
