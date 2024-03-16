@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-02-14 05:12+0100\n"
+"PO-Revision-Date: 2024-03-15 04:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -130,10 +130,9 @@ msgid "Calendar Reminder Service"
 msgstr "კალენდრის შეხსენების სერვისი"
 
 #: kalendaracmain.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) KDE Community 2021-2022"
+#, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) KDE Community 2021-2022"
+msgstr "(c) KDE Community 2021-2024"
 
 #: kalendaracmain.cpp:31
 #, kde-format

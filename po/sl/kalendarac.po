@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-02-16 18:42+0100\n"
+"PO-Revision-Date: 2024-03-15 05:30+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -132,10 +132,9 @@ msgid "Calendar Reminder Service"
 msgstr "Servis opomnikov koledarja"
 
 #: kalendaracmain.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) KDE Community 2021-2022"
+#, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) Skupnost KDE 2021-2022"
+msgstr "(c) Skupnost KDE 2021-2024"
 
 #: kalendaracmain.cpp:31
 #, kde-format
