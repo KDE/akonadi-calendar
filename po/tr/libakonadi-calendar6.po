@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2024-03-08 18:47+0300\n"
+"PO-Revision-Date: 2024-03-17 02:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -848,7 +848,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"‘%1’ davetini sildiniz.\n"
+"‘%1’ davetini kaldırdınız.\n"
 "Güncenin iptal edildiğini katılımcılara e-posta ile bildirmek istiyor "
 "musunuz?"
 
@@ -1236,14 +1236,14 @@ msgstr "&Yeni"
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr "O anda seçilmiş alıcıyı siler"
+msgstr "Şu anda seçili olan alıcıyı kaldırır"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
 #, kde-format
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
-msgstr "Şu anda listeden seçilmiş alıcıyı silmek için bu düğmeyi tıklayın"
+msgstr "Listede şu anda seçili olan alıcıyı kaldırmak için bu düğmeye tıklayın"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
@@ -1387,7 +1387,7 @@ msgid ""
 "only or disabled calendar."
 msgstr ""
 "Olay veya görev takviminizden kaldırılamıyor. Ya daha önce silindi ya da "
-"sizin tarafından sahiplenilmemiş durumda. Salt-okunur veya etkin olmayan bir "
+"sizin tarafından sahiplenilmemiş durumda. Saltokunur veya etkin olmayan bir "
 "takvime de ait olabilir."
 
 #: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
