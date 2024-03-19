@@ -130,10 +130,9 @@ msgid "Calendar Reminder Service"
 msgstr "Služba upomínek kalendáře"
 
 #: kalendaracmain.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) KDE Community 2021-2022"
+#, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) Komunita KDE 2021-2022"
+msgstr ""
 
 #: kalendaracmain.cpp:31
 #, kde-format
