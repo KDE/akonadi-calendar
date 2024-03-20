@@ -982,7 +982,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
 
     QString messageText = d->mFormat.createScheduleMessage(freebusy, KCalendarCore::iTIPPublish);
 
-    if (!f.open(QIODevice::ReadWrite)) {
+    if (!f.open(QIODevice::WriteOnly)) {
         qCDebug(AKONADICALENDAR_LOG) << "acceptFreeBusy: Can't open:" << filename << "for writing";
         return false;
     }
