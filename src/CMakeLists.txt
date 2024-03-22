@@ -21,8 +21,8 @@ target_sources(KPim6AkonadiCalendar PRIVATE
     calendarutils.h
     calfilterpartstatusproxymodel.cpp
     calfilterpartstatusproxymodel.h
-    calfilterproxymodel_p.cpp
-    calfilterproxymodel_p.h
+    calfilterproxymodel.cpp
+    calfilterproxymodel.h
     collectioncalendar.cpp
     collectioncalendar.h
     etmcalendar.cpp
@@ -153,6 +153,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   CalendarClipboard
   CalendarUtils
   CalFilterPartStatusProxyModel
+  CalFilterProxyModel
   CollectionCalendar
   ETMCalendar
   FetchJobCalendar

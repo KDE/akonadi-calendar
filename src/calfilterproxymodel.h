@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "akonadi-calendar_export.h"
+
 #include <QSortFilterProxyModel>
 
 #include <memory>
@@ -20,7 +22,7 @@ namespace Akonadi
 {
 class CalFilterProxyModelPrivate;
 
-class CalFilterProxyModel : public QSortFilterProxyModel
+class AKONADI_CALENDAR_EXPORT CalFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:

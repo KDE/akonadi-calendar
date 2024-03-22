@@ -5,7 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "calfilterproxymodel_p.h"
+#include "calfilterproxymodel.h"
 #include "calendarutils.h"
 
 #include <Akonadi/EntityTreeModel>
@@ -72,4 +72,4 @@ bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &so
     return d->filter->filterIncidence(incidence);
 }
 
-#include "moc_calfilterproxymodel_p.cpp"
+#include "moc_calfilterproxymodel.cpp"

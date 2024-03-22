@@ -9,7 +9,7 @@
 #include "calendarmodel_p.h"
 #include "calendarutils.h"
 #include "calfilterpartstatusproxymodel.h"
-#include "calfilterproxymodel_p.h"
+#include "calfilterproxymodel.h"
 #include "etmcalendar_p.h"
 #include "kcolumnfilterproxymodel_p.h"
 
