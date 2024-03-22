@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:38+0000\n"
-"PO-Revision-Date: 2024-03-17 02:34+0300\n"
+"PO-Revision-Date: 2024-03-21 23:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -59,7 +59,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"‘%1’ ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi keserek bütün alt "
+"“%1” ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi keserek bütün alt "
 "yapılacak işleri bağımsız mı yapmak istersiniz, yoksa bütün alt yapılacak "
 "işler ile birlikte bu ögeyi mi kesmek istersiniz?"
 
@@ -85,7 +85,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"‘%1’ ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi mi kopyalamak "
+"“%1” ögesinin alt yapılacak işleri var. Yalnızca bu ögeyi mi kopyalamak "
 "istersiniz yoksa bütün alt yapılacak işlerle birlikte bu ögeyi mi kopyalamak "
 "istersiniz?"
 
@@ -421,7 +421,7 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p>Yazılım, uygun/meşgul listenizi ‘%1’ URL’sine yükleyemedi. Erişim "
+"<qt><p>Yazılım, uygun/meşgul listenizi “%1” URL’sine yükleyemedi. Erişim "
 "haklarıyla veya adresle ilgili bir sorun olabilir. Sistem iletisi: <em>%2</"
 "em>.</p><p>Lütfen URL’yi denetleyin veya sistem yöneticinizle bağlantıya "
 "geçin.</p></qt>"
@@ -463,7 +463,7 @@ msgstr "Uygun/Meşgul Karşıya Yükleme URL’si Yok"
 #: freebusymanager.cpp:760
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<qt>Hedef URL ‘%1’ geçersiz.</qt>"
+msgstr "<qt>Hedef URL “%1” geçersiz.</qt>"
 
 #: freebusymanager.cpp:761
 #, kde-format
@@ -705,7 +705,7 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
-"‘%1’ ögesi gönderilemiyor.\n"
+"“%1” ögesi gönderilemiyor.\n"
 "Yöntem: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
@@ -722,24 +722,24 @@ msgstr "Yayıncılık"
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr "‘%1’ ögesi yayımlanamıyor"
+msgstr "“%1” ögesi yayımlanamıyor"
 
 #: itiphandler_p.cpp:181
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr "Yönlendirme"
+msgstr "İletme"
 
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr "%1 yönlendirilemiyor"
+msgstr "'%1' ögesi iletilemiyor"
 
 #: itiphandler_p.cpp:189
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr "Yönlendirme Hatası"
+msgstr "İletme Hatası"
 
 #: itiphandlerhelper_p.cpp:35
 #, kde-format
@@ -763,7 +763,7 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"‘%1’ olayı diğer insanları içerir.\n"
+"“%1” olayı diğer insanları içerir.\n"
 "Bu katılımcılara da e-posta göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:240
@@ -772,7 +772,7 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"‘%1’ yapılacakları diğer kişileri de içeriyor.\n"
+"“%1” yapılacakları diğer kişileri de içeriyor.\n"
 "Bu katılımcılara da davet e-postası göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:245
@@ -799,7 +799,7 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
-"‘%1’ davetini değiştirdiniz.\n"
+"“%1” davetini değiştirdiniz.\n"
 "Katılımcılara bir güncelleme iletisi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
@@ -828,7 +828,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"‘%1’ davetini kaldırdınız.\n"
+"“%1” davetini kaldırdınız.\n"
 "Bu etkinliğin iptal edildiğini katılımcılara e-posta ile bildirmek istiyor "
 "musunuz?"
 
@@ -838,7 +838,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"‘%1’ davetini kaldırdınız.\n"
+"“%1” davetini kaldırdınız.\n"
 "Yapılacak ögesinin iptal edildiğini katılımcılara e-posta ile bildirmek "
 "istiyor musunuz?"
 
@@ -848,7 +848,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"‘%1’ davetini kaldırdınız.\n"
+"“%1” davetini kaldırdınız.\n"
 "Güncenin iptal edildiğini katılımcılara e-posta ile bildirmek istiyor "
 "musunuz?"
 
