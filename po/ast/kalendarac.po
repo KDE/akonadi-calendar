@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2023-10-31 20:07+0100\n"
+"PO-Revision-Date: 2024-03-18 23:09+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
-"Language-Team: \n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -129,10 +129,9 @@ msgid "Calendar Reminder Service"
 msgstr ""
 
 #: kalendaracmain.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) KDE Community 2021-2022"
+#, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) 2021-2022, La comunidá KDE"
+msgstr "(c) 2021-2024, La comunidá KDE"
 
 #: kalendaracmain.cpp:31
 #, kde-format
