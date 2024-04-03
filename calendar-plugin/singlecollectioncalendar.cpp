@@ -4,6 +4,7 @@
 */
 
 #include "singlecollectioncalendar.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "../src/calendarbase_p.h"
 
@@ -74,7 +75,7 @@ void SingleCollectionCalendar::setCollection(const Akonadi::Collection &c)
 
 bool SingleCollectionCalendar::addEvent(const KCalendarCore::Event::Ptr &event)
 {
-    if (m_collection.contentMimeTypes().contains(event->mimeType()) || m_collection.contentMimeTypes().contains(QLatin1StringView("text/calendar"))) {
+    if (m_collection.contentMimeTypes().contains(event->mimeType()) || m_collection.contentMimeTypes().contains("text/calendar"_L1)) {
         return CalendarBase::addEvent(event);
     }
     return false;
@@ -82,7 +83,7 @@ bool SingleCollectionCalendar::addEvent(const KCalendarCore::Event::Ptr &event)
 
 bool SingleCollectionCalendar::addTodo(const KCalendarCore::Todo::Ptr &todo)
 {
-    if (m_collection.contentMimeTypes().contains(todo->mimeType()) || m_collection.contentMimeTypes().contains(QLatin1StringView("text/calendar"))) {
+    if (m_collection.contentMimeTypes().contains(todo->mimeType()) || m_collection.contentMimeTypes().contains("text/calendar"_L1)) {
         return CalendarBase::addTodo(todo);
     }
     return false;
@@ -90,7 +91,7 @@ bool SingleCollectionCalendar::addTodo(const KCalendarCore::Todo::Ptr &todo)
 
 bool SingleCollectionCalendar::addJournal(const KCalendarCore::Journal::Ptr &journal)
 {
-    if (m_collection.contentMimeTypes().contains(journal->mimeType()) || m_collection.contentMimeTypes().contains(QLatin1StringView("text/calendar"))) {
+    if (m_collection.contentMimeTypes().contains(journal->mimeType()) || m_collection.contentMimeTypes().contains("text/calendar"_L1)) {
         return CalendarBase::addJournal(journal);
     }
     return false;

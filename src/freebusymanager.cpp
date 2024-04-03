@@ -6,6 +6,8 @@
 */
 
 #include "freebusymanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarsettings.h"
 #include "freebusydownloadjob_p.h"
 #include "freebusymanager_p.h"
@@ -529,7 +531,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
     QStringList providers;
     const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
     for (const Akonadi::AgentInstance &agent : agents) {
-        if (agent.type().capabilities().contains(QLatin1StringView("FreeBusyProvider"))) {
+        if (agent.type().capabilities().contains("FreeBusyProvider"_L1)) {
             providers << agent.identifier();
         }
     }
@@ -692,7 +694,7 @@ Q_GLOBAL_STATIC(FreeBusyManagerStatic, sManagerInstance)
 FreeBusyManager::FreeBusyManager()
     : d_ptr(new FreeBusyManagerPrivate(this))
 {
-    setObjectName(QLatin1StringView("FreeBusyManager"));
+    setObjectName("FreeBusyManager"_L1);
     connect(CalendarSettings::self(), SIGNAL(configChanged()), SLOT(checkFreeBusyUrl()));
 }
 
@@ -803,7 +805,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         if (CalendarSettings::self()->publishKolab()) {
             // we use Kolab
             QString server;
-            if (CalendarSettings::self()->publishKolabServer() == QLatin1StringView("%SERVER%")
+            if (CalendarSettings::self()->publishKolabServer() == "%SERVER%"_L1
                 || CalendarSettings::self()->publishKolabServer().isEmpty()) {
                 server = emailHost;
             } else {

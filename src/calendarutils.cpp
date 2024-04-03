@@ -9,6 +9,8 @@
 */
 
 #include "calendarutils.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "etmcalendar.h"
 
 #include <Akonadi/AgentManager>
@@ -86,7 +88,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
     const QString resourceName = fullCollection.resource();
 
     // Kolab Groupware
-    if (resourceName.contains(QLatin1StringView("kolab"))) {
+    if (resourceName.contains("kolab"_L1)) {
         QString typeStr = cName; // contents type: "Calendar", "Tasks", etc
         QString ownerStr; // folder owner: "fred", "ethel", etc
         QString nameStr; // folder name: "Public", "Test", etc
@@ -95,23 +97,22 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
             while (p != Akonadi::Collection::root()) {
                 Akonadi::Collection tCol = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()});
                 const QString tName = tCol.name();
-                if (tName.startsWith(QLatin1StringView("shared.cal"), Qt::CaseInsensitive)) {
+                if (tName.startsWith("shared.cal"_L1, Qt::CaseInsensitive)) {
                     ownerStr = QStringLiteral("Shared");
                     nameStr = cName;
                     typeStr = i18n("Calendar");
                     break;
-                } else if (tName.startsWith(QLatin1StringView("shared.tasks"), Qt::CaseInsensitive)
-                           || tName.startsWith(QLatin1StringView("shared.todo"), Qt::CaseInsensitive)) {
+                } else if (tName.startsWith("shared.tasks"_L1, Qt::CaseInsensitive) || tName.startsWith("shared.todo"_L1, Qt::CaseInsensitive)) {
                     ownerStr = QStringLiteral("Shared");
                     nameStr = cName;
                     typeStr = i18n("Tasks");
                     break;
-                } else if (tName.startsWith(QLatin1StringView("shared.journal"), Qt::CaseInsensitive)) {
+                } else if (tName.startsWith("shared.journal"_L1, Qt::CaseInsensitive)) {
                     ownerStr = QStringLiteral("Shared");
                     nameStr = cName;
                     typeStr = i18n("Journal");
                     break;
-                } else if (tName.startsWith(QLatin1StringView("shared.notes"), Qt::CaseInsensitive)) {
+                } else if (tName.startsWith("shared.notes"_L1, Qt::CaseInsensitive)) {
                     ownerStr = QStringLiteral("Shared");
                     nameStr = cName;
                     typeStr = i18n("Notes");
@@ -128,11 +129,10 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
         }
 
         if (!ownerStr.isEmpty()) {
-            if (!ownerStr.compare(QLatin1StringView("INBOX"), Qt::CaseInsensitive)) {
+            if (!ownerStr.compare("INBOX"_L1, Qt::CaseInsensitive)) {
                 return i18nc("%1 is folder contents", "My Kolab %1", typeStr);
-            } else if (!ownerStr.compare(QLatin1StringView("SHARED"), Qt::CaseInsensitive)
-                       || !ownerStr.compare(QLatin1StringView("CALENDAR"), Qt::CaseInsensitive)
-                       || !ownerStr.compare(QLatin1StringView("RESOURCES"), Qt::CaseInsensitive)) {
+            } else if (!ownerStr.compare("SHARED"_L1, Qt::CaseInsensitive) || !ownerStr.compare("CALENDAR"_L1, Qt::CaseInsensitive)
+                       || !ownerStr.compare("RESOURCES"_L1, Qt::CaseInsensitive)) {
                 return i18nc("%1 is folder name, %2 is folder contents", "Shared Kolab %1 %2", nameStr, typeStr);
             } else {
                 if (nameStr.isEmpty()) {
@@ -147,13 +147,13 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
     } // end kolab section
 
     // Dav Groupware
-    if (resourceName.contains(QLatin1StringView("davgroupware"))) {
+    if (resourceName.contains("davgroupware"_L1)) {
         const QString resourceDisplayName = Akonadi::AgentManager::self()->instance(resourceName).name();
         return i18nc("%1 is the folder name", "%1 in %2", fullCollection.displayName(), resourceDisplayName);
     } // end caldav section
 
     // Google
-    if (resourceName.contains(QLatin1StringView("google"))) {
+    if (resourceName.contains("google"_L1)) {
         QString ownerStr; // folder owner: "user@gmail.com"
         if (model) {
             Akonadi::Collection p = c.parentCollection();
@@ -164,13 +164,13 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
 
         QString typeStr;
         const QString mimeStr = c.contentMimeTypes().join(QLatin1Char(','));
-        if (mimeStr.contains(QLatin1StringView(".event"))) {
+        if (mimeStr.contains(".event"_L1)) {
             typeStr = i18n("Calendar");
-        } else if (mimeStr.contains(QLatin1StringView(".todo"))) {
+        } else if (mimeStr.contains(".todo"_L1)) {
             typeStr = i18n("Tasks");
-        } else if (mimeStr.contains(QLatin1StringView(".journal"))) {
+        } else if (mimeStr.contains(".journal"_L1)) {
             typeStr = i18n("Journal");
-        } else if (mimeStr.contains(QLatin1StringView(".note"))) {
+        } else if (mimeStr.contains(".note"_L1)) {
             typeStr = i18n("Notes");
         } else {
             typeStr = mimeStr;
@@ -195,7 +195,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
     const QString dName = fullCollection.displayName();
 
     if (!dName.isEmpty()) {
-        return fullCollection.name().startsWith(QLatin1StringView("akonadi_")) ? i18n("My %1", dName) : dName;
+        return fullCollection.name().startsWith("akonadi_"_L1) ? i18n("My %1", dName) : dName;
     } else if (!fullCollection.name().isEmpty()) {
         return fullCollection.name();
     } else {

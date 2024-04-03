@@ -11,6 +11,8 @@
 #pragma once
 
 #include "history.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidencechanger.h"
 #include "itiphandlerhelper_p.h"
 
@@ -190,8 +192,7 @@ public:
                 // which isn't very specific
                 if (m_changes[i]->completed
                     && (m_changes[i]->resultCode == IncidenceChanger::ResultCodeSuccess
-                        || (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError
-                            && m_changes[i]->errorString == QLatin1StringView("Unknown error.")))) {
+                        || (m_changes[i]->resultCode == IncidenceChanger::ResultCodeJobError && m_changes[i]->errorString == "Unknown error."_L1))) {
                     m_changes[i]->resultCode = IncidenceChanger::ResultCodeRolledback;
                 }
             }

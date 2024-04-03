@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "kalendaralarmclient.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../src/calendarsettings.h"
 #include "alarmnotification.h"
 #include "calendarinterface.h"
@@ -61,7 +63,7 @@ void KalendarAlarmClient::setupAkonadi()
 {
     const QStringList mimeTypes{Event::eventMimeType(), Todo::todoMimeType()};
     mCalendar = Akonadi::ETMCalendar::Ptr(new Akonadi::ETMCalendar(mimeTypes));
-    mCalendar->setObjectName(QLatin1StringView("KalendarAC's calendar"));
+    mCalendar->setObjectName("KalendarAC's calendar"_L1);
     Akonadi::IncidenceChanger *changer = mCalendar->incidenceChanger();
     changer->setShowDialogsOnError(false);
     mETM = mCalendar->entityTreeModel();
@@ -171,8 +173,8 @@ void KalendarAlarmClient::showIncidence(const QString &uid, const QDateTime &occ
     job->setStartupId(xdgActivationToken.toUtf8());
     connect(job, &KJob::finished, this, [appId, kontactPlugin, uid, occurrence, xdgActivationToken]() {
         // if running inside Kontact, select the right plugin
-        if (appId == QLatin1StringView("org.kde.kontact")) {
-            const QString objectName = QLatin1Char('/') + kontactPlugin + QLatin1StringView("_PimApplication");
+        if (appId == "org.kde.kontact"_L1) {
+            const QString objectName = QLatin1Char('/') + kontactPlugin + "_PimApplication"_L1;
             QDBusInterface iface(appId, objectName, QStringLiteral("org.kde.PIMUniqueApplication"), QDBusConnection::sessionBus());
             if (iface.isValid()) {
                 QStringList arguments({kontactPlugin});

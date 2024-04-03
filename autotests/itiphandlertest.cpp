@@ -5,6 +5,8 @@
 */
 
 #include "itiphandlertest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "fetchjobcalendar.h"
 #include "helper.h"
 #include "mailclient_p.h"
@@ -589,7 +591,7 @@ void ITIPHandlerTest::createITIPHandler()
 
 QString ITIPHandlerTest::icalData(const QString &data_filename)
 {
-    QString absolutePath = QFINDTESTDATA(QLatin1StringView("itip_data/") + data_filename);
+    QString absolutePath = QFINDTESTDATA("itip_data/"_L1 + data_filename);
     return QString::fromLatin1(readFile(absolutePath));
 }
 

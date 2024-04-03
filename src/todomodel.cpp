@@ -6,6 +6,7 @@
 */
 
 #include "todomodel.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KCalendarCore/Attachment>
 #include <KCalendarCore/Event>
@@ -112,7 +113,7 @@ TodoModel::TodoModel(QObject *parent)
     : KExtraColumnsProxyModel(parent)
     , d(new TodoModelPrivate(this))
 {
-    setObjectName(QLatin1StringView("TodoModel"));
+    setObjectName("TodoModel"_L1);
 }
 
 TodoModel::~TodoModel() = default;
@@ -604,7 +605,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
 
                 KCalendarCore::Todo::Ptr oldTodo = KCalendarCore::Todo::Ptr(destTodo->clone());
 
-                if (text.startsWith(QLatin1StringView("file:"))) {
+                if (text.startsWith("file:"_L1)) {
                     destTodo->addAttachment(KCalendarCore::Attachment(text));
                 } else {
                     QStringList emails = KEmailAddress::splitAddressList(text);

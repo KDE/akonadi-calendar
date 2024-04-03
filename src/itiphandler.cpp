@@ -29,7 +29,7 @@
 #include <KMessageBox>
 
 using namespace Akonadi;
-
+using namespace Qt::Literals::StringLiterals;
 // async emittion
 static void emitiTipMessageProcessed(ITIPHandler *handler, ITIPHandler::Result resultCode, const QString &errorString)
 {
@@ -143,20 +143,19 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         return;
     }
 
-    if (action.startsWith(QLatin1StringView("accepted")) || action.startsWith(QLatin1StringView("tentative"))
-        || action.startsWith(QLatin1StringView("delegated")) || action.startsWith(QLatin1StringView("counter"))) {
+    if (action.startsWith("accepted"_L1) || action.startsWith("tentative"_L1) || action.startsWith("delegated"_L1) || action.startsWith("counter"_L1)) {
         // Find myself and set my status. This can't be done in the scheduler,
         // since this does not know the choice I made in the KMail bpf
         KCalendarCore::Attendee::List attendees = d->m_incidence->attendees();
         for (auto &attendee : attendees) {
             if (attendee.email() == receiver) {
-                if (action.startsWith(QLatin1StringView("accepted"))) {
+                if (action.startsWith("accepted"_L1)) {
                     attendee.setStatus(KCalendarCore::Attendee::Accepted);
-                } else if (action.startsWith(QLatin1StringView("tentative"))) {
+                } else if (action.startsWith("tentative"_L1)) {
                     attendee.setStatus(KCalendarCore::Attendee::Tentative);
-                } else if (CalendarSettings::self()->outlookCompatCounterProposals() && action.startsWith(QLatin1StringView("counter"))) {
+                } else if (CalendarSettings::self()->outlookCompatCounterProposals() && action.startsWith("counter"_L1)) {
                     attendee.setStatus(KCalendarCore::Attendee::Tentative);
-                } else if (action.startsWith(QLatin1StringView("delegated"))) {
+                } else if (action.startsWith("delegated"_L1)) {
                     attendee.setStatus(KCalendarCore::Attendee::Delegated);
                 }
                 break;
@@ -164,12 +163,12 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         }
         d->m_incidence->setAttendees(attendees);
 
-        if (CalendarSettings::self()->outlookCompatCounterProposals() || !action.startsWith(QLatin1StringView("counter"))) {
+        if (CalendarSettings::self()->outlookCompatCounterProposals() || !action.startsWith("counter"_L1)) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, receiver);
             return; // signal emitted in onSchedulerFinished().
         }
         // TODO: what happens here? we must emit a signal
-    } else if (action.startsWith(QLatin1StringView("cancel"))) {
+    } else if (action.startsWith("cancel"_L1)) {
         // Delete the old incidence, if one is present
         KCalendarCore::Incidence::Ptr existingIncidence = d->calendar()->incidenceFromSchedulingID(d->m_incidence->uid());
         if (existingIncidence) {
@@ -193,14 +192,14 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
 
             emitiTipMessageProcessed(this, ResultSuccess, QString());
         }
-    } else if (action.startsWith(QLatin1StringView("reply"))) {
+    } else if (action.startsWith("reply"_L1)) {
         if (d->m_method != KCalendarCore::iTIPCounter) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, QString());
         } else {
             d->m_scheduler->acceptCounterProposal(d->m_incidence, d->calendar());
         }
         return; // signal emitted in onSchedulerFinished().
-    } else if (action.startsWith(QLatin1StringView("request"))) {
+    } else if (action.startsWith("request"_L1)) {
         d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), d->m_method, status, receiver);
         return;
     } else {
@@ -210,7 +209,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         emitiTipMessageProcessed(this, ResultError, i18n("Invalid action: %1", action));
     }
 
-    if (action.startsWith(QLatin1StringView("counter"))) {
+    if (action.startsWith("counter"_L1)) {
         if (d->m_uiDelegate) {
             Akonadi::Item item;
             item.setMimeType(d->m_incidence->mimeType());

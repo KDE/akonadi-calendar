@@ -9,6 +9,8 @@
 */
 
 #include "itiphandlerhelper_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarsettings.h"
 #include "utils_p.h"
 
@@ -161,7 +163,7 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sentInvitation(int messageBoxRe
 bool ITIPHandlerHelper::weAreOrganizerOf(const KCalendarCore::Incidence::Ptr &incidence)
 {
     const QString email = incidence->organizer().email();
-    return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty() || email == QLatin1StringView("invalid@email.address");
+    return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty() || email == "invalid@email.address"_L1;
 }
 
 bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalendarCore::Incidence::Ptr &incidence)

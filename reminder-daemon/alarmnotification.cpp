@@ -13,7 +13,7 @@
 #include <QUrlQuery>
 
 using namespace std::chrono_literals;
-
+using namespace Qt::Literals::StringLiterals;
 AlarmNotification::AlarmNotification(const QString &uid)
     : m_uid{uid}
 {
@@ -181,7 +181,7 @@ void AlarmNotification::setRemindAt(const QDateTime &remindAtDt)
 
 bool AlarmNotification::hasValidContextAction() const
 {
-    return m_contextAction.isValid() && (m_contextAction.scheme() == QLatin1StringView("https") || m_contextAction.scheme() == QLatin1StringView("geo"));
+    return m_contextAction.isValid() && (m_contextAction.scheme() == "https"_L1 || m_contextAction.scheme() == "geo"_L1);
 }
 
 QString AlarmNotification::determineContextAction(const KCalendarCore::Incidence::Ptr &incidence)

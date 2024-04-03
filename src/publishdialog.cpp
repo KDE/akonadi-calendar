@@ -10,6 +10,7 @@
 // TODO: the list in PublishDialog::addresses()
 
 #include "publishdialog_p.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KCalendarCore/Person>
 
@@ -33,7 +34,7 @@ PublishDialog::PublishDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Select Addresses"));
     auto layout = new QVBoxLayout(this);
     auto widget = new QWidget(this);
-    widget->setObjectName(QLatin1StringView("PublishFreeBusy"));
+    widget->setObjectName("PublishFreeBusy"_L1);
     d->mUI.setupUi(widget);
     layout->addWidget(widget);
     d->mUI.mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);

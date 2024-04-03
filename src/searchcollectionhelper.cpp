@@ -7,6 +7,8 @@
 */
 
 #include "searchcollectionhelper.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadicalendar_debug.h"
 
 #include <Akonadi/CollectionDeleteJob>
@@ -100,9 +102,9 @@ void SearchCollectionHelper::onSearchCollectionsFetched(KJob *job)
         const Akonadi::Collection::List lstCols = fetchJob->collections();
         for (const Akonadi::Collection &col : lstCols) {
             const QString collectionName = col.name();
-            if (collectionName == QLatin1StringView("OpenInvitations")) {
+            if (collectionName == "OpenInvitations"_L1) {
                 d->openInvitationCollection = col;
-            } else if (collectionName == QLatin1StringView("DeclinedInvitations")) {
+            } else if (collectionName == "DeclinedInvitations"_L1) {
                 d->declineInvitationCollection = col;
             }
         }
@@ -196,10 +198,10 @@ void SearchCollectionHelper::createSearchJobFinished(KJob *job)
     qCDebug(AKONADICALENDAR_LOG) << "Created search folder successfully " << searchCollection.name();
 
     const QString searchCollectionName = searchCollection.name();
-    if (searchCollectionName == QLatin1StringView("OpenInvitations")) {
+    if (searchCollectionName == "OpenInvitations"_L1) {
         d->openInvitationCollection = searchCollection;
         updateOpenInvitation();
-    } else if (searchCollectionName == QLatin1StringView("DeclinedInvitations")) {
+    } else if (searchCollectionName == "DeclinedInvitations"_L1) {
         d->declineInvitationCollection = searchCollection;
         updateDeclinedInvitation();
     }
