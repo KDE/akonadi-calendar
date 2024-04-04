@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-20 00:38+0000\n"
+"POT-Creation-Date: 2024-04-04 00:38+0000\n"
 "PO-Revision-Date: 2024-02-20 10:17+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -300,28 +300,28 @@ msgstr ""
 "naar vrij/bezet-gegevens van jan@mijndomein.com op de server www.uwdomein."
 "com mislukken."
 
-#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
-#: todomodel.cpp:476
+#: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
+#: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "Agenda"
 
-#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:170
+#: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
 msgstr "Taken"
 
-#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:172
+#: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
 msgstr "Journaal"
 
-#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:174
+#: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
 msgstr "Notities"
 
-#: calendarutils.cpp:132
+#: calendarutils.cpp:133
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
@@ -386,7 +386,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: freebusymanager.cpp:378
+#: freebusymanager.cpp:380
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -395,18 +395,18 @@ msgstr ""
 "Kon vrij/bezet-informatie niet downloaden van: %1\n"
 "Reden: %2"
 
-#: freebusymanager.cpp:379 freebusymanager.cpp:402
+#: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Fout bij ophalen vrij/bezet-informatie"
 
-#: freebusymanager.cpp:401
+#: freebusymanager.cpp:403
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr "Ontleden van vrij/bezet-informatie, opgehaald van '%1' is mislukt"
 
-#: freebusymanager.cpp:416
+#: freebusymanager.cpp:418
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -419,23 +419,23 @@ msgstr ""
 "adres op. Het systeem antwoordde: <em>%2</em>.</p><p>Controleer het URL-"
 "adres, of neem contact op met uw systeembeheerder.</p></qt>"
 
-#: freebusymanager.cpp:617
+#: freebusymanager.cpp:619
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "De vrij/bezetinformatie is met succes verzonden."
 
-#: freebusymanager.cpp:618 itiphandler_p.cpp:136
+#: freebusymanager.cpp:620 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Vrij/bezet-informatie wordt verzonden"
 
-#: freebusymanager.cpp:621
+#: freebusymanager.cpp:623
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Kon de informatie vrij/bezet niet publiceren: %1"
 
-#: freebusymanager.cpp:745
+#: freebusymanager.cpp:747
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -447,18 +447,18 @@ msgstr ""
 "\"Vrij/bezet\". </p><p>Neem contact op met uw systeembeheerder voor het "
 "juiste URL-adres en de accountgegevens.</p></qt>"
 
-#: freebusymanager.cpp:750
+#: freebusymanager.cpp:752
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Geen URL-adres voor sturen van vrij/bezetinformatie"
 
-#: freebusymanager.cpp:760
+#: freebusymanager.cpp:762
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Het opgegeven URL-adres %1 is ongeldig.</qt>"
 
-#: freebusymanager.cpp:761
+#: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -633,22 +633,22 @@ msgstr ""
 msgid "Invalid incidence"
 msgstr "Ongeldige gebeurtenis"
 
-#: itiphandler.cpp:210
+#: itiphandler.cpp:209
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Ongeldige actie: %1"
 
-#: itiphandler.cpp:233
+#: itiphandler.cpp:232
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Fout bij het verzenden van tegenvoorstel"
 
-#: itiphandler.cpp:240
+#: itiphandler.cpp:239
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Kon de bewerker niet starten voor het bewerken van het tegenvoorstel"
 
-#: itiphandler.cpp:271
+#: itiphandler.cpp:270
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -656,7 +656,7 @@ msgstr ""
 "Het item '%1' heeft geen gebruikers. Er zal daarom geen groupware-bericht "
 "worden verzonden."
 
-#: itiphandler.cpp:274
+#: itiphandler.cpp:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -675,7 +675,7 @@ msgid "Do Not Send"
 msgstr "Niet verzenden"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:508
+#: itiphandlerhelper_p.cpp:510
 #, kde-format
 msgid "Error: %1"
 msgstr "Fout: %1"
@@ -738,23 +738,23 @@ msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Fout bij doorsturen"
 
-#: itiphandlerhelper_p.cpp:35
+#: itiphandlerhelper_p.cpp:37
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
 msgstr "Voorgestelde nieuwe vergadertijd: %1 - %2"
 
-#: itiphandlerhelper_p.cpp:67
+#: itiphandlerhelper_p.cpp:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Groepsplanning e-mail"
 
-#: itiphandlerhelper_p.cpp:144
+#: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Geen samenvatting opgegeven</placeholder>"
 
-#: itiphandlerhelper_p.cpp:235
+#: itiphandlerhelper_p.cpp:237
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -763,7 +763,7 @@ msgstr ""
 "Aan activiteit \"%1\" nemen nog andere personen deel.\n"
 "Wilt u de deelnemers per e-mail uitnodigen?"
 
-#: itiphandlerhelper_p.cpp:240
+#: itiphandlerhelper_p.cpp:242
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -772,7 +772,7 @@ msgstr ""
 "Aan taak \"%1\" nemen nog andere personen deel.\n"
 "Wilt u de deelnemers per e-mail uitnodigen?"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:247
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -781,7 +781,7 @@ msgstr ""
 "Aan deze gebeurtenis doen andere mensen mee. Moet er een e-mail verstuurd "
 "worden naar de deelnemers?"
 
-#: itiphandlerhelper_p.cpp:269
+#: itiphandlerhelper_p.cpp:271
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -791,7 +791,7 @@ msgstr ""
 "agenda niet meer overeenstemmen met die van de organisator. Wilt u die "
 "werkelijk bewerken?"
 
-#: itiphandlerhelper_p.cpp:302
+#: itiphandlerhelper_p.cpp:304
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -800,18 +800,18 @@ msgstr ""
 "De uitnodiging \"%1\" is door u gewijzigd.\n"
 "Wilt u de deelnemers een e-mailbericht sturen?"
 
-#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
-#: itiphandlerhelper_p.cpp:344
+#: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
+#: itiphandlerhelper_p.cpp:346
 #, kde-format
 msgid "Send Update"
 msgstr "Update verzenden"
 
-#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Wilt u een statusupdate naar de organisator van deze taak verzenden?"
 
-#: itiphandlerhelper_p.cpp:337
+#: itiphandlerhelper_p.cpp:339
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -820,7 +820,7 @@ msgstr ""
 "Uw status als deelnemer van deze activiteit is veranderd. Wilt u een "
 "statusupdate naar de organisator van deze activiteit sturen?"
 
-#: itiphandlerhelper_p.cpp:380
+#: itiphandlerhelper_p.cpp:382
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -829,7 +829,7 @@ msgstr ""
 "De uitnodiging \"%1\" is door u verplaatst.\n"
 "Wilt u de deelnemers berichten dat de activiteit niet doorgaat?"
 
-#: itiphandlerhelper_p.cpp:385
+#: itiphandlerhelper_p.cpp:387
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -838,7 +838,7 @@ msgstr ""
 "De uitnodiging \"%1\" is door u verplaatst.\n"
 "Wilt u de deelnemers berichten dat de taak niet doorgaat?"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:392
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -847,19 +847,19 @@ msgstr ""
 "De uitnodiging \"%1\" is door u verwijderd.\n"
 "Wilt u de deelnemers berichten dat het journaal niet doorgaat?"
 
-#: itiphandlerhelper_p.cpp:412
+#: itiphandlerhelper_p.cpp:414
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Wilt u een statusupdate naar de organisator van dit journaal verzenden?"
 
-#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
+#: itiphandlerhelper_p.cpp:419 itiphandlerhelper_p.cpp:440
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Update verzenden"
 
-#: itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:434
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -869,17 +869,17 @@ msgstr ""
 "een nader antwoord sturen aan de organisator waarin u de uitnodiging niet "
 "aanvaardt?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:124
+#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Tegenvoorstel: %1"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Verzenden groepsplanning e-mail mislukt."
 
-#: itiphandlerhelper_p.cpp:501
+#: itiphandlerhelper_p.cpp:503
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1137,18 +1137,18 @@ msgstr "Waarschuwing voor niet-versleuteld bericht"
 msgid "Error sending e-mail: "
 msgstr "Fout bij het verzenden van e-mail: "
 
-#: publishdialog.cpp:33
+#: publishdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
 msgstr "Adressen selecteren"
 
-#: publishdialog.cpp:60
+#: publishdialog.cpp:61
 #, kde-format
 msgid "Send email to these recipients"
 msgstr "E-mail naar deze ontvangers sturen"
 
-#: publishdialog.cpp:62
+#: publishdialog.cpp:63
 #, kde-format
 msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
@@ -1157,12 +1157,12 @@ msgstr ""
 "Door op de knop <b>OK</b> te klikken wordt een e-mail verstuurd naar de door "
 "u ingevoerde ontvangers."
 
-#: publishdialog.cpp:67
+#: publishdialog.cpp:68
 #, kde-format
 msgid "Cancel recipient selection and the email"
 msgstr "Selectie van ontvangers en de e-mail annuleren"
 
-#: publishdialog.cpp:69
+#: publishdialog.cpp:70
 #, kde-format
 msgid ""
 "Clicking the <b>Cancel</b> button will cause the email operation to be "
@@ -1171,13 +1171,13 @@ msgstr ""
 "Door op de knop <b>OK</b> te klikken wordt het versturen van de e-mail "
 "gestopt."
 
-#: publishdialog.cpp:74
+#: publishdialog.cpp:75
 #, kde-format
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr "Klik op de knop <b>Help</b> voor meer informatie over groepsplanning."
 
-#: publishdialog.cpp:122
+#: publishdialog.cpp:123
 #, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
@@ -1188,7 +1188,7 @@ msgstr ""
 "met ontvangers.\n"
 "%1"
 
-#: publishdialog.cpp:125
+#: publishdialog.cpp:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
@@ -1479,13 +1479,13 @@ msgstr "Geen cache voor vrij/bezet"
 msgid "Error saving freebusy object"
 msgstr "Fout bij opslaan van vrij/bezet-object"
 
-#: searchcollectionhelper.cpp:177
+#: searchcollectionhelper.cpp:179
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Afgeslagen uitnodigingen"
 
-#: searchcollectionhelper.cpp:185
+#: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
@@ -1939,73 +1939,73 @@ msgstr "B&ewerken..."
 msgid "Edit the selected incidence."
 msgstr "Het geselecteerde voorval bewerken."
 
-#: todomodel.cpp:158 todomodel.cpp:193
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Uitzondering"
 
-#: todomodel.cpp:160 todomodel.cpp:195
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Ja"
 
-#: todomodel.cpp:163 todomodel.cpp:198
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Nee"
 
-#: todomodel.cpp:177 todomodel.cpp:214
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:458
+#: todomodel.cpp:459
 #, kde-format
 msgid "Summary"
 msgstr "Samenvatting"
 
-#: todomodel.cpp:460
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
 msgstr "Herhalingen"
 
-#: todomodel.cpp:462
+#: todomodel.cpp:463
 #, kde-format
 msgid "Priority"
 msgstr "Prioriteit"
 
-#: todomodel.cpp:464
+#: todomodel.cpp:465
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Voltooid"
 
-#: todomodel.cpp:466
+#: todomodel.cpp:467
 #, kde-format
 msgid "Start Date"
 msgstr "Begindatum"
 
-#: todomodel.cpp:468
+#: todomodel.cpp:469
 #, kde-format
 msgid "Due Date"
 msgstr "Einddatum"
 
-#: todomodel.cpp:470
+#: todomodel.cpp:471
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Voltooid"
 
-#: todomodel.cpp:472
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
 msgstr "Tags"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
 msgstr "Beschrijving"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-20 00:38+0000\n"
+"POT-Creation-Date: 2024-04-04 00:38+0000\n"
 "PO-Revision-Date: 2024-02-20 11:06+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -303,28 +303,28 @@ msgstr ""
 "datos de libere/occupate de pusillo@midominio.com sur le servitor www."
 "tudominio.com fallera."
 
-#: calendarutils.cpp:101 calendarutils.cpp:119 calendarutils.cpp:168
-#: todomodel.cpp:476
+#: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
+#: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
 msgstr "Calendario"
 
-#: calendarutils.cpp:107 calendarutils.cpp:119 calendarutils.cpp:170
+#: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
 msgstr "Cargas"
 
-#: calendarutils.cpp:112 calendarutils.cpp:119 calendarutils.cpp:172
+#: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
 msgstr "Jornal"
 
-#: calendarutils.cpp:117 calendarutils.cpp:119 calendarutils.cpp:174
+#: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
 msgstr "Notas"
 
-#: calendarutils.cpp:132
+#: calendarutils.cpp:133
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
@@ -389,7 +389,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Incognite"
 
-#: freebusymanager.cpp:378
+#: freebusymanager.cpp:380
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -398,20 +398,20 @@ msgstr ""
 "Il falleva discargar datos de libere/occupate ex: %1\n"
 "Motivation: %2"
 
-#: freebusymanager.cpp:379 freebusymanager.cpp:402
+#: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Error de recuperation de libere/occupate"
 
-#: freebusymanager.cpp:401
+#: freebusymanager.cpp:403
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
 "Il falleva analysar information de libere/occupate que esseva recuperate ex: "
 "%1"
 
-#: freebusymanager.cpp:416
+#: freebusymanager.cpp:418
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -424,23 +424,23 @@ msgstr ""
 "specificate un URL incorrecte.  Le systema diceva: <em>%2</em>.</p><p>Pro "
 "favor, verifica le URL o continge tu gerente de systema.</p></qt>"
 
-#: freebusymanager.cpp:617
+#: freebusymanager.cpp:619
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Le information de libere/occupate esseva inviate successosemente."
 
-#: freebusymanager.cpp:618 itiphandler_p.cpp:136
+#: freebusymanager.cpp:620 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Inviante Libere/Occupate"
 
-#: freebusymanager.cpp:621
+#: freebusymanager.cpp:623
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Incapace de publicar datos de libere/occupate: %1"
 
-#: freebusymanager.cpp:745
+#: freebusymanager.cpp:747
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -452,18 +452,18 @@ msgstr ""
 "in le pagina de \"Libere/Occupate\".</p><p>Continge tu gerente de systema "
 "pro le exacte URL e detalios de conto.</p></qt>"
 
-#: freebusymanager.cpp:750
+#: freebusymanager.cpp:752
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Necun URL de incargar Libere/Occupate"
 
-#: freebusymanager.cpp:760
+#: freebusymanager.cpp:762
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Le URL objectivo '%1' fornite es invalide.</qt> "
 
-#: freebusymanager.cpp:761
+#: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -641,22 +641,22 @@ msgstr "Error durante que on processava un invitation o un actualisation."
 msgid "Invalid incidence"
 msgstr "Incidentia invalide"
 
-#: itiphandler.cpp:210
+#: itiphandler.cpp:209
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Action invalide: %1"
 
-#: itiphandler.cpp:233
+#: itiphandler.cpp:232
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Error quando on inviava contra proposition."
 
-#: itiphandler.cpp:240
+#: itiphandler.cpp:239
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Il non pote initiar editor pro modificar contra proposition"
 
-#: itiphandler.cpp:271
+#: itiphandler.cpp:270
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -664,7 +664,7 @@ msgstr ""
 "Le elemento \"%1\" non ha participantes. Ergo necun message de groupware "
 "essera inviate."
 
-#: itiphandler.cpp:274
+#: itiphandler.cpp:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -683,7 +683,7 @@ msgid "Do Not Send"
 msgstr "Non invia"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
-#: itiphandlerhelper_p.cpp:508
+#: itiphandlerhelper_p.cpp:510
 #, kde-format
 msgid "Error: %1"
 msgstr "Error: %1"
@@ -746,23 +746,23 @@ msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Error de Reexpedir"
 
-#: itiphandlerhelper_p.cpp:35
+#: itiphandlerhelper_p.cpp:37
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
 msgstr "Nove tempore de incontro proponite: %1 - %2"
 
-#: itiphandlerhelper_p.cpp:67
+#: itiphandlerhelper_p.cpp:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-Posta de e-gruppo planificate"
 
-#: itiphandlerhelper_p.cpp:144
+#: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Nulle summario date</placeholder>"
 
-#: itiphandlerhelper_p.cpp:235
+#: itiphandlerhelper_p.cpp:237
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -771,7 +771,7 @@ msgstr ""
 "Le evento \"%1\" include altere personas.\n"
 "Tu vole inviar per e-posta le invitation al participantes?"
 
-#: itiphandlerhelper_p.cpp:240
+#: itiphandlerhelper_p.cpp:242
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -780,7 +780,7 @@ msgstr ""
 "Le cosa de facer \"%1\" include altere personas.\n"
 "Tu vole inviar per e-posta le invitation al participantes?"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:247
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -789,7 +789,7 @@ msgstr ""
 "iste incidentia include altere personas. On debera inviar un e-posta al "
 "participantes?"
 
-#: itiphandlerhelper_p.cpp:269
+#: itiphandlerhelper_p.cpp:271
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -799,7 +799,7 @@ msgstr ""
 "essera foras de synchronisation con le calendario de organisator. Tu "
 "vermente vole modificar lo?"
 
-#: itiphandlerhelper_p.cpp:302
+#: itiphandlerhelper_p.cpp:304
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -808,18 +808,18 @@ msgstr ""
 "Tu modificava le invitation \"%1\".\n"
 "Tu vole inviar per e-posta a participantes un message de actualisation?"
 
-#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
-#: itiphandlerhelper_p.cpp:344
+#: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
+#: itiphandlerhelper_p.cpp:346
 #, kde-format
 msgid "Send Update"
 msgstr "Invia actualisation"
 
-#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Tu vole inviar un actualisation de stato al organisator de iste carga?"
 
-#: itiphandlerhelper_p.cpp:337
+#: itiphandlerhelper_p.cpp:339
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -828,7 +828,7 @@ msgstr ""
 "Tu stato como participante a iste evento cambiava. Tu vole inviar un "
 "actualisation de stato al organisator de evento?"
 
-#: itiphandlerhelper_p.cpp:380
+#: itiphandlerhelper_p.cpp:382
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -838,7 +838,7 @@ msgstr ""
 "Tu vole inviar per e-posta le aviso al participantes que le evento es "
 "cancellate?"
 
-#: itiphandlerhelper_p.cpp:385
+#: itiphandlerhelper_p.cpp:387
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -848,7 +848,7 @@ msgstr ""
 "Tu vole inviar per e-posta a participantes un aviso que le action o cosa de "
 "facer es cancellate?"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:392
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -857,19 +857,19 @@ msgstr ""
 "Tu removeva le invitation \"%1\".\n"
 "Tu vole avisar per e-posta le participantes que le jornal es cancellate?"
 
-#: itiphandlerhelper_p.cpp:412
+#: itiphandlerhelper_p.cpp:414
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Tu vole inviar un actualisation de stato al organisator de iste jornal?"
 
-#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
+#: itiphandlerhelper_p.cpp:419 itiphandlerhelper_p.cpp:440
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Invia actualisation"
 
-#: itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:434
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -878,17 +878,17 @@ msgstr ""
 "Tu previemente dava acceptation a un invitation pro iste evento. Tu vole "
 "inviar un responsa actualisate al organisator declinante le invitation?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:124
+#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Contra proposition: %1"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Il falleva a inviar e-posta de gruppo planificate"
 
-#: itiphandlerhelper_p.cpp:501
+#: itiphandlerhelper_p.cpp:503
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -1143,18 +1143,18 @@ msgstr "Aviso de message nonn cryptate"
 msgid "Error sending e-mail: "
 msgstr "Error quando on inviava e-posta: "
 
-#: publishdialog.cpp:33
+#: publishdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
 msgstr "Selectiona adresses"
 
-#: publishdialog.cpp:60
+#: publishdialog.cpp:61
 #, kde-format
 msgid "Send email to these recipients"
 msgstr "Invia e-posta a iste destinatarios"
 
-#: publishdialog.cpp:62
+#: publishdialog.cpp:63
 #, kde-format
 msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
@@ -1163,12 +1163,12 @@ msgstr ""
 "Pulsar le button de <b>Ok</b> causara que un message de e-posta essera "
 "inviate al destinatarios que tu ha insertate."
 
-#: publishdialog.cpp:67
+#: publishdialog.cpp:68
 #, kde-format
 msgid "Cancel recipient selection and the email"
 msgstr "Cancella selection de destinatario e le e-posta"
 
-#: publishdialog.cpp:69
+#: publishdialog.cpp:70
 #, kde-format
 msgid ""
 "Clicking the <b>Cancel</b> button will cause the email operation to be "
@@ -1177,7 +1177,7 @@ msgstr ""
 "Pulsar le button de <b>Cancella</b> causara que le operation de e-posta "
 "essera terminate."
 
-#: publishdialog.cpp:74
+#: publishdialog.cpp:75
 #, kde-format
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
@@ -1185,7 +1185,7 @@ msgstr ""
 "Pulsa le button de <b>Adjuta</b> pro leger ulterior information a proposito "
 "de Planification de Gruppo."
 
-#: publishdialog.cpp:122
+#: publishdialog.cpp:123
 #, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
@@ -1195,7 +1195,7 @@ msgstr ""
 "Incapace de publicar le incidentia de calendario debite a un catena de "
 "destinatarios invalide. %1"
 
-#: publishdialog.cpp:125
+#: publishdialog.cpp:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
@@ -1487,13 +1487,13 @@ msgstr "Necun cache de Libere Occupate"
 msgid "Error saving freebusy object"
 msgstr "Error durante que on salveguarda objecto de libere/occupate"
 
-#: searchcollectionhelper.cpp:177
+#: searchcollectionhelper.cpp:179
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
 msgstr "Invitationes declinate"
 
-#: searchcollectionhelper.cpp:185
+#: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
@@ -1950,73 +1950,73 @@ msgstr "&Edita..."
 msgid "Edit the selected incidence."
 msgstr "Modifica le incidentias selectionate."
 
-#: todomodel.cpp:158 todomodel.cpp:193
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Exception"
 
-#: todomodel.cpp:160 todomodel.cpp:195
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Si"
 
-#: todomodel.cpp:163 todomodel.cpp:198
+#: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "No"
 
-#: todomodel.cpp:177 todomodel.cpp:214
+#: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:458
+#: todomodel.cpp:459
 #, kde-format
 msgid "Summary"
 msgstr "Summario"
 
-#: todomodel.cpp:460
+#: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
 msgstr "Recurre"
 
-#: todomodel.cpp:462
+#: todomodel.cpp:463
 #, kde-format
 msgid "Priority"
 msgstr "Prioritate"
 
-#: todomodel.cpp:464
+#: todomodel.cpp:465
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Complete"
 
-#: todomodel.cpp:466
+#: todomodel.cpp:467
 #, kde-format
 msgid "Start Date"
 msgstr "Data de initio"
 
-#: todomodel.cpp:468
+#: todomodel.cpp:469
 #, kde-format
 msgid "Due Date"
 msgstr "Data de expiration"
 
-#: todomodel.cpp:470
+#: todomodel.cpp:471
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Completate"
 
-#: todomodel.cpp:472
+#: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
 msgstr "Etiquettas"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:475
 #, kde-format
 msgid "Description"
 msgstr "Description"
