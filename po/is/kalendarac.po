@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-02-14 11:02+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-05 12:10+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "Viðburður"
 #: alarmnotification.cpp:60
 #, kde-format
 msgid "Task due at %1"
-msgstr "Skil á verkefni þann %1"
+msgstr "Skiladagur verkefnis %1"
 
 #: alarmnotification.cpp:64
 #, kde-format
@@ -129,10 +129,9 @@ msgid "Calendar Reminder Service"
 msgstr "Áminningarþjónusta dagatals"
 
 #: kalendaracmain.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) KDE Community 2021-2022"
+#, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) KDE-samfélagið 2021-2022"
+msgstr "(c) KDE-samfélagið 2021-2024"
 
 #: kalendaracmain.cpp:31
 #, kde-format
@@ -162,7 +161,7 @@ msgstr "Tímalengd &biðtíma:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr "Setja áminningar í bið í þetta langan tíma"
+msgstr "Setja áminningarnar í bið í þetta langan tíma"
 
 #: suspenddialog.cpp:84
 #, kde-format
@@ -172,9 +171,9 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
-"Hver áminning fyrir völdu uppákomurnar verður sett í bið í þennan fjölda "
-"tímaeininga. Þú getur valið tímaeiningarnar (venjulega mínútur) í valinu við "
-"hliðina."
+"Áminningar fyrir uppákomurnar sem eru valdar verða settar í bið í sem svarar "
+"þessum fjölda tímaeininga. Þú getur valið tímaeiningarnar (venjulega "
+"mínútur) í valinu við hliðina."
 
 #: suspenddialog.cpp:92
 #, kde-format
@@ -214,7 +213,7 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
-"Hver áminning fyrir völdu uppákomurnar verður sett í bið með þessari "
+"Áminningar fyrir uppákomurnar sem eru valdar verða settar í bið með þessari "
 "tímaeiningu. Þú getur valið fjölda tímaeininga í valinu við hliðina."
 
 #: suspenddialog.cpp:111
@@ -227,7 +226,7 @@ msgstr "Minna á síðar."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr "Minna mig á aftur eftir tiltekið tímabil"
+msgstr "Minna mig á aftur eftir tiltekinn tíma"
 
 #: suspenddialog.cpp:113
 #, kde-format
@@ -255,4 +254,4 @@ msgstr "Hætta við að minna á síðar, þ.e. hunsa áminninguna alveg"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr "Ýttu á þennan hnapp til að þagga áminninguna alveg."
+msgstr "Ýttu á þennan hnapp til að loka alveg á áminninguna."
