@@ -300,7 +300,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
                 composer->setSigningKeys(keyResolver.signingKeys(concreteFormat));
             }
 
-            composer->setMessageCryptoFormat(concreteFormat);
+            composer->setCryptoMessageFormat(concreteFormat);
             composer->setSignAndEncrypt(signSomething, encryptSomething);
 
             composers.push_back(std::move(composer));
