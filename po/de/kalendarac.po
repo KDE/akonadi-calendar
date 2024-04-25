@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-03-27 19:22+0100\n"
+"PO-Revision-Date: 2024-04-24 19:14+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -173,6 +173,9 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Alle Erinnerungen der ausgewählten Ereignisse werden für eine Zeitdauer "
+"dieser Einheit unterbrochen. Sie können die Einheit (meist: Minuten) im "
+"danebenliegenden Auswahlfeld festlegen."
 
 #: suspenddialog.cpp:92
 #, kde-format
@@ -212,6 +215,9 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Alle Erinnerungen der ausgewählten Ereignisse werden für diese Zeitdauer "
+"unterbrochen. Sie können die Anzahl der Zeiteinheiten im danebenliegenden "
+"Zahleneingabefeld festlegen."
 
 #: suspenddialog.cpp:111
 #, kde-format
@@ -232,6 +238,8 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Durch Drücken dieses Knopfes werden Sie über dieses Ereignis nach der "
+"angegebenen Zeit nochmals erinnert."
 
 #: suspenddialog.cpp:117
 #, kde-format
