@@ -588,8 +588,6 @@ void IncidenceChangerPrivate::handleInvitationsAfterChange(const Change::Ptr &ch
             break;
         }
         case IncidenceChanger::ChangeTypeDelete:
-            handler->deleteLater();
-            handler = nullptr;
             Q_ASSERT(!change->originalItems.isEmpty());
             for (const Akonadi::Item &item : std::as_const(change->originalItems)) {
                 Q_ASSERT(item.hasPayload());
