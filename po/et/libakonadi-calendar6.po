@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 02:27+0000\n"
 "PO-Revision-Date: 2020-04-20 11:38+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -567,22 +567,22 @@ msgstr "Tekkis tundmatu tõrge"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Tõrge kalendrielemendi muutmisel. Veateade oli: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "See kalendrielement on juba kustutatud või seda praegu kustutatakse."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Pääsuloendi piirangute tõttu ei saa toimingut teostada"
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Valitud kogu on vigane"
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -591,12 +591,12 @@ msgstr ""
 "Vaikimisi kogu on vigane või puudub korralik pääsuloend ja kasutati valikut "
 "DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Topelt elemendi ID rühmatoimingus"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -604,7 +604,7 @@ msgid ""
 msgstr ""
 "Üks muudatuste rühma kuuluv muudatus nurjus. Kõik muudatused võetakse tagasi."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Tundmatu tõrge"

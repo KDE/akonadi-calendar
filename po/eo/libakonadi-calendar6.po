@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 02:27+0000\n"
 "PO-Revision-Date: 2024-02-24 21:13+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -566,22 +566,22 @@ msgstr "Nekonata eraro okazis"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Eraro dum provado modifi kalendaran elementon. Eraro estis: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Tiu kalendara ero jam estis forigita, aŭ nuntempe forigita."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Operacio ne povas esti farita pro ACL-limigoj"
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "La elektita kolekto estas malvalida"
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -590,12 +590,12 @@ msgstr ""
 "Defaŭlta kolekto estas nevalida aŭ ne havas taŭgajn ACL-ojn kaj "
 "DestinationPolicyNeverAsk estis uzata"
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Duobligi eron-id en grupoperacio"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -604,7 +604,7 @@ msgstr ""
 "Unu ŝanĝo apartenanta al grupo de ŝanĝoj malsukcesis. Ĉiuj ŝanĝoj estas "
 "retroigitaj."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Nekonata eraro"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 02:27+0000\n"
 "PO-Revision-Date: 2024-02-20 02:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -570,24 +570,24 @@ msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
 "Error al intentar modificar un elemento de calendario. El error fue: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr ""
 "El elemento de calendario ya estaba borrado, o se estaba borrando en este "
 "momento."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "La operación no se puede ejecutar debido a restricciones de ACL"
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "La colección elegida no es válida"
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -596,12 +596,12 @@ msgstr ""
 "La colección predeterminada no es válida o no dispone de ACL apropiadas y se "
 "usó DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Elemento duplicado en una operación de grupo"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -610,7 +610,7 @@ msgstr ""
 "Un cambio perteneciente a un grupo de cambios ha fallado. Todos los cambios "
 "se están deshaciendo."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Error desconocido"

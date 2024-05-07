@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 02:27+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -569,22 +569,22 @@ msgstr "Dat geev en nich begäng Fehler."
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Fehler bi't Ännern vun en Kalennerindrag. De Fehler weer: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "De Kalennerindrag weer al wegmaakt oder wöör jüst wegdaan."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Akschoon lett sik nich utföhren, de TVL lett dat nich to."
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "De utsöchte Sammeln gellt nich."
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -593,12 +593,12 @@ msgstr ""
 "De Standardsammeln is leeg oder hett keen propper TVL, un de Teelregel "
 "\"Nienich Fragen\" wöör bruukt."
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Dubbelt Indrag-ID binnen en Koppel-Akschoon"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -607,7 +607,7 @@ msgstr ""
 "Een Ännern, de en Koppel vun Ännern tohöör, is fehlslaan. All Ännern warrt "
 "torüchdreiht."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"

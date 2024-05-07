@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 02:27+0000\n"
 "PO-Revision-Date: 2023-08-21 22:29+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -571,25 +571,25 @@ msgstr ""
 "Σφάλμα στην προσπάθεια τροποποίησης αντικειμένου ημερολογίου. Το σφάλμα "
 "ήταν: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr ""
 "Αυτό το αντικείμενο ημερολογίου έχει ήδη διαγραφεί, ή διαγράφεται τώρα."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr ""
 "Αδυναμία εκτέλεσης της λειτουργίας εξαιτίας περιορισμών στη λίστα ελέγχου "
 "πρόσβασης (ACL)"
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Η επιλεγμένη συλλογή δεν είναι έγκυρη"
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -598,12 +598,12 @@ msgstr ""
 "Η προκαθορισμένη συλλογή δεν είναι έγκυρη ή δεν έχει σωστές λίστες ελέγχου "
 "πρόσβασης και χρησιμοποιεί το DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Διπλό αναγνωριστικό αντικειμένου σε λειτουργία ομάδας"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -612,7 +612,7 @@ msgstr ""
 "Αποτυχία μιας αλλαγής που ανήκει σε ομάδα αλλαγών. Όλες οι αλλαγές "
 "ανακαλούνται."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Άγνωστο σφάλμα"
