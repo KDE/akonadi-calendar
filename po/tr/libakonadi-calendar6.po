@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 00:39+0000\n"
 "PO-Revision-Date: 2024-03-21 23:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -569,22 +569,22 @@ msgstr "Bilinmeyen bir hata oluştu"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Takvim ögesi değiştirilmeye çalışılırken hata oluştu. Hata: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Takvim ögesi zaten silinmişti, ya da şu anda silindi."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ACL kısıtlamaları nedeniyle işlem uygulanamadı"
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Seçilen derleme geçersiz"
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -593,12 +593,12 @@ msgstr ""
 "Öntanımlı seçki ya geçersiz ya da uygun ACL’leri sahip değil ve "
 "DestinationPolicyNeverAsk kullanılmış"
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Bir grup işleminde aynı öge birden çok kez kullanılmış"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -607,7 +607,7 @@ msgstr ""
 "Bir değişim bir grup değişikliğin başarısız olmasına neden oluyor. Tüm "
 "değişiklikler geri alınıyor."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Bilinmeyen hata"

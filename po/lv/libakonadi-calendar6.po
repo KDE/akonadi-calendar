@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-07 00:39+0000\n"
 "PO-Revision-Date: 2024-02-02 17:31+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -565,22 +565,22 @@ msgstr "Nezināma kļūda"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Kļūda, rediģējot kalendāra vienumu. Kļūda: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Šis kalendāra vienums ir jau dzēsts vai šobrīd tiek dzēsts."
 
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Darbība nevar tikt veikta ACL ierobežojumu dēļ"
 
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Izvēlētā kolekcija nav derīga"
 
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1202
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -589,12 +589,12 @@ msgstr ""
 "Noklusējuma kolekcija nav derīga vai tai nav pareizi ACL un "
 "„DestinationPolicyNeverAsk“"
 
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Grupas darbībā atkārtojas vienuma ID"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -603,7 +603,7 @@ msgstr ""
 "Neizdevās veikt vienu izmaiņu no izmaiņu grupas. Tiek atsauktas visas "
 "izmaiņas."
 
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
 msgstr "Nezināma kļūda"
