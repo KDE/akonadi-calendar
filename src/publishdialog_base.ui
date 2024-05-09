@@ -81,7 +81,7 @@
           <string>Click this button to show another dialog where you will be able to select a recipient from your address book</string>
          </property>
          <property name="text">
-          <string>&amp;Select...</string>
+          <string>&amp;Select…</string>
          </property>
         </widget>
        </item>

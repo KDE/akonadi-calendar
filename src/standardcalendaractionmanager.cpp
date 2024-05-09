@@ -43,7 +43,7 @@ public:
     {
         switch (type) {
         case Akonadi::StandardActionManager::CreateCollection:
-            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setText(i18n("Add Folder..."));
+            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setText(i18n("Add Folder…"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setWhatsThis(i18n("Add a new calendar folder to the currently selected calendar folder."));
             mGenericManager->setContextText(StandardActionManager::CreateCollection, StandardActionManager::DialogTitle, i18nc("@title:window", "New Folder"));
@@ -100,7 +100,7 @@ public:
             mGenericManager->action(Akonadi::StandardActionManager::CutCollections)->setWhatsThis(i18n("Cut the selected calendar folders from the calendar."));
             break;
         case Akonadi::StandardActionManager::CollectionProperties:
-            mGenericManager->action(Akonadi::StandardActionManager::CollectionProperties)->setText(i18n("Folder Properties..."));
+            mGenericManager->action(Akonadi::StandardActionManager::CollectionProperties)->setText(i18n("Folder Properties…"));
             mGenericManager->action(Akonadi::StandardActionManager::CollectionProperties)
                 ->setWhatsThis(i18n("Open a dialog to edit the properties of the selected calendar folder."));
             mGenericManager->setContextText(StandardActionManager::CollectionProperties,
@@ -135,7 +135,7 @@ public:
             mGenericManager->action(Akonadi::StandardActionManager::CutItems)->setWhatsThis(i18n("Cut the selected events from the calendar."));
             break;
         case Akonadi::StandardActionManager::CreateResource:
-            mGenericManager->action(Akonadi::StandardActionManager::CreateResource)->setText(i18n("Add &Calendar..."));
+            mGenericManager->action(Akonadi::StandardActionManager::CreateResource)->setText(i18n("Add &Calendar…"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateResource)
                 ->setWhatsThis(i18n("Add a new calendar<p>"
                                     "You will be presented with a dialog where you can select "
@@ -168,7 +168,7 @@ public:
 
             break;
         case Akonadi::StandardActionManager::ResourceProperties:
-            mGenericManager->action(Akonadi::StandardActionManager::ResourceProperties)->setText(i18n("Calendar Properties..."));
+            mGenericManager->action(Akonadi::StandardActionManager::ResourceProperties)->setText(i18n("Calendar Properties…"));
             mGenericManager->action(Akonadi::StandardActionManager::ResourceProperties)
                 ->setWhatsThis(i18n("Open a dialog to edit properties of the selected calendar."));
             break;
@@ -322,7 +322,7 @@ public:
                     }
                     act = mActions.value(StandardCalendarActionManager::EditIncidence);
                     if (act) {
-                        act->setText(i18n("Edit Event..."));
+                        act->setText(i18n("Edit Event…"));
                     }
                 } else if (mimeType == KCalendarCore::Todo::todoMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
@@ -352,7 +352,7 @@ public:
                     }
                     act = mActions.value(StandardCalendarActionManager::EditIncidence);
                     if (act) {
-                        act->setText(i18n("Edit To-do..."));
+                        act->setText(i18n("Edit To-do…"));
                     }
                 } else if (mimeType == KCalendarCore::Journal::journalMimeType()) {
                     if (mGenericManager->action(Akonadi::StandardActionManager::CopyItems)) {
@@ -382,7 +382,7 @@ public:
                     }
                     act = mActions.value(StandardCalendarActionManager::EditIncidence);
                     if (act) {
-                        act->setText(i18n("Edit Journal..."));
+                        act->setText(i18n("Edit Journal…"));
                     }
                 }
             }
@@ -522,7 +522,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
     case CreateEvent:
         action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("appointment-new")));
-        action->setText(i18n("New E&vent..."));
+        action->setText(i18n("New E&vent…"));
         action->setWhatsThis(i18n("Create a new event"));
         d->mActions.insert(CreateEvent, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_event_create"), action);
@@ -533,7 +533,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
     case CreateTodo:
         action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("task-new")));
-        action->setText(i18n("New &To-do..."));
+        action->setText(i18n("New &To-do…"));
         action->setWhatsThis(i18n("Create a new To-do"));
         d->mActions.insert(CreateTodo, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_todo_create"), action);
@@ -543,7 +543,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         break;
     case CreateSubTodo:
         action = new QAction(d->mParentWidget);
-        action->setText(i18n("New Su&b-to-do..."));
+        action->setText(i18n("New Su&b-to-do…"));
         action->setWhatsThis(i18n("Create a new Sub-to-do"));
         d->mActions.insert(CreateSubTodo, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_subtodo_create"), action);
@@ -554,7 +554,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
     case CreateJournal:
         action = new QAction(d->mParentWidget);
         action->setIcon(QIcon::fromTheme(QStringLiteral("journal-new")));
-        action->setText(i18n("New &Journal..."));
+        action->setText(i18n("New &Journal…"));
         action->setWhatsThis(i18n("Create a new Journal"));
         d->mActions.insert(CreateJournal, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_journal_create"), action);
@@ -564,7 +564,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         break;
     case EditIncidence:
         action = new QAction(d->mParentWidget);
-        action->setText(i18n("&Edit..."));
+        action->setText(i18n("&Edit…"));
         action->setWhatsThis(i18n("Edit the selected incidence."));
         d->mActions.insert(EditIncidence, action);
         d->mActionCollection->addAction(QStringLiteral("akonadi_incidence_edit"), action);
