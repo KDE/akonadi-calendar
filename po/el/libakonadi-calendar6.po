@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-08-21 22:29+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -1280,8 +1280,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "&Επιλογή..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1500,8 +1501,9 @@ msgid "Open Invitations"
 msgstr "Ανοικτές προσκλήσεις"
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Προσθήκη φακέλου..."
 
 #: standardcalendaractionmanager.cpp:48
@@ -1608,8 +1610,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Αποκοπή των επιλεγμένων φακέλων ημερολογίου από το ημερολόγιο."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Ιδιότητες φακέλου..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1688,9 +1691,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "Αποκοπή των επιλεγμένων γεγονότων από το ημερολόγιο."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "Προσθήκη η&μερολογίου..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Προσθήκη ημερολογίου"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1751,8 +1756,9 @@ msgstr[0] "Να διαγραφεί το ημερολόγιο;"
 msgstr[1] "Να διαγραφούν τα ημερολόγια;"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Ιδιότητες ημερολογίου..."
 
 #: standardcalendaractionmanager.cpp:173
@@ -1827,8 +1833,9 @@ msgid "Move Event To"
 msgstr "Μετακίνηση γεγονότος σε"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Επεξεργασία γεγονότος..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1863,8 +1870,9 @@ msgid "Move To-do To"
 msgstr "Μετακίνηση εργασίας προς υλοποίηση σε"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Επεξεργασία εργασίας προς υλοποίηση..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1899,13 +1907,15 @@ msgid "Move Journal To"
 msgstr "Μετακίνηση χρονικού σε"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Επεξεργασία χρονικού..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "Νέο γεγ&ονός..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1914,8 +1924,9 @@ msgid "Create a new event"
 msgstr "Δημιουργία νέου γεγονότος"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Νέα εργασία προς υ&λοποίηση..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1924,8 +1935,9 @@ msgid "Create a new To-do"
 msgstr "Δημιουργία νέας εργασίας προς υλοποίηση"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Νέα υποεργασία προς υλο&ποίηση..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1934,8 +1946,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Δημιουργία νέας υποεργασίας προς υλοποίηση"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "Νέο &χρονικό..."
 
 #: standardcalendaractionmanager.cpp:558
@@ -1944,8 +1957,9 @@ msgid "Create a new Journal"
 msgstr "Δημιουργία νέου χρονικού"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Επεξεργασία..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -2028,6 +2042,9 @@ msgstr "Περιγραφή"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Πλήρης διαγραφή ολοκληρωμένων εργασιών"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "Προσθήκη η&μερολογίου..."
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr ""

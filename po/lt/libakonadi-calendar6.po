@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2024-02-29 23:28+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1197,8 +1197,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "Ž&ymėti..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1404,8 +1405,9 @@ msgid "Open Invitations"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Pridėti aplanką..."
 
 #: standardcalendaractionmanager.cpp:48
@@ -1524,8 +1526,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Iškirpti pažymėtus kalendoriaus aplankus iš kalendoriaus."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Aplanko savybės..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1612,9 +1615,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "Iškirpti pažymėtus įvykius iš kalendoriaus."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "Pridėti &kalendorių..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Pridėti kalendorių"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1681,8 +1686,9 @@ msgstr[2] "Ištrinti kalendorius?"
 msgstr[3] "Ištrinti kalendorius?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Kalendoriaus savybės..."
 
 #: standardcalendaractionmanager.cpp:173
@@ -1756,8 +1762,9 @@ msgid "Move Event To"
 msgstr "Perkelti įvykį į"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Taisyti įvykį..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1798,8 +1805,9 @@ msgid "Move To-do To"
 msgstr "Perkelti užduotį į"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Taisyti užduotį..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1840,13 +1848,15 @@ msgid "Move Journal To"
 msgstr "Perkelti dienyną į"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Taisyti dienyną..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "Na&ujas įvykis..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1855,8 +1865,9 @@ msgid "Create a new event"
 msgstr "Sukurti naują įvykį"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Nauja &užduotis..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1866,7 +1877,7 @@ msgstr "Sukurti naują užduotį"
 
 #: standardcalendaractionmanager.cpp:546
 #, fuzzy, kde-format
-msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Naujas sudedamasis darbas..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1875,8 +1886,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Sukurti naują sudedamąjį darbą"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "Naujas &dienynas..."
 
 #: standardcalendaractionmanager.cpp:558
@@ -1885,8 +1897,9 @@ msgid "Create a new Journal"
 msgstr "Sukurti naują dienyną"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Taisyti..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -1969,3 +1982,6 @@ msgstr "Aprašas"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr ""
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "Pridėti &kalendorių..."

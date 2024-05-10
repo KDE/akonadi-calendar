@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2010-09-24 20:38+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -1162,7 +1162,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
 #, kde-format
-msgid "&Select..."
+msgid "&Select…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1369,7 +1369,7 @@ msgstr ""
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
-msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:48
@@ -1476,7 +1476,7 @@ msgstr ""
 
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
-msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:105
@@ -1553,9 +1553,11 @@ msgid "Cut the selected events from the calendar."
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Delete Calendar"
+#| msgid_plural "&Delete %1 Calendars"
+msgid "Add &Calendar…"
+msgstr "कैलेंडर मेटाबू (&D)"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1612,7 +1614,7 @@ msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
-msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:173
@@ -1685,7 +1687,7 @@ msgstr ""
 
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
-msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:329
@@ -1721,7 +1723,7 @@ msgstr ""
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
-msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:359
@@ -1760,13 +1762,15 @@ msgid "Move Journal To"
 msgstr "कैलेंडर मेटाबू (&D)"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Delete Calendar"
+#| msgid_plural "&Delete %1 Calendars"
+msgid "Edit Journal…"
+msgstr "कैलेंडर मेटाबू (&D)"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
-msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:526
@@ -1776,7 +1780,7 @@ msgstr "नवीन घटना बनाबू"
 
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
-msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:537
@@ -1786,9 +1790,10 @@ msgid "Create a new To-do"
 msgstr "नवीन घटना बनाबू"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Create a new event"
+msgid "New Su&b-to-do…"
+msgstr "नवीन घटना बनाबू"
 
 #: standardcalendaractionmanager.cpp:547
 #, fuzzy, kde-format
@@ -1797,9 +1802,11 @@ msgid "Create a new Sub-to-do"
 msgstr "नवीन घटना बनाबू"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Delete Calendar"
+#| msgid_plural "&Delete %1 Calendars"
+msgid "New &Journal…"
+msgstr "कैलेंडर मेटाबू (&D)"
 
 #: standardcalendaractionmanager.cpp:558
 #, fuzzy, kde-format
@@ -1809,7 +1816,7 @@ msgstr "नवीन घटना बनाबू"
 
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:568

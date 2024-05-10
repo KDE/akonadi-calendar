@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2024-03-03 22:24+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1262,8 +1262,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "&Kijelölés…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1481,8 +1482,9 @@ msgid "Open Invitations"
 msgstr "Nyitott meghívások"
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Mappa hozzáadása…"
 
 #: standardcalendaractionmanager.cpp:48
@@ -1586,8 +1588,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "A kijelölt naptármappák kivágása a naptárból."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Mappatulajdonságok…"
 
 #: standardcalendaractionmanager.cpp:105
@@ -1666,9 +1669,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "A kijelölt események kivágása a naptárból."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "&Naptár hozzáadása…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Naptár hozzáadása"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1729,8 +1734,9 @@ msgstr[0] "Törli a naptárat?"
 msgstr[1] "Törli a naptárakat?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Naptártulajdonságok…"
 
 #: standardcalendaractionmanager.cpp:173
@@ -1803,8 +1809,9 @@ msgid "Move Event To"
 msgstr "Esemény mozgatása ide"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Esemény szerkesztése…"
 
 #: standardcalendaractionmanager.cpp:329
@@ -1839,8 +1846,9 @@ msgid "Move To-do To"
 msgstr "Feladat mozgatása"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Feladat szerkesztése…"
 
 #: standardcalendaractionmanager.cpp:359
@@ -1875,13 +1883,15 @@ msgid "Move Journal To"
 msgstr "Naplóbejegyzés mozgatása ide"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Naplóbejegyzés szerkesztése…"
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "Új e&semény…"
 
 #: standardcalendaractionmanager.cpp:526
@@ -1890,8 +1900,9 @@ msgid "Create a new event"
 msgstr "Új esemény létrehozása"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Új felada&t…"
 
 #: standardcalendaractionmanager.cpp:537
@@ -1900,8 +1911,9 @@ msgid "Create a new To-do"
 msgstr "Új feladat létrehozása"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Ú&j részfeladat…"
 
 #: standardcalendaractionmanager.cpp:547
@@ -1910,8 +1922,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Új részfeladat létrehozása"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "Új &naplóbejegyzés…"
 
 #: standardcalendaractionmanager.cpp:558
@@ -1920,8 +1933,9 @@ msgid "Create a new Journal"
 msgstr "Új naplóbejegyzés létrehozása"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "Sz&erkesztés…"
 
 #: standardcalendaractionmanager.cpp:568
@@ -2004,6 +2018,9 @@ msgstr "Leírás"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "A lezárt feladatok törlése"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "&Naptár hozzáadása…"
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "Az e-mail üzenetek küldéséhez használandó levél átvitel"

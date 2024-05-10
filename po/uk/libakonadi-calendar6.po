@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2024-02-20 09:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -1282,8 +1282,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "Ви&брати…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1506,8 +1507,9 @@ msgid "Open Invitations"
 msgstr "Відкриті запрошення"
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Додати теку…"
 
 #: standardcalendaractionmanager.cpp:48
@@ -1621,8 +1623,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Вирізати позначені теки календаря з календаря."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Властивості теки…"
 
 #: standardcalendaractionmanager.cpp:105
@@ -1710,9 +1713,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "Скопіювати позначені записи подій з календаря."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "Додати &календар…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Додавання календаря"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1778,8 +1783,9 @@ msgstr[2] "Вилучити календарі?"
 msgstr[3] "Вилучити календар?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Властивості календаря…"
 
 #: standardcalendaractionmanager.cpp:173
@@ -1853,8 +1859,9 @@ msgid "Move Event To"
 msgstr "Пересунути подію до"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Змінити запис події…"
 
 #: standardcalendaractionmanager.cpp:329
@@ -1895,8 +1902,9 @@ msgid "Move To-do To"
 msgstr "Пересунути завдання до"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Змінити завдання…"
 
 #: standardcalendaractionmanager.cpp:359
@@ -1937,13 +1945,15 @@ msgid "Move Journal To"
 msgstr "Пересунути журнал до"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Змінити журнал…"
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "Нова п&одія…"
 
 #: standardcalendaractionmanager.cpp:526
@@ -1952,8 +1962,9 @@ msgid "Create a new event"
 msgstr "Створити запис події"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Нове &завдання…"
 
 #: standardcalendaractionmanager.cpp:537
@@ -1962,8 +1973,9 @@ msgid "Create a new To-do"
 msgstr "Створити запис події"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Нове п&ідзавдання…"
 
 #: standardcalendaractionmanager.cpp:547
@@ -1972,8 +1984,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Створити запис підзавдання"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "Новий &журнал…"
 
 #: standardcalendaractionmanager.cpp:558
@@ -1982,8 +1995,9 @@ msgid "Create a new Journal"
 msgstr "Створити новий журнал"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Змінити..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -2066,6 +2080,9 @@ msgstr "Опис"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Вилучаємо записи виконаних завдань"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "Додати &календар…"
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "Канал надсилання поштових повідомлень"

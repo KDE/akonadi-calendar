@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2024-02-20 23:48+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1237,8 +1237,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "선택(&S)..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1455,8 +1456,9 @@ msgid "Open Invitations"
 msgstr "열린 초대장"
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "폴더 추가..."
 
 #: standardcalendaractionmanager.cpp:48
@@ -1552,8 +1554,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "선택한 캘린더 폴더를 캘린더에서 잘라냅니다."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "폴더 속성..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1625,9 +1628,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "선택한 이벤트를 캘린더에서 삭제합니다."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "캘린더 추가(&C)..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "캘린더 추가"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1683,8 +1688,9 @@ msgid_plural "Delete Calendars?"
 msgstr[0] "캘린더 삭제?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "캘린더 속성..."
 
 #: standardcalendaractionmanager.cpp:173
@@ -1755,8 +1761,9 @@ msgid "Move Event To"
 msgstr "다음으로 이벤트 이동"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "이벤트 편집..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1788,8 +1795,9 @@ msgid "Move To-do To"
 msgstr "다음으로 할 일 이동"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "할 일 편집..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1821,13 +1829,15 @@ msgid "Move Journal To"
 msgstr "다음으로 저널 이동"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "저널 편집..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "새 이벤트(&V)..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1836,8 +1846,9 @@ msgid "Create a new event"
 msgstr "새 이벤트 만들기"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "새 할 일(&T)..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1846,8 +1857,9 @@ msgid "Create a new To-do"
 msgstr "새 할 일 만들기"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "새 하위 할 일 만들기(&B)..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1856,8 +1868,9 @@ msgid "Create a new Sub-to-do"
 msgstr "새 하위 할 일 만들기"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "새 저널(&J)..."
 
 #: standardcalendaractionmanager.cpp:558
@@ -1866,8 +1879,9 @@ msgid "Create a new Journal"
 msgstr "새 저널 만들기"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "편집(&E)..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -1950,6 +1964,9 @@ msgstr "설명"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "완료된 할 일 비우는 중"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "캘린더 추가(&C)..."
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "이메일 메시지를 보낼 때 사용할 전송 방법"

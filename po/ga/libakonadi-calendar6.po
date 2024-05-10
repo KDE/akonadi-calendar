@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1157,7 +1157,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
 #, kde-format
-msgid "&Select..."
+msgid "&Select…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1363,9 +1363,11 @@ msgid "Open Invitations"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Update Calendar"
+#| msgid_plural "Update %1 Calendars"
+msgid "Add Folder…"
+msgstr "Nuashonraigh Féilire"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1491,8 +1493,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Airíonna an Fhillteáin..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1581,9 +1584,11 @@ msgid "Cut the selected events from the calendar."
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Cuir Féilire Leis"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1642,9 +1647,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Calendar Properties…"
+msgstr "Airíonna an Fhillteáin..."
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1721,8 +1727,9 @@ msgid "Move Event To"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Cuir Imeacht in Eagar..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1766,8 +1773,9 @@ msgid "Move To-do To"
 msgstr "Bog Tasc Go"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Cuir Tasc in Eagar..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1811,13 +1819,15 @@ msgid "Move Journal To"
 msgstr "Bog Dialann Go"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Cuir Dialann in Eagar..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "Imeac&ht Nua..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1826,8 +1836,9 @@ msgid "Create a new event"
 msgstr "Cruthaigh imeacht nua"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "&Tasc Nua..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1836,8 +1847,9 @@ msgid "Create a new To-do"
 msgstr "Cruthaigh Tasc nua"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "&Fo-Thasc Nua..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1846,8 +1858,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Cruthaigh Fo-thasc nua"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "&Dialann Nua..."
 
 #: standardcalendaractionmanager.cpp:558
@@ -1856,8 +1869,9 @@ msgid "Create a new Journal"
 msgstr "Cruthaigh Dialann nua"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Eagar..."
 
 #: standardcalendaractionmanager.cpp:568

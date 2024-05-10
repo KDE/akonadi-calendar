@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1191,8 +1191,9 @@ msgstr "点击此按钮以显示用于从您的地址簿添加收件人的对话
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "选择(&S)..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1405,8 +1406,9 @@ msgid "Open Invitations"
 msgstr ""
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "添加文件夹..."
 
 #: standardcalendaractionmanager.cpp:48
@@ -1502,8 +1504,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "从日历中剪切选中的日历文件夹。"
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "文件夹属性..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1575,9 +1578,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "从日历中剪切选中的事件。"
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "添加日历(&C)..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "添加日历"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1631,8 +1636,9 @@ msgid_plural "Delete Calendars?"
 msgstr[0] "删除日历吗？"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "日历属性..."
 
 #: standardcalendaractionmanager.cpp:173
@@ -1703,8 +1709,9 @@ msgid "Move Event To"
 msgstr "移动事件到"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "编辑事件..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1736,8 +1743,9 @@ msgid "Move To-do To"
 msgstr "移动待办事项到"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "编辑待办事项..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1769,13 +1777,15 @@ msgid "Move Journal To"
 msgstr "移动日记到"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "编辑日记..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "新建事件(&V)..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1784,8 +1794,9 @@ msgid "Create a new event"
 msgstr "创建新事件"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "新建待办事项(&T)..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1794,8 +1805,9 @@ msgid "Create a new To-do"
 msgstr "新建待办事项"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "新建子待办事项(&B)..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1804,8 +1816,9 @@ msgid "Create a new Sub-to-do"
 msgstr "创建新子待办事项"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "新建日记(&J)..."
 
 #: standardcalendaractionmanager.cpp:558
@@ -1814,8 +1827,9 @@ msgid "Create a new Journal"
 msgstr "创建一篇新日记"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "编辑(&E)..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -1898,3 +1912,6 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "正在删除已完成待办事项"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "添加日历(&C)..."

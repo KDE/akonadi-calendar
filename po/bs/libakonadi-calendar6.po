@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1250,8 +1250,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "&Izaberi..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1488,7 +1489,7 @@ msgstr ""
 #: standardcalendaractionmanager.cpp:46
 #, fuzzy, kde-format
 #| msgid "Add Calendar Folder..."
-msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Dodaj kalendarsku fasciklu..."
 
 #: standardcalendaractionmanager.cpp:48
@@ -1615,8 +1616,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Isijeci kalendarske fascikle iz kalendara"
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Svojstva fascikle..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1699,9 +1701,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "Isijeci izabrane događaje iz kalendara"
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "Dodaj &kalendar..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Dodaj kalendar"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1765,8 +1769,9 @@ msgstr[1] "Obrisati kalendare?"
 msgstr[2] "Obrisati kalendare?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Svojstva kalendara..."
 
 #: standardcalendaractionmanager.cpp:173
@@ -1843,8 +1848,9 @@ msgid "Move Event To"
 msgstr "Premjesti događaj u"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Izmijeni događaj..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1882,8 +1888,9 @@ msgid "Move To-do To"
 msgstr "Premjesti zadatak u"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Izmijeni zadatak..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1921,13 +1928,15 @@ msgid "Move Journal To"
 msgstr "Premjesti dnevnik u"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Uredi dnevnik..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "No&vi događaj..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1936,8 +1945,9 @@ msgid "Create a new event"
 msgstr "Kreiraj novi događaj"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Novi &zadatak..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1946,8 +1956,9 @@ msgid "Create a new To-do"
 msgstr "Kreiraj novi zadatak"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Novi &podzadatak..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1956,8 +1967,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Kreiraj novi podzadatak"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "Novi &Dnevnik"
 
 #: standardcalendaractionmanager.cpp:558
@@ -1966,8 +1978,9 @@ msgid "Create a new Journal"
 msgstr "Kreiraj novi Dnevnik"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Izmijeni..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -2062,6 +2075,9 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Ukloni završene zadatke"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "Dodaj &kalendar..."
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "Transport pošte za slanje poruka elektronske pošte"

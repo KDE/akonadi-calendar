@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2024-03-21 23:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1269,8 +1269,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "&Seç…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1488,8 +1489,9 @@ msgid "Open Invitations"
 msgstr "Açık Davetler"
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Klasör Ekle…"
 
 #: standardcalendaractionmanager.cpp:48
@@ -1595,8 +1597,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Seçili takvim klasörünü takvimden kes."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Klasör Özellikleri…"
 
 #: standardcalendaractionmanager.cpp:105
@@ -1674,9 +1677,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "Seçili etkinlikleri takvimden kes."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "&Takvim Ekle…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Takvim Ekle"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1736,8 +1741,9 @@ msgstr[0] "Takvim Silinsin mi?"
 msgstr[1] "Takvimler Silinsin mi?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Takvim Özellikleri…"
 
 #: standardcalendaractionmanager.cpp:173
@@ -1809,8 +1815,9 @@ msgid "Move Event To"
 msgstr "Etkinliği Taşı"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Etkinliği Düzenle…"
 
 #: standardcalendaractionmanager.cpp:329
@@ -1845,8 +1852,9 @@ msgid "Move To-do To"
 msgstr "Yapılacak Ögeyi Taşı"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "&Yapılacak Ögesini Düzenle…"
 
 #: standardcalendaractionmanager.cpp:359
@@ -1881,13 +1889,15 @@ msgid "Move Journal To"
 msgstr "Günceyi Şuraya Taşı"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Günceyi Düzenle…"
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "Yeni &Etkinlik…"
 
 #: standardcalendaractionmanager.cpp:526
@@ -1896,8 +1906,9 @@ msgid "Create a new event"
 msgstr "Yeni etkinlik oluştur"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Ye&ni Yapılacak Ögesi…"
 
 #: standardcalendaractionmanager.cpp:537
@@ -1906,8 +1917,9 @@ msgid "Create a new To-do"
 msgstr "Yeni Yapılacak Ögesi oluştur"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Y&eni Alt Yapılacak Ögesi…"
 
 #: standardcalendaractionmanager.cpp:547
@@ -1916,8 +1928,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Yeni bir alt yapılacak ögesi oluştur"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "Yeni &Günce…"
 
 #: standardcalendaractionmanager.cpp:558
@@ -1926,8 +1939,9 @@ msgid "Create a new Journal"
 msgstr "Yeni günce oluştur"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "Dü&zenle…"
 
 #: standardcalendaractionmanager.cpp:568
@@ -2010,6 +2024,9 @@ msgstr "Açıklama"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Tamamlanmış yapılacak ögelerini temizleme işlemi bitti"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "&Takvim Ekle…"
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "E-posta iletilerini göndermek için kullanılacak posta taşıması"

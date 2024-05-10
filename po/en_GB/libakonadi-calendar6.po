@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-04-08 11:14+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -1236,8 +1236,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, kde-format
-msgid "&Select..."
+#, fuzzy, kde-format
+#| msgid "&Select..."
+msgid "&Select…"
 msgstr "&Select..."
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
@@ -1456,8 +1457,9 @@ msgid "Open Invitations"
 msgstr "Open Invitations"
 
 #: standardcalendaractionmanager.cpp:46
-#, kde-format
-msgid "Add Folder..."
+#, fuzzy, kde-format
+#| msgid "Add Folder..."
+msgid "Add Folder…"
 msgstr "Add Folder..."
 
 #: standardcalendaractionmanager.cpp:48
@@ -1561,8 +1563,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Cut the selected calendar folders from the calendar."
 
 #: standardcalendaractionmanager.cpp:103
-#, kde-format
-msgid "Folder Properties..."
+#, fuzzy, kde-format
+#| msgid "Folder Properties..."
+msgid "Folder Properties…"
 msgstr "Folder Properties..."
 
 #: standardcalendaractionmanager.cpp:105
@@ -1640,9 +1643,11 @@ msgid "Cut the selected events from the calendar."
 msgstr "Cut the selected events from the calendar."
 
 #: standardcalendaractionmanager.cpp:138
-#, kde-format
-msgid "Add &Calendar..."
-msgstr "Add &Calendar..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Calendar"
+msgid "Add &Calendar…"
+msgstr "Add Calendar"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1702,8 +1707,9 @@ msgstr[0] "Delete Calendar?"
 msgstr[1] "Delete Calendars?"
 
 #: standardcalendaractionmanager.cpp:171
-#, kde-format
-msgid "Calendar Properties..."
+#, fuzzy, kde-format
+#| msgid "Calendar Properties..."
+msgid "Calendar Properties…"
 msgstr "Calendar Properties..."
 
 #: standardcalendaractionmanager.cpp:173
@@ -1775,8 +1781,9 @@ msgid "Move Event To"
 msgstr "Move Event To"
 
 #: standardcalendaractionmanager.cpp:325
-#, kde-format
-msgid "Edit Event..."
+#, fuzzy, kde-format
+#| msgid "Edit Event..."
+msgid "Edit Event…"
 msgstr "Edit Event..."
 
 #: standardcalendaractionmanager.cpp:329
@@ -1811,8 +1818,9 @@ msgid "Move To-do To"
 msgstr "Move To-do To"
 
 #: standardcalendaractionmanager.cpp:355
-#, kde-format
-msgid "Edit To-do..."
+#, fuzzy, kde-format
+#| msgid "Edit To-do..."
+msgid "Edit To-do…"
 msgstr "Edit To-do..."
 
 #: standardcalendaractionmanager.cpp:359
@@ -1847,13 +1855,15 @@ msgid "Move Journal To"
 msgstr "Move Journal To"
 
 #: standardcalendaractionmanager.cpp:385
-#, kde-format
-msgid "Edit Journal..."
+#, fuzzy, kde-format
+#| msgid "Edit Journal..."
+msgid "Edit Journal…"
 msgstr "Edit Journal..."
 
 #: standardcalendaractionmanager.cpp:525
-#, kde-format
-msgid "New E&vent..."
+#, fuzzy, kde-format
+#| msgid "New E&vent..."
+msgid "New E&vent…"
 msgstr "New E&vent..."
 
 #: standardcalendaractionmanager.cpp:526
@@ -1862,8 +1872,9 @@ msgid "Create a new event"
 msgstr "Create a new event"
 
 #: standardcalendaractionmanager.cpp:536
-#, kde-format
-msgid "New &To-do..."
+#, fuzzy, kde-format
+#| msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "New &To-do..."
 
 #: standardcalendaractionmanager.cpp:537
@@ -1872,8 +1883,9 @@ msgid "Create a new To-do"
 msgstr "Create a new To-do"
 
 #: standardcalendaractionmanager.cpp:546
-#, kde-format
-msgid "New Su&b-to-do..."
+#, fuzzy, kde-format
+#| msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "New Su&b-to-do..."
 
 #: standardcalendaractionmanager.cpp:547
@@ -1882,8 +1894,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Create a new Sub-to-do"
 
 #: standardcalendaractionmanager.cpp:557
-#, kde-format
-msgid "New &Journal..."
+#, fuzzy, kde-format
+#| msgid "New &Journal..."
+msgid "New &Journal…"
 msgstr "New &Journal..."
 
 #: standardcalendaractionmanager.cpp:558
@@ -1892,8 +1905,9 @@ msgid "Create a new Journal"
 msgstr "Create a new Journal"
 
 #: standardcalendaractionmanager.cpp:567
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Edit..."
 
 #: standardcalendaractionmanager.cpp:568
@@ -1976,6 +1990,9 @@ msgstr "Description"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Purging completed to-dos"
+
+#~ msgid "Add &Calendar..."
+#~ msgstr "Add &Calendar..."
 
 #~ msgid "Mail transport to use for sending e-mail messages"
 #~ msgstr "Mail transport to use for sending e-mail messages"
