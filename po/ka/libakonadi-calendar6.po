@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-02-20 03:26+0100\n"
+"PO-Revision-Date: 2024-05-10 07:24+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1257,10 +1257,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&მონიშნეთ..."
+msgstr "&მონიშნეთ…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1477,8 +1476,7 @@ msgid "Open Invitations"
 msgstr "მოსაწვევების გახსნა"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "საქაღალდის დამატება…"
 
@@ -1584,10 +1582,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "მონიშნული კალენდარის საქაღალდეების კალენდარიდან ამოჭრა."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "საქაღალდის თვისებები..."
+msgstr "საქაღალდის თვისებები…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1663,11 +1660,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "კალენდრიდან მონიშნული მოვლენების ამოჭრა."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "კალენდრის დამატება"
+msgstr "კალენდრის დამატება…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1727,10 +1722,9 @@ msgstr[0] "წავშალო კალენდრები?"
 msgstr[1] "წავშალო კალენდრები?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "კალენდრის თვისებები..."
+msgstr "კალენდრის თვისებები…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1801,10 +1795,9 @@ msgid "Move Event To"
 msgstr "მოვლენის გადატანა"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "მოვლენის ჩასწორება..."
+msgstr "მოვლენის ჩასწორება…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1838,10 +1831,9 @@ msgid "Move To-do To"
 msgstr "განრიგის გადატანა"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "განრიგის ჩასწორება..."
+msgstr "განრიგის ჩასწორება…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1875,16 +1867,14 @@ msgid "Move Journal To"
 msgstr "ჟურნალის გადატანა"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "ჟურნალის ჩასწორება..."
+msgstr "ჟურნალის ჩასწორება…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "ახალი &მოვლენა..."
+msgstr "ახალი &მოვლენა…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1892,10 +1882,9 @@ msgid "Create a new event"
 msgstr "ახალი მოვლენის შექმნა"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "&ახალი განრიგი..."
+msgstr "&ახალი განრიგი…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1903,10 +1892,9 @@ msgid "Create a new To-do"
 msgstr "ახალი განრიგის შექმნა"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "ახალი &ქვეგანრიგი..."
+msgstr "ახალი &ქვეგანრიგი…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1914,10 +1902,9 @@ msgid "Create a new Sub-to-do"
 msgstr "ახალი ქვეგანრიგის შექმნა"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "&ახალი ჟურნალი..."
+msgstr "&ახალი ჟურნალი…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1925,10 +1912,9 @@ msgid "Create a new Journal"
 msgstr "ახალი ჟურნალის შექმნა"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "&ჩასწორება..."
+msgstr "&ჩასწორება…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format

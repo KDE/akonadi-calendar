@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-02-26 18:17+0100\n"
-"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"PO-Revision-Date: 2024-05-10 06:10+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -969,7 +969,7 @@ msgstr "Naj pošljem nepodpisano?"
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr "Pošlji podpisano"
+msgstr "Pošlji nepodpisano"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -1263,10 +1263,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&Izbor …"
+msgstr "Izberi…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1292,7 +1291,7 @@ msgstr "To polje vsebuje ime prejemnika"
 #, kde-format
 msgctxt "recipient email"
 msgid "E&mail:"
-msgstr "&E-pošta:"
+msgstr "E-pošta:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:146
@@ -1483,10 +1482,9 @@ msgid "Open Invitations"
 msgstr "Odprta vabila"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "Dodaj mapo …"
+msgstr "Dodaj mapo…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1599,10 +1597,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Izreži izbrane koledarske mape s koledarja."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "Lastnosti mape …"
+msgstr "Lastnosti mape…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1688,11 +1685,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Izreži izbrane dogodke s koledarja."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Dodaj koledar"
+msgstr "Dodaj koledar…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1724,10 +1719,10 @@ msgstr "Ustvarjanje koledarja ni uspelo"
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] "Iz&briši %1 koledarjev"
-msgstr[1] "Iz&briši %1 koledar"
-msgstr[2] "Iz&briši %1 koledarja"
-msgstr[3] "Iz&briši %1 koledarje"
+msgstr[0] "Izbriši %1 koledarjev"
+msgstr[1] "Izbriši %1 koledar"
+msgstr[2] "Izbriši %1 koledarja"
+msgstr[3] "Izbriši %1 koledarje"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1758,10 +1753,9 @@ msgstr[2] "Izbrišem koledarja?"
 msgstr[3] "Izbrišem koledarje?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "Lastnosti koledarja …"
+msgstr "Lastnosti koledarja…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1785,7 +1779,7 @@ msgstr "Posodobi vsebino vseh map izbranih koledarjev."
 #: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
-msgstr "&Kopiraj na koledar"
+msgstr "Kopiraj na koledar"
 
 #: standardcalendaractionmanager.cpp:183
 #, kde-format
@@ -1834,10 +1828,9 @@ msgid "Move Event To"
 msgstr "Premakni dogodek na"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "Uredi dogodek …"
+msgstr "Uredi dogodek…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1877,10 +1870,9 @@ msgid "Move To-do To"
 msgstr "Premakni opravilo na"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "Uredi opravilo …"
+msgstr "Uredi opravilo…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1920,16 +1912,14 @@ msgid "Move Journal To"
 msgstr "Premakni dnevnik na"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "Uredi dnevnik …"
+msgstr "Uredi dnevnik…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "Nov &dogodek …"
+msgstr "Nov dogodek…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1937,10 +1927,9 @@ msgid "Create a new event"
 msgstr "Ustvari nov dogodek"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "Novo &opravilo …"
+msgstr "Novo opravilo…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1948,10 +1937,9 @@ msgid "Create a new To-do"
 msgstr "Ustvari novo opravilo"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Novo po&dopravilo …"
+msgstr "Novo podopravilo…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1959,10 +1947,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Ustvari novo podopravilo"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "Nov &dnevnik …"
+msgstr "Nov dnevnik…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1970,10 +1957,9 @@ msgid "Create a new Journal"
 msgstr "Ustvari nov dnevnik"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "&Uredi …"
+msgstr "Ur&edi…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format

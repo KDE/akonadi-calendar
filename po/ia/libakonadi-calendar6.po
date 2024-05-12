@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-02-20 11:06+0100\n"
+"PO-Revision-Date: 2024-05-10 12:23+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1278,10 +1278,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&Selige..."
+msgstr "&Selige…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1501,8 +1500,7 @@ msgid "Open Invitations"
 msgstr "Aperi invitationes: "
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "Adde Dossier..."
 
@@ -1610,8 +1608,7 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Talia le seligite dossieres de calendario ex calendario."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
 msgstr "Proprietates de dossier..."
 
@@ -1691,11 +1688,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Talia  le seligite eventos ex calendario."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Adde calendario"
+msgstr "Adde &Calendario…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1755,8 +1750,7 @@ msgstr[0] "Dele calendario?"
 msgstr[1] "Dele  calendarios?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
 msgstr "Proprietates de calendario..."
 
@@ -1830,8 +1824,7 @@ msgid "Move Event To"
 msgstr "Move evento in"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
 msgstr "Edita evento..."
 
@@ -1867,10 +1860,9 @@ msgid "Move To-do To"
 msgstr "Move activitate de facer in"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "Edita activitate de facer"
+msgstr "Edita activitate de facer..."
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1904,16 +1896,14 @@ msgid "Move Journal To"
 msgstr "Move jornal in"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
 msgstr "Edita jornal..."
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "Nove e&vento..."
+msgstr "Nove E&vento..."
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1921,10 +1911,9 @@ msgid "Create a new event"
 msgstr "Crea un nove evento"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "Nove activi&tate de facer ..."
+msgstr "Nove Activi&tate de Facer ..."
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1932,8 +1921,7 @@ msgid "Create a new To-do"
 msgstr "Crea un nove activitate de facer"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Nove Su&b-activitate-de-facer..."
 
@@ -1943,10 +1931,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Crea un nove sub-activitate de facer"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "Nove &jornal ..."
+msgstr "Nove &Jornal ..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1954,8 +1941,7 @@ msgid "Create a new Journal"
 msgstr "Crea un nove jornal"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
 msgstr "&Edita..."
 

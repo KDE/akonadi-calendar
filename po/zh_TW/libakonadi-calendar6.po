@@ -4,13 +4,13 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2013, 2015.
 # pan93412 <pan93412@gmail.com>, 2018.
 # Jeff Huang <s8321414@gmail.com>, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023, 2024.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-02-22 22:45+0900\n"
+"PO-Revision-Date: 2024-05-10 16:36+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -1219,10 +1219,9 @@ msgstr "點擊此按鍵會顯示出您的通訊錄，您可以漎裡面選取收
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "選取(&S)..."
+msgstr "選取(&S)…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1434,10 +1433,9 @@ msgid "Open Invitations"
 msgstr "等待中的邀請"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "新增資料夾……"
+msgstr "新增資料夾…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1532,10 +1530,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "從行事曆中剪下選取的行事曆資料夾。"
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "資料夾屬性..."
+msgstr "資料夾屬性…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1606,11 +1603,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "從行事曆中剪下選取的事件。"
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "新增行事曆"
+msgstr "新增行事曆(&C)…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1665,10 +1660,9 @@ msgid_plural "Delete Calendars?"
 msgstr[0] "要刪除行事曆嗎？"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "行事曆屬性..."
+msgstr "行事曆屬性…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1738,10 +1732,9 @@ msgid "Move Event To"
 msgstr "將事件移到"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "編輯事件..."
+msgstr "編輯事件…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1772,10 +1765,9 @@ msgid "Move To-do To"
 msgstr "移動待辦事項到"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "編輯待辦事項..."
+msgstr "編輯待辦事項…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1806,16 +1798,14 @@ msgid "Move Journal To"
 msgstr "移動日誌到"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "編輯日誌..."
+msgstr "編輯日誌…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "新增事件(&V)..."
+msgstr "新增事件(&V)…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1823,10 +1813,9 @@ msgid "Create a new event"
 msgstr "建立新事件"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "新增待辦事項(&T)..."
+msgstr "新增待辦事項(&T)…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1834,10 +1823,9 @@ msgid "Create a new To-do"
 msgstr "建立新的待辦事項"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "新增子待辦事項(&B)..."
+msgstr "新增子待辦事項(&B)…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1845,10 +1833,9 @@ msgid "Create a new Sub-to-do"
 msgstr "建立新的子待辦事項"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "新增日誌(&J)..."
+msgstr "新增日誌(&J)…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1856,10 +1843,9 @@ msgid "Create a new Journal"
 msgstr "建立新日誌"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "編輯(&E)..."
+msgstr "編輯(&E)…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format

@@ -243,13 +243,13 @@ msgstr "勾选此框获取 KOrganizer 按照您的要求发送给参与者的所
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Hide declined invitations"
-msgstr ""
+msgstr "隐藏已拒绝的邀请"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
-msgstr ""
+msgstr "选中此项将在事件视图中隐藏已拒绝的邀请。"
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -263,7 +263,7 @@ msgstr "仅显示我组织或者参加的活动的提醒"
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
-msgstr ""
+msgstr "选中此项将仅接受您作为组织者、或者参与的活动的事件的提醒。"
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
@@ -892,22 +892,24 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"根据收件人签名首选项的检查，要询问您是否签名此信件。\n"
+"您要签名此信件吗？"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Sign Message?"
-msgstr ""
+msgstr "签名信件吗？"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "签名(&S)"
 
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
-msgstr ""
+msgstr "不签名(&N)"
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -915,23 +917,25 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"这些收件人的签名首选项设置存在冲突。\n"
+"要签名此信件吗？"
 
 #: mailclient_p.cpp:747
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
-msgstr ""
+msgstr "此信件要求您签名，但是没有为此身份配置有效的签名密钥。"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "不签名发送？"
 
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "不签名发送(&U)"
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -940,6 +944,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"此信件的部分内容将不被签名。\n"
+"发送仅部分签名的信件可能违反站点规定。\n"
+"要改为签名全部内容吗？"
 
 #: mailclient_p.cpp:767
 #, kde-format
@@ -948,26 +955,29 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"此信件将不被签名。\n"
+"发送未签名的信件可能违反站点规定。\n"
+"要改为签名信件吗？"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "签名所有部分(&S)"
 
 #: mailclient_p.cpp:770
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "签名(&S)"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "未签名信件警告"
 
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
-msgstr ""
+msgstr "原样发送(&A)"
 
 #: mailclient_p.cpp:824
 #, kde-format
@@ -975,6 +985,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"找到了所有收件人的有效已信任加密密钥。\n"
+"要加密此信件吗？"
 
 #: mailclient_p.cpp:827
 #, kde-format
@@ -983,31 +995,33 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"根据收件人签名首选项的检查，要询问您是否加密此信件。\n"
+"您要加密此信件吗？"
 
 #: mailclient_p.cpp:832 mailclient_p.cpp:857
 #, kde-format
 msgid "Encrypt Message?"
-msgstr ""
+msgstr "加密信件吗？"
 
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "签名并加密(&E)"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "加密(&E)"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "仅签名(&S)"
 
 #: mailclient_p.cpp:834 mailclient_p.cpp:907
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "原样发送(&S)"
 
 #: mailclient_p.cpp:854
 #, kde-format
@@ -1015,11 +1029,13 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"这些收件人的加密首选项设置存在冲突。\n"
+"要加密此信件吗？"
 
 #: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
-msgstr ""
+msgstr "不加密(&N)"
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1028,16 +1044,18 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"此信件要求您加密，并且发送一份加密后的副本给您自己，但是没有为此身份配置有效"
+"的已信任加密密钥。"
 
 #: mailclient_p.cpp:880
 #, kde-format
 msgid "Send Unencrypted?"
-msgstr ""
+msgstr "不加密发送吗？"
 
 #: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
-msgstr ""
+msgstr "不加密发送(&U)"
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1047,6 +1065,9 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"此信件的部分内容将不被加密。\n"
+"发送仅部分加密的信件可能违反站点规定和泄露敏感信息。\n"
+"要改为加密全部内容吗？"
 
 #: mailclient_p.cpp:899
 #, kde-format
@@ -1056,16 +1077,19 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"此信件将不被加密。\n"
+"发送不加密的信件可能违反站点规定和泄露敏感信息。\n"
+"要改为加密信件吗？"
 
 #: mailclient_p.cpp:903
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "加密所有部分(&E)"
 
 #: mailclient_p.cpp:905
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "未加密信件警告"
 
 #: mailscheduler_p.cpp:199
 #, kde-format
@@ -1115,6 +1139,8 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
+"无法发布日历事件，因为收件人字段无效。\n"
+"%1"
 
 #: publishdialog.cpp:126
 #, kde-format
@@ -1191,10 +1217,9 @@ msgstr "点击此按钮以显示用于从您的地址簿添加收件人的对话
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "选择(&S)..."
+msgstr "选择(&S)…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1397,19 +1422,18 @@ msgstr "保存忙碌空闲对象出错"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "已拒绝的邀请"
 
 #: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "开放的邀请"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "添加文件夹..."
+msgstr "添加文件夹…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1504,10 +1528,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "从日历中剪切选中的日历文件夹。"
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "文件夹属性..."
+msgstr "文件夹属性…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1578,11 +1601,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "从日历中剪切选中的事件。"
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "添加日历"
+msgstr "添加日历(&C)…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1636,10 +1657,9 @@ msgid_plural "Delete Calendars?"
 msgstr[0] "删除日历吗？"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "日历属性..."
+msgstr "日历属性…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1709,10 +1729,9 @@ msgid "Move Event To"
 msgstr "移动事件到"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "编辑事件..."
+msgstr "编辑事件…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1743,10 +1762,9 @@ msgid "Move To-do To"
 msgstr "移动待办事项到"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "编辑待办事项..."
+msgstr "编辑待办事项…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1777,16 +1795,14 @@ msgid "Move Journal To"
 msgstr "移动日记到"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "编辑日记..."
+msgstr "编辑日记…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "新建事件(&V)..."
+msgstr "新建事件(&V)…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1794,10 +1810,9 @@ msgid "Create a new event"
 msgstr "创建新事件"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "新建待办事项(&T)..."
+msgstr "新建待办事项(&T)…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1805,10 +1820,9 @@ msgid "Create a new To-do"
 msgstr "新建待办事项"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "新建子待办事项(&B)..."
+msgstr "新建子待办事项(&B)…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1816,10 +1830,9 @@ msgid "Create a new Sub-to-do"
 msgstr "创建新子待办事项"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "新建日记(&J)..."
+msgstr "新建日记(&J)…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1827,10 +1840,9 @@ msgid "Create a new Journal"
 msgstr "创建一篇新日记"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "编辑(&E)..."
+msgstr "编辑(&E)…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
@@ -1841,25 +1853,25 @@ msgstr "编辑所选事件。"
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "例外"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr "、"
 
 #: todomodel.cpp:459
 #, kde-format
@@ -1869,7 +1881,7 @@ msgstr "摘要"
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "重复"
 
 #: todomodel.cpp:463
 #, kde-format
@@ -1885,33 +1897,30 @@ msgstr "完成"
 #: todomodel.cpp:467
 #, kde-format
 msgid "Start Date"
-msgstr ""
+msgstr "开始日期"
 
 #: todomodel.cpp:469
 #, kde-format
 msgid "Due Date"
-msgstr ""
+msgstr "截止日期"
 
 #: todomodel.cpp:471
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr ""
+msgstr "已完成"
 
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "标签"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: todopurger.cpp:61
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "正在删除已完成待办事项"
-
-#~ msgid "Add &Calendar..."
-#~ msgstr "添加日历(&C)..."
