@@ -67,7 +67,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "Confirmació de KOrganizer"
+msgstr "Confirmeu KOrganizer"
 
 #: calendarclipboard.cpp:181
 #, kde-format
@@ -204,8 +204,8 @@ msgid ""
 "download user.ifb, for example nn.ifb."
 msgstr ""
 "Amb esta opció podreu canviar el nom de fitxer que es recuperarà des del "
-"servidor. Si se selecciona, baixarà un fitxer de lliure/ocupat anomenat "
-"usuari@domini.ifb, per exemple nn@kde.org.ifb. Si no se selecciona, baixarà "
+"servidor. Si està marcada, es baixarà un fitxer de lliure/ocupat anomenat "
+"usuari@domini.ifb, per exemple nn@kde.org.ifb. Si no està marcada, baixarà "
 "usuari.ifb, per exemple nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
@@ -245,7 +245,7 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
-"Seleccioneu esta casella per a obtindre una còpia de tots els missatges de "
+"Marqueu esta casella per a obtindre una còpia de tots els missatges de "
 "correu que KOrganizer enviarà als assistents a l'esdeveniment a petició "
 "vostra."
 
@@ -260,8 +260,8 @@ msgstr "Oculta les invitacions refusades"
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
-"Seleccioneu esta casella per a ocultar les invitacions rebutjades en les "
-"vistes d'esdeveniments."
+"Marqueu esta casella per a ocultar les invitacions rebutjades en les vistes "
+"d'esdeveniments."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -277,7 +277,7 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
-"Seleccioneu-la per a rebre només recordatoris d'esdeveniments dels quals sou "
+"Marqueu-la per a rebre només recordatoris d'esdeveniments dels quals sou "
 "l'organitzador o que hi assistiu."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
@@ -304,8 +304,8 @@ msgid ""
 msgstr ""
 "Amb esta configuració podeu configurar si la part de domini de l'URL de "
 "lliure/ocupat ha de coincidir amb la part de domini de l'ID de l'usuari que "
-"esteu buscant. Per exemple, si esta opció està establida, llavors la busca "
-"de les dades de lliure/ocupat de jordi@meudomini.com en el servidor www."
+"esteu buscant. Per exemple, si s'ha establit esta opció, llavors la busca de "
+"les dades de lliure/ocupat de jordi@meudomini.com en el servidor www."
 "teudomini.com no funcionarà."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
@@ -489,7 +489,7 @@ msgstr "Creació de %1"
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
-msgstr "Supressió de %1"
+msgstr "Suprimiu %1"
 
 #: history_p.cpp:232
 #, kde-format
@@ -1295,7 +1295,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select..."
-msgstr "&Selecciona..."
+msgstr "&Selecciona…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1516,7 +1516,7 @@ msgstr "Invitacions obertes"
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder..."
-msgstr "Afig una carpeta..."
+msgstr "Afig una carpeta…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1625,7 +1625,7 @@ msgstr "Retalla les carpetes de calendari seleccionades del calendari."
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties..."
-msgstr "Propietats de la carpeta..."
+msgstr "Propietats de la carpeta…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1705,7 +1705,7 @@ msgstr "Retalla els esdeveniments seleccionats del calendari."
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar..."
-msgstr "Afig un &calendari..."
+msgstr "Afig un &calendari…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1768,7 +1768,7 @@ msgstr[1] "Voleu suprimir els calendaris?"
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties..."
-msgstr "Propietats del calendari..."
+msgstr "Propietats del calendari…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1842,7 +1842,7 @@ msgstr "Mou l'esdeveniment a"
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event..."
-msgstr "Edita l'esdeveniment..."
+msgstr "Edita l'esdeveniment…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1878,7 +1878,7 @@ msgstr "Mou la tasca pendent cap a"
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do..."
-msgstr "Edita la tasca pendent..."
+msgstr "Edita la tasca pendent…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1914,12 +1914,12 @@ msgstr "Mou el diari a"
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal..."
-msgstr "Edita el diari..."
+msgstr "Edita el diari…"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent..."
-msgstr "Esde&veniment nou..."
+msgstr "Esde&veniment nou…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1929,7 +1929,7 @@ msgstr "Crea un esdeveniment nou"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do..."
-msgstr "&Tasca pendent nova..."
+msgstr "&Tasca pendent nova…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1939,7 +1939,7 @@ msgstr "Crea una tasca pendent nova"
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do..."
-msgstr "Su&btasca pendent nova..."
+msgstr "Su&btasca pendent nova…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1949,7 +1949,7 @@ msgstr "Crea una subtasca pendent nova"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal..."
-msgstr "D&iari nou..."
+msgstr "D&iari nou…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1959,7 +1959,7 @@ msgstr "Crea un diari nou"
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit..."
-msgstr "&Edita..."
+msgstr "&Edita…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
