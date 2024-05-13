@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 02:27+0000\n"
-"PO-Revision-Date: 2024-02-24 16:42+0100\n"
+"PO-Revision-Date: 2024-05-12 09:00+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -1937,7 +1937,7 @@ msgstr "Nowe &podzadanie..."
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
-msgstr "Utwórz nowe podzadanie"
+msgstr "Utwórz nowe pod-zadanie"
 
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
