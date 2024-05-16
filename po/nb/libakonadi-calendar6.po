@@ -1973,6 +1973,3 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Rydder bort fullførte gjøremål"
-
-#~ msgid "Add &Calendar..."
-#~ msgstr "Legg til &kalender …"
