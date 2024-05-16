@@ -866,7 +866,7 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
         switch (dialogDelegate->warningTwoActionsCancel(msg,
                                                         i18n("Encrypt Message?"),
                                                         KGuiItem(i18nc("@action:button", "&Encrypt")),
-                                                        KGuiItem(i18n("Do &Not Encrypt")))) {
+                                                        KGuiItem(i18nc("@action:button", "Do &Not Encrypt")))) {
         case ITIPHandlerDialogDelegate::CancelAction:
             result = false;
             canceled = true;
