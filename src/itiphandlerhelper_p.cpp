@@ -309,7 +309,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                       ITIPHandlerDialogDelegate::Attendees,
                                                       question,
                                                       mDefaultAction,
-                                                      KGuiItem(i18n("Send Update")));
+                                                      KGuiItem(i18nc("@action:button", "Send Update")));
             return;
         } else {
             Q_EMIT sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
@@ -330,7 +330,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                   ITIPHandlerDialogDelegate::Organizer,
                                                   question,
                                                   mDefaultAction,
-                                                  KGuiItem(i18n("Send Update")));
+                                                  KGuiItem(i18nc("@action:button", "Send Update")));
         return;
     } else if (incidence->type() == KCalendarCore::Incidence::TypeEvent) {
         if (attendeeStatusChanged && method == KCalendarCore::iTIPRequest) {
@@ -343,7 +343,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                       ITIPHandlerDialogDelegate::Organizer,
                                                       question,
                                                       mDefaultAction,
-                                                      KGuiItem(i18n("Send Update")));
+                                                      KGuiItem(i18nc("@action:button", "Send Update")));
             return;
         } else {
             slotIncidenceModifiedDialogClosed(KMessageBox::ButtonCode::PrimaryAction, method, incidence);

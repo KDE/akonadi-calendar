@@ -702,7 +702,10 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
             "yielded that you be asked whether or not to sign "
             "this message.\n"
             "Sign this message?");
-        switch (dialogDelegate->warningTwoActionsCancel(msg, i18n("Sign Message?"), KGuiItem(i18nc("to sign", "&Sign")), KGuiItem(i18n("Do &Not Sign")))) {
+        switch (dialogDelegate->warningTwoActionsCancel(msg,
+                                                        i18n("Sign Message?"),
+                                                        KGuiItem(i18nc("to sign", "&Sign")),
+                                                        KGuiItem(i18nc("@action:button", "Do &Not Sign")))) {
         case ITIPHandlerDialogDelegate::CancelAction:
             result = false;
             canceled = true;
@@ -725,7 +728,10 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
             "There are conflicting signing preferences "
             "for these recipients.\n"
             "Sign this message?");
-        switch (dialogDelegate->warningTwoActionsCancel(msg, i18n("Sign Message?"), KGuiItem(i18nc("to sign", "&Sign")), KGuiItem(i18n("Do &Not Sign")))) {
+        switch (dialogDelegate->warningTwoActionsCancel(msg,
+                                                        i18n("Sign Message?"),
+                                                        KGuiItem(i18nc("to sign", "&Sign")),
+                                                        KGuiItem(i18nc("@action:button", "Do &Not Sign")))) {
         case ITIPHandlerDialogDelegate::CancelAction:
             result = false;
             canceled = true;
@@ -747,7 +753,7 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
             "You have requested to sign this message, "
             "but no valid signing keys have been configured "
             "for this identity.");
-        if (dialogDelegate->warningContinueCancel(msg, i18n("Send Unsigned?"), KGuiItem(i18n("Send &Unsigned"))) == KMessageBox::Cancel) {
+        if (dialogDelegate->warningContinueCancel(msg, i18n("Send Unsigned?"), KGuiItem(i18nc("@action:button", "Send &Unsigned"))) == KMessageBox::Cancel) {
             result = false;
             return false;
         } else {
@@ -768,7 +774,10 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
                                                               "Sending unsigned message might violate site policy.\n"
                                                               "Sign message instead?"); // oh, I hate this...
             const QString buttonText = sign && !doSignCompletely ? i18n("&Sign All Parts") : i18n("&Sign");
-            switch (dialogDelegate->warningTwoActionsCancel(msg, i18n("Unsigned-Message Warning"), KGuiItem(buttonText), KGuiItem(i18n("Send &As Is")))) {
+            switch (dialogDelegate->warningTwoActionsCancel(msg,
+                                                            i18n("Unsigned-Message Warning"),
+                                                            KGuiItem(buttonText),
+                                                            KGuiItem(i18nc("@action:button", "Send &As Is")))) {
             case ITIPHandlerDialogDelegate::CancelAction:
                 result = false;
                 canceled = true;
@@ -854,7 +863,10 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
             "There are conflicting encryption preferences "
             "for these recipients.\n"
             "Encrypt this message?");
-        switch (dialogDelegate->warningTwoActionsCancel(msg, i18n("Encrypt Message?"), KGuiItem(i18n("&Encrypt")), KGuiItem(i18n("Do &Not Encrypt")))) {
+        switch (dialogDelegate->warningTwoActionsCancel(msg,
+                                                        i18n("Encrypt Message?"),
+                                                        KGuiItem(i18nc("@action:button", "&Encrypt")),
+                                                        KGuiItem(i18n("Do &Not Encrypt")))) {
         case ITIPHandlerDialogDelegate::CancelAction:
             result = false;
             canceled = true;
@@ -877,7 +889,7 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
             "and to encrypt a copy to yourself, "
             "but no valid trusted encryption keys have been "
             "configured for this identity.");
-        if (dialogDelegate->warningContinueCancel(msg, i18n("Send Unencrypted?"), KGuiItem(i18n("Send &Unencrypted")))
+        if (dialogDelegate->warningContinueCancel(msg, i18n("Send Unencrypted?"), KGuiItem(i18nc("@action:button", "Send &Unencrypted")))
             == ITIPHandlerDialogDelegate::CancelAction) {
             result = false;
             return false;
