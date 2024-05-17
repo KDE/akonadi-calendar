@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2023-04-06 12:14+0400\n"
+"POT-Creation-Date: 2024-05-17 00:39+0000\n"
+"PO-Revision-Date: 2024-05-16 13:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -65,12 +65,16 @@ msgid "KOrganizer Confirmation"
 msgstr "تأكيد «منظّمك»"
 
 #: calendarclipboard.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cut Only This"
+msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "قصّ هذا فقط"
 
 #: calendarclipboard.cpp:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cut All"
+msgctxt "@action:button"
 msgid "Cut All"
 msgstr "قصّ الكلّ"
 
@@ -84,12 +88,16 @@ msgstr ""
 "الفرعيّة؟"
 
 #: calendarclipboard.cpp:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy Only This"
+msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "انسخ هذا فقط"
 
 #: calendarclipboard.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy All"
+msgctxt "@action:button"
 msgid "Copy All"
 msgstr "انسخ الكلّ"
 
@@ -244,11 +252,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "الدعوات المرفوضة"
+msgstr "أخف الدعوات المرفوضة"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
@@ -784,7 +790,9 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Update"
+msgctxt "@action:button"
 msgid "Send Update"
 msgstr "أرسل تحديثًا"
 
@@ -900,52 +908,57 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"أدّى فحص تفضيلات التّوقيع للمستلم أن تُسأل إن أردت توقيع هذه الرّسالة أم لا.\n"
+"أأوقّع هذه الرّسالة؟"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#: mailclient_p.cpp:706 mailclient_p.cpp:732
+#, kde-format
 msgid "Sign Message?"
-msgstr "أرسل رسائل"
+msgstr "أأوقّع الرّسالة؟"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "و&قّع"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#| msgid "Do &Not Sign"
+msgctxt "@action:button"
 msgid "Do &Not Sign"
-msgstr "لا تُرسل بريدًا"
+msgstr "لا &توقّع"
 
-#: mailclient_p.cpp:725
+#: mailclient_p.cpp:728
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"ثمّة تفضيلات توقيع متضاربة للمستقبلين.\n"
+"أأوقّع هذه الرّسالة؟"
 
-#: mailclient_p.cpp:747
+#: mailclient_p.cpp:753
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"لقد طلبت توقيع هذه الرّسالة ولكن لم تُضبط مفاتيح توقيع صالحة لهذه الهويّة."
 
-#: mailclient_p.cpp:750
+#: mailclient_p.cpp:756
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "أأرسلها غير موقّعة؟"
 
-#: mailclient_p.cpp:750
-#, kde-format
+#: mailclient_p.cpp:756
+#, fuzzy, kde-format
+#| msgid "Send &Unsigned"
+msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "أرسلها &غير موقّعة"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:769
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -953,7 +966,7 @@ msgid ""
 "Sign all parts instead?"
 msgstr ""
 
-#: mailclient_p.cpp:767
+#: mailclient_p.cpp:773
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -961,103 +974,118 @@ msgid ""
 "Sign message instead?"
 msgstr ""
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "و&قّع كلّ الأجزاء"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "و&قّع"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "تحذير برسالة غير موقّعة"
 
-#: mailclient_p.cpp:771
-#, kde-format
+#: mailclient_p.cpp:780
+#, fuzzy, kde-format
+#| msgid "Send &As Is"
+msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr ""
+msgstr "أر&سلها كما هي"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"عُثر على مفاتيح تعمية موثوقة وصالحة لكلّ المستلمين.\n"
+"أأعمّي هذه الرّسالة؟"
 
-#: mailclient_p.cpp:827
+#: mailclient_p.cpp:836
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"أدّى فحص تفضيلات التّعمية للمستلم أن تُسأل إن أردت تعمية هذه الرّسالة أم لا.\n"
+"أأعمّي هذه الرّسالة؟"
 
-#: mailclient_p.cpp:832 mailclient_p.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#: mailclient_p.cpp:841 mailclient_p.cpp:867
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "أرسل رسائل"
+msgstr "أأعمّي الرّسالة؟"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:842
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "وقّع و&عمِّ"
 
-#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
+#: mailclient_p.cpp:842 mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&عمِّ"
 
-#: mailclient_p.cpp:834 mailclient_p.cpp:907
+#: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "و&قّع فقط"
 
-#: mailclient_p.cpp:834 mailclient_p.cpp:907
+#: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "أر&سلها كما هي"
 
-#: mailclient_p.cpp:854
+#: mailclient_p.cpp:863
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"ثمّة تفضيلات تعمية متضاربة للمستقبلين.\n"
+"أأعمّي هذه الرّسالة؟"
 
-#: mailclient_p.cpp:857
+#: mailclient_p.cpp:868
 #, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
-msgid "Do &Not Encrypt"
-msgstr "لا تُرسل بريدًا"
+#| msgid "&Encrypt"
+msgctxt "@action:button"
+msgid "&Encrypt"
+msgstr "&عمِّ"
 
-#: mailclient_p.cpp:876
+#: mailclient_p.cpp:869
+#, fuzzy, kde-format
+#| msgid "Do &Not Encrypt"
+msgctxt "@action:button"
+msgid "Do &Not Encrypt"
+msgstr "لا &تعمِّ"
+
+#: mailclient_p.cpp:888
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"لقد طلبت تعمية هذه الرّسالة، وتعمية نسخة لك، ولكن لم تُضبط مفاتيح تعمية صالحة "
+"لهذه الهويّة."
 
-#: mailclient_p.cpp:880
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#: mailclient_p.cpp:892
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "أرسل تحديثًا"
+msgstr "أأرسلها دون تعمية؟"
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:892
 #, fuzzy, kde-format
-#| msgid "Send Update"
+#| msgid "Send &Unencrypted"
+msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr "أرسل تحديثًا"
+msgstr "أرسلها &دون تعمية"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:906
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1066,7 +1094,7 @@ msgid ""
 "Encrypt all parts instead?"
 msgstr ""
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1075,15 +1103,15 @@ msgid ""
 "Encrypt messages instead?"
 msgstr ""
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&عمِّ كلّ الأجزاء"
 
-#: mailclient_p.cpp:905
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "تحذير برسالة غير معمّاة"
 
 #: mailscheduler_p.cpp:199
 #, kde-format
@@ -1127,15 +1155,14 @@ msgid ""
 msgstr "انقر زرّ <b>مساعدة</b> لقراءة المزيد عن جدولة المجموعات."
 
 #: publishdialog.cpp:123
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
-msgstr "تعذّر نشر حدوث التّقويم بسبب عدم صلاحيّة سلسلة المستلمين. %1"
+msgstr ""
+"تعذّر نشر حدوث التّقويم بسبب عدم صلاحيّة سلسلة المستلمين.\n"
+" %1"
 
 #: publishdialog.cpp:126
 #, kde-format
@@ -1214,10 +1241,9 @@ msgstr "انقر هذا الزّرّ لعرض حواريّ آخر يمكنك م�
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "ا&ختر..."
+msgstr "&حدد…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1430,10 +1456,9 @@ msgid "Open Invitations"
 msgstr "الدعوات المفتوحة"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "أضف مجلدًا..."
+msgstr "أضف مجلّدًا…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1558,10 +1583,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "قصّ مجلّدات التّقاويم المحدّدة من التّقويم."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "خصائص المجلّد..."
+msgstr "خصائص المجلّد…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1657,11 +1681,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "قصّ الأحداث المحدّدة من التّقويم."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "إضافة التّقويم"
+msgstr "أضف ت&قويمًا…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1732,10 +1754,9 @@ msgstr[4] "أأحذف التّقاويم؟"
 msgstr[5] "أأحذف التّقاويم؟"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "خصائص المجلّد..."
+msgstr "خصائص المجلّد…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1812,10 +1833,9 @@ msgid "Move Event To"
 msgstr "انقل الحدث إلى"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "حرّر الحدث..."
+msgstr "حرّر الحدث…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1861,10 +1881,9 @@ msgid "Move To-do To"
 msgstr "انقل المهمّة إلى"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "حرّر المهمّة..."
+msgstr "حرّر المهمّة…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1910,16 +1929,14 @@ msgid "Move Journal To"
 msgstr "انقل اليوميّة إلى"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "حرّر اليوميّة..."
+msgstr "حرّر اليوميّة…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "حد&ث جديد..."
+msgstr "حد&ث جديد…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1927,10 +1944,9 @@ msgid "Create a new event"
 msgstr "أنشئ حدثًا جديدًا"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "م&همّة جديدة..."
+msgstr "م&همّة جديدة…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1938,10 +1954,9 @@ msgid "Create a new To-do"
 msgstr "أنشئ مهمّة جديدة"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "مهمّة &فرعيّة جديدة..."
+msgstr "مهمّة &فرعيّة جديدة…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1949,10 +1964,9 @@ msgid "Create a new Sub-to-do"
 msgstr "أنشئ مهمّة فرعيّة جديدة"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "يو&ميّة جديدة..."
+msgstr "يو&ميّة جديدة…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1960,10 +1974,9 @@ msgid "Create a new Journal"
 msgstr "أنشئ يوميّة جديدة"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "&حرّر..."
+msgstr "&حرّر…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
+"POT-Creation-Date: 2024-05-17 00:39+0000\n"
 "PO-Revision-Date: 2024-03-21 18:08+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -69,12 +69,16 @@ msgid "KOrganizer Confirmation"
 msgstr "KOrganizer-Bestätigung"
 
 #: calendarclipboard.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cut Only This"
+msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Nur diese Aufgabe ausschneiden"
 
 #: calendarclipboard.cpp:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cut All"
+msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Alle ausschneiden"
 
@@ -89,12 +93,16 @@ msgstr ""
 "Aufgabe und alle zugehörigen Unteraufgaben kopieren?"
 
 #: calendarclipboard.cpp:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy Only This"
+msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Nur diese Aufgabe kopieren"
 
 #: calendarclipboard.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy All"
+msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Alle kopieren"
 
@@ -815,7 +823,9 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Update"
+msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Aktualisierung versenden"
 
@@ -944,23 +954,25 @@ msgstr ""
 "gefragt werden möchten, ob diese Nachricht signiert werden soll.\n"
 "Möchten Sie diese Nachricht signieren?"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
+#: mailclient_p.cpp:706 mailclient_p.cpp:732
 #, kde-format
 msgid "Sign Message?"
 msgstr "Nachricht signieren?"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Signieren"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, kde-format
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#, fuzzy, kde-format
+#| msgid "Do &Not Sign"
+msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Nicht signieren"
 
-#: mailclient_p.cpp:725
+#: mailclient_p.cpp:728
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -969,7 +981,7 @@ msgstr ""
 "Es gibt Konflikte in den Signierungseinstellungen für diese Empfänger.\n"
 "Möchten Sie diese Nachricht signieren?"
 
-#: mailclient_p.cpp:747
+#: mailclient_p.cpp:753
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -978,17 +990,19 @@ msgstr ""
 "Sie haben festgelegt, dass diese Nachricht signiert werden soll, aber es "
 "wurde kein gültiger Signierungsschlüssel für diese Identität eingerichtet."
 
-#: mailclient_p.cpp:750
+#: mailclient_p.cpp:756
 #, kde-format
 msgid "Send Unsigned?"
 msgstr "Unsigniert senden?"
 
-#: mailclient_p.cpp:750
-#, kde-format
+#: mailclient_p.cpp:756
+#, fuzzy, kde-format
+#| msgid "Send &Unsigned"
+msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "&Unsigniert senden"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:769
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1000,7 +1014,7 @@ msgstr ""
 "Regelungen dieser Seite missachten.\n"
 "Möchten Sie stattdessen alle Teile signieren?"
 
-#: mailclient_p.cpp:767
+#: mailclient_p.cpp:773
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1012,27 +1026,29 @@ msgstr ""
 "dieser Seite missachten.\n"
 "Möchten Sie stattdessen die Nachricht signieren?"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Alle Teile &signieren"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign"
 msgstr "&Signieren"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr "Warnung: Unsignierte Nachricht"
 
-#: mailclient_p.cpp:771
-#, kde-format
+#: mailclient_p.cpp:780
+#, fuzzy, kde-format
+#| msgid "Send &As Is"
+msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Ohne Änderung &senden"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1042,7 +1058,7 @@ msgstr ""
 "Verschlüsselungsschlüssel gefunden.\n"
 "Möchten Sie diese Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:827
+#: mailclient_p.cpp:836
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1053,32 +1069,32 @@ msgstr ""
 "Sie gefragt werden möchten, ob diese Nachricht verschlüsselt  werden soll.\n"
 "Möchten Sie diese Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:832 mailclient_p.cpp:857
+#: mailclient_p.cpp:841 mailclient_p.cpp:867
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:842
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Signieren && V&erschlüsseln"
 
-#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
+#: mailclient_p.cpp:842 mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Verschlüsseln"
 
-#: mailclient_p.cpp:834 mailclient_p.cpp:907
+#: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Sign Only"
 msgstr "Nur &signieren"
 
-#: mailclient_p.cpp:834 mailclient_p.cpp:907
+#: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Ohne Änderung &senden"
 
-#: mailclient_p.cpp:854
+#: mailclient_p.cpp:863
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1087,12 +1103,21 @@ msgstr ""
 "Es gibt Konflikte in den Verschlüsselungseinstellungen für diese Empfänger.\n"
 "Möchten Sie diese Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:857
-#, kde-format
+#: mailclient_p.cpp:868
+#, fuzzy, kde-format
+#| msgid "&Encrypt"
+msgctxt "@action:button"
+msgid "&Encrypt"
+msgstr "&Verschlüsseln"
+
+#: mailclient_p.cpp:869
+#, fuzzy, kde-format
+#| msgid "Do &Not Encrypt"
+msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Nicht verschlüsseln"
 
-#: mailclient_p.cpp:876
+#: mailclient_p.cpp:888
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1104,17 +1129,19 @@ msgstr ""
 "gültiger vertrauenswürdiger Verschlüsselungsschlüssel für diese Identität "
 "eingerichtet."
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:892
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Unverschlüsselt senden?"
 
-#: mailclient_p.cpp:880
-#, kde-format
+#: mailclient_p.cpp:892
+#, fuzzy, kde-format
+#| msgid "Send &Unencrypted"
+msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&Unverschlüsselt senden"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:906
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1128,7 +1155,7 @@ msgstr ""
 "verbreiten\n"
 "Möchten Sie stattdessen alle Teile verschlüsseln?"
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1142,12 +1169,12 @@ msgstr ""
 "verbreiten\n"
 "Möchten Sie stattdessen die Nachrichten verschlüsseln?"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Alle Teile v&erschlüsseln"
 
-#: mailclient_p.cpp:905
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Warnung: Nicht verschlüsselte Nachricht"

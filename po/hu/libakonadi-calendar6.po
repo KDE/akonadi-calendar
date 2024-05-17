@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
+"POT-Creation-Date: 2024-05-17 00:39+0000\n"
 "PO-Revision-Date: 2024-05-14 11:32+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -66,12 +66,16 @@ msgid "KOrganizer Confirmation"
 msgstr "KOrganizer jóváhagyás"
 
 #: calendarclipboard.cpp:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cut Only This"
+msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Csak ezt vágja ki"
 
 #: calendarclipboard.cpp:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cut All"
+msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Összes kivágása"
 
@@ -85,12 +89,16 @@ msgstr ""
 "vagy a feladathoz tartozó összes részfeladatot is?"
 
 #: calendarclipboard.cpp:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy Only This"
+msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Csak ezt másolja"
 
 #: calendarclipboard.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy All"
+msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Összes másolása"
 
@@ -800,7 +808,9 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Update"
+msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Frissítés küldése"
 
@@ -923,23 +933,25 @@ msgstr ""
 "program kérdezzen rá, alá szeretné-e írni az üzenetet.\n"
 "Alá szeretné írni az üzenetet?"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
+#: mailclient_p.cpp:706 mailclient_p.cpp:732
 #, kde-format
 msgid "Sign Message?"
 msgstr "Aláírja az üzenetet?"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Aláírás"
 
-#: mailclient_p.cpp:705 mailclient_p.cpp:728
-#, kde-format
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#, fuzzy, kde-format
+#| msgid "Do &Not Sign"
+msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Ne írja alá"
 
-#: mailclient_p.cpp:725
+#: mailclient_p.cpp:728
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -948,7 +960,7 @@ msgstr ""
 "A címzett aláírási beállításai nem egyértelműek.\n"
 "Alá szeretné írni az üzenetet?"
 
-#: mailclient_p.cpp:747
+#: mailclient_p.cpp:753
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -957,17 +969,19 @@ msgstr ""
 "Az üzenet aláírását kérte, de nincs beállítva érvényes aláírási kulcs ehhez "
 "az azonosítóhoz."
 
-#: mailclient_p.cpp:750
+#: mailclient_p.cpp:756
 #, kde-format
 msgid "Send Unsigned?"
 msgstr "Elkül&dés aláírás nélkül?"
 
-#: mailclient_p.cpp:750
-#, kde-format
+#: mailclient_p.cpp:756
+#, fuzzy, kde-format
+#| msgid "Send &Unsigned"
+msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Elkül&dés aláírás nélkül"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:769
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -978,7 +992,7 @@ msgstr ""
 "Lehet, hogy ez az Önnél érvényes biztonsági előírások megsértését jelenti.\n"
 "Inkább minden üzenetrészt alá szeretne írni?"
 
-#: mailclient_p.cpp:767
+#: mailclient_p.cpp:773
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -989,27 +1003,29 @@ msgstr ""
 "Lehet, hogy ez az Önnél érvényes biztonsági előírások megsértését jelenti.\n"
 "Inkább alá szeretné írni az üzenetet?"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Minden rész &aláírása"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign"
 msgstr "&Aláírás"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
 msgstr "Figyelmeztetés nem aláírt üzenetről"
 
-#: mailclient_p.cpp:771
-#, kde-format
+#: mailclient_p.cpp:780
+#, fuzzy, kde-format
+#| msgid "Send &As Is"
+msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Elkül&dés így"
 
-#: mailclient_p.cpp:824
+#: mailclient_p.cpp:833
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1018,7 +1034,7 @@ msgstr ""
 "Mindegyik címzetthez választható megbízható titkosítási kulcs.\n"
 "Titkosítani szeretné az üzenetet?"
 
-#: mailclient_p.cpp:827
+#: mailclient_p.cpp:836
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1029,32 +1045,32 @@ msgstr ""
 "program kérdezzen rá, titkosítani szeretné-e az üzenetet.\n"
 "Titkosítani szeretné az üzenetet?"
 
-#: mailclient_p.cpp:832 mailclient_p.cpp:857
+#: mailclient_p.cpp:841 mailclient_p.cpp:867
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Titkosítani szeretné az üzenetet?"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:842
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Aláírás és titkosítás"
 
-#: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
+#: mailclient_p.cpp:842 mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Titkosítás"
 
-#: mailclient_p.cpp:834 mailclient_p.cpp:907
+#: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Csak aláírás"
 
-#: mailclient_p.cpp:834 mailclient_p.cpp:907
+#: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Elküldés í&gy"
 
-#: mailclient_p.cpp:854
+#: mailclient_p.cpp:863
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1063,12 +1079,21 @@ msgstr ""
 "Ezeknél a címzetteknél nem egyértelműek a titkosítási beállítások.\n"
 "Titkosítani szeretné az üzenetet?"
 
-#: mailclient_p.cpp:857
-#, kde-format
+#: mailclient_p.cpp:868
+#, fuzzy, kde-format
+#| msgid "&Encrypt"
+msgctxt "@action:button"
+msgid "&Encrypt"
+msgstr "&Titkosítás"
+
+#: mailclient_p.cpp:869
+#, fuzzy, kde-format
+#| msgid "Do &Not Encrypt"
+msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "T&itkosítás nélkül"
 
-#: mailclient_p.cpp:876
+#: mailclient_p.cpp:888
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1079,17 +1104,19 @@ msgstr ""
 "nem található az azonosítóhoz beállított érvényes, megbízható titkosítási "
 "kulcs."
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:892
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Küldés titkosítatlan&ul?"
 
-#: mailclient_p.cpp:880
-#, kde-format
+#: mailclient_p.cpp:892
+#, fuzzy, kde-format
+#| msgid "Send &Unencrypted"
+msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Küldés titkosítatlan&ul"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:906
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1102,7 +1129,7 @@ msgstr ""
 "adatok kikerülését jelenti.\n"
 "Inkább minden üzenetrészt titkosítani szeretne?"
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1115,12 +1142,12 @@ msgstr ""
 "biztonsági előírásokat.\n"
 "Inkább titkosítani szeretné az üzenetet?"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Az összes üzenetrész &titkosítása"
 
-#: mailclient_p.cpp:905
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Figyelmeztetés nem titkosított üzenetről"
