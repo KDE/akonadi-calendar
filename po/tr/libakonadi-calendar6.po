@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:39+0000\n"
-"PO-Revision-Date: 2024-05-10 13:43+0300\n"
+"PO-Revision-Date: 2024-05-17 13:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
-"Güncellenecek takvim bulunamadı, büyük olasılıkla yakın zamanlarda silindi."
+"Güncellenecek takvim bulunamadı, büyük olasılıkla yakın zamanda silindi."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -70,18 +70,16 @@ msgid "KOrganizer Confirmation"
 msgstr "K Organizatör Onayı"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Yalnızca Bunu Kes"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
-msgstr "Hepsini kes"
+msgstr "Tümünü Kes"
 
 #: calendarclipboard.cpp:215
 #, kde-format
@@ -94,15 +92,13 @@ msgstr ""
 "istersiniz?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Yalnızca Bunu Kopyala"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Tümünü Kopyala"
@@ -812,8 +808,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Güncelleme Gönder"
@@ -952,8 +947,7 @@ msgid "&Sign"
 msgstr "İ&mzala"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "İm&zalama"
@@ -982,8 +976,7 @@ msgid "Send Unsigned?"
 msgstr "İmzalanmamış Olarak Gönderilsin mi?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "İm&zalanmamış Olarak Gönder"
@@ -1027,8 +1020,7 @@ msgid "Unsigned-Message Warning"
 msgstr "İmzalanmamış İleti Uyarısı"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Olduğu &Gibi Gönder"
@@ -1088,15 +1080,13 @@ msgstr ""
 "Bu ileti şifrelensin mı?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Ş&ifrele"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "Ş&ifreleme"
@@ -1118,8 +1108,7 @@ msgid "Send Unencrypted?"
 msgstr "Şifrelenmemiş Olarak Gönderilsin mi?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Şi&frelenmemiş Olarak Gönder"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:39+0000\n"
-"PO-Revision-Date: 2024-05-10 06:10+0200\n"
+"PO-Revision-Date: 2024-05-17 07:26+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -71,15 +71,13 @@ msgid "KOrganizer Confirmation"
 msgstr "Potrditev KOrganizerja"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Izreži samo to"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Izreži vse"
@@ -94,15 +92,13 @@ msgstr ""
 "opravilo skupaj z njegovimi podopravili?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopiraj samo to"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Kopiraj vse"
@@ -813,8 +809,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Pošlji posodobitev"
@@ -949,8 +944,7 @@ msgid "&Sign"
 msgstr "Podpiši"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "Ne podpiši"
@@ -979,8 +973,7 @@ msgid "Send Unsigned?"
 msgstr "Naj pošljem nepodpisano?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Pošlji nepodpisano"
@@ -1024,8 +1017,7 @@ msgid "Unsigned-Message Warning"
 msgstr "Opozorilo o nepodpisanem sporočilu"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Pošlji kot je"
@@ -1085,15 +1077,13 @@ msgstr ""
 "Naj šifriram to sporočilo?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Šifriraj"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "Ne šifriraj"
@@ -1115,8 +1105,7 @@ msgid "Send Unencrypted?"
 msgstr "Naj pošljem nešifrirano?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Pošlji nešifrirano"
