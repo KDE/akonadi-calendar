@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 02:27+0000\n"
-"PO-Revision-Date: 2024-02-20 02:52+0100\n"
+"PO-Revision-Date: 2024-05-18 01:12+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
-"No se ha podido encontrar la incidencia a actualizar, probablemente se borró "
-"recientemente."
+"No se ha podido encontrar la incidencia a actualizar, probablemente se ha "
+"borrado recientemente."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -58,9 +58,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"El elemento «%1» tiene subtareas. ¿Quiere usted cortar solo este elemento y "
-"hacer sus subtareas independientes, o cortar la tarea con todas sus "
-"subtareas?"
+"El elemento «%1» tiene subtareas. ¿Quiere cortar solo este elemento y hacer "
+"sus subtareas independientes, o cortar la tarea con todas sus subtareas?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
@@ -84,8 +83,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"El elemento «%1» tiene subtareas. ¿Quiere usted copiar solo este elemento o "
-"copiar la tarea con todas sus subtareas?"
+"El elemento «%1» tiene subtareas. ¿Quiere copiar solo este elemento o copiar "
+"la tarea con todas sus subtareas?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
@@ -202,10 +201,10 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
-"Con esta preferencia, usted puede cambiar el nombre de archivo que se "
-"recuperará del servidor. Con esto marcado, descargará un archivo de "
-"disponibilidad denominado usuario@dominio.ifb, por ejemplo nn@kde.org.ifb. "
-"Sin establecerlo, descargará usuario.ifb, por ejemplo, nn.ifb."
+"Con esta preferencia, puede cambiar el nombre de archivo que se recuperará "
+"del servidor. Con esto marcado, descargará un archivo de disponibilidad "
+"denominado usuario@dominio.ifb, por ejemplo nn@kde.org.ifb. Sin "
+"establecerlo, descargará usuario.ifb, por ejemplo, nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
@@ -282,7 +281,7 @@ msgstr ""
 #: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr "Enviar propuestas de seudocontrarestar tipo Outlook"
+msgstr "Enviar seudocontrapropuesta tipo Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:105
@@ -299,11 +298,11 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
-"Con esta preferencia, usted puede configurar si la parte de dominio del URL "
-"de disponibilidad tiene que coincidir con la parte de dominio del usuario "
-"que usted está buscando. Por ejemplo, si esta opción está activa, la "
-"búsqueda de los datos de disponibilidad de joe@mydomain.com en el servidor "
-"www.yourdomain.com fallará."
+"Con esta preferencia, puede configurar si la parte de dominio de la URL de "
+"disponibilidad tiene que coincidir con la parte de dominio del usuario que "
+"está buscando. Por ejemplo, si esta opción está activa, la búsqueda de los "
+"datos de disponibilidad de joe@mydomain.com en el servidor www.yourdomain."
+"com fallará."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
 #: todomodel.cpp:477
@@ -410,8 +409,8 @@ msgstr "Error de recuperación de disponibilidad"
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
-"Ha fallado al analizar la información de disponibilidad que se recuperó "
-"desde %1"
+"No se ha podido analizar la información de disponibilidad que se ha obtenido "
+"de %1"
 
 #: freebusymanager.cpp:418
 #, kde-format
@@ -421,15 +420,15 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p>La aplicación no pudo enviar su lista de disponibilidad al URL «%1». "
-"Podría haber un problema con los permisos de acceso, o usted especificó un "
-"URL incorrecto. El sistema dijo: <em>%2</em>.</p><p>Por favor, verifique el "
-"URL o contacte con su administrador del sistema.</p></qt>"
+"<qt><p>La aplicación no ha podido enviar su lista de disponibilidad a la URL "
+"«%1». Podría haber un problema con los permisos de acceso, o ha indicado una "
+"URL incorrecta. El sistema ha informado: <em>%2</em>.</p><p>Compruebe la URL "
+"o contacte con su administrador del sistema.</p></qt>"
 
 #: freebusymanager.cpp:619
 #, kde-format
 msgid "The free/busy information was successfully sent."
-msgstr "La información de disponibilidad se envió correctamente."
+msgstr "La información de disponibilidad se ha enviado correctamente."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:136
 #, kde-format
@@ -449,10 +448,10 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
-"<qt><p>No se configuró un URL para enviar su lista de disponibilidad. Por "
-"favor, establézcala en el diálogo de configuración de KOrganizer, en la "
-"página «Disponibilidad».</p><p>Contacte con su administrador del sistema "
-"para el URL exacto y los detalles de las cuentas.</p></qt>"
+"<qt><p>No se ha configurado una URL para enviar su lista de disponibilidad. "
+"Defínala en el diálogo de configuración de KOrganizer, en la página "
+"«Disponibilidad».</p><p>Contacte con su administrador del sistema para "
+"obtener la URL exacta y los detalles de las cuentas.</p></qt>"
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -463,7 +462,7 @@ msgstr "No hay URL de envío de disponibilidad"
 #: freebusymanager.cpp:762
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<qt>El URL destino «%1» proporcionada no es válida.</qt>"
+msgstr "<qt>La URL de destino «%1» proporcionada no es válida.</qt>"
 
 #: freebusymanager.cpp:763
 #, kde-format
@@ -522,7 +521,7 @@ msgstr "Nombre de archivo vacío. No se importará el archivo ical."
 #: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
-msgstr "El url a importar está malformada."
+msgstr "La URL que se va a importar está mal formada."
 
 #: icalimporter.cpp:179
 #, kde-format
@@ -562,7 +561,7 @@ msgstr "Error al intentar borrar un elemento de calendario. El error fue: %1"
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
-msgstr "Ocurrió un error desconocido"
+msgstr "Ha ocurrido un error desconocido"
 
 #: incidencechanger.cpp:411
 #, kde-format
@@ -593,8 +592,8 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
-"La colección predeterminada no es válida o no dispone de ACL apropiadas y se "
-"usó DestinationPolicyNeverAsk"
+"La colección predeterminada no es válida o no dispone de ACL apropiada y se "
+"ha usado DestinationPolicyNeverAsk"
 
 #: incidencechanger.cpp:1206
 #, kde-format
@@ -698,7 +697,8 @@ msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
-"El mensaje de colaboración para el elemento «%1» se envió correctamente.\n"
+"El mensaje de colaboración para el elemento «%1» se ha enviado "
+"correctamente.\n"
 "Método: %2"
 
 #: itiphandler_p.cpp:144
@@ -715,7 +715,7 @@ msgstr ""
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr "La información del elemento se envió correctamente."
+msgstr "La información del elemento se ha enviado correctamente."
 
 #: itiphandler_p.cpp:161
 #, kde-format
@@ -759,7 +759,7 @@ msgstr "Correo de planificación de grupo"
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr "<placeholder>No se proporcionó resumen</placeholder>"
+msgstr "<placeholder>No se ha proporcionado un resumen</placeholder>"
 
 #: itiphandlerhelper_p.cpp:237
 #, kde-format
@@ -768,7 +768,7 @@ msgid ""
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 "El evento «%1» incluye a más gente.\n"
-"¿Quiere usted enviar por correo la invitación a los asistentes?"
+"¿Quiere enviar por correo la invitación a los asistentes?"
 
 #: itiphandlerhelper_p.cpp:242
 #, kde-format
@@ -777,7 +777,7 @@ msgid ""
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 "La tarea pendiente «%1» incluye a más gente.\n"
-"¿Quiere usted enviar por correo la invitación a los asistentes?"
+"¿Quiere enviar por correo la invitación a los asistentes?"
 
 #: itiphandlerhelper_p.cpp:247
 #, kde-format
@@ -796,7 +796,7 @@ msgid ""
 msgstr ""
 "Usted no es el organizador de este evento. Al editarlo se pondrá su "
 "calendario sin sincronizar con el calendario del organizador. ¿Realmente "
-"quiere usted editarlo?"
+"quiere editarlo?"
 
 #: itiphandlerhelper_p.cpp:304
 #, kde-format
@@ -804,8 +804,8 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
-"Usted cambió la invitación «%1».\n"
-"¿Quiere usted enviar un correo a los asistentes con un mensaje actualizado?"
+"Ha cambiado la invitación «%1».\n"
+"¿Quiere enviar un correo a los asistentes con un mensaje actualizado?"
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
@@ -817,8 +817,7 @@ msgstr "Enviar actualización"
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
-"¿Quiere usted enviar una actualización de estado al organizador de esta "
-"tarea?"
+"¿Quiere enviar una actualización de estado al organizador de esta tarea?"
 
 #: itiphandlerhelper_p.cpp:339
 #, kde-format
@@ -826,7 +825,7 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
-"Su estado como asistente a este evento cambió. ¿Quiere usted enviar una "
+"Su estado como asistente a este evento ha cambiado. ¿Quiere enviar una "
 "actualización de estado al organizador del evento?"
 
 #: itiphandlerhelper_p.cpp:382
@@ -835,9 +834,9 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"Usted eliminó la invitación «%1».\n"
-"¿Quiere usted enviar un correo a los asistentes informando que el evento se "
-"ha cancelado?"
+"Ha eliminado la invitación «%1».\n"
+"¿Quiere enviar un correo a los asistentes para decirles que el evento se ha "
+"cancelado?"
 
 #: itiphandlerhelper_p.cpp:387
 #, kde-format
@@ -845,8 +844,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"Usted eliminó la invitación «%1».\n"
-"¿Quiere usted enviar un correo a los asistentes informando que la tarea "
+"Ha eliminado la invitación «%1».\n"
+"¿Quiere enviar un correo a los asistentes para decirles que la tarea "
 "pendiente se ha cancelado?"
 
 #: itiphandlerhelper_p.cpp:392
@@ -855,16 +854,15 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"Usted eliminó la invitación «%1».\n"
-"¿Quiere usted enviar un correo a los asistentes informando que el diario se "
-"ha cancelado?"
+"Ha eliminado la invitación «%1».\n"
+"¿Quiere enviar un correo a los asistentes para decirles que el diario se ha "
+"cancelado?"
 
 #: itiphandlerhelper_p.cpp:414
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
-"¿Quiere usted enviar una actualización de estado al organizador de este "
-"diario?"
+"¿Quiere enviar una actualización de estado al organizador de este diario?"
 
 #: itiphandlerhelper_p.cpp:419 itiphandlerhelper_p.cpp:440
 #, kde-format
@@ -878,8 +876,8 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
-"Usted ha aceptado previamente una invitación a este evento. ¿Quiere usted "
-"enviar una respuesta actualizada al organizador declinando la invitación?"
+"Ha aceptado previamente una invitación a este evento. ¿Quiere enviar una "
+"respuesta actualizada al organizador declinando la invitación?"
 
 #: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
 #, kde-format
@@ -1164,8 +1162,8 @@ msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
 "recipients you have entered."
 msgstr ""
-"Al pulsar el botón <b>Aceptar</b> causará que se envíe un correo a los "
-"destinatarios que usted haya introducido."
+"Al pulsar el botón <b>Aceptar</b> se enviará un correo a los destinatarios "
+"que haya introducido."
 
 #: publishdialog.cpp:68
 #, kde-format
@@ -1219,8 +1217,8 @@ msgid ""
 "This is a list of all the addresses you have currently selected to receive "
 "the iCalendar invitation."
 msgstr ""
-"Esta es una lista de las direcciones que usted ha seleccionado actualmente "
-"para recibir la invitación iCalendar."
+"Esta es la lista de las direcciones que ha seleccionado para recibir la "
+"invitación iCalendar."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mNew)
 #: publishdialog_base.ui:52
@@ -1235,7 +1233,7 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
-"Pulse este botón y usted podrá introducir un nombre y correo para una nueva "
+"Pulse este botón y podrá introducir un nombre y correo para una nueva "
 "dirección que añadir a la lista de destinatarios"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
@@ -1278,8 +1276,8 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Pulse este botón para mostrar otro diálogo dónde usted podrá seleccionar un "
-"destinatario desde su libreta de direcciones"
+"Pulse este botón para mostrar otro diálogo dónde podrá seleccionar un "
+"destinatario de la libreta de direcciones"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
@@ -1344,7 +1342,7 @@ msgstr "Error: Asignación de distintos tipos de índices."
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
-"Esto no es una actualización. La incidencia encontrada se modificó más "
+"Esto no es una actualización. La incidencia encontrada se ha modificado "
 "recientemente."
 
 #: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
@@ -1365,14 +1363,14 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
-"<para>Usted añadió una actualización de invitación, pero no se pudo "
+"<para>Ha añadido una actualización de invitación, pero no se ha podido "
 "encontrar una versión anterior del elemento en su calendario.</"
 "para><para>Esto puede haber ocurrido porque:<list><item>el organizador no le "
-"incluyó en la invitación original</item><item>usted todavía no ha aceptado "
-"la invitación original</item><item>usted borró la invitación original de su "
-"calendario</item><item>usted ya no tiene acceso al calendario que contiene "
-"la invitación</item></list></para><para>Esto no es un problema, pero "
-"pensamos qué debería saberlo.</para>"
+"ha incluido en la invitación original</item><item>usted todavía no ha "
+"aceptado la invitación original</item><item>usted ha borrado la invitación "
+"original de su calendario</item><item>usted ya no tiene acceso al calendario "
+"que contiene la invitación</item></list></para><para>Esto no es un problema, "
+"pero creemos que debería saberlo.</para>"
 
 #: scheduler_p.cpp:297
 #, kde-format
@@ -1403,9 +1401,9 @@ msgid ""
 "already been deleted or is not owned by you. Or it might belong to a read-"
 "only or disabled calendar."
 msgstr ""
-"El evento o tarea no se pudo eliminar de su calendario. Quizás ya se ha "
+"El evento o tarea no se ha podido eliminar de su calendario. Quizá ya se ha "
 "borrado o usted no es su propietario. O puede que pertenezca a un calendario "
-"de solo-lectura o desactivado."
+"de solo lectura o desactivado."
 
 #: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
 #: scheduler_p.cpp:574
@@ -1447,7 +1445,7 @@ msgstr "Asistencia rechazada"
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr "El organizador rechazó su asistencia a esta reunión."
+msgstr "El organizador ha rechazado su asistencia a esta reunión."
 
 #: scheduler_p.cpp:508
 #, kde-format
@@ -1456,8 +1454,8 @@ msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
 msgstr ""
-"Se añadió un asistente a la incidencia. ¿Quiere usted enviar a los "
-"asistentes un correo actualizado?"
+"Se ha añadido un asistente a la incidencia. ¿Quiere enviar a los asistentes "
+"un correo actualizado?"
 
 #: scheduler_p.cpp:510
 #, kde-format

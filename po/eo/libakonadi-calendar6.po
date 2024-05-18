@@ -1,7 +1,7 @@
 # translation of libakonadi-calendar5-serializer.pot to Esperanto
 # Copyright (C) 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the akonadi-calendar package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 02:27+0000\n"
-"PO-Revision-Date: 2024-02-24 21:13+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -203,7 +203,7 @@ msgid ""
 "download user.ifb, for example nn.ifb."
 msgstr ""
 "Kun ĉi tiu agordo, vi povas ŝanĝi la dosiernomon, kiu estos prenita de la "
-"servilo. Kun ĉi tio kontrolita, ĝi elŝutos libera/okupita-dosieron nomitan "
+"servilo. Kun ĉi tio markita, ĝi elŝutos libera/okupita-dosieron nomitan "
 "user@domain.ifb, ekzemple nn@kde.org.ifb. Sen ĉi tiu aro, ĝi elŝutos user."
 "ifb, ekzemple nn.ifb."
 
@@ -317,7 +317,7 @@ msgstr "Taskoj"
 #: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
-msgstr "Ĵurnalo"
+msgstr "Taglibro"
 
 #: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
 #, kde-format
@@ -612,7 +612,7 @@ msgstr "Nekonata eraro"
 #: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
-msgstr "Eraro dum ŝarĝo de kalendaro."
+msgstr "Eraro dum ŝargo de kalendaro."
 
 #: itiphandler.cpp:118
 #, kde-format
@@ -846,7 +846,7 @@ msgid ""
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
 "Vi forigis la inviton \"%1\".\n"
-"Ĉu vi volas retpoŝtigi al la ĉeestantoj ke la ĵurnalo estas nuligita?"
+"Ĉu vi volas retpoŝtigi al la ĉeestantoj ke la taglibro estas nuligita?"
 
 #: itiphandlerhelper_p.cpp:414
 #, kde-format
@@ -1718,7 +1718,8 @@ msgid ""
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
 "Forigu la elektitajn kalendarojn<p>La nuntempe elektitaj kalendaroj estos "
-"forigitaj, kune kun ĉiuj eventoj, ĉiuj kaj ĵurnaloj kiujn ili enhavas.</p>"
+"forigitaj, kune kun ĉiuj eventoj, farendoj kaj taglibroj kiujn ili enhavas.</"
+"p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
