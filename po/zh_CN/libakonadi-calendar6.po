@@ -66,12 +66,12 @@ msgstr "KOrganizer 确认"
 #: calendarclipboard.cpp:181
 #, kde-format
 msgid "Cut Only This"
-msgstr "仅剪切这个"
+msgstr ""
 
 #: calendarclipboard.cpp:182
 #, kde-format
 msgid "Cut All"
-msgstr "全部剪切"
+msgstr ""
 
 #: calendarclipboard.cpp:215
 #, kde-format
@@ -85,12 +85,12 @@ msgstr ""
 #: calendarclipboard.cpp:220
 #, kde-format
 msgid "Copy Only This"
-msgstr "仅复制这个"
+msgstr ""
 
 #: calendarclipboard.cpp:221
 #, kde-format
 msgid "Copy All"
-msgstr "全部复制"
+msgstr ""
 
 #: calendarmodel.cpp:192
 #, kde-format
@@ -909,7 +909,7 @@ msgstr "签名(&S)"
 #: mailclient_p.cpp:705 mailclient_p.cpp:728
 #, kde-format
 msgid "Do &Not Sign"
-msgstr "不签名(&N)"
+msgstr ""
 
 #: mailclient_p.cpp:725
 #, kde-format
@@ -935,7 +935,7 @@ msgstr "不签名发送？"
 #: mailclient_p.cpp:750
 #, kde-format
 msgid "Send &Unsigned"
-msgstr "不签名发送(&U)"
+msgstr ""
 
 #: mailclient_p.cpp:763
 #, kde-format
@@ -977,7 +977,7 @@ msgstr "未签名信件警告"
 #: mailclient_p.cpp:771
 #, kde-format
 msgid "Send &As Is"
-msgstr "原样发送(&A)"
+msgstr ""
 
 #: mailclient_p.cpp:824
 #, kde-format
@@ -1035,7 +1035,7 @@ msgstr ""
 #: mailclient_p.cpp:857
 #, kde-format
 msgid "Do &Not Encrypt"
-msgstr "不加密(&N)"
+msgstr ""
 
 #: mailclient_p.cpp:876
 #, kde-format
@@ -1055,7 +1055,7 @@ msgstr "不加密发送吗？"
 #: mailclient_p.cpp:880
 #, kde-format
 msgid "Send &Unencrypted"
-msgstr "不加密发送(&U)"
+msgstr ""
 
 #: mailclient_p.cpp:894
 #, kde-format
