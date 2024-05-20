@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 15:18+0530\n"
+"PO-Revision-Date: 2024-05-19 17:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -65,15 +65,13 @@ msgid "KOrganizer Confirmation"
 msgstr "கேயார்கனைசர் உறுதிப்பாடு"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "இதை மட்டும் வேட்டு"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "அனைத்தையும் வெட்டு"
@@ -88,15 +86,13 @@ msgstr ""
 "சார்ந்தவற்றுடன் சேர்த்து இதை நகலெடுக்க வேண்டுமா?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "இதை மட்டும் நகலெடு"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "அனைத்தையும் நகலெடு"
@@ -767,11 +763,10 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Unencrypted?"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
-msgstr "மறையாக்காமல் அனுப்பலாமா?"
+msgstr "மாற்றத்தை அனுப்பு"
 
 #: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
@@ -815,7 +810,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
-msgstr ""
+msgstr "மாற்றத்தை அனுப்பு"
 
 #: itiphandlerhelper_p.cpp:434
 #, kde-format
@@ -838,12 +833,12 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
-msgstr ""
+msgstr "மாற்றுவதை ரத்து செய்"
 
 #: mailclient_p.cpp:377 mailclient_p.cpp:415
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr ""
+msgstr "பங்கேற்போர் யாருமில்லை"
 
 #: mailclient_p.cpp:424
 #, kde-format
@@ -893,8 +888,7 @@ msgid "&Sign"
 msgstr "&கையொப்பமிடு"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "கை&யொப்பமிடாதே"
@@ -923,8 +917,7 @@ msgid "Send Unsigned?"
 msgstr "கையொப்பமிடாமல் அனுப்பலாமா?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "&கையொப்பமிடாமல் அனுப்பு"
@@ -967,8 +960,7 @@ msgid "Unsigned-Message Warning"
 msgstr "கையொப்பமிடாத அஞ்சலை பற்றிய எச்சரிக்கை"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&அப்படியே அனுப்பு"
@@ -1028,15 +1020,13 @@ msgstr ""
 "இவ்வஞ்சலை மறையாக்கம் செய்யலாமா?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&மறையாக்கு"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "மறையாக்கா&தே"
@@ -1057,8 +1047,7 @@ msgid "Send Unencrypted?"
 msgstr "மறையாக்காமல் அனுப்பலாமா?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&மறையாக்காமல் அனுப்பு"
@@ -1869,7 +1858,7 @@ msgstr "&திருத்து…"
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்டுள்ள நிகழ்வை திருத்த விடும்."
 
 #: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
