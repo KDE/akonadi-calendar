@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:39+0000\n"
-"PO-Revision-Date: 2024-05-10 12:23+0200\n"
+"PO-Revision-Date: 2024-05-20 12:18+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -66,15 +66,13 @@ msgid "KOrganizer Confirmation"
 msgstr "Confirmation de KOrganizer"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Talia solmente isto"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Talia toto"
@@ -89,15 +87,13 @@ msgstr ""
 "elemento o copiar le activitate con tote su sub-activitates?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
-msgstr "Copia solo isto"
+msgstr "Copia solmente isto"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Copia toto"
@@ -818,8 +814,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Invia actualisation"
@@ -958,8 +953,7 @@ msgid "&Sign"
 msgstr "&Signa"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Non signa"
@@ -988,11 +982,10 @@ msgid "Send Unsigned?"
 msgstr "Invia non signate?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr "Invia non signate"
+msgstr "Invia n&on signate"
 
 #: mailclient_p.cpp:769
 #, kde-format
@@ -1032,8 +1025,7 @@ msgid "Unsigned-Message Warning"
 msgstr "Aviso de message non signate"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Invi&a como es"
@@ -1094,15 +1086,13 @@ msgstr ""
 "Crypta iste message?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Crypta"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "No&n Crypta"
@@ -1123,8 +1113,7 @@ msgid "Send Unencrypted?"
 msgstr "Invia non cryptate?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Invia &sin cryptation"

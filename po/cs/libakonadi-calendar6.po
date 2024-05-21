@@ -64,18 +64,16 @@ msgid "KOrganizer Confirmation"
 msgstr "KOrganizer - potvrzení"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
-msgstr "Vyjmout pouze toto"
+msgstr ""
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
-msgstr "Vyjmout vše"
+msgstr ""
 
 #: calendarclipboard.cpp:215
 #, kde-format
@@ -85,18 +83,16 @@ msgid ""
 msgstr ""
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
-msgstr "Zkopírovat pouze toto"
+msgstr ""
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
-msgstr "Zkopírovat vše"
+msgstr ""
 
 #: calendarmodel.cpp:192
 #, kde-format
@@ -783,11 +779,10 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
-msgstr "Odeslat aktualizaci"
+msgstr ""
 
 #: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
@@ -917,11 +912,10 @@ msgid "&Sign"
 msgstr "Podep&sat"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
-msgstr "&Nepodepisovat"
+msgstr ""
 
 #: mailclient_p.cpp:728
 #, kde-format
@@ -943,11 +937,10 @@ msgid "Send Unsigned?"
 msgstr "Odeslat nepodepsané?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr "Od&eslat nepodepsané"
+msgstr ""
 
 #: mailclient_p.cpp:769
 #, kde-format
@@ -981,11 +974,10 @@ msgid "Unsigned-Message Warning"
 msgstr "Varování na nepodepsanou zprávu"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr "Posl&at tak, jak je"
+msgstr ""
 
 #: mailclient_p.cpp:833
 #, kde-format
@@ -1038,18 +1030,16 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
-msgstr "Zaši&frovat"
+msgstr ""
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
-msgstr "&Nešifrovat"
+msgstr ""
 
 #: mailclient_p.cpp:888
 #, kde-format
@@ -1065,11 +1055,10 @@ msgid "Send Unencrypted?"
 msgstr "Odeslat nešifrovaně?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr "Odeslat neši&frovaně"
+msgstr ""
 
 #: mailclient_p.cpp:906
 #, kde-format
