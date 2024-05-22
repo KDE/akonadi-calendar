@@ -58,14 +58,14 @@ PublishDialog::PublishDialog(QWidget *parent)
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     layout->addWidget(buttonBox);
 
-    okButton->setToolTip(i18n("Send email to these recipients"));
+    okButton->setToolTip(i18nc("@info:tooltip", "Send email to these recipients"));
     okButton->setWhatsThis(
         i18n("Clicking the <b>Ok</b> button will cause "
              "an email to be sent to the recipients you "
              "have entered."));
 
     QPushButton *cancelButton = buttonBox->button(QDialogButtonBox::Cancel);
-    cancelButton->setToolTip(i18n("Cancel recipient selection and the email"));
+    cancelButton->setToolTip(i18nc("@info:tooltip", "Cancel recipient selection and the email"));
     cancelButton->setWhatsThis(
         i18n("Clicking the <b>Cancel</b> button will "
              "cause the email operation to be terminated."));
