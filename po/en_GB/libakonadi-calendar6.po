@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-04-08 11:14+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -1131,7 +1131,9 @@ msgid "Select Addresses"
 msgstr "Select Addresses"
 
 #: publishdialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send email to these recipients"
+msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Send email to these recipients"
 
@@ -1145,7 +1147,9 @@ msgstr ""
 "recipients you have entered."
 
 #: publishdialog.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel recipient selection and the email"
+msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Cancel recipient selection and the email"
 

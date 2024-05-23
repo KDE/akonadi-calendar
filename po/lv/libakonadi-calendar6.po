@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-02-02 17:31+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1162,7 +1162,9 @@ msgid "Select Addresses"
 msgstr "Atlasīt adreses"
 
 #: publishdialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send email to these recipients"
+msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Nosūtīt e-pastu šiem saņēmējiem"
 
@@ -1175,7 +1177,9 @@ msgstr ""
 "Spiežot uz <b>Labi</b>, e-pasta vēstuli nosūtīsiet norādītajiem saņēmējiem."
 
 #: publishdialog.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel recipient selection and the email"
+msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Atcelt saņēmēju atlasi un e-pasta sūtīšanu"
 

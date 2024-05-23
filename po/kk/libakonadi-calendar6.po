@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -1144,7 +1144,9 @@ msgid "Select Addresses"
 msgstr "Адрестерді таңдау"
 
 #: publishdialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send email to these recipients"
+msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Осыларға эл.поштаны жіберу"
 
@@ -1157,7 +1159,9 @@ msgstr ""
 "<b>ОК</b> батырмасына басқанда, келтірілгеніңіздерге эл.пошта жібріледі."
 
 #: publishdialog.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel recipient selection and the email"
+msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Алушыларды таңдауынан мен эл.пошта жіберуден айну"
 

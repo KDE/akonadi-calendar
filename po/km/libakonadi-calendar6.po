@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2012-07-11 10:23+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -1083,6 +1083,7 @@ msgstr ""
 
 #: publishdialog.cpp:61
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr ""
 
@@ -1095,6 +1096,7 @@ msgstr ""
 
 #: publishdialog.cpp:68
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr ""
 

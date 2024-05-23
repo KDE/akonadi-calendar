@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-09-13 23:14+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -1164,7 +1164,9 @@ msgid "Select Addresses"
 msgstr "Ünvanları seçmək"
 
 #: publishdialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send email to these recipients"
+msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "E-poçtu bu alıcılara göndərəmək"
 
@@ -1178,7 +1180,9 @@ msgstr ""
 "olacaqsınız."
 
 #: publishdialog.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel recipient selection and the email"
+msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Alıcının seçilməsi və məktubun göndərilməsini ləğv etmək"
 
