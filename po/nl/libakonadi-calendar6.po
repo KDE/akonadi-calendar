@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 10:29+0200\n"
+"PO-Revision-Date: 2024-05-23 10:22+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1160,8 +1160,7 @@ msgid "Select Addresses"
 msgstr "Adressen selecteren"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "E-mail naar deze ontvangers sturen"
@@ -1176,11 +1175,10 @@ msgstr ""
 "u ingevoerde ontvangers."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
-msgstr "Selectie van ontvangers en de e-mail annuleren"
+msgstr "Selectie van ontvangers en het e-mailbericht annuleren"
 
 #: publishdialog.cpp:70
 #, kde-format

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 13:29+0300\n"
+"PO-Revision-Date: 2024-05-23 13:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1161,8 +1161,7 @@ msgid "Select Addresses"
 msgstr "Adresleri Seç"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Bu alıcılara e-posta gönder"
@@ -1177,11 +1176,10 @@ msgstr ""
 "gönderilecektir."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
-msgstr "Alıcı seçimini ve e-postayı iptal eder"
+msgstr "Alıcı seçimini ve e-postayı iptal et"
 
 #: publishdialog.cpp:70
 #, kde-format

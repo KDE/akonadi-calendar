@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 16:44+0300\n"
+"PO-Revision-Date: 2024-05-23 06:23+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -1172,8 +1172,7 @@ msgid "Select Addresses"
 msgstr "Виберіть адреси"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Надіслати повідомлення електронної пошти всім учасникам"
@@ -1188,8 +1187,7 @@ msgstr ""
 "електронної пошти до вказаних вами отримувачів."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Скасувати вибір отримувачів і надсилання повідомлення"
