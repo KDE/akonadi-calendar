@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 04:45+0200\n"
+"PO-Revision-Date: 2024-05-24 16:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1149,8 +1149,7 @@ msgid "Select Addresses"
 msgstr "აირჩიეთ მისამართები"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "ამ მიმღებებისთვის ელფოსტის გაგზავნა"
@@ -1163,8 +1162,7 @@ msgid ""
 msgstr "<b>დიახ</b> ღილაკზე დაჭერით ელფოსტას შეყვანილ მისამართებზე გააგზავნით."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "მიმღების შერჩევისა და ელფოსტის გაუქმება"

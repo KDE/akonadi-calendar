@@ -1181,8 +1181,7 @@ msgid "Select Addresses"
 msgstr "Seleccioneu les adreces"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Envia un correu electrònic a estos destinataris"
@@ -1197,8 +1196,7 @@ msgstr ""
 "que heu introduït."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Cancel·la la selecció dels destinataris i el correu electrònic"
