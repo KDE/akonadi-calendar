@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 09:00+0200\n"
+"PO-Revision-Date: 2024-05-26 11:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10"
+" || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
 #: calendarbase.cpp:265
@@ -67,14 +67,14 @@ msgid "KOrganizer Confirmation"
 msgstr "Potwierdzenie KOrganizera"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Wytnij tylko to"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
@@ -90,14 +90,14 @@ msgstr ""
 "czy ten element wraz ze wszystkimi pod-zadaniami?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Skopiuj tylko to"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"
 msgid "Copy All"
@@ -811,7 +811,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Send Update"
 msgctxt "@action:button"
 msgid "Send Update"
@@ -949,7 +949,7 @@ msgid "&Sign"
 msgstr "Podpi&sz"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Do &Not Sign"
 msgctxt "@action:button"
 msgid "Do &Not Sign"
@@ -979,7 +979,7 @@ msgid "Send Unsigned?"
 msgstr "Czy wysłać niepodpisaną?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Send &Unsigned"
 msgctxt "@action:button"
 msgid "Send &Unsigned"
@@ -1025,7 +1025,7 @@ msgid "Unsigned-Message Warning"
 msgstr "Ostrzeżenie o niepodpisanej wiadomości"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Send &As Is"
 msgctxt "@action:button"
 msgid "Send &As Is"
@@ -1087,14 +1087,14 @@ msgstr ""
 "Czy zaszyfrować wiadomość?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "&Encrypt"
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Za&szyfruj"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Do &Not Encrypt"
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
@@ -1116,7 +1116,7 @@ msgid "Send Unencrypted?"
 msgstr "Czy wysłać niezaszyfrowaną?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Send &Unencrypted"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
@@ -1170,7 +1170,7 @@ msgid "Select Addresses"
 msgstr "Wybierz adresy"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Send email to these recipients"
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
@@ -1186,7 +1186,7 @@ msgstr ""
 "odbiorców."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Cancel recipient selection and the email"
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
@@ -2084,3 +2084,4 @@ msgstr "Czyszczenie ukończonych zadań"
 
 #~ msgid "Failed to load ical file, check permissions."
 #~ msgstr "Nieudane wczytanie pliku ical, sprawdź uprawnienia."
+
