@@ -1105,7 +1105,7 @@ msgstr "选择地址"
 #: publishdialog.cpp:61
 #, kde-format
 msgid "Send email to these recipients"
-msgstr "向这些接收人发送电子邮件"
+msgstr ""
 
 #: publishdialog.cpp:63
 #, kde-format
@@ -1117,7 +1117,7 @@ msgstr "点击<b>确认</b>按钮即可向输入的这些接收人发送电子�
 #: publishdialog.cpp:68
 #, kde-format
 msgid "Cancel recipient selection and the email"
-msgstr "取消接收人选择和邮件发送"
+msgstr ""
 
 #: publishdialog.cpp:70
 #, kde-format
