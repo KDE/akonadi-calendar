@@ -14,9 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10"
-" || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -68,14 +67,12 @@ msgstr "Potwierdzenie KOrganizera"
 
 #: calendarclipboard.cpp:181
 #, kde-format
-#| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Wytnij tylko to"
 
 #: calendarclipboard.cpp:182
 #, kde-format
-#| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Wytnij wszystko"
@@ -91,14 +88,12 @@ msgstr ""
 
 #: calendarclipboard.cpp:220
 #, kde-format
-#| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Skopiuj tylko to"
 
 #: calendarclipboard.cpp:221
 #, kde-format
-#| msgid "Copy All"
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Skopiuj wszystko"
@@ -812,7 +807,6 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
 #, kde-format
-#| msgid "Send Update"
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Wyślij uaktualnienie"
@@ -950,7 +944,6 @@ msgstr "Podpi&sz"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
-#| msgid "Do &Not Sign"
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Nie podpisuj"
@@ -980,7 +973,6 @@ msgstr "Czy wysłać niepodpisaną?"
 
 #: mailclient_p.cpp:756
 #, kde-format
-#| msgid "Send &Unsigned"
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Wyślij &niepodpisaną"
@@ -1026,7 +1018,6 @@ msgstr "Ostrzeżenie o niepodpisanej wiadomości"
 
 #: mailclient_p.cpp:780
 #, kde-format
-#| msgid "Send &As Is"
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Wyślij &bez zmian"
@@ -1088,14 +1079,12 @@ msgstr ""
 
 #: mailclient_p.cpp:868
 #, kde-format
-#| msgid "&Encrypt"
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Za&szyfruj"
 
 #: mailclient_p.cpp:869
 #, kde-format
-#| msgid "Do &Not Encrypt"
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Nie szyfruj"
@@ -1117,7 +1106,6 @@ msgstr "Czy wysłać niezaszyfrowaną?"
 
 #: mailclient_p.cpp:892
 #, kde-format
-#| msgid "Send &Unencrypted"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&Wyślij niezaszyfrowaną"
@@ -1171,7 +1159,6 @@ msgstr "Wybierz adresy"
 
 #: publishdialog.cpp:61
 #, kde-format
-#| msgid "Send email to these recipients"
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Wyślij wiadomość pocztową do tych odbiorców"
@@ -1187,7 +1174,6 @@ msgstr ""
 
 #: publishdialog.cpp:68
 #, kde-format
-#| msgid "Cancel recipient selection and the email"
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Porzuć wybór odbiorców i poczty"
@@ -2084,4 +2070,3 @@ msgstr "Czyszczenie ukończonych zadań"
 
 #~ msgid "Failed to load ical file, check permissions."
 #~ msgstr "Nieudane wczytanie pliku ical, sprawdź uprawnienia."
-
