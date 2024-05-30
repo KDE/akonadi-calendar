@@ -1100,11 +1100,10 @@ msgid "Select Addresses"
 msgstr "Vybrat adresy"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
-msgstr "Poslat email těmto příjemcům"
+msgstr ""
 
 #: publishdialog.cpp:63
 #, kde-format
@@ -1114,11 +1113,10 @@ msgid ""
 msgstr ""
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
-msgstr "Zrušit email a výběr příjemců"
+msgstr ""
 
 #: publishdialog.cpp:70
 #, kde-format
