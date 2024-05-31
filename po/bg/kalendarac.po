@@ -257,6 +257,3 @@ msgstr ""
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
 msgstr "Натиснете този бутон, за да заглушите напомнянето за постоянно."
-
-#~ msgid "Remind in 1 hour"
-#~ msgstr "Напомняне след 1 час"

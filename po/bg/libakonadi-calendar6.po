@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 02:27+0000\n"
-"PO-Revision-Date: 2024-02-26 08:43+0100\n"
+"PO-Revision-Date: 2024-05-30 17:11+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -208,7 +208,7 @@ msgstr ""
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr "Безплатен/зает URL адрес за извличане"
+msgstr "URL адрес за извличане на свободен/зает"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
@@ -900,12 +900,12 @@ msgstr "Няма участници в имейла"
 #: mailclient_p.cpp:424
 #, kde-format
 msgid "Free Busy Object"
-msgstr "Безплатен зает обект"
+msgstr "Обект свободен/зает"
 
 #: mailclient_p.cpp:458 mailclient_p.cpp:489
 #, kde-format
 msgid "Free Busy Message"
-msgstr "Безплатно заето съобщение"
+msgstr "Съобщение свободно/заето"
 
 #: mailclient_p.cpp:629
 #, kde-format
@@ -1048,7 +1048,7 @@ msgstr "Шифроване на писмото?"
 #: mailclient_p.cpp:833
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr "Подписване &&& криптиране"
+msgstr "Подписване и &криптиране"
 
 #: mailclient_p.cpp:833 mailclient_p.cpp:857 mailclient_p.cpp:903
 #, kde-format
