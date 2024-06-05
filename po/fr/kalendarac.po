@@ -211,8 +211,8 @@ msgid ""
 "input."
 msgstr ""
 "Chaque rappel aux fréquences sélectionnées sera suspendu à l'aide de cette "
-"unité de temps.Vous pouvez définir le nombre d'unités de temps en saisissant "
-"une entrée adjacente du numéro."
+"unité de temps. Vous pouvez définir le nombre d'unités de temps en "
+"saisissant une entrée adjacente du numéro."
 
 #: suspenddialog.cpp:111
 #, kde-format
