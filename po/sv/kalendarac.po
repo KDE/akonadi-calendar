@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kalendar package.
 #
-# SPDX-FileCopyrightText: 2022, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
+# SPDX-FileCopyrightText: 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-06-08 14:47+0200\n"
+"PO-Revision-Date: 2024-06-09 09:08+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -25,7 +25,7 @@ msgstr "Stefan Asserhäll"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "stefan.asserhall@bredband.net"
+msgstr "stefan.asserhall@gmail.com"
 
 #: alarmnotification.cpp:50
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "Påminn om 5 min"
 #: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind later..."
-msgstr ""
+msgstr "Påminn senare..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -155,13 +155,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "För&dröjningstid:"
 
 #: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Fördröj påminnelserna så här lång tid"
 
 #: suspenddialog.cpp:84
 #, kde-format
@@ -171,36 +171,39 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Alla påminnelser för de markerade förekomsterna fördröjs med det här antalet "
+"tidsenheter. Du kan välja tidsenheter (vanligtvis minuter) i den "
+"intilliggande väljaren."
 
 #: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "minut(er)"
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "timma(r)"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "dag(ar)"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "vecka/veckor"
 
 #: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Fördröj påminnelserna med den här tidsenheten"
 
 #: suspenddialog.cpp:98
 #, kde-format
@@ -210,18 +213,21 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Alla påminnelser för de markerade förekomsterna fördröjs med den här "
+"tidsenheten. Du kan ange antal tidsenheter i den intilliggande "
+"nummerinmatningsrutan."
 
 #: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr ""
+msgstr "Påminn senare"
 
 #: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Påminn mig igen efter angivet intervall"
 
 #: suspenddialog.cpp:113
 #, kde-format
@@ -230,24 +236,26 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Tryck på den här knappen för att bli påmind igen om förekomsten efter den "
+"angivna tiden."
 
 #: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "Avbryt senare påminnelse, dvs. avfärda påminnelsen för alltid"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "Tryck på den här knappen för att tysta påminnelsen för alltid."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Påminn om 1 timma"
