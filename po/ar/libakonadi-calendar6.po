@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 02:27+0000\n"
-"PO-Revision-Date: 2024-05-16 13:48+0400\n"
+"PO-Revision-Date: 2024-06-08 11:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -251,13 +252,13 @@ msgstr "أخف الدعوات المرفوضة"
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
-msgstr ""
+msgstr "حدد هذا المربع لإخفاء الدعوات المرفوضة في عرض الأحداث."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
-msgstr ""
+msgstr "اعرض التذكيرات فقط للأحداث التي أقوم بتنظيمها أو حضورها"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -265,7 +266,7 @@ msgstr ""
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
-msgstr ""
+msgstr "حدد هذا الخيار لتلقي تذكيرات فقط للأحداث التي تنظمها أو تحضرها."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
@@ -950,6 +951,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"بعض أجزاء هذه الرسالة لن توقع \n"
+"إرسال رسائل موقعة بشكل جزئي قد يؤدي إلى انتهاك نهج الموقع .\n"
+"هل تريد توقيع كل الأجزاء بدلاً من ذلك؟"
 
 #: mailclient_p.cpp:767
 #, kde-format
@@ -958,6 +962,9 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"هذه الرسالة لم توقع.\n"
+"إرسال رسالة غير موقعة قد ينتهك سياسة الموقع.\n"
+"هل تريد توقيع الرسالة بدلاً من ذلك؟"
 
 #: mailclient_p.cpp:770
 #, kde-format
@@ -1065,6 +1072,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"بعض أجزاء هذه الرسالة لن تعمى.\n"
+"إرسال رسائل معماه بشكل جزئي قد يؤدي إلى انتهاك نهج الموقع و/أو تسرب معلومات "
+"حساسة.\n"
+"هل تريد تعمية كل الأجزاء بدلاً من ذلك؟"
 
 #: mailclient_p.cpp:899
 #, kde-format
@@ -1074,6 +1085,10 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"لن تعمى هذه الرسالة.\n"
+"قد يؤدي إرسال رسائل غير معماه إلى انتهاك نهج الموقع و/أو تسرب معلومات "
+"حساسة.\n"
+"هل تريد تعمية الرسائل بدلاً من ذلك؟"
 
 #: mailclient_p.cpp:903
 #, kde-format
