@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-05-16 13:49+0400\n"
+"PO-Revision-Date: 2024-06-13 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -159,13 +160,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "مدة ال&تعليق:"
 
 #: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "علق الإشعارات بهذا القدر من الوقت"
 
 #: suspenddialog.cpp:84
 #, kde-format
@@ -175,6 +176,8 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"سيعلق  كل تذكير للأحداث المحددة بهذا العدد من الوحدات الزمنية. يمكنك اختيار "
+"الوحدات الزمنية (عادةً الدقائق) في المحدد المجاور."
 
 #: suspenddialog.cpp:92
 #, kde-format
@@ -204,7 +207,7 @@ msgstr "من الأسابيع"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "علق الإشعارات باستخدام هذه الوحدة من الوقت"
 
 #: suspenddialog.cpp:98
 #, kde-format
@@ -214,6 +217,8 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"سيعلق  كل تذكير للأحداث المحددة بهذا العدد من الوحدات الزمنية. يمكنك اختيار "
+"الوحدات الزمنية في مكان الإدخال المجاور."
 
 #: suspenddialog.cpp:111
 #, kde-format
@@ -225,7 +230,7 @@ msgstr "ذكّرني لاحقًا"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "ذكرني مرة أخرى بعد الفاصل الزمني المحدد"
 
 #: suspenddialog.cpp:113
 #, kde-format
@@ -234,6 +239,7 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"اضغط على هذا الزر ليتم تذكيرك مرة أخرى بهذا الحادث بعد مرور الوقت المحدد."
 
 #: suspenddialog.cpp:117
 #, kde-format
@@ -245,13 +251,13 @@ msgstr "ألغِ"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
+msgstr "إلغاء التذكير لاحقًا، أي تجاهل التذكير إلى الأبد"
 
 #: suspenddialog.cpp:119
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
-msgstr ""
+msgstr "اضغط على هذا الزر لإسكات التذكير إلى الأبد."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "ذكرني بعد ساعة"
