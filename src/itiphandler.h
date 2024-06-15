@@ -43,22 +43,6 @@ namespace Akonadi
 class ITIPHandlerPrivate;
 
 /**
- * @short Ui delegate for editing counter proposals.
- * @since 4.11
- */
-class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate : public QObject
-{
-    Q_OBJECT
-public:
-    explicit GroupwareUiDelegate(QObject *parent = nullptr);
-    ~GroupwareUiDelegate() override;
-
-    virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
-    virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) = 0;
-    virtual void createCalendar() = 0;
-};
-
-/**
  * @short Ui delegate for dialogs raised by the ITIPHandler and IncidenceChanger.
  * @since 4.15
  */
@@ -311,11 +295,6 @@ public:
      * A dialog will prompt the user to input recipients.
      */
     void sendAsICalendar(const KCalendarCore::Incidence::Ptr &incidence, QWidget *parentWidget = nullptr);
-
-    /**
-     * Sets the UI delegate to edit counter proposals.
-     */
-    void setGroupwareUiDelegate(GroupwareUiDelegate *delegate);
 
     /**
      * Sets the calendar that the itip handler should use.

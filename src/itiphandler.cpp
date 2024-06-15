@@ -24,6 +24,7 @@
 
 #include <Akonadi/MessageQueueJob>
 #include <KIdentityManagementCore/IdentityManager>
+#include <QProcess>
 
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
@@ -39,13 +40,6 @@ static void emitiTipMessageProcessed(ITIPHandler *handler, ITIPHandler::Result r
                               Q_ARG(Akonadi::ITIPHandler::Result, resultCode),
                               Q_ARG(QString, errorString));
 }
-
-GroupwareUiDelegate::GroupwareUiDelegate(QObject *parent)
-    : QObject(parent)
-{
-}
-
-GroupwareUiDelegate::~GroupwareUiDelegate() = default;
 
 ITIPHandlerComponentFactory::ITIPHandlerComponentFactory(QObject *parent)
     : QObject(parent)
@@ -210,34 +204,44 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
     }
 
     if (action.startsWith("counter"_L1)) {
-        if (d->m_uiDelegate) {
-            Akonadi::Item item;
-            item.setMimeType(d->m_incidence->mimeType());
-            item.setPayload(KCalendarCore::Incidence::Ptr(d->m_incidence->clone()));
+        KCalendarCore::ICalFormat icalFormat;
+        const auto newIncidence = KCalendarCore::Incidence::Ptr(d->m_incidence->clone());
+        const auto payload = icalFormat.toString(newIncidence);
 
-            // TODO_KDE5: This blocks because m_uiDelegate is not a QObject and can't emit a finished()
-            // signal. Make async in kde5
-            d->m_uiDelegate->requestIncidenceEditor(item);
-            KCalendarCore::Incidence::Ptr newIncidence;
-            if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-                newIncidence = item.payload<KCalendarCore::Incidence::Ptr>();
-            }
+        const auto kincidenceeditor = QStandardPaths::findExecutable("kincidenceeditor"_L1);
 
-            if (*newIncidence == *d->m_incidence) {
+        auto process = new QProcess(this);
+        process->start(kincidenceeditor, {"--stdio"_L1});
+        connect(process, &QProcess::started, this, [process, payload]() {
+            process->write(payload.toUtf8());
+        });
+
+        connect(process, &QProcess::started, this, [process, payload]() {
+            process->write(payload.toUtf8());
+            process->closeWriteChannel();
+        });
+
+        connect(process, &QProcess::started, this, [this, process, receiver, newIncidence]() {
+            const auto icalContent = process->readAll();
+            if (icalContent.isEmpty()) {
                 emitiTipMessageProcessed(this, ResultCancelled, QString());
-            } else {
-                ITIPHandlerHelper::SendResult result = d->m_helper->sendCounterProposal(receiver, d->m_incidence, newIncidence);
-                if (result != ITIPHandlerHelper::ResultSuccess) {
-                    // It gives success in all paths, this never happens
-                    emitiTipMessageProcessed(this, ResultError, i18n("Error sending counter proposal"));
-                    Q_ASSERT(false);
-                }
             }
-        } else {
-            // This should never happen
-            qCWarning(AKONADICALENDAR_LOG) << "No UI delegate is set";
-            emitiTipMessageProcessed(this, ResultError, i18n("Could not start editor to edit counter proposal"));
-        }
+            KCalendarCore::ICalFormat format;
+            KCalendarCore::Incidence::Ptr incidence = format.fromString(QString::fromUtf8(icalContent));
+
+            if (incidence) {
+                emitiTipMessageProcessed(this, ResultError, i18n("Error editing the counter proposal"));
+                Q_ASSERT(false);
+                return;
+            }
+
+            ITIPHandlerHelper::SendResult result = d->m_helper->sendCounterProposal(receiver, d->m_incidence, newIncidence);
+            if (result != ITIPHandlerHelper::ResultSuccess) {
+                // It gives success in all paths, this never happens
+                emitiTipMessageProcessed(this, ResultError, i18n("Error sending counter proposal"));
+                Q_ASSERT(false);
+            }
+        });
     }
 }
 
@@ -366,11 +370,6 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
                        messageText);
     }
     delete publishdlg;
-}
-
-void ITIPHandler::setGroupwareUiDelegate(GroupwareUiDelegate *delegate)
-{
-    d->m_uiDelegate = delegate;
 }
 
 void ITIPHandler::setCalendar(const Akonadi::CalendarBase::Ptr &calendar)

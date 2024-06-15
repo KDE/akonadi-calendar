@@ -61,7 +61,6 @@ public:
     ITIPHandlerHelper *m_helper = nullptr;
     Operation m_currentOperation;
     QPointer<QWidget> m_parentWidget; // To be used for KMessageBoxes
-    GroupwareUiDelegate *m_uiDelegate = nullptr;
     bool m_showDialogsOnError = true;
     ITIPHandler *const q;
 

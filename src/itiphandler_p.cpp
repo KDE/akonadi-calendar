@@ -17,7 +17,6 @@ ITIPHandlerPrivate::ITIPHandlerPrivate(ITIPHandlerComponentFactory *factory, ITI
     , m_method(KCalendarCore::iTIPNoMethod)
     , m_helper(new ITIPHandlerHelper(m_factory))
     , m_currentOperation(OperationNone)
-    , m_uiDelegate(nullptr)
     , q(qq)
 {
     m_helper->setParent(this);
