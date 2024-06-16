@@ -182,6 +182,13 @@ Q_SIGNALS:
      */
     void calendarChanged();
 
+    /**
+     * Emitted whenever the set selected (checked) calendars was modified by the user.
+     * Typically used to save that new selection to a config file.
+     * @since 6.1.40
+     */
+    void calendarSelectionEdited();
+
 private:
     Q_DECLARE_PRIVATE(ETMCalendar)
 };

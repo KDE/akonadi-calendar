@@ -143,6 +143,8 @@ void ETMCalendarPrivate::setupFilteredETM()
     mCheckableProxyModel->setSourceModel(mCollectionProxyModel);
     mCheckableProxyModel->setObjectName("Add checkboxes"_L1);
 
+    connect(mCheckableProxyModel, &CheckableProxyModel::checkedByUser, q, &ETMCalendar::calendarSelectionEdited);
+
     mSelectionProxy = new KSelectionProxyModel(selectionModel, /**parent=*/this);
     mSelectionProxy->setObjectName("Only show items of selected collection"_L1);
     mSelectionProxy->setFilterBehavior(KSelectionProxyModel::ChildrenOfExactSelection);
