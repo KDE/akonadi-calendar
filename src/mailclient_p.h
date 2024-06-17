@@ -11,7 +11,7 @@
 #include "akonadi-calendar_tests_export.h"
 #include "itiphandler.h"
 #include <KCalendarCore/IncidenceBase>
-#include <KMime/KMimeMessage>
+#include <KMime/Message>
 #include <QObject>
 
 #include <optional>
