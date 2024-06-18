@@ -133,7 +133,6 @@ private:
     AKONADI_CALENDAR_NO_EXPORT FreeBusyManager();
     ~FreeBusyManager() override;
 
-private:
     friend class FreeBusyManagerStatic;
 
     std::unique_ptr<FreeBusyManagerPrivate> const d_ptr;
