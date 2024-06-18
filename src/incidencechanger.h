@@ -273,7 +273,7 @@ public:
     /**
      * Returns the base ETM tree model
      */
-    Akonadi::EntityTreeModel *entityTreeModel() const;
+    [[nodiscard]] Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /**
      * Sets the default collection.
@@ -362,7 +362,7 @@ public:
      * It's always valid.
      * Ownership remains with IncidenceChanger.
      */
-    History *history() const;
+    [[nodiscard]] History *history() const;
 
     /**
      * For performance reasons, IncidenceChanger internally caches the ids of the last deleted items,

@@ -29,7 +29,7 @@ public:
     explicit CalFilterProxyModel(QObject *parent = nullptr);
     ~CalFilterProxyModel() override;
 
-    KCalendarCore::CalFilter *filter() const;
+    [[nodiscard]] KCalendarCore::CalFilter *filter() const;
     void setFilter(KCalendarCore::CalFilter *filter);
 
 protected:
