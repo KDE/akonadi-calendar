@@ -11,7 +11,7 @@ target_sources(akonadi_serializer_kcalcore PRIVATE
 ecm_qt_declare_logging_category(akonadi_serializer_kcalcore HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer
         DESCRIPTION "calendar serializer (plugin)"
         EXPORT AKONADI-CALENDAR
-    )
+)
 
 
 target_link_libraries(akonadi_serializer_kcalcore

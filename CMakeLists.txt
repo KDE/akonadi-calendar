@@ -91,7 +91,7 @@ ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.4.0)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
@@ -100,20 +100,20 @@ add_subdirectory(src)
 add_subdirectory(serializers)
 add_subdirectory(reminder-daemon)
 add_subdirectory(calendar-plugin)
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(autotests)
-endif ()
+endif()
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiCalendar")
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6AkonadiCalendar_QCH
         FILE KPim6AkonadiCalendarQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
-    )
+)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiCalendarQchTargets.cmake\")")
 endif()
 
@@ -140,7 +140,7 @@ ecm_qt_install_logging_categories(
         EXPORT AKONADI-CALENDAR
         FILE akonadi-calendar.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-        )
+)
 
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)

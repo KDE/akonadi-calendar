@@ -90,14 +90,14 @@ ecm_qt_declare_logging_category(KPim6AkonadiCalendar HEADER akonadicalendar_debu
         DESCRIPTION "akonadicalendar (pim lib)"
         OLD_CATEGORY_NAMES log_akonadicalendar
         EXPORT AKONADI-CALENDAR
-    )
+)
 
 kconfig_add_kcfg_files(KPim6AkonadiCalendar GENERATE_MOC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
-qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
+qt_add_dbus_adaptor(akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor)
 target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6AkonadiCalendar PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6AkonadiCalendar
@@ -171,11 +171,11 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   PREFIX Akonadi
 )
 
-install( FILES
+install(FILES
   ${AkonadiCalendar_CamelCase_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar/Akonadi COMPONENT Devel
 )
-install( FILES
+install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
   ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
@@ -183,7 +183,7 @@ install( FILES
 )
 
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6AkonadiCalendar_QCH
         NAME AkonadiCalendar
@@ -203,5 +203,5 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 endif()
