@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-06-27 21:38+0300\n"
+"PO-Revision-Date: 2024-06-28 10:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
-"2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.4.2\n"
 
 #: calendarbase.cpp:265
@@ -148,49 +148,49 @@ msgstr "לוח שנה"
 #: calendarsettings.kcfg:23
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr ""
+msgstr "כתובת פרסום פנוי/עסוק"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr ""
+msgstr "כתובת לפרסום פרטי פנוי/עסוק"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:28
 #, kde-format
 msgid "Free/Busy Publish Username"
-msgstr ""
+msgstr "שם משתמש לפרסום פנוי/עסוק"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:29
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr ""
+msgstr "שם משתמש לפרסום פרטי פנוי/עסוק"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:33
 #, kde-format
 msgid "Free/Busy Publish Password"
-msgstr ""
+msgstr "סיסמה לפרסום פנוי/עסוק"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr ""
+msgstr "סיסמה לפרסום פרטי פנוי/עסוק"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr ""
+msgstr "הפעלת משיכה אוטומטית של פרטי פנוי/עסוק"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:50
 #, kde-format
 msgid "Use full email address for retrieval"
-msgstr ""
+msgstr "להשתמש בכתובת הדוא״ל המלאה למשיכה"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:51
@@ -206,31 +206,31 @@ msgstr ""
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr ""
+msgstr "כתובת משיכת פנוי/עסוק"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
 #, kde-format
 msgid "Free/Busy Retrieval Username"
-msgstr ""
+msgstr "שם משתמש למשיכת פנוי/עסוק"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:64
 #, kde-format
 msgid "Free/Busy Retrieval Password"
-msgstr ""
+msgstr "סיסמה למשיכת פנוי/עסוק"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:65
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr ""
+msgstr "סיסמה למשיכת פרטי פנוי/עסוק"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:76
 #, kde-format
 msgid "Send copy to owner when mailing events"
-msgstr ""
+msgstr "שליחת עותק לבעלים בעת שליחת אירועים בדוא״ל"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:77
@@ -244,13 +244,13 @@ msgstr ""
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Hide declined invitations"
-msgstr ""
+msgstr "הסתרת ההזמנות שסורבו"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
-msgstr ""
+msgstr "יש לסמן את התיבה הזאת כדי להסתיר הזמנות שסורבו מתצוגת האירועים."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -292,40 +292,40 @@ msgstr ""
 #: todomodel.cpp:477
 #, kde-format
 msgid "Calendar"
-msgstr ""
+msgstr "לוח שנה"
 
 #: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "משימות"
 
 #: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
-msgstr ""
+msgstr "יומן"
 
 #: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "פתקיות"
 
 #: calendarutils.cpp:133
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
-msgstr ""
+msgstr "ה־Kolab שלי %1"
 
 #: calendarutils.cpp:136
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
-msgstr ""
+msgstr "Kolab משותף %1 %2"
 
 #: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr ""
+msgstr "%2 ב־Kolab של %1"
 
 #: calendarutils.cpp:141
 #, kde-format
@@ -343,36 +343,36 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr ""
+msgstr "%1 בתוך %2"
 
 #: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr ""
+msgstr "%2 של ה־Google של %1"
 
 #: calendarutils.cpp:187
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
-msgstr ""
+msgstr "%2 של %1"
 
 #: calendarutils.cpp:190
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr ""
+msgstr "%1 של Google"
 
 #: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "%1 שלי"
 
 #: calendarutils.cpp:202
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr ""
+msgstr "לא ידוע"
 
 #: freebusymanager.cpp:380
 #, kde-format
@@ -380,12 +380,14 @@ msgid ""
 "Failed to download free/busy data from: %1\n"
 "Reason: %2"
 msgstr ""
+"הורדת נתוני פנוי/עסוק נכשלה מתוך: %1\n"
+"סיבה: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr ""
+msgstr "שגיאת משיכת פנוי/עסוק"
 
 #: freebusymanager.cpp:403
 #, kde-format
@@ -404,18 +406,18 @@ msgstr ""
 #: freebusymanager.cpp:619
 #, kde-format
 msgid "The free/busy information was successfully sent."
-msgstr ""
+msgstr "נתוני פנוי/עסוק נשלחו בהצלחה."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr ""
+msgstr "נשלח פנוי/עסוק"
 
 #: freebusymanager.cpp:623
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
-msgstr ""
+msgstr "לא ניתן לפרסם פרטי פנוי/עסוק: %1"
 
 #: freebusymanager.cpp:747
 #, kde-format
@@ -429,129 +431,129 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr ""
+msgstr "אין כתובת להעלאת פרטי פנוי/עסוק"
 
 #: freebusymanager.cpp:762
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr ""
+msgstr "<qt>כתובת היעד שסופקה ‚%1’ שגויה.</qt>"
 
 #: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
-msgstr ""
+msgstr "כתובת שגויה"
 
 #: history_p.cpp:71
 #, kde-format
 msgid "General error"
-msgstr ""
+msgstr "שגיאה כללית"
 
 #: history_p.cpp:82
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 creation"
-msgstr ""
+msgstr "יצירת %1"
 
 #: history_p.cpp:150
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
-msgstr ""
+msgstr "מחיקת %1"
 
 #: history_p.cpp:232
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
-msgstr ""
+msgstr "שינוי %1"
 
 #: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr ""
+msgstr "שגיאה ביצירת משאב ical‏: %1"
 
 #: icalimporter.cpp:93
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
-msgstr ""
+msgstr "תפיסת ממשק D-Bus להגדרות מרוחקות נכשלה."
 
 #: icalimporter.cpp:118
 #, kde-format
 msgid "Could not download remote file."
-msgstr ""
+msgstr "לא ניתן להוריד קובץ מרוחק."
 
 #: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
-msgstr ""
+msgstr "כבר מתבצעת משימת ייבוא."
 
 #: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
-msgstr ""
+msgstr "שם קובץ ריק. לא ייבא קובץ ical."
 
 #: icalimporter.cpp:172
 #, kde-format
 msgid "Url to import is malformed."
-msgstr ""
+msgstr "הכתובת לייבוא שגויה."
 
 #: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr ""
+msgstr "הקובץ הנבחר בלתי קריא."
 
 #: icalimporter.cpp:187
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
-msgstr ""
+msgstr "הקובץ הנבחר מסודר לא נכון או שהתסדיר שלו לא נתמך על ידי התוכנה הזאת."
 
 #: icalimporter.cpp:195
 #, kde-format
 msgid "The selected file is empty."
-msgstr ""
+msgstr "הקובץ הנבחר ריק."
 
 #: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
-msgstr ""
+msgstr "מיזוג קובץ ical ללוח שנה קיים."
 
 #: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
-msgstr ""
+msgstr "שגיאה בניסיון ליצור פריט לוח שנה. השגיאה הייתה: %1"
 
 #: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
-msgstr ""
+msgstr "שגיאה בניסיון למחוק פריט לוח שנה. השגיאה הייתה: %1"
 
 #: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
-msgstr ""
+msgstr "אירעה שגיאה בלתי ידועה"
 
 #: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr ""
+msgstr "שגיאה בניסיון לערוך פריט לוח שנה. השגיאה הייתה: %1"
 
 #: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr ""
+msgstr "פריט לוח השנה כבר נמחק או שהוא נמחק כרגע."
 
 #: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr ""
+msgstr "אי אפשר לבצע את הפעולה עקב הגבלות רשימת בקרת גישה"
 
 #: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
-msgstr ""
+msgstr "האוסף הנבחר שגוי"
 
 #: incidencechanger.cpp:1202
 #, kde-format
@@ -563,34 +565,34 @@ msgstr ""
 #: incidencechanger.cpp:1206
 #, kde-format
 msgid "Duplicate item id in a group operation"
-msgstr ""
+msgstr "מזהה פריט כפול בפעולה קבוצתית"
 
 #: incidencechanger.cpp:1210
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
-msgstr ""
+msgstr "שינוי אחד מתוך קבוצה של שינויים נכשל. כל השינויים מוחזרים אחורה."
 
 #: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
-msgstr ""
+msgstr "שגיאה לא ידועה"
 
 #: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
-msgstr ""
+msgstr "טעינת לוח השנה נכשלה."
 
 #: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
-msgstr ""
+msgstr "הודעת שגיאה: %1"
 
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr ""
+msgstr "שגיאה לא ידועה בפענוח הזמנת ה־iCal"
 
 #: itiphandler.cpp:125
 #, kde-format
@@ -600,22 +602,22 @@ msgstr ""
 #: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
-msgstr ""
+msgstr "מופע שגוי"
 
 #: itiphandler.cpp:209
 #, kde-format
 msgid "Invalid action: %1"
-msgstr ""
+msgstr "פעולה שגויה: %1"
 
 #: itiphandler.cpp:232
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr ""
+msgstr "שגיאה בשליחת הצעה נגדית"
 
 #: itiphandler.cpp:239
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr ""
+msgstr "לא ניתן להתחיל את העורך כדי לערוך את ההצעה הנגדית"
 
 #: itiphandler.cpp:270
 #, kde-format
@@ -627,30 +629,30 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr ""
+msgstr "ההודעה לא נשלחה"
 
 #: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
-msgstr ""
+msgstr "לשלוח דוא״ל"
 
 #: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
-msgstr ""
+msgstr "לא לשלוח"
 
 #: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
 #: itiphandlerhelper_p.cpp:510
 #, kde-format
 msgid "Error: %1"
-msgstr ""
+msgstr "שגיאה: %1"
 
 #: itiphandler_p.cpp:81
 #, kde-format
 msgid "Error loading calendar: %1"
-msgstr ""
+msgstr "שגיאה בטעינת לוח השנה: %1"
 
 #: itiphandler_p.cpp:132
 #, kde-format
@@ -667,44 +669,46 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
+"לא ניתן לשלוח את הפריט ‚%1’.\n"
+"שיטה: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr ""
+msgstr "פרטי הפריט נשלחו בהצלחה."
 
 #: itiphandler_p.cpp:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
-msgstr ""
+msgstr "פרסום"
 
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr ""
+msgstr "לא ניתן לפרסם את הפריט ‚%1’"
 
 #: itiphandler_p.cpp:181
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr ""
+msgstr "העברה"
 
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr ""
+msgstr "לא ניתן להעביר את הפריט ‚%1’"
 
 #: itiphandler_p.cpp:189
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr ""
+msgstr "שגיאת העברה"
 
 #: itiphandlerhelper_p.cpp:37
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr ""
+msgstr "הוצעה שעה חדש לפגישה: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:69
 #, kde-format
@@ -715,7 +719,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr ""
+msgstr "<placeholder>לא סופק תקציר</placeholder>"
 
 #: itiphandlerhelper_p.cpp:237
 #, kde-format
@@ -736,7 +740,7 @@ msgstr ""
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
-msgstr ""
+msgstr "המופע הזה כולל אנשים אחרים. האם לשלוח הודעה למשתתפים האחרים?"
 
 #: itiphandlerhelper_p.cpp:271
 #, kde-format
@@ -750,14 +754,14 @@ msgstr ""
 msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
-msgstr ""
+msgstr "ערכת את ההזמנה „%1”. לשלוח הודעת עדכון למשתתפים?"
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
-msgstr ""
+msgstr "לשלוח עדכון"
 
 #: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
@@ -801,7 +805,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
-msgstr ""
+msgstr "לשלוח עדכון"
 
 #: itiphandlerhelper_p.cpp:434
 #, kde-format
@@ -813,7 +817,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
-msgstr ""
+msgstr "הצעה נגדית: %1"
 
 #: itiphandlerhelper_p.cpp:495
 #, kde-format
@@ -824,12 +828,12 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
-msgstr ""
+msgstr "ביטול עדכון"
 
 #: mailclient_p.cpp:377 mailclient_p.cpp:415
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr ""
+msgstr "אין נמענים לשליחת הודעת הדוא״ל"
 
 #: mailclient_p.cpp:424
 #, kde-format
@@ -839,7 +843,7 @@ msgstr ""
 #: mailclient_p.cpp:458 mailclient_p.cpp:489
 #, kde-format
 msgid "Free Busy Message"
-msgstr ""
+msgstr "הודעת פנוי עסוק"
 
 #: mailclient_p.cpp:629
 #, kde-format
@@ -863,23 +867,26 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"חקירת העדפות החתימה של הנמען הובילה לכך שתופיע בקשה האם לחתום על ההודעה הזאת "
+"או לא.\n"
+"לחתום על ההודעה הזאת?"
 
 #: mailclient_p.cpp:706 mailclient_p.cpp:732
 #, kde-format
 msgid "Sign Message?"
-msgstr ""
+msgstr "לחתום על ההודעה?"
 
 #: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "ל&חתום"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
-msgstr ""
+msgstr "&לא לחתום"
 
 #: mailclient_p.cpp:728
 #, kde-format
@@ -887,24 +894,26 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"יש העדפות חתימה סותרות לנמענים האלה.\n"
+"לחתום על ההודעה הזאת?"
 
 #: mailclient_p.cpp:753
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
-msgstr ""
+msgstr "ביקשת לחתום על ההודעה הזאת אך לא הוגדרו מפתחות חתימה תקפים לזהות הזאת."
 
 #: mailclient_p.cpp:756
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "לשלוח ללא חתימה?"
 
 #: mailclient_p.cpp:756
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "לשלוח ללא ח&תימה"
 
 #: mailclient_p.cpp:769
 #, kde-format
@@ -913,6 +922,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"חלקים מההודעה הזאת לא ייחתמו.\n"
+"שליחת הודעה חתומה באופן חלקי עלולה להפר את מדיניות האתר.\n"
+"לחתום על כל החלקים במקום?"
 
 #: mailclient_p.cpp:773
 #, kde-format
@@ -921,27 +933,30 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"ההודעה הזאת לא תיחתם.\n"
+"שליחת הודעה לא חתומה עלולה להפר את מדיניות האתר.\n"
+"לחתום על ההודעה במקום?"
 
 #: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "לחתום על &כל החלקים"
 
 #: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "ל&חתום"
 
 #: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "אזהרת הודעה לא חתומה"
 
 #: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr ""
+msgstr "לשלוח &ללא שינוי"
 
 #: mailclient_p.cpp:833
 #, kde-format
@@ -949,6 +964,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"מפתחות הצפנה תקפים ואמינים נמצאו לכל הנמענים.\n"
+"להצפין את ההודעה הזאת?"
 
 #: mailclient_p.cpp:836
 #, kde-format
@@ -957,31 +974,33 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"חקירת העדפות ההצפנה של הנמען מראה שתופיע שאלה האם להצפין את ההודעה או לא.\n"
+"להצפין את ההודעה?"
 
 #: mailclient_p.cpp:841 mailclient_p.cpp:867
 #, kde-format
 msgid "Encrypt Message?"
-msgstr ""
+msgstr "להצפין את ההודעה?"
 
 #: mailclient_p.cpp:842
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "לחתום ולה&צפין"
 
 #: mailclient_p.cpp:842 mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "להצ&פין"
 
 #: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "ל&חתום בלבד"
 
 #: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "לשלוח בלי &שינוי"
 
 #: mailclient_p.cpp:863
 #, kde-format
@@ -989,18 +1008,20 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"יש העדפות הצפנה סותרות לנמענים האלה.\n"
+"להצפין את ההודעה הזאת?"
 
 #: mailclient_p.cpp:868
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
-msgstr ""
+msgstr "לה&צפין"
 
 #: mailclient_p.cpp:869
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
-msgstr ""
+msgstr "&לא להצפין"
 
 #: mailclient_p.cpp:888
 #, kde-format
@@ -1009,17 +1030,19 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"ביקשת להצפין את ההודעה הזאת ולהצפין עותק לעצמך, אך לא נמצאו מפתחות הצפנה "
+"אמינים לזהות הזאת."
 
 #: mailclient_p.cpp:892
 #, kde-format
 msgid "Send Unencrypted?"
-msgstr ""
+msgstr "לשלוח ללא הצפנה?"
 
 #: mailclient_p.cpp:892
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr ""
+msgstr "לשלוח ל&לא הצפנה"
 
 #: mailclient_p.cpp:906
 #, kde-format
@@ -1029,6 +1052,9 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"חלקים מההודעה הזאת לא יוצפנו.\n"
+"שליחת הודעה מוצפנת חלקית יכולה להפר את מדיניות האתר ו/או להדליף מידע רגיש.\n"
+"להצפין את כל החלקים במקום?"
 
 #: mailclient_p.cpp:911
 #, kde-format
@@ -1038,33 +1064,36 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"ההודעה הזאת לא תוצפן.\n"
+"שליחת הודעות לא מוצפות עלולה להפר את מדיניות האתר ו/או להדליף מידע רגיש.\n"
+"להצפין את ההודעות במקום?"
 
 #: mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "להצפין את &כל החלקים"
 
 #: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "אזהרת הודעה לא מוצפנת"
 
 #: mailscheduler_p.cpp:199
 #, kde-format
 msgid "Error sending e-mail: "
-msgstr ""
+msgstr "שגיאה בשליחת דוא״ל: "
 
 #: publishdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
-msgstr ""
+msgstr "בחירת כתובות"
 
 #: publishdialog.cpp:61
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
-msgstr ""
+msgstr "שליחת הודעות לנמענים האלה"
 
 #: publishdialog.cpp:63
 #, kde-format
@@ -1077,7 +1106,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
-msgstr ""
+msgstr "ביטול בחירת נמענים והודעת הדוא״ל"
 
 #: publishdialog.cpp:70
 #, kde-format
@@ -1090,7 +1119,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
-msgstr ""
+msgstr "לחיצה על כפתור ה<b>עזרה</b> תציג בפניך פרטםי נוספים על תזמון קבוצתי."
 
 #: publishdialog.cpp:123
 #, kde-format
@@ -1104,13 +1133,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
-msgstr ""
+msgstr "שגיאת פרסום"
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:38
 #, kde-format
 msgid "The list of addressees to receive the invitation"
-msgstr ""
+msgstr "רשימת הכתובות לקבלת ההזמנה"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:41
@@ -1124,7 +1153,7 @@ msgstr ""
 #: publishdialog_base.ui:52
 #, kde-format
 msgid "Create a new recipient"
-msgstr ""
+msgstr "יצירת נמענים חדשים"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mNew)
 #: publishdialog_base.ui:55
@@ -1138,7 +1167,7 @@ msgstr ""
 #: publishdialog_base.ui:58
 #, kde-format
 msgid "&New"
-msgstr ""
+msgstr "&חדש"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:65
@@ -1157,13 +1186,13 @@ msgstr ""
 #: publishdialog_base.ui:71
 #, kde-format
 msgid "&Remove"
-msgstr ""
+msgstr "ה&סרה"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr ""
+msgstr "נא לבחור נמען או נמענת מספר הכתובות שלך"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1177,55 +1206,55 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select…"
-msgstr ""
+msgstr "&בחירה…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
 #, kde-format
 msgctxt "recipient name"
 msgid "Name:"
-msgstr ""
+msgstr "שם:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mNameLineEdit)
 #: publishdialog_base.ui:123
 #, kde-format
 msgid "The recipient's name"
-msgstr ""
+msgstr "שם הנמען או הנמענת"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mNameLineEdit)
 #: publishdialog_base.ui:126
 #, kde-format
 msgid "This field contains the name of the recipient"
-msgstr ""
+msgstr "השדה הזה מכיל את שם הנמען או הנמענת"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: publishdialog_base.ui:136
 #, kde-format
 msgctxt "recipient email"
 msgid "E&mail:"
-msgstr ""
+msgstr "&דוא״ל:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:146
 #, kde-format
 msgid "The recipient's email address"
-msgstr ""
+msgstr "כתובת הדוא״ל הממוענת"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mEmailLineEdit)
 #: publishdialog_base.ui:149
 #, kde-format
 msgid "This field contains the email address of the recipient"
-msgstr ""
+msgstr "השדה הזה מכיל את כתובת הדוא״ל של הנמען או הנמענת"
 
 #: publishdialog_p.cpp:44
 #, kde-format
 msgid "(EmptyName)"
-msgstr ""
+msgstr "(שם ריק)"
 
 #: publishdialog_p.cpp:45
 #, kde-format
 msgid "(EmptyEmail)"
-msgstr ""
+msgstr "(דוא״ל ריק)"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
@@ -1240,7 +1269,7 @@ msgstr ""
 #: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
 #, kde-format
 msgid "Error modifying incidence"
-msgstr ""
+msgstr "שגיאה בשינוי מופע"
 
 #: scheduler_p.cpp:288
 #, kde-kuit-format
@@ -1260,22 +1289,22 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr ""
+msgstr "לא ניתן למצוא הזמנה לעדכון"
 
 #: scheduler_p.cpp:304
 #, kde-format
 msgid "Error adding incidence"
-msgstr ""
+msgstr "שגיאה בהוספת מופע"
 
 #: scheduler_p.cpp:338
 #, kde-format
 msgid "Could not find incidence to delete."
-msgstr ""
+msgstr "לא ניתן למצוא מופע להסרה."
 
 #: scheduler_p.cpp:391
 #, kde-format
 msgid "Error recording exception"
-msgstr ""
+msgstr "שגיאה בתיעוד חריגה"
 
 #: scheduler_p.cpp:408
 #, kde-format
@@ -1290,7 +1319,7 @@ msgstr ""
 #: scheduler_p.cpp:574
 #, kde-format
 msgid "Generic Error"
-msgstr ""
+msgstr "שגיאה כללית"
 
 #: scheduler_p.cpp:476
 #, kde-format
@@ -1334,107 +1363,107 @@ msgctxt "@info"
 msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
-msgstr ""
+msgstr "נוספו משתתפים למופע. לשלוח למשתתפים הודעת עדכון?"
 
 #: scheduler_p.cpp:510
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr ""
+msgstr "נוספו משתתפים"
 
 #: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
-msgstr ""
+msgstr "לשלוח הודעות"
 
 #: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
-msgstr ""
+msgstr "לא לשלוח"
 
 #: scheduler_p.cpp:558
 #, kde-format
 msgid "No incidence for scheduling."
-msgstr ""
+msgstr "אין מופע לתזמון."
 
 #: scheduler_p.cpp:581
 #, kde-format
 msgid "No Free Busy Cache"
-msgstr ""
+msgstr "אין מטמון פנוי/עסוק"
 
 #: scheduler_p.cpp:600
 #, kde-format
 msgid "Error saving freebusy object"
-msgstr ""
+msgstr "שגיאה בשמירת פריט פנוי/עסוק"
 
 #: searchcollectionhelper.cpp:179
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "הזמנות שסורבו"
 
 #: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "הזמנות פתוחות"
 
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder…"
-msgstr ""
+msgstr "הוספת תיקייה…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
 msgid "Add a new calendar folder to the currently selected calendar folder."
-msgstr ""
+msgstr "הוספת תיקיית לוחות שנה חדשה לתיקיית לוחות השנה הנבחרת."
 
 #: standardcalendaractionmanager.cpp:49
 #, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
-msgstr ""
+msgstr "תיקייה חדשה"
 
 #: standardcalendaractionmanager.cpp:53
 #, kde-format
 msgid "Could not create calendar folder: %1"
-msgstr ""
+msgstr "לא ניתן ליצור תיקיית לוחות שנה:%1"
 
 #: standardcalendaractionmanager.cpp:57
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr ""
+msgstr "יצירת תיקיית לוחות שנה נכשלה"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
 msgid "Copy Folder"
 msgid_plural "Copy %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "העתקת תיקייה"
+msgstr[1] "העתקת שתי תיקיות"
+msgstr[2] "העתקת %1 תיקיות"
+msgstr[3] "העתקת %1 תיקיות"
 
 #: standardcalendaractionmanager.cpp:68
 #, kde-format
 msgid "Copy the selected calendar folders to the clipboard."
-msgstr ""
+msgstr "העתקת תיקיות לוחות השנה הנבחרות ללוח הגזירים."
 
 #: standardcalendaractionmanager.cpp:71
 #, kde-format
 msgid "Delete Folder"
 msgid_plural "Delete %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מחיקת תיקייה"
+msgstr[1] "מחיקת שתי תיקיות"
+msgstr[2] "מחיקת %1 תיקיות"
+msgstr[3] "מחיקת %1 תיקיות"
 
 #: standardcalendaractionmanager.cpp:73
 #, kde-format
 msgid "Delete the selected calendar folders from the calendar."
-msgstr ""
+msgstr "מחיקת תיקיות לוחות השנה הנבחרות מלוח השנה."
 
 #: standardcalendaractionmanager.cpp:76
 #, kde-format
@@ -1452,142 +1481,142 @@ msgstr[3] ""
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למחוק את תיקיית לוחות השנה?"
+msgstr[1] "למחוק את תיקיות לוחות השנה?"
+msgstr[2] "למחוק את תיקיות לוחות השנה?"
+msgstr[3] "למחוק את תיקיות לוחות השנה?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
 msgid "Could not delete calendar folder: %1"
-msgstr ""
+msgstr "לא ניתן למחוק תיקיית לוחות שנה: %1"
 
 #: standardcalendaractionmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr ""
+msgstr "מחיקת תיקיית לוחות שנה נכשלה"
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
 msgid "Update Folder"
 msgid_plural "Update %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "עדכון תיקייה"
+msgstr[1] "עדכון שתי תיקיות"
+msgstr[2] "עדכון %1 תיקיות"
+msgstr[3] "עדכון %1 תיקיות"
 
 #: standardcalendaractionmanager.cpp:95
 #, kde-format
 msgid "Update the content of the selected calendar folders."
-msgstr ""
+msgstr "עדכון תוכן תיקיות לוחות השנה הנבחרות."
 
 #: standardcalendaractionmanager.cpp:99
 #, kde-format
 msgid "Cut Folder"
 msgid_plural "Cut %1 Folders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "גזירת תיקייה"
+msgstr[1] "גזירת שתי תיקיות"
+msgstr[2] "גזירת %1 תיקיות"
+msgstr[3] "גזירת %1 תיקיות"
 
 #: standardcalendaractionmanager.cpp:100
 #, kde-format
 msgid "Cut the selected calendar folders from the calendar."
-msgstr ""
+msgstr "גזירת תיקיות לוחות השנה הנבחרות מלוח השנה."
 
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties…"
-msgstr ""
+msgstr "מאפייני תיקייה…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
 msgid "Open a dialog to edit the properties of the selected calendar folder."
-msgstr ""
+msgstr "פתיחת חלונית לעריכת מאפייני תיקיית לוחות השנה הנבחרת."
 
 #: standardcalendaractionmanager.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Calendar Folder %1"
-msgstr ""
+msgstr "מאפייני תיקיית לוחות השנה %1"
 
 #: standardcalendaractionmanager.cpp:111 standardcalendaractionmanager.cpp:299
 #, kde-format
 msgid "Copy Event"
 msgid_plural "Copy %1 Events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "העתקת אירוע"
+msgstr[1] "העתקת שני אירועים"
+msgstr[2] "העתקת %1 אירועים"
+msgstr[3] "העתקת %1 אירועים"
 
 #: standardcalendaractionmanager.cpp:112
 #, kde-format
 msgid "Copy the selected events to the clipboard."
-msgstr ""
+msgstr "העתקת האירועים הנבחרים ללוח הגזירים."
 
 #: standardcalendaractionmanager.cpp:116 standardcalendaractionmanager.cpp:310
 #, kde-format
 msgid "Delete Event"
 msgid_plural "Delete %1 Events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מחיקת אירוע"
+msgstr[1] "מחיקת שני אירועים"
+msgstr[2] "מחיקת %1 אירועים"
+msgstr[3] "מחיקת %1 אירועים"
 
 #: standardcalendaractionmanager.cpp:117
 #, kde-format
 msgid "Delete the selected events from the calendar."
-msgstr ""
+msgstr "מחיקת האירועים הנבחרים מלוח השנה."
 
 #: standardcalendaractionmanager.cpp:120
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למחוק את האירוע הנבחר?"
+msgstr[1] "למחוק את שני האירועים הנבחרים?"
+msgstr[2] "למחוק את %1 האירועים הנבחרים?"
+msgstr[3] "למחוק את %1 האירועים הנבחרים?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Event?"
 msgid_plural "Delete Events?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למחוק את האירוע?"
+msgstr[1] "למחוק את האירועים?"
+msgstr[2] "למחוק את האירועים?"
+msgstr[3] "למחוק את האירועים?"
 
 #: standardcalendaractionmanager.cpp:126
 #, kde-format
 msgid "Could not delete event: %1"
-msgstr ""
+msgstr "לא ניתן למחוק את האירוע: %1"
 
 #: standardcalendaractionmanager.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr ""
+msgstr "מחיקת אירוע נכשלה"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
 msgid "Cut Event"
 msgid_plural "Cut %1 Events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "גזירת אירוע"
+msgstr[1] "גזירת שני אירועים"
+msgstr[2] "גזירת %1 אירועים"
+msgstr[3] "גזירת %1 אירועים"
 
 #: standardcalendaractionmanager.cpp:135
 #, kde-format
 msgid "Cut the selected events from the calendar."
-msgstr ""
+msgstr "גזירת האירועים הנבחרים מלוח השנה."
 
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar…"
-msgstr ""
+msgstr "הו&ספת לוח שנה…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1595,32 +1624,33 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
+"הוספת לוח שנה חדש<p>תוצג חלונית בה ניתן לבחור את סוג לוח השנה להוספה.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Calendar"
-msgstr ""
+msgstr "הוספת לוח שנה"
 
 #: standardcalendaractionmanager.cpp:147
 #, kde-format
 msgid "Could not create calendar: %1"
-msgstr ""
+msgstr "לא ניתן ליצור לוח שנה: %1"
 
 #: standardcalendaractionmanager.cpp:151
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr ""
+msgstr "יצירת לוח השנה נכשלה"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
 msgid "&Delete Calendar"
 msgid_plural "&Delete %1 Calendars"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למ&חוק לוח שנה"
+msgstr[1] "למ&חוק שני לוחות שנה"
+msgstr[2] "למ&חוק %1 לוחות שנה"
+msgstr[3] "למ&חוק %1 לוחות שנה"
 
 #: standardcalendaractionmanager.cpp:158
 #, kde-format
@@ -1628,239 +1658,241 @@ msgid ""
 "Delete the selected calendars<p>The currently selected calendars will be "
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
+"מחיקת לוחות השנה הנבחרים<p>לוחות השנה שנבחרו יימחקו עם כל האירועים, המטלות "
+"והיומנים שהם מכילים."
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למחוק את לוח השנה הזה?"
+msgstr[1] "למחוק את שני לוחות השנה האלה?"
+msgstr[2] "למחוק את %1 לוחות השנה האלה?"
+msgstr[3] "למחוק את %1 לוחות השנה האלה?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar?"
 msgid_plural "Delete Calendars?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למחוק את לוח השנה?"
+msgstr[1] "למחוק את לוחות השנה?"
+msgstr[2] "למחוק את לוחות השנה?"
+msgstr[3] "למחוק את לוחות השנה?"
 
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties…"
-msgstr ""
+msgstr "מאפייני לוח השנה…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
-msgstr ""
+msgstr "יש לפתוח את החלונית כדי לערוך את מאפייני לוח השנה הנבחר."
 
 #: standardcalendaractionmanager.cpp:177
 #, kde-format
 msgid "Update Calendar"
 msgid_plural "Update %1 Calendars"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "עדכון לוח שנה"
+msgstr[1] "עדכון שני לוחות שנה"
+msgstr[2] "עדכון %1 לוחות שנה"
+msgstr[3] "עדכון %1 לוחות שנה"
 
 #: standardcalendaractionmanager.cpp:179
 #, kde-format
 msgid "Updates the content of all folders of the selected calendars."
-msgstr ""
+msgstr "עדכון תוכן כל התיקיות של לוחות השנה הנבחרים."
 
 #: standardcalendaractionmanager.cpp:182
 #, kde-format
 msgid "&Copy to Calendar"
-msgstr ""
+msgstr "ה&עתקה ללוח שנה"
 
 #: standardcalendaractionmanager.cpp:183
 #, kde-format
 msgid "Copy the selected event to a different calendar."
-msgstr ""
+msgstr "העתקת האירוע הנבחר ללוח שנה אחר."
 
 #: standardcalendaractionmanager.cpp:186
 #, kde-format
 msgid "&Move to Calendar"
-msgstr ""
+msgstr "הע&ברה ללוח שנה"
 
 #: standardcalendaractionmanager.cpp:187
 #, kde-format
 msgid "Move the selected event to a different calendar."
-msgstr ""
+msgstr "העברת האירוע הנבחר ללוח שנה אחר"
 
 #: standardcalendaractionmanager.cpp:190
 #, kde-format
 msgid "Could not paste event: %1"
-msgstr ""
+msgstr "לא ניתן להדביק אירוע: %1"
 
 #: standardcalendaractionmanager.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr ""
+msgstr "ההדבקה נכשלה"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
 msgid "Update Available Calendars"
-msgstr ""
+msgstr "עדכון לוחות השנה הזמינים"
 
 #: standardcalendaractionmanager.cpp:196
 #, kde-format
 msgid "Updates the tree of available calendars."
-msgstr ""
+msgstr "עדכון עץ לוחות השנה הזמינים."
 
 #: standardcalendaractionmanager.cpp:303 standardcalendaractionmanager.cpp:307
 #, kde-format
 msgid "Copy Event To"
-msgstr ""
+msgstr "העתקת אירוע אל"
 
 #: standardcalendaractionmanager.cpp:317 standardcalendaractionmanager.cpp:321
 #, kde-format
 msgid "Move Event To"
-msgstr ""
+msgstr "העברת אירוע אל"
 
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event…"
-msgstr ""
+msgstr "עריכת אירוע…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "העתקת מטלה"
+msgstr[1] "העתקת שתי מטלות"
+msgstr[2] "העתקת %1 מטלות"
+msgstr[3] "העתקת %1 מטלות"
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
-msgstr ""
+msgstr "העתקת מטלה אל"
 
 #: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מחיקת מטלה"
+msgstr[1] "מחיקת שתי מטלות"
+msgstr[2] "מחיקת %1 מטלות"
+msgstr[3] "מחיקת %1 מטלות"
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "גזירת מטלה"
+msgstr[1] "גזירת שתי מטלות"
+msgstr[2] "גזירת %1 מטלות"
+msgstr[3] "גזירת %1 מטלות"
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
-msgstr ""
+msgstr "העברת מטלה אל"
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do…"
-msgstr ""
+msgstr "עריכת מטלה…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "העתקת יומן"
+msgstr[1] "העתקת שני יומנים"
+msgstr[2] "העתקת %1 יומנים"
+msgstr[3] "העתקת %1 יומנים"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
 msgid "Copy Journal To"
-msgstr ""
+msgstr "העתקת יומן אל"
 
 #: standardcalendaractionmanager.cpp:370
 #, kde-format
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מחיקת יומן"
+msgstr[1] "מחיקת שני יומנים"
+msgstr[2] "מחיקת %1 יומנים"
+msgstr[3] "מחיקת %1 יומנים"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "גזירת יומן"
+msgstr[1] "גזירת שני יומנים"
+msgstr[2] "גזירת %1 יומנים"
+msgstr[3] "גזירת %1 יומנים"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
 msgid "Move Journal To"
-msgstr ""
+msgstr "העברת היומן אל"
 
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal…"
-msgstr ""
+msgstr "עריכת יומן…"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent…"
-msgstr ""
+msgstr "אירוע &חדש…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
 msgid "Create a new event"
-msgstr ""
+msgstr "יצירת אירוע חדש"
 
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do…"
-msgstr ""
+msgstr "מ&טלה חדשה…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
-msgstr ""
+msgstr "יצירת מטלה חדשה"
 
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do…"
-msgstr ""
+msgstr "מטלת מ&שנה חדשה…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
-msgstr ""
+msgstr "יצירת מטלת משנה חדשה"
 
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal…"
-msgstr ""
+msgstr "יומן ח&דש…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
 msgid "Create a new Journal"
-msgstr ""
+msgstr "יצירת יומן חדש"
 
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit…"
-msgstr ""
+msgstr "ע&ריכה…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
-msgstr ""
+msgstr "עריכת המופע הנבחר."
 
 #: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
