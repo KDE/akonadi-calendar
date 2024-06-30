@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-02-21 23:50+0100\n"
+"PO-Revision-Date: 2024-06-29 13:29+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -68,15 +68,13 @@ msgid "KOrganizer Confirmation"
 msgstr "KOrganizer berrespena"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Ebaki hau bakarrik"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Ebaki guztia"
@@ -91,15 +89,13 @@ msgstr ""
 "edo zeregina bere azpi-zeregin guztiekin kopiatu nahi duzu?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopiatu hau bakarrik"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Kopiatu guztia"
@@ -814,8 +810,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Bidali eguneratzea"
@@ -955,8 +950,7 @@ msgid "&Sign"
 msgstr "&Sinatu"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "E&z sinatu"
@@ -985,8 +979,7 @@ msgid "Send Unsigned?"
 msgstr "Sinatu gabe bidali?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Bidali sinatu &gabe"
@@ -1030,8 +1023,7 @@ msgid "Unsigned-Message Warning"
 msgstr "Sinatu gabeko mezuaren Abisua"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Bidali dagoen bez&ala"
@@ -1092,18 +1084,16 @@ msgstr ""
 "Mezu hau zifratu?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
-msgstr "&Zifratu"
+msgstr "Zi&fratu"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
-msgstr "E&z zifratu"
+msgstr "&Ez zifratu"
 
 #: mailclient_p.cpp:888
 #, kde-format
@@ -1122,8 +1112,7 @@ msgid "Send Unencrypted?"
 msgstr "Bidali zifratu gabe?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Bidali zifratu &gabe"
@@ -1176,8 +1165,7 @@ msgid "Select Addresses"
 msgstr "Hautatu helbidea"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Bidali e-posta hartzaile hauei"
@@ -1192,8 +1180,7 @@ msgstr ""
 "bidaltzea eragingo du."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Hartzaileen hautapena eta e-posta bertan behera utzi"
@@ -1306,8 +1293,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
 msgstr "&Hautatu..."
 
@@ -1528,8 +1514,7 @@ msgid "Open Invitations"
 msgstr "Irekitako gonbidapenak"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "Gehitu karpeta..."
 
@@ -1635,8 +1620,7 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Ebaki hautatutako egutegi-karpetak egutegitik."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
 msgstr "Karpetaren propietateak..."
 
@@ -1716,11 +1700,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Ebaki hautatutako ekitaldiak egutegitik."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Gehitu egutegia"
+msgstr "Gehitu e&gutegia..."
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1780,8 +1762,7 @@ msgstr[0] "Egutegia ezabatu?"
 msgstr[1] "Egutegiak ezabatu?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
 msgstr "Egutegiaren propietateak..."
 
@@ -1856,8 +1837,7 @@ msgid "Move Event To"
 msgstr "Eraman ekitaldia hona,"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
 msgstr "Editatu ekitaldia..."
 
@@ -1893,8 +1873,7 @@ msgid "Move To-do To"
 msgstr "Eraman zeregina hona,"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
 msgstr "Editatu zeregina..."
 
@@ -1930,14 +1909,12 @@ msgid "Move Journal To"
 msgstr "Eraman egunkaria hona, "
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
 msgstr "Editatu egunkaria..."
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
 msgstr "E&kitaldi berria..."
 
@@ -1947,8 +1924,7 @@ msgid "Create a new event"
 msgstr "Sortu ekitaldi berri bat"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
 msgstr "&Zeregin berria..."
 
@@ -1958,8 +1934,7 @@ msgid "Create a new To-do"
 msgstr "Sortu zeregin berra"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Az&pi-zeregin berria..."
 
@@ -1969,8 +1944,7 @@ msgid "Create a new Sub-to-do"
 msgstr "Sortu azpi-zeregin berria"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
 msgstr "E&gunkari berria..."
 
@@ -1980,8 +1954,7 @@ msgid "Create a new Journal"
 msgstr "Sortu egunkari berri bat"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
 msgstr "&Editatu..."
 

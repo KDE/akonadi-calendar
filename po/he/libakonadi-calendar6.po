@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-06-28 10:40+0300\n"
+"PO-Revision-Date: 2024-06-29 07:44+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -239,6 +239,8 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
+"סימון התיבה הזאת יגרום לשליחת עותק של כל הודעות הדוא״ל שנשלחות על ידי "
+"KOrganizer לבקשתך למשתתפים באירועים."
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
@@ -256,7 +258,7 @@ msgstr "יש לסמן את התיבה הזאת כדי להסתיר הזמנות 
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
-msgstr ""
+msgstr "להציג רק תזכורות לאירועים שארגנתי או שאני שותף או שותפה להם"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -325,7 +327,7 @@ msgstr "Kolab משותף %1 %2"
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr "%2 ב־Kolab של %1"
+msgstr "%2 ה־Kolab של %1"
 
 #: calendarutils.cpp:141
 #, kde-format
@@ -392,7 +394,7 @@ msgstr "שגיאת משיכת פנוי/עסוק"
 #: freebusymanager.cpp:403
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr ""
+msgstr "נכשל פענוח פרטי פנוי/עסוק שהתקבלו דרך: %1"
 
 #: freebusymanager.cpp:418
 #, kde-format
@@ -597,7 +599,7 @@ msgstr "שגיאה לא ידועה בפענוח הזמנת ה־iCal"
 #: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr ""
+msgstr "שגיאה בעיבוד הזמנה או עדכון."
 
 #: itiphandler.cpp:142
 #, kde-format
@@ -623,7 +625,7 @@ msgstr "לא ניתן להתחיל את העורך כדי לערוך את ההצ
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
-msgstr ""
+msgstr "לפריט ‚%1’ אין משתתפים. לכן לא תישלח הודעה קבוצתית."
 
 #: itiphandler.cpp:273
 #, kde-format
@@ -714,7 +716,7 @@ msgstr "הוצעה שעה חדש לפגישה: %1 - %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr ""
+msgstr "דוא״ל לתזמון קבוצתי"
 
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
@@ -727,6 +729,8 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
+"האירוע „%1” כולל אנשים אחרים.\n"
+"לשלוח את ההזמנה בדוא״ל למשתתפים?"
 
 #: itiphandlerhelper_p.cpp:242
 #, kde-format
@@ -734,6 +738,8 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
+"המטלה „%1” כוללת אנשים אחרים.\n"
+"לשלוח את ההזמנה למשתתפים בדוא״ל?"
 
 #: itiphandlerhelper_p.cpp:247
 #, kde-format
@@ -766,7 +772,7 @@ msgstr "לשלוח עדכון"
 #: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
-msgstr ""
+msgstr "לשלוח עדכון מצב למארגני המשימה הזאת?"
 
 #: itiphandlerhelper_p.cpp:339
 #, kde-format
@@ -812,7 +818,7 @@ msgstr "לשלוח עדכון"
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
-msgstr ""
+msgstr "אישרת הזמנה לאירוע הזה בעבר. לשלוח תגובה מעודכנת שמסרבת להזמנה?"
 
 #: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
 #, kde-format
@@ -822,7 +828,7 @@ msgstr "הצעה נגדית: %1"
 #: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr ""
+msgstr "שליחת הודעת דוא״ל לתזמון קבוצתי נכשלה."
 
 #: itiphandlerhelper_p.cpp:503
 #, kde-format
@@ -1147,7 +1153,7 @@ msgstr "רשימת הכתובות לקבלת ההזמנה"
 msgid ""
 "This is a list of all the addresses you have currently selected to receive "
 "the iCalendar invitation."
-msgstr ""
+msgstr "זאת רשימת הכתובות שבחרת כרגע לקבלת הזמנת ה־iCalendar."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mNew)
 #: publishdialog_base.ui:52
@@ -1162,6 +1168,8 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
+"לחיצה על הכפתור הזה תאפשר לך למלא שם ודוא״ל של נמענים חדשים להוספה לרשימת "
+"הנמענים"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
@@ -1173,14 +1181,14 @@ msgstr "&חדש"
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr ""
+msgstr "הסרת הנמען הנבחר"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
 #, kde-format
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
-msgstr ""
+msgstr "לחיצה על הכפתור הזה תסיר את הנמען הנבחר מהרשימה"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
