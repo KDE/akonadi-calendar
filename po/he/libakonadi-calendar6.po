@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-06-29 07:44+0300\n"
+"PO-Revision-Date: 2024-07-01 06:17+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -201,6 +201,9 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
+"עם ההגדרה הזאת, אפשר לשנות את שם הקובץ שיימשך מהשרת. כשהאפשרות מסומנת, יימשך "
+"קובץ פנוי/עסוק בשם user@domain.ifb, למשל: nn@kde.org.ifb. ללא ההגדרה הזאת, "
+"יימשך user.ifb, למשל: nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
@@ -266,19 +269,19 @@ msgstr "להציג רק תזכורות לאירועים שארגנתי או שא
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
-msgstr ""
+msgstr "יש לסמן את ה כדי לקבל רק תזכורות לאירועים שארגנת או שנרשמת להשתתף בהם."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr ""
+msgstr "שליחת הצעות נגדיות מדומות בסגנון Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:105
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
-msgstr ""
+msgstr "לבדוק האם שם המארח וכתובת הדוא״ל לקבלה תואמות"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:106
@@ -289,6 +292,9 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
+"עם ההגדרה הזאת אפשר לבחור האם החלק של שם התחום בכתובת הפנוי/עסוק חייב להתאים "
+"לחלק שם התחום במזהה המשתמש שמחפשים. למשל, אם האפשרות הזאת מוגדרת, חיפוש אחר "
+"נתוני פנוי/עסוק של joe@mydomain.com בשרת www.yourdomain.com תיכשל."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
 #: todomodel.cpp:477
@@ -333,13 +339,13 @@ msgstr "%2 ה־Kolab של %1"
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
-msgstr ""
+msgstr "%3 ‏Kolab ה־%2 של %1"
 
 #: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
-msgstr ""
+msgstr "Kolab %1"
 
 #: calendarutils.cpp:152
 #, kde-format
@@ -563,6 +569,8 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
+"אוסף ברירת המחדל שגוי או שאין לו רשימות בקרת גישה (ACLs) ו־"
+"DestinationPolicyNeverAsk (אף פעם לא לשאול על מדיניות יעד) מתאימות בשימוש"
 
 #: incidencechanger.cpp:1206
 #, kde-format
@@ -662,6 +670,8 @@ msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
+"ההודעה הקבוצתית לפריט ‚%1’ נשלחה בהצלחה.\n"
+"שיטה: %2"
 
 #: itiphandler_p.cpp:144
 #, kde-format
@@ -754,6 +764,8 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
+"ארגון האירוע הזה אינו בידיך. עריכתו תפגום בסנכרון מול לוח השנה של המארגנים. "
+"לערוך אותו?"
 
 #: itiphandlerhelper_p.cpp:304
 #, kde-format
@@ -779,7 +791,7 @@ msgstr "לשלוח עדכון מצב למארגני המשימה הזאת?"
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
-msgstr ""
+msgstr "מצב ההשתתפות שלך באירוע הזה השתנה. לשלוח עדכון מצב למארגני האירוע?"
 
 #: itiphandlerhelper_p.cpp:382
 #, kde-format
@@ -787,6 +799,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
+"הסרת את ההזמנה„%1”.\n"
+"לשלוח הודעה למשתתפים בדוא״ל שהאירוע הזה מבוטל?"
 
 #: itiphandlerhelper_p.cpp:387
 #, kde-format
@@ -794,6 +808,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
+"הסרת את ההזמנה„%1”.\n"
+"לשלוח הודעה למשתתפים בדוא״ל שהמטלה הזאת מבוטלת?"
 
 #: itiphandlerhelper_p.cpp:392
 #, kde-format
@@ -801,11 +817,13 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
+"הסרת את ההזמנה„%1”.\n"
+"לשלוח הודעה למשתתפים בדוא״ל שהיומן הזה מבוטל?"
 
 #: itiphandlerhelper_p.cpp:414
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr ""
+msgstr "לשלוח עדכון מצב למארגני היומן הזה?"
 
 #: itiphandlerhelper_p.cpp:419 itiphandlerhelper_p.cpp:440
 #, kde-format
@@ -844,7 +862,7 @@ msgstr "אין נמענים לשליחת הודעת הדוא״ל"
 #: mailclient_p.cpp:424
 #, kde-format
 msgid "Free Busy Object"
-msgstr ""
+msgstr "פריט פנוי עסוק"
 
 #: mailclient_p.cpp:458 mailclient_p.cpp:489
 #, kde-format
@@ -854,17 +872,17 @@ msgstr "הודעת פנוי עסוק"
 #: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
-msgstr ""
+msgstr "שגיאה ביצירת תעבורה"
 
 #: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
-msgstr ""
+msgstr "שגיאה במשיכת תעבורה. לא ניתן לשלוח הזמנות"
 
 #: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
-msgstr ""
+msgstr "שגיאה בהצבת ההודעה הזאת בתור תיבת הדוא״ל היוצא: %1"
 
 #: mailclient_p.cpp:701
 #, kde-format
@@ -1106,7 +1124,7 @@ msgstr "שליחת הודעות לנמענים האלה"
 msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
 "recipients you have entered."
-msgstr ""
+msgstr "לחיצה על כפתור ה<b>אישור</b>תגרום לשליחת הודעת הדוא״ל לנמענים שציינת."
 
 #: publishdialog.cpp:68
 #, kde-format
@@ -1119,7 +1137,7 @@ msgstr "ביטול בחירת נמענים והודעת הדוא״ל"
 msgid ""
 "Clicking the <b>Cancel</b> button will cause the email operation to be "
 "terminated."
-msgstr ""
+msgstr "לחיצה על כפתור ה<b>ביטול</b> תחסל את פעולת הדוא״ל."
 
 #: publishdialog.cpp:75
 #, kde-format
@@ -1134,6 +1152,8 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
+"לא ניתן לפרסם את מופע לוח השנה הזה עקב מחרוזת נמענים שגויה.\n"
+"%1"
 
 #: publishdialog.cpp:126
 #, kde-format
@@ -1209,6 +1229,7 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
+"לחיצה על הכפתור הזה תציג חלונית נוספת בה ניתן לבחור איש קשר מפנקס הכתובות שלך"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
@@ -1267,12 +1288,12 @@ msgstr "(דוא״ל ריק)"
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
 msgid "Error: Assigning different incidence types."
-msgstr ""
+msgstr "שגיאה: הקצאת סוגים שונים למופעים."
 
 #: scheduler_p.cpp:223 scheduler_p.cpp:272
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
-msgstr ""
+msgstr "זה לא עדכון. המופע שנמצא נערך מאוחר יותר."
 
 #: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
 #, kde-format
@@ -1322,6 +1343,8 @@ msgid ""
 "already been deleted or is not owned by you. Or it might belong to a read-"
 "only or disabled calendar."
 msgstr ""
+"לא ניתן להסיר את האירוע או המשימה מלוח השנה שלך. אולי הוא כבר נמחק או שאינו "
+"בבעלותך. או שהוא שייך ללוח שנה לקריאה בלבד או מושבת."
 
 #: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
 #: scheduler_p.cpp:574
@@ -1333,37 +1356,37 @@ msgstr "שגיאה כללית"
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
-msgstr ""
+msgstr "התקבלה בקשה מצד %1 להשתתף באירוע %2 אך לא נשלחה הזמנה לצד המבקש."
 
 #: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
-msgstr ""
+msgstr "התקבלה בקשה מצד %1 להשתתף באירוע %2 מטעם %3."
 
 #: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr ""
+msgstr "משתתף או משתתפת שלא הוזמנו"
 
 #: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
-msgstr ""
+msgstr "קבלת השתתפות"
 
 #: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
-msgstr ""
+msgstr "דחיית השתתפות"
 
 #: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr ""
+msgstr "המארגנים דחו את השתתפותך בפגישה הזאת."
 
 #: scheduler_p.cpp:508
 #, kde-format
@@ -1479,10 +1502,10 @@ msgid ""
 "Do you really want to delete this calendar folder and all its sub-folders?"
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "למחוק את תיקיית לוח השנה הזאת על כל תת־תיקיותיה?"
+msgstr[1] "למחוק את שתי תיקיות לוח השנה האלה על כל תת־תיקיותיהן?"
+msgstr[2] "למחוק את %1 תיקיות לוח השנה האלה על כל תת־תיקיותיהן?"
+msgstr[3] "למחוק את %1 תיקיות לוח השנה האלה על כל תת־תיקיותיהן?"
 
 #: standardcalendaractionmanager.cpp:81
 #, kde-format
