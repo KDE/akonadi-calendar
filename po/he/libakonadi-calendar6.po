@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-07-01 06:17+0300\n"
+"PO-Revision-Date: 2024-07-02 18:35+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -410,6 +410,9 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
+"<qt><p>התוכנה לא הצליחה להעלות את רשימת הפנוי/עסוק שלך לכתובת ‚%1’. יכולות "
+"להיות בעיות עם הרשאות הגישה, או שציינת כתובת שגויה. המערכת דיווחה: <em>%2</"
+"em>.</p><p>נא לבדוק שהכתובת תקינה או ליצור קשר עם הנהלת המערכת שלך.</p></qt>"
 
 #: freebusymanager.cpp:619
 #, kde-format
@@ -434,6 +437,9 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
+"<qt><p>לא הוגדרה כתובת להעלאת רשימת הפנוי/עסוק שלך. נא להגדיר אותה בחלונית "
+"ההגדרות של KOrganizer, בעמוד „Free/Busy”.</p><p>יש ליצור קשר עם הנהלת המערכת "
+"שלך לקבלת פרטי החשבון והכתובת המדויקים.</p></qt>"
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -1313,6 +1319,12 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
+"<para>הוספת עדכון להזמנה, אך לא הצלחנו למצוא גרסה קודמת של הפריט בלוח השנה "
+"שלך.</para><para>הסיבות לכך יכולות להיות:<list><item>המארגנים לא כללו אותך "
+"בהזמנה המקורית</item><item>טרם אישרת את ההזמנה המקורית</item><item>מחקת את "
+"ההזמנה המקורית מלוח השנה שלך</item><item>כבר אין לך גישה ללוח השנה שמכיל את "
+"ההזמנה</item></list></para><para>זאת לא תקלה אבל חשבנו שחשוב ליידע אותך.</"
+"para>"
 
 #: scheduler_p.cpp:297
 #, kde-format
@@ -1690,7 +1702,7 @@ msgid ""
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
 "מחיקת לוחות השנה הנבחרים<p>לוחות השנה שנבחרו יימחקו עם כל האירועים, המטלות "
-"והיומנים שהם מכילים."
+"והיומנים שהם מכילים.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
