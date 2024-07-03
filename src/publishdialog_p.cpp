@@ -41,8 +41,8 @@ void PublishDialogPrivate::addItem()
     }
 
     item->setSelected(true);
-    mUI.mNameLineEdit->setPlaceholderText(i18n("(EmptyName)"));
-    mUI.mEmailLineEdit->setPlaceholderText(i18n("(EmptyEmail)"));
+    mUI.mNameLineEdit->setPlaceholderText(i18nc("@info:placeholder", "(EmptyName)"));
+    mUI.mEmailLineEdit->setPlaceholderText(i18nc("@info:placeholder", "(EmptyEmail)"));
     mUI.mListWidget->setCurrentItem(item);
     mUI.mRemove->setEnabled(true);
 }
