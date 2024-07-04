@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1324,12 +1324,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Dit Feld bargt den Adressaat sien Nettpostadress "
 
 #: publishdialog_p.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyName)"
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(keen Naam)"
 
 #: publishdialog_p.cpp:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyEmail)"
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(leddig Adress)"
 

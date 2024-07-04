@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2012-12-27 09:48+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1239,11 +1239,13 @@ msgstr ""
 
 #: publishdialog_p.cpp:44
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr ""
 
 #: publishdialog_p.cpp:45
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-05-14 11:32+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1336,12 +1336,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Ez a mező a címzett e-mail címét tartalmazza"
 
 #: publishdialog_p.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyName)"
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(Üres név)"
 
 #: publishdialog_p.cpp:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyEmail)"
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(Üres e-mail)"
 

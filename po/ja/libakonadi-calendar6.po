@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2014-09-25 01:00-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1223,11 +1223,13 @@ msgstr ""
 
 #: publishdialog_p.cpp:44
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr ""
 
 #: publishdialog_p.cpp:45
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr ""
 

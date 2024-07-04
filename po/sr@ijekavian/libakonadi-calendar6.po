@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1341,13 +1341,17 @@ msgid "This field contains the email address of the recipient"
 msgstr "Ово поље садржи адресу е‑поште примаоца."
 
 #: publishdialog_p.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyName)"
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(празно‑име)"
 
 # rewrite-msgid: /Email/Message/
 #: publishdialog_p.cpp:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyEmail)"
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(празна-порука)"
 

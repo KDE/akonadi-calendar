@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -1316,12 +1316,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Бұл алушының эл.пошта адресі жазылатын өріс"
 
 #: publishdialog_p.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyName)"
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(Атауы бос)"
 
 #: publishdialog_p.cpp:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(EmptyEmail)"
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(Бос эл.пошта)"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -1214,11 +1214,13 @@ msgstr ""
 
 #: publishdialog_p.cpp:44
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr ""
 
 #: publishdialog_p.cpp:45
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr ""
 
