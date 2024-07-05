@@ -1262,12 +1262,12 @@ msgstr "此字段包含了收件人的邮箱地址"
 #: publishdialog_p.cpp:44
 #, kde-format
 msgid "(EmptyName)"
-msgstr "(空名称)"
+msgstr ""
 
 #: publishdialog_p.cpp:45
 #, kde-format
 msgid "(EmptyEmail)"
-msgstr "(空电子邮件)"
+msgstr ""
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
