@@ -1278,18 +1278,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "此字段包含了收件人的邮箱地址"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
-msgstr "(空名称)"
+msgstr ""
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
-msgstr "(空电子邮件)"
+msgstr ""
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
