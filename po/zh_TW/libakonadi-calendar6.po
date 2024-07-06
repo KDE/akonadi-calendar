@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-05-23 16:07+0900\n"
+"PO-Revision-Date: 2024-07-05 15:36+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1280,18 +1280,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "此欄位為收件者的電子郵件地址"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "（空白名稱）"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
-msgstr "（空的電子郵件）"
+msgstr "（空白電子郵件）"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
