@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-05-14 11:32+0200\n"
+"PO-Revision-Date: 2024-07-07 14:25+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -66,15 +66,13 @@ msgid "KOrganizer Confirmation"
 msgstr "KOrganizer jóváhagyás"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Csak ezt vágja ki"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Összes kivágása"
@@ -89,15 +87,13 @@ msgstr ""
 "vagy a feladathoz tartozó összes részfeladatot is?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Csak ezt másolja"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Összes másolása"
@@ -808,8 +804,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Frissítés küldése"
@@ -945,8 +940,7 @@ msgid "&Sign"
 msgstr "&Aláírás"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Ne írja alá"
@@ -975,8 +969,7 @@ msgid "Send Unsigned?"
 msgstr "Elkül&dés aláírás nélkül?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Elkül&dés aláírás nélkül"
@@ -1019,8 +1012,7 @@ msgid "Unsigned-Message Warning"
 msgstr "Figyelmeztetés nem aláírt üzenetről"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Elkül&dés így"
@@ -1080,15 +1072,13 @@ msgstr ""
 "Titkosítani szeretné az üzenetet?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Titkosítás"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "T&itkosítás nélkül"
@@ -1110,8 +1100,7 @@ msgid "Send Unencrypted?"
 msgstr "Küldés titkosítatlan&ul?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Küldés titkosítatlan&ul"
@@ -1164,8 +1153,7 @@ msgid "Select Addresses"
 msgstr "Címek kiválasztása"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "E-mail küldése a következő címzetteknek"
@@ -1180,8 +1168,7 @@ msgstr ""
 "címzetteknek."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "A címzettkiválasztás és a levélküldés megszakítása"
@@ -1336,15 +1323,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "Ez a mező a címzett e-mail címét tartalmazza"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(Üres név)"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(Üres e-mail)"
