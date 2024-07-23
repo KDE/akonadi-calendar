@@ -2053,6 +2053,3 @@ msgstr "Descripció"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "S'estan netejant les tasques pendents finalitzades"
-
-#~ msgid "Add &Calendar..."
-#~ msgstr "Afegeix un &calendari..."

@@ -101,7 +101,7 @@ msgstr "Recorda d'ací a 5 min"
 #: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind later..."
-msgstr "Recorda més tard..."
+msgstr "Recorda més tard…"
 
 #: alarmnotification.cpp:130
 #, kde-format

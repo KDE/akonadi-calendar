@@ -260,6 +260,3 @@ msgstr ""
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
 msgstr "Premeu aquest botó per a silenciar el recordatori per sempre."
-
-#~ msgid "Remind in 1 hour"
-#~ msgstr "Recorda d'aquí a 1 hora"
