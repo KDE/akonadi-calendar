@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2011, 2013, 2015, 2016, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2020-11-17 19:33+0100\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-07-25 12:34+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -60,22 +61,19 @@ msgstr ""
 "delgøremål?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer-bekræftelse"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Klip kun dette"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Klip alle"
@@ -90,15 +88,13 @@ msgstr ""
 "kopiere det sammen med alle dets delgøremål?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopiér kun dette"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Kopiér alle"
@@ -257,19 +253,21 @@ msgstr ""
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Hide declined invitations"
-msgstr ""
+msgstr "Skjul afviste invitationer"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Tjek denne boks for at skjule afviste invitationer i begivenhedsvisningen."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"Vis kun bekendtgørelser for begivenheder, jeg arrangerer eller deltager"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -278,6 +276,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Tjek denne boks for kun at få bekendtgørelser for begivenheder, du er "
+"arrangøren af eller du deltager."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
@@ -307,94 +307,89 @@ msgstr ""
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
 #: todomodel.cpp:477
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar title"
-#| msgid "Calendar"
+#, kde-format
 msgid "Calendar"
 msgstr "Kalender"
 
 #: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Opgaver"
 
 #: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
-#, fuzzy, kde-format
-#| msgid "Cut Journal"
-#| msgid_plural "Cut %1 Journals"
+#, kde-format
 msgid "Journal"
-msgstr "Klip journal"
+msgstr "Journal"
 
 #: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "Noter"
 
 #: calendarutils.cpp:133
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
-msgstr ""
+msgstr "Min kolab %1"
 
 #: calendarutils.cpp:136
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
-msgstr ""
+msgstr "Delte kolab %1 %2"
 
 #: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr ""
+msgstr "%1s kolab %2"
 
 #: calendarutils.cpp:141
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
-msgstr ""
+msgstr "%1s %2 kolab %3"
 
 #: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
-msgstr ""
+msgstr "Kolab %1"
 
 #: calendarutils.cpp:152
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr ""
+msgstr "%1 i %2"
 
 #: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr ""
+msgstr "%1s Google %2"
 
 #: calendarutils.cpp:187
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
-msgstr ""
+msgstr "%1s %2"
 
 #: calendarutils.cpp:190
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
-msgstr ""
+msgstr "Google %1"
 
 #: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "Min %1"
 
 #: calendarutils.cpp:202
-#, fuzzy, kde-format
-#| msgid "Unknown error"
+#, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
-msgstr "Ukendt fejl"
+msgstr "Ukendt"
 
 #: freebusymanager.cpp:380
 #, kde-format
@@ -406,8 +401,7 @@ msgstr ""
 "Årsag: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Fejl ved hentning af ledig/opdaget"
@@ -437,8 +431,7 @@ msgid "The free/busy information was successfully sent."
 msgstr "Afsendelse af ledig/optaget-information gennemført."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Sender ledig/optaget"
@@ -461,8 +454,7 @@ msgstr ""
 "kontodetaljerne.</p></qt>"
 
 #: freebusymanager.cpp:752
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ingen upload-URL til ledig/optaget"
@@ -473,8 +465,7 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Den angvine mål-URL \"%1\" er ugyldig.</qt>"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Ugyldig URL"
@@ -535,7 +526,7 @@ msgstr "URL'en der skal importeres er i forkert format."
 #: icalimporter.cpp:179
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr ""
+msgstr "Den valgte fil er læsbar fil."
 
 #: icalimporter.cpp:187
 #, kde-format
@@ -543,12 +534,13 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
+"Den valgte fil er ikke formateret ordenligt eller er i et format, der ikke "
+"understøttes af dette program."
 
 #: icalimporter.cpp:195
-#, fuzzy, kde-format
-#| msgid "The ical file to merge is empty."
+#, kde-format
 msgid "The selected file is empty."
-msgstr "Ical-filen der skal indflettes er tom."
+msgstr "Den valgte fil er tom."
 
 #: icalimporter.cpp:213
 #, kde-format
@@ -670,8 +662,7 @@ msgstr ""
 "groupware-besked."
 
 #: itiphandler.cpp:273
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Besked ikke sendt"
@@ -725,8 +716,7 @@ msgid "The item information was successfully sent."
 msgstr "Det lykkedes at sende information om elementet."
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publicering"
@@ -737,8 +727,7 @@ msgid "Unable to publish the item '%1'"
 msgstr "Kan ikke publicere elementet \"%1\""
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Videresender"
@@ -749,8 +738,7 @@ msgid "Unable to forward the item '%1'"
 msgstr "Kan ikke videresende elementet \"%1\""
 
 #: itiphandler_p.cpp:189
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
 msgstr "Videresendelsesfejl"
@@ -761,8 +749,7 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Foreslog nyt mødetidspunkt: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:69
-#, fuzzy, kde-format
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-mail til gruppeskemalægning"
@@ -820,8 +807,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Send opdatering"
@@ -940,27 +926,26 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Undesøgelse af modtagerens signeringspræferencer gav, at du blev spurgt, om "
+"du vil signere denne besked.\n"
+"Signér denne besked?"
 
 #: mailclient_p.cpp:706 mailclient_p.cpp:732
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Send breve"
+msgstr "Signér besked?"
 
 #: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Signér"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
-msgstr "Send ikke"
+msgstr "Send &ikke"
 
 #: mailclient_p.cpp:728
 #, kde-format
@@ -968,6 +953,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Der er modstridende signeringspræferencer for disse modtagere.\n"
+"Underskriv denne besked?"
 
 #: mailclient_p.cpp:753
 #, kde-format
@@ -975,18 +962,19 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Du har anmodet om at signere denne besked, men ingen gyldige signeringsnøgle "
+"konfigureret for denne identitet."
 
 #: mailclient_p.cpp:756
 #, kde-format
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "Send usigneret?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr "Send opdatering"
+msgstr "Send &usigneret"
 
 #: mailclient_p.cpp:769
 #, kde-format
@@ -995,6 +983,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Nogle dele af denne besked vil ikke blive signeret?\n"
+"Du kan overtræde webstedets politik ved kun at sende en delvist signeret "
+"besked.\n"
+"Signér alle dele i stedet?"
 
 #: mailclient_p.cpp:773
 #, kde-format
@@ -1003,27 +995,30 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Denne besked vil blive sendt usigneret.\n"
+"Du kan overtræde webstedets politik ved at sende en usigneret besked.\n"
+"Signér besked i stedet?"
 
 #: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Signér alle dele"
 
 #: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Signér"
 
 #: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Advarsel for usigneret besked"
 
 #: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr ""
+msgstr "Send &som den er"
 
 #: mailclient_p.cpp:833
 #, kde-format
@@ -1031,6 +1026,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Gyldige pålidelige krypteringsnøgler blev fundet for alle modtagere.\n"
+"Kryptér denne besked?"
 
 #: mailclient_p.cpp:836
 #, kde-format
@@ -1039,33 +1036,34 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Undersøgelse af modtagerens krypteringsprefærencer gav, at du blev spurgt om "
+"du ville kryptere denne besked.\n"
+"Kryptér denne besked?"
 
 #: mailclient_p.cpp:841 mailclient_p.cpp:867
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Send breve"
+msgstr "Kryptér besked?"
 
 #: mailclient_p.cpp:842
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Signér &og &kryptér"
 
 #: mailclient_p.cpp:842 mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Kryptér"
 
 #: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "&Signér kun"
 
 #: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Send som den er"
 
 #: mailclient_p.cpp:863
 #, kde-format
@@ -1073,22 +1071,20 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Der er modstridende krypteringspræferencer for disse modtagere.\n"
+"Kryptér denne besked?"
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
-msgstr "Send ikke"
+msgstr "&Krypér"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
-msgstr "Send ikke"
+msgstr "Kryptér &ikke"
 
 #: mailclient_p.cpp:888
 #, kde-format
@@ -1097,19 +1093,20 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Du har anmodet om at kryptere denne besked, og for at kryptere en kopiere "
+"til dig selv, men ingen gyldige pålidelige krypteringsnøgler er blevet "
+"konfigureret for denne identitet."
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Send opdatering"
+msgstr "Send usigneret?"
 
 #: mailclient_p.cpp:892
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr "Send opdatering"
+msgstr "Send ukrypteret"
 
 #: mailclient_p.cpp:906
 #, kde-format
@@ -1119,6 +1116,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Nogle dele af denne besked vil ikke blive krypteret.\n"
+"Du kan overtræde webstedets politik og/eller lække følsomme oplysninger ved "
+"at sende beskeden delvist krypteret.\n"
+"Krypér alle dele i stedet?"
 
 #: mailclient_p.cpp:911
 #, kde-format
@@ -1128,16 +1129,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Denne besked vil ikke blive krypteret.\n"
+"Du kan overtræde webstedets politik og/eller lække følsomme oplysninger ved "
+"at sende beskeden ukrypteret.\n"
+"Krypér beskeder i stedet?"
 
 #: mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Kryptér alle dele"
 
 #: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Advarsel for ukrypteret besked"
 
 #: mailscheduler_p.cpp:199
 #, kde-format
@@ -1151,8 +1156,7 @@ msgid "Select Addresses"
 msgstr "Vælg adresser"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Send e-mail til disse modtagere"
@@ -1167,8 +1171,7 @@ msgstr ""
 "du har angivet."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Annullér modtagerudvalg og e-mail"
@@ -1191,20 +1194,17 @@ msgstr ""
 "gruppeskemalægning."
 
 #: publishdialog.cpp:123
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
-"Kan ikke publicere kalenderforekomsten pga. en ugyldig modtagerstreng. %1"
+"Kan ikke publicere kalenderforekomsten pga. en ugyldig modtagerstreng. \n"
+"%1"
 
 #: publishdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Publishing Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
 msgstr "Publiceringsfejl"
@@ -1285,10 +1285,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&Vælg..."
+msgstr "&Vælg…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1329,15 +1328,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "Dette felt indeholder modtagerens e-mailadresse"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(TomtNavn)"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(TomE-mail)"
@@ -1382,12 +1379,10 @@ msgstr ""
 "problem, men vi syntes du skulle vide det.</para>"
 
 #: scheduler_p.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cannot find invitation to be updated"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Kan ikke finde invitationen der skal opdateres"
+msgstr "Kan ikke finde invitationen, der skal opdateres"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1435,9 +1430,7 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 ønsker at deltage i %2 på vegne af %3."
 
 #: scheduler_p.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Ikke-inviteret deltager"
@@ -1471,9 +1464,7 @@ msgstr ""
 "til deltagerne via e-mail?"
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Deltager tilføjet"
@@ -1509,19 +1500,18 @@ msgstr "Fejl under gemning af ledig/opdaget-objekt"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Afviste invitationer"
 
 #: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Åbne invitationer"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "Tilføj mappe..."
+msgstr "Tilføj mappe…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1540,8 +1530,7 @@ msgid "Could not create calendar folder: %1"
 msgstr "Kunne ikke oprette kalendermappe: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
 msgstr "Oprettelse af kalendermappe mislykkedes"
@@ -1581,10 +1570,7 @@ msgstr[0] ""
 msgstr[1] "Vil du virkelig slette %1 kalendermapper og alle deres undermapper?"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
@@ -1597,8 +1583,7 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Kunne ikke slette kalendermappe: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
 msgstr "Sletning af kalendermappe mislykkedes"
@@ -1628,10 +1613,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Klip de markerede kalendermapper fra kalenderen."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "Mappeegenskaber..."
+msgstr "Mappeegenskaber…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1690,8 +1674,7 @@ msgid "Could not delete event: %1"
 msgstr "Kunne ikke slette begivenhed: %1"
 
 #: standardcalendaractionmanager.cpp:130
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
 msgstr "Sletning af begivenhed mislykkedes"
@@ -1709,11 +1692,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Klip de markerede begivenheder fra kalenderen."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Tilføj kalender"
+msgstr "Tilføj &kalender…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1736,8 +1717,7 @@ msgid "Could not create calendar: %1"
 msgstr "Kunne ikke oprette kalender: %1"
 
 #: standardcalendaractionmanager.cpp:151
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
 msgstr "Oprettelse af kalender mislykkedes"
@@ -1774,10 +1754,9 @@ msgstr[0] "Slet kalender?"
 msgstr[1] "Slet kalendere?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "Kalenderegenskaber..."
+msgstr "Kalenderegenskaber…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1822,8 +1801,7 @@ msgid "Could not paste event: %1"
 msgstr "Kunne ikke indsætte begivenhed: %1"
 
 #: standardcalendaractionmanager.cpp:192
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
 msgstr "Indsættelse mislykkedes"
@@ -1849,10 +1827,9 @@ msgid "Move Event To"
 msgstr "Flyt begivenhed til"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "Redigér begivenhed..."
+msgstr "Redigér begivenhed…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1886,10 +1863,9 @@ msgid "Move To-do To"
 msgstr "Flyt gøremål til"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "Redigér gøremål..."
+msgstr "Redigér opgave…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1923,16 +1899,14 @@ msgid "Move Journal To"
 msgstr "Flyt journal til"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "Redigér journal..."
+msgstr "Redigér journal…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "Ny &begivenhed..."
+msgstr "Ny &begivenhed…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1940,10 +1914,9 @@ msgid "Create a new event"
 msgstr "Opret ny begivenhed"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "Nyt &gøremål..."
+msgstr "Nyt &opgave…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1951,10 +1924,9 @@ msgid "Create a new To-do"
 msgstr "Opret nyt gøremål"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Nyt &undergøremål..."
+msgstr "Nyt &underopgave…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1962,10 +1934,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Opret nyt undergøremål"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "Ny &journal..."
+msgstr "Ny &journal…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1973,10 +1944,9 @@ msgid "Create a new Journal"
 msgstr "Opret ny journal"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "R&edigér..."
+msgstr "&Redigér…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
@@ -1987,71 +1957,59 @@ msgstr "Redigér den markerede forekomst."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Undtagelser"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Resumé"
 
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Gentages"
 
 #: todomodel.cpp:463
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Prioritet"
 
 #: todomodel.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Gennemført"
 
 #: todomodel.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Startdato og -tidspunkt"
+msgstr "Startdato"
 
 #: todomodel.cpp:469
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Forfaldsdato og -tidspunkt"
+msgstr "Forfaldsdato"
 
 #: todomodel.cpp:471
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Gennemført"
@@ -2059,12 +2017,12 @@ msgstr "Gennemført"
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Mærker"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 #: todopurger.cpp:61
 #, kde-format
