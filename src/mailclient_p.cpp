@@ -753,7 +753,8 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
             "You have requested to sign this message, "
             "but no valid signing keys have been configured "
             "for this identity.");
-        if (dialogDelegate->warningContinueCancel(msg, i18n("Send Unsigned?"), KGuiItem(i18nc("@action:button", "Send &Unsigned"))) == KMessageBox::Cancel) {
+        if (dialogDelegate->warningContinueCancel(msg, i18nc("@title:window", "Send Unsigned?"), KGuiItem(i18nc("@action:button", "Send &Unsigned")))
+            == KMessageBox::Cancel) {
             result = false;
             return false;
         } else {
@@ -775,7 +776,7 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
                                                               "Sign message instead?"); // oh, I hate this...
             const QString buttonText = sign && !doSignCompletely ? i18n("&Sign All Parts") : i18n("&Sign");
             switch (dialogDelegate->warningTwoActionsCancel(msg,
-                                                            i18n("Unsigned-Message Warning"),
+                                                            i18nc("@title:window", "Unsigned-Message Warning"),
                                                             KGuiItem(buttonText),
                                                             KGuiItem(i18nc("@action:button", "Send &As Is")))) {
             case ITIPHandlerDialogDelegate::CancelAction:
@@ -838,7 +839,7 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
                                               "this message.\n"
                                               "Encrypt this message?");
         switch (dialogDelegate->warningTwoActionsCancel(msg,
-                                                        i18n("Encrypt Message?"),
+                                                        i18nc("@title:window", "Encrypt Message?"),
                                                         KGuiItem(signSomething ? i18n("Sign && &Encrypt") : i18n("&Encrypt")),
                                                         KGuiItem(signSomething ? i18n("&Sign Only") : i18n("&Send As-Is")))) {
         case ITIPHandlerDialogDelegate::CancelAction:
