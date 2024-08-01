@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 09:50+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -962,7 +962,9 @@ msgstr ""
 "konfigurētas derīgas paraksta atslēgas."
 
 #: mailclient_p.cpp:756
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Unsigned?"
+msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Vai nosūtīt neparakstītu?"
 
@@ -972,7 +974,7 @@ msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "No&sūtīt neparakstītu"
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -983,7 +985,7 @@ msgstr ""
 "Daļēji parakstītas vēstules sūtīšana var pārkāpt vietnes politiku.\n"
 "Vai tā vietā parakstīt visas daļas?"
 
-#: mailclient_p.cpp:773
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -994,28 +996,30 @@ msgstr ""
 "Neparakstītas vēstules nosūtīšana var pārkāpt vietas politiku.\n"
 "Vai tomēr parakstīt vēstuli?"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Parakstīt visas daļas"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
 msgstr "&Parakstīt"
 
-#: mailclient_p.cpp:778
-#, kde-format
+#: mailclient_p.cpp:779
+#, fuzzy, kde-format
+#| msgid "Unsigned-Message Warning"
+msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Neparakstītas vēstules brīdinājums"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "N&osūtīt bez izmaiņām"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1024,7 +1028,7 @@ msgstr ""
 "Visiem saņēmējiem ir atrastas derīgas šifrēšanas atslēgas.\n"
 "Vai šifrēt šo vēstuli?"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:837
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1035,32 +1039,34 @@ msgstr ""
 "vēlaties vai nevēlaties šifrēt šo vēstuli.\n"
 "Vai šifrēt šo vēstuli?"
 
-#: mailclient_p.cpp:841 mailclient_p.cpp:867
-#, kde-format
+#: mailclient_p.cpp:842
+#, fuzzy, kde-format
+#| msgid "Encrypt Message?"
+msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Vai šifrēt vēstuli?"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Paraksts un š&ifrēšana"
 
-#: mailclient_p.cpp:842 mailclient_p.cpp:915
+#: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
 msgstr "Š&ifrēt"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Tikai parakstīt"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Sūtīt bez izmaiņām"
 
-#: mailclient_p.cpp:863
+#: mailclient_p.cpp:864
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1071,17 +1077,22 @@ msgstr ""
 
 #: mailclient_p.cpp:868
 #, kde-format
+msgid "Encrypt Message?"
+msgstr "Vai šifrēt vēstuli?"
+
+#: mailclient_p.cpp:869
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Š&ifrēt"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "N&ešifrēt"
 
-#: mailclient_p.cpp:888
+#: mailclient_p.cpp:889
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1091,18 +1102,18 @@ msgstr ""
 "Jums ir lūgts šifrēt šo vēstuli un arī savu kopiju, tomēr šai identitātei "
 "nav konfigurētas uzticamas šifrēšanas atslēgas."
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Sūtīt nešifrētu?"
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Sūtīt neši&frētu"
 
-#: mailclient_p.cpp:906
+#: mailclient_p.cpp:907
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1115,7 +1126,7 @@ msgstr ""
 "atklāt sensitīvu informāciju.\n"
 "Vai tomēr šifrēt visas daļas?"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:912
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1128,12 +1139,12 @@ msgstr ""
 "sensitīvu informāciju.\n"
 "Vai tomēr šifrēt vēstules?"
 
-#: mailclient_p.cpp:915
+#: mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Šifrēt visas &daļas"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Nešifrētas vēstules brīdinājums"

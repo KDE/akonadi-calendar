@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -934,7 +934,9 @@ msgid ""
 msgstr "此信件要求您签名，但是没有为此身份配置有效的签名密钥。"
 
 #: mailclient_p.cpp:756
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Unsigned?"
+msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "不签名发送？"
 
@@ -944,7 +946,7 @@ msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr ""
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -955,7 +957,7 @@ msgstr ""
 "发送仅部分签名的信件可能违反站点规定。\n"
 "要改为签名全部内容吗？"
 
-#: mailclient_p.cpp:773
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -966,28 +968,30 @@ msgstr ""
 "发送未签名的信件可能违反站点规定。\n"
 "要改为签名信件吗？"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "签名所有部分(&S)"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
 msgstr "签名(&S)"
 
-#: mailclient_p.cpp:778
-#, kde-format
+#: mailclient_p.cpp:779
+#, fuzzy, kde-format
+#| msgid "Unsigned-Message Warning"
+msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "未签名信件警告"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr ""
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -996,7 +1000,7 @@ msgstr ""
 "找到了所有收件人的有效已信任加密密钥。\n"
 "要加密此信件吗？"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:837
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1006,32 +1010,34 @@ msgstr ""
 "根据收件人签名首选项的检查，要询问您是否加密此信件。\n"
 "您要加密此信件吗？"
 
-#: mailclient_p.cpp:841 mailclient_p.cpp:867
-#, kde-format
+#: mailclient_p.cpp:842
+#, fuzzy, kde-format
+#| msgid "Encrypt Message?"
+msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "加密信件吗？"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "签名并加密(&E)"
 
-#: mailclient_p.cpp:842 mailclient_p.cpp:915
+#: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
 msgstr "加密(&E)"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Sign Only"
 msgstr "仅签名(&S)"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Send As-Is"
 msgstr "原样发送(&S)"
 
-#: mailclient_p.cpp:863
+#: mailclient_p.cpp:864
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1042,17 +1048,22 @@ msgstr ""
 
 #: mailclient_p.cpp:868
 #, kde-format
+msgid "Encrypt Message?"
+msgstr "加密信件吗？"
+
+#: mailclient_p.cpp:869
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:888
+#: mailclient_p.cpp:889
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1062,18 +1073,18 @@ msgstr ""
 "此信件要求您加密，并且发送一份加密后的副本给您自己，但是没有为此身份配置有效"
 "的已信任加密密钥。"
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "不加密发送吗？"
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr ""
 
-#: mailclient_p.cpp:906
+#: mailclient_p.cpp:907
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1085,7 +1096,7 @@ msgstr ""
 "发送仅部分加密的信件可能违反站点规定和泄露敏感信息。\n"
 "要改为加密全部内容吗？"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:912
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1097,12 +1108,12 @@ msgstr ""
 "发送不加密的信件可能违反站点规定和泄露敏感信息。\n"
 "要改为加密信件吗？"
 
-#: mailclient_p.cpp:915
+#: mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "加密所有部分(&E)"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "未加密信件警告"

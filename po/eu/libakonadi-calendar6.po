@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-07-04 08:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -974,7 +974,9 @@ msgstr ""
 "baliodunak konfiguratu."
 
 #: mailclient_p.cpp:756
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Unsigned?"
+msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Sinatu gabe bidali?"
 
@@ -984,7 +986,7 @@ msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Bidali sinatu &gabe"
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -996,7 +998,7 @@ msgstr ""
 "urra ditzake.\n"
 "Hori ekiditeko, atal guztiak sinatu?"
 
-#: mailclient_p.cpp:773
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1007,28 +1009,30 @@ msgstr ""
 "Sinatu gabeko mezua bidaltzeak guneko gidalerroak urra ditzake.\n"
 "Hori ekiditeko, mezua sinatu?"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Sinatu atal guztiak"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
 msgstr "&Sinatu"
 
-#: mailclient_p.cpp:778
-#, kde-format
+#: mailclient_p.cpp:779
+#, fuzzy, kde-format
+#| msgid "Unsigned-Message Warning"
+msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Sinatu gabeko mezuaren Abisua"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Bidali dagoen bez&ala"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1038,7 +1042,7 @@ msgstr ""
 "dira.\n"
 "Mezu hau zifratu?"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:837
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1049,32 +1053,34 @@ msgstr ""
 "edo ez zuri galdetzeko beharra eman du.\n"
 "Mezua zifratu?"
 
-#: mailclient_p.cpp:841 mailclient_p.cpp:867
-#, kde-format
+#: mailclient_p.cpp:842
+#, fuzzy, kde-format
+#| msgid "Encrypt Message?"
+msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Mezua zifratu?"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Sinatu eta &zifratu"
 
-#: mailclient_p.cpp:842 mailclient_p.cpp:915
+#: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Zifratu"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Sinatu bakarrik"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Bidali dagoen bezala"
 
-#: mailclient_p.cpp:863
+#: mailclient_p.cpp:864
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1085,17 +1091,22 @@ msgstr ""
 
 #: mailclient_p.cpp:868
 #, kde-format
+msgid "Encrypt Message?"
+msgstr "Mezua zifratu?"
+
+#: mailclient_p.cpp:869
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Zi&fratu"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Ez zifratu"
 
-#: mailclient_p.cpp:888
+#: mailclient_p.cpp:889
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1106,18 +1117,18 @@ msgstr ""
 "zifratzea ere, baina nortasun honetarako ez da konfiantzazko zifratzeko gako "
 "baliodunik konfiguratu."
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Bidali zifratu gabe?"
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Bidali zifratu &gabe"
 
-#: mailclient_p.cpp:906
+#: mailclient_p.cpp:907
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1130,7 +1141,7 @@ msgstr ""
 "edo babes bereziko informazioaren ihesa eragin dezake.\n"
 "Hori ekiditeko, atal guztiak sinatu?"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:912
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1143,12 +1154,12 @@ msgstr ""
 "bereziko informazioaren ihesa eragin dezake.\n"
 "Hori ekiditeko, mezuak zifratu?"
 
-#: mailclient_p.cpp:915
+#: mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&Zifratu atal guztiak"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Zifratu gabeko mezuaren abisua"

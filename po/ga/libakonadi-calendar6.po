@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -900,6 +900,7 @@ msgstr ""
 
 #: mailclient_p.cpp:756
 #, kde-format
+msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr ""
 
@@ -909,7 +910,7 @@ msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr ""
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -917,7 +918,7 @@ msgid ""
 "Sign all parts instead?"
 msgstr ""
 
-#: mailclient_p.cpp:773
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -925,35 +926,36 @@ msgid ""
 "Sign message instead?"
 msgstr ""
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign All Parts"
 msgstr ""
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
 msgstr ""
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:779
 #, kde-format
+msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr ""
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr ""
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:837
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -961,32 +963,33 @@ msgid ""
 "Encrypt this message?"
 msgstr ""
 
-#: mailclient_p.cpp:841 mailclient_p.cpp:867
+#: mailclient_p.cpp:842
 #, kde-format
+msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr ""
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:842 mailclient_p.cpp:915
+#: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Sign Only"
 msgstr ""
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Send As-Is"
 msgstr ""
 
-#: mailclient_p.cpp:863
+#: mailclient_p.cpp:864
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -995,17 +998,22 @@ msgstr ""
 
 #: mailclient_p.cpp:868
 #, kde-format
-msgctxt "@action:button"
-msgid "&Encrypt"
+msgid "Encrypt Message?"
 msgstr ""
 
 #: mailclient_p.cpp:869
 #, kde-format
 msgctxt "@action:button"
+msgid "&Encrypt"
+msgstr ""
+
+#: mailclient_p.cpp:870
+#, kde-format
+msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr ""
 
-#: mailclient_p.cpp:888
+#: mailclient_p.cpp:889
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1013,18 +1021,18 @@ msgid ""
 "identity."
 msgstr ""
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr ""
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr ""
 
-#: mailclient_p.cpp:906
+#: mailclient_p.cpp:907
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1033,7 +1041,7 @@ msgid ""
 "Encrypt all parts instead?"
 msgstr ""
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:912
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1042,12 +1050,12 @@ msgid ""
 "Encrypt messages instead?"
 msgstr ""
 
-#: mailclient_p.cpp:915
+#: mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr ""
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr ""

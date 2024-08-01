@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2023-08-21 22:29+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -984,7 +984,9 @@ msgstr ""
 "κλειδιά υπογραφής για αυτή την ταυτότητα ."
 
 #: mailclient_p.cpp:756
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Unsigned?"
+msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Αποστολή Χωρίς Υπογραφή;"
 
@@ -995,7 +997,7 @@ msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Αποστολή &χωρίς υπογραφή"
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1007,7 +1009,7 @@ msgstr ""
 "πολιτική του ιστοχώρου.\n"
 "Να υπογραφούν όλα τα τμήματα;"
 
-#: mailclient_p.cpp:773
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1019,29 +1021,31 @@ msgstr ""
 "ιστοχώρου.\n"
 "Να υπογραφεί το μήνυμα;"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Να &υπογραφούν όλα τα τμήματα"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
 msgstr "&Υπογραφή"
 
-#: mailclient_p.cpp:778
-#, kde-format
+#: mailclient_p.cpp:779
+#, fuzzy, kde-format
+#| msgid "Unsigned-Message Warning"
+msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Προειδοποίηση ανυπόγραφου μηνύματος"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, fuzzy, kde-format
 #| msgid "Send &As Is"
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&Αποστολή ως έχει"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1050,7 +1054,7 @@ msgstr ""
 "Έγκυρα έμπιστα κλειδιά κρυπτογράφησης βρέθηκαν για όλους τους παραλήπτες.\n"
 "Να κρυπτογραφηθεί αυτό το μήνυμα;"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:837
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1061,32 +1065,34 @@ msgstr ""
 "απευθύνεται η ερώτηση αν θα κρυπτογραφήσετε ή όχι αυτό το μήνυμα.\n"
 "Να κρυπτογραφηθεί αυτό το μήνυμα;"
 
-#: mailclient_p.cpp:841 mailclient_p.cpp:867
-#, kde-format
+#: mailclient_p.cpp:842
+#, fuzzy, kde-format
+#| msgid "Encrypt Message?"
+msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Να κρυπτογραφηθεί το μήνυμα;"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Υπογραφή && &Κρυπτογράφηση"
 
-#: mailclient_p.cpp:842 mailclient_p.cpp:915
+#: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Κρυπτογράφηση"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Υπογραφή μόνο"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Απο&στολή ως έχει"
 
-#: mailclient_p.cpp:863
+#: mailclient_p.cpp:864
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1096,20 +1102,25 @@ msgstr ""
 "Να κρυπτογραφηθεί αυτό το μήνυμα;"
 
 #: mailclient_p.cpp:868
+#, kde-format
+msgid "Encrypt Message?"
+msgstr "Να κρυπτογραφηθεί το μήνυμα;"
+
+#: mailclient_p.cpp:869
 #, fuzzy, kde-format
 #| msgid "&Encrypt"
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Κρυπτογράφηση"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, fuzzy, kde-format
 #| msgid "Do &Not Encrypt"
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "Να μη&ν κρυπτογραφηθεί"
 
-#: mailclient_p.cpp:888
+#: mailclient_p.cpp:889
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1120,19 +1131,19 @@ msgstr ""
 "αντίγραφο για εσάς, αλλά δεν έχουν διαμορφωθεί έγκυρα έμπιστα κλειδιά "
 "κρυπτογράφησης για αυτήν την ταυτότητα."
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Να αποσταλεί μη κρυπτογραφημένο;"
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, fuzzy, kde-format
 #| msgid "Send &Unencrypted"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Αποστολή μη κρυπτογρ&αφημένου"
 
-#: mailclient_p.cpp:906
+#: mailclient_p.cpp:907
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1145,7 +1156,7 @@ msgstr ""
 "πολιτική του ιστοχώρου ή/και συμβάλλει στη διαρροή ευαίσθητων πληροφοριών.\n"
 "Να κρυπτογραφηθούν όλα τα τμήματα;"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:912
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1158,12 +1169,12 @@ msgstr ""
 "ιστοχώρου και/η να διαρρεύσει ευαίσθητες πληροφορίες. \n"
 "Να κρυπτογραφήσω το μήνυμα;"
 
-#: mailclient_p.cpp:915
+#: mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Να &κρυπτογραφηθούν όλα τα τμήματα"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Προειδοποίηση ακρυπτογράφητου μηνύματος"

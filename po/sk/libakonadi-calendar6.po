@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2023-10-11 18:44+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -963,7 +963,9 @@ msgstr ""
 "nakonfigurované žiadne platné podpisové kľúče."
 
 #: mailclient_p.cpp:756
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send Unsigned?"
+msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Poslať nepodpísané?"
 
@@ -974,7 +976,7 @@ msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Poslať nepodpísané"
 
-#: mailclient_p.cpp:769
+#: mailclient_p.cpp:770
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -986,7 +988,7 @@ msgstr ""
 "lokality.\n"
 "Podpísať namiesto toho všetky časti?"
 
-#: mailclient_p.cpp:773
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -997,29 +999,31 @@ msgstr ""
 "Odoslanie nepodpísanej správy môže byť v rozpore so zásadami lokality.\n"
 "Podpísať správu namiesto toho?"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Podpí&sať všetky časti"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
 msgstr "Podpí&sať"
 
-#: mailclient_p.cpp:778
-#, kde-format
+#: mailclient_p.cpp:779
+#, fuzzy, kde-format
+#| msgid "Unsigned-Message Warning"
+msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Upozornenie na nepodpísanú správu"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, fuzzy, kde-format
 #| msgid "Send &As Is"
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Posl&ať ako je"
 
-#: mailclient_p.cpp:833
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1028,7 +1032,7 @@ msgstr ""
 "Pre všetkých príjemcov boli nájdené platné dôveryhodné šifrovacie kľúče.\n"
 "Šifrovať túto správu?"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:837
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1039,32 +1043,34 @@ msgstr ""
 "požiadaní, aby ste túto správu zašifrovali alebo nie.\n"
 "Šifrovať túto správu?"
 
-#: mailclient_p.cpp:841 mailclient_p.cpp:867
-#, kde-format
+#: mailclient_p.cpp:842
+#, fuzzy, kde-format
+#| msgid "Encrypt Message?"
+msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Šifrovať správu?"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Podpísať a zašifrovať"
 
-#: mailclient_p.cpp:842 mailclient_p.cpp:915
+#: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
 msgstr "Šifrovať"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Sign Only"
 msgstr "Iba podpísať"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:919
+#: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Posl&ať ako je"
 
-#: mailclient_p.cpp:863
+#: mailclient_p.cpp:864
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1074,20 +1080,25 @@ msgstr ""
 "Šifrovať túto správu?"
 
 #: mailclient_p.cpp:868
+#, kde-format
+msgid "Encrypt Message?"
+msgstr "Šifrovať správu?"
+
+#: mailclient_p.cpp:869
 #, fuzzy, kde-format
 #| msgid "&Encrypt"
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Šifrovať"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, fuzzy, kde-format
 #| msgid "Do &Not Encrypt"
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Nešifrovať"
 
-#: mailclient_p.cpp:888
+#: mailclient_p.cpp:889
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1098,19 +1109,19 @@ msgstr ""
 "pre túto identitu neboli nakonfigurované žiadne platné dôveryhodné "
 "šifrovacie kľúče."
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Poslať nezašifrované?"
 
-#: mailclient_p.cpp:892
+#: mailclient_p.cpp:893
 #, fuzzy, kde-format
 #| msgid "Send &Unencrypted"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Poslať nezašifrované"
 
-#: mailclient_p.cpp:906
+#: mailclient_p.cpp:907
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1123,7 +1134,7 @@ msgstr ""
 "lokality a/alebo spôsobiť únik citlivých informácií.\n"
 "Šifrovať namiesto toho všetky časti?"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:912
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1136,12 +1147,12 @@ msgstr ""
 "alebo spôsobiť únik citlivých informácií..\n"
 "Šifrovať správy namiesto toho?"
 
-#: mailclient_p.cpp:915
+#: mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Šifrovať všetky časti"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Upozornenie na nezašifrovanú správu"
