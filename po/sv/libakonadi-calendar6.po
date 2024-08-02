@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 03:53+0200\n"
+"PO-Revision-Date: 2024-08-01 07:20+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: calendarbase.cpp:265
@@ -963,8 +963,7 @@ msgstr ""
 "ställts in för den här identiteten."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Skicka osignerat?"
@@ -1008,8 +1007,7 @@ msgid "&Sign"
 msgstr "&Signera"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Varning om osignerat brev"
@@ -1041,8 +1039,7 @@ msgstr ""
 "Kryptera brevet?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Kryptera brev?"

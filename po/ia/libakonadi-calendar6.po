@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 11:50+0200\n"
+"PO-Revision-Date: 2024-08-01 15:09+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -977,8 +977,7 @@ msgstr ""
 "essite configurate pro iste identitate."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Invia non signate?"
@@ -1022,8 +1021,7 @@ msgid "&Sign"
 msgstr "&Signa"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Aviso de message non signate"
@@ -1056,8 +1054,7 @@ msgstr ""
 "Tu crypta iste message?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Crypta message?"

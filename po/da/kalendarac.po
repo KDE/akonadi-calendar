@@ -1,0 +1,257 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar package.
+#
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-15 00:38+0000\n"
+"PO-Revision-Date: 2024-08-01 17:32+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Rasmus Rosendahl-Kaa"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Rasmus@Rosendahl-Kaa.name"
+
+#: alarmnotification.cpp:50
+#, kde-format
+msgid "View"
+msgstr "Vis"
+
+#: alarmnotification.cpp:57
+#, kde-format
+msgid "Task"
+msgstr "Opgave"
+
+#: alarmnotification.cpp:57
+#, kde-format
+msgid "Event"
+msgstr "Begivenhed"
+
+#: alarmnotification.cpp:60
+#, kde-format
+msgid "Task due at %1"
+msgstr "Opgave for kl. %1"
+
+#: alarmnotification.cpp:64
+#, kde-format
+msgctxt "Event starts in 5 minutes"
+msgid "%2 starts in %1 minute"
+msgid_plural "%2 starts in %1 minutes"
+msgstr[0] "%2 starter om %1 minut"
+msgstr[1] "%2 starter om %1 minutter"
+
+#: alarmnotification.cpp:68
+#, kde-format
+msgctxt "Event starts at 10:00"
+msgid "%1 starts at %2"
+msgstr "%1 starter kl. %2"
+
+#: alarmnotification.cpp:70
+#, kde-format
+msgctxt "Event started at 10:00"
+msgid "%1 started at %2"
+msgstr "%1 startede kl. %2"
+
+#: alarmnotification.cpp:76
+#, kde-format
+msgctxt "Event starts on <DATE> at <TIME>"
+msgid "%1 starts on %2 at %3"
+msgstr "%1 starter den %2 kl. %3"
+
+#: alarmnotification.cpp:82
+#, kde-format
+msgctxt "Event started on <DATE> at <TIME>"
+msgid "%1 started on %2 at %3"
+msgstr "%1 startede den %2 kl. %3"
+
+#: alarmnotification.cpp:91
+#, kde-format
+msgctxt "Event starts on <DATE>"
+msgid "%1 starts on %2"
+msgstr "%1 starter den %2"
+
+#: alarmnotification.cpp:93
+#, kde-format
+msgctxt "Event started on <DATE>"
+msgid "%1 started on %2"
+msgstr "%1 startede den %2"
+
+#: alarmnotification.cpp:118
+#, kde-format
+msgid "Remind in 5 mins"
+msgstr "Påmind om 5 minutter"
+
+#: alarmnotification.cpp:124
+#, kde-format
+msgid "Remind later..."
+msgstr "Påmind senere..."
+
+#: alarmnotification.cpp:130
+#, kde-format
+msgctxt "dismiss a reminder notification for an event"
+msgid "Dismiss"
+msgstr "Afvis"
+
+#: alarmnotification.cpp:206
+#, kde-format
+msgid "Open URL"
+msgstr "Åbn URL"
+
+#: alarmnotification.cpp:224
+#, kde-format
+msgid "Map"
+msgstr "Kort"
+
+#: kalendaracmain.cpp:23
+#, kde-format
+msgctxt "@title"
+msgid "Reminders"
+msgstr "Påmindelser"
+
+#: kalendaracmain.cpp:26
+#, kde-format
+msgid "Calendar Reminder Service"
+msgstr "Kalenderpåmindelsestjeneste"
+
+#: kalendaracmain.cpp:30
+#, kde-format
+msgid "(c) KDE Community 2021-2024"
+msgstr "(c) KDE-fællesskab 2021-2024"
+
+#: kalendaracmain.cpp:31
+#, kde-format
+msgctxt "@info:credit"
+msgid "Carl Schwan"
+msgstr "Carl Schwan"
+
+#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer"
+msgstr "Vedligeholder"
+
+#: kalendaracmain.cpp:35
+#, kde-format
+msgctxt "@info:credit"
+msgid "Clau Cambra"
+msgstr "Clau Cambra"
+
+#: suspenddialog.cpp:75
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "&Varighed af suspendering:"
+
+#: suspenddialog.cpp:82
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "Suspendér påmindelserne med så meget tid"
+
+#: suspenddialog.cpp:84
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"Hver påmindelse for de valgte hændelser vil blive suspenderet med dette "
+"antal tidsenheder. Du kan vælge tidsenheden (normalt minutter) i nærliggende "
+"vælger."
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "minutter"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "timer"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "dage"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "Uger"
+
+#: suspenddialog.cpp:96
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "Suspender påmindelserne med denne tidsenhed"
+
+#: suspenddialog.cpp:98
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"Hver påmindelse for de valgte hændelser vil blive suspenderet med denne "
+"tidsenhed. Du kan vælge antal tidsenheder i den nærliggende vælger."
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "Påmind senere"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "Påmind mig igen efter det angivne interval"
+
+#: suspenddialog.cpp:113
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+"Tryk på denne knap for at blive mindet om denne hændelse igen efter den "
+"angivne mængde tid."
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Annullér"
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr "Annullér at påminde senere, f.eks. for at afvise påmindelsen for evigt"
+
+#: suspenddialog.cpp:119
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr "Tryk på denne knap for at stoppe påmindelsen for evigt."

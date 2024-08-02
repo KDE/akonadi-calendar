@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 04:54+0200\n"
+"PO-Revision-Date: 2024-08-01 05:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -961,8 +961,7 @@ msgstr ""
 "ხელმოწერის გასაღებები მითითებული არაა."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "გავაგზავნო ხელმოწერის გარეშე?"
@@ -1006,8 +1005,7 @@ msgid "&Sign"
 msgstr "&ხელმოწერა"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "გაფრთხილება ხელმოუწერელი შეტყობინების შესახებ"
@@ -1039,8 +1037,7 @@ msgstr ""
 "დავშიფრო შეტყობინება?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "დავშიფრო შეტყობინება?"

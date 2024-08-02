@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 06:43+0300\n"
+"PO-Revision-Date: 2024-08-01 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -935,8 +935,7 @@ msgid ""
 msgstr "ביקשת לחתום על ההודעה הזאת אך לא הוגדרו מפתחות חתימה תקפים לזהות הזאת."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "לשלוח ללא חתימה?"
@@ -980,8 +979,7 @@ msgid "&Sign"
 msgstr "ל&חתום"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "אזהרת הודעה לא חתומה"
@@ -1012,8 +1010,7 @@ msgstr ""
 "להצפין את ההודעה?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "להצפין את ההודעה?"

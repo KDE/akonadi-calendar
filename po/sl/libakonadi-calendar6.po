@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 10:31+0200\n"
+"PO-Revision-Date: 2024-08-01 06:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -88,7 +88,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"Opravilo »%1« ima podopravila. Ali želite kopirati samo to opravilo ali "
+"Opravilo \"%1\"  ima podopravila. Ali želite kopirati samo to opravilo ali "
 "opravilo skupaj z njegovimi podopravili?"
 
 #: calendarclipboard.cpp:220
@@ -968,8 +968,7 @@ msgstr ""
 "ključev podpisovanja za to identiteto."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Naj pošljem nepodpisano?"
@@ -1014,8 +1013,7 @@ msgid "&Sign"
 msgstr "Podpiši"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Opozorilo o nepodpisanem sporočilu"
@@ -1047,8 +1045,7 @@ msgstr ""
 "Naj šifriram to sporočilo?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Naj šifriram sporočilo?"

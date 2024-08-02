@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 01:07+0200\n"
+"PO-Revision-Date: 2024-08-01 04:43+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -977,8 +977,7 @@ msgstr ""
 "configurado ninguna clave válida para firmar con esta identidad."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "¿Enviar sin firmar?"
@@ -1023,8 +1022,7 @@ msgid "&Sign"
 msgstr "&Firmar"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Advertencia de mensaje sin firmar"
@@ -1057,11 +1055,10 @@ msgstr ""
 "¿Desea cifrar este mensaje?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
-msgstr "¿Desea cifrar el mensaje?"
+msgstr "¿Cifrar el mensaje?"
 
 #: mailclient_p.cpp:843
 #, kde-format

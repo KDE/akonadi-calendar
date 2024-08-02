@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 13:50+0300\n"
+"PO-Revision-Date: 2024-08-01 13:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -971,11 +971,10 @@ msgstr ""
 "imzalama anahtarı yapılandırılmamış."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
-msgstr "İmzalanmamış Olarak Gönderilsin mi?"
+msgstr "İmzalanmamış Olarak Gönder?"
 
 #: mailclient_p.cpp:756
 #, kde-format
@@ -1017,8 +1016,7 @@ msgid "&Sign"
 msgstr "İ&mzala"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "İmzalanmamış İleti Uyarısı"
@@ -1050,11 +1048,10 @@ msgstr ""
 "Bu ileti şifrelensin mı?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
-msgstr "İleti Şifrelensin mi?"
+msgstr "İletiyi Şifrele?"
 
 #: mailclient_p.cpp:843
 #, kde-format
