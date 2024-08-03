@@ -936,7 +936,7 @@ msgstr "此信件要求您签名，但是没有为此身份配置有效的签名
 #: mailclient_p.cpp:756
 #, kde-format
 msgid "Send Unsigned?"
-msgstr "不签名发送？"
+msgstr ""
 
 #: mailclient_p.cpp:756
 #, kde-format
@@ -979,7 +979,7 @@ msgstr "签名(&S)"
 #: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr "未签名信件警告"
+msgstr ""
 
 #: mailclient_p.cpp:780
 #, kde-format
