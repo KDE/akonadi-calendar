@@ -934,11 +934,10 @@ msgid ""
 msgstr "此信件要求您签名，但是没有为此身份配置有效的签名密钥。"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
-msgstr "不签名发送？"
+msgstr ""
 
 #: mailclient_p.cpp:756
 #, kde-format
@@ -979,11 +978,10 @@ msgid "&Sign"
 msgstr "签名(&S)"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
-msgstr "未签名信件警告"
+msgstr ""
 
 #: mailclient_p.cpp:781
 #, kde-format
@@ -1011,11 +1009,10 @@ msgstr ""
 "您要加密此信件吗？"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
-msgstr "加密信件吗？"
+msgstr ""
 
 #: mailclient_p.cpp:843
 #, kde-format
