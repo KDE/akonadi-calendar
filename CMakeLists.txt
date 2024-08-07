@@ -68,6 +68,7 @@ find_package(KF6Codecs ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Notifications ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Crash ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6MailTransport ${MAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)

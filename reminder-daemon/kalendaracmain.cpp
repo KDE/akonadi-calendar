@@ -3,8 +3,10 @@
 
 #include "kalendaralarmclient.h"
 #include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
+
 #include <QApplication>
 #include <QCommandLineParser>
 
@@ -38,6 +40,8 @@ int main(int argc, char **argv)
                         QStringLiteral("https://claudiocambra.com"));
     aboutData.setProductName("Reminder Daemon/general"); // Bugzilla product/component name
     KAboutData::setApplicationData(aboutData);
+
+    KCrash::initialize();
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
