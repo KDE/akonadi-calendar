@@ -17,7 +17,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <KCheckableProxyModel>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
 
 #include <QFileInfo>
 

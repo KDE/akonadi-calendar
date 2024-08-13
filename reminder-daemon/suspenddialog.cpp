@@ -9,7 +9,6 @@
 
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
 
 #include <QComboBox>
 #include <QDialogButtonBox>
