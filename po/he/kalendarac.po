@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:40+0000\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
 "PO-Revision-Date: 2024-06-21 16:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -154,19 +154,19 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "קלאו קמברה"
 
-#: suspenddialog.cpp:75
+#: suspenddialog.cpp:74
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "משך ה&שהיה:"
 
-#: suspenddialog.cpp:82
+#: suspenddialog.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "להשהות את התזכורות למשך הזמן הזה"
 
-#: suspenddialog.cpp:84
+#: suspenddialog.cpp:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -177,37 +177,37 @@ msgstr ""
 "כל תזכורת למופעים הנבחרים תושהה במספר זה של יחידות זמן. אפשר לבחור יחידות "
 "זמן (בדרך כלל דקות) בבורר הסמוך."
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:91
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "דקות"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "שעות"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "ימים"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "שבועות"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "השהיית התזכורות ביחידת הזמן הזאת"
 
-#: suspenddialog.cpp:98
+#: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -218,19 +218,19 @@ msgstr ""
 "כל תזכורת למופעים הנבחרים יושהה באמצעות יחידת הזמן הזאת. אפשר להגדיר את מספר "
 "יחידות הזמן בקלט מילוי המספר הסמוך."
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "להזכיר מאוחר יותר"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "להזכיר לי שוב אחרי פרק הזמן שצוין"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -240,19 +240,19 @@ msgstr ""
 "יש ללחוץ על הכפתור הזה כדי לקבל תזכורת שוב על המופע הזה אחרי כמות הזמן "
 "שצוינה."
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgstr "ביטול התזכורת בעתיד, כלומר להתעלם מהתזכורת לעד"
 
-#: suspenddialog.cpp:119
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."

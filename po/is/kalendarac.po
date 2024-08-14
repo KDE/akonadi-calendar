@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:40+0000\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
 "PO-Revision-Date: 2024-04-05 12:10+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -151,19 +151,19 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:75
+#: suspenddialog.cpp:74
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "Tímalengd &biðtíma:"
 
-#: suspenddialog.cpp:82
+#: suspenddialog.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "Setja áminningarnar í bið í þetta langan tíma"
 
-#: suspenddialog.cpp:84
+#: suspenddialog.cpp:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -175,37 +175,37 @@ msgstr ""
 "þessum fjölda tímaeininga. Þú getur valið tímaeiningarnar (venjulega "
 "mínútur) í valinu við hliðina."
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:91
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "mínúta/mínútur"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "klst."
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "dagur/dagar"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "vika/vikur"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "Setja áminningar í bið með þessari tímaeiningu"
 
-#: suspenddialog.cpp:98
+#: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -216,19 +216,19 @@ msgstr ""
 "Áminningar fyrir uppákomurnar sem eru valdar verða settar í bið með þessari "
 "tímaeiningu. Þú getur valið fjölda tímaeininga í valinu við hliðina."
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "Minna á síðar."
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "Minna mig á aftur eftir tiltekinn tíma"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -238,19 +238,19 @@ msgstr ""
 "Ýttu á þennan hnapp til að fá aðra áminningu um uppákomuna eftir að "
 "tiltekinn tími er liðinn."
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgstr "Hætta við að minna á síðar, þ.e. hunsa áminninguna alveg"
 
-#: suspenddialog.cpp:119
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."

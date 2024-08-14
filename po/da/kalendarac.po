@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:40+0000\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
 "PO-Revision-Date: 2024-08-01 17:32+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -151,19 +151,19 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:75
+#: suspenddialog.cpp:74
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "&Varighed af suspendering:"
 
-#: suspenddialog.cpp:82
+#: suspenddialog.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "Suspendér påmindelserne med så meget tid"
 
-#: suspenddialog.cpp:84
+#: suspenddialog.cpp:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -175,37 +175,37 @@ msgstr ""
 "antal tidsenheder. Du kan vælge tidsenheden (normalt minutter) i nærliggende "
 "vælger."
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:91
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "minutter"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "timer"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "dage"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "Uger"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "Suspender påmindelserne med denne tidsenhed"
 
-#: suspenddialog.cpp:98
+#: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -216,19 +216,19 @@ msgstr ""
 "Hver påmindelse for de valgte hændelser vil blive suspenderet med denne "
 "tidsenhed. Du kan vælge antal tidsenheder i den nærliggende vælger."
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "Påmind senere"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "Påmind mig igen efter det angivne interval"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -238,19 +238,19 @@ msgstr ""
 "Tryk på denne knap for at blive mindet om denne hændelse igen efter den "
 "angivne mængde tid."
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annullér"
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgstr "Annullér at påminde senere, f.eks. for at afvise påmindelsen for evigt"
 
-#: suspenddialog.cpp:119
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Press this button to silence the reminder forever."
