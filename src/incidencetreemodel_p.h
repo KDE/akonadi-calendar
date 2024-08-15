@@ -45,11 +45,7 @@ struct PreNode {
     KCalendarCore::Incidence::Ptr incidence;
     QPersistentModelIndex sourceIndex;
     Akonadi::Item item;
-    int depth;
-    PreNode()
-        : depth(-1)
-    {
-    }
+    int depth = -1;
 };
 
 class IncidenceTreeModelPrivate : public QObject
@@ -61,12 +57,12 @@ public:
     void insertNode(const PreNode::Ptr &node, bool silent = false);
     void insertNode(const QModelIndex &sourceIndex, bool silent = false);
     void removeNode(const Node::Ptr &node);
-    QModelIndex indexForNode(const Node::Ptr &node) const;
-    int rowForNode(const Node::Ptr &node) const;
+    [[nodiscard]] QModelIndex indexForNode(const Node::Ptr &node) const;
+    [[nodiscard]] int rowForNode(const Node::Ptr &node) const;
     bool indexBeingRemoved(const QModelIndex &) const; // Is it being removed?
     void dumpTree();
     void assert_and_dump(bool condition, const QString &message);
-    Node::List sorted(const Node::List &nodes) const;
+    [[nodiscard]] Node::List sorted(const Node::List &nodes) const;
     PreNode::Ptr prenodeFromSourceRow(int sourceRow) const;
     void setSourceModel(QAbstractItemModel *model);
 

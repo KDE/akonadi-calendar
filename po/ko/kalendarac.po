@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# Shinjo Park <kde@peremen.name>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 01:37+0000\n"
-"PO-Revision-Date: 2022-07-13 11:13+0200\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"PO-Revision-Date: 2024-02-17 12:36+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,62 +90,169 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1이(가) %2에 시작됨|/|%1$[이가 %1] %2에 시작됨"
 
-#: alarmnotification.cpp:117
+#: alarmnotification.cpp:118
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "5분 후에 다시 알림"
 
-#: alarmnotification.cpp:123
+#: alarmnotification.cpp:124
 #, kde-format
-msgid "Remind in 1 hour"
-msgstr "1시간 후에 다시 알림"
+msgid "Remind later..."
+msgstr "나중에 알림..."
 
-#: alarmnotification.cpp:129
+#: alarmnotification.cpp:130
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "알림 끄기"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "URL 열기"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "지도"
 
-#: kalendaracmain.cpp:23
+#: kalendaracmain.cpp:25
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "알림"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:28
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "캘린더 알림 서비스"
 
-#: kalendaracmain.cpp:30
-#, kde-format
-msgid "(c) KDE Community 2021-2022"
+#: kalendaracmain.cpp:32
+#, fuzzy, kde-format
+#| msgid "(c) KDE Community 2021-2022"
+msgid "(c) KDE Community 2021-2024"
 msgstr "(c) KDE Community 2021-2022"
 
-#: kalendaracmain.cpp:31
+#: kalendaracmain.cpp:33
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
+#: kalendaracmain.cpp:34 kalendaracmain.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "관리자"
 
-#: kalendaracmain.cpp:35
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
+
+#: suspenddialog.cpp:74
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "일시 정지 기간(&D):"
+
+#: suspenddialog.cpp:81
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "다음 기간 동안 알림 일시 정지"
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"선택한 반복 항목의 각각 알림은 이 시간만큼 일시 정지됩니다. 옆에 있는 선택기"
+"에서 시간(주로 분 단위)을 선택하십시오."
+
+#: suspenddialog.cpp:91
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "분"
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "시간"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "일"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "주"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "다음 기간 동안 알림 중지"
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"선택한 반복 항목의 각각 알림은 이 시간만큼 일시 정지됩니다. 옆에 있는 선택기"
+"에서 시간을 선택하십시오."
+
+#: suspenddialog.cpp:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "나중에 알림"
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "지정한 시간 이후에 다시 알림"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+"이 단추를 클릭하면 지정한 시간 이후 항목에 대한 알림을 다시 받게 됩니다."
+
+#: suspenddialog.cpp:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "취소"
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr "나중에 알림을 취소하며 더 이상 알리지 않음"
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr "이 단추를 클릭하면 알림을 완전히 취소합니다."
+
+#~ msgid "Remind in 1 hour"
+#~ msgstr "1시간 후에 다시 알림"

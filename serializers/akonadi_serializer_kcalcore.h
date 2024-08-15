@@ -30,7 +30,7 @@ public:
 
     void compare(Akonadi::AbstractDifferencesReporter *reporter, const Akonadi::Item &leftItem, const Akonadi::Item &rightItem) override;
 
-    QString extractGid(const Item &item) const override;
+    [[nodiscard]] QString extractGid(const Item &item) const override;
 
 private:
     KCalendarCore::ICalFormat mFormat;

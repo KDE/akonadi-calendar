@@ -13,7 +13,7 @@
 #include <QUrlQuery>
 
 using namespace std::chrono_literals;
-
+using namespace Qt::Literals::StringLiterals;
 AlarmNotification::AlarmNotification(const QString &uid)
     : m_uid{uid}
 {
@@ -31,6 +31,7 @@ AlarmNotification::~AlarmNotification()
 void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::Incidence::Ptr &incidence)
 {
     const QDateTime startTime = m_occurrence.isValid() ? m_occurrence.toLocalTime() : incidence->dtStart().toLocalTime();
+    const auto title = incidence->summary();
     const bool notificationExists = m_notification;
     if (!notificationExists) {
         m_notification = new KNotification(QStringLiteral("alarm"));
@@ -44,8 +45,7 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     }
 
     // change the content unconditionally, that will also update already existing notifications
-    m_notification->setTitle(incidence->summary());
-    m_notification->setText(m_text);
+    m_notification->setTitle(title);
 
     auto defaultAction = m_notification->addDefaultAction(i18n("View"));
     QObject::connect(defaultAction, &KNotificationAction::activated, client, [this, client, startTime] {
@@ -114,33 +114,32 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     m_notification->setIconName(incidence->type() == KCalendarCore::Incidence::TypeTodo ? QStringLiteral("view-task")
                                                                                         : QStringLiteral("view-calendar-upcoming"));
 
-    auto remindIn5MAction = m_notification->addAction(i18n("Remind in 5 mins"));
-    QObject::connect(remindIn5MAction, &KNotificationAction::activated, remindIn5MAction, [this, client] {
-        QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        client->suspend(this, 5min);
-    });
-
-    auto remindIn1hAction = m_notification->addAction(i18n("Remind in 1 hour"));
-    QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client] {
-        QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        client->suspend(this, 5min);
-    });
-
-    auto dismissAction = m_notification->addAction(i18nc("dismiss a reminder notification for an event", "Dismiss"));
-    QObject::connect(dismissAction, &KNotificationAction::activated, dismissAction, [this, client] {
-        QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-        client->dismiss(this);
-    });
-
-    const auto contextActionString = determineContextAction(incidence);
-    if (!contextActionString.isEmpty()) {
-        auto contextAction = m_notification->addAction(contextActionString);
-        QObject::connect(contextAction, &KNotificationAction::activated, contextAction, [this] {
-            QDesktopServices::openUrl(m_contextAction);
-        });
-    }
-
     if (!notificationExists) {
+        auto remindIn5MAction = m_notification->addAction(i18n("Remind in 5 mins"));
+        QObject::connect(remindIn5MAction, &KNotificationAction::activated, remindIn5MAction, [this, client] {
+            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->suspend(this, 5min);
+        });
+
+        auto remindIn1hAction = m_notification->addAction(i18n("Remind later..."));
+        QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client, title] {
+            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->askAndSuspend(this, title, m_text);
+        });
+
+        auto dismissAction = m_notification->addAction(i18nc("dismiss a reminder notification for an event", "Dismiss"));
+        QObject::connect(dismissAction, &KNotificationAction::activated, dismissAction, [this, client] {
+            QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
+            client->dismiss(this);
+        });
+
+        const auto contextActionString = determineContextAction(incidence);
+        if (!contextActionString.isEmpty()) {
+            auto contextAction = m_notification->addAction(contextActionString);
+            QObject::connect(contextAction, &KNotificationAction::activated, contextAction, [this] {
+                QDesktopServices::openUrl(m_contextAction);
+            });
+        }
         m_notification->sendEvent();
     }
 }
@@ -182,7 +181,7 @@ void AlarmNotification::setRemindAt(const QDateTime &remindAtDt)
 
 bool AlarmNotification::hasValidContextAction() const
 {
-    return m_contextAction.isValid() && (m_contextAction.scheme() == QLatin1String("https") || m_contextAction.scheme() == QLatin1String("geo"));
+    return m_contextAction.isValid() && (m_contextAction.scheme() == "https"_L1 || m_contextAction.scheme() == "geo"_L1);
 }
 
 QString AlarmNotification::determineContextAction(const KCalendarCore::Incidence::Ptr &incidence)

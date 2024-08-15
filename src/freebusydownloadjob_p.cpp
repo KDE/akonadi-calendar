@@ -6,6 +6,7 @@
 */
 
 #include "freebusydownloadjob_p.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KIO/Job>
 #include <KIO/TransferJob>
@@ -17,7 +18,7 @@ FreeBusyDownloadJob::FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget)
     : mUrl(url)
     , mParent(parentWidget)
 {
-    setObjectName(QLatin1StringView("FreeBusyDownloadJob"));
+    setObjectName("FreeBusyDownloadJob"_L1);
 }
 
 FreeBusyDownloadJob::~FreeBusyDownloadJob() = default;

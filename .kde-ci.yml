@@ -9,6 +9,7 @@ Dependencies:
     'frameworks/kcalendarcore' : '@latest-kf6'
     'frameworks/knotifications' : '@latest-kf6'
     'frameworks/kdbusaddons' : '@latest-kf6'
+    'frameworks/kcrash' : '@latest-kf6'
     'pim/akonadi' : '@same'
     'pim/akonadi-mime' : '@same'
     'pim/akonadi-contacts' : '@same'

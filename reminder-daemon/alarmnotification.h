@@ -66,7 +66,7 @@ public:
     void setWasSuspended(bool newWasSuspended);
 
 private:
-    bool hasValidContextAction() const;
+    [[nodiscard]] bool hasValidContextAction() const;
     [[nodiscard]] QString determineContextAction(const KCalendarCore::Incidence::Ptr &incidence);
 
     QPointer<KNotification> m_notification;

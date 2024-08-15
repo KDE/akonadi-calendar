@@ -63,6 +63,15 @@ public:
         }
         return KCheckableProxyModel::data(index, role);
     }
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
+    {
+        if (role == Qt::CheckStateRole) {
+            Q_EMIT checkedByUser();
+        }
+        return KCheckableProxyModel::setData(index, value, role);
+    }
+Q_SIGNALS:
+    void checkedByUser();
 };
 
 class ETMCalendarPrivate : public CalendarBasePrivate

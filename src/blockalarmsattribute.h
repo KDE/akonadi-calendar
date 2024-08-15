@@ -64,7 +64,7 @@ public:
      *
      * @since 4.11
      */
-    bool isAlarmTypeBlocked(KCalendarCore::Alarm::Type type) const;
+    [[nodiscard]] bool isAlarmTypeBlocked(KCalendarCore::Alarm::Type type) const;
 
     /**
      * Returns whether all alarms are blocked or not.
@@ -72,11 +72,11 @@ public:
      * @since 5.0
      */
 
-    bool isEverythingBlocked() const;
+    [[nodiscard]] bool isEverythingBlocked() const;
 
-    QByteArray type() const override;
+    [[nodiscard]] QByteArray type() const override;
     BlockAlarmsAttribute *clone() const override;
-    QByteArray serialized() const override;
+    [[nodiscard]] QByteArray serialized() const override;
     void deserialize(const QByteArray &data) override;
 
 private:

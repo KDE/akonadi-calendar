@@ -9,6 +9,8 @@
 */
 
 #include "itiphandlerhelper_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarsettings.h"
 #include "utils_p.h"
 
@@ -161,7 +163,7 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sentInvitation(int messageBoxRe
 bool ITIPHandlerHelper::weAreOrganizerOf(const KCalendarCore::Incidence::Ptr &incidence)
 {
     const QString email = incidence->organizer().email();
-    return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty() || email == QLatin1String("invalid@email.address");
+    return Akonadi::CalendarUtils::thatIsMe(email) || email.isEmpty() || email == "invalid@email.address"_L1;
 }
 
 bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalendarCore::Incidence::Ptr &incidence)
@@ -307,7 +309,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                       ITIPHandlerDialogDelegate::Attendees,
                                                       question,
                                                       mDefaultAction,
-                                                      KGuiItem(i18n("Send Update")));
+                                                      KGuiItem(i18nc("@action:button", "Send Update")));
             return;
         } else {
             Q_EMIT sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::ResultNoSendingNeeded, method, incidence);
@@ -328,7 +330,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                   ITIPHandlerDialogDelegate::Organizer,
                                                   question,
                                                   mDefaultAction,
-                                                  KGuiItem(i18n("Send Update")));
+                                                  KGuiItem(i18nc("@action:button", "Send Update")));
         return;
     } else if (incidence->type() == KCalendarCore::Incidence::TypeEvent) {
         if (attendeeStatusChanged && method == KCalendarCore::iTIPRequest) {
@@ -341,7 +343,7 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
                                                       ITIPHandlerDialogDelegate::Organizer,
                                                       question,
                                                       mDefaultAction,
-                                                      KGuiItem(i18n("Send Update")));
+                                                      KGuiItem(i18nc("@action:button", "Send Update")));
             return;
         } else {
             slotIncidenceModifiedDialogClosed(KMessageBox::ButtonCode::PrimaryAction, method, incidence);

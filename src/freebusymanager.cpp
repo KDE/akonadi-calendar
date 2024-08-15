@@ -6,6 +6,8 @@
 */
 
 #include "freebusymanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarsettings.h"
 #include "freebusydownloadjob_p.h"
 #include "freebusymanager_p.h"
@@ -24,7 +26,9 @@
 #include "akonadicalendar_debug.h"
 #include <KMessageBox>
 
+#include <KIO/FileCopyJob>
 #include <KIO/Job>
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <QUrl>
 
@@ -527,7 +531,7 @@ QStringList FreeBusyManagerPrivate::getFreeBusyProviders() const
     QStringList providers;
     const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
     for (const Akonadi::AgentInstance &agent : agents) {
-        if (agent.type().capabilities().contains(QLatin1String("FreeBusyProvider"))) {
+        if (agent.type().capabilities().contains("FreeBusyProvider"_L1)) {
             providers << agent.identifier();
         }
     }
@@ -690,7 +694,7 @@ Q_GLOBAL_STATIC(FreeBusyManagerStatic, sManagerInstance)
 FreeBusyManager::FreeBusyManager()
     : d_ptr(new FreeBusyManagerPrivate(this))
 {
-    setObjectName(QLatin1StringView("FreeBusyManager"));
+    setObjectName("FreeBusyManager"_L1);
     connect(CalendarSettings::self(), SIGNAL(configChanged()), SLOT(checkFreeBusyUrl()));
 }
 
@@ -801,7 +805,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         if (CalendarSettings::self()->publishKolab()) {
             // we use Kolab
             QString server;
-            if (CalendarSettings::self()->publishKolabServer() == QLatin1String("%SERVER%")
+            if (CalendarSettings::self()->publishKolabServer() == "%SERVER%"_L1
                 || CalendarSettings::self()->publishKolabServer().isEmpty()) {
                 server = emailHost;
             } else {
@@ -980,7 +984,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
 
     QString messageText = d->mFormat.createScheduleMessage(freebusy, KCalendarCore::iTIPPublish);
 
-    if (!f.open(QIODevice::ReadWrite)) {
+    if (!f.open(QIODevice::WriteOnly)) {
         qCDebug(AKONADICALENDAR_LOG) << "acceptFreeBusy: Can't open:" << filename << "for writing";
         return false;
     }

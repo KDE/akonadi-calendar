@@ -1,22 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 01:37+0000\n"
-"PO-Revision-Date: 2022-08-16 21:16+0400\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"PO-Revision-Date: 2024-06-13 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -96,62 +96,168 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "بدأت ‏%1 في %2"
 
-#: alarmnotification.cpp:117
+#: alarmnotification.cpp:118
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "ذكرني بعد خمس دقائق"
 
-#: alarmnotification.cpp:123
+#: alarmnotification.cpp:124
 #, kde-format
-msgid "Remind in 1 hour"
-msgstr "ذكرني بعد ساعة"
+msgid "Remind later..."
+msgstr "ذكّرني لاحقًا..."
 
-#: alarmnotification.cpp:129
+#: alarmnotification.cpp:130
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "تجاهل"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "افتح الرابط"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "الخريطة"
 
-#: kalendaracmain.cpp:23
+#: kalendaracmain.cpp:25
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "التّذكيرات"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:28
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "خدمة تذكير التقويم"
 
-#: kalendaracmain.cpp:30
+#: kalendaracmain.cpp:32
 #, kde-format
-msgid "(c) KDE Community 2021-2022"
-msgstr "(c)  مجتمع كِيدِي 2021-2022"
+msgid "(c) KDE Community 2021-2024"
+msgstr "(c)  مجتمع كِيدِي 2021-2024"
 
-#: kalendaracmain.cpp:31
+#: kalendaracmain.cpp:33
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
+#: kalendaracmain.cpp:34 kalendaracmain.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "المشرف"
 
-#: kalendaracmain.cpp:35
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
+
+#: suspenddialog.cpp:74
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "مدة ال&تعليق:"
+
+#: suspenddialog.cpp:81
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "علق الإشعارات بهذا القدر من الوقت"
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"سيعلق  كل تذكير للأحداث المحددة بهذا العدد من الوحدات الزمنية. يمكنك اختيار "
+"الوحدات الزمنية (عادةً الدقائق) في المحدد المجاور."
+
+#: suspenddialog.cpp:91
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "من الدقائق"
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "من الساعات"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "من الأيام"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "من الأسابيع"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "علق الإشعارات باستخدام هذه الوحدة من الوقت"
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"سيعلق  كل تذكير للأحداث المحددة بهذا العدد من الوحدات الزمنية. يمكنك اختيار "
+"الوحدات الزمنية في مكان الإدخال المجاور."
+
+#: suspenddialog.cpp:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "ذكّرني لاحقًا"
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "ذكرني مرة أخرى بعد الفاصل الزمني المحدد"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+"اضغط على هذا الزر ليتم تذكيرك مرة أخرى بهذا الحادث بعد مرور الوقت المحدد."
+
+#: suspenddialog.cpp:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr "إلغاء التذكير لاحقًا، أي تجاهل التذكير إلى الأبد"
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr "اضغط على هذا الزر لإسكات التذكير إلى الأبد."
+
+#~ msgid "Remind in 1 hour"
+#~ msgstr "ذكرني بعد ساعة"

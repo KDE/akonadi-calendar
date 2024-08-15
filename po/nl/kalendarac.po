@@ -1,26 +1,27 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 01:37+0000\n"
-"PO-Revision-Date: 2022-06-14 10:30+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"PO-Revision-Date: 2024-04-28 07:10+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2022"
+msgstr "Freek de Kruijf - 2022 t/m 2024"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -91,62 +92,170 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 begon op %2"
 
-#: alarmnotification.cpp:117
+#: alarmnotification.cpp:118
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Herinnering over 5 minuten"
 
-#: alarmnotification.cpp:123
+#: alarmnotification.cpp:124
 #, kde-format
-msgid "Remind in 1 hour"
-msgstr "Herinnering over 1 uur"
+msgid "Remind later..."
+msgstr "Later herinneren..."
 
-#: alarmnotification.cpp:129
+#: alarmnotification.cpp:130
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
-msgstr "Wegdoen"
+msgstr "Gezien"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "URL-adres openen"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "Kaart"
 
-#: kalendaracmain.cpp:23
+#: kalendaracmain.cpp:25
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
-msgstr "Herinneringen"
+msgstr "Niet vergeten"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:28
 #, kde-format
 msgid "Calendar Reminder Service"
-msgstr "Herinneringservice van Calendar"
+msgstr "Calendar Niet-vergeten service"
 
-#: kalendaracmain.cpp:30
+#: kalendaracmain.cpp:32
 #, kde-format
-msgid "(c) KDE Community 2021-2022"
-msgstr "(c) KDE gemeenschap 2021-2022"
+msgid "(c) KDE Community 2021-2024"
+msgstr "(c) KDE gemeenschap 2021-2024"
 
-#: kalendaracmain.cpp:31
+#: kalendaracmain.cpp:33
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "Carl Schwan"
 
-#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
+#: kalendaracmain.cpp:34 kalendaracmain.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "Onderhouder"
 
-#: kalendaracmain.cpp:35
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
+
+#: suspenddialog.cpp:74
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "Tijds&duur van uitstel:"
+
+#: suspenddialog.cpp:81
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "De herinneringen met ... tijd uitstellen"
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"Elke herinnering voor de geselecteerde gebeurtenissen wordt uitgesteld met "
+"zoveel tijdseenheden. U kunt de tijdseenheden (typisch minuten) in kiezen."
+
+#: suspenddialog.cpp:91
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "minu(u)t(en)"
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "u(u)r(en)"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "dag(en)"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "we(e)k(en)"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "De herinneringen met deze tijdseenheid uitstellen"
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"Elke herinnering voor de geselecteerde gebeurtenis wordt uitgesteld  met "
+"deze tijdseenheid. U kunt het aantal tijdseenheden in de getalinvoer "
+"invoeren. "
+
+#: suspenddialog.cpp:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "Later herinneren"
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "Herinner me opnieuw na het gespecificeerde interval"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+"Druk op deze knop om opnieuw aan deze gebeurtenis herinnerd te worden na een "
+"bepaalde tijd."
+
+#: suspenddialog.cpp:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr "Herinnerings-signaal later annuleren, d.i. voor altijd stil maken "
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr "Druk op deze knop om dit herinnerings-signaal op stil te zetten."
+
+#~ msgid "Remind in 1 hour"
+#~ msgstr "Herinnering over 1 uur"

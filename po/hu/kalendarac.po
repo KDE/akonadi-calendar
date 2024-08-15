@@ -1,0 +1,261 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar package.
+#
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"PO-Revision-Date: 2024-03-20 14:21+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.04.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@fsf.hu"
+
+#: alarmnotification.cpp:50
+#, kde-format
+msgid "View"
+msgstr "Nézet"
+
+#: alarmnotification.cpp:57
+#, kde-format
+msgid "Task"
+msgstr "Feladat"
+
+#: alarmnotification.cpp:57
+#, kde-format
+msgid "Event"
+msgstr "Esemény"
+
+#: alarmnotification.cpp:60
+#, kde-format
+msgid "Task due at %1"
+msgstr "Feladat határideje: %1"
+
+#: alarmnotification.cpp:64
+#, kde-format
+msgctxt "Event starts in 5 minutes"
+msgid "%2 starts in %1 minute"
+msgid_plural "%2 starts in %1 minutes"
+msgstr[0] "A(z) %2 %1 percen belül kezdődik"
+msgstr[1] "A(z) %2 %1 percen belül kezdődik"
+
+#: alarmnotification.cpp:68
+#, kde-format
+msgctxt "Event starts at 10:00"
+msgid "%1 starts at %2"
+msgstr "A(z) %1 elkezdődik ekkor: %2"
+
+#: alarmnotification.cpp:70
+#, kde-format
+msgctxt "Event started at 10:00"
+msgid "%1 started at %2"
+msgstr "A(z) %1 elkezdődött ekkor: %2"
+
+#: alarmnotification.cpp:76
+#, kde-format
+msgctxt "Event starts on <DATE> at <TIME>"
+msgid "%1 starts on %2 at %3"
+msgstr "A(z) %1 elkezdődik ekkor: %2 %3"
+
+#: alarmnotification.cpp:82
+#, kde-format
+msgctxt "Event started on <DATE> at <TIME>"
+msgid "%1 started on %2 at %3"
+msgstr "A(z) %1 elkezdődött ekkor: %2 %3"
+
+#: alarmnotification.cpp:91
+#, kde-format
+msgctxt "Event starts on <DATE>"
+msgid "%1 starts on %2"
+msgstr "A(z) %1 elkezdődik ekkor: %2 "
+
+#: alarmnotification.cpp:93
+#, kde-format
+msgctxt "Event started on <DATE>"
+msgid "%1 started on %2"
+msgstr "A(z) %1 elkezdődött ekkor: %2 "
+
+#: alarmnotification.cpp:118
+#, kde-format
+msgid "Remind in 5 mins"
+msgstr "Emlékeztető 5 perc múlva"
+
+#: alarmnotification.cpp:124
+#, kde-format
+msgid "Remind later..."
+msgstr "Emlékeztessen később…"
+
+#: alarmnotification.cpp:130
+#, kde-format
+msgctxt "dismiss a reminder notification for an event"
+msgid "Dismiss"
+msgstr "Eltüntet"
+
+#: alarmnotification.cpp:206
+#, kde-format
+msgid "Open URL"
+msgstr "Hivatkozás megnyitása"
+
+#: alarmnotification.cpp:224
+#, kde-format
+msgid "Map"
+msgstr "Térkép"
+
+#: kalendaracmain.cpp:25
+#, kde-format
+msgctxt "@title"
+msgid "Reminders"
+msgstr "Emlékeztetők"
+
+#: kalendaracmain.cpp:28
+#, kde-format
+msgid "Calendar Reminder Service"
+msgstr "Naptári emlékeztető szolgáltatás"
+
+#: kalendaracmain.cpp:32
+#, kde-format
+msgid "(c) KDE Community 2021-2024"
+msgstr "© A KDE közösség, 2021-2024."
+
+#: kalendaracmain.cpp:33
+#, kde-format
+msgctxt "@info:credit"
+msgid "Carl Schwan"
+msgstr "Carl Schwan"
+
+#: kalendaracmain.cpp:34 kalendaracmain.cpp:38
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer"
+msgstr "Karbantartó"
+
+#: kalendaracmain.cpp:37
+#, kde-format
+msgctxt "@info:credit"
+msgid "Clau Cambra"
+msgstr "Clau Cambra"
+
+#: suspenddialog.cpp:74
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "Felfüggesztés i&dőtartama:"
+
+#: suspenddialog.cpp:81
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "Az emlékeztetők felfüggesztése a megadott időre"
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"A kiválasztott események minden egyes emlékeztetője fel lesz függesztve "
+"ezzel az időmennyiséggel. Az időegységet (általalában perc) a szomszédos "
+"választóban adhatja meg."
+
+#: suspenddialog.cpp:91
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "perc"
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "óra"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "nap"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "hét"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "Az emlékeztetők felfüggesztése ezzel a mértékegységgel"
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"A kiválasztott események minden egyes emlékeztetője fel lesz függesztve "
+"ezzel az időmérték-egységgel. Az időegységek számát a szomszédos "
+"számbeviteli mezőben adhatja meg."
+
+#: suspenddialog.cpp:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "Emlékeztessen később"
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "Emlékeztessen később a megadott időköz után"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+"Nyomja meg ezt a gombot, hogy újabb emlékeztetőt kapjon az eseményről a "
+"megadott idő elteltével."
+
+#: suspenddialog.cpp:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Mégse"
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr "Későbbi emlékeztető törlése, azaz az emlékeztető örökre elvetése"
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr "Ezt a gombot megnyomva az emlékeztető örökre elhallgat."
+
+#~ msgid "Remind in 1 hour"
+#~ msgstr "Emlékeztető 1 óra múlva"

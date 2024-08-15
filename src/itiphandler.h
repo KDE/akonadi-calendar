@@ -171,10 +171,10 @@ public:
      * @param buttonCancel: dialog's cancel answer.
      * @returns The button clicked by the user (KMessageBox::ButtonCode)
      */
-    virtual int warningContinueCancel(const QString &text,
-                                      const QString &title,
-                                      const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
-                                      const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
+    [[nodiscard]] virtual int warningContinueCancel(const QString &text,
+                                                    const QString &title,
+                                                    const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                                    const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
 
 Q_SIGNALS:
     /*

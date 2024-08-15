@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar6\")
 
 add_library(KPim6AkonadiCalendar)
 add_library(KPim6::AkonadiCalendar ALIAS KPim6AkonadiCalendar)
@@ -19,10 +19,10 @@ target_sources(KPim6AkonadiCalendar PRIVATE
     calendarmodel_p.h
     calendarutils.cpp
     calendarutils.h
-    calfilterpartstatusproxymodel_p.cpp
-    calfilterpartstatusproxymodel_p.h
-    calfilterproxymodel_p.cpp
-    calfilterproxymodel_p.h
+    calfilterpartstatusproxymodel.cpp
+    calfilterpartstatusproxymodel.h
+    calfilterproxymodel.cpp
+    calfilterproxymodel.h
     collectioncalendar.cpp
     collectioncalendar.h
     etmcalendar.cpp
@@ -90,14 +90,14 @@ ecm_qt_declare_logging_category(KPim6AkonadiCalendar HEADER akonadicalendar_debu
         DESCRIPTION "akonadicalendar (pim lib)"
         OLD_CATEGORY_NAMES log_akonadicalendar
         EXPORT AKONADI-CALENDAR
-    )
+)
 
 kconfig_add_kcfg_files(KPim6AkonadiCalendar GENERATE_MOC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
-qt_add_dbus_adaptor( akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor )
+qt_add_dbus_adaptor(akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor)
 target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6AkonadiCalendar PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6AkonadiCalendar
@@ -128,11 +128,9 @@ PRIVATE
     KPim6::CalendarUtils
     KPim6::AkonadiWidgets
     KPim6::MailTransport
-    KPim6::Mime
     KPim6::MessageCore
     KPim6::MessageComposer
     KPim6::Libkleo
-    KF6::Codecs
 )
 
 set_target_properties(KPim6AkonadiCalendar PROPERTIES
@@ -152,6 +150,8 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   CalendarBase
   CalendarClipboard
   CalendarUtils
+  CalFilterPartStatusProxyModel
+  CalFilterProxyModel
   CollectionCalendar
   ETMCalendar
   FetchJobCalendar
@@ -171,11 +171,11 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   PREFIX Akonadi
 )
 
-install( FILES
+install(FILES
   ${AkonadiCalendar_CamelCase_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar/Akonadi COMPONENT Devel
 )
-install( FILES
+install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_export.h
   ${AkonadiCalendar_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/calendarsettings.h
@@ -183,7 +183,7 @@ install( FILES
 )
 
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6AkonadiCalendar_QCH
         NAME AkonadiCalendar
@@ -203,5 +203,5 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 endif()

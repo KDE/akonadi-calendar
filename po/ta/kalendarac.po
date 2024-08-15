@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# Kishore G <kishore96@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 01:37+0000\n"
-"PO-Revision-Date: 2022-08-07 11:49+0530\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"PO-Revision-Date: 2024-03-17 17:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.90\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -91,62 +91,169 @@ msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 %2 அன்று தொடங்கியது"
 
-#: alarmnotification.cpp:117
+#: alarmnotification.cpp:118
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "5 நிமிடங்களில் நினைவூட்டு"
 
-#: alarmnotification.cpp:123
+#: alarmnotification.cpp:124
 #, kde-format
-msgid "Remind in 1 hour"
-msgstr "1 மணிநேரத்தில் நினைவூட்டு"
+msgid "Remind later..."
+msgstr "பின்னர் நினைவூட்டு…"
 
-#: alarmnotification.cpp:129
+#: alarmnotification.cpp:130
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "மறை"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:206
 #, kde-format
 msgid "Open URL"
 msgstr "முகவரியை திற"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:224
 #, kde-format
 msgid "Map"
 msgstr "நிலப்படம்"
 
-#: kalendaracmain.cpp:23
+#: kalendaracmain.cpp:25
 #, kde-format
 msgctxt "@title"
 msgid "Reminders"
 msgstr "நினைவூட்டல்கள்"
 
-#: kalendaracmain.cpp:26
+#: kalendaracmain.cpp:28
 #, kde-format
 msgid "Calendar Reminder Service"
 msgstr "நாள்காட்டி நினைவூட்டல் சேவை"
 
-#: kalendaracmain.cpp:30
+#: kalendaracmain.cpp:32
 #, kde-format
-msgid "(c) KDE Community 2021-2022"
-msgstr "(c) கே.டீ.யீ. சமூகம் 2021-2022"
+msgid "(c) KDE Community 2021-2024"
+msgstr "(c) கே.டீ.யீ. சமூகம் 2021-2024"
 
-#: kalendaracmain.cpp:31
+#: kalendaracmain.cpp:33
 #, kde-format
 msgctxt "@info:credit"
 msgid "Carl Schwan"
 msgstr "கார்ல் ஷுவான்"
 
-#: kalendaracmain.cpp:32 kalendaracmain.cpp:36
+#: kalendaracmain.cpp:34 kalendaracmain.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr "பராமரிப்பாளர்"
 
-#: kalendaracmain.cpp:35
+#: kalendaracmain.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "க்லாவ் காம்பிரா"
+
+#: suspenddialog.cpp:74
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "இவ்வளவு &நேரத்திற்கு ஒத்திவை:"
+
+#: suspenddialog.cpp:81
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "நினைவூட்டல்களை இவ்வளவு நேரத்திற்கு ஒத்திவைக்கும்"
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட நிகழ்வுகளுக்கான நினைவூட்டல்கள் இவ்வளவு நேரத்திற்கு ஒத்திவைக்கப்படும். நேர "
+"அலகை (எ.கா. நிமிடங்கள்) பக்கத்திலுள்ள தேர்வுப்பெட்டியில் தேர்ந்தெடுக்கலாம்."
+
+#: suspenddialog.cpp:91
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "நிமிடம்"
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "மணிநேரம்"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "நாள்"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "வாரம்"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "நினைவூட்டல்களை ஒத்திவைக்கும் நேரத்திற்கு இந்த அலகை பயன்படுத்து"
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட நிகழ்வுகளுக்கான நினைவூட்டல்கள் இந்த அலகைக் கொண்டு ஒத்திவைக்கப்படும். நேர "
+"அளவை பக்கத்திலுள்ள உள்ளீட்டுப்பெட்டியில் தேர்ந்தெடுக்கலாம்."
+
+#: suspenddialog.cpp:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "பின்னர் நினைவூட்டு…"
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "குறிப்பிட்ட இடைவெளிக்கு பிறகு மறுபடியும் நினைவூட்டும்"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr ""
+"குறிப்பிட்ட நேர இடைவெளிக்குப் பிறகு மறுபடியும் இதைப் பற்றி நினைவூட்டலைத் தூண்ட இப்பட்டனை "
+"அழுத்தலாம்."
+
+#: suspenddialog.cpp:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "ரத்து செய்"
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgstr "பின்னர் நினைவூட்டுவதை ரத்து செய்யும், அதாவது நினைவூட்டல் காலாவதியாகும்"
+
+#: suspenddialog.cpp:118
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Press this button to silence the reminder forever."
+msgstr "நினைவூட்டலை நிரந்தரமாக அடக்க இப்பட்டனை அழுத்தலாம்"
+
+#~ msgid "Remind in 1 hour"
+#~ msgstr "1 மணிநேரத்தில் நினைவூட்டு"

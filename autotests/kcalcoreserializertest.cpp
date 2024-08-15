@@ -93,7 +93,7 @@ private Q_SLOTS:
 
         // ü
         const char latin1_umlaut[] = {static_cast<char>(0xFC), '\0'};
-        event->setSummary(QLatin1String(latin1_umlaut));
+        event->setSummary(QLatin1StringView(latin1_umlaut));
 
         Item item;
         item.setMimeType(mimeType);

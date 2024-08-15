@@ -78,16 +78,16 @@ public:
 public: /// Functions
     FreeBusyManagerPrivate(FreeBusyManager *q);
     void checkFreeBusyUrl();
-    QString freeBusyDir() const;
+    [[nodiscard]] QString freeBusyDir() const;
     void fetchFreeBusyUrl(const QString &email);
     QString freeBusyToIcal(const KCalendarCore::FreeBusy::Ptr &freebusy);
     KCalendarCore::FreeBusy::Ptr iCalToFreeBusy(const QByteArray &freeBusyData);
     KCalendarCore::FreeBusy::Ptr ownerFreeBusy();
-    QString ownerFreeBusyAsString();
+    [[nodiscard]] QString ownerFreeBusyAsString();
     void processFreeBusyDownloadResult(KJob *_job);
     void processFreeBusyUploadResult(KJob *_job);
     void uploadFreeBusy();
-    QStringList getFreeBusyProviders() const;
+    [[nodiscard]] QStringList getFreeBusyProviders() const;
     void queryFreeBusyProviders(const QStringList &providers, const QString &email);
     void queryFreeBusyProviders(const QStringList &providers, const QString &email, const QDateTime &start, const QDateTime &end);
 
@@ -111,7 +111,7 @@ public:
     explicit FbCheckerJob(const QList<QUrl> &urlsToCheck, QObject *parent = nullptr);
     void start() override;
 
-    QUrl validUrl() const;
+    [[nodiscard]] QUrl validUrl() const;
 
 private Q_SLOTS:
     void onGetJobFinished(KJob *job);

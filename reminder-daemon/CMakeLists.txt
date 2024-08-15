@@ -14,8 +14,10 @@ target_sources(kalendarac PRIVATE
     kalendaralarmclient.h
     alarmnotification.h
     kalendaracmain.cpp
+    suspenddialog.h
+    suspenddialog.cpp
     ${kalendarac_SRCS}
-    )
+)
 
 target_include_directories(kalendarac PRIVATE ${CMAKE_BINARY_DIR})
 target_link_libraries(kalendarac
@@ -29,9 +31,10 @@ target_link_libraries(kalendarac
     KF6::KIOGui
     KF6::I18n
     KF6::Notifications
+    KF6::Crash
     Qt::Core
     Qt::DBus
-    )
+)
 
 ecm_qt_declare_logging_category(kalendarac
     HEADER logging.h
@@ -41,18 +44,18 @@ ecm_qt_declare_logging_category(kalendarac
     EXPORT REMINDER_DAEMON
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kalendarac PROPERTIES UNITY_BUILD ON)
 endif()
 
 install(TARGETS
     kalendarac ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    )
+)
 
 install(FILES
     org.kde.kalendarac.desktop
     DESTINATION ${KDE_INSTALL_AUTOSTARTDIR}
-    )
+)
 
 install(FILES kalendarac.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
@@ -64,3 +67,7 @@ ecm_qt_install_logging_categories(
     FILE org_kde_kalendarac.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()

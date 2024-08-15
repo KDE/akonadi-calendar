@@ -178,8 +178,8 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
                                                                   "cut the to-do with all its sub-to-dos?",
                                                                   incidence->summary()),
                                                              i18nc("@title:window", "KOrganizer Confirmation"),
-                                                             KGuiItem(i18n("Cut Only This")),
-                                                             KGuiItem(i18n("Cut All")));
+                                                             KGuiItem(i18nc("@action:button", "Cut Only This")),
+                                                             KGuiItem(i18nc("@action:button", "Cut All")));
 
         if (km == KMessageBox::Cancel) {
             Q_EMIT cutFinished(/*success=*/true, QString());
@@ -217,8 +217,8 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
                                                                   "copy the to-do with all its sub-to-dos?",
                                                                   incidence->summary()),
                                                              i18nc("@title:window", "KOrganizer Confirmation"),
-                                                             KGuiItem(i18n("Copy Only This")),
-                                                             KGuiItem(i18n("Copy All")));
+                                                             KGuiItem(i18nc("@action:button", "Copy Only This")),
+                                                             KGuiItem(i18nc("@action:button", "Copy All")));
         if (km == KMessageBox::Cancel) {
             return true;
         }

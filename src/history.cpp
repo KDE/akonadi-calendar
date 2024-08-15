@@ -5,6 +5,8 @@
 */
 
 #include "history.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadicalendar_debug.h"
 #include "history_p.h"
 
@@ -24,7 +26,7 @@ HistoryPrivate::HistoryPrivate(History *qq)
     , mOperationTypeInProgress(TypeNone)
     , q(qq)
 {
-    mChanger->setObjectName(QLatin1StringView("changer")); // for auto-connects
+    mChanger->setObjectName("changer"_L1); // for auto-connects
 }
 
 void History::recordCreation(const Akonadi::Item &item, const QString &description, const uint atomicOperationId)

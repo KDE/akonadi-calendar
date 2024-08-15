@@ -38,6 +38,7 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
             KCalendarCore::Calendar::Ptr cal(new SingleCollectionCalendar(col));
             m_calendars.push_back(cal);
         }
+        Q_EMIT calendarsChanged();
     });
 
     auto monitor = new Akonadi::Monitor(this);

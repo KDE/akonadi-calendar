@@ -7,8 +7,11 @@
 */
 
 #include "searchcollectionhelper.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadicalendar_debug.h"
 
+#include <Akonadi/CollectionDeleteJob>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/CollectionModifyJob>
@@ -21,23 +24,68 @@
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
 
+#include <KIdentityManagementCore/IdentityManager>
+
 #include <KLocalizedString>
 
 using namespace Akonadi;
 
-SearchCollectionHelper::SearchCollectionHelper(QObject *parent)
-    : QObject(parent)
-    , mIdentityManager(KIdentityManagementCore::IdentityManager::self())
+namespace Akonadi
 {
-    setupSearchCollections();
-    connect(mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateOpenInvitation);
-    connect(mIdentityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateDeclinedInvitation);
 
-    updateOpenInvitation();
-    updateDeclinedInvitation();
+class SearchCollectionHelperPrivate
+{
+public:
+    KIdentityManagementCore::IdentityManager *const identityManager = KIdentityManagementCore::IdentityManager::self();
+    Akonadi::Collection openInvitationCollection;
+    Akonadi::Collection declineInvitationCollection;
+    bool enabled = false;
+};
+
 }
 
-void SearchCollectionHelper::setupSearchCollections()
+SearchCollectionHelper::SearchCollectionHelper(QObject *parent)
+    : QObject(parent)
+    , d(std::make_unique<SearchCollectionHelperPrivate>())
+{
+    fetchSearchCollections();
+}
+
+SearchCollectionHelper::~SearchCollectionHelper() = default;
+
+void SearchCollectionHelper::setEnabled(bool enabled)
+{
+    if (d->enabled == enabled) {
+        return;
+    }
+
+    d->enabled = enabled;
+    if (d->enabled) {
+        init();
+    } else {
+        deinit();
+    }
+}
+
+bool SearchCollectionHelper::enabled() const
+{
+    return d->enabled;
+}
+
+void SearchCollectionHelper::init()
+{
+    fetchSearchCollections();
+    connect(d->identityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateOpenInvitation);
+    connect(d->identityManager, qOverload<>(&KIdentityManagementCore::IdentityManager::changed), this, &SearchCollectionHelper::updateDeclinedInvitation);
+}
+
+void SearchCollectionHelper::deinit()
+{
+    d->identityManager->disconnect(this);
+    removeSearchCollections();
+}
+
+void SearchCollectionHelper::fetchSearchCollections()
 {
     // Collection "Search", has always ID 1
     auto fetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection(1), Akonadi::CollectionFetchJob::FirstLevel);
@@ -54,15 +102,21 @@ void SearchCollectionHelper::onSearchCollectionsFetched(KJob *job)
         const Akonadi::Collection::List lstCols = fetchJob->collections();
         for (const Akonadi::Collection &col : lstCols) {
             const QString collectionName = col.name();
-            if (collectionName == QLatin1String("OpenInvitations")) {
-                mOpenInvitationCollection = col;
-            } else if (collectionName == QLatin1String("DeclinedInvitations")) {
-                mDeclineCollection = col;
+            if (collectionName == "OpenInvitations"_L1) {
+                d->openInvitationCollection = col;
+            } else if (collectionName == "DeclinedInvitations"_L1) {
+                d->declineInvitationCollection = col;
             }
         }
     }
-    updateOpenInvitation();
-    updateDeclinedInvitation();
+
+    if (d->enabled) {
+        updateOpenInvitation();
+        updateDeclinedInvitation();
+    } else {
+        // When disabled, make sure the collections are not shown
+        removeSearchCollections();
+    }
 }
 
 void SearchCollectionHelper::updateSearchCollection(Akonadi::Collection col,
@@ -73,7 +127,7 @@ void SearchCollectionHelper::updateSearchCollection(Akonadi::Collection col,
     // Update or create search collections
 
     Akonadi::SearchQuery query(Akonadi::SearchTerm::RelOr);
-    const QStringList lstEmails = mIdentityManager->allEmails();
+    const QStringList lstEmails = d->identityManager->allEmails();
     for (const QString &email : lstEmails) {
         if (!email.isEmpty()) {
             query.addTerm(Akonadi::IncidenceSearchTerm(Akonadi::IncidenceSearchTerm::PartStatus, QString(email + QString::number(status))));
@@ -105,9 +159,21 @@ void SearchCollectionHelper::updateSearchCollection(Akonadi::Collection col,
     }
 }
 
+void SearchCollectionHelper::removeSearchCollections()
+{
+    if (d->openInvitationCollection.isValid()) {
+        new Akonadi::CollectionDeleteJob(d->openInvitationCollection, this);
+        d->openInvitationCollection = {};
+    }
+    if (d->declineInvitationCollection.isValid()) {
+        new Akonadi::CollectionDeleteJob(d->declineInvitationCollection, this);
+        d->declineInvitationCollection = {};
+    }
+}
+
 void SearchCollectionHelper::updateDeclinedInvitation()
 {
-    updateSearchCollection(mDeclineCollection,
+    updateSearchCollection(d->declineInvitationCollection,
                            KCalendarCore::Attendee::Declined,
                            QStringLiteral("DeclinedInvitations"),
                            i18nc("A collection of all declined invidations.", "Declined Invitations"));
@@ -115,7 +181,7 @@ void SearchCollectionHelper::updateDeclinedInvitation()
 
 void SearchCollectionHelper::updateOpenInvitation()
 {
-    updateSearchCollection(mOpenInvitationCollection,
+    updateSearchCollection(d->openInvitationCollection,
                            KCalendarCore::Attendee::NeedsAction,
                            QStringLiteral("OpenInvitations"),
                            i18nc("A collection of all open invidations.", "Open Invitations"));
@@ -132,11 +198,11 @@ void SearchCollectionHelper::createSearchJobFinished(KJob *job)
     qCDebug(AKONADICALENDAR_LOG) << "Created search folder successfully " << searchCollection.name();
 
     const QString searchCollectionName = searchCollection.name();
-    if (searchCollectionName == QLatin1String("OpenInvitations")) {
-        mOpenInvitationCollection = searchCollection;
+    if (searchCollectionName == "OpenInvitations"_L1) {
+        d->openInvitationCollection = searchCollection;
         updateOpenInvitation();
-    } else if (searchCollectionName == QLatin1String("DeclinedInvitations")) {
-        mDeclineCollection = searchCollection;
+    } else if (searchCollectionName == "DeclinedInvitations"_L1) {
+        d->declineInvitationCollection = searchCollection;
         updateDeclinedInvitation();
     }
 }
