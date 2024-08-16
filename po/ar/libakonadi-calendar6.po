@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-28 12:23+0400\n"
+"PO-Revision-Date: 2024-08-15 10:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -941,8 +941,7 @@ msgstr ""
 "لقد طلبت توقيع هذه الرّسالة ولكن لم تُضبط مفاتيح توقيع صالحة لهذه الهويّة."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "أأرسلها غير موقّعة؟"
@@ -986,8 +985,7 @@ msgid "&Sign"
 msgstr "و&قّع"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "تحذير برسالة غير موقّعة"
@@ -1018,8 +1016,7 @@ msgstr ""
 "أأعمّي هذه الرّسالة؟"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "أأعمّي الرّسالة؟"
