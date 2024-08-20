@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-02-20 23:48+0100\n"
+"PO-Revision-Date: 2024-08-19 21:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -64,15 +64,13 @@ msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 확인"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "이것만 잘라내기"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "모두 잘라내기"
@@ -87,15 +85,13 @@ msgstr ""
 "복사하시겠습니까?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "이것만 복사"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "모두 복사"
@@ -795,8 +791,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "업데이트 보내기"
@@ -930,8 +925,7 @@ msgid "&Sign"
 msgstr "서명(&S)"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "서명하지 않음(&N)"
@@ -953,15 +947,13 @@ msgid ""
 msgstr "메시지 서명을 요청했지만 프로필에 대한 올바른 서명 키가 없습니다."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "서명하지 않고 보내기?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "서명하지 않고 보내기(&U)"
@@ -999,15 +991,13 @@ msgid "&Sign"
 msgstr "서명(&S)"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "서명 없는 메시지 경고"
 
 #: mailclient_p.cpp:781
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "그대로 보내기(&A)"
@@ -1032,8 +1022,7 @@ msgstr ""
 "이 메시지를 암호화하시겠습니까?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "메시지 암호화?"
@@ -1073,15 +1062,13 @@ msgid "Encrypt Message?"
 msgstr "메시지 암호화?"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "암호화(&E)"
 
 #: mailclient_p.cpp:870
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "암호화하지 않음(&N)"
@@ -1102,8 +1089,7 @@ msgid "Send Unencrypted?"
 msgstr "암호화하지 않고 보내기?"
 
 #: mailclient_p.cpp:893
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "암호화하지 않고 보냄(&U)"
@@ -1156,8 +1142,7 @@ msgid "Select Addresses"
 msgstr "주소 선택"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "다음 수신자에게 이메일 보내기"
@@ -1170,8 +1155,7 @@ msgid ""
 msgstr "<b>확인</b> 단추를 클릭하면 입력한 수신자에게 메일을 보냅니다."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "수신자 선택 및 전송 취소"
@@ -1279,10 +1263,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "선택(&S)..."
+msgstr "선택(&S)…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1323,15 +1306,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "이 필드에는 수신자의 이메일 주소가 들어 있습니다"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(빈이름)"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(빈이메일)"
@@ -1502,10 +1483,9 @@ msgid "Open Invitations"
 msgstr "열린 초대장"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "폴더 추가..."
+msgstr "폴더 추가…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1600,10 +1580,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "선택한 캘린더 폴더를 캘린더에서 잘라냅니다."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "폴더 속성..."
+msgstr "폴더 속성…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1674,11 +1653,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "선택한 이벤트를 캘린더에서 삭제합니다."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "캘린더 추가"
+msgstr "캘린더 추가(&C)…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1734,10 +1711,9 @@ msgid_plural "Delete Calendars?"
 msgstr[0] "캘린더 삭제?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "캘린더 속성..."
+msgstr "캘린더 속성…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1807,10 +1783,9 @@ msgid "Move Event To"
 msgstr "다음으로 이벤트 이동"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "이벤트 편집..."
+msgstr "이벤트 편집…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1841,10 +1816,9 @@ msgid "Move To-do To"
 msgstr "다음으로 할 일 이동"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "할 일 편집..."
+msgstr "할 일 편집…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1875,16 +1849,14 @@ msgid "Move Journal To"
 msgstr "다음으로 저널 이동"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "저널 편집..."
+msgstr "저널 편집…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "새 이벤트(&V)..."
+msgstr "새 이벤트(&V)…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1892,10 +1864,9 @@ msgid "Create a new event"
 msgstr "새 이벤트 만들기"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "새 할 일(&T)..."
+msgstr "새 할 일(&T)…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1903,10 +1874,9 @@ msgid "Create a new To-do"
 msgstr "새 할 일 만들기"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "새 하위 할 일 만들기(&B)..."
+msgstr "새 하위 할 일(&B)…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1914,10 +1884,9 @@ msgid "Create a new Sub-to-do"
 msgstr "새 하위 할 일 만들기"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "새 저널(&J)..."
+msgstr "새 저널(&J)…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1925,10 +1894,9 @@ msgid "Create a new Journal"
 msgstr "새 저널 만들기"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "편집(&E)..."
+msgstr "편집(&E)…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
