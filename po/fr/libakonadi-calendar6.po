@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 10:31+0200\n"
+"PO-Revision-Date: 2024-08-02 09:45+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1013,11 +1013,10 @@ msgstr ""
 "valable n'a été configurée pour cette identité."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
-msgstr "Envoyer non signé ?"
+msgstr "Envoyer sous forme non signée ?"
 
 #: mailclient_p.cpp:756
 #, kde-format
@@ -1059,8 +1058,7 @@ msgid "&Sign"
 msgstr "&Signer"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Alarme de message non signé"
@@ -1093,8 +1091,7 @@ msgstr ""
 "Voulez-vous chiffrer ce message ?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Chiffrer ce message ?"
