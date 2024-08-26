@@ -69,14 +69,12 @@ msgstr ""
 
 #: calendarclipboard.cpp:181
 #, fuzzy, kde-format
-#| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Klipp bare dette"
 
 #: calendarclipboard.cpp:182
 #, fuzzy, kde-format
-#| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Klipp alt"
@@ -92,14 +90,12 @@ msgstr ""
 
 #: calendarclipboard.cpp:220
 #, fuzzy, kde-format
-#| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopier bare dette"
 
 #: calendarclipboard.cpp:221
 #, fuzzy, kde-format
-#| msgid "Copy All"
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Kopier alt"
@@ -805,7 +801,6 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
 #, fuzzy, kde-format
-#| msgid "Send Update"
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Send oppdatering"
@@ -1078,7 +1073,6 @@ msgstr ""
 
 #: mailclient_p.cpp:892
 #, fuzzy, kde-format
-#| msgid "Send Update"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Send oppdatering"
@@ -1124,7 +1118,6 @@ msgstr ""
 
 #: publishdialog.cpp:61
 #, fuzzy, kde-format
-#| msgid "Send email to these recipients"
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Send e-post til disse adressatene"
@@ -1140,7 +1133,6 @@ msgstr ""
 
 #: publishdialog.cpp:68
 #, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Avbryt adressatvalg og e-post"
@@ -1251,7 +1243,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
 #, fuzzy, kde-format
-#| msgid "&Select..."
 msgid "&Select…"
 msgstr "&Velg …"
 
@@ -1295,14 +1286,12 @@ msgstr "Dette feltet inneholder e-postadressen til mottakeren"
 
 #: publishdialog_p.cpp:44
 #, fuzzy, kde-format
-#| msgid "(EmptyName)"
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(TomtNavn)"
 
 #: publishdialog_p.cpp:45
 #, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(TomE-post)"
@@ -1575,7 +1564,6 @@ msgstr "Klipp ut de markerte kalendermappene fra kalenderen."
 
 #: standardcalendaractionmanager.cpp:103
 #, fuzzy, kde-format
-#| msgid "Folder Properties..."
 msgid "Folder Properties…"
 msgstr "Mappeegenskaper …"
 
@@ -1656,8 +1644,6 @@ msgstr "Klipp ut de markerte hendelsene fra kalenderen."
 
 #: standardcalendaractionmanager.cpp:138
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
 msgid "Add &Calendar…"
 msgstr "Legg til kalender"
 
@@ -1720,7 +1706,6 @@ msgstr[1] "Slett kalendere?"
 
 #: standardcalendaractionmanager.cpp:171
 #, fuzzy, kde-format
-#| msgid "Calendar Properties..."
 msgid "Calendar Properties…"
 msgstr "Kalenderegenskaper …"
 
@@ -1795,7 +1780,6 @@ msgstr "Flytt hendelse til"
 
 #: standardcalendaractionmanager.cpp:325
 #, fuzzy, kde-format
-#| msgid "Edit Event..."
 msgid "Edit Event…"
 msgstr "Rediger hendelse …"
 
@@ -1832,7 +1816,6 @@ msgstr "Flytt gjøremål til"
 
 #: standardcalendaractionmanager.cpp:355
 #, fuzzy, kde-format
-#| msgid "Edit To-do..."
 msgid "Edit To-do…"
 msgstr "Rediger gjøremål …"
 
@@ -1869,13 +1852,11 @@ msgstr "Flytt dagbok til"
 
 #: standardcalendaractionmanager.cpp:385
 #, fuzzy, kde-format
-#| msgid "Edit Journal..."
 msgid "Edit Journal…"
 msgstr "Rediger dagbok …"
 
 #: standardcalendaractionmanager.cpp:525
 #, fuzzy, kde-format
-#| msgid "New E&vent..."
 msgid "New E&vent…"
 msgstr "Ny &hendelse …"
 
@@ -1886,7 +1867,6 @@ msgstr "Lag en ny hendelse"
 
 #: standardcalendaractionmanager.cpp:536
 #, fuzzy, kde-format
-#| msgid "New &To-do..."
 msgid "New &To-do…"
 msgstr "Nytt &gjøremål …"
 
@@ -1897,7 +1877,6 @@ msgstr "Lag et nytt gjøremål"
 
 #: standardcalendaractionmanager.cpp:546
 #, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
 msgid "New Su&b-to-do…"
 msgstr "Nytt &delgjøremål …"
 
@@ -1908,7 +1887,6 @@ msgstr "Lag et nytt delgjøremål"
 
 #: standardcalendaractionmanager.cpp:557
 #, fuzzy, kde-format
-#| msgid "New &Journal..."
 msgid "New &Journal…"
 msgstr "Ny &dagbok …"
 
@@ -1919,7 +1897,6 @@ msgstr "Lag en ny dagbok"
 
 #: standardcalendaractionmanager.cpp:567
 #, fuzzy, kde-format
-#| msgid "&Edit..."
 msgid "&Edit…"
 msgstr "&Rediger …"
 
