@@ -318,7 +318,7 @@ void KalendarAlarmClient::checkAlarms()
         if (incidence) {
             if (shouldNotify(incidence, settings)) {
                 const auto occurrence = occurrenceForAlarm(incidence, alarm, from);
-                addNotification(uid, alarm->text(), occurrence, mLastChecked, false);
+                addNotification(uid, incidence->description(), occurrence, mLastChecked, false);
             } else {
                 qCDebug(REMINDER_DAEMON_LOG) << "Alarm for incidence " << uid << "skipped, because we are not an organizer or attendee.";
             }
