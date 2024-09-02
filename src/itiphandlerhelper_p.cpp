@@ -408,11 +408,11 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod me
         }
 
         const QString question = (incidence->type() == KCalendarCore::Incidence::TypeTodo) ? i18n(
-                                     "Do you want to send a status update to the "
-                                     "organizer of this task?")
+                                                                                                 "Do you want to send a status update to the "
+                                                                                                 "organizer of this task?")
                                                                                            : i18n(
-                                                                                               "Do you want to send a status update to the "
-                                                                                               "organizer of this journal?");
+                                                                                                 "Do you want to send a status update to the "
+                                                                                                 "organizer of this journal?");
         askDelegator->openDialogIncidenceDeleted(ITIPHandlerDialogDelegate::Organizer,
                                                  question,
                                                  mDefaultAction,

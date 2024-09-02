@@ -50,7 +50,8 @@ private:
     AKONADI_CALENDAR_NO_EXPORT void modifyResult(KJob *job);
 
     AKONADI_CALENDAR_NO_EXPORT void fetchSearchCollections();
-    AKONADI_CALENDAR_NO_EXPORT void updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
+    AKONADI_CALENDAR_NO_EXPORT void
+    updateSearchCollection(Akonadi::Collection col, KCalendarCore::Attendee::PartStat status, const QString &name, const QString &displayName);
     AKONADI_CALENDAR_NO_EXPORT void removeSearchCollections();
 
     std::unique_ptr<SearchCollectionHelperPrivate> const d;

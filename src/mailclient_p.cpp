@@ -767,13 +767,13 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
     if (!sign || !doSignCompletely) {
         if (cryptoWarningUnsigned(identity)) {
             const QString msg = sign && !doSignCompletely ? i18n(
-                                    "Some parts of this message will not be signed.\n"
-                                    "Sending only partially signed messages might violate site policy.\n"
-                                    "Sign all parts instead?") // oh, I hate this...
+                                                                "Some parts of this message will not be signed.\n"
+                                                                "Sending only partially signed messages might violate site policy.\n"
+                                                                "Sign all parts instead?") // oh, I hate this...
                                                           : i18n(
-                                                              "This message will not be signed.\n"
-                                                              "Sending unsigned message might violate site policy.\n"
-                                                              "Sign message instead?"); // oh, I hate this...
+                                                                "This message will not be signed.\n"
+                                                                "Sending unsigned message might violate site policy.\n"
+                                                                "Sign message instead?"); // oh, I hate this...
             const QString buttonText = sign && !doSignCompletely ? i18n("&Sign All Parts") : i18n("&Sign");
             switch (dialogDelegate->warningTwoActionsCancel(msg,
                                                             i18nc("@title:window", "Unsigned-Message Warning"),
@@ -831,13 +831,13 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
     case Kleo::Ask: {
         // the user wants to be asked or has to be asked
         const QString msg = opportunistic ? i18n(
-                                "Valid trusted encryption keys were found for all recipients.\n"
-                                "Encrypt this message?")
+                                                "Valid trusted encryption keys were found for all recipients.\n"
+                                                "Encrypt this message?")
                                           : i18n(
-                                              "Examination of the recipient's encryption preferences "
-                                              "yielded that you be asked whether or not to encrypt "
-                                              "this message.\n"
-                                              "Encrypt this message?");
+                                                "Examination of the recipient's encryption preferences "
+                                                "yielded that you be asked whether or not to encrypt "
+                                                "this message.\n"
+                                                "Encrypt this message?");
         switch (dialogDelegate->warningTwoActionsCancel(msg,
                                                         i18nc("@title:window", "Encrypt Message?"),
                                                         KGuiItem(signSomething ? i18n("Sign && &Encrypt") : i18n("&Encrypt")),
@@ -904,15 +904,15 @@ bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
     if (!encrypt || !doEncryptCompletely) {
         if (cryptoWarningUnencrypted(identity)) {
             const QString msg = !doEncryptCompletely ? i18n(
-                                    "Some parts of this message will not be encrypted.\n"
-                                    "Sending only partially encrypted messages might violate "
-                                    "site policy and/or leak sensitive information.\n"
-                                    "Encrypt all parts instead?") // oh, I hate this...
+                                                           "Some parts of this message will not be encrypted.\n"
+                                                           "Sending only partially encrypted messages might violate "
+                                                           "site policy and/or leak sensitive information.\n"
+                                                           "Encrypt all parts instead?") // oh, I hate this...
                                                      : i18n(
-                                                         "This message will not be encrypted.\n"
-                                                         "Sending unencrypted messages might violate site policy and/or "
-                                                         "leak sensitive information.\n"
-                                                         "Encrypt messages instead?"); // oh, I hate this...
+                                                           "This message will not be encrypted.\n"
+                                                           "Sending unencrypted messages might violate site policy and/or "
+                                                           "leak sensitive information.\n"
+                                                           "Encrypt messages instead?"); // oh, I hate this...
             const QString buttonText = !doEncryptCompletely ? i18n("&Encrypt All Parts") : i18n("&Encrypt");
             switch (dialogDelegate->warningTwoActionsCancel(msg,
                                                             i18n("Unencrypted Message Warning"),
