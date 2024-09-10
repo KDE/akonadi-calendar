@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-07-04 11:50+0200\n"
+"PO-Revision-Date: 2024-09-09 12:33+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1152,7 +1152,7 @@ msgstr "Cr&ypta omne partes"
 #: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr "Aviso de message nonn cryptate"
+msgstr "Aviso de message non cryptate"
 
 #: mailscheduler_p.cpp:199
 #, kde-format
