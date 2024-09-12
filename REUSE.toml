@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "akonadi-calendar"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/akonadi-calendar"
+
+[[annotations]]
+path = ["autotests/itip_data/**", "autotests/unittestenv/**", "TODO"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
