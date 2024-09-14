@@ -111,11 +111,10 @@ SuspendDialog::SuspendDialog(const KSharedConfig::Ptr &config, const QString &ti
     suspendButton->setToolTip(i18nc("@info:tooltip", "Remind me again after the specified interval"));
     suspendButton->setWhatsThis(i18nc("@info:whatsthis", "Press this button to be reminded again about this incidence after the specified amount of time."));
 
-    auto dismissButton = new QPushButton(this);
-    buttonBox->addButton(dismissButton, QDialogButtonBox::RejectRole);
-    dismissButton->setText(i18nc("@action:button", "Cancel"));
-    dismissButton->setToolTip(i18nc("@info:tooltip", "Cancel reminding later, i.e. dismiss the reminder forever"));
-    dismissButton->setWhatsThis(i18nc("@info:whatsthis", "Press this button to silence the reminder forever."));
+    auto cancelButton = new QPushButton(this);
+    buttonBox->addButton(cancelButton, QDialogButtonBox::RejectRole);
+    cancelButton->setText(i18nc("@action:button", "Cancel"));
+    cancelButton->setToolTip(i18nc("@info:tooltip", "Cancel reminding later, show the notification again"));
 
     connect(suspendButton, &QPushButton::clicked, this, [this, suspendSpin, suspendUnitCombo]() {
         KConfigGroup configGroup(m_config, QStringLiteral("Suspend"));
@@ -125,8 +124,8 @@ SuspendDialog::SuspendDialog(const KSharedConfig::Ptr &config, const QString &ti
         Q_EMIT suspendRequested(delayFromGui(suspendSpin, suspendUnitCombo));
         close();
     });
-    connect(dismissButton, &QPushButton::clicked, this, [this]() {
-        Q_EMIT dismissRequested();
+    connect(cancelButton, &QPushButton::clicked, this, [this]() {
+        Q_EMIT cancelRequested();
         close();
     });
 }

@@ -139,7 +139,10 @@ void KalendarAlarmClient::suspend(AlarmNotification *notification, std::chrono::
     storeNotification(notification);
 }
 
-void KalendarAlarmClient::askAndSuspend(AlarmNotification *notification, const QString &title, const QString &text)
+void KalendarAlarmClient::askAndSuspend(AlarmNotification *notification,
+                                        const QString &title,
+                                        const QString &text,
+                                        const KCalendarCore::Incidence::Ptr &incidence)
 {
     auto dialog = new SuspendDialog(m_config, title, text, nullptr);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
@@ -148,8 +151,9 @@ void KalendarAlarmClient::askAndSuspend(AlarmNotification *notification, const Q
     QObject::connect(dialog, &SuspendDialog::suspendRequested, this, [this, notification](std::chrono::seconds seconds) {
         suspend(notification, seconds);
     });
-    QObject::connect(dialog, &SuspendDialog::dismissRequested, this, [this, notification]() {
-        dismiss(notification);
+    QObject::connect(dialog, &SuspendDialog::cancelRequested, this, [this, notification, incidence]() {
+        // User pressed Cancel, show notification again so they can choose something else
+        notification->send(this, incidence);
     });
 }
 

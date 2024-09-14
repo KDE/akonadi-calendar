@@ -31,7 +31,7 @@ public:
     /** Show incidence in the calendar application. */
     void showIncidence(const QString &uid, const QDateTime &occurrence, const QString &xdgActivationToken);
 
-    void askAndSuspend(AlarmNotification *notification, const QString &title, const QString &text);
+    void askAndSuspend(AlarmNotification *notification, const QString &title, const QString &text, const KCalendarCore::Incidence::Ptr &incidence);
 
 private:
     void deferredInit();

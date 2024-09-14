@@ -116,19 +116,19 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
 
     if (!notificationExists) {
         auto remindIn5MAction = m_notification->addAction(i18n("Remind in 5 mins"));
-        QObject::connect(remindIn5MAction, &KNotificationAction::activated, remindIn5MAction, [this, client] {
+        QObject::connect(remindIn5MAction, &KNotificationAction::activated, client, [this, client] {
             QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
             client->suspend(this, 5min);
         });
 
-        auto remindIn1hAction = m_notification->addAction(i18n("Remind later..."));
-        QObject::connect(remindIn1hAction, &KNotificationAction::activated, remindIn1hAction, [this, client, title] {
+        auto remindLaterAction = m_notification->addAction(i18n("Remind later..."));
+        QObject::connect(remindLaterAction, &KNotificationAction::activated, client, [this, client, title, incidence] {
             QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
-            client->askAndSuspend(this, title, m_text);
+            client->askAndSuspend(this, title, m_text, incidence);
         });
 
         auto dismissAction = m_notification->addAction(i18nc("dismiss a reminder notification for an event", "Dismiss"));
-        QObject::connect(dismissAction, &KNotificationAction::activated, dismissAction, [this, client] {
+        QObject::connect(dismissAction, &KNotificationAction::activated, client, [this, client] {
             QObject::disconnect(m_notification, &KNotification::closed, client, nullptr);
             client->dismiss(this);
         });

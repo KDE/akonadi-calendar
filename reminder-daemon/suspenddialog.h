@@ -24,7 +24,7 @@ public:
 
 Q_SIGNALS:
     void suspendRequested(std::chrono::seconds seconds);
-    void dismissRequested();
+    void cancelRequested();
 
 private:
     KSharedConfig::Ptr m_config;
