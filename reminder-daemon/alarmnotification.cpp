@@ -236,3 +236,13 @@ void AlarmNotification::setWasSuspended(bool newWasSuspended)
 {
     m_wasSuspended = newWasSuspended;
 }
+
+bool AlarmNotification::isRemindLaterDialogVisible() const
+{
+    return m_remindLaterDialogVisible;
+}
+
+void AlarmNotification::setRemindLaterDialogVisible(bool visible)
+{
+    m_remindLaterDialogVisible = visible;
+}

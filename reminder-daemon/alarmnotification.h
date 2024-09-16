@@ -65,6 +65,9 @@ public:
 
     void setWasSuspended(bool newWasSuspended);
 
+    [[nodiscard]] bool isRemindLaterDialogVisible() const;
+    void setRemindLaterDialogVisible(bool visible);
+
 private:
     [[nodiscard]] bool hasValidContextAction() const;
     [[nodiscard]] QString determineContextAction(const KCalendarCore::Incidence::Ptr &incidence);
@@ -76,4 +79,5 @@ private:
     QDateTime m_remind_at;
     QUrl m_contextAction;
     bool m_wasSuspended = false;
+    bool m_remindLaterDialogVisible = false;
 };

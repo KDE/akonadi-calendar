@@ -144,14 +144,17 @@ void KalendarAlarmClient::askAndSuspend(AlarmNotification *notification,
                                         const QString &text,
                                         const KCalendarCore::Incidence::Ptr &incidence)
 {
+    notification->setRemindLaterDialogVisible(true);
     auto dialog = new SuspendDialog(m_config, title, text, nullptr);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
     dialog->activateWindow(); // don't let focus prevention get in the way
     QObject::connect(dialog, &SuspendDialog::suspendRequested, this, [this, notification](std::chrono::seconds seconds) {
+        notification->setRemindLaterDialogVisible(false);
         suspend(notification, seconds);
     });
     QObject::connect(dialog, &SuspendDialog::cancelRequested, this, [this, notification, incidence]() {
+        notification->setRemindLaterDialogVisible(false);
         // User pressed Cancel, show notification again so they can choose something else
         notification->send(this, incidence);
     });
@@ -347,7 +350,7 @@ void KalendarAlarmClient::checkAlarms()
             continue;
         }
 
-        if (notification->remindAt() <= mLastChecked) {
+        if (notification->remindAt() <= mLastChecked && !notification->isRemindLaterDialogVisible()) {
             const auto incidence = mCalendar->incidence(notification->uid());
             if (incidence) { // can still be null when we get here during the early stages of loading/restoring
                 notification->send(this, incidence);
