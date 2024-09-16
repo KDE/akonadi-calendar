@@ -67,15 +67,13 @@ msgid "KOrganizer Confirmation"
 msgstr "Επιβεβαίωση του KOrganizer"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Αποκοπή αυτού μόνο"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Αποκοπή όλων"
@@ -91,15 +89,13 @@ msgstr ""
 "της;"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Αντιγραφή αυτού μόνο"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Αντιγραφή όλων"
@@ -819,8 +815,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Αποστολή ενημέρωσης"
@@ -959,8 +954,7 @@ msgid "&Sign"
 msgstr "&Υπογραφή"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "Να μη&ν υπογραφεί"
@@ -984,15 +978,13 @@ msgstr ""
 "κλειδιά υπογραφής για αυτή την ταυτότητα ."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Αποστολή Χωρίς Υπογραφή;"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Αποστολή &χωρίς υπογραφή"
@@ -1032,15 +1024,13 @@ msgid "&Sign"
 msgstr "&Υπογραφή"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Προειδοποίηση ανυπόγραφου μηνύματος"
 
 #: mailclient_p.cpp:781
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&Αποστολή ως έχει"
@@ -1066,8 +1056,7 @@ msgstr ""
 "Να κρυπτογραφηθεί αυτό το μήνυμα;"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Να κρυπτογραφηθεί το μήνυμα;"
@@ -1107,15 +1096,13 @@ msgid "Encrypt Message?"
 msgstr "Να κρυπτογραφηθεί το μήνυμα;"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Κρυπτογράφηση"
 
 #: mailclient_p.cpp:870
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "Να μη&ν κρυπτογραφηθεί"
@@ -1137,8 +1124,7 @@ msgid "Send Unencrypted?"
 msgstr "Να αποσταλεί μη κρυπτογραφημένο;"
 
 #: mailclient_p.cpp:893
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Αποστολή μη κρυπτογρ&αφημένου"
@@ -1191,8 +1177,7 @@ msgid "Select Addresses"
 msgstr "Επιλογή διευθύνσεων"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Αποστολή μηνύματος αλληλογραφίας σε αυτούς τους παραλήπτες"
@@ -1207,8 +1192,7 @@ msgstr ""
 "παραλήπτες που έχετε δώσει."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Ακύρωση της επιλογής παραληπτών και του μηνύματος"
@@ -1322,10 +1306,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&Επιλογή..."
+msgstr "&Επιλογή…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1366,15 +1349,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "Αυτό το πεδίο περιέχει τη διεύθυνση αλληλογραφίας του παραλήπτη"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(EmptyName)"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(EmptyEmail)"
@@ -1547,10 +1528,9 @@ msgid "Open Invitations"
 msgstr "Ανοικτές προσκλήσεις"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "Προσθήκη φακέλου..."
+msgstr "Προσθήκη φακέλου…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1656,10 +1636,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Αποκοπή των επιλεγμένων φακέλων ημερολογίου από το ημερολόγιο."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "Ιδιότητες φακέλου..."
+msgstr "Ιδιότητες φακέλου…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1737,11 +1716,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Αποκοπή των επιλεγμένων γεγονότων από το ημερολόγιο."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Προσθήκη ημερολογίου"
+msgstr "Προσθήκη ημερολογίο&υ…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1802,10 +1779,9 @@ msgstr[0] "Να διαγραφεί το ημερολόγιο;"
 msgstr[1] "Να διαγραφούν τα ημερολόγια;"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "Ιδιότητες ημερολογίου..."
+msgstr "Ιδιότητες ημερολογίου…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1879,10 +1855,9 @@ msgid "Move Event To"
 msgstr "Μετακίνηση γεγονότος σε"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "Επεξεργασία γεγονότος..."
+msgstr "Επεξεργασία γεγονότος…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1916,10 +1891,9 @@ msgid "Move To-do To"
 msgstr "Μετακίνηση εργασίας προς υλοποίηση σε"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "Επεξεργασία εργασίας προς υλοποίηση..."
+msgstr "Επεξεργασία εργασίας προς υλοποίηση…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1953,16 +1927,14 @@ msgid "Move Journal To"
 msgstr "Μετακίνηση χρονικού σε"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "Επεξεργασία χρονικού..."
+msgstr "Επεξεργασία χρονικού…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "Νέο γεγ&ονός..."
+msgstr "Νέο γεγ&ονός…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1970,10 +1942,9 @@ msgid "Create a new event"
 msgstr "Δημιουργία νέου γεγονότος"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "Νέα εργασία προς υ&λοποίηση..."
+msgstr "Νέα εργασία προς υ&λοποίηση…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1981,10 +1952,9 @@ msgid "Create a new To-do"
 msgstr "Δημιουργία νέας εργασίας προς υλοποίηση"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Νέα υποεργασία προς υλο&ποίηση..."
+msgstr "Νέα υποεργασία προς υλο&ποίηση…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1992,10 +1962,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Δημιουργία νέας υποεργασίας προς υλοποίηση"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "Νέο &χρονικό..."
+msgstr "Νέο &χρονικό…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -2003,10 +1972,9 @@ msgid "Create a new Journal"
 msgstr "Δημιουργία νέου χρονικού"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "&Επεξεργασία..."
+msgstr "&Επεξεργασία…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
