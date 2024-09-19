@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
 "PO-Revision-Date: 2023-10-04 19:05+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -245,13 +245,7 @@ msgstr ""
 #: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Cancel reminding later, i.e. dismiss the reminder forever"
-msgstr ""
-
-#: suspenddialog.cpp:118
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Press this button to silence the reminder forever."
+msgid "Cancel reminding later, show the notification again"
 msgstr ""
 
 #~ msgid "Remind in 1 hour"

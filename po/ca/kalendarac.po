@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
 "PO-Revision-Date: 2024-03-15 09:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -248,18 +248,18 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 #: suspenddialog.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgctxt "@info:tooltip"
-msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgid "Cancel reminding later, show the notification again"
 msgstr ""
 "Cancel·la el recordatori més tard, és a dir, descarta el recordatori per "
 "sempre"
 
-#: suspenddialog.cpp:118
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Press this button to silence the reminder forever."
-msgstr "Premeu aquest botó per a silenciar el recordatori per sempre."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to silence the reminder forever."
+#~ msgstr "Premeu aquest botó per a silenciar el recordatori per sempre."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Recorda d'aquí a 1 hora"

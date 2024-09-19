@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
 "PO-Revision-Date: 2024-05-07 08:08+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -243,17 +243,17 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #: suspenddialog.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgctxt "@info:tooltip"
-msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgid "Cancel reminding later, show the notification again"
 msgstr ""
 "Annuler la rappel plus tard, c'est-à-dire rejeter le rappel pour toujours"
 
-#: suspenddialog.cpp:118
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Press this button to silence the reminder forever."
-msgstr "Appuyez sur ce bouton pour couper le rappel pour toujours."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to silence the reminder forever."
+#~ msgstr "Appuyez sur ce bouton pour couper le rappel pour toujours."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Rappel dans une heure"

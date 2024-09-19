@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
 "PO-Revision-Date: 2024-08-14 00:03+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -250,13 +250,13 @@ msgid "Cancel"
 msgstr "Atsisakyti"
 
 #: suspenddialog.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgctxt "@info:tooltip"
-msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgid "Cancel reminding later, show the notification again"
 msgstr "Atsisakyti priminimo vėliau, t.y. atmesti priminimą visam laikui"
 
-#: suspenddialog.cpp:118
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Press this button to silence the reminder forever."
-msgstr "Paspauskite šį mygtuką, norėdami visam laikui nutildyti priminimą."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to silence the reminder forever."
+#~ msgstr "Paspauskite šį mygtuką, norėdami visam laikui nutildyti priminimą."

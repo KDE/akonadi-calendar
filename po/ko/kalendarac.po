@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
 "PO-Revision-Date: 2024-08-19 21:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -242,16 +242,16 @@ msgid "Cancel"
 msgstr "취소"
 
 #: suspenddialog.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgctxt "@info:tooltip"
-msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgid "Cancel reminding later, show the notification again"
 msgstr "나중에 알림을 취소하며 더 이상 알리지 않음"
 
-#: suspenddialog.cpp:118
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Press this button to silence the reminder forever."
-msgstr "이 단추를 클릭하면 알림을 완전히 취소합니다."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to silence the reminder forever."
+#~ msgstr "이 단추를 클릭하면 알림을 완전히 취소합니다."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "1시간 후에 다시 알림"

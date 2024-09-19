@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
 "PO-Revision-Date: 2024-03-15 17:48+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -249,16 +249,16 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: suspenddialog.cpp:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
 msgctxt "@info:tooltip"
-msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+msgid "Cancel reminding later, show the notification again"
 msgstr "Скасувати нагадування, тобто відкинути нагадування назавжди"
 
-#: suspenddialog.cpp:118
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Press this button to silence the reminder forever."
-msgstr "Натисніть цю кнопку, щоб припинити нагадування назавжди."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to silence the reminder forever."
+#~ msgstr "Натисніть цю кнопку, щоб припинити нагадування назавжди."
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Нагадати за 1 годину"
