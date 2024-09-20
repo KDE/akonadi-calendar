@@ -4,20 +4,21 @@
 #
 # Stelios <sstavra@gmail.com>, 2012, 2020, 2022.
 # George Stefanakis <george.stefanakis@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-08-21 22:29+0300\n"
-"Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-19 14:58+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -57,7 +58,7 @@ msgid ""
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
 "Το αντικείμενο «%1» περιέχει υπο-εργασίες προς υλοποίηση. Θέλετε να το "
-"αποκόψετε και να μετατέψετε τις υπο-εργασίες σε ανεξάρτητες ή να αποκόψετε "
+"αποκόψετε και να μετατρέψετε τις υπο-εργασίες σε ανεξάρτητες ή να αποκόψετε "
 "την εργασία και όλες τις υπο-εργασίες της;"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
@@ -284,7 +285,7 @@ msgstr ""
 #: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr "Αποστολή ψευδο αντιπροτάσεων παρόμοιων με του Outlook"
+msgstr "Αποστολή ψευδό αντιπροτάσεων παρόμοιων με του Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:105
@@ -400,7 +401,7 @@ msgid ""
 "Failed to download free/busy data from: %1\n"
 "Reason: %2"
 msgstr ""
-"Αποτυχία λήψης δεδομένω διαθεσιμότητα από: %1\n"
+"Αποτυχία λήψης δεδομένων διαθεσιμότητα από: %1\n"
 "Αιτία: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
@@ -423,9 +424,9 @@ msgid ""
 "contact your system administrator.</p></qt>"
 msgstr ""
 "<qt><p>Αδυναμία αποστολής από το λογισμικό της λίστας διαθεσιμότητα στο URL "
-"'%1'. Ίσως υπάρχει πρόβλημα με τα δικαιώματα πρόσβασης, ή να έσετε δώσει "
+"'%1'. Ίσως υπάρχει πρόβλημα με τα δικαιώματα πρόσβασης, ή να έχετε δώσει "
 "λάθος URL. Το σύστημα αναφέρει: <em>%2</em>.</p><p>Ελέγξτε το URL ή "
-"επικοινωνήστε με υον διαχειριστή του συστήματος.</p></qt>"
+"επικοινωνήστε με τον διαχειριστή του συστήματος.</p></qt>"
 
 #: freebusymanager.cpp:619
 #, kde-format
@@ -452,8 +453,8 @@ msgid ""
 msgstr ""
 "<qt><p>Δεν έχει διαμορφωθεί URL για την αποστολή της λίστας διαθεσιμότητας. "
 "Ρυθμίστε το στο διάλογο διαμόρφωσης του KOrganizer, στη σελίδα "
-"«Διαθεσιμότητα».</p><p>Επικοινωνήστε με υον διαχειριστή του συστήματος για "
-"το σωστό URL και τις λεπτομέρεις του λογαριασμού.</p></qt>"
+"«Διαθεσιμότητα».</p><p>Επικοινωνήστε με τον διαχειριστή του συστήματος για "
+"το σωστό URL και τις λεπτομέρειες του λογαριασμού.</p></qt>"
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -904,7 +905,7 @@ msgstr "Να εγκαταλειφθεί η ενημέρωση"
 #: mailclient_p.cpp:377 mailclient_p.cpp:415
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr "Δεν υππαρχουν συμμετέχοντες στην αλληλογραφία"
+msgstr "Δεν υπάρχουν συμμετέχοντες στην αλληλογραφία"
 
 #: mailclient_p.cpp:424
 #, kde-format
@@ -919,7 +920,7 @@ msgstr "Μήνυμα διαθεσιμότητας"
 #: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
-msgstr "Σφάλμα κατά τη δημιουργία μετσφοράς"
+msgstr "Σφάλμα κατά τη δημιουργία μεταφοράς"
 
 #: mailclient_p.cpp:647
 #, kde-format
@@ -1258,7 +1259,7 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
-"Με κλκι σε αυτό το κουμπί θα μπορείτε να δώσετε ένα όνομα και μια διεύθυνση "
+"Με κλικ σε αυτό το κουμπί θα μπορείτε να δώσετε ένα όνομα και μια διεύθυνση "
 "ηλεκτρονικής αλληλογραφίας για να προστεθεί ένας νέος παραλήπτης στη λίστα"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
