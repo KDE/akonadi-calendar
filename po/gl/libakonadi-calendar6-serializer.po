@@ -1,22 +1,23 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Xosé <xosecalvo@gmail.com>, 2011.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017.
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-27 00:45+0000\n"
-"PO-Revision-Date: 2017-10-04 21:00+0100\n"
+"PO-Revision-Date: 2024-09-22 00:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadi_serializer_kcalcore.cpp:175
 #, kde-format
@@ -33,6 +34,7 @@ msgstr "Non"
 msgid "Attendees"
 msgstr "Asistentes"
 
+# skip-rule: proposta-gl-organizador
 #: akonadi_serializer_kcalcore.cpp:202
 #, kde-format
 msgid "Organizer"
@@ -41,7 +43,7 @@ msgstr "Organizador"
 #: akonadi_serializer_kcalcore.cpp:206
 #, kde-format
 msgid "UID"
-msgstr "Identificador do usuario"
+msgstr "Identificador de persoa usuaria"
 
 #: akonadi_serializer_kcalcore.cpp:210
 #, kde-format
@@ -127,7 +129,7 @@ msgstr "Creación"
 #: akonadi_serializer_kcalcore.cpp:264
 #, kde-format
 msgid "Related Uid"
-msgstr "Identificador do usuario relacionado"
+msgstr "Identificador de persoa usuaria relacionado"
 
 #: akonadi_serializer_kcalcore.cpp:271
 #, kde-format

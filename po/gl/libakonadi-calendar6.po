@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 12:20+0200\n"
+"PO-Revision-Date: 2024-09-22 00:20+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -165,13 +165,13 @@ msgstr "O URL onde publicar a información de dispoñíbel/ocupado."
 #: calendarsettings.kcfg:28
 #, kde-format
 msgid "Free/Busy Publish Username"
-msgstr "Nome de usuaria de publicación da dispoñibilidade"
+msgstr "Nome de persoa usuaria de publicación da dispoñibilidade"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:29
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr "O nome de usuaria que publica a información de dispoñíbel/ocupado."
+msgstr "O nome de persoa usuaria que publica a información de dispoñibilidade."
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:33
@@ -221,7 +221,7 @@ msgstr "URL do que obter da dispoñibilidade"
 #: calendarsettings.kcfg:60
 #, kde-format
 msgid "Free/Busy Retrieval Username"
-msgstr "Nome de usuaria que obtén a dispoñibilidade"
+msgstr "Nome de persoa usuaria que obtén a dispoñibilidade"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:64
