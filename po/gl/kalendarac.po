@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-15 00:38+0000\n"
-"PO-Revision-Date: 2024-03-16 23:23+0100\n"
+"PO-Revision-Date: 2024-09-22 00:18+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -45,7 +45,7 @@ msgstr "Evento"
 #: alarmnotification.cpp:60
 #, kde-format
 msgid "Task due at %1"
-msgstr "Tarefa con %1 como data límite"
+msgstr "Tarefa coa data límite %1"
 
 #: alarmnotification.cpp:64
 #, kde-format
@@ -203,7 +203,7 @@ msgstr "semanas"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr "Suspender as lembranzas empregando esta unidade de tempo."
+msgstr "Suspender as lembranzas con esta unidade de tempo."
 
 #: suspenddialog.cpp:98
 #, kde-format
@@ -213,9 +213,9 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
-"Cada unha das lembranzas das incidencias seleccionadas hase suspender "
-"empregando esta unidade de tempo. Pode axustar o número de unidades de tempo "
-"no campo que hai a carón."
+"Cada unha das lembranzas das incidencias seleccionadas hase suspender con "
+"esta unidade de tempo. Pode definir o número de unidades de tempo no campo "
+"que hai a carón."
 
 #: suspenddialog.cpp:111
 #, kde-format
