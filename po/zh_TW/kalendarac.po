@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2024-03-20 18:12+0900\n"
+"PO-Revision-Date: 2024-09-23 20:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -244,12 +244,10 @@ msgid "Cancel"
 msgstr "取消"
 
 #: suspenddialog.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr "取消稍後提醒，意即永遠忽略提醒"
+msgstr "取消稍後提醒，而重新顯示通知"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "Press this button to silence the reminder forever."
