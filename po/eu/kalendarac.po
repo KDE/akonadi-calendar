@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2024-03-23 22:50+0100\n"
+"PO-Revision-Date: 2024-09-25 21:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -249,12 +249,10 @@ msgid "Cancel"
 msgstr "Utzi"
 
 #: suspenddialog.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr "Utzi geroago gogoraraztea, adib. oroigarria betiko baztertu"
+msgstr "Ezeztatu geroago gogoraraztea, erakutsi jakinarazpena berriro"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "Press this button to silence the reminder forever."

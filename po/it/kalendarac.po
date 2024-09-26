@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2024-03-15 13:37+0100\n"
+"PO-Revision-Date: 2024-09-20 06:25+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -246,14 +246,10 @@ msgid "Cancel"
 msgstr "Annulla"
 
 #: suspenddialog.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr ""
-"Annulla il promemoria in un secondo momento, ovvero elimina il promemoria "
-"per sempre"
+msgstr "Annulla il promemoria in seguito, mostra di nuovo la notifica"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "Press this button to silence the reminder forever."
