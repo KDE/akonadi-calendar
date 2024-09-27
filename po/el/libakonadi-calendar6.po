@@ -5,20 +5,21 @@
 # Stelios <sstavra@gmail.com>, 2012, 2020, 2022.
 # George Stefanakis <george.stefanakis@gmail.com>, 2023.
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2024 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-09-19 14:58+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2024-09-26 11:12+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -255,23 +256,24 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Απορριφθείσες προσκλήσεις"
+msgstr "Απόκρυψη προσκλήσεων που απορρίφθηκαν"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Επιλέξτε αυτό το πλαίσιο για να αποκρύψετε τις απορριφθείσες προσκλήσεις "
+"στις προβολές συμβάντων."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"Εμφάνιση υπενθυμίσεων μόνο για εκδηλώσεις που διοργανώνω ή παρευρίσκομαι"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -280,6 +282,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Επιλέξτε αυτό για να λαμβάνετε υπενθυμίσεις μόνο για εκδηλώσεις που είστε ο "
+"διοργανωτής ή που παρευρίσκεστε."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100

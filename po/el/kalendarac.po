@@ -1,31 +1,32 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
 # Stelios <sstavra@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2024 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2022-12-29 16:26+0200\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"PO-Revision-Date: 2024-09-26 11:11+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Stelios"
+msgstr "Stelios, Πέτρος Βιδάλης"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sstavra@gmail.com"
+msgstr "sstavra@gmail.com, pvidalis@gmail.com"
 
 #: alarmnotification.cpp:50
 #, kde-format
@@ -97,11 +98,9 @@ msgid "Remind in 5 mins"
 msgstr "Υπενθύμιση σε 5 λεπτά"
 
 #: alarmnotification.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgid "Remind later..."
-msgstr "Υπενθυμίσεις"
+msgstr "Υπενθύμιση αργότερα..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -131,10 +130,9 @@ msgid "Calendar Reminder Service"
 msgstr "Υπηρεσία υπενθυμίσεων του ημερολογίου"
 
 #: kalendaracmain.cpp:32
-#, fuzzy, kde-format
-#| msgid "(c) KDE Community 2021-2022"
+#, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) Η Κοινότητα του KDE 2021-2022"
+msgstr "(c) Η Κοινότητα του KDE 2021-2024"
 
 #: kalendaracmain.cpp:33
 #, kde-format
@@ -158,13 +156,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "&Διάρκεια αναστολής:"
 
 #: suspenddialog.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Διακοπή υπενθυμίσεων για αυτό το χρονικό διάστημα"
 
 #: suspenddialog.cpp:83
 #, kde-format
@@ -174,36 +172,39 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Κάθε υπενθύμιση για τα επιλεγμένα περιστατικά θα ανασταλεί από αυτόν τον "
+"αριθμότων χρονικών μονάδων. Μπορείτε να επιλέξετε τις μονάδες χρόνου "
+"(συνήθως λεπτά) στοπαρακείμενος επιλογέα."
 
 #: suspenddialog.cpp:91
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
-msgstr ""
+msgstr "λεπτό(ά)"
 
 #: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
-msgstr ""
+msgstr "ώρα(ες)"
 
 #: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
-msgstr ""
+msgstr "ημέρα(ες)"
 
 #: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
-msgstr ""
+msgstr "εβδομάδα(ες)"
 
 #: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Διακόψτε τις υπενθυμίσεις χρησιμοποιώντας αυτήν τη μονάδα χρόνου"
 
 #: suspenddialog.cpp:97
 #, kde-format
@@ -213,20 +214,21 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Κάθε υπενθύμιση για τα επιλεγμένα περιστατικά θα ανασταλεί χρησιμοποιώντας "
+"αυτήν την μονάδα χρόνου. Μπορείτε να ορίσετε τον αριθμό των μονάδων χρόνου "
+"στον παρακάτω πλαίσιο εισαγωγής."
 
 #: suspenddialog.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Reminders"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
-msgstr "Υπενθυμίσεις"
+msgstr "Υπενθύμιση αργότερα"
 
 #: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Υπενθύμιση ξανά μετά το καθορισμένο διάστημα"
 
 #: suspenddialog.cpp:112
 #, kde-format
@@ -235,18 +237,20 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Πατήστε αυτό το κουμπί για να λάβετε ξανά υπενθύμιση σχετικά με αυτό το "
+"περιστατικό μετά τοκαθορισμένο χρονικό διάστημα."
 
 #: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Ακύρωση"
 
 #: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr ""
+msgstr "Ακυρώστε την υπενθύμιση αργότερα, εμφανίστε ξανά την ειδοποίηση"
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Υπενθύμιση σε 1 ώρα"

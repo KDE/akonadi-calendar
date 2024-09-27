@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# Wantoyèk <wantoyek@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Wantoyèk <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2022-07-07 08:20+0700\n"
+"PO-Revision-Date: 2024-09-26 23:28+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -60,22 +60,19 @@ msgstr ""
 "semua subrencananya?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
-#, fuzzy, kde-format
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Konfirmasi KOrganizer"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Potong Ini Saja"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Potong semua"
@@ -90,15 +87,13 @@ msgstr ""
 "atau menyalin rencana dengan semua subrencananya?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Salin Ini Saja"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Salin Semua"
@@ -401,11 +396,10 @@ msgstr ""
 "Alasannya: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
-#, fuzzy, kde-format
-#| msgid "Free/busy retrieval error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr "Galat pengambilan senggang/sibuk"
+msgstr "Galat Pengambilan Senggang/Sibuk"
 
 #: freebusymanager.cpp:403
 #, kde-format
@@ -431,16 +425,15 @@ msgid "The free/busy information was successfully sent."
 msgstr "Informasi senggang/sibuk berhasil dikirim."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:136
-#, fuzzy, kde-format
-#| msgid "Sending Free/Busy"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr "Mengirim Senggang/Sibuk"
+msgstr "Pengiriman Senggang/Sibuk"
 
 #: freebusymanager.cpp:623
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Tak bisa melansir data senggang/sibuk: %1"
+msgstr "Tak bisa menerbitkan data senggang/sibuk: %1"
 
 #: freebusymanager.cpp:747
 #, kde-format
@@ -455,11 +448,10 @@ msgstr ""
 "detail URL dan akun.</p></qt>"
 
 #: freebusymanager.cpp:752
-#, fuzzy, kde-format
-#| msgid "No Free/Busy Upload URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr "Tidak Ada Senggang/Sibuk URL Yang Diunggah"
+msgstr "Tidak Ada URL Unggahan Senggang/Sibuk"
 
 #: freebusymanager.cpp:762
 #, kde-format
@@ -467,8 +459,7 @@ msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Target URL '%1' yang disediakan tidak valid.</qt>"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "Invalid URL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "URL tidak valid"
@@ -663,11 +654,10 @@ msgstr ""
 "grup yang akan dikirim."
 
 #: itiphandler.cpp:273
-#, fuzzy, kde-format
-#| msgid "Message Not Sent"
+#, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr "Pesan Tidak Dikirim"
+msgstr "Pesan Tidak Terkirim"
 
 #: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
 #, kde-format
@@ -718,23 +708,21 @@ msgid "The item information was successfully sent."
 msgstr "Informasi item telah berhasil dikirim."
 
 #: itiphandler_p.cpp:161
-#, fuzzy, kde-format
-#| msgid "Publishing"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
-msgstr "Melansir"
+msgstr "Penerbitan"
 
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr "Tak bisa melansir item '%1'"
+msgstr "Tak bisa menerbitkan item '%1'"
 
 #: itiphandler_p.cpp:181
-#, fuzzy, kde-format
-#| msgid "Forwarding"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
-msgstr "Meneruskan"
+msgstr "Penerusan"
 
 #: itiphandler_p.cpp:188
 #, kde-format
@@ -742,11 +730,10 @@ msgid "Unable to forward the item '%1'"
 msgstr "Tak bisa meneruskan item '%1'"
 
 #: itiphandler_p.cpp:189
-#, fuzzy, kde-format
-#| msgid "Forwarding Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
-msgstr "Galas Meneruskan"
+msgstr "Galat Penerusan"
 
 #: itiphandlerhelper_p.cpp:37
 #, kde-format
@@ -754,8 +741,7 @@ msgid "Proposed new meeting time: %1 - %2"
 msgstr "Waktu rapat baru yang diajukan: %1 - %2"
 
 #: itiphandlerhelper_p.cpp:69
-#, fuzzy, kde-format
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Email Penjadwalan Grup"
@@ -812,8 +798,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Kirim Pembaruan"
@@ -937,25 +922,21 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:706 mailclient_p.cpp:732
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Sign Message?"
-msgstr "Kirim Pesan"
+msgstr "Apakah Tanda Tangani Pesan?"
 
 #: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
-msgstr ""
+msgstr "&Tanda tangani"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
-msgstr "Jangan Kirim"
+msgstr "&Jangan Tanda Tangani"
 
 #: mailclient_p.cpp:728
 #, kde-format
@@ -972,18 +953,16 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
-msgstr "Kirim Pembaruan"
+msgstr "Apakah Kirim Tak Tertanda Tangani?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr "Kirim Pembaruan"
+msgstr "Kirim Tak &Tertanda Tangani"
 
 #: mailclient_p.cpp:770
 #, kde-format
@@ -1009,7 +988,7 @@ msgstr ""
 #: mailclient_p.cpp:777
 #, kde-format
 msgid "&Sign"
-msgstr ""
+msgstr "&Tanda tangani"
 
 #: mailclient_p.cpp:779
 #, kde-format
@@ -1039,12 +1018,10 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
-msgstr "Kirim Pesan"
+msgstr "Apakah Enkripsi Pesan?"
 
 #: mailclient_p.cpp:843
 #, kde-format
@@ -1054,7 +1031,7 @@ msgstr ""
 #: mailclient_p.cpp:843 mailclient_p.cpp:916
 #, kde-format
 msgid "&Encrypt"
-msgstr ""
+msgstr "&Enkripsi"
 
 #: mailclient_p.cpp:844 mailclient_p.cpp:920
 #, kde-format
@@ -1074,27 +1051,21 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:868
-#, fuzzy, kde-format
-#| msgctxt "@option"
-#| msgid "Send Messages"
+#, kde-format
 msgid "Encrypt Message?"
-msgstr "Kirim Pesan"
+msgstr "Apakah Enkripsi Pesan?"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
-msgstr "Jangan Kirim"
+msgstr "&Enkripsi"
 
 #: mailclient_p.cpp:870
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
-msgstr "Jangan Kirim"
+msgstr "&Jangan Enkripsikan"
 
 #: mailclient_p.cpp:889
 #, kde-format
@@ -1105,17 +1076,15 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:893
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgid "Send Unencrypted?"
-msgstr "Kirim Pembaruan"
+msgstr "Apakah Kirim Tak Terenkripsi?"
 
 #: mailclient_p.cpp:893
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr "Kirim Pembaruan"
+msgstr "&Kirim Tak Terenkripsi"
 
 #: mailclient_p.cpp:907
 #, kde-format
@@ -1157,8 +1126,7 @@ msgid "Select Addresses"
 msgstr "Pilih Alamat"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Kirim email kepada para penerima"
@@ -1173,8 +1141,7 @@ msgstr ""
 "yang kamu masukkan."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Batalkan pilihan penerima dan email"
@@ -1196,23 +1163,21 @@ msgstr ""
 "Penjadwalan Grup."
 
 #: publishdialog.cpp:123
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string. %1"
+#, kde-format
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
-"Tak bisa melansir insiden kalender karena string penerima tidak valid. %1"
+"Tidak dapat menerbitkan insiden kalender karena string penerima tidak "
+"valid.\n"
+"%1"
 
 #: publishdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Publishing Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
-msgstr "Pelansiran Galat"
+msgstr "Galat Penerbitan"
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:38
@@ -1291,10 +1256,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&Pilih..."
+msgstr "&Pilih…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1335,18 +1299,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Bidang ini berisi alamat email penerima"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
-msgstr "(NamaKosong)"
+msgstr "(Nama_Kosong)"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
-msgstr "(EmailKosong)"
+msgstr "(Email_Kosong)"
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format
@@ -1387,12 +1349,10 @@ msgstr ""
 "masalah, tapi kami pikir kamu harus tau.</para>"
 
 #: scheduler_p.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cannot find invitation to be updated"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr "Tidak dapat menemukan undangan yang mau diperbarui"
+msgstr "Tidak Bisa Menemukan Undangan yang Mau Diperbarui"
 
 #: scheduler_p.cpp:304
 #, kde-format
@@ -1440,12 +1400,10 @@ msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 ingin menghadiri %2 untuk kepentingan %3."
 
 #: scheduler_p.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Uninvited attendee"
+#, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
-msgstr "Perserta yang tidak diundang"
+msgstr "Perserta yang Tidak Diundang"
 
 #: scheduler_p.cpp:483
 #, kde-format
@@ -1476,12 +1434,10 @@ msgstr ""
 "dalam sebuah pesan pembaruan?"
 
 #: scheduler_p.cpp:510
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Attendee Added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
-msgstr "Peserta Ditambahkan"
+msgstr "Peserta yang Ditambahkan"
 
 #: scheduler_p.cpp:511
 #, kde-format
@@ -1514,17 +1470,16 @@ msgstr "Galat menyimpan obyek senggangsibuk"
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Undangan Ditolak"
 
 #: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Buka Undangan"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "Tambahkan Folder..."
 
@@ -1547,11 +1502,10 @@ msgid "Could not create calendar folder: %1"
 msgstr "Tidak dapat membuat folder kalender: %1"
 
 #: standardcalendaractionmanager.cpp:57
-#, fuzzy, kde-format
-#| msgid "Calendar folder creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
-msgstr "Pembuatan folder kalender gagal"
+msgstr "Gagal Membuat Folder Kalender"
 
 #: standardcalendaractionmanager.cpp:66
 #, kde-format
@@ -1591,15 +1545,12 @@ msgstr[1] ""
 "subfoldernya?"
 
 #: standardcalendaractionmanager.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete calendar folder?"
-#| msgid_plural "Delete calendar folders?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Calendar Folder?"
 msgid_plural "Delete Calendar Folders?"
-msgstr[0] "Hapus folder kalender?"
-msgstr[1] "Hapus folder-folder kalender?"
+msgstr[0] "Apakah Hapus Folder Kalender?"
+msgstr[1] "Apakah Hapus Folder-folder Kalender?"
 
 #: standardcalendaractionmanager.cpp:85
 #, kde-format
@@ -1607,11 +1558,10 @@ msgid "Could not delete calendar folder: %1"
 msgstr "Tidak dapat menghapus folder kalender: %1"
 
 #: standardcalendaractionmanager.cpp:89
-#, fuzzy, kde-format
-#| msgid "Calendar folder deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Deletion Failed"
-msgstr "Penghapusan folder kalender gagal"
+msgstr "Gagal Menghapus Folder Kalender"
 
 #: standardcalendaractionmanager.cpp:93
 #, kde-format
@@ -1638,10 +1588,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Potong folder-folder kalender yang dipilih dari kalender."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "Properti Kalender..."
+msgstr "Properti Folder..."
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1700,11 +1649,10 @@ msgid "Could not delete event: %1"
 msgstr "Tidak dapat menghapus acara: %1"
 
 #: standardcalendaractionmanager.cpp:130
-#, fuzzy, kde-format
-#| msgid "Event deletion failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Event Deletion Failed"
-msgstr "Penghapusan acara gagal"
+msgstr "Gagal Menghapus Acara"
 
 #: standardcalendaractionmanager.cpp:134 standardcalendaractionmanager.cpp:313
 #, kde-format
@@ -1719,11 +1667,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Potong acara yang dipilih dari kalender."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Tambahkan Kalender"
+msgstr "Tambahkan &Kalender..."
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1746,11 +1692,10 @@ msgid "Could not create calendar: %1"
 msgstr "Tidak dapat membuat kalender: %1"
 
 #: standardcalendaractionmanager.cpp:151
-#, fuzzy, kde-format
-#| msgid "Calendar creation failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Calendar Creation Failed"
-msgstr "Pambuatan kalender gagal"
+msgstr "Gagal Membuat Kalender"
 
 #: standardcalendaractionmanager.cpp:156
 #, kde-format
@@ -1784,8 +1729,7 @@ msgstr[0] "Hapus Kalender?"
 msgstr[1] "Hapus Kalender?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
 msgstr "Properti Kalender..."
 
@@ -1832,11 +1776,10 @@ msgid "Could not paste event: %1"
 msgstr "Tidak dapat menempel acara: %1"
 
 #: standardcalendaractionmanager.cpp:192
-#, fuzzy, kde-format
-#| msgid "Paste failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "Gagal tempel"
+msgstr "Gagal Menempel"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
@@ -1859,8 +1802,7 @@ msgid "Move Event To"
 msgstr "Pindahkan Acara Ke"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
 msgstr "Edit Acara..."
 
@@ -1896,8 +1838,7 @@ msgid "Move To-do To"
 msgstr "Pindahkan Rencana Ke"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
 msgstr "Edit Rencana..."
 
@@ -1933,14 +1874,12 @@ msgid "Move Journal To"
 msgstr "Pindahkan Jurnal Ke"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "Edit Journal..."
+msgstr "Edit Jurnal..."
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
 msgstr "A&cara Baru..."
 
@@ -1950,8 +1889,7 @@ msgid "Create a new event"
 msgstr "Membuat acara baru"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
 msgstr "&Rencana Baru..."
 
@@ -1961,10 +1899,9 @@ msgid "Create a new To-do"
 msgstr "Membuat Rencana baru"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Sub-rencana baru..."
+msgstr "Su&b-rencana Baru..."
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1972,10 +1909,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Membuat Sub-rencana baru"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "&Jurnal baru..."
+msgstr "&Jurnal Baru..."
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1983,10 +1919,9 @@ msgid "Create a new Journal"
 msgstr "Membuat Jurnal baru"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "&Edit..."
+msgstr "&Edit…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
@@ -2003,24 +1938,22 @@ msgstr ""
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
-msgstr ""
+msgstr "Iya"
 
 #: todomodel.cpp:164 todomodel.cpp:199
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
-msgstr ""
+msgstr "Tidak"
 
 #: todomodel.cpp:178 todomodel.cpp:215
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ""
+msgstr ","
 
 #: todomodel.cpp:459
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event summary"
-#| msgid "Summary"
+#, kde-format
 msgid "Summary"
 msgstr "Ringkasan"
 
@@ -2030,51 +1963,41 @@ msgid "Recurs"
 msgstr ""
 
 #: todomodel.cpp:463
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item priority"
-#| msgid "Priority"
+#, kde-format
 msgid "Priority"
 msgstr "Prioritas"
 
 #: todomodel.cpp:465
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Rampung"
 
 #: todomodel.cpp:467
-#, fuzzy, kde-format
-#| msgctxt "@title:column calendar event start date and time"
-#| msgid "Start Date and Time"
+#, kde-format
 msgid "Start Date"
-msgstr "Awal Waktu dan Tanggal"
+msgstr "Tanggal Awal"
 
 #: todomodel.cpp:469
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item due date and time"
-#| msgid "Due Date and Time"
+#, kde-format
 msgid "Due Date"
-msgstr "Jatuh Tempo Waktu dan Tanggal"
+msgstr "Tanggal Jatuh Tempo"
 
 #: todomodel.cpp:471
-#, fuzzy, kde-format
-#| msgctxt "@title:column todo item completion in percent"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "Rampung"
+msgstr "Dirampungkan"
 
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Tag"
 
 #: todomodel.cpp:475
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Deskripsi"
 
 #: todopurger.cpp:61
 #, kde-format

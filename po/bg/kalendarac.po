@@ -250,7 +250,3 @@ msgstr "Отказ"
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
 msgstr "Отмяна на напомнянето по-късно,показване на известието отново"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Press this button to silence the reminder forever."
-#~ msgstr "Натиснете този бутон, за да заглушите напомнянето за постоянно."
