@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-09-26 23:28+0700\n"
+"PO-Revision-Date: 2024-09-27 22:46+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -55,7 +55,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"Item \"%1\" memiliki subrencana. Apakah kamu ingin memotong item ini saja "
+"Item \"%1\" memiliki subrencana. Apakah Anda ingin memotong item ini saja "
 "dan membuat semua independen subrencananya, atau memotong rencana dengan "
 "semua subrencananya?"
 
@@ -83,7 +83,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"Item \"%1\" memiliki subrencana. Apakah kamu ingin menyalin item ini saja "
+"Item \"%1\" memiliki subrencana. Apakah Anda ingin menyalin item ini saja "
 "atau menyalin rencana dengan semua subrencananya?"
 
 #: calendarclipboard.cpp:220
@@ -252,19 +252,23 @@ msgstr ""
 #: calendarsettings.kcfg:82
 #, kde-format
 msgid "Hide declined invitations"
-msgstr ""
+msgstr "Sembunyikan undangan yang ditolak"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Centang kotak ini untuk menyembunyikan undangan yang ditolak dalam tampilan "
+"acara."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"Hanya menampilkan ingatan untuk acara yang saya selenggarakan atau saya "
+"hadiri"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -273,6 +277,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Centang ini untuk hanya menerima ingatan untuk acara yang Anda selenggarakan "
+"atau yang Anda hadiri."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
@@ -956,13 +962,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
-msgstr "Apakah Kirim Tak Tertanda Tangani?"
+msgstr "Apakah Kirim Tak Tertandatangani?"
 
 #: mailclient_p.cpp:756
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr "Kirim Tak &Tertanda Tangani"
+msgstr "Kirim Tak &Tertandatangani"
 
 #: mailclient_p.cpp:770
 #, kde-format
@@ -971,6 +977,10 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Beberapa bagian pesan ini belum ditandatangani.\n"
+"Mengirim hanya sebagian pesan yang ditandatangani mungkin melanggar "
+"kebijakan situs.\n"
+"Tanda tangani semua bagian sebagai gantinya?"
 
 #: mailclient_p.cpp:774
 #, kde-format
@@ -1138,7 +1148,7 @@ msgid ""
 "recipients you have entered."
 msgstr ""
 "Mengeklik tombol <b>Oke</b> akan menyebabkan email terkirim kepada penerima "
-"yang kamu masukkan."
+"yang Anda masukkan."
 
 #: publishdialog.cpp:68
 #, kde-format
@@ -1192,7 +1202,7 @@ msgid ""
 "This is a list of all the addresses you have currently selected to receive "
 "the iCalendar invitation."
 msgstr ""
-"Ini adalah daftar semua alamat yang kamu miliki saat ini yang dipilih untuk "
+"Ini adalah daftar semua alamat yang Anda miliki saat ini yang dipilih untuk "
 "menerima undangan iCalendar."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mNew)
@@ -1208,7 +1218,7 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
-"Klik tombol ini dan kamu akan bisa memasukkan nama dan email untuk sebuah "
+"Klik tombol ini dan Anda akan bisa memasukkan nama dan email untuk sebuah "
 "alamat baru untuk menambahkan ke daftar penerima"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
@@ -1251,7 +1261,7 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Klik tombol ini untuk menampilkan dialog lainnya yang mana kamu akan dapat "
+"Klik tombol ini untuk menampilkan dialog lainnya yang mana Anda akan dapat "
 "memilih penerima dari buku alamatmu"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
@@ -1340,13 +1350,13 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
-"<para>Kamu menambahkan pembaruan undangan, tetapi versi item yang lebih lama "
+"<para>Anda menambahkan pembaruan undangan, tetapi versi item yang lebih lama "
 "tidak dapat ditemukan di kalendermu.</para><para>Ini mungkin terjadi karena:"
-"<list><item>penyelenggara tidak menyertakan kamu dalam undangan asli</"
-"item><item>kamu belum menerima undangan asli</item><item> kamu menghapus "
-"undangan asli dari kalendermu</item><item>kamu tidak lagi memiliki akses ke "
+"<list><item>penyelenggara tidak menyertakan Anda dalam undangan asli</"
+"item><item>Anda belum menerima undangan asli</item><item> Anda menghapus "
+"undangan asli dari kalendermu</item><item>Anda tidak lagi memiliki akses ke "
 "kalender yang berisi undangan</item></list></para><para>Ini bukanlah sebuah "
-"masalah, tapi kami pikir kamu harus tau.</para>"
+"masalah, tapi kami pikir Anda harus tau.</para>"
 
 #: scheduler_p.cpp:297
 #, kde-format
@@ -1378,7 +1388,7 @@ msgid ""
 "only or disabled calendar."
 msgstr ""
 "Acara atau tugas tidak dapat disingkirkan dari kalender. Mungkin itu sudah "
-"dihapus atau tidak lagi dimiliki oleh kamu. Atau itu mungkin dia hanya baca "
+"dihapus atau tidak lagi dimiliki oleh Anda. Atau itu mungkin dia hanya baca "
 "atau kalender yang dinonfungsikan."
 
 #: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
@@ -1430,7 +1440,7 @@ msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
 msgstr ""
-"Peserta telah ditambahkan ke insiden. Apakah kamu ingin meng-email peserta "
+"Peserta telah ditambahkan ke insiden. Apakah Anda ingin meng-email peserta "
 "dalam sebuah pesan pembaruan?"
 
 #: scheduler_p.cpp:510
@@ -1538,10 +1548,10 @@ msgid ""
 msgid_plural ""
 "Do you really want to delete %1 calendar folders and all their sub-folders?"
 msgstr[0] ""
-"Apakah kamu benar-benar ingin menghapus folder kalender ini dan semua "
+"Apakah Anda benar-benar ingin menghapus folder kalender ini dan semua "
 "subfoldernya?"
 msgstr[1] ""
-"Apakah kamu benar-benar ingin menghapus %1 folder kalender dan semua "
+"Apakah Anda benar-benar ingin menghapus %1 folder kalender dan semua "
 "subfoldernya?"
 
 #: standardcalendaractionmanager.cpp:81
@@ -1633,7 +1643,7 @@ msgstr "Hapus acara yang dipilih dari kalender."
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
 msgstr[0] "Apakah kamu sungguh ingin menghapus acara yang dipilih?"
-msgstr[1] "Apakah kamu sungguh ingin menghapus %1 acara?"
+msgstr[1] "Apakah Anda sungguh ingin menghapus %1 acara?"
 
 #: standardcalendaractionmanager.cpp:124
 #, kde-format
@@ -1677,8 +1687,8 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
-"Tambahkan sebuah kalender baru<p>Kamu akan disuguhkan dengan dialog di mana "
-"kamu bisa pilih tipenya kalender yang harus ditambahkan.</p>"
+"Tambahkan sebuah kalender baru<p>Anda akan disuguhkan dengan dialog di mana "
+"Anda bisa pilih tipenya kalender yang harus ditambahkan.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
@@ -1717,8 +1727,8 @@ msgstr ""
 #, kde-format
 msgid "Do you really want to delete this calendar?"
 msgid_plural "Do you really want to delete %1 calendars?"
-msgstr[0] "Apakah kamu sungguh ingin menghapus kalender ini?"
-msgstr[1] "Apakah kamu sungguh ingin menghapus %1 kalender itu?"
+msgstr[0] "Apakah Anda sungguh ingin menghapus kalender ini?"
+msgstr[1] "Apakah Anda sungguh ingin menghapus %1 kalender itu?"
 
 #: standardcalendaractionmanager.cpp:167
 #, kde-format
@@ -1932,7 +1942,7 @@ msgstr "Edit insiden yang dipilih."
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
-msgstr ""
+msgstr "Kecuali"
 
 #: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format

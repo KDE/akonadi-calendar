@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2024-09-26 23:30+0700\n"
+"PO-Revision-Date: 2024-09-27 22:10+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -155,13 +155,13 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr ""
+msgstr "&Durasi suspensi:"
 
 #: suspenddialog.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Suspensi si pengingat berdasarkan hitungan waktu ini"
 
 #: suspenddialog.cpp:83
 #, kde-format
@@ -171,6 +171,9 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Setiap pengingat untuk insiden yang dipilih akan disuspensi berdasarkan "
+"angka ini pada unit waktu. Anda bisa memilih unit waktu di dalam selektor "
+"yang bersebelahan."
 
 #: suspenddialog.cpp:91
 #, kde-format
@@ -200,7 +203,7 @@ msgstr "pekan"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Suspensikan pengingat menggunakan unit waktu ini"
 
 #: suspenddialog.cpp:97
 #, kde-format
@@ -210,6 +213,9 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Setiap pengingat untuk insiden yang dipilih akan disuspensi menggunakan unit "
+"waktu ini. Anda bisa mengatur angka pada unit waktu di dalam input entri "
+"angka yang bersebelahan."
 
 #: suspenddialog.cpp:110
 #, kde-format
@@ -221,7 +227,7 @@ msgstr "Ingatkan Nanti"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Ingatkan saya lagi sesudah selang tertentu"
 
 #: suspenddialog.cpp:112
 #, kde-format
@@ -230,6 +236,8 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Tekan tombol ini untuk mengingatkan lagi tentang insiden ini sesudah "
+"hitungan waktu yang ditentukan."
 
 #: suspenddialog.cpp:116
 #, kde-format
@@ -241,7 +249,7 @@ msgstr "Batal"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr ""
+msgstr "Batalkan pengingat nanti, tampilkan notifikasi lagi"
 
 #~ msgid "Remind in 1 hour"
 #~ msgstr "Ingatkan dalam waktu 1 jam"
