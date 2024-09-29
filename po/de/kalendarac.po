@@ -3,21 +3,22 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2022.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-24 19:14+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-09-27 13:36+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -248,12 +249,11 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #: suspenddialog.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr "Erneutes Erinnern abbrechen (z. B. Erinnerung dauerhaft schließen)"
+msgstr ""
+"Erneutes Erinnern abbrechen und die Benachrichtigung noch einmal anzeigen"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "Press this button to silence the reminder forever."
