@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-09-27 22:46+0700\n"
+"PO-Revision-Date: 2024-09-28 17:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -203,7 +203,7 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
-"Dengan pengaturan ini, kamu bisa mengubah nama file yang akan diambil dari "
+"Dengan pengaturan ini, Anda bisa mengubah nama file yang akan diambil dari "
 "server. Dengan mencentang ini, ia akan mengunduh file senggang/sibuk bernama "
 "user@domain.ifb, misalnya nn@kde.org.ifb. Tanpa set ini, itu akan mengunduh "
 "user.ifb, misalnya nn.if"
@@ -301,8 +301,8 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
-"Dengan pengaturan ini kamu bisa mengonfigurasi apakah bagian domain pada URL "
-"senggang/sibuk memiliki kecocokan dengan bagian domain ID pengguna yang kamu "
+"Dengan pengaturan ini Anda bisa mengonfigurasi apakah bagian domain pada URL "
+"senggang/sibuk memiliki kecocokan dengan bagian domain ID pengguna yang Anda "
 "cari. Misalnya, jika opsi ini disetel, kemudian mencari data senggang/sibuk "
 "budi@domainku.com di server www.domainmu.com akan gagal."
 
@@ -421,9 +421,9 @@ msgid ""
 "contact your system administrator.</p></qt>"
 msgstr ""
 "<qt><p>Perangkat lunak tidak bisa mengunggah daftar senggang/sibukmu ke URL "
-"'%1'. Ada kemungkinan mesalah dengan kebenaran akses, atau URL yang kamu "
+"'%1'. Ada kemungkinan mesalah dengan kebenaran akses, atau URL yang Anda "
 "tentukan salah. Sistem bilang: <em>%2</em>.</p><p>Silakan periksa URL atau "
-"hubungi administrator sistem kamu.</p></qt>"
+"hubungi administrator sistem Anda.</p></qt>"
 
 #: freebusymanager.cpp:619
 #, kde-format
@@ -450,7 +450,7 @@ msgid ""
 msgstr ""
 "<qt><p>Tidak ada URL yang dikonfigurasi untuk mengunggah daftar senggang/"
 "sibukmu. Silakan setel itu di dialog konfigurasi KOrganizer, pada halaman "
-"\"Senggang/Sibuk\".</p><p>Hubungi admisistrator sistem kamu untuk menepatkan "
+"\"Senggang/Sibuk\".</p><p>Hubungi admisistrator sistem Anda untuk menepatkan "
 "detail URL dan akun.</p></qt>"
 
 #: freebusymanager.cpp:752
@@ -764,7 +764,7 @@ msgid ""
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 "Acara \"%1\" termasuk orang lain.\n"
-"Apakah kamu ingin mengemail undangan kepada peserta?"
+"Apakah Anda ingin mengemail undangan kepada peserta?"
 
 #: itiphandlerhelper_p.cpp:242
 #, kde-format
@@ -773,7 +773,7 @@ msgid ""
 "Do you want to email the invitation to the attendees?"
 msgstr ""
 "Rencana \"%1\" termasuk orang lain.\n"
-"Apakah kamu ingin mengemail undangan kepada peserta?"
+"Apakah Anda ingin mengemail undangan kepada peserta?"
 
 #: itiphandlerhelper_p.cpp:247
 #, kde-format
@@ -789,8 +789,8 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
-"Kamu belum menyelenggarakan acara ini. Mengeditnya akan membawa kalendermu "
-"tak tersinkronisasikan dengan kalender penyelenggara. Apakah kamu benar-"
+"Anda belum menyelenggarakan acara ini. Mengeditnya akan membawa kalendermu "
+"tak tersinkronisasikan dengan kalender penyelenggara. Apakah Anda benar-"
 "benar ingin mengeditnya?"
 
 #: itiphandlerhelper_p.cpp:304
@@ -799,8 +799,8 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
-"Kamu mengubah undangan  \"%1\".\n"
-"Apakah kamu ingin mengemail kepada peserta dalam sebuah pesan pembaruan?"
+"Anda mengubah undangan  \"%1\".\n"
+"Apakah Anda ingin mengemail kepada peserta dalam sebuah pesan pembaruan?"
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
@@ -813,7 +813,7 @@ msgstr "Kirim Pembaruan"
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
-"Apakah kamu ingin mengirim pembaruan status ke penyelenggara pada tugas ini?"
+"Apakah Anda ingin mengirim pembaruan status ke penyelenggara pada tugas ini?"
 
 #: itiphandlerhelper_p.cpp:339
 #, kde-format
@@ -821,7 +821,7 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
-"Statusmu sebagai peserta acara ini berubah. Apakah kamu ingin mengirim "
+"Statusmu sebagai peserta acara ini berubah. Apakah Anda ingin mengirim "
 "pembaruan status ke penyelenggara acara?"
 
 #: itiphandlerhelper_p.cpp:382
@@ -830,8 +830,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"Kamu menghapus undangan \"%1\".\n"
-"Apakah kamu ingin mengirim email kepada peserta bahwa acara dibatalkan?"
+"Anda menghapus undangan \"%1\".\n"
+"Apakah Anda ingin mengirim email kepada peserta bahwa acara dibatalkan?"
 
 #: itiphandlerhelper_p.cpp:387
 #, kde-format
@@ -839,8 +839,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"Kamu menghapus undangan \"%1\".\n"
-"Apakah kamu ingin mengirim email kepada para peserta bahwa rencana itu "
+"Anda menghapus undangan \"%1\".\n"
+"Apakah Anda ingin mengirim email kepada para peserta bahwa rencana itu "
 "dibatalkan?"
 
 #: itiphandlerhelper_p.cpp:392
@@ -849,14 +849,14 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"Kamu menghapus undangan \"%1\".\n"
-"Apakah kamu ingin mengirim email kepada peserta bahwa jurnal dibatalkan?"
+"Anda menghapus undangan \"%1\".\n"
+"Apakah Anda ingin mengirim email kepada peserta bahwa jurnal dibatalkan?"
 
 #: itiphandlerhelper_p.cpp:414
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
-"Apakah kamu ingin mengirim pembaruan status ke penyelenggara jurnal ini?"
+"Apakah Anda ingin mengirim pembaruan status ke penyelenggara jurnal ini?"
 
 #: itiphandlerhelper_p.cpp:419 itiphandlerhelper_p.cpp:440
 #, kde-format
@@ -870,7 +870,7 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
-"Kamu sebelumnya telah menerima undangan ke acara ini. Apakah kamu ingin "
+"Anda sebelumnya telah menerima undangan ke acara ini. Apakah Anda ingin "
 "mengirim tanggapan terbaru kepada penyelenggara yang menolak undangan?"
 
 #: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
@@ -926,6 +926,9 @@ msgid ""
 "whether or not to sign this message.\n"
 "Sign this message?"
 msgstr ""
+"Pemeriksaan terhadap preferensi penandatanganan penerima menunjukkan bahwa "
+"Anda ditanya apakah menandatangani pesan ini atau tidak.\n"
+"Tanda tangani pesan ini?"
 
 #: mailclient_p.cpp:706 mailclient_p.cpp:732
 #, kde-format
@@ -950,6 +953,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Ada preferensi penandatanganan yang konflik terhadap penerimaan tersebut.\n"
+"Tanda tangani pesan ini?"
 
 #: mailclient_p.cpp:753
 #, kde-format
@@ -957,6 +962,8 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Anda telah diminta untuk menandatangani pesan ini, tetapi tidak ada kunci "
+"penandatanganan valid yang telah dikonfigurasi untuk identitas ini."
 
 #: mailclient_p.cpp:756
 #, kde-format
@@ -977,7 +984,7 @@ msgid ""
 "Sign all parts instead?"
 msgstr ""
 "Beberapa bagian pesan ini belum ditandatangani.\n"
-"Mengirim hanya sebagian pesan yang ditandatangani mungkin melanggar "
+"Pengiriman pesan yang hanya sebagian yang ditandatangani mungkin menyalahi "
 "kebijakan situs.\n"
 "Tanda tangani semua bagian sebagai gantinya?"
 
@@ -988,11 +995,14 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Pesan ini tidak akan ditandatangani.\n"
+"Mengirim pesan yang tak ditandatangani mungkin menyalahi kebijakan situs.\n"
+"Tanda tangani pesan sebagai gantinya?"
 
 #: mailclient_p.cpp:776
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "&Tanda tangani Semua Bagian"
 
 #: mailclient_p.cpp:776
 #, kde-format
@@ -1002,13 +1012,13 @@ msgstr "&Tanda tangani"
 #: mailclient_p.cpp:778
 #, kde-format
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Peringatan Pesan Tak Tertandatangani"
 
 #: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr ""
+msgstr "Kirim &Apa Adanya"
 
 #: mailclient_p.cpp:833
 #, kde-format
@@ -1016,6 +1026,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Kunci enkripsi terpercaya valid yang ditemukan untuk semua penerimaan.\n"
+"Enkripsikan pesan ini?"
 
 #: mailclient_p.cpp:836
 #, kde-format
@@ -1024,16 +1036,19 @@ msgid ""
 "asked whether or not to encrypt this message.\n"
 "Encrypt this message?"
 msgstr ""
+"Pemeriksaan preferensi enkripsi penerima menunjukkan bahwa Anda ditanya "
+"apakah akan mengenkripsi pesan ini atau tidak.\n"
+"Enkripsikan pesan ini?"
 
 #: mailclient_p.cpp:841 mailclient_p.cpp:867
 #, kde-format
 msgid "Encrypt Message?"
-msgstr "Apakah Enkripsi Pesan?"
+msgstr "Enkripsikan Pesan?"
 
 #: mailclient_p.cpp:842
 #, kde-format
 msgid "Sign && &Encrypt"
-msgstr ""
+msgstr "Tanda tangani && &Enkripsi"
 
 #: mailclient_p.cpp:842 mailclient_p.cpp:915
 #, kde-format
@@ -1043,12 +1058,12 @@ msgstr "&Enkripsi"
 #: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Sign Only"
-msgstr ""
+msgstr "&Tanda Tangani Saja"
 
 #: mailclient_p.cpp:843 mailclient_p.cpp:919
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Kirim Apa Adanya"
 
 #: mailclient_p.cpp:863
 #, kde-format
@@ -1056,6 +1071,8 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Ada preferensi enkripsi yang konflik untuk penerima tersebut.\n"
+"Enkripsikan pesan ini?"
 
 #: mailclient_p.cpp:868
 #, kde-format
@@ -1076,17 +1093,20 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Anda memiliki permintaan untuk mengenkripsi pesan ini, dan untuk "
+"mengenkripsi salinan untuk Anda sendiri, tetapi tidak ada kunci enkripsi "
+"terpercaya yang valid untuk identitas ini."
 
 #: mailclient_p.cpp:892
 #, kde-format
 msgid "Send Unencrypted?"
-msgstr "Apakah Kirim Tak Terenkripsi?"
+msgstr "Kirim Tak Terenkripsi?"
 
 #: mailclient_p.cpp:892
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr "&Kirim Tak Terenkripsi"
+msgstr "Kirim &Tak Terenkripsi"
 
 #: mailclient_p.cpp:906
 #, kde-format
@@ -1096,6 +1116,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Beberapa bagian pesan ini tidak dienkripsi.\n"
+"Pengiriman pesan yang hanya sebagian yang dienkripsi mungkin menyalahi "
+"kebijakan situs dan/atau bocornya informasi yang sensitif.\n"
+"Enkripsikan semua bagian sebagai gantinya?"
 
 #: mailclient_p.cpp:911
 #, kde-format
@@ -1105,16 +1129,20 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Pesan ini tidak akan dienkripsi.\n"
+"Pengiriman pesan tak terenkripsi mungkin menyalahi kebijakan situs dan/atau "
+"membocorkan informasi sensitif.\n"
+"Enkripsi pesan sebagai gantinya?"
 
 #: mailclient_p.cpp:915
 #, kde-format
 msgid "&Encrypt All Parts"
-msgstr ""
+msgstr "&Enkripsi Semua Bagian"
 
 #: mailclient_p.cpp:917
 #, kde-format
 msgid "Unencrypted Message Warning"
-msgstr ""
+msgstr "Peringatan Pesan Tak Terenkripsi"
 
 #: mailscheduler_p.cpp:199
 #, kde-format
@@ -1634,7 +1662,7 @@ msgstr "Hapus acara yang dipilih dari kalender."
 #, kde-format
 msgid "Do you really want to delete the selected event?"
 msgid_plural "Do you really want to delete %1 events?"
-msgstr[0] "Apakah kamu sungguh ingin menghapus acara yang dipilih?"
+msgstr[0] "Apakah Anda sungguh ingin menghapus acara yang dipilih?"
 msgstr[1] "Apakah Anda sungguh ingin menghapus %1 acara?"
 
 #: standardcalendaractionmanager.cpp:124
@@ -1962,7 +1990,7 @@ msgstr "Ringkasan"
 #: todomodel.cpp:461
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Berulang"
 
 #: todomodel.cpp:463
 #, kde-format
