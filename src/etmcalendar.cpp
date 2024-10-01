@@ -127,7 +127,6 @@ void ETMCalendarPrivate::setupFilteredETM()
 
     mCollectionProxyModel = new Akonadi::CollectionFilterProxyModel(this);
     mCollectionProxyModel->setObjectName("Only show collections"_L1);
-    mCollectionProxyModel->setDynamicSortFilter(true);
     mCollectionProxyModel->addMimeTypeFilter(QStringLiteral("text/calendar"));
     mCollectionProxyModel->setExcludeVirtualCollections(false);
     mCollectionProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
@@ -160,7 +159,6 @@ void ETMCalendarPrivate::setupFilteredETM()
     QList<KCalendarCore::Attendee::PartStat> blockedStatusList;
     blockedStatusList << KCalendarCore::Attendee::NeedsAction;
     blockedStatusList << KCalendarCore::Attendee::Declined;
-    mCalFilterPartStatusProxyModel->setDynamicSortFilter(true);
     mCalFilterPartStatusProxyModel->setBlockedStatusList(blockedStatusList);
     mCalFilterPartStatusProxyModel->setSourceModel(mCalFilterProxyModel);
     mCalFilterPartStatusProxyModel->setObjectName("PartStatus filtering"_L1);
