@@ -241,13 +241,7 @@ msgid "Cancel"
 msgstr "取消"
 
 #: suspenddialog.cpp:117
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cancel reminding later, i.e. dismiss the reminder forever"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr "取消以后提醒，即永久地取消此提醒"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Press this button to silence the reminder forever."
-#~ msgstr "点击此按钮将永久性地取消此提醒。"
+msgstr ""
