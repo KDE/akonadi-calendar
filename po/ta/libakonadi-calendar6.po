@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-16 17:16+0530\n"
+"PO-Revision-Date: 2024-10-20 16:27+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -490,7 +490,7 @@ msgstr "தொலை கோப்பை பதிவிறக்க முடி
 #: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
-msgstr ""
+msgstr "இறக்குமதி ஏற்கனவே செயலிலுள்ளது."
 
 #: icalimporter.cpp:167
 #, kde-format
@@ -527,38 +527,38 @@ msgstr "ஏற்கனவேயுள்ள நாள்காட்டிய�
 #: incidencechanger.cpp:260
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
-msgstr ""
+msgstr "நாள்காட்டி உருப்படியை உருவாக்குவதில் சிக்கல். கிடைத்த விளக்கம்: %1"
 
 #: incidencechanger.cpp:339
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
-msgstr ""
+msgstr "நாள்காட்டி உருப்படியை நீக்குவதில் சிக்கல். கிடைத்த விளக்கம்: %1"
 
 #: incidencechanger.cpp:374
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
-msgstr ""
+msgstr "தெரியாத சிக்கல் நேர்ந்துள்ளது"
 
 #: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr ""
+msgstr "நாள்காட்டி உருப்படியை மாற்றுவதில் சிக்கல். கிடைத்த விளக்கம்: %1"
 
 #: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr ""
+msgstr "அந்த உருப்படி ஏற்கனவே நீக்கப்பட்டுள்ளது, அல்லது நீக்கப்படுகிறது."
 
 #: incidencechanger.cpp:1195
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr ""
+msgstr "ACL வரம்புகளின் காரணமாக அச்செயல் அனுமதிக்கப்படாதது."
 
 #: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள தொகுப்பு செல்லுபடியாகாதது"
 
 #: incidencechanger.cpp:1202
 #, kde-format
@@ -582,17 +582,17 @@ msgstr ""
 #: incidencechanger.cpp:1215
 #, kde-format
 msgid "Unknown error"
-msgstr ""
+msgstr "தெரியாத சிக்கல்"
 
 #: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
-msgstr ""
+msgstr "நாள்காட்டியை ஏற்றுவதில் சிக்கல்."
 
 #: itiphandler.cpp:118
 #, kde-format
 msgid "Error message: %1"
-msgstr ""
+msgstr "சிக்கல் குறித்த செய்தி: %1"
 
 #: itiphandler.cpp:119
 #, kde-format
@@ -612,7 +612,7 @@ msgstr ""
 #: itiphandler.cpp:209
 #, kde-format
 msgid "Invalid action: %1"
-msgstr ""
+msgstr "செல்லுபடியாகாத செயல்: %1"
 
 #: itiphandler.cpp:232
 #, kde-format
@@ -674,22 +674,24 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
+"'%1' தனை அனுப்ப முடியவில்லை.\n"
+"முறை: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr ""
+msgstr "விவரங்கள் வெற்றிகரமாக அனுப்பப்பட்டன."
 
 #: itiphandler_p.cpp:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
-msgstr ""
+msgstr "பதிப்பிப்பது"
 
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr ""
+msgstr "'%1' தனை பதிப்பிக்க முடியவில்லை"
 
 #: itiphandler_p.cpp:181
 #, kde-format
