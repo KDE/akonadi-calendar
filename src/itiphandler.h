@@ -79,7 +79,13 @@ public:
         Attendees /**< the attendees of the incidence */
     };
 
-    enum DialogAction { OkAction = 1, CancelAction = 2, PrimaryAction = 3, SecondaryAction = 4, ContinueAction = 5 };
+    enum DialogAction {
+        OkAction = 1,
+        CancelAction = 2,
+        PrimaryAction = 3,
+        SecondaryAction = 4,
+        ContinueAction = 5
+    };
 
     /**
      * Creates a new AskDelegator

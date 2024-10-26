@@ -11,7 +11,14 @@
 #include "../src/incidencechanger.h"
 #include "unittestbase.h"
 
-enum SignalType { DeletionSignal, CreationSignal, ModificationSignal, UndoSignal, RedoSignal, NumSignals };
+enum SignalType {
+    DeletionSignal,
+    CreationSignal,
+    ModificationSignal,
+    UndoSignal,
+    RedoSignal,
+    NumSignals
+};
 
 class HistoryTest : public UnitTestBase
 {

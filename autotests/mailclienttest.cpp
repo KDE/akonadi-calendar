@@ -33,7 +33,11 @@ const auto s_testGpgKey = QByteArray("D6003D89B2840A1B1888C39E5AB1CE1311F6B1DB")
 const QString s_test2Email = QStringLiteral("test2@example.com");
 const auto s_test2GpgKey = QByteArray("A9794D762BC67B1DEB161CDD8B3613B451672CB8");
 
-enum class CryptoState { Plain, Signed, Encrypted };
+enum class CryptoState {
+    Plain,
+    Signed,
+    Encrypted
+};
 
 struct ExpectedDialog {
     QString text;

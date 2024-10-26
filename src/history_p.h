@@ -22,7 +22,11 @@ namespace Akonadi
 {
 class History;
 
-enum OperationType { TypeNone, TypeUndo, TypeRedo };
+enum OperationType {
+    TypeNone,
+    TypeUndo,
+    TypeRedo
+};
 
 class Entry : public QObject
 {

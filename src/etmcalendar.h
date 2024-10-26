@@ -41,7 +41,10 @@ class AKONADI_CALENDAR_EXPORT ETMCalendar : public CalendarBase
 {
     Q_OBJECT
 public:
-    enum CollectionColumn { CollectionTitle = 0, CollectionColumnCount };
+    enum CollectionColumn {
+        CollectionTitle = 0,
+        CollectionColumnCount
+    };
 
     using Ptr = QSharedPointer<ETMCalendar>;
 

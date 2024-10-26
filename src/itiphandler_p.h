@@ -32,7 +32,13 @@ struct Invitation {
  * These operations are async and we don't want them to be called before the other has finished.
  * This enum is just to Q_ASSERT that.
  */
-enum Operation { OperationNone, OperationProcessiTIPMessage, OperationSendiTIPMessage, OperationPublishInformation, OperationSendAsICalendar };
+enum Operation {
+    OperationNone,
+    OperationProcessiTIPMessage,
+    OperationSendiTIPMessage,
+    OperationPublishInformation,
+    OperationSendAsICalendar
+};
 
 class ITIPHandlerPrivate : public QObject
 {

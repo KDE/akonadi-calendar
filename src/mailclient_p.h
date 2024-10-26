@@ -83,9 +83,20 @@ class AKONADI_CALENDAR_TESTS_EXPORT MailClient : public QObject
     bool mAkonadiLookupEnabled = true;
 
 public:
-    enum Result { ResultSuccess, ResultNoAttendees, ResultReallyNoAttendees, ResultErrorCreatingTransport, ResultErrorFetchingTransport, ResultQueueJobError };
+    enum Result {
+        ResultSuccess,
+        ResultNoAttendees,
+        ResultReallyNoAttendees,
+        ResultErrorCreatingTransport,
+        ResultErrorFetchingTransport,
+        ResultQueueJobError
+    };
 
-    enum MailPrivacy { MailPrivacyPlain = 0, MailPrivacySign = 1, MailPrivacyEncrypt = 2 };
+    enum MailPrivacy {
+        MailPrivacyPlain = 0,
+        MailPrivacySign = 1,
+        MailPrivacyEncrypt = 2
+    };
     Q_DECLARE_FLAGS(MailPrivacyFlags, MailPrivacy)
 
     explicit MailClient(ITIPHandlerComponentFactory *factory, QObject *parent = nullptr);

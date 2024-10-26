@@ -22,7 +22,10 @@ class QWidget;
 
 namespace Akonadi
 {
-enum Status { StatusNone, StatusSendingInvitation };
+enum Status {
+    StatusNone,
+    StatusSendingInvitation
+};
 
 /**
   This class handles sending of invitations to attendees when Incidences (e.g.
@@ -62,7 +65,11 @@ public:
         ResultPending /**< The user has been asked about one detail, waiting for the answer */
     };
 
-    enum MessagePrivacy { MessagePrivacyPlain = 0, MessagePrivacySign = 1, MessagePrivacyEncrypt = 2 };
+    enum MessagePrivacy {
+        MessagePrivacyPlain = 0,
+        MessagePrivacySign = 1,
+        MessagePrivacyEncrypt = 2
+    };
     Q_DECLARE_FLAGS(MessagePrivacyFlags, MessagePrivacy)
 
     /**

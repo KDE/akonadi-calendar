@@ -39,7 +39,11 @@ public: /// Structs
     struct FreeBusyProviderRequest {
         FreeBusyProviderRequest(const QString &provider);
 
-        enum Status { NotStarted, HandlingRequested, FreeBusyRequested };
+        enum Status {
+            NotStarted,
+            HandlingRequested,
+            FreeBusyRequested
+        };
 
         Status mRequestStatus;
         QSharedPointer<QDBusInterface> mInterface;
