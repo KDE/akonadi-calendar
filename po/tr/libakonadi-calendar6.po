@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-01 13:04+0300\n"
+"PO-Revision-Date: 2024-10-25 18:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -454,7 +454,7 @@ msgid ""
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
 "<qt><p>Uygun/meşgul listenizi yüklemek için bir URL yapılandırılmadı. Lütfen "
-"bunu K Organizatör’ün yapılandırma penceresindeki ‘Uygun/Meşgul’ sayfasından "
+"bunu K Organizatör’ün yapılandırma penceresindeki “Uygun/Meşgul” sayfasından "
 "ayarlayın.</p><p>URL ve hesap ayrıntıları için sistem yöneticinizle görüşün."
 "</p></qt>"
 
@@ -737,7 +737,7 @@ msgstr "İletme"
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr "'%1' ögesi iletilemiyor"
+msgstr "“%1” ögesi iletilemiyor"
 
 #: itiphandler_p.cpp:189
 #, kde-format
