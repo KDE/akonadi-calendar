@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -682,13 +682,13 @@ msgid "Message Not Sent"
 msgstr "Poruka se ne šalje"
 
 # rewrite-msgid: /Email/Message/
-#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
+#: itiphandler.h:108 itiphandler.h:126 itiphandler.h:142 itiphandler.h:155
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "Pošalji poruku"
 
-#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
+#: itiphandler.h:109 itiphandler.h:127 itiphandler.h:143 itiphandler.h:156
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"

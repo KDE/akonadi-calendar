@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2024-08-09 03:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -646,13 +646,13 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "訊息未送出"
 
-#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
+#: itiphandler.h:108 itiphandler.h:126 itiphandler.h:142 itiphandler.h:155
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "傳送電子郵件"
 
-#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
+#: itiphandler.h:109 itiphandler.h:127 itiphandler.h:143 itiphandler.h:156
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"

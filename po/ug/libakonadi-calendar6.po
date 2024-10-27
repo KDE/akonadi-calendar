@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -633,7 +633,7 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr ""
 
-#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
+#: itiphandler.h:108 itiphandler.h:126 itiphandler.h:142 itiphandler.h:155
 #, fuzzy, kde-format
 #| msgctxt "recipient email"
 #| msgid "Email:"
@@ -641,7 +641,7 @@ msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "ئېلخەت:"
 
-#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
+#: itiphandler.h:109 itiphandler.h:127 itiphandler.h:143 itiphandler.h:156
 #, fuzzy, kde-format
 #| msgctxt "@option"
 #| msgid "Do Not Send"

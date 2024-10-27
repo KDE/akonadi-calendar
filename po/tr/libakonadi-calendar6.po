@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2024-10-25 18:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -669,13 +669,13 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "İleti Gönderilmedi"
 
-#: itiphandler.h:102 itiphandler.h:120 itiphandler.h:136 itiphandler.h:149
+#: itiphandler.h:108 itiphandler.h:126 itiphandler.h:142 itiphandler.h:155
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "E-posta Gönder"
 
-#: itiphandler.h:103 itiphandler.h:121 itiphandler.h:137 itiphandler.h:150
+#: itiphandler.h:109 itiphandler.h:127 itiphandler.h:143 itiphandler.h:156
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
