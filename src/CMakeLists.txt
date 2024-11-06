@@ -116,8 +116,8 @@ PUBLIC
     KF6::CalendarCore
     KF6::WidgetsAddons
     KF6::I18n
-    KF6::ConfigWidgets
     KPim6::IdentityManagementCore
+    KF6::ConfigGui
 PRIVATE
     KF6::Codecs
     KF6::KIOCore
