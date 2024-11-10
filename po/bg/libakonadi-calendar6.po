@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-09-29 14:39+0200\n"
+"PO-Revision-Date: 2024-11-09 20:06+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -55,7 +55,7 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
-"Елементът \"%1\" има подзадачи. Искате ли да изрежете само този елемент и да "
+"Елементът „%1“ има подзадачи. Искате ли да изрежете само този елемент и да "
 "направите независими всички подзадачи или да отрежете задачата с всичките ѝ "
 "подзадачи?"
 
@@ -83,8 +83,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
-"Елементът \"%1\" има подзадачи. Искате ли да копирате само този елемент или "
-"да копирате задължението с всичките му подзадачи?"
+"Елементът „%1“ има подзадачи. Искате ли да копирате само този елемент или да "
+"копирате задължението с всичките му подзадачи?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
@@ -424,7 +424,7 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<qt><p> Софтуерът не можа да качи списъка ви със заетост на URL \"%1\" . "
+"<qt><p> Софтуерът не можа да качи списъка ви със заетост на URL „%1“ . "
 "Възможно е да има проблем с правата за достъп или сте посочили неправилен "
 "URL адрес. Системата каза: <em> %2 </em>.</p><p> Моля, проверете URL адреса "
 "или се свържете със системния си администратор.</p></qt>"
@@ -466,7 +466,7 @@ msgstr "Няма URL за качване на заетост"
 #: freebusymanager.cpp:762
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<qt>Предоставеният целеви URL адрес \"%1\" е невалиден.</qt>"
+msgstr "<qt>Предоставеният целеви URL адрес „%1“ е невалиден.</qt>"
 
 #: freebusymanager.cpp:763
 #, kde-format
@@ -662,8 +662,8 @@ msgstr "Не може да стартира редактор за редакти
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
-"Елементът \"%1\" няма присъстващи. Следователно няма да бъде изпратено "
-"групово съобщение."
+"Елементът „%1“ няма присъстващи. Следователно няма да бъде изпратено групово "
+"съобщение."
 
 #: itiphandler.cpp:273
 #, kde-format
@@ -700,7 +700,7 @@ msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
-"Съобщението за групов софтуер за елемент \"%1\" бе изпратено успешно. \n"
+"Съобщението за групов софтуер за елемент „%1“ бе изпратено успешно. \n"
 "Метод: %2"
 
 #: itiphandler_p.cpp:144
@@ -711,7 +711,7 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
-"Не може да се изпрати елементът \"%1\" . \n"
+"Не може да се изпрати елементът „%1“ . \n"
 "Метод: %2"
 
 #: itiphandler_p.cpp:160 itiphandler_p.cpp:180
@@ -728,7 +728,7 @@ msgstr "Публикуване"
 #: itiphandler_p.cpp:166
 #, kde-format
 msgid "Unable to publish the item '%1'"
-msgstr "Елементът \"%1\" не може да бъде публикуван"
+msgstr "Елементът „%1“ не може да бъде публикуван"
 
 #: itiphandler_p.cpp:181
 #, kde-format
@@ -739,7 +739,7 @@ msgstr "Препращане"
 #: itiphandler_p.cpp:188
 #, kde-format
 msgid "Unable to forward the item '%1'"
-msgstr "Не може да се препрати елементът \"%1\""
+msgstr "Не може да се препрати елементът „%1“"
 
 #: itiphandler_p.cpp:189
 #, kde-format
@@ -769,7 +769,7 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"Събитието \"%1\" включва други хора. \n"
+"Събитието „%1“ включва други хора. \n"
 "Искате ли да изпратите поканата по имейл до присъстващите?"
 
 #: itiphandlerhelper_p.cpp:242
@@ -778,7 +778,7 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
-"Заданието \"%1 \"включва други хора. \n"
+"Заданието „%1“ включва други хора. \n"
 "Искате ли да изпратите поканата по имейл до присъстващите?"
 
 #: itiphandlerhelper_p.cpp:247
@@ -806,7 +806,7 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
-"Променихте поканата \"%1\". \n"
+"Променихте поканата „%1“. \n"
 "Искате ли да изпратите на участниците съобщение за актуализация по имейл?"
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
@@ -838,7 +838,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
-"Премахнахте поканата \"%1 \". \n"
+"Премахнахте поканата „%1“ . \n"
 "Искате ли да изпратите имейл до присъстващите, че събитието е отменено?"
 
 #: itiphandlerhelper_p.cpp:387
@@ -847,7 +847,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
-"Премахнахте поканата \"%1 \". \n"
+"Премахнахте поканата „%1“ . \n"
 "Искате ли да изпратите имейл до присъстващите, че заданието е отменено?"
 
 #: itiphandlerhelper_p.cpp:392
@@ -856,7 +856,7 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
-"Премахнахте поканата \"%1 \". \n"
+"Премахнахте поканата „%1“ . \n"
 "Искате ли да изпратите имейл до присъстващите, че списанието е отменено?"
 
 #: itiphandlerhelper_p.cpp:414
