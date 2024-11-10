@@ -35,15 +35,11 @@ namespace KIdentityManagementCore
 class Identity;
 }
 
-namespace Kleo
-{
-class KeyResolver;
-}
-
 namespace MessageComposer
 {
 class Composer;
 class ContactPreference;
+class KeyResolver;
 }
 
 namespace MailTransport
@@ -179,7 +175,7 @@ private:
     void populateComposer(MessageComposer::Composer *composer, const MessageData &msg);
 
     bool determineWhetherToSign(bool doSignCompletely,
-                                Kleo::KeyResolver *keyResolver,
+                                MessageComposer::KeyResolver *keyResolver,
                                 ITIPHandlerDialogDelegate *dialogDelegate,
                                 const KIdentityManagementCore::Identity &identity,
                                 bool signSomething,
@@ -188,7 +184,7 @@ private:
                                 bool &canceled);
 
     bool determineWhetherToEncrypt(bool doEncryptCompletely,
-                                   Kleo::KeyResolver *keyResolver,
+                                   MessageComposer::KeyResolver *keyResolver,
                                    ITIPHandlerDialogDelegate *dialogDelegate,
                                    const KIdentityManagementCore::Identity &identity,
                                    bool encryptSomething,
@@ -207,7 +203,7 @@ private:
                       const MessageData &msg,
                       const KMime::Message::Ptr &message);
 
-    void populateKeyResolverContactsPreferences(Kleo::KeyResolver &keyResolver, const QStringList &addresses);
+    void populateKeyResolverContactsPreferences(MessageComposer::KeyResolver &keyResolver, const QStringList &addresses);
 };
 }
 

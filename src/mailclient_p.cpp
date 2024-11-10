@@ -129,7 +129,7 @@ std::optional<MessageComposer::ContactPreference> MailClient::contactPreference(
     return {};
 }
 
-void MailClient::populateKeyResolverContactsPreferences(Kleo::KeyResolver &keyResolver, const QStringList &addresses)
+void MailClient::populateKeyResolverContactsPreferences(MessageComposer::KeyResolver &keyResolver, const QStringList &addresses)
 {
     for (const auto &address : addresses) {
         if (const auto &pref = contactPreference(address); pref.has_value()) {
@@ -138,7 +138,7 @@ void MailClient::populateKeyResolverContactsPreferences(Kleo::KeyResolver &keyRe
     }
 }
 
-static bool populateKeyResolverEncryptionKeys(Kleo::KeyResolver &keyResolver, const KIdentityManagementCore::Identity &identity)
+static bool populateKeyResolverEncryptionKeys(MessageComposer::KeyResolver &keyResolver, const KIdentityManagementCore::Identity &identity)
 {
     QStringList encryptToSelfKeys;
     if (!identity.pgpEncryptionKey().isEmpty()) {
@@ -147,7 +147,7 @@ static bool populateKeyResolverEncryptionKeys(Kleo::KeyResolver &keyResolver, co
     if (!identity.smimeEncryptionKey().isEmpty()) {
         encryptToSelfKeys.push_back(QString::fromLatin1(identity.smimeEncryptionKey()));
     }
-    if (const auto result = keyResolver.setEncryptToSelfKeys(encryptToSelfKeys); result != Kleo::Ok) {
+    if (const auto result = keyResolver.setEncryptToSelfKeys(encryptToSelfKeys); result != MessageComposer::ResolverResult::Ok) {
         qCWarning(AKONADICALENDAR_LOG) << "KeyResolver - failed to set encrypto-to-self keys, result:" << result;
         return false;
     }
@@ -155,7 +155,7 @@ static bool populateKeyResolverEncryptionKeys(Kleo::KeyResolver &keyResolver, co
     return true;
 }
 
-static bool populateKeyResolverSigningKeys(Kleo::KeyResolver &keyResolver, const KIdentityManagementCore::Identity &identity)
+static bool populateKeyResolverSigningKeys(MessageComposer::KeyResolver &keyResolver, const KIdentityManagementCore::Identity &identity)
 {
     QStringList signingKeys;
     if (!identity.pgpSigningKey().isEmpty()) {
@@ -165,7 +165,7 @@ static bool populateKeyResolverSigningKeys(Kleo::KeyResolver &keyResolver, const
         signingKeys.push_back(QString::fromLatin1(identity.smimeSigningKey()));
     }
     qCDebug(AKONADICALENDAR_LOG) << "Settings signing keys:" << signingKeys;
-    if (const auto result = keyResolver.setSigningKeys(signingKeys); result != Kleo::Ok) {
+    if (const auto result = keyResolver.setSigningKeys(signingKeys); result != MessageComposer::ResolverResult::Ok) {
         qCWarning(AKONADICALENDAR_LOG) << "KeyResolver - failed to set signing keys, result:" << result;
         return false;
     }
@@ -193,7 +193,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
                                                                                            encryptKeyNearExpiryWarningThresholdInDays(),
                                                                                            encryptRootCertNearExpiryWarningThresholdInDays(),
                                                                                            encryptChainCertNearExpiryWarningThresholdInDays()});
-    Kleo::KeyResolver keyResolver(/* encToSelf */ true, showKeyApprovalDialog(), identity.pgpAutoEncrypt(), Kleo::AutoFormat, expiryChecker);
+    MessageComposer::KeyResolver keyResolver(/* encToSelf */ true, showKeyApprovalDialog(), identity.pgpAutoEncrypt(), Kleo::AutoFormat, expiryChecker);
 
     const auto recipients = msg.to + msg.cc;
     populateKeyResolverContactsPreferences(keyResolver, recipients);
@@ -252,11 +252,11 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
     }
 
     canceled = false;
-    const Kleo::Result kpgpResult = keyResolver.resolveAllKeys(signSomething, encryptSomething);
-    if (kpgpResult == Kleo::Canceled || canceled) {
+    const auto kpgpResult = keyResolver.resolveAllKeys(signSomething, encryptSomething);
+    if (kpgpResult == MessageComposer::ResolverResult::Canceled || canceled) {
         qCDebug(AKONADICALENDAR_LOG) << "resolveAllKeys: one key resolution canceled by user";
         return {};
-    } else if (kpgpResult != Kleo::Ok) {
+    } else if (kpgpResult != MessageComposer::ResolverResult::Ok) {
         // TODO handle failure
         qCDebug(AKONADICALENDAR_LOG) << "resolveAllKeys: failed to resolve keys! oh noes";
         return {};
@@ -673,7 +673,7 @@ void MailClient::handleQueueJobFinished(KJob *job)
 }
 
 bool MailClient::determineWhetherToSign(bool doSignCompletely,
-                                        Kleo::KeyResolver *keyResolver,
+                                        MessageComposer::KeyResolver *keyResolver,
                                         ITIPHandlerDialogDelegate *dialogDelegate,
                                         const KIdentityManagementCore::Identity &identity,
                                         bool signSomething,
@@ -798,7 +798,7 @@ bool MailClient::determineWhetherToSign(bool doSignCompletely,
 }
 
 bool MailClient::determineWhetherToEncrypt(bool doEncryptCompletely,
-                                           Kleo::KeyResolver *keyResolver,
+                                           MessageComposer::KeyResolver *keyResolver,
                                            ITIPHandlerDialogDelegate *dialogDelegate,
                                            const KIdentityManagementCore::Identity &identity,
                                            bool encryptSomething,
