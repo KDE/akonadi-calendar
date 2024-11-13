@@ -5,22 +5,22 @@
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Александр Яворский <yavorsky.a@t-rosta.com>, 2018.
 # SPDX-FileCopyrightText: 2020, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
-# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-01-27 15:22+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-11-12 17:04+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -73,15 +73,13 @@ msgid "KOrganizer Confirmation"
 msgstr "Подтверждение KOrganizer"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Вырезать одну задачу"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Вырезать всё"
@@ -96,15 +94,13 @@ msgstr ""
 "её вместе со всеми подзадачами?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Копировать одну задачу"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Копировать всё"
@@ -256,22 +252,22 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
-"Отметьте этот флажок, чтобы получать копии всех почтовых сообщений-запросов, "
-"которые KOrganizer посылает участникам событий."
+"Установите этот флажок, чтобы получать копии всех почтовых сообщений-"
+"запросов, которые KOrganizer посылает участникам событий."
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Отклонённые приглашения"
+msgstr "Скрывать отклонённые приглашения"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Установите этот флажок, чтобы скрывать отклонённые приглашения при просмотре "
+"событий."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -627,7 +623,7 @@ msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
-"Сбой изменения из относящихся к группе. Программа откатила назад все "
+"Сбой изменения из числа относящихся к группе. Программа откатила назад все "
 "изменения."
 
 #: incidencechanger.cpp:1215
@@ -828,8 +824,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Отправить обновление"
@@ -964,8 +959,7 @@ msgid "&Sign"
 msgstr "&Подписать"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Не подписывать"
@@ -988,15 +982,13 @@ msgstr ""
 "Для подписи этого письма в профиле не настроены действительные ключи подписи."
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Отправить неподписанным?"
 
 #: mailclient_p.cpp:756
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Отправить &неподписанным"
@@ -1035,15 +1027,13 @@ msgid "&Sign"
 msgstr "&Подписать"
 
 #: mailclient_p.cpp:779
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Предупреждение о неподписанном письме"
 
 #: mailclient_p.cpp:781
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Отправить &как есть"
@@ -1069,8 +1059,7 @@ msgstr ""
 "Зашифровать письмо?"
 
 #: mailclient_p.cpp:842
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Зашифровать письмо?"
@@ -1110,15 +1099,13 @@ msgid "Encrypt Message?"
 msgstr "Зашифровать письмо?"
 
 #: mailclient_p.cpp:869
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "За&шифровать"
 
 #: mailclient_p.cpp:870
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Не шифровать"
@@ -1139,8 +1126,7 @@ msgid "Send Unencrypted?"
 msgstr "Отправить незашифрованным?"
 
 #: mailclient_p.cpp:893
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Отправить &незашифрованным"
@@ -1193,8 +1179,7 @@ msgid "Select Addresses"
 msgstr "Выбор адресов"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Отправить письмо этим получателям"
@@ -1208,8 +1193,7 @@ msgstr ""
 "После нажатия кнопки <b>ОК</b> письмо будет отправлено введённым получателям."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Отменить выбор получателей и отправку письма"
@@ -1320,10 +1304,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "&Выбрать..."
+msgstr "&Выбрать…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1364,15 +1347,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "Это поле содержит адрес электронной почты получателя"
 
 #: publishdialog_p.cpp:44
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(БезИмени)"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(БезАдреса)"
@@ -1545,10 +1526,9 @@ msgid "Open Invitations"
 msgstr "Открытые приглашения"
 
 #: standardcalendaractionmanager.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "Добавить папку календаря..."
+msgstr "Добавить папку календаря…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1661,10 +1641,9 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Вырезать выбранные папки календаря из календаря."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
-msgstr "Свойства папки..."
+msgstr "Свойства папки…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1750,11 +1729,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Вырезать выбранные события из календаря."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Добавление календаря"
+msgstr "Добавить &календарь…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1820,10 +1797,9 @@ msgstr[2] "Удаление календарей"
 msgstr[3] "Удаление календаря"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
-msgstr "Свойства календаря..."
+msgstr "Свойства календаря…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1896,10 +1872,9 @@ msgid "Move Event To"
 msgstr "Переместить событие в"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
-msgstr "Изменить событие..."
+msgstr "Изменить событие…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1939,10 +1914,9 @@ msgid "Move To-do To"
 msgstr "Переместить задачу в"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "Изменить задачу..."
+msgstr "Изменить задачу…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1982,16 +1956,14 @@ msgid "Move Journal To"
 msgstr "Переместить запись дневника в"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
-msgstr "Изменить запись дневника..."
+msgstr "Изменить запись дневника…"
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
-msgstr "Создать со&бытие..."
+msgstr "Создать со&бытие…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1999,10 +1971,9 @@ msgid "Create a new event"
 msgstr "Создать новое событие"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "Создать &задачу..."
+msgstr "Создать &задачу…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -2010,10 +1981,9 @@ msgid "Create a new To-do"
 msgstr "Создать новую задачу"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Создать &подзадачу..."
+msgstr "Создать &подзадачу…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -2021,10 +1991,9 @@ msgid "Create a new Sub-to-do"
 msgstr "Создать новую подзадачу"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
-msgstr "Создать запись &дневника..."
+msgstr "Создать запись &дневника…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -2032,10 +2001,9 @@ msgid "Create a new Journal"
 msgstr "Создать новую запись дневника"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
-msgstr "&Изменить..."
+msgstr "&Изменить…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
