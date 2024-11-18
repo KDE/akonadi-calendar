@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-08-01 10:41+0200\n"
+"PO-Revision-Date: 2024-11-17 20:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -1144,7 +1144,7 @@ msgid ""
 msgstr ""
 "Algunes parts d'aquest missatge no s'encriptaran.\n"
 "L'enviament de missatges només parcialment encriptats podria infringir la "
-"política del lloc.\n"
+"política del lloc o provocar fuites d'informació confidencial.\n"
 "Encripto totes les parts?"
 
 #: mailclient_p.cpp:912
@@ -1157,8 +1157,8 @@ msgid ""
 msgstr ""
 "Aquest missatge no s'encriptarà.\n"
 "L'enviament de missatges sense encriptar podria infringir la política del "
-"lloc i/o perdre informació confidencial.\n"
-"Encripto totes les parts?"
+"lloc o provocar fuites d'informació confidencial.\n"
+"Encripto el missatge?"
 
 #: mailclient_p.cpp:916
 #, kde-format
