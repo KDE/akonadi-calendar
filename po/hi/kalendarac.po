@@ -1,0 +1,248 @@
+# Hindi translations for akonadi-calendar package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-19 00:40+0000\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1)\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "तुम्हारे नाम"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "आपके ईमेल"
+
+#: alarmnotification.cpp:50
+#, kde-format
+msgid "View"
+msgstr "देखना"
+
+#: alarmnotification.cpp:57
+#, kde-format
+msgid "Task"
+msgstr "काम"
+
+#: alarmnotification.cpp:57
+#, kde-format
+msgid "Event"
+msgstr "आयोजन"
+
+#: alarmnotification.cpp:60
+#, kde-format
+msgid "Task due at %1"
+msgstr "कार्य %1 पर पूरा होना है"
+
+#: alarmnotification.cpp:64
+#, kde-format
+msgctxt "Event starts in 5 minutes"
+msgid "%2 starts in %1 minute"
+msgid_plural "%2 starts in %1 minutes"
+msgstr[0] "%2 %1 मिनट में शुरू होगा"
+msgstr[1] "%2 %1 मिनट में शुरू होगा"
+
+#: alarmnotification.cpp:68
+#, kde-format
+msgctxt "Event starts at 10:00"
+msgid "%1 starts at %2"
+msgstr "%1 %2 से शुरू होता है"
+
+#: alarmnotification.cpp:70
+#, kde-format
+msgctxt "Event started at 10:00"
+msgid "%1 started at %2"
+msgstr "%1 %2 पर शुरू हुआ"
+
+#: alarmnotification.cpp:76
+#, kde-format
+msgctxt "Event starts on <DATE> at <TIME>"
+msgid "%1 starts on %2 at %3"
+msgstr "%1 %2 से %3 पर शुरू होता है"
+
+#: alarmnotification.cpp:82
+#, kde-format
+msgctxt "Event started on <DATE> at <TIME>"
+msgid "%1 started on %2 at %3"
+msgstr "%1 %2 पर %3 पर शुरू हुआ"
+
+#: alarmnotification.cpp:91
+#, kde-format
+msgctxt "Event starts on <DATE>"
+msgid "%1 starts on %2"
+msgstr "%1 %2 से शुरू होता है"
+
+#: alarmnotification.cpp:93
+#, kde-format
+msgctxt "Event started on <DATE>"
+msgid "%1 started on %2"
+msgstr "%1 %2 पर शुरू हुआ"
+
+#: alarmnotification.cpp:118
+#, kde-format
+msgid "Remind in 5 mins"
+msgstr "5 मिनट में याद दिलाएं"
+
+#: alarmnotification.cpp:124
+#, kde-format
+msgid "Remind later..."
+msgstr "बाद में याद दिलाना..."
+
+#: alarmnotification.cpp:130
+#, kde-format
+msgctxt "dismiss a reminder notification for an event"
+msgid "Dismiss"
+msgstr "नकार देना"
+
+#: alarmnotification.cpp:206
+#, kde-format
+msgid "Open URL"
+msgstr "यूआरएल खोलें"
+
+#: alarmnotification.cpp:224
+#, kde-format
+msgid "Map"
+msgstr "नक्शा"
+
+#: kalendaracmain.cpp:25
+#, kde-format
+msgctxt "@title"
+msgid "Reminders"
+msgstr "अनुस्मारक"
+
+#: kalendaracmain.cpp:28
+#, kde-format
+msgid "Calendar Reminder Service"
+msgstr "कैलेंडर अनुस्मारक सेवा"
+
+#: kalendaracmain.cpp:32
+#, kde-format
+msgid "(c) KDE Community 2021-2024"
+msgstr "(सी) केडीई समुदाय 2021-2024"
+
+#: kalendaracmain.cpp:33
+#, kde-format
+msgctxt "@info:credit"
+msgid "Carl Schwan"
+msgstr "कार्ल स्वान"
+
+#: kalendaracmain.cpp:34 kalendaracmain.cpp:38
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer"
+msgstr "मेंटेनर"
+
+#: kalendaracmain.cpp:37
+#, kde-format
+msgctxt "@info:credit"
+msgid "Clau Cambra"
+msgstr "चैम्बर कुंजी"
+
+#: suspenddialog.cpp:74
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Suspend &duration:"
+msgstr "निलम्बन अवधि:"
+
+#: suspenddialog.cpp:81
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders by this amount of time"
+msgstr "अनुस्मारकों को इस समय तक स्थगित करें"
+
+#: suspenddialog.cpp:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended by this number "
+"of time units. You can choose the time units (typically minutes) in the "
+"adjacent selector."
+msgstr ""
+"चयनित घटनाओं के लिए प्रत्येक अनुस्मारक को समय इकाइयों की इस संख्या द्वारा निलंबित कर "
+"दिया जाएगा। आप आसन्न चयनकर्ता में समय इकाइयाँ (आमतौर पर मिनट) चुन सकते हैं।"
+
+#: suspenddialog.cpp:91
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of minutes"
+msgid "minute(s)"
+msgstr "मिनट)"
+
+#: suspenddialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of hours"
+msgid "hour(s)"
+msgstr "घंटे)"
+
+#: suspenddialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of days"
+msgid "day(s)"
+msgstr "दिन"
+
+#: suspenddialog.cpp:94
+#, kde-format
+msgctxt "@item:inlistbox suspend in terms of weeks"
+msgid "week(s)"
+msgstr "सप्ताह"
+
+#: suspenddialog.cpp:95
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Suspend the reminders using this time unit"
+msgstr "इस समय इकाई का उपयोग करके अनुस्मारक निलंबित करें"
+
+#: suspenddialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Each reminder for the selected incidences will be suspended using this time "
+"unit. You can set the number of time units in the adjacent number entry "
+"input."
+msgstr ""
+"चयनित घटनाओं के लिए प्रत्येक अनुस्मारक को इस समय इकाई का उपयोग करके निलंबित कर दिया "
+"जाएगा। आप आसन्न संख्या प्रविष्टि इनपुट में समय इकाइयों की संख्या निर्धारित कर सकते हैं।"
+
+#: suspenddialog.cpp:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Remind Later"
+msgstr "बाद में याद दिलाएँ"
+
+#: suspenddialog.cpp:111
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remind me again after the specified interval"
+msgstr "निर्दिष्ट अंतराल के बाद मुझे पुनः याद दिलाएं"
+
+#: suspenddialog.cpp:112
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Press this button to be reminded again about this incidence after the "
+"specified amount of time."
+msgstr "निर्दिष्ट समय के बाद इस घटना के बारे में पुनः याद दिलाने के लिए यह बटन दबाएं।"
+
+#: suspenddialog.cpp:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "रद्द करना"
+
+#: suspenddialog.cpp:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel reminding later, show the notification again"
+msgstr "बाद में याद दिलाना रद्द करें, अधिसूचना फिर से दिखाएं"
