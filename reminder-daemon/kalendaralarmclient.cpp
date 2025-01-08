@@ -29,8 +29,23 @@ static const char mySuspensedGroupName[] = "Suspended";
 
 KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
     : QObject(parent)
-    , m_config(KSharedConfig::openConfig())
+    , m_config(KSharedConfig::openStateConfig())
 {
+    // Migrate old config to state config
+    KSharedConfig::Ptr oldConfig = KSharedConfig::openConfig();
+    KConfigGroup alarmsGroup = m_config->group(QStringLiteral("Alarms"));
+    oldConfig->group(QStringLiteral("Alarms")).moveValuesTo(alarmsGroup);
+    KConfigGroup suspendGroup = m_config->group(QStringLiteral("Suspend"));
+    oldConfig->group(QStringLiteral("Suspend")).moveValuesTo(suspendGroup);
+
+    const QString suspendedGroupName = QStringLiteral("Suspended");
+    const QStringList groups = oldConfig->group(suspendedGroupName).groupList();
+    for (const QString &group : groups) {
+        KConfigGroup newGroup = m_config->group(suspendedGroupName).group(group);
+        oldConfig->group(suspendedGroupName).group(group).moveValuesTo(newGroup);
+    }
+    oldConfig->sync();
+
     mCheckTimer.setSingleShot(true);
     mCheckTimer.setTimerType(Qt::VeryCoarseTimer);
 
