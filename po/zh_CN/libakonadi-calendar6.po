@@ -67,13 +67,13 @@ msgstr "KOrganizer 确认"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
-msgstr ""
+msgstr "仅剪切这个"
 
 #: calendarclipboard.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
-msgstr ""
+msgstr "全部剪切"
 
 #: calendarclipboard.cpp:215
 #, kde-format
@@ -88,13 +88,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
-msgstr ""
+msgstr "仅复制这个"
 
 #: calendarclipboard.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
-msgstr ""
+msgstr "全部复制"
 
 #: calendarmodel.cpp:192
 #, kde-format
@@ -784,7 +784,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
-msgstr ""
+msgstr "发送更新"
 
 #: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
@@ -915,7 +915,7 @@ msgstr "签名(&S)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
-msgstr ""
+msgstr "不签名(&N)"
 
 #: mailclient_p.cpp:728
 #, kde-format
@@ -937,13 +937,13 @@ msgstr "此信件要求您签名，但是没有为此身份配置有效的签名
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
-msgstr ""
+msgstr "不签名发送？"
 
 #: mailclient_p.cpp:756
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr ""
+msgstr "不签名发送(&U)"
 
 #: mailclient_p.cpp:770
 #, kde-format
@@ -981,13 +981,13 @@ msgstr "签名(&S)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "未签名信件警告"
 
 #: mailclient_p.cpp:781
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr ""
+msgstr "原样发送(&A)"
 
 #: mailclient_p.cpp:834
 #, kde-format
@@ -1012,7 +1012,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
-msgstr ""
+msgstr "加密信件吗？"
 
 #: mailclient_p.cpp:843
 #, kde-format
@@ -1052,13 +1052,13 @@ msgstr "加密信件吗？"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
-msgstr ""
+msgstr "加密(&E)"
 
 #: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
-msgstr ""
+msgstr "不加密(&N)"
 
 #: mailclient_p.cpp:889
 #, kde-format
@@ -1079,7 +1079,7 @@ msgstr "不加密发送吗？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
-msgstr ""
+msgstr "不加密发送(&U)"
 
 #: mailclient_p.cpp:907
 #, kde-format
@@ -1130,7 +1130,7 @@ msgstr "选择地址"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
-msgstr ""
+msgstr "向这些接收人发送电子邮件"
 
 #: publishdialog.cpp:63
 #, kde-format
@@ -1143,7 +1143,7 @@ msgstr "点击<b>确认</b>按钮即可向输入的这些接收人发送电子�
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
-msgstr ""
+msgstr "取消接收人选择和邮件发送"
 
 #: publishdialog.cpp:70
 #, kde-format
@@ -1289,13 +1289,13 @@ msgstr "此字段包含了收件人的邮箱地址"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
-msgstr ""
+msgstr " (空名称) "
 
 #: publishdialog_p.cpp:45
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
-msgstr ""
+msgstr " (空电子邮件) "
 
 #: scheduler_p.cpp:132 scheduler_p.cpp:239
 #, kde-format

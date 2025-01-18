@@ -98,7 +98,7 @@ msgstr "5分钟后提醒"
 #: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind later..."
-msgstr "以后提醒..."
+msgstr "稍后提醒..."
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -244,4 +244,4 @@ msgstr "取消"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr ""
+msgstr "取消提醒，稍后再显示通知"
