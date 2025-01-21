@@ -17,7 +17,6 @@
 #include <KCalendarCore/Incidence>
 #include <KEmailAddress>
 #include <KIdentityManagementCore/Identity>
-#include <MessageComposer/ContactPreference>
 
 #include <Akonadi/MessageQueueJob>
 #include <MailTransport/Transport>
@@ -31,7 +30,8 @@
 #include <gpgme++/context.h>
 #include <gpgme++/importresult.h>
 
-#include <MessageComposer/Composer>
+#include <MessageComposer/ComposerJob>
+#include <MessageComposer/ContactPreference>
 #include <MessageComposer/GlobalPart>
 #include <MessageComposer/InfoPart>
 #include <MessageComposer/ItipPart>
@@ -173,7 +173,7 @@ static bool populateKeyResolverSigningKeys(MessageComposer::KeyResolver &keyReso
     return true;
 }
 
-std::vector<std::unique_ptr<MessageComposer::Composer>>
+std::vector<std::unique_ptr<MessageComposer::ComposerJob>>
 MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, const MessageData &msg)
 {
     // TODO: Those should be set based on whether the user selects "Sign" or "Encrypt" options
@@ -237,18 +237,18 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
         return {};
     }
 
-    std::vector<std::unique_ptr<MessageComposer::Composer>> composers;
+    std::vector<std::unique_ptr<MessageComposer::ComposerJob>> composerJobs;
 
     if (!signSomething && !encryptSomething) {
-        auto &composer = composers.emplace_back(std::make_unique<MessageComposer::Composer>());
+        auto &composerJob = composerJobs.emplace_back(std::make_unique<MessageComposer::ComposerJob>());
         const auto preferredCrypto = Kleo::stringToCryptoMessageFormat(identity.preferredCryptoMessageFormat());
         if (preferredCrypto & Kleo::OpenPGPMIMEFormat) {
-            composer->setAutocryptEnabled(identity.autocryptEnabled());
+            composerJob->setAutocryptEnabled(identity.autocryptEnabled());
             if (keyResolver.encryptToSelfKeysFor(Kleo::OpenPGPMIMEFormat).size() > 0) {
-                composer->setSenderEncryptionKey(keyResolver.encryptToSelfKeysFor(Kleo::OpenPGPMIMEFormat)[0]);
+                composerJob->setSenderEncryptionKey(keyResolver.encryptToSelfKeysFor(Kleo::OpenPGPMIMEFormat)[0]);
             }
         }
-        return composers;
+        return composerJobs;
     }
 
     canceled = false;
@@ -273,7 +273,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
                 continue;
             }
 
-            auto composer = std::make_unique<MessageComposer::Composer>();
+            auto composerJob = std::make_unique<MessageComposer::ComposerJob>();
 
             if (encryptSomething || identity.autocryptEnabled()) {
                 QList<QPair<QStringList, std::vector<GpgME::Key>>> data;
@@ -282,38 +282,38 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
                     data.push_back(qMakePair(info.recipients, info.keys));
                     qCDebug(AKONADICALENDAR_LOG) << "Resolved keys for:" << info.recipients;
                 }
-                composer->setEncryptionKeys(data);
+                composerJob->setEncryptionKeys(data);
                 if (concreteFormat & Kleo::OpenPGPMIMEFormat && identity.autocryptEnabled()) {
-                    composer->setAutocryptEnabled(true);
-                    composer->setSenderEncryptionKey(keyResolver.encryptToSelfKeysFor(concreteFormat)[0]);
+                    composerJob->setAutocryptEnabled(true);
+                    composerJob->setSenderEncryptionKey(keyResolver.encryptToSelfKeysFor(concreteFormat)[0]);
                     QTemporaryDir dir;
                     bool specialGnupgHome = addKeysToContext(dir.path(), data, keyResolver.useAutocrypt());
                     if (specialGnupgHome) {
                         dir.setAutoRemove(false);
-                        composer->setGnupgHome(dir.path());
+                        composerJob->setGnupgHome(dir.path());
                     }
                 }
             }
 
             if (signSomething) {
                 // find signing keys for this format
-                composer->setSigningKeys(keyResolver.signingKeys(concreteFormat));
+                composerJob->setSigningKeys(keyResolver.signingKeys(concreteFormat));
             }
 
-            composer->setCryptoMessageFormat(concreteFormat);
-            composer->setSignAndEncrypt(signSomething, encryptSomething);
+            composerJob->setCryptoMessageFormat(concreteFormat);
+            composerJob->setSignAndEncrypt(signSomething, encryptSomething);
 
-            composers.push_back(std::move(composer));
+            composerJobs.push_back(std::move(composerJob));
         }
     } else {
-        composers.emplace_back(std::make_unique<MessageComposer::Composer>());
+        composerJobs.emplace_back(std::make_unique<MessageComposer::ComposerJob>());
     }
 
-    return composers;
+    return composerJobs;
 }
 
 void MailClient::queueMessage(const MailTransport::Transport *transport,
-                              const MessageComposer::Composer *composer,
+                              const MessageComposer::ComposerJob *composerJob,
                               const KCalendarCore::IncidenceBase::Ptr &incidence,
                               const KIdentityManagementCore::Identity &identity,
                               const MessageData &msg,
@@ -340,11 +340,11 @@ void MailClient::queueMessage(const MailTransport::Transport *transport,
         qjob->addressAttribute().setFrom(
             KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(transport->senderOverwriteAddress())));
     } else {
-        qjob->addressAttribute().setFrom(KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(composer->infoPart()->from())));
+        qjob->addressAttribute().setFrom(KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(composerJob->infoPart()->from())));
     }
 
-    qjob->addressAttribute().setTo(MessageComposer::Util::cleanUpEmailListAndEncoding(composer->infoPart()->to()));
-    qjob->addressAttribute().setCc(MessageComposer::Util::cleanUpEmailListAndEncoding(composer->infoPart()->cc()));
+    qjob->addressAttribute().setTo(MessageComposer::Util::cleanUpEmailListAndEncoding(composerJob->infoPart()->to()));
+    qjob->addressAttribute().setCc(MessageComposer::Util::cleanUpEmailListAndEncoding(composerJob->infoPart()->cc()));
     if (msg.bccMe) {
         qjob->addressAttribute().setBcc({qjob->addressAttribute().from()});
     }
@@ -496,7 +496,7 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
     send(incidence, identity, msg, mailTransport);
 }
 
-void MailClient::populateComposer(MessageComposer::Composer *composer, const MessageData &msg)
+void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, const MessageData &msg)
 {
     // gather config values
     KConfig config(QStringLiteral("kmail2rc"));
@@ -509,10 +509,10 @@ void MailClient::populateComposer(MessageComposer::Composer *composer, const Mes
 #endif
     );
 
-    auto *globalPart = composer->globalPart();
+    auto *globalPart = composerJob->globalPart();
     globalPart->setGuiEnabled(false);
 
-    auto *infoPart = composer->infoPart();
+    auto *infoPart = composerJob->infoPart();
     infoPart->setCc(msg.cc);
     infoPart->setTo(msg.to);
     infoPart->setFrom(msg.from);
@@ -528,7 +528,7 @@ void MailClient::populateComposer(MessageComposer::Composer *composer, const Mes
     extras.push_back(header);
     infoPart->setExtraHeaders(extras);
 
-    auto *itipPart = composer->itipPart();
+    auto *itipPart = composerJob->itipPart();
     itipPart->setOutlookConformInvitation(outlookConformInvitation);
     itipPart->setInvitationBody(msg.body);
     itipPart->setInvitation(msg.attachment);
@@ -648,17 +648,17 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
         return;
     }
 
-    auto composers = buildComposers(incidence, identity, msg);
-    for (auto &composerPtr : composers) {
-        populateComposer(composerPtr.get(), msg);
-        auto *composer = composerPtr.release();
-        QObject::connect(composer, &MessageComposer::Composer::result, this, [this, transport, composer, incidence, identity, msg]() {
-            for (const auto &message : composer->resultMessages()) {
-                queueMessage(transport, composer, incidence, identity, msg, message);
+    auto composerJobs = buildComposers(incidence, identity, msg);
+    for (auto &composerJobPtr : composerJobs) {
+        populateComposer(composerJobPtr.get(), msg);
+        auto *composerJob = composerJobPtr.release();
+        QObject::connect(composerJob, &MessageComposer::ComposerJob::result, this, [this, transport, composerJob, incidence, identity, msg]() {
+            for (const auto &message : composerJob->resultMessages()) {
+                queueMessage(transport, composerJob, incidence, identity, msg, message);
             }
-            composer->deleteLater();
+            composerJob->deleteLater();
         });
-        composer->start();
+        composerJob->start();
     }
 }
 

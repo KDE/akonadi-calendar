@@ -37,7 +37,7 @@ class Identity;
 
 namespace MessageComposer
 {
-class Composer;
+class ComposerJob;
 class ContactPreference;
 class KeyResolver;
 }
@@ -169,10 +169,10 @@ protected:
     virtual bool showKeyApprovalDialog() const;
 
 private:
-    std::vector<std::unique_ptr<MessageComposer::Composer>>
+    std::vector<std::unique_ptr<MessageComposer::ComposerJob>>
     buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, const MessageData &msg);
 
-    void populateComposer(MessageComposer::Composer *composer, const MessageData &msg);
+    void populateComposer(MessageComposer::ComposerJob *composerJob, const MessageData &msg);
 
     bool determineWhetherToSign(bool doSignCompletely,
                                 MessageComposer::KeyResolver *keyResolver,
@@ -197,7 +197,7 @@ private:
     addKeysToContext(const QString &gnupgHome, const QList<QPair<QStringList, std::vector<GpgME::Key>>> &data, const std::map<QByteArray, QString> &autocrypt);
 
     void queueMessage(const MailTransport::Transport *transport,
-                      const MessageComposer::Composer *composer,
+                      const MessageComposer::ComposerJob *composerJob,
                       const KCalendarCore::IncidenceBase::Ptr &incidence,
                       const KIdentityManagementCore::Identity &identity,
                       const MessageData &msg,
