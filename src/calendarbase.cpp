@@ -374,8 +374,6 @@ Akonadi::Item CalendarBase::item(Akonadi::Item::Id id) const
     auto it = d->mItemById.constFind(id);
     if (it != d->mItemById.cend()) {
         i = *it;
-    } else {
-        qCDebug(AKONADICALENDAR_LOG) << "Can't find any item with id " << id;
     }
     return i;
 }
