@@ -6,13 +6,13 @@
 # obsoleteman <tulliana@gmail.com>, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-27 00:45+0000\n"
-"PO-Revision-Date: 2023-05-15 21:12+0300\n"
+"PO-Revision-Date: 2025-02-21 09:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 "X-POOTLE-MTIME: 1413102277.000000\n"
 
 #: akonadi_serializer_kcalcore.cpp:175
@@ -51,12 +51,12 @@ msgstr "Kullanıcı Kimliği"
 #: akonadi_serializer_kcalcore.cpp:210
 #, kde-format
 msgid "Is all-day"
-msgstr "tüm gün"
+msgstr "Tüm gün"
 
 #: akonadi_serializer_kcalcore.cpp:214
 #, kde-format
 msgid "Has duration"
-msgstr "süresi var"
+msgstr "Süresi var"
 
 #: akonadi_serializer_kcalcore.cpp:219
 #, kde-format
@@ -106,7 +106,7 @@ msgstr "Alarmlar"
 #: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
 msgid "Resources"
-msgstr "Kaynaklar"
+msgstr "Özkaynaklar"
 
 #: akonadi_serializer_kcalcore.cpp:254
 #, kde-format
@@ -116,57 +116,57 @@ msgstr "Ekler"
 #: akonadi_serializer_kcalcore.cpp:255
 #, kde-format
 msgid "Exception Dates"
-msgstr "İstisna Tarihler"
+msgstr "İstisna tarihler"
 
 #: akonadi_serializer_kcalcore.cpp:256
 #, kde-format
 msgid "Exception Times"
-msgstr "İstisna Saatler"
+msgstr "İstisna saatler"
 
 #: akonadi_serializer_kcalcore.cpp:260
 #, kde-format
 msgid "Created"
-msgstr "Oluşturuldu"
+msgstr "Oluşturulma"
 
 #: akonadi_serializer_kcalcore.cpp:264
 #, kde-format
 msgid "Related Uid"
-msgstr "İlgili Kullanıcı Kimliği"
+msgstr "İlgili kullanıcı kimliği"
 
 #: akonadi_serializer_kcalcore.cpp:271
 #, kde-format
 msgid "Start time"
-msgstr "Başlangıç saati"
+msgstr "Başlangıç zamanı"
 
 #: akonadi_serializer_kcalcore.cpp:275
 #, kde-format
 msgid "Has End Date"
-msgstr "Sonlandırma Zamanı Var"
+msgstr "Bitiş tarihi var"
 
 #: akonadi_serializer_kcalcore.cpp:279
 #, kde-format
 msgid "End Date"
-msgstr "Bitiş Tarihi"
+msgstr "Bitiş tarihi"
 
 #: akonadi_serializer_kcalcore.cpp:289
 #, kde-format
 msgid "Has Start Date"
-msgstr "Başlama Zamanı Var"
+msgstr "Başlangıç tarihi var"
 
 #: akonadi_serializer_kcalcore.cpp:295
 #, kde-format
 msgid "Has Due Date"
-msgstr "Yapılma Tarihi Var"
+msgstr "Bitiş tarihi var"
 
 #: akonadi_serializer_kcalcore.cpp:299
 #, kde-format
 msgid "Due Date"
-msgstr "Bitiş Tarihi"
+msgstr "Bitiş tarihi"
 
 #: akonadi_serializer_kcalcore.cpp:304
 #, kde-format
 msgid "Has Complete Date"
-msgstr "Tamamlanma Zamanı Var"
+msgstr "Tamamlanma tarihi var"
 
 #: akonadi_serializer_kcalcore.cpp:311
 #, kde-format

@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Serdar Soytetir <tulliana@gmail.com>, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-10-25 18:06+0300\n"
+"PO-Revision-Date: 2025-02-21 09:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Kopyalama yapılırken hata oluştu."
 #: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
-msgstr "Öge bulunamadı: %1"
+msgstr "Öge bulunamıyor: %1"
 
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "Takvim"
 #: calendarsettings.kcfg:23
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr "Uygun/Meşgul Yayınlama URL’si"
+msgstr "Uygun/Meşgul yayınlama URL’si"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
@@ -167,7 +167,7 @@ msgstr "Uygun/Meşgul bilgisini yayınlama URL’si"
 #: calendarsettings.kcfg:28
 #, kde-format
 msgid "Free/Busy Publish Username"
-msgstr "Uygun/Meşgul Yayınlama Kullanıcı Adı"
+msgstr "Uygun/Meşgul yayınlama kullanıcı adı"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:29
@@ -179,7 +179,7 @@ msgstr "Uygun/Meşgul bilgisini yayımlamak için kullanıcı adı"
 #: calendarsettings.kcfg:33
 #, kde-format
 msgid "Free/Busy Publish Password"
-msgstr "Uygun/Meşgul Yayınlama Parolası"
+msgstr "Uygun/Meşgul yayınlama parolası"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:34
@@ -191,13 +191,13 @@ msgstr "Uygun/Meşgul bilgisini yayınlamak için parola"
 #: calendarsettings.kcfg:45
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr "Otomatik Uygun/Meşgul geri getirme etkinleştir"
+msgstr "Kendiliğinden Uygun/Meşgul almayı etkinleştir"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:50
 #, kde-format
 msgid "Use full email address for retrieval"
-msgstr "Geri getirme işleminde tam e-posta adresi kullanın"
+msgstr "Alma işleminde tam e-posta adresi kullan"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:51
@@ -209,15 +209,15 @@ msgid ""
 "download user.ifb, for example nn.ifb."
 msgstr ""
 "Bu ayarla, sunucudan getirelecek dosyanın adını değiştirebilirsiniz. Bu "
-"denetimle, user@domain.ifb adlı bir uygun/meşgul dosyası indirecektir, "
-"örneğin nn@kde.org.ifb. Bu ayarlanmadığında user.ifb indirilecektir, örneğin "
-"nn.ifb."
+"denetimle, user@domain.ifb adlı bir uygun/meşgul dosyası indirecektir; "
+"örneğin, nn@kde.org.ifb. Bu ayarlanmadığında user.ifb indirilecektir; "
+"örneğin, nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:56
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr "Uygun/Meşgul Alma URL’si"
+msgstr "Uygun/Meşgul alma URL’si"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:60
@@ -229,7 +229,7 @@ msgstr "Uygun/Meşgul kullanıcı adı getirme"
 #: calendarsettings.kcfg:64
 #, kde-format
 msgid "Free/Busy Retrieval Password"
-msgstr "Uygun/Meşgul geri getirme parolası"
+msgstr "Uygun/Meşgul alma parolası"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:65
@@ -404,7 +404,7 @@ msgid ""
 "Reason: %2"
 msgstr ""
 "%1 konumundan Uygun/Meşgul verisi indirme başarısız:\n"
-"Neden: %2"
+"Gerekçe: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -501,7 +501,7 @@ msgstr "%1 değiştirme"
 #: icalimporter.cpp:83
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr "ical kaynağı oluşturulurken hata: %1"
+msgstr "iCal kaynağı oluşturulurken hata: %1"
 
 #: icalimporter.cpp:93
 #, kde-format
@@ -516,12 +516,12 @@ msgstr "Uzak dosya indirilemedi."
 #: icalimporter.cpp:141 icalimporter.cpp:162
 #, kde-format
 msgid "An import task is already in progress."
-msgstr "İçe aktarma görevi zaten işleniyor."
+msgstr "İçe aktarma görevi halihazırda sürüyor."
 
 #: icalimporter.cpp:167
 #, kde-format
 msgid "Empty filename. Will not import ical file."
-msgstr "Boş dosya adı. ical dosyası içe aktarılmayacak."
+msgstr "Boş dosya adı. iCal dosyası içe aktarılmayacak."
 
 #: icalimporter.cpp:172
 #, kde-format
@@ -550,7 +550,7 @@ msgstr "Seçili dosya boş."
 #: icalimporter.cpp:213
 #, kde-format
 msgid "Merge ical file into existing calendar."
-msgstr "Ical dosyasını mevcut takvimle birleştir."
+msgstr "iCal dosyasını var olan takvimle birleştirin."
 
 #: incidencechanger.cpp:260
 #, kde-format
@@ -571,12 +571,12 @@ msgstr "Bilinmeyen bir hata oluştu"
 #: incidencechanger.cpp:411
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr "Takvim ögesi değiştirilmeye çalışılırken hata oluştu. Hata: %1"
+msgstr "Takvim ögesinde değişiklik yapmaya çalışılırken hata oluştu. Hata: %1"
 
 #: incidencechanger.cpp:805 incidencechanger.cpp:929
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr "Takvim ögesi zaten silinmişti, ya da şu anda silindi."
+msgstr "Takvim ögesi halihazırda silinmişti veya şu anda silindi."
 
 #: incidencechanger.cpp:1195
 #, kde-format
@@ -586,7 +586,7 @@ msgstr "ACL kısıtlamaları nedeniyle işlem uygulanamadı"
 #: incidencechanger.cpp:1198
 #, kde-format
 msgid "The chosen collection is invalid"
-msgstr "Seçilen derleme geçersiz"
+msgstr "Seçili koleksiyon geçersiz"
 
 #: incidencechanger.cpp:1202
 #, kde-format
@@ -594,7 +594,7 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
-"Öntanımlı seçki ya geçersiz ya da uygun ACL’leri sahip değil ve "
+"Öntanımlı koleksiyon ya geçersiz ya da uygun ACL’leri sahip değil ve "
 "DestinationPolicyNeverAsk kullanılmış"
 
 #: incidencechanger.cpp:1206
@@ -629,17 +629,17 @@ msgstr "Hata iletisi: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr "ICal daveti ayrıştırılırken bilinmeyen hata"
+msgstr "iCal daveti ayrıştırılırken bilinmeyen hata"
 
 #: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr "Davet ya da güncelleme işlemi yapılırken hata oluştu."
+msgstr "Davet veya güncelleme işlemi yapılırken hata oluştu."
 
 #: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
-msgstr "Geçersiz toplantı"
+msgstr "Geçersiz olay"
 
 #: itiphandler.cpp:209
 #, kde-format
@@ -759,7 +759,7 @@ msgstr "Grup Zamanlama E-postası"
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr "<placeholder>Özet verilmedi</placeholder>"
+msgstr "<placeholder>Verilen özet yok</placeholder>"
 
 #: itiphandlerhelper_p.cpp:237
 #, kde-format
@@ -816,7 +816,8 @@ msgstr "Güncelleme Gönder"
 #: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
-msgstr "Bu görevin düzenleyicisine durum güncellemesi göndermek istiyor musun?"
+msgstr ""
+"Bu görevin düzenleyicisine durum güncellemesi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:339
 #, kde-format
@@ -824,8 +825,8 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
-"Bu olayın bir katılımcısı olarak durumun değişti. Bu olayın düzenleyicisine "
-"durum güncellemesi göndermek istiyor musun?"
+"Bu olayın bir katılımcısı olarak durumunuz değişti. Bu olayın "
+"düzenleyicisine durum güncellemesi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:382
 #, kde-format
@@ -881,7 +882,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
 #, kde-format
 msgid "Counter proposal: %1"
-msgstr "Karşıt öneri: %1"
+msgstr "Karşı öneri: %1"
 
 #: itiphandlerhelper_p.cpp:495
 #, kde-format
@@ -902,12 +903,12 @@ msgstr "Bu e-postayı alacak katılımcı yok"
 #: mailclient_p.cpp:424
 #, kde-format
 msgid "Free Busy Object"
-msgstr "Uygun Meşgul Nesnesi"
+msgstr "Uygun/Meşgul Nesnesi"
 
 #: mailclient_p.cpp:458 mailclient_p.cpp:489
 #, kde-format
 msgid "Free Busy Message"
-msgstr "Uygun Meşgul İletisi"
+msgstr "Uygun/Meşgul İletisi"
 
 #: mailclient_p.cpp:629
 #, kde-format
@@ -922,7 +923,7 @@ msgstr "Taşımayı getirirken hata oluştu. Davetler gönderilemiyor"
 #: mailclient_p.cpp:669
 #, kde-format
 msgid "Error queuing message in outbox: %1"
-msgstr "Giden kutusunda hata kuyruklama iletisi: %1"
+msgstr "Giden kutusunda iletiyi kuyruğa koyarken hata: %1"
 
 #: mailclient_p.cpp:701
 #, kde-format
@@ -1845,37 +1846,37 @@ msgstr "Etkinliği Düzenle…"
 #, kde-format
 msgid "Copy To-do"
 msgid_plural "Copy %1 To-dos"
-msgstr[0] "Yapılacak ögeyi kopyala"
-msgstr[1] "%1 yapılacak ögeyi kopyala"
+msgstr[0] "Yapılacak’ı Kopyala"
+msgstr[1] "%1 Yapılacak’ı Kopyala"
 
 #: standardcalendaractionmanager.cpp:333 standardcalendaractionmanager.cpp:337
 #, kde-format
 msgid "Copy To-do To"
-msgstr "Yapılacak ögeyi buraya kopyala"
+msgstr "Yapılacak’ı Şuraya Kopyala"
 
 #: standardcalendaractionmanager.cpp:340
 #, kde-format
 msgid "Delete To-do"
 msgid_plural "Delete %1 To-dos"
-msgstr[0] "Yapılacak Ögesini Sil"
-msgstr[1] "%1 Yapılacak Ögesini Sil"
+msgstr[0] "Yapılacak’ı Sil"
+msgstr[1] "%1 Yapılacak’ı Sil"
 
 #: standardcalendaractionmanager.cpp:343
 #, kde-format
 msgid "Cut To-do"
 msgid_plural "Cut %1 To-dos"
-msgstr[0] "Yapılacak Ögeyi Kes"
-msgstr[1] "%1 Yapılacak Ögeyi Kes"
+msgstr[0] "Yapılacak’ı Kes"
+msgstr[1] "%1 Yapılacak’ı Kes"
 
 #: standardcalendaractionmanager.cpp:347 standardcalendaractionmanager.cpp:351
 #, kde-format
 msgid "Move To-do To"
-msgstr "Yapılacak Ögeyi Taşı"
+msgstr "Yapılacak’ı Şuraya Taşı"
 
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do…"
-msgstr "Yapılacak Ögesini Düzenle…"
+msgstr "Yapılacak’ı Düzenle…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1926,22 +1927,22 @@ msgstr "Yeni etkinlik oluştur"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do…"
-msgstr "Ye&ni Yapılacak Ögesi…"
+msgstr "Ye&ni Yapılacak…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
 msgid "Create a new To-do"
-msgstr "Yeni Yapılacak Ögesi oluştur"
+msgstr "Yeni yapılacak ögesi oluştur"
 
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Y&eni Alt Yapılacak Ögesi…"
+msgstr "Y&eni Alt Yapılacak…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
 msgid "Create a new Sub-to-do"
-msgstr "Yeni bir alt yapılacak ögesi oluştur"
+msgstr "Yeni bir alt yapılacak oluştur"
 
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
@@ -1961,7 +1962,7 @@ msgstr "Dü&zenle…"
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
 msgid "Edit the selected incidence."
-msgstr "Seçilmiş olayı düzenle."
+msgstr "Seçili olayı düzenle"
 
 #: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
@@ -2016,7 +2017,7 @@ msgstr "Başlangıç Tarihi"
 #: todomodel.cpp:469
 #, kde-format
 msgid "Due Date"
-msgstr "Sonlanma Tarihi"
+msgstr "Bitiş Tarihi"
 
 #: todomodel.cpp:471
 #, kde-format
@@ -2027,7 +2028,7 @@ msgstr "Tamamlanan"
 #: todomodel.cpp:473
 #, kde-format
 msgid "Tags"
-msgstr "Etiketler"
+msgstr "Künyeler"
 
 #: todomodel.cpp:475
 #, kde-format
