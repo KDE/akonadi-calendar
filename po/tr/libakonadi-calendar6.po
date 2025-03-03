@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2025-02-21 09:50+0300\n"
+"PO-Revision-Date: 2025-03-02 13:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -754,7 +754,7 @@ msgstr "Önerilen yeni toplantı zamanı: %1 — %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr "Grup Zamanlama E-postası"
+msgstr "Grup Programı E-postası"
 
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
@@ -1202,8 +1202,8 @@ msgstr "<b>İptal</b> düğmesine tıklandığında e-posta işlemi sonlandırı
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr ""
-"<b>Yardım</b> düğmesine tıklandığında Grup Zaman Çizelgesi hakkında daha "
-"fazla bilgi görülebilir."
+"Grup Programı hakkında daha fazla bilgi okumak için <b>Yardım</b> düğmesine "
+"tıklayın."
 
 #: publishdialog.cpp:123
 #, kde-format
@@ -1212,7 +1212,7 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
-"Geçersiz bir alıcılar dizisinden dolayı takvim olayı yayımlanamıyor.\n"
+"Geçersiz bir alıcılar dizisinden dolayı takvim olayı yayınlanamıyor.\n"
 "%1"
 
 #: publishdialog.cpp:126
