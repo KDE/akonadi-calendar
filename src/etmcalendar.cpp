@@ -377,14 +377,14 @@ void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
     Q_ASSERT(!newIncidence->uid().isEmpty());
     newIncidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
     IncidenceBase::Ptr existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
+    Akonadi::Item seenItem = mItemById.value(item.id()); // if not found, seenItem will be invalid
 
-    if (!existingIncidence && !mItemById.contains(item.id())) {
+    if (!existingIncidence && !seenItem.isValid()) {
         // We don't know about this one because it was discarded, for example because of not having DTSTART
         return;
     }
 
     mItemsByCollection.insert(item.storageCollectionId(), item);
-    Akonadi::Item oldItem = mItemById.value(item.id());
 
     if (existingIncidence) {
         // We set the payload so that the internal incidence pointer and the one in mItemById stay the same
@@ -395,10 +395,10 @@ void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
         // Check if RELATED-TO changed, updating parenting information
         handleParentChanged(newIncidence);
         *(existingIncidence.data()) = *(newIncidence.data());
-    } else {
+    } else { // seenItem must be valid
         mItemById.insert(item.id(), item); // The item needs updating too, revision changed.
         // The item changed it's UID, update our maps, the Google resource changes the UID when we create incidences.
-        handleUidChange(oldItem, item, newIncidence->instanceIdentifier());
+        handleUidChange(seenItem, item, newIncidence->instanceIdentifier());
     }
 }
 
