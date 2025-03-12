@@ -21,7 +21,7 @@
 #include <Akonadi/ItemModifyJob>
 #include <Akonadi/ItemMoveJob>
 #include <Akonadi/Monitor>
-#include <akonadi/private/dbus_p.h>
+#include <private/dbus_p.h>
 
 #include <KCalendarCore/Event>
 
