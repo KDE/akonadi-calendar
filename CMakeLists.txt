@@ -65,9 +65,15 @@ set(MESSAGECOMPOSER_LIB_VERSION "6.4.40")
 set(LIBKLEO_LIB_VERSION "6.4.40")
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfigVersion.cmake"
-                        SOVERSION 6
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfigVersion.cmake"
+    SOVERSION 6
+)
+
+ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDARCORE
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar-core_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarCoreConfigVersion.cmake"
+    SOVERSION 6
 )
 
 configure_file(akonadi-calendar-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/akonadi-calendar-version.h @ONLY)
@@ -126,6 +132,42 @@ if(BUILD_TESTING)
 endif()
 
 ########### CMake Config Files ###########
+set(CMAKECONFIG_INSTALL_DIR_CORE "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiCalendarCore")
+
+if(BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim6AkonadiCalendarCore_QCH
+        FILE KPim6AkonadiCalendarCoreQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR_CORE}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS_CORE "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiCalendarCoreQchTargets.cmake\")")
+endif()
+
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiCalendarCoreConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarCoreConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_CORE}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarCoreConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarCoreConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_CORE}"
+    COMPONENT Devel
+)
+
+install(EXPORT KPim6AkonadiCalendarCoreTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_CORE}"
+    FILE KPim6AkonadiCalendarCoreTargets.cmake
+    NAMESPACE KPim6::
+)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar-core_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore
+    COMPONENT Devel
+)
+
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6AkonadiCalendar")
 
 if(BUILD_QCH)
@@ -134,35 +176,39 @@ if(BUILD_QCH)
         FILE KPim6AkonadiCalendarQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
-)
+    )
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6AkonadiCalendarQchTargets.cmake\")")
 endif()
 
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiCalendarConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimAkonadiCalendarConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+)
+
+install(EXPORT KPim6AkonadiCalendarTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPim6AkonadiCalendarTargets.cmake
+    NAMESPACE KPim6::
+)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar
+    COMPONENT Devel
 )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfigVersion.cmake"
-  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-  COMPONENT Devel
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
 )
 
-install(EXPORT KPim6AkonadiCalendarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6AkonadiCalendarTargets.cmake NAMESPACE KPim6::)
-
-install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar COMPONENT Devel
-)
 ecm_qt_install_logging_categories(
-        EXPORT AKONADI-CALENDAR
-        FILE akonadi-calendar.categories
-        DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+    EXPORT AKONADI-CALENDAR
+    FILE akonadi-calendar.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
-
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)

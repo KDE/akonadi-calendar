@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "akonadi-calendar_export.h"
+#include "akonadi-calendar-core_export.h"
 
 #include <QString>
 
@@ -38,7 +38,7 @@ class FreeBusyProviderBasePrivate;
  * @since 4.7
  */
 
-class AKONADI_CALENDAR_EXPORT FreeBusyProviderBase
+class AKONADI_CALENDAR_CORE_EXPORT FreeBusyProviderBase
 {
 public:
     /**

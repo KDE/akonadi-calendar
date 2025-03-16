@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
+add_subdirectory(core)
+
 add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar6\")
 
 add_library(KPim6AkonadiCalendar)
@@ -36,9 +38,6 @@ target_sources(KPim6AkonadiCalendar PRIVATE
     freebusymanager.cpp
     freebusymanager.h
     freebusymanager_p.h
-    freebusyproviderbase.cpp
-    freebusyproviderbase.h
-    freebusyproviderbase_p.h
     history.cpp
     history.h
     history_p.cpp
@@ -95,7 +94,6 @@ ecm_qt_declare_logging_category(KPim6AkonadiCalendar HEADER akonadicalendar_debu
 kconfig_add_kcfg_files(KPim6AkonadiCalendar GENERATE_MOC calendarsettings.kcfgc)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
-qt_add_dbus_adaptor(akonadicalendar_LIB_SRC interfaces/org.freedesktop.Akonadi.Resource.FreeBusyProvider.xml freebusyproviderbase_p.h Akonadi::FreeBusyProviderBasePrivate freebusyprovideradaptor  Akonadi__FreeBusyProviderAdaptor)
 target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6AkonadiCalendar PROPERTIES UNITY_BUILD ON)
@@ -113,6 +111,7 @@ target_include_directories(KPim6AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akon
 target_link_libraries(KPim6AkonadiCalendar
 PUBLIC
     KPim6::AkonadiCore
+    KPim6::AkonadiCalendarCore
     KF6::CalendarCore
     KF6::WidgetsAddons
     KF6::I18n
@@ -156,7 +155,6 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   ETMCalendar
   FetchJobCalendar
   FreeBusyManager
-  FreeBusyProviderBase
   History
   ICalImporter
   IncidenceChanger
