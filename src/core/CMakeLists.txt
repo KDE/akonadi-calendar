@@ -44,7 +44,7 @@ target_include_directories(KPim6AkonadiCalendarCore
     INTERFACE
         "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore>"
     PUBLIC
-        "$<BUILD_INTERFACE:${Akonadi-Calendar-Calendar_SOURCE_DIR}/src;${Akonadi-Calendar-Calendar_BINARY_DIR}/src>"
+        "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src/core;${Akonadi-Calendar_BINARY_DIR}/src/core>"
 )
 
 target_link_libraries(KPim6AkonadiCalendarCore PUBLIC
