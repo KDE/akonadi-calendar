@@ -110,7 +110,6 @@ target_include_directories(KPim6AkonadiCalendar PUBLIC "$<BUILD_INTERFACE:${Akon
 
 target_link_libraries(KPim6AkonadiCalendar
 PUBLIC
-    KPim6::AkonadiCore
     KPim6::AkonadiCalendarCore
     KF6::CalendarCore
     KF6::WidgetsAddons
