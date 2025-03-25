@@ -341,11 +341,13 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
     }
 
     const auto item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
+    if (!item.isValid()) {
+        return false;
+    }
 
-    if (!item.isValid() || !todo) {
-        qCWarning(AKONADICALENDAR_LOG) << "TodoModel::setData() called, bug item is invalid or doesn't have payload";
-        Q_ASSERT(false);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
+    if (!todo) {
+        qCWarning(AKONADICALENDAR_LOG) << "TodoModel::setData() called, bug item doesn't have payload";
         return false;
     }
 
@@ -633,17 +635,12 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
         return Qt::NoItemFlags;
     }
 
-    Qt::ItemFlags ret = KExtraColumnsProxyModel::flags(index);
-
     const auto item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-
     if (!item.isValid()) {
-        Q_ASSERT(mapToSource(index).isValid());
-        qCWarning(AKONADICALENDAR_LOG) << "Item is invalid " << index;
-        Q_ASSERT(false);
         return Qt::NoItemFlags;
     }
 
+    Qt::ItemFlags ret = KExtraColumnsProxyModel::flags(index);
     ret |= Qt::ItemIsDragEnabled;
 
     const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
