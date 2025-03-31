@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-31 00:42+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -308,7 +308,7 @@ msgstr ""
 "njegovdomen.rs неће проћи."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:479
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
 #| msgid "Calendar"
@@ -2087,26 +2087,26 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:459
+#: todomodel.cpp:461
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "сажетак"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:463
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:463
+#: todomodel.cpp:465
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "приоритет"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:467
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2114,21 +2114,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "довршеност"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:469
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "датум и време почетка"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:471
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "датом и време рока"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:473
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2136,12 +2136,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "довршеност"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:475
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:475
+#: todomodel.cpp:477
 #, kde-format
 msgid "Description"
 msgstr ""

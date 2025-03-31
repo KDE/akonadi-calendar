@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-31 00:42+0000\n"
 "PO-Revision-Date: 2024-08-05 11:27+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -293,7 +293,7 @@ msgid ""
 msgstr ""
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:479
 #, kde-format
 msgid "Calendar"
 msgstr "Kalendář"
@@ -1919,49 +1919,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:461
 #, kde-format
 msgid "Summary"
 msgstr "Shrnutí"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:463
 #, kde-format
 msgid "Recurs"
 msgstr "Opakuje se"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:465
 #, kde-format
 msgid "Priority"
 msgstr "Priorita"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:467
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Dokončeno"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:469
 #, kde-format
 msgid "Start Date"
 msgstr "Počáteční datum"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:471
 #, kde-format
 msgid "Due Date"
 msgstr "Datum dokončení"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:473
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:475
 #, kde-format
 msgid "Tags"
 msgstr "Značky"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:477
 #, kde-format
 msgid "Description"
 msgstr "Popis"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-31 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -295,7 +295,7 @@ msgstr ""
 "忙碌数据时将失败。"
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:479
 #, kde-format
 msgid "Calendar"
 msgstr "日历"
@@ -1901,49 +1901,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr "、"
 
-#: todomodel.cpp:459
+#: todomodel.cpp:461
 #, kde-format
 msgid "Summary"
 msgstr "摘要"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:463
 #, kde-format
 msgid "Recurs"
 msgstr "重复"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:465
 #, kde-format
 msgid "Priority"
 msgstr "优先级"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:467
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "完成"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:469
 #, kde-format
 msgid "Start Date"
 msgstr "开始日期"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:471
 #, kde-format
 msgid "Due Date"
 msgstr "截止日期"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:473
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "已完成"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:475
 #, kde-format
 msgid "Tags"
 msgstr "标签"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:477
 #, kde-format
 msgid "Description"
 msgstr "描述"

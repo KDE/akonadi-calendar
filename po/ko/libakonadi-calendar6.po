@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-31 00:42+0000\n"
 "PO-Revision-Date: 2024-08-19 21:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -299,7 +299,7 @@ msgstr ""
 "로 판단합니다."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:479
 #, kde-format
 msgid "Calendar"
 msgstr "캘린더"
@@ -1927,49 +1927,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:461
 #, kde-format
 msgid "Summary"
 msgstr "요약"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:463
 #, kde-format
 msgid "Recurs"
 msgstr "반복"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:465
 #, kde-format
 msgid "Priority"
 msgstr "중요도"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:467
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "완료"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:469
 #, kde-format
 msgid "Start Date"
 msgstr "시작 날짜"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:471
 #, kde-format
 msgid "Due Date"
 msgstr "만료 기한"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:473
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "완료됨"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:475
 #, kde-format
 msgid "Tags"
 msgstr "태그"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:477
 #, kde-format
 msgid "Description"
 msgstr "설명"
