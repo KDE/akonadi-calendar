@@ -8,7 +8,7 @@
 
 #include "icalimporter.h"
 #include "icalimporter_p.h"
-#include "utils_p.h"
+#include "selectcollection.h"
 
 #include <Akonadi/AgentInstanceCreateJob>
 #include <Akonadi/AgentManager>

@@ -19,35 +19,6 @@
 
 using namespace Akonadi::CalendarUtils;
 
-Akonadi::Collection
-Akonadi::CalendarUtils::selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection)
-{
-    QPointer<Akonadi::CollectionDialog> dlg(new Akonadi::CollectionDialog(parent));
-
-    qCDebug(AKONADICALENDAR_LOG) << "selecting collections with mimeType in " << mimeTypes;
-
-    dlg->changeCollectionDialogOptions(Akonadi::CollectionDialog::KeepTreeExpanded);
-    dlg->setMimeTypeFilter(mimeTypes);
-    dlg->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
-    if (defaultCollection.isValid()) {
-        dlg->setDefaultCollection(defaultCollection);
-    }
-    Akonadi::Collection collection;
-
-    // FIXME: don't use exec.
-    dialogCode = dlg->exec();
-    if (dialogCode == QDialog::Accepted) {
-        collection = dlg->selectedCollection();
-
-        if (!collection.isValid()) {
-            qCWarning(AKONADICALENDAR_LOG) << "An invalid collection was selected!";
-        }
-    }
-    delete dlg;
-
-    return collection;
-}
-
 QString Akonadi::CalendarUtils::fullName()
 {
     KEMailSettings settings;

@@ -74,6 +74,8 @@ target_sources(KPim6AkonadiCalendar PRIVATE
     scheduler_p.h
     searchcollectionhelper.cpp
     searchcollectionhelper.h
+    selectcollection.cpp
+    selectcollection.h
     standardcalendaractionmanager.cpp
     standardcalendaractionmanager.h
     todomodel.cpp
@@ -162,6 +164,7 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   PublishDialog
   StandardCalendarActionManager
   SearchCollectionHelper
+  SelectCollection
   TodoModel
   TodoPurger
   REQUIRED_HEADERS AkonadiCalendar_HEADERS

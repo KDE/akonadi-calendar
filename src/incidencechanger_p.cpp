@@ -7,7 +7,8 @@
 #include "incidencechanger_p.h"
 #include "akonadicalendar_debug.h"
 #include "calendarutils.h"
-#include "utils_p.h"
+#include "selectcollection.h"
+
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemCreateJob>

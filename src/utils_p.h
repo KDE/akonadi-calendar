@@ -33,7 +33,5 @@ namespace CalendarUtils
 
 [[nodiscard]] QStringList allEmails();
 
-[[nodiscard]] Akonadi::Collection
-selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }
 }
