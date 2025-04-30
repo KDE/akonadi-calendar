@@ -192,16 +192,23 @@ private:
         newIncidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
         IncidenceBase::Ptr existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
 
-        auto oldItem = m_itemById.value(item.id());
+        auto oldItem = m_itemById.value(item.id()); // if not found, seenItem will be invalid
+
+        if (!existingIncidence && !oldItem.isValid()) {
+            // We don't know about this one because it was discarded, for example because of not having DTSTART
+            return;
+        }
 
         if (existingIncidence) {
+            // We set the payload so that the internal incidence pointer and the one in m_itemById stay the same
             auto updatedItem = item;
             updatedItem.setPayload(existingIncidence.staticCast<KCalendarCore::Incidence>());
             m_itemById.insert(item.id(), updatedItem);
 
             (*existingIncidence.data()) = *(newIncidence.data());
-        } else {
+        } else { // seenItem must be valid
             m_itemById.insert(item.id(), item);
+            // The item changed it's UID, update our maps, the Google resource changes the UID when we create incidences.
             handleUidChange(oldItem, item, newIncidence->instanceIdentifier());
         }
     }
