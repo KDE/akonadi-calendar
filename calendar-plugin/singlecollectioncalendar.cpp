@@ -16,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 SingleCollectionCalendar::SingleCollectionCalendar(const Akonadi::Collection &col, QObject *parent)
     : Akonadi::CalendarBase(parent)
 {
+    setId(QString::number(col.id()));
     setCollection(col);
 
     incidenceChanger()->setDefaultCollection(col);
