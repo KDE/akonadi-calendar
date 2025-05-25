@@ -1200,8 +1200,8 @@ msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
 "recipients you have entered."
 msgstr ""
-"En clicar el botó <b>Bé</b> s'enviarà un correu electrònic als destinataris "
-"que heu introduït."
+"Quan es clique damunt del botó <b>Bé</b> s'enviarà un correu electrònic als "
+"destinataris que heu introduït."
 
 #: publishdialog.cpp:68
 #, kde-format
@@ -1215,15 +1215,15 @@ msgid ""
 "Clicking the <b>Cancel</b> button will cause the email operation to be "
 "terminated."
 msgstr ""
-"En clicar el botó <b>Cancel·la</b> es finalitzarà l'operació de correu "
-"electrònic."
+"Quan es clique damunt del botó <b>Cancel·la</b> es finalitzarà l'operació de "
+"correu electrònic."
 
 #: publishdialog.cpp:75
 #, kde-format
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr ""
-"Cliqueu en el botó <b>Ajuda</b> per a llegir més informació quant a la "
+"Cliqueu damunt del botó <b>Ajuda</b> per a llegir més informació quant a la "
 "planificació de grup."
 
 #: publishdialog.cpp:123
@@ -1272,8 +1272,8 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
-"Cliqueu este botó i podreu introduir un nom i una adreça de correu per a "
-"afegir una entrada nova a la llista de destinataris"
+"Cliqueu damunt d'este botó i podreu introduir un nom i una adreça de correu "
+"per a afegir una entrada nova a la llista de destinataris"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
@@ -1293,7 +1293,8 @@ msgstr "Elimina el destinatari seleccionat"
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
 msgstr ""
-"Cliqueu este botó per a eliminar de la llista el destinatari seleccionat"
+"Cliqueu damunt d'este botó per a eliminar de la llista el destinatari "
+"seleccionat"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
@@ -1314,8 +1315,8 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Cliqueu este botó per a mostrar un altre diàleg on podreu seleccionar un "
-"destinatari des de la llibreta d'adreces"
+"Cliqueu damunt d'este botó per a mostrar un altre diàleg on podreu "
+"seleccionar un destinatari des de la llibreta d'adreces"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
