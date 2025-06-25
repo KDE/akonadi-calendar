@@ -271,7 +271,7 @@ void ITIPHandler::sendiTIPMessage(KCalendarCore::iTIPMethod method, const KCalen
                                           "Therefore no groupware message will be sent.",
                                           incidence->summary()),
                                      i18nc("@title:window", "Message Not Sent"),
-                                     QStringLiteral("ScheduleNoAttendees"));
+                                     u"ScheduleNoAttendees"_s);
         }
 
         return;

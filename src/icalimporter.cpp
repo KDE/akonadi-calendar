@@ -7,6 +7,8 @@
 */
 
 #include "icalimporter.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "icalimporter_p.h"
 #include "selectcollection.h"
 
@@ -88,7 +90,7 @@ void ICalImporterPrivate::resourceCreated(KJob *job)
     Akonadi::AgentInstance instance = createjob->instance();
     const QString service = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, instance.identifier());
 
-    QDBusInterface iface(service, QStringLiteral("/Settings"));
+    QDBusInterface iface(service, u"/Settings"_s);
     if (!iface.isValid()) {
         setErrorMessage(i18n("Failed to obtain D-Bus interface for remote configuration."));
         Q_EMIT q->importIntoNewFinished(false);
@@ -98,8 +100,8 @@ void ICalImporterPrivate::resourceCreated(KJob *job)
     const QString path = createjob->property("path").toString();
     Q_ASSERT(!path.isEmpty());
 
-    iface.call(QStringLiteral("setPath"), path);
-    iface.call(QStringLiteral("save"));
+    iface.call(u"setPath"_s, path);
+    iface.call(u"save"_s);
     instance.reconfigure();
 
     Q_EMIT q->importIntoNewFinished(true);
@@ -144,7 +146,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     d->m_working = true;
 
-    Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
+    Akonadi::AgentType type = Akonadi::AgentManager::self()->type(u"akonadi_ical_resource"_s);
 
     auto job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);

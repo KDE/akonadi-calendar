@@ -7,6 +7,7 @@
 */
 
 #include "mailclient_p.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "akonadi-calendar-version.h"
 
@@ -499,8 +500,8 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
 void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, const MessageData &msg)
 {
     // gather config values
-    KConfig config(QStringLiteral("kmail2rc"));
-    KConfigGroup configGroup(&config, QStringLiteral("Invitations"));
+    KConfig config(u"kmail2rc"_s);
+    KConfigGroup configGroup(&config, u"Invitations"_s);
     const bool outlookConformInvitation = configGroup.readEntry("LegacyBodyInvites",
 #ifdef KDEPIM_ENTERPRISE_BUILD
                                                                 true
@@ -523,7 +524,7 @@ void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, con
 
     // Set User-Agent
     auto *header = new KMime::Headers::Generic("User-Agent");
-    header->fromUnicodeString(QStringLiteral("KOrganizer %1").arg(QStringLiteral(AKONADI_CALENDAR_VERSION)));
+    header->fromUnicodeString(u"KOrganizer %1"_s.arg(QStringLiteral(AKONADI_CALENDAR_VERSION)));
     KMime::Headers::Base::List extras;
     extras.push_back(header);
     infoPart->setExtraHeaders(extras);

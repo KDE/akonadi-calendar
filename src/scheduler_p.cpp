@@ -6,6 +6,8 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "scheduler_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarbase_p.h"
 
 #include <KCalUtils/Stringify>
@@ -136,7 +138,7 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
                     const bool success = calendar->modifyIncidence(newInc);
 
                     if (!success) {
-                        Q_EMIT transactionFinished(ResultModifyingError, QStringLiteral("Error modifying incidence"));
+                        Q_EMIT transactionFinished(ResultModifyingError, u"Error modifying incidence"_s);
                     } else {
                         // signal will be emitted in the handleModifyFinished() slot
                     }
@@ -248,7 +250,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                             const bool success = calendar->addIncidence(incidence);
 
                             if (!success) {
-                                Q_EMIT transactionFinished(ResultCreatingError, QStringLiteral("Error creating incidence"));
+                                Q_EMIT transactionFinished(ResultCreatingError, u"Error creating incidence"_s);
                             } else {
                                 // Signal emitted in the result slot of addFinished()
                             }
@@ -295,7 +297,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                                         "</list></para>"
                                         "<para>This is not a problem, but we thought you should know.</para>"),
                                  i18nc("@title:window", "Cannot Find Invitation to be Updated"),
-                                 QStringLiteral("AcceptCantFindIncidence"));
+                                 u"AcceptCantFindIncidence"_s);
     }
     qCDebug(AKONADICALENDAR_LOG) << "Storing new incidence with scheduling uid=" << schedulingUid << " and uid=" << incidence->uid();
 
@@ -326,7 +328,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
     }
 
     if (incidence->type() == IncidenceBase::TypeJournal) {
-        Q_EMIT transactionFinished(ResultUnsupported, QStringLiteral("Unsupported incidence type"));
+        Q_EMIT transactionFinished(ResultUnsupported, u"Unsupported incidence type"_s);
         return;
     }
 

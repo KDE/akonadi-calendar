@@ -175,7 +175,7 @@ void SearchCollectionHelper::updateDeclinedInvitation()
 {
     updateSearchCollection(d->declineInvitationCollection,
                            KCalendarCore::Attendee::Declined,
-                           QStringLiteral("DeclinedInvitations"),
+                           u"DeclinedInvitations"_s,
                            i18nc("A collection of all declined invidations.", "Declined Invitations"));
 }
 
@@ -183,7 +183,7 @@ void SearchCollectionHelper::updateOpenInvitation()
 {
     updateSearchCollection(d->openInvitationCollection,
                            KCalendarCore::Attendee::NeedsAction,
-                           QStringLiteral("OpenInvitations"),
+                           u"OpenInvitations"_s,
                            i18nc("A collection of all open invidations.", "Open Invitations"));
 }
 

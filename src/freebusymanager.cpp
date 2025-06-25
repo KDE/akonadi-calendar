@@ -52,16 +52,16 @@ QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
     QString emailName;
     QString emailHost;
 
-    const int atPos = email.indexOf(QLatin1Char('@'));
+    const int atPos = email.indexOf(u'@');
     if (atPos >= 0) {
         emailName = email.left(atPos);
         emailHost = email.mid(atPos + 1);
     }
 
     QString saveStr = url.path();
-    saveStr.replace(QStringLiteral("%email%"), email, Qt::CaseInsensitive);
-    saveStr.replace(QStringLiteral("%name%"), emailName, Qt::CaseInsensitive);
-    saveStr.replace(QStringLiteral("%server%"), emailHost, Qt::CaseInsensitive);
+    saveStr.replace(u"%email%"_s, email, Qt::CaseInsensitive);
+    saveStr.replace(u"%name%"_s, emailName, Qt::CaseInsensitive);
+    saveStr.replace(u"%server%"_s, emailHost, Qt::CaseInsensitive);
 
     QUrl retUrl(url);
     retUrl.setPath(saveStr);
@@ -127,9 +127,8 @@ FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const Q
     : mRequestStatus(NotStarted)
     , mInterface(nullptr)
 {
-    mInterface = QSharedPointer<QDBusInterface>(new QDBusInterface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + provider,
-                                                                   QStringLiteral("/FreeBusyProvider"),
-                                                                   QStringLiteral("org.freedesktop.Akonadi.Resource.FreeBusyProvider")));
+    mInterface = QSharedPointer<QDBusInterface>(
+        new QDBusInterface(u"org.freedesktop.Akonadi.Resource."_s + provider, u"/FreeBusyProvider"_s, u"org.freedesktop.Akonadi.Resource.FreeBusyProvider"_s));
 }
 
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
@@ -163,7 +162,7 @@ FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
 
 QString FreeBusyManagerPrivate::freeBusyDir() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusy");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/korganizer/freebusy"_s;
 }
 
 void FreeBusyManagerPrivate::checkFreeBusyUrl()
@@ -174,7 +173,7 @@ void FreeBusyManagerPrivate::checkFreeBusyUrl()
 
 static QString configFile()
 {
-    static QString file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusyurls");
+    static QString file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/korganizer/freebusyurls"_s;
     return file;
 }
 
@@ -183,7 +182,7 @@ void FreeBusyManagerPrivate::fetchFreeBusyUrl(const QString &email)
     // First check if there is a specific FB url for this email
     KConfig cfg(configFile());
     KConfigGroup group = cfg.group(email);
-    QString url = group.readEntry(QStringLiteral("url"));
+    QString url = group.readEntry(u"url"_s);
     if (!url.isEmpty()) {
         qCDebug(AKONADICALENDAR_LOG) << "Found cached url:" << url;
         QUrl cachedUrl(url);
@@ -215,7 +214,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     auto job = qobject_cast<Akonadi::ContactSearchJob *>(_job);
     KConfig cfg(configFile());
     KConfigGroup group = cfg.group(email);
-    QString url = group.readEntry(QStringLiteral("url"));
+    QString url = group.readEntry(u"url"_s);
 
     const KContacts::Addressee::List contacts = job->contacts();
     for (const KContacts::Addressee &contact : contacts) {
@@ -241,7 +240,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
 
     // Sanity check: Don't download if it's not a correct email
     // address (this also avoids downloading for "(empty email)").
-    int emailpos = email.indexOf(QLatin1Char('@'));
+    int emailpos = email.indexOf(u'@');
     if (emailpos == -1) {
         qCWarning(AKONADICALENDAR_LOG) << "No '@' found in" << email;
         Q_EMIT freeBusyUrlRetrieved(email, QUrl());
@@ -255,7 +254,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         // Don't try to fetch free/busy data for users not on the specified servers
         // This tests if the hostnames match, or one is a subset of the other
         const QString hostDomain = QUrl(CalendarSettings::self()->freeBusyRetrieveUrl()).host();
-        if (hostDomain != emailHost && !hostDomain.endsWith(QLatin1Char('.') + emailHost) && !emailHost.endsWith(QLatin1Char('.') + hostDomain)) {
+        if (hostDomain != emailHost && !hostDomain.endsWith(u'.' + emailHost) && !emailHost.endsWith(u'.' + hostDomain)) {
             // Host names do not match
             qCDebug(AKONADICALENDAR_LOG) << "Host '" << hostDomain << "' doesn't match email '" << email << '\'';
             Q_EMIT freeBusyUrlRetrieved(email, QUrl());
@@ -263,7 +262,7 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         }
     }
 
-    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegularExpression(QStringLiteral("\\.[xiv]fb$")))) {
+    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegularExpression(u"\\.[xiv]fb$"_s))) {
         // user specified a fullpath
         // do variable string replacements to the URL (MS Outlook style)
         const QUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
@@ -283,9 +282,9 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     // else we search for a fb file in the specified URL with known possible extensions
     QStringList extensions;
     extensions.reserve(3);
-    extensions << QStringLiteral("xfb");
-    extensions << QStringLiteral("ifb");
-    extensions << QStringLiteral("vfb");
+    extensions << u"xfb"_s;
+    extensions << u"ifb"_s;
+    extensions << u"vfb"_s;
 
     QStringList::ConstIterator ext;
     QList<QUrl> urlsToCheck;
@@ -297,12 +296,12 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         QUrl dirURL = replaceVariablesUrl(sourceUrl, email);
         if (CalendarSettings::self()->freeBusyFullDomainRetrieval()) {
             dirURL = dirURL.adjusted(QUrl::StripTrailingSlash);
-            dirURL.setPath(QString(dirURL.path() + QLatin1Char('/') + email + QLatin1Char('.') + (*ext)));
+            dirURL.setPath(QString(dirURL.path() + u'/' + email + u'.' + (*ext)));
         } else {
             // Cut off everything left of the @ sign to get the user name.
             const QString emailName = email.left(emailpos);
             dirURL = dirURL.adjusted(QUrl::StripTrailingSlash);
-            dirURL.setPath(QString(dirURL.path() + QLatin1Char('/') + emailName + QLatin1Char('.') + (*ext)));
+            dirURL.setPath(QString(dirURL.path() + u'/' + emailName + u'.' + (*ext)));
         }
         dirURL.setUserName(CalendarSettings::self()->freeBusyRetrieveUser());
         dirURL.setPassword(CalendarSettings::self()->freeBusyRetrievePassword());
@@ -550,7 +549,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
         // clang-format off
         connect(request.mInterface.data(), SIGNAL(handlesFreeBusy(QString,bool)), this, SLOT(onHandlesFreeBusy(QString,bool)));
         // clang-format on
-        request.mInterface->call(QStringLiteral("canHandleFreeBusy"), email);
+        request.mInterface->call(u"canHandleFreeBusy"_s, email);
         request.mRequestStatus = FreeBusyProviderRequest::HandlingRequested;
         mProvidersRequestsByEmail[email].mRequests << request;
     }
@@ -607,7 +606,7 @@ void FreeBusyManagerPrivate::onHandlesFreeBusy(const QString &email, bool handle
         // clang-format off
         connect(iface, SIGNAL(freeBusyRetrieved(QString,QString,bool,QString)), this, SLOT(onFreeBusyRetrieved(QString,QString,bool,QString)));
         // clang-format on
-        iface->call(QStringLiteral("retrieveFreeBusy"), email, queue->mStartTime, queue->mEndTime);
+        iface->call(u"retrieveFreeBusy"_s, email, queue->mStartTime, queue->mEndTime);
         queue->mRequests[requestIndex].mRequestStatus = FreeBusyProviderRequest::FreeBusyRequested;
     }
 }
@@ -618,7 +617,7 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
         KMessageBox::information(mParentWidgetForMailling,
                                  i18n("The free/busy information was successfully sent."),
                                  i18nc("@title:window", "Sending Free/Busy"),
-                                 QStringLiteral("FreeBusyPublishSuccess"));
+                                 u"FreeBusyPublishSuccess"_s);
     } else {
         KMessageBox::error(mParentWidgetForMailling, i18n("Unable to publish the free/busy data: %1", errorMsg));
     }
@@ -785,7 +784,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
     // We need to massage the list a bit so that Outlook understands
     // it.
-    messageText.replace(QRegularExpression(QStringLiteral("ORGANIZER\\s*:MAILTO:")), QStringLiteral("ORGANIZER:"));
+    messageText.replace(QRegularExpression(u"ORGANIZER\\s*:MAILTO:"_s), u"ORGANIZER:"_s);
 
     // Create a local temp file and save the message to it
     QTemporaryFile tempFile;
@@ -936,7 +935,7 @@ KCalendarCore::FreeBusy::Ptr FreeBusyManager::loadFreeBusy(const QString &email)
     Q_D(FreeBusyManager);
     const QString fbd = d->freeBusyDir();
 
-    QFile f(fbd + QLatin1Char('/') + email + QStringLiteral(".ifb"));
+    QFile f(fbd + u'/' + email + u".ifb"_s);
     if (!f.exists()) {
         qCDebug(AKONADICALENDAR_LOG) << f.fileName() << "doesn't exist.";
         return {};
@@ -972,9 +971,9 @@ bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
     }
 
     QString filename(fbd);
-    filename += QLatin1Char('/');
+    filename += u'/';
     filename += person.email();
-    filename += QStringLiteral(".ifb");
+    filename += u".ifb"_s;
     QFile f(filename);
 
     qCDebug(AKONADICALENDAR_LOG) << "filename:" << filename;

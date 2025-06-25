@@ -5,6 +5,8 @@
 */
 
 #include "itiphandler_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "fetchjobcalendar.h"
 #include <KCalendarCore/Incidence>
 #include <KLocalizedString>
@@ -134,7 +136,7 @@ void ITIPHandlerPrivate::finishSendiTIPMessage(Akonadi::MailScheduler::Result re
                                           m_queuedInvitation.incidence->summary(),
                                           KCalendarCore::ScheduleMessage::methodName(m_queuedInvitation.method)),
                                      i18nc("@title:window", "Sending Free/Busy"),
-                                     QStringLiteral("FreeBusyPublishSuccess"));
+                                     u"FreeBusyPublishSuccess"_s);
         }
         Q_EMIT q->iTipMessageSent(ITIPHandler::ResultSuccess, QString());
     } else {
@@ -159,7 +161,7 @@ void ITIPHandlerPrivate::finishPublishInformation(Akonadi::MailScheduler::Result
             KMessageBox::information(m_parentWidget,
                                      i18n("The item information was successfully sent."),
                                      i18nc("@title:window", "Publishing"),
-                                     QStringLiteral("IncidencePublishSuccess"));
+                                     u"IncidencePublishSuccess"_s);
         }
         Q_EMIT q->informationPublished(ITIPHandler::ResultSuccess, QString());
     } else {
@@ -179,7 +181,7 @@ void ITIPHandlerPrivate::finishSendAsICalendar(Akonadi::MailClient::Result resul
             KMessageBox::information(m_parentWidget,
                                      i18n("The item information was successfully sent."),
                                      i18nc("@title:window", "Forwarding"),
-                                     QStringLiteral("IncidenceForwardSuccess"));
+                                     u"IncidenceForwardSuccess"_s);
         }
         Q_EMIT q->sentAsICalendar(ITIPHandler::ResultSuccess, QString());
     } else {

@@ -98,22 +98,22 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
                 Akonadi::Collection tCol = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()});
                 const QString tName = tCol.name();
                 if (tName.startsWith("shared.cal"_L1, Qt::CaseInsensitive)) {
-                    ownerStr = QStringLiteral("Shared");
+                    ownerStr = u"Shared"_s;
                     nameStr = cName;
                     typeStr = i18n("Calendar");
                     break;
                 } else if (tName.startsWith("shared.tasks"_L1, Qt::CaseInsensitive) || tName.startsWith("shared.todo"_L1, Qt::CaseInsensitive)) {
-                    ownerStr = QStringLiteral("Shared");
+                    ownerStr = u"Shared"_s;
                     nameStr = cName;
                     typeStr = i18n("Tasks");
                     break;
                 } else if (tName.startsWith("shared.journal"_L1, Qt::CaseInsensitive)) {
-                    ownerStr = QStringLiteral("Shared");
+                    ownerStr = u"Shared"_s;
                     nameStr = cName;
                     typeStr = i18n("Journal");
                     break;
                 } else if (tName.startsWith("shared.notes"_L1, Qt::CaseInsensitive)) {
-                    ownerStr = QStringLiteral("Shared");
+                    ownerStr = u"Shared"_s;
                     nameStr = cName;
                     typeStr = i18n("Notes");
                     break;
@@ -163,7 +163,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
         const QString nameStr = c.displayName(); // folder name: can be anything
 
         QString typeStr;
-        const QString mimeStr = c.contentMimeTypes().join(QLatin1Char(','));
+        const QString mimeStr = c.contentMimeTypes().join(u',');
         if (mimeStr.contains(".event"_L1)) {
             typeStr = i18n("Calendar");
         } else if (mimeStr.contains(".todo"_L1)) {
@@ -177,7 +177,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
         }
 
         if (!ownerStr.isEmpty()) {
-            const int atChar = ownerStr.lastIndexOf(QLatin1Char('@'));
+            const int atChar = ownerStr.lastIndexOf(u'@');
             if (atChar >= 0) {
                 ownerStr.truncate(atChar);
             }

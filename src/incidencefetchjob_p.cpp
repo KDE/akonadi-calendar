@@ -6,6 +6,8 @@
 */
 
 #include "incidencefetchjob_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemFetchJob>
@@ -19,7 +21,7 @@ using namespace Akonadi;
 IncidenceFetchJob::IncidenceFetchJob(QObject *parent)
     : Job(parent)
 {
-    m_mimeTypeChecker.addWantedMimeType(QStringLiteral("text/calendar"));
+    m_mimeTypeChecker.addWantedMimeType(u"text/calendar"_s);
 }
 
 Item::List IncidenceFetchJob::items() const
@@ -30,8 +32,8 @@ Item::List IncidenceFetchJob::items() const
 void IncidenceFetchJob::doStart()
 {
     auto job = new CollectionFetchJob(Collection::root(), CollectionFetchJob::Recursive, this);
-    job->fetchScope().setContentMimeTypes(QStringList() << QStringLiteral("text/calendar") << KCalendarCore::Event::eventMimeType()
-                                                        << KCalendarCore::Todo::todoMimeType() << KCalendarCore::Journal::journalMimeType());
+    job->fetchScope().setContentMimeTypes(QStringList() << u"text/calendar"_s << KCalendarCore::Event::eventMimeType() << KCalendarCore::Todo::todoMimeType()
+                                                        << KCalendarCore::Journal::journalMimeType());
     connect(job, &CollectionFetchJob::result, this, &IncidenceFetchJob::collectionFetchResult);
 }
 

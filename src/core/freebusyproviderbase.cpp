@@ -5,6 +5,8 @@
 */
 
 #include "freebusyproviderbase.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "freebusyproviderbase_p.h"
 
 #include "freebusyprovideradaptor.h"
@@ -19,7 +21,7 @@ FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *q
     , q(qq)
 {
     new Akonadi__FreeBusyProviderAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/FreeBusyProvider"), this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(u"/FreeBusyProvider"_s, this, QDBusConnection::ExportAdaptors);
 }
 
 QDateTime FreeBusyProviderBasePrivate::lastCacheUpdate()

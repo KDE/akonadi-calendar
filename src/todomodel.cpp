@@ -165,7 +165,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         }
     case PriorityRole:
         if (todo->priority() == 0) {
-            return QStringLiteral("--");
+            return u"--"_s;
         }
         return todo->priority();
     case PercentRole:
@@ -200,7 +200,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             }
         case PriorityColumn:
             if (todo->priority() == 0) {
-                return QVariant(QStringLiteral("--"));
+                return QVariant(u"--"_s);
             }
             return {todo->priority()};
         case PercentColumn:
@@ -268,7 +268,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     // category colour
     if (role == Qt::DecorationRole && index.column() == SummaryColumn) {
         if (todo->recurs()) {
-            return QVariant(QIcon::fromTheme(QStringLiteral("task-recurring")));
+            return QVariant(QIcon::fromTheme(u"task-recurring"_s));
         }
         const QStringList categories = todo->categories();
         return categories.isEmpty() ? QVariant() : QVariant(Akonadi::TagCache::instance()->tagColor(categories.first()));

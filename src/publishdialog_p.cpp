@@ -6,6 +6,8 @@
 */
 
 #include "publishdialog_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/AbstractEmailAddressSelectionDialog>
 #include <Akonadi/EmailAddressSelectionDialog>
 #include <KCalendarCore/Person>
@@ -89,7 +91,7 @@ void PublishDialogPrivate::openAddressbook()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
 
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/akonadi/emailaddressselectionldapdialogplugin"));
+    const KPluginMetaData editWidgetPlugin(u"pim6/akonadi/emailaddressselectionldapdialogplugin"_s);
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin, q);
     if (result) {

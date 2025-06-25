@@ -6,6 +6,8 @@
 */
 
 #include "mailscheduler_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarbase.h"
 #include "calendarsettings.h"
 #include "utils_p.h"
@@ -132,7 +134,7 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
 
 QString MailScheduler::freeBusyDir() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusy");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/korganizer/freebusy"_s;
 }
 
 // TODO: AKONADI_PORT review following code
@@ -185,7 +187,7 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
     }
 
     if (result != ResultSuccess) {
-        Q_EMIT transactionFinished(result, QStringLiteral("Error creating job"));
+        Q_EMIT transactionFinished(result, u"Error creating job"_s);
     } else {
         // Nothing to do here. Signal will be emitted when we hear back from the calendar.
     }

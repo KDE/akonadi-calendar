@@ -7,6 +7,7 @@
  */
 
 #include "standardcalendaractionmanager.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/EntityTreeModel>
 
@@ -30,8 +31,8 @@ public:
     {
         mGenericManager = new StandardActionManager(actionCollection, parentWidget);
         mParent->connect(mGenericManager, &StandardActionManager::actionStateUpdated, mParent, &StandardCalendarActionManager::actionStateUpdated);
-        mGenericManager->setMimeTypeFilter(QStringList() << QStringLiteral("text/calendar"));
-        mGenericManager->setCapabilityFilter(QStringList() << QStringLiteral("Resource"));
+        mGenericManager->setMimeTypeFilter(QStringList() << u"text/calendar"_s);
+        mGenericManager->setCapabilityFilter(QStringList() << u"Resource"_s);
     }
 
     ~StandardCalendarActionManagerPrivate()
@@ -57,9 +58,8 @@ public:
                                             i18nc("@title:window", "Calendar Folder Creation Failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setProperty("ContentMimeTypes",
-                              QStringList() << QStringLiteral("inode/directory") << QStringLiteral("application/x-vnd.akonadi.calendar.todo")
-                                            << QStringLiteral("application/x-vnd.akonadi.calendar.event")
-                                            << QStringLiteral("application/x-vnd.akonadi.calendar.journal"));
+                              QStringList() << u"inode/directory"_s << u"application/x-vnd.akonadi.calendar.todo"_s
+                                            << u"application/x-vnd.akonadi.calendar.event"_s << u"application/x-vnd.akonadi.calendar.journal"_s);
 
             break;
         case Akonadi::StandardActionManager::CopyCollections:
@@ -521,22 +521,22 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
     switch (type) {
     case CreateEvent:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QStringLiteral("appointment-new")));
+        action->setIcon(QIcon::fromTheme(u"appointment-new"_s));
         action->setText(i18n("New E&vent…"));
         action->setWhatsThis(i18n("Create a new event"));
         d->mActions.insert(CreateEvent, action);
-        d->mActionCollection->addAction(QStringLiteral("akonadi_event_create"), action);
+        d->mActionCollection->addAction(u"akonadi_event_create"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             d->slotCreateEvent();
         });
         break;
     case CreateTodo:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QStringLiteral("task-new")));
+        action->setIcon(QIcon::fromTheme(u"task-new"_s));
         action->setText(i18n("New &To-do…"));
         action->setWhatsThis(i18n("Create a new To-do"));
         d->mActions.insert(CreateTodo, action);
-        d->mActionCollection->addAction(QStringLiteral("akonadi_todo_create"), action);
+        d->mActionCollection->addAction(u"akonadi_todo_create"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             d->slotCreateTodo();
         });
@@ -546,18 +546,18 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("New Su&b-to-do…"));
         action->setWhatsThis(i18n("Create a new Sub-to-do"));
         d->mActions.insert(CreateSubTodo, action);
-        d->mActionCollection->addAction(QStringLiteral("akonadi_subtodo_create"), action);
+        d->mActionCollection->addAction(u"akonadi_subtodo_create"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             d->slotCreateSubTodo();
         });
         break;
     case CreateJournal:
         action = new QAction(d->mParentWidget);
-        action->setIcon(QIcon::fromTheme(QStringLiteral("journal-new")));
+        action->setIcon(QIcon::fromTheme(u"journal-new"_s));
         action->setText(i18n("New &Journal…"));
         action->setWhatsThis(i18n("Create a new Journal"));
         d->mActions.insert(CreateJournal, action);
-        d->mActionCollection->addAction(QStringLiteral("akonadi_journal_create"), action);
+        d->mActionCollection->addAction(u"akonadi_journal_create"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             d->slotCreateJournal();
         });
@@ -567,7 +567,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
         action->setText(i18n("&Edit…"));
         action->setWhatsThis(i18n("Edit the selected incidence."));
         d->mActions.insert(EditIncidence, action);
-        d->mActionCollection->addAction(QStringLiteral("akonadi_incidence_edit"), action);
+        d->mActionCollection->addAction(u"akonadi_incidence_edit"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             d->slotEditIncidence();
         });

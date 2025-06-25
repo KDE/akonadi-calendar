@@ -6,6 +6,8 @@
 */
 
 #include "fetchjobcalendar.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadicalendar_debug.h"
 #include "fetchjobcalendar_p.h"
 #include "incidencefetchjob_p.h"
@@ -39,7 +41,7 @@ void FetchJobCalendarPrivate::slotSearchJobFinished(KJob *job)
         for (const Akonadi::Item &item : lstItem) {
             if (!item.isValid() || !item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                 m_success = false;
-                m_errorMessage = QStringLiteral("Invalid item or payload: %1").arg(item.id());
+                m_errorMessage = u"Invalid item or payload: %1"_s.arg(item.id());
                 qCWarning(AKONADICALENDAR_LOG) << "Unable to fetch incidences:" << m_errorMessage;
                 continue;
             }

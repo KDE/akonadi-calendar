@@ -7,6 +7,7 @@
 */
 
 #include "calendarmodel_p.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "calendarutils.h"
 #include <Akonadi/ItemFetchScope>
@@ -70,13 +71,13 @@ QVariant CalendarModel::entityData(const Akonadi::Item &item, int column, int ro
         }
         const auto incType{inc->type()};
         if (incType == KCalendarCore::IncidenceBase::TypeTodo) {
-            return QIcon::fromTheme(QStringLiteral("view-pim-tasks"));
+            return QIcon::fromTheme(u"view-pim-tasks"_s);
         } else if (incType == KCalendarCore::IncidenceBase::TypeJournal) {
-            return QIcon::fromTheme(QStringLiteral("view-pim-journal"));
+            return QIcon::fromTheme(u"view-pim-journal"_s);
         } else if (incType == KCalendarCore::IncidenceBase::TypeEvent) {
-            return QIcon::fromTheme(QStringLiteral("view-calendar"));
+            return QIcon::fromTheme(u"view-calendar"_s);
         }
-        return QIcon::fromTheme(QStringLiteral("network-wired"));
+        return QIcon::fromTheme(u"network-wired"_s);
     }
     case Qt::DisplayRole:
         switch (column) {

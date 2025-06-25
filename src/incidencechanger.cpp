@@ -5,6 +5,8 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "incidencechanger.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadicalendar_debug.h"
 #include "calendarutils.h"
 #include "incidencechanger_p.h"

@@ -41,10 +41,10 @@ PublishDialog::PublishDialog(QWidget *parent)
     d->mUI.mNameLineEdit->setEnabled(false);
     d->mUI.mEmailLineEdit->setEnabled(false);
 
-    d->mUI.mNew->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    d->mUI.mRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
+    d->mUI.mNew->setIcon(QIcon::fromTheme(u"list-add"_s));
+    d->mUI.mRemove->setIcon(QIcon::fromTheme(u"list-remove"_s));
     d->mUI.mRemove->setEnabled(false);
-    d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(QStringLiteral("view-pim-contacts")));
+    d->mUI.mSelectAddressee->setIcon(QIcon::fromTheme(u"view-pim-contacts"_s));
     connect(d->mUI.mListWidget, &QListWidget::itemSelectionChanged, d.get(), &PublishDialogPrivate::updateInput);
     connect(d->mUI.mNew, &QAbstractButton::clicked, d.get(), &PublishDialogPrivate::addItem);
     connect(d->mUI.mRemove, &QAbstractButton::clicked, d.get(), &PublishDialogPrivate::removeItem);
@@ -84,7 +84,7 @@ PublishDialog::~PublishDialog() = default;
 
 void PublishDialog::slotHelp()
 {
-    const QUrl url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/group-scheduling.html")));
+    const QUrl url = QUrl(u"help:/"_s).resolved(QUrl(u"korganizer/group-scheduling.html"_s));
     // launch khelpcenter, or a browser for URIs not handled by khelpcenter
     QDesktopServices::openUrl(url);
 }
@@ -111,7 +111,7 @@ QString PublishDialog::addresses() const
         }
     }
 
-    return toList.join(QLatin1Char(','));
+    return toList.join(u',');
 }
 
 void PublishDialog::accept()

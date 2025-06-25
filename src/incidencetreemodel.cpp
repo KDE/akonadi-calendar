@@ -5,6 +5,8 @@
 */
 
 #include "akonadicalendar_debug.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidencetreemodel_p.h"
 
 #include <Akonadi/EntityTreeModel>
@@ -851,9 +853,9 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
     Q_ASSERT(node);
     static int level = 0;
     ++level;
-    QString padding = QString(level - 1, QLatin1Char(' '));
-    s << padding + QLatin1StringView("node") << node.data() << QStringLiteral(";uid=") << node->uid << QStringLiteral(";id=") << node->id
-      << QStringLiteral(";parentUid=") << node->parentUid << QStringLiteral(";parentNode=") << (void *)(node->parentNode.data()) << '\n';
+    QString padding = QString(level - 1, u' ');
+    s << padding + QLatin1StringView("node") << node.data() << u";uid="_s << node->uid << u";id="_s << node->id << u";parentUid="_s << node->parentUid
+      << u";parentNode="_s << (void *)(node->parentNode.data()) << '\n';
 
     for (const Node::Ptr &child : std::as_const(node->directChilds)) {
         s << child;

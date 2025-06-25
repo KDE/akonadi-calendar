@@ -7,6 +7,7 @@
 #pragma once
 
 #include "calendarbase_p.h"
+
 #include "calendarmodel_p.h"
 #include "etmcalendar.h"
 #include "incidencechanger.h"
@@ -21,6 +22,7 @@ class QAbstractItemModel;
 class CheckableProxyModel;
 class KSelectionProxyModel;
 
+using namespace Qt::Literals::StringLiterals;
 namespace Akonadi
 {
 class EntityTreeModel;
@@ -31,8 +33,8 @@ class CalFilterPartStatusProxyModel;
 
 static bool isStructuralCollection(const Akonadi::Collection &collection)
 {
-    const QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar") << KCalendarCore::Event::eventMimeType()
-                                                << KCalendarCore::Todo::todoMimeType() << KCalendarCore::Journal::journalMimeType();
+    const QStringList mimeTypes = QStringList() << u"text/calendar"_s << KCalendarCore::Event::eventMimeType() << KCalendarCore::Todo::todoMimeType()
+                                                << KCalendarCore::Journal::journalMimeType();
     const QStringList collectionMimeTypes = collection.contentMimeTypes();
     for (const QString &mimeType : mimeTypes) {
         if (collectionMimeTypes.contains(mimeType)) {
