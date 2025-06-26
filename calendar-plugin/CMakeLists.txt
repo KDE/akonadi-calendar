@@ -2,11 +2,13 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
 add_library(akonadicalendarplugin)
-target_sources(akonadicalendarplugin PRIVATE
-    akonadicalendarplugin.cpp
-    singlecollectioncalendar.cpp
-    akonadicalendarplugin.h
-    singlecollectioncalendar.h
+target_sources(
+    akonadicalendarplugin
+    PRIVATE
+        akonadicalendarplugin.cpp
+        singlecollectioncalendar.cpp
+        akonadicalendarplugin.h
+        singlecollectioncalendar.h
 )
 
 ecm_qt_declare_logging_category(akonadicalendarplugin
@@ -17,9 +19,12 @@ ecm_qt_declare_logging_category(akonadicalendarplugin
     EXPORT AKONADI-CALENDAR
 )
 
-target_link_libraries(akonadicalendarplugin PRIVATE
-    KF6::CalendarCore
-    KPim6::AkonadiCalendar
+target_link_libraries(
+    akonadicalendarplugin
+    PRIVATE KF6::CalendarCore KPim6::AkonadiCalendar
 )
 
-install(TARGETS akonadicalendarplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/org.kde.kcalendarcore.calendars/)
+install(
+    TARGETS akonadicalendarplugin
+    DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/org.kde.kcalendarcore.calendars/
+)

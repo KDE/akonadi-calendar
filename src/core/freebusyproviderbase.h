@@ -114,7 +114,7 @@ public:
     virtual void retrieveFreeBusy(const QString &email, const QDateTime &start, const QDateTime &end) = 0;
 
     /**
-     * Derivate classes must call this method to notify the requestor
+     * Derivate classes must call this method to notify the requester
      * that the result is here.
      *
      * The @p freeBusy is expected to be an iTIP request containing

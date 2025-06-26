@@ -4,4 +4,3 @@
 [D-BUS Service]
 Name=org.kde.kalendarac
 Exec=${CMAKE_INSTALL_FULL_BINDIR}/kalendarac
-

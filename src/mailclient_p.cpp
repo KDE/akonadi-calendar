@@ -220,7 +220,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
 
     signSomething = determineWhetherToSign(doSignCompletely, &keyResolver, dialogDelegate.get(), identity, signSomething, signAttachments, result, canceled);
     if (!result) {
-        qCDebug(AKONADICALENDAR_LOG) << "KeyResolver failed to resolve signing keys - " << (canceled ? "operation canceled" : "an error occured");
+        qCDebug(AKONADICALENDAR_LOG) << "KeyResolver failed to resolve signing keys - " << (canceled ? "operation canceled" : "an error occurred");
         return {};
     }
 
@@ -234,7 +234,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
                                                  result,
                                                  canceled);
     if (!result) {
-        qCDebug(AKONADICALENDAR_LOG) << "KeyResolver failed to resolve encryption keys - " << (canceled ? "operation canceled" : "an error occured");
+        qCDebug(AKONADICALENDAR_LOG) << "KeyResolver failed to resolve encryption keys - " << (canceled ? "operation canceled" : "an error occurred");
         return {};
     }
 

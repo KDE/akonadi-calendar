@@ -89,7 +89,7 @@ public:
     [[nodiscard]] Akonadi::Collection collection(Akonadi::Collection::Id) const;
 
     /**
-     * Returns true if the collection owning incidence @p has righ @p right
+     * Returns true if the collection owning incidence @p has right @p right
      */
     [[nodiscard]] bool hasRight(const Akonadi::Item &item, Akonadi::Collection::Right right) const;
 

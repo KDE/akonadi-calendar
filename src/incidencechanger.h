@@ -121,7 +121,7 @@ public:
      * Flags describing whether invitation emails should signed and/or encrypted.
      */
     enum InvitationPrivacy {
-        InvitationPrivacyPlain = 0, ///< Invitation emails are not signed or encrpyted
+        InvitationPrivacyPlain = 0, ///< Invitation emails are not signed or encrypted
         InvitationPrivacySign = 1, ///< Invitation emails are signed
         InvitationPrivacyEncrypt = 2 //< Invitation emails are encrypted
     };

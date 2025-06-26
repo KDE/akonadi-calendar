@@ -6,10 +6,12 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libakonadi-calendar6\")
 add_library(KPim6AkonadiCalendarCore)
 add_library(KPim6::AkonadiCalendarCore ALIAS KPim6AkonadiCalendarCore)
 
-target_sources(KPim6AkonadiCalendarCore PRIVATE
-    freebusyproviderbase.cpp
-    freebusyproviderbase.h
-    freebusyproviderbase_p.h
+target_sources(
+    KPim6AkonadiCalendarCore
+    PRIVATE
+        freebusyproviderbase.cpp
+        freebusyproviderbase.h
+        freebusyproviderbase_p.h
 )
 
 ecm_qt_declare_logging_category(KPim6AkonadiCalendarCore
@@ -39,26 +41,28 @@ ecm_generate_export_header(KPim6AkonadiCalendarCore
     EXPORT_FILE_NAME akonadi-calendar-core_export.h
 )
 
-
-target_include_directories(KPim6AkonadiCalendarCore
+target_include_directories(
+    KPim6AkonadiCalendarCore
     INTERFACE
         "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore>"
     PUBLIC
         "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src/core;${Akonadi-Calendar_BINARY_DIR}/src/core>"
 )
 
-target_link_libraries(KPim6AkonadiCalendarCore PUBLIC
-    KPim6::AkonadiCore
+target_link_libraries(KPim6AkonadiCalendarCore PUBLIC KPim6::AkonadiCore)
+
+set_target_properties(
+    KPim6AkonadiCalendarCore
+    PROPERTIES
+        VERSION ${AKONADICALENDAR_VERSION}
+        SOVERSION ${AKONADICALENDAR_SOVERSION}
+        EXPORT_NAME AkonadiCalendarCore
 )
 
-set_target_properties(KPim6AkonadiCalendarCore PROPERTIES
-    VERSION ${AKONADICALENDAR_VERSION}
-    SOVERSION ${AKONADICALENDAR_SOVERSION}
-    EXPORT_NAME AkonadiCalendarCore
-)
-
-install(TARGETS KPim6AkonadiCalendarCore
-    EXPORT KPim6AkonadiCalendarCoreTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+install(
+    TARGETS KPim6AkonadiCalendarCore
+    EXPORT KPim6AkonadiCalendarCoreTargets
+    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(AkonadiCalendarCore_CamelCase_HEADERS
@@ -68,15 +72,18 @@ ecm_generate_headers(AkonadiCalendarCore_CamelCase_HEADERS
     PREFIX Akonadi
 )
 
-install(FILES ${AkonadiCalendarCore_CamelCase_HEADERS}
+install(
+    FILES ${AkonadiCalendarCore_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore/Akonadi
     COMPONENT Devel
 )
 
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar-core_export.h
-    ${AkonadiCalendarCore_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore/akonadi COMPONENT Devel
+install(
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar-core_export.h
+        ${AkonadiCalendarCore_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore/akonadi
+    COMPONENT Devel
 )
 
 if(BUILD_QCH)
