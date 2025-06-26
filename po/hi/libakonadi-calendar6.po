@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-31 00:42+0000\n"
+"POT-Creation-Date: 2025-06-26 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -97,49 +97,49 @@ msgctxt "@action:button"
 msgid "Copy All"
 msgstr "सभी को कॉपी करें"
 
-#: calendarmodel.cpp:192
+#: calendarmodel.cpp:193
 #, kde-format
 msgctxt "@title:column calendar event summary"
 msgid "Summary"
 msgstr "सारांश"
 
-#: calendarmodel.cpp:194
+#: calendarmodel.cpp:195
 #, kde-format
 msgctxt "@title:column calendar event start date and time"
 msgid "Start Date and Time"
 msgstr "प्रारंभ दिनांक और समय"
 
-#: calendarmodel.cpp:196
+#: calendarmodel.cpp:197
 #, kde-format
 msgctxt "@title:column calendar event end date and time"
 msgid "End Date and Time"
 msgstr "समाप्ति तिथि और समय"
 
-#: calendarmodel.cpp:198
+#: calendarmodel.cpp:199
 #, kde-format
 msgctxt "@title:column calendar event type"
 msgid "Type"
 msgstr "प्रकार"
 
-#: calendarmodel.cpp:200
+#: calendarmodel.cpp:201
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
 msgstr "नियत तिथि और समय"
 
-#: calendarmodel.cpp:202
+#: calendarmodel.cpp:203
 #, kde-format
 msgctxt "@title:column todo item priority"
 msgid "Priority"
 msgstr "प्राथमिकता"
 
-#: calendarmodel.cpp:204
+#: calendarmodel.cpp:205
 #, kde-format
 msgctxt "@title:column todo item completion in percent"
 msgid "Complete"
 msgstr "पूरा"
 
-#: calendarmodel.cpp:213
+#: calendarmodel.cpp:214
 #, kde-format
 msgctxt "@title:column calendar title"
 msgid "Calendar"
@@ -387,7 +387,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: freebusymanager.cpp:380
+#: freebusymanager.cpp:379
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -396,18 +396,18 @@ msgstr ""
 "खाली/व्यस्त डेटा डाउनलोड करने में विफल: %1\n"
 "कारण: %2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:380 freebusymanager.cpp:403
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "खाली/व्यस्त पुनर्प्राप्ति त्रुटि"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:402
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr "खाली/व्यस्त जानकारी पार्स करने में विफल रहा जो निम्न से प्राप्त की गई थी: %1"
 
-#: freebusymanager.cpp:418
+#: freebusymanager.cpp:417
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -420,23 +420,23 @@ msgstr ""
 "कहा: <em>%2</em> .</p><p> कृपया URL जांचें या अपने सिस्टम प्रशासक से संपर्क करें।</p></"
 "qt>"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:618
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "खाली/व्यस्त जानकारी सफलतापूर्वक भेज दी गई।"
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:136
+#: freebusymanager.cpp:619 itiphandler_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "खाली/व्यस्त भेजना"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:622
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "खाली/व्यस्त डेटा प्रकाशित करने में असमर्थ: %1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:746
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -447,18 +447,18 @@ msgstr ""
 "कृपया इसे &quot;खाली/व्यस्त&quot; पृष्ठ पर KOrganizer के कॉन्फ़िगरेशन डायलॉग में सेट करें।</"
 "p><p> सटीक URL और खाता विवरण के लिए अपने सिस्टम व्यवस्थापक से संपर्क करें।</p></qt>"
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:751
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "कोई खाली/व्यस्त अपलोड URL नहीं"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:761
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>प्रदान किया गया लक्ष्य URL '%1' अमान्य है.</qt>"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:762
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -487,42 +487,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 संशोधन"
 
-#: icalimporter.cpp:83
+#: icalimporter.cpp:85
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "ical संसाधन बनाते समय त्रुटि: %1"
 
-#: icalimporter.cpp:93
+#: icalimporter.cpp:95
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "दूरस्थ कॉन्फ़िगरेशन के लिए D-Bus इंटरफ़ेस प्राप्त करने में विफल."
 
-#: icalimporter.cpp:118
+#: icalimporter.cpp:120
 #, kde-format
 msgid "Could not download remote file."
 msgstr "दूरस्थ फ़ाइल डाउनलोड नहीं की जा सकी."
 
-#: icalimporter.cpp:141 icalimporter.cpp:162
+#: icalimporter.cpp:143 icalimporter.cpp:164
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "आयात कार्य पहले से ही प्रगति पर है."
 
-#: icalimporter.cpp:167
+#: icalimporter.cpp:169
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "खाली फ़ाइल नाम. ical फ़ाइल आयात नहीं करेगा."
 
-#: icalimporter.cpp:172
+#: icalimporter.cpp:174
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "आयात करने हेतु URL विकृत है."
 
-#: icalimporter.cpp:179
+#: icalimporter.cpp:181
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "चयनित फ़ाइल पठनीय फ़ाइल नहीं है."
 
-#: icalimporter.cpp:187
+#: icalimporter.cpp:189
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -531,53 +531,53 @@ msgstr ""
 "चयनित फ़ाइल उचित रूप से फ़ॉर्मेट नहीं है, या ऐसे फ़ॉर्मेट में है जो इस सॉफ़्टवेयर द्वारा समर्थित "
 "नहीं है।"
 
-#: icalimporter.cpp:195
+#: icalimporter.cpp:197
 #, kde-format
 msgid "The selected file is empty."
 msgstr "चयनित फ़ाइल रिक्त है."
 
-#: icalimporter.cpp:213
+#: icalimporter.cpp:215
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "ical फ़ाइल को मौजूदा कैलेंडर में मर्ज करें."
 
-#: incidencechanger.cpp:260
+#: incidencechanger.cpp:262
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "कैलेंडर आइटम बनाने का प्रयास करते समय त्रुटि हुई। त्रुटि थी: %1"
 
-#: incidencechanger.cpp:339
+#: incidencechanger.cpp:341
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "कैलेंडर आइटम को हटाने का प्रयास करते समय त्रुटि हुई। त्रुटि थी: %1"
 
-#: incidencechanger.cpp:374
+#: incidencechanger.cpp:376
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "एक अज्ञात त्रुटि हुई"
 
-#: incidencechanger.cpp:411
+#: incidencechanger.cpp:413
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "कैलेंडर आइटम संशोधित करने का प्रयास करते समय त्रुटि हुई। त्रुटि थी: %1"
 
-#: incidencechanger.cpp:805 incidencechanger.cpp:929
+#: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "वह कैलेंडर आइटम पहले ही हटा दिया गया है, या अभी हटाया जा रहा है।"
 
-#: incidencechanger.cpp:1195
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ACL प्रतिबंधों के कारण ऑपरेशन नहीं किया जा सकता"
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "चुना गया संग्रह अमान्य है"
 
-#: incidencechanger.cpp:1202
+#: incidencechanger.cpp:1204
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -586,12 +586,12 @@ msgstr ""
 "डिफ़ॉल्ट संग्रह अमान्य है या उसमें उचित ACL नहीं है और DestinationPolicyNeverAsk का "
 "उपयोग किया गया था"
 
-#: incidencechanger.cpp:1206
+#: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "समूह ऑपरेशन में आइटम आईडी की प्रतिलिपि बनाएँ"
 
-#: incidencechanger.cpp:1210
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -599,7 +599,7 @@ msgid ""
 msgstr ""
 "परिवर्तनों के समूह से संबंधित एक परिवर्तन विफल हो गया। सभी परिवर्तन वापस लिए जा रहे हैं।"
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
 msgstr "अज्ञात त्रुटि"
@@ -668,18 +668,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "न भेजें"
 
-#: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
 #: itiphandlerhelper_p.cpp:510
 #, kde-format
 msgid "Error: %1"
 msgstr "त्रुटि: %1"
 
-#: itiphandler_p.cpp:81
+#: itiphandler_p.cpp:83
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "कैलेंडर लोड करते समय त्रुटि: %1"
 
-#: itiphandler_p.cpp:132
+#: itiphandler_p.cpp:134
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -688,7 +688,7 @@ msgstr ""
 "आइटम '%1' के लिए ग्रुपवेयर संदेश सफलतापूर्वक भेजा गया।\n"
 "विधि: %2"
 
-#: itiphandler_p.cpp:144
+#: itiphandler_p.cpp:146
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -699,34 +699,34 @@ msgstr ""
 "आइटम '%1' भेजने में असमर्थ।\n"
 "विधि: %2"
 
-#: itiphandler_p.cpp:160 itiphandler_p.cpp:180
+#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "आइटम जानकारी सफलतापूर्वक भेज दी गई."
 
-#: itiphandler_p.cpp:161
+#: itiphandler_p.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "प्रकाशित करना"
 
-#: itiphandler_p.cpp:166
+#: itiphandler_p.cpp:168
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "आइटम '%1' प्रकाशित करने में असमर्थ"
 
-#: itiphandler_p.cpp:181
+#: itiphandler_p.cpp:183
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "अग्रेषित करना"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:190
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "आइटम '%1' को अग्रेषित करने में असमर्थ"
 
-#: itiphandler_p.cpp:189
+#: itiphandler_p.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -856,7 +856,7 @@ msgstr ""
 "आपने पहले भी इस कार्यक्रम के लिए आमंत्रण स्वीकार किया था। क्या आप आमंत्रण अस्वीकार करने "
 "वाले आयोजक को एक अद्यतन प्रतिक्रिया भेजना चाहते हैं?"
 
-#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
+#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "प्रति प्रस्ताव: %1"
@@ -872,37 +872,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "अद्यतन निरस्त करें"
 
-#: mailclient_p.cpp:377 mailclient_p.cpp:415
+#: mailclient_p.cpp:378 mailclient_p.cpp:416
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "ईमेल करने के लिए कोई सहभागी नहीं है"
 
-#: mailclient_p.cpp:424
+#: mailclient_p.cpp:425
 #, kde-format
 msgid "Free Busy Object"
 msgstr "निःशुल्क व्यस्त वस्तु"
 
-#: mailclient_p.cpp:458 mailclient_p.cpp:489
+#: mailclient_p.cpp:459 mailclient_p.cpp:490
 #, kde-format
 msgid "Free Busy Message"
 msgstr "निःशुल्क व्यस्त संदेश"
 
-#: mailclient_p.cpp:629
+#: mailclient_p.cpp:630
 #, kde-format
 msgid "Error while creating transport"
 msgstr "ट्रांसपोर्ट बनाते समय त्रुटि"
 
-#: mailclient_p.cpp:647
+#: mailclient_p.cpp:648
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "ट्रांसपोर्ट प्राप्त करने में त्रुटि हुई। आमंत्रण भेजने में असमर्थ"
 
-#: mailclient_p.cpp:669
+#: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "आउटबॉक्स में संदेश पंक्तिबद्ध करने में त्रुटि: %1"
 
-#: mailclient_p.cpp:701
+#: mailclient_p.cpp:702
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -913,24 +913,24 @@ msgstr ""
 "पूछा जाएगा कि क्या आपको इस संदेश पर हस्ताक्षर करना है या नहीं।\n"
 "क्या आप इस संदेश पर हस्ताक्षर करना चाहते हैं?"
 
-#: mailclient_p.cpp:706 mailclient_p.cpp:732
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
 msgstr "संदेश पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:707 mailclient_p.cpp:733
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&संकेत"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "हस्ताक्षर न करें और न करें"
 
-#: mailclient_p.cpp:728
+#: mailclient_p.cpp:729
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -939,7 +939,7 @@ msgstr ""
 "इन प्राप्तकर्ताओं के लिए परस्पर विरोधी हस्ताक्षर प्राथमिकताएँ हैं।\n"
 "इस संदेश पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:753
+#: mailclient_p.cpp:754
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -948,19 +948,19 @@ msgstr ""
 "आपने इस संदेश पर हस्ताक्षर करने का अनुरोध किया है, लेकिन इस पहचान के लिए कोई वैध "
 "हस्ताक्षर कुंजी कॉन्फ़िगर नहीं की गई है।"
 
-#: mailclient_p.cpp:756
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "हस्ताक्षर रहित भेजें?"
 
-#: mailclient_p.cpp:756
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "भेजें &हस्ताक्षर रहित"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -971,7 +971,7 @@ msgstr ""
 "केवल आंशिक रूप से हस्ताक्षरित संदेश भेजने से साइट नीति का उल्लंघन हो सकता है।\n"
 "इसके बजाय सभी भागों पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:775
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -982,29 +982,29 @@ msgstr ""
 "हस्ताक्षर रहित संदेश भेजने से साइट नीति का उल्लंघन हो सकता है।\n"
 "इसके बजाय संदेश पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:777
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&सभी भागों पर हस्ताक्षर करें"
 
-#: mailclient_p.cpp:777
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign"
 msgstr "&संकेत"
 
-#: mailclient_p.cpp:779
+#: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "अहस्ताक्षरित-संदेश चेतावनी"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&जैसा है वैसा ही भेजें"
 
-#: mailclient_p.cpp:834
+#: mailclient_p.cpp:835
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1013,7 +1013,7 @@ msgstr ""
 "सभी प्राप्तकर्ताओं के लिए मान्य विश्वसनीय एन्क्रिप्शन कुंजियाँ पाई गईं।\n"
 "इस संदेश को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:837
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1024,33 +1024,33 @@ msgstr ""
 "संदेश को एन्क्रिप्ट करना है या नहीं।\n"
 "इस संदेश को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "संदेश एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:843
+#: mailclient_p.cpp:844
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "साइन इन करें && &एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:916
+#: mailclient_p.cpp:844 mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt"
 msgstr "&एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:920
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Sign Only"
 msgstr "केवल &साइन करें"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:920
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&जैसा है वैसा ही भेजें"
 
-#: mailclient_p.cpp:864
+#: mailclient_p.cpp:865
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1059,24 +1059,24 @@ msgstr ""
 "इन प्राप्तकर्ताओं के लिए परस्पर विरोधी एन्क्रिप्शन प्राथमिकताएँ हैं।\n"
 "इस संदेश को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "संदेश एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "एन्क्रिप्ट न करें"
 
-#: mailclient_p.cpp:889
+#: mailclient_p.cpp:890
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1087,18 +1087,18 @@ msgstr ""
 "अनुरोध किया है, लेकिन इस पहचान के लिए कोई वैध विश्वसनीय एन्क्रिप्शन कुंजी कॉन्फ़िगर नहीं "
 "की गई है।"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:894
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "अनएन्क्रिप्टेड भेजें?"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:894
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "भेजें &अनएन्क्रिप्टेड"
 
-#: mailclient_p.cpp:907
+#: mailclient_p.cpp:908
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1111,7 +1111,7 @@ msgstr ""
 "संवेदनशील जानकारी लीक हो सकती है।\n"
 "इसके बजाय सभी भागों को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:912
+#: mailclient_p.cpp:913
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1124,17 +1124,17 @@ msgstr ""
 "हो सकती है।\n"
 "इसके बजाय संदेशों को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "सभी भागों को &एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:918
+#: mailclient_p.cpp:919
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "अनएन्क्रिप्टेड संदेश चेतावनी"
 
-#: mailscheduler_p.cpp:199
+#: mailscheduler_p.cpp:201
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "ई-मेल भेजने में त्रुटि:"
@@ -1312,34 +1312,34 @@ msgstr "प्राप्तकर्ता का ईमेल पता"
 msgid "This field contains the email address of the recipient"
 msgstr "इस फ़ील्ड में प्राप्तकर्ता का ईमेल पता होता है"
 
-#: publishdialog_p.cpp:44
+#: publishdialog_p.cpp:46
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(खाली नाम)"
 
-#: publishdialog_p.cpp:45
+#: publishdialog_p.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(खाली ईमेल)"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:239
+#: scheduler_p.cpp:134 scheduler_p.cpp:241
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "त्रुटि: विभिन्न घटना प्रकार निर्दिष्ट करते समय।"
 
-#: scheduler_p.cpp:223 scheduler_p.cpp:272
+#: scheduler_p.cpp:225 scheduler_p.cpp:274
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "यह कोई अद्यतन नहीं है। हाल ही में पाई गई घटना को संशोधित किया गया है।"
 
-#: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
+#: scheduler_p.cpp:265 scheduler_p.cpp:536 scheduler_p.cpp:551
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "घटना को संशोधित करने में त्रुटि"
 
-#: scheduler_p.cpp:288
+#: scheduler_p.cpp:290
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1359,28 +1359,28 @@ msgstr ""
 "वाले कैलेंडर तक पहुंच नहीं है</item></list></para><para>यह कोई समस्या नहीं है, लेकिन हमें "
 "लगा कि आपको पता होना चाहिए।</para>"
 
-#: scheduler_p.cpp:297
+#: scheduler_p.cpp:299
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "अपडेट करने का आमंत्रण नहीं मिल सका"
 
-#: scheduler_p.cpp:304
+#: scheduler_p.cpp:306
 #, kde-format
 msgid "Error adding incidence"
 msgstr "घटना जोड़ने में त्रुटि"
 
-#: scheduler_p.cpp:338
+#: scheduler_p.cpp:340
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "हटाने के लिए घटना नहीं मिल सकी."
 
-#: scheduler_p.cpp:391
+#: scheduler_p.cpp:393
 #, kde-format
 msgid "Error recording exception"
 msgstr "त्रुटि रिकॉर्डिंग अपवाद"
 
-#: scheduler_p.cpp:408
+#: scheduler_p.cpp:410
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1392,49 +1392,49 @@ msgstr ""
 "गया हो या यह आपके स्वामित्व में न हो। या हो सकता है कि यह केवल पढ़ने के लिए उपलब्ध या "
 "अक्षम कैलेंडर से संबंधित हो।"
 
-#: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
-#: scheduler_p.cpp:574
+#: scheduler_p.cpp:420 scheduler_p.cpp:435 scheduler_p.cpp:570
+#: scheduler_p.cpp:576
 #, kde-format
 msgid "Generic Error"
 msgstr "सामान्य त्रुटि"
 
-#: scheduler_p.cpp:476
+#: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1, %2 में भाग लेना चाहता है लेकिन उसे आमंत्रित नहीं किया गया।"
 
-#: scheduler_p.cpp:478
+#: scheduler_p.cpp:480
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1, %3 की ओर से %2 में भाग लेना चाहता है।"
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "बिन बुलाए उपस्थित व्यक्ति"
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "उपस्थिति स्वीकार करें"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:486
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "उपस्थिति अस्वीकार करें"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "आयोजक ने इस बैठक में आपकी उपस्थिति को अस्वीकार कर दिया है।"
 
-#: scheduler_p.cpp:508
+#: scheduler_p.cpp:510
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1443,35 +1443,35 @@ msgid ""
 msgstr ""
 "घटना में एक सहभागी को जोड़ा गया। क्या आप सहभागियों को अपडेट संदेश ईमेल करना चाहते हैं?"
 
-#: scheduler_p.cpp:510
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "सहभागी जोड़ा गया"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "संदेश भेजें"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "न भेजें"
 
-#: scheduler_p.cpp:558
+#: scheduler_p.cpp:560
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "शेड्यूलिंग के लिए कोई घटना नहीं."
 
-#: scheduler_p.cpp:581
+#: scheduler_p.cpp:583
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "कोई खाली व्यस्त कैश नहीं"
 
-#: scheduler_p.cpp:600
+#: scheduler_p.cpp:602
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "फ्रीबिज़ी ऑब्जेक्ट सहेजने में त्रुटि"
@@ -1488,28 +1488,28 @@ msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
 msgstr "खुला निमंत्रण"
 
-#: standardcalendaractionmanager.cpp:46
+#: standardcalendaractionmanager.cpp:47
 #, kde-format
 msgid "Add Folder…"
 msgstr "फ़ोल्डर जोड़ें…"
 
-#: standardcalendaractionmanager.cpp:48
+#: standardcalendaractionmanager.cpp:49
 #, kde-format
 msgid "Add a new calendar folder to the currently selected calendar folder."
 msgstr "वर्तमान में चयनित कैलेंडर फ़ोल्डर में एक नया कैलेंडर फ़ोल्डर जोड़ें."
 
-#: standardcalendaractionmanager.cpp:49
+#: standardcalendaractionmanager.cpp:50
 #, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "नया फ़ोल्डर"
 
-#: standardcalendaractionmanager.cpp:53
+#: standardcalendaractionmanager.cpp:54
 #, kde-format
 msgid "Could not create calendar folder: %1"
 msgstr "कैलेंडर फ़ोल्डर नहीं बनाया जा सका: %1"
 
-#: standardcalendaractionmanager.cpp:57
+#: standardcalendaractionmanager.cpp:58
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"

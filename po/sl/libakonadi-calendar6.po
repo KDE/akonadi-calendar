@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-31 00:42+0000\n"
+"POT-Creation-Date: 2025-06-26 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 06:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -103,49 +103,49 @@ msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Kopiraj vse"
 
-#: calendarmodel.cpp:192
+#: calendarmodel.cpp:193
 #, kde-format
 msgctxt "@title:column calendar event summary"
 msgid "Summary"
 msgstr "Povzetek"
 
-#: calendarmodel.cpp:194
+#: calendarmodel.cpp:195
 #, kde-format
 msgctxt "@title:column calendar event start date and time"
 msgid "Start Date and Time"
 msgstr "Datum in čas začetka"
 
-#: calendarmodel.cpp:196
+#: calendarmodel.cpp:197
 #, kde-format
 msgctxt "@title:column calendar event end date and time"
 msgid "End Date and Time"
 msgstr "Datum in čas konca"
 
-#: calendarmodel.cpp:198
+#: calendarmodel.cpp:199
 #, kde-format
 msgctxt "@title:column calendar event type"
 msgid "Type"
 msgstr "Vrsta"
 
-#: calendarmodel.cpp:200
+#: calendarmodel.cpp:201
 #, kde-format
 msgctxt "@title:column todo item due date and time"
 msgid "Due Date and Time"
 msgstr "Datum in čas zapadlosti"
 
-#: calendarmodel.cpp:202
+#: calendarmodel.cpp:203
 #, kde-format
 msgctxt "@title:column todo item priority"
 msgid "Priority"
 msgstr "Prednost"
 
-#: calendarmodel.cpp:204
+#: calendarmodel.cpp:205
 #, kde-format
 msgctxt "@title:column todo item completion in percent"
 msgid "Complete"
 msgstr "Zaključeno"
 
-#: calendarmodel.cpp:213
+#: calendarmodel.cpp:214
 #, kde-format
 msgctxt "@title:column calendar title"
 msgid "Calendar"
@@ -395,7 +395,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: freebusymanager.cpp:380
+#: freebusymanager.cpp:379
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -404,20 +404,20 @@ msgstr ""
 "Podatkov o prostosti/zaposlenosti ni bilo mogoče prejeti iz %1\n"
 "Vzrok: %2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:380 freebusymanager.cpp:403
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Napaka pridobivanja podatkov o prostosti/zaposlenosti"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:402
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
 "Podatkov o prostosti/zaposlenosti, pridobljenih iz %1, ni bilo mogoče "
 "razčleniti"
 
-#: freebusymanager.cpp:418
+#: freebusymanager.cpp:417
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -430,23 +430,23 @@ msgstr ""
 "ste navedli napačen URL. Sistem je odvrnil: <em>%2</em>.</p><p>Preverite URL "
 "ali stopite v stik z vašim sistemskim skrbnikom.</p></qt>"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:618
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Podatki o prostosti/zaposlenosti so bili uspešno poslani."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:136
+#: freebusymanager.cpp:619 itiphandler_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Pošiljanje podatkov o prostosti/zaposlenosti"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:622
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Podatkov o prostosti/zaposlenosti ni bilo mogoče objaviti: %1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:746
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -458,18 +458,18 @@ msgstr ""
 "ja na strani »Prostost/zaposlenost«.</p><p>Za natančen URL in podatke o "
 "računu stopite v stik z vašim sistemskim skrbnikom.</p></qt>"
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:751
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ni URL-ja za pošiljanje prostosti/zaposlenosti"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:761
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Podan ciljni URL »%1« ni veljaven.</qt>"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:762
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -498,42 +498,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "Sprememba %1"
 
-#: icalimporter.cpp:83
+#: icalimporter.cpp:85
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Napaka med ustvarjanjem vira ical: %1"
 
-#: icalimporter.cpp:93
+#: icalimporter.cpp:95
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "Pridobivanje vmesnika D-Bus za oddaljeno nastavljanje ni uspelo."
 
-#: icalimporter.cpp:118
+#: icalimporter.cpp:120
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Ni bilo mogoče prejeti oddaljene datoteke."
 
-#: icalimporter.cpp:141 icalimporter.cpp:162
+#: icalimporter.cpp:143 icalimporter.cpp:164
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Opravilo uvažanja že teče."
 
-#: icalimporter.cpp:167
+#: icalimporter.cpp:169
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Prazno ime datoteke. Datoteka ical ne bo uvožena."
 
-#: icalimporter.cpp:172
+#: icalimporter.cpp:174
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "URL za uvoz je napačno oblikovan."
 
-#: icalimporter.cpp:179
+#: icalimporter.cpp:181
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "Izbrana datoteka ni berljiva."
 
-#: icalimporter.cpp:187
+#: icalimporter.cpp:189
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -542,54 +542,54 @@ msgstr ""
 "Izbrana datoteka ni pravilno oblikovana ali ni v formatu, ki ga podpira to "
 "programje."
 
-#: icalimporter.cpp:195
+#: icalimporter.cpp:197
 #, kde-format
 msgid "The selected file is empty."
 msgstr "Izbrana datoteka je prazna."
 
-#: icalimporter.cpp:213
+#: icalimporter.cpp:215
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Združi datoteko ical v obstoječi koledar."
 
-#: incidencechanger.cpp:260
+#: incidencechanger.cpp:262
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Napaka med poskusom ustvarjanja predmeta koledarja. Napaka je bila: %1"
 
-#: incidencechanger.cpp:339
+#: incidencechanger.cpp:341
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Napaka med poskusom brisanja predmeta koledarja. Napaka je bila: %1"
 
-#: incidencechanger.cpp:374
+#: incidencechanger.cpp:376
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Prišlo je do neznane napake"
 
-#: incidencechanger.cpp:411
+#: incidencechanger.cpp:413
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
 "Napaka med poskusom spreminjanja predmeta koledarja. Napaka je bila: %1"
 
-#: incidencechanger.cpp:805 incidencechanger.cpp:929
+#: incidencechanger.cpp:807 incidencechanger.cpp:931
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Ta predmet koledarja je že bil izbrisan ali pa se že briše."
 
-#: incidencechanger.cpp:1195
+#: incidencechanger.cpp:1197
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Opravila ni mogoče izvesti zaradi omejitev ACL"
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1200
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Izbrana zbirka ni veljavna"
 
-#: incidencechanger.cpp:1202
+#: incidencechanger.cpp:1204
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -598,12 +598,12 @@ msgstr ""
 "Privzeta zbirka ni veljavna ali pa nima pravih ACL-jev, uporabljen pa je bil "
 "tudi DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1206
+#: incidencechanger.cpp:1208
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Podvojen ID predmeta v skupini opravil"
 
-#: incidencechanger.cpp:1210
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -612,7 +612,7 @@ msgstr ""
 "Ena izmed sprememb iz skupine sprememb je spodletela. Vse spremembe bodo "
 "povrnjene."
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1217
 #, kde-format
 msgid "Unknown error"
 msgstr "Neznana napaka"
@@ -683,18 +683,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Ne pošlji"
 
-#: itiphandler_p.cpp:59 itiphandler_p.cpp:61 itiphandler_p.cpp:115
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
 #: itiphandlerhelper_p.cpp:510
 #, kde-format
 msgid "Error: %1"
 msgstr "Napaka: %1"
 
-#: itiphandler_p.cpp:81
+#: itiphandler_p.cpp:83
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Napaka med nalaganjem koledarja: %1"
 
-#: itiphandler_p.cpp:132
+#: itiphandler_p.cpp:134
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -703,7 +703,7 @@ msgstr ""
 "Sporočilo programa za skupinsko delo predmeta »%1« je bilo uspešno poslano.\n"
 "Način: %2"
 
-#: itiphandler_p.cpp:144
+#: itiphandler_p.cpp:146
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -714,34 +714,34 @@ msgstr ""
 "Ni bilo mogoče poslati predmeta »%1«.\n"
 "Način: %2"
 
-#: itiphandler_p.cpp:160 itiphandler_p.cpp:180
+#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Podatki o predmetu so bili uspešno poslani."
 
-#: itiphandler_p.cpp:161
+#: itiphandler_p.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Objavljanje"
 
-#: itiphandler_p.cpp:166
+#: itiphandler_p.cpp:168
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče objaviti"
 
-#: itiphandler_p.cpp:181
+#: itiphandler_p.cpp:183
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Posredovanje"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:190
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče posredovati"
 
-#: itiphandler_p.cpp:189
+#: itiphandler_p.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -875,7 +875,7 @@ msgstr ""
 "Predhodno ste že sprejeli vabilo na ta dogodek. Ali želite organizatorju "
 "poslati posodobljen odgovor, da zavračate povabilo?"
 
-#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:124
+#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Nasprotni predlog: %1"
@@ -891,37 +891,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Prekini posodobitev"
 
-#: mailclient_p.cpp:377 mailclient_p.cpp:415
+#: mailclient_p.cpp:378 mailclient_p.cpp:416
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Ni udeležencev za pošiljanje e-pošte"
 
-#: mailclient_p.cpp:424
+#: mailclient_p.cpp:425
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Predmet prostosti/zaposlenosti"
 
-#: mailclient_p.cpp:458 mailclient_p.cpp:489
+#: mailclient_p.cpp:459 mailclient_p.cpp:490
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Sporočilo prostosti/zaposlenosti"
 
-#: mailclient_p.cpp:629
+#: mailclient_p.cpp:630
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Napaka med ustvarjanjem prenosa"
 
-#: mailclient_p.cpp:647
+#: mailclient_p.cpp:648
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Napaka med pridobivanjem prenosa. Povabil ni mogoče poslati"
 
-#: mailclient_p.cpp:669
+#: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Napaka postavljanja sporočila v čakalno vrsto odhajajočih: %1"
 
-#: mailclient_p.cpp:701
+#: mailclient_p.cpp:702
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -932,24 +932,24 @@ msgstr ""
 "ali naj to sporočilo podpiše ali ne.\n"
 "Naj podpišem to sporočilo?"
 
-#: mailclient_p.cpp:706 mailclient_p.cpp:732
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
 msgstr "Naj podpišem sporočilo?"
 
-#: mailclient_p.cpp:707 mailclient_p.cpp:733
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "Podpiši"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "Ne podpiši"
 
-#: mailclient_p.cpp:728
+#: mailclient_p.cpp:729
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -958,7 +958,7 @@ msgstr ""
 "Za te prejemnike obstajajo nasprotujoče si nastavitve podpisovanja.\n"
 "Naj podpišem to sporočilo?"
 
-#: mailclient_p.cpp:753
+#: mailclient_p.cpp:754
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -967,19 +967,19 @@ msgstr ""
 "Zahtevali ste podpis tega sporočila, vendar ni konfiguriran noben veljaven "
 "ključev podpisovanja za to identiteto."
 
-#: mailclient_p.cpp:756
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Naj pošljem nepodpisano?"
 
-#: mailclient_p.cpp:756
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Pošlji nepodpisano"
 
-#: mailclient_p.cpp:770
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -991,7 +991,7 @@ msgstr ""
 "mesta.\n"
 "Naj namesto tega podpišem vse dele?"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:775
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1002,29 +1002,29 @@ msgstr ""
 "Pošiljanje nepodpisanih sporočil lahko krši pravilnik spletnega mesta.\n"
 "Naj namesto tega sporočilo podpišem?"
 
-#: mailclient_p.cpp:777
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Podpiši vse dele"
 
-#: mailclient_p.cpp:777
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign"
 msgstr "Podpiši"
 
-#: mailclient_p.cpp:779
+#: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Opozorilo o nepodpisanem sporočilu"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Pošlji kot je"
 
-#: mailclient_p.cpp:834
+#: mailclient_p.cpp:835
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1033,7 +1033,7 @@ msgstr ""
 "Za vse prejemnike so bili najdeni veljavni zaupanja vredni šifrirni ključi.\n"
 "Naj šifriram to sporočilo?"
 
-#: mailclient_p.cpp:837
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1044,33 +1044,33 @@ msgstr ""
 "ali naj se to sporočilo šifrira ali ne.\n"
 "Naj šifriram to sporočilo?"
 
-#: mailclient_p.cpp:842
+#: mailclient_p.cpp:843
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Naj šifriram sporočilo?"
 
-#: mailclient_p.cpp:843
+#: mailclient_p.cpp:844
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Podpiši in šifriraj"
 
-#: mailclient_p.cpp:843 mailclient_p.cpp:916
+#: mailclient_p.cpp:844 mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt"
 msgstr "Šifriraj"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:920
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Sign Only"
 msgstr "Samo podpiši"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:920
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Pošlji kot je"
 
-#: mailclient_p.cpp:864
+#: mailclient_p.cpp:865
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1079,24 +1079,24 @@ msgstr ""
 "Za te prejemnike obstajajo nasprotujoče si nastavitve šifriranja.\n"
 "Naj šifriram to sporočilo?"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Naj šifriram sporočilo?"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Šifriraj"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "Ne šifriraj"
 
-#: mailclient_p.cpp:889
+#: mailclient_p.cpp:890
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1107,18 +1107,18 @@ msgstr ""
 "identiteto niso bili konfigurirani nobeni veljavni zaupanja vredni šifrirni "
 "ključi."
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:894
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Naj pošljem nešifrirano?"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:894
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Pošlji nešifrirano"
 
-#: mailclient_p.cpp:907
+#: mailclient_p.cpp:908
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1131,7 +1131,7 @@ msgstr ""
 "mesta in/aliuhajanje občutljivih informacij.\n"
 "Naj namesto tega šifriram vse dele?"
 
-#: mailclient_p.cpp:912
+#: mailclient_p.cpp:913
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1144,17 +1144,17 @@ msgstr ""
 "aliuhajanje občutljivih informacij.\n"
 "Naj namesto tega šifriram sporočilo?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Šifriraj vse dele"
 
-#: mailclient_p.cpp:918
+#: mailclient_p.cpp:919
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Opozorilo o nešifriranem sporočilu"
 
-#: mailscheduler_p.cpp:199
+#: mailscheduler_p.cpp:201
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Napaka med pošiljanjem pošte: "
@@ -1331,34 +1331,34 @@ msgstr "E-poštni naslov prejemnika"
 msgid "This field contains the email address of the recipient"
 msgstr "To polje vsebuje e-poštni naslov prejemnika"
 
-#: publishdialog_p.cpp:44
+#: publishdialog_p.cpp:46
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(PraznoIme)"
 
-#: publishdialog_p.cpp:45
+#: publishdialog_p.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(PraznaEpošta)"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:239
+#: scheduler_p.cpp:134 scheduler_p.cpp:241
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Napaka: dodeljevanje različnih vrst pojavitev."
 
-#: scheduler_p.cpp:223 scheduler_p.cpp:272
+#: scheduler_p.cpp:225 scheduler_p.cpp:274
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "To ni posodobitev. Najdena pojavitev je bila nedavno spremenjena."
 
-#: scheduler_p.cpp:263 scheduler_p.cpp:534 scheduler_p.cpp:549
+#: scheduler_p.cpp:265 scheduler_p.cpp:536 scheduler_p.cpp:551
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Napaka med spreminjanjem pojavitve"
 
-#: scheduler_p.cpp:288
+#: scheduler_p.cpp:290
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1379,28 +1379,28 @@ msgstr ""
 "ki vsebuje povabilo</item></list></para><para>To ni napaka, je le obvestilo."
 "</para>"
 
-#: scheduler_p.cpp:297
+#: scheduler_p.cpp:299
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Povabila za posodobitev ni mogoče najti"
 
-#: scheduler_p.cpp:304
+#: scheduler_p.cpp:306
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Napaka med dodajanjem pojavitve"
 
-#: scheduler_p.cpp:338
+#: scheduler_p.cpp:340
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Ni bilo mogoče najti pojavitve za izbris."
 
-#: scheduler_p.cpp:391
+#: scheduler_p.cpp:393
 #, kde-format
 msgid "Error recording exception"
 msgstr "Napaka med zapisovanjem izjeme"
 
-#: scheduler_p.cpp:408
+#: scheduler_p.cpp:410
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1412,49 +1412,49 @@ msgstr ""
 "ga že izbrisali, ali pa niste njegov lastnik. Mogoče je tudi, da pripada "
 "koledarju, ki je samo za branje, ali pa je onemogočen."
 
-#: scheduler_p.cpp:418 scheduler_p.cpp:433 scheduler_p.cpp:568
-#: scheduler_p.cpp:574
+#: scheduler_p.cpp:420 scheduler_p.cpp:435 scheduler_p.cpp:570
+#: scheduler_p.cpp:576
 #, kde-format
 msgid "Generic Error"
 msgstr "Splošna napaka"
 
-#: scheduler_p.cpp:476
+#: scheduler_p.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 se želi udeležiti %2, vendar ni bil povabljen."
 
-#: scheduler_p.cpp:478
+#: scheduler_p.cpp:480
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 se želi v imenu %3 udeležiti %2."
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nepovabljen udeleženec"
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Sprejmi udeležbo"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:486
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Zavrni udeležbo"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Organizator je zavrnil vašo udeležbo na tem srečanju."
 
-#: scheduler_p.cpp:508
+#: scheduler_p.cpp:510
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1464,35 +1464,35 @@ msgstr ""
 "Pojavitvi je bil dodan udeleženec. Ali želite udeležencem poslati e-pošto s "
 "posodobitvijo?"
 
-#: scheduler_p.cpp:510
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Udeleženec je dodan"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Pošlji sporočila"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Ne pošlji"
 
-#: scheduler_p.cpp:558
+#: scheduler_p.cpp:560
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Ni pojavitve za razporejanje."
 
-#: scheduler_p.cpp:581
+#: scheduler_p.cpp:583
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Ni predpomnilnika prostosti/zaposlenosti"
 
-#: scheduler_p.cpp:600
+#: scheduler_p.cpp:602
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Napaka med shranjevanjem predmeta prostosti/zaposlenosti"
@@ -1509,28 +1509,28 @@ msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
 msgstr "Odprta vabila"
 
-#: standardcalendaractionmanager.cpp:46
+#: standardcalendaractionmanager.cpp:47
 #, kde-format
 msgid "Add Folder…"
 msgstr "Dodaj mapo…"
 
-#: standardcalendaractionmanager.cpp:48
+#: standardcalendaractionmanager.cpp:49
 #, kde-format
 msgid "Add a new calendar folder to the currently selected calendar folder."
 msgstr "V trenutno izbrano koledarsko mapo doda novo koledarsko mapo."
 
-#: standardcalendaractionmanager.cpp:49
+#: standardcalendaractionmanager.cpp:50
 #, kde-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Nova mapa"
 
-#: standardcalendaractionmanager.cpp:53
+#: standardcalendaractionmanager.cpp:54
 #, kde-format
 msgid "Could not create calendar folder: %1"
 msgstr "Koledarske mape ni bilo mogoče ustvariti: %1"
 
-#: standardcalendaractionmanager.cpp:57
+#: standardcalendaractionmanager.cpp:58
 #, kde-format
 msgctxt "@title:window"
 msgid "Calendar Folder Creation Failed"
