@@ -1,16 +1,17 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for libakonadi-calendar6.po package.
+# Copyright (C) 2010-2025 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar package.
 #
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2011, 2013, 2014, 2015, 2016, 2018.
-# Javier Viñal <francisco-javie.vinal@seg-social.es>, 2013.
-# SPDX-FileCopyrightText: 2019, 2020, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2013, 2014, 2015, 2016, 2018 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2013 Javier Viñal <francisco-javie.vinal@seg-social.es>
+# SPDX-FileCopyrightText: 2019, 2020, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libakonadi-calendar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-16 02:32+0000\n"
-"PO-Revision-Date: 2024-08-01 04:43+0200\n"
+"PO-Revision-Date: 2025-06-29 13:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1309,7 +1310,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select…"
-msgstr "&Seleccionar..."
+msgstr "&Seleccionar…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1533,7 +1534,7 @@ msgstr "Invitaciones abiertas"
 #: standardcalendaractionmanager.cpp:46
 #, kde-format
 msgid "Add Folder…"
-msgstr "Añadir carpeta..."
+msgstr "Añadir carpeta…"
 
 #: standardcalendaractionmanager.cpp:48
 #, kde-format
@@ -1639,7 +1640,7 @@ msgstr "Corta las carpetas de calendario seleccionadas."
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties…"
-msgstr "Propiedades de la carpeta..."
+msgstr "Propiedades de la carpeta…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1719,7 +1720,7 @@ msgstr "Corta los eventos seleccionados del calendario."
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar…"
-msgstr "Añadir &calendario..."
+msgstr "Añadir &calendario…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1782,7 +1783,7 @@ msgstr[1] "¿Borrar calendarios?"
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties…"
-msgstr "Propiedades del calendario..."
+msgstr "Propiedades del calendario…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1858,7 +1859,7 @@ msgstr "Mover evento a"
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event…"
-msgstr "Editar evento..."
+msgstr "Editar evento…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1894,7 +1895,7 @@ msgstr "Mover tarea a"
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do…"
-msgstr "Editar tarea..."
+msgstr "Editar tarea…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1930,12 +1931,12 @@ msgstr "Mover diario a"
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal…"
-msgstr "Editar diario..."
+msgstr "Editar diario…"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent…"
-msgstr "Nuevo e&vento..."
+msgstr "Nuevo e&vento…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1945,7 +1946,7 @@ msgstr "Crea un nuevo evento"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do…"
-msgstr "Nueva &tarea..."
+msgstr "Nueva &tarea…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1955,7 +1956,7 @@ msgstr "Crea una nueva tarea"
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Nueva su&btarea..."
+msgstr "Nueva su&btarea…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1965,7 +1966,7 @@ msgstr "Crea una nueva subtarea"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal…"
-msgstr "Nuevo &diario..."
+msgstr "Nuevo &diario…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1975,7 +1976,7 @@ msgstr "Crear un nuevo diario"
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit…"
-msgstr "&Editar..."
+msgstr "&Editar…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format
@@ -2057,22 +2058,3 @@ msgstr "Descripción"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Purgando las tareas pendientes completadas"
-
-#~ msgid "Add &Calendar..."
-#~ msgstr "Añadir &calendario..."
-
-#~ msgid "Mail transport to use for sending e-mail messages"
-#~ msgstr "Transporte de correo a usar para enviar mensajes de correo"
-
-#~ msgid ""
-#~ "If specified all, groupware e-mails will use this transport. Otherwise, "
-#~ "the default one will be used."
-#~ msgstr ""
-#~ "Si se especifica todo, los correos de colaboración usarán este "
-#~ "transporte. De otro modo, se usará el predeterminado."
-
-#~ msgid "The specified file doesn't exist, aborting import."
-#~ msgstr "El archivo específico no existe, interrumpiendo importación."
-
-#~ msgid "Failed to load ical file, check permissions."
-#~ msgstr "Ha fallado al cargar el archivo ical, compruebe los permisos."

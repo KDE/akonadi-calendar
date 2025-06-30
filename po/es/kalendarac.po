@@ -1,15 +1,15 @@
 # Spanish translations for kalendarac.po package.
-# Copyright (C) 2022 This file is copyright:
-# This file is distributed under the same license as the kalendar package.
-#
+# Copyright (C) 2022-2025 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar package.
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:40+0000\n"
-"PO-Revision-Date: 2024-09-20 02:05+0200\n"
+"PO-Revision-Date: 2025-06-29 13:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -101,7 +101,7 @@ msgstr "Recordatorio en 5 minutos"
 #: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind later..."
-msgstr "Recordar más tarde..."
+msgstr "Recordar más tarde…"
 
 #: alarmnotification.cpp:130
 #, kde-format
@@ -252,10 +252,3 @@ msgstr "Cancelar"
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
 msgstr "Cancelar recordatorio más tarde, mostrar la notificación nuevamente"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Press this button to silence the reminder forever."
-#~ msgstr "Pulse este botón para silenciar el recordatorio definitivamente."
-
-#~ msgid "Remind in 1 hour"
-#~ msgstr "Recordatorio en 1 hora"
