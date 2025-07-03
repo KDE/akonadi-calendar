@@ -100,7 +100,12 @@ ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6AkonadiCalendar PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6AkonadiCalendar
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6AkonadiCalendar
     VERSION ${PIM_VERSION}
@@ -146,16 +151,15 @@ target_link_libraries(
 set_target_properties(
     KPim6AkonadiCalendar
     PROPERTIES
-        VERSION ${AKONADICALENDAR_VERSION}
-        SOVERSION ${AKONADICALENDAR_SOVERSION}
-        EXPORT_NAME AkonadiCalendar
+        VERSION
+            ${AKONADICALENDAR_VERSION}
+        SOVERSION
+            ${AKONADICALENDAR_SOVERSION}
+        EXPORT_NAME
+            AkonadiCalendar
 )
 
-install(
-    TARGETS KPim6AkonadiCalendar
-    EXPORT KPim6AkonadiCalendarTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6AkonadiCalendar EXPORT KPim6AkonadiCalendarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   HEADER_NAMES
@@ -185,7 +189,8 @@ ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
 )
 
 install(
-    FILES ${AkonadiCalendar_CamelCase_HEADERS}
+    FILES
+        ${AkonadiCalendar_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendar/Akonadi
     COMPONENT Devel
 )

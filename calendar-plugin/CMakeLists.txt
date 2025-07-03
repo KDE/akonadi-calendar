@@ -21,10 +21,9 @@ ecm_qt_declare_logging_category(akonadicalendarplugin
 
 target_link_libraries(
     akonadicalendarplugin
-    PRIVATE KF6::CalendarCore KPim6::AkonadiCalendar
+    PRIVATE
+        KF6::CalendarCore
+        KPim6::AkonadiCalendar
 )
 
-install(
-    TARGETS akonadicalendarplugin
-    DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/org.kde.kcalendarcore.calendars/
-)
+install(TARGETS akonadicalendarplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/org.kde.kcalendarcore.calendars/)

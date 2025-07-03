@@ -32,7 +32,12 @@ qt_add_dbus_adaptor(akonadicalendarcore_LIB_SRC
 
 target_sources(KPim6AkonadiCalendarCore PRIVATE ${akonadicalendarcore_LIB_SRC})
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6AkonadiCalendarCore PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6AkonadiCalendarCore
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 ecm_generate_export_header(KPim6AkonadiCalendarCore
@@ -54,16 +59,15 @@ target_link_libraries(KPim6AkonadiCalendarCore PUBLIC KPim6::AkonadiCore)
 set_target_properties(
     KPim6AkonadiCalendarCore
     PROPERTIES
-        VERSION ${AKONADICALENDAR_VERSION}
-        SOVERSION ${AKONADICALENDAR_SOVERSION}
-        EXPORT_NAME AkonadiCalendarCore
+        VERSION
+            ${AKONADICALENDAR_VERSION}
+        SOVERSION
+            ${AKONADICALENDAR_SOVERSION}
+        EXPORT_NAME
+            AkonadiCalendarCore
 )
 
-install(
-    TARGETS KPim6AkonadiCalendarCore
-    EXPORT KPim6AkonadiCalendarCoreTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6AkonadiCalendarCore EXPORT KPim6AkonadiCalendarCoreTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(AkonadiCalendarCore_CamelCase_HEADERS
     HEADER_NAMES
@@ -73,7 +77,8 @@ ecm_generate_headers(AkonadiCalendarCore_CamelCase_HEADERS
 )
 
 install(
-    FILES ${AkonadiCalendarCore_CamelCase_HEADERS}
+    FILES
+        ${AkonadiCalendarCore_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore/Akonadi
     COMPONENT Devel
 )

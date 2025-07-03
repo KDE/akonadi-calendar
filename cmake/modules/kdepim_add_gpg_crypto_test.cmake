@@ -20,9 +20,7 @@ macro(ADD_GPG_CRYPTO_TEST _target _testname)
             # DYLD_LIBRARY_PATH actually breaks things
             set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/")
         else(APPLE)
-            set(_ld_library_path
-                "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/:${KDE_INSTALL_LIBDIR}:${QT_LIBRARY_DIR}"
-            )
+            set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/:${KDE_INSTALL_LIBDIR}:${QT_LIBRARY_DIR}")
         endif(APPLE)
         set(_executable "$<TARGET_FILE:${_target}>")
 
@@ -31,10 +29,8 @@ macro(ADD_GPG_CRYPTO_TEST _target _testname)
             TARGET ${_target}
             POST_BUILD
             COMMAND
-                ${CMAKE_COMMAND} -D_filename=${_executable}.shell
-                -D_library_path_variable=${_library_path_variable}
-                -D_ld_library_path="${_ld_library_path}"
-                -D_executable=$<TARGET_FILE:${_target}>
+                ${CMAKE_COMMAND} -D_filename=${_executable}.shell -D_library_path_variable=${_library_path_variable}
+                -D_ld_library_path="${_ld_library_path}" -D_executable=$<TARGET_FILE:${_target}>
                 -D_gnupghome="${GNUPGHOME}" -P
                 ${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_generate_crypto_test_wrapper.cmake
         )
@@ -42,15 +38,15 @@ macro(ADD_GPG_CRYPTO_TEST _target _testname)
         set_property(
             DIRECTORY
             APPEND
-            PROPERTY ADDITIONAL_MAKE_CLEAN_FILES "${_executable}.shell"
+            PROPERTY
+                ADDITIONAL_MAKE_CLEAN_FILES
+                    "${_executable}.shell"
         )
         add_test(NAME ${_testname} COMMAND ${_executable}.shell)
     else(UNIX)
         # under windows, set the property WRAPPER_SCRIPT just to the name of the executable
         # maybe later this will change to a generated batch file (for setting the PATH so that the Qt libs are found)
-        set(_ld_library_path
-            "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}\;${KDE_INSTALL_LIBDIR}\;${QT_LIBRARY_DIR}"
-        )
+        set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}\;${KDE_INSTALL_LIBDIR}\;${QT_LIBRARY_DIR}")
         set(_executable "$<TARGET_FILE:${_target}>")
 
         # use add_custom_target() to have the batch-file-wrapper generated during build time instead of cmake time
@@ -58,8 +54,7 @@ macro(ADD_GPG_CRYPTO_TEST _target _testname)
             TARGET ${_target}
             POST_BUILD
             COMMAND
-                ${CMAKE_COMMAND} -D_filename="${_executable}.bat"
-                -D_ld_library_path="${_ld_library_path}"
+                ${CMAKE_COMMAND} -D_filename="${_executable}.bat" -D_ld_library_path="${_ld_library_path}"
                 -D_executable="${_executable}" -D_gnupghome="${GNUPGHOME}" -P
                 ${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_generate_crypto_test_wrapper.cmake
         )
@@ -68,7 +63,12 @@ macro(ADD_GPG_CRYPTO_TEST _target _testname)
     endif(UNIX)
 
     # can't be parallelized due to gpg-agent
-    set_tests_properties(${_testname} PROPERTIES RUN_SERIAL TRUE)
+    set_tests_properties(
+        ${_testname}
+        PROPERTIES
+            RUN_SERIAL
+                TRUE
+    )
 endmacro(ADD_GPG_CRYPTO_TEST)
 
 macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
@@ -89,16 +89,16 @@ macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
             # DYLD_LIBRARY_PATH actually breaks things
             set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/")
         else(APPLE)
-            set(_ld_library_path
-                "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/:${KDE_INSTALL_LIBDIR}:${QT_LIBRARY_DIR}"
-            )
+            set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/:${KDE_INSTALL_LIBDIR}:${QT_LIBRARY_DIR}")
         endif(APPLE)
 
         set(_posix "shell")
         set_property(
             DIRECTORY
             APPEND
-            PROPERTY ADDITIONAL_MAKE_CLEAN_FILES "${_executable}.${_posix}"
+            PROPERTY
+                ADDITIONAL_MAKE_CLEAN_FILES
+                    "${_executable}.${_posix}"
         )
 
         # use add_custom_target() to have the sh-wrapper generated during build time instead of cmake time
@@ -106,18 +106,14 @@ macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
             TARGET ${_target}
             POST_BUILD
             COMMAND
-                ${CMAKE_COMMAND} -D_filename=${_executable}.${_posix}
-                -D_library_path_variable=${_library_path_variable}
-                -D_ld_library_path="${_ld_library_path}"
-                -D_executable="${_executable}" -D_gnupghome="${GNUPGHOME}" -P
+                ${CMAKE_COMMAND} -D_filename=${_executable}.${_posix} -D_library_path_variable=${_library_path_variable}
+                -D_ld_library_path="${_ld_library_path}" -D_executable="${_executable}" -D_gnupghome="${GNUPGHOME}" -P
                 ${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_generate_crypto_test_wrapper.cmake
         )
     else(UNIX)
         # under windows, set the property WRAPPER_SCRIPT just to the name of the executable
         # maybe later this will change to a generated batch file (for setting the PATH so that the Qt libs are found)
-        set(_ld_library_path
-            "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}\;${KDE_INSTALL_LIBDIR}\;${QT_LIBRARY_DIR}"
-        )
+        set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}\;${KDE_INSTALL_LIBDIR}\;${QT_LIBRARY_DIR}")
         set(_posix "bat")
 
         # use add_custom_target() to have the batch-file-wrapper generated during build time instead of cmake time
@@ -125,36 +121,32 @@ macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
             TARGET ${_target}
             POST_BUILD
             COMMAND
-                ${CMAKE_COMMAND} -D_filename="${_executable}.${_posix}"
-                -D_ld_library_path="${_ld_library_path}"
+                ${CMAKE_COMMAND} -D_filename="${_executable}.${_posix}" -D_ld_library_path="${_ld_library_path}"
                 -D_executable="${_executable}" -D_gnupghome="${GNUPGHOME}" -P
                 ${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_generate_crypto_test_wrapper.cmake
         )
     endif()
 
     if(NOT DEFINED _testrunner)
-        find_program(_testrunner NAMES akonaditest akonaditest.exe)
+        find_program(
+            _testrunner
+            NAMES
+                akonaditest
+                akonaditest.exe
+        )
         if(NOT _testrunner)
-            message(
-                WARNING
-                "Could not locate akonaditest executable, isolated Akonadi tests will fail!"
-            )
+            message(WARNING "Could not locate akonaditest executable, isolated Akonadi tests will fail!")
         endif()
     endif()
 
     function(_defineTest name backend)
         set(backends ${ARGN})
-        if(
-            NOT DEFINED AKONADI_RUN_${backend}_ISOLATED_TESTS
-            OR AKONADI_RUN_${backend}_ISOLATED_TESTS
-        )
+        if(NOT DEFINED AKONADI_RUN_${backend}_ISOLATED_TESTS OR AKONADI_RUN_${backend}_ISOLATED_TESTS)
             list(LENGTH "${backends}" backendsLen)
             string(TOLOWER ${backend} lcbackend)
             list(FIND "${backends}" ${lcbackend} enableBackend)
             if(${backendsLen} EQUAL 0 OR ${enableBackend} GREATER -1)
-                set(configFile
-                    ${CMAKE_CURRENT_SOURCE_DIR}/unittestenv/config.xml
-                )
+                set(configFile ${CMAKE_CURRENT_SOURCE_DIR}/unittestenv/config.xml)
                 if(AKONADI_TESTS_XML)
                     set(extraOptions
                         -xml
@@ -166,8 +158,7 @@ macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
                 add_test(
                     NAME ${_test_name}
                     COMMAND
-                        ${_testrunner} -c "${configFile}" -b ${lcbackend}
-                        "${_executable}.${_posix}" ${extraOptions}
+                        ${_testrunner} -c "${configFile}" -b ${lcbackend} "${_executable}.${_posix}" ${extraOptions}
                 )
                 # Taken from ECMAddTests.cmake
                 if(CMAKE_LIBRARY_OUTPUT_DIRECTORY)
@@ -183,10 +174,17 @@ macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
                     )
                     set_tests_properties(
                         ${_test_name}
-                        PROPERTIES ENVIRONMENT "${_test_env}"
+                        PROPERTIES
+                            ENVIRONMENT
+                                "${_test_env}"
                     )
                 endif()
-                set_tests_properties(${_test_name} PROPERTIES RUN_SERIAL TRUE) # can't be parallelized due to gpg-agent
+                set_tests_properties(
+                    ${_test_name}
+                    PROPERTIES
+                        RUN_SERIAL
+                            TRUE
+                ) # can't be parallelized due to gpg-agent
             endif()
         endif()
     endfunction()

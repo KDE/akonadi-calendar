@@ -9,6 +9,10 @@ add_executable(
     notificationobject.cpp
 )
 
-target_link_libraries(notification_gui KF6::Notifications Qt::Widgets)
+target_link_libraries(
+    notification_gui
+    KF6::Notifications
+    Qt::Widgets
+)
 
 install(FILES notification_gui.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
