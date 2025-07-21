@@ -132,8 +132,6 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     Q_ASSERT(sourceIndex.isValid());
     const auto item = sourceIndex.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {
-        qCWarning(AKONADICALENDAR_LOG) << "Invalid index: " << sourceIndex;
-        // Q_ASSERT( false );
         return {};
     }
     const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
