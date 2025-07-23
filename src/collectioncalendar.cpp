@@ -365,7 +365,6 @@ bool CollectionCalendar::hasRight(Akonadi::Collection::Right right) const
 {
     Q_D(const CollectionCalendar);
     const auto fullCollection = Akonadi::EntityTreeModel::updatedCollection(d->m_model, d->m_collection);
-    Q_ASSERT(fullCollection.isValid());
     if (!fullCollection.isValid()) {
         return false;
     }
