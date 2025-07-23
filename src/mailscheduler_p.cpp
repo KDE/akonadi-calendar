@@ -126,8 +126,6 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
             subject = i18n("Counter proposal: %1", inc->summary());
         }
 
-        const auto from = sender.isEmpty() ? CalendarUtils::email() : sender;
-
         d->m_mailer->mailOrganizer(incidence, identity, sender, method, CalendarSettings::self()->bcc(), messageText, subject, {}, d->privacyFlags());
     }
 }

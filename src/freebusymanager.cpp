@@ -214,14 +214,13 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
     auto job = qobject_cast<Akonadi::ContactSearchJob *>(_job);
     KConfig cfg(configFile());
     KConfigGroup group = cfg.group(email);
-    QString url = group.readEntry(u"url"_s);
 
     const KContacts::Addressee::List contacts = job->contacts();
     for (const KContacts::Addressee &contact : contacts) {
         const QString pref = contact.preferredEmail();
         if (!pref.isEmpty() && pref != email) {
             group = cfg.group(pref);
-            url = group.readEntry("url");
+            const QString url = group.readEntry("url");
             qCDebug(AKONADICALENDAR_LOG) << "Preferred email of" << email << "is" << pref;
             if (!url.isEmpty()) {
                 qCDebug(AKONADICALENDAR_LOG) << "Taken url from preferred email:" << url;
