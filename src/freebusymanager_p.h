@@ -37,7 +37,7 @@ class FreeBusyManagerPrivate : public QObject
 
 public: /// Structs
     struct FreeBusyProviderRequest {
-        FreeBusyProviderRequest(const QString &provider);
+        explicit FreeBusyProviderRequest(const QString &provider);
 
         enum Status {
             NotStarted,
@@ -80,7 +80,7 @@ public:
     QPointer<QWidget> mParentWidgetForRetrieval;
 
 public: /// Functions
-    FreeBusyManagerPrivate(FreeBusyManager *q);
+    explicit FreeBusyManagerPrivate(FreeBusyManager *q);
     void checkFreeBusyUrl();
     [[nodiscard]] QString freeBusyDir() const;
     void fetchFreeBusyUrl(const QString &email);

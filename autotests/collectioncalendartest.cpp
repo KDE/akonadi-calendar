@@ -83,7 +83,7 @@ class Observer : public QObject, public KCalendarCore::Calendar::CalendarObserve
 {
     Q_OBJECT
 public:
-    Observer(Akonadi::CollectionCalendar &calendar)
+    explicit Observer(Akonadi::CollectionCalendar &calendar)
         : mCalendar(calendar)
     {
         mCalendar.registerObserver(this);

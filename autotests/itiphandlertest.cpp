@@ -69,7 +69,7 @@ UnitTestResult::List FakeMessageQueueJob::sUnitTestResults;
 class FakeITIPHandlerComponentFactory : public ITIPHandlerComponentFactory
 {
 public:
-    FakeITIPHandlerComponentFactory(QObject *parent = nullptr)
+    explicit FakeITIPHandlerComponentFactory(QObject *parent = nullptr)
         : ITIPHandlerComponentFactory(parent)
     {
     }

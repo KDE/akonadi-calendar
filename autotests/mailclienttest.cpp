@@ -147,7 +147,7 @@ public:
 class TestableMailClient : public MailClient
 {
 public:
-    TestableMailClient(QObject *parent)
+    explicit TestableMailClient(QObject *parent)
         : MailClient(new FakeITIPHandlerComponentFactory(parent), parent)
     {
         // Disable Akonadi contacts lookup - we ain't gonna find anything anyway,

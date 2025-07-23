@@ -32,7 +32,7 @@ namespace Akonadi
 class TodoModelPrivate
 {
 public:
-    TodoModelPrivate(TodoModel *qq);
+    explicit TodoModelPrivate(TodoModel *qq);
 
     Akonadi::EntityTreeModel *etm()
     {
