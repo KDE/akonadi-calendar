@@ -24,6 +24,7 @@ CalendarClipboardPrivate::CalendarClipboardPrivate(const Akonadi::CalendarBase::
 {
     Q_ASSERT(m_calendar);
     if (!m_changer) {
+        /* cppcheck-suppress knownPointerToBool */
         m_changer = new Akonadi::IncidenceChanger(this);
         m_changer->setHistoryEnabled(false);
         m_changer->setGroupwareCommunication(false);
