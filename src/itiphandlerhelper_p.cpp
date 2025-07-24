@@ -273,13 +273,11 @@ bool ITIPHandlerHelper::handleIncidenceAboutToBeModified(const KCalendarCore::In
                 "Do you really want to edit it?");
             const int messageBoxReturnCode = KMessageBox::warningTwoActions(mParent, question, {}, KStandardGuiItem::ok(), KStandardGuiItem::cancel());
             return messageBoxReturnCode != KMessageBox::ButtonCode::SecondaryAction;
-            break;
         }
         case KCalendarCore::Incidence::TypeJournal:
         case KCalendarCore::Incidence::TypeTodo:
             // Not sure why we handle to-dos differently regarding this
             return true;
-            break;
         default:
             qCritical() << "Unknown incidence type: " << incidence->type() << incidence->typeStr();
             Q_ASSERT_X(false, "ITIPHandlerHelper::handleIncidenceAboutToBeModified()", "Unknown incidence type");
