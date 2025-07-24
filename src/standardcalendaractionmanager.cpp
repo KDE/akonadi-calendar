@@ -472,6 +472,11 @@ public:
     QHash<StandardCalendarActionManager::Type, QAction *> mActions;
     QSet<StandardCalendarActionManager::Type> mInterceptedActions;
     StandardCalendarActionManager *const mParent;
+
+private:
+    // disable copy ctor
+    StandardCalendarActionManagerPrivate(const StandardCalendarActionManagerPrivate &) = delete;
+    StandardCalendarActionManagerPrivate &operator=(const StandardCalendarActionManagerPrivate &) = delete;
 };
 
 Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent)
