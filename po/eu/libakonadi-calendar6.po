@@ -1,7 +1,7 @@
 # Translation for libakonadi-calendar5.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-26 00:43+0000\n"
-"PO-Revision-Date: 2024-08-05 22:50+0200\n"
+"PO-Revision-Date: 2025-07-23 13:55+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -1303,7 +1303,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select…"
-msgstr "&Hautatu..."
+msgstr "&Hautatu…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1526,7 +1526,7 @@ msgstr "Irekitako gonbidapenak"
 #: standardcalendaractionmanager.cpp:47
 #, kde-format
 msgid "Add Folder…"
-msgstr "Gehitu karpeta..."
+msgstr "Gehitu karpeta…"
 
 #: standardcalendaractionmanager.cpp:49
 #, kde-format
@@ -1632,7 +1632,7 @@ msgstr "Ebaki hautatutako egutegi-karpetak egutegitik."
 #: standardcalendaractionmanager.cpp:103
 #, kde-format
 msgid "Folder Properties…"
-msgstr "Karpetaren propietateak..."
+msgstr "Karpetaren propietateak…"
 
 #: standardcalendaractionmanager.cpp:105
 #, kde-format
@@ -1712,7 +1712,7 @@ msgstr "Ebaki hautatutako ekitaldiak egutegitik."
 #: standardcalendaractionmanager.cpp:138
 #, kde-format
 msgid "Add &Calendar…"
-msgstr "Gehitu e&gutegia..."
+msgstr "Gehitu e&gutegia…"
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1774,7 +1774,7 @@ msgstr[1] "Egutegiak ezabatu?"
 #: standardcalendaractionmanager.cpp:171
 #, kde-format
 msgid "Calendar Properties…"
-msgstr "Egutegiaren propietateak..."
+msgstr "Egutegiaren propietateak…"
 
 #: standardcalendaractionmanager.cpp:173
 #, kde-format
@@ -1849,7 +1849,7 @@ msgstr "Eraman ekitaldia hona,"
 #: standardcalendaractionmanager.cpp:325
 #, kde-format
 msgid "Edit Event…"
-msgstr "Editatu ekitaldia..."
+msgstr "Editatu ekitaldia…"
 
 #: standardcalendaractionmanager.cpp:329
 #, kde-format
@@ -1885,7 +1885,7 @@ msgstr "Eraman zeregina hona,"
 #: standardcalendaractionmanager.cpp:355
 #, kde-format
 msgid "Edit To-do…"
-msgstr "Editatu zeregina..."
+msgstr "Editatu zeregina…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1921,12 +1921,12 @@ msgstr "Eraman egunkaria hona, "
 #: standardcalendaractionmanager.cpp:385
 #, kde-format
 msgid "Edit Journal…"
-msgstr "Editatu egunkaria..."
+msgstr "Editatu egunkaria…"
 
 #: standardcalendaractionmanager.cpp:525
 #, kde-format
 msgid "New E&vent…"
-msgstr "E&kitaldi berria..."
+msgstr "E&kitaldi berria…"
 
 #: standardcalendaractionmanager.cpp:526
 #, kde-format
@@ -1936,7 +1936,7 @@ msgstr "Sortu ekitaldi berri bat"
 #: standardcalendaractionmanager.cpp:536
 #, kde-format
 msgid "New &To-do…"
-msgstr "&Zeregin berria..."
+msgstr "&Zeregin berria…"
 
 #: standardcalendaractionmanager.cpp:537
 #, kde-format
@@ -1946,7 +1946,7 @@ msgstr "Sortu zeregin berra"
 #: standardcalendaractionmanager.cpp:546
 #, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Az&pi-zeregin berria..."
+msgstr "Az&pi-zeregin berria…"
 
 #: standardcalendaractionmanager.cpp:547
 #, kde-format
@@ -1956,7 +1956,7 @@ msgstr "Sortu azpi-zeregin berria"
 #: standardcalendaractionmanager.cpp:557
 #, kde-format
 msgid "New &Journal…"
-msgstr "E&gunkari berria..."
+msgstr "E&gunkari berria…"
 
 #: standardcalendaractionmanager.cpp:558
 #, kde-format
@@ -1966,7 +1966,7 @@ msgstr "Sortu egunkari berri bat"
 #: standardcalendaractionmanager.cpp:567
 #, kde-format
 msgid "&Edit…"
-msgstr "&Editatu..."
+msgstr "&Editatu…"
 
 #: standardcalendaractionmanager.cpp:568
 #, kde-format

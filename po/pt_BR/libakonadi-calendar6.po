@@ -2,7 +2,7 @@
 # Copyright (C) 2010-2018 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2025 Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2010, 2012, 2013, 2014, 2015, 2016, 2018.
 # Aracele Torres <araceletorres@gmail.com>, 2010.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2020, 2022, 2023.
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-26 00:43+0000\n"
-"PO-Revision-Date: 2023-11-14 13:18-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2025-07-23 15:23-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -70,15 +70,13 @@ msgid "KOrganizer Confirmation"
 msgstr "Confirmação do KOrganizer"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Recortar somente esta"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Recortar todas"
@@ -93,15 +91,13 @@ msgstr ""
 "tarefa junto com todas as suas subtarefas?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Copiar somente esta"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Copiar todas"
@@ -259,17 +255,16 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Convites recusados"
+msgstr "Ocultar convites recusados"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Selecione esta caixa para ocultar convites declinados na visão de eventos."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -812,8 +807,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
 #: itiphandlerhelper_p.cpp:346
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Enviar atualização"
@@ -948,8 +942,7 @@ msgid "&Sign"
 msgstr "A&ssinar"
 
 #: mailclient_p.cpp:709 mailclient_p.cpp:735
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Não assinar"
@@ -973,18 +966,16 @@ msgstr ""
 "de assinatura válida para esta identidade."
 
 #: mailclient_p.cpp:757
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Enviar sem assinatura?"
 
 #: mailclient_p.cpp:757
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
-msgstr "E&nviar sem assinatura"
+msgstr "Enviar sem assinat&ura"
 
 #: mailclient_p.cpp:771
 #, kde-format
@@ -1020,15 +1011,13 @@ msgid "&Sign"
 msgstr "A&ssinar"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Aviso de mensagem não assinada"
 
 #: mailclient_p.cpp:782
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Envi&ar como está"
@@ -1055,8 +1044,7 @@ msgstr ""
 "Deseja criptografar esta mensagem?"
 
 #: mailclient_p.cpp:843
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Criptografar mensagem?"
@@ -1096,15 +1084,13 @@ msgid "Encrypt Message?"
 msgstr "Criptografar mensagem?"
 
 #: mailclient_p.cpp:870
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Criptografar"
 
 #: mailclient_p.cpp:871
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Não criptografar"
@@ -1126,8 +1112,7 @@ msgid "Send Unencrypted?"
 msgstr "Enviar sem criptografar?"
 
 #: mailclient_p.cpp:894
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&Enviar sem criptografia"
@@ -1180,8 +1165,7 @@ msgid "Select Addresses"
 msgstr "Selecionar endereços"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Enviar e-mail a estes destinatários"
@@ -1196,8 +1180,7 @@ msgstr ""
 "destinatários informados."
 
 #: publishdialog.cpp:68
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Cancelar a seleção dos destinatários e do e-mail"
@@ -1311,8 +1294,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
 msgstr "&Selecionar..."
 
@@ -1355,15 +1337,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "Este campo contém o endereço de e-mail do destinatário"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "(EmptyName)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(Nome em branco)"
 
 #: publishdialog_p.cpp:47
-#, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(E-mail em branco)"
@@ -1538,8 +1518,7 @@ msgid "Open Invitations"
 msgstr "Convites abertos"
 
 #: standardcalendaractionmanager.cpp:47
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "Adicionar pasta..."
 
@@ -1646,8 +1625,7 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Recorta as pastas de calendários selecionadas do calendário."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
 msgstr "Propriedades da pasta..."
 
@@ -1727,11 +1705,9 @@ msgid "Cut the selected events from the calendar."
 msgstr "Recorta os eventos selecionados do calendário."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
-msgstr "Adicionar calendário"
+msgstr "Adicionar &calendário..."
 
 #: standardcalendaractionmanager.cpp:140
 #, kde-format
@@ -1792,8 +1768,7 @@ msgstr[0] "Excluir o calendário?"
 msgstr[1] "Excluir os calendários?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
 msgstr "Propriedades do calendário..."
 
@@ -1866,8 +1841,7 @@ msgid "Move Event To"
 msgstr "Mover o evento para"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
 msgstr "Editar evento..."
 
@@ -1903,8 +1877,7 @@ msgid "Move To-do To"
 msgstr "Mover a tarefa para"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
 msgstr "Editar tarefa..."
 
@@ -1940,14 +1913,12 @@ msgid "Move Journal To"
 msgstr "Mover o diário para"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
 msgstr "Editar diário..."
 
 #: standardcalendaractionmanager.cpp:525
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
 msgstr "Novo e&vento..."
 
@@ -1957,8 +1928,7 @@ msgid "Create a new event"
 msgstr "Cria um evento novo"
 
 #: standardcalendaractionmanager.cpp:536
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
 msgstr "Nova &tarefa..."
 
@@ -1968,8 +1938,7 @@ msgid "Create a new To-do"
 msgstr "Criar uma nova tarefa"
 
 #: standardcalendaractionmanager.cpp:546
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Nova su&btarefa..."
 
@@ -1979,8 +1948,7 @@ msgid "Create a new Sub-to-do"
 msgstr "Cria uma nova subtarefa"
 
 #: standardcalendaractionmanager.cpp:557
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
 msgstr "No&vo diário..."
 
@@ -1990,8 +1958,7 @@ msgid "Create a new Journal"
 msgstr "Cria um novo evento de diário"
 
 #: standardcalendaractionmanager.cpp:567
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
 msgstr "&Editar..."
 
