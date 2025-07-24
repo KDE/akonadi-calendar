@@ -314,6 +314,7 @@ void ITIPHandler::publishInformation(const KCalendarCore::Incidence::Ptr &incide
             publishdlg->addAttendee(*it);
         }
     }
+    /* cppcheck-suppress nullPointerRedundantCheck */
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
         d->m_scheduler->publish(incidence, publishdlg->addresses());
     } else {
@@ -336,6 +337,7 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
     KCalendarCore::Incidence::Ptr incidence = KCalendarCore::Incidence::Ptr(originalIncidence->clone());
 
     QPointer<Akonadi::PublishDialog> publishdlg = new Akonadi::PublishDialog;
+    /* cppcheck-suppress nullPointerRedundantCheck */
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
         const QString recipients = publishdlg->addresses();
         if (incidence->organizer().isEmpty()) {

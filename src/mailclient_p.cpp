@@ -334,7 +334,9 @@ void MailClient::queueMessage(const MailTransport::Transport *transport,
         }
     }
 
-    qjob->transportAttribute().setTransportId(transport->id());
+    if (transport) {
+        qjob->transportAttribute().setTransportId(transport->id());
+    }
 
     if (transport && transport->specifySenderOverwriteAddress()) {
         qjob->addressAttribute().setFrom(
