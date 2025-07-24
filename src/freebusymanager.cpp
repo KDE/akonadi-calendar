@@ -125,29 +125,28 @@ QUrl FbCheckerJob::validUrl() const
 
 FreeBusyManagerPrivate::FreeBusyProviderRequest::FreeBusyProviderRequest(const QString &provider)
     : mRequestStatus(NotStarted)
-    , mInterface(nullptr)
+    , mInterface(QSharedPointer<QDBusInterface>(new QDBusInterface(u"org.freedesktop.Akonadi.Resource."_s + provider,
+                                                                   u"/FreeBusyProvider"_s,
+                                                                   u"org.freedesktop.Akonadi.Resource.FreeBusyProvider"_s)))
 {
-    mInterface = QSharedPointer<QDBusInterface>(
-        new QDBusInterface(u"org.freedesktop.Akonadi.Resource."_s + provider, u"/FreeBusyProvider"_s, u"org.freedesktop.Akonadi.Resource.FreeBusyProvider"_s));
 }
 
 /// FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue()
-    : mResultingFreeBusy(nullptr)
+    : mStartTime(QDateTime(QDate::currentDate(), QTime()))
+    , mResultingFreeBusy(nullptr)
 {
     // Set the start of the period to today 00:00:00
-    mStartTime = QDateTime(QDate::currentDate(), QTime());
     mEndTime = mStartTime.addDays(14);
     mResultingFreeBusy = KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(mStartTime, mEndTime));
 }
 
 FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequestsQueue(const QDateTime &start, const QDateTime &end)
-    : mResultingFreeBusy(nullptr)
+    : mStartTime(start)
+    , mEndTime(end)
+    , mResultingFreeBusy(KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(start, end)))
 {
-    mStartTime = start;
-    mEndTime = end;
-    mResultingFreeBusy = KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(start, end));
 }
 
 /// FreeBusyManagerPrivate
