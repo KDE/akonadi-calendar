@@ -417,7 +417,6 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
         return;
     }
 
-    QString subject;
     if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
         KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
         msg.subject = inc->summary();
