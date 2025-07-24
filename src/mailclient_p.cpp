@@ -112,8 +112,8 @@ static QStringList extractEmailAndNormalize(const QString &email)
     const QStringList splittedEmail = KEmailAddress::splitAddressList(email);
     QStringList normalizedEmail;
     normalizedEmail.reserve(splittedEmail.count());
-    for (const QString &email : splittedEmail) {
-        const QString str = KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(email));
+    for (const QString &emailItem : splittedEmail) {
+        const QString str = KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(emailItem));
         normalizedEmail << str;
     }
     return normalizedEmail;
