@@ -57,17 +57,17 @@ void CalendarClipboardPrivate::getIncidenceHierarchy(const KCalendarCore::Incide
 
 void CalendarClipboardPrivate::cut(const KCalendarCore::Incidence::List &incidences)
 {
-    const bool result = m_dndfactory->copyIncidences(incidences);
+    const bool copyResult = m_dndfactory->copyIncidences(incidences);
     m_pendingChangeIds.clear();
     // Note: Don't use DndFactory::cutIncidences(), it doesn't use IncidenceChanger for deletion
     // we would loose async error handling and redo/undo features
-    if (result) {
+    if (copyResult) {
         Akonadi::Item::List items = m_calendar->itemList(incidences);
-        const int result = m_changer->deleteIncidences(items);
-        if (result == -1) {
+        const int deleteResult = m_changer->deleteIncidences(items);
+        if (deleteResult == -1) {
             Q_EMIT q->cutFinished(/**success=*/false, i18n("Error performing deletion."));
         } else {
-            m_pendingChangeIds << result;
+            m_pendingChangeIds << deleteResult;
         }
     } else {
         Q_EMIT q->cutFinished(/**success=*/false, i18n("Error performing copy."));

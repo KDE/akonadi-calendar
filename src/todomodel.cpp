@@ -558,11 +558,11 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
 
                 auto tmpParent = parent;
                 while (tmpParent.isValid()) {
-                    const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-                    if (!parentItem.isValid()) {
+                    const auto tmpItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+                    if (!tmpItem.isValid()) {
                         break;
                     }
-                    const auto parentTodo = Akonadi::CalendarUtils::todo(parentItem);
+                    const auto parentTodo = Akonadi::CalendarUtils::todo(tmpItem);
                     if (!parentTodo) {
                         break;
                     }
