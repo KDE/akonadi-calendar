@@ -464,7 +464,6 @@ void IncidenceChangerPrivate::handleInvitationsBeforeChange(const Change::Ptr &c
             // nothing needs to be done
             break;
         case IncidenceChanger::ChangeTypeDelete: {
-            ITIPHandlerHelper::SendResult status;
             bool sendOk = true;
             Q_ASSERT(!change->originalItems.isEmpty());
 
@@ -495,7 +494,7 @@ void IncidenceChangerPrivate::handleInvitationsBeforeChange(const Change::Ptr &c
                     sendOk = false;
                     handler->sendIncidenceDeletedMessage(KCalendarCore::iTIPCancel, incidence);
                     if (change->atomicOperationId) {
-                        mInvitationStatusByAtomicOperation.insert(change->atomicOperationId, status);
+                        mInvitationStatusByAtomicOperation.insert(change->atomicOperationId, ITIPHandlerHelper::ResultCanceled);
                     }
                     // TODO: with some status we want to break immediately
                 }
