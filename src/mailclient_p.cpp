@@ -252,9 +252,8 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
         return composerJobs;
     }
 
-    canceled = false;
     const auto kpgpResult = keyResolver.resolveAllKeys(signSomething, encryptSomething);
-    if (kpgpResult == MessageComposer::ResolverResult::Canceled || canceled) {
+    if (kpgpResult == MessageComposer::ResolverResult::Canceled) {
         qCDebug(AKONADICALENDAR_LOG) << "resolveAllKeys: one key resolution canceled by user";
         return {};
     } else if (kpgpResult != MessageComposer::ResolverResult::Ok) {
