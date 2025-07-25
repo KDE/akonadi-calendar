@@ -198,8 +198,9 @@ private Q_SLOTS:
                 auto fetchJob = new ItemFetchJob(item, this);
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
-                QVERIFY(!fetchJob->items().isEmpty());
-                Item retrievedItem = fetchJob->items().first();
+                const auto items = fetchJob->items();
+                QVERIFY(!items.isEmpty());
+                Item retrievedItem = items.first();
                 QVERIFY(retrievedItem.isValid());
                 QVERIFY(retrievedItem.hasPayload());
                 QVERIFY(retrievedItem.hasPayload<KCalendarCore::Event::Ptr>());
@@ -600,8 +601,9 @@ private Q_SLOTS:
                 auto fetchJob = new ItemFetchJob(item, this);
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
-                QVERIFY(fetchJob->items().count() == 1);
-                QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(i));
+                const auto items = fetchJob->items();
+                QVERIFY(items.count() == 1);
+                QCOMPARE(items.first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(i));
             }
         }
 
@@ -613,8 +615,9 @@ private Q_SLOTS:
             auto fetchJob = new ItemFetchJob(item, this);
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
-            QVERIFY(fetchJob->items().count() == 1);
-            QCOMPARE(fetchJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(numberOfModifications - 1));
+            const auto items = fetchJob->items();
+            QVERIFY(items.count() == 1);
+            QCOMPARE(items.first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(numberOfModifications - 1));
             if (mIncidencesToModify > 0) {
                 waitForSignals();
             }
@@ -966,8 +969,9 @@ private Q_SLOTS:
                     auto fJob = new ItemFetchJob(Item(item.id()));
                     fJob->fetchScope().fetchFullPayload();
                     AKVERIFYEXEC(fJob);
-                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->summary(),
-                             fJob->items().first().payload<KCalendarCore::Incidence::Ptr>()->summary());
+                    const auto items = fJob->items();
+                    QVERIFY(!items.isEmpty());
+                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->summary(), items.first().payload<KCalendarCore::Incidence::Ptr>()->summary());
                 }
                 break;
             default:

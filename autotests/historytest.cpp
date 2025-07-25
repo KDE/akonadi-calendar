@@ -35,7 +35,13 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
     if (!ok) {
         return false;
     }
-    Item it = job->items().first();
+    const auto items = job->items();
+    if (items.isEmpty()) {
+        qWarning() << "job returned an empty items list";
+        return false;
+    }
+
+    Item it = items.first();
     if (!it.hasPayload()) {
         qWarning() << "Item has no payload";
         return false;
