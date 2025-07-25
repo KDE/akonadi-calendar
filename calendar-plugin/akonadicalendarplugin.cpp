@@ -60,7 +60,7 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
         Q_EMIT calendarsChanged();
     });
     connect(monitor, qOverload<const Akonadi::Collection &>(&Akonadi::Monitor::collectionChanged), this, [this](const Akonadi::Collection &col) {
-        for (const auto &c : m_calendars) {
+        for (const auto &c : std::as_const(m_calendars)) {
             const auto cal = c.staticCast<SingleCollectionCalendar>();
             if (cal->collection().id() == col.id()) {
                 cal->setCollection(col);

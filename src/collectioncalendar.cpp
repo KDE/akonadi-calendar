@@ -145,7 +145,8 @@ private:
             }
         });
         connect(m_model, &QAbstractItemModel::modelReset, this, [this]() {
-            for (const auto &item : q->items()) {
+            const auto itemList = q->items();
+            for (const auto &item : itemList) {
                 internalRemove(item);
             }
             m_populatedFromEtm = false;
@@ -267,7 +268,8 @@ private:
         m_monitor->itemFetchScope().fetchFullPayload();
         m_monitor->itemFetchScope().setCacheOnly(true);
         m_monitor->itemFetchScope().setAncestorRetrieval(ItemFetchScope::AncestorRetrieval::Parent);
-        for (const auto &mt : KCalendarCore::Incidence::mimeTypes()) {
+        const auto mimeTypeList = KCalendarCore::Incidence::mimeTypes();
+        for (const auto &mt : mimeTypeList) {
             m_monitor->setMimeTypeMonitored(mt, true);
         }
 

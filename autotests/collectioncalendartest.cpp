@@ -133,7 +133,8 @@ Akonadi::Collection findResourceCollection(const QString &resource)
         qWarning() << "Failed to fetch collection tree";
         return {};
     }
-    for (const auto &col : fetch->collections()) {
+    const auto collectionList = fetch->collections();
+    for (const auto &col : collectionList) {
         if (col.resource() == resource) {
             return col;
         }

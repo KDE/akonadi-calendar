@@ -654,8 +654,9 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
         populateComposer(composerJobPtr.get(), msg);
         auto *composerJob = composerJobPtr.release();
         QObject::connect(composerJob, &MessageComposer::ComposerJob::result, this, [this, transport, composerJob, incidence, identity, msg]() {
-            for (const auto &message : composerJob->resultMessages()) {
-                queueMessage(transport, composerJob, incidence, identity, msg, message);
+            const auto resultMessageList = composerJob->resultMessages();
+            for (const auto &resultMessage : resultMessageList) {
+                queueMessage(transport, composerJob, incidence, identity, msg, resultMessage);
             }
             composerJob->deleteLater();
         });
