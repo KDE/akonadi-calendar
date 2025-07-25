@@ -855,7 +855,7 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
     ++level;
     QString padding = QString(level - 1, u' ');
     s << padding + QLatin1StringView("node") << node.data() << u";uid="_s << node->uid << u";id="_s << node->id << u";parentUid="_s << node->parentUid
-      << u";parentNode="_s << (void *)(node->parentNode.data()) << '\n';
+      << u";parentNode="_s << static_cast<void *>(node->parentNode.data()) << '\n';
 
     for (const Node::Ptr &child : std::as_const(node->directChilds)) {
         s << child;
