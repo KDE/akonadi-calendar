@@ -461,25 +461,26 @@ void ITIPHandlerHelper::slotIncidenceDeletedDialogClosed(const int messageBoxRet
     Q_EMIT sendIncidenceDeletedMessageFinished(status, method, incidence);
 }
 
-ITIPHandlerHelper::SendResult
-ITIPHandlerHelper::sendCounterProposal(const QString &receiver, const KCalendarCore::Incidence::Ptr &oldEvent, const KCalendarCore::Incidence::Ptr &newEvent)
+ITIPHandlerHelper::SendResult ITIPHandlerHelper::sendCounterProposal(const QString &receiver,
+                                                                     const KCalendarCore::Incidence::Ptr &oldIncidence,
+                                                                     const KCalendarCore::Incidence::Ptr &newIncidence)
 {
-    Q_ASSERT(oldEvent);
-    Q_ASSERT(newEvent);
+    Q_ASSERT(oldIncidence);
+    Q_ASSERT(newIncidence);
 
-    if (!oldEvent || !newEvent || *oldEvent == *newEvent) {
+    if (!oldIncidence || !newIncidence || *oldIncidence == *newIncidence) {
         return ITIPHandlerHelper::ResultNoSendingNeeded;
     }
 
     if (CalendarSettings::self()->outlookCompatCounterProposals()) {
-        KCalendarCore::Incidence::Ptr tmp(oldEvent->clone());
-        tmp->setSummary(i18n("Counter proposal: %1", newEvent->summary()));
-        tmp->setDescription(newEvent->description());
-        tmp->addComment(proposalComment(newEvent));
+        KCalendarCore::Incidence::Ptr tmp(oldIncidence->clone());
+        tmp->setSummary(i18n("Counter proposal: %1", newIncidence->summary()));
+        tmp->setDescription(newIncidence->description());
+        tmp->addComment(proposalComment(newIncidence));
 
         return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, tmp, KCalendarCore::iTIPReply, receiver);
     } else {
-        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newEvent, KCalendarCore::iTIPCounter, receiver);
+        return sentInvitation(KMessageBox::ButtonCode::PrimaryAction, newIncidence, KCalendarCore::iTIPCounter, receiver);
     }
 }
 

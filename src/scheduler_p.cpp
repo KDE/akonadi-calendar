@@ -104,13 +104,13 @@ void Scheduler::acceptTransaction(const IncidenceBase::Ptr &incidence,
     }
 }
 
-void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
+void Scheduler::acceptPublish(const IncidenceBase::Ptr &incidence,
                               const Akonadi::CalendarBase::Ptr &calendar,
                               ScheduleMessage::Status status,
                               iTIPMethod method)
 {
-    if (newIncBase->type() == IncidenceBase::TypeFreeBusy) {
-        acceptFreeBusy(newIncBase, method);
+    if (incidence->type() == IncidenceBase::TypeFreeBusy) {
+        acceptFreeBusy(incidence, method);
         return;
     }
 
@@ -119,8 +119,8 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &newIncBase,
 
     qCDebug(AKONADICALENDAR_LOG) << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status);
 
-    Incidence::Ptr newInc = newIncBase.staticCast<Incidence>();
-    Incidence::Ptr calInc = calendar->incidence(newIncBase->uid());
+    Incidence::Ptr newInc = incidence.staticCast<Incidence>();
+    Incidence::Ptr calInc = calendar->incidence(incidence->uid());
     switch (status) {
     case ScheduleMessage::Unknown:
     case ScheduleMessage::PublishNew:

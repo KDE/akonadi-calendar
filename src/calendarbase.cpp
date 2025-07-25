@@ -426,12 +426,12 @@ Akonadi::Item::List CalendarBase::items(Akonadi::Collection::Id id) const
     return result;
 }
 
-Akonadi::Item::List CalendarBase::itemList(const KCalendarCore::Incidence::List &incidences) const
+Akonadi::Item::List CalendarBase::itemList(const KCalendarCore::Incidence::List &incidenceList) const
 {
     Akonadi::Item::List items;
-    items.reserve(incidences.size());
+    items.reserve(incidenceList.size());
 
-    for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : incidenceList) {
         if (incidence) {
             items << item(incidence->instanceIdentifier());
         } else {

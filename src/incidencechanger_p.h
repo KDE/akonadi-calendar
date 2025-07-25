@@ -247,7 +247,7 @@ class IncidenceChangerPrivate : public QObject
 {
     Q_OBJECT
 public:
-    explicit IncidenceChangerPrivate(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *mIncidenceChanger);
+    explicit IncidenceChangerPrivate(bool enableHistory, ITIPHandlerComponentFactory *factory, IncidenceChanger *qq);
     ~IncidenceChangerPrivate() override;
 
     void loadCollections(); // async-loading of list of writable collections

@@ -26,7 +26,7 @@ public:
 
     void deleteAllIncidencesOfType(const QString &mimeType);
 
-    void handleUidChange(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &newUid);
+    void handleUidChange(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &newIdentifier);
 
     // Checks if parent changed and adjust internal hierarchy info
     void handleParentChanged(const KCalendarCore::Incidence::Ptr &incidence);

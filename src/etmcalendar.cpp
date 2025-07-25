@@ -432,12 +432,12 @@ ETMCalendar::ETMCalendar(const QStringList &mimeTypes, QObject *parent)
     d->init();
 }
 
-ETMCalendar::ETMCalendar(ETMCalendar *other, QObject *parent)
+ETMCalendar::ETMCalendar(ETMCalendar *calendar, QObject *parent)
     : CalendarBase(new ETMCalendarPrivate(this), parent)
 {
     Q_D(ETMCalendar);
 
-    auto model = qobject_cast<Akonadi::CalendarModel *>(other->entityTreeModel());
+    auto model = qobject_cast<Akonadi::CalendarModel *>(calendar->entityTreeModel());
     if (model) {
         d->mETM = model->weakPointer().toStrongRef();
     }

@@ -163,7 +163,7 @@ protected:
     /** Allows to disable Akonadi lookup in KeyResolver (for tests) */
     void setAkonadiLookupEnabled(bool enabled);
     /** Allows to override KeyResolver contact preferences (useful for tests) */
-    virtual std::optional<MessageComposer::ContactPreference> contactPreference(const QString &email);
+    virtual std::optional<MessageComposer::ContactPreference> contactPreference(const QString &address);
 
     /** Whether to show key approval dialog or not. **/
     virtual bool showKeyApprovalDialog() const;

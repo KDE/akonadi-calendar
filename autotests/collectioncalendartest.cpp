@@ -99,9 +99,11 @@ public:
     QSignalSpy incidenceRemovedSpy{this, &Observer::incidenceRemoved};
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     void incidenceAdded(const Akonadi::Item &item);
     void incidenceChanged(const Akonadi::Item &item);
     void incidenceRemoved(const Akonadi::Item &item);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override

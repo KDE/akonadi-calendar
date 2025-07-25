@@ -98,7 +98,7 @@ public: /// Functions
 public Q_SLOTS:
     void processRetrieveQueue();
     void contactSearchJobFinished(KJob *_job);
-    void finishProcessRetrieveQueue(const QString &email, const QUrl &url);
+    void finishProcessRetrieveQueue(const QString &email, const QUrl &freeBusyUrlForEmail);
     void onHandlesFreeBusy(const QString &email, bool handles);
     void onFreeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText);
     void processMailSchedulerResult(Akonadi::Scheduler::Result result, const QString &errorMsg);

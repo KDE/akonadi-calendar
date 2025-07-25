@@ -76,7 +76,7 @@ public:
 
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-    [[nodiscard]] QVariant headerData(int section, Qt::Orientation, int role) const override;
+    [[nodiscard]] QVariant headerData(int column, Qt::Orientation orientation, int role) const override;
 
     AKONADI_CALENDAR_DECL_DEPRECATED_TEXT("Setting calendar is no longer necessary.")
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);

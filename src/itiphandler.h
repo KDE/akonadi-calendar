@@ -289,11 +289,11 @@ public:
      *
      * @param receiver
      * @param iCal
-     * @param type
+     * @param action
      *
      * @see iTipMessageProcessed()
      */
-    void processiTIPMessage(const QString &receiver, const QString &iCal, const QString &type);
+    void processiTIPMessage(const QString &receiver, const QString &iCal, const QString &action);
 
     /**
      * Sends an iTip message.
