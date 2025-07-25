@@ -333,7 +333,6 @@ void ITIPHandlerTest::testProcessITIPMessageCancel()
 {
     QFETCH(QString, creation_data_filename);
     QFETCH(QString, cancel_data_filename);
-    QFETCH(QString, incidenceUid);
 
     const QString receiver = QLatin1StringView(s_ourEmail);
     FakeMessageQueueJob::sUnitTestResults.clear();
