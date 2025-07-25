@@ -377,6 +377,7 @@ void ITIPHandler::setGroupwareUiDelegate(GroupwareUiDelegate *delegate)
 
 void ITIPHandler::setCalendar(const Akonadi::CalendarBase::Ptr &calendar)
 {
+    /* cppcheck-suppress duplicateConditionalAssign */
     if (d->m_calendar != calendar) {
         d->m_calendar = calendar;
     }
