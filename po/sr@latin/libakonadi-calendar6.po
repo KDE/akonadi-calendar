@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 00:43+0000\n"
+"POT-Creation-Date: 2025-07-25 00:43+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -25,32 +25,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Ne mogu da nađem slučaj za ažuriranje, verovatno je nedavno obrisan."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:68
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Greška tokom brisanja."
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:73
 #, kde-format
 msgid "Error performing copy."
 msgstr "Greška tokom kopiranja."
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:97
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Ne mogu da nađem stavku: %1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Greška tokom uklanjanja relacija."
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:159
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Greška tokom brisanja slučajeva: %1"
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:176
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -60,7 +60,7 @@ msgstr ""
 "njene podobaveze nezavisnim, ili da isečete i sve podobaveze?"
 
 # rewrite-msgid: /KOrganizer//
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:181 calendarclipboard.cpp:220
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
@@ -68,21 +68,21 @@ msgid "KOrganizer Confirmation"
 msgstr "Potvrda"
 
 # >> cut only this to-do
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:182
 #, fuzzy, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Iseci samo ovu"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:183
 #, fuzzy, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Iseci sve"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:216
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -92,14 +92,14 @@ msgstr ""
 "zajedno sa svim njenim podobavezama?"
 
 # >> copy only this to-do
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:221
 #, fuzzy, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopiraj samo ovu"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:222
 #, fuzzy, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"
@@ -399,7 +399,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Nepoznata greška."
 
-#: freebusymanager.cpp:379
+#: freebusymanager.cpp:377
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -408,19 +408,19 @@ msgstr ""
 "Ne mogu da preuzmem podatke slobodno-zauzeto: %1\n"
 "Razlog: %2"
 
-#: freebusymanager.cpp:380 freebusymanager.cpp:403
+#: freebusymanager.cpp:378 freebusymanager.cpp:401
 #, fuzzy, kde-format
 #| msgid "Free/busy retrieval error"
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Greška u dobavljanju slobodnog-zauzetog"
 
-#: freebusymanager.cpp:402
+#: freebusymanager.cpp:400
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr "Ne mogu da raščlanim podatke slobodno-zauzeto dobavljene sa: %1"
 
-#: freebusymanager.cpp:417
+#: freebusymanager.cpp:415
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -433,26 +433,26 @@ msgstr ""
 "odgovara: <em>%2</em>.</p><p>Proverite URL ili se obratite svom sistem-"
 "administratoru.</p></qt>"
 
-#: freebusymanager.cpp:618
+#: freebusymanager.cpp:616
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Podaci slobodno-zauzeto uspešno su poslati."
 
 # >> @title:window
-#: freebusymanager.cpp:619 itiphandler_p.cpp:138
+#: freebusymanager.cpp:617 itiphandler_p.cpp:138
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Slanje slobodnog-zauzetog"
 
-#: freebusymanager.cpp:622
+#: freebusymanager.cpp:620
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Ne mogu da objavim podatke slobodno-zauzeto: %1"
 
 # >! ui: Free/Busy --> ?
-#: freebusymanager.cpp:746
+#: freebusymanager.cpp:744
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -465,19 +465,19 @@ msgstr ""
 "detalje naloga.</p></qt>"
 
 # >> @title:window
-#: freebusymanager.cpp:751
+#: freebusymanager.cpp:749
 #, fuzzy, kde-format
 #| msgid "No Free/Busy Upload URL"
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Nema URL‑a za otpremanje slobodnog-zauzetog"
 
-#: freebusymanager.cpp:761
+#: freebusymanager.cpp:759
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Zadati ciljni URL „%1“ nije dobar.</qt>"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:760
 #, fuzzy, kde-format
 #| msgid "Invalid URL"
 msgctxt "@title:window"
@@ -581,25 +581,25 @@ msgstr "Nepoznata greška."
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Greška pri pokušaju menjanja kalendarske stavke: %1"
 
-#: incidencechanger.cpp:807 incidencechanger.cpp:931
+#: incidencechanger.cpp:806 incidencechanger.cpp:930
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Ta kalendarska stavka već je obrisana, ili je brisanje u toku."
 
 # >> @info
-#: incidencechanger.cpp:1197
+#: incidencechanger.cpp:1196
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Postupak ne može da se izvrši zbog ACL ograničenja."
 
 # >> @info
-#: incidencechanger.cpp:1200
+#: incidencechanger.cpp:1199
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Izabran zbirka je loša."
 
 # >> @info
-#: incidencechanger.cpp:1204
+#: incidencechanger.cpp:1203
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -609,13 +609,13 @@ msgstr ""
 "DestinationPolicyNeverAsk."
 
 # >> @info
-#: incidencechanger.cpp:1208
+#: incidencechanger.cpp:1207
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Udvostručeni ID stavke u grupnom postupku."
 
 # >> @info
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1211
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -623,7 +623,7 @@ msgid ""
 msgstr "Jedna od izmena iz grupe izmena nije prošla. Vraćaju se sve izmene."
 
 # >> @info
-#: incidencechanger.cpp:1217
+#: incidencechanger.cpp:1216
 #, kde-format
 msgid "Unknown error"
 msgstr "Nepoznata greška."
@@ -695,7 +695,7 @@ msgid "Do Not Send"
 msgstr "Ne šalji"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
-#: itiphandlerhelper_p.cpp:510
+#: itiphandlerhelper_p.cpp:508
 #, kde-format
 msgid "Error: %1"
 msgstr "Greška: %1"
@@ -818,7 +818,7 @@ msgstr ""
 "Vi niste organizator ovog događaja. Ako ga uredite, vaš kalendar će se "
 "razići sa organizatorovim. Želite li zaista da ga uredite?"
 
-#: itiphandlerhelper_p.cpp:304
+#: itiphandlerhelper_p.cpp:302
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -827,20 +827,20 @@ msgstr ""
 "Izmenili ste pozivnicu „%1“.\n"
 "Želite li da prisutnima pošaljete dopunu e‑poštom?"
 
-#: itiphandlerhelper_p.cpp:312 itiphandlerhelper_p.cpp:333
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:344
 #, fuzzy, kde-format
 #| msgid "Send Update"
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Pošalji dopunu"
 
-#: itiphandlerhelper_p.cpp:327 itiphandlerhelper_p.cpp:411
+#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Želite li da pošaljete dopunu statusa organizatoru ovog zadatka?"
 
-#: itiphandlerhelper_p.cpp:339
+#: itiphandlerhelper_p.cpp:337
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -849,7 +849,7 @@ msgstr ""
 "Izmenjen je vaš status kao prisutnog u ovom događaju. Želite li da pošaljete "
 "dopunu statusa organizatoru događaja?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:380
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -858,7 +858,7 @@ msgstr ""
 "Uklonili ste pozivnicu „%1“.\n"
 "Želite li da prisutne obavestite e‑poštom da je događaj otkazan?"
 
-#: itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:385
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -867,7 +867,7 @@ msgstr ""
 "Uklonili ste pozivnicu „%1“.\n"
 "Želite li da prisutne obavestite e‑poštom da je obaveza otkazana?"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:390
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -876,18 +876,18 @@ msgstr ""
 "Uklonili ste pozivnicu „%1“.\n"
 "Želite li da prisutne obavestite e‑poštom da je dnevnik otkazan?"
 
-#: itiphandlerhelper_p.cpp:414
+#: itiphandlerhelper_p.cpp:412
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Želite li da pošaljete dopunu statusa organizatoru ovog dnevnika?"
 
-#: itiphandlerhelper_p.cpp:419 itiphandlerhelper_p.cpp:440
+#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Pošalji dopunu"
 
-#: itiphandlerhelper_p.cpp:434
+#: itiphandlerhelper_p.cpp:432
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -896,24 +896,24 @@ msgstr ""
 "Ranije ste prihvatili pozivnicu za ovaj događaj. Želite li da pošaljete "
 "dopunski odgovor organizatoru kojim odbijate pozivnicu?"
 
-#: itiphandlerhelper_p.cpp:478 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Protivpredlog: %1"
 
 # rewrite-msgid: /email/message/
-#: itiphandlerhelper_p.cpp:495
+#: itiphandlerhelper_p.cpp:493
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Slanje poruke za grupno zakazivanje nije prošlo."
 
-#: itiphandlerhelper_p.cpp:503
+#: itiphandlerhelper_p.cpp:501
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Obustavi ažuriranje"
 
-#: mailclient_p.cpp:378 mailclient_p.cpp:416
+#: mailclient_p.cpp:379 mailclient_p.cpp:417
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Nema prisutnih kojim treba pisati."
@@ -1163,7 +1163,7 @@ msgstr ""
 msgid "Unencrypted Message Warning"
 msgstr ""
 
-#: mailscheduler_p.cpp:201
+#: mailscheduler_p.cpp:199
 #, kde-format
 msgid "Error sending e-mail: "
 msgstr "Greška pri slanju e‑pošte: "
@@ -2009,57 +2009,57 @@ msgstr "Premesti dnevnik u"
 msgid "Edit Journal…"
 msgstr "Uredi dnevnik..."
 
-#: standardcalendaractionmanager.cpp:525
+#: standardcalendaractionmanager.cpp:530
 #, fuzzy, kde-format
 #| msgid "New E&vent..."
 msgid "New E&vent…"
 msgstr "Novi &događaj..."
 
-#: standardcalendaractionmanager.cpp:526
+#: standardcalendaractionmanager.cpp:531
 #, kde-format
 msgid "Create a new event"
 msgstr "Napravi novi događaj"
 
-#: standardcalendaractionmanager.cpp:536
+#: standardcalendaractionmanager.cpp:541
 #, fuzzy, kde-format
 #| msgid "New &To-do..."
 msgid "New &To-do…"
 msgstr "Nova &obaveza..."
 
-#: standardcalendaractionmanager.cpp:537
+#: standardcalendaractionmanager.cpp:542
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Napravi novu obavezu"
 
-#: standardcalendaractionmanager.cpp:546
+#: standardcalendaractionmanager.cpp:551
 #, fuzzy, kde-format
 #| msgid "New Su&b-to-do..."
 msgid "New Su&b-to-do…"
 msgstr "Nova &podobaveza..."
 
-#: standardcalendaractionmanager.cpp:547
+#: standardcalendaractionmanager.cpp:552
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Napravi novu podobavezu"
 
-#: standardcalendaractionmanager.cpp:557
+#: standardcalendaractionmanager.cpp:562
 #, fuzzy, kde-format
 #| msgid "New &Journal..."
 msgid "New &Journal…"
 msgstr "Novi d&nevnik..."
 
-#: standardcalendaractionmanager.cpp:558
+#: standardcalendaractionmanager.cpp:563
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Napravi novi dnevnik"
 
-#: standardcalendaractionmanager.cpp:567
+#: standardcalendaractionmanager.cpp:572
 #, fuzzy, kde-format
 #| msgid "&Edit..."
 msgid "&Edit…"
 msgstr "&Uredi..."
 
-#: standardcalendaractionmanager.cpp:568
+#: standardcalendaractionmanager.cpp:573
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Uređivanje izabranog slučaja."
