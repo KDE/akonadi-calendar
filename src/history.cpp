@@ -22,7 +22,7 @@ History::History(QObject *parent)
 History::~History() = default;
 
 HistoryPrivate::HistoryPrivate(History *qq)
-    : mChanger(new IncidenceChanger(/*history=*/false, qq))
+    : mChanger(new IncidenceChanger(/*enableHistory=*/false, qq))
     , mOperationTypeInProgress(TypeNone)
     , q(qq)
 {
