@@ -485,7 +485,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
                                                 KGuiItem(i18nc("@option", "Accept Attendance")),
                                                 KGuiItem(i18nc("@option", "Reject Attendance")))
                 != KMessageBox::ButtonCode::PrimaryAction) {
-                Incidence::Ptr cancel = incidence;
+                Incidence::Ptr &cancel = incidence;
                 cancel->addComment(i18nc("@info", "The organizer rejected your attendance at this meeting."));
                 performTransaction(incidenceBase, iTIPCancel, attNew.fullName());
                 continue;

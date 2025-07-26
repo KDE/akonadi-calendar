@@ -432,7 +432,7 @@ private Q_SLOTS:
         if (FakeMessageQueueJob::sUnitTestResults.isEmpty()) {
             qDebug() << "mail results are empty";
         } else {
-            const auto unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
+            const auto &unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
             if (expectedTransportId != -1 && unitTestResult.transportId != expectedTransportId) {
                 qDebug() << "got " << unitTestResult.transportId << "; expected=" << expectedTransportId;
                 QVERIFY(false);
@@ -487,7 +487,7 @@ private Q_SLOTS:
         QString transport;
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
-        QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
+        const QString &expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
         KCalendarCore::Person organizer(QStringLiteral("Organizer"), s_ourEmail);
         incidence->setOrganizer(organizer);
 
@@ -564,7 +564,7 @@ private Q_SLOTS:
         QString transport;
         MailClient::Result expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
-        QString expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
+        const QString &expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
         KCalendarCore::Person organizer(QStringLiteral("Organizer"), s_ourEmail);
         QStringList toList;
         toList << s_ourEmail;

@@ -41,7 +41,7 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
         return false;
     }
 
-    Item it = items.first();
+    const Item &it = items.first();
     if (!it.hasPayload()) {
         qWarning() << "Item has no payload";
         return false;
@@ -290,7 +290,7 @@ void HistoryTest::testAtomicOperations()
     mChanger->startAtomicOperation();
 
     for (int i = 0; i < items.count(); ++i) {
-        const Akonadi::Item item = items[i];
+        const Akonadi::Item &item = items[i];
         int changeId = -1;
         switch (changeTypes[i]) {
         case IncidenceChanger::ChangeTypeCreate:
@@ -335,7 +335,7 @@ void HistoryTest::testAtomicOperations()
 
     // Verify that it got undone
     for (int i = 0; i < items.count(); ++i) {
-        const Akonadi::Item item = items[i];
+        const Akonadi::Item &item = items[i];
         switch (changeTypes[i]) {
         case IncidenceChanger::ChangeTypeCreate:
             // It changed id, have no way to verify

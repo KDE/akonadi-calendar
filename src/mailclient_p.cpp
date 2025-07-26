@@ -390,7 +390,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
 
     const int numberOfAttendees = attendees.count();
     for (int i = 0; i < numberOfAttendees; ++i) {
-        const KCalendarCore::Attendee a = attendees.at(i);
+        const KCalendarCore::Attendee &a = attendees.at(i);
 
         const QString email = a.email();
         if (email.isEmpty()) {

@@ -200,7 +200,7 @@ private Q_SLOTS:
                 AKVERIFYEXEC(fetchJob);
                 const auto items = fetchJob->items();
                 QVERIFY(!items.isEmpty());
-                Item retrievedItem = items.first();
+                const Item &retrievedItem = items.first();
                 QVERIFY(retrievedItem.isValid());
                 QVERIFY(retrievedItem.hasPayload());
                 QVERIFY(retrievedItem.hasPayload<KCalendarCore::Event::Ptr>());
@@ -897,7 +897,7 @@ private Q_SLOTS:
         for (int i = 0; i < items.count(); ++i) {
             mCollection.setRights(rights[i]);
             mChanger->setDefaultCollection(mCollection);
-            const Akonadi::Item item = items[i];
+            const Akonadi::Item &item = items[i];
             int changeId = -1;
             switch (changeTypes[i]) {
             case IncidenceChanger::ChangeTypeCreate:
@@ -938,7 +938,7 @@ private Q_SLOTS:
             const bool expectedSuccess = (expectedResults[i] == IncidenceChanger::ResultCodeSuccess);
             mCollection.setRights(rights[i]);
 
-            Akonadi::Item item = items[i];
+            const Akonadi::Item &item = items[i];
 
             switch (changeTypes[i]) {
             case IncidenceChanger::ChangeTypeCreate:
