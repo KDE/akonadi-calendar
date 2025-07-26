@@ -403,7 +403,8 @@ KalendarAlarmClient::occurrenceForAlarm(const KCalendarCore::Incidence::Ptr &inc
     // Alarm time is defined by an offset from the event start or end time.
     // Find the offset from the event start time, which is also used as the
     // offset from the recurrence time.
-    Duration offset(0), endOffset(0);
+    Duration offset(0);
+    Duration endOffset(0);
     if (alarm->hasStartOffset()) {
         offset = alarm->startOffset();
     } else if (alarm->hasEndOffset()) {
