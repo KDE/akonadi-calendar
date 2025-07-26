@@ -245,7 +245,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
         const auto preferredCrypto = Kleo::stringToCryptoMessageFormat(identity.preferredCryptoMessageFormat());
         if (preferredCrypto & Kleo::OpenPGPMIMEFormat) {
             composerJob->setAutocryptEnabled(identity.autocryptEnabled());
-            if (keyResolver.encryptToSelfKeysFor(Kleo::OpenPGPMIMEFormat).size() > 0) {
+            if (!keyResolver.encryptToSelfKeysFor(Kleo::OpenPGPMIMEFormat).empty()) {
                 composerJob->setSenderEncryptionKey(keyResolver.encryptToSelfKeysFor(Kleo::OpenPGPMIMEFormat)[0]);
             }
         }
