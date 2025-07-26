@@ -22,8 +22,7 @@ using namespace KCalendarCore;
 using namespace Akonadi;
 
 PublishDialogPrivate::PublishDialogPrivate(PublishDialog *qq)
-    : QObject()
-    , q(qq)
+    : q(qq)
 {
 }
 

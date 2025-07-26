@@ -10,15 +10,13 @@
 #include <KLocalizedString>
 
 Entry::Entry(const Akonadi::Item &item, const QString &description, History *qq)
-    : QObject()
 {
     mItems << item;
     init(description, qq);
 }
 
 Entry::Entry(const Akonadi::Item::List &items, const QString &description, History *qq)
-    : QObject()
-    , mItems(items)
+    : mItems(items)
 {
     init(description, qq);
 }

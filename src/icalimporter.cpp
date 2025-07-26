@@ -30,8 +30,7 @@ using namespace KCalendarCore;
 using namespace Akonadi;
 
 ICalImporterPrivate::ICalImporterPrivate(IncidenceChanger *changer, ICalImporter *qq)
-    : QObject()
-    , q(qq)
+    : q(qq)
     , m_changer(changer)
 {
     if (!changer) {

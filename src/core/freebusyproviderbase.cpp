@@ -17,8 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *qq)
-    : QObject()
-    , q(qq)
+    : q(qq)
 {
     new Akonadi__FreeBusyProviderAdaptor(this);
     QDBusConnection::sessionBus().registerObject(u"/FreeBusyProvider"_s, this, QDBusConnection::ExportAdaptors);

@@ -74,8 +74,7 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
 }
 
 IncidenceTreeModelPrivate::IncidenceTreeModelPrivate(IncidenceTreeModel *qq, const QStringList &mimeTypes)
-    : QObject()
-    , m_mimeTypes(mimeTypes)
+    : m_mimeTypes(mimeTypes)
     , q(qq)
 {
 }

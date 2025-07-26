@@ -152,8 +152,7 @@ FreeBusyManagerPrivate::FreeBusyProvidersRequestsQueue::FreeBusyProvidersRequest
 /// FreeBusyManagerPrivate
 
 FreeBusyManagerPrivate::FreeBusyManagerPrivate(FreeBusyManager *q)
-    : QObject()
-    , q_ptr(q)
+    : q_ptr(q)
     , mParentWidgetForRetrieval(nullptr)
 {
     connect(this, &FreeBusyManagerPrivate::freeBusyUrlRetrieved, this, &FreeBusyManagerPrivate::finishProcessRetrieveQueue);
