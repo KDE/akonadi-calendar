@@ -316,11 +316,6 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
             return;
         }
     } else if (incidence->type() == KCalendarCore::Incidence::TypeTodo) {
-        if (method == KCalendarCore::iTIPRequest) {
-            // This is an update to be sent to the organizer
-            method = KCalendarCore::iTIPReply;
-        }
-
         const QString question = i18n(
             "Do you want to send a status update to the "
             "organizer of this task?");
@@ -332,7 +327,6 @@ void ITIPHandlerHelper::sendIncidenceModifiedMessage(KCalendarCore::iTIPMethod m
         return;
     } else if (incidence->type() == KCalendarCore::Incidence::TypeEvent) {
         if (attendeeStatusChanged && method == KCalendarCore::iTIPRequest) {
-            method = KCalendarCore::iTIPReply;
             const QString question = i18n(
                 "Your status as an attendee of this event changed. "
                 "Do you want to send a status update to the event organizer?");
@@ -400,11 +394,6 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod me
             return;
         }
     } else if (incidence->type() != KCalendarCore::Incidence::TypeEvent) {
-        if (method == KCalendarCore::iTIPRequest) {
-            // This is an update to be sent to the organizer
-            method = KCalendarCore::iTIPReply;
-        }
-
         const QString question = (incidence->type() == KCalendarCore::Incidence::TypeTodo) ? i18n(
                                                                                                  "Do you want to send a status update to the "
                                                                                                  "organizer of this task?")
