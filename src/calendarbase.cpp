@@ -76,6 +76,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     if (mItemIdByUid.contains(uid) && mItemIdByUid[uid] != item.id()) {
         // We only allow duplicate UIDs if they have the same item id, for example
         // when using virtual folders.
+// NOLINTBEGIN(readability-avoid-unconditional-preprocessor-if)
 #if 0
         qCWarning(AKONADICALENDAR_LOG) << "Discarding duplicate incidence with instanceIdentifier=" << uid
                                        << "and summary " << incidence->summary()
@@ -83,6 +84,7 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
                                        << "; new id=" << item.id()
                                        << "; existing id=" << mItemIdByUid[uid];
 #endif
+        // NOLINTEND(readability-avoid-unconditional-preprocessor-if)
         return;
     }
 

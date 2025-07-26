@@ -225,12 +225,14 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                         "This isn't an update. "
                         "The found incidence was modified more recently.");
 // QT5 port
+// NOLINTBEGIN(readability-avoid-unconditional-preprocessor-if)
 #if 0
                     qCWarning(AKONADICALENDAR_LOG) << errorString
                                                    << "; revision=" << existingIncidence->revision()
                                                    << "; existing->lastModified=" << existingIncidence->lastModified()
                                                    << "; update->lastModified=" << incidence->lastModified();
 #endif
+                    // NOLINTEND(readability-avoid-unconditional-preprocessor-if)
                     Q_EMIT transactionFinished(ResultOutatedUpdate, errorString);
                     return;
                 }

@@ -791,6 +791,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
         textStream << messageText;
         textStream.flush();
 
+// NOLINTBEGIN(readability-avoid-unconditional-preprocessor-if)
 #if 0
         QString defaultEmail = KOCore()
                                ::self()->email();
@@ -826,6 +827,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
             targetURL.setPassword(CalendarSettings::self()->publishPassword());
         }
 #endif
+        // NOLINTEND(readability-avoid-unconditional-preprocessor-if)
 
         QUrl src;
         src.setPath(tempFile.fileName());
