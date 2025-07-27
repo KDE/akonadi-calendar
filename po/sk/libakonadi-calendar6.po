@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:43+0000\n"
+"POT-Creation-Date: 2025-07-27 00:42+0000\n"
 "PO-Revision-Date: 2023-10-11 18:44+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: calendarbase.cpp:265
+#: calendarbase.cpp:266
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Nemôžem nájsť výskyt na aktualizáciu, pravdepodobne bol vymazaný."
 
-#: calendarclipboard.cpp:68
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Chyba počas vykonávania mazania."
 
-#: calendarclipboard.cpp:73
+#: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
 msgstr "Chyba počas vykonávania kopírovania."
 
-#: calendarclipboard.cpp:97
+#: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Nemôžem nájsť položku: %1"
 
-#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
+#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Chyba počas odstraňovania vzťahov."
 
-#: calendarclipboard.cpp:159
+#: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Chyba počas mazania výskytov: %1"
 
-#: calendarclipboard.cpp:176
+#: calendarclipboard.cpp:175
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -57,27 +57,27 @@ msgstr ""
 "všetky jej podúlohy nezávislé alebo vystrihnúť úlohu so všetkými jej "
 "podúlohami?"
 
-#: calendarclipboard.cpp:181 calendarclipboard.cpp:220
+#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Potvrdenie KOrganizer"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:181
 #, fuzzy, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Vystrihnúť iba toto"
 
-#: calendarclipboard.cpp:183
+#: calendarclipboard.cpp:182
 #, fuzzy, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Vystrihnúť všetko"
 
-#: calendarclipboard.cpp:216
+#: calendarclipboard.cpp:215
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -86,14 +86,14 @@ msgstr ""
 "Položka \"%1\" má podúlohy. Chcete kopírovať iba túto položku alebo "
 "kopírovať úlohu so všetkými jej podúlohami?"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:220
 #, fuzzy, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopírovať iba toto"
 
-#: calendarclipboard.cpp:222
+#: calendarclipboard.cpp:221
 #, fuzzy, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"
@@ -391,7 +391,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Neznámy"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:376
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -400,19 +400,19 @@ msgstr ""
 "Zlyhalo stiahnutie dát voľný/zaneprázdnený z: %1\n"
 "Dôvod: %2"
 
-#: freebusymanager.cpp:378 freebusymanager.cpp:401
+#: freebusymanager.cpp:377 freebusymanager.cpp:400
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Chyba pri získavaní voľný/zaneprázdnený"
 
-#: freebusymanager.cpp:400
+#: freebusymanager.cpp:399
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
 "Zlyhalo spracovanie informácií voľný/zaneprázdnený, ktoré boli získané z: %1"
 
-#: freebusymanager.cpp:415
+#: freebusymanager.cpp:414
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -425,23 +425,23 @@ msgstr ""
 "Systém odpovedal: <em>%2</em>.</p><p>Prosím, skontrolujte URL alebo sa "
 "obráťte na vášho správcu systému.</p></qt>"
 
-#: freebusymanager.cpp:616
+#: freebusymanager.cpp:615
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Informácia voľný/zaneprázdnený bola úspešne odoslaná."
 
-#: freebusymanager.cpp:617 itiphandler_p.cpp:138
+#: freebusymanager.cpp:616 itiphandler_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Posielanie voľný/zaneprázdnený"
 
-#: freebusymanager.cpp:620
+#: freebusymanager.cpp:619
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Nemožno publikovať dáta voľný/zaneprázdnený: %1"
 
-#: freebusymanager.cpp:744
+#: freebusymanager.cpp:743
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -453,82 +453,82 @@ msgstr ""
 "stránke \"Voľný/Zaneprázdnený\". </p><p>Obráťte sa na správcu systému pre "
 "presné URL a podrobnosti o účte.</p></qt>"
 
-#: freebusymanager.cpp:749
+#: freebusymanager.cpp:748
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Žiadne URL pre nahratie voľný/zaneprázdnený"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:758
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Poskytnuté cieľové URL '%1' je neplatné.</qt>"
 
-#: freebusymanager.cpp:760
+#: freebusymanager.cpp:759
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Neplatné URL"
 
-#: history_p.cpp:71
+#: history_p.cpp:69
 #, kde-format
 msgid "General error"
 msgstr "Všeobecná chyba"
 
-#: history_p.cpp:82
+#: history_p.cpp:80
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 creation"
 msgstr "%1 vytvorenie"
 
-#: history_p.cpp:150
+#: history_p.cpp:148
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
 msgstr "%1 vymazanie"
 
-#: history_p.cpp:232
+#: history_p.cpp:230
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 zmena"
 
-#: icalimporter.cpp:85
+#: icalimporter.cpp:84
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Chyba vytvárania zdroja ical: %1"
 
-#: icalimporter.cpp:95
+#: icalimporter.cpp:94
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "Zlyhalo získanie rozhrania D-Bus pre vzdialené nastavenie."
 
-#: icalimporter.cpp:120
+#: icalimporter.cpp:119
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Nepodarilo sa stiahnuť vzdialený súbor."
 
-#: icalimporter.cpp:143 icalimporter.cpp:164
+#: icalimporter.cpp:142 icalimporter.cpp:163
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Beží už iná úloha importu."
 
-#: icalimporter.cpp:169
+#: icalimporter.cpp:168
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Prázdny názov súboru. Neimportujem ical súbor."
 
-#: icalimporter.cpp:174
+#: icalimporter.cpp:173
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "Url na import je znetvorené."
 
-#: icalimporter.cpp:181
+#: icalimporter.cpp:180
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "Vybraný súbor nie je čitateľný súbor."
 
-#: icalimporter.cpp:189
+#: icalimporter.cpp:188
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -537,12 +537,12 @@ msgstr ""
 "Vybraný súbor nie je správne naformátovaný alebo jeho formát nie je "
 "softvérom podporovaný."
 
-#: icalimporter.cpp:197
+#: icalimporter.cpp:196
 #, kde-format
 msgid "The selected file is empty."
 msgstr "Vybraný súbor je prázdny."
 
-#: icalimporter.cpp:215
+#: icalimporter.cpp:214
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Zlúčiť ical súbor do existujúceho kalendára."
@@ -676,7 +676,7 @@ msgid "Do Not Send"
 msgstr "Neposielať"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
-#: itiphandlerhelper_p.cpp:508
+#: itiphandlerhelper_p.cpp:509
 #, kde-format
 msgid "Error: %1"
 msgstr "Chyba: %1"
@@ -869,17 +869,17 @@ msgstr ""
 "Predtým ste prijali pozvanie na túto akciu. Chcete poslať aktualizovanú "
 "odpoveď odmietajúcu pozvanie organizátorovi ?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:477 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Protinávrh: %1"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:494
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Odoslanie e-mailu skupinového plánovania zlyhalo."
 
-#: itiphandlerhelper_p.cpp:501
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -910,12 +910,12 @@ msgstr "Chyba počas vytvárania prenosu"
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Chyba naťahovania prenosu. Nemôžem poslať pozvánky"
 
-#: mailclient_p.cpp:670
+#: mailclient_p.cpp:671
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Chyba zaraďovania správy na poslanie: %1"
 
-#: mailclient_p.cpp:702
+#: mailclient_p.cpp:703
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -926,25 +926,25 @@ msgstr ""
 "požiadaní, aby ste túto správu podpísali alebo nie.\n"
 "Podpísať túto správu?"
 
-#: mailclient_p.cpp:707 mailclient_p.cpp:733
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgid "Sign Message?"
 msgstr "Podpísať správu?"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "Podpí&sať"
 
-#: mailclient_p.cpp:709 mailclient_p.cpp:735
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, fuzzy, kde-format
 #| msgid "Do &Not Sign"
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Nepodpisovať"
 
-#: mailclient_p.cpp:729
+#: mailclient_p.cpp:730
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -953,7 +953,7 @@ msgstr ""
 "Pre týchto príjemcov existujú protichodné podpisové predvoľby.\n"
 "Podpísať túto správu?"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:755
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -962,21 +962,21 @@ msgstr ""
 "Požiadali ste o podpísanie tejto správy, ale pre túto identitu neboli "
 "nakonfigurované žiadne platné podpisové kľúče."
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:758
 #, fuzzy, kde-format
 #| msgid "Send Unsigned?"
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Poslať nepodpísané?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:758
 #, fuzzy, kde-format
 #| msgid "Send &Unsigned"
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Poslať nepodpísané"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:772
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -988,7 +988,7 @@ msgstr ""
 "lokality.\n"
 "Podpísať namiesto toho všetky časti?"
 
-#: mailclient_p.cpp:775
+#: mailclient_p.cpp:776
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -999,31 +999,31 @@ msgstr ""
 "Odoslanie nepodpísanej správy môže byť v rozpore so zásadami lokality.\n"
 "Podpísať správu namiesto toho?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:779
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Podpí&sať všetky časti"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:779
 #, kde-format
 msgid "&Sign"
 msgstr "Podpí&sať"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, fuzzy, kde-format
 #| msgid "Unsigned-Message Warning"
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Upozornenie na nepodpísanú správu"
 
-#: mailclient_p.cpp:782
+#: mailclient_p.cpp:783
 #, fuzzy, kde-format
 #| msgid "Send &As Is"
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Posl&ať ako je"
 
-#: mailclient_p.cpp:835
+#: mailclient_p.cpp:836
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1032,7 +1032,7 @@ msgstr ""
 "Pre všetkých príjemcov boli nájdené platné dôveryhodné šifrovacie kľúče.\n"
 "Šifrovať túto správu?"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:839
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1043,34 +1043,34 @@ msgstr ""
 "požiadaní, aby ste túto správu zašifrovali alebo nie.\n"
 "Šifrovať túto správu?"
 
-#: mailclient_p.cpp:843
+#: mailclient_p.cpp:844
 #, fuzzy, kde-format
 #| msgid "Encrypt Message?"
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Šifrovať správu?"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:845
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Podpísať a zašifrovať"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:917
+#: mailclient_p.cpp:845 mailclient_p.cpp:918
 #, kde-format
 msgid "&Encrypt"
 msgstr "Šifrovať"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:846 mailclient_p.cpp:922
 #, kde-format
 msgid "&Sign Only"
 msgstr "Iba podpísať"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:846 mailclient_p.cpp:922
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Posl&ať ako je"
 
-#: mailclient_p.cpp:865
+#: mailclient_p.cpp:866
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1079,26 +1079,26 @@ msgstr ""
 "Pre týchto príjemcov existujú protichodné šifrovacie predvoľby.\n"
 "Šifrovať túto správu?"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Šifrovať správu?"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:871
 #, fuzzy, kde-format
 #| msgid "&Encrypt"
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Šifrovať"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:872
 #, fuzzy, kde-format
 #| msgid "Do &Not Encrypt"
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Nešifrovať"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:891
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1109,19 +1109,19 @@ msgstr ""
 "pre túto identitu neboli nakonfigurované žiadne platné dôveryhodné "
 "šifrovacie kľúče."
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:895
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Poslať nezašifrované?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:895
 #, fuzzy, kde-format
 #| msgid "Send &Unencrypted"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Poslať nezašifrované"
 
-#: mailclient_p.cpp:908
+#: mailclient_p.cpp:909
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1134,7 +1134,7 @@ msgstr ""
 "lokality a/alebo spôsobiť únik citlivých informácií.\n"
 "Šifrovať namiesto toho všetky časti?"
 
-#: mailclient_p.cpp:913
+#: mailclient_p.cpp:914
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1147,12 +1147,12 @@ msgstr ""
 "alebo spôsobiť únik citlivých informácií..\n"
 "Šifrovať správy namiesto toho?"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Šifrovať všetky časti"
 
-#: mailclient_p.cpp:919
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Upozornenie na nezašifrovanú správu"
@@ -1342,36 +1342,36 @@ msgstr "E-mailová adresa prijímateľa"
 msgid "This field contains the email address of the recipient"
 msgstr "Toto pole obsahuje e-mailovú adresu prijímateľa"
 
-#: publishdialog_p.cpp:46
+#: publishdialog_p.cpp:45
 #, fuzzy, kde-format
 #| msgid "(EmptyName)"
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(PrázdneMeno)"
 
-#: publishdialog_p.cpp:47
+#: publishdialog_p.cpp:46
 #, fuzzy, kde-format
 #| msgid "(EmptyEmail)"
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(PrázdnyEmail)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:241
+#: scheduler_p.cpp:134 scheduler_p.cpp:243
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Chyba: Priradenie rôznych typov výskytu."
 
-#: scheduler_p.cpp:225 scheduler_p.cpp:274
+#: scheduler_p.cpp:225 scheduler_p.cpp:276
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "Toto nie je aktualizácia. Nájdený výskyt bol zmenený neskôr."
 
-#: scheduler_p.cpp:265 scheduler_p.cpp:536 scheduler_p.cpp:551
+#: scheduler_p.cpp:267 scheduler_p.cpp:538 scheduler_p.cpp:553
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Chyba úpravy výskytu"
 
-#: scheduler_p.cpp:290
+#: scheduler_p.cpp:292
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1392,28 +1392,28 @@ msgstr ""
 "pozvánkou</item></list></para><para>Toto nie je problém, ale len aby ste "
 "vedeli.</para>"
 
-#: scheduler_p.cpp:299
+#: scheduler_p.cpp:301
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Nie je možné nájsť pozvánku na aktualizáciu"
 
-#: scheduler_p.cpp:306
+#: scheduler_p.cpp:308
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Chyba pridania výskytu"
 
-#: scheduler_p.cpp:340
+#: scheduler_p.cpp:342
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Nemôžem nájsť výskyt na vymazanie."
 
-#: scheduler_p.cpp:393
+#: scheduler_p.cpp:395
 #, kde-format
 msgid "Error recording exception"
 msgstr "Chyba nahrávania výnimky"
 
-#: scheduler_p.cpp:410
+#: scheduler_p.cpp:412
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1425,49 +1425,49 @@ msgstr ""
 "vymazaná alebo ju nevlastníte. Alebo je iba na čítanie alebo je zakázaný "
 "kalendár."
 
-#: scheduler_p.cpp:420 scheduler_p.cpp:435 scheduler_p.cpp:570
-#: scheduler_p.cpp:576
+#: scheduler_p.cpp:422 scheduler_p.cpp:437 scheduler_p.cpp:572
+#: scheduler_p.cpp:578
 #, kde-format
 msgid "Generic Error"
 msgstr "Všeobecná chyba"
 
-#: scheduler_p.cpp:478
+#: scheduler_p.cpp:480
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 sa chce zúčastniť %2, ale nebol pozvaný."
 
-#: scheduler_p.cpp:480
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 sa chce zúčastniť %2 menom %3."
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:486
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nepozvaný účastník"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Prijať účasť"
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Zamietnuť účasť"
 
-#: scheduler_p.cpp:489
+#: scheduler_p.cpp:491
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Organizátor odmietol vašu účasť na tomto stretnutí."
 
-#: scheduler_p.cpp:510
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1477,35 +1477,35 @@ msgstr ""
 "Bol pridaný účastník do stretnutia. Chcete poslať účastníkom aktualizačnú "
 "správu e-mailom?"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Účastník pridaný"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:515
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Poslať správy"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:516
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Neposielať"
 
-#: scheduler_p.cpp:560
+#: scheduler_p.cpp:562
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Žiadny výskyt na plánovanie."
 
-#: scheduler_p.cpp:583
+#: scheduler_p.cpp:585
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Žiadna cache pre Free Busy"
 
-#: scheduler_p.cpp:602
+#: scheduler_p.cpp:604
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Chyba ukladania objekty freebusy"

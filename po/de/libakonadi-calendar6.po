@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:43+0000\n"
+"POT-Creation-Date: 2025-07-27 00:42+0000\n"
 "PO-Revision-Date: 2025-07-18 16:20+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,39 +20,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.3\n"
 
-#: calendarbase.cpp:265
+#: calendarbase.cpp:266
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
 "Das zu aktualisierende Ereignis wurde nicht gefunden, vielleicht wird es "
 "gerade gelöscht."
 
-#: calendarclipboard.cpp:68
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Fehler bei der Durchführung des Löschens."
 
-#: calendarclipboard.cpp:73
+#: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
 msgstr "Fehler bei der Durchführung des Kopierens."
 
-#: calendarclipboard.cpp:97
+#: calendarclipboard.cpp:96
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Der Eintrag „%1“ kann nicht gefunden werden"
 
-#: calendarclipboard.cpp:113 calendarclipboard.cpp:130
+#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Fehler beim Entfernen von Beziehungen."
 
-#: calendarclipboard.cpp:159
+#: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Fehler beim Löschen des Ereignisses: %1"
 
-#: calendarclipboard.cpp:176
+#: calendarclipboard.cpp:175
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -62,25 +62,25 @@ msgstr ""
 "ausschneiden und die Unteraufgaben verselbständigen, oder möchten Sie die "
 "Aufgabe und alle zugehörigen Unteraufgaben ausschneiden?"
 
-#: calendarclipboard.cpp:181 calendarclipboard.cpp:220
+#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer-Bestätigung"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Nur diese Aufgabe ausschneiden"
 
-#: calendarclipboard.cpp:183
+#: calendarclipboard.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Alle ausschneiden"
 
-#: calendarclipboard.cpp:216
+#: calendarclipboard.cpp:215
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -90,13 +90,13 @@ msgstr ""
 "kopieren und alle Unteraufgaben verselbständigen, oder möchten Sie die "
 "Aufgabe und alle zugehörigen Unteraufgaben kopieren?"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Nur diese Aufgabe kopieren"
 
-#: calendarclipboard.cpp:222
+#: calendarclipboard.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
@@ -397,7 +397,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:376
 #, kde-format
 msgid ""
 "Failed to download free/busy data from: %1\n"
@@ -406,19 +406,19 @@ msgstr ""
 "Frei/Belegt-Information sind nicht von „%1“ heruntergeladen worden. Grund: "
 "„%2“"
 
-#: freebusymanager.cpp:378 freebusymanager.cpp:401
+#: freebusymanager.cpp:377 freebusymanager.cpp:400
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Fehlernachricht bei Frei/Belegt-Informationen"
 
-#: freebusymanager.cpp:400
+#: freebusymanager.cpp:399
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
 "Frei/Belegt-Informationen empfangen von „%1“ sind nicht verarbeitet worden."
 
-#: freebusymanager.cpp:415
+#: freebusymanager.cpp:414
 #, kde-format
 msgid ""
 "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -432,23 +432,23 @@ msgstr ""
 "lautet: <em>%2</em>.</p><p>Bitte überprüfen Sie die Adresse oder wenden Sie "
 "sich an Ihren Systemadministrator.</p></qt>"
 
-#: freebusymanager.cpp:616
+#: freebusymanager.cpp:615
 #, kde-format
 msgid "The free/busy information was successfully sent."
 msgstr "Die Frei/Belegt-Informationen wurden erfolgreich gesendet."
 
-#: freebusymanager.cpp:617 itiphandler_p.cpp:138
+#: freebusymanager.cpp:616 itiphandler_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Frei/Belegt-Informationen versenden "
 
-#: freebusymanager.cpp:620
+#: freebusymanager.cpp:619
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Das Auslesen der Frei/Belegt-Informationen ist nicht möglich: %1"
 
-#: freebusymanager.cpp:744
+#: freebusymanager.cpp:743
 #, kde-format
 msgid ""
 "<qt><p>No URL configured for uploading your free/busy list. Please set it in "
@@ -460,84 +460,84 @@ msgstr ""
 "Seite „Frei/Belegt“ an.</p><p>Fragen Sie Ihren Systemadministrator nach der "
 "genauen Adresse und den Zugangsdaten.</p></qt>"
 
-#: freebusymanager.cpp:749
+#: freebusymanager.cpp:748
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Keine Adresse zur Veröffentlichung von Frei/Belegt-Informationen"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:758
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgstr "<qt>Die angegebene Zieladresse „%1“ ist ungültig</qt>"
 
-#: freebusymanager.cpp:760
+#: freebusymanager.cpp:759
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Ungültige Adresse"
 
-#: history_p.cpp:71
+#: history_p.cpp:69
 #, kde-format
 msgid "General error"
 msgstr "Allgemeiner Fehler"
 
-#: history_p.cpp:82
+#: history_p.cpp:80
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 creation"
 msgstr "Erstellung (%1)"
 
-#: history_p.cpp:150
+#: history_p.cpp:148
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 deletion"
 msgstr "Löschung (%1)"
 
-#: history_p.cpp:232
+#: history_p.cpp:230
 #, kde-format
 msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "Änderung (%1)"
 
-#: icalimporter.cpp:85
+#: icalimporter.cpp:84
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Fehler beim Erstellen der iCal-Ressource: %1"
 
-#: icalimporter.cpp:95
+#: icalimporter.cpp:94
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr ""
 "Die D-Bus-Schnittstelle für die entfernte Konfiguration kann nicht erstellt "
 "werden."
 
-#: icalimporter.cpp:120
+#: icalimporter.cpp:119
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Die Datei auf dem fremden Rechner lässt sich nicht herunterladen."
 
-#: icalimporter.cpp:143 icalimporter.cpp:164
+#: icalimporter.cpp:142 icalimporter.cpp:163
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Eine Importaufgabe wird bereits ausgeführt."
 
-#: icalimporter.cpp:169
+#: icalimporter.cpp:168
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Leerer Dateiname. Die iCal-Datei wird nicht importiert."
 
-#: icalimporter.cpp:174
+#: icalimporter.cpp:173
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "Die Adresse (URL)für den Import ist unzulässig."
 
-#: icalimporter.cpp:181
+#: icalimporter.cpp:180
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "Die ausgewählte Datei ist keine lesbare Datei."
 
-#: icalimporter.cpp:189
+#: icalimporter.cpp:188
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -546,12 +546,12 @@ msgstr ""
 "Die ausgewählte Datei ist nicht richtig formatiert oder das Format wird von "
 "dieser Anwendung nicht unterstützt."
 
-#: icalimporter.cpp:197
+#: icalimporter.cpp:196
 #, kde-format
 msgid "The selected file is empty."
 msgstr "Die ausgewählte Datei ist leer."
 
-#: icalimporter.cpp:215
+#: icalimporter.cpp:214
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "iCal-Datei in bestehenden Kalender zusammenführen."
@@ -692,7 +692,7 @@ msgid "Do Not Send"
 msgstr "Nicht senden"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
-#: itiphandlerhelper_p.cpp:508
+#: itiphandlerhelper_p.cpp:509
 #, kde-format
 msgid "Error: %1"
 msgstr "Fehler: %1"
@@ -889,17 +889,17 @@ msgstr ""
 "Sie haben vorher eine Einladung zu diesem Termin akzeptiert. Möchten Sie dem "
 "Organisator mitteilen, dass Sie den Termin absagen?"
 
-#: itiphandlerhelper_p.cpp:476 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:477 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Gegenvorschlag: %1"
 
-#: itiphandlerhelper_p.cpp:493
+#: itiphandlerhelper_p.cpp:494
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Senden der Gruppenplanungs-E-Mail ist fehlgeschlagen."
 
-#: itiphandlerhelper_p.cpp:501
+#: itiphandlerhelper_p.cpp:502
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
@@ -932,13 +932,13 @@ msgstr ""
 "Fehler beim Abholen des Versandwegs, Einladungen können nicht versendet "
 "werden"
 
-#: mailclient_p.cpp:670
+#: mailclient_p.cpp:671
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr ""
 "Fehler beim Einfügen der Nachricht in die Warteschlange des Postausgangs: %1"
 
-#: mailclient_p.cpp:702
+#: mailclient_p.cpp:703
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -949,24 +949,24 @@ msgstr ""
 "gefragt werden möchten, ob diese Nachricht signiert werden soll.\n"
 "Möchten Sie diese Nachricht signieren?"
 
-#: mailclient_p.cpp:707 mailclient_p.cpp:733
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgid "Sign Message?"
 msgstr "Nachricht signieren?"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Signieren"
 
-#: mailclient_p.cpp:709 mailclient_p.cpp:735
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Nicht signieren"
 
-#: mailclient_p.cpp:729
+#: mailclient_p.cpp:730
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -975,7 +975,7 @@ msgstr ""
 "Es gibt Konflikte in den Signierungseinstellungen für diese Empfänger.\n"
 "Möchten Sie diese Nachricht signieren?"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:755
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -984,19 +984,19 @@ msgstr ""
 "Sie haben festgelegt, dass diese Nachricht signiert werden soll, aber es "
 "wurde kein gültiger Signierungsschlüssel für diese Identität eingerichtet."
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:758
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Unsigniert senden?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:758
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "&Unsigniert senden"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:772
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1008,7 +1008,7 @@ msgstr ""
 "Regelungen dieser Seite missachten.\n"
 "Möchten Sie stattdessen alle Teile signieren?"
 
-#: mailclient_p.cpp:775
+#: mailclient_p.cpp:776
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1020,29 +1020,29 @@ msgstr ""
 "dieser Seite missachten.\n"
 "Möchten Sie stattdessen die Nachricht signieren?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:779
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Alle Teile &signieren"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:779
 #, kde-format
 msgid "&Sign"
 msgstr "&Signieren"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:781
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Warnung: Unsignierte Nachricht"
 
-#: mailclient_p.cpp:782
+#: mailclient_p.cpp:783
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Ohne Änderung &senden"
 
-#: mailclient_p.cpp:835
+#: mailclient_p.cpp:836
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1052,7 +1052,7 @@ msgstr ""
 "Verschlüsselungsschlüssel gefunden.\n"
 "Möchten Sie diese Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:839
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1063,33 +1063,33 @@ msgstr ""
 "Sie gefragt werden möchten, ob diese Nachricht verschlüsselt werden soll.\n"
 "Möchten Sie diese Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:843
+#: mailclient_p.cpp:844
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:845
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Signieren && V&erschlüsseln"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:917
+#: mailclient_p.cpp:845 mailclient_p.cpp:918
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Verschlüsseln"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:846 mailclient_p.cpp:922
 #, kde-format
 msgid "&Sign Only"
 msgstr "Nur &signieren"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:846 mailclient_p.cpp:922
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Ohne Änderung &senden"
 
-#: mailclient_p.cpp:865
+#: mailclient_p.cpp:866
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1098,24 +1098,24 @@ msgstr ""
 "Es gibt Konflikte in den Verschlüsselungseinstellungen für diese Empfänger.\n"
 "Möchten Sie diese Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:870
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Nachricht verschlüsseln?"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Verschlüsseln"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:872
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Nicht verschlüsseln"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:891
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1127,18 +1127,18 @@ msgstr ""
 "gültiger vertrauenswürdiger Verschlüsselungsschlüssel für diese Identität "
 "eingerichtet."
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:895
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Unverschlüsselt senden?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:895
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&Unverschlüsselt senden"
 
-#: mailclient_p.cpp:908
+#: mailclient_p.cpp:909
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1152,7 +1152,7 @@ msgstr ""
 "verbreiten\n"
 "Möchten Sie stattdessen alle Teile verschlüsseln?"
 
-#: mailclient_p.cpp:913
+#: mailclient_p.cpp:914
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1166,12 +1166,12 @@ msgstr ""
 "verbreiten\n"
 "Möchten Sie stattdessen die Nachrichten verschlüsseln?"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:918
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Alle Teile v&erschlüsseln"
 
-#: mailclient_p.cpp:919
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Warnung: Nicht verschlüsselte Nachricht"
@@ -1361,36 +1361,36 @@ msgstr "Die E-Mail-Adresse des Empfängers"
 msgid "This field contains the email address of the recipient"
 msgstr "Dieses Feld enthält die E-Mail-Adresse des Empfängers."
 
-#: publishdialog_p.cpp:46
+#: publishdialog_p.cpp:45
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyName)"
 msgstr "(Leerer Name)"
 
-#: publishdialog_p.cpp:47
+#: publishdialog_p.cpp:46
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(Leere E-Mail)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:241
+#: scheduler_p.cpp:134 scheduler_p.cpp:243
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Fehler: Zuweisung verschiedener Ereignistypen."
 
-#: scheduler_p.cpp:225 scheduler_p.cpp:274
+#: scheduler_p.cpp:225 scheduler_p.cpp:276
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Dies ist keine Aktualisierung, Das gefundene Ereignis wurde erst kürzlich "
 "geändert."
 
-#: scheduler_p.cpp:265 scheduler_p.cpp:536 scheduler_p.cpp:551
+#: scheduler_p.cpp:267 scheduler_p.cpp:538 scheduler_p.cpp:553
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Fehler beim Bearbeiten des Ereignisses"
 
-#: scheduler_p.cpp:290
+#: scheduler_p.cpp:292
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1413,28 +1413,28 @@ msgstr ""
 "enthält</item></list></para><para>Dies ist kein Problem, aber Sie sollten es "
 "wissen.</para>"
 
-#: scheduler_p.cpp:299
+#: scheduler_p.cpp:301
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Zu aktualisierende Einladung nicht gefunden"
 
-#: scheduler_p.cpp:306
+#: scheduler_p.cpp:308
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Fehler beim Hinzufügen des Ereignisses"
 
-#: scheduler_p.cpp:340
+#: scheduler_p.cpp:342
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Das zu löschende Ereignis wurde nicht gefunden."
 
-#: scheduler_p.cpp:393
+#: scheduler_p.cpp:395
 #, kde-format
 msgid "Error recording exception"
 msgstr "Fehler beim Aufzeichnen der Ausnahme"
 
-#: scheduler_p.cpp:410
+#: scheduler_p.cpp:412
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1447,49 +1447,49 @@ msgstr ""
 "Eventuell gehört es auch zu einem deaktivierten Kalender oder einem, aus dem "
 "nur gelesen werden kann."
 
-#: scheduler_p.cpp:420 scheduler_p.cpp:435 scheduler_p.cpp:570
-#: scheduler_p.cpp:576
+#: scheduler_p.cpp:422 scheduler_p.cpp:437 scheduler_p.cpp:572
+#: scheduler_p.cpp:578
 #, kde-format
 msgid "Generic Error"
 msgstr "Allgemeiner Fehler"
 
-#: scheduler_p.cpp:478
+#: scheduler_p.cpp:480
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 möchte an %2 teilnehmen, wurde aber nicht eingeladen."
 
-#: scheduler_p.cpp:480
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 möchte für %3 an %2 teilnehmen."
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:486
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nicht eingeladener Teilnehmer"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Teilnahme zulassen"
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Teilnahme abgelehnen"
 
-#: scheduler_p.cpp:489
+#: scheduler_p.cpp:491
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Der Organisator verweigert Ihnen die Teilnahme an diesem Meeting."
 
-#: scheduler_p.cpp:510
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1499,35 +1499,35 @@ msgstr ""
 "Dem Ereignis wurde ein Teilnehmer hinzugefügt. Möchten Sie allen Teilnehmern "
 "eine Aktualisierung per E-Mail senden?"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Teilnehmer hinzugefügt"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:515
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Nachrichten senden"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:516
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Nicht senden"
 
-#: scheduler_p.cpp:560
+#: scheduler_p.cpp:562
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Es wurde ein Ereignis zur Einplanung gefunden."
 
-#: scheduler_p.cpp:583
+#: scheduler_p.cpp:585
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Kein Frei/Belegt-Zwischenspeicher"
 
-#: scheduler_p.cpp:602
+#: scheduler_p.cpp:604
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Fehler beim Speichern des Frei/Belegt-Objekts"
