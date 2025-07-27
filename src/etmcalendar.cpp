@@ -582,12 +582,14 @@ bool ETMCalendar::collectionFilteringEnabled() const
 void ETMCalendarPrivate::updateLoadingState()
 {
     if (!q->entityTreeModel()->isCollectionTreeFetched()) {
-        return q->setIsLoading(true);
+        q->setIsLoading(true);
+        return;
     }
 
     for (const Akonadi::Collection &collection : std::as_const(mCollectionMap)) {
         if (!q->entityTreeModel()->isCollectionPopulated(collection.id())) {
-            return q->setIsLoading(true);
+            q->setIsLoading(true);
+            return;
         }
     }
 
