@@ -217,6 +217,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(todo->description());
         case CalendarColumn:
             return QVariant(Akonadi::CalendarUtils::displayName(d->etm(), item.parentCollection()));
+        default:
+            break;
         }
         return {};
     }
@@ -243,6 +245,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(todo->description());
         case CalendarColumn:
             return QVariant(Akonadi::CalendarUtils::displayName(d->etm(), item.parentCollection()));
+        default:
+            break;
         }
         return {};
     }
@@ -303,6 +307,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case CategoriesColumn:
         case CalendarColumn:
             return {Qt::AlignHCenter | Qt::AlignVCenter};
+        default:
+            break;
         }
         return {Qt::AlignLeft | Qt::AlignVCenter};
     }
@@ -392,6 +398,8 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
             case DescriptionColumn:
                 todo->setDescription(value.toString());
                 break;
+            default:
+                break;
             }
         }
 
@@ -475,6 +483,8 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
             return QVariant(i18n("Description"));
         case CalendarColumn:
             return QVariant(i18n("Calendar"));
+        default:
+            break;
         }
     }
 
@@ -489,6 +499,8 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
         case CategoriesColumn:
         case CalendarColumn:
             return {Qt::AlignHCenter};
+        default:
+            break;
         }
         return {};
     }
@@ -659,6 +671,8 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
             if (!todo->descriptionIsRich()) {
                 ret |= Qt::ItemIsEditable;
             }
+            break;
+        default:
             break;
         }
     }
