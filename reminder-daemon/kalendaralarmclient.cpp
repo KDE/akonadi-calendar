@@ -24,7 +24,7 @@ using namespace KCalendarCore;
 
 namespace
 {
-static const char mySuspensedGroupName[] = "Suspended";
+const char mySuspensedGroupName[] = "Suspended";
 }
 
 KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
