@@ -27,7 +27,9 @@ using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace KCalendarCore;
 
+// NOLINTBEGIN(misc-use-internal-linkage)
 AKONADI_CALENDAR_TESTS_EXPORT bool akonadi_calendar_running_unittests = false;
+// NOLINTEND(misc-use-internal-linkage)
 
 static ITIPHandlerDialogDelegate::Action actionFromStatus(ITIPHandlerHelper::SendResult result)
 {

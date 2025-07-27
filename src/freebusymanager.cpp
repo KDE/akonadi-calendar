@@ -47,7 +47,7 @@ using namespace KCalendarCore;
 
 /// Free helper functions
 
-QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
+static QUrl replaceVariablesUrl(const QUrl &url, const QString &email)
 {
     QString emailName;
     QString emailHost;

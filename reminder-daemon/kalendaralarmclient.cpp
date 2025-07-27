@@ -89,7 +89,7 @@ void KalendarAlarmClient::setupAkonadi()
     checkAlarms();
 }
 
-void checkAllItems(KCheckableProxyModel *model, const QModelIndex &parent = QModelIndex())
+static void checkAllItems(KCheckableProxyModel *model, const QModelIndex &parent = QModelIndex())
 {
     const int rowCount = model->rowCount(parent);
     for (int row = 0; row < rowCount; ++row) {

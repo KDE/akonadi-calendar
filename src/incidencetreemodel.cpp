@@ -12,7 +12,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/EntityTreeModel>
 
 using namespace Akonadi;
-QDebug operator<<(QDebug s, const Node::Ptr &node);
+static QDebug operator<<(QDebug s, const Node::Ptr &node);
 
 static void calculateDepth(const Node::Ptr &node)
 {

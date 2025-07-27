@@ -24,7 +24,7 @@ using namespace Qt::Literals::StringLiterals;
 
 using namespace Akonadi;
 
-QString proposalComment(const KCalendarCore::Incidence::Ptr &incidence)
+static QString proposalComment(const KCalendarCore::Incidence::Ptr &incidence)
 {
     QString comment;
 
