@@ -149,7 +149,6 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &incidence,
         }
         break;
     case ScheduleMessage::Obsolete:
-        break;
     default:
         break;
     }

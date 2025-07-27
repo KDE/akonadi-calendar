@@ -148,6 +148,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         // since this does not know the choice I made in the KMail bpf
         KCalendarCore::Attendee::List attendees = d->m_incidence->attendees();
         for (auto &attendee : attendees) {
+            // NOLINTBEGIN(bugprone-branch-clone)
             if (attendee.email() == receiver) {
                 if (action.startsWith("accepted"_L1)) {
                     attendee.setStatus(KCalendarCore::Attendee::Accepted);
@@ -160,6 +161,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
                 }
                 break;
             }
+            // NOLINTEND(bugprone-branch-clone)
         }
         d->m_incidence->setAttendees(attendees);
 
