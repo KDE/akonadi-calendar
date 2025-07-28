@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:42+0000\n"
+"POT-Creation-Date: 2025-07-28 00:41+0000\n"
 "PO-Revision-Date: 2024-11-17 20:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -558,46 +558,46 @@ msgstr "El fitxer seleccionat està buit."
 msgid "Merge ical file into existing calendar."
 msgstr "Fusiona el fitxer ical dins el calendari existent."
 
-#: incidencechanger.cpp:262
+#: incidencechanger.cpp:264
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Error en intentar enviar un element de calendari. L'error ha estat: %1"
 
-#: incidencechanger.cpp:341
+#: incidencechanger.cpp:343
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr ""
 "Error en intentar suprimir un element de calendari. L'error ha estat: %1"
 
-#: incidencechanger.cpp:376
+#: incidencechanger.cpp:378
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "S'ha produït un error desconegut"
 
-#: incidencechanger.cpp:413
+#: incidencechanger.cpp:415
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
 "Error en intentar modificar un element de calendari. L'error ha estat: %1"
 
-#: incidencechanger.cpp:806 incidencechanger.cpp:930
+#: incidencechanger.cpp:808 incidencechanger.cpp:932
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr ""
 "Aquest element de calendari ja s'ha suprimit, o s'està suprimint ara mateix."
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "L'operació no es pot portar a terme per restriccions de l'ACL"
 
-#: incidencechanger.cpp:1199
+#: incidencechanger.cpp:1201
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "La col·lecció seleccionada no és vàlida"
 
-#: incidencechanger.cpp:1203
+#: incidencechanger.cpp:1205
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -606,12 +606,12 @@ msgstr ""
 "La col·lecció predeterminada no és vàlida o no té les ACL adequades i s'ha "
 "utilitzat «DestinationPolicyNeverAsk»"
 
-#: incidencechanger.cpp:1207
+#: incidencechanger.cpp:1209
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "ID d'element duplicat en una operació de grup"
 
-#: incidencechanger.cpp:1211
+#: incidencechanger.cpp:1213
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -620,7 +620,7 @@ msgstr ""
 "Ha fallat un canvi que pertany a un grup de canvis. Tots els canvis es "
 "desfaran."
 
-#: incidencechanger.cpp:1216
+#: incidencechanger.cpp:1218
 #, kde-format
 msgid "Unknown error"
 msgstr "Error desconegut"
@@ -650,22 +650,22 @@ msgstr "Hi ha hagut un error en processar una invitació o actualització."
 msgid "Invalid incidence"
 msgstr "Incidència no vàlida"
 
-#: itiphandler.cpp:209
+#: itiphandler.cpp:211
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Acció no vàlida: %1"
 
-#: itiphandler.cpp:232
+#: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Error en enviar la contraproposta"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:241
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "No s'ha pogut iniciar l'editor per a editar la contraproposta"
 
-#: itiphandler.cpp:270
+#: itiphandler.cpp:272
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -673,7 +673,7 @@ msgstr ""
 "L'element «%1» no té cap assistent. Per tant, no s'enviarà cap missatge de "
 "treball en grup."
 
-#: itiphandler.cpp:273
+#: itiphandler.cpp:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -1366,24 +1366,24 @@ msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(CorreuElectrònicBuit)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:243
+#: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Error: Assignació de diferents tipus d'incidències."
 
-#: scheduler_p.cpp:225 scheduler_p.cpp:276
+#: scheduler_p.cpp:224 scheduler_p.cpp:275
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Això no és una actualització. La incidència trobada s'ha modificat més "
 "recentment."
 
-#: scheduler_p.cpp:267 scheduler_p.cpp:538 scheduler_p.cpp:553
+#: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Error en modificar la incidència"
 
-#: scheduler_p.cpp:292
+#: scheduler_p.cpp:291
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1404,28 +1404,28 @@ msgstr ""
 "teniu accés al calendari que conté la invitació</item></list></para> "
 "<para>Això no és cap problema, però hauríeu de conèixer-ho.</para>"
 
-#: scheduler_p.cpp:301
+#: scheduler_p.cpp:300
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "No s'ha pogut trobar cap invitació a actualitzar"
 
-#: scheduler_p.cpp:308
+#: scheduler_p.cpp:307
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Error en afegir la incidència"
 
-#: scheduler_p.cpp:342
+#: scheduler_p.cpp:341
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "No s'ha pogut trobar cap incidència a suprimir."
 
-#: scheduler_p.cpp:395
+#: scheduler_p.cpp:394
 #, kde-format
 msgid "Error recording exception"
 msgstr "Error en enregistrar una excepció"
 
-#: scheduler_p.cpp:412
+#: scheduler_p.cpp:411
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1437,49 +1437,49 @@ msgstr ""
 "suprimit o no sou el propietari. O potser pertany a un calendari desactivat "
 "o de només lectura."
 
-#: scheduler_p.cpp:422 scheduler_p.cpp:437 scheduler_p.cpp:572
-#: scheduler_p.cpp:578
+#: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
+#: scheduler_p.cpp:577
 #, kde-format
 msgid "Generic Error"
 msgstr "Error genèric"
 
-#: scheduler_p.cpp:480
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 vol assistir a %2, però no ha estat invitat."
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:481
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 vol assistir a %2 en lloc de %3."
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Assistent no invitat"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:486
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Accepta l'assistència"
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Rebutja l'assistència"
 
-#: scheduler_p.cpp:491
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "L'organitzador ha rebutjat la vostra assistència a aquesta reunió."
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1489,35 +1489,35 @@ msgstr ""
 "S'ha afegit un assistent a la incidència. Voleu enviar als assistents un "
 "missatge d'actualització?"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "S'ha afegit l'assistent"
 
-#: scheduler_p.cpp:515
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Envia els missatges"
 
-#: scheduler_p.cpp:516
+#: scheduler_p.cpp:515
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "No els enviïs"
 
-#: scheduler_p.cpp:562
+#: scheduler_p.cpp:561
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Sense incidències a planificar."
 
-#: scheduler_p.cpp:585
+#: scheduler_p.cpp:584
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "No hi ha memòria cau de lliure/ocupat"
 
-#: scheduler_p.cpp:604
+#: scheduler_p.cpp:603
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Error en desar un objecte de lliure/ocupat"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:42+0000\n"
+"POT-Creation-Date: 2025-07-28 00:41+0000\n"
 "PO-Revision-Date: 2024-11-09 20:06+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -551,45 +551,45 @@ msgstr "Избраният файл е празен."
 msgid "Merge ical file into existing calendar."
 msgstr "Обединяване на ical файл в съществуващ календар."
 
-#: incidencechanger.cpp:262
+#: incidencechanger.cpp:264
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Грешка при опит за създаване на елемент от календара. Грешка беше: %1"
 
-#: incidencechanger.cpp:341
+#: incidencechanger.cpp:343
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr ""
 "Грешка при опит за изтриване на елемент от календара. Грешката беше: %1"
 
-#: incidencechanger.cpp:376
+#: incidencechanger.cpp:378
 #, kde-format
 msgctxt "errormessage for a job ended with an unexpected result"
 msgid "An unknown error occurred"
 msgstr "Възникна неизвестна грешка"
 
-#: incidencechanger.cpp:413
+#: incidencechanger.cpp:415
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
 "Грешка при опит за модифициране на елемент от календара. Грешка беше: %1"
 
-#: incidencechanger.cpp:806 incidencechanger.cpp:930
+#: incidencechanger.cpp:808 incidencechanger.cpp:932
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Този ​​елемент от календара вече беше изтрит или в момента се изтрива."
 
-#: incidencechanger.cpp:1196
+#: incidencechanger.cpp:1198
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Операцията не може да се извърши поради ограничения за ACL"
 
-#: incidencechanger.cpp:1199
+#: incidencechanger.cpp:1201
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Избраната колекция е невалидна"
 
-#: incidencechanger.cpp:1203
+#: incidencechanger.cpp:1205
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -598,12 +598,12 @@ msgstr ""
 "Колекцията по подразбиране е невалидна или няма подходящи ACL и е използван "
 "DestinationPolicyNeverAsk"
 
-#: incidencechanger.cpp:1207
+#: incidencechanger.cpp:1209
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Дублиран идентификатор на елемент в групова операция"
 
-#: incidencechanger.cpp:1211
+#: incidencechanger.cpp:1213
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -612,7 +612,7 @@ msgstr ""
 "Една промяна, принадлежаща към група промени, е неуспешна. Всички промени се "
 "връщат обратно."
 
-#: incidencechanger.cpp:1216
+#: incidencechanger.cpp:1218
 #, kde-format
 msgid "Unknown error"
 msgstr "Неизвестна грешка"
@@ -642,22 +642,22 @@ msgstr "Грешка при обработката на покана или ак
 msgid "Invalid incidence"
 msgstr "Невалидно събитие"
 
-#: itiphandler.cpp:209
+#: itiphandler.cpp:211
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Невалидно действие: %1"
 
-#: itiphandler.cpp:232
+#: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Грешка при изпращане на броячно предложение"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:241
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Не може да стартира редактор за редактиране на предложение за брояч"
 
-#: itiphandler.cpp:270
+#: itiphandler.cpp:272
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -665,7 +665,7 @@ msgstr ""
 "Елементът „%1“ няма присъстващи. Следователно няма да бъде изпратено групово "
 "съобщение."
 
-#: itiphandler.cpp:273
+#: itiphandler.cpp:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -1356,22 +1356,22 @@ msgctxt "@info:placeholder"
 msgid "(EmptyEmail)"
 msgstr "(Празен имейл)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:243
+#: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Грешка: Задаване на различни видове събития."
 
-#: scheduler_p.cpp:225 scheduler_p.cpp:276
+#: scheduler_p.cpp:224 scheduler_p.cpp:275
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "Това не е актуализация. Намереният случай е променен по-рано."
 
-#: scheduler_p.cpp:267 scheduler_p.cpp:538 scheduler_p.cpp:553
+#: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Грешка при промяна на събитието"
 
-#: scheduler_p.cpp:292
+#: scheduler_p.cpp:291
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1392,28 +1392,28 @@ msgstr ""
 "достъп до календара, съдържащ поканата </item></list></para><para> Това не е "
 "проблем, но сметнахме, че трябва да знаете.</para>"
 
-#: scheduler_p.cpp:301
+#: scheduler_p.cpp:300
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Не може да се намери покана за качване"
 
-#: scheduler_p.cpp:308
+#: scheduler_p.cpp:307
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Грешка при добавяне на случай"
 
-#: scheduler_p.cpp:342
+#: scheduler_p.cpp:341
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Не можа да се намери събитие за изтриване."
 
-#: scheduler_p.cpp:395
+#: scheduler_p.cpp:394
 #, kde-format
 msgid "Error recording exception"
 msgstr "Грешка при записване на изключение"
 
-#: scheduler_p.cpp:412
+#: scheduler_p.cpp:411
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1425,49 +1425,49 @@ msgstr ""
 "би вече са изтрити или не са ваша собственост. Или може да принадлежат към "
 "календар само за четене или деактивиран."
 
-#: scheduler_p.cpp:422 scheduler_p.cpp:437 scheduler_p.cpp:572
-#: scheduler_p.cpp:578
+#: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
+#: scheduler_p.cpp:577
 #, kde-format
 msgid "Generic Error"
 msgstr "Обща грешка"
 
-#: scheduler_p.cpp:480
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 иска да присъства на %2, но не беше поканен."
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:481
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 иска да присъства на %2 от името на %3."
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Непоканен участник"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:486
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Приемане на присъствието"
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:487
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Отхвърляне на присъствието"
 
-#: scheduler_p.cpp:491
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Организаторът отхвърли вашето присъствие на тази среща."
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1477,35 +1477,35 @@ msgstr ""
 "Към събитието беше добавен участник. Искате ли да изпратите на участниците "
 "съобщение за актуализация по имейл?"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Добавен участник"
 
-#: scheduler_p.cpp:515
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Изпращане на съобщения"
 
-#: scheduler_p.cpp:516
+#: scheduler_p.cpp:515
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Да не се изпраща"
 
-#: scheduler_p.cpp:562
+#: scheduler_p.cpp:561
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Няма случа за планиране."
 
-#: scheduler_p.cpp:585
+#: scheduler_p.cpp:584
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Без кеш за заетост"
 
-#: scheduler_p.cpp:604
+#: scheduler_p.cpp:603
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Грешка при запазване на обект със свободен заем"
