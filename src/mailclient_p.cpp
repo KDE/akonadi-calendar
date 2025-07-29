@@ -5,6 +5,7 @@
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
+// clazy:excludeall=lambda-in-connect
 
 #include "mailclient_p.h"
 using namespace Qt::Literals::StringLiterals;
@@ -569,6 +570,7 @@ bool MailClient::addKeysToContext(const QString &gnupgHome,
             if (it == autocryptMap.end()) {
                 qCDebug(AKONADICALENDAR_LOG) << "Adding " << k.primaryFingerprint() << "via Export/Import";
                 auto exportJob = proto->publicKeyExportJob(false);
+                // clazy reports this as a lambda-in-connect issue. false positive
                 connect(exportJob,
                         &QGpgME::ExportJob::result,
                         exportJob,
