@@ -127,7 +127,7 @@ void IncidenceTreeModelPrivate::reset(bool silent)
     if (q->sourceModel()) {
         const int sourceCount = q->sourceModel()->rowCount();
         for (int i = 0; i < sourceCount; ++i) {
-            PreNode::Ptr prenode = prenodeFromSourceRow(i);
+            PreNode::Ptr const prenode = prenodeFromSourceRow(i);
             if (prenode && (m_mimeTypes.isEmpty() || m_mimeTypes.contains(prenode->incidence->mimeType()))) {
                 insertNode(prenode, /**silent=*/true);
             }
@@ -155,7 +155,7 @@ void IncidenceTreeModelPrivate::onDataChanged(const QModelIndex &begin, const QM
     const int last_row = end.row();
 
     for (int i = first_row; i <= last_row; ++i) {
-        QModelIndex sourceIndex = q->sourceModel()->index(i, 0);
+        QModelIndex const sourceIndex = q->sourceModel()->index(i, 0);
         Q_ASSERT(sourceIndex.isValid());
         QModelIndex index = q->mapFromSource(sourceIndex);
         // Index might be invalid if we filter by incidence type.
@@ -165,12 +165,12 @@ void IncidenceTreeModelPrivate::onDataChanged(const QModelIndex &begin, const QM
             // Did we this node change parent? If no, just Q_EMIT dataChanged(), if
             // yes, we must Q_EMIT rowsMoved(), so we see a visual effect in the view.
             Node *rawNode = reinterpret_cast<Node *>(index.internalPointer());
-            Node::Ptr node = m_uidMap.value(rawNode->uid); // Looks hackish but it's safe
+            Node::Ptr const node = m_uidMap.value(rawNode->uid); // Looks hackish but it's safe
             Q_ASSERT(node);
-            Node::Ptr oldParentNode = node->parentNode;
+            Node::Ptr const oldParentNode = node->parentNode;
             auto item = q->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
             Q_ASSERT(item.isValid());
-            KCalendarCore::Incidence::Ptr incidence =
+            KCalendarCore::Incidence::Ptr const incidence =
                 !item.hasPayload<KCalendarCore::Incidence::Ptr>() ? KCalendarCore::Incidence::Ptr() : item.payload<KCalendarCore::Incidence::Ptr>();
             if (!incidence) {
                 qCCritical(AKONADICALENDAR_LOG) << "Incidence shouldn't be invalid." << item.hasPayload() << item.id();
@@ -292,7 +292,7 @@ void IncidenceTreeModelPrivate::onRowsInserted(const QModelIndex &parent, int be
     Q_ASSERT(begin <= end);
     PreNode::List nodes;
     for (int i = begin; i <= end; ++i) {
-        PreNode::Ptr node = prenodeFromSourceRow(i);
+        PreNode::Ptr const node = prenodeFromSourceRow(i);
         // if m_mimeTypes is empty, we ignore this feature
         if (!node || (!m_mimeTypes.isEmpty() && !m_mimeTypes.contains(node->incidence->mimeType()))) {
             continue;
@@ -315,9 +315,9 @@ void IncidenceTreeModelPrivate::onRowsInserted(const QModelIndex &parent, int be
 
 void IncidenceTreeModelPrivate::insertNode(const PreNode::Ptr &prenode, bool silent)
 {
-    KCalendarCore::Incidence::Ptr incidence = prenode->incidence;
-    Akonadi::Item item = prenode->item;
-    Node::Ptr node(new Node());
+    KCalendarCore::Incidence::Ptr const incidence = prenode->incidence;
+    Akonadi::Item const item = prenode->item;
+    Node::Ptr const node(new Node());
     node->sourceIndex = prenode->sourceIndex;
     node->id = item.id();
     node->uid = incidence->instanceIdentifier();
@@ -444,7 +444,7 @@ void IncidenceTreeModelPrivate::onRowsAboutToBeRemoved(const QModelIndex &parent
     // First, gather nodes to remove
     Node::List nodesToRemove;
     for (int i = begin; i <= end; ++i) {
-        QModelIndex sourceIndex = q->sourceModel()->index(i, 0, QModelIndex());
+        QModelIndex const sourceIndex = q->sourceModel()->index(i, 0, QModelIndex());
         Q_ASSERT(sourceIndex.isValid());
         Q_ASSERT(sourceIndex.model() == q->sourceModel());
         const Akonadi::Item::Id id = sourceIndex.data(EntityTreeModel::ItemIdRole).toLongLong();
@@ -454,7 +454,7 @@ void IncidenceTreeModelPrivate::onRowsAboutToBeRemoved(const QModelIndex &parent
             Q_ASSERT(m_mimeTypes.count() != 3);
             continue;
         }
-        Node::Ptr node = m_nodeMap.value(id);
+        Node::Ptr const node = m_nodeMap.value(id);
         Q_ASSERT(node->id == id);
         nodesToRemove << node;
     }
@@ -649,7 +649,7 @@ QVariant IncidenceTreeModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    QModelIndex sourceIndex = mapToSource(index);
+    QModelIndex const sourceIndex = mapToSource(index);
     Q_ASSERT(sourceIndex.isValid());
 
     return sourceModel()->data(sourceIndex, role);
@@ -735,7 +735,7 @@ QModelIndex IncidenceTreeModel::mapToSource(const QModelIndex &proxyIndex) const
       return QModelIndex();
     }
     QModelIndex index = indexes.first();*/
-    QModelIndex index = node->sourceIndex;
+    QModelIndex const index = node->sourceIndex;
     if (!index.isValid()) {
         qCWarning(AKONADICALENDAR_LOG) << "IncidenceTreeModel::mapToSource(): sourceModelIndex is invalid";
         Q_ASSERT(false);
@@ -809,7 +809,7 @@ QModelIndex IncidenceTreeModel::index(int row, int column, const QModelIndex &pa
         return createIndex(row, column, parentNode->directChilds.at(row).data());
     } else {
         Q_ASSERT(row < d->m_toplevelNodeList.count());
-        Node::Ptr node = d->m_toplevelNodeList.at(row);
+        Node::Ptr const node = d->m_toplevelNodeList.at(row);
         Q_ASSERT(node);
         return createIndex(row, column, node.data());
     }

@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 #include <Akonadi/Item>
 #include <KCalendarCore/Event>
 #include <QObject>
@@ -32,7 +34,7 @@ private Q_SLOTS:
     {
         QFETCH(QString, mimeType);
 
-        QByteArray serialized =
+        QByteArray const serialized =
             "BEGIN:VCALENDAR\n"
             "PRODID:-//K Desktop Environment//NONSGML libkcal 3.5//EN\n"
             "VERSION:2.0\n"
@@ -85,7 +87,7 @@ private Q_SLOTS:
 
         const QDate currentDate = QDate::currentDate();
 
-        Event::Ptr event = Event::Ptr(new Event());
+        Event::Ptr const event = Event::Ptr(new Event());
         event->setUid(QStringLiteral("12345"));
         event->setDtStart(QDateTime(currentDate, {}));
         event->setDtEnd(QDateTime(currentDate.addDays(1), {}));
@@ -118,5 +120,7 @@ private Q_SLOTS:
 };
 
 QTEST_MAIN(KCalCoreSerializerTest)
+
+// NOLINTEND(misc-const-correctness)
 
 #include "kcalcoreserializertest.moc"

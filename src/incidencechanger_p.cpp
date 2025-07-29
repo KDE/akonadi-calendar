@@ -103,7 +103,7 @@ void IncidenceChangerPrivate::onCollectionsLoaded(KJob *job)
             continue;
         }
 
-        KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(change->newItem);
+        KCalendarCore::Incidence::Ptr const incidence = CalendarUtils::incidence(change->newItem);
         Collection::List candidateCollections = collectionsForMimeType(incidence->mimeType(), allCollections);
         if (candidateCollections.count() == 1 && candidateCollections.first().isValid()) {
             // We only have 1 writable collection, don't bother the user with a dialog

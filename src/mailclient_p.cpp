@@ -188,7 +188,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
     bool encryptSomething = msg.encrypt;
     const bool doEncryptCompletely = msg.encrypt;
 
-    std::unique_ptr<ITIPHandlerDialogDelegate> dialogDelegate(
+    std::unique_ptr<ITIPHandlerDialogDelegate> const dialogDelegate(
         mFactory->createITIPHanderDialogDelegate(qSharedPointerCast<KCalendarCore::Incidence>(incidence), KCalendarCore::iTIPMethod::iTIPNoMethod));
 
     auto expiryChecker = std::make_shared<Kleo::ExpiryChecker>(Kleo::ExpiryCheckerSettings{encryptOwnKeyNearExpiryWarningThresholdInDays(),
@@ -288,7 +288,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
                     composerJob->setAutocryptEnabled(true);
                     composerJob->setSenderEncryptionKey(keyResolver.encryptToSelfKeysFor(concreteFormat)[0]);
                     QTemporaryDir dir;
-                    bool specialGnupgHome = addKeysToContext(dir.path(), data, keyResolver.useAutocrypt());
+                    bool const specialGnupgHome = addKeysToContext(dir.path(), data, keyResolver.useAutocrypt());
                     if (specialGnupgHome) {
                         dir.setAutoRemove(false);
                         composerJob->setGnupgHome(dir.path());
@@ -374,7 +374,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
                                MailPrivacyFlags mailPrivacy)
 {
     Q_ASSERT(incidence);
-    KCalendarCore::Attendee::List attendees = incidence->attendees();
+    KCalendarCore::Attendee::List const attendees = incidence->attendees();
     if (attendees.isEmpty()) {
         qCWarning(AKONADICALENDAR_LOG) << "There are no attendees to e-mail";
         Q_EMIT finished(ResultNoAttendees, i18n("There are no attendees to e-mail"));
@@ -420,7 +420,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
     }
 
     if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
-        KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
+        KCalendarCore::Incidence::Ptr const inc = incidence.staticCast<KCalendarCore::Incidence>();
         msg.subject = inc->summary();
     } else {
         msg.subject = i18n("Free Busy Object");
@@ -452,7 +452,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
     msg.method = KCalendarCore::ScheduleMessage::methodName(method);
 
     if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
-        KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
+        KCalendarCore::Incidence::Ptr const inc = incidence.staticCast<KCalendarCore::Incidence>();
         if (msg.subject.isEmpty()) {
             msg.subject = inc->summary();
         }
@@ -485,7 +485,7 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
     msg.method = KCalendarCore::ScheduleMessage::methodName(method);
 
     if (incidence->type() != KCalendarCore::Incidence::TypeFreeBusy) {
-        KCalendarCore::Incidence::Ptr inc = incidence.staticCast<KCalendarCore::Incidence>();
+        KCalendarCore::Incidence::Ptr const inc = incidence.staticCast<KCalendarCore::Incidence>();
         msg.subject = inc->summary();
     } else {
         msg.subject = i18n("Free Busy Message");
@@ -502,7 +502,7 @@ void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, con
 {
     // gather config values
     KConfig config(u"kmail2rc"_s);
-    KConfigGroup configGroup(&config, u"Invitations"_s);
+    KConfigGroup const configGroup(&config, u"Invitations"_s);
     const bool outlookConformInvitation = configGroup.readEntry("LegacyBodyInvites",
 #ifdef KDEPIM_ENTERPRISE_BUILD
                                                                 true

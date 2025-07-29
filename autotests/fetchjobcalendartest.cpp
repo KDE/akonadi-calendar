@@ -23,7 +23,7 @@ class FetchJobCalendarTest : public QObject
     {
         Item item;
         item.setMimeType(Event::eventMimeType());
-        Incidence::Ptr incidence(new Event());
+        Incidence::Ptr const incidence(new Event());
         incidence->setUid(uid);
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setDtStart(QDateTime::currentDateTimeUtc());
@@ -65,7 +65,7 @@ private Q_SLOTS:
         createIncidence(QStringLiteral("e"));
         createIncidence(QStringLiteral("f"));
 
-        FetchJobCalendar calendar;
+        FetchJobCalendar const calendar;
         QSignalSpy spy(&calendar, &FetchJobCalendar::loadFinished);
         QVERIFY(spy.wait(1000));
         QVERIFY2(spy.at(0).at(0).toBool(), qPrintable(spy.at(0).at(1).toString()));

@@ -57,7 +57,7 @@ void ITIPHandlerPrivate::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult
     const bool success = result == ITIPHandlerHelper::ResultSuccess;
 
     if (m_currentOperation == OperationProcessiTIPMessage) {
-        MailScheduler::Result result2 = success ? MailScheduler::ResultSuccess : MailScheduler::ResultGenericError;
+        MailScheduler::Result const result2 = success ? MailScheduler::ResultSuccess : MailScheduler::ResultGenericError;
         finishProcessiTIPMessage(result2, i18n("Error: %1", errorMessage));
     } else {
         Q_EMIT q->iTipMessageSent(success ? ITIPHandler::ResultSuccess : ITIPHandler::ResultError, success ? QString() : i18n("Error: %1", errorMessage));
@@ -200,7 +200,7 @@ void ITIPHandlerPrivate::finishSendAsICalendar(Akonadi::MailClient::Result resul
 CalendarBase::Ptr ITIPHandlerPrivate::calendar()
 {
     if (!m_calendar) {
-        FetchJobCalendar::Ptr fetchJobCalendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
+        FetchJobCalendar::Ptr const fetchJobCalendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
         connect(fetchJobCalendar.data(), &FetchJobCalendar::loadFinished, this, &ITIPHandlerPrivate::onLoadFinished);
 
         m_calendar = fetchJobCalendar;
@@ -211,7 +211,7 @@ CalendarBase::Ptr ITIPHandlerPrivate::calendar()
 
 bool ITIPHandlerPrivate::isLoaded()
 {
-    FetchJobCalendar::Ptr fetchJobCalendar = calendar().dynamicCast<Akonadi::FetchJobCalendar>();
+    FetchJobCalendar::Ptr const fetchJobCalendar = calendar().dynamicCast<Akonadi::FetchJobCalendar>();
     if (fetchJobCalendar) {
         return !fetchJobCalendar->isLoading();
     }

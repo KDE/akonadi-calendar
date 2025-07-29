@@ -118,7 +118,7 @@ void SerializerPluginKCalCore::serialize(const Item &item, const QByteArray &lab
     // Using an env variable for now while testing
     if (qgetenv("KCALCORE_BINARY_SERIALIZER") == QByteArray("1")) {
         QDataStream output(&data);
-        IncidenceBase::Ptr base = i;
+        IncidenceBase::Ptr const base = i;
         output << base;
     } else {
         // ### I guess this can be done without hardcoding stuff

@@ -112,7 +112,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
     }
 
     KCalendarCore::ICalFormat format;
-    KCalendarCore::ScheduleMessage::Ptr message = format.parseScheduleMessage(d->calendar(), iCal);
+    KCalendarCore::ScheduleMessage::Ptr const message = format.parseScheduleMessage(d->calendar(), iCal);
 
     if (!message) {
         const QString errorMessage = format.exception() ? i18n("Error message: %1", KCalUtils::Stringify::errorMessage(*format.exception()))
@@ -134,7 +134,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
 
     d->m_method = static_cast<KCalendarCore::iTIPMethod>(message->method());
 
-    KCalendarCore::ScheduleMessage::Status status = message->status();
+    KCalendarCore::ScheduleMessage::Status const status = message->status();
     d->m_incidence = message->event().dynamicCast<KCalendarCore::Incidence>();
     if (!d->m_incidence) {
         qCritical() << "Invalid incidence";
@@ -172,7 +172,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
         // TODO: what happens here? we must emit a signal
     } else if (action.startsWith("cancel"_L1)) {
         // Delete the old incidence, if one is present
-        KCalendarCore::Incidence::Ptr existingIncidence = d->calendar()->incidenceFromSchedulingID(d->m_incidence->uid());
+        KCalendarCore::Incidence::Ptr const existingIncidence = d->calendar()->incidenceFromSchedulingID(d->m_incidence->uid());
         if (existingIncidence) {
             d->m_scheduler->acceptTransaction(d->m_incidence, d->calendar(), KCalendarCore::iTIPCancel, status, receiver);
             return; // signal emitted in onSchedulerFinished().
@@ -228,7 +228,7 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
             if (*newIncidence == *d->m_incidence) {
                 emitiTipMessageProcessed(this, ResultCancelled, QString());
             } else {
-                ITIPHandlerHelper::SendResult result = d->m_helper->sendCounterProposal(receiver, d->m_incidence, newIncidence);
+                ITIPHandlerHelper::SendResult const result = d->m_helper->sendCounterProposal(receiver, d->m_incidence, newIncidence);
                 if (result != ITIPHandlerHelper::ResultSuccess) {
                     // It gives success in all paths, this never happens
                     emitiTipMessageProcessed(this, ResultError, i18n("Error sending counter proposal"));
@@ -307,11 +307,11 @@ void ITIPHandler::publishInformation(const KCalendarCore::Incidence::Ptr &incide
 
     d->m_currentOperation = OperationPublishInformation;
 
-    QPointer<Akonadi::PublishDialog> publishdlg = new Akonadi::PublishDialog();
+    QPointer<Akonadi::PublishDialog> const publishdlg = new Akonadi::PublishDialog();
     if (incidence->attendeeCount() > 0) {
-        KCalendarCore::Attendee::List attendees = incidence->attendees();
+        KCalendarCore::Attendee::List const attendees = incidence->attendees();
         KCalendarCore::Attendee::List::ConstIterator it;
-        KCalendarCore::Attendee::List::ConstIterator end(attendees.constEnd());
+        KCalendarCore::Attendee::List::ConstIterator const end(attendees.constEnd());
         for (it = attendees.constBegin(); it != end; ++it) {
             publishdlg->addAttendee(*it);
         }
@@ -336,9 +336,9 @@ void ITIPHandler::sendAsICalendar(const KCalendarCore::Incidence::Ptr &originalI
     }
 
     // Clone so we can change organizer and recurid
-    KCalendarCore::Incidence::Ptr incidence = KCalendarCore::Incidence::Ptr(originalIncidence->clone());
+    KCalendarCore::Incidence::Ptr const incidence = KCalendarCore::Incidence::Ptr(originalIncidence->clone());
 
-    QPointer<Akonadi::PublishDialog> publishdlg = new Akonadi::PublishDialog;
+    QPointer<Akonadi::PublishDialog> const publishdlg = new Akonadi::PublishDialog;
     /* cppcheck-suppress nullPointerRedundantCheck */
     if (publishdlg->exec() == QDialog::Accepted && publishdlg) {
         const QString recipients = publishdlg->addresses();

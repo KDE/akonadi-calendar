@@ -35,7 +35,7 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
             if (!filterCollection(col)) {
                 continue;
             }
-            KCalendarCore::Calendar::Ptr cal(new SingleCollectionCalendar(col));
+            KCalendarCore::Calendar::Ptr const cal(new SingleCollectionCalendar(col));
             m_calendars.push_back(cal);
         }
         Q_EMIT calendarsChanged();

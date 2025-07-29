@@ -119,8 +119,8 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &incidence,
 
     qCDebug(AKONADICALENDAR_LOG) << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status);
 
-    Incidence::Ptr newInc = incidence.staticCast<Incidence>();
-    Incidence::Ptr calInc = calendar->incidence(incidence->uid());
+    Incidence::Ptr const newInc = incidence.staticCast<Incidence>();
+    Incidence::Ptr const calInc = calendar->incidence(incidence->uid());
     switch (status) {
     case ScheduleMessage::Unknown:
     case ScheduleMessage::PublishNew:
@@ -161,7 +161,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                               ScheduleMessage::Status status,
                               const QString &email)
 {
-    Incidence::Ptr incidence = incidenceBase.staticCast<Incidence>();
+    Incidence::Ptr const incidence = incidenceBase.staticCast<Incidence>();
 
     if (incidence->type() == IncidenceBase::TypeFreeBusy) {
         // reply to this request is handled in korganizer's incomingdialog
@@ -245,7 +245,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                     incidence->setSchedulingID(schedulingUid, existingUid);
 
                     if (incidence->hasRecurrenceId()) {
-                        Incidence::Ptr existingInstance = calendar->incidence(incidence->instanceIdentifier());
+                        Incidence::Ptr const existingInstance = calendar->incidence(incidence->instanceIdentifier());
                         if (!existingInstance) {
                             // The organizer created an exception, lets create it in our calendar, we don't have it yet
                             const bool success = calendar->addIncidence(incidence);
@@ -320,7 +320,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
                              ScheduleMessage::Status status,
                              const QString &attendeeEmail)
 {
-    Incidence::Ptr incidence = incidenceBase.staticCast<Incidence>();
+    Incidence::Ptr const incidence = incidenceBase.staticCast<Incidence>();
 
     if (incidence->type() == IncidenceBase::TypeFreeBusy) {
         // reply to this request is handled in korganizer's incomingdialog
@@ -379,7 +379,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
 
         qCDebug(AKONADICALENDAR_LOG) << "removing existing incidence " << existingUid;
         if (incidence->hasRecurrenceId()) {
-            Incidence::Ptr existingInstance = calendar->incidence(incidence->instanceIdentifier());
+            Incidence::Ptr const existingInstance = calendar->incidence(incidence->instanceIdentifier());
 
             if (existingInstance) {
                 existingInstance->setStatus(Incidence::StatusCanceled);
@@ -486,7 +486,7 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
                                                 KGuiItem(i18nc("@option", "Accept Attendance")),
                                                 KGuiItem(i18nc("@option", "Reject Attendance")))
                 != KMessageBox::ButtonCode::PrimaryAction) {
-                Incidence::Ptr &cancel = incidence;
+                Incidence::Ptr const &cancel = incidence;
                 cancel->addComment(i18nc("@info", "The organizer rejected your attendance at this meeting."));
                 performTransaction(incidenceBase, iTIPCancel, attNew.fullName());
                 continue;
@@ -526,8 +526,8 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         if (incidence->type() == Incidence::TypeTodo) {
             // for VTODO a REPLY can be used to update the completion status of
             // a to-do. see RFC2446 3.4.3
-            Todo::Ptr update = incidenceBase.dynamicCast<Todo>();
-            Todo::Ptr calendarTodo = incidence.staticCast<Todo>();
+            Todo::Ptr const update = incidenceBase.dynamicCast<Todo>();
+            Todo::Ptr const calendarTodo = incidence.staticCast<Todo>();
             Q_ASSERT(update);
             if (update && (calendarTodo->percentComplete() != update->percentComplete())) {
                 calendarTodo->setPercentComplete(update->percentComplete());
@@ -585,7 +585,7 @@ void Scheduler::acceptFreeBusy(const IncidenceBase::Ptr &incidence, iTIPMethod m
         return;
     }
 
-    FreeBusy::Ptr freebusy = incidence.staticCast<FreeBusy>();
+    FreeBusy::Ptr const freebusy = incidence.staticCast<FreeBusy>();
 
     qCDebug(AKONADICALENDAR_LOG) << "freeBusyDirName:" << freeBusyDir();
 
@@ -594,7 +594,7 @@ void Scheduler::acceptFreeBusy(const IncidenceBase::Ptr &incidence, iTIPMethod m
         from = freebusy->organizer();
     }
     if ((method == iTIPReply) && (freebusy->attendeeCount() == 1)) {
-        Attendee attendee = freebusy->attendees().at(0);
+        Attendee const attendee = freebusy->attendees().at(0);
         from.setName(attendee.name());
         from.setEmail(attendee.email());
     }

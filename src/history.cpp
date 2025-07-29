@@ -35,7 +35,7 @@ void History::recordCreation(const Akonadi::Item &item, const QString &descripti
 
     Q_ASSERT_X(item.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordCreation()", "Item must have Incidence::Ptr payload.");
 
-    Entry::Ptr entry(new CreationEntry(item, description, this));
+    Entry::Ptr const entry(new CreationEntry(item, description, this));
 
     d->stackEntry(entry, atomicOperationId);
 }
@@ -47,7 +47,7 @@ void History::recordModification(const Akonadi::Item &oldItem, const Akonadi::It
     Q_ASSERT_X(oldItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification", "old item must have Incidence::Ptr payload");
     Q_ASSERT_X(newItem.hasPayload<KCalendarCore::Incidence::Ptr>(), "History::recordModification", "newItem item must have Incidence::Ptr payload");
 
-    Entry::Ptr entry(new ModificationEntry(newItem, oldItem.payload<KCalendarCore::Incidence::Ptr>(), description, this));
+    Entry::Ptr const entry(new ModificationEntry(newItem, oldItem.payload<KCalendarCore::Incidence::Ptr>(), description, this));
 
     Q_ASSERT(newItem.revision() >= oldItem.revision());
 
@@ -64,7 +64,7 @@ void History::recordDeletion(const Akonadi::Item &item, const QString &descripti
 
 void History::recordDeletions(const Akonadi::Item::List &items, const QString &description, const uint atomicOperationId)
 {
-    Entry::Ptr entry(new DeletionEntry(items, description, this));
+    Entry::Ptr const entry(new DeletionEntry(items, description, this));
 
     for (const Akonadi::Item &item : items) {
         Q_UNUSED(item)
@@ -210,8 +210,8 @@ void HistoryPrivate::stackEntry(const Entry::Ptr &entry, uint atomicOperationId)
     Entry::Ptr entryToPush;
 
     if (useMultiEntry) {
-        Entry::Ptr topEntry = (mOperationTypeInProgress == TypeNone) ? (mUndoStack.isEmpty() ? Entry::Ptr() : mUndoStack.top())
-                                                                     : (mQueuedEntries.isEmpty() ? Entry::Ptr() : mQueuedEntries.last());
+        Entry::Ptr const topEntry = (mOperationTypeInProgress == TypeNone) ? (mUndoStack.isEmpty() ? Entry::Ptr() : mUndoStack.top())
+                                                                           : (mQueuedEntries.isEmpty() ? Entry::Ptr() : mQueuedEntries.last());
 
         const bool topIsMultiEntry = qobject_cast<MultiEntry *>(topEntry.data());
 
@@ -223,7 +223,7 @@ void HistoryPrivate::stackEntry(const Entry::Ptr &entry, uint atomicOperationId)
             }
             multiEntry->addEntry(entry);
         } else {
-            MultiEntry::Ptr multiEntry = MultiEntry::Ptr(new MultiEntry(atomicOperationId, entry->mDescription, q));
+            MultiEntry::Ptr const multiEntry = MultiEntry::Ptr(new MultiEntry(atomicOperationId, entry->mDescription, q));
             multiEntry->addEntry(entry);
             entryToPush = multiEntry;
         }

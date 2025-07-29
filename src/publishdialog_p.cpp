@@ -126,7 +126,7 @@ void PublishDialogPrivate::updateItem()
         return;
     }
 
-    Person person(mUI.mNameLineEdit->text(), mUI.mEmailLineEdit->text());
+    Person const person(mUI.mNameLineEdit->text(), mUI.mEmailLineEdit->text());
     QListWidgetItem *item = mUI.mListWidget->selectedItems().at(0);
     item->setText(person.fullName());
 }

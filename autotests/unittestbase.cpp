@@ -52,7 +52,7 @@ void UnitTestBase::stopWaiting()
 
 void UnitTestBase::createIncidence(const QString &uid)
 {
-    Item item = generateIncidence(uid);
+    Item const item = generateIncidence(uid);
     createIncidence(item);
 }
 
@@ -75,11 +75,11 @@ void UnitTestBase::verifyExists(const QString &uid, bool exists)
 
 Akonadi::Item::List UnitTestBase::calendarItems()
 {
-    FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
+    FetchJobCalendar::Ptr const calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
     connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
     KCalendarCore::ICalFormat format;
-    QString dump = format.toString(calendar.staticCast<KCalendarCore::Calendar>());
+    QString const dump = format.toString(calendar.staticCast<KCalendarCore::Calendar>());
     qDebug() << dump;
     calendar->deleteLater();
     return calendar->items();
@@ -93,7 +93,7 @@ void UnitTestBase::onLoadFinished(bool success, const QString &)
 
 void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expectedCalendar)
 {
-    FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
+    FetchJobCalendar::Ptr const calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
     connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &UnitTestBase::onLoadFinished);
     waitForIt();
 
@@ -141,8 +141,8 @@ void UnitTestBase::compareCalendars(const KCalendarCore::Calendar::Ptr &expected
 
         if (*expectedIncidence != *incidence) {
             ICalFormat format;
-            QString expectedData = format.toString(expectedIncidence);
-            QString gotData = format.toString(incidence);
+            QString const expectedData = format.toString(expectedIncidence);
+            QString const gotData = format.toString(incidence);
             qDebug() << "Test failed, expected:\n" << expectedData << "\nbut got " << gotData;
             QVERIFY(false);
         }
@@ -165,7 +165,7 @@ Item UnitTestBase::generateIncidence(const QString &uid, const QString &organize
 {
     Item item;
     item.setMimeType(KCalendarCore::Event::eventMimeType());
-    KCalendarCore::Incidence::Ptr incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
+    KCalendarCore::Incidence::Ptr const incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
 
     if (!uid.isEmpty()) {
         incidence->setUid(uid);

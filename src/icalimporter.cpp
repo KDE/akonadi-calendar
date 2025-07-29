@@ -86,7 +86,7 @@ void ICalImporterPrivate::resourceCreated(KJob *job)
         return;
     }
 
-    Akonadi::AgentInstance instance = createjob->instance();
+    Akonadi::AgentInstance const instance = createjob->instance();
     const QString service = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, instance.identifier());
 
     QDBusInterface iface(service, u"/Settings"_s);
@@ -145,7 +145,7 @@ bool ICalImporter::importIntoNewResource(const QString &filename)
 
     d->m_working = true;
 
-    Akonadi::AgentType type = Akonadi::AgentManager::self()->type(u"akonadi_ical_resource"_s);
+    Akonadi::AgentType const type = Akonadi::AgentManager::self()->type(u"akonadi_ical_resource"_s);
 
     auto job = new Akonadi::AgentInstanceCreateJob(type, this);
     job->setProperty("path", filename);
@@ -175,15 +175,15 @@ bool ICalImporter::importIntoExistingResource(const QUrl &url, Collection collec
     }
 
     if (url.isLocalFile()) {
-        QFileInfo f{url.path()};
+        QFileInfo const f{url.path()};
         if (!f.exists() || !f.isFile() || !f.isReadable()) {
             d->setErrorMessage(i18n("The selected file is not a readable file."));
             return false;
         }
-        MemoryCalendar::Ptr temporaryCalendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
+        MemoryCalendar::Ptr const temporaryCalendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
         FileStorage storage(temporaryCalendar);
         storage.setFileName(url.path());
-        bool success = storage.load();
+        bool const success = storage.load();
         if (!success) {
             d->setErrorMessage(i18n("The selected file is not properly formatted, or in a format not supported by this software."));
             return false;

@@ -197,7 +197,7 @@ void IncidenceChangerPrivate::queueModification(const Change::Ptr &change)
     // previous modifications
     const Akonadi::Item::Id id = change->newItem.id();
     if (mQueuedModifications.contains(id)) {
-        Change::Ptr toBeDiscarded = mQueuedModifications.take(id);
+        Change::Ptr const toBeDiscarded = mQueuedModifications.take(id);
         toBeDiscarded->resultCode = IncidenceChanger::ResultCodeModificationDiscarded;
         toBeDiscarded->completed = true;
         mChangeById.remove(toBeDiscarded->id);
@@ -249,7 +249,7 @@ void IncidenceChangerPrivate::handleTransactionJobResult(KJob *job)
 
 void IncidenceChangerPrivate::handleCreateJobResult(KJob *job)
 {
-    Change::Ptr change = mChangeForJob.take(job);
+    Change::Ptr const change = mChangeForJob.take(job);
 
     const auto j = qobject_cast<const ItemCreateJob *>(job);
     Q_ASSERT(j);
@@ -257,7 +257,7 @@ void IncidenceChangerPrivate::handleCreateJobResult(KJob *job)
 
     if (j->error()) {
         const QString errorString = j->errorString();
-        IncidenceChanger::ResultCode resultCode = IncidenceChanger::ResultCodeJobError;
+        IncidenceChanger::ResultCode const resultCode = IncidenceChanger::ResultCodeJobError;
         item = change->newItem;
         qCritical() << errorString;
         if (mShowDialogsOnError) {
@@ -283,8 +283,8 @@ void IncidenceChangerPrivate::handleCreateJobResult(KJob *job)
 
 void IncidenceChangerPrivate::handleCreateJobResult2(int changeId, ITIPHandlerHelper::SendResult status)
 {
-    Change::Ptr change = mChangeById[changeId];
-    Akonadi::Item item = change->newItem;
+    Change::Ptr const change = mChangeById[changeId];
+    Akonadi::Item const item = change->newItem;
 
     mChangeById.remove(changeId);
 
@@ -317,12 +317,12 @@ void IncidenceChangerPrivate::handleCreateJobResult2(int changeId, ITIPHandlerHe
 
 void IncidenceChangerPrivate::handleDeleteJobResult(KJob *job)
 {
-    Change::Ptr change = mChangeForJob.take(job);
+    Change::Ptr const change = mChangeForJob.take(job);
 
     const auto j = qobject_cast<const ItemDeleteJob *>(job);
     const Item::List items = j->deletedItems();
 
-    QSharedPointer<DeletionChange> deletionChange = change.staticCast<DeletionChange>();
+    QSharedPointer<DeletionChange> const deletionChange = change.staticCast<DeletionChange>();
 
     deletionChange->mItemIds.reserve(deletionChange->mItemIds.count() + items.count());
     for (const Akonadi::Item &item : items) {
@@ -368,7 +368,7 @@ void IncidenceChangerPrivate::handleDeleteJobResult(KJob *job)
 
 void IncidenceChangerPrivate::handleDeleteJobResult2(int changeId, ITIPHandlerHelper::SendResult status)
 {
-    Change::Ptr change = mChangeById[changeId];
+    Change::Ptr const change = mChangeById[changeId];
     mChangeById.remove(change->id);
 
     if (status == ITIPHandlerHelper::ResultSuccess) {
@@ -384,7 +384,7 @@ void IncidenceChangerPrivate::handleDeleteJobResult2(int changeId, ITIPHandlerHe
 
 void IncidenceChangerPrivate::handleModifyJobResult(KJob *job)
 {
-    Change::Ptr change = mChangeForJob.take(job);
+    Change::Ptr const change = mChangeForJob.take(job);
 
     const auto j = qobject_cast<const ItemModifyJob *>(job);
     const Item item = j->item();
@@ -439,7 +439,7 @@ void IncidenceChangerPrivate::handleModifyJobResult(KJob *job)
 
 void IncidenceChangerPrivate::handleModifyJobResult2(int changeId, ITIPHandlerHelper::SendResult status)
 {
-    Change::Ptr change = mChangeById[changeId];
+    Change::Ptr const change = mChangeById[changeId];
 
     mChangeById.remove(changeId);
     if (change->atomicOperationId != 0) {
@@ -485,7 +485,7 @@ void IncidenceChangerPrivate::handleInvitationsBeforeChange(const Change::Ptr &c
 
             for (const Akonadi::Item &item : std::as_const(change->originalItems)) {
                 Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
-                Incidence::Ptr incidence = CalendarUtils::incidence(item);
+                Incidence::Ptr const incidence = CalendarUtils::incidence(item);
                 if (!incidence->supportsGroupwareCommunication()) {
                     continue;
                 }
@@ -513,8 +513,8 @@ void IncidenceChangerPrivate::handleInvitationsBeforeChange(const Change::Ptr &c
             }
 
             Q_ASSERT(change->originalItems.count() == 1);
-            Incidence::Ptr oldIncidence = CalendarUtils::incidence(change->originalItems.first());
-            Incidence::Ptr newIncidence = CalendarUtils::incidence(change->newItem);
+            Incidence::Ptr const oldIncidence = CalendarUtils::incidence(change->originalItems.first());
+            Incidence::Ptr const newIncidence = CalendarUtils::incidence(change->newItem);
 
             if (!oldIncidence->supportsGroupwareCommunication()) {
                 break;
@@ -583,7 +583,7 @@ void IncidenceChangerPrivate::handleInvitationsAfterChange(const Change::Ptr &ch
 
         switch (change->type) {
         case IncidenceChanger::ChangeTypeCreate: {
-            Incidence::Ptr incidence = CalendarUtils::incidence(change->newItem);
+            Incidence::Ptr const incidence = CalendarUtils::incidence(change->newItem);
             if (incidence->supportsGroupwareCommunication()) {
                 handler->sendIncidenceCreatedMessage(KCalendarCore::iTIPRequest, incidence);
                 return;
@@ -594,7 +594,7 @@ void IncidenceChangerPrivate::handleInvitationsAfterChange(const Change::Ptr &ch
             Q_ASSERT(!change->originalItems.isEmpty());
             for (const Akonadi::Item &item : std::as_const(change->originalItems)) {
                 Q_ASSERT(item.hasPayload());
-                Incidence::Ptr incidence = CalendarUtils::incidence(item);
+                Incidence::Ptr const incidence = CalendarUtils::incidence(item);
                 Q_ASSERT(incidence);
                 if (!incidence->supportsGroupwareCommunication()) {
                     continue;
@@ -628,8 +628,8 @@ void IncidenceChangerPrivate::handleInvitationsAfterChange(const Change::Ptr &ch
             }
 
             Q_ASSERT(change->originalItems.count() == 1);
-            Incidence::Ptr oldIncidence = CalendarUtils::incidence(change->originalItems.first());
-            Incidence::Ptr newIncidence = CalendarUtils::incidence(change->newItem);
+            Incidence::Ptr const oldIncidence = CalendarUtils::incidence(change->originalItems.first());
+            Incidence::Ptr const newIncidence = CalendarUtils::incidence(change->newItem);
 
             if (!newIncidence->supportsGroupwareCommunication() || !Akonadi::CalendarUtils::thatIsMe(newIncidence->organizer().email())) {
                 // If we're not the organizer, the user already saw the "Do you really want to do this, incidence will become out of sync"
@@ -829,7 +829,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
 void IncidenceChangerPrivate::deleteIncidences2(int changeId, ITIPHandlerHelper::SendResult status)
 {
     Q_UNUSED(status)
-    Change::Ptr change = mChangeById[changeId];
+    Change::Ptr const change = mChangeById[changeId];
     const uint atomicOperationId = change->atomicOperationId;
     auto deleteJob = new ItemDeleteJob(change->originalItems, parentJob(change));
     mChangeForJob.insert(deleteJob, change);
@@ -877,7 +877,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem, const KCalendarCo
     const uint atomicOperationId = d->mBatchOperationInProgress ? d->mLatestAtomicOperationId : 0;
     const int changeId = ++d->mLatestChangeId;
     auto modificationChange = new ModificationChange(this, changeId, atomicOperationId, parent);
-    Change::Ptr change(modificationChange);
+    Change::Ptr const change(modificationChange);
 
     if (originalPayload) {
         Item originalItem(changedItem);
@@ -914,7 +914,7 @@ int IncidenceChanger::modifyIncidence(const Item &changedItem, const KCalendarCo
 void IncidenceChangerPrivate::performModification(const Change::Ptr &change)
 {
     const Item::Id id = change->newItem.id();
-    Akonadi::Item &newItem = change->newItem;
+    Akonadi::Item const &newItem = change->newItem;
     Q_ASSERT(newItem.isValid());
     Q_ASSERT(newItem.hasPayload<Incidence::Ptr>());
 
@@ -951,7 +951,7 @@ void IncidenceChangerPrivate::performModification(const Change::Ptr &change)
 
 void IncidenceChangerPrivate::performModification2(int changeId, ITIPHandlerHelper::SendResult status)
 {
-    Change::Ptr change = mChangeById[changeId];
+    Change::Ptr const change = mChangeById[changeId];
     const Item::Id id = change->newItem.id();
     Akonadi::Item &newItem = change->newItem;
     Q_ASSERT(newItem.isValid());
@@ -978,7 +978,7 @@ void IncidenceChangerPrivate::performModification2(int changeId, ITIPHandlerHelp
         newItem.setRevision(latestRevisionByItemId[id]);
     }
 
-    Incidence::Ptr incidence = CalendarUtils::incidence(newItem);
+    Incidence::Ptr const incidence = CalendarUtils::incidence(newItem);
     {
         if (!allowedModificationsWithoutRevisionUpdate(incidence)) { // increment revision ( KCalendarCore revision, not akonadi )
             const int revision = incidence->revision();
@@ -1296,8 +1296,8 @@ bool IncidenceChangerPrivate::allowAtomicOperation(int atomicOperationId, const 
         } else if (change->type == IncidenceChanger::ChangeTypeModify) {
             allow = !operation->m_itemIdsInOperation.contains(change->newItem.id());
         } else if (change->type == IncidenceChanger::ChangeTypeDelete) {
-            DeletionChange::Ptr deletion = change.staticCast<DeletionChange>();
-            for (Akonadi::Item::Id id : std::as_const(deletion->mItemIds)) {
+            DeletionChange::Ptr const deletion = change.staticCast<DeletionChange>();
+            for (Akonadi::Item::Id const id : std::as_const(deletion->mItemIds)) {
                 if (operation->m_itemIdsInOperation.contains(id)) {
                     allow = false;
                     break;

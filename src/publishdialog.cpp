@@ -94,7 +94,7 @@ void PublishDialog::addAttendee(const Attendee &attendee)
     d->mUI.mNameLineEdit->setEnabled(true);
     d->mUI.mEmailLineEdit->setEnabled(true);
     auto item = new QListWidgetItem(d->mUI.mListWidget);
-    Person person(attendee.name(), attendee.email());
+    Person const person(attendee.name(), attendee.email());
     item->setText(person.fullName());
     d->mUI.mListWidget->addItem(item);
     d->mUI.mRemove->setEnabled(!d->mUI.mListWidget->selectedItems().isEmpty());

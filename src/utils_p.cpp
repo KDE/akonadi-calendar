@@ -21,7 +21,7 @@ using namespace Akonadi::CalendarUtils;
 
 QString Akonadi::CalendarUtils::fullName()
 {
-    KEMailSettings settings;
+    KEMailSettings const settings;
     QString tusername = settings.getSetting(KEMailSettings::RealName);
 
     // Quote the username as it might contain commas and other quotable chars.
@@ -37,7 +37,7 @@ QString Akonadi::CalendarUtils::fullName()
 
 QString Akonadi::CalendarUtils::email()
 {
-    KEMailSettings emailSettings;
+    KEMailSettings const emailSettings;
     return emailSettings.getSetting(KEMailSettings::EmailAddress);
 }
 

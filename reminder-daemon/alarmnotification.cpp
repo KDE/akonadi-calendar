@@ -195,7 +195,7 @@ QString AlarmNotification::determineContextAction(const KCalendarCore::Incidence
         m_contextAction = QUrl(incidence->customProperty("MICROSOFT", "SKYPETEAMSMEETINGURL"));
     }
     if (!hasValidContextAction()) {
-        static QRegularExpression urlFinder(QStringLiteral(R"(https://[^\s>]*)"));
+        static QRegularExpression const urlFinder(QStringLiteral(R"(https://[^\s>]*)"));
         const auto match = urlFinder.match(incidence->description());
         if (match.hasMatch()) {
             m_contextAction = QUrl(match.captured());

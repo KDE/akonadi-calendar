@@ -210,7 +210,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case CompletedDateColumn:
             return todo->hasCompletedDate() ? QLocale().toString(todo->completed().toLocalTime().date(), QLocale::ShortFormat) : QVariant(QString());
         case CategoriesColumn: {
-            QString categories = todo->categories().join(i18nc("delimiter for joining category/tag names", ","));
+            QString const categories = todo->categories().join(i18nc("delimiter for joining category/tag names", ","));
             return QVariant(categories);
         }
         case DescriptionColumn:
@@ -357,7 +357,7 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
 
     const auto parentCol = Akonadi::EntityTreeModel::updatedCollection(d->etm(), item.parentCollection());
     if (parentCol.rights() & Akonadi::Collection::CanChangeItem) {
-        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        KCalendarCore::Todo::Ptr const oldTodo(todo->clone());
         if (role == Qt::CheckStateRole && index.column() == 0) {
             const bool checked = static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked;
             if (checked) {
@@ -553,14 +553,14 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
     if (d->m_changer && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
         // DndFactory only needs a valid calendar for drag event, not for drop event.
         KCalUtils::DndFactory dndFactory(KCalendarCore::Calendar::Ptr{});
-        KCalendarCore::Todo::Ptr t = dndFactory.createDropTodo(data);
-        KCalendarCore::Event::Ptr e = dndFactory.createDropEvent(data);
+        KCalendarCore::Todo::Ptr const t = dndFactory.createDropTodo(data);
+        KCalendarCore::Event::Ptr const e = dndFactory.createDropEvent(data);
 
         if (t) {
             // we don't want to change the created todo, but the one which is already
             // stored in our calendar / tree
             const Akonadi::Item item = d->findItemByUid(t->uid(), QModelIndex());
-            KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
+            KCalendarCore::Todo::Ptr const todo = Akonadi::CalendarUtils::todo(item);
             KCalendarCore::Todo::Ptr destTodo;
             if (parent.isValid()) {
                 const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
@@ -589,7 +589,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
             }
 
             if (!destTodo || !destTodo->hasRecurrenceId()) {
-                KCalendarCore::Todo::Ptr oldTodo = KCalendarCore::Todo::Ptr(todo->clone());
+                KCalendarCore::Todo::Ptr const oldTodo = KCalendarCore::Todo::Ptr(todo->clone());
                 // destTodo is empty when we drag a to-do out of a relationship
                 todo->setRelatedTo(destTodo ? destTodo->uid() : QString());
                 d->m_changer->modifyIncidence(item, oldTodo);
@@ -610,17 +610,17 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
             }
 
             const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-            KCalendarCore::Todo::Ptr destTodo = Akonadi::CalendarUtils::todo(parentItem);
+            KCalendarCore::Todo::Ptr const destTodo = Akonadi::CalendarUtils::todo(parentItem);
 
             if (data->hasText()) {
-                QString text = data->text();
+                QString const text = data->text();
 
-                KCalendarCore::Todo::Ptr oldTodo = KCalendarCore::Todo::Ptr(destTodo->clone());
+                KCalendarCore::Todo::Ptr const oldTodo = KCalendarCore::Todo::Ptr(destTodo->clone());
 
                 if (text.startsWith("file:"_L1)) {
                     destTodo->addAttachment(KCalendarCore::Attachment(text));
                 } else {
-                    QStringList emails = KEmailAddress::splitAddressList(text);
+                    QStringList const emails = KEmailAddress::splitAddressList(text);
                     for (QStringList::ConstIterator it = emails.constBegin(); it != emails.constEnd(); ++it) {
                         QString name;
                         QString email;

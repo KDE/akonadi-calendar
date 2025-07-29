@@ -189,9 +189,9 @@ private:
 
     void updateItem(const Item &item)
     {
-        Incidence::Ptr newIncidence = CalendarUtils::incidence(item);
+        Incidence::Ptr const newIncidence = CalendarUtils::incidence(item);
         newIncidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
-        IncidenceBase::Ptr existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
+        IncidenceBase::Ptr const existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
 
         auto oldItem = m_itemById.value(item.id()); // if not found, seenItem will be invalid
 

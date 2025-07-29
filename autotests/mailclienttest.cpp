@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 // mailclient_p.cpp isn't exported so we include it directly.
 
 #include "mailclient_p.h"
@@ -240,13 +242,13 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         cryptoIdentity.setPgpAutoSign(true);
         cryptoIdentity.setPgpAutoEncrypt(true);
 
-        bool bccMe = false;
-        QString attachment;
-        QString transport;
+        bool const bccMe = false;
+        QString const attachment;
+        QString const transport;
         MailClient::Result expectedResult = MailClient::ResultNoAttendees;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         const QString expectedFrom = s_ourEmail; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalendarCore::Person organizer(QStringLiteral("Organizer"), s_ourEmail);
+        KCalendarCore::Person const organizer(QStringLiteral("Organizer"), s_ourEmail);
 
         QStringList toList;
         QStringList toCcList;
@@ -278,7 +280,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         incidence = KCalendarCore::Incidence::Ptr(new KCalendarCore::Event());
         incidence->setOrganizer(organizer);
         incidence->addAttendee(attendee);
-        QString invalidTransport = QStringLiteral("foo");
+        QString const invalidTransport = QStringLiteral("foo");
         expectedResult = MailClient::ResultSuccess;
         // Should default to the default transport
         QTest::newRow("Invalid transport") << incidence << identity << bccMe << attachment << invalidTransport << expectedResult << expectedTransportId
@@ -300,7 +302,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         //----------------------------------------------------------------------------------------------
         // One valid attendee, identity wants to encrypt
         {
-            KCalendarCore::Incidence::Ptr inc{incidence->clone()};
+            KCalendarCore::Incidence::Ptr const inc{incidence->clone()};
             inc->clearAttendees();
             inc->addAttendee(KCalendarCore::Attendee({}, s_testEmail));
             // No crypto preference for the attendee
@@ -317,7 +319,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
             ident.setPGPSigningKey(s_ourGpgKey);
             ident.setPGPEncryptionKey(s_ourGpgKey);
 
-            KCalendarCore::Incidence::Ptr inc{incidence->clone()};
+            KCalendarCore::Incidence::Ptr const inc{incidence->clone()};
             inc->clearAttendees();
             inc->addAttendee(KCalendarCore::Attendee({}, s_testEmail));
 
@@ -334,7 +336,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
             ident.setPGPSigningKey(s_ourGpgKey);
             ident.setPGPEncryptionKey(s_ourGpgKey);
 
-            KCalendarCore::Incidence::Ptr inc{incidence->clone()};
+            KCalendarCore::Incidence::Ptr const inc{incidence->clone()};
             inc->addAttendee(KCalendarCore::Attendee({}, s_testEmail));
 
             QTest::newRow("Two attendees, one wants encryption, one has no key")
@@ -352,7 +354,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
             ident.setPGPSigningKey(s_ourGpgKey);
             ident.setPGPEncryptionKey(s_ourGpgKey);
 
-            KCalendarCore::Incidence::Ptr inc{incidence->clone()};
+            KCalendarCore::Incidence::Ptr const inc{incidence->clone()};
             inc->clearAttendees();
             inc->addAttendee(KCalendarCore::Attendee({}, s_testEmail));
             inc->addAttendee(KCalendarCore::Attendee({}, s_test2Email));
@@ -479,21 +481,21 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         QTest::addColumn<QString>("expectedSubject");
 
         KCalendarCore::IncidenceBase::Ptr incidence(new KCalendarCore::Event());
-        KIdentityManagementCore::Identity identity;
+        KIdentityManagementCore::Identity const identity;
         const QString from = s_ourEmail;
-        bool bccMe = false;
-        QString attachment;
-        QString subject = QStringLiteral("subject1");
-        QString transport;
-        MailClient::Result expectedResult = MailClient::ResultSuccess;
+        bool const bccMe = false;
+        QString const attachment;
+        QString const subject = QStringLiteral("subject1");
+        QString const transport;
+        MailClient::Result const expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         const QString &expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalendarCore::Person organizer(QStringLiteral("Organizer"), s_ourEmail);
+        KCalendarCore::Person const organizer(QStringLiteral("Organizer"), s_ourEmail);
         incidence->setOrganizer(organizer);
 
         QStringList toList;
         toList << s_ourEmail;
-        QStringList toBccList;
+        QStringList const toBccList;
         QString expectedSubject;
         //----------------------------------------------------------------------------------------------
         expectedSubject = subject;
@@ -529,7 +531,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         waitForSignals();
         QCOMPARE(mLastResult, expectedResult);
 
-        UnitTestResult unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
+        UnitTestResult const unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
         if (expectedTransportId != -1) {
             QCOMPARE(unitTestResult.transportId, expectedTransportId);
         }
@@ -555,20 +557,20 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         QTest::addColumn<QStringList>("expectedToList");
         QTest::addColumn<QStringList>("expectedBccList");
 
-        KCalendarCore::IncidenceBase::Ptr incidence(new KCalendarCore::Event());
-        KIdentityManagementCore::Identity identity;
+        KCalendarCore::IncidenceBase::Ptr const incidence(new KCalendarCore::Event());
+        KIdentityManagementCore::Identity const identity;
         const QString from = s_ourEmail;
-        bool bccMe = false;
+        bool const bccMe = false;
         const QString recipients = s_ourEmail;
-        QString attachment;
-        QString transport;
-        MailClient::Result expectedResult = MailClient::ResultSuccess;
+        QString const attachment;
+        QString const transport;
+        MailClient::Result const expectedResult = MailClient::ResultSuccess;
         const int expectedTransportId = 69372773; // from tests/unittestenv/kdehome/share/config/mailtransports
         const QString &expectedFrom = from; // from tests/unittestenv/kdehome/share/config/emailidentities
-        KCalendarCore::Person organizer(QStringLiteral("Organizer"), s_ourEmail);
+        KCalendarCore::Person const organizer(QStringLiteral("Organizer"), s_ourEmail);
         QStringList toList;
         toList << s_ourEmail;
-        QStringList toBccList;
+        QStringList const toBccList;
         //----------------------------------------------------------------------------------------------
         QTest::newRow("test1") << incidence << identity << from << bccMe << recipients << attachment << transport << expectedResult << expectedTransportId
                                << expectedFrom << toList << toBccList;
@@ -594,7 +596,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         mMailClient->mailTo(incidence, identity, from, KCalendarCore::iTIPRequest, bccMe, recipients, attachment, transport);
         waitForSignals();
         QCOMPARE(mLastResult, expectedResult);
-        UnitTestResult unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
+        UnitTestResult const unitTestResult = FakeMessageQueueJob::sUnitTestResults.first();
         if (expectedTransportId != -1) {
             QCOMPARE(unitTestResult.transportId, expectedTransportId);
         }
@@ -623,5 +625,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
 };
 
 QTEST_AKONADIMAIN(MailClientTest)
+
+// NOLINTEND(misc-const-correctness)
 
 #include "mailclienttest.moc"

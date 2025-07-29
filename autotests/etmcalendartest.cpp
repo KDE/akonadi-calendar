@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 #include "etmcalendartest.h"
 
 #include "../src/etmcalendar.h"
@@ -30,7 +32,7 @@ void ETMCalendarTest::createIncidence(const QString &uid)
 {
     Item item;
     item.setMimeType(Event::eventMimeType());
-    Incidence::Ptr incidence = Incidence::Ptr(new Event());
+    Incidence::Ptr const incidence = Incidence::Ptr(new Event());
     incidence->setUid(uid);
     incidence->setDtStart(QDateTime::currentDateTimeUtc());
     incidence->setSummary(QStringLiteral("summary"));
@@ -43,7 +45,7 @@ void ETMCalendarTest::createTodo(const QString &uid, const QString &parentUid)
 {
     Item item;
     item.setMimeType(Todo::todoMimeType());
-    Todo::Ptr todo = Todo::Ptr(new Todo());
+    Todo::Ptr const todo = Todo::Ptr(new Todo());
     todo->setUid(uid);
 
     todo->setRelatedTo(parentUid);
@@ -135,7 +137,7 @@ void ETMCalendarTest::testCollectionChanged()
 {
     QFETCH(Akonadi::Collection, noRightsCollection);
     auto job = new CollectionModifyJob(mCollection, this);
-    QSignalSpy spy(mCalendar, &ETMCalendar::collectionChanged);
+    QSignalSpy const spy(mCalendar, &ETMCalendar::collectionChanged);
     mIncidencesToChange = 6;
     AKVERIFYEXEC(job);
     QTestEventLoop::instance().enterLoop(10);
@@ -157,7 +159,7 @@ void ETMCalendarTest::testIncidencesModified()
     Item item = mCalendar->item(uid);
     QVERIFY(item.isValid());
     QVERIFY(item.hasPayload());
-    Incidence::Ptr clone = Incidence::Ptr(CalendarUtils::incidence(item)->clone());
+    Incidence::Ptr const clone = Incidence::Ptr(CalendarUtils::incidence(item)->clone());
     clone->setSummary(tr("foo33"));
     item.setPayload(clone);
     auto job = new ItemModifyJob(item);
@@ -171,7 +173,7 @@ void ETMCalendarTest::testIncidencesModified()
 
 void ETMCalendarTest::testIncidencesDeleted()
 {
-    Event::List incidences = mCalendar->events();
+    Event::List const incidences = mCalendar->events();
     QCOMPARE(incidences.count(), 6);
     const Item item = mCalendar->item(tr("a"));
     QVERIFY(item.isValid());
@@ -255,10 +257,10 @@ void ETMCalendarTest::calendarIncidenceChanged(const Incidence::Ptr &incidence)
 {
     const QString id = incidence->customProperty("VOLATILE", "AKONADI-ID");
 
-    Akonadi::Item item = mCalendar->item(incidence->uid());
+    Akonadi::Item const item = mCalendar->item(incidence->uid());
     QVERIFY(item.isValid());
     QVERIFY(item.hasPayload());
-    Incidence::Ptr i2 = CalendarUtils::incidence(item);
+    Incidence::Ptr const i2 = CalendarUtils::incidence(item);
 
     if (id.toLongLong() != item.id()) {
         qDebug() << "Incidence uid = " << incidence->uid() << "; internal incidence uid = " << i2->uid();
@@ -267,7 +269,7 @@ void ETMCalendarTest::calendarIncidenceChanged(const Incidence::Ptr &incidence)
 
     QCOMPARE(incidence.data(), i2.data());
     QCOMPARE(i2->summary(), incidence->summary());
-    Incidence::Ptr i3 = mCalendar->incidence(incidence->uid());
+    Incidence::Ptr const i3 = mCalendar->incidence(incidence->uid());
     QCOMPARE(i3->summary(), incidence->summary());
 
     if (mIncidencesToChange > 0) {
@@ -384,7 +386,7 @@ void ETMCalendarTest::testSubTodos()
     QVERIFY(mCalendar->childIncidences(tr("tb.2")).isEmpty());
 
     // Delete everything, so we don't have duplicate ids when the next test row runs
-    Akonadi::Item::List itemsToDelete = mCalendar->items();
+    Akonadi::Item::List const itemsToDelete = mCalendar->items();
     mIncidencesToDelete = itemsToDelete.count();
     auto deleteJob = new ItemDeleteJob(itemsToDelete);
     AKVERIFYEXEC(deleteJob);
@@ -403,7 +405,7 @@ void ETMCalendarTest::testNotifyObserverBug()
     waitForIt();
 
     Akonadi::Item item = mCalendar->item(uid);
-    KCalendarCore::Incidence::Ptr incidence = KCalendarCore::Incidence::Ptr(mCalendar->incidence(uid)->clone());
+    KCalendarCore::Incidence::Ptr const incidence = KCalendarCore::Incidence::Ptr(mCalendar->incidence(uid)->clone());
     QVERIFY(item.isValid());
 
     // Modify it
@@ -424,7 +426,7 @@ void ETMCalendarTest::testUidChange()
     createTodo(originalUid, QString());
     waitForIt();
 
-    KCalendarCore::Incidence::Ptr clone = Incidence::Ptr(mCalendar->incidence(originalUid)->clone());
+    KCalendarCore::Incidence::Ptr const clone = Incidence::Ptr(mCalendar->incidence(originalUid)->clone());
     QCOMPARE(clone->uid(), originalUid);
 
     Akonadi::Item item = mCalendar->item(originalUid);
@@ -467,15 +469,15 @@ void ETMCalendarTest::testItem()
     createTodo(uid, QString());
     waitForIt();
 
-    Incidence::Ptr incidence = mCalendar->incidence(uid);
-    Akonadi::Item item = mCalendar->item(uid);
-    Akonadi::Item item2 = mCalendar->item(item.id());
+    Incidence::Ptr const incidence = mCalendar->incidence(uid);
+    Akonadi::Item const item = mCalendar->item(uid);
+    Akonadi::Item const item2 = mCalendar->item(item.id());
     QVERIFY(incidence);
     QVERIFY(item.isValid());
     QVERIFY(item2.isValid());
 
-    Incidence::Ptr incidence1 = CalendarUtils::incidence(item);
-    Incidence::Ptr incidence2 = CalendarUtils::incidence(item2);
+    Incidence::Ptr const incidence1 = CalendarUtils::incidence(item);
+    Incidence::Ptr const incidence2 = CalendarUtils::incidence(item2);
 
     // The pointers should be the same
     QCOMPARE(incidence1.data(), incidence2.data());
@@ -505,11 +507,11 @@ void ETMCalendarTest::testShareETM()
 
 void ETMCalendarTest::testFilterInvitations()
 {
-    int anz = mCalendar->model()->rowCount();
-    QString uid = QStringLiteral("invite-01");
+    int const anz = mCalendar->model()->rowCount();
+    QString const uid = QStringLiteral("invite-01");
     Item item;
-    Incidence::Ptr incidence = Incidence::Ptr(new Event());
-    KEMailSettings emailSettings;
+    Incidence::Ptr const incidence = Incidence::Ptr(new Event());
+    KEMailSettings const emailSettings;
     KCalendarCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
 
     item.setMimeType(Event::eventMimeType());
@@ -532,18 +534,18 @@ void ETMCalendarTest::testFilterInvitations()
 
 void ETMCalendarTest::testFilterInvitationsChanged()
 {
-    int anz = mCalendar->model()->rowCount();
+    int const anz = mCalendar->model()->rowCount();
 
-    KEMailSettings emailSettings;
+    KEMailSettings const emailSettings;
     KCalendarCore::Attendee me(QStringLiteral("me"), emailSettings.getSetting(KEMailSettings::EmailAddress));
 
-    QString uid = QStringLiteral("invite-02");
+    QString const uid = QStringLiteral("invite-02");
     mIncidencesToAdd = 1;
     createIncidence(uid);
     waitForIt();
     QCOMPARE(mCalendar->model()->rowCount(), anz + 1);
 
-    Incidence::Ptr incidence = mCalendar->incidence(uid);
+    Incidence::Ptr const incidence = mCalendar->incidence(uid);
     Item item = mCalendar->item(uid);
 
     incidence->addAttendee(me);
@@ -586,5 +588,7 @@ void ETMCalendarTest::checkExitLoop()
 }
 
 QTEST_AKONADIMAIN(ETMCalendarTest)
+
+// NOLINTEND(misc-const-correctness)
 
 #include "moc_etmcalendartest.cpp"

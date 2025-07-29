@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 #include "calendarbasetest.h"
 
 #include "../src/calendarbase.h"
@@ -58,7 +60,7 @@ void CalendarBaseTest::createInitialIncidences()
     mExpectedSlotResult = true;
 
     for (int i = 0; i < 5; ++i) {
-        Event::Ptr event = Event::Ptr(new Event());
+        Event::Ptr const event = Event::Ptr(new Event());
         event->setUid(QStringLiteral("event") + QString::number(i));
         event->setSummary(QStringLiteral("summary") + QString::number(i));
         event->setDtStart(QDateTime::currentDateTimeUtc());
@@ -70,7 +72,7 @@ void CalendarBaseTest::createInitialIncidences()
     mOneEventUid = mUids.last();
 
     for (int i = 0; i < 5; ++i) {
-        Todo::Ptr todo = Todo::Ptr(new Todo());
+        Todo::Ptr const todo = Todo::Ptr(new Todo());
         todo->setUid(QStringLiteral("todo") + QString::number(i));
         todo->setDtStart(QDateTime::currentDateTimeUtc());
         todo->setSummary(QStringLiteral("summary") + QString::number(i));
@@ -82,7 +84,7 @@ void CalendarBaseTest::createInitialIncidences()
     mOneTodoUid = mUids.last();
 
     for (int i = 0; i < 5; ++i) {
-        Journal::Ptr journal = Journal::Ptr(new Journal());
+        Journal::Ptr const journal = Journal::Ptr(new Journal());
         journal->setUid(QStringLiteral("journal") + QString::number(i));
         journal->setSummary(QStringLiteral("summary") + QString::number(i));
         journal->setDtStart(QDateTime::currentDateTimeUtc());
@@ -94,7 +96,7 @@ void CalendarBaseTest::createInitialIncidences()
     mOneJournalUid = mUids.last();
 
     for (int i = 0; i < 5; ++i) {
-        Incidence::Ptr incidence = Incidence::Ptr(new Event());
+        Incidence::Ptr const incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("incidence") + QString::number(i));
         incidence->setSummary(QStringLiteral("summary") + QString::number(i));
         incidence->setDtStart(QDateTime::currentDateTimeUtc());
@@ -146,7 +148,7 @@ void CalendarBaseTest::testChildIncidences_data()
     QTest::addColumn<QStringList>("childrenUids");
 
     QTest::newRow("Invalid parent") << "doesn't exist" << Item::Id(404) << QStringList();
-    Item::Id id = createTodo(tr("parent1"));
+    Item::Id const id = createTodo(tr("parent1"));
     QVERIFY(id > -1);
     QVERIFY(createTodo(tr("child1"), tr("parent1")) > -1);
     QVERIFY(createTodo(tr("child2"), tr("parent1")) > -1);
@@ -258,7 +260,7 @@ void CalendarBaseTest::handleDeleteFinished(bool success, const QString &errorSt
 
 Item::Id CalendarBaseTest::createTodo(const QString &uid, const QString &parentUid)
 {
-    Todo::Ptr todo = Todo::Ptr(new Todo());
+    Todo::Ptr const todo = Todo::Ptr(new Todo());
     todo->setUid(uid);
     todo->setSummary(QStringLiteral("summary"));
     if (!parentUid.isEmpty()) {
@@ -270,5 +272,7 @@ Item::Id CalendarBaseTest::createTodo(const QString &uid, const QString &parentU
 
     return mCalendar->item(uid).id();
 }
+
+// NOLINTEND(misc-const-correctness)
 
 #include "moc_calendarbasetest.cpp"

@@ -14,7 +14,7 @@
 Akonadi::Collection
 Akonadi::CalendarUtils::selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection)
 {
-    QPointer<Akonadi::CollectionDialog> dlg(new Akonadi::CollectionDialog(parent));
+    QPointer<Akonadi::CollectionDialog> const dlg(new Akonadi::CollectionDialog(parent));
 
     qCDebug(AKONADICALENDAR_LOG) << "selecting collections with mimeType in " << mimeTypes;
 

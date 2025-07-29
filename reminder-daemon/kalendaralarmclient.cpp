@@ -65,7 +65,7 @@ KalendarAlarmClient::KalendarAlarmClient(QObject *parent)
         });
     }
 
-    KConfigGroup alarmGroup(m_config, QStringLiteral("Alarms"));
+    KConfigGroup const alarmGroup(m_config, QStringLiteral("Alarms"));
     mLastChecked = alarmGroup.readEntry("CalendarsLastChecked", QDateTime::currentDateTime().addDays(-9));
 
     restoreSuspendedFromConfig();
@@ -93,7 +93,7 @@ static void checkAllItems(KCheckableProxyModel *model, const QModelIndex &parent
 {
     const int rowCount = model->rowCount(parent);
     for (int row = 0; row < rowCount; ++row) {
-        QModelIndex index = model->index(row, 0, parent);
+        QModelIndex const index = model->index(row, 0, parent);
         model->setData(index, Qt::Checked, Qt::CheckStateRole);
 
         if (model->rowCount(index) > 0) {
@@ -178,7 +178,7 @@ void KalendarAlarmClient::askAndSuspend(AlarmNotification *notification,
 void KalendarAlarmClient::showIncidence(const QString &uid, const QDateTime &occurrence, const QString &xdgActivationToken)
 {
     KConfig cfg(QStringLiteral("defaultcalendarrc"));
-    KConfigGroup grp(&cfg, QStringLiteral("General"));
+    KConfigGroup const grp(&cfg, QStringLiteral("General"));
     const auto appId = grp.readEntry(QStringLiteral("ApplicationId"), QString());
     if (appId.isEmpty()) {
         return;
@@ -198,7 +198,7 @@ void KalendarAlarmClient::showIncidence(const QString &uid, const QDateTime &occ
             const QString objectName = QLatin1Char('/') + kontactPlugin + "_PimApplication"_L1;
             QDBusInterface iface(appId, objectName, QStringLiteral("org.kde.PIMUniqueApplication"), QDBusConnection::sessionBus());
             if (iface.isValid()) {
-                QStringList arguments({kontactPlugin});
+                QStringList const arguments({kontactPlugin});
                 iface.call(QStringLiteral("newInstance"), QByteArray(), arguments, QString());
             }
         }

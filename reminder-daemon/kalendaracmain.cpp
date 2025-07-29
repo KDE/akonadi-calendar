@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    QApplication const app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
     app.setQuitLockEnabled(false);
 
@@ -49,8 +49,8 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    KDBusService service(KDBusService::Unique);
-    KalendarAlarmClient client;
+    KDBusService const service(KDBusService::Unique);
+    KalendarAlarmClient const client;
 
     return app.exec();
 }

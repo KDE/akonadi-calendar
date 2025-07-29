@@ -63,7 +63,7 @@ void TodoPurgerPrivate::deleteTodos()
     Akonadi::Item::List toDelete;
     m_ignoredItems = 0;
     for (const Akonadi::Item &item : items) {
-        KCalendarCore::Todo::Ptr todo = CalendarUtils::todo(item);
+        KCalendarCore::Todo::Ptr const todo = CalendarUtils::todo(item);
 
         if (!todo || !todo->isCompleted()) {
             continue;
@@ -106,7 +106,7 @@ bool TodoPurgerPrivate::treeIsDeletable(const KCalendarCore::Todo::Ptr &todo)
     }
 
     for (const KCalendarCore::Incidence::Ptr &child : children) {
-        KCalendarCore::Todo::Ptr childTodo = child.dynamicCast<KCalendarCore::Todo>();
+        KCalendarCore::Todo::Ptr const childTodo = child.dynamicCast<KCalendarCore::Todo>();
 
         if (!childTodo) {
             return false; // This never happens

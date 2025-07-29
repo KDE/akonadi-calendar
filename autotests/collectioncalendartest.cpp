@@ -243,7 +243,7 @@ void CollectionCalendarTest::testPopulateFromReadyETM()
     Akonadi::EntityTreeModel etm(monitor.get());
     QVERIFY(waitForEtmToPopulate(&etm));
 
-    Akonadi::CollectionCalendar calendar(&etm, testCollection);
+    Akonadi::CollectionCalendar const calendar(&etm, testCollection);
 
     // Should populate right away
     QCOMPARE(calendar.incidences().size(), 10);
@@ -253,7 +253,7 @@ void CollectionCalendarTest::testPopulateWhenETMLoads()
 {
     auto monitor = createMonitor();
     Akonadi::EntityTreeModel etm(monitor.get());
-    Akonadi::CollectionCalendar calendar(&etm, testCollection);
+    Akonadi::CollectionCalendar const calendar(&etm, testCollection);
     QVERIFY(!etm.isFullyPopulated());
     QVERIFY(!etm.isCollectionPopulated(testCollection.id()));
     QVERIFY(calendar.incidences().empty());
@@ -274,7 +274,7 @@ void CollectionCalendarTest::testItemAdded()
 
     QCOMPARE(calendar.incidences().size(), 10);
 
-    EphemeralItem item = createIncidence(testCollection, QStringLiteral("New Test Item"));
+    EphemeralItem const item = createIncidence(testCollection, QStringLiteral("New Test Item"));
     QVERIFY(observer.incidenceAddedSpy.wait());
 
     const auto newItem = std::as_const(observer.incidenceAddedSpy)[0][0].value<Akonadi::Item>();
@@ -333,7 +333,7 @@ void CollectionCalendarTest::testItemChanged()
         QVERIFY(observer.incidenceAddedSpy.wait());
         QCOMPARE(calendar.incidences().size(), 11);
 
-        KCalendarCore::Event::Ptr copy(item->payload<KCalendarCore::Event::Ptr>()->clone());
+        KCalendarCore::Event::Ptr const copy(item->payload<KCalendarCore::Event::Ptr>()->clone());
         copy->setSummary(QStringLiteral("Changed"));
         Akonadi::Item newItem = *item;
         newItem.setPayload(copy);
@@ -359,7 +359,7 @@ void CollectionCalendarTest::testUnrelatedItemIsNotSeen()
     QSignalSpy etmRemovedSpy(&etm, &Akonadi::EntityTreeModel::rowsRemoved);
 
     Akonadi::CollectionCalendar calendar(&etm, testCollection);
-    Observer observer(calendar);
+    Observer const observer(calendar);
 
     {
         // Create new incidence in the other collection

@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 #include "../src/incidencechanger.h"
 
 #include <Akonadi/Collection>
@@ -40,7 +42,7 @@ QString s_outEmail2 = QStringLiteral("identity2@kde.org");
 static Akonadi::Item item()
 {
     Item item;
-    Incidence::Ptr incidence = Incidence::Ptr(new Event());
+    Incidence::Ptr const incidence = Incidence::Ptr(new Event());
     incidence->setSummary(QStringLiteral("random summary"));
     item.setMimeType(incidence->mimeType());
     item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
@@ -49,7 +51,7 @@ static Akonadi::Item item()
 
 static Akonadi::Item createItem(const Akonadi::Collection &collection)
 {
-    Item i = item();
+    Item const i = item();
     auto createJob = new ItemCreateJob(i, collection);
 
     createJob->exec();
@@ -230,7 +232,7 @@ private Q_SLOTS:
         auto fetchJob = new ItemFetchJob(mCollection);
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
-        Item::List items = fetchJob->items();
+        Item::List const items = fetchJob->items();
 
         // 5 Incidences were created in testCreating(). Keep this in sync.
         QCOMPARE(items.count(), 5);
@@ -290,7 +292,7 @@ private Q_SLOTS:
 
         Item item;
         item.setMimeType(Event::eventMimeType());
-        Incidence::Ptr incidence = Incidence::Ptr(new Event());
+        Incidence::Ptr const incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
@@ -331,7 +333,7 @@ private Q_SLOTS:
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             QVERIFY(fetchJob->items().count() == 1);
-            Item fetchedItem = fetchJob->items().constFirst();
+            Item const fetchedItem = fetchJob->items().constFirst();
             QVERIFY(fetchedItem.isValid());
             QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
             auto incidence = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
@@ -348,7 +350,7 @@ private Q_SLOTS:
         // kolab #1386
         Item item;
         item.setMimeType(Event::eventMimeType());
-        Incidence::Ptr incidence = Incidence::Ptr(new Event());
+        Incidence::Ptr const incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
         incidence->setOrganizer(Person(QStringLiteral("orga"), QStringLiteral("orga@dev.nul")));
@@ -357,7 +359,7 @@ private Q_SLOTS:
         auto job = new ItemCreateJob(item, mCollection, this);
         AKVERIFYEXEC(job);
         item = job->item();
-        Alarm::Ptr alarm = Alarm::Ptr(new Alarm(incidence.data()));
+        Alarm::Ptr const alarm = Alarm::Ptr(new Alarm(incidence.data()));
         alarm->setStartOffset(Duration(-15));
         alarm->setType(Alarm::Display);
         incidence->addAlarm(alarm);
@@ -374,7 +376,7 @@ private Q_SLOTS:
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         QVERIFY(fetchJob->items().count() == 1);
-        Item fetchedItem = fetchJob->items().constFirst();
+        Item const fetchedItem = fetchJob->items().constFirst();
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
         auto incidence2 = fetchedItem.payload<KCalendarCore::Incidence::Ptr>();
@@ -405,7 +407,7 @@ private Q_SLOTS:
         // we as organizator
         Item item;
         item.setMimeType(Event::eventMimeType());
-        Event::Ptr incidence = Event::Ptr(new Event());
+        Event::Ptr const incidence = Event::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), QTimeZone::utc()));
         incidence->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), QTimeZone::utc()));
@@ -420,35 +422,35 @@ private Q_SLOTS:
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence));
             event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:start Date") << item << event << true;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence));
             event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:end Date") << item << event << true;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence));
             event->setAllDay(true);
             QCOMPARE(event->dirtyFields().count(), 2);
             QTest::newRow("organizator:allDay") << item << event << true;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence));
             event->setLocation(QStringLiteral("location2"));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:location") << item << event << true;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence));
             event->setSummary(QStringLiteral("summary"));
             QCOMPARE(event->dirtyFields().count(), 1);
             QTest::newRow("organizator:summary") << item << event << false;
@@ -457,7 +459,7 @@ private Q_SLOTS:
         // we are normal attendee
         Item item2;
         item2.setMimeType(Event::eventMimeType());
-        Event::Ptr incidence2 = Event::Ptr(new Event());
+        Event::Ptr const incidence2 = Event::Ptr(new Event());
         incidence2->setUid(QStringLiteral("test123uid"));
         incidence2->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(12, 0, 0), QTimeZone::utc()));
         incidence2->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(14, 0, 0), QTimeZone::utc()));
@@ -472,31 +474,31 @@ private Q_SLOTS:
         item2.setPayload<KCalendarCore::Incidence::Ptr>(incidence2);
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence2));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence2));
             event->setDtStart(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QTest::newRow("attendee:start Date") << item2 << event << false;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence2));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence2));
             event->setDtEnd(QDateTime(QDate(2006, 1, 8), QTime(13, 0, 0), QTimeZone::utc()));
             QTest::newRow("attendee:end Date") << item2 << event << false;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence2));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence2));
             event->setAllDay(false);
             QTest::newRow("attendee:allDay") << item2 << event << false;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence2));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence2));
             event->setLocation(QStringLiteral("location2"));
             QTest::newRow("attendee:location") << item2 << event << false;
         }
 
         {
-            Event::Ptr event = Event::Ptr(new Event(*incidence2));
+            Event::Ptr const event = Event::Ptr(new Event(*incidence2));
             event->setSummary(QStringLiteral("summary"));
             QTest::newRow("attendee:summary") << item2 << event << false;
         }
@@ -514,7 +516,7 @@ private Q_SLOTS:
         item = job->item();
         item.setPayload<KCalendarCore::Incidence::Ptr>(event);
 
-        int revision = event->revision();
+        int const revision = event->revision();
 
         mChanger->setRespectsCollectionRights(true);
         const int changeId = mChanger->modifyIncidence(item);
@@ -527,7 +529,7 @@ private Q_SLOTS:
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
         QVERIFY(fetchJob->items().count() == 1);
-        Item fetchedItem = fetchJob->items().constFirst();
+        Item const fetchedItem = fetchJob->items().constFirst();
 
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalendarCore::Event::Ptr>());
@@ -565,7 +567,7 @@ private Q_SLOTS:
         // Create an incidence
         Item item;
         item.setMimeType(Event::eventMimeType());
-        Incidence::Ptr incidence = Incidence::Ptr(new Event());
+        Incidence::Ptr const incidence = Incidence::Ptr(new Event());
         incidence->setUid(QStringLiteral("test123uid"));
         incidence->setSummary(QStringLiteral("summary"));
         item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
@@ -1057,7 +1059,7 @@ private Q_SLOTS:
         QFETCH(QDate, recurrenceEnd);
         QFETCH(QDate, expectedRecurrenceEnd);
 
-        Event::Ptr incidence = Event::Ptr(new Event());
+        Event::Ptr const incidence = Event::Ptr(new Event());
         incidence->setSummary(QStringLiteral("random summary"));
         incidence->setDtStart(dtStart);
         incidence->setDtEnd(dtEnd);
@@ -1090,7 +1092,7 @@ private Q_SLOTS:
         waitForSignals();
 
         // Now lets move it
-        Incidence::Ptr originalIncidence = Incidence::Ptr(incidence->clone());
+        Incidence::Ptr const originalIncidence = Incidence::Ptr(incidence->clone());
         incidence->setDtStart(dtStart.addSecs(offsetToMove));
 
         incidence->setDtEnd(dtEnd.addSecs(offsetToMove));
@@ -1158,7 +1160,7 @@ public Q_SLOTS:
             qDebug() << "Error string is " << errorMessage;
         } else {
             QVERIFY(!deletedIds.isEmpty());
-            for (Akonadi::Item::Id id : std::as_const(deletedIds)) {
+            for (Akonadi::Item::Id const id : std::as_const(deletedIds)) {
                 QVERIFY(id != -1);
             }
         }
@@ -1280,5 +1282,7 @@ public Q_SLOTS:
 };
 
 QTEST_AKONADIMAIN(IncidenceChangerTest)
+
+// NOLINTEND(misc-const-correctness)
 
 #include "incidencechangertest.moc"

@@ -141,7 +141,7 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sentInvitation(int messageBoxRe
         // Yes, we do modify the incidence here, but we still keep the Ptr
         // semantics, because this change is only for sending and not stored int the
         // local calendar.
-        KCalendarCore::Incidence::Ptr _incidence(incidence->clone());
+        KCalendarCore::Incidence::Ptr const _incidence(incidence->clone());
         if (_incidence->summary().isEmpty()) {
             _incidence->setSummary(xi18n("<placeholder>No summary given</placeholder>"));
         }
@@ -257,7 +257,7 @@ void ITIPHandlerHelper::slotIncidenceCreatedDialogClosed(int messageBoxReturnCod
                                                          KCalendarCore::iTIPMethod method,
                                                          const KCalendarCore::Incidence::Ptr &incidence)
 {
-    ITIPHandlerHelper::SendResult status = sentInvitation(messageBoxReturnCode, incidence, method);
+    ITIPHandlerHelper::SendResult const status = sentInvitation(messageBoxReturnCode, incidence, method);
     Q_EMIT sendIncidenceCreatedMessageFinished(status, method, incidence);
 }
 
@@ -353,7 +353,7 @@ void ITIPHandlerHelper::slotIncidenceModifiedDialogClosed(int messageBoxReturnCo
                                                           KCalendarCore::iTIPMethod method,
                                                           const KCalendarCore::Incidence::Ptr &incidence)
 {
-    ITIPHandlerHelper::SendResult status = sentInvitation(messageBoxReturnCode, incidence, method);
+    ITIPHandlerHelper::SendResult const status = sentInvitation(messageBoxReturnCode, incidence, method);
     Q_EMIT sendIncidenceModifiedMessageFinished(status, method, incidence);
 }
 
@@ -417,7 +417,7 @@ void ITIPHandlerHelper::sendIncidenceDeletedMessage(KCalendarCore::iTIPMethod me
         }
 
         if (incidenceAcceptedBefore) {
-            QString question = i18n(
+            QString const question = i18n(
                 "You had previously accepted an invitation to this event. "
                 "Do you want to send an updated response to the organizer "
                 "declining the invitation?");
@@ -446,7 +446,7 @@ void ITIPHandlerHelper::slotIncidenceDeletedDialogClosed(const int messageBoxRet
                                                          KCalendarCore::iTIPMethod method,
                                                          const KCalendarCore::Incidence::Ptr &incidence)
 {
-    ITIPHandlerHelper::SendResult status = sentInvitation(messageBoxReturnCode, incidence, method);
+    ITIPHandlerHelper::SendResult const status = sentInvitation(messageBoxReturnCode, incidence, method);
     Q_EMIT sendIncidenceDeletedMessageFinished(status, method, incidence);
 }
 
@@ -462,7 +462,7 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sendCounterProposal(const QStri
     }
 
     if (CalendarSettings::self()->outlookCompatCounterProposals()) {
-        KCalendarCore::Incidence::Ptr tmp(oldIncidence->clone());
+        KCalendarCore::Incidence::Ptr const tmp(oldIncidence->clone());
         tmp->setSummary(i18n("Counter proposal: %1", newIncidence->summary()));
         tmp->setDescription(newIncidence->description());
         tmp->addComment(proposalComment(newIncidence));

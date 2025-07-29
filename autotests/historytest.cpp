@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 #include "historytest.h"
 #include "helper.h"
 
@@ -58,7 +60,7 @@ static bool checkSummary(const Akonadi::Item &item, const QString &expected)
 static Akonadi::Item item()
 {
     Item item;
-    Incidence::Ptr incidence = Incidence::Ptr(new Event());
+    Incidence::Ptr const incidence = Incidence::Ptr(new Event());
     incidence->setSummary(QStringLiteral("random summary"));
     item.setMimeType(incidence->mimeType());
     item.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
@@ -67,7 +69,7 @@ static Akonadi::Item item()
 
 static Akonadi::Item createItem(const Akonadi::Collection &collection)
 {
-    Item i = item();
+    Item const i = item();
     auto createJob = new ItemCreateJob(i, collection);
     [&]() {
         QVERIFY(createJob->exec());
@@ -194,7 +196,7 @@ void HistoryTest::testModification_data()
     QTest::addColumn<Akonadi::Item>("item");
     QTest::addColumn<QString>("oldSummary");
     QTest::addColumn<QString>("newSummary");
-    Item item1 = createItem(mCollection);
+    Item const item1 = createItem(mCollection);
     const QString oldSummary(QStringLiteral("old"));
     const QString newSummary(QStringLiteral("new"));
     item1.payload<KCalendarCore::Incidence::Ptr>()->setSummary(oldSummary);
@@ -207,7 +209,7 @@ void HistoryTest::testModification()
     QFETCH(QString, oldSummary);
     QFETCH(QString, newSummary);
     QVERIFY(item.hasPayload());
-    Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
+    Incidence::Ptr const originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
 
     item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(newSummary);
     mPendingSignals[ModificationSignal] = 1;
@@ -308,7 +310,7 @@ void HistoryTest::testAtomicOperations()
         case IncidenceChanger::ChangeTypeModify: {
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
-            Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
+            Incidence::Ptr const originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
             item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
             changeId = mChanger->modifyIncidence(item, originalPayload);
             QVERIFY(changeId != -1);
@@ -435,7 +437,7 @@ void HistoryTest::testMix()
             item = item.isValid() ? item : mItemByChangeId.value(lastCreateChangeId);
             QVERIFY(item.isValid());
             QVERIFY(item.hasPayload<KCalendarCore::Incidence::Ptr>());
-            Incidence::Ptr originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
+            Incidence::Ptr const originalPayload = Incidence::Ptr(item.payload<KCalendarCore::Incidence::Ptr>()->clone());
             item.payload<KCalendarCore::Incidence::Ptr>()->setSummary(QStringLiteral("Changed"));
             QVERIFY(originalPayload);
             changeId = mChanger->modifyIncidence(item, originalPayload);
@@ -520,7 +522,7 @@ void HistoryTest::deleteFinished(int changeId,
         qDebug() << "Error string is " << errorMessage;
     } else {
         QVERIFY(!deletedIds.isEmpty());
-        for (Akonadi::Item::Id id : std::as_const(deletedIds)) {
+        for (Akonadi::Item::Id const id : std::as_const(deletedIds)) {
             QVERIFY(id != -1);
         }
     }
@@ -599,5 +601,7 @@ void HistoryTest::maybeQuitEventLoop()
 }
 
 QTEST_AKONADIMAIN(HistoryTest)
+
+// NOLINTEND(misc-const-correctness)
 
 #include "moc_historytest.cpp"

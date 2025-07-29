@@ -61,7 +61,7 @@ void CalendarClipboardPrivate::cut(const KCalendarCore::Incidence::List &inciden
     // Note: Don't use DndFactory::cutIncidences(), it doesn't use IncidenceChanger for deletion
     // we would loose async error handling and redo/undo features
     if (copyResult) {
-        Akonadi::Item::List items = m_calendar->itemList(incidences);
+        Akonadi::Item::List const items = m_calendar->itemList(incidences);
         const int deleteResult = m_changer->deleteIncidences(items);
         if (deleteResult == -1) {
             Q_EMIT q->cutFinished(/**success=*/false, i18n("Error performing deletion."));
@@ -97,7 +97,7 @@ void CalendarClipboardPrivate::makeChildsIndependent(const KCalendarCore::Incide
                 return;
             }
 
-            KCalendarCore::Incidence::Ptr newIncidence(child->clone());
+            KCalendarCore::Incidence::Ptr const newIncidence(child->clone());
             newIncidence->setRelatedTo(QString());
             childItem.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
             const int changeId = m_changer->modifyIncidence(childItem, /*originalPayload*/ child);
@@ -198,7 +198,7 @@ void CalendarClipboard::cutIncidence(const KCalendarCore::Incidence::Ptr &incide
         Q_ASSERT(!uids.isEmpty());
         KCalendarCore::Incidence::List incidencesToCut;
         for (const QString &uid : std::as_const(uids)) {
-            KCalendarCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
+            KCalendarCore::Incidence::Ptr const child = d->m_calendar->incidence(uid);
             if (child) {
                 incidencesToCut << child;
             }
@@ -235,7 +235,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
         d->getIncidenceHierarchy(incidence, uids);
         Q_ASSERT(!uids.isEmpty());
         for (const QString &uid : std::as_const(uids)) {
-            KCalendarCore::Incidence::Ptr child = d->m_calendar->incidence(uid);
+            KCalendarCore::Incidence::Ptr const child = d->m_calendar->incidence(uid);
             if (child) {
                 incidencesToCopy << child;
             }

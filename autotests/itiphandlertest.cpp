@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// NOLINTBEGIN(misc-const-correctness) due to QFETCH
+
 #include "itiphandlertest.h"
 using namespace Qt::Literals::StringLiterals;
 
@@ -118,7 +120,7 @@ void ITIPHandlerTest::testProcessITIPMessage_data()
     QString data_filename;
     QString action = QStringLiteral("accepted");
     QString incidenceUid = QStringLiteral("uosj936i6arrtl9c2i5r2mfuvg");
-    QString receiver = QLatin1StringView(s_ourEmail);
+    QString const receiver = QLatin1StringView(s_ourEmail);
     Akonadi::ITIPHandler::Result expectedResult;
     int expectedNumIncidences = 0;
     KCalendarCore::Attendee::PartStat expectedPartStat;
@@ -215,7 +217,7 @@ void ITIPHandlerTest::testProcessITIPMessage()
 
     m_expectedResult = expectedResult;
 
-    QString iCalData = icalData(data_filename);
+    QString const iCalData = icalData(data_filename);
     Akonadi::Item::List items;
     processItip(iCalData, receiver, action, expectedNumIncidences, items);
 
@@ -225,7 +227,7 @@ void ITIPHandlerTest::testProcessITIPMessage()
         QCOMPARE(incidence->schedulingID(), incidenceUid);
         QVERIFY(incidence->schedulingID() != incidence->uid());
 
-        KCalendarCore::Attendee me = ourAttendee(incidence);
+        KCalendarCore::Attendee const me = ourAttendee(incidence);
         QVERIFY(!me.isNull());
         QCOMPARE(me.status(), expectedPartStat);
     }
@@ -290,14 +292,14 @@ void ITIPHandlerTest::testProcessITIPMessages()
 
     for (int i = 0; i < invitation_filenames.count(); i++) {
         // First accept the invitation that creates the incidence:
-        QString iCalData = icalData(invitation_filenames.at(i));
+        QString const iCalData = icalData(invitation_filenames.at(i));
         Item::List items;
         qDebug() << "Processing " << invitation_filenames.at(i);
         processItip(iCalData, receiver, actions.at(i), -1, items);
     }
 
-    QString expectedICalData = icalData(expected_filename);
-    KCalendarCore::MemoryCalendar::Ptr expectedCalendar = KCalendarCore::MemoryCalendar::Ptr(new KCalendarCore::MemoryCalendar(QTimeZone::utc()));
+    QString const expectedICalData = icalData(expected_filename);
+    KCalendarCore::MemoryCalendar::Ptr const expectedCalendar = KCalendarCore::MemoryCalendar::Ptr(new KCalendarCore::MemoryCalendar(QTimeZone::utc()));
     KCalendarCore::ICalFormat format;
     format.fromString(expectedCalendar, expectedICalData);
     compareCalendars(expectedCalendar); // Here's where the cool and complex comparisons are done
@@ -313,7 +315,7 @@ void ITIPHandlerTest::testProcessITIPMessageCancel_data()
 
     QString creation_data_filename;
     QString cancel_data_filename;
-    QString incidenceUid = QStringLiteral("uosj936i6arrtl9c2i5r2mfuvg");
+    QString const incidenceUid = QStringLiteral("uosj936i6arrtl9c2i5r2mfuvg");
     //----------------------------------------------------------------------------------------------
     // Someone invited us to an event, we accept, then organizer cancels event
     creation_data_filename = QStringLiteral("invited_us");
@@ -512,9 +514,9 @@ void ITIPHandlerTest::testOutgoingInvitations()
         QVERIFY(mLastInsertedItem.isValid());
 
         m_pendingIncidenceChangerSignal = 1;
-        Incidence::Ptr oldIncidence = Incidence::Ptr(incidence->clone());
+        Incidence::Ptr const oldIncidence = Incidence::Ptr(incidence->clone());
         incidence->setSummary(QStringLiteral("the-new-summary"));
-        int changeId = m_changer->modifyIncidence(mLastInsertedItem, oldIncidence);
+        int const changeId = m_changer->modifyIncidence(mLastInsertedItem, oldIncidence);
         QVERIFY(changeId != 1);
         waitForIt();
         QCOMPARE(FakeMessageQueueJob::sUnitTestResults.count(), expectedEmailCount);
@@ -545,7 +547,7 @@ void ITIPHandlerTest::testIdentity_data()
     QTest::addColumn<bool>("expectedResult");
 
     const QString myEmail = QLatin1StringView(s_ourEmail);
-    QString myEmail2 = QStringLiteral("Some name <%1>").arg(myEmail);
+    QString const myEmail2 = QStringLiteral("Some name <%1>").arg(myEmail);
 
     const QString myAlias1 = QStringLiteral("alias1@kde.org"); // hardcoded in emailidentities, do not change
     const QString myIdentity2 = QLatin1StringView(s_outEmail2);
@@ -590,7 +592,7 @@ void ITIPHandlerTest::createITIPHandler()
 
 QString ITIPHandlerTest::icalData(const QString &data_filename)
 {
-    QString absolutePath = QFINDTESTDATA("itip_data/"_L1 + data_filename);
+    QString const absolutePath = QFINDTESTDATA("itip_data/"_L1 + data_filename);
     return QString::fromLatin1(readFile(absolutePath));
 }
 
@@ -690,5 +692,7 @@ void ITIPHandlerTest::onModifyFinished(int changeId, const Item &item, Incidence
 }
 
 QTEST_AKONADIMAIN(ITIPHandlerTest)
+
+// NOLINTEND(misc-const-correctness)
 
 #include "moc_itiphandlertest.cpp"

@@ -121,7 +121,7 @@ void MailScheduler::performTransaction(const KCalendarCore::IncidenceBase::Ptr &
         d->m_mailer->mailAttendees(incidence, identity, method, CalendarSettings::self()->bcc(), messageText, {}, d->privacyFlags());
     } else {
         QString subject;
-        KCalendarCore::Incidence::Ptr inc = incidence.dynamicCast<KCalendarCore::Incidence>();
+        KCalendarCore::Incidence::Ptr const inc = incidence.dynamicCast<KCalendarCore::Incidence>();
         if (inc && method == KCalendarCore::iTIPCounter) {
             subject = i18n("Counter proposal: %1", inc->summary());
         }
@@ -146,7 +146,7 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
 
     Akonadi::Item exInc = calendar->item(incidence);
     if (!exInc.isValid()) {
-        KCalendarCore::Incidence::Ptr exIncidence = calendar->incidenceFromSchedulingID(incidence->uid());
+        KCalendarCore::Incidence::Ptr const exIncidence = calendar->incidenceFromSchedulingID(incidence->uid());
         if (exIncidence) {
             exInc = calendar->item(exIncidence);
         }
@@ -166,8 +166,8 @@ void MailScheduler::acceptCounterProposal(const KCalendarCore::Incidence::Ptr &i
 
         Q_ASSERT(exIncPtr && incidence);
 
-        KCalendarCore::IncidenceBase::Ptr i1 = exIncPtr;
-        KCalendarCore::IncidenceBase::Ptr i2 = incidence;
+        KCalendarCore::IncidenceBase::Ptr const i1 = exIncPtr;
+        KCalendarCore::IncidenceBase::Ptr const i2 = incidence;
 
         if (i1->type() == i2->type()) {
             *i1 = *i2;

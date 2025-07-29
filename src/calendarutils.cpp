@@ -84,7 +84,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
         }
     }
 
-    QString cName = fullCollection.name();
+    QString const cName = fullCollection.name();
     const QString resourceName = fullCollection.resource();
 
     // Kolab Groupware
@@ -95,7 +95,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
         if (model) {
             Akonadi::Collection p = c.parentCollection();
             while (p != Akonadi::Collection::root()) {
-                Akonadi::Collection tCol = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()});
+                Akonadi::Collection const tCol = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()});
                 const QString tName = tCol.name();
                 if (tName.startsWith("shared.cal"_L1, Qt::CaseInsensitive)) {
                     ownerStr = u"Shared"_s;
@@ -156,7 +156,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
     if (resourceName.contains("google"_L1)) {
         QString ownerStr; // folder owner: "user@gmail.com"
         if (model) {
-            Akonadi::Collection p = c.parentCollection();
+            Akonadi::Collection const p = c.parentCollection();
             ownerStr = Akonadi::EntityTreeModel::updatedCollection(model, Collection{p.id()}).displayName();
         }
 
@@ -224,7 +224,7 @@ QMimeData *CalendarUtils::createMimeData(const Akonadi::Item::List &items)
         return nullptr;
     }
 
-    KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+    KCalendarCore::MemoryCalendar::Ptr const cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     QList<QUrl> urls;
     int incidencesFound = 0;
@@ -235,7 +235,7 @@ QMimeData *CalendarUtils::createMimeData(const Akonadi::Item::List &items)
         }
         ++incidencesFound;
         urls.push_back(item.url());
-        KCalendarCore::Incidence::Ptr i(incidence->clone());
+        KCalendarCore::Incidence::Ptr const i(incidence->clone());
         cal->addIncidence(i);
     }
 

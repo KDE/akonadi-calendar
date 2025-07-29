@@ -106,7 +106,7 @@ void ETMCalendarPrivate::onCollectionChanged(const Akonadi::Collection &collecti
         const Akonadi::Item::List items = q->items();
         for (const Akonadi::Item &item : items) {
             if (item.storageCollectionId() == collection.id()) {
-                KCalendarCore::Incidence::Ptr incidence = CalendarUtils::incidence(item);
+                KCalendarCore::Incidence::Ptr const incidence = CalendarUtils::incidence(item);
                 if (incidence) {
                     incidence->setReadOnly(!(collection.rights() & Akonadi::Collection::CanChangeItem));
                 }
@@ -241,7 +241,7 @@ Akonadi::Collection::List ETMCalendarPrivate::collectionsFromModel(const QAbstra
         const Akonadi::Collection collection = CollectionUtils::fromIndex(i);
         if (collection.isValid()) {
             collections << collection;
-            QModelIndex childIndex = model->index(0, 0, i);
+            QModelIndex const childIndex = model->index(0, 0, i);
             if (childIndex.isValid()) {
                 collections << collectionsFromModel(model, i);
             }
@@ -266,7 +266,7 @@ void ETMCalendarPrivate::itemsAdded(const Akonadi::Item::List &items)
             internalInsert(item);
         }
 
-        Akonadi::Collection::Id id = items.first().storageCollectionId();
+        Akonadi::Collection::Id const id = items.first().storageCollectionId();
         if (mPopulatedCollectionIds.contains(id)) {
             // If the collection isn't populated yet, it will be sent later
             // Saves some cpu cycles
@@ -372,12 +372,12 @@ void ETMCalendarPrivate::onDataChangedInFilteredModel(const QModelIndex &topLeft
 
 void ETMCalendarPrivate::updateItem(const Akonadi::Item &item)
 {
-    Incidence::Ptr newIncidence = CalendarUtils::incidence(item);
+    Incidence::Ptr const newIncidence = CalendarUtils::incidence(item);
     Q_ASSERT(newIncidence);
     Q_ASSERT(!newIncidence->uid().isEmpty());
     newIncidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
-    IncidenceBase::Ptr existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
-    Akonadi::Item seenItem = mItemById.value(item.id()); // if not found, seenItem will be invalid
+    IncidenceBase::Ptr const existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
+    Akonadi::Item const seenItem = mItemById.value(item.id()); // if not found, seenItem will be invalid
 
     if (!existingIncidence && !seenItem.isValid()) {
         // We don't know about this one because it was discarded, for example because of not having DTSTART
