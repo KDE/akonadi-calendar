@@ -140,9 +140,15 @@ public:
 Q_SIGNALS:
     void finished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage);
 
-    void sendIncidenceDeletedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
-    void sendIncidenceModifiedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
-    void sendIncidenceCreatedMessageFinished(ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceDeletedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult,
+                                             KCalendarCore::iTIPMethod method,
+                                             const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceModifiedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult,
+                                              KCalendarCore::iTIPMethod method,
+                                              const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceCreatedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult,
+                                             KCalendarCore::iTIPMethod method,
+                                             const KCalendarCore::Incidence::Ptr &incidence);
 
 private Q_SLOTS:
     void onSchedulerFinished(Akonadi::Scheduler::Result result, const QString &errorMsg);

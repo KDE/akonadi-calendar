@@ -1249,7 +1249,7 @@ public Q_SLOTS:
         QCOMPARE(changer.respectsCollectionRights(), false);
     }
 
-    void compareExpectedResult(IncidenceChanger::ResultCode result, IncidenceChanger::ResultCode expected, const QString &str)
+    void compareExpectedResult(Akonadi::IncidenceChanger::ResultCode result, Akonadi::IncidenceChanger::ResultCode expected, const QString &str)
     {
         if (mPermissionsOrRollback) {
             if (expected == IncidenceChanger::ResultCodePermissions) {

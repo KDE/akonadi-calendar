@@ -87,8 +87,8 @@ public:
     bool useGroupwareCommunication;
 
 Q_SIGNALS:
-    void dialogClosedBeforeChange(int id, ITIPHandlerHelper::SendResult status);
-    void dialogClosedAfterChange(int id, ITIPHandlerHelper::SendResult status);
+    void dialogClosedBeforeChange(int id, Akonadi::ITIPHandlerHelper::SendResult status);
+    void dialogClosedAfterChange(int id, Akonadi::ITIPHandlerHelper::SendResult status);
 
 public Q_SLOTS:
     void emitUserDialogClosedAfterChange(Akonadi::ITIPHandlerHelper::SendResult status);
@@ -290,11 +290,11 @@ public Q_SLOTS:
     void performNextModification(Akonadi::Item::Id id);
     void onCollectionsLoaded(KJob *job);
 
-    void handleCreateJobResult2(int changeId, ITIPHandlerHelper::SendResult);
-    void handleDeleteJobResult2(int changeId, ITIPHandlerHelper::SendResult);
-    void handleModifyJobResult2(int changeId, ITIPHandlerHelper::SendResult);
-    void performModification2(int changeId, ITIPHandlerHelper::SendResult);
-    void deleteIncidences2(int changeId, ITIPHandlerHelper::SendResult);
+    void handleCreateJobResult2(int changeId, Akonadi::ITIPHandlerHelper::SendResult);
+    void handleDeleteJobResult2(int changeId, Akonadi::ITIPHandlerHelper::SendResult);
+    void handleModifyJobResult2(int changeId, Akonadi::ITIPHandlerHelper::SendResult);
+    void performModification2(int changeId, Akonadi::ITIPHandlerHelper::SendResult);
+    void deleteIncidences2(int changeId, Akonadi::ITIPHandlerHelper::SendResult);
 
 public:
     int mLatestChangeId;
