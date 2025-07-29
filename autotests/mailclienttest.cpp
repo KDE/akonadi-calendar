@@ -24,6 +24,7 @@
 #include <QObject>
 #include <QTestEventLoop>
 
+// clazy:excludeall=non-pod-global-static
 const QString s_ourEmail = QStringLiteral("unittests@dev.nul"); // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 const auto s_ourGpgKey = QByteArray("7E501DEA81F62DB17389393325058D1857FDD0E7");
 
