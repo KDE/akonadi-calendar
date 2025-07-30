@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-28 00:41+0000\n"
+"POT-Creation-Date: 2025-07-30 00:43+0000\n"
 "PO-Revision-Date: 2025-06-29 13:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -310,7 +310,7 @@ msgstr ""
 "com fallará."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:485
 #, kde-format
 msgid "Calendar"
 msgstr "Calendario"
@@ -686,7 +686,7 @@ msgid "Do Not Send"
 msgstr "No enviar"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
-#: itiphandlerhelper_p.cpp:509
+#: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Error: %1"
@@ -812,20 +812,20 @@ msgstr ""
 "Ha cambiado la invitación «%1».\n"
 "¿Quiere enviar un correo a los asistentes con un mensaje actualizado?"
 
-#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
-#: itiphandlerhelper_p.cpp:344
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:326
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Enviar actualización"
 
-#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:320 itiphandlerhelper_p.cpp:398
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "¿Quiere enviar una actualización de estado al organizador de esta tarea?"
 
-#: itiphandlerhelper_p.cpp:337
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -834,7 +834,7 @@ msgstr ""
 "Su estado como asistente a este evento ha cambiado. ¿Quiere enviar una "
 "actualización de estado al organizador del evento?"
 
-#: itiphandlerhelper_p.cpp:380
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -844,7 +844,7 @@ msgstr ""
 "¿Quiere enviar un correo a los asistentes para decirles que el evento se ha "
 "cancelado?"
 
-#: itiphandlerhelper_p.cpp:385
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -854,7 +854,7 @@ msgstr ""
 "¿Quiere enviar un correo a los asistentes para decirles que la tarea "
 "pendiente se ha cancelado?"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -864,19 +864,19 @@ msgstr ""
 "¿Quiere enviar un correo a los asistentes para decirles que el diario se ha "
 "cancelado?"
 
-#: itiphandlerhelper_p.cpp:412
+#: itiphandlerhelper_p.cpp:401
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "¿Quiere enviar una actualización de estado al organizador de este diario?"
 
-#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
+#: itiphandlerhelper_p.cpp:406 itiphandlerhelper_p.cpp:427
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Enviar actualización"
 
-#: itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:421
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -885,53 +885,53 @@ msgstr ""
 "Ha aceptado previamente una invitación a este evento. ¿Quiere enviar una "
 "respuesta actualizada al organizador declinando la invitación?"
 
-#: itiphandlerhelper_p.cpp:477 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:466 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Propuesta de contador: %1"
 
-#: itiphandlerhelper_p.cpp:494
+#: itiphandlerhelper_p.cpp:483
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "El envío del correo de planificación de grupo ha fallado."
 
-#: itiphandlerhelper_p.cpp:502
+#: itiphandlerhelper_p.cpp:491
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Interrumpir actualización"
 
-#: mailclient_p.cpp:379 mailclient_p.cpp:417
+#: mailclient_p.cpp:380 mailclient_p.cpp:418
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "No hay asistentes a los que enviar correo"
 
-#: mailclient_p.cpp:425
+#: mailclient_p.cpp:426
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Objeto de disponibilidad"
 
-#: mailclient_p.cpp:459 mailclient_p.cpp:490
+#: mailclient_p.cpp:460 mailclient_p.cpp:491
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Mensaje de disponibilidad"
 
-#: mailclient_p.cpp:630
+#: mailclient_p.cpp:632
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Error en la creación del transporte"
 
-#: mailclient_p.cpp:648
+#: mailclient_p.cpp:650
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Error al recuperar transporte. No es posible enviar invitaciones"
 
-#: mailclient_p.cpp:671
+#: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Error al encolar mensaje en la bandeja de salida: %1"
 
-#: mailclient_p.cpp:703
+#: mailclient_p.cpp:705
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -942,24 +942,24 @@ msgstr ""
 "debe preguntar si quiere firmar este mensaje.\n"
 "¿Desea firmar este mensaje?"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgid "Sign Message?"
 msgstr "¿Desea firmar el mensaje?"
 
-#: mailclient_p.cpp:709 mailclient_p.cpp:735
+#: mailclient_p.cpp:711 mailclient_p.cpp:737
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Firmar"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:712 mailclient_p.cpp:738
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&No firmar"
 
-#: mailclient_p.cpp:730
+#: mailclient_p.cpp:732
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -968,7 +968,7 @@ msgstr ""
 "Existen preferencia de firma en conflicto para estos destinatarios.\n"
 "¿Desea firmar este mensaje?"
 
-#: mailclient_p.cpp:755
+#: mailclient_p.cpp:757
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -977,19 +977,19 @@ msgstr ""
 "Ha solicitado que quiere firmar este mensaje, aunque todavía no ha "
 "configurado ninguna clave válida para firmar con esta identidad."
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "¿Enviar sin firmar?"
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Enviar &sin firmar"
 
-#: mailclient_p.cpp:772
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1001,7 +1001,7 @@ msgstr ""
 "este sitio.\n"
 "¿Desea firmar todas las partes del mensaje?"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:778
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1012,29 +1012,29 @@ msgstr ""
 "El envío de mensajes sin firmar puede infringir la política de este sitio.\n"
 "¿Desea firmar el mensaje?"
 
-#: mailclient_p.cpp:779
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Firmar todas las partes"
 
-#: mailclient_p.cpp:779
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign"
 msgstr "&Firmar"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:783
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Advertencia de mensaje sin firmar"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:785
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&Enviar como está"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1044,7 +1044,7 @@ msgstr ""
 "destinatarios.\n"
 "¿Desea cifrar este mensaje?"
 
-#: mailclient_p.cpp:839
+#: mailclient_p.cpp:841
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1055,33 +1055,33 @@ msgstr ""
 "debe preguntar si quiere cifrar este mensaje.\n"
 "¿Desea cifrar este mensaje?"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "¿Cifrar el mensaje?"
 
-#: mailclient_p.cpp:845
+#: mailclient_p.cpp:847
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Firmar y &cifrar"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:918
+#: mailclient_p.cpp:847 mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Cifrar"
 
-#: mailclient_p.cpp:846 mailclient_p.cpp:922
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Solo firmar"
 
-#: mailclient_p.cpp:846 mailclient_p.cpp:922
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Enviar como está"
 
-#: mailclient_p.cpp:866
+#: mailclient_p.cpp:868
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1090,24 +1090,24 @@ msgstr ""
 "Existen preferencias de cifrado en conflicto para estos destinatarios.\n"
 "¿Desea cifrar este mensaje?"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:872
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "¿Desea cifrar el mensaje?"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Cifrar"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&No cifrar"
 
-#: mailclient_p.cpp:891
+#: mailclient_p.cpp:893
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1118,18 +1118,18 @@ msgstr ""
 "usted, aunque no se ha encontrado ninguna clave de cifrado de confianza "
 "válida para esta identidad."
 
-#: mailclient_p.cpp:895
+#: mailclient_p.cpp:897
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "¿Enviar sin cifrar?"
 
-#: mailclient_p.cpp:895
+#: mailclient_p.cpp:897
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Enviar &sin cifrar"
 
-#: mailclient_p.cpp:909
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1142,7 +1142,7 @@ msgstr ""
 "este sitio o filtrar información sensible.\n"
 "¿Desea cifrar todas las partes?"
 
-#: mailclient_p.cpp:914
+#: mailclient_p.cpp:916
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1155,12 +1155,12 @@ msgstr ""
 "filtrar información sensible.\n"
 "¿Desea cifrar el mensaje?"
 
-#: mailclient_p.cpp:918
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&Cifrar todas las partes"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:922
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Advertencia de mensaje sin cifrar"
@@ -2007,49 +2007,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:467
 #, kde-format
 msgid "Summary"
 msgstr "Resumen"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:469
 #, kde-format
 msgid "Recurs"
 msgstr "Se repite"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:471
 #, kde-format
 msgid "Priority"
 msgstr "Prioridad"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:473
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "% completo"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:475
 #, kde-format
 msgid "Start Date"
 msgstr "Fecha de inicio"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:477
 #, kde-format
 msgid "Due Date"
 msgstr "Fecha de vencimiento"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:479
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Completada"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:481
 #, kde-format
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:483
 #, kde-format
 msgid "Description"
 msgstr "Descripción"

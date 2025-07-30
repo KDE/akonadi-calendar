@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-28 00:41+0000\n"
+"POT-Creation-Date: 2025-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 07:20+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -305,7 +305,7 @@ msgstr ""
 "data om ledig-upptagen för anna@mindomän.se på servern www.dindomän.se."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:477
+#: todomodel.cpp:485
 #, kde-format
 msgid "Calendar"
 msgstr "Kalender"
@@ -677,7 +677,7 @@ msgid "Do Not Send"
 msgstr "Skicka inte"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
-#: itiphandlerhelper_p.cpp:509
+#: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Fel: %1"
@@ -802,19 +802,19 @@ msgstr ""
 "Du ändrade inbjudan \"%1\".\n"
 "Vill du skicka e-post till deltagarna med ett uppdateringsmeddelande?"
 
-#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:331
-#: itiphandlerhelper_p.cpp:344
+#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:326
+#: itiphandlerhelper_p.cpp:338
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Skicka uppdatering"
 
-#: itiphandlerhelper_p.cpp:325 itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:320 itiphandlerhelper_p.cpp:398
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Vill du skicka uppdatering av status till uppgiftens organisatör?"
 
-#: itiphandlerhelper_p.cpp:337
+#: itiphandlerhelper_p.cpp:331
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -823,7 +823,7 @@ msgstr ""
 "Din status som deltagare i händelsen har ändrats. Vill du skicka uppdatering "
 "av status till händelsens organisatör?"
 
-#: itiphandlerhelper_p.cpp:380
+#: itiphandlerhelper_p.cpp:374
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -832,7 +832,7 @@ msgstr ""
 "Du tog bort inbjudan \"%1\".\n"
 "Vill du skicka e-post till deltagarna att händelsen är inställd?"
 
-#: itiphandlerhelper_p.cpp:385
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -841,7 +841,7 @@ msgstr ""
 "Du tog bort inbjudan \"%1\".\n"
 "Vill du skicka e-post till deltagarna att uppgiften är inställd?"
 
-#: itiphandlerhelper_p.cpp:390
+#: itiphandlerhelper_p.cpp:384
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -850,18 +850,18 @@ msgstr ""
 "Du tog bort inbjudan \"%1\".\n"
 "Vill du skicka e-post till deltagarna att journalen är inställd?"
 
-#: itiphandlerhelper_p.cpp:412
+#: itiphandlerhelper_p.cpp:401
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Vill du skicka uppdatering av status till journalens organisatör?"
 
-#: itiphandlerhelper_p.cpp:417 itiphandlerhelper_p.cpp:438
+#: itiphandlerhelper_p.cpp:406 itiphandlerhelper_p.cpp:427
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Skicka uppdatering"
 
-#: itiphandlerhelper_p.cpp:432
+#: itiphandlerhelper_p.cpp:421
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -870,53 +870,53 @@ msgstr ""
 "Du har tidigare accepterat en inbjudan till aktiviteten. Vill du skicka ett "
 "uppdaterat svar till händelsens organisatör som avböjer inbjudan?"
 
-#: itiphandlerhelper_p.cpp:477 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:466 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Motförslag: %1"
 
-#: itiphandlerhelper_p.cpp:494
+#: itiphandlerhelper_p.cpp:483
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Misslyckades skicka e-post för gruppschemaläggning."
 
-#: itiphandlerhelper_p.cpp:502
+#: itiphandlerhelper_p.cpp:491
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Avbryt uppdatering"
 
-#: mailclient_p.cpp:379 mailclient_p.cpp:417
+#: mailclient_p.cpp:380 mailclient_p.cpp:418
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Det finns inga deltagare att skicka e-post till"
 
-#: mailclient_p.cpp:425
+#: mailclient_p.cpp:426
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Ledig/upptagen-objekt"
 
-#: mailclient_p.cpp:459 mailclient_p.cpp:490
+#: mailclient_p.cpp:460 mailclient_p.cpp:491
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Ledig/upptagen-meddelande"
 
-#: mailclient_p.cpp:630
+#: mailclient_p.cpp:632
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Fel när överföring skulle skapas"
 
-#: mailclient_p.cpp:648
+#: mailclient_p.cpp:650
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Fel när överföring skulle hämtas. Kan inte skicka inbjudningarna"
 
-#: mailclient_p.cpp:671
+#: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Fel när brev skulle köas i utkorg: %1"
 
-#: mailclient_p.cpp:703
+#: mailclient_p.cpp:705
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -927,24 +927,24 @@ msgstr ""
 "tillfrågad om att signera brevet eller inte.\n"
 "Signera brevet?"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgid "Sign Message?"
 msgstr "Signera brev?"
 
-#: mailclient_p.cpp:709 mailclient_p.cpp:735
+#: mailclient_p.cpp:711 mailclient_p.cpp:737
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Signera"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:712 mailclient_p.cpp:738
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "Signera i&nte"
 
-#: mailclient_p.cpp:730
+#: mailclient_p.cpp:732
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -953,7 +953,7 @@ msgstr ""
 "Signeringspreferenserna för dessa mottagare har konflikter.\n"
 "Signera brevet?"
 
-#: mailclient_p.cpp:755
+#: mailclient_p.cpp:757
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -962,19 +962,19 @@ msgstr ""
 "Du har begärt att signera brevet, men inga giltiga signeringsnycklar har "
 "ställts in för den här identiteten."
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Skicka osignerat?"
 
-#: mailclient_p.cpp:758
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Skicka &osignerat"
 
-#: mailclient_p.cpp:772
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -985,7 +985,7 @@ msgstr ""
 "Att skicka bara delvis signerade brev kan bryta mot lokal policy.\n"
 "Signera alla delar istället?"
 
-#: mailclient_p.cpp:776
+#: mailclient_p.cpp:778
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -996,29 +996,29 @@ msgstr ""
 "Att skicka osignerade brev kan bryta mot lokal policy.\n"
 "Signera brevet istället?"
 
-#: mailclient_p.cpp:779
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Signera alla delar"
 
-#: mailclient_p.cpp:779
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign"
 msgstr "&Signera"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:783
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Varning om osignerat brev"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:785
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Skick&a som det är"
 
-#: mailclient_p.cpp:836
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1027,7 +1027,7 @@ msgstr ""
 "Giltiga pålitliga nycklar hittades för alla mottagare.\n"
 "Kryptera brevet?"
 
-#: mailclient_p.cpp:839
+#: mailclient_p.cpp:841
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1038,33 +1038,33 @@ msgstr ""
 "tillfrågad om att kryptera brevet eller inte.\n"
 "Kryptera brevet?"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Kryptera brev?"
 
-#: mailclient_p.cpp:845
+#: mailclient_p.cpp:847
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Sign&era och kryptera"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:918
+#: mailclient_p.cpp:847 mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt"
 msgstr "Krypt&era"
 
-#: mailclient_p.cpp:846 mailclient_p.cpp:922
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Signera enbart"
 
-#: mailclient_p.cpp:846 mailclient_p.cpp:922
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Skicka som det är"
 
-#: mailclient_p.cpp:866
+#: mailclient_p.cpp:868
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1073,24 +1073,24 @@ msgstr ""
 "Krypteringspreferenserna för dessa mottagare har konflikter.\n"
 "Kryptera brevet?"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:872
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Kryptera brev?"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Krypt&era"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "Kryptera i&nte"
 
-#: mailclient_p.cpp:891
+#: mailclient_p.cpp:893
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1100,18 +1100,18 @@ msgstr ""
 "Du har begärt att kryptera brevet, och att kryptera en kopia till dig själv, "
 "men inga giltiga krypteringsnycklar har ställts in för den här identiteten."
 
-#: mailclient_p.cpp:895
+#: mailclient_p.cpp:897
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Skicka okrypterat?"
 
-#: mailclient_p.cpp:895
+#: mailclient_p.cpp:897
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Skicka &okrypterat"
 
-#: mailclient_p.cpp:909
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1124,7 +1124,7 @@ msgstr ""
 "läcka ut känslig information.\n"
 "Kryptera alla delar istället?"
 
-#: mailclient_p.cpp:914
+#: mailclient_p.cpp:916
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1137,12 +1137,12 @@ msgstr ""
 "känslig information.\n"
 "Kryptera breven istället?"
 
-#: mailclient_p.cpp:918
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Krypt&era alla delar"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:922
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Varning om okrypterat brev"
@@ -1984,49 +1984,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:459
+#: todomodel.cpp:467
 #, kde-format
 msgid "Summary"
 msgstr "Sammanfattning"
 
-#: todomodel.cpp:461
+#: todomodel.cpp:469
 #, kde-format
 msgid "Recurs"
 msgstr "Upprepas"
 
-#: todomodel.cpp:463
+#: todomodel.cpp:471
 #, kde-format
 msgid "Priority"
 msgstr "Prioritet"
 
-#: todomodel.cpp:465
+#: todomodel.cpp:473
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Färdig"
 
-#: todomodel.cpp:467
+#: todomodel.cpp:475
 #, kde-format
 msgid "Start Date"
 msgstr "Startdatum"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:477
 #, kde-format
 msgid "Due Date"
 msgstr "Färdigdatum"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:479
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Klar"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:481
 #, kde-format
 msgid "Tags"
 msgstr "Etiketter"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:483
 #, kde-format
 msgid "Description"
 msgstr "Beskrivning"
