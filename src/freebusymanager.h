@@ -1,7 +1,4 @@
 /*
-  Requires the Qt and KDE widget libraries, available at no cost at
-  http://www.trolltech.com and http://www.kde.org respectively
-
   SPDX-FileCopyrightText: 2002-2004 Klarälvdalens Datakonsult AB,
         <info@klaralvdalens-datakonsult.se>
 
