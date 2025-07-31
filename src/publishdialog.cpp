@@ -119,10 +119,15 @@ void PublishDialog::accept()
     QString badAddress;
     const KEmailAddress::EmailParseResult addressOk = KEmailAddress::isValidAddressList(addresses(), badAddress);
     if (addressOk != KEmailAddress::AddressOk) {
+        auto errorMessage = emailParseResultToString(addressOk);
+        if (d->mUI.mEmailLineEdit->text().isEmpty()) {
+            errorMessage = i18nc("@info", "Please provide at least 1 valid email address");
+        }
         KMessageBox::error(this,
-                           i18n("Unable to publish the calendar incidence due to an "
-                                "invalid recipients string.\n%1",
-                                emailParseResultToString(addressOk)),
+                           i18nc("@info",
+                                 "Unable to publish the calendar incidence due to an "
+                                 "invalid recipients string.\n%1",
+                                 errorMessage),
                            i18nc("@title:window", "Publishing Error"));
     } else {
         QDialog::accept();
