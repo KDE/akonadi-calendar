@@ -54,10 +54,11 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
 
     QString text;
     const auto now = QDateTime::currentDateTime();
-    const auto incidenceType = incidence->type() == KCalendarCore::Incidence::TypeTodo ? i18n("Task") : i18n("Event");
+    const auto incidenceType =
+        incidence->type() == KCalendarCore::Incidence::TypeTodo ? i18nc("incidence is a to-do", "To-do") : i18nc("incidence is an event", "Event");
     if (incidence->type() == KCalendarCore::Incidence::TypeTodo && !incidence->dtStart().isValid()) {
         const auto todo = incidence.staticCast<KCalendarCore::Todo>();
-        text = i18n("Task due at %1", QLocale().toString(todo->dtDue().time(), QLocale::NarrowFormat));
+        text = i18n("To-do due at %1", QLocale().toString(todo->dtDue().time(), QLocale::NarrowFormat));
     } else if (!incidence->allDay()) {
         const int startOffset = qRound(now.secsTo(startTime) / 60.0);
         if (startOffset > 0 && startOffset < 60) {
