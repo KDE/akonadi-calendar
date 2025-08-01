@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2013-03-25 17:45+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -1112,15 +1112,22 @@ msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr ""
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
 #, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
+#, kde-format
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
 "%1"
 msgstr ""
 
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"

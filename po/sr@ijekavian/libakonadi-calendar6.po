@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1214,11 +1214,18 @@ msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr "Кликните на дугме <i>Помоћ</i> да прочитате више о групном заказивању."
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
+#, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to publish the calendar incidence due to an invalid recipients "
 #| "string. %1"
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
@@ -1226,7 +1233,7 @@ msgid ""
 msgstr "Не могу да објавим случај из календара због лоше ниске прималаца. %1"
 
 # >> @title:window
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, fuzzy, kde-format
 #| msgid "Publishing Error"
 msgctxt "@title:window"

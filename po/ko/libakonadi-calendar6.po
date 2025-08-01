@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2024-08-19 21:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1175,8 +1175,19 @@ msgstr ""
 "<b>도움말</b> 단추를 클릭하면 그룹 약속 결정에 대한 더 많은 정보를 볼 수 있습"
 "니다."
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
 #, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string.\n"
+#| "%1"
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
@@ -1185,7 +1196,7 @@ msgstr ""
 "받는 사람 문자열이 잘못되어 반복되는 캘린더 항목을 게시할 수 없습니다.\n"
 "%1"
 
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"

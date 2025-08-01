@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2024-10-02 16:38+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1194,8 +1194,19 @@ msgstr ""
 "Spiežot uz <b>Palīdzība</b> pogas, varēsiet uzzināt vairāk par grupu "
 "plānošanu."
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
 #, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string.\n"
+#| "%1"
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
@@ -1204,7 +1215,7 @@ msgstr ""
 "Neizdodas publicēta kalendāra notikumu nederīgas saņēmēju virknes dēļ.\n"
 "%1"
 
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"

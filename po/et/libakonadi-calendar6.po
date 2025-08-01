@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2020-04-20 11:38+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -1191,11 +1191,18 @@ msgstr ""
 "Klõpsuga nupule <b>Abi</b> saab täpsemalt tutvuda grupitöö ajaplaneerija "
 "kohta käiva teabega."
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
+#, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to publish the calendar incidence due to an invalid recipients "
 #| "string. %1"
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
@@ -1204,7 +1211,7 @@ msgstr ""
 "Kalendriintsidendi avaldamine ei ole võimalik vigase saajate stringi tõttu. "
 "%1"
 
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, fuzzy, kde-format
 #| msgid "Publishing Error"
 msgctxt "@title:window"

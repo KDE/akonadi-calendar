@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2025-07-23 15:23-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1202,8 +1202,19 @@ msgstr ""
 "Clique no botão <b>Ajuda</b> para ler mais informações sobre agendamento de "
 "grupo."
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
 #, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string.\n"
+#| "%1"
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
@@ -1213,7 +1224,7 @@ msgstr ""
 "destinatários ser inválida.\n"
 "%1"
 
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"

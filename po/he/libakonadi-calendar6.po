@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:44+0000\n"
 "PO-Revision-Date: 2025-07-07 18:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1159,8 +1159,19 @@ msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr "לחיצה על כפתור ה<b>עזרה</b> תציג בפניך פרטםי נוספים על תזמון קבוצתי."
 
-#: publishdialog.cpp:123
+#: publishdialog.cpp:124
 #, kde-format
+msgctxt "@info"
+msgid "Please provide at least 1 valid email address"
+msgstr ""
+
+#: publishdialog.cpp:128
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to publish the calendar incidence due to an invalid recipients "
+#| "string.\n"
+#| "%1"
+msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
 "string.\n"
@@ -1169,7 +1180,7 @@ msgstr ""
 "לא ניתן לפרסם את מופע לוח השנה הזה עקב מחרוזת נמענים שגויה.\n"
 "%1"
 
-#: publishdialog.cpp:126
+#: publishdialog.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
