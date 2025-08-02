@@ -1,16 +1,16 @@
 # Translation for libakonadi-calendar5.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2024 This file is copyright:
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-01 00:44+0000\n"
-"PO-Revision-Date: 2025-07-23 13:55+0200\n"
+"PO-Revision-Date: 2025-08-01 12:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -1213,14 +1213,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Mesedez, eman gutxienez e-posta helbide baliodun bat"
 
 #: publishdialog.cpp:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string.\n"
-#| "%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "

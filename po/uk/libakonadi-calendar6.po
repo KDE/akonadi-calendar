@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-01 00:44+0000\n"
-"PO-Revision-Date: 2024-08-01 20:14+0300\n"
+"PO-Revision-Date: 2025-08-01 09:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1220,14 +1220,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Будь ласка, надайте принаймні одну коректну адресу електронної пошти"
 
 #: publishdialog.cpp:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string.\n"
-#| "%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
