@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-01 00:44+0000\n"
-"PO-Revision-Date: 2025-07-23 15:23-0300\n"
+"PO-Revision-Date: 2025-08-02 09:31-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -1206,14 +1206,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Forneça pelo menos um endereço de e-mail válido"
 
 #: publishdialog.cpp:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string.\n"
-#| "%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
