@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-19 00:40+0000\n"
+"POT-Creation-Date: 2025-08-04 00:42+0000\n"
 "PO-Revision-Date: 2024-09-19 19:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,22 +32,26 @@ msgstr "mkondarev@yahoo.de"
 msgid "View"
 msgstr "Изглед"
 
-#: alarmnotification.cpp:57
+#: alarmnotification.cpp:58
 #, kde-format
-msgid "Task"
-msgstr "Задача"
+msgctxt "incidence is a to-do"
+msgid "To-do"
+msgstr ""
 
-#: alarmnotification.cpp:57
-#, kde-format
+#: alarmnotification.cpp:58
+#, fuzzy, kde-format
+#| msgid "Event"
+msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Събитие"
 
-#: alarmnotification.cpp:60
-#, kde-format
-msgid "Task due at %1"
+#: alarmnotification.cpp:61
+#, fuzzy, kde-format
+#| msgid "Task due at %1"
+msgid "To-do due at %1"
 msgstr "Изпълнение на задачата на %1"
 
-#: alarmnotification.cpp:64
+#: alarmnotification.cpp:65
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
@@ -55,64 +59,64 @@ msgid_plural "%2 starts in %1 minutes"
 msgstr[0] "%2 започва след %1 минута"
 msgstr[1] "%2 започва след %1 минути"
 
-#: alarmnotification.cpp:68
+#: alarmnotification.cpp:69
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "%1 започва от %2"
 
-#: alarmnotification.cpp:70
+#: alarmnotification.cpp:71
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "%1 започнато на  в %2"
 
-#: alarmnotification.cpp:76
+#: alarmnotification.cpp:77
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "%1 започва на %2  в %3"
 
-#: alarmnotification.cpp:82
+#: alarmnotification.cpp:83
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "%1 започнато на %2 в %3"
 
-#: alarmnotification.cpp:91
+#: alarmnotification.cpp:92
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "%1 започва на %2"
 
-#: alarmnotification.cpp:93
+#: alarmnotification.cpp:94
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 започнати на %2"
 
-#: alarmnotification.cpp:118
+#: alarmnotification.cpp:119
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Напомняне след 5 мин"
 
-#: alarmnotification.cpp:124
+#: alarmnotification.cpp:125
 #, kde-format
 msgid "Remind later..."
 msgstr "Напомни ми по-късно…"
 
-#: alarmnotification.cpp:130
+#: alarmnotification.cpp:131
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Отхвърляне"
 
-#: alarmnotification.cpp:206
+#: alarmnotification.cpp:207
 #, kde-format
 msgid "Open URL"
 msgstr "Отваряне на адрес (URL)"
 
-#: alarmnotification.cpp:224
+#: alarmnotification.cpp:225
 #, kde-format
 msgid "Map"
 msgstr "Карта"
@@ -250,3 +254,6 @@ msgstr "Отказ"
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
 msgstr "Отмяна на напомнянето по-късно,показване на известието отново"
+
+#~ msgid "Task"
+#~ msgstr "Задача"

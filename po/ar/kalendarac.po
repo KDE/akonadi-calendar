@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-19 00:40+0000\n"
+"POT-Creation-Date: 2025-08-04 00:42+0000\n"
 "PO-Revision-Date: 2024-09-26 11:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,22 +33,26 @@ msgstr "zayed.alsaidi@gmail.com"
 msgid "View"
 msgstr "العرض"
 
-#: alarmnotification.cpp:57
+#: alarmnotification.cpp:58
 #, kde-format
-msgid "Task"
-msgstr "المهمّة"
+msgctxt "incidence is a to-do"
+msgid "To-do"
+msgstr ""
 
-#: alarmnotification.cpp:57
-#, kde-format
+#: alarmnotification.cpp:58
+#, fuzzy, kde-format
+#| msgid "Event"
+msgctxt "incidence is an event"
 msgid "Event"
 msgstr "الحدث"
 
-#: alarmnotification.cpp:60
-#, kde-format
-msgid "Task due at %1"
+#: alarmnotification.cpp:61
+#, fuzzy, kde-format
+#| msgid "Task due at %1"
+msgid "To-do due at %1"
 msgstr "تحين المهمة عند %1"
 
-#: alarmnotification.cpp:64
+#: alarmnotification.cpp:65
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
@@ -60,64 +64,64 @@ msgstr[3] "تبدأ %2 بعد %1 دقائق"
 msgstr[4] "تبدأ %2 بعد %1 دقيقة"
 msgstr[5] "تبدأ %2 بعد %1 دقيقة"
 
-#: alarmnotification.cpp:68
+#: alarmnotification.cpp:69
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "تبدأ ‏%1 في %2"
 
-#: alarmnotification.cpp:70
+#: alarmnotification.cpp:71
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "بدأت ‏%1 في %2"
 
-#: alarmnotification.cpp:76
+#: alarmnotification.cpp:77
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "تبدأ ‏%1 في %2 عند %3"
 
-#: alarmnotification.cpp:82
+#: alarmnotification.cpp:83
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "بدأت ‏%1 في %2 عند %3"
 
-#: alarmnotification.cpp:91
+#: alarmnotification.cpp:92
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "تبدأ ‏%1 في %2"
 
-#: alarmnotification.cpp:93
+#: alarmnotification.cpp:94
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "بدأت ‏%1 في %2"
 
-#: alarmnotification.cpp:118
+#: alarmnotification.cpp:119
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "ذكرني بعد خمس دقائق"
 
-#: alarmnotification.cpp:124
+#: alarmnotification.cpp:125
 #, kde-format
 msgid "Remind later..."
 msgstr "ذكّرني لاحقًا..."
 
-#: alarmnotification.cpp:130
+#: alarmnotification.cpp:131
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "تجاهل"
 
-#: alarmnotification.cpp:206
+#: alarmnotification.cpp:207
 #, kde-format
 msgid "Open URL"
 msgstr "افتح الرابط"
 
-#: alarmnotification.cpp:224
+#: alarmnotification.cpp:225
 #, kde-format
 msgid "Map"
 msgstr "الخريطة"
@@ -252,6 +256,9 @@ msgstr "ألغِ"
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
 msgstr "ألغ التذكير لاحقًا، وأظهر الإشعار مرة أخرى"
+
+#~ msgid "Task"
+#~ msgstr "المهمّة"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "Press this button to silence the reminder forever."
