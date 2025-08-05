@@ -2,6 +2,17 @@
 IconName=appointment-reminder
 DesktopEntry=org.kde.kalendar
 Comment=Reminders about calendar events and to-dos
+Comment[ca]=Recordatoris dels esdeveniments i les tasques pendents del calendari
+Comment[ca@valencia]=Recordatoris dels esdeveniments i les tasques pendents del calendari
+Comment[eu]=Egutegiko ekitaldiei eta egitekoei buruzko oroigarriak
+Comment[he]=תזכורות על אירועים ומטלות בלוח השנה
+Comment[ka]=შეხსენებები კალენდარული მოვლენებისა და გეგმების შესახებ
+Comment[nl]=Herinneringen over agenda-afspraken en taken
+Comment[sl]=Opomniki o dogodkih v koledarju in opravilih
+Comment[sv]=Påminnelser om kalenderhändelser och uppgifter
+Comment[tr]=Takvim etkinlikleri ve yapılacaklar için anımsatıcılar
+Comment[uk]=Нагадування щодо подій та завдань з календаря
+Comment[x-test]=xxReminders about calendar events and to-dosxx
 Name=Calendar Reminders
 Name[ar]=تذكير التقويم
 Name[az]=Təqvim xatırlatmaları
