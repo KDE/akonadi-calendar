@@ -75,7 +75,7 @@ msgstr "الحالة"
 #: akonadi_serializer_kcalcore.cpp:240
 #, kde-format
 msgid "Secrecy"
-msgstr "السّرّيّة"
+msgstr "السريّة"
 
 #: akonadi_serializer_kcalcore.cpp:244
 #, kde-format
