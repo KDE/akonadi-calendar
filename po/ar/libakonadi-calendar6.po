@@ -179,7 +179,7 @@ msgstr "كلمة سرّ نشر متفرّغ/مشغول"
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr "كلمة السّرّ لنشر معلومات متفرّغ/مشغول"
+msgstr "كلمة السر لنشر معلومات متفرّغ/مشغول"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:45
