@@ -433,8 +433,6 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
         return;
     }
 
-    beginResetModel();
-
     if (sourceModel()) {
         disconnect(sourceModel(), &QAbstractItemModel::dataChanged, this, nullptr);
     }
@@ -446,8 +444,6 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
             d->onDataChanged(begin, end);
         });
     }
-
-    endResetModel();
 }
 
 void TodoModel::setIncidenceChanger(Akonadi::IncidenceChanger *changer)

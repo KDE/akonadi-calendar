@@ -540,13 +540,11 @@ void IncidenceTreeModelPrivate::onRowsRemoved(const QModelIndex &parent, int beg
 
 void IncidenceTreeModelPrivate::onModelAboutToBeReset()
 {
-    q->beginResetModel();
 }
 
 void IncidenceTreeModelPrivate::onModelReset()
 {
     reset(/**silent=*/false);
-    q->endResetModel();
 }
 
 void IncidenceTreeModelPrivate::onLayoutAboutToBeChanged()
