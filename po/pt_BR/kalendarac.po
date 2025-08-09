@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-04 00:42+0000\n"
-"PO-Revision-Date: 2025-07-23 15:20-0300\n"
+"PO-Revision-Date: 2025-08-08 10:31-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -37,20 +37,18 @@ msgstr "Exibir"
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
-msgstr ""
+msgstr "Tarefa"
 
 #: alarmnotification.cpp:58
-#, fuzzy, kde-format
-#| msgid "Event"
+#, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Evento"
 
 #: alarmnotification.cpp:61
-#, fuzzy, kde-format
-#| msgid "Task due at %1"
+#, kde-format
 msgid "To-do due at %1"
-msgstr "A tarefa vence em %1"
+msgstr "Tarefa vence em %1"
 
 #: alarmnotification.cpp:65
 #, kde-format
