@@ -32,6 +32,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <gpgme++/context.h>
 #include <gpgme++/importresult.h>
 
+#include <gpgme.h>
+
 #include <MessageComposer/ComposerJob>
 #include <MessageComposer/ContactPreference>
 #include <MessageComposer/GlobalPart>
@@ -581,7 +583,11 @@ bool MailClient::addKeysToContext(const QString &gnupgHome,
                             Q_UNUSED(auditLogAsHtml);
                             Q_UNUSED(auditLogError);
                             if (result) {
+#if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
+                                qCWarning(AKONADICALENDAR_LOG) << "Failed to export " << k.primaryFingerprint() << result.asStdString();
+#else
                                 qCWarning(AKONADICALENDAR_LOG) << "Failed to export " << k.primaryFingerprint() << result.asString();
+#endif
                                 --runningJobs;
                                 if (runningJobs < 1) {
                                     loop.quit();
