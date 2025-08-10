@@ -77,6 +77,7 @@ set(IDENTITYMANAGEMENT_LIB_VERSION "6.5.40")
 set(MESSAGECORE_LIB_VERSION "6.5.40")
 set(MESSAGECOMPOSER_LIB_VERSION "6.5.40")
 set(LIBKLEO_LIB_VERSION "6.5.40")
+set(GPGME_LIB_VERSION "1.23.2")
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h"
@@ -124,6 +125,21 @@ find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiContactCore ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
+
+find_package(Gpgmepp ${GPGME_LIB_VERSION} CONFIG)
+set_package_properties(
+    Gpgmepp
+    PROPERTIES
+        DESCRIPTION
+            "GpgME++ Library"
+        URL
+            "https://www.gnupg.org"
+        TYPE
+            REQUIRED
+        PURPOSE
+            "GpgME++ is required for OpenPGP support"
+)
+find_package(QGpgmeQt6 ${GPGME_LIB_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 
