@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-01 00:44+0000\n"
+"POT-Creation-Date: 2025-08-12 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -876,37 +876,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "अद्यतनं निरस्तं कुर्वन्तु"
 
-#: mailclient_p.cpp:380 mailclient_p.cpp:418
+#: mailclient_p.cpp:382 mailclient_p.cpp:420
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "ई-मेलं कर्तुं उपस्थिताः न सन्ति"
 
-#: mailclient_p.cpp:426
+#: mailclient_p.cpp:428
 #, kde-format
 msgid "Free Busy Object"
 msgstr "निःशुल्क व्यस्त वस्तु"
 
-#: mailclient_p.cpp:460 mailclient_p.cpp:491
+#: mailclient_p.cpp:462 mailclient_p.cpp:493
 #, kde-format
 msgid "Free Busy Message"
 msgstr "निःशुल्क व्यस्त सन्देश"
 
-#: mailclient_p.cpp:632
+#: mailclient_p.cpp:638
 #, kde-format
 msgid "Error while creating transport"
 msgstr "परिवहनस्य निर्माणकाले त्रुटिः"
 
-#: mailclient_p.cpp:650
+#: mailclient_p.cpp:656
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "परिवहनं आनयन् त्रुटिः। आमन्त्रणपत्राणि प्रेषयितुं असमर्थः"
 
-#: mailclient_p.cpp:673
+#: mailclient_p.cpp:679
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "बहिःपेटिकायां सन्देशस्य पङ्क्तिकरणं त्रुटिः: %1"
 
-#: mailclient_p.cpp:705
+#: mailclient_p.cpp:711
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -917,24 +917,24 @@ msgstr ""
 "वा न वा इति ।\n"
 "अस्मिन् सन्देशे हस्ताक्षरं कुर्वन्तु?"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:716 mailclient_p.cpp:742
 #, kde-format
 msgid "Sign Message?"
 msgstr "हस्ताक्षरं सन्देशः?"
 
-#: mailclient_p.cpp:711 mailclient_p.cpp:737
+#: mailclient_p.cpp:717 mailclient_p.cpp:743
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&चिह्नम्‌"
 
-#: mailclient_p.cpp:712 mailclient_p.cpp:738
+#: mailclient_p.cpp:718 mailclient_p.cpp:744
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "हस्ताक्षरं कुर्वन्तु &न कुर्वन्तु"
 
-#: mailclient_p.cpp:732
+#: mailclient_p.cpp:738
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -943,7 +943,7 @@ msgstr ""
 "एतेषां प्राप्तकर्तानां कृते परस्परविरोधिनः हस्ताक्षरप्राथमिकताः सन्ति ।\n"
 "अस्मिन् सन्देशे हस्ताक्षरं कुर्वन्तु?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:763
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -952,19 +952,19 @@ msgstr ""
 "भवता एतत् सन्देशं हस्ताक्षरं कर्तुं अनुरोधः कृतः, परन्तु अस्य परिचयस्य कृते वैधहस्ताक्षरकुंजी "
 "विन्यस्ताः न सन्ति ।"
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:766
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "अहस्ताक्षरितं प्रेषयतु?"
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:766
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "प्रेषयतु &अनहस्ताक्षरितम्"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:780
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -975,7 +975,7 @@ msgstr ""
 "केवलं आंशिकरूपेण हस्ताक्षरितसन्देशान् प्रेषयित्वा साइट् नीतिस्य उल्लङ्घनं भवितुम् अर्हति ।\n"
 "तस्य स्थाने सर्वेषु भागेषु हस्ताक्षरं कुर्वन्तु?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:784
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -986,29 +986,29 @@ msgstr ""
 "अहस्ताक्षरितं सन्देशं प्रेषयित्वा साइट् नीतेः उल्लङ्घनं भवितुम् अर्हति ।\n"
 "तस्य स्थाने सन्देशे हस्ताक्षरं कुर्वन्तु?"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:787
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&सभी भागों पर हस्ताक्षर करें"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:787
 #, kde-format
 msgid "&Sign"
 msgstr "&चिह्नम्‌"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:789
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "अहस्ताक्षरित-सन्देश चेतावनी"
 
-#: mailclient_p.cpp:785
+#: mailclient_p.cpp:791
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "प्रेषयतु &यथा अस्ति"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:844
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1017,7 +1017,7 @@ msgstr ""
 "सर्वेषां प्राप्तकर्तानां कृते वैधविश्वसनीयगुप्तीकरणकुंजीः प्राप्ताः ।\n"
 "एतत् सन्देशं एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:841
+#: mailclient_p.cpp:847
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1028,33 +1028,33 @@ msgstr ""
 "इति ।\n"
 "एतत् सन्देशं एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:846
+#: mailclient_p.cpp:852
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "सन्देशं एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:853
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "हस्ताक्षरं && &Encrypt"
 
-#: mailclient_p.cpp:847 mailclient_p.cpp:920
+#: mailclient_p.cpp:853 mailclient_p.cpp:926
 #, kde-format
 msgid "&Encrypt"
 msgstr "&गुप्तीकरण"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:854 mailclient_p.cpp:930
 #, kde-format
 msgid "&Sign Only"
 msgstr "&केवलं हस्ताक्षरं कुर्वन्तु"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:854 mailclient_p.cpp:930
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&यथावत् प्रेषयतु"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:874
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1063,24 +1063,24 @@ msgstr ""
 "एतेषां ग्राहकानाम् कृते परस्परविरोधिनः एन्क्रिप्शन-प्राथमिकताः सन्ति ।\n"
 "एतत् सन्देशं एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:878
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "सन्देशं एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:873
+#: mailclient_p.cpp:879
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&गुप्तीकरण"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:880
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "एन्क्रिप्ट् कुर्वन्तु &न कुर्वन्तु"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:899
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1090,18 +1090,18 @@ msgstr ""
 "भवता एतत् सन्देशं गोपनीयं कर्तुं, प्रतिलिपिं च स्वस्य कृते गोपनं कर्तुं प्रार्थितं, परन्तु अस्य "
 "परिचयस्य कृते वैधविश्वसनीयगुप्तीकरणकुंजी विन्यस्तं नास्ति ।"
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:903
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "अगुप्तं प्रेषयतु?"
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:903
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "प्रेषयतु &अगुप्तम्"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:917
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1114,7 +1114,7 @@ msgstr ""
 "संवेदनशीलसूचनाः लीकं कर्तुं शक्नुवन्ति ।\n"
 "तस्य स्थाने सर्वान् भागान् एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:922
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1127,12 +1127,12 @@ msgstr ""
 "अर्हन्ति ।\n"
 "तस्य स्थाने सन्देशान् एन्क्रिप्ट् कुर्वन्तु?"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:926
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&सर्वभागाः एन्क्रिप्ट् कुर्वन्तु"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:928
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "अगुप्तसन्देश चेतावनी"
