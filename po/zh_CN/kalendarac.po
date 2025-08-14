@@ -36,7 +36,7 @@ msgstr "查看"
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
-msgstr ""
+msgstr "待办事项"
 
 #: alarmnotification.cpp:58
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "事件"
 #: alarmnotification.cpp:61
 #, kde-format
 msgid "To-do due at %1"
-msgstr ""
+msgstr "待办事项截止日期为 %1"
 
 #: alarmnotification.cpp:65
 #, kde-format

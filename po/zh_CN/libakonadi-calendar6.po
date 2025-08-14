@@ -1162,7 +1162,7 @@ msgstr "点击<b>帮助</b>按钮可阅读更多有关分组日程安排的信�
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "请至少提供一个有效的电子邮件地址。"
 
 #: publishdialog.cpp:128
 #, kde-format
@@ -1172,6 +1172,8 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
+"无法发布日历事件，因为收件人字段无效。\n"
+"%1"
 
 #: publishdialog.cpp:131
 #, kde-format
