@@ -1165,6 +1165,8 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
+"无法发布日历事件，因为收件人字段无效。\n"
+"%1"
 
 #: publishdialog.cpp:126
 #, kde-format
