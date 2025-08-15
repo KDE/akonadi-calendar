@@ -501,7 +501,7 @@ msgstr "تعذّر تنزيل الملفّ البعيد."
 #: icalimporter.cpp:142 icalimporter.cpp:163
 #, kde-format
 msgid "An import task is already in progress."
-msgstr "ثمّة مهمّة استيراد تجري بالفعل."
+msgstr "ثمّة مهمّة استيراد تجري فعلًا."
 
 #: icalimporter.cpp:168
 #, kde-format
@@ -559,7 +559,7 @@ msgstr "خطأ أثناء محاولة تعديل عنصر التّقويم. ا�
 #: incidencechanger.cpp:808 incidencechanger.cpp:932
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr "حُذف عنصر التّقويم بالفعل، أو أنّه يجري حذفه."
+msgstr "حُذف عنصر التّقويم فعلًا، أو أنّه يجري حذفه."
 
 #: incidencechanger.cpp:1198
 #, kde-format
