@@ -202,7 +202,7 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
-"يمكنك بهذا الإعداد تغيير اسم الملفّ الذي سيُجلب من الخادوم. إن كان مؤشّرًا عليه "
+"يمكنك بهذا الإعداد تغيير اسم الملفّ الذي سيُجلب من الخادم. إن كان مؤشّرًا عليه "
 "فسيُنزّل ملفّ متفرّغ/مشغول له الاسم user@domain.ifb، مثلًا nn@kde.org.ifb. إن لم "
 "يؤشّر فسيُنزّل user.ifb، مثلًا nn.ifb."
 
@@ -295,7 +295,7 @@ msgid ""
 msgstr ""
 "يمكنك بهذا الإعداد ضبط فيما إذا كان جزء النّطاق لمسار متفرّغ/مشغول يطابق جزء "
 "النّطاق لمعرّف المستخدم الذي تبحث عنه. فمثلًا (إن ضُبط هذا الخيار) البحث عنه "
-"بيانات متفرّغ/مشغول لِ‍ joe@mydomain.com على الخادوم www.yourdomain.com سيفشل."
+"بيانات متفرّغ/مشغول لِ‍ joe@mydomain.com على الخادم www.yourdomain.com سيفشل."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
 #: todomodel.cpp:479
