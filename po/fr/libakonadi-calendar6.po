@@ -1,7 +1,7 @@
 # translation of libakonadi-calendar.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2020, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2020, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Joëlle Cornavin <jcornavin@laposte.net>, 2010, 2011.
 # Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2013.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
@@ -22,9 +22,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 25.07.90\n"
 "X-Text-Markup: kde4\n"
 
 #: calendarbase.cpp:265
