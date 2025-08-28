@@ -39,17 +39,15 @@ msgid "To-do"
 msgstr ""
 
 #: alarmnotification.cpp:58
-#, fuzzy, kde-format
-#| msgid "Event"
+#, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
-msgstr "Událost"
+msgstr ""
 
 #: alarmnotification.cpp:61
-#, fuzzy, kde-format
-#| msgid "Task due at %1"
+#, kde-format
 msgid "To-do due at %1"
-msgstr "Termín úlohy %1"
+msgstr ""
 
 #: alarmnotification.cpp:65
 #, kde-format
@@ -247,6 +245,3 @@ msgstr "Zrušit"
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
 msgstr ""
-
-#~ msgid "Task"
-#~ msgstr "Úloha"
