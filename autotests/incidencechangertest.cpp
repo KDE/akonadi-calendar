@@ -332,7 +332,7 @@ private Q_SLOTS:
             auto fetchJob = new ItemFetchJob(item, this);
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
-            QVERIFY(fetchJob->items().count() == 1);
+            QCOMPARE(fetchJob->items().count(), 1);
             Item const fetchedItem = fetchJob->items().constFirst();
             QVERIFY(fetchedItem.isValid());
             QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
@@ -375,7 +375,7 @@ private Q_SLOTS:
         auto fetchJob = new ItemFetchJob(item, this);
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
-        QVERIFY(fetchJob->items().count() == 1);
+        QCOMPARE(fetchJob->items().count(), 1);
         Item const fetchedItem = fetchJob->items().constFirst();
         QVERIFY(fetchedItem.isValid());
         QVERIFY(fetchedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
@@ -528,7 +528,7 @@ private Q_SLOTS:
         auto fetchJob = new ItemFetchJob(item, this);
         fetchJob->fetchScope().fetchFullPayload();
         AKVERIFYEXEC(fetchJob);
-        QVERIFY(fetchJob->items().count() == 1);
+        QCOMPARE(fetchJob->items().count(), 1);
         Item const fetchedItem = fetchJob->items().constFirst();
 
         QVERIFY(fetchedItem.isValid());
@@ -608,7 +608,7 @@ private Q_SLOTS:
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
                 const auto items = fetchJob->items();
-                QVERIFY(items.count() == 1);
+                QCOMPARE(items.count(), 1);
                 QCOMPARE(items.first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(i));
             }
         }
@@ -622,7 +622,7 @@ private Q_SLOTS:
             fetchJob->fetchScope().fetchFullPayload();
             AKVERIFYEXEC(fetchJob);
             const auto items = fetchJob->items();
-            QVERIFY(items.count() == 1);
+            QCOMPARE(items.count(), 1);
             QCOMPARE(items.first().payload<KCalendarCore::Incidence::Ptr>()->summary(), QString::number(numberOfModifications - 1));
             if (mIncidencesToModify > 0) {
                 waitForSignals();
@@ -1147,7 +1147,7 @@ public Q_SLOTS:
             QTest::qWait(100);
         }
 
-        QVERIFY(mChangeToWaitFor == -1);
+        QCOMPARE(mChangeToWaitFor, -1);
     }
 
     void deleteFinished(int changeId, const QList<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)

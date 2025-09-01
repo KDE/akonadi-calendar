@@ -202,10 +202,10 @@ void CalendarBaseTest::testDelete()
     QVERIFY(!job2->exec());
     QVERIFY(!job3->exec());
     QVERIFY(!job4->exec());
-    QVERIFY(mCalendar->item(event.id()) == Item());
-    QVERIFY(mCalendar->item(todo.id()) == Item());
-    QVERIFY(mCalendar->item(journal.id()) == Item());
-    QVERIFY(mCalendar->item(incidence.id()) == Item());
+    QCOMPARE(mCalendar->item(event.id()), Item());
+    QCOMPARE(mCalendar->item(todo.id()), Item());
+    QCOMPARE(mCalendar->item(journal.id()), Item());
+    QCOMPARE(mCalendar->item(incidence.id()), Item());
 }
 
 /*

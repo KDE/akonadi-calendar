@@ -114,8 +114,8 @@ private Q_SLOTS:
 
         auto event2 = item2.payload<Event::Ptr>();
         QVERIFY(event2 != nullptr);
-        QVERIFY(event2->summary().toUtf8() == QByteArray(utf_umlaut));
-        QVERIFY(event2->summary().toLatin1() == QByteArray(latin1_umlaut));
+        QCOMPARE(event2->summary().toUtf8(), QByteArray(utf_umlaut));
+        QCOMPARE(event2->summary().toLatin1(), QByteArray(latin1_umlaut));
     }
 };
 
