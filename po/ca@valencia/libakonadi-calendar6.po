@@ -1186,7 +1186,7 @@ msgstr "Error enviant el correu: "
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Addresses"
-msgstr "Seleccioneu les adreces"
+msgstr "Trieu les adreces"
 
 #: publishdialog.cpp:61
 #, kde-format
@@ -1313,7 +1313,7 @@ msgstr "&Elimina"
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr "Selecciona un destinatari des de la llibreta d'adreces"
+msgstr "Tria un destinatari des de la llibreta d'adreces"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1329,7 +1329,7 @@ msgstr ""
 #: publishdialog_base.ui:84
 #, kde-format
 msgid "&Select…"
-msgstr "&Selecciona…"
+msgstr "&Tria…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
