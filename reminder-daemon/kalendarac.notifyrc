@@ -3,6 +3,7 @@ IconName=appointment-reminder
 DesktopEntry=org.kde.kalendar
 Comment=Reminders about calendar events and to-dos
 Comment[ar]=مذكِّر بأحداث التقويم والأعمال
+Comment[bg]=Напомняния за календарни събития и задачи
 Comment[ca]=Recordatoris dels esdeveniments i les tasques pendents del calendari
 Comment[ca@valencia]=Recordatoris dels esdeveniments i les tasques pendents del calendari
 Comment[es]=Recordatorios sobre eventos de calendario y tareas pendientes
