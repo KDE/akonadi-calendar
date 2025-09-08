@@ -55,7 +55,6 @@ Name[sv]=Förekomstserialisering
 Name[tg]=Силсилабанди фарогирӣ
 Name[tr]=Olay Sıralandırıcısı
 Name[uk]=Серіалізатор подій
-Name[x-test]=xxIncidence Serializerxx
 Name[zh_CN]=事件序列转换器
 Name[zh_TW]=事件序列器
 Comment=An Akonadi serializer plugin for events, tasks and journal entries
@@ -115,7 +114,6 @@ Comment[sv]=Ett insticksprogram till Akonadi för serialisering av händelser, u
 Comment[tg]=Васеъшавии силсилабанди барномаи Akonadi барои рӯйдодҳо, вазифаҳо ва вурудҳои дафтар
 Comment[tr]=Olay, görev ve günce nesneleri için bir Akonadi sıralandırıcısı
 Comment[uk]=Додаток серіалізації Akonadi для подій, завдань і записів журналів
-Comment[x-test]=xxAn Akonadi serializer plugin for events, tasks and journal entriesxx
 Comment[zh_CN]=对事项、任务和日记项进行序列转换的 Akonadi 插件
 Comment[zh_TW]=事件、工作與日誌項目物件的 Akonadi 序列器外掛程式
 
