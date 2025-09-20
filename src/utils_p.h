@@ -18,8 +18,6 @@
  * Util functions that have no place to live.
  */
 
-class QWidget;
-
 namespace Akonadi
 {
 namespace CalendarUtils
