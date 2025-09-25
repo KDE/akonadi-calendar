@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2022, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-04 00:42+0000\n"
-"PO-Revision-Date: 2024-09-19 11:30+0200\n"
+"PO-Revision-Date: 2025-09-24 16:43+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -36,20 +36,18 @@ msgstr "Vista"
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
-msgstr ""
+msgstr "De facer"
 
 #: alarmnotification.cpp:58
-#, fuzzy, kde-format
-#| msgid "Event"
+#, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Evento"
 
 #: alarmnotification.cpp:61
-#, fuzzy, kde-format
-#| msgid "Task due at %1"
+#, kde-format
 msgid "To-do due at %1"
-msgstr "Expiration de carga a %1"
+msgstr "Expiration de facer a %1"
 
 #: alarmnotification.cpp:65
 #, kde-format
