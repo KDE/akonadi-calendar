@@ -196,7 +196,7 @@ class MailClientTest : public QObject
 
 private:
     TestableMailClient *mMailClient = nullptr;
-    int mPendingSignals;
+    int mPendingSignals = 0;
     MailClient::Result mLastResult;
     QString mLastErrorMessage;
 
