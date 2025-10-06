@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-26 00:43+0000\n"
-"PO-Revision-Date: 2025-07-07 18:38+0300\n"
+"PO-Revision-Date: 2025-10-05 08:50+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: calendarbase.cpp:265
 #, kde-format
@@ -1157,7 +1157,7 @@ msgstr "לחיצה על כפתור ה<b>ביטול</b> תחסל את פעולת 
 #, kde-format
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
-msgstr "לחיצה על כפתור ה<b>עזרה</b> תציג בפניך פרטםי נוספים על תזמון קבוצתי."
+msgstr "לחיצה על כפתור ה<b>עזרה</b> תציג בפניך פרטים נוספים על תזמון קבוצתי."
 
 #: publishdialog.cpp:123
 #, kde-format
