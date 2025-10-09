@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# SPDX-FileCopyrightText: 2022, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-04 00:42+0000\n"
-"PO-Revision-Date: 2024-12-24 15:35+0100\n"
+"PO-Revision-Date: 2025-10-09 00:06+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,18 +36,16 @@ msgstr "보기"
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
-msgstr ""
+msgstr "할 일"
 
 #: alarmnotification.cpp:58
-#, fuzzy, kde-format
-#| msgid "Event"
+#, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "이벤트"
 
 #: alarmnotification.cpp:61
-#, fuzzy, kde-format
-#| msgid "Task due at %1"
+#, kde-format
 msgid "To-do due at %1"
 msgstr "%1에 만료되는 작업"
 
