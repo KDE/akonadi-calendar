@@ -261,7 +261,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
         return {};
     } else if (kpgpResult != MessageComposer::ResolverResult::Ok) {
         // TODO handle failure
-        qCDebug(AKONADICALENDAR_LOG) << "resolveAllKeys: failed to resolve keys! oh noes";
+        qCDebug(AKONADICALENDAR_LOG) << "resolveAllKeys: failed to resolve keys! oh no";
         return {};
     }
 
