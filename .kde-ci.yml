@@ -20,7 +20,12 @@ Dependencies:
 
 Options:
   require-passing-tests-on: ['Linux', 'FreeBSD']
-  cppcheck-arguments: '--enable=warning,performance,portability,style --suppress-xml=cppcheck-suppressions.xml -DQTEST_AKONADIMAIN\(X\)= -DAKONADI_CALENDAR_DECL_DEPRECATED_TEXT\(X\)= -DKCONFIGGROUP_DECLARE_ENUM_QOBJECT\(X,Y\)='
+  cppcheck-arguments:
+    - --enable=warning,performance,portability,style
+    - --suppress-xml=cppcheck-suppressions.xml
+    - -DQTEST_AKONADIMAIN(X)=
+    - -DAKONADI_CALENDAR_DECL_DEPRECATED_TEXT(X)=
+    - -DKCONFIGGROUP_DECLARE_ENUM_QOBJECT(X,Y)=
   cppcheck-ignore-files:
     - autotests
   require-cppcheck-clean: True
