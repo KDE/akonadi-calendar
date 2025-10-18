@@ -4,7 +4,7 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2019, 2020.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2019, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
@@ -295,7 +295,8 @@ msgstr "Envia pseudocontrapropostes semblants a les d'Outlook"
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
-"Comprova si el nom de màquina i l'adreça de correu de recuperació coincidixen"
+"Comprova si el nom de l'amfitrió i l'adreça de correu de recuperació "
+"coincidixen"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:106
