@@ -31,8 +31,15 @@ void KColumnFilterProxyModel::setVisibleColumn(int column)
 
 void KColumnFilterProxyModel::setVisibleColumns(const QList<int> &visibleColumns)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+#endif
     m_visibleColumns = visibleColumns;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Columns);
+#else
     invalidateFilter();
+#endif
 }
 
 bool KColumnFilterProxyModel::filterAcceptsColumn(int column, const QModelIndex &parent) const

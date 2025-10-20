@@ -44,8 +44,15 @@ void CalFilterProxyModel::setFilter(KCalendarCore::CalFilter *filter)
         return;
     }
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+#endif
     d->filter = filter;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 bool CalFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
