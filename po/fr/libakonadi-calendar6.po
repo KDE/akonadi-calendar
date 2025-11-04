@@ -471,7 +471,7 @@ msgid ""
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
 "<qt><p>Aucune URL n'est configurée pour envoyer votre liste d'informations "
-"de disponibilité. Veuillez la définir dans la boîte de dialogue de "
+"de disponibilité. Veuillez la définir dans la boite de dialogue de "
 "configuration de KOrganizer, sur la page « Disponibilité ».</p><p>Contactez "
 "votre administrateur système pour connaître l'URL exacte et les détails du "
 "compte.</p></qt>"
@@ -963,7 +963,7 @@ msgstr ""
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr ""
-"Erreur lors de la mise en file d'attente des messages dans la boîte "
+"Erreur lors de la mise en file d'attente des messages dans la boite "
 "d'envoi : %1"
 
 #: mailclient_p.cpp:711
@@ -1263,7 +1263,7 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
-"Impossible de publier la fréquence de l'agenda à cause d'une chaîne de "
+"Impossible de publier la fréquence de l'agenda à cause d'une chaine de "
 "destinataire non valable.\n"
 "%1"
 
@@ -1346,7 +1346,7 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Cliquez sur ce bouton pour afficher une autre boîte de dialogue où vous "
+"Cliquez sur ce bouton pour afficher une autre boite de dialogue où vous "
 "pourrez choisir un destinataire dans votre carnet d'adresses"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
@@ -1693,7 +1693,7 @@ msgstr "Propriétés du dossier..."
 #, kde-format
 msgid "Open a dialog to edit the properties of the selected calendar folder."
 msgstr ""
-"Ouvre une boîte de dialogue pour modifier les propriétés du dossier de "
+"Ouvre une boite de dialogue pour modifier les propriétés du dossier de "
 "calendriers sélectionné."
 
 #: standardcalendaractionmanager.cpp:108
@@ -1775,7 +1775,7 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
-"Ajoute un nouveau calendrier<p>Une boîte de dialogue apparaît dans laquelle "
+"Ajoute un nouveau calendrier<p>Une boite de dialogue apparait dans laquelle "
 "vous pouvez sélectionner le type du calendrier devant être ajouté.</p>"
 
 #: standardcalendaractionmanager.cpp:143
@@ -1836,7 +1836,7 @@ msgstr "Propriétés de l'agenda..."
 #, kde-format
 msgid "Open a dialog to edit properties of the selected calendar."
 msgstr ""
-"Ouvre une boîte de dialogue pour modifier les propriétés du calendrier "
+"Ouvre une boite de dialogue pour modifier les propriétés du calendrier "
 "sélectionné."
 
 #: standardcalendaractionmanager.cpp:177
