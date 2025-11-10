@@ -252,6 +252,3 @@ msgstr "Отказ"
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
 msgstr "Отмяна на напомнянето по-късно,показване на известието отново"
-
-#~ msgid "Task"
-#~ msgstr "Задача"
