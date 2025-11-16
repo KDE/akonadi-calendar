@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:44+0000\n"
-"PO-Revision-Date: 2025-08-01 12:45+0300\n"
+"PO-Revision-Date: 2025-11-15 21:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -817,7 +817,7 @@ msgstr "Güncelleme Gönder"
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
-"Bu görevin düzenleyicisine durum güncellemesi göndermek istiyor musunuz?"
+"Bu görevin organizatörüne durum güncellemesi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:331
 #, kde-format
@@ -825,8 +825,8 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
-"Bu olayın bir katılımcısı olarak durumunuz değişti. Bu olayın "
-"düzenleyicisine durum güncellemesi göndermek istiyor musunuz?"
+"Bu olayın bir katılımcısı olarak durumunuz değişti. Bu olayın organizatörüne "
+"durum güncellemesi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:374
 #, kde-format
@@ -862,7 +862,7 @@ msgstr ""
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
-"Bu güncenin düzenleyicisine bir durum güncellemesi göndermek ister misiniz?"
+"Bu güncenin organizatörüne bir durum güncellemesi göndermek istiyor musunuz?"
 
 #: itiphandlerhelper_p.cpp:406 itiphandlerhelper_p.cpp:427
 #, kde-format
@@ -1466,7 +1466,7 @@ msgstr "Katılımı Reddet"
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
-msgstr "Düzenleyici toplantıya katılmanızı reddetti."
+msgstr "Organizatör, toplantıya katılma isteğinizi reddetti."
 
 #: scheduler_p.cpp:511
 #, kde-format
