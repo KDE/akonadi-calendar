@@ -59,21 +59,15 @@ PublishDialog::PublishDialog(QWidget *parent)
     layout->addWidget(buttonBox);
 
     okButton->setToolTip(i18nc("@info:tooltip", "Send email to these recipients"));
-    okButton->setWhatsThis(
-        i18n("Clicking the <b>Ok</b> button will cause "
-             "an email to be sent to the recipients you "
-             "have entered."));
+    okButton->setWhatsThis(i18nc("@info:whatsthis", "Clicking this button will cause an email to be sent to the recipients you have entered."));
 
     QPushButton *cancelButton = buttonBox->button(QDialogButtonBox::Cancel);
     cancelButton->setToolTip(i18nc("@info:tooltip", "Cancel recipient selection and the email"));
-    cancelButton->setWhatsThis(
-        i18n("Clicking the <b>Cancel</b> button will "
-             "cause the email operation to be terminated."));
+    cancelButton->setWhatsThis(i18nc("@info:whatsthis", "Clicking this button will cause the email operation to be terminated."));
 
     QPushButton *helpButton = buttonBox->button(QDialogButtonBox::Help);
-    helpButton->setWhatsThis(
-        i18n("Click the <b>Help</b> button to read "
-             "more information about Group Scheduling."));
+    helpButton->setToolTip(i18nc("@info:tooltip", "See the Group Scheduling manual"));
+    helpButton->setWhatsThis(i18nc("@info:whatsthis", "Click this button to read more information about Group Scheduling."));
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &PublishDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &PublishDialog::reject);

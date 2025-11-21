@@ -373,7 +373,11 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
     if (job->error()) {
         qCritical() << "Error downloading freebusy" << _job->errorString();
         KMessageBox::error(mParentWidgetForRetrieval,
-                           i18n("Failed to download free/busy data from: %1\nReason: %2", job->url().toDisplayString(), job->errorText()),
+                           i18nc("@info",
+                                 "Failed to download free/busy data from: <link>%1</link>.<nl/>"
+                                 "Reason: %2",
+                                 job->url().toDisplayString(),
+                                 job->errorText()),
                            i18nc("@title:window", "Free/Busy Retrieval Error"));
 
         // TODO: Ask for a retry? (i.e. queue  the email again when the user wants it).
@@ -396,7 +400,7 @@ void FreeBusyManagerPrivate::processFreeBusyDownloadResult(KJob *_job)
         } else {
             qCritical() << "Error downloading freebusy, invalid fb.";
             KMessageBox::error(mParentWidgetForRetrieval,
-                               i18n("Failed to parse free/busy information that was retrieved from: %1", job->url().toDisplayString()),
+                               i18nc("@info", "Failed to parse free/busy information that was retrieved from: <link>%1</link>", job->url().toDisplayString()),
                                i18nc("@title:window", "Free/Busy Retrieval Error"));
         }
     }
@@ -411,14 +415,14 @@ void FreeBusyManagerPrivate::processFreeBusyUploadResult(KJob *_job)
     auto job = static_cast<KIO::FileCopyJob *>(_job);
     if (job->error()) {
         KMessageBox::error(nullptr,
-                           i18n("<qt><p>The software could not upload your free/busy list to "
-                                "the URL '%1'. There might be a problem with the access "
-                                "rights, or you specified an incorrect URL. The system said: "
-                                "<em>%2</em>.</p>"
-                                "<p>Please check the URL or contact your system administrator."
-                                "</p></qt>",
-                                job->destUrl().toString(),
-                                job->errorString()));
+                           i18nc("@info",
+                                 "The software could not upload your free/busy list to "
+                                 "the URL <link>%1</link>. There might be a problem with the access "
+                                 "rights, or you specified an incorrect URL. The system said: "
+                                 "<nl/><emphasis>%2</emphasis>.<nl/>"
+                                 "Please check the URL or contact your system administrator.",
+                                 job->destUrl().toString(),
+                                 job->errorString()));
     }
     // Delete temp file
     QUrl const src = job->srcUrl();
@@ -612,11 +616,11 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
 {
     if (result == Scheduler::ResultSuccess) {
         KMessageBox::information(mParentWidgetForMailling,
-                                 i18n("The free/busy information was successfully sent."),
+                                 i18nc("@info", "The free/busy information was successfully sent."),
                                  i18nc("@title:window", "Sending Free/Busy"),
                                  u"FreeBusyPublishSuccess"_s);
     } else {
-        KMessageBox::error(mParentWidgetForMailling, i18n("Unable to publish the free/busy data: %1", errorMsg));
+        KMessageBox::error(mParentWidgetForMailling, i18nc("@info", "Unable to publish the free/busy data: %1", errorMsg));
     }
 
     sender()->deleteLater();
@@ -740,11 +744,12 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
     QUrl targetURL(CalendarSettings::self()->freeBusyPublishUrl());
     if (targetURL.isEmpty()) {
         KMessageBox::error(parentWidget,
-                           i18n("<qt><p>No URL configured for uploading your free/busy list. "
-                                "Please set it in KOrganizer's configuration dialog, on the "
-                                "\"Free/Busy\" page.</p>"
-                                "<p>Contact your system administrator for the exact URL and the "
-                                "account details.</p></qt>"),
+                           i18nc("@info",
+                                 "No URL configured for uploading your free/busy list. "
+                                 "Please set it in KOrganizer's configuration dialog, on the "
+                                 "\"Free/Busy\" page.<nl/>"
+                                 "Contact your system administrator for the exact URL and the "
+                                 "account details."),
                            i18nc("@title:window", "No Free/Busy Upload URL"));
         return;
     }
@@ -755,7 +760,7 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
     }
     if (!targetURL.isValid()) {
         KMessageBox::error(parentWidget,
-                           i18n("<qt>The target URL '%1' provided is invalid.</qt>", targetURL.toDisplayString()),
+                           i18nc("@info", "The target URL <link>%1</link> provided is invalid.", targetURL.toDisplayString()),
                            i18nc("@title:window", "Invalid URL"));
         d->mBrokenUrl = true;
         return;
