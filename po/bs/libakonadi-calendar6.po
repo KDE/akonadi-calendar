@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-23 00:43+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -399,83 +399,107 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Nepoznata greška"
 
-#: freebusymanager.cpp:376
-#, kde-format
-msgid ""
-"Failed to download free/busy data from: %1\n"
-"Reason: %2"
+#: freebusymanager.cpp:377
+#, fuzzy, kde-format
+#| msgid ""
+#| "Failed to download free/busy data from: %1\n"
+#| "Reason: %2"
+msgctxt "@info"
+msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
 "Neuspjelo preuzimanje podataka o slobodnom/zauzezom: %1\n"
 "Razlog: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, fuzzy, kde-format
 #| msgid "Free/busy retrieval error"
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Greška u preuzimanju slobodnog/zauzetog"
 
-#: freebusymanager.cpp:399
-#, kde-format
-msgid "Failed to parse free/busy information that was retrieved from: %1"
+#: freebusymanager.cpp:403
+#, fuzzy, kde-format
+#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+msgctxt "@info"
+msgid ""
+"Failed to parse free/busy information that was retrieved from: <link>%1</"
+"link>"
 msgstr ""
 "Greška u analizi informacije o slobodnom/zauzetom koja je preuzeta s %1."
 
-#: freebusymanager.cpp:414
-#, kde-format
+#: freebusymanager.cpp:419
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
+#| "There might be a problem with the access rights, or you specified an "
+#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
+#| "or contact your system administrator.</p></qt>"
+msgctxt "@info"
 msgid ""
-"<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-"There might be a problem with the access rights, or you specified an "
-"incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
-"contact your system administrator.</p></qt>"
+"The software could not upload your free/busy list to the URL <link>%1</"
+"link>. There might be a problem with the access rights, or you specified an "
+"incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
+"check the URL or contact your system administrator."
 msgstr ""
 "<qt><p>Sofcver ne može poslati vašu listu o  slobodnom/zauzetom na URL '%1'. "
 "Tu može biti problem s pravima pristupa ili je naveden neispravan URL. "
 "Sistem je rekao: <em>%2</em>.</p><p>Molim provjerite URL ili kontaktirajte "
 "sistem administratora.</p></qt>"
 
-#: freebusymanager.cpp:615
-#, kde-format
+#: freebusymanager.cpp:619
+#, fuzzy, kde-format
+#| msgid "The free/busy information was successfully sent."
+msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "informacije o slobodnom/zauzetom su uspješno poslane."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:138
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Slanje informacija o slobodnom/zauzetom"
 
-#: freebusymanager.cpp:619
-#, kde-format
+#: freebusymanager.cpp:623
+#, fuzzy, kde-format
+#| msgid "Unable to publish the free/busy data: %1"
+msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Ne mogu da objavim informacije o slobodnom/zauzetom: %1"
 
-#: freebusymanager.cpp:743
-#, kde-format
+#: freebusymanager.cpp:748
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
+#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
+#| "p><p>Contact your system administrator for the exact URL and the account "
+#| "details.</p></qt>"
+msgctxt "@info"
 msgid ""
-"<qt><p>No URL configured for uploading your free/busy list. Please set it in "
-"KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
-"your system administrator for the exact URL and the account details.</p></qt>"
+"No URL configured for uploading your free/busy list. Please set it in "
+"KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
+"your system administrator for the exact URL and the account details."
 msgstr ""
 "<qt><p>Nijedan URL nije konfigurisan za slanje informacije o slobodnom/"
 "zauzetom. Molim postavite je u  KOrganizer konfiguracionom dijalogu, na "
 "\"Slobodan/Zauzet\" stranici.</p><p>Kontaktirajte sistem administratora za "
 "tačan URL detalje oi nalogu.</p></qt>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:753
 #, fuzzy, kde-format
 #| msgid "No Free/Busy Upload URL"
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Nema URL za slanje informacije o slobodnom/zauzetom"
 
-#: freebusymanager.cpp:758
-#, kde-format
-msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#: freebusymanager.cpp:763
+#, fuzzy, kde-format
+#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+msgctxt "@info"
+msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "<qt>Odredišni URL '%1' koji je naveden je nevažećo.</qt>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:764
 #, fuzzy, kde-format
 #| msgid "Invalid URL"
 msgctxt "@title:window"
@@ -1169,44 +1193,60 @@ msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Pošaljite poštu ovim učesnicima"
 
-#: publishdialog.cpp:63
-#, kde-format
+#: publishdialog.cpp:62
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
+#| "recipients you have entered."
+msgctxt "@info:whatsthis"
 msgid ""
-"Clicking the <b>Ok</b> button will cause an email to be sent to the "
-"recipients you have entered."
+"Clicking this button will cause an email to be sent to the recipients you "
+"have entered."
 msgstr ""
 "Klik na dugme <b>U redu</b> će rezultovati da se pošta pošalje primaocima "
 "koje ste unijeli."
 
-#: publishdialog.cpp:68
+#: publishdialog.cpp:65
 #, fuzzy, kde-format
 #| msgid "Cancel recipient selection and the email"
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Otkaži izbor primaoca i elektronsku poštu"
 
-#: publishdialog.cpp:70
-#, kde-format
-msgid ""
-"Clicking the <b>Cancel</b> button will cause the email operation to be "
-"terminated."
+#: publishdialog.cpp:66
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
+#| "terminated."
+msgctxt "@info:whatsthis"
+msgid "Clicking this button will cause the email operation to be terminated."
 msgstr ""
 "Klik na dugme <b>otkaži</b> će učiniti da se operacije o elektronskoj pošti "
 "prekinu."
 
-#: publishdialog.cpp:75
-#, kde-format
-msgid ""
-"Click the <b>Help</b> button to read more information about Group Scheduling."
+#: publishdialog.cpp:69
+#, fuzzy, kde-format
+#| msgid "Group Scheduling Email"
+msgctxt "@info:tooltip"
+msgid "See the Group Scheduling manual"
+msgstr "Pošta za grupno zakazivanje"
+
+#: publishdialog.cpp:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Click the <b>Help</b> button to read more information about Group "
+#| "Scheduling."
+msgctxt "@info:whatsthis"
+msgid "Click this button to read more information about Group Scheduling."
 msgstr "Klik na dugme <b>Pomoć</b> za više informacija o grupnom zakazivanju."
 
-#: publishdialog.cpp:124
+#: publishdialog.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
 msgstr ""
 
-#: publishdialog.cpp:128
+#: publishdialog.cpp:122
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1215,7 +1255,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: publishdialog.cpp:131
+#: publishdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
@@ -1342,17 +1382,17 @@ msgstr "Ovo polje sadrži adresu elektronske pošte primaoca"
 
 #: publishdialog_p.cpp:45
 #, fuzzy, kde-format
-#| msgid "(EmptyName)"
-msgctxt "@info:placeholder"
-msgid "(EmptyName)"
-msgstr "(PraznoIme)"
+#| msgid "The recipient's name"
+msgctxt "@info/plain optional email recipient name"
+msgid "recipient name (optional)"
+msgstr "Ime primaoca"
 
 #: publishdialog_p.cpp:46
 #, fuzzy, kde-format
-#| msgid "(EmptyEmail)"
-msgctxt "@info:placeholder"
-msgid "(EmptyEmail)"
-msgstr "(PrazanEmail)"
+#| msgid "The recipient's email address"
+msgctxt "@info/plain required email recipient address"
+msgid "recipient email (required)"
+msgstr "Adresa elektronske pošte primaoca"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
@@ -2124,6 +2164,18 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Ukloni završene zadatke"
+
+#, fuzzy
+#~| msgid "(EmptyName)"
+#~ msgctxt "@info:placeholder"
+#~ msgid "(EmptyName)"
+#~ msgstr "(PraznoIme)"
+
+#, fuzzy
+#~| msgid "(EmptyEmail)"
+#~ msgctxt "@info:placeholder"
+#~ msgid "(EmptyEmail)"
+#~ msgstr "(PrazanEmail)"
 
 #~ msgid "Add &Calendar..."
 #~ msgstr "Dodaj &kalendar..."

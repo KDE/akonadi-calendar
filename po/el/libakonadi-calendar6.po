@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-23 00:43+0000\n"
 "PO-Revision-Date: 2024-09-26 11:12+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -399,79 +399,103 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Άγνωστος"
 
-#: freebusymanager.cpp:376
-#, kde-format
-msgid ""
-"Failed to download free/busy data from: %1\n"
-"Reason: %2"
+#: freebusymanager.cpp:377
+#, fuzzy, kde-format
+#| msgid ""
+#| "Failed to download free/busy data from: %1\n"
+#| "Reason: %2"
+msgctxt "@info"
+msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
 "Αποτυχία λήψης δεδομένων διαθεσιμότητα από: %1\n"
 "Αιτία: %2"
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Σφάλμα ανάκτησης διαθεσιμότητας"
 
-#: freebusymanager.cpp:399
-#, kde-format
-msgid "Failed to parse free/busy information that was retrieved from: %1"
+#: freebusymanager.cpp:403
+#, fuzzy, kde-format
+#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+msgctxt "@info"
+msgid ""
+"Failed to parse free/busy information that was retrieved from: <link>%1</"
+"link>"
 msgstr "Αποτυχία ανάλυσης πληροφοριών διαθεσιμότητας που ανακτήθηκαν από: %1"
 
-#: freebusymanager.cpp:414
-#, kde-format
+#: freebusymanager.cpp:419
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
+#| "There might be a problem with the access rights, or you specified an "
+#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
+#| "or contact your system administrator.</p></qt>"
+msgctxt "@info"
 msgid ""
-"<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-"There might be a problem with the access rights, or you specified an "
-"incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
-"contact your system administrator.</p></qt>"
+"The software could not upload your free/busy list to the URL <link>%1</"
+"link>. There might be a problem with the access rights, or you specified an "
+"incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
+"check the URL or contact your system administrator."
 msgstr ""
 "<qt><p>Αδυναμία αποστολής από το λογισμικό της λίστας διαθεσιμότητα στο URL "
 "'%1'. Ίσως υπάρχει πρόβλημα με τα δικαιώματα πρόσβασης, ή να έχετε δώσει "
 "λάθος URL. Το σύστημα αναφέρει: <em>%2</em>.</p><p>Ελέγξτε το URL ή "
 "επικοινωνήστε με τον διαχειριστή του συστήματος.</p></qt>"
 
-#: freebusymanager.cpp:615
-#, kde-format
+#: freebusymanager.cpp:619
+#, fuzzy, kde-format
+#| msgid "The free/busy information was successfully sent."
+msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Οι πληροφορίες διαθεσιμότητας εστάλησαν με επιτυχία."
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Αποστολή διαθεσιμότητας"
 
-#: freebusymanager.cpp:619
-#, kde-format
+#: freebusymanager.cpp:623
+#, fuzzy, kde-format
+#| msgid "Unable to publish the free/busy data: %1"
+msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Αδυναμία δημοσίευσης των δεδομένων διαθεσιμότητας: %1"
 
-#: freebusymanager.cpp:743
-#, kde-format
+#: freebusymanager.cpp:748
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
+#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
+#| "p><p>Contact your system administrator for the exact URL and the account "
+#| "details.</p></qt>"
+msgctxt "@info"
 msgid ""
-"<qt><p>No URL configured for uploading your free/busy list. Please set it in "
-"KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
-"your system administrator for the exact URL and the account details.</p></qt>"
+"No URL configured for uploading your free/busy list. Please set it in "
+"KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
+"your system administrator for the exact URL and the account details."
 msgstr ""
 "<qt><p>Δεν έχει διαμορφωθεί URL για την αποστολή της λίστας διαθεσιμότητας. "
 "Ρυθμίστε το στο διάλογο διαμόρφωσης του KOrganizer, στη σελίδα "
 "«Διαθεσιμότητα».</p><p>Επικοινωνήστε με τον διαχειριστή του συστήματος για "
 "το σωστό URL και τις λεπτομέρειες του λογαριασμού.</p></qt>"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:753
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Κανένα URL για την αποστολή διαθεσιμότητας"
 
-#: freebusymanager.cpp:758
-#, kde-format
-msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#: freebusymanager.cpp:763
+#, fuzzy, kde-format
+#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+msgctxt "@info"
+msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "<qt>Το URL '%1' του προορισμού που δόθηκε δεν είναι έγκυρο.</qt>"
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:764
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -1187,43 +1211,60 @@ msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Αποστολή μηνύματος αλληλογραφίας σε αυτούς τους παραλήπτες"
 
-#: publishdialog.cpp:63
-#, kde-format
+#: publishdialog.cpp:62
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
+#| "recipients you have entered."
+msgctxt "@info:whatsthis"
 msgid ""
-"Clicking the <b>Ok</b> button will cause an email to be sent to the "
-"recipients you have entered."
+"Clicking this button will cause an email to be sent to the recipients you "
+"have entered."
 msgstr ""
 "Με κλικ στο κουμπί <b>Εντάξει</b> ένα μήνυμα αλληλογραφίας θα σταλεί στους "
 "παραλήπτες που έχετε δώσει."
 
-#: publishdialog.cpp:68
+#: publishdialog.cpp:65
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Ακύρωση της επιλογής παραληπτών και του μηνύματος"
 
-#: publishdialog.cpp:70
-#, kde-format
-msgid ""
-"Clicking the <b>Cancel</b> button will cause the email operation to be "
-"terminated."
+#: publishdialog.cpp:66
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
+#| "terminated."
+msgctxt "@info:whatsthis"
+msgid "Clicking this button will cause the email operation to be terminated."
 msgstr "Με κλικ στο κουμπί <b>Ακύρωση</b> η αλληλογραφία θα τερματιστεί."
 
-#: publishdialog.cpp:75
-#, kde-format
-msgid ""
-"Click the <b>Help</b> button to read more information about Group Scheduling."
+#: publishdialog.cpp:69
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Group Scheduling Email"
+msgctxt "@info:tooltip"
+msgid "See the Group Scheduling manual"
+msgstr "Αλληλογραφία χρονοπρογραμματισμού ομάδων"
+
+#: publishdialog.cpp:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Click the <b>Help</b> button to read more information about Group "
+#| "Scheduling."
+msgctxt "@info:whatsthis"
+msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
 "Με κλικ στο κουμπί <b>Βοήθεια</b> θα διαβάσετε περισσότερες πληροφορίες για "
 "τον χρονοπρογραμματισμό ομάδων."
 
-#: publishdialog.cpp:124
+#: publishdialog.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
 msgstr ""
 
-#: publishdialog.cpp:128
+#: publishdialog.cpp:122
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to publish the calendar incidence due to an invalid recipients "
@@ -1239,7 +1280,7 @@ msgstr ""
 "συμβολοσειράς παραληπτών.\n"
 "%1"
 
-#: publishdialog.cpp:131
+#: publishdialog.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
@@ -1365,16 +1406,18 @@ msgid "This field contains the email address of the recipient"
 msgstr "Αυτό το πεδίο περιέχει τη διεύθυνση αλληλογραφίας του παραλήπτη"
 
 #: publishdialog_p.cpp:45
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "(EmptyName)"
-msgstr "(EmptyName)"
+#, fuzzy, kde-format
+#| msgid "The recipient's name"
+msgctxt "@info/plain optional email recipient name"
+msgid "recipient name (optional)"
+msgstr "Το όνομα του παραλήπτη"
 
 #: publishdialog_p.cpp:46
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "(EmptyEmail)"
-msgstr "(EmptyEmail)"
+#, fuzzy, kde-format
+#| msgid "The recipient's email address"
+msgctxt "@info/plain required email recipient address"
+msgid "recipient email (required)"
+msgstr "Η διεύθυνση αλληλογραφίας του παραλήπτη"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
@@ -2072,6 +2115,14 @@ msgstr "Περιγραφή"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Πλήρης διαγραφή ολοκληρωμένων εργασιών"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "(EmptyName)"
+#~ msgstr "(EmptyName)"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "(EmptyEmail)"
+#~ msgstr "(EmptyEmail)"
 
 #~ msgid "Add &Calendar..."
 #~ msgstr "Προσθήκη η&μερολογίου..."

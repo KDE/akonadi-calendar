@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-23 00:43+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -377,69 +377,76 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr ""
 
-#: freebusymanager.cpp:376
+#: freebusymanager.cpp:377
 #, kde-format
-msgid ""
-"Failed to download free/busy data from: %1\n"
-"Reason: %2"
+msgctxt "@info"
+msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
 
-#: freebusymanager.cpp:377 freebusymanager.cpp:400
+#: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr ""
 
-#: freebusymanager.cpp:399
+#: freebusymanager.cpp:403
 #, kde-format
-msgid "Failed to parse free/busy information that was retrieved from: %1"
-msgstr ""
-
-#: freebusymanager.cpp:414
-#, kde-format
+msgctxt "@info"
 msgid ""
-"<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-"There might be a problem with the access rights, or you specified an "
-"incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
-"contact your system administrator.</p></qt>"
+"Failed to parse free/busy information that was retrieved from: <link>%1</"
+"link>"
 msgstr ""
 
-#: freebusymanager.cpp:615
+#: freebusymanager.cpp:419
 #, kde-format
+msgctxt "@info"
+msgid ""
+"The software could not upload your free/busy list to the URL <link>%1</"
+"link>. There might be a problem with the access rights, or you specified an "
+"incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
+"check the URL or contact your system administrator."
+msgstr ""
+
+#: freebusymanager.cpp:619
+#, kde-format
+msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr ""
 
-#: freebusymanager.cpp:616 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr ""
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:623
 #, kde-format
+msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr ""
 
-#: freebusymanager.cpp:743
+#: freebusymanager.cpp:748
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<qt><p>No URL configured for uploading your free/busy list. Please set it in "
-"KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
-"your system administrator for the exact URL and the account details.</p></qt>"
+"No URL configured for uploading your free/busy list. Please set it in "
+"KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
+"your system administrator for the exact URL and the account details."
 msgstr ""
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:753
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr ""
 
-#: freebusymanager.cpp:758
+#: freebusymanager.cpp:763
 #, kde-format
-msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+msgctxt "@info"
+msgid "The target URL <link>%1</link> provided is invalid."
 msgstr ""
 
-#: freebusymanager.cpp:759
+#: freebusymanager.cpp:764
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -1077,39 +1084,45 @@ msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr ""
 
-#: publishdialog.cpp:63
+#: publishdialog.cpp:62
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Clicking the <b>Ok</b> button will cause an email to be sent to the "
-"recipients you have entered."
+"Clicking this button will cause an email to be sent to the recipients you "
+"have entered."
 msgstr ""
 
-#: publishdialog.cpp:68
+#: publishdialog.cpp:65
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr ""
 
+#: publishdialog.cpp:66
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Clicking this button will cause the email operation to be terminated."
+msgstr ""
+
+#: publishdialog.cpp:69
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "See the Group Scheduling manual"
+msgstr ""
+
 #: publishdialog.cpp:70
 #, kde-format
-msgid ""
-"Clicking the <b>Cancel</b> button will cause the email operation to be "
-"terminated."
+msgctxt "@info:whatsthis"
+msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
 
-#: publishdialog.cpp:75
-#, kde-format
-msgid ""
-"Click the <b>Help</b> button to read more information about Group Scheduling."
-msgstr ""
-
-#: publishdialog.cpp:124
+#: publishdialog.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
 msgstr ""
 
-#: publishdialog.cpp:128
+#: publishdialog.cpp:122
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1118,7 +1131,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: publishdialog.cpp:131
+#: publishdialog.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
@@ -1237,14 +1250,14 @@ msgstr ""
 
 #: publishdialog_p.cpp:45
 #, kde-format
-msgctxt "@info:placeholder"
-msgid "(EmptyName)"
+msgctxt "@info/plain optional email recipient name"
+msgid "recipient name (optional)"
 msgstr ""
 
 #: publishdialog_p.cpp:46
 #, kde-format
-msgctxt "@info:placeholder"
-msgid "(EmptyEmail)"
+msgctxt "@info/plain required email recipient address"
+msgid "recipient email (required)"
 msgstr ""
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
