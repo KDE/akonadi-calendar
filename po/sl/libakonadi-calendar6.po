@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:43+0000\n"
-"PO-Revision-Date: 2025-08-01 08:19+0200\n"
+"PO-Revision-Date: 2025-11-23 08:19+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -396,15 +396,12 @@ msgid "Unknown"
 msgstr "Neznano"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Podatkov o prostosti/zaposlenosti ni bilo mogoče prejeti iz %1\n"
-"Vzrok: %2"
+"Podatkov o prostosti/zaposlenosti ni bilo mogoče prejeti iz <link>%1</link>."
+"<nl/>Vzrok: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -413,23 +410,17 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Napaka pridobivanja podatkov o prostosti/zaposlenosti"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
 msgstr ""
-"Podatkov o prostosti/zaposlenosti, pridobljenih iz %1, ni bilo mogoče "
-"razčleniti"
+"Podatkov o prostosti/zaposlenosti, pridobljenih iz <link>%1</link>, ni bilo "
+"mogoče razčleniti"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -437,17 +428,16 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Programska oprema ni mogla poslati vašega seznama prostosti/"
-"zaposlenosti na URL »%1«. Lahko da je težava v dovoljenjih za dostop ali pa "
-"ste navedli napačen URL. Sistem je odvrnil: <em>%2</em>.</p><p>Preverite URL "
-"ali stopite v stik z vašim sistemskim skrbnikom.</p></qt>"
+"Programska oprema ni mogla naložiti vašega seznama prostih/zasedenih ur na "
+"URL <link>%1</link>. Morda je težava s pravicami dostopa ali pa ste navedli "
+"napačen URL. Sistem je sporočil: <nl/><emphasis>%2</emphasis>.<nl/>Preverite "
+"URL ali se obrnite na skrbnika sistema."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
-msgstr "Podatki o prostosti/zaposlenosti so bili uspešno poslani."
+msgstr "Informacije o prostosti/zaposlenosti so bile uspešno poslane."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:138
 #, kde-format
@@ -456,29 +446,23 @@ msgid "Sending Free/Busy"
 msgstr "Pošiljanje podatkov o prostosti/zaposlenosti"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Podatkov o prostosti/zaposlenosti ni bilo mogoče objaviti: %1"
+msgstr "Podatkov o zasedenosti/prostem času ni mogoče objaviti: %1"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt><p>Ni nastavljenih URL-jev za pošiljanje vašega seznama prostosti/"
-"zaposlenosti. Nastavite jih lahko v nastavitvenem pogovornem oknu KOrganizer-"
-"ja na strani »Prostost/zaposlenost«.</p><p>Za natančen URL in podatke o "
-"računu stopite v stik z vašim sistemskim skrbnikom.</p></qt>"
+"Ni konfiguriranega URL-ja za nalaganje seznama prostega/zasedenega časa. "
+"Nastavite ga v pogovornem oknu za konfiguracijo programa KOrganizer na "
+"strani »Prost/zaseden«.<nl/>Za natančen URL in podrobnosti računa se obrnite "
+"na skrbnika sistema."
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -487,11 +471,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Ni URL-ja za pošiljanje prostosti/zaposlenosti"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Podan ciljni URL »%1« ni veljaven.</qt>"
+msgstr "Podani ciljni URL <link>%1</link> je neveljaven."
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -1196,15 +1179,14 @@ msgid "Send email to these recipients"
 msgstr "Pošlji e-pošto tem prejemnikom"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
-msgstr "Klik na gumb <b>V redu</b> bo poslal e-pošto navedenim prejemnikom."
+msgstr ""
+"S klikom na ta gumb boste poslali e-poštno sporočilo prejemnikom, ki ste jih "
+"vnesli."
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1213,31 +1195,24 @@ msgid "Cancel recipient selection and the email"
 msgstr "Prekliči izbor prejemnikov in e-pošto"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr "Klik na gumb <b>Prekliči</b> bo prekinil opravilo pošiljanja e-pošte."
+msgstr "S klikom na ta gumb se bo postopek pošiljanja e-pošte prekinil."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "E-pošta za razporejanje skupin"
+msgstr "Glejte priročnik za skupinsko razporejanje"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
-"Kliknite na gumb <b>Pomoč</b> za več podrobnosti o razporejanju skupin."
+"Kliknite ta gumb, če želite prebrati več informacij o skupinskem "
+"razporejanju."
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1379,18 +1354,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "To polje vsebuje e-poštni naslov prejemnika"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Ime prejemnika"
+msgstr "ime prejemnika"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "E-poštni naslov prejemnika"
+msgstr "e-poštni naslov prejemnika (zahtevano)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
