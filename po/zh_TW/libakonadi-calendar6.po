@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:43+0000\n"
-"PO-Revision-Date: 2025-08-08 01:52+0900\n"
+"PO-Revision-Date: 2025-11-24 19:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -383,15 +383,10 @@ msgid "Unknown"
 msgstr "未知"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
-msgstr ""
-"從 %1 下載行程資訊時失敗\n"
-"理由：%2"
+msgstr "從 <link>%1</link> 下載行程資訊時失敗。<nl/>原因：%2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -400,21 +395,15 @@ msgid "Free/Busy Retrieval Error"
 msgstr "有空/沒空資訊取得時發生錯誤"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "剖析從 %1 取得的行程資訊時失敗"
+msgstr "剖析從 <link>%1</link> 取得的行程資訊時失敗"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -422,13 +411,12 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>系統無法將您的行程資訊清單上傳至網址 %1。也許是存取權限有問題，或是您"
-"指定的網址有誤。系統回應為：<em>%2</em></p> <p>請檢查您的網址，或是與您的系統"
-"管理員聯絡。</p></qt>"
+"系統無法將您的行程資訊清單上傳至網址 <link>%1</link>。也許是存取權限有問題，"
+"或是您指定的網址有誤。系統回應為：<nl/><emphasis>%2</emphasis>。<nl/>請檢查您"
+"的網址，或是與您的系統管理員聯絡。"
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "行程資訊已成功送出。"
@@ -440,28 +428,21 @@ msgid "Sending Free/Busy"
 msgstr "正在送出有空/沒空資訊"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "無法發布行程資料：%1"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt><p>沒有設定您上傳行程資訊清單使用的網址。請在 KOrganizer 的設定對話框裡的"
-"「行程資訊」頁中設定。</p> <p> 關於網址與帳號詳情等資訊，請與您的系統管理員聯"
-"絡。</p></qt>"
+"沒有設定您上傳行程資訊清單使用的網址。請在 KOrganizer 的設定對話框裡的「行程"
+"資訊」頁中設定。<nl/>關於網址與帳號詳情等資訊，請與您的系統管理員聯絡。"
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -470,11 +451,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "沒有可上傳有空/沒空資訊的網址"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>提供的目標網址 %1 無效。</qt>"
+msgstr "提供的目標網址 <link>%1</link> 無效。"
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -1159,15 +1139,12 @@ msgid "Send email to these recipients"
 msgstr "傳送電子郵件給這些收件者"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
-msgstr "點擊「確定」可以將信件送出。"
+msgstr "點擊此按鈕會讓信件送出給您所輸入的收件者。"
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1176,30 +1153,22 @@ msgid "Cancel recipient selection and the email"
 msgstr "取消選取的收件者與電子郵件"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr "點擊「取消」可以取消發送電子郵件。"
+msgstr "點擊此按鈕會使電子郵件動作終止。"
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "群組排程電子郵件"
+msgstr "查看群組排程說明"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
-msgstr "點擊<b>說明</b>鍵可以讀關於群組排程的詳情"
+msgstr "點擊此按鈕可以閱讀關於群組排程的更多資訊。"
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1336,18 +1305,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "此欄位為收件者的電子郵件地址"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "收件者姓名"
+msgstr "收件者姓名（可選）"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "收件者的電子郵件地址："
+msgstr "收件者的電子郵件地址（必要）"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
