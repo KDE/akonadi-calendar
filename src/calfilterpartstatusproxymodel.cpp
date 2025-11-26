@@ -35,7 +35,12 @@ public:
 
 void CalFilterPartStatusProxyModel::slotIdentitiesChanged()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateRowsFilter();
+#endif
 }
 
 CalFilterPartStatusProxyModel::CalFilterPartStatusProxyModel(QObject *parent)
@@ -57,8 +62,15 @@ const QList<KCalendarCore::Attendee::PartStat> &CalFilterPartStatusProxyModel::b
 void CalFilterPartStatusProxyModel::setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList)
 {
     if (d->mBlockedStatusList != blockStatusList) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         d->mBlockedStatusList = blockStatusList;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateRowsFilter();
+#endif
     }
 }
 
@@ -70,8 +82,15 @@ bool CalFilterPartStatusProxyModel::filterVirtual() const
 void CalFilterPartStatusProxyModel::setFilterVirtual(bool filterVirtual)
 {
     if (d->mFilterVirtual != filterVirtual) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         d->mFilterVirtual = filterVirtual;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateRowsFilter();
+#endif
     }
 }
 
