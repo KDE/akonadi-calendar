@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:43+0000\n"
-"PO-Revision-Date: 2025-08-03 23:06+0400\n"
+"PO-Revision-Date: 2025-11-26 10:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -384,15 +384,10 @@ msgid "Unknown"
 msgstr "مجهول"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
-msgstr ""
-"فشل تنزيل بيانات متفرّغ/مشغول من: %1\n"
-"السّبب: %2"
+msgstr "فشل تنزيل بيانات متفرّغ/مشغول من: <link>%1</link>.<nl/>السّبب: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -401,21 +396,15 @@ msgid "Free/Busy Retrieval Error"
 msgstr "خطأ في جلب متفرّغ/مشغول"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "فشل تحليل معلومات متفرّغ/مشغول التي جُلبت من: %1"
+msgstr "فشل تحليل معلومات متفرّغ/مشغول التي جُلبت من: <link>%1</link>"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -423,14 +412,12 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<html dir=\"rtl\"><p>تعذّر على البرمجيّة تحديث قائمة متفرّغ/مشغول لديك إلى "
-"المسار ’%1‘. قد تكون هناك مشكلة مع أذونات النّفاذ، أو أنّك حدّدت مسارًا غير "
-"صحيح. قال النّظام: <em>%2</em>.</p><p>رجاءً افحص المسار أو تواصل مع مدير "
-"النّظام.</p></html>"
+"تعذّر على البرمجيّة تحديث قائمة متفرّغ/مشغول لديك إلى المسار <link>%1</link>. "
+"قد تكون هناك مشكلة مع تصاريح النّفاذ، أو أنّك حدّدت مسارًا غير صحيح. قال النّظام: "
+"<em>%2</emphasis>.<nl/>رجاءً افحص المسار أو تواصل مع مدير النّظام."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "أُرسلت معلومات متفرّغ/مشغول بنجاح."
@@ -442,28 +429,21 @@ msgid "Sending Free/Busy"
 msgstr "يُرسل متفرّغ/مشغول"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "تعذّر نشر بيانات متفرّغ/مشغول: %1"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<html dir=\"rtl\"><p>لم يُضبط أيّ مسار لرفع قائمة متفرّغ/مشغول. رجاءً حدّده في "
-"حواريّ ضبط «منظّمك»، في صفحة ”متفرّغ/مشغول“.</p><p>راسل مدير النّظام لتعرف "
-"المسار بالضّبط وتفاصيل الحساب.</p></html>"
+"لم يُضبط أيّ مسار لرفع قائمة متفرّغ/مشغول. رجاءً حدّده في حواريّ ضبط «منظّمك»، في "
+"صفحة ”متفرّغ/مشغول“.<nl/>راسل مدير النّظام لتعرف المسار بالضّبط وتفاصيل الحساب."
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -472,11 +452,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "لا مسار رفع متفرّغ/مشغول"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<html dir=\"rtl\"> مسار ’%1‘ الهدف الموفّر غير صالح.</html>"
+msgstr " مسار  الهدف الموفّر <link>%1</link> غير صالح."
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -1166,15 +1145,12 @@ msgid "Send email to these recipients"
 msgstr "أرسل بريدًا إلى هؤلاء المستلمين"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
-msgstr "نقر زرّ <b>حسنًا</b> سيُرسل بريدًا إلى المستلمين الذي أدخلتهم."
+msgstr "إذا نقرت هذا زرّ سيُرسل بريدًا إلى المستلمين الذي أدخلتهم."
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1183,30 +1159,22 @@ msgid "Cancel recipient selection and the email"
 msgstr "ألغِ تحديد المستلمين والبريد"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr "نقر زرّ <b>ألغِ</b> سيُنهي عمليّة إرسال البريد الإلكترونيّ."
+msgstr "إذا نقرت هذا زرّ ستُنهي عمليّة إرسال البريد الإلكترونيّ."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "بريد بجدولة المجموعة"
+msgstr "انظر توثيق جدولة المجموعة"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
-msgstr "انقر زرّ <b>مساعدة</b> لقراءة المزيد عن جدولة المجموعات."
+msgstr "إذا نقرت هذا زرّ لقراءة المزيد عن جدولة المجموعات."
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1345,18 +1313,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "يحتوي هذا الحقل عنوان بريد المستلم الإلكترونيّ"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "اسم المستلم"
+msgstr "اسم المستلم (اختياري)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "عنوان بريد المستلم"
+msgstr "عنوان بريد المستلم (مطلوب)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
