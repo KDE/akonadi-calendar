@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:43+0000\n"
-"PO-Revision-Date: 2024-10-20 16:27+0530\n"
+"PO-Revision-Date: 2025-11-30 14:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -42,7 +42,7 @@ msgstr "உருப்பிடியைக் கண்டுபிடிக�
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
-msgstr ""
+msgstr "உருப்படிகளுக்கிடையேயான தொடர்புகளை நீக்குவதில் சிக்கல்."
 
 #: calendarclipboard.cpp:158
 #, kde-format
@@ -244,6 +244,8 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
+"நிகழ்வுகளில் பங்கேற்போர்க்கு கேயார்கனைசர் அனுப்பும் அனைத்து அஞ்சல்களின் நகல்களைப் பெற "
+"இப்பெட்டியைக் குறிக்கவும்."
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
@@ -255,7 +257,7 @@ msgstr "நிராகரித்த அழைப்பிதழ்களை �
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
-msgstr ""
+msgstr "நிராகரிக்கப்பட்டுள்ள நிகழ்வுகளை மறைக்க இப்பெட்டியைக் குறிக்கவும்."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
@@ -270,12 +272,14 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"நீர் நடத்தும் அல்லது பங்கேற்கப் போகும் நிகழ்வுகளுக்கு மட்டும் நினைவூட்டல்களைப் பெற "
+"இப்பெட்டியைக் குறிக்கவும்."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr ""
+msgstr "மாற்ற பரிந்துரைகளை அவுட்லுக் போல அனுப்பு"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:105
@@ -454,7 +458,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr ""
+msgstr "குறிப்பிடப்பட்டுள்ள சேருமிட முகவரி <link>%1</link> செல்லுபடியாகாதது."
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -610,17 +614,17 @@ msgstr "சிக்கல் குறித்த செய்தி: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr ""
+msgstr "iCal அழைப்பிதழை கையாள்வதில் தெரியாத சிக்கல்"
 
 #: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr ""
+msgstr "அழைப்பிதழையோ மாற்றத்தையோ கையாள்வதில் சிக்கல்."
 
 #: itiphandler.cpp:142
 #, kde-format
 msgid "Invalid incidence"
-msgstr ""
+msgstr "செல்லுபடியாகாத நிகழ்வு"
 
 #: itiphandler.cpp:211
 #, kde-format
@@ -630,18 +634,18 @@ msgstr "செல்லுபடியாகாத செயல்: %1"
 #: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr ""
+msgstr "மாற்றப்பரிந்துரையை அனுப்புவதில் சிக்கல்"
 
 #: itiphandler.cpp:241
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr ""
+msgstr "மாற்றப்பரிந்துரையைத் திருத்த உரைத்திருத்தியைத் துவக்க முடியவில்லை"
 
 #: itiphandler.cpp:272
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
-msgstr ""
+msgstr "'%1' தனில் பங்கேற்போர் யாருமில்லாததால் எந்த அஞ்சலும் அனுப்பப்படாது."
 
 #: itiphandler.cpp:275
 #, kde-format
