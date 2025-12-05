@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2025-08-03 23:06+0400\n"
+"PO-Revision-Date: 2025-12-04 14:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -411,10 +411,9 @@ msgid ""
 "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL or "
 "contact your system administrator.</p></qt>"
 msgstr ""
-"<html dir=\"rtl\"><p>تعذّر على البرمجيّة تحديث قائمة متفرّغ/مشغول لديك إلى "
-"المسار ’%1‘. قد تكون هناك مشكلة مع أذونات النّفاذ، أو أنّك حدّدت مسارًا غير "
-"صحيح. قال النّظام: <em>%2</em>.</p><p>رجاءً افحص المسار أو تواصل مع مدير "
-"النّظام.</p></html>"
+"<html><p>تعذّر على البرمجيّة تحديث قائمة متفرّغ/مشغول لديك إلى المسار ’%1‘. قد "
+"تكون هناك مشكلة مع أذونات النّفاذ، أو أنّك حدّدت مسارًا غير صحيح. قال النّظام: "
+"<em>%2</em>.</p><p>رجاءً افحص المسار أو تواصل مع مدير النّظام.</p></html>"
 
 #: freebusymanager.cpp:615
 #, kde-format
@@ -439,9 +438,9 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.</p><p>Contact "
 "your system administrator for the exact URL and the account details.</p></qt>"
 msgstr ""
-"<html dir=\"rtl\"><p>لم يُضبط أيّ مسار لرفع قائمة متفرّغ/مشغول. رجاءً حدّده في "
-"حواريّ ضبط «منظّمك»، في صفحة ”متفرّغ/مشغول“.</p><p>راسل مدير النّظام لتعرف "
-"المسار بالضّبط وتفاصيل الحساب.</p></html>"
+"<html><p>لم يُضبط أيّ مسار لرفع قائمة متفرّغ/مشغول. رجاءً حدّده في حواريّ ضبط "
+"«منظّمك»، في صفحة ”متفرّغ/مشغول“.</p><p>راسل مدير النّظام لتعرف المسار بالضّبط "
+"وتفاصيل الحساب.</p></html>"
 
 #: freebusymanager.cpp:748
 #, kde-format
@@ -452,7 +451,7 @@ msgstr "لا مسار رفع متفرّغ/مشغول"
 #: freebusymanager.cpp:758
 #, kde-format
 msgid "<qt>The target URL '%1' provided is invalid.</qt>"
-msgstr "<html dir=\"rtl\"> مسار ’%1‘ الهدف الموفّر غير صالح.</html>"
+msgstr "<html> مسار ’%1‘ الهدف الموفّر غير صالح.</html>"
 
 #: freebusymanager.cpp:759
 #, kde-format
