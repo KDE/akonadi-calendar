@@ -415,7 +415,7 @@ msgstr ""
 #: freebusymanager.cpp:615
 #, kde-format
 msgid "The free/busy information was successfully sent."
-msgstr ""
+msgstr "闲忙信息已成功发送。"
 
 #: freebusymanager.cpp:616 itiphandler_p.cpp:138
 #, kde-format
@@ -426,7 +426,7 @@ msgstr "正在发送空闲/忙碌信息"
 #: freebusymanager.cpp:619
 #, kde-format
 msgid "Unable to publish the free/busy data: %1"
-msgstr ""
+msgstr "无法发布闲忙数据：%1"
 
 #: freebusymanager.cpp:743
 #, kde-format
