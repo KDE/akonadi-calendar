@@ -385,6 +385,8 @@ msgstr "未知"
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
+"无法从 <link>%1</link> 下载空闲/忙碌数据。<nl/>\n"
+"原因： %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -398,7 +400,7 @@ msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr ""
+msgstr "从 <link>%1</link> 获取的闲忙信息解析失败"
 
 #: freebusymanager.cpp:419
 #, kde-format
@@ -409,12 +411,15 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
+"软件无法上传您的闲忙列表到 URL <link>%1</link>。访问权限可能有问题，或者您指"
+"定了一个不正确的 URL。该系统报告：<nl/><emphasis>%2</emphasis>。<nl/>请检查 "
+"URL 或联系您的系统管理员。"
 
 #: freebusymanager.cpp:619
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
-msgstr ""
+msgstr "闲忙信息已成功发送。"
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:138
 #, kde-format
@@ -426,7 +431,7 @@ msgstr "正在发送空闲/忙碌信息"
 #, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr ""
+msgstr "无法发布闲忙数据：%1"
 
 #: freebusymanager.cpp:748
 #, kde-format
@@ -436,6 +441,8 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
+"没有配置可供上传闲忙列表的 URL。请在 KOrganizer 配置对话框的“空闲/忙碌”标签页"
+"中进行设置。<nl/>您可以联系您的系统管理员获悉准确的 URL 及其账户细节。"
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -447,7 +454,7 @@ msgstr "无空闲/忙碌信息上传 URL"
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr ""
+msgstr "提供的目标 URL <link>%1</link> 无效。"
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -1137,7 +1144,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
-msgstr ""
+msgstr "点击此按钮即可向输入的这些接收人发送电子邮件。"
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1149,19 +1156,19 @@ msgstr "取消接收人选择和邮件发送"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr ""
+msgstr "点击此按钮即可终止电子邮件操作。"
 
 #: publishdialog.cpp:69
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr ""
+msgstr "请参阅分组日程安排手册"
 
 #: publishdialog.cpp:70
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
-msgstr ""
+msgstr "点击此按钮可阅读更多有关分组日程安排的信息。"
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1301,13 +1308,13 @@ msgstr "此字段包含了收件人的邮箱地址"
 #, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr ""
+msgstr "收件人名称 (可选)"
 
 #: publishdialog_p.cpp:46
 #, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr ""
+msgstr "收件人电子邮件 (必须)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
