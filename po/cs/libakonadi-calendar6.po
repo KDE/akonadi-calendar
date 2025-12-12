@@ -379,15 +379,10 @@ msgid "Unknown"
 msgstr "Neznámý"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Stažení dat aktivit z %1 selhalo\n"
-"Důvod: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -396,21 +391,15 @@ msgid "Free/Busy Retrieval Error"
 msgstr ""
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "Analýza informací o zaneprázdněnosti získaných z %1 selhala"
+msgstr ""
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -418,17 +407,13 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Software nemohl přenést váš seznam aktivit na URL %1. Může zde být "
-"problém s přístupovými právy, nebo jste zadali nesprávnou URL. Systém "
-"odpověděl: <em>%2</em>.</p><p>Zkontrolujte prosím URL nebo kontaktujte svého "
-"administrátora.</p></qt>"
 
 #: freebusymanager.cpp:619
 #, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#| msgid "The item information was successfully sent."
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
-msgstr "Informace o zaneprázdněnosti byly úspěšně odeslány."
+msgstr "Informace o položce byla úspěšně odeslána."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:138
 #, kde-format
@@ -438,28 +423,19 @@ msgstr ""
 
 #: freebusymanager.cpp:623
 #, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#| msgid "Unable to publish the item '%1'"
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Nelze publikovat informace o aktivitě: %1"
+msgstr "Nelze publikovat položku '%1'"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt> <p>Nebylo zadáno žádné URL pro uložení seznamu zaneprázdněnosti. Prosím "
-"zadejte požadované informace v konfiguračním dialogu programu KOrganizer, v "
-"záložce \"Zaneprázdněnost\".</p><p>Kontaktujte administrátora vašeho systému "
-"pro přesné zadání URL a podrobnosti účtu.</p></qt>"
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -468,11 +444,10 @@ msgid "No Free/Busy Upload URL"
 msgstr ""
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Cílové URL '%1' je neplatné.</qt>"
+msgstr ""
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -2011,11 +1986,3 @@ msgstr "Popis"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Čištění dokončených úkolů"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyName)"
-#~ msgstr "(PrázdnéJméno)"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyEmail)"
-#~ msgstr "(PrázdnýEmail)"
