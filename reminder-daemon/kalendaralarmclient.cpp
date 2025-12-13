@@ -120,7 +120,7 @@ void KalendarAlarmClient::deferredInit()
 void KalendarAlarmClient::restoreSuspendedFromConfig()
 {
     qCDebug(REMINDER_DAEMON_LOG) << "Restore suspended alarms from config";
-    const KConfigGroup suspendedGroup(KSharedConfig::openConfig(), QLatin1StringView(mySuspensedGroupName));
+    const KConfigGroup suspendedGroup(m_config, QLatin1StringView(mySuspensedGroupName));
     const auto suspendedAlarms = suspendedGroup.groupList();
 
     for (const auto &s : suspendedAlarms) {
@@ -226,7 +226,7 @@ void KalendarAlarmClient::storeNotification(AlarmNotification *notification)
     }
     notificationGroup.writeEntry("RemindAt", notification->remindAt());
     notificationGroup.writeEntry("WasSuspensed", notification->wasSuspended());
-    KSharedConfig::openConfig()->sync();
+    m_config->sync();
 }
 
 void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
@@ -239,7 +239,7 @@ void KalendarAlarmClient::removeNotification(AlarmNotification *notification)
     KConfigGroup suspendedGroup(m_config, QLatin1StringView(mySuspensedGroupName));
     KConfigGroup notificationGroup(&suspendedGroup, QLatin1StringView(notificationUidData));
     notificationGroup.deleteGroup();
-    KSharedConfig::openConfig()->sync();
+    m_config->sync();
 }
 
 void KalendarAlarmClient::addNotification(const QString &uid, const QString &text, const QDateTime &occurrence, const QDateTime &remindTime, bool wasSuspended)
