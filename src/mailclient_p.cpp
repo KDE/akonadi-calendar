@@ -320,7 +320,7 @@ void MailClient::queueMessage(const MailTransport::Transport *transport,
                               const KCalendarCore::IncidenceBase::Ptr &incidence,
                               const KIdentityManagementCore::Identity &identity,
                               const MessageData &msg,
-                              const KMime::Message::Ptr &message)
+                              const std::shared_ptr<KMime::Message> &message)
 {
     Akonadi::MessageQueueJob *qjob = mFactory->createMessageQueueJob(incidence, identity, this);
     qjob->setMessage(message);

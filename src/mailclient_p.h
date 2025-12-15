@@ -23,7 +23,7 @@ struct UnitTestResult {
     QStringList cc;
     QStringList bcc;
     int transportId;
-    KMime::Message::Ptr message;
+    std::shared_ptr<KMime::Message> message;
     UnitTestResult()
         : transportId(-1)
     {
@@ -201,7 +201,7 @@ private:
                       const KCalendarCore::IncidenceBase::Ptr &incidence,
                       const KIdentityManagementCore::Identity &identity,
                       const MessageData &msg,
-                      const KMime::Message::Ptr &message);
+                      const std::shared_ptr<KMime::Message> &message);
 
     void populateKeyResolverContactsPreferences(MessageComposer::KeyResolver &keyResolver, const QStringList &addresses);
 };
