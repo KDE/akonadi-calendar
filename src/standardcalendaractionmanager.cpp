@@ -474,9 +474,7 @@ public:
     StandardCalendarActionManager *const mParent;
 
 private:
-    // disable copy ctor
-    StandardCalendarActionManagerPrivate(const StandardCalendarActionManagerPrivate &) = delete;
-    StandardCalendarActionManagerPrivate &operator=(const StandardCalendarActionManagerPrivate &) = delete;
+    Q_DISABLE_COPY_MOVE(StandardCalendarActionManagerPrivate)
 };
 
 Akonadi::StandardCalendarActionManager::StandardCalendarActionManager(KActionCollection *actionCollection, QWidget *parent)
