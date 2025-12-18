@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:43+0000\n"
 "PO-Revision-Date: 2025-12-08 06:13-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1937,52 +1937,52 @@ msgstr "Mover o diário para"
 msgid "Edit Journal…"
 msgstr "Editar diário…"
 
-#: standardcalendaractionmanager.cpp:530
+#: standardcalendaractionmanager.cpp:528
 #, kde-format
 msgid "New E&vent…"
 msgstr "Novo e&vento…"
 
-#: standardcalendaractionmanager.cpp:531
+#: standardcalendaractionmanager.cpp:529
 #, kde-format
 msgid "Create a new event"
 msgstr "Cria um evento novo"
 
-#: standardcalendaractionmanager.cpp:541
+#: standardcalendaractionmanager.cpp:539
 #, kde-format
 msgid "New &To-do…"
 msgstr "Nova &tarefa…"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:540
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Criar uma nova tarefa"
 
-#: standardcalendaractionmanager.cpp:551
+#: standardcalendaractionmanager.cpp:549
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Nova su&btarefa…"
 
-#: standardcalendaractionmanager.cpp:552
+#: standardcalendaractionmanager.cpp:550
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Cria uma nova subtarefa"
 
-#: standardcalendaractionmanager.cpp:562
+#: standardcalendaractionmanager.cpp:560
 #, kde-format
 msgid "New &Journal…"
 msgstr "No&vo diário…"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:561
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Cria um novo evento de diário"
 
-#: standardcalendaractionmanager.cpp:572
+#: standardcalendaractionmanager.cpp:570
 #, kde-format
 msgid "&Edit…"
 msgstr "&Editar…"
 
-#: standardcalendaractionmanager.cpp:573
+#: standardcalendaractionmanager.cpp:571
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Editar a incidência selecionada."

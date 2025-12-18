@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:43+0000\n"
 "PO-Revision-Date: 2025-11-23 14:34+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1988,52 +1988,52 @@ msgstr "Пересунути журнал до"
 msgid "Edit Journal…"
 msgstr "Змінити журнал…"
 
-#: standardcalendaractionmanager.cpp:530
+#: standardcalendaractionmanager.cpp:528
 #, kde-format
 msgid "New E&vent…"
 msgstr "Нова п&одія…"
 
-#: standardcalendaractionmanager.cpp:531
+#: standardcalendaractionmanager.cpp:529
 #, kde-format
 msgid "Create a new event"
 msgstr "Створити запис події"
 
-#: standardcalendaractionmanager.cpp:541
+#: standardcalendaractionmanager.cpp:539
 #, kde-format
 msgid "New &To-do…"
 msgstr "Нове &завдання…"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:540
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Створити запис події"
 
-#: standardcalendaractionmanager.cpp:551
+#: standardcalendaractionmanager.cpp:549
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Нове п&ідзавдання…"
 
-#: standardcalendaractionmanager.cpp:552
+#: standardcalendaractionmanager.cpp:550
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Створити запис підзавдання"
 
-#: standardcalendaractionmanager.cpp:562
+#: standardcalendaractionmanager.cpp:560
 #, kde-format
 msgid "New &Journal…"
 msgstr "Новий &журнал…"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:561
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Створити новий журнал"
 
-#: standardcalendaractionmanager.cpp:572
+#: standardcalendaractionmanager.cpp:570
 #, kde-format
 msgid "&Edit…"
 msgstr "&Змінити…"
 
-#: standardcalendaractionmanager.cpp:573
+#: standardcalendaractionmanager.cpp:571
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Змінити параметри позначеного запису події."

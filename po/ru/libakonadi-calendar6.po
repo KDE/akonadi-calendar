@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:43+0000\n"
 "PO-Revision-Date: 2024-11-12 17:04+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -2014,52 +2014,52 @@ msgstr "Переместить запись дневника в"
 msgid "Edit Journal…"
 msgstr "Изменить запись дневника…"
 
-#: standardcalendaractionmanager.cpp:530
+#: standardcalendaractionmanager.cpp:528
 #, kde-format
 msgid "New E&vent…"
 msgstr "Создать со&бытие…"
 
-#: standardcalendaractionmanager.cpp:531
+#: standardcalendaractionmanager.cpp:529
 #, kde-format
 msgid "Create a new event"
 msgstr "Создать новое событие"
 
-#: standardcalendaractionmanager.cpp:541
+#: standardcalendaractionmanager.cpp:539
 #, kde-format
 msgid "New &To-do…"
 msgstr "Создать &задачу…"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:540
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Создать новую задачу"
 
-#: standardcalendaractionmanager.cpp:551
+#: standardcalendaractionmanager.cpp:549
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Создать &подзадачу…"
 
-#: standardcalendaractionmanager.cpp:552
+#: standardcalendaractionmanager.cpp:550
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Создать новую подзадачу"
 
-#: standardcalendaractionmanager.cpp:562
+#: standardcalendaractionmanager.cpp:560
 #, kde-format
 msgid "New &Journal…"
 msgstr "Создать запись &дневника…"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:561
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Создать новую запись дневника"
 
-#: standardcalendaractionmanager.cpp:572
+#: standardcalendaractionmanager.cpp:570
 #, kde-format
 msgid "&Edit…"
 msgstr "&Изменить…"
 
-#: standardcalendaractionmanager.cpp:573
+#: standardcalendaractionmanager.cpp:571
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Изменить выбранное событие, задачу или запись дневника."

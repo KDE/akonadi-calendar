@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:43+0000\n"
 "PO-Revision-Date: 2025-11-28 21:23+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1940,52 +1940,52 @@ msgstr "Преместване на дневника в"
 msgid "Edit Journal…"
 msgstr "Редактиране на дневник…"
 
-#: standardcalendaractionmanager.cpp:530
+#: standardcalendaractionmanager.cpp:528
 #, kde-format
 msgid "New E&vent…"
 msgstr "Ново &събитие…"
 
-#: standardcalendaractionmanager.cpp:531
+#: standardcalendaractionmanager.cpp:529
 #, kde-format
 msgid "Create a new event"
 msgstr "Създаване на ново събитие"
 
-#: standardcalendaractionmanager.cpp:541
+#: standardcalendaractionmanager.cpp:539
 #, kde-format
 msgid "New &To-do…"
 msgstr "Нова &задача…"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:540
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Създаване на нова задача"
 
-#: standardcalendaractionmanager.cpp:551
+#: standardcalendaractionmanager.cpp:549
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Нова по&дзадача…"
 
-#: standardcalendaractionmanager.cpp:552
+#: standardcalendaractionmanager.cpp:550
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Създаване на нова подзадача"
 
-#: standardcalendaractionmanager.cpp:562
+#: standardcalendaractionmanager.cpp:560
 #, kde-format
 msgid "New &Journal…"
 msgstr "Нов &дневник…"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:561
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Създаване на ново списание"
 
-#: standardcalendaractionmanager.cpp:572
+#: standardcalendaractionmanager.cpp:570
 #, kde-format
 msgid "&Edit…"
 msgstr "&Редактиране…"
 
-#: standardcalendaractionmanager.cpp:573
+#: standardcalendaractionmanager.cpp:571
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Редактиране на избраното събитие."

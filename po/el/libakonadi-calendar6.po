@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:43+0000\n"
 "PO-Revision-Date: 2024-09-26 11:12+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1990,52 +1990,52 @@ msgstr "Μετακίνηση χρονικού σε"
 msgid "Edit Journal…"
 msgstr "Επεξεργασία χρονικού…"
 
-#: standardcalendaractionmanager.cpp:530
+#: standardcalendaractionmanager.cpp:528
 #, kde-format
 msgid "New E&vent…"
 msgstr "Νέο γεγ&ονός…"
 
-#: standardcalendaractionmanager.cpp:531
+#: standardcalendaractionmanager.cpp:529
 #, kde-format
 msgid "Create a new event"
 msgstr "Δημιουργία νέου γεγονότος"
 
-#: standardcalendaractionmanager.cpp:541
+#: standardcalendaractionmanager.cpp:539
 #, kde-format
 msgid "New &To-do…"
 msgstr "Νέα εργασία προς υ&λοποίηση…"
 
-#: standardcalendaractionmanager.cpp:542
+#: standardcalendaractionmanager.cpp:540
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Δημιουργία νέας εργασίας προς υλοποίηση"
 
-#: standardcalendaractionmanager.cpp:551
+#: standardcalendaractionmanager.cpp:549
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Νέα υποεργασία προς υλο&ποίηση…"
 
-#: standardcalendaractionmanager.cpp:552
+#: standardcalendaractionmanager.cpp:550
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Δημιουργία νέας υποεργασίας προς υλοποίηση"
 
-#: standardcalendaractionmanager.cpp:562
+#: standardcalendaractionmanager.cpp:560
 #, kde-format
 msgid "New &Journal…"
 msgstr "Νέο &χρονικό…"
 
-#: standardcalendaractionmanager.cpp:563
+#: standardcalendaractionmanager.cpp:561
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Δημιουργία νέου χρονικού"
 
-#: standardcalendaractionmanager.cpp:572
+#: standardcalendaractionmanager.cpp:570
 #, kde-format
 msgid "&Edit…"
 msgstr "&Επεξεργασία…"
 
-#: standardcalendaractionmanager.cpp:573
+#: standardcalendaractionmanager.cpp:571
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Επεξεργασία του επιλεγμένου περιστατικού."
