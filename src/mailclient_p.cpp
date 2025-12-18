@@ -528,7 +528,7 @@ void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, con
     // Set User-Agent
     auto *header = new KMime::Headers::Generic("User-Agent");
     header->fromUnicodeString(u"KOrganizer %1"_s.arg(QStringLiteral(AKONADI_CALENDAR_VERSION)));
-    KMime::Headers::Base::List extras;
+    QList<KMime::Headers::Base *> extras;
     extras.push_back(header);
     infoPart->setExtraHeaders(extras);
 

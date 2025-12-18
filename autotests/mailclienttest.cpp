@@ -446,15 +446,15 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
             QCOMPARE(unitTestResult.bcc, expectedBccList);
             switch (expectedCrypto) {
             case CryptoState::Plain:
-                QCOMPARE(unitTestResult.message->contentType(false)->mimeType(), "text/plain");
+                QCOMPARE(unitTestResult.message->contentType(KMime::CreatePolicy::DontCreate)->mimeType(), "text/plain");
                 break;
 
             case CryptoState::Signed:
-                QCOMPARE(unitTestResult.message->contentType(false)->mimeType(), "multipart/signed");
+                QCOMPARE(unitTestResult.message->contentType(KMime::CreatePolicy::DontCreate)->mimeType(), "multipart/signed");
                 break;
 
             case CryptoState::Encrypted:
-                QCOMPARE(unitTestResult.message->contentType(false)->mimeType(), "multipart/encrypted");
+                QCOMPARE(unitTestResult.message->contentType(KMime::CreatePolicy::DontCreate)->mimeType(), "multipart/encrypted");
                 break;
             }
         }
