@@ -2037,13 +2037,3 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Rydder bort fullførte gjøremål"
-
-#, fuzzy
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyName)"
-#~ msgstr "(TomtNavn)"
-
-#, fuzzy
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyEmail)"
-#~ msgstr "(TomE-post)"
