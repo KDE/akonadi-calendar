@@ -94,7 +94,7 @@ void FbCheckerJob::checkNextUrl()
     const QUrl url = mUrlsToCheck.takeFirst();
 
     mData.clear();
-    KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
+    const KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
     connect(job, &KIO::TransferJob::data, this, &FbCheckerJob::dataReceived);
     connect(job, &KIO::TransferJob::result, this, &FbCheckerJob::onGetJobFinished);
 }
@@ -456,7 +456,7 @@ void FreeBusyManagerPrivate::processRetrieveQueue()
 
 void FreeBusyManagerPrivate::finishProcessRetrieveQueue(const QString &email, const QUrl &freeBusyUrlForEmail)
 {
-    Q_Q(FreeBusyManager);
+    Q_Q(FreeBusyManager); // NOLINT(misc-const-correctness)
 
     if (!freeBusyUrlForEmail.isValid()) {
         qCDebug(AKONADICALENDAR_LOG) << "Invalid FreeBusy URL" << freeBusyUrlForEmail.toDisplayString() << email;

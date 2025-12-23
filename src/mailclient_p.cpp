@@ -650,7 +650,7 @@ void MailClient::send(const KCalendarCore::IncidenceBase::Ptr &incidence,
                                  << msg.body << "\nAttachment:\n"
                                  << msg.attachment << "\nmailTransport: " << mailTransport << "\nidentity:" << identity.identityName();
 
-    MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportByName(mailTransport);
+    const MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportByName(mailTransport);
     if (!transport) {
         qCritical() << "Error fetching transport; mailTransport" << mailTransport << MailTransport::TransportManager::self()->defaultTransportName();
         Q_EMIT finished(ResultErrorFetchingTransport, i18n("Error fetching transport. Unable to send invitations"));

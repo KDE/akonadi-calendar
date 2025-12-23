@@ -585,7 +585,7 @@ QAction *StandardCalendarActionManager::createAction(StandardCalendarActionManag
 
 QAction *StandardCalendarActionManager::createAction(StandardActionManager::Type type)
 {
-    QAction *act = d->mGenericManager->action(type);
+    QAction *act = d->mGenericManager->action(type); // NOLINT(misc-const-correctness)
     if (!act) {
         act = d->mGenericManager->createAction(type);
     }

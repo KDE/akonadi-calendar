@@ -548,7 +548,7 @@ void IncidenceChangerPrivate::handleInvitationsBeforeChange(const Change::Ptr &c
 
             if (newIncidence->type() == oldIncidence->type()) {
                 IncidenceBase *i1 = newIncidence.data();
-                IncidenceBase *i2 = oldIncidence.data();
+                const IncidenceBase *i2 = oldIncidence.data();
                 *i1 = *i2;
             }
             break;
@@ -1275,7 +1275,7 @@ void IncidenceChangerPrivate::cancelTransaction()
 void IncidenceChangerPrivate::cleanupTransaction()
 {
     Q_ASSERT(mAtomicOperations.contains(mLatestAtomicOperationId));
-    AtomicOperation *operation = mAtomicOperations[mLatestAtomicOperationId];
+    const AtomicOperation *operation = mAtomicOperations[mLatestAtomicOperationId];
     Q_ASSERT(operation);
     Q_ASSERT(operation->rolledback());
     if (!operation->pendingJobs() && operation->m_endCalled && operation->m_transactionCompleted) {
@@ -1289,7 +1289,7 @@ bool IncidenceChangerPrivate::allowAtomicOperation(int atomicOperationId, const 
     bool allow = true;
     if (atomicOperationId > 0) {
         Q_ASSERT(mAtomicOperations.contains(atomicOperationId));
-        AtomicOperation *operation = mAtomicOperations.value(atomicOperationId);
+        const AtomicOperation *operation = mAtomicOperations.value(atomicOperationId);
 
         if (change->type == IncidenceChanger::ChangeTypeCreate) {
             allow = true;

@@ -164,7 +164,7 @@ void IncidenceTreeModelPrivate::onDataChanged(const QModelIndex &begin, const QM
 
             // Did we this node change parent? If no, just Q_EMIT dataChanged(), if
             // yes, we must Q_EMIT rowsMoved(), so we see a visual effect in the view.
-            Node *rawNode = reinterpret_cast<Node *>(index.internalPointer());
+            const Node *rawNode = reinterpret_cast<Node *>(index.internalPointer());
             Node::Ptr const node = m_uidMap.value(rawNode->uid); // Looks hackish but it's safe
             Q_ASSERT(node);
             Node::Ptr const oldParentNode = node->parentNode;
@@ -659,7 +659,7 @@ int IncidenceTreeModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         Q_ASSERT(parent.model() == this);
-        Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
+        const Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
         Q_ASSERT(parentNode);
         d->assert_and_dump(!d->m_removedNodes.contains(parentNode), QString::number((quintptr)parentNode, 16) + QLatin1StringView(" was already deleted"));
 
@@ -720,7 +720,7 @@ QModelIndex IncidenceTreeModel::mapToSource(const QModelIndex &proxyIndex) const
     Q_ASSERT(proxyIndex.column() < columnCount());
     Q_ASSERT(proxyIndex.internalPointer());
     Q_ASSERT(proxyIndex.model() == this);
-    Node *node = reinterpret_cast<Node *>(proxyIndex.internalPointer());
+    const Node *node = reinterpret_cast<Node *>(proxyIndex.internalPointer());
 
     /*
      This code is slow, using a persistent model index instead.
@@ -756,7 +756,7 @@ QModelIndex IncidenceTreeModel::parent(const QModelIndex &child) const
 
     Q_ASSERT(child.model() == this);
     Q_ASSERT(child.internalPointer());
-    Node *childNode = reinterpret_cast<Node *>(child.internalPointer());
+    const Node *childNode = reinterpret_cast<Node *>(child.internalPointer());
     if (d->m_removedNodes.contains(childNode)) {
         qCWarning(AKONADICALENDAR_LOG) << "IncidenceTreeModel::parent() Node already removed.";
         return {};
@@ -798,7 +798,7 @@ QModelIndex IncidenceTreeModel::index(int row, int column, const QModelIndex &pa
     if (parent.isValid()) {
         Q_ASSERT(parent.model() == this);
         Q_ASSERT(parent.internalPointer());
-        Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
+        const Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
 
         if (row >= parentNode->directChilds.count()) {
             qCCritical(AKONADICALENDAR_LOG) << "IncidenceTreeModel::index() row=" << row << "; column=" << column;
@@ -823,7 +823,7 @@ bool IncidenceTreeModel::hasChildren(const QModelIndex &parent) const
             // Indexes at column >0 don't have parent, says Qt documentation
             return false;
         }
-        Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
+        const Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
         Q_ASSERT(parentNode);
         return !parentNode->directChilds.isEmpty();
     } else {

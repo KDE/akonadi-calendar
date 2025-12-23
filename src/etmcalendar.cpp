@@ -507,7 +507,7 @@ KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from, const QDat
         const Akonadi::Item item = i.next().value();
 
         Akonadi::Collection parentCollection; // must have same lifetime as blockedAttr
-        BlockAlarmsAttribute *blockedAttr = nullptr;
+        const BlockAlarmsAttribute *blockedAttr = nullptr;
 
         if (excludeBlockedAlarms) {
             // take the collection from m_collectionMap, because we need the up-to-date collection attrs
