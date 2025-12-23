@@ -26,12 +26,12 @@ class AKONADI_CALENDAR_EXPORT SearchCollectionHelper : public QObject
 {
     Q_OBJECT
 public:
-    /**
-     * @brief Construct a new Search Collection Helper object.
+    /*!
+     * \brief Construct a new Search Collection Helper object.
      *
      * Note that helper is disabled by default. Call setEnabled(true) to enable it.
      *
-     * @param parent
+     * \a parent
      */
     explicit SearchCollectionHelper(QObject *parent = nullptr);
     ~SearchCollectionHelper() override;

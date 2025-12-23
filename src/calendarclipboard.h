@@ -19,11 +19,11 @@ namespace Akonadi
 class IncidenceChanger;
 class CalendarClipboardPrivate;
 
-/**
- * @short Class to copy or cut calendar incidences.
+/*!
+ * \brief Class to copy or cut calendar incidences.
  *
  * @author Sérgio Martins <iamsergio@gmail.com>
- * @since 4.11
+ * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT CalendarClipboard : public QObject
 {
@@ -35,47 +35,47 @@ public:
         AskMode ///< The user is asked if he wants children to be cut/copied too
     };
 
-    /**
+    /*!
      * Constructs a new CalendarClipboard.
-     * @param calendar calendar containing incidences
-     * @param changer incidence changer that will delete incidences while copying.
+     * \a calendar calendar containing incidences
+     * \a changer incidence changer that will delete incidences while copying.
      *        If 0, an internal one will be created.
-     * @param parent QObject parent
+     * \a parent QObject parent
      */
     explicit CalendarClipboard(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer = nullptr, QObject *parent = nullptr);
-    /**
+    /*!
      * Destroys the CalendarClipboard instance.
      */
     ~CalendarClipboard() override;
 
-    /**
+    /*!
      * Copies the specified incidence into the clipboard and then deletes it from akonadi.
      * The incidence must be present in the calendar.
      * After it's deletion from akonadi, signal cutFinished() is emitted.
-     * @param incidence to cut
-     * @param mode how to treat child incidences. Defaults to #RecursiveMode
-     * @see cutFinished().
+     * \a incidence to cut
+     * \a mode how to treat child incidences. Defaults to #RecursiveMode
+     * \sa cutFinished().
      */
     void cutIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode = RecursiveMode);
 
-    /**
+    /*!
      * Copies the specified incidence into the clipboard.
-     * @param incidence the incidence to copy
-     * @param mode how to treat child incidences. Defaults to #RecursiveMode
-     * @return true on success
+     * \a incidence the incidence to copy
+     * \a mode how to treat child incidences. Defaults to #RecursiveMode
+     * Returns true on success
      */
     bool copyIncidence(const KCalendarCore::Incidence::Ptr &incidence, CalendarClipboard::Mode mode = RecursiveMode);
 
-    /**
+    /*!
      * Returns if there's any ical mime data available for pasting.
      */
     [[nodiscard]] bool pasteAvailable() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted after cutIncidences() finishes.
-     * @param success true if the cut was successful
-     * @param errorMessage if @p success if false, contains the error message, empty otherwise.
+     * \a success true if the cut was successful
+     * \a errorMessage if \a success if false, contains the error message, empty otherwise.
      */
     void cutFinished(bool success, const QString &errorMessage);
 

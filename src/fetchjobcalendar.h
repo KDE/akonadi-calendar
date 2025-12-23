@@ -15,17 +15,17 @@
 namespace Akonadi
 {
 class FetchJobCalendarPrivate;
-/**
- * @short A KCalendarCore::Calendar that uses a one time IncidenceFetchJob to populate itself.
+/*!
+ * \brief A KCalendarCore::Calendar that uses a one time IncidenceFetchJob to populate itself.
  *
  * If you want a persistent calendar ( which monitors Akonadi for changes )
  * use an ETMCalendar.
  *
- * @see ETMCalendar
- * @see CalendarBase
+ * \sa ETMCalendar
+ * \sa CalendarBase
  *
  * @author Sérgio Martins <sergio.martins@kdab.com>
- * @since 4.11
+ * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT FetchJobCalendar : public Akonadi::CalendarBase
 {
@@ -33,22 +33,22 @@ class AKONADI_CALENDAR_EXPORT FetchJobCalendar : public Akonadi::CalendarBase
 public:
     using Ptr = QSharedPointer<FetchJobCalendar>;
 
-    /**
+    /*!
      * Creates a new FetchJobCalendar. Loading begins asynchronously.
-     * @see loadFinished()
+     * \sa loadFinished()
      */
     explicit FetchJobCalendar(QObject *parent = nullptr);
 
-    /**
+    /*!
      * Destroys this FetchJobCalendar.
      */
     ~FetchJobCalendar() override;
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted when the IncidenceFetchJob finishes.
-     * @param success the success of the operation
-     * @param errorMessage if @p success is false, contains the error message
+     * \a success the success of the operation
+     * \a errorMessage if \a success is false, contains the error message
      */
     void loadFinished(bool success, const QString &errorMessage);
 

@@ -92,7 +92,7 @@ public:
     QString mLastErrorString;
     bool mUndoAllInProgress = false;
 
-    /**
+    /*!
      * When recordCreation/Deletion/Modification is called and an undo operation is already in progress
      * the entry is added here.
      */

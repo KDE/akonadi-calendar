@@ -1,4 +1,4 @@
-/**
+/*!
   This file is part of the akonadi-calendar library.
 
   SPDX-FileCopyrightText: 2013 Sérgio Martins <iamsergio@gmail.com>
@@ -17,10 +17,10 @@
 
 #include <memory>
 
-/**
+/*!
  * A class to import ical calendar files into akonadi.
  *
- * @since 4.12
+ * \since 4.12
  */
 namespace Akonadi
 {
@@ -31,17 +31,17 @@ class AKONADI_CALENDAR_EXPORT ICalImporter : public QObject
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Constructs a new ICalImporter object. Use a different ICalImporter instance for each file you want to import.
      *
-     * @param changer An existing IncidenceChanger, if 0, an internal one will be created.
+     * \a changer An existing IncidenceChanger, if 0, an internal one will be created.
      *                If you pass an existing one, you will be able to undo/redo import operations.
-     * @param parent  Parent QObject.
+     * \a parent  Parent QObject.
      */
     explicit ICalImporter(Akonadi::IncidenceChanger *changer = nullptr, QObject *parent = nullptr);
     ~ICalImporter() override;
 
-    /**
+    /*!
      * Translated error message.
      * This is set when either importIntoExistingFinished() or importIntoNewResource() return false
      * or when the corresponding signals are have success=false.
@@ -49,16 +49,16 @@ public:
     [[nodiscard]] QString errorMessage() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted after calling importIntoExistingResource()
-     * @param success Success of the operation.
-     * @param total Number of incidences included in the ical file.
+     * \a success Success of the operation.
+     * \a total Number of incidences included in the ical file.
      *
-     * @see importIntoExistingResource(), errorMessage().
+     * \sa importIntoExistingResource(), errorMessage().
      */
     void importIntoExistingFinished(bool success, int total);
 
-    /**
+    /*!
      * Emitted after calling importIntoNewResource().
      * If success is false, check errorMessage().
      */
@@ -66,19 +66,19 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 
-    /**
-     * Creates a new akonadi_ical_resource and configures it to use @p filename.
-     * @param filename ical absolute file path
-     * @return True if the job was started, in this case you should wait for the corresponding signal.
+    /*!
+     * Creates a new akonadi_ical_resource and configures it to use \a filename.
+     * \a filename ical absolute file path
+     * Returns True if the job was started, in this case you should wait for the corresponding signal.
      */
     bool importIntoNewResource(const QString &filename);
 
-    /**
+    /*!
      * Imports an ical file into an existing resource.
-     * @param url Path of a local or remote file to import.
-     * @param collectionId The destination collection. If null, the user will be prompted for a destination.
+     * \a url Path of a local or remote file to import.
+     * \a collectionId The destination collection. If null, the user will be prompted for a destination.
      *
-     * @return false if some basic validation happened, like insufficient permissions. Use errorMessage() to see
+     * Returns false if some basic validation happened, like insufficient permissions. Use errorMessage() to see
      *         what happened. The importIntoExistingFinished() signal won't be emitted in this case.
      *
      *         true if the import job was started. importIntoExistingFinished() signal will be emitted in this case.

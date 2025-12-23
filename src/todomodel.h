@@ -26,13 +26,13 @@ namespace Akonadi
 {
 class TodoModelPrivate;
 
-/** Expands an IncidenceTreeModel by additional columns for showing todos. */
+/*! Expands an IncidenceTreeModel by additional columns for showing todos. */
 class AKONADI_CALENDAR_EXPORT TodoModel : public KExtraColumnsProxyModel
 {
     Q_OBJECT
 
 public:
-    /** This enum defines all columns this model provides */
+    /*! This enum defines all columns this model provides */
     enum {
         SummaryColumn = 0,
         RecurColumn,
@@ -47,7 +47,7 @@ public:
         ColumnCount // Just for iteration/column count purposes. Always keep at the end of enum.
     };
 
-    /** This enum defines the user defined roles of the items in this model */
+    /*! This enum defines the user defined roles of the items in this model */
     enum {
         TodoRole = Akonadi::EntityTreeModel::UserRole + 1,
         TodoPtrRole,
@@ -96,7 +96,7 @@ public:
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
 Q_SIGNALS:
-    /** Emitted when dropMimeData() rejected a drop
+    /*! Emitted when dropMimeData() rejected a drop
      *  on the same item or any of its children.
      */
     void dropOnSelfRejected();

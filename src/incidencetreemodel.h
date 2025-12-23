@@ -18,21 +18,21 @@ namespace Akonadi
 
 class IncidenceTreeModelPrivate;
 
-/** Hierarchical incidence model.
+/*! Hierarchical incidence model.
  *  Useful as a source for TodoModel for example.
  */
 class AKONADI_CALENDAR_EXPORT IncidenceTreeModel : public QAbstractProxyModel
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Constructs a new IncidenceTreeModel.
      */
     explicit IncidenceTreeModel(QObject *parent = nullptr);
 
-    /**
+    /*!
      * Constructs a new IncidenceTreeModel which will only show incidences of
-     * type @p mimeTypes. Common use case is a to-do tree.
+     * type \a mimeTypes. Common use case is a to-do tree.
      *
      * This constructor is offered for performance reasons. The filtering has
      * zero overhead, and we avoid stacking mime type filter proxy models.
@@ -59,13 +59,13 @@ public:
     void setSourceModel(QAbstractItemModel *sourceModel) override;
     [[nodiscard]] bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
 
-    /**
-     * Returns the akonadi item containing the incidence with @p incidenceUid.
+    /*!
+     * Returns the akonadi item containing the incidence with \a incidenceUid.
      */
     [[nodiscard]] Akonadi::Item item(const QString &incidenceUid) const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever an index changes parent.
      * The view can then expand the parent if desired.
      * This is better than the view waiting for "rows moved" signals because those
@@ -73,7 +73,7 @@ Q_SIGNALS:
      */
     void indexChangedParent(const QModelIndex &index);
 
-    /**
+    /*!
      * Signals that we finished doing a batch of insertions.
      *
      * One rowsInserted() signal from the ETM, will make IncidenceTreeModel generate

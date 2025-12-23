@@ -23,29 +23,29 @@ class AKONADI_CALENDAR_EXPORT FreeBusyManager : public QObject, public KCalendar
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Returns the FreeBusyManager
      */
     static FreeBusyManager *self();
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
-    /**
+    /*!
       Publishes the owners freebusy information from the current calendar
       starting from the current date/time to current date/time + freeBusyPublishDays.
       If an upload is already in progress nothing happens.
 
-      @see KCalPrefBase::freeBusyPublishUrl()
-      @see KCalPrefBase::freeBusyPublishDays();
+      \sa KCalPrefBase::freeBusyPublishUrl()
+      \sa KCalPrefBase::freeBusyPublishDays();
       */
     Q_INVOKABLE void publishFreeBusy(QWidget *parentWidget = nullptr);
 
-    /**
+    /*!
       Mail the freebusy information.
       */
     Q_INVOKABLE void mailFreeBusy(int daysToPublish = 30, QWidget *parentWidget = nullptr);
 
-    /**
+    /*!
       Retrieve the freebusy information of somebody else, i.e. it will not try
       to download our own freebusy information.
 
@@ -69,27 +69,27 @@ public:
       The call is asynchronous, a download is started in the background (if
       needed) and freeBusyRetrieved will be emitted when the download is finished.
 
-      @see KCalPrefs::thatIsMe( const QString &email );
-      @see Akonadi::FreeBusyProviderBase
+      \sa KCalPrefs::thatIsMe( const QString &email );
+      \sa Akonadi::FreeBusyProviderBase
 
-      @param email Address of the person for which the F/B list should be
+      \a email Address of the person for which the F/B list should be
               retrieved.
-      @param forceDownload Set to true to trigger a download even when automatic
+      \a forceDownload Set to true to trigger a download even when automatic
               retrieval of freebusy information is disabled in the configuration.
-      @return true if a download is initiated, and false otherwise
+      Returns true if a download is initiated, and false otherwise
     */
     Q_INVOKABLE bool retrieveFreeBusy(const QString &email, bool forceDownload, QWidget *parentWidget = nullptr);
 
-    /**
+    /*!
       Clears the retrieval queue, i.e. all retrieval request that are not started
       yet will not start at all. The freebusy retrieval that currently is
       downloading (if one) will not be canceled.
 
-      @see retrieveFreeBusy
+      \sa retrieveFreeBusy
       */
     void cancelRetrieval();
 
-    /**
+    /*!
       Load freebusy information belonging to an email. The information is loaded
       from a local file. If the file does not exists or doesn't contain valid
       information 0 is returned. In that case the information should be retrieved
@@ -97,33 +97,33 @@ public:
 
       Implements KCalendarCore::FreeBusyCache::loadFreeBusy
 
-      @param email is a QString containing a email string in the
+      \a email is a QString containing a email string in the
       "FirstName LastName <emailaddress>" format.
     */
     [[nodiscard]] KCalendarCore::FreeBusy::Ptr loadFreeBusy(const QString &email) override;
 
-    /**
+    /*!
       Save freebusy information belonging to an email.
 
       Implements KCalendarCore::FreeBusyCache::saveFreeBusy
 
-      @param freebusy is a pointer to a valid FreeBusy instance.
-      @param person is a valid Person instance.
+      \a freebusy is a pointer to a valid FreeBusy instance.
+      \a person is a valid Person instance.
     */
     bool saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy, const KCalendarCore::Person &person) override;
 
 Q_SIGNALS:
-    /**
+    /*!
       This signal is emitted to return results of free/busy requests.
     */
     void freeBusyRetrieved(const KCalendarCore::FreeBusy::Ptr &fb, const QString &email);
 
 protected:
-    /** React on timer events, used for delayed freebusy list uploading */
+    /*! React on timer events, used for delayed freebusy list uploading */
     void timerEvent(QTimerEvent *event) override;
 
 private:
-    /**
+    /*!
       Creates a new FreeBusyManager, private because FreeBusyManager is a
       Singleton
       */

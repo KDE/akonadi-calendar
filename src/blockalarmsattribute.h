@@ -18,58 +18,58 @@ namespace Akonadi
 {
 class BlockAlarmsAttributePrivate;
 
-/**
- * @short An Attribute that marks that alarms from a calendar collection are blocked.
+/*!
+ * \brief An Attribute that marks that alarms from a calendar collection are blocked.
  *
  * A calendar collection which has this attribute set won't be evaluated by korgac and
  * therefore it's alarms won't be used, unless explicitly unblocked in blockAlarmType().
  *
  * @author Tobias Koenig <tokoe@kdab.com>
- * @see Akonadi::Attribute
- * @since 4.11
+ * \sa Akonadi::Attribute
+ * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT BlockAlarmsAttribute : public Akonadi::Attribute
 {
 public:
-    /**
+    /*!
      * Creates a new block alarms attribute.
      */
     BlockAlarmsAttribute();
 
-    /**
+    /*!
      * Destroys the block alarms attribute.
      */
     ~BlockAlarmsAttribute() override;
 
-    /**
+    /*!
      * Blocks or unblocks given alarm type.
      *
      * By default, all alarm types are blocked.
      *
-     * @since 4.11
+     * \since 4.11
      */
     void blockAlarmType(KCalendarCore::Alarm::Type type, bool block = true);
 
-    /**
+    /*!
      * Blocks or unblocks every alarm type.
      *
      * By default, all alarm types are blocked.
      *
-     * @since 5.0
+     * \since 5.0
      */
     void blockEverything(bool block = true);
 
-    /**
+    /*!
      * Returns whether given alarm type is blocked or not.
      *
-     * @since 4.11
+     * \since 4.11
      */
     [[nodiscard]] bool isAlarmTypeBlocked(KCalendarCore::Alarm::Type type) const;
 
-    /**
+    /*!
      * Returns whether all alarms are blocked or not.
      *
-     * @since 5.0
+     * \since 5.0
      */
 
     [[nodiscard]] bool isEverythingBlocked() const;

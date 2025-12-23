@@ -24,8 +24,8 @@ namespace Akonadi
 class EntityTreeModel;
 class IncidenceChangerPrivate;
 
-/**
- * @short IncidenceChanger is the preferred way to easily create, modify and delete incidences.
+/*!
+ * \brief IncidenceChanger is the preferred way to easily create, modify and delete incidences.
  *
  * It hides the communication with akonadi from the library user.
  *
@@ -40,7 +40,7 @@ class IncidenceChangerPrivate;
  *
  * In the context of this API, "change", means "creation", "deletion" or incidence "modification".
  *
- * @code
+ * \code
  * IncidenceChanger *changer = new IncidenceChanger( parent );
  * connect( changer,
  *          SIGNAL(createFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
@@ -64,10 +64,10 @@ class IncidenceChangerPrivate;
  *  // Invalid parameters, incidence is null.
  * }
  *
- * @endcode
+ * \endcode
  *
  * @author Sérgio Martins <iamsergio@gmail.com>
- * @since 4.11
+ * \since 4.11
  */
 
 class History;
@@ -76,7 +76,7 @@ class AKONADI_CALENDAR_EXPORT IncidenceChanger : public QObject
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * This enum describes result codes which are returned by createFinished(),
      * modifyfinished() and deleteFinished() signals.
      */
@@ -93,23 +93,23 @@ public:
         ResultCodeDuplicateId ///< Duplicate Akonadi::Item::Ids must be unique in group operations
     };
 
-    /**
+    /*!
      * This enum describes destination policies.
      * Destination policies control how the createIncidence() method chooses the
      * collection where the item will be created.
      */
     enum DestinationPolicy {
-        DestinationPolicyDefault, ///< The default collection is used, if it's invalid, the user is prompted. @see setDefaultCollection().
+        DestinationPolicyDefault, ///< The default collection is used, if it's invalid, the user is prompted. \sa setDefaultCollection().
         DestinationPolicyAsk, ///< User is always asked which collection to use.
         DestinationPolicyNeverAsk ///< The default collection is used, if it's invalid, an error is returned, and the incidence isn't added.
     };
 
-    /**
+    /*!
      * Enum for controlling "Do you want to e-mail attendees" type of dialogs.
      * This is only honoured if groupware communication is active.
      *
-     * @see groupwareCommunication()
-     * @since 4.12
+     * \sa groupwareCommunication()
+     * \since 4.12
      */
     enum InvitationPolicy {
         InvitationPolicySend = 0, ///< Invitation e-mails are sent without asking the user if he wants to.
@@ -117,7 +117,7 @@ public:
         InvitationPolicyDontSend ///< E-mails aren't sent
     };
 
-    /**
+    /*!
      * Flags describing whether invitation emails should signed and/or encrypted.
      */
     enum InvitationPrivacy {
@@ -127,7 +127,7 @@ public:
     };
     Q_DECLARE_FLAGS(InvitationPrivacyFlags, InvitationPrivacy)
 
-    /**
+    /*!
      * This enum describes change types.
      */
     enum ChangeType {
@@ -136,69 +136,69 @@ public:
         ChangeTypeDelete ///> Represents an incidence deletion.
     };
 
-    /**
+    /*!
      * Creates a new IncidenceChanger instance.
      * creates a default ITIPHandlerComponentFactory object.
-     * @param parent parent QObject
+     * \a parent parent QObject
      */
     explicit IncidenceChanger(QObject *parent = nullptr);
 
-    /**
+    /*!
      * Creates a new IncidenceChanger instance.
-     * @param factory factory for creating dialogs and the mail transport job. To create a default
+     * \a factory factory for creating dialogs and the mail transport job. To create a default
      * factory set factory == 0
-     * @param parent parent QObject
-     * @since 4.15
+     * \a parent parent QObject
+     * \since 4.15
      */
     explicit IncidenceChanger(ITIPHandlerComponentFactory *factory, QObject *parent);
 
-    /**
+    /*!
      * Destroys this IncidenceChanger instance.
      */
     ~IncidenceChanger() override;
 
-    /**
+    /*!
      * Creates a new incidence.
      *
-     * @param incidence Incidence to create, must be valid.
-     * @param collection Collection where the incidence will be created. If invalid, one according
+     * \a incidence Incidence to create, must be valid.
+     * \a collection Collection where the incidence will be created. If invalid, one according
      *                   to the DestinationPolicy will be used. You can know which collection was
      *                   used by calling lastCollectionUsed();
-     * @param parent widget parent to be used in dialogs.
+     * \a parent widget parent to be used in dialogs.
      *
-     * @return Returns an integer which identifies this change. This identifier is useful
+     * Returns Returns an integer which identifies this change. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::createFinished() signal.
      *
-     *         Returns -1 if @p incidence is invalid. The createFinished() signal
+     *         Returns -1 if \a incidence is invalid. The createFinished() signal
      *         won't be emitted in this case.
      */
     int
     createIncidence(const KCalendarCore::Incidence::Ptr &incidence, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a new incidence.
      *
-     * @param item Item containing the incidence to create and metadata, such as tags.
-     * @param collection Collection where the incidence will be created. If invalid, one according
+     * \a item Item containing the incidence to create and metadata, such as tags.
+     * \a collection Collection where the incidence will be created. If invalid, one according
      *                   to the DestinationPolicy will be used. You can know which collection was
      *                   used by calling lastCollectionUsed();
-     * @param parent widget parent to be used in dialogs.
+     * \a parent widget parent to be used in dialogs.
      *
-     * @return Returns an integer which identifies this change. This identifier is useful
+     * Returns Returns an integer which identifies this change. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::createFinished() signal.
      *
-     *         Returns -1 if @p item is invalid. The createFinished() signal
+     *         Returns -1 if \a item is invalid. The createFinished() signal
      *         won't be emitted in this case.
      */
     int createFromItem(const Akonadi::Item &item, const Akonadi::Collection &collection = Akonadi::Collection(), QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Deletes an incidence. If it's recurring, all occurrences are deleted.
      *
-     * @param item Item to delete. Item must be valid.
-     * @param parent Parent to be used in dialogs.
+     * \a item Item to delete. Item must be valid.
+     * \a parent Parent to be used in dialogs.
      *
-     * @return Returns an integer which identifies this deletion. This identifier is useful
+     * Returns Returns an integer which identifies this deletion. This identifier is useful
      *         to correlate this deletion with the IncidenceChanger::deleteFinished() signal.
      *
      *         Returns -1 if item is invalid. The deleteFinished() signal won't be emitted in this
@@ -206,29 +206,29 @@ public:
      */
     int deleteIncidence(const Akonadi::Item &item, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Deletes a list of Items.
      *
-     * @param items List of items do delete. They must be valid.
-     * @param parent Parent to be used in dialogs.
-     * @return Returns an integer which identifies this deletion. This identifier is useful
+     * \a items List of items do delete. They must be valid.
+     * \a parent Parent to be used in dialogs.
+     * Returns Returns an integer which identifies this deletion. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::deleteFinished() signal.
      *
-     *         Returns -1 if any item is invalid or if @p items is empty. The deleteFinished() signal
+     *         Returns -1 if any item is invalid or if \a items is empty. The deleteFinished() signal
      *         won't be emitted in this case.
      */
     int deleteIncidences(const Akonadi::Item::List &items, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Modifies an incidence.
      *
-     * @param item A valid item, with the new payload.
-     * @param originalPayload The payload before the modification. If invalid it won't be recorded
+     * \a item A valid item, with the new payload.
+     * \a originalPayload The payload before the modification. If invalid it won't be recorded
      *                        to the undo stack and groupware functionality won't be used for this
      *                        deletion.
-     * @param parent Parent to be used in dialogs.
+     * \a parent Parent to be used in dialogs.
      *
-     * @return Returns an integer which identifies this modification. This identifier is useful
+     * Returns Returns an integer which identifies this modification. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::modifyFinished() signal.
      *
      *         Returns -1 if the item doesn't have a valid payload. The modifyFinished() signal
@@ -238,7 +238,7 @@ public:
                         const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
                         QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Some incidence operations require more than one change. Like dissociating
      * occurrences, which needs an incidence add and an incidence change.
      *
@@ -248,123 +248,123 @@ public:
      * If one change belonging to a batch operation fails, all other changes
      * are rolled back.
      *
-     * @param operationDescription Describes what the atomic operation does.
+     * \a operationDescription Describes what the atomic operation does.
      *        This will be what incidenceChanger->history()->descriptionForNextUndo()
      *        if you have history enabled.
      *
-     * @see endAtomicOperation()
+     * \sa endAtomicOperation()
      */
     void startAtomicOperation(const QString &operationDescription = QString());
 
-    /**
+    /*!
      * Tells IncidenceChanger you finished doing changes that belong to a
      * batch operation.
      *
-     * @see startAtomicOperation()
+     * \sa startAtomicOperation()
      */
     void endAtomicOperation();
 
-    /**
+    /*!
      * Sets the base ETM tree model
      * Used by the editor dialog's collection combobox, for instance.
      */
     void setEntityTreeModel(Akonadi::EntityTreeModel *model);
 
-    /**
+    /*!
      * Returns the base ETM tree model
      */
     [[nodiscard]] Akonadi::EntityTreeModel *entityTreeModel() const;
 
-    /**
+    /*!
      * Sets the default collection.
-     * @param collection The collection to be used in createIncidence() if the
+     * \a collection The collection to be used in createIncidence() if the
      *        proper destination policy is set.
-     * @see createIncidence()
-     * @see destinationPolicy()
-     * @see defaultCollection()
+     * \sa createIncidence()
+     * \sa destinationPolicy()
+     * \sa defaultCollection()
      */
     void setDefaultCollection(const Akonadi::Collection &collection);
 
-    /**
+    /*!
      * Returns the defaultCollection.
      * If none is set, an invalid Collection is returned.
-     * @see setDefaultCollection()
-     * @see DestinationPolicy
+     * \sa setDefaultCollection()
+     * \sa DestinationPolicy
      */
     [[nodiscard]] Akonadi::Collection defaultCollection() const;
 
-    /**
+    /*!
      * Sets the destination policy to use. The destination policy determines the
      * collection to use in createIncidence()
      *
-     * @see createIncidence()
-     * @see destinationPolicy()
+     * \sa createIncidence()
+     * \sa destinationPolicy()
      */
     void setDestinationPolicy(DestinationPolicy destinationPolicy);
 
-    /**
+    /*!
      * Returns the current destination policy.
      * If none is set, DestinationPolicyDefault is returned.
-     * @see setDestinationPolicy()
-     * @see DestinationPolicy
+     * \sa setDestinationPolicy()
+     * \sa DestinationPolicy
      */
     [[nodiscard]] DestinationPolicy destinationPolicy() const;
 
-    /**
+    /*!
      * Sets if IncidenceChanger should show error dialogs.
      */
     void setShowDialogsOnError(bool enable);
 
-    /**
+    /*!
      * Returns true if error dialogs are shown by IncidenceChanger.
      * The default is true.
      *
-     * @see setShowDialogsOnError()
+     * \sa setShowDialogsOnError()
      */
     [[nodiscard]] bool showDialogsOnError() const;
 
-    /**
+    /*!
      * Sets if IncidenceChanger should honour collection's ACLs by disallowing changes if
      * necessary.
      */
     void setRespectsCollectionRights(bool respect);
 
-    /**
+    /*!
      * Returns true if IncidenceChanger honors collection's ACLs by disallowing
      * changes if necessary.
      *
      * The default is true.
-     * @see setRespectsCollectionRights()
-     * @see ResultCode::ResultCodePermissions
+     * \sa setRespectsCollectionRights()
+     * \sa ResultCode::ResultCodePermissions
      */
     [[nodiscard]] bool respectsCollectionRights() const;
 
-    /**
+    /*!
      * Enable or disable history.
      * With history enabled all changes are recorded into the undo/redo stack.
      *
-     * @see history()
-     * @see historyEnabled()
+     * \sa history()
+     * \sa historyEnabled()
      */
     void setHistoryEnabled(bool enable);
 
-    /**
+    /*!
      * Returns true if changes are added into the undo stack.
      * Default is true.
      *
-     * @see history()
-     * @see historyEnabled()
+     * \sa history()
+     * \sa historyEnabled()
      */
     [[nodiscard]] bool historyEnabled() const;
 
-    /**
+    /*!
      * Returns a pointer to the history object.
      * It's always valid.
      * Ownership remains with IncidenceChanger.
      */
     [[nodiscard]] History *history() const;
 
-    /**
+    /*!
      * For performance reasons, IncidenceChanger internally caches the ids of the last deleted items,
      * to avoid creating useless delete jobs.
      *
@@ -373,111 +373,109 @@ public:
      * ETM doesn't know about the deletions immediately, so it can happen that some items are
      * deleted more than once, resulting in an error.
      *
-     * @return true if the item was deleted recently, false otherwise.
+     * Returns true if the item was deleted recently, false otherwise.
      */
     [[nodiscard]] bool deletedRecently(Akonadi::Item::Id) const;
 
-    /**
+    /*!
      * Enables or disabled groupware communication.
      * With groupware communication enabled, invitations and update e-mails will be sent to each
      * attendee.
      */
     void setGroupwareCommunication(bool enabled);
 
-    /**
+    /*!
      * Returns if we're using groupware communication.
      * Default is false.
-     * @see setGroupwareCommuniation()
+     * \sa setGroupwareCommuniation()
      */
     [[nodiscard]] bool groupwareCommunication() const;
 
-    /**
+    /*!
      * Makes modifyIncidence() adjust recurrence parameters when modifying DTSTART.
      */
     void setAutoAdjustRecurrence(bool enable);
 
-    /**
+    /*!
      * True if recurrence parameters are adjusted when modifying DTSTART.
      * Default is true.
      */
     [[nodiscard]] bool autoAdjustRecurrence() const;
 
-    /**
+    /*!
      * Sets the invitation policy.
      *
-     * @since 4.12
+     * \since 4.12
      */
     void setInvitationPolicy(InvitationPolicy policy);
 
-    /**
+    /*!
      * Returns the invitation policy.
      * The default is InvitationPolicyAsk.
      *
-     * @since 4.12
+     * \since 4.12
      */
     [[nodiscard]] InvitationPolicy invitationPolicy() const;
 
-    /**
+    /*!
      * Returns the collection that the last createIncidence() used.
      * Will be invalid if no incidences were created yet.
      *
-     * @see createIncidence().
+     * \sa createIncidence().
      */
     [[nodiscard]] Akonadi::Collection lastCollectionUsed() const;
 
-    /**
+    /*!
      * Sets the invitation privacy flags.
      */
     void setInvitationPrivacy(InvitationPrivacyFlags invitationPrivacy);
 
-    /**
+    /*!
      * Returns the invitation privacy policy.
      * Default value is InvitationPrivacyPlain.
      */
     [[nodiscard]] InvitationPrivacyFlags invitationPrivacy() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when IncidenceChanger creates an Incidence in akonadi.
      *
-     * @param changeId the unique identifier of this change, returned by createIncidence().
-     * @param item the created item, might be invalid if the @p resultCode is not ResultCodeSuccess
-     * @param resultCode success/error code
-     * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
+     * \a changeId the unique identifier of this change, returned by createIncidence().
+     * \a item the created item, might be invalid if the \a resultCode is not ResultCodeSuccess
+     * \a resultCode success/error code
+     * \a errorString if \a resultCode is not ResultCodeSuccess, contains an i18n'ed error
      *        message. If you enabled error dialogs, this string was already presented to the user.
      */
     void createFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
-    /**
+    /*!
      * Emitted when IncidenceChanger modifies an Incidence in akonadi.
      *
-     * @param changeId the unique identifier of this change, returned by modifyIncidence().
-     * @param item the modified item, might be invalid if the @p resultCode is not ResultCodeSuccess
-     * @param resultCode success/error code
-     * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
+     * \a changeId the unique identifier of this change, returned by modifyIncidence().
+     * \a item the modified item, might be invalid if the \a resultCode is not ResultCodeSuccess
+     * \a resultCode success/error code
+     * \a errorString if \a resultCode is not ResultCodeSuccess, contains an i18n'ed error
      *        message. If you enabled error dialogs, this string was already presented to the user.
      */
     void modifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
-    /**
+    /*!
      * Emitted when IncidenceChanger deletes an Incidence in akonadi.
      *
-     * @param changeId the unique identifier of this change, returned by deletedIncidence().
-     * @param itemIdList list of deleted item ids, might be emptu if the @p resultCode is not
+     * \a changeId the unique identifier of this change, returned by deletedIncidence().
+     * \a itemIdList list of deleted item ids, might be emptu if the \a resultCode is not
      *                   ResultCodeSuccess
-     * @param resultCode success/error code
-     * @param errorString if @p resultCode is not ResultCodeSuccess, contains an i18n'ed error
+     * \a resultCode success/error code
+     * \a errorString if \a resultCode is not ResultCodeSuccess, contains an i18n'ed error
      *        message. If you enabled error dialogs, this string was already presented to the user.
      */
     void deleteFinished(int changeId, const QList<Akonadi::Item::Id> &itemIdList, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
 private:
-    //@cond PRIVATE
     friend class HistoryPrivate;
     friend class AtomicOperation;
     // used internally by the History class
     explicit IncidenceChanger(bool enableHistory, QObject *parent = nullptr);
 
     std::unique_ptr<IncidenceChangerPrivate> const d;
-    //@endcond
 };
 }
 

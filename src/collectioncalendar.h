@@ -18,7 +18,7 @@ class EntityTreeModel;
 
 class CollectionCalendarPrivate;
 
-/** Calendar representing a single Akonadi::Collection. */
+/*! Calendar representing a single Akonadi::Collection. */
 class AKONADI_CALENDAR_EXPORT CollectionCalendar : public Akonadi::CalendarBase
 {
     Q_OBJECT
@@ -41,8 +41,8 @@ public:
     [[nodiscard]] bool hasRight(Akonadi::Collection::Right right) const;
 
 Q_SIGNALS:
-    /**
-     * @brief Emitted whenever an incidence is added, removed or changed
+    /*!
+     * \brief Emitted whenever an incidence is added, removed or changed
      */
     void calendarChanged();
 

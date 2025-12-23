@@ -34,11 +34,8 @@ protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    //@cond PRIVATE
     AKONADI_CALENDAR_NO_EXPORT void slotIdentitiesChanged();
 
     std::unique_ptr<CalFilterPartStatusProxyModelPrivate> const d;
-
-    //@endcond
 };
 }
