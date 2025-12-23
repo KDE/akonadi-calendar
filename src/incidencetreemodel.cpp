@@ -275,7 +275,10 @@ PreNode::Ptr IncidenceTreeModelPrivate::prenodeFromSourceRow(int row) const
         // It's a Collection, ignore that, we only want items.
         return {};
     }
-
+    if (!item.hasPayload()) {
+        // No payload means nothing to do
+        return {};
+    }
     node->item = item;
     node->incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     Q_ASSERT(node->incidence);
