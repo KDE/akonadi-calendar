@@ -1,0 +1,9 @@
+/*!
+    \module AkonadiCalendar
+    \title AkonadiCalendar C++ Classes
+    \ingroup modules
+    \cmakepackage KPim6
+    \cmakecomponent AkonadiCalendar
+
+    \brief AkonadiCalendar provides API calendar.
+*/

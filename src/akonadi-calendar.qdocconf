@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = AkonadiCalendar
+description = Akonadi Calendar library.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "AkonadiCalendar"
+
+qhp.projects            = AkonadiCalendar
+
+qhp.AkonadiCalendar.file                = akonadicalendar.qhp
+qhp.AkonadiCalendar.namespace           = org.kde.akonadicalendar.$QT_VERSION_TAG
+qhp.AkonadiCalendar.virtualFolder       = akonadicalendar
+qhp.AkonadiCalendar.indexTitle          = AkonadiCalendar
+qhp.AkonadiCalendar.indexRoot           =
+
+qhp.AkonadiCalendar.subprojects         = classes
+qhp.AkonadiCalendar.subprojects.classes.title = C++ Classes
+qhp.AkonadiCalendar.subprojects.classes.indexTitle = AkonadiCalendar C++ Classes
+qhp.AkonadiCalendar.subprojects.classes.selectors = class fake:headerfile
+qhp.AkonadiCalendar.subprojects.classes.sortPages = true
+
+tagfile = akonadicalendar.tags
