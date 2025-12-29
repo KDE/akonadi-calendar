@@ -18,6 +18,10 @@
 #include <memory>
 
 /*!
+ * \class Akonadi::ICalImporter
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ICalImporter
+ *
  * A class to import ical calendar files into akonadi.
  *
  * \since 4.12

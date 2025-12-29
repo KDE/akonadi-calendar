@@ -16,18 +16,34 @@
 namespace Akonadi
 {
 class CalFilterPartStatusProxyModelPrivate;
-
+/*!
+ * \class Akonadi::CalFilterPartStatusProxyModel
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/CalFilterPartStatusProxyModel
+ */
 class AKONADI_CALENDAR_EXPORT CalFilterPartStatusProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit CalFilterPartStatusProxyModel(QObject *parent = nullptr);
+    /*!
+     */
     ~CalFilterPartStatusProxyModel() override;
 
+    /*!
+     */
     void setFilterVirtual(bool filterVirtual);
+    /*!
+     */
     [[nodiscard]] bool filterVirtual() const;
 
+    /*!
+     */
     void setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList);
+    /*!
+     */
     const QList<KCalendarCore::Attendee::PartStat> &blockedStatusList() const;
 
 protected:

@@ -18,6 +18,11 @@ namespace Akonadi
 {
 class PublishDialogPrivate;
 
+/*!
+ * \class Akonadi::PublishDialog
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/PublishDialog
+ */
 class AKONADI_CALENDAR_EXPORT PublishDialog : public QDialog
 {
     Q_OBJECT

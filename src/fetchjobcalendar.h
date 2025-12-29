@@ -16,6 +16,10 @@ namespace Akonadi
 {
 class FetchJobCalendarPrivate;
 /*!
+ * \class Akonadi::FetchJobCalendar
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/FetchJobCalendar
+ *
  * \brief A KCalendarCore::Calendar that uses a one time IncidenceFetchJob to populate itself.
  *
  * If you want a persistent calendar ( which monitors Akonadi for changes )
@@ -24,7 +28,7 @@ class FetchJobCalendarPrivate;
  * \sa ETMCalendar
  * \sa CalendarBase
  *
- * @author Sérgio Martins <sergio.martins@kdab.com>
+ * \author Sérgio Martins <sergio.martins@kdab.com>
  * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT FetchJobCalendar : public Akonadi::CalendarBase

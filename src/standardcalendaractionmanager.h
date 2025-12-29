@@ -31,9 +31,13 @@ class Item;
 class StandardCalendarActionManagerPrivate;
 
 /*!
+ * \class Akonadi::StandardCalendarActionManager
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/StandardCalendarActionManager
+ *
  * \brief Manages calendar specific actions for collection and item views.
  *
- * @author Casey Link <unnamedrambler@gmail.com>
+ * \author Casey Link <unnamedrambler@gmail.com>
  * \since 4.6
  */
 class AKONADI_CALENDAR_EXPORT StandardCalendarActionManager : public QObject

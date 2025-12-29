@@ -18,7 +18,11 @@ namespace Akonadi
 {
 class FreeBusyManagerPrivate;
 class FreeBusyManagerStatic;
-
+/*!
+ * \class Akonadi::FreeBusyManager
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/FreeBusyManager
+ */
 class AKONADI_CALENDAR_EXPORT FreeBusyManager : public QObject, public KCalendarCore::FreeBusyCache
 {
     Q_OBJECT

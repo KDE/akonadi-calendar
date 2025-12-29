@@ -34,7 +34,7 @@ class EntityTreeModel;
  * \sa FetchJobCalendar
  * \sa CalendarBase
  *
- * @author Sérgio Martins <iamsergio@gmail.com>
+ * \author Sérgio Martins <iamsergio@gmail.com>
  * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT ETMCalendar : public CalendarBase

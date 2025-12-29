@@ -20,9 +20,13 @@ class IncidenceChanger;
 class CalendarClipboardPrivate;
 
 /*!
+ * \class Akonadi::CalendarClipboard
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/CalendarClipboard
+ *
  * \brief Class to copy or cut calendar incidences.
  *
- * @author Sérgio Martins <iamsergio@gmail.com>
+ * \author Sérgio Martins <iamsergio@gmail.com>
  * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT CalendarClipboard : public QObject

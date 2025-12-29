@@ -21,15 +21,27 @@ class CalFilter;
 namespace Akonadi
 {
 class CalFilterProxyModelPrivate;
-
+/*!
+ * \class Akonadi::CalFilterProxyModel
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/CalFilterProxyModel
+ */
 class AKONADI_CALENDAR_EXPORT CalFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit CalFilterProxyModel(QObject *parent = nullptr);
+    /*!
+     */
     ~CalFilterProxyModel() override;
 
+    /*!
+     */
     [[nodiscard]] KCalendarCore::CalFilter *filter() const;
+    /*!
+     */
     void setFilter(KCalendarCore::CalFilter *filter);
 
 protected:

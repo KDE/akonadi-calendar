@@ -66,7 +66,7 @@ class IncidenceChangerPrivate;
  *
  * \endcode
  *
- * @author Sérgio Martins <iamsergio@gmail.com>
+ * \author Sérgio Martins <iamsergio@gmail.com>
  * \since 4.11
  */
 

@@ -22,6 +22,10 @@ class CalendarBasePrivate;
 class IncidenceChanger;
 
 /*!
+ * \class Akonadi::CalendarBase
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/CalendarBase
+ *
  * \brief The base class for all akonadi aware calendars.
  *
  * Because it inherits KCalendarCore::Calendar, it provides seamless integration
@@ -31,7 +35,7 @@ class IncidenceChanger;
  * \sa ETMCalendar
  * \sa FetchJobCalendar
  *
- * @author Sérgio Martins <sergio.martins@kdab.com>
+ * \author Sérgio Martins <sergio.martins@kdab.com>
  * \since 4.11
  */
 class AKONADI_CALENDAR_EXPORT CalendarBase : public KCalendarCore::MemoryCalendar

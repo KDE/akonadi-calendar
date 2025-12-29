@@ -19,12 +19,16 @@ namespace Akonadi
 class BlockAlarmsAttributePrivate;
 
 /*!
+ * \class Akonadi::BlockAlarmsAttribute
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/BlockAlarmsAttribute
+ *
  * \brief An Attribute that marks that alarms from a calendar collection are blocked.
  *
  * A calendar collection which has this attribute set won't be evaluated by korgac and
  * therefore it's alarms won't be used, unless explicitly unblocked in blockAlarmType().
  *
- * @author Tobias Koenig <tokoe@kdab.com>
+ * \author Tobias Koenig <tokoe@kdab.com>
  * \sa Akonadi::Attribute
  * \since 4.11
  */

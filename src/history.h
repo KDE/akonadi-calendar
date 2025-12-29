@@ -40,7 +40,7 @@ class HistoryPrivate;
       connect(redoAction, &QAction::triggered, myIncidenceChanger->history(), &Akonadi::IncidenceChanger::redo);
    \endcode
 
-   @author Sérgio Martins <iamsergio@gmail.com>
+   \author Sérgio Martins <iamsergio@gmail.com>
    \since 4.11
 */
 
