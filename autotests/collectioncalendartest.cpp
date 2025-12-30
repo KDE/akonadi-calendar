@@ -218,7 +218,10 @@ void CollectionCalendarTest::initTestCase()
 {
     AkonadiTest::checkTestIsIsolated();
 
-    otherResourceConfig.open();
+    if (!otherResourceConfig.open()) {
+        qWarning() << "Cannot open resource:" << otherResourceConfig.fileName();
+        return;
+    }
 
     // We need two agents to test that the calendar properly ignores events in other collections
     // However we can't just add it to unittestenv, as having multiple resources breaks other
