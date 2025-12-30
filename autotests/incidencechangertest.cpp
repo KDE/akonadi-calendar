@@ -198,10 +198,10 @@ private Q_SLOTS:
             waitForSignals();
 
             if (expectedResultCode == IncidenceChanger::ResultCodeSuccess && !failureExpected) {
-                Item item;
+                Item localItem;
                 QVERIFY(mItemIdByChangeId.contains(changeId));
-                item.setId(mItemIdByChangeId.value(changeId));
-                auto fetchJob = new ItemFetchJob(item, this);
+                localItem.setId(mItemIdByChangeId.value(changeId));
+                auto fetchJob = new ItemFetchJob(localItem, this);
                 fetchJob->fetchScope().fetchFullPayload();
                 AKVERIFYEXEC(fetchJob);
                 const auto items = fetchJob->items();
@@ -211,9 +211,9 @@ private Q_SLOTS:
                 QVERIFY(retrievedItem.hasPayload());
                 QVERIFY(retrievedItem.hasPayload<KCalendarCore::Event::Ptr>());
                 QVERIFY(retrievedItem.hasPayload<KCalendarCore::Incidence::Ptr>());
-                auto incidence = retrievedItem.payload<KCalendarCore::Incidence::Ptr>();
-                QCOMPARE(incidence->summary(), summary);
-                QCOMPARE(incidence->uid(), uid);
+                auto retrievedIncidence = retrievedItem.payload<KCalendarCore::Incidence::Ptr>();
+                QCOMPARE(retrievedIncidence->summary(), summary);
+                QCOMPARE(retrievedIncidence->uid(), uid);
             }
         }
         mItemIdByChangeId.clear();
@@ -975,9 +975,10 @@ private Q_SLOTS:
                     auto fJob = new ItemFetchJob(Item(item.id()));
                     fJob->fetchScope().fetchFullPayload();
                     AKVERIFYEXEC(fJob);
-                    const auto items = fJob->items();
-                    QVERIFY(!items.isEmpty());
-                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->summary(), items.first().payload<KCalendarCore::Incidence::Ptr>()->summary());
+                    const auto fetchedItems = fJob->items();
+                    QVERIFY(!fetchedItems.isEmpty());
+                    QCOMPARE(item.payload<KCalendarCore::Incidence::Ptr>()->summary(),
+                             fetchedItems.first().payload<KCalendarCore::Incidence::Ptr>()->summary());
                 }
                 break;
             default:
