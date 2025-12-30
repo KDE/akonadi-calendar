@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-18 00:43+0000\n"
-"PO-Revision-Date: 2025-09-24 16:44+0200\n"
+"PO-Revision-Date: 2025-12-29 16:42+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -394,15 +394,12 @@ msgid "Unknown"
 msgstr "Incognite"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Il falleva discargar datos de libere/occupate ex: %1\n"
-"Motivation: %2"
+"Il falleva discargar datos de libere/occupate ex: <link>%1</link>.<nl/"
+">Motivation: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -411,23 +408,17 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Error de recuperation de libere/occupate"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
 msgstr ""
 "Il falleva analysar information de libere/occupate que esseva recuperate ex: "
-"%1"
+"<link>%1</link>"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -435,14 +426,13 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Le programma non poteva cargar tu lista de Libere/occupate in le URL "
-"'%1'. Il debe haber un problema con le derectos de accesso, o tu ha "
-"specificate un URL incorrecte.  Le systema diceva: <em>%2</em>.</p><p>Pro "
-"favor, verifica le URL o continge tu gerente de systema.</p></qt>"
+"Le programma non poteva cargar tu lista de Libere/occupate in le URL '<link>"
+"%1'</link>. Il debe haber un problema con le derectos de accesso, o tu ha "
+"specificate un URL incorrecte.  Le systema diceva: <nl/><emphasis>%2</"
+"emphasis>.<nl/>Pro favor, verifica le URL o continge tu gerente de systema."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Le information de libere/occupate esseva inviate successosemente."
@@ -454,29 +444,23 @@ msgid "Sending Free/Busy"
 msgstr "Inviante Libere/Occupate"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Incapace de publicar datos de libere/occupate: %1"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt><p>Nulle URL esseva configurate pro incargar tu lista de libere /"
-"occupate. Per favor, tu fixa illo in dialogo de configuration de KOrganizer, "
-"in le pagina de \"Libere/Occupate\".</p><p>Continge tu gerente de systema "
-"pro le exacte URL e detalios de conto.</p></qt>"
+"Nulle URL esseva configurate pro incargar tu lista de libere /occupate. Per "
+"favor, tu fixa illo in dialogo de configuration de KOrganizer, in le pagina "
+"de \"Libere/Occupate\".<nl/>Continge tu gerente de systema pro le exacte URL "
+"e detalios de conto."
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -485,11 +469,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Necun URL de incargar Libere/Occupate"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Le URL objectivo '%1' fornite es invalide.</qt> "
+msgstr "Le URL objectivo '<link>%1'</link>  fornite es invalide. "
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -1204,17 +1187,14 @@ msgid "Send email to these recipients"
 msgstr "Invia e-posta a iste destinatarios"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
 msgstr ""
-"Pulsar le button de <b>Ok</b> causara que un message de e-posta essera "
-"inviate al destinatarios que tu ha insertate."
+"Pulsar iste button causara que un message de e-posta essera inviate al "
+"destinatarios que tu ha insertate."
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1223,34 +1203,26 @@ msgid "Cancel recipient selection and the email"
 msgstr "Cancella selection de destinatario e le e-posta"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
 msgstr ""
-"Pulsar le button de <b>Cancella</b> causara que le operation de e-posta "
-"essera terminate."
+"Pulsar iste button  causara que le operation de e-posta essera terminate."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "E-Posta de e-gruppo planificate"
+msgstr ""
+"Vide le manaule de E-Posta de e-gruppo planificate (Group Scheduling Manual)"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
-"Pulsa le button de <b>Adjuta</b> pro leger ulterior information a proposito "
-"de Planification de Gruppo."
+"Pulsa iste button  pro leger ulterior information a proposito de "
+"Planification de Gruppo."
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1396,18 +1368,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Iste campo contine le adresse de e-posta del destinatario"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Le nomine del destinatario"
+msgstr "nomine del destinatario (optional)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "Le adresse de e-posta del destinatario"
+msgstr "adresse de e-posta del destinatario (requirite)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
