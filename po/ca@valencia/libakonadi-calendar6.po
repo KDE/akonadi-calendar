@@ -31,12 +31,12 @@ msgstr ""
 #: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing deletion."
-msgstr "S'ha produït un error en executar la supressió."
+msgstr "S'ha produït un error mentre s'executava la supressió."
 
 #: calendarclipboard.cpp:72
 #, kde-format
 msgid "Error performing copy."
-msgstr "S'ha produït un error en executar la còpia."
+msgstr "S'ha produït un error mentre s'executava la còpia."
 
 #: calendarclipboard.cpp:96
 #, kde-format
@@ -46,12 +46,12 @@ msgstr "No s'ha trobat l'element: %1"
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
-msgstr "S'ha produït un error en eliminar les relacions."
+msgstr "S'ha produït un error mentre s'eliminaven les relacions."
 
 #: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
-msgstr "S'ha produït un error en suprimir les incidències: %1"
+msgstr "S'ha produït un error mentre se suprimien les incidències: %1"
 
 #: calendarclipboard.cpp:175
 #, kde-format
@@ -411,7 +411,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr "S'ha produït un error en la recuperació de lliure/ocupat"
+msgstr "S'ha produït un error durant la recuperació de lliure/ocupat"
 
 #: freebusymanager.cpp:403
 #, kde-format
@@ -420,8 +420,8 @@ msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
 msgstr ""
-"No s'ha pogut analitzar la informació de lliure/ocupat que es va recuperar "
-"des de: <link>%1</link>"
+"Ha fallat durant l'anàlisi de la informació de lliure/ocupat que es va "
+"recuperar des de: <link>%1</link>"
 
 #: freebusymanager.cpp:419
 #, kde-format
@@ -512,13 +512,14 @@ msgstr "Modificació de %1"
 #: icalimporter.cpp:84
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr "S'ha produït un error en crear el recurs ical: %1"
+msgstr "S'ha produït un error mentre es creava el recurs ical: %1"
 
 #: icalimporter.cpp:94
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr ""
-"No s'ha pogut obtindre la interfície de D-Bus per a la configuració remota."
+"Ha fallat mentre s'obtenia la interfície de D-Bus per a la configuració "
+"remota."
 
 #: icalimporter.cpp:119
 #, kde-format
@@ -568,15 +569,15 @@ msgstr "Fusiona el fitxer ical dins el calendari existent."
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr ""
-"S'ha produït un error en intentar enviar un element de calendari. L'error ha "
-"sigut: %1"
+"S'ha produït un error mentre s'intentava enviar un element de calendari. "
+"L'error ha sigut: %1"
 
 #: incidencechanger.cpp:343
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr ""
-"S'ha produït un error en intentar suprimir un element de calendari. L'error "
-"ha sigut: %1"
+"S'ha produït un error mentre s'intentava suprimir un element de calendari. "
+"L'error ha sigut: %1"
 
 #: incidencechanger.cpp:378
 #, kde-format
@@ -588,8 +589,8 @@ msgstr "S'ha produït un error desconegut"
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
-"S'ha produït un error en intentar modificar un element de calendari. L'error "
-"ha sigut: %1"
+"S'ha produït un error mentre s'intentava modificar un element de calendari. "
+"L'error ha sigut: %1"
 
 #: incidencechanger.cpp:808 incidencechanger.cpp:932
 #, kde-format
@@ -638,7 +639,7 @@ msgstr "S'ha produït un error desconegut"
 #: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
-msgstr "S'ha produït un error en carregar el calendari."
+msgstr "S'ha produït un error mentre es carregava el calendari."
 
 #: itiphandler.cpp:118
 #, kde-format
@@ -648,14 +649,13 @@ msgstr "Missatge d'error: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr ""
-"S'ha produït un error desconegut en l'anàlisi sintàctica d'una invitació "
-"d'iCal"
+msgstr "S'ha produït un error desconegut en analitzar una invitació d'iCal"
 
 #: itiphandler.cpp:125
 #, kde-format
 msgid "Error while processing an invitation or update."
-msgstr "S'ha produït un error en processar una invitació o actualització."
+msgstr ""
+"S'ha produït un error mentre es processava una invitació o actualització."
 
 #: itiphandler.cpp:142
 #, kde-format
@@ -670,7 +670,7 @@ msgstr "Acció no vàlida: %1"
 #: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr "S'ha produït un error en enviar la contraproposta"
+msgstr "S'ha produït un error mentre s'enviava la contraproposta"
 
 #: itiphandler.cpp:241
 #, kde-format
@@ -712,7 +712,7 @@ msgstr "S'ha produït un error: %1"
 #: itiphandler_p.cpp:83
 #, kde-format
 msgid "Error loading calendar: %1"
-msgstr "S'ha produït un error en carregar el calendari: %1"
+msgstr "S'ha produït un error mentre es carregava el calendari: %1"
 
 #: itiphandler_p.cpp:134
 #, kde-format
@@ -909,7 +909,7 @@ msgstr "Contraproposta: %1"
 #: itiphandlerhelper_p.cpp:483
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr "No s'ha pogut enviar el correu de planificació de grup."
+msgstr "Ha fallat mentre s'enviava el correu de planificació de grup."
 
 #: itiphandlerhelper_p.cpp:491
 #, kde-format
@@ -935,21 +935,21 @@ msgstr "Missatge de lliure/ocupat"
 #: mailclient_p.cpp:638
 #, kde-format
 msgid "Error while creating transport"
-msgstr "S'ha produït un error en crear el transport"
+msgstr "S'ha produït un error mentre es creava el transport"
 
 #: mailclient_p.cpp:656
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr ""
-"S'ha produït un error en arreplegar el transport. Les invitacions no s'han "
-"pogut enviar"
+"S'ha produït un error mentre s'arreplegava el transport. Les invitacions no "
+"s'han pogut enviar"
 
 #: mailclient_p.cpp:679
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr ""
-"S'ha produït un error en enviar el missatge en la cua de la safata d'eixida: "
-"%1"
+"S'ha produït un error mentre s'enviava el missatge a la cua de la safata "
+"d'eixida: %1"
 
 #: mailclient_p.cpp:711
 #, kde-format
@@ -1410,7 +1410,7 @@ msgstr ""
 #: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
 #, kde-format
 msgid "Error modifying incidence"
-msgstr "S'ha produït un error en modificar la incidència"
+msgstr "S'ha produït un error mentre es modificava la incidència"
 
 #: scheduler_p.cpp:291
 #, kde-kuit-format
@@ -1442,7 +1442,7 @@ msgstr "No s'ha trobat cap invitació que s'haja d'actualitzar"
 #: scheduler_p.cpp:307
 #, kde-format
 msgid "Error adding incidence"
-msgstr "S'ha produït un error en afegir la incidència"
+msgstr "S'ha produït un error mentre s'afegia la incidència"
 
 #: scheduler_p.cpp:341
 #, kde-format
@@ -1452,7 +1452,7 @@ msgstr "No s'ha trobat cap incidència que s'haja de suprimir."
 #: scheduler_p.cpp:394
 #, kde-format
 msgid "Error recording exception"
-msgstr "S'ha produït un error en enregistrar una excepció"
+msgstr "S'ha produït un error mentre s'enregistrava una excepció"
 
 #: scheduler_p.cpp:411
 #, kde-format
@@ -1549,7 +1549,7 @@ msgstr "No hi ha memòria cau de lliure/ocupat"
 #: scheduler_p.cpp:603
 #, kde-format
 msgid "Error saving freebusy object"
-msgstr "S'ha produït un error en guardar un objecte de lliure/ocupat"
+msgstr "S'ha produït un error mentre es guardava un objecte de lliure/ocupat"
 
 #: searchcollectionhelper.cpp:179
 #, kde-format
@@ -1867,7 +1867,7 @@ msgstr "No s'ha pogut apegar l'esdeveniment: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Paste Failed"
-msgstr "No s'ha pogut apegar"
+msgstr "Ha fallat mentre s'apegava"
 
 #: standardcalendaractionmanager.cpp:195
 #, kde-format
