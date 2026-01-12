@@ -418,7 +418,7 @@ msgstr "S'ha produït un error durant la recuperació de lliure/ocupat"
 #, kde-format
 msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgstr ""
-"Ha fallat durant l'anàlisi la informació de lliure/ocupat que es va "
+"Ha fallat durant l'anàlisi de la informació de lliure/ocupat que es va "
 "recuperar des de: %1"
 
 #: freebusymanager.cpp:414
