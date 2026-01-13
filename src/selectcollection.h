@@ -16,6 +16,8 @@ namespace Akonadi
 {
 namespace CalendarUtils
 {
+/*!
+ */
 [[nodiscard]] AKONADI_CALENDAR_EXPORT Akonadi::Collection
 selectCollection(QWidget *parent, int &dialogCode, const QStringList &mimeTypes, const Akonadi::Collection &defaultCollection = Akonadi::Collection());
 }

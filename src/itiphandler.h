@@ -50,11 +50,21 @@ class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit GroupwareUiDelegate(QObject *parent = nullptr);
+    /*!
+     */
     ~GroupwareUiDelegate() override;
 
+    /*!
+     */
     virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
+    /*!
+     */
     virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) = 0;
+    /*!
+     */
     virtual void createCalendar() = 0;
 };
 
@@ -92,7 +102,7 @@ public:
      */
     explicit ITIPHandlerDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent = nullptr);
 
-    /*
+    /*!
      * Opens a Dialog, when an incidence is created
      * The function must emit a dialogClosed signal with the user's answer
      *
@@ -108,7 +118,7 @@ public:
                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
-    /*
+    /*!
      * Opens a Dialog, when an incidence is modified
      * The function must emit a dialogClosed signal with the user's answer
      *
@@ -126,7 +136,7 @@ public:
                                              const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
                                              const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
 
-    /*
+    /*!
      * Opens a Dialog, when an incidence is deleted
      * The function must emit a dialogClosed signal with the user's answer
      *
@@ -141,7 +151,7 @@ public:
                                             Action action = ActionAsk,
                                             const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
                                             const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send")));
-    /*
+    /*!
      * Opens a Dialog, when mail was sended
      * The function must emit a dialogClosed signal with the user's answer
      *
@@ -183,7 +193,7 @@ public:
                                                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
 
 Q_SIGNALS:
-    /*
+    /*!
      * Signal is emitted, when the user has answered the dialog or the defaultAction is used
      * \a answer: answer should be part of KMessageBox:ButtonCode, keep in mind that it is a YesNoDialog so normally it should be KMessageBox::Yes or
      * KMessageBox::No
@@ -193,7 +203,7 @@ Q_SIGNALS:
     void dialogClosed(int answer, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
 
 protected:
-    /*
+    /*!
      * Opens a KMessageBox::questionYesNo with the question
      *
      * Returns KMessageBox::Yes or KMessageBox::No

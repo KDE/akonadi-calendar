@@ -32,6 +32,8 @@ public:
      */
     static FreeBusyManager *self();
 
+    /*!
+     */
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
     /*!

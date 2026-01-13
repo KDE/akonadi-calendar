@@ -34,9 +34,15 @@ public:
      * \a parent
      */
     explicit SearchCollectionHelper(QObject *parent = nullptr);
+    /*!
+     */
     ~SearchCollectionHelper() override;
 
+    /*!
+     */
     void setEnabled(bool enabled);
+    /*!
+     */
     [[nodiscard]] bool enabled() const;
 
 private:

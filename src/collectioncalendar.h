@@ -25,19 +25,39 @@ class AKONADI_CALENDAR_EXPORT CollectionCalendar : public Akonadi::CalendarBase
 public:
     using Ptr = QSharedPointer<CollectionCalendar>;
 
+    /*!
+     */
     explicit CollectionCalendar(const Akonadi::Collection &col, QObject *parent = nullptr);
+    /*!
+     */
     CollectionCalendar(QAbstractItemModel *model, const Akonadi::Collection &col, QObject *parent = nullptr);
+    /*!
+     */
     ~CollectionCalendar() override;
 
+    /*!
+     */
     [[nodiscard]] Akonadi::Collection collection() const;
+    /*!
+     */
     void setCollection(const Akonadi::Collection &c);
 
+    /*!
+     */
     [[nodiscard]] Akonadi::EntityTreeModel *model() const;
 
+    /*!
+     */
     bool addEvent(const KCalendarCore::Event::Ptr &event) override;
+    /*!
+     */
     bool addTodo(const KCalendarCore::Todo::Ptr &todo) override;
+    /*!
+     */
     bool addJournal(const KCalendarCore::Journal::Ptr &journal) override;
 
+    /*!
+     */
     [[nodiscard]] bool hasRight(Akonadi::Collection::Right right) const;
 
 Q_SIGNALS:

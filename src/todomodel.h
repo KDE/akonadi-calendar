@@ -63,36 +63,68 @@ public:
         CalendarRole,
     };
 
+    /*!
+     */
     explicit TodoModel(QObject *parent = nullptr);
 
+    /*!
+     */
     ~TodoModel() override;
 
+    /*!
+     */
     [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
+    /*!
+     */
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
+    /*!
+     */
     [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
+    /*!
+     */
     [[nodiscard]] QVariant extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role = Qt::DisplayRole) const override;
 
+    /*!
+     */
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
+    /*!
+     */
     [[nodiscard]] QVariant headerData(int column, Qt::Orientation orientation, int role) const override;
 
+    /*!
+     */
     AKONADI_CALENDAR_DECL_DEPRECATED_TEXT("Setting calendar is no longer necessary.")
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
+    /*!
+     */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
 
+    /*!
+     */
     [[nodiscard]] QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
+    /*!
+     */
     [[nodiscard]] bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
+    /*!
+     */
     [[nodiscard]] QStringList mimeTypes() const override;
 
+    /*!
+     */
     [[nodiscard]] Qt::DropActions supportedDropActions() const override;
 
+    /*!
+     */
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
+    /*!
+     */
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
 Q_SIGNALS:
