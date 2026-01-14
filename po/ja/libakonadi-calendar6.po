@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:43+0000\n"
+"POT-Creation-Date: 2026-01-14 00:44+0000\n"
 "PO-Revision-Date: 2014-09-25 01:00-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -638,13 +638,13 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr ""
 
-#: itiphandler.h:108 itiphandler.h:126 itiphandler.h:142 itiphandler.h:155
+#: itiphandler.h:118 itiphandler.h:136 itiphandler.h:152 itiphandler.h:165
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr ""
 
-#: itiphandler.h:109 itiphandler.h:127 itiphandler.h:143 itiphandler.h:156
+#: itiphandler.h:119 itiphandler.h:137 itiphandler.h:153 itiphandler.h:166
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
