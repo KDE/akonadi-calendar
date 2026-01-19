@@ -96,6 +96,12 @@ ecm_qt_declare_logging_category(KPim6AkonadiCalendar HEADER akonadicalendar_debu
 )
 
 kconfig_add_kcfg_files(KPim6AkonadiCalendar GENERATE_MOC calendarsettings.kcfgc)
+set_source_files_properties(
+    calendarsettings.cpp
+    PROPERTIES
+        SKIP_LINTING
+            ON
+)
 ki18n_wrap_ui(akonadicalendar_LIB_SRC publishdialog_base.ui)
 
 target_sources(KPim6AkonadiCalendar PRIVATE ${akonadicalendar_LIB_SRC})
