@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2011, 2013, 2016, 2017, 2020, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2011, 2013, 2016, 2017, 2020, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015.
 #
 # KDE Finnish translation sprint participants:
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2025-09-10 16:56+0300\n"
+"PO-Revision-Date: 2026-01-05 15:35+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
-"Päivitettävää esiintymää ei löydy. Se todennäköisesti on poistettu äskettäin."
+"Päivitettävää esiintymää ei löydy: se on todennäköisesti äskettäin poistettu."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -747,7 +747,7 @@ msgstr "Ehdotettu uusi tapaamisaika: %1–%2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr "Ryhmän aikataulusuunnitelmaviesti"
+msgstr "Ryhmäaikataulutusviesti"
 
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
@@ -875,7 +875,7 @@ msgstr "Vastaehdotus: %1"
 #: itiphandlerhelper_p.cpp:483
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr "Ryhmän aikataulusuunnitelmaviestin lähetys epäonnistui."
+msgstr "Ryhmäaikataulutusviestin lähettäminen epäonnistui."
 
 #: itiphandlerhelper_p.cpp:491
 #, kde-format
@@ -1168,8 +1168,8 @@ msgid ""
 "Clicking the <b>Ok</b> button will cause an email to be sent to the "
 "recipients you have entered."
 msgstr ""
-"<b>OK</b>-painikkeen napsautus lähettää sähköpostin antamillesi "
-"vastaanottajille."
+"<b>OK</b>-painiketta napsauttamalla lähetetään annetuille vastaanottajille "
+"sähköposti."
 
 #: publishdialog.cpp:68
 #, kde-format
@@ -1189,8 +1189,7 @@ msgstr "<b>Peru</b>-painikkeen napsautus keskeyttää sähköpostitoiminnon."
 msgid ""
 "Click the <b>Help</b> button to read more information about Group Scheduling."
 msgstr ""
-"Napsauttamalla <b>Ohje</b>-painiketta saa lisätietoa ryhmän "
-"aikataulusuunnittelusta."
+"<b>Ohje</b>-painiketta napsauttamalla saa ryhmäaikataulutuksesta lisätietoa."
 
 #: publishdialog.cpp:124
 #, kde-format
@@ -1244,8 +1243,8 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
-"Voit lisätä uuden vastaanottajan nimen ja sähköpostin luetteloon "
-"napsauttamalla tätä painiketta"
+"Tätä painiketta napsauttamalla voi lisätä luetteloon uuden vastaanottajan "
+"nimen ja sähköpostin"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
@@ -1265,7 +1264,7 @@ msgstr "Poista valittu vastaanottaja"
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
 msgstr ""
-"Poista valittu vastaanottaja luettelosta napsauttamalla tätä painiketta"
+"Tätä painiketta napsauttamalla valittu vastaanottaja poistetaan luettelosta"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
@@ -1286,8 +1285,8 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
-"Avaa ikkuna, jossa voit valita vastaanottajan osoitekirjastasi, "
-"napsauttamalla tätä painiketta"
+"Tätä painiketta napsauttamalla avataan ikkuna, jossa voi valita "
+"vastaanottajan osoitekirjasta"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
