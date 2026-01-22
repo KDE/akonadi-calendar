@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 00:44+0000\n"
-"PO-Revision-Date: 2025-09-24 11:51+0300\n"
+"PO-Revision-Date: 2026-01-20 19:07+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -393,15 +393,11 @@ msgid "Unknown"
 msgstr "Nezināms"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Neizdevās lejupielādēt „brīvs/aizņemts“ datus no: %1\n"
-"Iemesls: %2"
+"Neizdevās lejupielādēt aizņemtības datus no: <link>%1</link>.<nl/>Iemesls: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -410,21 +406,16 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Aizņemtības izgūšanas kļūda"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "Neizdevās parsēt aizņemtības informāciju, kas ir iegūta no: %1"
+msgstr ""
+"Neizdevās parsēt aizņemtības informāciju, kas tika izgūta no: <link>%1</link>"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -432,14 +423,14 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Programmatūrai nav izdevies augšupielādēt jūsu aizņemtības sarakstu "
-"uz URL „%1“. Iespējams, ka pastāv kāda problēma ar piekļuves tiesībām, vai "
-"arī norādījāt nepareizu URL adresi. Sistēma atbildēja: <em>%2</em>.</"
-"p><p>Pārbaudiet URL vai sazinieties ar sistēmas administratoru.</p></qt>"
+"Programmatūrai nav izdevies augšupielādēt jūsu aizņemtības sarakstu uz URL "
+"„<link>%1</link>“. Iespējams, ka pastāv kāda problēma ar piekļuves tiesībām, "
+"vai arī norādījāt nepareizu URL adresi. Sistēma atbildēja: <nl/><emphasis>"
+"%2</emphasis>.<nl/>Pārbaudiet URL vai sazinieties ar sistēmas administratoru."
+"</p></qt>"
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Aizņemtības informācija ir nosūtīta."
@@ -451,29 +442,22 @@ msgid "Sending Free/Busy"
 msgstr "Nosūta aizņemtības statusu"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Neizdodas publicēt aizņemtības datus: %1"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt><p>Aizņemtības sarakstam nav konfigurēta URL adrese. Iestatiet to "
-"„KOrganizer“ aizņemtības lapas konfigurācijas lodziņā.</p><p>Sazinieties ar "
-"savas sistēmas administratoru, lai iegūtu precīzu URL adresi un konta "
-"informāciju.</p></qt>"
+"Aizņemtības sarakstam nav konfigurēta URL adrese. Iestatiet to „KOrganizer“ "
+"aizņemtības lapas konfigurācijas lodziņā.<nl/>Sazinieties ar savas sistēmas "
+"administratoru, lai iegūtu precīzu URL adresi un konta informāciju."
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -482,11 +466,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Nav aizņemtības augšupielādes URL"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Mērķa URL „%1“ nav norādīta vai nav derīga.</qt>"
+msgstr "Mērķa URL „<link>%1</link>“ nav norādīta vai nav derīga."
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -1188,16 +1171,13 @@ msgid "Send email to these recipients"
 msgstr "Nosūtīt e-pasta vēstuli šiem saņēmējiem"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
 msgstr ""
-"Spiežot uz <b>Labi</b>, e-pasta vēstuli nosūtīsiet norādītajiem saņēmējiem."
+"Spiežot uz šīs pogas, e-pasta vēstule tiks nosūtīta norādītajiem saņēmējiem."
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1206,34 +1186,22 @@ msgid "Cancel recipient selection and the email"
 msgstr "Atcelt saņēmēju atlasi un e-pasta vēstules sūtīšanu"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr ""
-"Spiežot uz <b>Atcelt</b> pogas, tika izbeigtas visas uzsāktās e-pasta "
-"darbības."
+msgstr "Spiežot uz šīs pogas, tika izbeigtas visas uzsāktās e-pasta darbības."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "Grupēt ieplānotās e-pasta vēstules"
+msgstr "Skatīt grupu plānošanas rokasgrāmatu"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
-msgstr ""
-"Spiežot uz <b>Palīdzība</b> pogas, varēsiet uzzināt vairāk par grupu "
-"plānošanu."
+msgstr "Spiežot uz šīs pogas, uzzināsiet vairāk par grupu plānošanu."
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1375,23 +1343,21 @@ msgid "This field contains the email address of the recipient"
 msgstr "Šis lauciņš satur saņēmēja e-pasta adresi"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Saņēmēja vārds"
+msgstr "saņēmēja vārds (neobligāts)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "Saņēmēja e-pasta adrese"
+msgstr "saņēmēja e-pasta adrese (obligāta)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
 msgid "Error: Assigning different incidence types."
-msgstr "Kļūda: Piešķirti atšķirīgi notikuma tipi."
+msgstr "Kļūda: piešķirti atšķirīgi notikumu tipi."
 
 #: scheduler_p.cpp:224 scheduler_p.cpp:275
 #, kde-format
