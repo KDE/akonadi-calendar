@@ -505,13 +505,7 @@ void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, con
     // gather config values
     KConfig config(u"kmail2rc"_s);
     KConfigGroup const configGroup(&config, u"Invitations"_s);
-    const bool outlookConformInvitation = configGroup.readEntry("LegacyBodyInvites",
-#ifdef KDEPIM_ENTERPRISE_BUILD
-                                                                true
-#else
-                                                                false
-#endif
-    );
+    const bool outlookConformInvitation = configGroup.readEntry("LegacyBodyInvites", false);
 
     auto *globalPart = composerJob->globalPart();
     globalPart->setGuiEnabled(false);
