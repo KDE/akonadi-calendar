@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-14 00:44+0000\n"
+"POT-Creation-Date: 2026-02-01 00:43+0000\n"
 "PO-Revision-Date: 2023-04-03 09:44+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -928,22 +928,22 @@ msgstr "Objecto Livre/Ocupado"
 msgid "Free Busy Message"
 msgstr "Mensagem de Livre/Ocupado"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:632
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Erro ao criar o transporte"
 
-#: mailclient_p.cpp:656
+#: mailclient_p.cpp:650
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Erro ao obter o transporte. Não foi possível enviar os convites"
 
-#: mailclient_p.cpp:679
+#: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Erro ao colocar a mensagem em espera na Caixa de Saída: %1"
 
-#: mailclient_p.cpp:711
+#: mailclient_p.cpp:705
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -954,25 +954,25 @@ msgstr ""
 "você deseja confirmar sempre se deseja ou não assinar esta mensagem.\n"
 "Deseja então assinar esta mensagem?"
 
-#: mailclient_p.cpp:716 mailclient_p.cpp:742
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgid "Sign Message?"
 msgstr "Assinar a Mensagem?"
 
-#: mailclient_p.cpp:717 mailclient_p.cpp:743
+#: mailclient_p.cpp:711 mailclient_p.cpp:737
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "A&ssinar"
 
-#: mailclient_p.cpp:718 mailclient_p.cpp:744
+#: mailclient_p.cpp:712 mailclient_p.cpp:738
 #, fuzzy, kde-format
 #| msgid "Do &Not Sign"
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Não Assinar"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:732
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -981,7 +981,7 @@ msgstr ""
 "Existem definições de assinatura em conflito para estes destinatários.\n"
 "Deseja assinar esta mensagem?"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:757
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -990,21 +990,21 @@ msgstr ""
 "Pediu para assinar esta mensagem, mas não configurou nenhumas chaves de "
 "assinatura para esta identidade."
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, fuzzy, kde-format
 #| msgid "Send Unsigned?"
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Enviar Sem Assinar?"
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, fuzzy, kde-format
 #| msgid "Send &Unsigned"
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Enviar &Sem Assinar"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1016,7 +1016,7 @@ msgstr ""
 "do servidor.\n"
 "Deseja assinar todas as partes em alternativa?"
 
-#: mailclient_p.cpp:784
+#: mailclient_p.cpp:778
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1027,31 +1027,31 @@ msgstr ""
 "O envio de mensagens não assinadas poderá violar a política do servidor.\n"
 "Deseja assinar todas as partes em alternativa?"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "A&ssinar Todas as Partes"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign"
 msgstr "A&ssinar"
 
-#: mailclient_p.cpp:789
+#: mailclient_p.cpp:783
 #, fuzzy, kde-format
 #| msgid "Unsigned-Message Warning"
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Aviso de Mensagem Não Assinada"
 
-#: mailclient_p.cpp:791
+#: mailclient_p.cpp:785
 #, fuzzy, kde-format
 #| msgid "Send &As Is"
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Envi&ar como Está"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1061,7 +1061,7 @@ msgstr ""
 "destinatários.\n"
 "Deseja encriptar esta mensagem?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:841
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1072,34 +1072,34 @@ msgstr ""
 "destinatário, se deseja ou não encriptar esta mensagem.\n"
 "Deseja então encriptar esta mensagem?"
 
-#: mailclient_p.cpp:852
+#: mailclient_p.cpp:846
 #, fuzzy, kde-format
 #| msgid "Encrypt Message?"
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Encriptar a Mensagem?"
 
-#: mailclient_p.cpp:853
+#: mailclient_p.cpp:847
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Assinar && &Encriptar"
 
-#: mailclient_p.cpp:853 mailclient_p.cpp:926
+#: mailclient_p.cpp:847 mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Encriptar"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Sign Only"
 msgstr "A&ssinar Apenas"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Enviar como E&stá"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:868
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1108,26 +1108,26 @@ msgstr ""
 "Existem definições de encriptação em conflito para estes destinatários.\n"
 "Deseja encriptar esta mensagem?"
 
-#: mailclient_p.cpp:878
+#: mailclient_p.cpp:872
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Encriptar a Mensagem?"
 
-#: mailclient_p.cpp:879
+#: mailclient_p.cpp:873
 #, fuzzy, kde-format
 #| msgid "&Encrypt"
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Encriptar"
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:874
 #, fuzzy, kde-format
 #| msgid "Do &Not Encrypt"
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Não Encriptar"
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:893
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1138,19 +1138,19 @@ msgstr ""
 "para si próprio, mas não estão configuradas nenhumas chaves de encriptação "
 "fidedignas para esta identidade."
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Enviar Sem Encriptar?"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, fuzzy, kde-format
 #| msgid "Send &Unencrypted"
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Enviar &Sem Encriptar"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1163,7 +1163,7 @@ msgstr ""
 "política do servidor e/ou libertar informação importante.\n"
 "Deseja encriptar todas as partes em alternativa?"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:916
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1176,12 +1176,12 @@ msgstr ""
 "ou libertar informação importante.\n"
 "Deseja encriptar as mensagens em alternativa?"
 
-#: mailclient_p.cpp:926
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&Encriptar Todas as Partes"
 
-#: mailclient_p.cpp:928
+#: mailclient_p.cpp:922
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Aviso de Mensagem Não Assinada"

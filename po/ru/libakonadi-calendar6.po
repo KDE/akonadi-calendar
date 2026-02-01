@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-14 00:44+0000\n"
-"PO-Revision-Date: 2026-01-28 19:08+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"POT-Creation-Date: 2026-02-01 00:43+0000\n"
+"PO-Revision-Date: 2026-01-31 13:03+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -400,15 +400,11 @@ msgid "Unknown"
 msgstr "Неизвестно"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Не удалось получить данные о занятости от %1.\n"
-"Причина: %2"
+"Не удалось получить данные о занятости от <link>%1</link>.<nl/>Причина: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -417,21 +413,16 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Ошибка извлечения сведений о занятости"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "Не удалось разобрать сведения о занятости, полученные от %1."
+msgstr ""
+"Не удалось разобрать сведения о занятости, полученные от <link>%1</link>."
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -439,14 +430,13 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Программа не смогла опубликовать список занятости по адресу «%1». "
+"Программа не смогла опубликовать список занятости по адресу <link>%1</link>. "
 "Возможно, возникла проблема с правами или указан неверный URL. Система "
-"сообщила: <em>%2</em>.</p><p>Пожалуйста, проверьте URL или обратитесь к "
-"системному администратору.</p></qt>"
+"сообщила: <nl/><emphasis>%2</emphasis>.<nl/>Проверьте URL или обратитесь к "
+"системному администратору."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Сведения о занятости были переданы успешно."
@@ -458,29 +448,22 @@ msgid "Sending Free/Busy"
 msgstr "Передача сведений о занятости"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Опубликовать сведения о занятости не удалось: %1"
+msgstr "Не удалось опубликовать сведения о занятости: %1"
 
 #: freebusymanager.cpp:748
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt><p>URL-адрес для публикации сведений о занятости не определён. Задайте "
-"его в диалоге конфигурации KOrganizer, на вкладке «Занятое время».</"
-"p><p>Точный адрес и учётные данные можно узнать у системного администратора."
-"</p></qt>"
+"Не определён URL-адрес для публикации сведений о занятости. Задайте его в "
+"диалоге конфигурации KOrganizer, на вкладке «Занятое время».<nl/>Точный "
+"адрес и учётные данные можно узнать у системного администратора."
 
 #: freebusymanager.cpp:753
 #, kde-format
@@ -489,11 +472,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Нет адреса публикации сведений о занятости"
 
 #: freebusymanager.cpp:763
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Указанный целевой адрес «%1» недопустим.</qt>"
+msgstr "Указанный целевой адрес «%1» не является допустимым."
 
 #: freebusymanager.cpp:764
 #, kde-format
@@ -945,22 +927,22 @@ msgstr "Объект занятости"
 msgid "Free Busy Message"
 msgstr "Сообщение занятости"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:632
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Ошибка при создании транспорта"
 
-#: mailclient_p.cpp:656
+#: mailclient_p.cpp:650
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Ошибка получения транспорта. Отправить приглашения не удалось."
 
-#: mailclient_p.cpp:679
+#: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Ошибка помещения сообщения в очередь на отправку: %1"
 
-#: mailclient_p.cpp:711
+#: mailclient_p.cpp:705
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -971,24 +953,24 @@ msgstr ""
 "вам предоставляется возможность подписать это сообщение.\n"
 "Подписать это сообщение?"
 
-#: mailclient_p.cpp:716 mailclient_p.cpp:742
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgid "Sign Message?"
 msgstr "Подписать письмо?"
 
-#: mailclient_p.cpp:717 mailclient_p.cpp:743
+#: mailclient_p.cpp:711 mailclient_p.cpp:737
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Подписать"
 
-#: mailclient_p.cpp:718 mailclient_p.cpp:744
+#: mailclient_p.cpp:712 mailclient_p.cpp:738
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Не подписывать"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:732
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -997,7 +979,7 @@ msgstr ""
 "Для этих получателей определены несогласованные параметры подписывания.\n"
 "Подписать это письмо?"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:757
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -1005,19 +987,19 @@ msgid ""
 msgstr ""
 "Для подписи этого письма в профиле не настроены действительные ключи подписи."
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Отправить неподписанным?"
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Отправить &неподписанным"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1029,7 +1011,7 @@ msgstr ""
 "правила.\n"
 "Подписать все части?"
 
-#: mailclient_p.cpp:784
+#: mailclient_p.cpp:778
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1040,29 +1022,29 @@ msgstr ""
 "Отправка неподписанного сообщения может нарушать правила сайта.\n"
 "Подписать сообщение?"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Подписать все части"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign"
 msgstr "&Подписать"
 
-#: mailclient_p.cpp:789
+#: mailclient_p.cpp:783
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Предупреждение о неподписанном письме"
 
-#: mailclient_p.cpp:791
+#: mailclient_p.cpp:785
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Отправить &как есть"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1071,7 +1053,7 @@ msgstr ""
 "Для всех получателей были найдены ключи, подходящие для шифрования.\n"
 "Зашифровать это письмо?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:841
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1082,33 +1064,33 @@ msgstr ""
 "указать, следует ли шифровать данное письмо.\n"
 "Зашифровать письмо?"
 
-#: mailclient_p.cpp:852
+#: mailclient_p.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Зашифровать письмо?"
 
-#: mailclient_p.cpp:853
+#: mailclient_p.cpp:847
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Подписать && &зашифровать"
 
-#: mailclient_p.cpp:853 mailclient_p.cpp:926
+#: mailclient_p.cpp:847 mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt"
 msgstr "За&шифровать"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Только подписать"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Отправить &как есть"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:868
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1117,24 +1099,24 @@ msgstr ""
 "Для этих получателей определены несогласованные параметры шифрования.\n"
 "Зашифровать письмо?"
 
-#: mailclient_p.cpp:878
+#: mailclient_p.cpp:872
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Зашифровать письмо?"
 
-#: mailclient_p.cpp:879
+#: mailclient_p.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "За&шифровать"
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Не шифровать"
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:893
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1144,18 +1126,18 @@ msgstr ""
 "Для шифрования этого письма и личной копии в профиле не настроены доверенные "
 "ключи шифрования."
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Отправить незашифрованным?"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Отправить &незашифрованным"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1168,7 +1150,7 @@ msgstr ""
 "правила и/или привести к утечке важной информации.\n"
 "Зашифровать все части?"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:916
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1181,12 +1163,12 @@ msgstr ""
 "привести к утечке важной информации.\n"
 "Зашифровать письмо?"
 
-#: mailclient_p.cpp:926
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&Зашифровать все части"
 
-#: mailclient_p.cpp:928
+#: mailclient_p.cpp:922
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Предупреждение о незашифрованном письме"
@@ -1209,16 +1191,13 @@ msgid "Send email to these recipients"
 msgstr "Отправить письмо этим получателям"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
 msgstr ""
-"После нажатия кнопки <b>ОК</b> письмо будет отправлено введённым получателям."
+"После нажатия этой кнопки письмо будет отправлено введённым получателям."
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1227,32 +1206,22 @@ msgid "Cancel recipient selection and the email"
 msgstr "Отменить выбор получателей и отправку письма"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr ""
-"После нажатия кнопки <b>Отмена</b> операция отправки письма будет отменена."
+msgstr "После нажатия этой кнопки операция отправки письма будет отменена."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "Сообщение планирования для группы"
+msgstr "Ознакомьтесь с руководством по групповому планированию"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
-msgstr ""
-"Нажмите кнопку <b>Справка</b>, чтобы узнать больше о групповом планировании."
+msgstr "Нажмите эту кнопку, чтобы узнать больше о групповом планировании."
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1395,18 +1364,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Это поле содержит адрес электронной почты получателя"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Имя получателя"
+msgstr "Имя получателя (необязательно)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "Адрес электронной почты получателя"
+msgstr "Адрес электронной почты получателя (обязательно)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format

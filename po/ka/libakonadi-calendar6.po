@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-14 00:44+0000\n"
+"POT-Creation-Date: 2026-02-01 00:43+0000\n"
 "PO-Revision-Date: 2025-11-23 07:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -907,22 +907,22 @@ msgstr "თავისუფალი/დაკავებულის ობ�
 msgid "Free Busy Message"
 msgstr "თავისუფალი/დაკავებულის შეტყობინება"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:632
 #, kde-format
 msgid "Error while creating transport"
 msgstr "ტრანსპორტის შექმნის შეცდომა"
 
-#: mailclient_p.cpp:656
+#: mailclient_p.cpp:650
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "ტრანსპორტის გამოთხოვის შეცდომა. მოსაწვევების გაგზავნა შეუძლებელია"
 
-#: mailclient_p.cpp:679
+#: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "ელფოსტის გამავლების სიაში ჩასმის შეცდომა: %1"
 
-#: mailclient_p.cpp:711
+#: mailclient_p.cpp:705
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -933,24 +933,24 @@ msgstr ""
 "შეტყობინების ხელმოწერა, თუ არა.\n"
 "მოვაწერო ხელი ამ შეტყობინებაზე?"
 
-#: mailclient_p.cpp:716 mailclient_p.cpp:742
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgid "Sign Message?"
 msgstr "მოვაწერო ხელი შეტყობინებას?"
 
-#: mailclient_p.cpp:717 mailclient_p.cpp:743
+#: mailclient_p.cpp:711 mailclient_p.cpp:737
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&ხელმოწერა"
 
-#: mailclient_p.cpp:718 mailclient_p.cpp:744
+#: mailclient_p.cpp:712 mailclient_p.cpp:738
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&ხელმოწერის გარეშე"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:732
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -959,7 +959,7 @@ msgstr ""
 "ამ მიმღებებისთვის ურთიერთგამომრიცხავი ხელმოწერის პარამეტრებია არჩეული.\n"
 "მოვაწერო ხელი ამ შეტყობინებას?"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:757
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -968,19 +968,19 @@ msgstr ""
 "მოითხოვეთ ამ შეტყობინების ხელმოწერა, მაგრამ ამ ანგარიშისთვის სწორი "
 "ხელმოწერის გასაღებები მითითებული არაა."
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "გავაგზავნო ხელმოწერის გარეშე?"
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "&ხელმოწერის გარეშე გაგზავნა"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -991,7 +991,7 @@ msgstr ""
 "ნაწილობრივ ხელმოწერილი შეტყობინების გაზავნა კი შეიძლება აკრძალული იყოს.\n"
 "მოხდეს ყველა ნაწილის ხელმოწერა?"
 
-#: mailclient_p.cpp:784
+#: mailclient_p.cpp:778
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1002,29 +1002,29 @@ msgstr ""
 "ხელმოუწერელი შეტყობინების გაგზავნით შეიძლება წესები დაარღვიოთ.\n"
 "მოვაწერო ხელი შეტყობინებას?"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&ყველა ნაწილის ხელმოწერა"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign"
 msgstr "&ხელმოწერა"
 
-#: mailclient_p.cpp:789
+#: mailclient_p.cpp:783
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "გაფრთხილება ხელმოუწერელი შეტყობინების შესახებ"
 
-#: mailclient_p.cpp:791
+#: mailclient_p.cpp:785
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&გაგზავნა, როგორც არის"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1033,7 +1033,7 @@ msgstr ""
 "ყველა მიმღებისთვის აღმოჩენილია სწორი დაშიფვრის გასაღებები.\n"
 "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:841
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1044,33 +1044,33 @@ msgstr ""
 "ეს შეტყობინება, თუ არა.\n"
 "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:852
+#: mailclient_p.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:853
+#: mailclient_p.cpp:847
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "დაშიფვრა და ხელმოწერა"
 
-#: mailclient_p.cpp:853 mailclient_p.cpp:926
+#: mailclient_p.cpp:847 mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt"
 msgstr "&დაშიფვრა"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Sign Only"
 msgstr "&მხოლოდ ხელმოწერა"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&გაგზავნა, როგორც არის"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:868
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1079,24 +1079,24 @@ msgstr ""
 "ამ მიმღებებისთვის ურთიერთგამომრიცხავი დაშიფვრის პარამეტრებია არჩეული.\n"
 "მოვაწერო ხელი ამ შეტყობინებას?"
 
-#: mailclient_p.cpp:878
+#: mailclient_p.cpp:872
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:879
+#: mailclient_p.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&დაშიფვრა"
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&არ დაშიფრო"
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:893
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1106,18 +1106,18 @@ msgstr ""
 "მოითხოვეთ ამ შეტყობინების დაშიფვრა და რომ თქვენი ასლიც დაიშიფროს, მაგრამ ამ "
 "ანგარიშისთვის სწორი დაშიფვრის გასაღებები მითითებული არაა."
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "გავაგზავნო დაუშიფრავად?"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&დაუშიფრავად გაგზავნა"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1130,7 +1130,7 @@ msgstr ""
 "მოხდეს ინფორმაციის გაჟონვა.\n"
 "დავშიფრო მთლიანად?"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:916
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1143,12 +1143,12 @@ msgstr ""
 "ინფორმაციის გაჟონვა.\n"
 "დავშიფრო შეტყობინება?"
 
-#: mailclient_p.cpp:926
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&ყველა ნაწილის დაშიფვრა"
 
-#: mailclient_p.cpp:928
+#: mailclient_p.cpp:922
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "გაფრთხილება დაუშიფრავი შეტყობინების შესახებ"

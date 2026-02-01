@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-14 00:44+0000\n"
+"POT-Creation-Date: 2026-02-01 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -911,22 +911,22 @@ msgstr "निःशुल्क व्यस्त वस्तु"
 msgid "Free Busy Message"
 msgstr "निःशुल्क व्यस्त संदेश"
 
-#: mailclient_p.cpp:638
+#: mailclient_p.cpp:632
 #, kde-format
 msgid "Error while creating transport"
 msgstr "ट्रांसपोर्ट बनाते समय त्रुटि"
 
-#: mailclient_p.cpp:656
+#: mailclient_p.cpp:650
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "ट्रांसपोर्ट प्राप्त करने में त्रुटि हुई। आमंत्रण भेजने में असमर्थ"
 
-#: mailclient_p.cpp:679
+#: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "आउटबॉक्स में संदेश पंक्तिबद्ध करने में त्रुटि: %1"
 
-#: mailclient_p.cpp:711
+#: mailclient_p.cpp:705
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -937,24 +937,24 @@ msgstr ""
 "पूछा जाएगा कि क्या आपको इस संदेश पर हस्ताक्षर करना है या नहीं।\n"
 "क्या आप इस संदेश पर हस्ताक्षर करना चाहते हैं?"
 
-#: mailclient_p.cpp:716 mailclient_p.cpp:742
+#: mailclient_p.cpp:710 mailclient_p.cpp:736
 #, kde-format
 msgid "Sign Message?"
 msgstr "संदेश पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:717 mailclient_p.cpp:743
+#: mailclient_p.cpp:711 mailclient_p.cpp:737
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&संकेत"
 
-#: mailclient_p.cpp:718 mailclient_p.cpp:744
+#: mailclient_p.cpp:712 mailclient_p.cpp:738
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "हस्ताक्षर न करें और न करें"
 
-#: mailclient_p.cpp:738
+#: mailclient_p.cpp:732
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -963,7 +963,7 @@ msgstr ""
 "इन प्राप्तकर्ताओं के लिए परस्पर विरोधी हस्ताक्षर प्राथमिकताएँ हैं।\n"
 "इस संदेश पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:763
+#: mailclient_p.cpp:757
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -972,19 +972,19 @@ msgstr ""
 "आपने इस संदेश पर हस्ताक्षर करने का अनुरोध किया है, लेकिन इस पहचान के लिए कोई वैध "
 "हस्ताक्षर कुंजी कॉन्फ़िगर नहीं की गई है।"
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "हस्ताक्षर रहित भेजें?"
 
-#: mailclient_p.cpp:766
+#: mailclient_p.cpp:760
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "भेजें &हस्ताक्षर रहित"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:774
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -995,7 +995,7 @@ msgstr ""
 "केवल आंशिक रूप से हस्ताक्षरित संदेश भेजने से साइट नीति का उल्लंघन हो सकता है।\n"
 "इसके बजाय सभी भागों पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:784
+#: mailclient_p.cpp:778
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1006,29 +1006,29 @@ msgstr ""
 "हस्ताक्षर रहित संदेश भेजने से साइट नीति का उल्लंघन हो सकता है।\n"
 "इसके बजाय संदेश पर हस्ताक्षर करें?"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&सभी भागों पर हस्ताक्षर करें"
 
-#: mailclient_p.cpp:787
+#: mailclient_p.cpp:781
 #, kde-format
 msgid "&Sign"
 msgstr "&संकेत"
 
-#: mailclient_p.cpp:789
+#: mailclient_p.cpp:783
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "अहस्ताक्षरित-संदेश चेतावनी"
 
-#: mailclient_p.cpp:791
+#: mailclient_p.cpp:785
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&जैसा है वैसा ही भेजें"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1037,7 +1037,7 @@ msgstr ""
 "सभी प्राप्तकर्ताओं के लिए मान्य विश्वसनीय एन्क्रिप्शन कुंजियाँ पाई गईं।\n"
 "इस संदेश को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:841
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1048,33 +1048,33 @@ msgstr ""
 "संदेश को एन्क्रिप्ट करना है या नहीं।\n"
 "इस संदेश को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:852
+#: mailclient_p.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "संदेश एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:853
+#: mailclient_p.cpp:847
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "साइन इन करें && &एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:853 mailclient_p.cpp:926
+#: mailclient_p.cpp:847 mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt"
 msgstr "&एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Sign Only"
 msgstr "केवल &साइन करें"
 
-#: mailclient_p.cpp:854 mailclient_p.cpp:930
+#: mailclient_p.cpp:848 mailclient_p.cpp:924
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&जैसा है वैसा ही भेजें"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:868
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1083,24 +1083,24 @@ msgstr ""
 "इन प्राप्तकर्ताओं के लिए परस्पर विरोधी एन्क्रिप्शन प्राथमिकताएँ हैं।\n"
 "इस संदेश को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:878
+#: mailclient_p.cpp:872
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "संदेश एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:879
+#: mailclient_p.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:880
+#: mailclient_p.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "एन्क्रिप्ट न करें"
 
-#: mailclient_p.cpp:899
+#: mailclient_p.cpp:893
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1111,18 +1111,18 @@ msgstr ""
 "अनुरोध किया है, लेकिन इस पहचान के लिए कोई वैध विश्वसनीय एन्क्रिप्शन कुंजी कॉन्फ़िगर नहीं "
 "की गई है।"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "अनएन्क्रिप्टेड भेजें?"
 
-#: mailclient_p.cpp:903
+#: mailclient_p.cpp:897
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "भेजें &अनएन्क्रिप्टेड"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:911
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1135,7 +1135,7 @@ msgstr ""
 "संवेदनशील जानकारी लीक हो सकती है।\n"
 "इसके बजाय सभी भागों को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:916
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1148,12 +1148,12 @@ msgstr ""
 "हो सकती है।\n"
 "इसके बजाय संदेशों को एन्क्रिप्ट करें?"
 
-#: mailclient_p.cpp:926
+#: mailclient_p.cpp:920
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "सभी भागों को &एन्क्रिप्ट करें"
 
-#: mailclient_p.cpp:928
+#: mailclient_p.cpp:922
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "अनएन्क्रिप्टेड संदेश चेतावनी"
