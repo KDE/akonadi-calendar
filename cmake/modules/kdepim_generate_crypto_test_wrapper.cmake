@@ -5,8 +5,7 @@
 
 if(UNIX)
     file(
-        WRITE
-        "${_filename}"
+        WRITE "${_filename}"
         "#!/bin/sh
 # created by cmake, don't edit, changes will be lost
 
@@ -54,8 +53,7 @@ else(UNIX)
     file(TO_NATIVE_PATH "${_gnupghome}" win_gnupghome)
 
     file(
-        WRITE
-        "${_filename}"
+        WRITE "${_filename}"
         "
 set PATH=${win_path};$ENV{PATH}
 set GNUPGHOME=${win_gnupghome};$ENV{GNUPGHOME}

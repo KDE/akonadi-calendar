@@ -144,7 +144,11 @@ macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
         if(NOT DEFINED AKONADI_RUN_${backend}_ISOLATED_TESTS OR AKONADI_RUN_${backend}_ISOLATED_TESTS)
             list(LENGTH "${backends}" backendsLen)
             string(TOLOWER ${backend} lcbackend)
-            list(FIND "${backends}" ${lcbackend} enableBackend)
+            list(
+                FIND "${backends}"
+                ${lcbackend}
+                enableBackend
+            )
             if(${backendsLen} EQUAL 0 OR ${enableBackend} GREATER -1)
                 set(configFile ${CMAKE_CURRENT_SOURCE_DIR}/unittestenv/config.xml)
                 if(AKONADI_TESTS_XML)
