@@ -886,7 +886,7 @@ msgstr ""
 #: mailclient_p.cpp:673
 #, kde-format
 msgid "Error queuing message in outbox: %1"
-msgstr ""
+msgstr "Chyba při zařazování zprávy do odeslané pošty: %1"
 
 #: mailclient_p.cpp:705
 #, kde-format
