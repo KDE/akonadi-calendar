@@ -35,6 +35,10 @@ class FreeBusyProviderBasePrivate;
  * Resource inheriting from this class must implement lastCacheUpdate(),
  * canHandleFreeBusy() and retrieveFreeBusy().
  *
+ * \class Akonadi::FreeBusyProviderBase
+ * \inmodule AkonadiCalendarCore
+ * \inheaderfile Akonadi/FreeBusyProviderBase
+ *
  * \since 4.7
  */
 
