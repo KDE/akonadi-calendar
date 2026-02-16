@@ -26,23 +26,29 @@ class AKONADI_CALENDAR_EXPORT CalFilterPartStatusProxyModel : public QSortFilter
     Q_OBJECT
 public:
     /*!
+     * Creates a new CalFilterPartStatusProxyModel.
      */
     explicit CalFilterPartStatusProxyModel(QObject *parent = nullptr);
     /*!
+     * Destroys the CalFilterPartStatusProxyModel.
      */
     ~CalFilterPartStatusProxyModel() override;
 
     /*!
+     * Sets whether to filter virtual attendees.
      */
     void setFilterVirtual(bool filterVirtual);
     /*!
+     * Returns whether virtual attendees are filtered.
      */
     [[nodiscard]] bool filterVirtual() const;
 
     /*!
+     * Sets the list of participation statuses to filter.
      */
     void setBlockedStatusList(const QList<KCalendarCore::Attendee::PartStat> &blockStatusList);
     /*!
+     * Returns the list of participation statuses that are filtered.
      */
     const QList<KCalendarCore::Attendee::PartStat> &blockedStatusList() const;
 

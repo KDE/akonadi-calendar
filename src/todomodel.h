@@ -64,66 +64,82 @@ public:
     };
 
     /*!
+     * Creates a new TodoModel.
      */
     explicit TodoModel(QObject *parent = nullptr);
 
     /*!
+     * Destroys the TodoModel.
      */
     ~TodoModel() override;
 
     /*!
+     * Returns the number of columns for the given parent index.
      */
     [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /*!
+     * Sets the source model.
      */
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
     /*!
+     * Returns the data stored under the given role for the item referred to by the index.
      */
     [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
     /*!
+     * Returns data for the extra column.
      */
     [[nodiscard]] QVariant extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role = Qt::DisplayRole) const override;
 
     /*!
+     * Sets the role data for the item at index to value.
      */
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     /*!
+     * Returns the data for the given role and section in the header.
      */
     [[nodiscard]] QVariant headerData(int column, Qt::Orientation orientation, int role) const override;
 
     /*!
+     * Sets the calendar to be used.
      */
     AKONADI_CALENDAR_DECL_DEPRECATED_TEXT("Setting calendar is no longer necessary.")
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
     /*!
+     * Sets the incidence changer.
      */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
 
     /*!
+     * Returns the MIME data of the given indexes.
      */
     [[nodiscard]] QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
     /*!
+     * Handles the drop of MIME data.
      */
     [[nodiscard]] bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
     /*!
+     * Returns the MIME types supported by this model.
      */
     [[nodiscard]] QStringList mimeTypes() const override;
 
     /*!
+     * Returns the drop actions supported by this model.
      */
     [[nodiscard]] Qt::DropActions supportedDropActions() const override;
 
     /*!
+     * Returns the item flags for the given index.
      */
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     /*!
+     * Returns the model's role names.
      */
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 

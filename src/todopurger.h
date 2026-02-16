@@ -29,6 +29,7 @@ class AKONADI_CALENDAR_EXPORT TodoPurger : public QObject
     Q_OBJECT
 public:
     /*!
+     * Creates a new TodoPurger instance.
      */
     explicit TodoPurger(QObject *parent = nullptr);
     ~TodoPurger() override;

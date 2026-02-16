@@ -51,19 +51,24 @@ class AKONADI_CALENDAR_EXPORT GroupwareUiDelegate : public QObject
     Q_OBJECT
 public:
     /*!
+     * Creates a new GroupwareUiDelegate.
      */
     explicit GroupwareUiDelegate(QObject *parent = nullptr);
     /*!
+     * Destroys the GroupwareUiDelegate.
      */
     ~GroupwareUiDelegate() override;
 
     /*!
+     * Request to edit the given incidence.
      */
     virtual void requestIncidenceEditor(const Akonadi::Item &item) = 0;
     /*!
+     * Sets the calendar to be used.
      */
     virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) = 0;
     /*!
+     * Creates a new calendar.
      */
     virtual void createCalendar() = 0;
 };

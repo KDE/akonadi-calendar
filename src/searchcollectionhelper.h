@@ -35,13 +35,16 @@ public:
      */
     explicit SearchCollectionHelper(QObject *parent = nullptr);
     /*!
+     * Destroys the SearchCollectionHelper.
      */
     ~SearchCollectionHelper() override;
 
     /*!
+     * Sets whether the search collection helper is enabled.
      */
     void setEnabled(bool enabled);
     /*!
+     * Returns whether the search collection helper is enabled.
      */
     [[nodiscard]] bool enabled() const;
 

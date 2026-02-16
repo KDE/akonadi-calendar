@@ -79,15 +79,19 @@ public:
     [[nodiscard]] bool isEverythingBlocked() const;
 
     /*!
+     * Returns the type of the attribute.
      */
     [[nodiscard]] QByteArray type() const override;
     /*!
+     * Creates a copy of the attribute.
      */
     BlockAlarmsAttribute *clone() const override;
     /*!
+     * Returns the serialized state of the attribute.
      */
     [[nodiscard]] QByteArray serialized() const override;
     /*!
+     * Sets the state of the attribute from the given serialized data.
      */
     void deserialize(const QByteArray &data) override;
 

@@ -31,16 +31,20 @@ class AKONADI_CALENDAR_EXPORT CalFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     /*!
+     * Creates a new CalFilterProxyModel.
      */
     explicit CalFilterProxyModel(QObject *parent = nullptr);
     /*!
+     * Destroys the CalFilterProxyModel.
      */
     ~CalFilterProxyModel() override;
 
     /*!
+     * Returns the calendar filter.
      */
     [[nodiscard]] KCalendarCore::CalFilter *filter() const;
     /*!
+     * Sets the calendar filter.
      */
     void setFilter(KCalendarCore::CalFilter *filter);
 
