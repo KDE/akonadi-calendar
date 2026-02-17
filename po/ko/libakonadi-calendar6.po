@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-01 00:43+0000\n"
+"POT-Creation-Date: 2026-02-17 00:45+0000\n"
 "PO-Revision-Date: 2025-10-09 00:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -678,13 +678,13 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "메시지 보내지 않음"
 
-#: itiphandler.h:118 itiphandler.h:136 itiphandler.h:152 itiphandler.h:165
+#: itiphandler.h:123 itiphandler.h:141 itiphandler.h:157 itiphandler.h:170
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "이메일 보내기"
 
-#: itiphandler.h:119 itiphandler.h:137 itiphandler.h:153 itiphandler.h:166
+#: itiphandler.h:124 itiphandler.h:142 itiphandler.h:158 itiphandler.h:171
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"

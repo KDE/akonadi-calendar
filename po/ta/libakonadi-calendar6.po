@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-01 00:43+0000\n"
+"POT-Creation-Date: 2026-02-17 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 14:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -653,13 +653,13 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "அஞ்சல் அனுப்பப்படவில்லை"
 
-#: itiphandler.h:118 itiphandler.h:136 itiphandler.h:152 itiphandler.h:165
+#: itiphandler.h:123 itiphandler.h:141 itiphandler.h:157 itiphandler.h:170
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "அஞ்சலை அனுப்பு"
 
-#: itiphandler.h:119 itiphandler.h:137 itiphandler.h:153 itiphandler.h:166
+#: itiphandler.h:124 itiphandler.h:142 itiphandler.h:158 itiphandler.h:171
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
