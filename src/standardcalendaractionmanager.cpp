@@ -439,26 +439,31 @@ public:
         Q_EMIT mParent->actionStateUpdated();
     }
 
+    /* cppcheck-suppress functionStatic */
     void slotCreateEvent()
     {
         // dummy as long as there are no editors available in kdepimlibs/
     }
 
+    /* cppcheck-suppress functionStatic */
     void slotCreateTodo()
     {
         // dummy as long as there are no editors available in kdepimlibs/
     }
 
+    /* cppcheck-suppress functionStatic */
     void slotCreateSubTodo()
     {
         // dummy as long as there are no editors available in kdepimlibs/
     }
 
+    /* cppcheck-suppress functionStatic */
     void slotCreateJournal()
     {
         // dummy as long as there are no editors available in kdepimlibs/
     }
 
+    /* cppcheck-suppress functionStatic */
     void slotEditIncidence()
     {
         // dummy as long as there are no editors available in kdepimlibs/
