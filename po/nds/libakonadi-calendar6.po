@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-17 00:45+0000\n"
+"POT-Creation-Date: 2026-02-19 00:47+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1989,57 +1989,57 @@ msgstr "Daagbook verschuven na"
 msgid "Edit Journal…"
 msgstr "Daagbook bewerken…"
 
-#: standardcalendaractionmanager.cpp:528
+#: standardcalendaractionmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "New E&vent..."
 msgid "New E&vent…"
 msgstr "Nieg &Begeefnis…"
 
-#: standardcalendaractionmanager.cpp:529
+#: standardcalendaractionmanager.cpp:534
 #, kde-format
 msgid "Create a new event"
 msgstr "En nieg Begeefnis opstellen"
 
-#: standardcalendaractionmanager.cpp:539
+#: standardcalendaractionmanager.cpp:544
 #, fuzzy, kde-format
 #| msgid "New &To-do..."
 msgid "New &To-do…"
 msgstr "Niege &Opgaav…"
 
-#: standardcalendaractionmanager.cpp:540
+#: standardcalendaractionmanager.cpp:545
 #, kde-format
 msgid "Create a new To-do"
 msgstr "En nieg Opgaav opstellen"
 
-#: standardcalendaractionmanager.cpp:549
+#: standardcalendaractionmanager.cpp:554
 #, fuzzy, kde-format
 #| msgid "New Su&b-to-do..."
 msgid "New Su&b-to-do…"
 msgstr "Niege Ünne&ropgaav…"
 
-#: standardcalendaractionmanager.cpp:550
+#: standardcalendaractionmanager.cpp:555
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "En nieg Ünneropgaav opstellen"
 
-#: standardcalendaractionmanager.cpp:560
+#: standardcalendaractionmanager.cpp:565
 #, fuzzy, kde-format
 #| msgid "New &Journal..."
 msgid "New &Journal…"
 msgstr "Nieg &Daagbookindrag…"
 
-#: standardcalendaractionmanager.cpp:561
+#: standardcalendaractionmanager.cpp:566
 #, kde-format
 msgid "Create a new Journal"
 msgstr "En nieg Daagbook opstellen"
 
-#: standardcalendaractionmanager.cpp:570
+#: standardcalendaractionmanager.cpp:575
 #, fuzzy, kde-format
 #| msgid "&Edit..."
 msgid "&Edit…"
 msgstr "&Bewerken..."
 
-#: standardcalendaractionmanager.cpp:571
+#: standardcalendaractionmanager.cpp:576
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Dat utsöchte Begeefnis bewerken"
