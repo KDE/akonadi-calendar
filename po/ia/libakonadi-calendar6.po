@@ -537,7 +537,7 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
-"Le file seligite non es propriemente formattate,o es in un formato non "
+"Le file seligite non es propriemente fnormatate,o es in un formato non "
 "supportate per iste software."
 
 #: icalimporter.cpp:196
