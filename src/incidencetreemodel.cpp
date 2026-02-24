@@ -254,11 +254,10 @@ void IncidenceTreeModelPrivate::onDataChanged(const QModelIndex &begin, const QM
     }
 }
 
-void IncidenceTreeModelPrivate::onRowsAboutToBeInserted(const QModelIndex &parent, int, int)
+void IncidenceTreeModelPrivate::onRowsAboutToBeInserted([[maybe_unused]] const QModelIndex &parent, int, int)
 {
     // We are a reparenting proxy, the source proxy is flat
     Q_ASSERT(!parent.isValid());
-    Q_UNUSED(parent)
     // Nothing to do yet. We don't know if all the new incidences in this range belong to the same
     // parent yet.
 }
@@ -286,12 +285,11 @@ PreNode::Ptr IncidenceTreeModelPrivate::prenodeFromSourceRow(int row) const
     return node;
 }
 
-void IncidenceTreeModelPrivate::onRowsInserted(const QModelIndex &parent, int begin, int end)
+void IncidenceTreeModelPrivate::onRowsInserted([[maybe_unused]] const QModelIndex &parent, int begin, int end)
 {
     // QElapsedTimer timer;
     // timer.start();
     Q_ASSERT(!parent.isValid());
-    Q_UNUSED(parent)
     Q_ASSERT(begin <= end);
     PreNode::List nodes;
     for (int i = begin; i <= end; ++i) {
@@ -436,12 +434,11 @@ Node::List IncidenceTreeModelPrivate::sorted(const Node::List &nodes) const
     return sorted;
 }
 
-void IncidenceTreeModelPrivate::onRowsAboutToBeRemoved(const QModelIndex &parent, int begin, int end)
+void IncidenceTreeModelPrivate::onRowsAboutToBeRemoved([[maybe_unused]] const QModelIndex &parent, int begin, int end)
 {
     // QElapsedTimer timer;
     // timer.start();
     Q_ASSERT(!parent.isValid());
-    Q_UNUSED(parent)
     Q_ASSERT(begin <= end);
 
     // First, gather nodes to remove
@@ -533,11 +530,8 @@ void IncidenceTreeModelPrivate::removeNode(const Node::Ptr &node)
     m_removedNodes << node.data();
 }
 
-void IncidenceTreeModelPrivate::onRowsRemoved(const QModelIndex &parent, int begin, int end)
+void IncidenceTreeModelPrivate::onRowsRemoved([[maybe_unused]] const QModelIndex &parent, [[maybe_unused]] int begin, [[maybe_unused]] int end)
 {
-    Q_UNUSED(parent)
-    Q_UNUSED(begin)
-    Q_UNUSED(end)
     // Nothing to do here, see comment on ::onRowsAboutToBeRemoved()
 }
 

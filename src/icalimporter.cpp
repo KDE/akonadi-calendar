@@ -45,12 +45,10 @@ ICalImporterPrivate::~ICalImporterPrivate()
 }
 
 void ICalImporterPrivate::onIncidenceCreated(int changeId,
-                                             const Akonadi::Item &item,
+                                             [[maybe_unused]] const Akonadi::Item &item,
                                              Akonadi::IncidenceChanger::ResultCode resultCode,
                                              const QString &errorString)
 {
-    Q_UNUSED(item)
-
     if (!m_pendingRequests.contains(changeId)) {
         return; // Not ours
     }

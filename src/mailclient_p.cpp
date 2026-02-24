@@ -127,9 +127,8 @@ void MailClient::setAkonadiLookupEnabled(bool enabled)
     mAkonadiLookupEnabled = enabled;
 }
 
-std::optional<MessageComposer::ContactPreference> MailClient::contactPreference(const QString &address)
+std::optional<MessageComposer::ContactPreference> MailClient::contactPreference([[maybe_unused]] const QString &address)
 {
-    Q_UNUSED(address);
     return {};
 }
 
@@ -572,10 +571,8 @@ bool MailClient::addKeysToContext(const QString &gnupgHome,
                         exportJob,
                         [&gnupgHome, &proto, &runningJobs, &loop, &k](const GpgME::Error &result,
                                                                       const QByteArray &keyData,
-                                                                      const QString &auditLogAsHtml,
-                                                                      const GpgME::Error &auditLogError) {
-                            Q_UNUSED(auditLogAsHtml);
-                            Q_UNUSED(auditLogError);
+                                                                      [[maybe_unused]] const QString &auditLogAsHtml,
+                                                                      [[maybe_unused]] const GpgME::Error &auditLogError) {
                             if (result) {
 #if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
                                 qCWarning(AKONADICALENDAR_LOG) << "Failed to export " << k.primaryFingerprint() << result.asStdString();

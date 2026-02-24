@@ -320,13 +320,12 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
-QVariant TodoModel::extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role) const
+QVariant TodoModel::extraColumnData([[maybe_unused]] const QModelIndex &parent,
+                                    [[maybe_unused]] int row,
+                                    [[maybe_unused]] int extraColumn,
+                                    [[maybe_unused]] int role) const
 {
     // we customize all columns, not just the extra ones, and thus do all that in ::data()
-    Q_UNUSED(parent);
-    Q_UNUSED(row);
-    Q_UNUSED(extraColumn);
-    Q_UNUSED(role);
     return {};
 }
 
@@ -507,9 +506,8 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
     return {};
 }
 
-void TodoModel::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
+void TodoModel::setCalendar([[maybe_unused]] const Akonadi::ETMCalendar::Ptr &calendar)
 {
-    Q_UNUSED(calendar);
     // Deprecated, no longer does anything
 }
 
@@ -540,11 +538,8 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
     return Akonadi::CalendarUtils::createMimeData(items);
 }
 
-bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, [[maybe_unused]] int row, [[maybe_unused]] int column, const QModelIndex &parent)
 {
-    Q_UNUSED(row)
-    Q_UNUSED(column)
-
     if (action != Qt::MoveAction) {
         qCWarning(AKONADICALENDAR_LOG) << "No action other than MoveAction currently supported!"; // TODO
         return false;

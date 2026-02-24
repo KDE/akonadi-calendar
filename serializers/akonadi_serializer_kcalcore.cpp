@@ -49,10 +49,8 @@ struct Header {
 
 } // namespace
 
-bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, QIODevice &data, int version)
+bool SerializerPluginKCalCore::deserialize(Item &item, const QByteArray &label, QIODevice &data, [[maybe_unused]] int version)
 {
-    Q_UNUSED(version)
-
     if (label != Item::FullPayload) {
         return false;
     }

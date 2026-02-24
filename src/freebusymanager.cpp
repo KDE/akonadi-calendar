@@ -626,10 +626,9 @@ void FreeBusyManagerPrivate::processMailSchedulerResult(Akonadi::Scheduler::Resu
     sender()->deleteLater();
 }
 
-void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText)
+void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, [[maybe_unused]] const QString &errorText)
 {
     Q_Q(FreeBusyManager);
-    Q_UNUSED(errorText)
 
     if (!mProvidersRequestsByEmail.contains(email)) {
         return;
@@ -998,9 +997,8 @@ bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
     return true;
 }
 
-void FreeBusyManager::timerEvent(QTimerEvent *event)
+void FreeBusyManager::timerEvent([[maybe_unused]] QTimerEvent *event)
 {
-    Q_UNUSED(event)
     publishFreeBusy();
 }
 
