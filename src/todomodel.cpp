@@ -506,6 +506,7 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
     return {};
 }
 
+/* cppcheck-suppress functionStatic */
 void TodoModel::setCalendar([[maybe_unused]] const Akonadi::ETMCalendar::Ptr &calendar)
 {
     // Deprecated, no longer does anything
