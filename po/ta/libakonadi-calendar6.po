@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 00:47+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2025-11-30 14:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -298,7 +298,7 @@ msgid ""
 msgstr ""
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:485
+#: todomodel.cpp:484
 #, kde-format
 msgid "Calendar"
 msgstr "நாள்காட்டி"
@@ -439,7 +439,7 @@ msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "'%1' தனை பதிப்பிக்க முடியவில்லை"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:747
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -448,19 +448,19 @@ msgid ""
 "your system administrator for the exact URL and the account details."
 msgstr ""
 
-#: freebusymanager.cpp:753
+#: freebusymanager.cpp:752
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr ""
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:762
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "குறிப்பிடப்பட்டுள்ள சேருமிட முகவரி <link>%1</link> செல்லுபடியாகாதது."
 
-#: freebusymanager.cpp:764
+#: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -489,54 +489,54 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 தனை மாற்றியது"
 
-#: icalimporter.cpp:84
+#: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "ical உருப்படியை உருவாக்குவதில் சிக்கல்: %1"
 
-#: icalimporter.cpp:94
+#: icalimporter.cpp:92
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr ""
 
-#: icalimporter.cpp:119
+#: icalimporter.cpp:117
 #, kde-format
 msgid "Could not download remote file."
 msgstr "தொலை கோப்பை பதிவிறக்க முடியவில்லை."
 
-#: icalimporter.cpp:142 icalimporter.cpp:163
+#: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "இறக்குமதி ஏற்கனவே செயலிலுள்ளது."
 
-#: icalimporter.cpp:168
+#: icalimporter.cpp:166
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "கோப்புப்பெயர் காலியாக உள்ளது. ical கோப்பு இறக்குமதி செய்யப்படாது."
 
-#: icalimporter.cpp:173
+#: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "இறக்குமதிக்கான முகவரி முறையற்றது."
 
-#: icalimporter.cpp:180
+#: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "தேர்ந்தெடுத்துள்ள கோப்பைப் படிக்க முடியாது."
 
-#: icalimporter.cpp:188
+#: icalimporter.cpp:186
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr "தேர்ந்தெடுத்துள்ள கோப்பு முறையற்ற அல்லது ஆதரிக்கப்படாத வடிவத்தில் உள்ளது."
 
-#: icalimporter.cpp:196
+#: icalimporter.cpp:194
 #, kde-format
 msgid "The selected file is empty."
 msgstr "தேர்ந்தெடுத்துள்ள கோப்பு காலியானது."
 
-#: icalimporter.cpp:214
+#: icalimporter.cpp:212
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "ஏற்கனவேயுள்ள நாள்காட்டியில் ical கோப்பை சேர்."
@@ -852,37 +852,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "மாற்றுவதை ரத்து செய்"
 
-#: mailclient_p.cpp:382 mailclient_p.cpp:420
+#: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "பங்கேற்போர் யாருமில்லை"
 
-#: mailclient_p.cpp:428
+#: mailclient_p.cpp:427
 #, kde-format
 msgid "Free Busy Object"
 msgstr ""
 
-#: mailclient_p.cpp:462 mailclient_p.cpp:493
+#: mailclient_p.cpp:461 mailclient_p.cpp:492
 #, kde-format
 msgid "Free Busy Message"
 msgstr ""
 
-#: mailclient_p.cpp:632
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr ""
 
-#: mailclient_p.cpp:650
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr ""
 
-#: mailclient_p.cpp:673
+#: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr ""
 
-#: mailclient_p.cpp:705
+#: mailclient_p.cpp:702
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -893,24 +893,24 @@ msgstr ""
 "கேட்குமாறு அமைத்துள்ளீர்கள்.\n"
 "இவ்வஞ்சலுக்கு கையொப்பமிட வேண்டுமா?"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
 msgstr "அஞ்சலுக்கு கையொப்பமிட வேண்டுமா?"
 
-#: mailclient_p.cpp:711 mailclient_p.cpp:737
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&கையொப்பமிடு"
 
-#: mailclient_p.cpp:712 mailclient_p.cpp:738
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "கை&யொப்பமிடாதே"
 
-#: mailclient_p.cpp:732
+#: mailclient_p.cpp:729
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -919,7 +919,7 @@ msgstr ""
 "இப்பெறுநருக்கான கையொப்ப அமைப்புகளில் முரண்பாடு உள்ளது.\n"
 "இவ்வஞ்சலுக்கு கையொப்பமிட வேண்டுமா?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:754
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -928,20 +928,20 @@ msgstr ""
 "இவ்வஞ்சலை கையொப்பமிட சொல்லியுள்ளீர்கள், ஆனால் இவ்வடையாளத்திற்கு எந்த கையொப்ப சாவியும் "
 "அமைக்கப்படவில்லை."
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, fuzzy, kde-format
 #| msgid "Send Unsigned?"
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "கையொப்பமிடாமல் அனுப்பலாமா?"
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "&கையொப்பமிடாமல் அனுப்பு"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -952,7 +952,7 @@ msgstr ""
 "கையொப்பமிடாத பகுதிகளையுடைய அஞ்சல்களை அனுப்புவது, தள கொள்கைகளை மீறலாம்.\n"
 "பதிலாக அனைத்து பகுதிகளுக்கும் கையொப்பமிட வேண்டுமா?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:775
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -963,30 +963,30 @@ msgstr ""
 "கையொப்பமிடாத அஞ்சல்களை அனுப்புவது, தள கொள்கைகளை மீறலாம்.\n"
 "பதிலாக அஞ்சலுக்கு கையொப்பமிட வேண்டுமா?"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "அனைத்து பகுதிகளுக்கும் &கையொப்பமிடு"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign"
 msgstr "&கையொப்பமிடு"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:780
 #, fuzzy, kde-format
 #| msgid "Unsigned-Message Warning"
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "கையொப்பமிடாத அஞ்சலை பற்றிய எச்சரிக்கை"
 
-#: mailclient_p.cpp:785
+#: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "&அப்படியே அனுப்பு"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:835
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -995,7 +995,7 @@ msgstr ""
 "அனைத்து பெறுநர்களுக்குமான நம்பகமான மறையாக்க சாவிகள் உங்களிடம் உள்ளன.\n"
 "அஞ்சலை மறையாக்கம் செய்யலாமா?"
 
-#: mailclient_p.cpp:841
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1006,34 +1006,34 @@ msgstr ""
 "கேட்குமாறு அமைத்துள்ளீர்கள்.\n"
 "இவ்வஞ்சலை மறையாக்கம் செய்ய வேண்டுமா?"
 
-#: mailclient_p.cpp:846
+#: mailclient_p.cpp:843
 #, fuzzy, kde-format
 #| msgid "Encrypt Message?"
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "அஞ்சலை மறையாக்கலாமா?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:844
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "&மறையாக்கி கையொப்பமிடு"
 
-#: mailclient_p.cpp:847 mailclient_p.cpp:920
+#: mailclient_p.cpp:844 mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt"
 msgstr "&மறையாக்கு"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Sign Only"
 msgstr "&கையொப்பம் மட்டும் இடு"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&அப்படியே அனுப்பு"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:865
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1042,24 +1042,24 @@ msgstr ""
 "இப்பெறுநர்களுக்கான மறையாக்க அமைப்புகள் முரண்படுகின்றன.\n"
 "இவ்வஞ்சலை மறையாக்கம் செய்யலாமா?"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "அஞ்சலை மறையாக்கலாமா?"
 
-#: mailclient_p.cpp:873
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&மறையாக்கு"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "மறையாக்கா&தே"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:890
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1069,18 +1069,18 @@ msgstr ""
 "இவ்வஞ்சலை மறையாக்கம் செய்யும்படியும், மறையாக்கிய நகலை உங்களுக்கும் அனுப்புமாறும் "
 "கூறியுள்ளீர்கள், ஆனால் நம்பகமான மறையாக்க சாவிகள் எதுவும் இவ்வடையாளத்திற்கு அமைக்கப்படவில்லை."
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "மறையாக்காமல் அனுப்பலாமா?"
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "&மறையாக்காமல் அனுப்பு"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:908
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1093,7 +1093,7 @@ msgstr ""
 "முக்கியமான தகவல்களை மூன்றாம் தரப்பினர் தெரிந்துகொள்வதற்கு உதவலாம்.\n"
 "பதிலாக அனைத்து பகுதிகளையும் மறையாக்கலாமா?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:913
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1106,12 +1106,12 @@ msgstr ""
 "மூன்றாம் தரப்பினர் தெரிந்துகொள்வதற்கு உதவலாம்.\n"
 "பதிலாக இவ்வஞ்சலை மறையாக்கலாமா?"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&அனைத்து பகுதிகளையும் மறையாக்கு"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:919
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "மறையாக்கப்படாத அஞ்சலை குறித்த எச்சரிக்கை"
@@ -1930,49 +1930,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Summary"
 msgstr "சுருக்கம்"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Recurs"
 msgstr "மீளநிகழ்வது"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgid "Priority"
 msgstr "முக்கியத்துவம்"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "முடிந்த‍து"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Start Date"
 msgstr "துவக்க தேதி"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Due Date"
 msgstr "உரிய தேதி"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:478
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "முடித்தது"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:480
 #, kde-format
 msgid "Tags"
 msgstr "குறிச்சொற்கள்"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:482
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"

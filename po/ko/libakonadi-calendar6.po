@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 00:47+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2025-10-09 00:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -299,7 +299,7 @@ msgstr ""
 "로 판단합니다."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:485
+#: todomodel.cpp:484
 #, kde-format
 msgid "Calendar"
 msgstr "캘린더"
@@ -449,7 +449,7 @@ msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "바쁨/한가함 데이터를 공개할 수 없음: %1"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:747
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
@@ -466,20 +466,20 @@ msgstr ""
 "정 대화 상자의 \"바쁨/한가함\" 페이지에 설정하십시오.</p><p>정확한 URL 및 계"
 "정 정보는 시스템 관리자에게 문의하십시오.</p></qt>"
 
-#: freebusymanager.cpp:753
+#: freebusymanager.cpp:752
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "바쁨/한가함 업로드 URL이 없음"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:762
 #, fuzzy, kde-format
 #| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "<qt>입력한 대상 URL '%1'이(가) 잘못되었습니다.</qt>"
 
-#: freebusymanager.cpp:764
+#: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -508,42 +508,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1 수정"
 
-#: icalimporter.cpp:84
+#: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "iCal 리소스를 만드는 중 오류 발생: %1"
 
-#: icalimporter.cpp:94
+#: icalimporter.cpp:92
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "원격으로 설정할 D-Bus 인터페이스를 가져올 수 없습니다."
 
-#: icalimporter.cpp:119
+#: icalimporter.cpp:117
 #, kde-format
 msgid "Could not download remote file."
 msgstr "원격 파일을 다운로드할 수 없습니다."
 
-#: icalimporter.cpp:142 icalimporter.cpp:163
+#: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "중요한 작업이 이미 진행 중입니다."
 
-#: icalimporter.cpp:168
+#: icalimporter.cpp:166
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "파일 이름이 비어 있습니다. 로컬 iCal 파일을 가져오지 않습니다."
 
-#: icalimporter.cpp:173
+#: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "가져올 URL이 잘못되었습니다."
 
-#: icalimporter.cpp:180
+#: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "선택한 파일을 읽을 수 없습니다."
 
-#: icalimporter.cpp:188
+#: icalimporter.cpp:186
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -552,12 +552,12 @@ msgstr ""
 "선택한 파일의 형식이 올바르지 않거나, 소프트웨어에서 형식을 지원하지 않습니"
 "다."
 
-#: icalimporter.cpp:196
+#: icalimporter.cpp:194
 #, kde-format
 msgid "The selected file is empty."
 msgstr "선택한 파일이 비어 있습니다."
 
-#: icalimporter.cpp:214
+#: icalimporter.cpp:212
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "iCal 파일을 존재하는 캘린더로 합칩니다."
@@ -897,37 +897,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "업데이트 중단"
 
-#: mailclient_p.cpp:382 mailclient_p.cpp:420
+#: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "이메일을 받을 참석자가 없음"
 
-#: mailclient_p.cpp:428
+#: mailclient_p.cpp:427
 #, kde-format
 msgid "Free Busy Object"
 msgstr "바쁨 한가함 객체"
 
-#: mailclient_p.cpp:462 mailclient_p.cpp:493
+#: mailclient_p.cpp:461 mailclient_p.cpp:492
 #, kde-format
 msgid "Free Busy Message"
 msgstr "바쁨 한가함 메시지"
 
-#: mailclient_p.cpp:632
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "전송 방식 생성 오류"
 
-#: mailclient_p.cpp:650
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "전송 방식을 가져올 수 없습니다. 초대장을 보낼 수 없음"
 
-#: mailclient_p.cpp:673
+#: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "보낼 편지함에 메시지를 추가할 수 없음: %1"
 
-#: mailclient_p.cpp:705
+#: mailclient_p.cpp:702
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -937,24 +937,24 @@ msgstr ""
 "받는 사람의 서명 선호도 검사 결과, 메시지에 서명 여부를 선택할 수 있습니다.\n"
 "이 메시지에 서명하시겠습니까?"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
 msgstr "메시지에 서명하기?"
 
-#: mailclient_p.cpp:711 mailclient_p.cpp:737
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "서명(&S)"
 
-#: mailclient_p.cpp:712 mailclient_p.cpp:738
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "서명하지 않음(&N)"
 
-#: mailclient_p.cpp:732
+#: mailclient_p.cpp:729
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -963,26 +963,26 @@ msgstr ""
 "다음 수신자에 대한 서명 선호가 충돌합니다.\n"
 "이 메시지에 서명하시겠습니까?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:754
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr "메시지 서명을 요청했지만 프로필에 대한 올바른 서명 키가 없습니다."
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "서명하지 않고 보내기?"
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "서명하지 않고 보내기(&U)"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -993,7 +993,7 @@ msgstr ""
 "부분적으로 서명한 메시지는 사이트 정책을 위반할 수도 있습니다.\n"
 "모든 부분에 서명하시겠습니까?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:775
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1004,29 +1004,29 @@ msgstr ""
 "서명하지 않은 메시지는 사이트 정책을 위반할 수도 있습니다.\n"
 "메시지에 서명하시겠습니까?"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "모두 서명하기(&S)"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign"
 msgstr "서명(&S)"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "서명 없는 메시지 경고"
 
-#: mailclient_p.cpp:785
+#: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "그대로 보내기(&A)"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:835
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1035,7 +1035,7 @@ msgstr ""
 "모든 수신자의 올바른 신뢰할 수 있는 암호 키를 찾았습니다.\n"
 "메시지를 암호화하시겠습니까?"
 
-#: mailclient_p.cpp:841
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1045,33 +1045,33 @@ msgstr ""
 "받는 사람의 암호화 선호도 검사 결과, 암호화 여부를 선택할 수 있습니다.\n"
 "이 메시지를 암호화하시겠습니까?"
 
-#: mailclient_p.cpp:846
+#: mailclient_p.cpp:843
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "메시지 암호화?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:844
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "서명 및 암호화(&E)"
 
-#: mailclient_p.cpp:847 mailclient_p.cpp:920
+#: mailclient_p.cpp:844 mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt"
 msgstr "암호화(&E)"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Sign Only"
 msgstr "서명만(&S)"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
 msgstr "그대로 보내기(&S)"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:865
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1080,24 +1080,24 @@ msgstr ""
 "다음 수신자에 대한 암호화 선호가 충돌합니다.\n"
 "이 메시지를 암호화하시겠습니까?"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "메시지 암호화?"
 
-#: mailclient_p.cpp:873
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "암호화(&E)"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "암호화하지 않음(&N)"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:890
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1107,18 +1107,18 @@ msgstr ""
 "메시지 암호화를 요청했고 자기 자신에게 복사본을 보내기로 했지만 이 프로필에 "
 "대한 올바른 신뢰할 수 있는 암호화 키를 찾지 못했습니다."
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "암호화하지 않고 보내기?"
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "암호화하지 않고 보냄(&U)"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:908
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1131,7 +1131,7 @@ msgstr ""
 "수 있습니다.\n"
 "모든 부분을 암호화하시겠습니까?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:913
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1144,12 +1144,12 @@ msgstr ""
 "있습니다.\n"
 "메시지를 암호화하시겠습니까?"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "모두 암호화(&E)"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:919
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "암호화되지 않은 메시지 경고"
@@ -1977,49 +1977,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Summary"
 msgstr "요약"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Recurs"
 msgstr "반복"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgid "Priority"
 msgstr "중요도"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "완료"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Start Date"
 msgstr "시작 날짜"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Due Date"
 msgstr "만료 기한"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:478
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "완료됨"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:480
 #, kde-format
 msgid "Tags"
 msgstr "태그"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:482
 #, kde-format
 msgid "Description"
 msgstr "설명"

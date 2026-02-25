@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 00:47+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2026-01-05 15:35+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -306,7 +306,7 @@ msgstr ""
 "epäonnistuu."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:485
+#: todomodel.cpp:484
 #, kde-format
 msgid "Calendar"
 msgstr "Kalenteri"
@@ -446,7 +446,7 @@ msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Varaustietojen julkaisu epäonnistui: %1"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:747
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -458,19 +458,19 @@ msgstr ""
 "asetusikkunan Varaustiedot-sivulla.<nl/>Tarkan osoitteen ja tilin tiedot saa "
 "järjestelmän ylläpitäjältä."
 
-#: freebusymanager.cpp:753
+#: freebusymanager.cpp:752
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Ei varaustietojen lähetysosoitetta"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:762
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "Annettu kohdeverkko-osoite <link>%1</link> on virheellinen."
 
-#: freebusymanager.cpp:764
+#: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -500,42 +500,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "%1n muutos|/|$[gen %1] muutos"
 
-#: icalimporter.cpp:84
+#: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Virhe luotaessa ical-resurssia: %1"
 
-#: icalimporter.cpp:94
+#: icalimporter.cpp:92
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "D-Bus-liittymää asetusten muuttamiseen etänä ei onnistuttu saamaan."
 
-#: icalimporter.cpp:119
+#: icalimporter.cpp:117
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Etätiedostoa ei saatu ladattua."
 
-#: icalimporter.cpp:142 icalimporter.cpp:163
+#: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Tuontitehtävä on jo meneillään."
 
-#: icalimporter.cpp:168
+#: icalimporter.cpp:166
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Tyhjä tiedostonimi. ical-tiedostoa ei tuoda."
 
-#: icalimporter.cpp:173
+#: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "Tuotava URL-osoite on virheellinen."
 
-#: icalimporter.cpp:180
+#: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "Valittua tiedostoa ei voi lukea."
 
-#: icalimporter.cpp:188
+#: icalimporter.cpp:186
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -544,12 +544,12 @@ msgstr ""
 "Valittua tiedostoa ei ole muotoiltu oikein tai tämä ohjelma ei tue sen "
 "muotoa."
 
-#: icalimporter.cpp:196
+#: icalimporter.cpp:194
 #, kde-format
 msgid "The selected file is empty."
 msgstr "Valittu tiedosto on tyhjä."
 
-#: icalimporter.cpp:214
+#: icalimporter.cpp:212
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Yhdistä ical-tiedosto olemassa olevaan kalenteriin."
@@ -891,37 +891,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Keskeytä päivitys"
 
-#: mailclient_p.cpp:382 mailclient_p.cpp:420
+#: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Ei osallistujia, joille lähettää sähköpostia"
 
-#: mailclient_p.cpp:428
+#: mailclient_p.cpp:427
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Varaustietokohde"
 
-#: mailclient_p.cpp:462 mailclient_p.cpp:493
+#: mailclient_p.cpp:461 mailclient_p.cpp:492
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Varaustietoviesti"
 
-#: mailclient_p.cpp:632
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Virhe luotaessa postinvälitystä"
 
-#: mailclient_p.cpp:650
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Virhe noudettaessa postinvälitystä. Kutsuja ei voi lähettää"
 
-#: mailclient_p.cpp:673
+#: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Virhe vietäessä viestiä lähteneiden jonoon: %1"
 
-#: mailclient_p.cpp:705
+#: mailclient_p.cpp:702
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -932,24 +932,24 @@ msgstr ""
 "sinulta on kysyttävä.\n"
 "Allekirjoitetaanko viesti?"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
 msgstr "Allekirjoitetaanko viesti?"
 
-#: mailclient_p.cpp:711 mailclient_p.cpp:737
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Allekirjoita"
 
-#: mailclient_p.cpp:712 mailclient_p.cpp:738
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Älä allekirjoita"
 
-#: mailclient_p.cpp:732
+#: mailclient_p.cpp:729
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -958,7 +958,7 @@ msgstr ""
 "Näillä vastaanottajilla allekirjoitustoiveissa on ristiriitoja.\n"
 "Allekirjoitetaanko viesti?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:754
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -967,19 +967,19 @@ msgstr ""
 "Pyysit allekirjoittamaan viestin, mutta tälle henkilöydelle ei ole asetettu "
 "kelvollisia allekirjoitusavaimia."
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Lähetetäänkö allekirjoittamatta?"
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Lähetä &allekirjoittamatta"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -991,7 +991,7 @@ msgstr ""
 "palvelinkäytänteitä.\n"
 "Allekirjoitetaanko kaikki osat?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:775
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1002,29 +1002,29 @@ msgstr ""
 "Allekirjoittamattoman viestin lähettäminen voi rikkoa palvelinkäytänteitä.\n"
 "Allekirjoitetaanko viesti?"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "Allekirjoita &kaikki osat"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign"
 msgstr "&Allekirjoita"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Varoitus allekirjoittamattomasta viestistä"
 
-#: mailclient_p.cpp:785
+#: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Lähetä s&ellaisenaan"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:835
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1033,7 +1033,7 @@ msgstr ""
 "Kaikille vastaanottajille ei löytynyt kelvollisia luotettuja salausavaimia.\n"
 "Salataanko viesti?"
 
-#: mailclient_p.cpp:841
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1044,33 +1044,33 @@ msgstr ""
 "on kysyttävä.\n"
 "Salataanko viesti?"
 
-#: mailclient_p.cpp:846
+#: mailclient_p.cpp:843
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Salataanko viesti?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:844
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Allekirjoita ja &salaa"
 
-#: mailclient_p.cpp:847 mailclient_p.cpp:920
+#: mailclient_p.cpp:844 mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Salaa"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Sign Only"
 msgstr "A&inoastaan allekirjoita"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
 msgstr "Lähetä s&ellaisenaan"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:865
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1079,24 +1079,24 @@ msgstr ""
 "Näillä vastaanottajilla salaustoiveissa on ristiriitoja.\n"
 "Salataanko viesti?"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Salataanko viesti?"
 
-#: mailclient_p.cpp:873
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Salaa"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Älä salaa"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:890
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1106,18 +1106,18 @@ msgstr ""
 "Pyysit salaamaan viestin sekä kopion itsellesi, mutta tälle henkilöydelle ei "
 "ole asetettu kelvollisia luotettuja salausavaimia."
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Lähetetäänkö salaamatta?"
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Lähetä &salaamatta"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:908
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1130,7 +1130,7 @@ msgstr ""
 "tai paljastaa arkaluontoista tietoa.\n"
 "Salataanko sen sijaan kaikki osat?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:913
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1143,12 +1143,12 @@ msgstr ""
 "paljastaa arkaluontoista tietoa.\n"
 "Salataanko viestit sen sijaan?"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Salaa &kaikki osat"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:919
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Varoitus salaamattomasta viestistä"
@@ -1990,49 +1990,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Summary"
 msgstr "Yhteenveto"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Recurs"
 msgstr "Toistuu"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgid "Priority"
 msgstr "Etusija"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Valmiina"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Start Date"
 msgstr "Aloituspäivä"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Due Date"
 msgstr "Määräpäivä"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:478
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Valmistunut"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:480
 #, kde-format
 msgid "Tags"
 msgstr "Luokitukset"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:482
 #, kde-format
 msgid "Description"
 msgstr "Kuvaus"

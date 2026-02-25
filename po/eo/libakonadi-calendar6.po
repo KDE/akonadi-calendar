@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 00:47+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2025-09-07 23:34+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -308,7 +308,7 @@ msgstr ""
 "malsukcesos."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:485
+#: todomodel.cpp:484
 #, kde-format
 msgid "Calendar"
 msgstr "Kalendaro"
@@ -459,7 +459,7 @@ msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Ne eblas publikigi la liberajn/okupatajn datumojn: %1"
 
-#: freebusymanager.cpp:748
+#: freebusymanager.cpp:747
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
@@ -477,20 +477,20 @@ msgstr ""
 "paĝo.</p><p>Kontaku vian sistemadministranton por la ĝusta URL kaj la "
 "kontodetaloj.</p></qt>"
 
-#: freebusymanager.cpp:753
+#: freebusymanager.cpp:752
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Neniu Libera/Okupita Alŝuta URL"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:762
 #, fuzzy, kde-format
 #| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "<qt>La cela URL '%1' provizita estas nevalida.</qt>"
 
-#: freebusymanager.cpp:764
+#: freebusymanager.cpp:763
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -519,42 +519,42 @@ msgctxt "%1 is event, todo or journal"
 msgid "%1 modification"
 msgstr "modifo de %1"
 
-#: icalimporter.cpp:84
+#: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
 msgstr "Eraro dum kreado de ika rimedo: %1"
 
-#: icalimporter.cpp:94
+#: icalimporter.cpp:92
 #, kde-format
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "Malsukcesis akiri D-Bus-interfacon por fora agordo."
 
-#: icalimporter.cpp:119
+#: icalimporter.cpp:117
 #, kde-format
 msgid "Could not download remote file."
 msgstr "Ne eblis elŝuti foran dosieron."
 
-#: icalimporter.cpp:142 icalimporter.cpp:163
+#: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
 msgid "An import task is already in progress."
 msgstr "Importtasko jam estas en progreso."
 
-#: icalimporter.cpp:168
+#: icalimporter.cpp:166
 #, kde-format
 msgid "Empty filename. Will not import ical file."
 msgstr "Malplena dosiernomo. Ne importos ikal dosieron."
 
-#: icalimporter.cpp:173
+#: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
 msgstr "URL por importi estas misformita."
 
-#: icalimporter.cpp:180
+#: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
 msgstr "La elektita dosiero ne estas legebla dosiero."
 
-#: icalimporter.cpp:188
+#: icalimporter.cpp:186
 #, kde-format
 msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
@@ -563,12 +563,12 @@ msgstr ""
 "La elektita dosiero ne estas konvene formatita, aŭ en formato ne subtenata "
 "de ĉi tiu programaro."
 
-#: icalimporter.cpp:196
+#: icalimporter.cpp:194
 #, kde-format
 msgid "The selected file is empty."
 msgstr "La elektita dosiero estas malplena."
 
-#: icalimporter.cpp:214
+#: icalimporter.cpp:212
 #, kde-format
 msgid "Merge ical file into existing calendar."
 msgstr "Kunfandi ikal dosieron en ekzistantan kalendaron."
@@ -914,37 +914,37 @@ msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "Ĉesi Ĝisdatigon"
 
-#: mailclient_p.cpp:382 mailclient_p.cpp:420
+#: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Ne estas partoprenantoj por retpoŝti"
 
-#: mailclient_p.cpp:428
+#: mailclient_p.cpp:427
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Libera Okupita Objekto"
 
-#: mailclient_p.cpp:462 mailclient_p.cpp:493
+#: mailclient_p.cpp:461 mailclient_p.cpp:492
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Libera Okupata Mesaĝo"
 
-#: mailclient_p.cpp:632
+#: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Eraro dum kreado de transporto"
 
-#: mailclient_p.cpp:650
+#: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Eraro alportante transporton. Ne eblas sendi invitojn"
 
-#: mailclient_p.cpp:673
+#: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Eraro enviciganta mesaĝon en elirkesto: %1"
 
-#: mailclient_p.cpp:705
+#: mailclient_p.cpp:702
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -955,24 +955,24 @@ msgstr ""
 "demandu vin ĉu subskribi aŭ ne ĉi tiun mesaĝon.\n"
 "Ĉu subskribi ĉi tiun mesaĝon?"
 
-#: mailclient_p.cpp:710 mailclient_p.cpp:736
+#: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
 msgstr "Ĉu Subskribi Mesaĝon?"
 
-#: mailclient_p.cpp:711 mailclient_p.cpp:737
+#: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Subskribi"
 
-#: mailclient_p.cpp:712 mailclient_p.cpp:738
+#: mailclient_p.cpp:709 mailclient_p.cpp:735
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Ne Subskribi"
 
-#: mailclient_p.cpp:732
+#: mailclient_p.cpp:729
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -981,7 +981,7 @@ msgstr ""
 "Estas konfliktantaj subskribaj preferoj por ĉi tiuj ricevantoj.\n"
 "Ĉu subskribi ĉi tiun mesaĝon?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:754
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -990,19 +990,19 @@ msgstr ""
 "Vi petis subskribi ĉi tiun mesaĝon, sed neniuj validaj subskribŝlosiloj "
 "estis agordita por ĉi tiu identeco."
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Ĉu Sendi Nesubskribite?"
 
-#: mailclient_p.cpp:760
+#: mailclient_p.cpp:757
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Sendi Nes&ubskribite"
 
-#: mailclient_p.cpp:774
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1013,7 +1013,7 @@ msgstr ""
 "Sendi nur parte subskribitajn mesaĝojn eble malobservos retejo-politikon.\n"
 "Anstataŭe subskribi ĉiujn partojn?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:775
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1024,29 +1024,29 @@ msgstr ""
 "Sendi nesubskribitan mesaĝon eble malobservos retejan politikon.\n"
 "Anstataŭe subskribi mesaĝon?"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Subskribi Ĉiujn Partojn"
 
-#: mailclient_p.cpp:781
+#: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign"
 msgstr "&Subskribi"
 
-#: mailclient_p.cpp:783
+#: mailclient_p.cpp:780
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Averto pri Nesubskribita Mesaĝo"
 
-#: mailclient_p.cpp:785
+#: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Sendi Kiel Est&as"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:835
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1055,7 +1055,7 @@ msgstr ""
 "Valigaj fidindaj ĉifradŝlosiloj estis trovitaj por ĉiuj ricevantoj.\n"
 "Ĉi ĉi tiun mesaĝon?"
 
-#: mailclient_p.cpp:841
+#: mailclient_p.cpp:838
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1066,33 +1066,33 @@ msgstr ""
 "demandu vin ĉu ĉifri aŭ ne ĉi tiun mesaĝon.\n"
 "Ĉi ĉi tiun mesaĝon?"
 
-#: mailclient_p.cpp:846
+#: mailclient_p.cpp:843
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Ĉu Ĉifri Mesaĝon?"
 
-#: mailclient_p.cpp:847
+#: mailclient_p.cpp:844
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Subskribi && Ĉ&ifri"
 
-#: mailclient_p.cpp:847 mailclient_p.cpp:920
+#: mailclient_p.cpp:844 mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt"
 msgstr "Ĉ&ifri"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Subskribi Nur"
 
-#: mailclient_p.cpp:848 mailclient_p.cpp:924
+#: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Sendi Kiel-Estas"
 
-#: mailclient_p.cpp:868
+#: mailclient_p.cpp:865
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1101,24 +1101,24 @@ msgstr ""
 "Estas konfliktantaj ĉifradaj preferoj por ĉi tiuj ricevantoj.\n"
 "Ĉu ĉi tiun mesaĝon ĉifri?"
 
-#: mailclient_p.cpp:872
+#: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Ĉu Ĉifri Mesaĝon?"
 
-#: mailclient_p.cpp:873
+#: mailclient_p.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Ĉ&ifri"
 
-#: mailclient_p.cpp:874
+#: mailclient_p.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Ne Ĉifri"
 
-#: mailclient_p.cpp:893
+#: mailclient_p.cpp:890
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1128,18 +1128,18 @@ msgstr ""
 "Vi petis ĉifri ĉi tiun mesaĝon, kaj ĉifri kopion al vi, sed neniuj validaj "
 "fidindaj ĉifradŝlosiloj estis agordita por ĉi tiu identeco."
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Ĉu Sendi Neĉifrite?"
 
-#: mailclient_p.cpp:897
+#: mailclient_p.cpp:894
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Send&u Neĉifrite"
 
-#: mailclient_p.cpp:911
+#: mailclient_p.cpp:908
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1152,7 +1152,7 @@ msgstr ""
 "liki sentemajn informojn.\n"
 "Ĉu ĉifri ĉiujn partojn anstataŭe?"
 
-#: mailclient_p.cpp:916
+#: mailclient_p.cpp:913
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1165,12 +1165,12 @@ msgstr ""
 "sentivajn informojn.\n"
 "Ĉu ĉifri mesaĝojn anstataŭe?"
 
-#: mailclient_p.cpp:920
+#: mailclient_p.cpp:917
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "Ĉ&ifri Ĉiujn Partojn"
 
-#: mailclient_p.cpp:922
+#: mailclient_p.cpp:919
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Neĉifrita Mesaĝo-Averto"
@@ -2038,49 +2038,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:467
+#: todomodel.cpp:466
 #, kde-format
 msgid "Summary"
 msgstr "Resumo"
 
-#: todomodel.cpp:469
+#: todomodel.cpp:468
 #, kde-format
 msgid "Recurs"
 msgstr "Ripetas"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:470
 #, kde-format
 msgid "Priority"
 msgstr "Prioritato"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:472
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Kompleta"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:474
 #, kde-format
 msgid "Start Date"
 msgstr "Komenca Dato"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:476
 #, kde-format
 msgid "Due Date"
 msgstr "Limdato"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:478
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Kompletigita"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:480
 #, kde-format
 msgid "Tags"
 msgstr "Etikedoj"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:482
 #, kde-format
 msgid "Description"
 msgstr "Priskribo"
