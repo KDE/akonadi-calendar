@@ -1,21 +1,22 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2024-05-30 16:39+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2026-02-27 13:08+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,18 +37,18 @@ msgstr "Pohled"
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
-msgstr ""
+msgstr "Úkol"
 
 #: alarmnotification.cpp:58
 #, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
-msgstr ""
+msgstr "Událost"
 
 #: alarmnotification.cpp:61
 #, kde-format
 msgid "To-do due at %1"
-msgstr ""
+msgstr "Úkol s termínem splnění %1"
 
 #: alarmnotification.cpp:65
 #, kde-format
@@ -164,7 +165,7 @@ msgstr "&Doba pozastavení:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
-msgstr ""
+msgstr "Pozastavit upomínky na tuto dobu"
 
 #: suspenddialog.cpp:83
 #, kde-format
@@ -174,6 +175,9 @@ msgid ""
 "of time units. You can choose the time units (typically minutes) in the "
 "adjacent selector."
 msgstr ""
+"Každá upomínka pro vybrané události bude pozastavena o tento počet časových "
+"jednotek. Časové jednotky (obvykle minuty) můžete vybrat v sousedním "
+"výběrovém prvku."
 
 #: suspenddialog.cpp:91
 #, kde-format
@@ -203,7 +207,7 @@ msgstr "týden(týdnů)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
-msgstr ""
+msgstr "Pozastavit upomínky pomocí této časové jednotky"
 
 #: suspenddialog.cpp:97
 #, kde-format
@@ -213,6 +217,9 @@ msgid ""
 "unit. You can set the number of time units in the adjacent number entry "
 "input."
 msgstr ""
+"Každá upomínka pro vybrané události bude pozastavena pomocí této časové "
+"jednotky. Počet časových jednotek můžete nastavit v sousedním poli pro "
+"zadání čísla."
 
 #: suspenddialog.cpp:110
 #, kde-format
@@ -224,7 +231,7 @@ msgstr "Připomenout později"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
-msgstr ""
+msgstr "Připomenout mi znovu po uplynutí zadaného intervalu"
 
 #: suspenddialog.cpp:112
 #, kde-format
@@ -233,6 +240,8 @@ msgid ""
 "Press this button to be reminded again about this incidence after the "
 "specified amount of time."
 msgstr ""
+"Stisknutím tohoto tlačítka si můžete nechat tuto událost připomenout po "
+"uplynutí zadané doby."
 
 #: suspenddialog.cpp:116
 #, kde-format
@@ -244,4 +253,4 @@ msgstr "Zrušit"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr ""
+msgstr "Zrušit připomenutí později, zobrazit upozornění znovu"
