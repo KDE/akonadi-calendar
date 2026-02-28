@@ -1,29 +1,30 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-25 00:47+0000\n"
-"PO-Revision-Date: 2024-08-05 11:27+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-02-27 13:12+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: calendarbase.cpp:266
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
-msgstr ""
+msgstr "Nelze najít položku k aktualizaci, pravděpodobně byla nedávno smazána."
 
 #: calendarclipboard.cpp:67
 #, kde-format
@@ -43,12 +44,12 @@ msgstr "Nelze najít položku: %1"
 #: calendarclipboard.cpp:112 calendarclipboard.cpp:129
 #, kde-format
 msgid "Error while removing relations."
-msgstr ""
+msgstr "Chyba při odstraňování vztahů."
 
 #: calendarclipboard.cpp:158
 #, kde-format
 msgid "Error while deleting incidences: %1"
-msgstr ""
+msgstr "Chyba při mazání položek: %1"
 
 #: calendarclipboard.cpp:175
 #, kde-format
@@ -56,6 +57,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
+"Položka \"%1\" má podúkoly. Chcete odebrat pouze tuto položku a všechny její "
+"podúkoly ponechat samostatné, nebo odebrat úkol i se všemi podúkoly?"
 
 #: calendarclipboard.cpp:180 calendarclipboard.cpp:219
 #, kde-format
@@ -81,6 +84,8 @@ msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
+"Položka \"%1\" má podúkoly. Chcete zkopírovat pouze tuto položku, nebo "
+"zkopírovat úkol se všemi jeho podúkoly?"
 
 #: calendarclipboard.cpp:220
 #, kde-format
@@ -255,12 +260,16 @@ msgstr "Skrýt odmítnuté pozvánky"
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Zaškrtněte toto políčko, chcete-li skrýt odmítnuté pozvánky v zobrazení "
+"událostí."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"Zobrazovat připomenutí pouze pro události, které organizuji nebo kterých se "
+"účastním"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -269,6 +278,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Zaškrtněte tuto možnost, pokud chcete dostávat připomenutí pouze pro "
+"události, které organizujete nebo kterých se účastníte."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
@@ -281,6 +292,7 @@ msgstr "Odeslat"
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
+"Zkontrolujte, zda se název hostitele a e-mailová adresa pro načítání shodují."
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:106
@@ -291,6 +303,10 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
+"Pomocí tohoto nastavení můžete nastavit, zda se část domény URL volného/"
+"obsazeného času musí shodovat s částí domény ID uživatele, kterého hledáte. "
+"Například pokud je tato možnost nastavena, pak hledání údajů o volném/"
+"obsazeném čase joe@mydomain.com na serveru www.yourdomain.com selže."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
 #: todomodel.cpp:484
@@ -370,7 +386,7 @@ msgstr "Google %1"
 #: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
-msgstr ""
+msgstr "Moje %1"
 
 #: calendarutils.cpp:202
 #, kde-format
@@ -388,7 +404,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr ""
+msgstr "Chyba při načítání volného/obsazeného času"
 
 #: freebusymanager.cpp:403
 #, kde-format
@@ -419,7 +435,7 @@ msgstr "Informace o položce byla úspěšně odeslána."
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr ""
+msgstr "Odesílání informací o volném čase/zaneprázdněnosti"
 
 #: freebusymanager.cpp:623
 #, fuzzy, kde-format
@@ -441,7 +457,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr ""
+msgstr "Žádná URL pro nahrání volného/obsazeného času"
 
 #: freebusymanager.cpp:762
 #, kde-format
@@ -481,7 +497,7 @@ msgstr "%1 změna"
 #: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr ""
+msgstr "Chyba při vytváření zdroje ical: %1"
 
 #: icalimporter.cpp:92
 #, kde-format
@@ -496,22 +512,22 @@ msgstr "Nelze stáhnout vzdálený soubor."
 #: icalimporter.cpp:140 icalimporter.cpp:161
 #, kde-format
 msgid "An import task is already in progress."
-msgstr ""
+msgstr "Importní úkol již probíhá."
 
 #: icalimporter.cpp:166
 #, kde-format
 msgid "Empty filename. Will not import ical file."
-msgstr ""
+msgstr "Prázdný název souboru. Soubor ical nebude importován."
 
 #: icalimporter.cpp:171
 #, kde-format
 msgid "Url to import is malformed."
-msgstr ""
+msgstr "URL adresa pro import je nesprávně formátovaná."
 
 #: icalimporter.cpp:178
 #, kde-format
 msgid "The selected file is not a readable file."
-msgstr ""
+msgstr "Vybraný soubor není čitelný."
 
 #: icalimporter.cpp:186
 #, kde-format
@@ -519,6 +535,8 @@ msgid ""
 "The selected file is not properly formatted, or in a format not supported by "
 "this software."
 msgstr ""
+"Vybraný soubor není správně formátován nebo je v formátu, který tento "
+"software nepodporuje."
 
 #: icalimporter.cpp:194
 #, kde-format
@@ -528,17 +546,17 @@ msgstr "Zvolená cesta je prázdná."
 #: icalimporter.cpp:212
 #, kde-format
 msgid "Merge ical file into existing calendar."
-msgstr ""
+msgstr "Sloučit soubor ical s existujícím kalendářem."
 
 #: incidencechanger.cpp:264
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
-msgstr ""
+msgstr "Chyba při pokusu o vytvoření položky kalendáře. Chyba: %1"
 
 #: incidencechanger.cpp:343
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
-msgstr ""
+msgstr "Chyba při pokusu o odstranění položky kalendáře. Chyba: %1"
 
 #: incidencechanger.cpp:378
 #, kde-format
@@ -549,22 +567,22 @@ msgstr "Vyskytla se neznámá chyba"
 #: incidencechanger.cpp:415
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
-msgstr ""
+msgstr "Chyba při pokusu o úpravu položky kalendáře. Chyba: %1"
 
 #: incidencechanger.cpp:808 incidencechanger.cpp:932
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
-msgstr ""
+msgstr "Tato položka kalendáře již byla odstraněna nebo je právě odstraňována."
 
 #: incidencechanger.cpp:1198
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr ""
+msgstr "Operaci nelze provést z důvodu omezení ACL."
 
 #: incidencechanger.cpp:1201
 #, kde-format
 msgid "The chosen collection is invalid"
-msgstr ""
+msgstr "Vybraná kolekce je neplatná"
 
 #: incidencechanger.cpp:1205
 #, kde-format
@@ -572,11 +590,13 @@ msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
 msgstr ""
+"Výchozí kolekce je neplatná nebo nemá správná oprávnění ACL a byla použita "
+"zásada cíle nikdy se neptat."
 
 #: incidencechanger.cpp:1209
 #, kde-format
 msgid "Duplicate item id in a group operation"
-msgstr ""
+msgstr "Duplicitní ID položky ve skupinové operaci"
 
 #: incidencechanger.cpp:1213
 #, kde-format
@@ -584,6 +604,7 @@ msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr ""
+"Jedna změna patřící do skupiny změn selhala. Všechny změny jsou vraceny zpět."
 
 #: incidencechanger.cpp:1218
 #, kde-format
@@ -593,7 +614,7 @@ msgstr "Neznámá chyba"
 #: itiphandler.cpp:110
 #, kde-format
 msgid "Error loading calendar."
-msgstr ""
+msgstr "Chyba při načítání kalendáře."
 
 #: itiphandler.cpp:118
 #, kde-format
@@ -603,7 +624,7 @@ msgstr "Chybová zpráva: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr ""
+msgstr "Neznámá chyba při analýze pozvánky iCal"
 
 #: itiphandler.cpp:125
 #, kde-format
@@ -623,18 +644,20 @@ msgstr "Neplatná činnost: %1"
 #: itiphandler.cpp:234
 #, kde-format
 msgid "Error sending counter proposal"
-msgstr ""
+msgstr "Chyba při odesílání protinávrhu"
 
 #: itiphandler.cpp:241
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
-msgstr ""
+msgstr "Nelze spustit editor pro úpravu protinávrhu"
 
 #: itiphandler.cpp:272
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
+"Položka \"%1\" nemá žádné účastníky. Proto nebude odeslána žádná zpráva "
+"groupware."
 
 #: itiphandler.cpp:275
 #, kde-format
@@ -663,7 +686,7 @@ msgstr "Chyba: %1"
 #: itiphandler_p.cpp:83
 #, kde-format
 msgid "Error loading calendar: %1"
-msgstr ""
+msgstr "Chyba při načítání kalendáře: %1"
 
 #: itiphandler_p.cpp:134
 #, kde-format
@@ -766,6 +789,8 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
+"Nejste organizátorem této události. Její úpravou dojde k nesouladu vašeho "
+"kalendáře s kalendářem organizátora. Opravdu ji chcete upravit?"
 
 #: itiphandlerhelper_p.cpp:302
 #, kde-format
@@ -827,7 +852,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:401
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr ""
+msgstr "Chcete odeslat aktualizaci stavu organizátorovi tohoto deníku?"
 
 #: itiphandlerhelper_p.cpp:406 itiphandlerhelper_p.cpp:427
 #, kde-format
@@ -841,6 +866,8 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
+"Dříve jste přijali pozvánku na tuto událost. Chcete odeslat aktualizovanou "
+"odpověď organizátorovi a pozvání odmítnout?"
 
 #: itiphandlerhelper_p.cpp:466 mailscheduler_p.cpp:126
 #, kde-format
@@ -850,7 +877,7 @@ msgstr "Protinávrh: %1"
 #: itiphandlerhelper_p.cpp:483
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr ""
+msgstr "Odeslání skupinového plánovacího e-mailu se nezdařilo."
 
 #: itiphandlerhelper_p.cpp:491
 #, kde-format
@@ -861,7 +888,7 @@ msgstr "Přerušit aktualizaci"
 #: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr ""
+msgstr "Neexistují žádní účastníci, kterým by bylo možné zaslat e-mail."
 
 #: mailclient_p.cpp:427
 #, kde-format
@@ -876,12 +903,12 @@ msgstr "Zpráva o aktivitě"
 #: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
-msgstr ""
+msgstr "Chyba při vytváření transportu"
 
 #: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
-msgstr ""
+msgstr "Chyba při načítání transportu. Nelze odeslat pozvánky."
 
 #: mailclient_p.cpp:670
 #, kde-format
@@ -922,6 +949,8 @@ msgid ""
 "There are conflicting signing preferences for these recipients.\n"
 "Sign this message?"
 msgstr ""
+"Pro tyto příjemce existují protichůdné preference podpisu.\n"
+"Podepsat tuto zprávu?"
 
 #: mailclient_p.cpp:754
 #, kde-format
@@ -929,6 +958,8 @@ msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr ""
+"Požádali jste o podepsání této zprávy, ale pro tuto identitu nebyly "
+"nastaveny žádné platné podpisové klíče."
 
 #: mailclient_p.cpp:757
 #, kde-format
@@ -949,6 +980,9 @@ msgid ""
 "Sending only partially signed messages might violate site policy.\n"
 "Sign all parts instead?"
 msgstr ""
+"Některé části této zprávy nebudou podepsány.\n"
+"Odesílání pouze částečně podepsaných zpráv může porušovat zásady webu.\n"
+"Podepsat všechny části?"
 
 #: mailclient_p.cpp:775
 #, kde-format
@@ -957,6 +991,9 @@ msgid ""
 "Sending unsigned message might violate site policy.\n"
 "Sign message instead?"
 msgstr ""
+"Tato zpráva nebude podepsána.\n"
+"Odeslání nepodepsané zprávy může porušovat zásady webu.\n"
+"Chcete zprávu podepsat?"
 
 #: mailclient_p.cpp:778
 #, kde-format
@@ -986,6 +1023,8 @@ msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Pro všechny příjemce byly nalezeny platné důvěryhodné šifrovací klíče.\n"
+"Šifrovat tuto zprávu?"
 
 #: mailclient_p.cpp:838
 #, kde-format
@@ -1030,6 +1069,8 @@ msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
 "Encrypt this message?"
 msgstr ""
+"Pro tyto příjemce existují protichůdné preference šifrování.\n"
+"Šifrovat tuto zprávu?"
 
 #: mailclient_p.cpp:869
 #, kde-format
@@ -1055,6 +1096,9 @@ msgid ""
 "yourself, but no valid trusted encryption keys have been configured for this "
 "identity."
 msgstr ""
+"Požádali jste o zašifrování této zprávy a zašifrování kopie pro sebe, ale "
+"pro tuto identitu nebyly nakonfigurovány žádné platné důvěryhodné šifrovací "
+"klíče."
 
 #: mailclient_p.cpp:894
 #, kde-format
@@ -1075,6 +1119,10 @@ msgid ""
 "leak sensitive information.\n"
 "Encrypt all parts instead?"
 msgstr ""
+"Některé části této zprávy nebudou šifrovány.\n"
+"Odesílání pouze částečně šifrovaných zpráv může porušovat zásady webu a/nebo "
+"vést k úniku citlivých informací.\n"
+"Chcete místo toho zašifrovat všechny části?"
 
 #: mailclient_p.cpp:913
 #, kde-format
@@ -1084,6 +1132,10 @@ msgid ""
 "information.\n"
 "Encrypt messages instead?"
 msgstr ""
+"Tato zpráva nebude šifrována.\n"
+"Odesílání nešifrovaných zpráv může porušovat zásady webu a/nebo vést k úniku "
+"citlivých informací.\n"
+"Chcete zprávy místo toho zašifrovat?"
 
 #: mailclient_p.cpp:917
 #, kde-format
@@ -1150,7 +1202,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Uveďte prosím alespoň 1 platnou e-mailovou adresu."
 
 #: publishdialog.cpp:122
 #, kde-format
@@ -1160,6 +1212,8 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
+"Nelze publikovat výskyt kalendáře z důvodu neplatného řetězce příjemců.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1171,7 +1225,7 @@ msgstr "Chyba publikování"
 #: publishdialog_base.ui:38
 #, kde-format
 msgid "The list of addressees to receive the invitation"
-msgstr ""
+msgstr "Seznam adresátů, kteří mají obdržet pozvánku"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, mListWidget)
 #: publishdialog_base.ui:41
@@ -1180,6 +1234,8 @@ msgid ""
 "This is a list of all the addresses you have currently selected to receive "
 "the iCalendar invitation."
 msgstr ""
+"Toto je seznam všech adres, které jste aktuálně vybrali pro příjem pozvánky "
+"iCalendar."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mNew)
 #: publishdialog_base.ui:52
@@ -1194,6 +1250,8 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
+"Kliknutím na toto tlačítko budete moci zadat jméno a e-mailovou adresu "
+"nového adresáta, kterého chcete přidat do seznamu příjemců."
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
@@ -1205,7 +1263,7 @@ msgstr "&Nový"
 #: publishdialog_base.ui:65
 #, kde-format
 msgid "Remove the recipient currently selected"
-msgstr ""
+msgstr "Odebrat aktuálně vybraného příjemce"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:68
@@ -1213,6 +1271,7 @@ msgstr ""
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
 msgstr ""
+"Kliknutím na toto tlačítko odeberete aktuálně vybraného příjemce ze seznamu."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
@@ -1224,7 +1283,7 @@ msgstr "Odst&ranit"
 #: publishdialog_base.ui:78
 #, kde-format
 msgid "Select a recipient from your address book"
-msgstr ""
+msgstr "Vyberte příjemce ze své knihy adres"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:81
@@ -1233,6 +1292,8 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
+"Kliknutím na toto tlačítko zobrazíte další dialogové okno, ve kterém budete "
+"moci vybrat příjemce ze své knihy adres."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
@@ -1257,7 +1318,7 @@ msgstr "Jméno příjemce"
 #: publishdialog_base.ui:126
 #, kde-format
 msgid "This field contains the name of the recipient"
-msgstr ""
+msgstr "Toto pole obsahuje jméno příjemce"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: publishdialog_base.ui:136
@@ -1276,7 +1337,7 @@ msgstr "E-mailová adresa příjemce"
 #: publishdialog_base.ui:149
 #, kde-format
 msgid "This field contains the email address of the recipient"
-msgstr ""
+msgstr "Toto pole obsahuje e-mailovou adresu příjemce"
 
 #: publishdialog_p.cpp:45
 #, fuzzy, kde-format
@@ -1295,17 +1356,17 @@ msgstr "E-mailová adresa příjemce"
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
 msgid "Error: Assigning different incidence types."
-msgstr ""
+msgstr "Chyba: Přiřazení různých typů položek."
 
 #: scheduler_p.cpp:224 scheduler_p.cpp:275
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
-msgstr ""
+msgstr "Toto není aktualizace. Nalezená položka byla upravena nedávno."
 
 #: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
 #, kde-format
 msgid "Error modifying incidence"
-msgstr ""
+msgstr "Chyba při úpravě položky"
 
 #: scheduler_p.cpp:291
 #, kde-kuit-format
@@ -1320,6 +1381,13 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
+"<para>Přidali jste aktualizaci pozvánky, ale starší verzi položky se "
+"nepodařilo v kalendáři najít.</para><para>K tomu mohlo dojít z následujících "
+"důvodů:<list><item>organizátor vás nezahrnul do původní pozvánky</"
+"item><item>původní pozvánku jste ještě nepřijali</item> <item>původní "
+"pozvánku jste z kalendáře odstranili</item><item>už nemáte přístup ke "
+"kalendáři obsahujícímu pozvánku</item></list></para><para>Není to žádný "
+"problém, ale mysleli jsme si, že byste to měli vědět.</para>"
 
 #: scheduler_p.cpp:300
 #, kde-format
@@ -1330,17 +1398,17 @@ msgstr "Nelze najít pozvánku k aktualizaci"
 #: scheduler_p.cpp:307
 #, kde-format
 msgid "Error adding incidence"
-msgstr ""
+msgstr "Chyba při přidávání položky"
 
 #: scheduler_p.cpp:341
 #, kde-format
 msgid "Could not find incidence to delete."
-msgstr ""
+msgstr "Nelze najít položku k odstranění."
 
 #: scheduler_p.cpp:394
 #, kde-format
 msgid "Error recording exception"
-msgstr ""
+msgstr "Chyba při zaznamenávání výjimky"
 
 #: scheduler_p.cpp:411
 #, kde-format
@@ -1350,6 +1418,9 @@ msgid ""
 "already been deleted or is not owned by you. Or it might belong to a read-"
 "only or disabled calendar."
 msgstr ""
+"Událost nebo úkol nebylo možné odstranit z vašeho kalendáře. Možná již byla "
+"odstraněna nebo není ve vašem vlastnictví. Nebo může patřit do kalendáře jen "
+"pro čtení nebo deaktivovaného kalendáře."
 
 #: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
 #: scheduler_p.cpp:577
@@ -1400,6 +1471,8 @@ msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
 msgstr ""
+"K události byl přidán účastník. Chcete účastníkům poslat e-mailem "
+"aktualizační zprávu?"
 
 #: scheduler_p.cpp:513
 #, kde-format
@@ -1422,17 +1495,17 @@ msgstr "Neodesílat"
 #: scheduler_p.cpp:561
 #, kde-format
 msgid "No incidence for scheduling."
-msgstr ""
+msgstr "Žádné položky pro plánování."
 
 #: scheduler_p.cpp:584
 #, kde-format
 msgid "No Free Busy Cache"
-msgstr ""
+msgstr "Žádná mezipaměť volného času"
 
 #: scheduler_p.cpp:603
 #, kde-format
 msgid "Error saving freebusy object"
-msgstr ""
+msgstr "Chyba při ukládání objektu volného času"
 
 #: searchcollectionhelper.cpp:179
 #, kde-format
@@ -1654,6 +1727,8 @@ msgid ""
 "Add a new calendar<p>You will be presented with a dialog where you can "
 "select the type of the calendar that shall be added.</p>"
 msgstr ""
+"Přidat nový kalendář<p>Zobrazí se dialogové okno, ve kterém můžete vybrat "
+"typ kalendáře, který chcete přidat.</p>"
 
 #: standardcalendaractionmanager.cpp:143
 #, kde-format
@@ -1686,6 +1761,8 @@ msgid ""
 "Delete the selected calendars<p>The currently selected calendars will be "
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
+"Odstranit vybrané kalendáře<p>Aktuálně vybrané kalendáře budou odstraněny "
+"spolu se všemi událostmi, úkoly a deníky, které obsahují.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
