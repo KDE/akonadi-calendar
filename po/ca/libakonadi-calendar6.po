@@ -2079,14 +2079,3 @@ msgstr "Descripció"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "S'estan netejant les tasques pendents finalitzades"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyName)"
-#~ msgstr "(NomBuit)"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyEmail)"
-#~ msgstr "(CorreuElectrònicBuit)"
-
-#~ msgid "Add &Calendar..."
-#~ msgstr "Afegeix un &calendari..."
