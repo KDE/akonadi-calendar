@@ -64,6 +64,7 @@ void ITIPHandlerPrivate::onHelperFinished(Akonadi::ITIPHandlerHelper::SendResult
     }
 }
 
+/* cppcheck-suppress functionStatic */
 void ITIPHandlerPrivate::onCounterProposalDelegateFinished(bool success, const QString &errorMessage)
 {
     Q_UNUSED(success)
