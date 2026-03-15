@@ -154,7 +154,7 @@ find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiContactCore ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6AkonadiMime ${AKONADI_MIME_VERSION} CONFIG REQUIRED)
+find_package(KPim6AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(Gpgmepp ${GPGME_LIB_VERSION} CONFIG)
 set_package_properties(
