@@ -71,6 +71,16 @@ macro(ADD_GPG_CRYPTO_TEST _target _testname)
     )
 endmacro(ADD_GPG_CRYPTO_TEST)
 
+if(NOT LIBRARY_OUTPUT_PATH)
+    set(LIBRARY_OUTPUT_PATH)
+endif()
+if(NOT QT_LIBRARY_DIR)
+    set(QT_LIBRARY_DIR)
+endif()
+if(NOT CONFIG_BACKENDS)
+    set(CONFIG_BACKENDS)
+endif()
+
 macro(ADD_GPG_CRYPTO_AKONADI_TEST _target _testname)
     set(_executable "$<TARGET_FILE:${_target}>")
 
