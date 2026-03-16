@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-16 00:45+0000\n"
 "PO-Revision-Date: 2025-11-23 08:19+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -439,7 +439,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informacije o prostosti/zaposlenosti so bile uspešno poslane."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -690,18 +690,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Ne pošlji"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Napaka: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Napaka med nalaganjem koledarja: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -710,7 +710,7 @@ msgstr ""
 "Sporočilo programa za skupinsko delo predmeta »%1« je bilo uspešno poslano.\n"
 "Način: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -721,34 +721,34 @@ msgstr ""
 "Ni bilo mogoče poslati predmeta »%1«.\n"
 "Način: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Podatki o predmetu so bili uspešno poslani."
 
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Objavljanje"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče objaviti"
 
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Posredovanje"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Predmeta »%1« ni bilo mogoče posredovati"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"

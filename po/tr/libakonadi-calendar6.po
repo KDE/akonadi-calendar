@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-16 00:45+0000\n"
 "PO-Revision-Date: 2025-11-23 12:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -439,7 +439,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Uygun/Meşgul bilgisi başarıyla gönderildi."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -688,18 +688,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Gönderme"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Hata: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Takvim yüklenirken hata oluştu: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -708,7 +708,7 @@ msgstr ""
 "%1 ögesi için grup yazılımı iletisi başarıyla gönderildi.\n"
 "Yöntem: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -719,34 +719,34 @@ msgstr ""
 "“%1” ögesi gönderilemiyor.\n"
 "Yöntem: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Öge bilgisi başarıyla gönderildi."
 
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Yayıncılık"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "“%1” ögesi yayımlanamıyor"
 
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "İletme"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "“%1” ögesi iletilemiyor"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
