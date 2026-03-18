@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-16 00:45+0000\n"
-"PO-Revision-Date: 2026-02-27 13:12+0100\n"
+"PO-Revision-Date: 2026-03-16 11:30+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -399,6 +399,7 @@ msgstr "Neznámý"
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
+"Nepodařilo se stáhnout údaje o aktivitě z: <link>%1</link>.<nl/>Důvod: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -413,6 +414,8 @@ msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
 msgstr ""
+"Nepodařilo se analyzovat informace o aktivitě, které byly načteny z: <link>"
+"%1</link>"
 
 #: freebusymanager.cpp:419
 #, kde-format
@@ -423,13 +426,16 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
+"Software nemohl nahrát váš seznam aktivity na adresu URL <link>%1</link>. "
+"Může se jednat o problém s přístupovými právy nebo jste zadali nesprávnou "
+"adresu URL. Systém hlásí: <nl/><emphasis>%2</emphasis>.<nl/>Zkontrolujte "
+"prosím adresu URL nebo se obraťte na správce systému."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The item information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
-msgstr "Informace o položce byla úspěšně odeslána."
+msgstr "Informace o zaneprázdněnosti byly úspěšně odeslány."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
@@ -438,11 +444,10 @@ msgid "Sending Free/Busy"
 msgstr "Odesílání informací o volném čase/zaneprázdněnosti"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the item '%1'"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Nelze publikovat položku '%1'"
+msgstr "Nelze publikovat informace o aktivitě: %1"
 
 #: freebusymanager.cpp:747
 #, kde-format
@@ -452,6 +457,10 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
+"Není nakonfigurována žádná adresa URL pro nahrání vašeho seznamu volného "
+"času/zaneprázdněnosti. Nastavte ji prosím v dialogovém okně nastavení "
+"KOrganizeru na stránce „Volný/Obsazený čas“.<nl/>Obraťte se na správce "
+"systému, aby vám sdělil přesnou adresu URL a podrobnosti o účtu."
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -463,7 +472,7 @@ msgstr "Žádná URL pro nahrání volného/obsazeného času"
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr ""
+msgstr "Zadaná cílová adresa URL <link>%1</link> je neplatná."
 
 #: freebusymanager.cpp:763
 #, kde-format
@@ -1171,6 +1180,7 @@ msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
 msgstr ""
+"Kliknutím na toto tlačítko se odešle e-mail příjemcům, které jste zadali."
 
 #: publishdialog.cpp:65
 #, kde-format
@@ -1182,21 +1192,20 @@ msgstr "Zrušit email a výběr příjemců"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr ""
+msgstr "Kliknutím na toto tlačítko dojde k ukončení operace s e-mailem."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "E-mail skupinového plánování"
+msgstr "Viz příručka k plánování skupinových aktivit"
 
 #: publishdialog.cpp:70
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
+"Kliknutím na toto tlačítko zobrazíte další informace o skupinovém plánování."
 
 #: publishdialog.cpp:118
 #, kde-format
@@ -1340,18 +1349,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Toto pole obsahuje e-mailovou adresu příjemce"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Jméno příjemce"
+msgstr "Jméno příjemce (volitelné)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "E-mailová adresa příjemce"
+msgstr "E-mailová adresa příjemce (povinné)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
