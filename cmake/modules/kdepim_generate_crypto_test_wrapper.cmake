@@ -49,8 +49,16 @@ exit \$_result
         _dummy
     )
 else(UNIX)
-    file(TO_NATIVE_PATH "${_ld_library_path}" win_path)
-    file(TO_NATIVE_PATH "${_gnupghome}" win_gnupghome)
+    file(
+        TO_NATIVE_PATH
+        "${_ld_library_path}"
+        win_path
+    )
+    file(
+        TO_NATIVE_PATH
+        "${_gnupghome}"
+        win_gnupghome
+    )
 
     file(
         WRITE "${_filename}"
