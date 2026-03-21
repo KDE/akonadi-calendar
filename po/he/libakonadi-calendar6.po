@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-25 00:47+0000\n"
-"PO-Revision-Date: 2025-11-23 09:10+0200\n"
+"PO-Revision-Date: 2026-03-20 08:12+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -400,7 +400,7 @@ msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "נכשל פענוח פרטי פנוי/עסוק שהתקבלו דרך: <link>%1</link>"
+msgstr "נכשל פיענוח פרטי פנוי/עסוק שהתקבלו דרך: <link>%1</link>"
 
 #: freebusymanager.cpp:419
 #, kde-format
@@ -614,7 +614,7 @@ msgstr "הודעת שגיאה: %1"
 #: itiphandler.cpp:119
 #, kde-format
 msgid "Unknown error while parsing iCal invitation"
-msgstr "שגיאה לא ידועה בפענוח הזמנת ה־iCal"
+msgstr "שגיאה לא ידועה בפיענוח הזמנת ה־iCal"
 
 #: itiphandler.cpp:125
 #, kde-format
