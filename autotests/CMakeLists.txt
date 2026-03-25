@@ -7,7 +7,8 @@ include(ECMAddTests)
 find_package(Qt6Test ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 
 add_subdirectory(gnupg_home)
-include(${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_add_gpg_crypto_test.cmake)
+set(GNUPGHOME ${CMAKE_SOURCE_DIR}/autotests/gnupg_home)
+include(${LIBKLEO_TEST_MODULE_PATH}/KleoAddGpgCryptoTest.cmake)
 
 set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
 
