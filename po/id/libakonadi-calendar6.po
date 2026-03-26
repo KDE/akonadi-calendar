@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-26 02:43+0000\n"
 "PO-Revision-Date: 2024-09-28 17:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -444,7 +444,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informasi senggang/sibuk berhasil dikirim."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -701,18 +701,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Jangan Kirim"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Galat: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Galat memuat kalender: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -721,7 +721,7 @@ msgstr ""
 "Pesan peralatan grup untuk item '%1' telah berhasil dikirim.\n"
 "Metode: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -732,34 +732,34 @@ msgstr ""
 "Tidak bisa mengirim item '%1'.\n"
 "Metode: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Informasi item telah berhasil dikirim."
 
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Penerbitan"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Tak bisa menerbitkan item '%1'"
 
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Penerusan"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Tak bisa meneruskan item '%1'"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"

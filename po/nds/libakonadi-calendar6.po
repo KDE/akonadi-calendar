@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-26 02:43+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -451,7 +451,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "De Free-/Bunnen-Daten wöörn mit Spood loosstüert."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
@@ -711,18 +711,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Nich loosstüern"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Fehler: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Fehler bi't Laden vun en Kalenner: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -731,7 +731,7 @@ msgstr ""
 "De Arbeitkoppel-Naricht för Indrag \"%1\" wöör mit Spood loosstüert.\n"
 "Metood: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -742,36 +742,36 @@ msgstr ""
 "De Indrag \"%1\" lett sik nich loosstüern.\n"
 "Metood: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "De Indrag-Informatschoon wöör mit Spood loosstüert."
 
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Apenmaken"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "De Indrag \"%1\" lett sik nich apenmaken"
 
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, fuzzy, kde-format
 #| msgid "Forwarding"
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Wiederledden"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Indrag \"%1\" lett sik nich wiederledden"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "Forwarding Error"
 msgctxt "@title:window"

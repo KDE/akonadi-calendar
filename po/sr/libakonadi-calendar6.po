@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-26 02:43+0000\n"
 "PO-Revision-Date: 2017-12-17 18:01+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -453,7 +453,7 @@ msgid "The free/busy information was successfully sent."
 msgstr "Подаци слободно-заузето успешно су послати."
 
 # >> @title:window
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
@@ -718,18 +718,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Не шаљи"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "Грешка: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Грешка при учитавању календара: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -738,7 +738,7 @@ msgstr ""
 "Групверска порука за ставку „%1“ успешно је послата.\n"
 "Метод: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -749,39 +749,39 @@ msgstr ""
 "Не могу да пошаљем ставку „%1“.\n"
 "Метод: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Подаци ставке успешно су послати."
 
 # >> @title:window
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Објављивање"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Не могу да објавим ставку „%1“."
 
 # >> @title:window
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, fuzzy, kde-format
 #| msgid "Forwarding"
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Прослеђивање"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Не могу да проследим ставку „%1“."
 
 # >> @title:window
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "Forwarding Error"
 msgctxt "@title:window"

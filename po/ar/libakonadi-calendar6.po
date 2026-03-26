@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-26 02:43+0000\n"
 "PO-Revision-Date: 2025-12-04 14:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -422,7 +422,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "أُرسلت معلومات متفرّغ/مشغول بنجاح."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -664,18 +664,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "لا تُرسل بريدًا"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "الخطأ: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "خطأ في تحميل التّقويم: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -684,7 +684,7 @@ msgstr ""
 "أُرسلت الرّسالة التّعاونيّة للعنصر ’%1‘ بنجاح.\n"
 "الطّريقة: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -695,34 +695,34 @@ msgstr ""
 "تعذّر إرسال العنصر ’%1‘.\n"
 "الطّريقة: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "أُرسلت معلومات العنصر بنجاح."
 
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "النّشر"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "فشل نشر العنصر ’%1‘"
 
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "التّمرير"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "فشل تمرير العنصر ’%1‘"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"

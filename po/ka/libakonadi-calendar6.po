@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:47+0000\n"
+"POT-Creation-Date: 2026-03-26 02:43+0000\n"
 "PO-Revision-Date: 2025-11-23 07:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -433,7 +433,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "თავისუფალი/დაკავებულის ინფორმაცია წარმატებით გაიგზავნა."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:138
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -681,18 +681,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "არ გააგზავნო"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:117
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:498
 #, kde-format
 msgid "Error: %1"
 msgstr "შეცდომა: %1"
 
-#: itiphandler_p.cpp:83
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "კალენდრის ჩატვირთვის შეცდომა: %1"
 
-#: itiphandler_p.cpp:134
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -701,7 +701,7 @@ msgstr ""
 "ჯგუფური შეტყობინება ელემენტისთვის \"%1\" წარმატებით გაიგზავნა.\n"
 "მეთოდი: %2"
 
-#: itiphandler_p.cpp:146
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -712,34 +712,34 @@ msgstr ""
 "ჩანაწერის გაგზავნის შეცდომა: %1.\n"
 "მეთოდი: %2"
 
-#: itiphandler_p.cpp:162 itiphandler_p.cpp:182
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "ელემენტის ინფორმაცია წარმატებით გაიგზავნა."
 
-#: itiphandler_p.cpp:163
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "გამოცემა"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "ჩანაწერის გამოცემის შეცდომა: %1"
 
-#: itiphandler_p.cpp:183
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "გადაგზავნა"
 
-#: itiphandler_p.cpp:190
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "გადაგზავნის შეცდომა: %1"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
