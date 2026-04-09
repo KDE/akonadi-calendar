@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -64,15 +64,13 @@ msgid "KOrganizer Confirmation"
 msgstr "Potvrdenie KOrganizer"
 
 #: calendarclipboard.cpp:181
-#, fuzzy, kde-format
-#| msgid "Cut Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Vystrihnúť iba toto"
 
 #: calendarclipboard.cpp:182
-#, fuzzy, kde-format
-#| msgid "Cut All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Vystrihnúť všetko"
@@ -87,15 +85,13 @@ msgstr ""
 "kopírovať úlohu so všetkými jej podúlohami?"
 
 #: calendarclipboard.cpp:220
-#, fuzzy, kde-format
-#| msgid "Copy Only This"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopírovať iba toto"
 
 #: calendarclipboard.cpp:221
-#, fuzzy, kde-format
-#| msgid "Copy All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
 msgstr "Kopírovať všetko"
@@ -252,23 +248,25 @@ msgstr ""
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:82
-#, fuzzy, kde-format
-#| msgctxt "A collection of all declined invidations."
-#| msgid "Declined Invitations"
+#, kde-format
 msgid "Hide declined invitations"
-msgstr "Odmietnuté pozvánky"
+msgstr "Skryť odmietnuté pozvánky"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
 #: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr ""
+"Zaškrtnite toto políčko, aby sa odmietnuté pozvánky skryli v zobrazeniach "
+"udalostí."
 
 #. i18n: ectx: label, entry, group (Reminders)
 #: calendarsettings.kcfg:91
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr ""
+"Zobrazovať pripomienky iba pre udalosti, ktoré organizujem alebo sa ich "
+"zúčastňujem"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
 #: calendarsettings.kcfg:92
@@ -277,6 +275,8 @@ msgid ""
 "Check this to only receive reminders for events that you are the organizer "
 "of or that you are attending."
 msgstr ""
+"Zaškrtnite toto, ak chcete dostávať pripomienky len pre udalosti, ktorých "
+"ste organizátorom alebo účastníkom."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
 #: calendarsettings.kcfg:100
@@ -392,15 +392,11 @@ msgid "Unknown"
 msgstr "Neznámy"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Zlyhalo stiahnutie dát voľný/zaneprázdnený z: %1\n"
-"Dôvod: %2"
+"Zlyhalo stiahnutie dát voľný/zaneprázdnený z: <link>%1</link>.<nl/>Dôvod: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -409,22 +405,17 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Chyba pri získavaní voľný/zaneprázdnený"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
 msgstr ""
-"Zlyhalo spracovanie informácií voľný/zaneprázdnený, ktoré boli získané z: %1"
+"Zlyhalo spracovanie informácií voľný/zaneprázdnený získaných z: <link>%1</"
+"link>"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -438,8 +429,7 @@ msgstr ""
 "obráťte na vášho správcu systému.</p></qt>"
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informácia voľný/zaneprázdnený bola úspešne odoslaná."
@@ -451,19 +441,13 @@ msgid "Sending Free/Busy"
 msgstr "Posielanie voľný/zaneprázdnený"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Nemožno publikovať dáta voľný/zaneprázdnený: %1"
 
 #: freebusymanager.cpp:747
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
@@ -482,11 +466,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Žiadne URL pre nahratie voľný/zaneprázdnený"
 
 #: freebusymanager.cpp:762
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Poskytnuté cieľové URL '%1' je neplatné.</qt>"
+msgstr "Zadaná cieľová URL <link>%1</link> je neplatná."
 
 #: freebusymanager.cpp:763
 #, kde-format
@@ -826,8 +809,7 @@ msgstr ""
 
 #: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:326
 #: itiphandlerhelper_p.cpp:338
-#, fuzzy, kde-format
-#| msgid "Send Update"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Poslať aktualizáciu"
@@ -962,8 +944,7 @@ msgid "&Sign"
 msgstr "Podpí&sať"
 
 #: mailclient_p.cpp:709 mailclient_p.cpp:735
-#, fuzzy, kde-format
-#| msgid "Do &Not Sign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Nepodpisovať"
@@ -987,15 +968,13 @@ msgstr ""
 "nakonfigurované žiadne platné podpisové kľúče."
 
 #: mailclient_p.cpp:757
-#, fuzzy, kde-format
-#| msgid "Send Unsigned?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Poslať nepodpísané?"
 
 #: mailclient_p.cpp:757
-#, fuzzy, kde-format
-#| msgid "Send &Unsigned"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Poslať nepodpísané"
@@ -1034,15 +1013,13 @@ msgid "&Sign"
 msgstr "Podpí&sať"
 
 #: mailclient_p.cpp:780
-#, fuzzy, kde-format
-#| msgid "Unsigned-Message Warning"
+#, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Upozornenie na nepodpísanú správu"
 
 #: mailclient_p.cpp:782
-#, fuzzy, kde-format
-#| msgid "Send &As Is"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Posl&ať ako je"
@@ -1068,8 +1045,7 @@ msgstr ""
 "Šifrovať túto správu?"
 
 #: mailclient_p.cpp:843
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Šifrovať správu?"
@@ -1109,15 +1085,13 @@ msgid "Encrypt Message?"
 msgstr "Šifrovať správu?"
 
 #: mailclient_p.cpp:870
-#, fuzzy, kde-format
-#| msgid "&Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "Šifrovať"
 
 #: mailclient_p.cpp:871
-#, fuzzy, kde-format
-#| msgid "Do &Not Encrypt"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Nešifrovať"
@@ -1139,8 +1113,7 @@ msgid "Send Unencrypted?"
 msgstr "Poslať nezašifrované?"
 
 #: mailclient_p.cpp:894
-#, fuzzy, kde-format
-#| msgid "Send &Unencrypted"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Poslať nezašifrované"
@@ -1193,17 +1166,13 @@ msgid "Select Addresses"
 msgstr "Vybrať adresy"
 
 #: publishdialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Send email to these recipients"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Send email to these recipients"
 msgstr "Poslať e-mail týmto príjemcom."
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
@@ -1213,35 +1182,26 @@ msgstr ""
 "ktorých ste zadali."
 
 #: publishdialog.cpp:65
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
 msgstr "Zrušiť výber príjemcu a e-mail"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
 msgstr ""
 "Kliknutie na tlačidlo <b>Zrušiť</b> spôsobí ukončenie e-mailovej operácie."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
 msgstr "E-mail skupinového plánovania"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
@@ -1251,14 +1211,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Zadajte aspoň 1 platnú e-mailovú adresu"
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string.\n"
-#| "%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
@@ -1351,8 +1307,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
 msgstr "Vybrať..."
 
@@ -1395,15 +1350,13 @@ msgid "This field contains the email address of the recipient"
 msgstr "Toto pole obsahuje e-mailovú adresu prijímateľa"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
 msgstr "Meno prijímateľa"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "E-mailová adresa prijímateľa"
@@ -1575,8 +1528,7 @@ msgid "Open Invitations"
 msgstr "Otvorené pozvánky"
 
 #: standardcalendaractionmanager.cpp:47
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "Pridať priečinok..."
 
@@ -1689,8 +1641,7 @@ msgid "Cut the selected calendar folders from the calendar."
 msgstr "Vystrihnúť vybrané priečinky kalendára z kalendára."
 
 #: standardcalendaractionmanager.cpp:103
-#, fuzzy, kde-format
-#| msgid "Folder Properties..."
+#, kde-format
 msgid "Folder Properties…"
 msgstr "Vlastnosti priečinka..."
 
@@ -1773,9 +1724,7 @@ msgid "Cut the selected events from the calendar."
 msgstr "Vystrihnúť vybrané udalosti z kalendára."
 
 #: standardcalendaractionmanager.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Calendar"
+#, kde-format
 msgid "Add &Calendar…"
 msgstr "Pridať kalendár"
 
@@ -1840,8 +1789,7 @@ msgstr[1] "Vymazať kalendáre?"
 msgstr[2] "Vymazať kalendáre?"
 
 #: standardcalendaractionmanager.cpp:171
-#, fuzzy, kde-format
-#| msgid "Calendar Properties..."
+#, kde-format
 msgid "Calendar Properties…"
 msgstr "Vlastnosti kalendára..."
 
@@ -1915,8 +1863,7 @@ msgid "Move Event To"
 msgstr "Presunúť udalosť do"
 
 #: standardcalendaractionmanager.cpp:325
-#, fuzzy, kde-format
-#| msgid "Edit Event..."
+#, kde-format
 msgid "Edit Event…"
 msgstr "Upraviť udalosť..."
 
@@ -1955,8 +1902,7 @@ msgid "Move To-do To"
 msgstr "Presunúť úlohu"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
 msgstr "Upraviť úlohu"
 
@@ -1995,14 +1941,12 @@ msgid "Move Journal To"
 msgstr "Presunúť žurnál do"
 
 #: standardcalendaractionmanager.cpp:385
-#, fuzzy, kde-format
-#| msgid "Edit Journal..."
+#, kde-format
 msgid "Edit Journal…"
 msgstr "Upraviť žurnál..."
 
 #: standardcalendaractionmanager.cpp:533
-#, fuzzy, kde-format
-#| msgid "New E&vent..."
+#, kde-format
 msgid "New E&vent…"
 msgstr "Nová &udalosť..."
 
@@ -2012,8 +1956,7 @@ msgid "Create a new event"
 msgstr "Vytvoriť novú udalosť"
 
 #: standardcalendaractionmanager.cpp:544
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
 msgstr "Nová úloha..."
 
@@ -2023,8 +1966,7 @@ msgid "Create a new To-do"
 msgstr "Vytvoriť novú úlohu"
 
 #: standardcalendaractionmanager.cpp:554
-#, fuzzy, kde-format
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Nová &podúloha..."
 
@@ -2034,8 +1976,7 @@ msgid "Create a new Sub-to-do"
 msgstr "Vytvoriť novú podúlohu"
 
 #: standardcalendaractionmanager.cpp:565
-#, fuzzy, kde-format
-#| msgid "New &Journal..."
+#, kde-format
 msgid "New &Journal…"
 msgstr "Nový žurnál..."
 
@@ -2045,8 +1986,7 @@ msgid "Create a new Journal"
 msgstr "Vytvoriť nový žurnál"
 
 #: standardcalendaractionmanager.cpp:575
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgid "&Edit…"
 msgstr "&Upraviť..."
 
@@ -2132,13 +2072,11 @@ msgid "Purging completed to-dos"
 msgstr "Čistím dokončené úlohy"
 
 #, fuzzy
-#~| msgid "(EmptyName)"
 #~ msgctxt "@info:placeholder"
 #~ msgid "(EmptyName)"
 #~ msgstr "(PrázdneMeno)"
 
 #, fuzzy
-#~| msgid "(EmptyEmail)"
 #~ msgctxt "@info:placeholder"
 #~ msgid "(EmptyEmail)"
 #~ msgstr "(PrázdnyEmail)"
