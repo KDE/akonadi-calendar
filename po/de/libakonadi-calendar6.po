@@ -3,14 +3,14 @@
 # SPDX-FileCopyrightText: 2010 Felix Schweighofer <felix.schweighofer@googlemail.com>
 # SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2017, 2018, 2020 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2010, 2013, 2016, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Alois Spitzbart <spitz234@hotmail.com>
 # Intevation GmbH, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-26 02:43+0000\n"
-"PO-Revision-Date: 2025-07-18 16:20+0200\n"
+"PO-Revision-Date: 2026-04-12 13:02+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -398,15 +398,12 @@ msgid "Unknown"
 msgstr "Unbekannt"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Frei/Belegt-Information sind nicht von „%1“ heruntergeladen worden. Grund: "
-"„%2“"
+"Frei/Belegt-Informationen können nicht von <link>%1</link> heruntergeladen "
+"werden.<nl/>Grund: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -415,22 +412,16 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Fehlernachricht bei Frei/Belegt-Informationen"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
 msgstr ""
-"Frei/Belegt-Informationen empfangen von „%1“ sind nicht verarbeitet worden."
+"Von <link>%1</link> empfangene Informationen können nicht verarbeitet werden."
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -438,15 +429,14 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Ihre Frei/Belegt-Informationen lassen sich nicht zur Adresse „%1“ "
+"Ihre Frei/Belegt-Informationen lassen sich nicht zur Adresse <link>%1</link> "
 "hochladen. Es könnte ein Problem mit den Zugriffsrechten geben oder Sie "
 "haben vielleicht eine falsche Adresse eingegeben. Die Systemnachricht "
-"lautet: <em>%2</em>.</p><p>Bitte überprüfen Sie die Adresse oder wenden Sie "
-"sich an Ihren Systemadministrator.</p></qt>"
+"lautet: <nl/><emphasis>%2</emphasis>.</nl>Bitte überprüfen Sie die Adresse "
+"oder wenden Sie sich an Ihren Systemadministrator."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Die Frei/Belegt-Informationen wurden erfolgreich gesendet."
@@ -455,32 +445,27 @@ msgstr "Die Frei/Belegt-Informationen wurden erfolgreich gesendet."
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr "Frei/Belegt-Informationen versenden "
+msgstr "Frei/Belegt-Informationen versenden"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Das Auslesen der Frei/Belegt-Informationen ist nicht möglich: %1"
+msgstr ""
+"Das Veröffentlichen der Frei/Belegt-Informationen ist nicht möglich: %1"
 
 #: freebusymanager.cpp:747
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
-#| "in KOrganizer's configuration dialog, on the \"Free/Busy\" page.</"
-#| "p><p>Contact your system administrator for the exact URL and the account "
-#| "details.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "No URL configured for uploading your free/busy list. Please set it in "
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"<qt><p>Keine Adresse für das Abholen von Frei/Belegt-Informationen "
-"angegeben. Bitte geben Sie eine in den Einstellungen von KOrganizer auf der "
-"Seite „Frei/Belegt“ an.</p><p>Fragen Sie Ihren Systemadministrator nach der "
-"genauen Adresse und den Zugangsdaten.</p></qt>"
+"Keine Adresse für das Hochladen von Frei/Belegt-Informationen angegeben. "
+"Bitte geben Sie eine in den Einstellungen von KOrganizer auf der Seite „Frei/"
+"Belegt“ an.<nl/>Fragen Sie Ihren Systemadministrator nach der genauen "
+"Adresse und den Zugangsdaten."
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -489,11 +474,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Keine Adresse zur Veröffentlichung von Frei/Belegt-Informationen"
 
 #: freebusymanager.cpp:762
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Die angegebene Zieladresse „%1“ ist ungültig</qt>"
+msgstr "Die angegebene Zieladresse <link>%1</link> ist ungültig."
 
 #: freebusymanager.cpp:763
 #, kde-format
@@ -1218,16 +1202,13 @@ msgid "Send email to these recipients"
 msgstr "E-Mail an diese Empfänger senden"
 
 #: publishdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Ok</b> button will cause an email to be sent to the "
-#| "recipients you have entered."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
 msgstr ""
-"Durch das Drücken des <b>OK</b>-Knopfs wird eine E-Mail an alle angegeben "
+"Durch das Drücken dieses Knopfes wird eine E-Mail an alle angegebenen "
 "Teilnehmer versendet."
 
 #: publishdialog.cpp:65
@@ -1237,47 +1218,34 @@ msgid "Cancel recipient selection and the email"
 msgstr "Die Teilnehmerauswahl und diese E-Mail abbrechen"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
 msgstr ""
-"Durch das Drücken des Knopfes <b>Abbrechen</b> wird dieser E-Mail-Vorgang "
-"abgebrochen."
+"Durch das Drücken dieses Knopfes wird dieser E-Mail-Vorgang abgebrochen."
 
 #: publishdialog.cpp:69
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Group Scheduling Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr "Gruppenplanungs-E-Mail"
+msgstr "Lesen Sie die Gruppenplanungsanleitung"
 
 #: publishdialog.cpp:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Click the <b>Help</b> button to read more information about Group "
-#| "Scheduling."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
-"Durch das Drücken auf <b>Hilfe</b> können Sie mehr Information über die "
+"Durch das Drücken dieses Knopfes können Sie mehr Informationen über die "
 "Gruppenplanung erhalten."
 
 #: publishdialog.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Bitte geben Sie mindestens eine gültige E-Mail-Adresse an"
 
 #: publishdialog.cpp:122
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string.\n"
-#| "%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
@@ -1414,18 +1382,16 @@ msgid "This field contains the email address of the recipient"
 msgstr "Dieses Feld enthält die E-Mail-Adresse des Empfängers."
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Der Name des Empfängers"
+msgstr "Empfängername (optional)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "Die E-Mail-Adresse des Empfängers"
+msgstr "E-Mail-Adresse des Empfängers (erforderlich)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
