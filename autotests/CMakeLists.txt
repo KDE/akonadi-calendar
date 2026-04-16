@@ -22,7 +22,7 @@ set(common_sources
     ${Akonadi-Calendar_SOURCE_DIR}/src/utils_p.cpp
 )
 set(common_libs
-    "KPim6::AkonadiCalendar;KF6::CalendarCore;KPim6::Mime;KPim6::IdentityManagementCore;KPim6::AkonadiWidgets;KF6::Codecs;KF6::ConfigCore"
+    "KPim6::AkonadiCalendar;KF6::CalendarCore;KF6::Mime;KPim6::IdentityManagementCore;KPim6::AkonadiWidgets;KF6::Codecs;KF6::ConfigCore"
 )
 
 # the tests need the ical resource, which we might not have at this point (e.g. on the CI)
@@ -45,7 +45,7 @@ if(AKONADI_ICAL_RESOURCE)
             Qt::DBus
             Qt::Test
             KPim6::AkonadiCalendar
-            KPim6::Mime
+            KF6::Mime
             KF6::Contacts
             KPim6::AkonadiMime
             KPim6::IdentityManagementCore
