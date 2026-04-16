@@ -12,6 +12,8 @@ find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 set(QT_REQUIRED_VERSION "6.9.0")
 
+option(BUILD_PYTHON_BINDINGS "Build Python bindings" ON)
+
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
@@ -208,6 +210,29 @@ add_subdirectory(reminder-daemon)
 add_subdirectory(calendar-plugin)
 if(BUILD_TESTING)
     add_subdirectory(autotests)
+endif()
+
+# Only Linux and FreeBSD CI has the relevant packages
+if(ANDROID OR APPLE OR WIN32 OR HAIKU OR NOT BUILD_SHARED_LIBS)
+    set(BUILD_PYTHON_BINDINGS OFF)
+endif()
+
+if(BUILD_PYTHON_BINDINGS)
+    find_package(
+        Python3
+        3.9
+        REQUIRED
+        COMPONENTS
+            Interpreter
+            Development
+    )
+    find_package(Shiboken6 REQUIRED)
+    find_package(PySide6 REQUIRED)
+endif()
+
+if(BUILD_PYTHON_BINDINGS)
+    include(ECMGeneratePythonBindings)
+    add_subdirectory(python)
 endif()
 
 ########### CMake Config Files ###########

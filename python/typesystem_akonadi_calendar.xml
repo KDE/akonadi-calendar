@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+    SPDX-FileCopyrightText: 2026 Alan Thouvenin <alan.thouvenin@enioka.com>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+-->
+<typesystem package="AkonadiCalendar">
+
+<load-typesystem name="typesystem_akonadi.xml" generate="no"/>
+<load-typesystem name="typesystem_core.xml" generate="no"/>
+<load-typesystem name="typesystem_widgets.xml" generate="no"/>
+<load-typesystem name="typesystem_kcalendarcore.xml" generate="no"/>
+
+<namespace-type name="Akonadi">
+
+    <object-type name="ETMCalendar">
+        <enum-type name="CollectionColumn"/>
+        <extra-includes>
+            <include file-name="pysidesignal.h" location="global" />
+        </extra-includes>
+    </object-type>
+    <object-type name="TodoPurger"/>
+    <object-type name="History">
+        <enum-type name="ResultCode"/>
+    </object-type>
+    <object-type name="IncidenceChanger">
+        <enum-type name="ResultCode"/>
+        <enum-type name="DestinationPolicy"/>
+        <enum-type name="InvitationPolicy"/>
+        <enum-type name="InvitationPrivacy"/>
+        <enum-type name="ChangeType"/>
+    </object-type>
+    <object-type name="SearchCollectionHelper"/>
+    <object-type name="FreeBusyManager"/>
+    <object-type name="ICalImporter"/>
+    <object-type name="CollectionCalendar">
+        <extra-includes>
+            <include file-name="pysidesignal.h" location="global" />
+        </extra-includes>
+    </object-type>
+    <object-type name="PublishDialog"/>
+    <object-type name="FetchJobCalendar">
+        <extra-includes>
+            <include file-name="pysidesignal.h" location="global" />
+        </extra-includes>
+    </object-type>
+    <object-type name="IncidenceTreeModel"/>
+    <object-type name="BlockAlarmsAttribute"/>
+    <object-type name="CalendarClipboard">
+        <enum-type name="Mode"/>
+    </object-type>
+    <object-type name="StandardCalendarActionManager">
+        <enum-type name="Type"/>
+    </object-type>
+    <object-type name="CalFilterProxyModel"/>
+    <object-type name="CalendarBase">
+        <extra-includes>
+            <include file-name="pysidesignal.h" location="global" />
+        </extra-includes>
+    </object-type>
+    <object-type name="CalFilterPartStatusProxyModel"/>
+    <object-type name="ITIPHandler">
+        <enum-type name="Result"/>
+    </object-type>
+    <object-type name="TodoModel">
+        <extra-includes>
+            <include file-name="pysidesignal.h" location="global" />
+        </extra-includes>
+    </object-type>
+
+    <namespace-type name="CalendarUtils"/>
+
+
+</namespace-type>
+
+</typesystem>
