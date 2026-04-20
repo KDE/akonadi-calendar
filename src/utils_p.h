@@ -11,7 +11,6 @@
 #include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 
-#include <QString>
 #include <QStringList>
 
 /**
