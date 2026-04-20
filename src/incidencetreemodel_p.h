@@ -31,7 +31,7 @@ struct Node {
 
     QPersistentModelIndex sourceIndex; // because ETM::modelIndexesForItem is so slow
     Akonadi::Item::Id id;
-    Node::Ptr parentNode;
+    QWeakPointer<Node> parentNode;
     QString parentUid;
     QString uid;
     List directChilds;

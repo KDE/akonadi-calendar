@@ -17,7 +17,7 @@ static QDebug operator<<(QDebug s, const Node::Ptr &node);
 static void calculateDepth(const Node::Ptr &node)
 {
     Q_ASSERT(node);
-    node->depth = node->parentNode ? 1 + node->parentNode->depth : 0;
+    node->depth = node->parentNode ? 1 + node->parentNode.toStrongRef()->depth : 0;
     for (const Node::Ptr &child : std::as_const(node->directChilds)) {
         calculateDepth(child);
     }
@@ -82,7 +82,7 @@ IncidenceTreeModelPrivate::IncidenceTreeModelPrivate(IncidenceTreeModel *qq, con
 int IncidenceTreeModelPrivate::rowForNode(const Node::Ptr &node) const
 {
     // Returns it's row number
-    const int row = node->parentNode ? node->parentNode->directChilds.indexOf(node) : m_toplevelNodeList.indexOf(node);
+    const int row = node->parentNode ? node->parentNode.toStrongRef()->directChilds.indexOf(node) : m_toplevelNodeList.indexOf(node);
     Q_ASSERT(row != -1);
     return row;
 }
@@ -108,7 +108,7 @@ QModelIndex IncidenceTreeModelPrivate::indexForNode(const Node::Ptr &node) const
     if (!node) {
         return {};
     }
-    const int row = node->parentNode ? node->parentNode->directChilds.indexOf(node) : m_toplevelNodeList.indexOf(node);
+    const int row = node->parentNode ? node->parentNode.toStrongRef()->directChilds.indexOf(node) : m_toplevelNodeList.indexOf(node);
 
     Q_ASSERT(row != -1);
     return q->createIndex(row, 0, node.data());
@@ -351,7 +351,7 @@ void IncidenceTreeModelPrivate::insertNode(const PreNode::Ptr &prenode, bool sil
 
             // We can only insert after beginInsertRows(), because it affects rowCounts
             mustInsertIntoParent = true;
-            rowToUse = node->parentNode->directChilds.count();
+            rowToUse = node->parentNode.toStrongRef()->directChilds.count();
         } else {
             // Parent unknown, we are orphan for now
             Q_ASSERT(!m_waitingForParent.contains(node->parentUid, node));
@@ -374,7 +374,7 @@ void IncidenceTreeModelPrivate::insertNode(const PreNode::Ptr &prenode, bool sil
     }
 
     if (mustInsertIntoParent) {
-        node->parentNode->directChilds.append(node);
+        node->parentNode.toStrongRef()->directChilds.append(node);
     }
 
     if (!silent) {
@@ -513,7 +513,7 @@ void IncidenceTreeModelPrivate::removeNode(const Node::Ptr &node)
     m_itemByUid.remove(node->uid);
 
     if (parent.isValid()) {
-        node->parentNode->directChilds.remove(rowToRemove);
+        node->parentNode.toStrongRef()->directChilds.remove(rowToRemove);
         node->parentNode = Node::Ptr();
     } else {
         m_toplevelNodeList.remove(rowToRemove);
@@ -772,7 +772,7 @@ QModelIndex IncidenceTreeModel::parent(const QModelIndex &child) const
     }
 
     Q_ASSERT(parentIndex.model() == this);
-    Q_ASSERT(childNode->parentNode.data());
+    Q_ASSERT(!childNode->parentNode.isNull());
 
     // Parent is always at row 0
     return parentIndex;
@@ -851,7 +851,7 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
     ++level;
     QString padding = QString(level - 1, u' ');
     s << padding + QLatin1StringView("node") << node.data() << u";uid="_s << node->uid << u";id="_s << node->id << u";parentUid="_s << node->parentUid
-      << u";parentNode="_s << static_cast<void *>(node->parentNode.data()) << '\n';
+      << u";parentNode="_s << static_cast<void *>(node->parentNode.toStrongRef().data()) << '\n';
 
     for (const Node::Ptr &child : std::as_const(node->directChilds)) {
         s << child;
