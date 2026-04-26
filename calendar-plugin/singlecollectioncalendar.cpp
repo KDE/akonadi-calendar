@@ -9,6 +9,8 @@ using namespace Qt::Literals::StringLiterals;
 #include "../src/calendarbase_p.h"
 
 #include <Akonadi/CalendarUtils>
+#include <Akonadi/CollectionColorAttribute>
+#include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
@@ -72,6 +74,15 @@ void SingleCollectionCalendar::setCollection(const Akonadi::Collection &c)
     setName(Akonadi::CalendarUtils::displayName(m_collection));
     setAccessMode((m_collection.rights() & (Akonadi::Collection::CanCreateItem | Akonadi::Collection::CanChangeItem)) ? KCalendarCore::ReadWrite
                                                                                                                       : KCalendarCore::ReadOnly);
+
+    if (auto attr = c.attribute<Akonadi::EntityDisplayAttribute>(); attr) {
+        setIcon(attr->icon());
+    }
+#if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(6, 26, 0)
+    if (auto attr = c.attribute<Akonadi::CollectionColorAttribute>(); attr) {
+        setColor(attr->color().name());
+    }
+#endif
 }
 
 bool SingleCollectionCalendar::addEvent(const KCalendarCore::Event::Ptr &event)

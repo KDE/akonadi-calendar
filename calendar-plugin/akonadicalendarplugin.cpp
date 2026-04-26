@@ -7,6 +7,8 @@
 #include "akonadicalendarplugin_debug.h"
 #include "singlecollectioncalendar.h"
 
+#include <Akonadi/AttributeFactory>
+#include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Monitor>
@@ -26,6 +28,8 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
         qCWarning(AKONADICALENDARPLUGIN_LOG) << "Akonadi is not running, but auto-launch is disabled!";
         return;
     }
+
+    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 
     auto job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive, this);
     job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
