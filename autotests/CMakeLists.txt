@@ -22,20 +22,26 @@ set(common_sources
     ${Akonadi-Calendar_SOURCE_DIR}/src/utils_p.cpp
 )
 set(common_libs
-    "KPim6::AkonadiCalendar;KF6::CalendarCore;KF6::Mime;KPim6::IdentityManagementCore;KPim6::AkonadiWidgets;KF6::Codecs;KF6::ConfigCore"
+    KPim6::AkonadiCalendar
+    KF6::CalendarCore
+    KF6::Mime
+    KPim6::IdentityManagementCore
+    KPim6::AkonadiWidgets
+    KF6::Codecs
+    KF6::ConfigCore
 )
 
 # the tests need the ical resource, which we might not have at this point (e.g. on the CI)
 find_program(AKONADI_ICAL_RESOURCE NAMES akonadi_ical_resource)
 if(AKONADI_ICAL_RESOURCE)
-    add_akonadi_isolated_test_advanced( historytest.cpp "${common_sources}" "${common_libs}")
-    add_akonadi_isolated_test_advanced( incidencechangertest.cpp "" "KPim6::AkonadiCalendar")
-    add_akonadi_isolated_test_advanced( calendarbasetest.cpp "" "KPim6::AkonadiCalendar")
-    add_akonadi_isolated_test_advanced( fetchjobcalendartest.cpp "" "KPim6::AkonadiCalendar")
-    add_akonadi_isolated_test_advanced( etmcalendartest.cpp "" "KPim6::AkonadiCalendar;KF6::ConfigCore")
-    add_akonadi_isolated_test_advanced( collectioncalendartest.cpp "" "KPim6::AkonadiCalendar;KPim6::AkonadiPrivate")
+    add_akonadi_isolated_test(SOURCE historytest.cpp ADDITIONAL_SOURCES ${common_sources} LINK_LIBRARIES ${common_libs})
+    add_akonadi_isolated_test(SOURCE incidencechangertest.cpp LINK_LIBRARIES KPim6::AkonadiCalendar)
+    add_akonadi_isolated_test(SOURCE calendarbasetest.cpp LINK_LIBRARIES KPim6::AkonadiCalendar)
+    add_akonadi_isolated_test(SOURCE fetchjobcalendartest.cpp LINK_LIBRARIES KPim6::AkonadiCalendar)
+    add_akonadi_isolated_test(SOURCE etmcalendartest.cpp LINK_LIBRARIES KPim6::AkonadiCalendar KF6::ConfigCore)
+    add_akonadi_isolated_test(SOURCE collectioncalendartest.cpp LINK_LIBRARIES KPim6::AkonadiCalendar KPim6::AkonadiPrivate)
 
-    add_akonadi_isolated_test_advanced( itiphandlertest.cpp "${common_sources}" "${common_libs};KPim6::AkonadiMime")
+    add_akonadi_isolated_test(SOURCE itiphandlertest.cpp ADDITIONAL_SOURCES ${common_sources} LINK_LIBRARIES ${common_libs} KPim6::AkonadiMime)
 
     add_executable(mailclienttest)
     target_sources(mailclienttest PRIVATE mailclienttest.cpp)
