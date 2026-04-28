@@ -273,7 +273,13 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(QIcon::fromTheme(u"task-recurring"_s));
         }
         const QStringList categories = todo->categories();
-        return categories.isEmpty() ? QVariant() : QVariant(Akonadi::TagCache::instance()->tagColor(categories.first()));
+        if (!categories.isEmpty()) {
+            const QColor catColor = Akonadi::TagCache::instance()->tagColor(categories.first());
+            if (catColor.isValid()) {
+                return QVariant(catColor);
+            }
+        }
+        return {};
     } else if (role == Qt::DecorationRole) {
         return {};
     }
