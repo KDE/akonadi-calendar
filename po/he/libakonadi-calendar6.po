@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:45+0000\n"
+"POT-Creation-Date: 2026-04-29 00:46+0000\n"
 "PO-Revision-Date: 2026-03-20 08:13+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -297,7 +297,7 @@ msgstr ""
 "נתוני פנוי/עסוק של joe@mydomain.com בשרת www.yourdomain.com תיכשל."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:484
+#: todomodel.cpp:490
 #, kde-format
 msgid "Calendar"
 msgstr "לוח שנה"
@@ -1990,49 +1990,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:466
+#: todomodel.cpp:472
 #, kde-format
 msgid "Summary"
 msgstr "תקציר"
 
-#: todomodel.cpp:468
+#: todomodel.cpp:474
 #, kde-format
 msgid "Recurs"
 msgstr "חזרתיות"
 
-#: todomodel.cpp:470
+#: todomodel.cpp:476
 #, kde-format
 msgid "Priority"
 msgstr "עדיפות"
 
-#: todomodel.cpp:472
+#: todomodel.cpp:478
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "השלמה"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:480
 #, kde-format
 msgid "Start Date"
 msgstr "תאריך התחלה"
 
-#: todomodel.cpp:476
+#: todomodel.cpp:482
 #, kde-format
 msgid "Due Date"
 msgstr "תאריך יעד"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:484
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "הושלמה"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:486
 #, kde-format
 msgid "Tags"
 msgstr "תגיות"
 
-#: todomodel.cpp:482
+#: todomodel.cpp:488
 #, kde-format
 msgid "Description"
 msgstr "תיאור"

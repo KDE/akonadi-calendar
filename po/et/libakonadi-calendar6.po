@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:45+0000\n"
+"POT-Creation-Date: 2026-04-29 00:46+0000\n"
 "PO-Revision-Date: 2020-04-20 11:38+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -306,7 +306,7 @@ msgstr ""
 "jaan@minudomeen.ee kohta serverist www.sinudomeen.ee ei anna tulemust."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:484
+#: todomodel.cpp:490
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
 #| msgid "Calendar"
@@ -2049,26 +2049,26 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:466
+#: todomodel.cpp:472
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "Kokkuvõte"
 
-#: todomodel.cpp:468
+#: todomodel.cpp:474
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:470
+#: todomodel.cpp:476
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "Tähtsus"
 
-#: todomodel.cpp:472
+#: todomodel.cpp:478
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2076,21 +2076,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Valmis"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:480
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "Alguse kuupäev ja kellaaeg"
 
-#: todomodel.cpp:476
+#: todomodel.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "Tähtaja kuupäev ja kellaaeg"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:484
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2098,12 +2098,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Valmis"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:486
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:482
+#: todomodel.cpp:488
 #, kde-format
 msgid "Description"
 msgstr ""

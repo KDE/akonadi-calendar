@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:45+0000\n"
+"POT-Creation-Date: 2026-04-29 00:46+0000\n"
 "PO-Revision-Date: 2025-11-23 16:25+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -305,7 +305,7 @@ msgstr ""
 "com mislukken."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:484
+#: todomodel.cpp:490
 #, kde-format
 msgid "Calendar"
 msgstr "Agenda"
@@ -2011,49 +2011,49 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:466
+#: todomodel.cpp:472
 #, kde-format
 msgid "Summary"
 msgstr "Samenvatting"
 
-#: todomodel.cpp:468
+#: todomodel.cpp:474
 #, kde-format
 msgid "Recurs"
 msgstr "Herhalingen"
 
-#: todomodel.cpp:470
+#: todomodel.cpp:476
 #, kde-format
 msgid "Priority"
 msgstr "Prioriteit"
 
-#: todomodel.cpp:472
+#: todomodel.cpp:478
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Voltooid"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:480
 #, kde-format
 msgid "Start Date"
 msgstr "Begindatum"
 
-#: todomodel.cpp:476
+#: todomodel.cpp:482
 #, kde-format
 msgid "Due Date"
 msgstr "Einddatum"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:484
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Voltooid"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:486
 #, kde-format
 msgid "Tags"
 msgstr "Tags"
 
-#: todomodel.cpp:482
+#: todomodel.cpp:488
 #, kde-format
 msgid "Description"
 msgstr "Beschrijving"
