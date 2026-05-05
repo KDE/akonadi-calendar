@@ -1068,7 +1068,7 @@ msgstr "Iba podpísať"
 #: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
-msgstr "&Posl&ať ako je"
+msgstr "&Poslať ako je"
 
 #: mailclient_p.cpp:865
 #, kde-format
