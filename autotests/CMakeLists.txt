@@ -10,8 +10,6 @@ add_subdirectory(gnupg_home)
 set(GNUPGHOME ${CMAKE_SOURCE_DIR}/autotests/gnupg_home)
 include(${LIBKLEO_TEST_MODULE_PATH}/KleoAddGpgCryptoTest.cmake)
 
-set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
-
 set(PREVIOUS_EXEC_OUTPUT_PATH ../../tests)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 
