@@ -164,11 +164,6 @@ public:
     /*!
      * Sets the \a text of the action \a type for the given \a context.
      */
-    void setContextText(StandardActionManager::Type type, StandardActionManager::TextContext context, const QString &text);
-
-    /*!
-     * Sets the \a text of the action \a type for the given \a context.
-     */
     void setContextText(StandardActionManager::Type type, StandardActionManager::TextContext context, const KLocalizedString &text);
 
     void setCollectionPropertiesPageNames(const QStringList &names);

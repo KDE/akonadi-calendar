@@ -47,7 +47,7 @@ public:
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setText(i18n("Add Folder…"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setWhatsThis(i18n("Add a new calendar folder to the currently selected calendar folder."));
-            mGenericManager->setContextText(StandardActionManager::CreateCollection, StandardActionManager::DialogTitle, i18nc("@title:window", "New Folder"));
+            mGenericManager->setContextText(StandardActionManager::CreateCollection, StandardActionManager::DialogTitle, ki18nc("@title:window", "New Folder"));
 
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::ErrorMessageText,
@@ -55,7 +55,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18nc("@title:window", "Calendar Folder Creation Failed"));
+                                            ki18nc("@title:window", "Calendar Folder Creation Failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setProperty("ContentMimeTypes",
                               QStringList() << u"inode/directory"_s << u"application/x-vnd.akonadi.calendar.todo"_s
@@ -86,7 +86,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteCollections,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18nc("@title:window", "Calendar Folder Deletion Failed"));
+                                            ki18nc("@title:window", "Calendar Folder Deletion Failed"));
 
             break;
         case Akonadi::StandardActionManager::SynchronizeCollections:
@@ -127,7 +127,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::DeleteItems,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18nc("@title:window", "Event Deletion Failed"));
+                                            ki18nc("@title:window", "Event Deletion Failed"));
             break;
 
         case Akonadi::StandardActionManager::CutItems:
@@ -140,7 +140,7 @@ public:
                 ->setWhatsThis(i18n("Add a new calendar<p>"
                                     "You will be presented with a dialog where you can select "
                                     "the type of the calendar that shall be added.</p>"));
-            mGenericManager->setContextText(StandardActionManager::CreateResource, StandardActionManager::DialogTitle, i18nc("@title:window", "Add Calendar"));
+            mGenericManager->setContextText(StandardActionManager::CreateResource, StandardActionManager::DialogTitle, ki18nc("@title:window", "Add Calendar"));
 
             mGenericManager->setContextText(StandardActionManager::CreateResource,
                                             StandardActionManager::ErrorMessageText,
@@ -148,7 +148,7 @@ public:
 
             mGenericManager->setContextText(StandardActionManager::CreateResource,
                                             StandardActionManager::ErrorMessageTitle,
-                                            i18nc("@title:window", "Calendar Creation Failed"));
+                                            ki18nc("@title:window", "Calendar Creation Failed"));
 
             break;
         case Akonadi::StandardActionManager::DeleteResources:
@@ -189,7 +189,7 @@ public:
         case StandardActionManager::Paste:
             mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageText, ki18n("Could not paste event: %1"));
 
-            mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageTitle, i18nc("@title:window", "Paste Failed"));
+            mGenericManager->setContextText(StandardActionManager::Paste, StandardActionManager::ErrorMessageTitle, ki18nc("@title:window", "Paste Failed"));
             break;
         case Akonadi::StandardActionManager::SynchronizeCollectionTree:
             mGenericManager->action(Akonadi::StandardActionManager::SynchronizeCollectionTree)->setText(i18n("Update Available Calendars"));
@@ -648,11 +648,6 @@ Akonadi::Collection::List StandardCalendarActionManager::selectedCollections() c
 Akonadi::Item::List StandardCalendarActionManager::selectedItems() const
 {
     return d->mGenericManager->selectedItems();
-}
-
-void StandardCalendarActionManager::setContextText(StandardActionManager::Type type, StandardActionManager::TextContext context, const QString &text)
-{
-    d->mGenericManager->setContextText(type, context, text);
 }
 
 void StandardCalendarActionManager::setContextText(StandardActionManager::Type type, StandardActionManager::TextContext context, const KLocalizedString &text)
