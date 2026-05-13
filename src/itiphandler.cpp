@@ -267,7 +267,7 @@ void ITIPHandler::sendiTIPMessage(KCalendarCore::iTIPMethod method, const KCalen
     }
 
     if (incidence->attendeeCount() == 0 && method != KCalendarCore::iTIPPublish) {
-        if (d->m_showDialogsOnError) {
+        if (parentWidget && d->m_showDialogsOnError) {
             KMessageBox::information(parentWidget,
                                      i18n("The item '%1' has no attendees. "
                                           "Therefore no groupware message will be sent.",
@@ -388,6 +388,7 @@ void ITIPHandler::setCalendar(const Akonadi::CalendarBase::Ptr &calendar)
 void ITIPHandler::setShowDialogsOnError(bool enable)
 {
     d->m_showDialogsOnError = enable;
+    d->m_scheduler->setShowDialogs(enable);
 }
 
 Akonadi::CalendarBase::Ptr ITIPHandler::calendar() const
