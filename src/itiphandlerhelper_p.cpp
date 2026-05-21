@@ -148,7 +148,16 @@ ITIPHandlerHelper::SendResult ITIPHandlerHelper::sentInvitation(int messageBoxRe
 
         // Send the mail
         m_status = StatusSendingInvitation;
-        m_scheduler->performTransaction(_incidence, method, sender);
+        // This is fire and forget anyway, also it'll lead us into the event loop
+        // potentially creating race issues. So delay the performTransaction call so
+        // that the caller can process the SendResult status first.
+        QMetaObject::invokeMethod(
+            m_scheduler,
+            [=, this] {
+                m_scheduler->performTransaction(_incidence, method, sender);
+            },
+            Qt::QueuedConnection);
+        Q_EMIT finished(ITIPHandlerHelper::ResultSuccess, QString());
         return ITIPHandlerHelper::ResultSuccess;
     } else if (messageBoxReturnCode == KMessageBox::ButtonCode::SecondaryAction) {
         Q_EMIT finished(ITIPHandlerHelper::ResultCanceled, QString());
