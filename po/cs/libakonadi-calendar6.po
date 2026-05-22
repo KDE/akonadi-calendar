@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 02:45+0000\n"
-"PO-Revision-Date: 2026-03-16 11:30+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-05-21 23:48+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Poedit 3.8\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -292,7 +292,7 @@ msgstr "Odeslat"
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr ""
-"Zkontrolujte, zda se název hostitele a e-mailová adresa pro načítání shodují."
+"Zkontrolujte, zda se název hostitele a e-mailová adresa pro načítání shodují"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:106
@@ -586,7 +586,7 @@ msgstr "Tato položka kalendáře již byla odstraněna nebo je právě odstraň
 #: incidencechanger.cpp:1198
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
-msgstr "Operaci nelze provést z důvodu omezení ACL."
+msgstr "Operaci nelze provést z důvodu omezení ACL"
 
 #: incidencechanger.cpp:1201
 #, kde-format
@@ -600,7 +600,7 @@ msgid ""
 "DestinationPolicyNeverAsk was used"
 msgstr ""
 "Výchozí kolekce je neplatná nebo nemá správná oprávnění ACL a byla použita "
-"zásada cíle nikdy se neptat."
+"zásada cíle nikdy se neptat"
 
 #: incidencechanger.cpp:1209
 #, kde-format
@@ -897,7 +897,7 @@ msgstr "Přerušit aktualizaci"
 #: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr "Neexistují žádní účastníci, kterým by bylo možné zaslat e-mail."
+msgstr "Neexistují žádní účastníci, kterým by bylo možné zaslat e-mail"
 
 #: mailclient_p.cpp:427
 #, kde-format
@@ -917,7 +917,7 @@ msgstr "Chyba při vytváření transportu"
 #: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
-msgstr "Chyba při načítání transportu. Nelze odeslat pozvánky."
+msgstr "Chyba při načítání transportu. Nelze odeslat pozvánky"
 
 #: mailclient_p.cpp:670
 #, kde-format
@@ -1211,7 +1211,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr "Uveďte prosím alespoň 1 platnou e-mailovou adresu."
+msgstr "Uveďte prosím alespoň 1 platnou e-mailovou adresu"
 
 #: publishdialog.cpp:122
 #, kde-format
@@ -1302,7 +1302,7 @@ msgid ""
 "recipient from your address book"
 msgstr ""
 "Kliknutím na toto tlačítko zobrazíte další dialogové okno, ve kterém budete "
-"moci vybrat příjemce ze své knihy adres."
+"moci vybrat příjemce ze své knihy adres"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
@@ -1352,13 +1352,13 @@ msgstr "Toto pole obsahuje e-mailovou adresu příjemce"
 #, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Jméno příjemce (volitelné)"
+msgstr "jméno příjemce (volitelné)"
 
 #: publishdialog_p.cpp:46
 #, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "E-mailová adresa příjemce (povinné)"
+msgstr "e-mailová adresa příjemce (povinné)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
