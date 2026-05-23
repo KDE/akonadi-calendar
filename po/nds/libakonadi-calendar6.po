@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:46+0000\n"
+"POT-Creation-Date: 2026-05-23 00:45+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -712,7 +712,7 @@ msgid "Do Not Send"
 msgstr "Nich loosstüern"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
-#: itiphandlerhelper_p.cpp:498
+#: itiphandlerhelper_p.cpp:507
 #, kde-format
 msgid "Error: %1"
 msgstr "Fehler: %1"
@@ -795,7 +795,7 @@ msgstr "Koppelplaan-Nettbreef"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr ""
 
-#: itiphandlerhelper_p.cpp:237
+#: itiphandlerhelper_p.cpp:246
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -804,7 +804,7 @@ msgstr ""
 "Dat Begeefnis \"%1\" ümfaat anner Lüüd.\n"
 "Wullt Du de Inladen de Deelnehmers tostüern?"
 
-#: itiphandlerhelper_p.cpp:242
+#: itiphandlerhelper_p.cpp:251
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -813,7 +813,7 @@ msgstr ""
 "De Opgaav \"%1\" ümfaat anner Lüüd.\n"
 "Wullt Du de Inladen de Deelnehmers tostüern?"
 
-#: itiphandlerhelper_p.cpp:247
+#: itiphandlerhelper_p.cpp:256
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -822,7 +822,7 @@ msgstr ""
 "Dit Begeefnis ümfaat anner Lüüd. Wullt Du de Deelnehmers en Nettbreef "
 "tostüern?"
 
-#: itiphandlerhelper_p.cpp:271
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -832,7 +832,7 @@ msgstr ""
 "Kalenner ut de Synkroniseren to den Utrichter sien. Wullt Du dat redig "
 "bewerken?"
 
-#: itiphandlerhelper_p.cpp:302
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -841,20 +841,20 @@ msgstr ""
 "Du hest de Inladen \"%1\" ännert.\n"
 "Wullt Du de Deelnehmers en Opfrischnaricht tostüern?"
 
-#: itiphandlerhelper_p.cpp:310 itiphandlerhelper_p.cpp:326
-#: itiphandlerhelper_p.cpp:338
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
+#: itiphandlerhelper_p.cpp:347
 #, fuzzy, kde-format
 #| msgid "Send Update"
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Opfrischen loosstüern"
 
-#: itiphandlerhelper_p.cpp:320 itiphandlerhelper_p.cpp:398
+#: itiphandlerhelper_p.cpp:329 itiphandlerhelper_p.cpp:407
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Wullt Du disse Opgaav sien Utrichter en Statusopfrischen tostüern?"
 
-#: itiphandlerhelper_p.cpp:331
+#: itiphandlerhelper_p.cpp:340
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -863,7 +863,7 @@ msgstr ""
 "Dien Status as Deelnehmer vun dit Begeefnis hett sik ännert. Wullt Du dit "
 "Begeefnis sien Utrichter en Statusopfrischen tostüern?"
 
-#: itiphandlerhelper_p.cpp:374
+#: itiphandlerhelper_p.cpp:383
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -872,7 +872,7 @@ msgstr ""
 "Du hest de Inladen \"%1\" wegmaakt.\n"
 "Wullt Du de Deelnehmers de Naricht tostüern, dit Begeefnis is afseggt?"
 
-#: itiphandlerhelper_p.cpp:379
+#: itiphandlerhelper_p.cpp:388
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -881,7 +881,7 @@ msgstr ""
 "Du hest de Inladen \"%1\" wegmaakt.\n"
 "Wullt Du de Deelnehmers de Naricht tostüern, disse Opgaav is afseggt?"
 
-#: itiphandlerhelper_p.cpp:384
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -890,18 +890,18 @@ msgstr ""
 "Du hest de Inladen \"%1\" wegmaakt.\n"
 "Wullt Du de Deelnehmers de Naricht tostüern, dit Daagbook is afseggt?"
 
-#: itiphandlerhelper_p.cpp:401
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Wullt Du dit Daagbook sien Utrichter en Statusopfrischen tostüern?"
 
-#: itiphandlerhelper_p.cpp:406 itiphandlerhelper_p.cpp:427
+#: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Opfrischen loosstüern"
 
-#: itiphandlerhelper_p.cpp:421
+#: itiphandlerhelper_p.cpp:430
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -910,17 +910,17 @@ msgstr ""
 "Du hest en Inladen för dit Begeefnis vördem al annahmen. Wullt Du den "
 "Utrichter de opfrischte Anter tostüern, Du wiest de Inladen af?"
 
-#: itiphandlerhelper_p.cpp:466 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Gegenvörslag: %1"
 
-#: itiphandlerhelper_p.cpp:483
+#: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Loosstüern vun Koppelplaan-Nettbreev fehlslaan"
 
-#: itiphandlerhelper_p.cpp:491
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
