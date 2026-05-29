@@ -139,6 +139,7 @@ target_link_libraries(
         KF6::I18n
         KPim6::IdentityManagementCore
         KF6::ConfigGui
+        KPim6::AkonadiWidgets
     PRIVATE
         KF6::Codecs
         KF6::KIOCore
@@ -147,7 +148,6 @@ target_link_libraries(
         KPim6::AkonadiContactCore
         KPim6::AkonadiMime
         KPim6::CalendarUtils
-        KPim6::AkonadiWidgets
         KPim6::MailTransport
         KPim6::MessageCore
         KPim6::MessageComposer
