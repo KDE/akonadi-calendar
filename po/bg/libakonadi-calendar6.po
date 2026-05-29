@@ -2065,11 +2065,3 @@ msgstr "Описание"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Пречистване на завършени задачи"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyName)"
-#~ msgstr "(Празно име)"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "(EmptyEmail)"
-#~ msgstr "(Празен имейл)"
