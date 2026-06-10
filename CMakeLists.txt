@@ -22,7 +22,6 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateHeaders)
 
 include(ECMSetupVersion)
-set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 file(
     GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
     src/*.cpp
