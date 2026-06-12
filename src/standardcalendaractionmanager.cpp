@@ -43,7 +43,7 @@ public:
     void updateGenericAction(StandardActionManager::Type type)
     {
         switch (type) {
-        case Akonadi::StandardActionManager::CreateCollection:
+        case Akonadi::StandardActionManager::CreateCollection: {
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)->setText(i18n("Add Folder…"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
                 ->setWhatsThis(i18n("Add a new calendar folder to the currently selected calendar folder."));
@@ -56,12 +56,17 @@ public:
             mGenericManager->setContextText(StandardActionManager::CreateCollection,
                                             StandardActionManager::ErrorMessageTitle,
                                             ki18nc("@title:window", "Calendar Folder Creation Failed"));
-            mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
-                ->setProperty("ContentMimeTypes",
-                              QStringList() << u"inode/directory"_s << u"application/x-vnd.akonadi.calendar.todo"_s
-                                            << u"application/x-vnd.akonadi.calendar.event"_s << u"application/x-vnd.akonadi.calendar.journal"_s);
+
+            auto *action = mGenericManager->action(Akonadi::StandardActionManager::CreateCollection);
+            action->setProperty("ContentMimeTypes",
+                                QStringList() << u"inode/directory"_s << u"application/x-vnd.akonadi.calendar.todo"_s
+                                              << u"application/x-vnd.akonadi.calendar.event"_s << u"application/x-vnd.akonadi.calendar.journal"_s);
+            Akonadi::Collection::Rights rights = Akonadi::Collection::AllRights;
+            rights.setFlag(Akonadi::Collection::CanCreateCollection, false);
+            action->setProperty("Rights", QVariant::fromValue(rights));
 
             break;
+        }
         case Akonadi::StandardActionManager::CopyCollections:
             mGenericManager->setActionText(Akonadi::StandardActionManager::CopyCollections, ki18np("Copy Folder", "Copy %1 Folders"));
             mGenericManager->action(Akonadi::StandardActionManager::CopyCollections)
