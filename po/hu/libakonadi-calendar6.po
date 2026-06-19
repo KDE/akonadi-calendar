@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2015, 2020.
 # Balázs Úr <urbalazs@gmail.com>, 2013.
-# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-23 00:45+0000\n"
-"PO-Revision-Date: 2025-11-06 20:58+0100\n"
+"PO-Revision-Date: 2026-06-18 21:45+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -1210,14 +1210,10 @@ msgid "Cancel recipient selection and the email"
 msgstr "A címzettkiválasztás és a levélküldés megszakítása"
 
 #: publishdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking the <b>Cancel</b> button will cause the email operation to be "
-#| "terminated."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr ""
-"Ha a <b>Mégsem</b> gombra kattint, akkor a levélküldési művelet megszakad."
+msgstr "Ha erre a gombra kattint, akkor a levélküldési művelet megszakad."
 
 #: publishdialog.cpp:69
 #, fuzzy, kde-format
