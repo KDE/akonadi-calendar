@@ -404,10 +404,7 @@ public:
 
         act = mActions.value(StandardCalendarActionManager::EditIncidence);
         if (act) {
-            bool canEditItem = true;
-
-            // only one selected item can be edited
-            canEditItem = canEditItem && (itemCount == 1);
+            bool canEditItem = false;
 
             // check whether parent collection allows changing the item
             const QModelIndexList rows = mItemSelectionModel->selectedRows();
@@ -415,7 +412,7 @@ public:
                 const QModelIndex index = rows.first();
                 const auto parentCollection = index.data(EntityTreeModel::ParentCollectionRole).value<Collection>();
                 if (parentCollection.isValid()) {
-                    canEditItem = canEditItem && (parentCollection.rights() & Collection::CanChangeItem);
+                    canEditItem = (parentCollection.rights() & Collection::CanChangeItem);
                 }
             }
 
