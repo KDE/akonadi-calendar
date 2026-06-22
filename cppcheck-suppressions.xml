@@ -4,12 +4,6 @@
 <id>returnByReference</id>
 </suppress>
 <suppress>
-<id>constParameterPointer</id>
-</suppress>
-<suppress>
-<id>constVariablePointer</id>
-</suppress>
-<suppress>
 <id>shadowFunction</id>
 </suppress>
 <suppress>

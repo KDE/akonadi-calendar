@@ -203,7 +203,7 @@ static QString displayNameImpl(const Akonadi::EntityTreeModel *model, const Akon
     }
 }
 
-QString CalendarUtils::displayName(Akonadi::ETMCalendar *calendar, const Akonadi::Collection &c)
+QString CalendarUtils::displayName(const Akonadi::ETMCalendar *calendar, const Akonadi::Collection &c)
 {
     return displayNameImpl(calendar ? calendar->entityTreeModel() : nullptr, c);
 }
