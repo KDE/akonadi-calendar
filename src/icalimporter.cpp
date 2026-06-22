@@ -127,7 +127,7 @@ ICalImporter::ICalImporter(Akonadi::IncidenceChanger *changer, QObject *parent)
 
 ICalImporter::~ICalImporter() = default;
 
-QString ICalImporter::errorMessage() const
+QString &ICalImporter::errorMessage() const
 {
     return d->m_lastErrorMessage;
 }

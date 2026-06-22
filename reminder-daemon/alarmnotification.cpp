@@ -145,12 +145,12 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     }
 }
 
-QString AlarmNotification::uid() const
+QString &AlarmNotification::uid()
 {
     return m_uid;
 }
 
-QString AlarmNotification::text() const
+QString &AlarmNotification::text()
 {
     return m_text;
 }

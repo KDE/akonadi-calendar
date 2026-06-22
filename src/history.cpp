@@ -131,7 +131,7 @@ bool History::clear()
     return result;
 }
 
-QString History::lastErrorString() const
+QString &History::lastErrorString() const
 {
     return d->mLastErrorString;
 }

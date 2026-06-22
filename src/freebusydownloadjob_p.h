@@ -27,7 +27,7 @@ public:
     void start() override;
 
     [[nodiscard]] QUrl url() const;
-    [[nodiscard]] QByteArray rawFreeBusyData() const;
+    [[nodiscard]] QByteArray &rawFreeBusyData();
 
 private Q_SLOTS:
     void slotData(KIO::Job *, const QByteArray &data);

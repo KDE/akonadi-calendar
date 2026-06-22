@@ -32,12 +32,12 @@ public:
     /**
      * @return The uid of the Incidence of the alarm of the notification
      */
-    [[nodiscard]] QString uid() const;
+    [[nodiscard]] QString &uid();
 
     /**
      * @brief The text of the notification that should be displayed
      */
-    [[nodiscard]] QString text() const;
+    [[nodiscard]] QString &text();
 
     /**
      * @brief Sets the to-be-displayed text of the notification

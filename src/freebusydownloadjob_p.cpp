@@ -31,7 +31,7 @@ void FreeBusyDownloadJob::start()
     connect(job, &KIO::TransferJob::data, this, &FreeBusyDownloadJob::slotData);
 }
 
-QByteArray FreeBusyDownloadJob::rawFreeBusyData() const
+QByteArray &FreeBusyDownloadJob::rawFreeBusyData()
 {
     return mFreeBusyData;
 }

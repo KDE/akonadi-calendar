@@ -19,7 +19,7 @@ KColumnFilterProxyModel::KColumnFilterProxyModel(QObject *parent)
 
 KColumnFilterProxyModel::~KColumnFilterProxyModel() = default;
 
-QList<int> KColumnFilterProxyModel::visbileColumns() const
+QList<int> &KColumnFilterProxyModel::visbileColumns()
 {
     return m_visibleColumns;
 }

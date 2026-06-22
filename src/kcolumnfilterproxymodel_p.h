@@ -31,7 +31,7 @@ public:
       Returns a vector containing the visible columns. If the vector is empty, all
       columns are visible.
     */
-    [[nodiscard]] QList<int> visbileColumns() const;
+    [[nodiscard]] QList<int> &visbileColumns();
 
     /**
       Convenience function. Has the same effect as:

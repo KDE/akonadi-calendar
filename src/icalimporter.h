@@ -50,7 +50,7 @@ public:
      * This is set when either importIntoExistingFinished() or importIntoNewResource() return false
      * or when the corresponding signals are have success=false.
      */
-    [[nodiscard]] QString errorMessage() const;
+    [[nodiscard]] QString &errorMessage() const;
 
 Q_SIGNALS:
     /*!

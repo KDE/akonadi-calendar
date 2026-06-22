@@ -128,7 +128,7 @@ public:
      *
      * The message is translated.
      */
-    [[nodiscard]] QString lastErrorString() const;
+    [[nodiscard]] QString &lastErrorString() const;
 
     /*!
      * Reverts every change in the undo stack.

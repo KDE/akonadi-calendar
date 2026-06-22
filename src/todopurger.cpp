@@ -157,7 +157,7 @@ void TodoPurger::purgeCompletedTodos()
     }
 }
 
-QString TodoPurger::lastError() const
+QString &TodoPurger::lastError() const
 {
     return d->m_lastError;
 }
