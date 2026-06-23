@@ -1,6 +1,11 @@
 # SPDX-FileCopyrightText: 2026 Alan Thouvenin <alan.thouvenin@enioka.com>
 # SPDX-License-Identifier: BSD-2-Clause
 
+# keep clang-tidy away from generated python code (finds thousands of issues)
+if(CMAKE_CXX_CLANG_TIDY)
+    return()
+endif()
+
 set(bindings_library "AkonadiCalendar")
 
 set(wrapped_header ${CMAKE_CURRENT_SOURCE_DIR}/bindings.h)
