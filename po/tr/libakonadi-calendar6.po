@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-23 00:46+0000\n"
 "PO-Revision-Date: 2026-05-02 18:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1933,52 +1933,52 @@ msgstr "Günceyi Şuraya Taşı"
 msgid "Edit Journal…"
 msgstr "Günceyi Düzenle…"
 
-#: standardcalendaractionmanager.cpp:533
+#: standardcalendaractionmanager.cpp:530
 #, kde-format
 msgid "New E&vent…"
 msgstr "Yeni &Etkinlik…"
 
-#: standardcalendaractionmanager.cpp:534
+#: standardcalendaractionmanager.cpp:531
 #, kde-format
 msgid "Create a new event"
 msgstr "Yeni etkinlik oluştur"
 
-#: standardcalendaractionmanager.cpp:544
+#: standardcalendaractionmanager.cpp:541
 #, kde-format
 msgid "New &To-do…"
 msgstr "Ye&ni Yapılacak…"
 
-#: standardcalendaractionmanager.cpp:545
+#: standardcalendaractionmanager.cpp:542
 #, kde-format
 msgid "Create a new To-do"
 msgstr "Yeni yapılacak ögesi oluştur"
 
-#: standardcalendaractionmanager.cpp:554
+#: standardcalendaractionmanager.cpp:551
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "Y&eni Alt Yapılacak…"
 
-#: standardcalendaractionmanager.cpp:555
+#: standardcalendaractionmanager.cpp:552
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "Yeni bir alt yapılacak oluştur"
 
-#: standardcalendaractionmanager.cpp:565
+#: standardcalendaractionmanager.cpp:562
 #, kde-format
 msgid "New &Journal…"
 msgstr "Yeni &Günce…"
 
-#: standardcalendaractionmanager.cpp:566
+#: standardcalendaractionmanager.cpp:563
 #, kde-format
 msgid "Create a new Journal"
 msgstr "Yeni günce oluştur"
 
-#: standardcalendaractionmanager.cpp:575
+#: standardcalendaractionmanager.cpp:572
 #, kde-format
 msgid "&Edit…"
 msgstr "Dü&zenle…"
 
-#: standardcalendaractionmanager.cpp:576
+#: standardcalendaractionmanager.cpp:573
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "Seçili olayı düzenle"

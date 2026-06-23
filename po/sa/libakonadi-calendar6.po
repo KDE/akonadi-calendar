@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-23 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1934,52 +1934,52 @@ msgstr "Move Journal To"
 msgid "Edit Journal…"
 msgstr "पत्रिका सम्पादयतु…"
 
-#: standardcalendaractionmanager.cpp:533
+#: standardcalendaractionmanager.cpp:530
 #, kde-format
 msgid "New E&vent…"
 msgstr "नवीन ई&वेण्ट्…"
 
-#: standardcalendaractionmanager.cpp:534
+#: standardcalendaractionmanager.cpp:531
 #, kde-format
 msgid "Create a new event"
 msgstr "नूतनं घटनां रचयन्तु"
 
-#: standardcalendaractionmanager.cpp:544
+#: standardcalendaractionmanager.cpp:541
 #, kde-format
 msgid "New &To-do…"
 msgstr "नवीन &To-do…"
 
-#: standardcalendaractionmanager.cpp:545
+#: standardcalendaractionmanager.cpp:542
 #, kde-format
 msgid "Create a new To-do"
 msgstr "नूतनं To-do रचयन्तु"
 
-#: standardcalendaractionmanager.cpp:554
+#: standardcalendaractionmanager.cpp:551
 #, kde-format
 msgid "New Su&b-to-do…"
 msgstr "नवीनं Su&b-to-do…"
 
-#: standardcalendaractionmanager.cpp:555
+#: standardcalendaractionmanager.cpp:552
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr "नूतनं Sub-to-do रचयन्तु"
 
-#: standardcalendaractionmanager.cpp:565
+#: standardcalendaractionmanager.cpp:562
 #, kde-format
 msgid "New &Journal…"
 msgstr "समाचार एवं पत्रिका…"
 
-#: standardcalendaractionmanager.cpp:566
+#: standardcalendaractionmanager.cpp:563
 #, kde-format
 msgid "Create a new Journal"
 msgstr "एकं नूतनं Journal रचयन्तु"
 
-#: standardcalendaractionmanager.cpp:575
+#: standardcalendaractionmanager.cpp:572
 #, kde-format
 msgid "&Edit…"
 msgstr "&सम्पादन…"
 
-#: standardcalendaractionmanager.cpp:576
+#: standardcalendaractionmanager.cpp:573
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr "चयनितं घटनां सम्पादयन्तु।"

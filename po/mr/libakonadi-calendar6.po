@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-23 00:46+0000\n"
 "PO-Revision-Date: 2013-03-25 17:45+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -1825,57 +1825,57 @@ msgstr ""
 msgid "Edit Journal…"
 msgstr "नवीन जर्नल (&J)..."
 
-#: standardcalendaractionmanager.cpp:533
+#: standardcalendaractionmanager.cpp:530
 #, fuzzy, kde-format
 #| msgid "New E&vent..."
 msgid "New E&vent…"
 msgstr "नवीन कार्यक्रम (&V)..."
 
-#: standardcalendaractionmanager.cpp:534
+#: standardcalendaractionmanager.cpp:531
 #, kde-format
 msgid "Create a new event"
 msgstr "नवीन कार्यक्रम तयार करा"
 
-#: standardcalendaractionmanager.cpp:544
+#: standardcalendaractionmanager.cpp:541
 #, fuzzy, kde-format
 #| msgid "New &To-do..."
 msgid "New &To-do…"
 msgstr "नवीन करण्यासाठी (&T)...."
 
-#: standardcalendaractionmanager.cpp:545
+#: standardcalendaractionmanager.cpp:542
 #, kde-format
 msgid "Create a new To-do"
 msgstr "नवीन करण्यासाठी तयार करा"
 
-#: standardcalendaractionmanager.cpp:554
+#: standardcalendaractionmanager.cpp:551
 #, fuzzy, kde-format
 #| msgid "New Su&b-to-do..."
 msgid "New Su&b-to-do…"
 msgstr "नवीन उप-कार्य (&B)..."
 
-#: standardcalendaractionmanager.cpp:555
+#: standardcalendaractionmanager.cpp:552
 #, kde-format
 msgid "Create a new Sub-to-do"
 msgstr ""
 
-#: standardcalendaractionmanager.cpp:565
+#: standardcalendaractionmanager.cpp:562
 #, fuzzy, kde-format
 #| msgid "New &Journal..."
 msgid "New &Journal…"
 msgstr "नवीन जर्नल (&J)..."
 
-#: standardcalendaractionmanager.cpp:566
+#: standardcalendaractionmanager.cpp:563
 #, kde-format
 msgid "Create a new Journal"
 msgstr "नवीन जर्नल तयार करा"
 
-#: standardcalendaractionmanager.cpp:575
+#: standardcalendaractionmanager.cpp:572
 #, fuzzy, kde-format
 #| msgid "&Edit..."
 msgid "&Edit…"
 msgstr "संपादन (&E)..."
 
-#: standardcalendaractionmanager.cpp:576
+#: standardcalendaractionmanager.cpp:573
 #, kde-format
 msgid "Edit the selected incidence."
 msgstr ""
