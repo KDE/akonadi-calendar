@@ -19,7 +19,6 @@
 #include <QSet>
 
 class QAbstractItemModel;
-class CheckableProxyModel;
 class KSelectionProxyModel;
 
 using namespace Qt::Literals::StringLiterals;
