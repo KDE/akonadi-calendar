@@ -14,6 +14,8 @@
 using namespace Akonadi;
 using namespace KCalendarCore;
 
+namespace
+{
 class KCalCoreSerializerTest : public QObject
 {
     Q_OBJECT
@@ -118,6 +120,7 @@ private Q_SLOTS:
         QCOMPARE(event2->summary().toLatin1(), QByteArray(latin1_umlaut));
     }
 };
+}
 
 QTEST_MAIN(KCalCoreSerializerTest)
 

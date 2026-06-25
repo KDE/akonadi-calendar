@@ -38,6 +38,8 @@ Q_DECLARE_METATYPE(QList<int>)
 static const char *s_ourEmail = "unittests@dev.nul"; // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 static const char *s_outEmail2 = "identity2@kde.org";
 
+namespace
+{
 class FakeMessageQueueJob : public Akonadi::MessageQueueJob
 {
 public:
@@ -85,6 +87,7 @@ public:
         return new FakeMessageQueueJob(parent);
     }
 };
+}
 
 void ITIPHandlerTest::initTestCase()
 {

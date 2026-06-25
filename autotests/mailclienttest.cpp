@@ -36,6 +36,8 @@ const auto s_testGpgKey = QByteArray("D6003D89B2840A1B1888C39E5AB1CE1311F6B1DB")
 const QString s_test2Email = QStringLiteral("test2@example.com");
 const auto s_test2GpgKey = QByteArray("A9794D762BC67B1DEB161CDD8B3613B451672CB8");
 
+namespace
+{
 enum class CryptoState {
     Plain,
     Signed,
@@ -46,7 +48,7 @@ struct ExpectedDialog {
     QString text;
     Akonadi::ITIPHandlerDialogDelegate::DialogAction action;
 };
-
+}
 using ContactPreferences = QMap<QString, MessageComposer::ContactPreference>;
 
 using namespace Akonadi;
@@ -56,6 +58,8 @@ Q_DECLARE_METATYPE(CryptoState)
 Q_DECLARE_METATYPE(QList<ExpectedDialog>)
 Q_DECLARE_METATYPE(ContactPreferences)
 
+namespace
+{
 class FakeMessageQueueJob : public Akonadi::MessageQueueJob
 {
 public:
@@ -179,7 +183,7 @@ private:
 
 ContactPreferences TestableMailClient::preferences;
 
-static MessageComposer::ContactPreference
+MessageComposer::ContactPreference
 createPreference(const QByteArray &key, Kleo::EncryptionPreference encPref, Kleo::SigningPreference sigPref = Kleo::UnknownSigningPreference)
 {
     MessageComposer::ContactPreference preference;
@@ -623,6 +627,7 @@ private Q_SLOTS: // NOLINT(readability-redundant-access-specifiers)
         }
     }
 };
+}
 
 QTEST_AKONADIMAIN(MailClientTest)
 

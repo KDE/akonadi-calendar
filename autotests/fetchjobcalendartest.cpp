@@ -14,6 +14,8 @@
 using namespace Akonadi;
 using namespace KCalendarCore;
 
+namespace
+{
 class FetchJobCalendarTest : public QObject
 {
     Q_OBJECT
@@ -80,6 +82,7 @@ private Q_SLOTS:
         QVERIFY(calendar.item(QStringLiteral("f")).isValid());
     }
 };
+}
 
 QTEST_AKONADIMAIN(FetchJobCalendarTest)
 

@@ -58,6 +58,8 @@ static Akonadi::Item createItem(const Akonadi::Collection &collection)
     return createJob->item();
 }
 
+namespace
+{
 class IncidenceChangerTest : public QObject
 {
     Q_OBJECT
@@ -1281,6 +1283,7 @@ public Q_SLOTS:
         QCOMPARE(result, expected);
     }
 };
+}
 
 QTEST_AKONADIMAIN(IncidenceChangerTest)
 
