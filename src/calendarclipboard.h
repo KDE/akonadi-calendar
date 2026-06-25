@@ -76,12 +76,14 @@ public:
     [[nodiscard]] bool pasteAvailable() const;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * Emitted after cutIncidences() finishes.
      * \a success true if the cut was successful
      * \a errorMessage if \a success if false, contains the error message, empty otherwise.
      */
     void cutFinished(bool success, const QString &errorMessage);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     std::unique_ptr<CalendarClipboardPrivate> const d;

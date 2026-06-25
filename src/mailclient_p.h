@@ -153,7 +153,7 @@ private:
     void handleQueueJobFinished(KJob *job);
 
 Q_SIGNALS:
-    void finished(Akonadi::MailClient::Result result, const QString &errorString);
+    void finished(Akonadi::MailClient::Result, const QString &);
 
 public:
     // For unit-test usage, since we can't depend on kdepim-runtime on jenkins

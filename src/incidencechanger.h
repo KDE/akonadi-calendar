@@ -437,6 +437,7 @@ public:
     [[nodiscard]] InvitationPrivacyFlags invitationPrivacy() const;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * Emitted when IncidenceChanger creates an Incidence in akonadi.
      *
@@ -468,6 +469,7 @@ Q_SIGNALS:
      *        message. If you enabled error dialogs, this string was already presented to the user.
      */
     void deleteFinished(int changeId, const QList<Akonadi::Item::Id> &itemIdList, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     friend class HistoryPrivate;

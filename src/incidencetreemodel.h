@@ -71,7 +71,7 @@ Q_SIGNALS:
      * This is better than the view waiting for "rows moved" signals because those
      * signals are also sent when the model is initially populated.
      */
-    void indexChangedParent(const QModelIndex &index);
+    void indexChangedParent(const QModelIndex &);
 
     /*!
      * Signals that we finished doing a batch of insertions.

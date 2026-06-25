@@ -105,7 +105,7 @@ public Q_SLOTS:
     void fbCheckerJobFinished(KJob *job);
 
 Q_SIGNALS:
-    void freeBusyUrlRetrieved(const QString &email, const QUrl &url);
+    void freeBusyUrlRetrieved(const QString &, const QUrl &);
 };
 
 class FbCheckerJob : public KJob

@@ -87,8 +87,8 @@ public:
     bool useGroupwareCommunication;
 
 Q_SIGNALS:
-    void dialogClosedBeforeChange(int id, Akonadi::ITIPHandlerHelper::SendResult status);
-    void dialogClosedAfterChange(int id, Akonadi::ITIPHandlerHelper::SendResult status);
+    void dialogClosedBeforeChange(int, Akonadi::ITIPHandlerHelper::SendResult);
+    void dialogClosedAfterChange(int, Akonadi::ITIPHandlerHelper::SendResult);
 
 public Q_SLOTS:
     void emitUserDialogClosedAfterChange(Akonadi::ITIPHandlerHelper::SendResult status);

@@ -138,17 +138,11 @@ public:
     sendCounterProposal(const QString &receiver, const KCalendarCore::Incidence::Ptr &oldIncidence, const KCalendarCore::Incidence::Ptr &newIncidence);
 
 Q_SIGNALS:
-    void finished(Akonadi::ITIPHandlerHelper::SendResult result, const QString &errorMessage);
+    void finished(Akonadi::ITIPHandlerHelper::SendResult, const QString &);
 
-    void sendIncidenceDeletedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult,
-                                             KCalendarCore::iTIPMethod method,
-                                             const KCalendarCore::Incidence::Ptr &incidence);
-    void sendIncidenceModifiedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult,
-                                              KCalendarCore::iTIPMethod method,
-                                              const KCalendarCore::Incidence::Ptr &incidence);
-    void sendIncidenceCreatedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult,
-                                             KCalendarCore::iTIPMethod method,
-                                             const KCalendarCore::Incidence::Ptr &incidence);
+    void sendIncidenceDeletedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod, const KCalendarCore::Incidence::Ptr &);
+    void sendIncidenceModifiedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod, const KCalendarCore::Incidence::Ptr &);
+    void sendIncidenceCreatedMessageFinished(Akonadi::ITIPHandlerHelper::SendResult, KCalendarCore::iTIPMethod, const KCalendarCore::Incidence::Ptr &);
 
 private Q_SLOTS:
     void onSchedulerFinished(Akonadi::Scheduler::Result result, const QString &errorMsg);

@@ -198,6 +198,7 @@ public:
                                                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * Signal is emitted, when the user has answered the dialog or the defaultAction is used
      * \a answer: answer should be part of KMessageBox:ButtonCode, keep in mind that it is a YesNoDialog so normally it should be KMessageBox::Yes or
@@ -206,6 +207,7 @@ Q_SIGNALS:
      * \a incidence: purpose of the dialog
      */
     void dialogClosed(int answer, KCalendarCore::iTIPMethod method, const KCalendarCore::Incidence::Ptr &incidence);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 protected:
     /*!
@@ -361,6 +363,7 @@ public:
     Akonadi::CalendarBase::Ptr calendar() const;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * Sent after processing an incoming iTip message.
      *
@@ -384,6 +387,7 @@ Q_SIGNALS:
      * Signal emitted after an incidence was sent with sendAsICalendar()
      */
     void sentAsICalendar(Akonadi::ITIPHandler::Result, const QString &errorMessage);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     Q_DISABLE_COPY(ITIPHandler)

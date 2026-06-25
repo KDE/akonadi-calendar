@@ -123,7 +123,7 @@ Q_SIGNALS:
     /*!
       This signal is emitted to return results of free/busy requests.
     */
-    void freeBusyRetrieved(const KCalendarCore::FreeBusy::Ptr &fb, const QString &email);
+    void freeBusyRetrieved(const KCalendarCore::FreeBusy::Ptr &, const QString &);
 
 protected:
     /*! React on timer events, used for delayed freebusy list uploading */

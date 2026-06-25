@@ -159,7 +159,8 @@ protected:
     KCalendarCore::ICalFormat *mFormat = nullptr;
 
 Q_SIGNALS:
-    void transactionFinished(Akonadi::Scheduler::Result, const QString &errorMessage);
+    void transactionFinished(Akonadi::Scheduler::Result, const QString &);
+
 private Q_SLOTS:
     void handleCreateFinished(bool success, const QString &errorMessage);
     void handleModifyFinished(bool success, const QString &errorMessage);

@@ -28,6 +28,7 @@ public:
     explicit FreeBusyProviderBasePrivate(FreeBusyProviderBase *qq);
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /**
      * This signal gets emitted when the resource answered
      * the free-busy handling request.
@@ -51,6 +52,7 @@ Q_SIGNALS:
      *                  went wrong.
      */
     void freeBusyRetrieved(const QString &email, const QString &freeBusy, bool success, const QString &errorText);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     friend class FreeBusyProviderBase;

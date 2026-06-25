@@ -208,6 +208,7 @@ public Q_SLOTS:
     void redo(QWidget *parent = nullptr);
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * This signal is emitted when an undo operation finishes.
      * \a resultCode History::ResultCodeSuccess on success.
@@ -226,6 +227,7 @@ Q_SIGNALS:
      * The redo/undo stacks have changed.
      */
     void changed();
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     friend class ::HistoryTest;

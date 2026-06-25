@@ -158,6 +158,7 @@ public:
     [[nodiscard]] bool collectionFilteringEnabled() const;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * This signal is emitted if a collection has been changed (properties or attributes).
      *
@@ -191,6 +192,7 @@ Q_SIGNALS:
      * \since 6.1.40
      */
     void calendarSelectionEdited();
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     Q_DECLARE_PRIVATE(ETMCalendar)

@@ -49,12 +49,14 @@ public:
     ~FetchJobCalendar() override;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * This signal is emitted when the IncidenceFetchJob finishes.
      * \a success the success of the operation
      * \a errorMessage if \a success is false, contains the error message
      */
     void loadFinished(bool success, const QString &errorMessage);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     Q_DECLARE_PRIVATE(FetchJobCalendar)

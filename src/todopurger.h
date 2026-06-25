@@ -60,6 +60,7 @@ public:
     [[nodiscard]] QString &lastError() const;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * Emitted when purging completed to-dos finished.
      * \a success    True if the operation could be completed. \sa lastError()
@@ -68,6 +69,7 @@ Q_SIGNALS:
      *                   or have incomplete or read-only children.
      */
     void todosPurged(bool success, int numDeleted, int numIgnored);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
     std::unique_ptr<TodoPurgerPrivate> const d;

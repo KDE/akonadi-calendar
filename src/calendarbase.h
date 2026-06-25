@@ -196,6 +196,7 @@ public:
     bool modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence);
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * This signal is emitted when an incidence is created in akonadi through
      * add{Incidence,Event,Todo,Journal}
@@ -219,6 +220,7 @@ Q_SIGNALS:
      * \a errorMessage if \a success is false, contains the error message
      */
     void modifyFinished(bool success, const QString &errorMessage);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 protected:
     Q_DECLARE_PRIVATE(CalendarBase)

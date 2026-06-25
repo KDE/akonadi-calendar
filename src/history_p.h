@@ -42,7 +42,7 @@ public:
     Akonadi::Item::List mItems;
     QString mDescription;
 Q_SIGNALS:
-    void finished(Akonadi::IncidenceChanger::ResultCode, const QString &errorString);
+    void finished(Akonadi::IncidenceChanger::ResultCode, const QString &);
 
 protected:
     virtual bool undo() = 0;

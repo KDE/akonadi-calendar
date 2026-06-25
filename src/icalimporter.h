@@ -53,6 +53,7 @@ public:
     [[nodiscard]] QString &errorMessage() const;
 
 Q_SIGNALS:
+    // NOLINTBEGIN(readability-inconsistent-declaration-parameter-name)
     /*!
      * Emitted after calling importIntoExistingResource()
      * \a success Success of the operation.
@@ -67,6 +68,7 @@ Q_SIGNALS:
      * If success is false, check errorMessage().
      */
     void importIntoNewFinished(bool success);
+    // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 public Q_SLOTS:
 
