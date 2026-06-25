@@ -50,6 +50,7 @@ public:
     [[nodiscard]] QWeakPointer<CalendarModel> weakPointer() const;
     void setWeakPointer(const QWeakPointer<CalendarModel> &weakPointer);
 
+protected:
     [[nodiscard]] QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const override;
 
     [[nodiscard]] QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const override;

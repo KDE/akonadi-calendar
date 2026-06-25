@@ -114,6 +114,7 @@ public:
     using Ptr = QSharedPointer<CreationEntry>;
     CreationEntry(const Akonadi::Item &item, const QString &description, History *q);
 
+protected:
     bool undo() override;
     bool redo() override;
 
@@ -132,6 +133,8 @@ class DeletionEntry : public Entry
     Q_OBJECT
 public:
     DeletionEntry(const Akonadi::Item::List &items, const QString &description, History *q);
+
+protected:
     bool undo() override;
     bool redo() override;
 
@@ -155,6 +158,7 @@ class ModificationEntry : public Entry
 public:
     ModificationEntry(const Akonadi::Item &item, const Incidence::Ptr &originalPayload, const QString &description, History *q);
 
+protected:
     bool undo() override;
     bool redo() override;
 
