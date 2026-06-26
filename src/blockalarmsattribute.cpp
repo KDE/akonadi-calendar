@@ -145,5 +145,5 @@ bool dummy()
 }
 
 // Called when this library is loaded.
-const bool registered = dummy();
+const bool registered = dummy(); // NOLINT(bugprone-throwing-static-initialization)
 } // namespace

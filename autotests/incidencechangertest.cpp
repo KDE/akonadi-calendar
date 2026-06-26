@@ -32,12 +32,14 @@ Q_DECLARE_METATYPE(QList<Akonadi::Collection::Right>)
 Q_DECLARE_METATYPE(QList<Akonadi::Collection::Rights>)
 Q_DECLARE_METATYPE(QList<Akonadi::IncidenceChanger::ResultCode>)
 Q_DECLARE_METATYPE(KCalendarCore::RecurrenceRule::PeriodType)
-// clazy:excludeall=non-pod-global-static
+// NOLINTBEGIN(bugprone-throwing-static-initialization)
+//  clazy:excludeall=non-pod-global-static
 namespace
 {
 QString s_ourEmail = QStringLiteral("unittests@dev.nul"); // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 QString s_outEmail2 = QStringLiteral("identity2@kde.org");
 }
+// NOLINTEND(bugprone-throwing-static-initialization)
 
 static Akonadi::Item item()
 {

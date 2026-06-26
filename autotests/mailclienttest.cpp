@@ -26,7 +26,8 @@
 #include <QObject>
 #include <QTestEventLoop>
 
-// clazy:excludeall=non-pod-global-static
+// NOLINTBEGIN(bugprone-throwing-static-initialization)
+//  clazy:excludeall=non-pod-global-static
 const QString s_ourEmail = QStringLiteral("unittests@dev.nul"); // change also in kdepimlibs/akonadi/calendar/tests/unittestenv/kdehome/share/config
 const auto s_ourGpgKey = QByteArray("7E501DEA81F62DB17389393325058D1857FDD0E7");
 
@@ -35,6 +36,7 @@ const auto s_testGpgKey = QByteArray("D6003D89B2840A1B1888C39E5AB1CE1311F6B1DB")
 
 const QString s_test2Email = QStringLiteral("test2@example.com");
 const auto s_test2GpgKey = QByteArray("A9794D762BC67B1DEB161CDD8B3613B451672CB8");
+// NOLINTEND(bugprone-throwing-static-initialization)
 
 namespace
 {
