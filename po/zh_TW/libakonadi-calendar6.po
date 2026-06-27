@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2025-11-24 19:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -145,55 +145,55 @@ msgid "Calendar"
 msgstr "行事曆"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
-#: calendarsettings.kcfg:23
+#: calendarsettings.kcfg:16
 #, kde-format
 msgid "Free/Busy Publish URL"
 msgstr "行程資訊發布網址"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
-#: calendarsettings.kcfg:24
+#: calendarsettings.kcfg:17
 #, kde-format
 msgid "URL for publishing free/busy information"
 msgstr "發布行程資訊用的網址"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
-#: calendarsettings.kcfg:28
+#: calendarsettings.kcfg:20
 #, kde-format
 msgid "Free/Busy Publish Username"
 msgstr "行程資訊發布之使用者名稱"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
-#: calendarsettings.kcfg:29
+#: calendarsettings.kcfg:21
 #, kde-format
 msgid "Username for publishing free/busy information"
 msgstr "用於行程資訊發布之使用者名稱"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
-#: calendarsettings.kcfg:33
+#: calendarsettings.kcfg:24
 #, kde-format
 msgid "Free/Busy Publish Password"
 msgstr "行程資訊發布之密碼"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
-#: calendarsettings.kcfg:34
+#: calendarsettings.kcfg:25
 #, kde-format
 msgid "Password for publishing free/busy information"
 msgstr "用於行程資訊發布之密碼"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:45
+#: calendarsettings.kcfg:34
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
 msgstr "開啟自動取得行程資訊功能"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:50
+#: calendarsettings.kcfg:38
 #, kde-format
 msgid "Use full email address for retrieval"
 msgstr "使用完整電子郵件地址取得行程資訊"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:51
+#: calendarsettings.kcfg:39
 #, kde-format
 msgid ""
 "With this setting, you can change the filename that will be fetched from the "
@@ -206,37 +206,37 @@ msgstr ""
 "如：user.ifb。"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:56
+#: calendarsettings.kcfg:43
 #, kde-format
 msgid "Free/Busy Retrieval URL"
 msgstr "取得行程資訊的網址"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:60
+#: calendarsettings.kcfg:46
 #, kde-format
 msgid "Free/Busy Retrieval Username"
 msgstr "取得行程資訊的使用者名稱"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:64
+#: calendarsettings.kcfg:49
 #, kde-format
 msgid "Free/Busy Retrieval Password"
 msgstr "取得行程資訊的密碼"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:65
+#: calendarsettings.kcfg:50
 #, kde-format
 msgid "Password for retrieving free/busy information"
 msgstr "取得行程資訊的密碼"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:76
+#: calendarsettings.kcfg:59
 #, kde-format
 msgid "Send copy to owner when mailing events"
 msgstr "寄送事件時也寄一份給擁有者。"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:77
+#: calendarsettings.kcfg:60
 #, kde-format
 msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
@@ -246,25 +246,25 @@ msgstr ""
 "者。"
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
-#: calendarsettings.kcfg:82
+#: calendarsettings.kcfg:64
 #, kde-format
 msgid "Hide declined invitations"
 msgstr "隱藏已拒絕的邀請"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
-#: calendarsettings.kcfg:83
+#: calendarsettings.kcfg:65
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr "勾選此選項來在事件檢視當中隱藏已拒絕的邀請。"
 
 #. i18n: ectx: label, entry, group (Reminders)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:71
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr "只顯示我發起或參加的事件的提醒"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
-#: calendarsettings.kcfg:92
+#: calendarsettings.kcfg:72
 #, kde-format
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
@@ -272,19 +272,19 @@ msgid ""
 msgstr "勾選此選項來僅接收您是發起人或是您會參加的事件的提醒。"
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:100
+#: calendarsettings.kcfg:79
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "送出類似 Outlook 虛擬反提案"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:105
+#: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "檢查主機名稱與接收到的電子郵件地址是否相符"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:106
+#: calendarsettings.kcfg:84
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "

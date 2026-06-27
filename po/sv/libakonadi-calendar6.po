@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2026-01-20 20:08+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -149,55 +149,55 @@ msgid "Calendar"
 msgstr "Kalender"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
-#: calendarsettings.kcfg:23
+#: calendarsettings.kcfg:16
 #, kde-format
 msgid "Free/Busy Publish URL"
 msgstr "Webbadress för ledig-upptagen publicering"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
-#: calendarsettings.kcfg:24
+#: calendarsettings.kcfg:17
 #, kde-format
 msgid "URL for publishing free/busy information"
 msgstr "Webbadress för att publicera ledig-upptagen information"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
-#: calendarsettings.kcfg:28
+#: calendarsettings.kcfg:20
 #, kde-format
 msgid "Free/Busy Publish Username"
 msgstr "Användarnamn för ledig-upptagen publicering"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
-#: calendarsettings.kcfg:29
+#: calendarsettings.kcfg:21
 #, kde-format
 msgid "Username for publishing free/busy information"
 msgstr "Användarnamn för att publicera ledig-upptagen information"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
-#: calendarsettings.kcfg:33
+#: calendarsettings.kcfg:24
 #, kde-format
 msgid "Free/Busy Publish Password"
 msgstr "Lösenord för ledig-upptagen publicering"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
-#: calendarsettings.kcfg:34
+#: calendarsettings.kcfg:25
 #, kde-format
 msgid "Password for publishing free/busy information"
 msgstr "Lösenord för att publicera ledig-upptagen information"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:45
+#: calendarsettings.kcfg:34
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
 msgstr "Aktivera automatisk hämtning av ledig-upptagen information"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:50
+#: calendarsettings.kcfg:38
 #, kde-format
 msgid "Use full email address for retrieval"
 msgstr "Använd hela e-postadressen vid hämtning"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:51
+#: calendarsettings.kcfg:39
 #, kde-format
 msgid ""
 "With this setting, you can change the filename that will be fetched from the "
@@ -211,37 +211,37 @@ msgstr ""
 "laddas användare.ifb ner, till exempel nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:56
+#: calendarsettings.kcfg:43
 #, kde-format
 msgid "Free/Busy Retrieval URL"
 msgstr "Webbadress för ledig-upptagen hämtning"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:60
+#: calendarsettings.kcfg:46
 #, kde-format
 msgid "Free/Busy Retrieval Username"
 msgstr "Användarnamn för ledig-upptagen hämtning"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:64
+#: calendarsettings.kcfg:49
 #, kde-format
 msgid "Free/Busy Retrieval Password"
 msgstr "Lösenord för ledig-upptagen hämtning"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
-#: calendarsettings.kcfg:65
+#: calendarsettings.kcfg:50
 #, kde-format
 msgid "Password for retrieving free/busy information"
 msgstr "Lösenord för att hämta ledig-upptagen information"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:76
+#: calendarsettings.kcfg:59
 #, kde-format
 msgid "Send copy to owner when mailing events"
 msgstr "Skicka kopia till ägaren vid sändning av händelser"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: calendarsettings.kcfg:77
+#: calendarsettings.kcfg:60
 #, kde-format
 msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
@@ -251,25 +251,25 @@ msgstr ""
 "begäran av dig till deltagare i händelser."
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
-#: calendarsettings.kcfg:82
+#: calendarsettings.kcfg:64
 #, kde-format
 msgid "Hide declined invitations"
 msgstr "Dölj avböjda inbjudningar"
 
 #. i18n: ectx: whatsthis, entry (HideDeclinedInvitations), group (Group Scheduling)
-#: calendarsettings.kcfg:83
+#: calendarsettings.kcfg:65
 #, kde-format
 msgid "Check this box to hide declined invitations in event views."
 msgstr "Markera rutan för att dölja avböjda inbjudningar i händelsevyer."
 
 #. i18n: ectx: label, entry, group (Reminders)
-#: calendarsettings.kcfg:91
+#: calendarsettings.kcfg:71
 #, kde-format
 msgid "Only show reminders for events I organize or attend"
 msgstr "Visa bara påminnelser för händelser jag organiserar eller deltar i"
 
 #. i18n: ectx: whatsthis, entry, group (Reminders)
-#: calendarsettings.kcfg:92
+#: calendarsettings.kcfg:72
 #, kde-format
 msgid ""
 "Check this to only receive reminders for events that you are the organizer "
@@ -279,19 +279,19 @@ msgstr ""
 "deltar i."
 
 #. i18n: ectx: label, entry (OutlookCompatCounterProposals), group (Hidden Options)
-#: calendarsettings.kcfg:100
+#: calendarsettings.kcfg:79
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
 msgstr "Skicka Outlook-liknande pseudomotförslag"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:105
+#: calendarsettings.kcfg:83
 #, kde-format
 msgid "Check whether hostname and retrieval email address match"
 msgstr "Kontrollera om värddatornamn och e-postadress för hämtning stämmer"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyCheckHostname), group (Hidden Options)
-#: calendarsettings.kcfg:106
+#: calendarsettings.kcfg:84
 #, kde-format
 msgid ""
 "With this setting you can configure whether the domain part of the free/busy "
