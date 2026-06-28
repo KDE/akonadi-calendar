@@ -770,7 +770,7 @@ msgstr "S'ha produït un error de reenviament"
 #: itiphandlerhelper_p.cpp:37
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr "Nova data i hora proposades: %1 - %2"
+msgstr "Nova data i hora proposades: %1 – %2"
 
 #: itiphandlerhelper_p.cpp:69
 #, kde-format
