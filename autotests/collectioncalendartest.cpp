@@ -71,7 +71,7 @@ private:
     void deleteItem()
     {
         if (mItem.isValid()) {
-            auto *job = new Akonadi::ItemDeleteJob(mItem);
+            auto job = new Akonadi::ItemDeleteJob(mItem);
             job->exec();
             mItem = {};
         }
@@ -129,7 +129,7 @@ private:
 
 Akonadi::Collection findResourceCollection(const QString &resource)
 {
-    auto *fetch = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+    auto fetch = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
     fetch->fetchScope().setResource(resource);
     if (!fetch->exec()) {
         qWarning() << "Failed to fetch collection tree";
@@ -160,7 +160,7 @@ Akonadi::Item createIncidence(const Akonadi::Collection &parent, const QString &
     item.setPayload(event);
     item.setGid(event->uid());
 
-    auto *job = new Akonadi::ItemCreateJob(item, parent);
+    auto job = new Akonadi::ItemCreateJob(item, parent);
     if (!job->exec()) {
         qWarning() << "Failed to create test incidence" << summary << ":" << job->errorString();
         return {};
@@ -226,7 +226,7 @@ void CollectionCalendarTest::initTestCase()
     // We need two agents to test that the calendar properly ignores events in other collections
     // However we can't just add it to unittestenv, as having multiple resources breaks other
     // more complex tests that expect exactly one calendar agent.
-    auto *agentJob = new Akonadi::AgentInstanceCreateJob(QStringLiteral("akonadi_ical_resource"));
+    auto agentJob = new Akonadi::AgentInstanceCreateJob(QStringLiteral("akonadi_ical_resource"));
     QVERIFY(agentJob->exec());
     configureResource(agentJob->instance(), otherResourceConfig.fileName());
 
@@ -341,7 +341,7 @@ void CollectionCalendarTest::testItemChanged()
         Akonadi::Item newItem = *item;
         newItem.setPayload(copy);
 
-        auto *modifyJob = new Akonadi::ItemModifyJob(newItem);
+        auto modifyJob = new Akonadi::ItemModifyJob(newItem);
         QVERIFY(modifyJob->exec());
 
         QVERIFY(observer.incidenceChangedSpy.wait());
@@ -378,7 +378,7 @@ void CollectionCalendarTest::testUnrelatedItemIsNotSeen()
 
         // Now we modify the incidence in the other collection
         item->payload<KCalendarCore::Event::Ptr>()->setSummary(QStringLiteral("Invisible and Changed"));
-        auto *modifyJob = new Akonadi::ItemModifyJob(*item);
+        auto modifyJob = new Akonadi::ItemModifyJob(*item);
         QVERIFY(modifyJob->exec());
         // Wait for the change to appear in the ETM
         QVERIFY(etmChangedSpy.wait());
