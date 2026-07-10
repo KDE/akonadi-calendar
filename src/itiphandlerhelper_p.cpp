@@ -15,7 +15,6 @@ using namespace Qt::Literals::StringLiterals;
 #include "utils_p.h"
 
 #include "akonadicalendar_debug.h"
-#include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Calendar>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -35,8 +34,8 @@ static QString proposalComment(const KCalendarCore::Incidence::Ptr &incidence)
     case KCalendarCore::IncidenceBase::TypeEvent: {
         const QDateTime dtEnd = incidence->dateTime(KCalendarCore::Incidence::RoleDisplayEnd);
         comment = i18n("Proposed new meeting time: %1 - %2",
-                       KCalUtils::IncidenceFormatter::dateToString(incidence->dtStart().toLocalTime().date()),
-                       KCalUtils::IncidenceFormatter::dateToString(dtEnd.toLocalTime().date()));
+                       QLocale().toString(incidence->dtStart().toLocalTime().date(), QLocale::ShortFormat),
+                       QLocale().toString(dtEnd.toLocalTime().date(), QLocale::ShortFormat));
         break;
     }
     case KCalendarCore::IncidenceBase::TypeTodo:
