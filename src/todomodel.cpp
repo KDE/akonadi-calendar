@@ -553,10 +553,8 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, [[may
     }
 
     if (d->m_changer && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
-        // DndFactory only needs a valid calendar for drag event, not for drop event.
-        KCalUtils::DndFactory dndFactory(KCalendarCore::Calendar::Ptr{});
-        KCalendarCore::Todo::Ptr const t = dndFactory.createDropTodo(data);
-        KCalendarCore::Event::Ptr const e = dndFactory.createDropEvent(data);
+        KCalendarCore::Todo::Ptr const t = KCalUtils::DndFactory::createDropTodo(data);
+        KCalendarCore::Event::Ptr const e = KCalUtils::DndFactory::createDropEvent(data);
 
         if (t) {
             // we don't want to change the created todo, but the one which is already

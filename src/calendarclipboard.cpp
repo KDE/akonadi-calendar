@@ -29,17 +29,12 @@ CalendarClipboardPrivate::CalendarClipboardPrivate(const Akonadi::CalendarBase::
         m_changer->setGroupwareCommunication(false);
     }
 
-    m_dndfactory = new KCalUtils::DndFactory(m_calendar);
-
     connect(m_changer, &IncidenceChanger::modifyFinished, this, &CalendarClipboardPrivate::slotModifyFinished);
 
     connect(m_changer, &IncidenceChanger::deleteFinished, this, &CalendarClipboardPrivate::slotDeleteFinished);
 }
 
-CalendarClipboardPrivate::~CalendarClipboardPrivate()
-{
-    delete m_dndfactory;
-}
+CalendarClipboardPrivate::~CalendarClipboardPrivate() = default;
 
 void CalendarClipboardPrivate::getIncidenceHierarchy(const KCalendarCore::Incidence::Ptr &incidence, QStringList &uids)
 {
@@ -56,7 +51,7 @@ void CalendarClipboardPrivate::getIncidenceHierarchy(const KCalendarCore::Incide
 
 void CalendarClipboardPrivate::cut(const KCalendarCore::Incidence::List &incidences)
 {
-    const bool copyResult = m_dndfactory->copyIncidences(incidences);
+    const bool copyResult = KCalUtils::DndFactory::copyIncidences(incidences);
     m_pendingChangeIds.clear();
     // Note: Don't use DndFactory::cutIncidences(), it doesn't use IncidenceChanger for deletion
     // we would loose async error handling and redo/undo features
@@ -242,7 +237,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
         }
     }
 
-    return d->m_dndfactory->copyIncidences(incidencesToCopy);
+    return KCalUtils::DndFactory::copyIncidences(incidencesToCopy);
 }
 
 bool CalendarClipboard::pasteAvailable() const
