@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-13 00:44+0000\n"
+"POT-Creation-Date: 2026-07-18 00:45+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -26,32 +26,32 @@ msgstr ""
 "Begeefnis, dat Du opfrischen wullt, lett sik nich finnen, dat hett een wull "
 "annerlest wegdaan."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:62
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Fehler bi't Wegdoon."
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing copy."
 msgstr "Fehler bi't Koperen."
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:91
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Indrag lett sik nich finnen: %1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Fehler bi't Wegmaken vun Betöög."
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:153
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Fehler bi't Wegdoon vun Begeefnissen: %1"
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:170
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -61,28 +61,28 @@ msgstr ""
 "all Ünneropgaven in normale Opgaven ümwanneln oder ok de Ünneropgaven "
 "knippen?"
 
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Beglöven - KOrganizer"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:176
 #, fuzzy, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Bloots dissen knippen"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:177
 #, fuzzy, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "All knippen"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:210
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -91,14 +91,14 @@ msgstr ""
 "De Indrag \"%1\" hett Ünneropgaven. Wullt bloots dissen Indrag koperen oder "
 "ok de Ünneropgaven?"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:215
 #, fuzzy, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Bloots dissen koperen"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:216
 #, fuzzy, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"

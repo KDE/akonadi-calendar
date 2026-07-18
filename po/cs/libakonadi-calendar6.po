@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-13 00:44+0000\n"
+"POT-Creation-Date: 2026-07-18 00:45+0000\n"
 "PO-Revision-Date: 2026-05-21 23:48+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -26,32 +26,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Nelze najít položku k aktualizaci, pravděpodobně byla nedávno smazána."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:62
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Chyba během mazání."
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing copy."
 msgstr "Chyba během kopírování."
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:91
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Nelze najít položku: %1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Chyba při odstraňování vztahů."
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:153
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Chyba při mazání položek: %1"
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:170
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -60,25 +60,25 @@ msgstr ""
 "Položka \"%1\" má podúkoly. Chcete odebrat pouze tuto položku a všechny její "
 "podúkoly ponechat samostatné, nebo odebrat úkol i se všemi podúkoly?"
 
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer - potvrzení"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Vyjmout pouze toto"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Vyjmout vše"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:210
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -87,13 +87,13 @@ msgstr ""
 "Položka \"%1\" má podúkoly. Chcete zkopírovat pouze tuto položku, nebo "
 "zkopírovat úkol se všemi jeho podúkoly?"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:215
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopírovat pouze toto"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"

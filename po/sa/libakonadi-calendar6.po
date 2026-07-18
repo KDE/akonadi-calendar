@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-13 00:44+0000\n"
+"POT-Creation-Date: 2026-07-18 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -24,32 +24,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "अद्यतनं कर्तुं घटनां न प्राप्नोत्, सम्भवतः अद्यैव विलोपितम्।"
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:62
 #, kde-format
 msgid "Error performing deletion."
 msgstr "लोपं कुर्वन् त्रुटिः।"
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing copy."
 msgstr "प्रतिलिपिं कर्तुं त्रुटिः।"
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:91
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "मदं न लभ्यते: %1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
 #, kde-format
 msgid "Error while removing relations."
 msgstr "सम्बन्धान् दूरीकर्तुं त्रुटिः।"
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:153
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "घटनाः विलोपयन्ते सति त्रुटिः: %1"
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:170
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -59,25 +59,25 @@ msgstr ""
 "उप-कार्य-कार्यं स्वतन्त्राणि कर्तुम् इच्छन्ति, अथवा कर्तव्यं सर्वैः उप-कार्यैः सह कटयितुम् "
 "इच्छन्ति?"
 
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer पुष्टिकरण"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "केवलं एतत् कटयतु"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "सर्वान् कटयतु"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:210
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -86,13 +86,13 @@ msgstr ""
 "\"%1\" इत्यस्य द्रव्यस्य उप-कार्यं भवति । किं भवान् केवलं एतत् द्रव्यं प्रतिलिखितुं इच्छति अथवा "
 "तस्य सर्वैः उप-कार्यैः सह कर्तव्यस्य प्रतिलिपिं कर्तुम् इच्छति?"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:215
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "केवलं एतत् प्रतिलिपि कुर्वन्तु"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"

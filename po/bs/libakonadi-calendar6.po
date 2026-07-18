@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-13 00:44+0000\n"
+"POT-Creation-Date: 2026-07-18 00:45+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -26,32 +26,32 @@ msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
 "Ne mogu pronaći učestalost za ažuriranje, vjerojatno je nedavno obrisan."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:62
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Greška pri obavljanju brisanja"
 
-#: calendarclipboard.cpp:72
+#: calendarclipboard.cpp:67
 #, kde-format
 msgid "Error performing copy."
 msgstr "Greška pri obavljanju kopiranja"
 
-#: calendarclipboard.cpp:96
+#: calendarclipboard.cpp:91
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Ne mogu naći element: %1"
 
-#: calendarclipboard.cpp:112 calendarclipboard.cpp:129
+#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Greška pri uklanjanju relacija"
 
-#: calendarclipboard.cpp:158
+#: calendarclipboard.cpp:153
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Greška pri brisanju incidenta %1"
 
-#: calendarclipboard.cpp:175
+#: calendarclipboard.cpp:170
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -60,28 +60,28 @@ msgstr ""
 "Stavka \"%1\" ima podzadatke. Želite li isjeći samo ovu stavku i napraviti "
 "njene podzadatke nezavisnim ili isjeći zadatak sa podzadacima?"
 
-#: calendarclipboard.cpp:180 calendarclipboard.cpp:219
+#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Potvrda u KOrganizer"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:176
 #, fuzzy, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Isijeci samo ovo"
 
-#: calendarclipboard.cpp:182
+#: calendarclipboard.cpp:177
 #, fuzzy, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Isijeci sve"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:210
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -90,14 +90,14 @@ msgstr ""
 "Stavka \"%1\" ima podzadatke. Želite li kopirati samo ovu stavku ili "
 "kopirati zadatak sa podzadacima?"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:215
 #, fuzzy, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopiraj samo ovo"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:216
 #, fuzzy, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"
