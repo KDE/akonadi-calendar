@@ -6,7 +6,11 @@
 
 #include "calendarclipboard_p.h"
 #include <KCalUtils/DndFactory>
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
 #include <KCalUtils/ICalDrag>
+#else
+#include <KCalendarCore/MimeData>
+#endif
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -242,7 +246,11 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
 
 bool CalendarClipboard::pasteAvailable() const
 {
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
     return KCalUtils::ICalDrag::canDecode(QApplication::clipboard()->mimeData());
+#else
+    return KCalendarCore::MimeData::canDecode(QGuiApplication::clipboard()->mimeData());
+#endif
 }
 
 #include "moc_calendarclipboard.cpp"

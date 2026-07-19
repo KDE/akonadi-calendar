@@ -17,7 +17,11 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/Collection>
 #include <Akonadi/EntityTreeModel>
 
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
 #include <KCalUtils/ICalDrag>
+#else
+#include <KCalendarCore/MimeData>
+#endif
 
 #include <KLocalizedString>
 
@@ -227,28 +231,31 @@ QMimeData *CalendarUtils::createMimeData(const Akonadi::Item::List &items)
     KCalendarCore::MemoryCalendar::Ptr const cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     QList<QUrl> urls;
-    int incidencesFound = 0;
     for (const Akonadi::Item &item : items) {
         const KCalendarCore::Incidence::Ptr incidence(CalendarUtils::incidence(item));
         if (!incidence) {
             continue;
         }
-        ++incidencesFound;
         urls.push_back(item.url());
         KCalendarCore::Incidence::Ptr const i(incidence->clone());
         cal->addIncidence(i);
     }
 
-    if (incidencesFound == 0) {
+    if (urls.isEmpty()) {
         return nullptr;
     }
 
     auto mimeData = std::make_unique<QMimeData>();
     mimeData->setUrls(urls);
 
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
     if (KCalUtils::ICalDrag::populateMimeData(mimeData.get(), cal)) {
         return mimeData.release();
     } else {
         return nullptr;
     }
+#else
+    KCalendarCore::MimeData::populate(mimeData.get(), cal);
+    return KCalendarCore::MimeData::canDecode(mimeData.get()) ? mimeData.release() : nullptr;
+#endif
 }
