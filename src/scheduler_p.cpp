@@ -10,8 +10,6 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "calendarbase_p.h"
 
-#include <KCalUtils/Stringify>
-
 #include <KCalendarCore/FreeBusyCache>
 #include <KCalendarCore/ICalFormat>
 
@@ -117,7 +115,7 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &incidence,
     QString errorString;
     Result result = ResultSuccess;
 
-    qCDebug(AKONADICALENDAR_LOG) << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status);
+    qCDebug(AKONADICALENDAR_LOG) << "status=" << status;
 
     Incidence::Ptr const newInc = incidence.staticCast<Incidence>();
     Incidence::Ptr const calInc = calendar->incidence(incidence->uid());
@@ -174,8 +172,8 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
     Result result = ResultSuccess;
 
     const Incidence::List existingIncidences = calendar->incidencesFromSchedulingID(schedulingUid);
-    qCDebug(AKONADICALENDAR_LOG) << "status=" << KCalUtils::Stringify::scheduleMessageStatus(status) << ": found " << existingIncidences.count()
-                                 << " incidences with schedulingID " << incidence->schedulingID() << "; uid was = " << schedulingUid;
+    qCDebug(AKONADICALENDAR_LOG) << "status=" << status << ": found " << existingIncidences.count() << " incidences with schedulingID "
+                                 << incidence->schedulingID() << "; uid was = " << schedulingUid;
 
     if (existingIncidences.isEmpty()) {
         // Perfectly normal if the incidence doesn't exist. This is probably
@@ -334,8 +332,8 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
     }
 
     const Incidence::List existingIncidences = calendar->incidencesFromSchedulingID(incidence->uid());
-    qCDebug(AKONADICALENDAR_LOG) << "Scheduler::acceptCancel=" << KCalUtils::Stringify::scheduleMessageStatus(status) << ": found "
-                                 << existingIncidences.count() << " incidences with schedulingID " << incidence->schedulingID();
+    qCDebug(AKONADICALENDAR_LOG) << "Scheduler::acceptCancel=" << status << ": found " << existingIncidences.count() << " incidences with schedulingID "
+                                 << incidence->schedulingID();
 
     Result result = ResultIncidenceToDeleteNotFound;
     const QString errorString = i18n("Could not find incidence to delete.");
