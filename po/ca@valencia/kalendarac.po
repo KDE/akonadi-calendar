@@ -135,7 +135,7 @@ msgstr "Servei de recordatoris de calendari"
 #: kalendaracmain.cpp:32
 #, kde-format
 msgid "(c) KDE Community 2021-2024"
-msgstr "(c) Comunitat KDE 2021-2024"
+msgstr "(c) La comunitat KDE 2021-2024"
 
 #: kalendaracmain.cpp:33
 #, kde-format
