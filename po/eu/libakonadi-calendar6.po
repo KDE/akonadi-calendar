@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:45+0000\n"
+"POT-Creation-Date: 2026-07-22 00:45+0000\n"
 "PO-Revision-Date: 2025-12-07 12:05+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1374,23 +1374,23 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "hartzailearen e-posta (beharrezkoa)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:242
+#: scheduler_p.cpp:132 scheduler_p.cpp:240
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Errorea: Gertakizun mota ezberdinak esleitzea."
 
-#: scheduler_p.cpp:224 scheduler_p.cpp:275
+#: scheduler_p.cpp:222 scheduler_p.cpp:273
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Hau ez da eguneratze bat. Aurkitutako gertakizuna berrikiago aldatu da."
 
-#: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
+#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Errorea gertakizuna aldatzean"
 
-#: scheduler_p.cpp:291
+#: scheduler_p.cpp:289
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1412,28 +1412,28 @@ msgstr ""
 "para><para>Hau ez da arazoa, baina zuk jakin beharrekoa dela uste dugu.</"
 "para>"
 
-#: scheduler_p.cpp:300
+#: scheduler_p.cpp:298
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Ezin da aurkitu eguneratu beharreko gonbidapena"
 
-#: scheduler_p.cpp:307
+#: scheduler_p.cpp:305
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Errorea gertakizuna gehitzean"
 
-#: scheduler_p.cpp:341
+#: scheduler_p.cpp:339
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Ezin izan da ezabatu beharreko gertakizuna aurkitu."
 
-#: scheduler_p.cpp:394
+#: scheduler_p.cpp:392
 #, kde-format
 msgid "Error recording exception"
 msgstr "Errorea salbuespena erregistratzean"
 
-#: scheduler_p.cpp:411
+#: scheduler_p.cpp:409
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1445,49 +1445,49 @@ msgstr ""
 "dagoeneko ezabatu da edo zu ez zara haren jabea. Edo irakurtzeko soilik den "
 "edo desgaituta dagoen egutegi batekoa izan daiteke."
 
-#: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
-#: scheduler_p.cpp:577
+#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
+#: scheduler_p.cpp:575
 #, kde-format
 msgid "Generic Error"
 msgstr "Errore generikoa"
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1(e)k %2(e)ra joan nahi du baina ez dute gonbidatu."
 
-#: scheduler_p.cpp:481
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1(e)k %2(e)ra joan nahi du %3(e)ren izenean."
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Gonbidatu gabeko partaidea"
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Onartu parte hartzea"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Errefusatu parte hartzea"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Antolatzaileak zuk parte hartzea errefusatu du."
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:509
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1497,35 +1497,35 @@ msgstr ""
 "Gertakizunari partaide bat gehitu zaio. Partaideei mezu eguneratua duen e-"
 "posta bidali nahi diezu?"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Partaidea gehitu da"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Bidali mezuak"
 
-#: scheduler_p.cpp:515
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Ez bidali"
 
-#: scheduler_p.cpp:561
+#: scheduler_p.cpp:559
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Ez dago programatu beharreko gertakizunik."
 
-#: scheduler_p.cpp:584
+#: scheduler_p.cpp:582
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Ez dago Libre/Lanpetua cacherik"
 
-#: scheduler_p.cpp:603
+#: scheduler_p.cpp:601
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Errorea Libre/Lanpetuta objektua gordetzean"

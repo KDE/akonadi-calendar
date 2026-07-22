@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:45+0000\n"
+"POT-Creation-Date: 2026-07-22 00:45+0000\n"
 "PO-Revision-Date: 2025-11-23 14:34+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1381,24 +1381,24 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "електронна пошта отримувача (обов'язкова)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:242
+#: scheduler_p.cpp:132 scheduler_p.cpp:240
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Помилка: призначено різні типи подій."
 
-#: scheduler_p.cpp:224 scheduler_p.cpp:275
+#: scheduler_p.cpp:222 scheduler_p.cpp:273
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Це не оновлення. У виявлений запис події було внесено зміни, які є свіжішими "
 "за ці."
 
-#: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
+#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Помилка під час спроби змінити запис події"
 
-#: scheduler_p.cpp:291
+#: scheduler_p.cpp:289
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1421,28 +1421,28 @@ msgstr ""
 "додаткових проблем у зв’язку з прийняттям оновлення запрошення виникнути не "
 "повинно, це повідомлення призначено лише для інформування.</para>"
 
-#: scheduler_p.cpp:300
+#: scheduler_p.cpp:298
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Не вдалося знайти запрошення, яке слід оновити"
 
-#: scheduler_p.cpp:307
+#: scheduler_p.cpp:305
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Помилка під час спроби додати запис події"
 
-#: scheduler_p.cpp:341
+#: scheduler_p.cpp:339
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Не вдалося знайти запис події для вилучення."
 
-#: scheduler_p.cpp:394
+#: scheduler_p.cpp:392
 #, kde-format
 msgid "Error recording exception"
 msgstr "Помилка під час спроби записати виняток"
 
-#: scheduler_p.cpp:411
+#: scheduler_p.cpp:409
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1455,49 +1455,49 @@ msgstr ""
 "того, цей запис може зберігатися у календарі, призначеному лише для читання "
 "або вимкненому календарі."
 
-#: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
-#: scheduler_p.cpp:577
+#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
+#: scheduler_p.cpp:575
 #, kde-format
 msgid "Generic Error"
 msgstr "Загальна помилка"
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 хоче брати участь в %2, але його не запрошено."
 
-#: scheduler_p.cpp:481
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 хоче брати участь в %2, від імені %3."
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Незапрошений учасник"
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Дозволити участь"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Відмовити в участі"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Організатор відмовив вам в участі в цій зустрічі."
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:509
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1507,35 +1507,35 @@ msgstr ""
 "До запису події було додано учасника. Бажаєте надіслати всім іншим учасникам "
 "повідомлення щодо оновлення запису?"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Додано учасника"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Надіслати повідомлення"
 
-#: scheduler_p.cpp:515
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Не надсилати"
 
-#: scheduler_p.cpp:561
+#: scheduler_p.cpp:559
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Немає подій для планування."
 
-#: scheduler_p.cpp:584
+#: scheduler_p.cpp:582
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Немає кешу даних щодо вільного/зайнятого часу"
 
-#: scheduler_p.cpp:603
+#: scheduler_p.cpp:601
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Помилка під час спроби збереження запису щодо вільного/зайнятого часу"

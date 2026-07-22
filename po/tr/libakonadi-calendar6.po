@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Serdar Soytetir <tulliana@gmail.com>, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:45+0000\n"
-"PO-Revision-Date: 2026-05-02 18:52+0300\n"
+"POT-Creation-Date: 2026-07-22 00:45+0000\n"
+"PO-Revision-Date: 2026-07-21 21:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -155,43 +155,43 @@ msgstr "Takvim"
 #: calendarsettings.kcfg:16
 #, kde-format
 msgid "Free/Busy Publish URL"
-msgstr "Uygun/Meşgul yayınlama URL’si"
+msgstr "Uygun/Meşgûl yayınlama URL’si"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUrl), group (FreeBusy Publish)
 #: calendarsettings.kcfg:17
 #, kde-format
 msgid "URL for publishing free/busy information"
-msgstr "Uygun/Meşgul bilgisini yayınlama URL’si"
+msgstr "Uygun/Meşgûl bilgisini yayınlama URL’si"
 
 #. i18n: ectx: label, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:20
 #, kde-format
 msgid "Free/Busy Publish Username"
-msgstr "Uygun/Meşgul yayınlama kullanıcı adı"
+msgstr "Uygun/Meşgûl yayınlama kullanıcı adı"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishUser), group (FreeBusy Publish)
 #: calendarsettings.kcfg:21
 #, kde-format
 msgid "Username for publishing free/busy information"
-msgstr "Uygun/Meşgul bilgisini yayımlamak için kullanıcı adı"
+msgstr "Uygun/Meşgûl bilgisini yayımlamak için kullanıcı adı"
 
 #. i18n: ectx: label, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:24
 #, kde-format
 msgid "Free/Busy Publish Password"
-msgstr "Uygun/Meşgul yayınlama parolası"
+msgstr "Uygun/Meşgûl yayınlama parolası"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyPublishPassword), group (FreeBusy Publish)
 #: calendarsettings.kcfg:25
 #, kde-format
 msgid "Password for publishing free/busy information"
-msgstr "Uygun/Meşgul bilgisini yayınlamak için parola"
+msgstr "Uygun/Meşgûl bilgisini yayınlamak için parola"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveAuto), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr "Kendiliğinden Uygun/Meşgul almayı etkinleştir"
+msgstr "Kendiliğinden Uygun/Meşgûl almayı etkinleştir"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:38
@@ -209,7 +209,7 @@ msgid ""
 "download user.ifb, for example nn.ifb."
 msgstr ""
 "Bu ayarla, sunucudan getirelecek dosyanın adını değiştirebilirsiniz. Bu "
-"denetimle, user@domain.ifb adlı bir uygun/meşgul dosyası indirecektir; "
+"denetimle, user@domain.ifb adlı bir uygun/meşgûl dosyası indirecektir; "
 "örneğin, nn@kde.org.ifb. Bu ayarlanmadığında user.ifb indirilecektir; "
 "örneğin, nn.ifb."
 
@@ -217,25 +217,25 @@ msgstr ""
 #: calendarsettings.kcfg:43
 #, kde-format
 msgid "Free/Busy Retrieval URL"
-msgstr "Uygun/Meşgul alma URL’si"
+msgstr "Uygun/Meşgûl alma URL’si"
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUser), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:46
 #, kde-format
 msgid "Free/Busy Retrieval Username"
-msgstr "Uygun/Meşgul kullanıcı adı getirme"
+msgstr "Uygun/Meşgûl kullanıcı adı getirme"
 
 #. i18n: ectx: label, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:49
 #, kde-format
 msgid "Free/Busy Retrieval Password"
-msgstr "Uygun/Meşgul alma parolası"
+msgstr "Uygun/Meşgûl alma parolası"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyRetrievePassword), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:50
 #, kde-format
 msgid "Password for retrieving free/busy information"
-msgstr "Uygun/meşgul bilgisine ulaşmak için parola"
+msgstr "Uygun/meşgûl bilgisine ulaşmak için parola"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: calendarsettings.kcfg:59
@@ -306,9 +306,9 @@ msgid ""
 "example, if this option is set, then looking for the free/busy data of "
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
-"Bu ayarla uygun/meşgul URL’sindeki alan bölümüyle aradığınız kullanıcı "
+"Bu ayarla uygun/meşgûl URL’sindeki alan bölümüyle aradığınız kullanıcı "
 "kimliğinin alan bölümünün eşleşmesini yapılandırabilirsiniz. Örneğin, eğer "
-"bu seçenek seçilmişse ve joe@mydomain.com adresinin uygun/meşgul verisini "
+"bu seçenek seçilmişse ve joe@mydomain.com adresinin uygun/meşgûl verisini "
 "arıyorsanız www.yourdomain.com adresi başarısız olacaktır."
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
@@ -402,14 +402,14 @@ msgstr "Bilinmeyen"
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Şu konumdan Uygun/Meşgul bilgisi indirilemedi: <link>%1</link>.<nl/>Gerekçe: "
+"Şu konumdan Uygun/Meşgûl bilgisi indirilemedi: <link>%1</link>.<nl/>Gerekçe: "
 "%2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
-msgstr "Uygun/Meşgul Edinme Hatası"
+msgstr "Uygun/Meşgûl Edinme Hatası"
 
 #: freebusymanager.cpp:403
 #, kde-format
@@ -417,7 +417,7 @@ msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "Şuradan alınan Uygun/Meşgul bilgisi ayrıştırılamadı: <link>%1</link>"
+msgstr "Şuradan alınan Uygun/Meşgûl bilgisi ayrıştırılamadı: <link>%1</link>"
 
 #: freebusymanager.cpp:419
 #, kde-format
@@ -428,7 +428,7 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"Yazılım, Uygun/Meşgul bilginizi <link>%1</link> URL’sine yükleyemedi. Erişim "
+"Yazılım, Uygun/Meşgûl bilginizi <link>%1</link> URL’sine yükleyemedi. Erişim "
 "haklarında bir sıkıntı olabilir veya geçersiz bir URL belirtmiş "
 "olabilirsiniz. Sistemden alınan veri: <nl/><emphasis>%2</emphasis>.<nl/"
 ">Lütfen URL’yi denetleyin veya sistem yöneticinize başvurun."
@@ -437,19 +437,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
-msgstr "Uygun/Meşgul bilgisi başarıyla gönderildi."
+msgstr "Uygun/Meşgûl bilgisi başarıyla gönderildi."
 
 #: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
-msgstr "Uygun/Meşgul Gönderiliyor"
+msgstr "Uygun/Meşgûl Gönderiliyor"
 
 #: freebusymanager.cpp:623
 #, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Uygun/Meşgul verisi yayımlanamadı: %1"
+msgstr "Uygun/Meşgûl verisi yayımlanamadı: %1"
 
 #: freebusymanager.cpp:747
 #, kde-format
@@ -459,8 +459,8 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
-"Uygun/Meşgul listenizi yüklemek için yapılandırılmış bir URL yok. Lütfen "
-"bunu, K Organizatör’ün yapılandırma iletişim kutusunun “Uygun/Meşgul” "
+"Uygun/Meşgûl listenizi yüklemek için yapılandırılmış bir URL yok. Lütfen "
+"bunu, K Organizatör’ün yapılandırma iletişim kutusunun “Uygun/Meşgûl” "
 "sayfasından ayarlayın.<nl/>URL ve hesap ayrıntıları için sistem yöneticinize "
 "başvurun."
 
@@ -468,7 +468,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
-msgstr "Uygun/Meşgul Karşıya Yükleme URL’si Yok"
+msgstr "Uygun/Meşgûl Karşıya Yükleme URL’si Yok"
 
 #: freebusymanager.cpp:762
 #, kde-format
@@ -910,12 +910,12 @@ msgstr "Bu e-postayı alacak katılımcı yok"
 #: mailclient_p.cpp:427
 #, kde-format
 msgid "Free Busy Object"
-msgstr "Uygun/Meşgul Nesnesi"
+msgstr "Uygun/Meşgûl Nesnesi"
 
 #: mailclient_p.cpp:461 mailclient_p.cpp:492
 #, kde-format
 msgid "Free Busy Message"
-msgstr "Uygun/Meşgul İletisi"
+msgstr "Uygun/Meşgûl İletisi"
 
 #: mailclient_p.cpp:629
 #, kde-format
@@ -1369,22 +1369,22 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "alıcı e-postası (zorunlu)"
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:242
+#: scheduler_p.cpp:132 scheduler_p.cpp:240
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Hata: Farklı toplantı türlerine atama yapılıyor."
 
-#: scheduler_p.cpp:224 scheduler_p.cpp:275
+#: scheduler_p.cpp:222 scheduler_p.cpp:273
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "Bu bir güncelleme değil. Bulunan toplantı yakında düzenlenmiş."
 
-#: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
+#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Toplantı değişikliği yapma hatası"
 
-#: scheduler_p.cpp:291
+#: scheduler_p.cpp:289
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1405,28 +1405,28 @@ msgstr ""
 "takvime artık erişiminiz olmayabilir</item></list></para><para>Bu bir sorun "
 "değil ama bilmek isteyeceğinizi düşündük.</para>"
 
-#: scheduler_p.cpp:300
+#: scheduler_p.cpp:298
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Güncellenecek Davet Bulunamıyor"
 
-#: scheduler_p.cpp:307
+#: scheduler_p.cpp:305
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Toplantı ekleme hatası"
 
-#: scheduler_p.cpp:341
+#: scheduler_p.cpp:339
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Silinecek toplantı bulunamadı."
 
-#: scheduler_p.cpp:394
+#: scheduler_p.cpp:392
 #, kde-format
 msgid "Error recording exception"
 msgstr "Hata kaydı istisnası"
 
-#: scheduler_p.cpp:411
+#: scheduler_p.cpp:409
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1438,49 +1438,49 @@ msgstr ""
 "sizin tarafından sahiplenilmemiş durumda. Saltokunur veya etkin olmayan bir "
 "takvime de ait olabilir."
 
-#: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
-#: scheduler_p.cpp:577
+#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
+#: scheduler_p.cpp:575
 #, kde-format
 msgid "Generic Error"
 msgstr "Genel Hata"
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 %2 kişisine eşlik etmek istiyor ancak davet edilmemiş"
 
-#: scheduler_p.cpp:481
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1, %3 adına %2 etkinliğine katılmak istiyor"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Davetsiz Katılımcı"
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Katılımı Kabul Et"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Katılımı Reddet"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Organizatör, toplantıya katılma isteğinizi reddetti."
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:509
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1490,38 +1490,38 @@ msgstr ""
 "Toplantıya bir katılımcı eklendi. Diğer katılımcılara bir güncelleme iletisi "
 "göndermek ister misiniz?"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Katılımcı Eklendi"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "İletileri Gönder"
 
-#: scheduler_p.cpp:515
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Gönderme"
 
-#: scheduler_p.cpp:561
+#: scheduler_p.cpp:559
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Zamanlama için bir toplantı yok."
 
-#: scheduler_p.cpp:584
+#: scheduler_p.cpp:582
 #, kde-format
 msgid "No Free Busy Cache"
-msgstr "Uygun/Meşgul Önbelleği Yok"
+msgstr "Uygun/Meşgûl Önbelleği Yok"
 
-#: scheduler_p.cpp:603
+#: scheduler_p.cpp:601
 #, kde-format
 msgid "Error saving freebusy object"
-msgstr "Uygun/Meşgul nesnesini kaydederken hata"
+msgstr "Uygun/Meşgûl nesnesini kaydederken hata"
 
 #: searchcollectionhelper.cpp:179
 #, kde-format

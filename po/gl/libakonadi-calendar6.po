@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:45+0000\n"
+"POT-Creation-Date: 2026-07-22 00:45+0000\n"
 "PO-Revision-Date: 2024-09-22 00:20+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1417,24 +1417,24 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "O enderezo de correo do destinatario."
 
-#: scheduler_p.cpp:134 scheduler_p.cpp:242
+#: scheduler_p.cpp:132 scheduler_p.cpp:240
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Erro: estanse a asignar distintos tipos de incidencia."
 
-#: scheduler_p.cpp:224 scheduler_p.cpp:275
+#: scheduler_p.cpp:222 scheduler_p.cpp:273
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Esta non é unha actualización. A incidencia que se atopou modificouse máis "
 "recentemente."
 
-#: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
+#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Produciuse un erro ao modificar a incidencia"
 
-#: scheduler_p.cpp:291
+#: scheduler_p.cpp:289
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1456,28 +1456,28 @@ msgstr ""
 "item></list></para><para>Isto non é ningún problema, pero consideramos que "
 "debería sabelo.</para>"
 
-#: scheduler_p.cpp:300
+#: scheduler_p.cpp:298
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Non é posíbel atopar a invitación para actualizar"
 
-#: scheduler_p.cpp:307
+#: scheduler_p.cpp:305
 #, kde-format
 msgid "Error adding incidence"
 msgstr "Produciuse un erro ao engadir a incidencia"
 
-#: scheduler_p.cpp:341
+#: scheduler_p.cpp:339
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Non foi posíbel atopar a incidencia para eliminala."
 
-#: scheduler_p.cpp:394
+#: scheduler_p.cpp:392
 #, kde-format
 msgid "Error recording exception"
 msgstr "Produciuse un erro ao rexistrar a excepción"
 
-#: scheduler_p.cpp:411
+#: scheduler_p.cpp:409
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1489,49 +1489,49 @@ msgstr ""
 "eliminase ou que vostede non sexa o dono. Ou podería pertencer a un "
 "calendario só para ler ou desactivado."
 
-#: scheduler_p.cpp:421 scheduler_p.cpp:436 scheduler_p.cpp:571
-#: scheduler_p.cpp:577
+#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
+#: scheduler_p.cpp:575
 #, kde-format
 msgid "Generic Error"
 msgstr "Erro xenérico"
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 quere asistir a %2 pero non se convidou."
 
-#: scheduler_p.cpp:481
+#: scheduler_p.cpp:479
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 quere asistir a %2 en representación de %3."
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Asistente sen invitación"
 
-#: scheduler_p.cpp:486
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Aceptar a asistencia"
 
-#: scheduler_p.cpp:487
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Rexeitar a asistencia"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Quen organiza rexeitou a súa asistencia a esta reunión."
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:509
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1541,35 +1541,35 @@ msgstr ""
 "Engadiuse un asistente á incidencia. Quere mandar aos asistentes unha "
 "mensaxe de actualización por correo electrónico?"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:511
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Engadiuse un asistente"
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:512
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Enviar mensaxes"
 
-#: scheduler_p.cpp:515
+#: scheduler_p.cpp:513
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Non enviar"
 
-#: scheduler_p.cpp:561
+#: scheduler_p.cpp:559
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Non hai incidencia ningunha para a planificación."
 
-#: scheduler_p.cpp:584
+#: scheduler_p.cpp:582
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Non hai caché de dispoñibilidade"
 
-#: scheduler_p.cpp:603
+#: scheduler_p.cpp:601
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Produciuse un erro ao gardar un obxecto freebusy"
