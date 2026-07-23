@@ -90,4 +90,16 @@ install(
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/AkonadiCalendarCore/akonadi
     COMPONENT Devel
 )
+
+ecm_add_installed_library_check(KPim6AkonadiCalendarCore
+    PACKAGE_NAME "KPim6AkonadiCalendarCore"
+    PACKAGE_VERSION ${AKONADICALENDAR_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6AkonadiCalendarCore
+    HEADERS ${AkonadiCalendarCore_CamelCase_HEADERS}
+    PREFIX Akonadi
+)
+
 ecm_generate_qdoc(KPim6AkonadiCalendarCore akonadi-calendar-core.qdocconf)

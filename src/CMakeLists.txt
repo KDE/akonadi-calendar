@@ -209,4 +209,15 @@ install(
     COMPONENT Devel
 )
 
+ecm_add_installed_library_check(KPim6AkonadiCalendar
+    PACKAGE_NAME "KPim6AkonadiCalendar"
+    PACKAGE_VERSION ${AKONADICALENDAR_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6AkonadiCalendar
+    HEADERS ${AkonadiCalendar_CamelCase_HEADERS}
+    PREFIX Akonadi
+)
+
 ecm_generate_qdoc(KPim6AkonadiCalendar akonadi-calendar.qdocconf)

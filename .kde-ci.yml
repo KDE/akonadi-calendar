@@ -30,3 +30,4 @@ Options:
   cppcheck-ignore-files:
     - autotests
   require-cppcheck-clean: True
+  run-installed-library-check: true
