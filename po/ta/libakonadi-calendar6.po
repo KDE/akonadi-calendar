@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:45+0000\n"
+"POT-Creation-Date: 2026-07-26 00:44+0000\n"
 "PO-Revision-Date: 2025-11-30 14:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -24,32 +24,32 @@ msgstr ""
 "புதுப்பிக்க வேண்டிய நிகழ்வைக் கண்டுபிடிக்க முடியவில்லை. அது சமீபத்தில் நீக்கப்பட்டிருக்கக் "
 "கூடும்."
 
-#: calendarclipboard.cpp:62
+#: calendarclipboard.cpp:66
 #, kde-format
 msgid "Error performing deletion."
 msgstr "நீக்குவதில் சிக்கல்."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:71
 #, kde-format
 msgid "Error performing copy."
 msgstr "நகலெடுப்பதில் சிக்கல்."
 
-#: calendarclipboard.cpp:91
+#: calendarclipboard.cpp:95
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "உருப்பிடியைக் கண்டுபிடிக்க முடியவில்லை: %1"
 
-#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
+#: calendarclipboard.cpp:111 calendarclipboard.cpp:128
 #, kde-format
 msgid "Error while removing relations."
 msgstr "உருப்படிகளுக்கிடையேயான தொடர்புகளை நீக்குவதில் சிக்கல்."
 
-#: calendarclipboard.cpp:153
+#: calendarclipboard.cpp:157
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "நிகழ்வுகளை நீக்குவதில் சிக்கல்: %1"
 
-#: calendarclipboard.cpp:170
+#: calendarclipboard.cpp:174
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -58,25 +58,25 @@ msgstr ""
 "\"%1\" என்பதில் சார்ந்த செய்யவேண்டியவை உள்ளன. இதை மட்டும் வெட்டி சார்ந்தவற்றை சுயசார்பாக்க "
 "வேண்டுமா, அல்லது சார்ந்தவற்றுடன் சேர்த்து இதை வெட்ட வேண்டுமா?"
 
-#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
+#: calendarclipboard.cpp:179 calendarclipboard.cpp:218
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "கேயார்கனைசர் உறுதிப்பாடு"
 
-#: calendarclipboard.cpp:176
+#: calendarclipboard.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "இதை மட்டும் வேட்டு"
 
-#: calendarclipboard.cpp:177
+#: calendarclipboard.cpp:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "அனைத்தையும் வெட்டு"
 
-#: calendarclipboard.cpp:210
+#: calendarclipboard.cpp:214
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -85,13 +85,13 @@ msgstr ""
 "\"%1\" என்பதில் சார்ந்த செய்யவேண்டியவை உள்ளன. இதை மட்டும் நகலெடுக்க வேண்டுமா, அல்லது "
 "சார்ந்தவற்றுடன் சேர்த்து இதை நகலெடுக்க வேண்டுமா?"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "இதை மட்டும் நகலெடு"
 
-#: calendarclipboard.cpp:216
+#: calendarclipboard.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
@@ -297,87 +297,87 @@ msgid ""
 "joe@mydomain.com on the server www.yourdomain.com will fail."
 msgstr ""
 
-#: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:490
+#: calendarutils.cpp:107 calendarutils.cpp:124 calendarutils.cpp:172
+#: todomodel.cpp:494
 #, kde-format
 msgid "Calendar"
 msgstr "நாள்காட்டி"
 
-#: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:124 calendarutils.cpp:174
 #, kde-format
 msgid "Tasks"
 msgstr "பணிகள்"
 
-#: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:124 calendarutils.cpp:176
 #, kde-format
 msgid "Journal"
 msgstr "நாளேடு"
 
-#: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
+#: calendarutils.cpp:122 calendarutils.cpp:124 calendarutils.cpp:178
 #, kde-format
 msgid "Notes"
 msgstr "குறிப்புகள்"
 
-#: calendarutils.cpp:133
+#: calendarutils.cpp:137
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:136
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr ""
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:143
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr ""
 
-#: calendarutils.cpp:141
+#: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr ""
 
-#: calendarutils.cpp:145
+#: calendarutils.cpp:149
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:152
+#: calendarutils.cpp:156
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1, %2-இல்"
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "%1-இன் கூகுள் %2"
 
-#: calendarutils.cpp:187
+#: calendarutils.cpp:191
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%1-இன் %2"
 
-#: calendarutils.cpp:190
+#: calendarutils.cpp:194
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "கூகுள் %1"
 
-#: calendarutils.cpp:198
+#: calendarutils.cpp:202
 #, kde-format
 msgid "My %1"
 msgstr "என் %1"
 
-#: calendarutils.cpp:202
+#: calendarutils.cpp:206
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -1906,73 +1906,73 @@ msgstr "&திருத்து…"
 msgid "Edit the selected incidence."
 msgstr "தேர்ந்தெடுக்கப்பட்டுள்ள நிகழ்வை திருத்த விடும்."
 
-#: todomodel.cpp:157 todomodel.cpp:192
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "விதிவிலக்கு"
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "ஆம்"
 
-#: todomodel.cpp:162 todomodel.cpp:197
+#: todomodel.cpp:166 todomodel.cpp:201
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "இல்லை"
 
-#: todomodel.cpp:176 todomodel.cpp:213
+#: todomodel.cpp:180 todomodel.cpp:217
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:472
+#: todomodel.cpp:476
 #, kde-format
 msgid "Summary"
 msgstr "சுருக்கம்"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:478
 #, kde-format
 msgid "Recurs"
 msgstr "மீளநிகழ்வது"
 
-#: todomodel.cpp:476
+#: todomodel.cpp:480
 #, kde-format
 msgid "Priority"
 msgstr "முக்கியத்துவம்"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:482
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "முடிந்த‍து"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:484
 #, kde-format
 msgid "Start Date"
 msgstr "துவக்க தேதி"
 
-#: todomodel.cpp:482
+#: todomodel.cpp:486
 #, kde-format
 msgid "Due Date"
 msgstr "உரிய தேதி"
 
-#: todomodel.cpp:484
+#: todomodel.cpp:488
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "முடித்தது"
 
-#: todomodel.cpp:486
+#: todomodel.cpp:490
 #, kde-format
 msgid "Tags"
 msgstr "குறிச்சொற்கள்"
 
-#: todomodel.cpp:488
+#: todomodel.cpp:492
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"

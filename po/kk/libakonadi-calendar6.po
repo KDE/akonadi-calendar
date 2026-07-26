@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:45+0000\n"
+"POT-Creation-Date: 2026-07-26 00:44+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,32 +22,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Жаңартылатын оқиға табылмады, бәлкім жуырда өшірілген шығар."
 
-#: calendarclipboard.cpp:62
+#: calendarclipboard.cpp:66
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Өшіруді орнындағанда қате орын алды."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:71
 #, kde-format
 msgid "Error performing copy."
 msgstr "Көшіруді орнындағанда қате орын алды."
 
-#: calendarclipboard.cpp:91
+#: calendarclipboard.cpp:95
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Аталым табылмады: %1"
 
-#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
+#: calendarclipboard.cpp:111 calendarclipboard.cpp:128
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Қатынастарды өшіру кезінде қате пайда болды."
 
-#: calendarclipboard.cpp:153
+#: calendarclipboard.cpp:157
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Өшіру кезде қате орын алды: %1"
 
-#: calendarclipboard.cpp:170
+#: calendarclipboard.cpp:174
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -56,28 +56,28 @@ msgstr ""
 "\"%1\" деген тармақтарға бөлінген. Ішкі істерді бөліп алып тек осыны ғана "
 "өшірмексіз бе, әлде барлық тармақтарымен бірге өшірейік пе?"
 
-#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
+#: calendarclipboard.cpp:179 calendarclipboard.cpp:218
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer құптауы"
 
-#: calendarclipboard.cpp:176
+#: calendarclipboard.cpp:180
 #, fuzzy, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Осыны ғана өшіру"
 
-#: calendarclipboard.cpp:177
+#: calendarclipboard.cpp:181
 #, fuzzy, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Барлығын"
 
-#: calendarclipboard.cpp:210
+#: calendarclipboard.cpp:214
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -86,14 +86,14 @@ msgstr ""
 "\"%1\" деген тармақтарға бөлінген. Ішкі істерді бөліп алып тек осыны ғана "
 "көшірмексіз бе, әлде барлық тармақтарымен бірге көшірейік пе?"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:219
 #, fuzzy, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Осыны ғана көшіру"
 
-#: calendarclipboard.cpp:216
+#: calendarclipboard.cpp:220
 #, fuzzy, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"
@@ -302,91 +302,91 @@ msgstr ""
 "кейінгі) бөлігіне нақты сәйкеістігін көрсетеді. Мәселен, myrqymbay@mydomain."
 "kz дегеннің Бос/істе мәліметін www.yourdomain.kz дегеннен іздеуге келмейді."
 
-#: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:490
+#: calendarutils.cpp:107 calendarutils.cpp:124 calendarutils.cpp:172
+#: todomodel.cpp:494
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
 #| msgid "Calendar"
 msgid "Calendar"
 msgstr "Күнтізбесі"
 
-#: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:124 calendarutils.cpp:174
 #, kde-format
 msgid "Tasks"
 msgstr ""
 
-#: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:124 calendarutils.cpp:176
 #, fuzzy, kde-format
 #| msgid "Cut Journal"
 #| msgid_plural "Cut %1 Journals"
 msgid "Journal"
 msgstr "%1 күнделік жазуды қиып алу"
 
-#: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
+#: calendarutils.cpp:122 calendarutils.cpp:124 calendarutils.cpp:178
 #, kde-format
 msgid "Notes"
 msgstr ""
 
-#: calendarutils.cpp:133
+#: calendarutils.cpp:137
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:136
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr ""
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:143
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr ""
 
-#: calendarutils.cpp:141
+#: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr ""
 
-#: calendarutils.cpp:145
+#: calendarutils.cpp:149
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr ""
 
-#: calendarutils.cpp:152
+#: calendarutils.cpp:156
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr ""
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr ""
 
-#: calendarutils.cpp:187
+#: calendarutils.cpp:191
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr ""
 
-#: calendarutils.cpp:190
+#: calendarutils.cpp:194
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr ""
 
-#: calendarutils.cpp:198
+#: calendarutils.cpp:202
 #, kde-format
 msgid "My %1"
 msgstr ""
 
-#: calendarutils.cpp:202
+#: calendarutils.cpp:206
 #, fuzzy, kde-format
 #| msgid "Unknown error"
 msgctxt "unknown resource"
@@ -2026,50 +2026,50 @@ msgstr "Өңд&еу..."
 msgid "Edit the selected incidence."
 msgstr "Таңдалғанды өзгерту."
 
-#: todomodel.cpp:157 todomodel.cpp:192
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr ""
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr ""
 
-#: todomodel.cpp:162 todomodel.cpp:197
+#: todomodel.cpp:166 todomodel.cpp:201
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr ""
 
-#: todomodel.cpp:176 todomodel.cpp:213
+#: todomodel.cpp:180 todomodel.cpp:217
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:472
+#: todomodel.cpp:476
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "Қортынды"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:478
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:476
+#: todomodel.cpp:480
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "Маңыздылығы"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2077,21 +2077,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Бітіруі"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:484
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "Бастау күні мен уақыты"
 
-#: todomodel.cpp:482
+#: todomodel.cpp:486
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "Бітіру күні мен уақыты"
 
-#: todomodel.cpp:484
+#: todomodel.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2099,12 +2099,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Бітіруі"
 
-#: todomodel.cpp:486
+#: todomodel.cpp:490
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:488
+#: todomodel.cpp:492
 #, kde-format
 msgid "Description"
 msgstr ""

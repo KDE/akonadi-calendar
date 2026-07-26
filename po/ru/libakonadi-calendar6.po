@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:45+0000\n"
+"POT-Creation-Date: 2026-07-26 00:44+0000\n"
 "PO-Revision-Date: 2026-01-31 13:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,32 +32,32 @@ msgstr ""
 "Не удалось найти мероприятие для изменения, возможно оно было удалено "
 "недавно."
 
-#: calendarclipboard.cpp:62
+#: calendarclipboard.cpp:66
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Ошибка при удалении."
 
-#: calendarclipboard.cpp:67
+#: calendarclipboard.cpp:71
 #, kde-format
 msgid "Error performing copy."
 msgstr "Ошибка при копировании."
 
-#: calendarclipboard.cpp:91
+#: calendarclipboard.cpp:95
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Не удалось найти запись: %1"
 
-#: calendarclipboard.cpp:107 calendarclipboard.cpp:124
+#: calendarclipboard.cpp:111 calendarclipboard.cpp:128
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Ошибка при удалении связей."
 
-#: calendarclipboard.cpp:153
+#: calendarclipboard.cpp:157
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Ошибка при удалении мероприятий: %1"
 
-#: calendarclipboard.cpp:170
+#: calendarclipboard.cpp:174
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -66,25 +66,25 @@ msgstr ""
 "В задаче «%1» есть подзадачи. Вырезать только эту задачу и сделать подзадачи "
 "независимыми или вырезать её вместе со всеми подзадачами?"
 
-#: calendarclipboard.cpp:175 calendarclipboard.cpp:214
+#: calendarclipboard.cpp:179 calendarclipboard.cpp:218
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Подтверждение KOrganizer"
 
-#: calendarclipboard.cpp:176
+#: calendarclipboard.cpp:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Вырезать одну задачу"
 
-#: calendarclipboard.cpp:177
+#: calendarclipboard.cpp:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Вырезать всё"
 
-#: calendarclipboard.cpp:210
+#: calendarclipboard.cpp:214
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -93,13 +93,13 @@ msgstr ""
 "В задаче «%1» есть подзадачи. Скопировать только эту задачу или скопировать "
 "её вместе со всеми подзадачами?"
 
-#: calendarclipboard.cpp:215
+#: calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Копировать одну задачу"
 
-#: calendarclipboard.cpp:216
+#: calendarclipboard.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
@@ -313,87 +313,87 @@ msgstr ""
 "пользователя. Если он установлен, то найти данные о занятости, например "
 "пользователя joe@mydomain.com на сервере www.yourdomain.com не удастся."
 
-#: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:490
+#: calendarutils.cpp:107 calendarutils.cpp:124 calendarutils.cpp:172
+#: todomodel.cpp:494
 #, kde-format
 msgid "Calendar"
 msgstr "Календарь"
 
-#: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
+#: calendarutils.cpp:112 calendarutils.cpp:124 calendarutils.cpp:174
 #, kde-format
 msgid "Tasks"
 msgstr "Задачи"
 
-#: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
+#: calendarutils.cpp:117 calendarutils.cpp:124 calendarutils.cpp:176
 #, kde-format
 msgid "Journal"
 msgstr "Дневник"
 
-#: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
+#: calendarutils.cpp:122 calendarutils.cpp:124 calendarutils.cpp:178
 #, kde-format
 msgid "Notes"
 msgstr "Заметки"
 
-#: calendarutils.cpp:133
+#: calendarutils.cpp:137
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "Моя папка Kolab %1"
 
-#: calendarutils.cpp:136
+#: calendarutils.cpp:140
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "Общая папка Kolab %1 %2"
 
-#: calendarutils.cpp:139
+#: calendarutils.cpp:143
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "Папка Kolab %2 (владелец: %1)"
 
-#: calendarutils.cpp:141
+#: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "Папка Kolab %2 %3 (владелец: %1)"
 
-#: calendarutils.cpp:145
+#: calendarutils.cpp:149
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "Папка Kolab %1"
 
-#: calendarutils.cpp:152
+#: calendarutils.cpp:156
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 в %2"
 
-#: calendarutils.cpp:185
+#: calendarutils.cpp:189
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "Google %2 (владелец: %1)"
 
-#: calendarutils.cpp:187
+#: calendarutils.cpp:191
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%2 (владелец: %1)"
 
-#: calendarutils.cpp:190
+#: calendarutils.cpp:194
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "Google %1"
 
-#: calendarutils.cpp:198
+#: calendarutils.cpp:202
 #, kde-format
 msgid "My %1"
 msgstr "Мой %1"
 
-#: calendarutils.cpp:202
+#: calendarutils.cpp:206
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -2027,73 +2027,73 @@ msgstr "&Изменить…"
 msgid "Edit the selected incidence."
 msgstr "Изменить выбранное событие, задачу или запись дневника."
 
-#: todomodel.cpp:157 todomodel.cpp:192
+#: todomodel.cpp:161 todomodel.cpp:196
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Исключение"
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:163 todomodel.cpp:198
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Да"
 
-#: todomodel.cpp:162 todomodel.cpp:197
+#: todomodel.cpp:166 todomodel.cpp:201
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Нет"
 
-#: todomodel.cpp:176 todomodel.cpp:213
+#: todomodel.cpp:180 todomodel.cpp:217
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:472
+#: todomodel.cpp:476
 #, kde-format
 msgid "Summary"
 msgstr "Сводка"
 
-#: todomodel.cpp:474
+#: todomodel.cpp:478
 #, kde-format
 msgid "Recurs"
 msgstr "Повторяется"
 
-#: todomodel.cpp:476
+#: todomodel.cpp:480
 #, kde-format
 msgid "Priority"
 msgstr "Приоритет"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:482
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Выполнение"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:484
 #, kde-format
 msgid "Start Date"
 msgstr "Дата начала"
 
-#: todomodel.cpp:482
+#: todomodel.cpp:486
 #, kde-format
 msgid "Due Date"
 msgstr "Дата завершения"
 
-#: todomodel.cpp:484
+#: todomodel.cpp:488
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Выполнено"
 
-#: todomodel.cpp:486
+#: todomodel.cpp:490
 #, kde-format
 msgid "Tags"
 msgstr "Метки"
 
-#: todomodel.cpp:488
+#: todomodel.cpp:492
 #, kde-format
 msgid "Description"
 msgstr "Описание"
