@@ -675,6 +675,67 @@ bool IncidenceChangerPrivate::myAttendeeStatusChanged(const Incidence::Ptr &newI
     return !oldMe.isNull() && !newMe.isNull() && oldMe.status() != newMe.status();
 }
 
+int IncidenceChangerPrivate::modifyIncidence(const Akonadi::Item &changedItem,
+                                             IncidenceModificationPolicy modificationPolicy,
+                                             const KCalendarCore::Incidence::Ptr &originalPayload,
+                                             QWidget *parent)
+{
+    if (!changedItem.isValid() || !changedItem.hasPayload<Incidence::Ptr>()) {
+        qCWarning(AKONADICALENDAR_LOG) << "An invalid item or payload is not allowed.";
+        cancelTransaction();
+        return -1;
+    }
+
+    if (!hasRights(changedItem.parentCollection(), IncidenceChanger::ChangeTypeModify)) {
+        qCWarning(AKONADICALENDAR_LOG) << "Item " << changedItem.id() << " can't be deleted due to ACL restrictions";
+        const int changeId = ++mLatestChangeId;
+        const QString errorString = showErrorDialog(IncidenceChanger::ResultCodePermissions, parent);
+        emitModifyFinished(q, changeId, changedItem, IncidenceChanger::ResultCodePermissions, errorString);
+        cancelTransaction();
+        return changeId;
+    }
+
+    // TODO also update revision here instead of in the editor
+    changedItem.payload<Incidence::Ptr>()->setLastModified(QDateTime::currentDateTimeUtc());
+
+    const uint atomicOperationId = mBatchOperationInProgress ? mLatestAtomicOperationId : 0;
+    const int changeId = ++mLatestChangeId;
+    auto modificationChange = new ModificationChange(q, changeId, atomicOperationId, parent);
+    modificationChange->modificationPolicy = modificationPolicy;
+    Change::Ptr const change(modificationChange);
+
+    if (originalPayload) {
+        Item originalItem(changedItem);
+        originalItem.setPayload<KCalendarCore::Incidence::Ptr>(originalPayload);
+        modificationChange->originalItems << originalItem;
+    }
+
+    modificationChange->newItem = changedItem;
+    mChangeById.insert(changeId, change);
+
+    if (!allowAtomicOperation(atomicOperationId, change)) {
+        const QString errorString = showErrorDialog(IncidenceChanger::ResultCodeDuplicateId, parent);
+
+        change->resultCode = IncidenceChanger::ResultCodeDuplicateId;
+        change->errorString = errorString;
+        cancelTransaction();
+        qCWarning(AKONADICALENDAR_LOG) << "Atomic operation now allowed";
+        return changeId;
+    }
+
+    if (mBatchOperationInProgress && mAtomicOperations[atomicOperationId]->rolledback()) {
+        const QString errorMessage = showErrorDialog(IncidenceChanger::ResultCodeRolledback, parent);
+        qCritical() << errorMessage;
+        cleanupTransaction();
+        emitModifyFinished(q, changeId, changedItem, IncidenceChanger::ResultCodeRolledback, errorMessage);
+    } else {
+        adjustRecurrence(originalPayload, CalendarUtils::incidence(modificationChange->newItem));
+        performModification(change);
+    }
+
+    return changeId;
+}
+
 IncidenceChanger::IncidenceChanger(QObject *parent)
     : QObject(parent)
     , d(new IncidenceChangerPrivate(/**history=*/true, /*factory=*/nullptr, this))
@@ -856,59 +917,7 @@ void IncidenceChangerPrivate::deleteIncidences2(int changeId, ITIPHandlerHelper:
 
 int IncidenceChanger::modifyIncidence(const Item &changedItem, const KCalendarCore::Incidence::Ptr &originalPayload, QWidget *parent)
 {
-    if (!changedItem.isValid() || !changedItem.hasPayload<Incidence::Ptr>()) {
-        qCWarning(AKONADICALENDAR_LOG) << "An invalid item or payload is not allowed.";
-        d->cancelTransaction();
-        return -1;
-    }
-
-    if (!d->hasRights(changedItem.parentCollection(), ChangeTypeModify)) {
-        qCWarning(AKONADICALENDAR_LOG) << "Item " << changedItem.id() << " can't be deleted due to ACL restrictions";
-        const int changeId = ++d->mLatestChangeId;
-        const QString errorString = d->showErrorDialog(ResultCodePermissions, parent);
-        emitModifyFinished(this, changeId, changedItem, ResultCodePermissions, errorString);
-        d->cancelTransaction();
-        return changeId;
-    }
-
-    // TODO also update revision here instead of in the editor
-    changedItem.payload<Incidence::Ptr>()->setLastModified(QDateTime::currentDateTimeUtc());
-
-    const uint atomicOperationId = d->mBatchOperationInProgress ? d->mLatestAtomicOperationId : 0;
-    const int changeId = ++d->mLatestChangeId;
-    auto modificationChange = new ModificationChange(this, changeId, atomicOperationId, parent);
-    Change::Ptr const change(modificationChange);
-
-    if (originalPayload) {
-        Item originalItem(changedItem);
-        originalItem.setPayload<KCalendarCore::Incidence::Ptr>(originalPayload);
-        modificationChange->originalItems << originalItem;
-    }
-
-    modificationChange->newItem = changedItem;
-    d->mChangeById.insert(changeId, change);
-
-    if (!d->allowAtomicOperation(atomicOperationId, change)) {
-        const QString errorString = d->showErrorDialog(ResultCodeDuplicateId, parent);
-
-        change->resultCode = ResultCodeDuplicateId;
-        change->errorString = errorString;
-        d->cancelTransaction();
-        qCWarning(AKONADICALENDAR_LOG) << "Atomic operation now allowed";
-        return changeId;
-    }
-
-    if (d->mBatchOperationInProgress && d->mAtomicOperations[atomicOperationId]->rolledback()) {
-        const QString errorMessage = d->showErrorDialog(ResultCodeRolledback, parent);
-        qCritical() << errorMessage;
-        d->cleanupTransaction();
-        emitModifyFinished(this, changeId, changedItem, ResultCodeRolledback, errorMessage);
-    } else {
-        d->adjustRecurrence(originalPayload, CalendarUtils::incidence(modificationChange->newItem));
-        d->performModification(change);
-    }
-
-    return changeId;
+    return d->modifyIncidence(changedItem, IncidenceModificationPolicy::Default, originalPayload, parent);
 }
 
 void IncidenceChangerPrivate::performModification(const Change::Ptr &change)
@@ -980,7 +989,12 @@ void IncidenceChangerPrivate::performModification2(int changeId, ITIPHandlerHelp
 
     Incidence::Ptr const incidence = CalendarUtils::incidence(newItem);
     {
-        if (!allowedModificationsWithoutRevisionUpdate(incidence)) { // increment revision ( KCalendarCore revision, not akonadi )
+        const ModificationChange::Ptr modificationChange = change.staticCast<ModificationChange>();
+        const auto modificationPolicy = modificationChange->modificationPolicy;
+        // SEQUENCE / revision is managed by the organizer, we don't increment it
+        const bool shouldIncrementRevision =
+            modificationPolicy != IncidenceModificationPolicy::Organizer && !allowedModificationsWithoutRevisionUpdate(incidence);
+        if (shouldIncrementRevision) {
             const int revision = incidence->revision();
             incidence->setRevision(revision + 1);
         }

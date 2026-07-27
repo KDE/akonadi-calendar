@@ -258,7 +258,7 @@ void Scheduler::acceptRequest(const IncidenceBase::Ptr &incidenceBase,
                         }
                     }
 
-                    const bool success = calendar->modifyIncidence(incidence);
+                    const bool success = calendar->d_ptr->modifyIncidence(incidence, IncidenceModificationPolicy::Organizer);
 
                     if (!success) {
                         Q_EMIT transactionFinished(ResultModifyingError, i18n("Error modifying incidence"));

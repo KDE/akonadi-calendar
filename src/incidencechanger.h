@@ -474,6 +474,7 @@ Q_SIGNALS:
 private:
     friend class HistoryPrivate;
     friend class AtomicOperation;
+    friend class CalendarBasePrivate;
     // used internally by the History class
     explicit IncidenceChanger(bool enableHistory, QObject *parent = nullptr);
 
