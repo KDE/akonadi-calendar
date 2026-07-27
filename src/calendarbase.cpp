@@ -10,6 +10,8 @@
 #include "calendarbase_p.h"
 #include "calendarutils.h"
 #include "incidencechanger.h"
+#include "incidencechanger_p.h"
+
 #include <Akonadi/CollectionFetchJob>
 
 #include <KLocalizedString>
@@ -352,6 +354,14 @@ void CalendarBasePrivate::handleParentChanged(const KCalendarCore::Incidence::Pt
     }
 }
 
+bool CalendarBasePrivate::modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence, IncidenceModificationPolicy modificationPolicy)
+{
+    Q_ASSERT(newIncidence);
+    Akonadi::Item item_ = q->item(newIncidence->instanceIdentifier());
+    item_.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
+    return -1 != mIncidenceChanger->d->modifyIncidence(item_, modificationPolicy);
+}
+
 CalendarBase::CalendarBase(QObject *parent)
     : MemoryCalendar(QTimeZone::systemTimeZone())
     , d_ptr(new CalendarBasePrivate(this))
@@ -599,10 +609,7 @@ bool CalendarBase::deleteIncidence(const KCalendarCore::Incidence::Ptr &incidenc
 bool CalendarBase::modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence)
 {
     Q_D(CalendarBase);
-    Q_ASSERT(newIncidence);
-    Akonadi::Item item_ = item(newIncidence->instanceIdentifier());
-    item_.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
-    return -1 != d->mIncidenceChanger->modifyIncidence(item_);
+    return d->modifyIncidence(newIncidence, IncidenceModificationPolicy::Default);
 }
 
 IncidenceChanger *CalendarBase::incidenceChanger() const

@@ -8,6 +8,7 @@
 
 #include "calendarbase.h"
 #include "incidencechanger.h"
+#include "incidencemodificationpolicy_p.h"
 
 #include <QList>
 #include <QMultiHash>
@@ -24,12 +25,12 @@ public:
     AKONADI_CALENDAR_EXPORT void internalInsert(const Akonadi::Item &item);
     AKONADI_CALENDAR_EXPORT void internalRemove(const Akonadi::Item &item);
 
-    void deleteAllIncidencesOfType(const QString &mimeType);
-
     void handleUidChange(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &newIdentifier);
 
     // Checks if parent changed and adjust internal hierarchy info
     void handleParentChanged(const KCalendarCore::Incidence::Ptr &incidence);
+
+    bool modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence, IncidenceModificationPolicy modificationPolicy);
 
 public Q_SLOTS:
     void slotDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &itemIds, Akonadi::IncidenceChanger::ResultCode, const QString &errorMessage);

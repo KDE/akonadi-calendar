@@ -14,6 +14,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "incidencechanger.h"
+#include "incidencemodificationpolicy_p.h"
 #include "itiphandlerhelper_p.h"
 
 #include <Akonadi/Collection>
@@ -116,6 +117,8 @@ public:
     }
 
     void emitCompletionSignal() override;
+
+    IncidenceModificationPolicy modificationPolicy = IncidenceModificationPolicy::Default;
 };
 
 class CreationChange : public Change
@@ -281,6 +284,11 @@ public:
     void handleInvitationsAfterChange(const Change::Ptr &change);
     static bool
     myAttendeeStatusChanged(const KCalendarCore::Incidence::Ptr &newIncidence, const KCalendarCore::Incidence::Ptr &oldIncidence, const QStringList &myEmails);
+
+    int modifyIncidence(const Akonadi::Item &item,
+                        IncidenceModificationPolicy modificationPolicy,
+                        const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
+                        QWidget *parent = nullptr);
 
 public Q_SLOTS:
     void handleCreateJobResult(KJob *job);
