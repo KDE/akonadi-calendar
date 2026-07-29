@@ -13,11 +13,6 @@
 #include <QList>
 #include <QSet>
 
-namespace KCalUtils
-{
-class DndFactory;
-}
-
 namespace Akonadi
 {
 class IncidenceChanger;

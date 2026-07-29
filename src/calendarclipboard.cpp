@@ -5,7 +5,6 @@
 */
 
 #include "calendarclipboard_p.h"
-#include <KCalUtils/DndFactory>
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
 #include <KCalUtils/ICalDrag>
 #else
@@ -17,8 +16,46 @@
 
 #include <QApplication>
 #include <QClipboard>
+#include <QMimeData>
 
 using namespace Akonadi;
+
+// Copies a list of incidences to the clipboard.
+static bool copyIncidences(const KCalendarCore::Incidence::List &incidences)
+{
+    QClipboard *clipboard = QGuiApplication::clipboard();
+    Q_ASSERT(clipboard);
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
+    Calendar::Ptr const calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
+
+    Incidence::List::ConstIterator it;
+    const Incidence::List::ConstIterator end(incidences.constEnd());
+    for (it = incidences.constBegin(); it != end; ++it) {
+        if (*it) {
+            calendar->addIncidence(Incidence::Ptr((*it)->clone()));
+        }
+    }
+
+    auto mimeData = new QMimeData;
+
+    ICalDrag::populateMimeData(mimeData, calendar);
+
+    if (calendar->incidences().isEmpty()) {
+        return false;
+    } else {
+        clipboard->setMimeData(mimeData);
+        return true;
+    }
+#else
+    auto mimeData = new QMimeData;
+    KCalendarCore::MimeData::populate(mimeData, incidences);
+    if (KCalendarCore::MimeData::canDecode(mimeData)) {
+        clipboard->setMimeData(mimeData);
+        return true;
+    }
+    return false;
+#endif
+}
 
 CalendarClipboardPrivate::CalendarClipboardPrivate(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq)
     : m_calendar(calendar)
@@ -55,7 +92,7 @@ void CalendarClipboardPrivate::getIncidenceHierarchy(const KCalendarCore::Incide
 
 void CalendarClipboardPrivate::cut(const KCalendarCore::Incidence::List &incidences)
 {
-    const bool copyResult = KCalUtils::DndFactory::copyIncidences(incidences);
+    const bool copyResult = copyIncidences(incidences);
     m_pendingChangeIds.clear();
     // Note: Don't use DndFactory::cutIncidences(), it doesn't use IncidenceChanger for deletion
     // we would loose async error handling and redo/undo features
@@ -241,7 +278,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
         }
     }
 
-    return KCalUtils::DndFactory::copyIncidences(incidencesToCopy);
+    return copyIncidences(incidencesToCopy);
 }
 
 bool CalendarClipboard::pasteAvailable() const
