@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-07-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-20 20:08+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -25,32 +25,32 @@ msgstr ""
 "Kunde inte hitta händelse att uppdatera, den har troligtvis nyligen tagits "
 "bort."
 
-#: calendarclipboard.cpp:66
+#: calendarclipboard.cpp:103
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Fel när borttagning skulle utföras."
 
-#: calendarclipboard.cpp:71
+#: calendarclipboard.cpp:108
 #, kde-format
 msgid "Error performing copy."
 msgstr "Fel när kopiering skulle utföras."
 
-#: calendarclipboard.cpp:95
+#: calendarclipboard.cpp:132
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Kan inte hitta objekt: %1"
 
-#: calendarclipboard.cpp:111 calendarclipboard.cpp:128
+#: calendarclipboard.cpp:148 calendarclipboard.cpp:165
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Fel vid borttagning av förhållanden."
 
-#: calendarclipboard.cpp:157
+#: calendarclipboard.cpp:194
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Fel vid borttagning av händelser: %1"
 
-#: calendarclipboard.cpp:174
+#: calendarclipboard.cpp:211
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -60,25 +60,25 @@ msgstr ""
 "och göra alla dess deluppgifter oberoende, eller klippa ut det tillsammans "
 "med alla deluppgifter?"
 
-#: calendarclipboard.cpp:179 calendarclipboard.cpp:218
+#: calendarclipboard.cpp:216 calendarclipboard.cpp:255
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Korganizer-bekräftelse"
 
-#: calendarclipboard.cpp:180
+#: calendarclipboard.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Klipp bara ut den här"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Klipp ut alla"
 
-#: calendarclipboard.cpp:214
+#: calendarclipboard.cpp:251
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -88,13 +88,13 @@ msgstr ""
 "göra alla dess deluppgifter oberoende, eller kopiera det tillsammans med "
 "alla deluppgifter?"
 
-#: calendarclipboard.cpp:219
+#: calendarclipboard.cpp:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Kopiera bara den här"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:257
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"

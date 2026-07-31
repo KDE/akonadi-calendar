@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-07-31 00:46+0000\n"
 "PO-Revision-Date: 2026-04-26 22:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,32 +23,32 @@ msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
 "업데이트할 반복 항목을 찾을 수 없습니다. 최근에 삭제되었을 수 있습니다."
 
-#: calendarclipboard.cpp:66
+#: calendarclipboard.cpp:103
 #, kde-format
 msgid "Error performing deletion."
 msgstr "삭제 수행 중 오류가 발생했습니다."
 
-#: calendarclipboard.cpp:71
+#: calendarclipboard.cpp:108
 #, kde-format
 msgid "Error performing copy."
 msgstr "복사 수행 중 오류가 발생했습니다."
 
-#: calendarclipboard.cpp:95
+#: calendarclipboard.cpp:132
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "항목을 찾을 수 없음: %1"
 
-#: calendarclipboard.cpp:111 calendarclipboard.cpp:128
+#: calendarclipboard.cpp:148 calendarclipboard.cpp:165
 #, kde-format
 msgid "Error while removing relations."
 msgstr "관계를 삭제하는 중 오류가 발생했습니다."
 
-#: calendarclipboard.cpp:157
+#: calendarclipboard.cpp:194
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "반복 항목을 삭제하는 중 오류 발생: %1"
 
-#: calendarclipboard.cpp:174
+#: calendarclipboard.cpp:211
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -57,25 +57,25 @@ msgstr ""
 "항목 \"%1\"에 하위 할 일이 있습니다. 이 항목만 잘라내고 하위 할 일을 독립된 "
 "항목으로 만들거나, 하위 할 일도 같이 잘라내시겠습니까?"
 
-#: calendarclipboard.cpp:179 calendarclipboard.cpp:218
+#: calendarclipboard.cpp:216 calendarclipboard.cpp:255
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 확인"
 
-#: calendarclipboard.cpp:180
+#: calendarclipboard.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "이것만 잘라내기"
 
-#: calendarclipboard.cpp:181
+#: calendarclipboard.cpp:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "모두 잘라내기"
 
-#: calendarclipboard.cpp:214
+#: calendarclipboard.cpp:251
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -84,13 +84,13 @@ msgstr ""
 "항목 \"%1\"에 하위 할 일이 있습니다. 이 항목만 복사하거나, 하위 할 일도 같이 "
 "복사하시겠습니까?"
 
-#: calendarclipboard.cpp:219
+#: calendarclipboard.cpp:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "이것만 복사"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:257
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
