@@ -6,7 +6,6 @@
 
 #include "history_p.h"
 #include "akonadicalendar_debug.h"
-#include <KCalUtils/Stringify>
 #include <KLocalizedString>
 
 Entry::Entry(const Akonadi::Item &item, const QString &description, History *qq)
@@ -77,7 +76,20 @@ CreationEntry::CreationEntry(const Akonadi::Item &item, const QString &descripti
     Q_ASSERT(mItems.count() == 1);
     const auto incidence = mItems.constFirst().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
-        mDescription = i18nc("%1 is event, todo or journal", "%1 creation", KCalUtils::Stringify::incidenceType(incidence->type()));
+        switch (incidence->type()) {
+        case KCalendarCore::Incidence::TypeEvent:
+            mDescription = i18n("event creation");
+            break;
+        case KCalendarCore::Incidence::TypeTodo:
+            mDescription = i18n("to-do creation");
+            break;
+        case KCalendarCore::Incidence::TypeJournal:
+            mDescription = i18n("journal creation");
+            break;
+        case KCalendarCore::Incidence::TypeFreeBusy:
+        case KCalendarCore::Incidence::TypeUnknown:
+            break;
+        }
     }
     connect(mChanger, &IncidenceChanger::createFinished, this, &CreationEntry::onCreateFinished);
     connect(mChanger, &IncidenceChanger::deleteFinished, this, &CreationEntry::onDeleteFinished);
@@ -145,7 +157,20 @@ DeletionEntry::DeletionEntry(const Akonadi::Item::List &items, const QString &de
 {
     const auto incidence = items.constFirst().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
-        mDescription = i18nc("%1 is event, todo or journal", "%1 deletion", KCalUtils::Stringify::incidenceType(incidence->type()));
+        switch (incidence->type()) {
+        case KCalendarCore::Incidence::TypeEvent:
+            mDescription = i18n("event deletion");
+            break;
+        case KCalendarCore::Incidence::TypeTodo:
+            mDescription = i18n("to-do deletion");
+            break;
+        case KCalendarCore::Incidence::TypeJournal:
+            mDescription = i18n("journal deletion");
+            break;
+        case KCalendarCore::Incidence::TypeFreeBusy:
+        case KCalendarCore::Incidence::TypeUnknown:
+            break;
+        }
     }
     connect(mChanger, &IncidenceChanger::createFinished, this, &DeletionEntry::onCreateFinished);
     connect(mChanger, &IncidenceChanger::deleteFinished, this, &DeletionEntry::onDeleteFinished);
@@ -227,7 +252,20 @@ ModificationEntry::ModificationEntry(const Akonadi::Item &item, const Incidence:
 {
     const auto incidence = mItems.constFirst().payload<KCalendarCore::Incidence::Ptr>();
     if (mDescription.isEmpty()) {
-        mDescription = i18nc("%1 is event, todo or journal", "%1 modification", KCalUtils::Stringify::incidenceType(incidence->type()));
+        switch (incidence->type()) {
+        case KCalendarCore::Incidence::TypeEvent:
+            mDescription = i18n("event modification");
+            break;
+        case KCalendarCore::Incidence::TypeTodo:
+            mDescription = i18n("to-do modification");
+            break;
+        case KCalendarCore::Incidence::TypeJournal:
+            mDescription = i18n("journal modification");
+            break;
+        case KCalendarCore::Incidence::TypeFreeBusy:
+        case KCalendarCore::Incidence::TypeUnknown:
+            break;
+        }
     }
 
     connect(mChanger, &IncidenceChanger::modifyFinished, this, &ModificationEntry::onModifyFinished);
