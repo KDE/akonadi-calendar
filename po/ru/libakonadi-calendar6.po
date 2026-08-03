@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:46+0000\n"
+"POT-Creation-Date: 2026-08-03 00:43+0000\n"
 "PO-Revision-Date: 2026-01-31 13:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -483,36 +483,105 @@ msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "Недопустимый адрес"
 
-#: history_p.cpp:69
+#: history_p.cpp:68
 #, kde-format
 msgid "General error"
 msgstr "Общая ошибка"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
-#: history_p.cpp:80
-#, kde-format
-msgctxt "%1 is event, todo or journal"
-msgid "%1 creation"
+#: history_p.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 creation"
+msgid "event creation"
 msgstr ""
 "создание объекта «%1»|/|создание $[replace-pairs-exact %1 'событие' "
 "'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
 "'занятости времени']"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
-#: history_p.cpp:148
-#, kde-format
-msgctxt "%1 is event, todo or journal"
-msgid "%1 deletion"
+#: history_p.cpp:84
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 creation"
+msgid "to-do creation"
+msgstr ""
+"создание объекта «%1»|/|создание $[replace-pairs-exact %1 'событие' "
+"'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
+"'занятости времени']"
+
+# %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
+#: history_p.cpp:87
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 creation"
+msgid "journal creation"
+msgstr ""
+"создание объекта «%1»|/|создание $[replace-pairs-exact %1 'событие' "
+"'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
+"'занятости времени']"
+
+# %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
+#: history_p.cpp:162
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 deletion"
+msgid "event deletion"
 msgstr ""
 "удаление объекта «%1»|/|удаление $[replace-pairs-exact %1 'событие' "
 "'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
 "'занятости времени']"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
-#: history_p.cpp:230
-#, kde-format
-msgctxt "%1 is event, todo or journal"
-msgid "%1 modification"
+#: history_p.cpp:165
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 deletion"
+msgid "to-do deletion"
+msgstr ""
+"удаление объекта «%1»|/|удаление $[replace-pairs-exact %1 'событие' "
+"'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
+"'занятости времени']"
+
+# %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
+#: history_p.cpp:168
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 deletion"
+msgid "journal deletion"
+msgstr ""
+"удаление объекта «%1»|/|удаление $[replace-pairs-exact %1 'событие' "
+"'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
+"'занятости времени']"
+
+# %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
+#: history_p.cpp:257
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 modification"
+msgid "event modification"
+msgstr ""
+"изменение объекта «%1»|/|изменение $[replace-pairs-exact %1 'событие' "
+"'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
+"'занятости времени']"
+
+# %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
+#: history_p.cpp:260
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 modification"
+msgid "to-do modification"
+msgstr ""
+"изменение объекта «%1»|/|изменение $[replace-pairs-exact %1 'событие' "
+"'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "
+"'занятости времени']"
+
+# %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
+#: history_p.cpp:263
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 modification"
+msgid "journal modification"
 msgstr ""
 "изменение объекта «%1»|/|изменение $[replace-pairs-exact %1 'событие' "
 "'события' 'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' "

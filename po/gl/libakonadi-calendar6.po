@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:46+0000\n"
+"POT-Creation-Date: 2026-08-03 00:43+0000\n"
 "PO-Revision-Date: 2024-09-22 00:20+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -500,27 +500,72 @@ msgctxt "@title:window"
 msgid "Invalid URL"
 msgstr "O URL é incorrecto"
 
-#: history_p.cpp:69
+#: history_p.cpp:68
 #, kde-format
 msgid "General error"
 msgstr "Erro xeral"
 
-#: history_p.cpp:80
-#, kde-format
-msgctxt "%1 is event, todo or journal"
-msgid "%1 creation"
+#: history_p.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 creation"
+msgid "event creation"
 msgstr "Creación de %1"
 
-#: history_p.cpp:148
-#, kde-format
-msgctxt "%1 is event, todo or journal"
-msgid "%1 deletion"
+#: history_p.cpp:84
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 creation"
+msgid "to-do creation"
+msgstr "Creación de %1"
+
+#: history_p.cpp:87
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 creation"
+msgid "journal creation"
+msgstr "Creación de %1"
+
+#: history_p.cpp:162
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 deletion"
+msgid "event deletion"
 msgstr "Eliminación de %1"
 
-#: history_p.cpp:230
-#, kde-format
-msgctxt "%1 is event, todo or journal"
-msgid "%1 modification"
+#: history_p.cpp:165
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 deletion"
+msgid "to-do deletion"
+msgstr "Eliminación de %1"
+
+#: history_p.cpp:168
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 deletion"
+msgid "journal deletion"
+msgstr "Eliminación de %1"
+
+#: history_p.cpp:257
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 modification"
+msgid "event modification"
+msgstr "Modificación de %1"
+
+#: history_p.cpp:260
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 modification"
+msgid "to-do modification"
+msgstr "Modificación de %1"
+
+#: history_p.cpp:263
+#, fuzzy, kde-format
+#| msgctxt "%1 is event, todo or journal"
+#| msgid "%1 modification"
+msgid "journal modification"
 msgstr "Modificación de %1"
 
 #: icalimporter.cpp:82
