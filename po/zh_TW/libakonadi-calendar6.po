@@ -4,13 +4,13 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2013, 2015.
 # pan93412 <pan93412@gmail.com>, 2018.
 # Jeff Huang <s8321414@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-03 00:43+0000\n"
-"PO-Revision-Date: 2025-11-24 19:28+0900\n"
+"PO-Revision-Date: 2026-08-04 08:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -468,67 +468,49 @@ msgid "General error"
 msgstr "一般錯誤"
 
 #: history_p.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "event creation"
-msgstr "%1 建立"
+msgstr "事件建立"
 
 #: history_p.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "to-do creation"
-msgstr "%1 建立"
+msgstr "待辦事項建立"
 
 #: history_p.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "journal creation"
-msgstr "%1 建立"
+msgstr "日誌建立"
 
 #: history_p.cpp:162
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "event deletion"
-msgstr "%1 刪除"
+msgstr "事件刪除"
 
 #: history_p.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "to-do deletion"
-msgstr "%1 刪除"
+msgstr "待辦事項刪除"
 
 #: history_p.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "journal deletion"
-msgstr "%1 刪除"
+msgstr "日誌刪除"
 
 #: history_p.cpp:257
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "event modification"
-msgstr "%1 修改"
+msgstr "事件修改"
 
 #: history_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "to-do modification"
-msgstr "%1 修改"
+msgstr "待辦事項修改"
 
 #: history_p.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "journal modification"
-msgstr "%1 修改"
+msgstr "日誌修改"
 
 #: icalimporter.cpp:82
 #, kde-format

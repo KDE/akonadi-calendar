@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-03 00:43+0000\n"
-"PO-Revision-Date: 2025-11-23 08:19+0100\n"
+"PO-Revision-Date: 2026-08-03 07:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -488,67 +488,49 @@ msgid "General error"
 msgstr "Splošna napaka"
 
 #: history_p.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "event creation"
-msgstr "Ustvaritev %1"
+msgstr "stvaritev dogodka"
 
 #: history_p.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "to-do creation"
-msgstr "Ustvaritev %1"
+msgstr "stvaritev opravila"
 
 #: history_p.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "journal creation"
-msgstr "Ustvaritev %1"
+msgstr "stvaritev dnevnika"
 
 #: history_p.cpp:162
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "event deletion"
-msgstr "Izbris %1"
+msgstr "brisanje dogodka"
 
 #: history_p.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "to-do deletion"
-msgstr "Izbris %1"
+msgstr "brisanje opravila"
 
 #: history_p.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "journal deletion"
-msgstr "Izbris %1"
+msgstr "brisanje dnevnika"
 
 #: history_p.cpp:257
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "event modification"
-msgstr "Sprememba %1"
+msgstr "sprememba dogodka"
 
 #: history_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "to-do modification"
-msgstr "Sprememba %1"
+msgstr "sprememba opravila"
 
 #: history_p.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "journal modification"
-msgstr "Sprememba %1"
+msgstr "sprememba dnevnika"
 
 #: icalimporter.cpp:82
 #, kde-format

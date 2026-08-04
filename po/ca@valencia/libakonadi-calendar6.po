@@ -1,16 +1,16 @@
 # Translation of libakonadi-calendar6.po to Catalan (Valencian)
-# Copyright (C) 2010-2025 This_file_is_part_of_KDE
+# Copyright (C) 2010-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2017, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2013-2015, 2017, 2020-2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2019, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-03 00:43+0000\n"
-"PO-Revision-Date: 2025-11-23 10:15+0100\n"
+"PO-Revision-Date: 2026-08-03 09:49+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -492,67 +492,49 @@ msgid "General error"
 msgstr "Error general"
 
 #: history_p.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "event creation"
-msgstr "Creació de %1"
+msgstr "creació d'esdeveniment"
 
 #: history_p.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "to-do creation"
-msgstr "Creació de %1"
+msgstr "creació de tasca pendent"
 
 #: history_p.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "journal creation"
-msgstr "Creació de %1"
+msgstr "creació de diari"
 
 #: history_p.cpp:162
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "event deletion"
-msgstr "Suprimiu %1"
+msgstr "supressió d'esdeveniment"
 
 #: history_p.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "to-do deletion"
-msgstr "Suprimiu %1"
+msgstr "supressió de tasca pendent"
 
 #: history_p.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "journal deletion"
-msgstr "Suprimiu %1"
+msgstr "supressió de diari"
 
 #: history_p.cpp:257
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "event modification"
-msgstr "Modificació de %1"
+msgstr "modificació d'esdeveniment"
 
 #: history_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "to-do modification"
-msgstr "Modificació de %1"
+msgstr "modificació de tasca pendent"
 
 #: history_p.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "journal modification"
-msgstr "Modificació de %1"
+msgstr "modificació de diari"
 
 #: icalimporter.cpp:82
 #, kde-format
