@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-03 00:43+0000\n"
-"PO-Revision-Date: 2026-03-20 08:13+0200\n"
+"PO-Revision-Date: 2026-08-04 08:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: calendarbase.cpp:266
 #, kde-format
@@ -470,67 +470,49 @@ msgid "General error"
 msgstr "שגיאה כללית"
 
 #: history_p.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "event creation"
-msgstr "יצירת %1"
+msgstr "יצירת אירוע"
 
 #: history_p.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "to-do creation"
-msgstr "יצירת %1"
+msgstr "יצירת מטלה"
 
 #: history_p.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "journal creation"
-msgstr "יצירת %1"
+msgstr "יצירת יומן"
 
 #: history_p.cpp:162
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "event deletion"
-msgstr "מחיקת %1"
+msgstr "מחיקת אירוע"
 
 #: history_p.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "to-do deletion"
-msgstr "מחיקת %1"
+msgstr "מחיקת מטלה"
 
 #: history_p.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "journal deletion"
-msgstr "מחיקת %1"
+msgstr "מחיקת יומן"
 
 #: history_p.cpp:257
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "event modification"
-msgstr "שינוי %1"
+msgstr "שינוי אירוע"
 
 #: history_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "to-do modification"
-msgstr "שינוי %1"
+msgstr "שינוי מטלה"
 
 #: history_p.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "journal modification"
-msgstr "שינוי %1"
+msgstr "שינוי יומן"
 
 #: icalimporter.cpp:82
 #, kde-format
