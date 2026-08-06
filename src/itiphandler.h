@@ -310,7 +310,19 @@ public:
      *
      * \sa iTipMessageProcessed()
      */
+    [[deprecated("use the ScheduleMessage overload instead")]]
     void processiTIPMessage(const QString &receiver, const QString &iCal, const QString &action);
+    /*!
+     * Processes a received iTip message.
+     *
+     * \a receiver
+     * \a message The parsed schedule message ("invitation")
+     * \a action
+     *
+     * \sa iTipMessageProcessed()
+     * \since 26.12
+     */
+    void processiTIPMessage(const QString &receiver, const KCalendarCore::ScheduleMessage::Ptr &message, const QString &action);
 
     /*!
      * Sends an iTip message.

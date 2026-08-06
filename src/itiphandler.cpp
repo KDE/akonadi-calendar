@@ -131,7 +131,35 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
 
         return;
     }
+}
 
+void ITIPHandler::processiTIPMessage(const QString &receiver, const KCalendarCore::ScheduleMessage::Ptr &message, const QString &action)
+{
+    qCDebug(AKONADICALENDAR_LOG) << "processiTIPMessage called with receiver=" << receiver << "; action=" << action;
+
+    if (d->m_currentOperation != OperationNone) {
+        d->m_currentOperation = OperationNone;
+        qCritical() << "There can't be an operation in progress!" << d->m_currentOperation;
+        return;
+    }
+
+    d->m_currentOperation = OperationProcessiTIPMessage;
+
+    if (!d->isLoaded()) {
+        d->m_queuedInvitation.receiver = receiver;
+        d->m_queuedInvitation.message = message;
+        d->m_queuedInvitation.action = action;
+        return;
+    }
+
+    if (d->m_calendarLoadError) {
+        d->m_currentOperation = OperationNone;
+        qCritical() << "Error loading calendar";
+        emitiTipMessageProcessed(this, ResultError, i18n("Error loading calendar."));
+        return;
+    }
+
+    Q_ASSERT(message);
     d->m_method = static_cast<KCalendarCore::iTIPMethod>(message->method());
 
     KCalendarCore::ScheduleMessage::Status const status = message->status();

@@ -607,7 +607,11 @@ void ITIPHandlerTest::processItip(const QString &icaldata,
 {
     items.clear();
     m_pendingItipMessageSignal = 1;
-    m_itipHandler->processiTIPMessage(receiver, icaldata, action);
+
+    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
+    ICalFormat format;
+    const auto message = format.parseScheduleMessage(calendar, icaldata);
+    m_itipHandler->processiTIPMessage(receiver, message, action);
     waitForIt();
 
     // 0 e-mails are sent because the status update e-mail is sent by
