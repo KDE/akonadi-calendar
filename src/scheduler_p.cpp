@@ -144,6 +144,11 @@ void Scheduler::acceptPublish(const IncidenceBase::Ptr &incidence,
                     return;
                 }
             }
+        } else if (newInc) {
+            if (!calendar->addIncidence(newInc)) {
+                result = ResultCreatingError;
+                errorString = i18n("Error adding incidence");
+            }
         }
         break;
     case ScheduleMessage::Obsolete:
