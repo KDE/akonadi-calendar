@@ -11,10 +11,11 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "akonadi-calendar-version.h"
+#include "akonadicalendar_debug.h"
+#include "mailbodyformatter_p.h"
 
 #include <Akonadi/Collection>
 
-#include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/Incidence>
 #include <KEmailAddress>
@@ -48,7 +49,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <Libkleo/ExpiryChecker>
 #include <Libkleo/ExpiryCheckerSettings>
 
-#include "akonadicalendar_debug.h"
 #include <KJob>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -427,7 +427,7 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
         msg.subject = i18n("Free Busy Object");
     }
 
-    msg.body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
+    msg.body = MailBodyFormatter::mailBodyStr(incidence);
     msg.sign = (mailPrivacy & MailPrivacySign) == MailPrivacySign;
     msg.encrypt = (mailPrivacy & MailPrivacyEncrypt) == MailPrivacyEncrypt;
 
@@ -461,7 +461,7 @@ void MailClient::mailOrganizer(const KCalendarCore::IncidenceBase::Ptr &incidenc
         msg.subject = i18n("Free Busy Message");
     }
 
-    msg.body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
+    msg.body = MailBodyFormatter::mailBodyStr(incidence);
     msg.sign = (mailPrivacy & MailPrivacySign) == MailPrivacySign;
     msg.encrypt = (mailPrivacy & MailPrivacyEncrypt) == MailPrivacyEncrypt;
 
@@ -492,7 +492,7 @@ void MailClient::mailTo(const KCalendarCore::IncidenceBase::Ptr &incidence,
         msg.subject = i18n("Free Busy Message");
     }
 
-    msg.body = KCalUtils::IncidenceFormatter::mailBodyStr(incidence);
+    msg.body = MailBodyFormatter::mailBodyStr(incidence);
     msg.sign = (mailPrivacy & MailPrivacySign) == MailPrivacySign;
     msg.encrypt = (mailPrivacy & MailPrivacyEncrypt) == MailPrivacyEncrypt;
 

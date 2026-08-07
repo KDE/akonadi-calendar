@@ -64,6 +64,7 @@ target_sources(
         itiphandler_p.h
         kcolumnfilterproxymodel.cpp
         kcolumnfilterproxymodel_p.h
+        mailbodyformatter.cpp
         mailclient_p.cpp
         mailclient_p.h
         mailscheduler_p.cpp
