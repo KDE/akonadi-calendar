@@ -7,7 +7,7 @@ set(PIM_VERSION "6.8.40")
 project(Akonadi-Calendar VERSION ${PIM_VERSION})
 
 # ECM setup
-set(KF_MIN_VERSION "6.26.0")
+set(KF_MIN_VERSION "6.27.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH
     ${CMAKE_CURRENT_SOURCE_DIR}/cmake/ecmcopy
