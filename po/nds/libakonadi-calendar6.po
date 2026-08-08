@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:43+0000\n"
+"POT-Creation-Date: 2026-08-08 00:45+0000\n"
 "PO-Revision-Date: 2014-08-13 00:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: calendarbase.cpp:266
+#: calendarbase.cpp:268
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
@@ -451,7 +451,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "De Free-/Bunnen-Daten wöörn mit Spood loosstüert."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:620 itiphandler_p.cpp:143
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
@@ -646,22 +646,22 @@ msgstr "Dat geev en nich begäng Fehler."
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Fehler bi't Ännern vun en Kalennerindrag. De Fehler weer: %1"
 
-#: incidencechanger.cpp:808 incidencechanger.cpp:932
+#: incidencechanger.cpp:869 incidencechanger.cpp:941
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "De Kalennerindrag weer al wegmaakt oder wöör jüst wegdaan."
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Akschoon lett sik nich utföhren, de TVL lett dat nich to."
 
-#: incidencechanger.cpp:1201
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "De utsöchte Sammeln gellt nich."
 
-#: incidencechanger.cpp:1205
+#: incidencechanger.cpp:1219
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -670,12 +670,12 @@ msgstr ""
 "De Standardsammeln is leeg oder hett keen propper TVL, un de Teelregel "
 "\"Nienich Fragen\" wöör bruukt."
 
-#: incidencechanger.cpp:1209
+#: incidencechanger.cpp:1223
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Dubbelt Indrag-ID binnen en Koppel-Akschoon"
 
-#: incidencechanger.cpp:1213
+#: incidencechanger.cpp:1227
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -684,12 +684,12 @@ msgstr ""
 "Een Ännern, de en Koppel vun Ännern tohöör, is fehlslaan. All Ännern warrt "
 "torüchdreiht."
 
-#: incidencechanger.cpp:1218
+#: incidencechanger.cpp:1232
 #, kde-format
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"
 
-#: itiphandler.cpp:110
+#: itiphandler.cpp:110 itiphandler.cpp:158
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Fehler bi't Laden vun en Kalenner"
@@ -709,27 +709,27 @@ msgstr "Fehler bi't Inlesen vun en ICal-Inladen"
 msgid "Error while processing an invitation or update."
 msgstr "Fehler bi't Verarbeiden vun en Inladen oder Opfrischen."
 
-#: itiphandler.cpp:142
+#: itiphandler.cpp:170
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Leeg Begeefnis"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:239
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Leeg Akschoon: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:262
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Fehler bi't Loosstüern vun en Gegenvörslag"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:269
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Editor för't Bewerken vun en Gegenvörslag lett sik nich opropen"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:300
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -737,7 +737,7 @@ msgstr ""
 "De Indrag \"%1\" hett keen Deelnehmers, keen Arbeitkoppel-Naricht warrt "
 "loosstüert."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:303
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -756,18 +756,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Nich loosstüern"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Fehler: %1"
 
-#: itiphandler_p.cpp:84
+#: itiphandler_p.cpp:88
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Fehler bi't Laden vun en Kalenner: %1"
 
-#: itiphandler_p.cpp:135
+#: itiphandler_p.cpp:139
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -776,7 +776,7 @@ msgstr ""
 "De Arbeitkoppel-Naricht för Indrag \"%1\" wöör mit Spood loosstüert.\n"
 "Metood: %2"
 
-#: itiphandler_p.cpp:147
+#: itiphandler_p.cpp:151
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -787,36 +787,36 @@ msgstr ""
 "De Indrag \"%1\" lett sik nich loosstüern.\n"
 "Metood: %2"
 
-#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
+#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "De Indrag-Informatschoon wöör mit Spood loosstüert."
 
-#: itiphandler_p.cpp:164
+#: itiphandler_p.cpp:168
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Apenmaken"
 
-#: itiphandler_p.cpp:169
+#: itiphandler_p.cpp:173
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "De Indrag \"%1\" lett sik nich apenmaken"
 
-#: itiphandler_p.cpp:184
+#: itiphandler_p.cpp:188
 #, fuzzy, kde-format
 #| msgid "Forwarding"
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Wiederledden"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:195
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Indrag \"%1\" lett sik nich wiederledden"
 
-#: itiphandler_p.cpp:192
+#: itiphandler_p.cpp:196
 #, fuzzy, kde-format
 #| msgid "Forwarding Error"
 msgctxt "@title:window"
@@ -1440,23 +1440,28 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "Den Adressaat sien Nettpostadress"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:240
+#: scheduler_p.cpp:132 scheduler_p.cpp:245
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Fehler: Verscheden Begeefnistypen towiest"
 
-#: scheduler_p.cpp:222 scheduler_p.cpp:273
+#: scheduler_p.cpp:150 scheduler_p.cpp:310
+#, kde-format
+msgid "Error adding incidence"
+msgstr "Fehler bi't Tofögen vun en Begeefnis"
+
+#: scheduler_p.cpp:227 scheduler_p.cpp:278
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 "Dit is keen Opfrischen. De funnen Begeefnis wöör later nochmaal ännert."
 
-#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
+#: scheduler_p.cpp:269 scheduler_p.cpp:540 scheduler_p.cpp:555
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Fehler bi't Ännern vun en Begeefnis"
 
-#: scheduler_p.cpp:289
+#: scheduler_p.cpp:294
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1470,7 +1475,7 @@ msgid ""
 "you should know.</para>"
 msgstr ""
 
-#: scheduler_p.cpp:298
+#: scheduler_p.cpp:303
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Cannot find invitation to be updated"
@@ -1478,22 +1483,17 @@ msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Keen Inladen funnen, de sik opfrischen lett"
 
-#: scheduler_p.cpp:305
-#, kde-format
-msgid "Error adding incidence"
-msgstr "Fehler bi't Tofögen vun en Begeefnis"
-
-#: scheduler_p.cpp:339
+#: scheduler_p.cpp:344
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Keen Begeefnis funnen, dat sik wegdoon lett"
 
-#: scheduler_p.cpp:392
+#: scheduler_p.cpp:397
 #, kde-format
 msgid "Error recording exception"
 msgstr "Fehler bi't Opnehmen vun en Utnahm"
 
-#: scheduler_p.cpp:409
+#: scheduler_p.cpp:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1505,25 +1505,25 @@ msgstr ""
 "Villicht hett Een em al wegmaakt, oder villicht büst Du nich de Eegner. "
 "Villicht höört he ok en bloots-leesbor oder utmaakt Kalenner to."
 
-#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
-#: scheduler_p.cpp:575
+#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:574
+#: scheduler_p.cpp:580
 #, kde-format
 msgid "Generic Error"
 msgstr "Allmeen Fehler"
 
-#: scheduler_p.cpp:477
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 will bi %2 dorbi wesen, man wöör nich inlaadt."
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 will för %3 bi %2 dorbi wesen."
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Uninvited attendee"
@@ -1531,25 +1531,25 @@ msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nich inlaadt Deelnehmer"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Deelnahm tolaten"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Deelnahm afwiesen"
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:493
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "De Utrichter hett Dien Deelnahm bi disse Mööt afwiest."
 
-#: scheduler_p.cpp:509
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1559,7 +1559,7 @@ msgstr ""
 "En Deelnehmer wöör dat Begeefnis toföögt. Wullt Du de Deelnehmers per "
 "Nettpost en Opfrischnaricht tostüern?"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Attendee Added"
@@ -1567,29 +1567,29 @@ msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Deelnehmer toföögt"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:517
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Narichten loosstüern"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:518
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Nich loosstüern"
 
-#: scheduler_p.cpp:559
+#: scheduler_p.cpp:564
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Keen Begeefnis, dat sik planen lett"
 
-#: scheduler_p.cpp:582
+#: scheduler_p.cpp:587
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Keen Free-/Bunnen-Twischenspieker"
 
-#: scheduler_p.cpp:601
+#: scheduler_p.cpp:606
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Fehler bi't Sekern vun en Free-/Bunnen-Objekt"

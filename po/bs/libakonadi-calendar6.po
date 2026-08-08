@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:43+0000\n"
+"POT-Creation-Date: 2026-08-08 00:45+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-12-31 05:22+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
-#: calendarbase.cpp:266
+#: calendarbase.cpp:268
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
@@ -453,7 +453,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "informacije o slobodnom/zauzetom su uspješno poslane."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:620 itiphandler_p.cpp:143
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
@@ -649,23 +649,23 @@ msgstr "Nepoznata greška"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Greška u pokušaju izmjene stavke kalendara. Greška je bila: %1"
 
-#: incidencechanger.cpp:808 incidencechanger.cpp:932
+#: incidencechanger.cpp:869 incidencechanger.cpp:941
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Kalendarska stavka je već bila obrisana ili se trenutno briše"
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr ""
 "Operacija se ne može obaviti zbog ograničenja na listama prava pristupa"
 
-#: incidencechanger.cpp:1201
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Izabrana kolekcija je nevažeća"
 
-#: incidencechanger.cpp:1205
+#: incidencechanger.cpp:1219
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -674,12 +674,12 @@ msgstr ""
 "Podrazumijevana kolekcija je nevažeća ili nema odgovarajuću listu prava "
 "pristupa i pravilo da se na odredištu ne postavlja pitanje je korišteno"
 
-#: incidencechanger.cpp:1209
+#: incidencechanger.cpp:1223
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Dupla oznaka stavke u grupnoh operaciji"
 
-#: incidencechanger.cpp:1213
+#: incidencechanger.cpp:1227
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -688,12 +688,12 @@ msgstr ""
 "Jedna promjena koja pripada grupi promjena je neuspjela. Sve promjene su "
 "vraćene"
 
-#: incidencechanger.cpp:1218
+#: incidencechanger.cpp:1232
 #, kde-format
 msgid "Unknown error"
 msgstr "Nepoznata greška"
 
-#: itiphandler.cpp:110
+#: itiphandler.cpp:110 itiphandler.cpp:158
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Greška pri učitavanju kalendara."
@@ -713,33 +713,33 @@ msgstr "Nepoznata greška pri analizi iCal poziva"
 msgid "Error while processing an invitation or update."
 msgstr "Greška pri obradi poziva ili ažuriranja"
 
-#: itiphandler.cpp:142
+#: itiphandler.cpp:170
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Pogrešna pojava"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:239
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Neispravna akcija: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:262
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Gerška slanja kontra prijedloga"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:269
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Ne mogu pokrenuti editor za uređivanje kontra prijedloga"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:300
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr "Stavka '%1' nema prisutnij. Stoga se grupna poruka neće slati."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:303
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -760,18 +760,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Nemoj slati"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Greška: %1"
 
-#: itiphandler_p.cpp:84
+#: itiphandler_p.cpp:88
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Greška pri učitavanju kalendara: %1"
 
-#: itiphandler_p.cpp:135
+#: itiphandler_p.cpp:139
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -780,7 +780,7 @@ msgstr ""
 "Grupna poruka za stavku  '%1' je uspješno poslana.\n"
 "Metod: %2"
 
-#: itiphandler_p.cpp:147
+#: itiphandler_p.cpp:151
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -791,36 +791,36 @@ msgstr ""
 "Ne mogu poslati stavku '%1'.\n"
 "Metod: %2"
 
-#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
+#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Informacija o stavci je uspješno poslana."
 
-#: itiphandler_p.cpp:164
+#: itiphandler_p.cpp:168
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Objavljivanje"
 
-#: itiphandler_p.cpp:169
+#: itiphandler_p.cpp:173
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Ne mogu da objavim stavku '%1'."
 
-#: itiphandler_p.cpp:184
+#: itiphandler_p.cpp:188
 #, fuzzy, kde-format
 #| msgid "Forwarding"
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Prosljeđivanje"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:195
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Ne mogu proslijediti stavku '%1'"
 
-#: itiphandler_p.cpp:192
+#: itiphandler_p.cpp:196
 #, fuzzy, kde-format
 #| msgid "Forwarding Error"
 msgctxt "@title:window"
@@ -1439,22 +1439,27 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "Adresa elektronske pošte primaoca"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:240
+#: scheduler_p.cpp:132 scheduler_p.cpp:245
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Greška: dodjela različitih tipova incidenta"
 
-#: scheduler_p.cpp:222 scheduler_p.cpp:273
+#: scheduler_p.cpp:150 scheduler_p.cpp:310
+#, kde-format
+msgid "Error adding incidence"
+msgstr "Greška pri dodavanju incidenta"
+
+#: scheduler_p.cpp:227 scheduler_p.cpp:278
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "Ovo nije ažuriranje. Nađeni incident je izmijenjen nedavno"
 
-#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
+#: scheduler_p.cpp:269 scheduler_p.cpp:540 scheduler_p.cpp:555
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Greška pri izmjeni incidenta"
 
-#: scheduler_p.cpp:289
+#: scheduler_p.cpp:294
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1484,7 +1489,7 @@ msgstr ""
 "iz kalendara</item><item>više nemate pristup kalendaru s pozivom</item></"
 "list></para><para>To nije problem, ali smatramo da trebate znati.</para>"
 
-#: scheduler_p.cpp:298
+#: scheduler_p.cpp:303
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Cannot find invitation to be updated"
@@ -1492,22 +1497,17 @@ msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Ne mogu naći poziv da se ažurura"
 
-#: scheduler_p.cpp:305
-#, kde-format
-msgid "Error adding incidence"
-msgstr "Greška pri dodavanju incidenta"
-
-#: scheduler_p.cpp:339
+#: scheduler_p.cpp:344
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Ne mogu naći incident za brisanje"
 
-#: scheduler_p.cpp:392
+#: scheduler_p.cpp:397
 #, kde-format
 msgid "Error recording exception"
 msgstr "Greška pri zapisivanju izuzetka"
 
-#: scheduler_p.cpp:409
+#: scheduler_p.cpp:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1519,25 +1519,25 @@ msgstr ""
 "obrisan ili niste njegov vlasnik. Ili možda pripada kalendaru koji je samo "
 "za čitanje ili onemogućen."
 
-#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
-#: scheduler_p.cpp:575
+#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:574
+#: scheduler_p.cpp:580
 #, kde-format
 msgid "Generic Error"
 msgstr "Generička greška"
 
-#: scheduler_p.cpp:477
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 želi da prisustvuje %2 ali nije pozvan."
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 želi da prisustvuje %2 u ime %3."
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Uninvited attendee"
@@ -1545,25 +1545,25 @@ msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nepozvan učesnik"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Prihvati prisustvo"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Odbij prisustvo"
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:493
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Organizator je odbio vaše učešće na sastanku"
 
-#: scheduler_p.cpp:509
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1573,7 +1573,7 @@ msgstr ""
 "Učesnik je dodan na incident. Želite li poslati elektronskom poštom "
 "učesnicima ažurnu poruku."
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Attendee Added"
@@ -1581,29 +1581,29 @@ msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Dodan učesnik"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:517
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Pošalji poruke"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:518
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Ne moj slati"
 
-#: scheduler_p.cpp:559
+#: scheduler_p.cpp:564
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Nema incidenata za zakazivanje"
 
-#: scheduler_p.cpp:582
+#: scheduler_p.cpp:587
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Nema skrovišta za slobodno/zazeto"
 
-#: scheduler_p.cpp:601
+#: scheduler_p.cpp:606
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Greška pri snimanju objekta o slobodnom/zauzetom"

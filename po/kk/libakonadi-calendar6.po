@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:43+0000\n"
+"POT-Creation-Date: 2026-08-08 00:45+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: calendarbase.cpp:266
+#: calendarbase.cpp:268
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Жаңартылатын оқиға табылмады, бәлкім жуырда өшірілген шығар."
@@ -446,7 +446,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Бос/Істе мәліметі сәтті жіберілді."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:620 itiphandler_p.cpp:143
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
@@ -641,22 +641,22 @@ msgstr "Беймәлім қате"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Күнтізбе жазуын өзгерту кезде қате орын алды. Қатесі мынадай: %1"
 
-#: incidencechanger.cpp:808 incidencechanger.cpp:932
+#: incidencechanger.cpp:869 incidencechanger.cpp:941
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Ол күнтізбе жазуы өшірілген, немесе өшіріліп жатыр."
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ACL шектеулер себебінен амал орындалмайды"
 
-#: incidencechanger.cpp:1201
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Таңдалған жинағы жарамсыз"
 
-#: incidencechanger.cpp:1205
+#: incidencechanger.cpp:1219
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -665,12 +665,12 @@ msgstr ""
 "Әдетті жиын жарамсыз не оның ACL-і (қатынауды басқару тізімі) не дұрыс емес, "
 "DestinationPolicyNeverAsk қолданған"
 
-#: incidencechanger.cpp:1209
+#: incidencechanger.cpp:1223
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Топтық амалда қосарланған ID кездесті"
 
-#: incidencechanger.cpp:1213
+#: incidencechanger.cpp:1227
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -679,12 +679,12 @@ msgstr ""
 "Топтық өзгерістерге жататын бір өзгеріс жаңылысы. Бүкіл өзгерістер "
 "қайтарылады."
 
-#: incidencechanger.cpp:1218
+#: incidencechanger.cpp:1232
 #, kde-format
 msgid "Unknown error"
 msgstr "Беймәлім қате"
 
-#: itiphandler.cpp:110
+#: itiphandler.cpp:110 itiphandler.cpp:158
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Күнтізбе жүктелмеді"
@@ -704,33 +704,33 @@ msgstr "iCal шақыруын талдау беймәлім қатесі"
 msgid "Error while processing an invitation or update."
 msgstr "Шақыру не жаңартуды өңдеу кезінде қате орын алды."
 
-#: itiphandler.cpp:142
+#: itiphandler.cpp:170
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Жарамсыз оқиға"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:239
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Жарамсыз әрекет: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:262
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Қарсы ұсынысты жіберу қатесі"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:269
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Қарсы ұсынысты өзгерту үшін редактор жегілмеді"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:300
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr "'%1' дегенде қатысушылары жоқ. Сондықтан топтық хат жіберілмеді."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:303
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -751,18 +751,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Жібермеу"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Қате: %1"
 
-#: itiphandler_p.cpp:84
+#: itiphandler_p.cpp:88
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Күнтізбе жүктелмеді: %1"
 
-#: itiphandler_p.cpp:135
+#: itiphandler_p.cpp:139
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -771,7 +771,7 @@ msgstr ""
 "'%1' дегенге қатысты топтық хабарлама жіберілді.\n"
 "Әдісі: %2"
 
-#: itiphandler_p.cpp:147
+#: itiphandler_p.cpp:151
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -782,36 +782,36 @@ msgstr ""
 "'%1' деген жіберілмеді.\n"
 "Әдісі: %2"
 
-#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
+#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Мәліметі сәтті жіберілді."
 
-#: itiphandler_p.cpp:164
+#: itiphandler_p.cpp:168
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Жариялау"
 
-#: itiphandler_p.cpp:169
+#: itiphandler_p.cpp:173
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "'%1' деген жарияланбады"
 
-#: itiphandler_p.cpp:184
+#: itiphandler_p.cpp:188
 #, fuzzy, kde-format
 #| msgid "Forwarding"
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Басқаға жолдау"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:195
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "'%1' деген басқаға жіберілмеді"
 
-#: itiphandler_p.cpp:192
+#: itiphandler_p.cpp:196
 #, fuzzy, kde-format
 #| msgid "Forwarding Error"
 msgctxt "@title:window"
@@ -1432,22 +1432,27 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "Алушының эл.пошта адресі"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:240
+#: scheduler_p.cpp:132 scheduler_p.cpp:245
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Қате: Басқа оқиға түрлерін тағайындау."
 
-#: scheduler_p.cpp:222 scheduler_p.cpp:273
+#: scheduler_p.cpp:150 scheduler_p.cpp:310
+#, kde-format
+msgid "Error adding incidence"
+msgstr "Оқиғаны қосу қатесі"
+
+#: scheduler_p.cpp:227 scheduler_p.cpp:278
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "Бұл жаңартуы емес. Табылған оқиға одан да жуырда өзгертілген. "
 
-#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
+#: scheduler_p.cpp:269 scheduler_p.cpp:540 scheduler_p.cpp:555
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Оқиғаны өзгерту қатесі"
 
-#: scheduler_p.cpp:289
+#: scheduler_p.cpp:294
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1478,7 +1483,7 @@ msgstr ""
 "жазылған күнтізбеге Сіз енді қатынай алмайсыз</item></list></"
 "para><para>Жағдайда ешбір қиыншылық жоқ, бірақ бұны Сіз білген жөн.</para>"
 
-#: scheduler_p.cpp:298
+#: scheduler_p.cpp:303
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Cannot find invitation to be updated"
@@ -1486,22 +1491,17 @@ msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Жаңартылатын шақыруы табылмады"
 
-#: scheduler_p.cpp:305
-#, kde-format
-msgid "Error adding incidence"
-msgstr "Оқиғаны қосу қатесі"
-
-#: scheduler_p.cpp:339
+#: scheduler_p.cpp:344
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Өшірілетін оқиға табылмады."
 
-#: scheduler_p.cpp:392
+#: scheduler_p.cpp:397
 #, kde-format
 msgid "Error recording exception"
 msgstr "Ерекшелікті жазғанда қате орын алды"
 
-#: scheduler_p.cpp:409
+#: scheduler_p.cpp:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1513,25 +1513,25 @@ msgstr ""
 "Сіздікі емес шығар. Немесе ол тек оқу үшін, әлде бұғатталған күнтізбедегісі "
 "болуы мүмкін."
 
-#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
-#: scheduler_p.cpp:575
+#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:574
+#: scheduler_p.cpp:580
 #, kde-format
 msgid "Generic Error"
 msgstr "Жалпы қате"
 
-#: scheduler_p.cpp:477
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 %2 дененге қатысуы келеді,  бірақ ол шақырылмаған."
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 %3 дегеннің атынан %2 дененге қатысуы келеді."
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Uninvited attendee"
@@ -1539,25 +1539,25 @@ msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Шақырылмаған қатысушы"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Қатысуға келісім бар"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Қатысуға келісім жоқ"
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:493
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Ұйымдастырушысы Сіздің жиналысқа қатысуына келіспеді.."
 
-#: scheduler_p.cpp:509
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1566,7 +1566,7 @@ msgid ""
 msgstr ""
 "Бір қатысушысы қосылған. Қатысушыларға, ол туралы эл.пошта жолдаймысыз?"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Attendee Added"
@@ -1574,29 +1574,29 @@ msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Қатысушысы қосылды"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:517
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Хаттарды жіберу"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:518
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Жібермеу"
 
-#: scheduler_p.cpp:559
+#: scheduler_p.cpp:564
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Жоспарлайтын оқиға жоқ."
 
-#: scheduler_p.cpp:582
+#: scheduler_p.cpp:587
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Бос/Істе кэші жоқ"
 
-#: scheduler_p.cpp:601
+#: scheduler_p.cpp:606
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Бос/Істе нысаның сақтау қатесі"

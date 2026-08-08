@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:43+0000\n"
+"POT-Creation-Date: 2026-08-08 00:45+0000\n"
 "PO-Revision-Date: 2026-08-03 22:47+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: calendarbase.cpp:266
+#: calendarbase.cpp:268
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Nelze najít položku k aktualizaci, pravděpodobně byla nedávno smazána."
@@ -437,7 +437,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informace o zaneprázdněnosti byly úspěšně odeslány."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:620 itiphandler_p.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -605,22 +605,22 @@ msgstr "Vyskytla se neznámá chyba"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Chyba při pokusu o úpravu položky kalendáře. Chyba: %1"
 
-#: incidencechanger.cpp:808 incidencechanger.cpp:932
+#: incidencechanger.cpp:869 incidencechanger.cpp:941
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Tato položka kalendáře již byla odstraněna nebo je právě odstraňována."
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Operaci nelze provést z důvodu omezení ACL"
 
-#: incidencechanger.cpp:1201
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Vybraná kolekce je neplatná"
 
-#: incidencechanger.cpp:1205
+#: incidencechanger.cpp:1219
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -629,12 +629,12 @@ msgstr ""
 "Výchozí kolekce je neplatná nebo nemá správná oprávnění ACL a byla použita "
 "zásada cíle nikdy se neptat"
 
-#: incidencechanger.cpp:1209
+#: incidencechanger.cpp:1223
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Duplicitní ID položky ve skupinové operaci"
 
-#: incidencechanger.cpp:1213
+#: incidencechanger.cpp:1227
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -642,12 +642,12 @@ msgid ""
 msgstr ""
 "Jedna změna patřící do skupiny změn selhala. Všechny změny jsou vraceny zpět."
 
-#: incidencechanger.cpp:1218
+#: incidencechanger.cpp:1232
 #, kde-format
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: itiphandler.cpp:110
+#: itiphandler.cpp:110 itiphandler.cpp:158
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Chyba při načítání kalendáře."
@@ -667,27 +667,27 @@ msgstr "Neznámá chyba při analýze pozvánky iCal"
 msgid "Error while processing an invitation or update."
 msgstr "Chyba během zpracování pozvánky nebo aktualizace."
 
-#: itiphandler.cpp:142
+#: itiphandler.cpp:170
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Neplatný výskyt"
 
-#: itiphandler.cpp:211
+#: itiphandler.cpp:239
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Neplatná činnost: %1"
 
-#: itiphandler.cpp:234
+#: itiphandler.cpp:262
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Chyba při odesílání protinávrhu"
 
-#: itiphandler.cpp:241
+#: itiphandler.cpp:269
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Nelze spustit editor pro úpravu protinávrhu"
 
-#: itiphandler.cpp:272
+#: itiphandler.cpp:300
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -695,7 +695,7 @@ msgstr ""
 "Položka \"%1\" nemá žádné účastníky. Proto nebude odeslána žádná zpráva "
 "groupware."
 
-#: itiphandler.cpp:275
+#: itiphandler.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -713,18 +713,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Neodesílat"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Chyba: %1"
 
-#: itiphandler_p.cpp:84
+#: itiphandler_p.cpp:88
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Chyba při načítání kalendáře: %1"
 
-#: itiphandler_p.cpp:135
+#: itiphandler_p.cpp:139
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -733,7 +733,7 @@ msgstr ""
 "Groupwarová zpráva pro položku '%1' byla úspěšně odeslána.\n"
 "Metoda: %2"
 
-#: itiphandler_p.cpp:147
+#: itiphandler_p.cpp:151
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -744,34 +744,34 @@ msgstr ""
 "Nelze odeslat položku '%1'.\n"
 "Metoda: %2"
 
-#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
+#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Informace o položce byla úspěšně odeslána."
 
-#: itiphandler_p.cpp:164
+#: itiphandler_p.cpp:168
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publikování"
 
-#: itiphandler_p.cpp:169
+#: itiphandler_p.cpp:173
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Nelze publikovat položku '%1'"
 
-#: itiphandler_p.cpp:184
+#: itiphandler_p.cpp:188
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Přeposílání"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:195
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Nelze předat položku '%1'"
 
-#: itiphandler_p.cpp:192
+#: itiphandler_p.cpp:196
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -1387,22 +1387,27 @@ msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
 msgstr "e-mailová adresa příjemce (povinné)"
 
-#: scheduler_p.cpp:132 scheduler_p.cpp:240
+#: scheduler_p.cpp:132 scheduler_p.cpp:245
 #, kde-format
 msgid "Error: Assigning different incidence types."
 msgstr "Chyba: Přiřazení různých typů položek."
 
-#: scheduler_p.cpp:222 scheduler_p.cpp:273
+#: scheduler_p.cpp:150 scheduler_p.cpp:310
+#, kde-format
+msgid "Error adding incidence"
+msgstr "Chyba při přidávání položky"
+
+#: scheduler_p.cpp:227 scheduler_p.cpp:278
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "Toto není aktualizace. Nalezená položka byla upravena nedávno."
 
-#: scheduler_p.cpp:264 scheduler_p.cpp:535 scheduler_p.cpp:550
+#: scheduler_p.cpp:269 scheduler_p.cpp:540 scheduler_p.cpp:555
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "Chyba při úpravě položky"
 
-#: scheduler_p.cpp:289
+#: scheduler_p.cpp:294
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1423,28 +1428,23 @@ msgstr ""
 "kalendáři obsahujícímu pozvánku</item></list></para><para>Není to žádný "
 "problém, ale mysleli jsme si, že byste to měli vědět.</para>"
 
-#: scheduler_p.cpp:298
+#: scheduler_p.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
 msgstr "Nelze najít pozvánku k aktualizaci"
 
-#: scheduler_p.cpp:305
-#, kde-format
-msgid "Error adding incidence"
-msgstr "Chyba při přidávání položky"
-
-#: scheduler_p.cpp:339
+#: scheduler_p.cpp:344
 #, kde-format
 msgid "Could not find incidence to delete."
 msgstr "Nelze najít položku k odstranění."
 
-#: scheduler_p.cpp:392
+#: scheduler_p.cpp:397
 #, kde-format
 msgid "Error recording exception"
 msgstr "Chyba při zaznamenávání výjimky"
 
-#: scheduler_p.cpp:409
+#: scheduler_p.cpp:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1456,49 +1456,49 @@ msgstr ""
 "odstraněna nebo není ve vašem vlastnictví. Nebo může patřit do kalendáře jen "
 "pro čtení nebo deaktivovaného kalendáře."
 
-#: scheduler_p.cpp:419 scheduler_p.cpp:434 scheduler_p.cpp:569
-#: scheduler_p.cpp:575
+#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:574
+#: scheduler_p.cpp:580
 #, kde-format
 msgid "Generic Error"
 msgstr "Obecná chyba"
 
-#: scheduler_p.cpp:477
+#: scheduler_p.cpp:482
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "%1 se chce zúčastnit %2, ale nebyl(a) pozván(a)."
 
-#: scheduler_p.cpp:479
+#: scheduler_p.cpp:484
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "%1 se chce zúčastnit %2 ve jménu %3."
 
-#: scheduler_p.cpp:483
+#: scheduler_p.cpp:488
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "Nepozvaný účastník"
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "Přijmout účast"
 
-#: scheduler_p.cpp:485
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "Odmítnout účast"
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:493
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "Organizátor zamítl vaši účast na této schůzce."
 
-#: scheduler_p.cpp:509
+#: scheduler_p.cpp:514
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1508,35 +1508,35 @@ msgstr ""
 "K události byl přidán účastník. Chcete účastníkům poslat e-mailem "
 "aktualizační zprávu?"
 
-#: scheduler_p.cpp:511
+#: scheduler_p.cpp:516
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "Účastník přidán"
 
-#: scheduler_p.cpp:512
+#: scheduler_p.cpp:517
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "Odeslat zprávy"
 
-#: scheduler_p.cpp:513
+#: scheduler_p.cpp:518
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "Neodesílat"
 
-#: scheduler_p.cpp:559
+#: scheduler_p.cpp:564
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "Žádné položky pro plánování."
 
-#: scheduler_p.cpp:582
+#: scheduler_p.cpp:587
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "Žádná mezipaměť volného času"
 
-#: scheduler_p.cpp:601
+#: scheduler_p.cpp:606
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "Chyba při ukládání objektu volného času"
