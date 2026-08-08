@@ -18,9 +18,13 @@
 #include "publishdialog.h"
 #include "utils_p.h"
 
-#include <KCalUtils/Stringify>
 #include <KCalendarCore/Attendee>
+#include <KCalendarCore/Exceptions>
 #include <KCalendarCore/ICalFormat>
+
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
+#include <KCalUtils/Stringify>
+#endif
 
 #include <Akonadi/MessageQueueJob>
 #include <KIdentityManagementCore/IdentityManager>
@@ -115,8 +119,13 @@ void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCa
     KCalendarCore::ScheduleMessage::Ptr const message = format.parseScheduleMessage(d->calendar(), iCal);
 
     if (!message) {
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
         const QString errorMessage = format.exception() ? i18n("Error message: %1", KCalUtils::Stringify::errorMessage(*format.exception()))
                                                         : i18n("Unknown error while parsing iCal invitation");
+#else
+        const QString errorMessage =
+            format.exception() ? i18n("Error message: %1", format.exception()->errorMessage()) : i18n("Unknown error while parsing iCal invitation");
+#endif
 
         qCritical() << "Error parsing" << errorMessage;
 
