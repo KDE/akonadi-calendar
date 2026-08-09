@@ -79,11 +79,7 @@ void ITIPHandlerPrivate::onLoadFinished(bool success, const QString &errorMessag
             // Harmless hack, processiTIPMessage() asserts that there's not current operation running
             // to prevent users from calling it twice.
             m_currentOperation = OperationNone;
-            if (m_queuedInvitation.message) {
-                q->processiTIPMessage(m_queuedInvitation.receiver, m_queuedInvitation.message, m_queuedInvitation.action);
-            } else {
-                q->processiTIPMessage(m_queuedInvitation.receiver, m_queuedInvitation.iCal, m_queuedInvitation.action);
-            }
+            q->processiTIPMessage(m_queuedInvitation.receiver, m_queuedInvitation.message, m_queuedInvitation.action);
         } else {
             Q_EMIT q->iTipMessageProcessed(ITIPHandler::ResultError, i18n("Error loading calendar: %1", errorMessage));
         }

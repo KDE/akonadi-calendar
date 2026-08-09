@@ -21,7 +21,6 @@ namespace Akonadi
 {
 struct Invitation {
     QString receiver;
-    QString iCal;
     KCalendarCore::ScheduleMessage::Ptr message;
     QString action;
     KCalendarCore::iTIPMethod method;

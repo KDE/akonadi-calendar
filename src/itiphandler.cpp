@@ -19,12 +19,7 @@
 #include "utils_p.h"
 
 #include <KCalendarCore/Attendee>
-#include <KCalendarCore/Exceptions>
 #include <KCalendarCore/ICalFormat>
-
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-#include <KCalUtils/Stringify>
-#endif
 
 #include <Akonadi/MessageQueueJob>
 #include <KIdentityManagementCore/IdentityManager>
@@ -88,59 +83,6 @@ ITIPHandler::ITIPHandler(ITIPHandlerComponentFactory *factory, QObject *parent)
 }
 
 ITIPHandler::~ITIPHandler() = default;
-
-void ITIPHandler::processiTIPMessage(const QString &receiver, const QString &iCal, const QString &action)
-{
-    qCDebug(AKONADICALENDAR_LOG) << "processiTIPMessage called with receiver=" << receiver << "; action=" << action;
-
-    if (d->m_currentOperation != OperationNone) {
-        d->m_currentOperation = OperationNone;
-        qCritical() << "There can't be an operation in progress!" << d->m_currentOperation;
-        return;
-    }
-
-    d->m_currentOperation = OperationProcessiTIPMessage;
-
-    if (!d->isLoaded()) {
-        d->m_queuedInvitation.receiver = receiver;
-        d->m_queuedInvitation.iCal = iCal;
-        d->m_queuedInvitation.action = action;
-        return;
-    }
-
-    if (d->m_calendarLoadError) {
-        d->m_currentOperation = OperationNone;
-        qCritical() << "Error loading calendar";
-        emitiTipMessageProcessed(this, ResultError, i18n("Error loading calendar."));
-        return;
-    }
-
-    KCalendarCore::ICalFormat format;
-    KCalendarCore::ScheduleMessage::Ptr const message = format.parseScheduleMessage(d->calendar(), iCal);
-
-    if (!message) {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-        const QString errorMessage = format.exception() ? i18n("Error message: %1", KCalUtils::Stringify::errorMessage(*format.exception()))
-                                                        : i18n("Unknown error while parsing iCal invitation");
-#else
-        const QString errorMessage =
-            format.exception() ? i18n("Error message: %1", format.exception()->errorMessage()) : i18n("Unknown error while parsing iCal invitation");
-#endif
-
-        qCritical() << "Error parsing" << errorMessage;
-
-        if (d->m_showDialogsOnError) {
-            KMessageBox::detailedError(nullptr, // mParent, TODO
-                                       i18n("Error while processing an invitation or update."),
-                                       errorMessage);
-        }
-
-        d->m_currentOperation = OperationNone;
-        emitiTipMessageProcessed(this, ResultError, errorMessage);
-
-        return;
-    }
-}
 
 void ITIPHandler::processiTIPMessage(const QString &receiver, const KCalendarCore::ScheduleMessage::Ptr &message, const QString &action)
 {

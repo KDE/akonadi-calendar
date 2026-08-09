@@ -305,17 +305,6 @@ public:
      * Processes a received iTip message.
      *
      * \a receiver
-     * \a iCal
-     * \a action
-     *
-     * \sa iTipMessageProcessed()
-     */
-    [[deprecated("use the ScheduleMessage overload instead")]]
-    void processiTIPMessage(const QString &receiver, const QString &iCal, const QString &action);
-    /*!
-     * Processes a received iTip message.
-     *
-     * \a receiver
      * \a message The parsed schedule message ("invitation")
      * \a action
      *
