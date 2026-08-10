@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:45+0000\n"
 "PO-Revision-Date: 2023-09-13 23:14+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -443,7 +443,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Sərbəst/Məşğul məlumtları uğurla göndərildi."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:143
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -697,47 +697,32 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Naməlum xəta"
 
-#: itiphandler.cpp:110 itiphandler.cpp:158
+#: itiphandler.cpp:109
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Təqvimin yüklənməsində xəta."
 
-#: itiphandler.cpp:118
-#, kde-format
-msgid "Error message: %1"
-msgstr "Xəta ismarıcı: %1"
-
-#: itiphandler.cpp:119
-#, kde-format
-msgid "Unknown error while parsing iCal invitation"
-msgstr "İCal dəvətini təhlil edərkən naməlum xəta"
-
-#: itiphandler.cpp:125
-#, kde-format
-msgid "Error while processing an invitation or update."
-msgstr "Təhlil və yenilənmə zamanı xəta."
-
-#: itiphandler.cpp:170
+#: itiphandler.cpp:121
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Səhv tədbir"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:190
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Səhv əməl: %1"
 
-#: itiphandler.cpp:262
+#: itiphandler.cpp:213
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Əks təklif göndərilməsində xəta"
 
-#: itiphandler.cpp:269
+#: itiphandler.cpp:220
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Əks təklifə düzəliş üçün redaktor başladıla bilmədi"
 
-#: itiphandler.cpp:300
+#: itiphandler.cpp:251
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -745,7 +730,7 @@ msgstr ""
 "\"%1\" elementində iştirak edən yoxdur. Buna görə heç bir qrup üçün ismarıc "
 "göndərilmir."
 
-#: itiphandler.cpp:303
+#: itiphandler.cpp:254
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -763,18 +748,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Göndərməmək"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Xəta: %1"
 
-#: itiphandler_p.cpp:88
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Təqvimin yüklənməsi xətası: %1"
 
-#: itiphandler_p.cpp:139
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -783,7 +768,7 @@ msgstr ""
 "Qrup üçün \"%1\" ismarıcı uğurla göndərildi.\n"
 "Qayda: %2"
 
-#: itiphandler_p.cpp:151
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -794,34 +779,34 @@ msgstr ""
 "\"%1\" elementinin göndərilməsi alınmadı.\n"
 "Qayda: %2"
 
-#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Element haqqında məlumatlar uğurla göndərildi."
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Yayım"
 
-#: itiphandler_p.cpp:173
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "\"%1\" elementini nəşr etmək alınmadı"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Yönləndirmə"
 
-#: itiphandler_p.cpp:195
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "\"%1\" elementinin yönləndirilməsi alınmadı"
 
-#: itiphandler_p.cpp:196
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -2338,6 +2323,15 @@ msgstr "Təsviri"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "İcra olunmuş tapşırıqların təmizlənməsi"
+
+#~ msgid "Error message: %1"
+#~ msgstr "Xəta ismarıcı: %1"
+
+#~ msgid "Unknown error while parsing iCal invitation"
+#~ msgstr "İCal dəvətini təhlil edərkən naməlum xəta"
+
+#~ msgid "Error while processing an invitation or update."
+#~ msgstr "Təhlil və yenilənmə zamanı xəta."
 
 #, fuzzy
 #~| msgid "(EmptyName)"

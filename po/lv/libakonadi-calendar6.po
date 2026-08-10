@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:45+0000\n"
-"PO-Revision-Date: 2026-01-20 19:07+0200\n"
+"POT-Creation-Date: 2026-08-10 00:45+0000\n"
+"PO-Revision-Date: 2026-08-07 13:35+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: calendarbase.cpp:268
 #, kde-format
@@ -435,7 +435,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Aizņemtības informācija ir nosūtīta."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:143
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -483,67 +483,49 @@ msgid "General error"
 msgstr "Vispārīga kļūda"
 
 #: history_p.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "event creation"
-msgstr "%1 izveide"
+msgstr "notikuma izveide"
 
 #: history_p.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "to-do creation"
-msgstr "%1 izveide"
+msgstr "uzdevuma izveide"
 
 #: history_p.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 creation"
+#, kde-format
 msgid "journal creation"
-msgstr "%1 izveide"
+msgstr "žurnāla izveide"
 
 #: history_p.cpp:162
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "event deletion"
-msgstr "%1 dzēšana"
+msgstr "notikuma dzēšana"
 
 #: history_p.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "to-do deletion"
-msgstr "%1 dzēšana"
+msgstr "uzdevuma dzēšana"
 
 #: history_p.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 deletion"
+#, kde-format
 msgid "journal deletion"
-msgstr "%1 dzēšana"
+msgstr "žurnāla dzēšana"
 
 #: history_p.cpp:257
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "event modification"
-msgstr "%1 rediģēšana"
+msgstr "notikuma rediģēšana"
 
 #: history_p.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "to-do modification"
-msgstr "%1 rediģēšana"
+msgstr "uzdevuma rediģēšana"
 
 #: history_p.cpp:263
-#, fuzzy, kde-format
-#| msgctxt "%1 is event, todo or journal"
-#| msgid "%1 modification"
+#, kde-format
 msgid "journal modification"
-msgstr "%1 rediģēšana"
+msgstr "žurnāla rediģēšana"
 
 #: icalimporter.cpp:82
 #, kde-format
@@ -663,47 +645,32 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Nezināma kļūda"
 
-#: itiphandler.cpp:110 itiphandler.cpp:158
+#: itiphandler.cpp:109
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Kļūda, ielādējot kalendāru."
 
-#: itiphandler.cpp:118
-#, kde-format
-msgid "Error message: %1"
-msgstr "Kļūdas ziņojums: %1"
-
-#: itiphandler.cpp:119
-#, kde-format
-msgid "Unknown error while parsing iCal invitation"
-msgstr "Nezināma kļūda, parsējot „iCal“ ielūgumu"
-
-#: itiphandler.cpp:125
-#, kde-format
-msgid "Error while processing an invitation or update."
-msgstr "Kļūda, apstrādājot ielūgumu vai atjauninājumu."
-
-#: itiphandler.cpp:170
+#: itiphandler.cpp:121
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Nederīgs notikums"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:190
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Nederīga darbība: %1"
 
-#: itiphandler.cpp:262
+#: itiphandler.cpp:213
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Kļūda, nosūtot pretpriekšlikumu"
 
-#: itiphandler.cpp:269
+#: itiphandler.cpp:220
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Neizdevās palaist redaktoru, lai rediģētu pretpriekšlikumu"
 
-#: itiphandler.cpp:300
+#: itiphandler.cpp:251
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -711,7 +678,7 @@ msgstr ""
 "Vienumam „%1“ nav apmeklētāju, tāpēc nav nosūtīts grupprogrammatūras "
 "ziņojums."
 
-#: itiphandler.cpp:303
+#: itiphandler.cpp:254
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -729,18 +696,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Nesūtīt"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Kļūda: %1"
 
-#: itiphandler_p.cpp:88
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Kļūda, ielādējot kalendāru: %1"
 
-#: itiphandler_p.cpp:139
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -749,7 +716,7 @@ msgstr ""
 "Grupprogrammatūras ziņojums par vienumu „%1“ ir veiksmīgi nosūtīts.\n"
 "Metode: %2"
 
-#: itiphandler_p.cpp:151
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -760,34 +727,34 @@ msgstr ""
 "Neizdodas nosūtīt vienumu „%1“.\n"
 "Metode: %2"
 
-#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Vienuma informācija ir veiksmīgi nosūtīta."
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publiskošana"
 
-#: itiphandler_p.cpp:173
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Neizdodas publiskos vienumu „%1“"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Pārsūtīšana"
 
-#: itiphandler_p.cpp:195
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Neizdodas pārsūtīt vienumu „%1“"
 
-#: itiphandler_p.cpp:196
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -2274,6 +2241,15 @@ msgstr "Apraksts"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Noņemt pabeigtos uzdevumus"
+
+#~ msgid "Error message: %1"
+#~ msgstr "Kļūdas ziņojums: %1"
+
+#~ msgid "Unknown error while parsing iCal invitation"
+#~ msgstr "Nezināma kļūda, parsējot „iCal“ ielūgumu"
+
+#~ msgid "Error while processing an invitation or update."
+#~ msgstr "Kļūda, apstrādājot ielūgumu vai atjauninājumu."
 
 #~ msgctxt "@info:placeholder"
 #~ msgid "(EmptyName)"

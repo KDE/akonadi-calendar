@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:45+0000\n"
 "PO-Revision-Date: 2025-12-07 12:05+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -440,7 +440,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Libre/Lanpetuta informazioa ondo bidali da."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:143
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -669,47 +669,32 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Errore ezezaguna"
 
-#: itiphandler.cpp:110 itiphandler.cpp:158
+#: itiphandler.cpp:109
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Errorea egutegia zamatzean."
 
-#: itiphandler.cpp:118
-#, kde-format
-msgid "Error message: %1"
-msgstr "Errore-mezua: %1"
-
-#: itiphandler.cpp:119
-#, kde-format
-msgid "Unknown error while parsing iCal invitation"
-msgstr "Errore ezezaguna iCal gonbidapenaren sintaxia aztertzean"
-
-#: itiphandler.cpp:125
-#, kde-format
-msgid "Error while processing an invitation or update."
-msgstr "Errorea gonbidapen bat edo eguneratze bat prozesatzean."
-
-#: itiphandler.cpp:170
+#: itiphandler.cpp:121
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Gertakizun baliogabea"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:190
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Ekintza baliogabea: %1"
 
-#: itiphandler.cpp:262
+#: itiphandler.cpp:213
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Errorea ordezko proposamen bidaltzean"
 
-#: itiphandler.cpp:269
+#: itiphandler.cpp:220
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Ezin izan da ordezko proposamena editatzeko editorea abiarazi"
 
-#: itiphandler.cpp:300
+#: itiphandler.cpp:251
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -717,7 +702,7 @@ msgstr ""
 "«%1» elementuak ez du partaiderik. Hori dela eta ez da talde-laneko mezurik "
 "bidaliko."
 
-#: itiphandler.cpp:303
+#: itiphandler.cpp:254
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -735,18 +720,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Ez bidali"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Errorea: %1"
 
-#: itiphandler_p.cpp:88
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Errorea egutegia zamatzean: %1"
 
-#: itiphandler_p.cpp:139
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -755,7 +740,7 @@ msgstr ""
 "«%1» elementuaren talde-lanerako mezua ondo bidali da.\n"
 "Metodoa: %2"
 
-#: itiphandler_p.cpp:151
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -766,34 +751,34 @@ msgstr ""
 "Ezin da «%1» elementua bidali.\n"
 "Metodoa: %2"
 
-#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Elementuaren informazioa ondo bidali da."
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Argitaratzea"
 
-#: itiphandler_p.cpp:173
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Ezin da argitaratu «%1» elementua"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Birbideratzea"
 
-#: itiphandler_p.cpp:195
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Ezin da birbideratu «%1» elementua"
 
-#: itiphandler_p.cpp:196
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -2278,6 +2263,15 @@ msgstr "Deskribapena"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Osatutako zereginak erabat kentzen"
+
+#~ msgid "Error message: %1"
+#~ msgstr "Errore-mezua: %1"
+
+#~ msgid "Unknown error while parsing iCal invitation"
+#~ msgstr "Errore ezezaguna iCal gonbidapenaren sintaxia aztertzean"
+
+#~ msgid "Error while processing an invitation or update."
+#~ msgstr "Errorea gonbidapen bat edo eguneratze bat prozesatzean."
 
 #~ msgctxt "@info:placeholder"
 #~ msgid "(EmptyName)"

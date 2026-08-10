@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -440,7 +440,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "निःशुल्क/व्यस्तसूचना सफलतया प्रेषिता।"
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:143
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -673,54 +673,39 @@ msgstr "परिवर्तनसमूहस्य एकः परिवर�
 msgid "Unknown error"
 msgstr "अज्ञातदोषः"
 
-#: itiphandler.cpp:110 itiphandler.cpp:158
+#: itiphandler.cpp:109
 #, kde-format
 msgid "Error loading calendar."
 msgstr "पञ्चाङ्गं लोड् करणं त्रुटिः।"
 
-#: itiphandler.cpp:118
-#, kde-format
-msgid "Error message: %1"
-msgstr "त्रुटिसन्देशः %1"
-
-#: itiphandler.cpp:119
-#, kde-format
-msgid "Unknown error while parsing iCal invitation"
-msgstr "iCal आमन्त्रणं विश्लेषणं कुर्वन् अज्ञातदोषः"
-
-#: itiphandler.cpp:125
-#, kde-format
-msgid "Error while processing an invitation or update."
-msgstr "आमन्त्रणं अथवा अद्यतनं संसाधयन् त्रुटिः।"
-
-#: itiphandler.cpp:170
+#: itiphandler.cpp:121
 #, kde-format
 msgid "Invalid incidence"
 msgstr "असिद्ध घटना"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:190
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "अमान्यक्रिया: %1"
 
-#: itiphandler.cpp:262
+#: itiphandler.cpp:213
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "प्रतिप्रस्तावं प्रेषयन् त्रुटिः"
 
-#: itiphandler.cpp:269
+#: itiphandler.cpp:220
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "काउण्टरप्रस्तावस्य सम्पादनार्थं सम्पादकं आरभ्यतुं न शक्तवान्"
 
-#: itiphandler.cpp:300
+#: itiphandler.cpp:251
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
 "'%1' इति मदस्य उपस्थिताः नास्ति । अतः कोऽपि समूहसामग्रीसन्देशः न प्रेषितः भविष्यति ।"
 
-#: itiphandler.cpp:303
+#: itiphandler.cpp:254
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -738,18 +723,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "मा प्रेषयतु"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "त्रुटिः %1"
 
-#: itiphandler_p.cpp:88
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "पञ्चाङ्गं लोड् करणं त्रुटिः: %1"
 
-#: itiphandler_p.cpp:139
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -758,7 +743,7 @@ msgstr ""
 "'%1' इति द्रव्यस्य समूहवेयरसन्देशः सफलतया प्रेषितः ।\n"
 "विधिः %2"
 
-#: itiphandler_p.cpp:151
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -769,34 +754,34 @@ msgstr ""
 "'%1' इति द्रव्यं प्रेषयितुं असमर्थः ।\n"
 "विधिः %2"
 
-#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "मदसूचना सफलतया प्रेषिता।"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "प्रकाशन"
 
-#: itiphandler_p.cpp:173
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "'%1' इति द्रव्यं प्रकाशयितुं असमर्थः ।"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "अग्रे प्रेषणम्"
 
-#: itiphandler_p.cpp:195
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "'%1' इति द्रव्यं अग्रे प्रेषयितुं असमर्थः ।"
 
-#: itiphandler_p.cpp:196
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -2270,6 +2255,15 @@ msgstr "वर्णनम्‌"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "शुद्धिकरणं सम्पन्नं टू-डोस्"
+
+#~ msgid "Error message: %1"
+#~ msgstr "त्रुटिसन्देशः %1"
+
+#~ msgid "Unknown error while parsing iCal invitation"
+#~ msgstr "iCal आमन्त्रणं विश्लेषणं कुर्वन् अज्ञातदोषः"
+
+#~ msgid "Error while processing an invitation or update."
+#~ msgstr "आमन्त्रणं अथवा अद्यतनं संसाधयन् त्रुटिः।"
 
 #~ msgctxt "@info:placeholder"
 #~ msgid "(EmptyName)"

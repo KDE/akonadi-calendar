@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:45+0000\n"
 "PO-Revision-Date: 2024-09-22 00:20+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -450,7 +450,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "A información da dispoñibilidade enviouse correctamente."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:143
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
@@ -693,47 +693,32 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Erro descoñecido"
 
-#: itiphandler.cpp:110 itiphandler.cpp:158
+#: itiphandler.cpp:109
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Produciuse un erro ao cargar o calendario."
 
-#: itiphandler.cpp:118
-#, kde-format
-msgid "Error message: %1"
-msgstr "Mensaxe de erro: %1"
-
-#: itiphandler.cpp:119
-#, kde-format
-msgid "Unknown error while parsing iCal invitation"
-msgstr "Produciuse un erro descoñecido ao analizar a invitación de iCal."
-
-#: itiphandler.cpp:125
-#, kde-format
-msgid "Error while processing an invitation or update."
-msgstr "Produciuse un erro ao procesar unha invitación ou unha actualización."
-
-#: itiphandler.cpp:170
+#: itiphandler.cpp:121
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Incidencia incorrecta"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:190
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Acción incorrecta: %1"
 
-#: itiphandler.cpp:262
+#: itiphandler.cpp:213
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Produciuse un erro ao enviar a contraproposta"
 
-#: itiphandler.cpp:269
+#: itiphandler.cpp:220
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Non foi posíbel iniciar o editor para editar a contraproposta"
 
-#: itiphandler.cpp:300
+#: itiphandler.cpp:251
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
@@ -741,7 +726,7 @@ msgstr ""
 "O elemento «%1» non ten asistentes, polo que o software colaborativo non vai "
 "enviar ningunha mensaxe."
 
-#: itiphandler.cpp:303
+#: itiphandler.cpp:254
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
@@ -759,18 +744,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Non enviar"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Erro: %1"
 
-#: itiphandler_p.cpp:88
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Produciuse un erro ao cargar o calendario: %1"
 
-#: itiphandler_p.cpp:139
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -780,7 +765,7 @@ msgstr ""
 "«%1».\n"
 "Método: %2"
 
-#: itiphandler_p.cpp:151
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -791,34 +776,34 @@ msgstr ""
 "Non é posíbel enviar o elemento «%1».\n"
 "Método: %2"
 
-#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "A información do elemento enviouse correctamente."
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Publicación"
 
-#: itiphandler_p.cpp:173
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Non é posíbel publicar o elemento «%1»"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:184
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Reenvío"
 
-#: itiphandler_p.cpp:195
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Non é posíbel reenviar o elemento «%1»"
 
-#: itiphandler_p.cpp:196
+#: itiphandler_p.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Forwarding Error"
@@ -2324,6 +2309,16 @@ msgstr "Descrición"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Estanse a purgar as tarefas completadas"
+
+#~ msgid "Error message: %1"
+#~ msgstr "Mensaxe de erro: %1"
+
+#~ msgid "Unknown error while parsing iCal invitation"
+#~ msgstr "Produciuse un erro descoñecido ao analizar a invitación de iCal."
+
+#~ msgid "Error while processing an invitation or update."
+#~ msgstr ""
+#~ "Produciuse un erro ao procesar unha invitación ou unha actualización."
 
 # skip-rule: trasno-empty2_reverse
 #~ msgctxt "@info:placeholder"

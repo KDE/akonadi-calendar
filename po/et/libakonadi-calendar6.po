@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:45+0000\n"
 "PO-Revision-Date: 2020-04-20 11:38+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -449,7 +449,7 @@ msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Teave vaba/hõivatud aja kohta saadeti edukalt edasi."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:143
+#: freebusymanager.cpp:620 itiphandler_p.cpp:139
 #, fuzzy, kde-format
 #| msgid "Sending Free/Busy"
 msgctxt "@title:window"
@@ -686,54 +686,39 @@ msgstr ""
 msgid "Unknown error"
 msgstr "Tundmatu tõrge"
 
-#: itiphandler.cpp:110 itiphandler.cpp:158
+#: itiphandler.cpp:109
 #, kde-format
 msgid "Error loading calendar."
 msgstr "Tõrge kalendri laadimisel."
 
-#: itiphandler.cpp:118
-#, kde-format
-msgid "Error message: %1"
-msgstr "Veateade: %1"
-
-#: itiphandler.cpp:119
-#, kde-format
-msgid "Unknown error while parsing iCal invitation"
-msgstr "Tundmatu tõrge iCali kutse parsimisel"
-
-#: itiphandler.cpp:125
-#, kde-format
-msgid "Error while processing an invitation or update."
-msgstr "Tõrge kutse või uuenduse töötlemisel."
-
-#: itiphandler.cpp:170
+#: itiphandler.cpp:121
 #, kde-format
 msgid "Invalid incidence"
 msgstr "Vigane sündmus"
 
-#: itiphandler.cpp:239
+#: itiphandler.cpp:190
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Vigane toiming: %1"
 
-#: itiphandler.cpp:262
+#: itiphandler.cpp:213
 #, kde-format
 msgid "Error sending counter proposal"
 msgstr "Tõrge vastuettepaneku saatmisel"
 
-#: itiphandler.cpp:269
+#: itiphandler.cpp:220
 #, kde-format
 msgid "Could not start editor to edit counter proposal"
 msgstr "Redaktori käivitamine vastuettepaneku muutmiseks nurjus"
 
-#: itiphandler.cpp:300
+#: itiphandler.cpp:251
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
 "Elemendil \"%1\" pole osalejaid. Seepärast ei saadeta ka grupitöö sõnumit."
 
-#: itiphandler.cpp:303
+#: itiphandler.cpp:254
 #, fuzzy, kde-format
 #| msgid "Message Not Sent"
 msgctxt "@title:window"
@@ -752,18 +737,18 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Ära saada"
 
-#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:122
+#: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
 #: itiphandlerhelper_p.cpp:506
 #, kde-format
 msgid "Error: %1"
 msgstr "Tõrge: %1"
 
-#: itiphandler_p.cpp:88
+#: itiphandler_p.cpp:84
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Tõrge kalendri laadimisel: %1"
 
-#: itiphandler_p.cpp:139
+#: itiphandler_p.cpp:135
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -772,7 +757,7 @@ msgstr ""
 "Elemendi '%1'grupitöösõnum saadeti edukalt teele.\n"
 "Meetod: %2"
 
-#: itiphandler_p.cpp:151
+#: itiphandler_p.cpp:147
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -783,36 +768,36 @@ msgstr ""
 "Elemendi '%1' saatmine nurjus.\n"
 "Meetod: %2"
 
-#: itiphandler_p.cpp:167 itiphandler_p.cpp:187
+#: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
 msgstr "Elemendi teave saadeti edukalt edasi."
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:164
 #, fuzzy, kde-format
 #| msgid "Publishing"
 msgctxt "@title:window"
 msgid "Publishing"
 msgstr "Avaldamine"
 
-#: itiphandler_p.cpp:173
+#: itiphandler_p.cpp:169
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Elemendi \"%1\" avaldamine nurjus"
 
-#: itiphandler_p.cpp:188
+#: itiphandler_p.cpp:184
 #, fuzzy, kde-format
 #| msgid "Forwarding"
 msgctxt "@title:window"
 msgid "Forwarding"
 msgstr "Edastamine"
 
-#: itiphandler_p.cpp:195
+#: itiphandler_p.cpp:191
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Elemendi \"%1\" edastamine nurjus"
 
-#: itiphandler_p.cpp:196
+#: itiphandler_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "Forwarding Error"
 msgctxt "@title:window"
@@ -2325,6 +2310,15 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Lõpetatud ülesannete kustutamine"
+
+#~ msgid "Error message: %1"
+#~ msgstr "Veateade: %1"
+
+#~ msgid "Unknown error while parsing iCal invitation"
+#~ msgstr "Tundmatu tõrge iCali kutse parsimisel"
+
+#~ msgid "Error while processing an invitation or update."
+#~ msgstr "Tõrge kutse või uuenduse töötlemisel."
 
 #, fuzzy
 #~| msgid "(EmptyName)"
