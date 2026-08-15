@@ -2233,12 +2233,3 @@ msgstr ""
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "Rydder bort fullførte gjøremål"
-
-#~ msgid "Error message: %1"
-#~ msgstr "Feilmelding: %1"
-
-#~ msgid "Unknown error while parsing iCal invitation"
-#~ msgstr "Ukjent feil under tolking av iCal-invitasjon"
-
-#~ msgid "Error while processing an invitation or update."
-#~ msgstr "Feil under behandling av en invitasjon eller oppdatering."
