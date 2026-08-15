@@ -13,7 +13,9 @@
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>
 
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
 #include <KCalUtils/Stringify>
+#endif
 
 #include <KLocalizedString>
 
@@ -22,7 +24,6 @@
 #include <QIODevice>
 
 using namespace KCalendarCore;
-using namespace KCalUtils;
 using namespace Akonadi;
 
 SerializerPluginKCalCore::SerializerPluginKCalCore() = default;
@@ -231,7 +232,14 @@ static void compareIncidence(AbstractDifferencesReporter *reporter, const Incide
     }
 
     if (left->status() != right->status()) {
-        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Status"), Stringify::incidenceStatus(left), Stringify::incidenceStatus(right));
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode,
+                              i18n("Status"),
+                              KCalUtils::Stringify::incidenceStatus(left),
+                              KCalUtils::Stringify::incidenceStatus(right));
+#else
+        reporter->addProperty(AbstractDifferencesReporter::ConflictMode, i18n("Status"), left->statusName(), right->statusName());
+#endif
     }
 
     if (left->secrecy() != right->secrecy()) {

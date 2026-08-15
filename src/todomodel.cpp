@@ -17,7 +17,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/IncidenceTreeModel>
 #include <Akonadi/TagCache>
 
-#include <KCalUtils/IncidenceFormatter>
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
 #include <KCalUtils/DndFactory>
 #include <KCalUtils/ICalDrag>

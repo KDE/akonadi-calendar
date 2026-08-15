@@ -44,8 +44,8 @@ private:
     void waitForSignals();
     void cleanup();
     void createITIPHandler();
-    QString icalData(const QString &filename);
-    void processItip(const QString &icaldata, const QString &receiver, const QString &action, int expectedNumIncidences, Akonadi::Item::List &items);
+    QByteArray icalData(const QString &filename);
+    void processItip(const QByteArray &icaldata, const QString &receiver, const QString &action, int expectedNumIncidences, Akonadi::Item::List &items);
     KCalendarCore::Attendee ourAttendee(const KCalendarCore::Incidence::Ptr &incidence) const;
 
 public Q_SLOTS:
