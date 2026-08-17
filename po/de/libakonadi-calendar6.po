@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-10 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:46+0000\n"
 "PO-Revision-Date: 2026-08-11 23:05+0200\n"
 "Last-Translator: Ewald Müller <EMuede@netscape.net>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -314,7 +314,7 @@ msgstr ""
 "dem Server anderedomain.de fehlschlagen."
 
 #: calendarutils.cpp:107 calendarutils.cpp:124 calendarutils.cpp:172
-#: todomodel.cpp:494
+#: todomodel.cpp:493
 #, kde-format
 msgid "Calendar"
 msgstr "Kalender"
@@ -2193,73 +2193,73 @@ msgstr "&Bearbeiten …"
 msgid "Edit the selected incidence."
 msgstr "Das ausgewählte Ereignis bearbeiten."
 
-#: todomodel.cpp:161 todomodel.cpp:196
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Ausnahme"
 
-#: todomodel.cpp:163 todomodel.cpp:198
+#: todomodel.cpp:162 todomodel.cpp:197
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Ja"
 
-#: todomodel.cpp:166 todomodel.cpp:201
+#: todomodel.cpp:165 todomodel.cpp:200
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Nein"
 
-#: todomodel.cpp:180 todomodel.cpp:217
+#: todomodel.cpp:179 todomodel.cpp:216
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:476
+#: todomodel.cpp:475
 #, kde-format
 msgid "Summary"
 msgstr "Zusammenfassung"
 
-#: todomodel.cpp:478
+#: todomodel.cpp:477
 #, kde-format
 msgid "Recurs"
 msgstr "Wiederholt"
 
-#: todomodel.cpp:480
+#: todomodel.cpp:479
 #, kde-format
 msgid "Priority"
 msgstr "Priorität"
 
-#: todomodel.cpp:482
+#: todomodel.cpp:481
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Abgeschlossen"
 
-#: todomodel.cpp:484
+#: todomodel.cpp:483
 #, kde-format
 msgid "Start Date"
 msgstr "Anfangsdatum"
 
-#: todomodel.cpp:486
+#: todomodel.cpp:485
 #, kde-format
 msgid "Due Date"
 msgstr "Fälligkeitsdatum"
 
-#: todomodel.cpp:488
+#: todomodel.cpp:487
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Abgeschlossen"
 
-#: todomodel.cpp:490
+#: todomodel.cpp:489
 #, kde-format
 msgid "Tags"
 msgstr "Stichwörter"
 
-#: todomodel.cpp:492
+#: todomodel.cpp:491
 #, kde-format
 msgid "Description"
 msgstr "Beschreibung"
