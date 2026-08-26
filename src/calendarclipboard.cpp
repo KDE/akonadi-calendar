@@ -7,6 +7,8 @@
 #include "calendarclipboard_p.h"
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
 #include <KCalUtils/ICalDrag>
+using namespace KCalendarCore;
+using namespace KCalUtils;
 #else
 #include <KCalendarCore/MimeData>
 #endif
