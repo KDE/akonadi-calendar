@@ -879,7 +879,14 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     d->mChangeById.insert(changeId, change);
 
     if (d->mGroupwareCommunication) {
-        connect(change.data(), &Change::dialogClosedBeforeChange, d.get(), &IncidenceChangerPrivate::deleteIncidences2);
+        const auto itemCount = change->originalItems.size();
+        connect(change.data(), &Change::dialogClosedBeforeChange, d.get(), [this, count = itemCount](auto &&...args) mutable {
+            if (count > 0) {
+                count -= 1;
+            } else {
+                d->deleteIncidences2(std::forward<decltype(args)>(args)...);
+            }
+        });
         d->handleInvitationsBeforeChange(change);
     } else {
         d->deleteIncidences2(changeId, ITIPHandlerHelper::ResultSuccess);
@@ -951,7 +958,14 @@ void IncidenceChangerPrivate::performModification(const Change::Ptr &change)
         return;
     }
     if (mGroupwareCommunication) {
-        connect(change.data(), &Change::dialogClosedBeforeChange, this, &IncidenceChangerPrivate::performModification2);
+        const auto itemCount = change->originalItems.size();
+        connect(change.data(), &Change::dialogClosedBeforeChange, this, [this, count = itemCount](auto &&...args) mutable {
+            if (count > 0) {
+                count -= 1;
+            } else {
+                performModification2(std::forward<decltype(args)>(args)...);
+            }
+        });
         handleInvitationsBeforeChange(change);
     } else {
         performModification2(change->id, ITIPHandlerHelper::ResultSuccess);
