@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:46+0000\n"
+"POT-Creation-Date: 2026-08-27 00:45+0000\n"
 "PO-Revision-Date: 2026-08-09 13:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -24,32 +24,32 @@ msgstr ""
 "Kon bij te werken gebeurtenis niet vinden, deze is waarschijnlijk recent "
 "verwijderd."
 
-#: calendarclipboard.cpp:103
+#: calendarclipboard.cpp:105
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Fout bij uitvoeren van verwijderen."
 
-#: calendarclipboard.cpp:108
+#: calendarclipboard.cpp:110
 #, kde-format
 msgid "Error performing copy."
 msgstr "Fout bij uitvoeren van kopiëren."
 
-#: calendarclipboard.cpp:132
+#: calendarclipboard.cpp:134
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Kan item niet vinden: %1"
 
-#: calendarclipboard.cpp:148 calendarclipboard.cpp:165
+#: calendarclipboard.cpp:150 calendarclipboard.cpp:167
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Fout tijdens het verwijderen van relaties."
 
-#: calendarclipboard.cpp:194
+#: calendarclipboard.cpp:196
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Fout bij verwijderen van gebeurtenissen: %1"
 
-#: calendarclipboard.cpp:211
+#: calendarclipboard.cpp:213
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -59,25 +59,25 @@ msgstr ""
 "bijbehorende subtaken zelfstandig maken, of wilt u de taak met alle "
 "bijbehorende subtaken verwijderen?"
 
-#: calendarclipboard.cpp:216 calendarclipboard.cpp:255
+#: calendarclipboard.cpp:218 calendarclipboard.cpp:257
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer bevestiging"
 
-#: calendarclipboard.cpp:217
+#: calendarclipboard.cpp:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Alleen dit knippen"
 
-#: calendarclipboard.cpp:218
+#: calendarclipboard.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Alle verwijderen"
 
-#: calendarclipboard.cpp:251
+#: calendarclipboard.cpp:253
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -85,13 +85,13 @@ msgid ""
 msgstr ""
 "\"%1\" heeft subtaken. Wilt u alleen dit kopiëren, of ook alle subtaken?"
 
-#: calendarclipboard.cpp:256
+#: calendarclipboard.cpp:258
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Alleen dit kopiëren"
 
-#: calendarclipboard.cpp:257
+#: calendarclipboard.cpp:259
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:46+0000\n"
+"POT-Creation-Date: 2026-08-27 00:45+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,32 +22,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "Жаңартылатын оқиға табылмады, бәлкім жуырда өшірілген шығар."
 
-#: calendarclipboard.cpp:103
+#: calendarclipboard.cpp:105
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Өшіруді орнындағанда қате орын алды."
 
-#: calendarclipboard.cpp:108
+#: calendarclipboard.cpp:110
 #, kde-format
 msgid "Error performing copy."
 msgstr "Көшіруді орнындағанда қате орын алды."
 
-#: calendarclipboard.cpp:132
+#: calendarclipboard.cpp:134
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Аталым табылмады: %1"
 
-#: calendarclipboard.cpp:148 calendarclipboard.cpp:165
+#: calendarclipboard.cpp:150 calendarclipboard.cpp:167
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Қатынастарды өшіру кезінде қате пайда болды."
 
-#: calendarclipboard.cpp:194
+#: calendarclipboard.cpp:196
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Өшіру кезде қате орын алды: %1"
 
-#: calendarclipboard.cpp:211
+#: calendarclipboard.cpp:213
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -56,28 +56,28 @@ msgstr ""
 "\"%1\" деген тармақтарға бөлінген. Ішкі істерді бөліп алып тек осыны ғана "
 "өшірмексіз бе, әлде барлық тармақтарымен бірге өшірейік пе?"
 
-#: calendarclipboard.cpp:216 calendarclipboard.cpp:255
+#: calendarclipboard.cpp:218 calendarclipboard.cpp:257
 #, fuzzy, kde-format
 #| msgid "KOrganizer Confirmation"
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer құптауы"
 
-#: calendarclipboard.cpp:217
+#: calendarclipboard.cpp:219
 #, fuzzy, kde-format
 #| msgid "Cut Only This"
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Осыны ғана өшіру"
 
-#: calendarclipboard.cpp:218
+#: calendarclipboard.cpp:220
 #, fuzzy, kde-format
 #| msgid "Cut All"
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Барлығын"
 
-#: calendarclipboard.cpp:251
+#: calendarclipboard.cpp:253
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -86,14 +86,14 @@ msgstr ""
 "\"%1\" деген тармақтарға бөлінген. Ішкі істерді бөліп алып тек осыны ғана "
 "көшірмексіз бе, әлде барлық тармақтарымен бірге көшірейік пе?"
 
-#: calendarclipboard.cpp:256
+#: calendarclipboard.cpp:258
 #, fuzzy, kde-format
 #| msgid "Copy Only This"
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Осыны ғана көшіру"
 
-#: calendarclipboard.cpp:257
+#: calendarclipboard.cpp:259
 #, fuzzy, kde-format
 #| msgid "Copy All"
 msgctxt "@action:button"
