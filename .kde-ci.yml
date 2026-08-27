@@ -4,12 +4,12 @@
 Dependencies:
  - 'on': ['Linux', 'FreeBSD', 'Windows']
    'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kcontacts': '@latest-kf6'
-    'frameworks/kcalendarcore': '@latest-kf6'
-    'frameworks/knotifications': '@latest-kf6'
-    'frameworks/kdbusaddons': '@latest-kf6'
-    'frameworks/kcrash': '@latest-kf6'
+    'frameworks/extra-cmake-modules': 'Frameworks/6.24'
+    'frameworks/kcontacts': 'Frameworks/6.24'
+    'frameworks/kcalendarcore': 'Frameworks/6.24'
+    'frameworks/knotifications': 'Frameworks/6.24'
+    'frameworks/kdbusaddons': 'Frameworks/6.24'
+    'frameworks/kcrash': 'Frameworks/6.24'
     'pim/akonadi': '@same'
     'pim/akonadi-mime': '@same'
     'pim/akonadi-contacts': '@same'
