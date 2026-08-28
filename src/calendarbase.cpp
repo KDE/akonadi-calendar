@@ -518,8 +518,6 @@ Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const
         Akonadi::Item const child = item(uid);
         if (child.isValid() && child.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             children.append(child);
-        } else {
-            qCWarning(AKONADICALENDAR_LOG) << "Invalid child with uid " << uid;
         }
     }
     return children;
