@@ -166,7 +166,7 @@ public:
      *                   used by calling lastCollectionUsed();
      * \a parent widget parent to be used in dialogs.
      *
-     * Returns Returns an integer which identifies this change. This identifier is useful
+     * \return Returns an integer which identifies this change. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::createFinished() signal.
      *
      *         Returns -1 if \a incidence is invalid. The createFinished() signal
@@ -184,7 +184,7 @@ public:
      *                   used by calling lastCollectionUsed();
      * \a parent widget parent to be used in dialogs.
      *
-     * Returns Returns an integer which identifies this change. This identifier is useful
+     * \return Returns an integer which identifies this change. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::createFinished() signal.
      *
      *         Returns -1 if \a item is invalid. The createFinished() signal
@@ -198,7 +198,7 @@ public:
      * \a item Item to delete. Item must be valid.
      * \a parent Parent to be used in dialogs.
      *
-     * Returns Returns an integer which identifies this deletion. This identifier is useful
+     * \return Returns an integer which identifies this deletion. This identifier is useful
      *         to correlate this deletion with the IncidenceChanger::deleteFinished() signal.
      *
      *         Returns -1 if item is invalid. The deleteFinished() signal won't be emitted in this
@@ -211,7 +211,7 @@ public:
      *
      * \a items List of items do delete. They must be valid.
      * \a parent Parent to be used in dialogs.
-     * Returns Returns an integer which identifies this deletion. This identifier is useful
+     * \return Returns an integer which identifies this deletion. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::deleteFinished() signal.
      *
      *         Returns -1 if any item is invalid or if \a items is empty. The deleteFinished() signal
@@ -228,7 +228,7 @@ public:
      *                        deletion.
      * \a parent Parent to be used in dialogs.
      *
-     * Returns Returns an integer which identifies this modification. This identifier is useful
+     * \return Returns an integer which identifies this modification. This identifier is useful
      *         to correlate this operation with the IncidenceChanger::modifyFinished() signal.
      *
      *         Returns -1 if the item doesn't have a valid payload. The modifyFinished() signal
