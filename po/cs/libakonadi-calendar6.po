@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:45+0000\n"
+"POT-Creation-Date: 2026-09-04 00:45+0000\n"
 "PO-Revision-Date: 2026-08-03 22:47+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -605,22 +605,22 @@ msgstr "Vyskytla se neznámá chyba"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Chyba při pokusu o úpravu položky kalendáře. Chyba: %1"
 
-#: incidencechanger.cpp:869 incidencechanger.cpp:941
+#: incidencechanger.cpp:869 incidencechanger.cpp:948
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Tato položka kalendáře již byla odstraněna nebo je právě odstraňována."
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1226
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Operaci nelze provést z důvodu omezení ACL"
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1229
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Vybraná kolekce je neplatná"
 
-#: incidencechanger.cpp:1219
+#: incidencechanger.cpp:1233
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -629,12 +629,12 @@ msgstr ""
 "Výchozí kolekce je neplatná nebo nemá správná oprávnění ACL a byla použita "
 "zásada cíle nikdy se neptat"
 
-#: incidencechanger.cpp:1223
+#: incidencechanger.cpp:1237
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Duplicitní ID položky ve skupinové operaci"
 
-#: incidencechanger.cpp:1227
+#: incidencechanger.cpp:1241
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -642,7 +642,7 @@ msgid ""
 msgstr ""
 "Jedna změna patřící do skupiny změn selhala. Všechny změny jsou vraceny zpět."
 
-#: incidencechanger.cpp:1232
+#: incidencechanger.cpp:1246
 #, kde-format
 msgid "Unknown error"
 msgstr "Neznámá chyba"

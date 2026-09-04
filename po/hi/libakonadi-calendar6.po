@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:45+0000\n"
+"POT-Creation-Date: 2026-09-04 00:45+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -631,22 +631,22 @@ msgstr "एक अज्ञात त्रुटि हुई"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "कैलेंडर आइटम संशोधित करने का प्रयास करते समय त्रुटि हुई। त्रुटि थी: %1"
 
-#: incidencechanger.cpp:869 incidencechanger.cpp:941
+#: incidencechanger.cpp:869 incidencechanger.cpp:948
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "वह कैलेंडर आइटम पहले ही हटा दिया गया है, या अभी हटाया जा रहा है।"
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1226
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "ACL प्रतिबंधों के कारण ऑपरेशन नहीं किया जा सकता"
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1229
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "चुना गया संग्रह अमान्य है"
 
-#: incidencechanger.cpp:1219
+#: incidencechanger.cpp:1233
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -655,12 +655,12 @@ msgstr ""
 "डिफ़ॉल्ट संग्रह अमान्य है या उसमें उचित ACL नहीं है और DestinationPolicyNeverAsk का "
 "उपयोग किया गया था"
 
-#: incidencechanger.cpp:1223
+#: incidencechanger.cpp:1237
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "समूह ऑपरेशन में आइटम आईडी की प्रतिलिपि बनाएँ"
 
-#: incidencechanger.cpp:1227
+#: incidencechanger.cpp:1241
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -668,7 +668,7 @@ msgid ""
 msgstr ""
 "परिवर्तनों के समूह से संबंधित एक परिवर्तन विफल हो गया। सभी परिवर्तन वापस लिए जा रहे हैं।"
 
-#: incidencechanger.cpp:1232
+#: incidencechanger.cpp:1246
 #, kde-format
 msgid "Unknown error"
 msgstr "अज्ञात त्रुटि"

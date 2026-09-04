@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:45+0000\n"
+"POT-Creation-Date: 2026-09-04 00:45+0000\n"
 "PO-Revision-Date: 2024-09-28 17:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -637,22 +637,22 @@ msgstr "Terjadi sebuah galat yang tak dikenal"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Galat ketika mencoba memodifikasi item kalender. Galatnya adalah: %1"
 
-#: incidencechanger.cpp:869 incidencechanger.cpp:941
+#: incidencechanger.cpp:869 incidencechanger.cpp:948
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Item kalender sudah dihapus, atau barusan dihapus."
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1226
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Operasi tidak bisa dilakukan karena ada batasan ACL"
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1229
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Koleksi yang dipilih tidak valid"
 
-#: incidencechanger.cpp:1219
+#: incidencechanger.cpp:1233
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -661,12 +661,12 @@ msgstr ""
 "Koleksi default tidak valid atau tidak miliki ACL yang betul dan "
 "DestinationPolicyNeverAsk telah digunakan"
 
-#: incidencechanger.cpp:1223
+#: incidencechanger.cpp:1237
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Id item duplikat dalam sebuah operasi grup"
 
-#: incidencechanger.cpp:1227
+#: incidencechanger.cpp:1241
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -675,7 +675,7 @@ msgstr ""
 "Satu perubahan kepunyaan grup yang perubahannya gagal. Semua perubahan telah "
 "dikembalikan semula."
 
-#: incidencechanger.cpp:1232
+#: incidencechanger.cpp:1246
 #, kde-format
 msgid "Unknown error"
 msgstr "Galat tak diketahui"

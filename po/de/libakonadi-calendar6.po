@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:45+0000\n"
+"POT-Creation-Date: 2026-09-04 00:45+0000\n"
 "PO-Revision-Date: 2026-08-11 23:05+0200\n"
 "Last-Translator: Ewald Müller <EMuede@netscape.net>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -616,24 +616,24 @@ msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr ""
 "Fehler beim Bearbeiten des Kalendereintrags. Die Fehlermeldung lautet: %1"
 
-#: incidencechanger.cpp:869 incidencechanger.cpp:941
+#: incidencechanger.cpp:869 incidencechanger.cpp:948
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Der Kalender wurde bereits gelöscht oder wird gerade gelöscht."
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1226
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr ""
 "Die Aktion kann aufgrund von Beschränkungen in der Zugriffskontrollliste "
 "(ACL) nicht ausgeführt werden"
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1229
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "Die gewählte Sammlung ist ungültig"
 
-#: incidencechanger.cpp:1219
+#: incidencechanger.cpp:1233
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -642,12 +642,12 @@ msgstr ""
 "Die Standard-Sammlung ist ungültig oder hat falsche Berechtigungen und "
 "DestinationPolicyNeverAsk wurde verwendet"
 
-#: incidencechanger.cpp:1223
+#: incidencechanger.cpp:1237
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Doppelte Kennung eines Eintrags in einer Gruppenoperation"
 
-#: incidencechanger.cpp:1227
+#: incidencechanger.cpp:1241
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -656,7 +656,7 @@ msgstr ""
 "Eine von mehreren, zu einer Gruppe gehörenden, Änderungen ist "
 "fehlgeschlagen. Alle Änderungen werden zurückgenommen."
 
-#: incidencechanger.cpp:1232
+#: incidencechanger.cpp:1246
 #, kde-format
 msgid "Unknown error"
 msgstr "Unbekannter Fehler"

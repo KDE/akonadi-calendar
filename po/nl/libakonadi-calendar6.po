@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:45+0000\n"
+"POT-Creation-Date: 2026-09-04 00:45+0000\n"
 "PO-Revision-Date: 2026-08-09 13:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -602,22 +602,22 @@ msgstr "Er is een onbekende fout opgetreden"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Fout bij het wijzigen van een agenda-item. Fout was: %1"
 
-#: incidencechanger.cpp:869 incidencechanger.cpp:941
+#: incidencechanger.cpp:869 incidencechanger.cpp:948
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Dat agenda-item was al verwijderd of wordt nu verwijderd."
 
-#: incidencechanger.cpp:1212
+#: incidencechanger.cpp:1226
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "Bewerking kan niet worden uitgevoerd vanwege ACL-restricties"
 
-#: incidencechanger.cpp:1215
+#: incidencechanger.cpp:1229
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "De gekozen verzameling is ongeldig"
 
-#: incidencechanger.cpp:1219
+#: incidencechanger.cpp:1233
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -626,12 +626,12 @@ msgstr ""
 "De standaard verzameling is ongeldig of heeft niet de juiste ACL's en "
 "DestinationPolicyNeverAsk is gebruikt"
 
-#: incidencechanger.cpp:1223
+#: incidencechanger.cpp:1237
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "Dubbel item-id in een groepsbewerking"
 
-#: incidencechanger.cpp:1227
+#: incidencechanger.cpp:1241
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
@@ -640,7 +640,7 @@ msgstr ""
 "Één wijziging behorende bij een groep wijzigingen is mislukt. Alle "
 "wijzigingen worden teruggedraaid."
 
-#: incidencechanger.cpp:1232
+#: incidencechanger.cpp:1246
 #, kde-format
 msgid "Unknown error"
 msgstr "Onbekende fout"
