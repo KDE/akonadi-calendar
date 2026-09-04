@@ -56,6 +56,7 @@ public:
     bool mBatchInsertionCancelled = false;
     bool mListensForNewItems = false; // does this model detect new item creations ?
     bool mLastCreationCancelled = false; // User pressed cancel in the collection selection dialog
+    bool mModificationInProgress = false;
 
     // Hash with uid->parentUid. When receiving onDataChanged() we need a way
     // to obtain the original RELATED-TO. Because RELATED-TO might have been modified

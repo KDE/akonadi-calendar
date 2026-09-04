@@ -21,6 +21,8 @@ public:
     bool addTodo(const KCalendarCore::Todo::Ptr &todo) override;
     bool addJournal(const KCalendarCore::Journal::Ptr &journal) override;
 
+    void incidenceUpdated(const QString &uid, const QDateTime &recurrenceId) override;
+
 private:
     Akonadi::Collection m_collection;
 };

@@ -227,6 +227,16 @@ protected:
     std::unique_ptr<CalendarBasePrivate> const d_ptr;
     CalendarBase(CalendarBasePrivate *const d, QObject *parent);
 
+    /*!
+     * Indicates that an incidence in this calendar is currently being
+     * modified with changes coming from Akonadi.
+     * This is useful for preventing modification loops, as there is
+     * no distinction in the KCalendarCore::Calendar API between "internal"
+     * and "external" modifications.
+     * \since 6.9.0
+     */
+    [[nodiscard]] bool isModificationInProgress() const;
+
     friend class Scheduler;
 };
 }

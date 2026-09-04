@@ -106,3 +106,11 @@ bool SingleCollectionCalendar::addJournal(const KCalendarCore::Journal::Ptr &jou
     }
     return false;
 }
+
+void SingleCollectionCalendar::incidenceUpdated(const QString &uid, const QDateTime &recurrenceId)
+{
+    Akonadi::CalendarBase::incidenceUpdated(uid, recurrenceId);
+    if (!isModificationInProgress()) {
+        modifyIncidence(incidence(uid, recurrenceId));
+    }
+}
