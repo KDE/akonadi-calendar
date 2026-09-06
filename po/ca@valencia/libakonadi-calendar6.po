@@ -4,12 +4,12 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2010, 2013-2015, 2017, 2020-2026 Josep M. Ferrer <txemaq@gmail.com>
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2019, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2013-2016, 2019-2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:45+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2026-08-09 08:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: calendarbase.cpp:268
+#: calendarbase.cpp:271
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
@@ -2267,13 +2267,3 @@ msgstr "Descripció"
 #, kde-format
 msgid "Purging completed to-dos"
 msgstr "S'estan netejant les tasques pendents finalitzades"
-
-#~ msgid "Error message: %1"
-#~ msgstr "Missatge d'error: %1"
-
-#~ msgid "Unknown error while parsing iCal invitation"
-#~ msgstr "S'ha produït un error desconegut en analitzar una invitació d'iCal"
-
-#~ msgid "Error while processing an invitation or update."
-#~ msgstr ""
-#~ "S'ha produït un error mentre es processava una invitació o actualització."

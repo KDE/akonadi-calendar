@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:45+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2026-08-11 12:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.9\n"
 
-#: calendarbase.cpp:268
+#: calendarbase.cpp:271
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "לא ניתן למצוא מופע לעדכון. כנראה שהוא נמחק לא מזמן."

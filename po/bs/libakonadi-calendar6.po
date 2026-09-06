@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:45+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-12-31 05:22+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
-#: calendarbase.cpp:268
+#: calendarbase.cpp:271
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
