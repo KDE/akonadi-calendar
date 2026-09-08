@@ -269,23 +269,27 @@ void KalendarAlarmClient::addNotification(const QString &uid, const QString &tex
 
 bool KalendarAlarmClient::collectionsAvailable() const
 {
-    // The list of collections must be available.
-    if (!mETM->isCollectionTreeFetched()) {
-        return false;
-    }
+    // The list of collections must be available, and all top-level collections must be populated.
+    return mETM->isCollectionTreeFetched() && unpopulatedCollectionNames().isEmpty();
+}
 
-    // All collections must be populated.
+QStringList KalendarAlarmClient::unpopulatedCollectionNames() const
+{
+    QStringList names;
     const int rowCount = mETM->rowCount();
     for (int row = 0; row < rowCount; ++row) {
-        static const int column = 0;
-        const QModelIndex index = mETM->index(row, column);
-        const bool haveData = mETM->data(index, Akonadi::EntityTreeModel::IsPopulatedRole).toBool();
-        if (!haveData) {
-            return false;
+        const QModelIndex index = mETM->index(row, 0);
+        if (!index.data(Akonadi::EntityTreeModel::IsPopulatedRole).toBool()) {
+            names << index.data(Qt::DisplayRole).toString();
         }
     }
+    return names;
+}
 
-    return true;
+void KalendarAlarmClient::scheduleNextCheck()
+{
+    // at the beginning of the next minute
+    mCheckTimer.start(std::chrono::seconds(60 - QTime::currentTime().second()));
 }
 
 namespace
@@ -320,9 +324,22 @@ void KalendarAlarmClient::checkAlarms()
     // We do not want to miss any reminders, so don't perform check unless
     // the collections are available and populated.
     if (!collectionsAvailable()) {
-        qCDebug(REMINDER_DAEMON_LOG) << "Collections are not available; aborting check.";
+        // Retry later: a collectionPopulated signal may never come (e.g. a resource re-created its collections).
+        ++mUnavailableChecks;
+        if (mUnavailableChecks == 5 || mUnavailableChecks % 60 == 0) {
+            if (!mETM->isCollectionTreeFetched()) {
+                qCWarning(REMINDER_DAEMON_LOG) << "Collection tree still not fetched after" << mUnavailableChecks << "checks, not checking alarms.";
+            } else {
+                qCWarning(REMINDER_DAEMON_LOG) << "Collections still not populated after" << mUnavailableChecks
+                                               << "checks, not checking alarms:" << unpopulatedCollectionNames();
+            }
+        } else {
+            qCDebug(REMINDER_DAEMON_LOG) << "Collections not available, retrying next minute.";
+        }
+        scheduleNextCheck();
         return;
     }
+    mUnavailableChecks = 0;
 
     const QDateTime from = mLastChecked.addSecs(1);
     mLastChecked = QDateTime::currentDateTime();
@@ -379,9 +396,7 @@ void KalendarAlarmClient::checkAlarms()
     }
 
     saveLastCheckTime();
-
-    // schedule next check for the beginning of the next minute
-    mCheckTimer.start(std::chrono::seconds(60 - mLastChecked.time().second()));
+    scheduleNextCheck();
 }
 
 void KalendarAlarmClient::saveLastCheckTime()

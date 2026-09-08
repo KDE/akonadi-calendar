@@ -42,6 +42,8 @@ private:
     void checkAlarms();
     void setupAkonadi();
     [[nodiscard]] bool collectionsAvailable() const;
+    [[nodiscard]] QStringList unpopulatedCollectionNames() const;
+    void scheduleNextCheck();
     void saveLastCheckTime();
     [[nodiscard]] QDateTime
     occurrenceForAlarm(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Alarm::Ptr &alarm, const QDateTime &from) const;
@@ -51,6 +53,7 @@ private:
 
     QDateTime mLastChecked;
     QTimer mCheckTimer;
+    int mUnavailableChecks = 0;
     QHash<QString, AlarmNotification *> m_notifications;
     KSharedConfig::Ptr m_config;
 };
