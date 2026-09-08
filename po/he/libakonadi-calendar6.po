@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-27 00:44+0000\n"
+"POT-Creation-Date: 2026-09-08 02:54+0000\n"
 "PO-Revision-Date: 2026-03-20 08:13+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: calendarbase.cpp:266
+#: calendarbase.cpp:271
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "לא ניתן למצוא מופע לעדכון. כנראה שהוא נמחק לא מזמן."
@@ -560,22 +560,22 @@ msgstr "אירעה שגיאה בלתי ידועה"
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "שגיאה בניסיון לערוך פריט לוח שנה. השגיאה הייתה: %1"
 
-#: incidencechanger.cpp:808 incidencechanger.cpp:932
+#: incidencechanger.cpp:869 incidencechanger.cpp:941
 #, kde-format
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "פריט לוח השנה כבר נמחק או שהוא נמחק כרגע."
 
-#: incidencechanger.cpp:1198
+#: incidencechanger.cpp:1212
 #, kde-format
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr "אי אפשר לבצע את הפעולה עקב הגבלות רשימת בקרת גישה"
 
-#: incidencechanger.cpp:1201
+#: incidencechanger.cpp:1215
 #, kde-format
 msgid "The chosen collection is invalid"
 msgstr "האוסף הנבחר שגוי"
 
-#: incidencechanger.cpp:1205
+#: incidencechanger.cpp:1219
 #, kde-format
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
@@ -584,19 +584,19 @@ msgstr ""
 "אוסף ברירת המחדל שגוי או שאין לו רשימות בקרת גישה (ACLs) ו־"
 "DestinationPolicyNeverAsk (אף פעם לא לשאול על מדיניות יעד) מתאימות בשימוש"
 
-#: incidencechanger.cpp:1209
+#: incidencechanger.cpp:1223
 #, kde-format
 msgid "Duplicate item id in a group operation"
 msgstr "מזהה פריט כפול בפעולה קבוצתית"
 
-#: incidencechanger.cpp:1213
+#: incidencechanger.cpp:1227
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
 msgstr "שינוי אחד מתוך קבוצה של שינויים נכשל. כל השינויים מוחזרים אחורה."
 
-#: incidencechanger.cpp:1218
+#: incidencechanger.cpp:1232
 #, kde-format
 msgid "Unknown error"
 msgstr "שגיאה לא ידועה"
