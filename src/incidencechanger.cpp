@@ -881,7 +881,7 @@ int IncidenceChanger::deleteIncidences(const Item::List &items, QWidget *parent)
     if (d->mGroupwareCommunication) {
         const auto itemCount = change->originalItems.size();
         connect(change.data(), &Change::dialogClosedBeforeChange, d.get(), [this, count = itemCount](auto &&...args) mutable {
-            if (count > 0) {
+            if (count > 1) {
                 count -= 1;
             } else {
                 d->deleteIncidences2(std::forward<decltype(args)>(args)...);
@@ -960,7 +960,7 @@ void IncidenceChangerPrivate::performModification(const Change::Ptr &change)
     if (mGroupwareCommunication) {
         const auto itemCount = change->originalItems.size();
         connect(change.data(), &Change::dialogClosedBeforeChange, this, [this, count = itemCount](auto &&...args) mutable {
-            if (count > 0) {
+            if (count > 1) {
                 count -= 1;
             } else {
                 performModification2(std::forward<decltype(args)>(args)...);
