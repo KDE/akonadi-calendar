@@ -55,6 +55,7 @@ static bool copyIncidences(const KCalendarCore::Incidence::List &incidences)
         clipboard->setMimeData(mimeData);
         return true;
     }
+    delete mimeData;
     return false;
 #endif
 }
