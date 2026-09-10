@@ -75,16 +75,16 @@ protected:
 bool MailBodyVisitor::visit(const Event::Ptr &event)
 {
     /* cppcheck-suppress variableScope */
-    QString const recurrence[] = {i18nc("no recurrence", "None"),
-                                  i18nc("event recurs by minutes", "Minutely"),
-                                  i18nc("event recurs by hours", "Hourly"),
-                                  i18nc("event recurs by days", "Daily"),
-                                  i18nc("event recurs by weeks", "Weekly"),
-                                  i18nc("event recurs same position (e.g. first monday) each month", "Monthly Same Position"),
-                                  i18nc("event recurs same day each month", "Monthly Same Day"),
-                                  i18nc("event recurs same month each year", "Yearly Same Month"),
-                                  i18nc("event recurs same day each year", "Yearly Same Day"),
-                                  i18nc("event recurs same position (e.g. first monday) each year", "Yearly Same Position")};
+    static QString const recurrence[] = {i18nc("no recurrence", "None"),
+                                         i18nc("event recurs by minutes", "Minutely"),
+                                         i18nc("event recurs by hours", "Hourly"),
+                                         i18nc("event recurs by days", "Daily"),
+                                         i18nc("event recurs by weeks", "Weekly"),
+                                         i18nc("event recurs same position (e.g. first monday) each month", "Monthly Same Position"),
+                                         i18nc("event recurs same day each month", "Monthly Same Day"),
+                                         i18nc("event recurs same month each year", "Yearly Same Month"),
+                                         i18nc("event recurs same day each year", "Yearly Same Day"),
+                                         i18nc("event recurs same position (e.g. first monday) each year", "Yearly Same Position")};
 
     mResult = mailBodyIncidence(event);
     mResult += i18n("Start Date: %1\n", QLocale().toString(event->dtStart().toLocalTime().date(), QLocale::ShortFormat));
