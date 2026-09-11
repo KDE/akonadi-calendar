@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:46+0000\n"
+"POT-Creation-Date: 2026-09-11 00:46+0000\n"
 "PO-Revision-Date: 2024-09-26 11:12+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -27,32 +27,32 @@ msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
 "Αδυναμία εύρεσης περιστατικού για ενημέρωση, μάλλον διαγράφηκε πρόσφατα."
 
-#: calendarclipboard.cpp:105
+#: calendarclipboard.cpp:106
 #, kde-format
 msgid "Error performing deletion."
 msgstr "Σφάλμα κατά την εκτέλεση της διαγραφής."
 
-#: calendarclipboard.cpp:110
+#: calendarclipboard.cpp:111
 #, kde-format
 msgid "Error performing copy."
 msgstr "Σφάλμα κατά την εκτέλεση της αντιγραφής."
 
-#: calendarclipboard.cpp:134
+#: calendarclipboard.cpp:135
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "Αδυναμία εύρεσης αντικειμένου: %1"
 
-#: calendarclipboard.cpp:150 calendarclipboard.cpp:167
+#: calendarclipboard.cpp:151 calendarclipboard.cpp:168
 #, kde-format
 msgid "Error while removing relations."
 msgstr "Σφάλμα στην αφαίρεση σχέσεων."
 
-#: calendarclipboard.cpp:196
+#: calendarclipboard.cpp:197
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "Σφάλμα στη διαγραφή περιστατικών: %1."
 
-#: calendarclipboard.cpp:213
+#: calendarclipboard.cpp:214
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -62,25 +62,25 @@ msgstr ""
 "αποκόψετε και να μετατρέψετε τις υπο-εργασίες σε ανεξάρτητες ή να αποκόψετε "
 "την εργασία και όλες τις υπο-εργασίες της;"
 
-#: calendarclipboard.cpp:218 calendarclipboard.cpp:257
+#: calendarclipboard.cpp:219 calendarclipboard.cpp:258
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Επιβεβαίωση του KOrganizer"
 
-#: calendarclipboard.cpp:219
+#: calendarclipboard.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "Αποκοπή αυτού μόνο"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "Αποκοπή όλων"
 
-#: calendarclipboard.cpp:253
+#: calendarclipboard.cpp:254
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -90,13 +90,13 @@ msgstr ""
 "αντιγράψετε μόνο αυτό ή να αντιγράψετε την εργασία και όλες τις υπο-εργασίες "
 "της;"
 
-#: calendarclipboard.cpp:258
+#: calendarclipboard.cpp:259
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "Αντιγραφή αυτού μόνο"
 
-#: calendarclipboard.cpp:259
+#: calendarclipboard.cpp:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
