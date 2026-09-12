@@ -33,6 +33,11 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
     const QDateTime startTime = m_occurrence.isValid() ? m_occurrence.toLocalTime() : incidence->dtStart().toLocalTime();
     const auto title = incidence->summary();
     const bool notificationExists = m_notification;
+    // dtStart can change between sends (e.g. the user moves the event while
+    // its reminder is on screen), so remember the latest value for the View action.
+    m_startTime = startTime;
+    // The incidence is back, any previous misses were transient.
+    m_incidenceMissedCount = 0;
     if (!notificationExists) {
         m_notification = new KNotification(QStringLiteral("alarm"));
 
@@ -42,15 +47,15 @@ void AlarmNotification::send(KalendarAlarmClient *client, const KCalendarCore::I
         QObject::connect(m_notification, &KNotification::closed, client, [this, client]() {
             client->dismiss(this);
         });
+
+        auto defaultAction = m_notification->addDefaultAction(i18n("View"));
+        QObject::connect(defaultAction, &KNotificationAction::activated, client, [this, client] {
+            client->showIncidence(uid(), m_startTime, m_notification->xdgActivationToken());
+        });
     }
 
     // change the content unconditionally, that will also update already existing notifications
     m_notification->setTitle(title);
-
-    auto defaultAction = m_notification->addDefaultAction(i18n("View"));
-    QObject::connect(defaultAction, &KNotificationAction::activated, client, [this, client, startTime] {
-        client->showIncidence(uid(), startTime, m_notification->xdgActivationToken());
-    });
 
     QString text;
     const auto now = QDateTime::currentDateTime();
@@ -246,4 +251,14 @@ bool AlarmNotification::isRemindLaterDialogVisible() const
 void AlarmNotification::setRemindLaterDialogVisible(bool visible)
 {
     m_remindLaterDialogVisible = visible;
+}
+
+int AlarmNotification::incidenceMissedCount() const
+{
+    return m_incidenceMissedCount;
+}
+
+void AlarmNotification::setIncidenceMissedCount(int count)
+{
+    m_incidenceMissedCount = count;
 }

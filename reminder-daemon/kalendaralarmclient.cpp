@@ -386,6 +386,18 @@ void KalendarAlarmClient::checkAlarms()
             const auto incidence = mCalendar->incidence(notification->uid());
             if (incidence) { // can still be null when we get here during the early stages of loading/restoring
                 notification->send(this, incidence);
+            } else if (!mCalendar->isLoading()) {
+                // The incidence this notification belongs to may no longer exist in the
+                // calendar (e.g. it was deleted in the meantime). incidence() can also
+                // be null transiently while collections are (re-)populating, and
+                // isLoading() does not cover that case, so only dismiss after several
+                // consecutive misses (checkAlarms() runs once per minute) instead of
+                // losing a suspended reminder on a single miss.
+                notification->setIncidenceMissedCount(notification->incidenceMissedCount() + 1);
+                if (notification->incidenceMissedCount() >= 5) {
+                    qCDebug(REMINDER_DAEMON_LOG) << "Alarm" << notification->uid() << "has no incidence anymore, dismissing it.";
+                    dismiss(notification);
+                }
             }
         }
     }

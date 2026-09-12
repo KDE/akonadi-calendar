@@ -68,6 +68,13 @@ public:
     [[nodiscard]] bool isRemindLaterDialogVisible() const;
     void setRemindLaterDialogVisible(bool visible);
 
+    /**
+     * @return Number of consecutive checkAlarms() passes in which the incidence
+     * for this notification was not found in the calendar. Reset on every send().
+     */
+    [[nodiscard]] int incidenceMissedCount() const;
+    void setIncidenceMissedCount(int count);
+
 private:
     [[nodiscard]] bool hasValidContextAction() const;
     [[nodiscard]] QString determineContextAction(const KCalendarCore::Incidence::Ptr &incidence);
@@ -77,7 +84,10 @@ private:
     QString m_text;
     QDateTime m_occurrence;
     QDateTime m_remind_at;
+    // Latest start time, refreshed on every send() for the one-shot View action.
+    QDateTime m_startTime;
     QUrl m_contextAction;
     bool m_wasSuspended = false;
     bool m_remindLaterDialogVisible = false;
+    int m_incidenceMissedCount = 0;
 };
