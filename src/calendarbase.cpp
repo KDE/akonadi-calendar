@@ -263,7 +263,7 @@ void CalendarBasePrivate::slotModifyFinished(int changeId, const Akonadi::Item &
 
         if (localIncidence) {
             // update our local one
-            QScopedValueRollback modificationGuard(mModificationInProgress, true);
+            const QScopedValueRollback modificationGuard(mModificationInProgress, true);
             *(static_cast<KCalendarCore::IncidenceBase *>(localIncidence.data())) = *(incidence.data());
         } else {
             // This shouldn't happen, unless the incidence gets deleted between event loops
@@ -360,7 +360,7 @@ void CalendarBasePrivate::handleParentChanged(const KCalendarCore::Incidence::Pt
 bool CalendarBasePrivate::modifyIncidence(const KCalendarCore::Incidence::Ptr &newIncidence, IncidenceModificationPolicy modificationPolicy)
 {
     Q_ASSERT(newIncidence);
-    QScopedValueRollback modificationGuard(mModificationInProgress, true);
+    const QScopedValueRollback modificationGuard(mModificationInProgress, true);
     Akonadi::Item item_ = q->item(newIncidence->instanceIdentifier());
     item_.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
     return -1 != mIncidenceChanger->d->modifyIncidence(item_, modificationPolicy);
