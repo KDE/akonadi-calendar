@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-09-13 00:45+0000\n"
 "PO-Revision-Date: 2025-08-25 09:22+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -28,29 +28,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toms.trasuns@posteo.net"
 
-#: alarmnotification.cpp:50
+#: alarmnotification.cpp:51
 #, kde-format
 msgid "View"
 msgstr "Skats"
 
-#: alarmnotification.cpp:58
+#: alarmnotification.cpp:63
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
 msgstr "Uzdevums"
 
-#: alarmnotification.cpp:58
+#: alarmnotification.cpp:63
 #, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Notikums"
 
-#: alarmnotification.cpp:61
+#: alarmnotification.cpp:66
 #, kde-format
 msgid "To-do due at %1"
 msgstr "Uzdevuma termiņš ir %1"
 
-#: alarmnotification.cpp:65
+#: alarmnotification.cpp:70
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
@@ -59,64 +59,64 @@ msgstr[0] "%2 sākies pēc %1 minūtes"
 msgstr[1] "%2 sākies pēc %1 minūtēm"
 msgstr[2] "%2 sākies pēc %1 minūtēm"
 
-#: alarmnotification.cpp:69
+#: alarmnotification.cpp:74
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "%1 sākas plkst. %2"
 
-#: alarmnotification.cpp:71
+#: alarmnotification.cpp:76
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "%1 sākās plkst. %2"
 
-#: alarmnotification.cpp:77
+#: alarmnotification.cpp:82
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "%1 sākas %2 plkst. %3"
 
-#: alarmnotification.cpp:83
+#: alarmnotification.cpp:88
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "%1 sākās %2 plkst. %3"
 
-#: alarmnotification.cpp:92
+#: alarmnotification.cpp:97
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "%1 sākas %2"
 
-#: alarmnotification.cpp:94
+#: alarmnotification.cpp:99
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 sākās %2"
 
-#: alarmnotification.cpp:119
+#: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Atgādināt pēc 5 min."
 
-#: alarmnotification.cpp:125
+#: alarmnotification.cpp:130
 #, kde-format
 msgid "Remind later..."
 msgstr "Atgādināt vēlāk..."
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:136
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Noraidīt"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:212
 #, kde-format
 msgid "Open URL"
 msgstr "Atvērt URL"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:230
 #, kde-format
 msgid "Map"
 msgstr "Karte"

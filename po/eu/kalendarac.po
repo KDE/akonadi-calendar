@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-09-13 00:45+0000\n"
 "PO-Revision-Date: 2025-08-04 20:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,29 +30,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: alarmnotification.cpp:50
+#: alarmnotification.cpp:51
 #, kde-format
 msgid "View"
 msgstr "Ikuspegia"
 
-#: alarmnotification.cpp:58
+#: alarmnotification.cpp:63
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
 msgstr "Egitekoa"
 
-#: alarmnotification.cpp:58
+#: alarmnotification.cpp:63
 #, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Ekitaldia"
 
-#: alarmnotification.cpp:61
+#: alarmnotification.cpp:66
 #, kde-format
 msgid "To-do due at %1"
 msgstr "Egitekoaren muga-eguna %1 da"
 
-#: alarmnotification.cpp:65
+#: alarmnotification.cpp:70
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
@@ -60,64 +60,64 @@ msgid_plural "%2 starts in %1 minutes"
 msgstr[0] "%2 minutu %1 barru hasiko da"
 msgstr[1] "%2 %1 minutu barru hasiko da"
 
-#: alarmnotification.cpp:69
+#: alarmnotification.cpp:74
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "%1 %2(e)tan hasiko da"
 
-#: alarmnotification.cpp:71
+#: alarmnotification.cpp:76
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "%1 %2(e)tan hasi da"
 
-#: alarmnotification.cpp:77
+#: alarmnotification.cpp:82
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "%1 %2(e)an %3(e)tan hasiko da"
 
-#: alarmnotification.cpp:83
+#: alarmnotification.cpp:88
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "%1 %2(e)an %3(e)tan hasi zen"
 
-#: alarmnotification.cpp:92
+#: alarmnotification.cpp:97
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "%1 %2(e)an hasiko da"
 
-#: alarmnotification.cpp:94
+#: alarmnotification.cpp:99
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 %2(e)an hasi zen"
 
-#: alarmnotification.cpp:119
+#: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Oroitarazi 5 minutu barru"
 
-#: alarmnotification.cpp:125
+#: alarmnotification.cpp:130
 #, kde-format
 msgid "Remind later..."
 msgstr "Gogorarazi geroago..."
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:136
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Baztertu"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:212
 #, kde-format
 msgid "Open URL"
 msgstr "Ireki URLa"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:230
 #, kde-format
 msgid "Map"
 msgstr "Mapa"

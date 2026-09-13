@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendarac\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-09-13 00:45+0000\n"
 "PO-Revision-Date: 2023-10-04 19:05+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -26,29 +26,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: alarmnotification.cpp:50
+#: alarmnotification.cpp:51
 #, kde-format
 msgid "View"
 msgstr "Zobraziť"
 
-#: alarmnotification.cpp:58
+#: alarmnotification.cpp:63
 #, kde-format
 msgctxt "incidence is a to-do"
 msgid "To-do"
 msgstr "Úloha"
 
-#: alarmnotification.cpp:58
+#: alarmnotification.cpp:63
 #, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Udalosť"
 
-#: alarmnotification.cpp:61
+#: alarmnotification.cpp:66
 #, kde-format
 msgid "To-do due at %1"
 msgstr "Termín úlohy je %1"
 
-#: alarmnotification.cpp:65
+#: alarmnotification.cpp:70
 #, kde-format
 msgctxt "Event starts in 5 minutes"
 msgid "%2 starts in %1 minute"
@@ -57,64 +57,64 @@ msgstr[0] "%2 sa začína o %1 minútu"
 msgstr[1] "%2 sa začína o %1 minúty"
 msgstr[2] "%2 sa začína o %1 minút"
 
-#: alarmnotification.cpp:69
+#: alarmnotification.cpp:74
 #, kde-format
 msgctxt "Event starts at 10:00"
 msgid "%1 starts at %2"
 msgstr "%1 začína o %2"
 
-#: alarmnotification.cpp:71
+#: alarmnotification.cpp:76
 #, kde-format
 msgctxt "Event started at 10:00"
 msgid "%1 started at %2"
 msgstr "%1 spustené o %2"
 
-#: alarmnotification.cpp:77
+#: alarmnotification.cpp:82
 #, kde-format
 msgctxt "Event starts on <DATE> at <TIME>"
 msgid "%1 starts on %2 at %3"
 msgstr "%1 začína %2 o %3"
 
-#: alarmnotification.cpp:83
+#: alarmnotification.cpp:88
 #, kde-format
 msgctxt "Event started on <DATE> at <TIME>"
 msgid "%1 started on %2 at %3"
 msgstr "%1 spustené %2 o %3"
 
-#: alarmnotification.cpp:92
+#: alarmnotification.cpp:97
 #, kde-format
 msgctxt "Event starts on <DATE>"
 msgid "%1 starts on %2"
 msgstr "%1 začína o %2"
 
-#: alarmnotification.cpp:94
+#: alarmnotification.cpp:99
 #, kde-format
 msgctxt "Event started on <DATE>"
 msgid "%1 started on %2"
 msgstr "%1 začalo o %2"
 
-#: alarmnotification.cpp:119
+#: alarmnotification.cpp:124
 #, kde-format
 msgid "Remind in 5 mins"
 msgstr "Pripomenúť o 5 minút"
 
-#: alarmnotification.cpp:125
+#: alarmnotification.cpp:130
 #, kde-format
 msgid "Remind later..."
 msgstr "Pripomenúť neskôr..."
 
-#: alarmnotification.cpp:131
+#: alarmnotification.cpp:136
 #, kde-format
 msgctxt "dismiss a reminder notification for an event"
 msgid "Dismiss"
 msgstr "Zamietnuť"
 
-#: alarmnotification.cpp:207
+#: alarmnotification.cpp:212
 #, kde-format
 msgid "Open URL"
 msgstr "Otvoriť URL"
 
-#: alarmnotification.cpp:225
+#: alarmnotification.cpp:230
 #, kde-format
 msgid "Map"
 msgstr "Mapa"
