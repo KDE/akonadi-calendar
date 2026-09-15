@@ -259,7 +259,8 @@ void FreeBusyManagerPrivate::contactSearchJobFinished(KJob *_job)
         }
     }
 
-    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(QRegularExpression(u"\\.[xiv]fb$"_s))) {
+    static const QRegularExpression reg(u"\\.[xiv]fb$"_s);
+    if (CalendarSettings::self()->freeBusyRetrieveUrl().contains(reg)) {
         // user specified a fullpath
         // do variable string replacements to the URL (MS Outlook style)
         const QUrl sourceUrl(CalendarSettings::self()->freeBusyRetrieveUrl());
@@ -785,7 +786,8 @@ void FreeBusyManager::publishFreeBusy(QWidget *parentWidget)
 
     // We need to massage the list a bit so that Outlook understands
     // it.
-    messageText.replace(QRegularExpression(u"ORGANIZER\\s*:MAILTO:"_s), u"ORGANIZER:"_s);
+    static const QRegularExpression reg(u"ORGANIZER\\s*:MAILTO:"_s);
+    messageText.replace(reg, u"ORGANIZER:"_s);
 
     // Create a local temp file and save the message to it
     QTemporaryFile tempFile;
