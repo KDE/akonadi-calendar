@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 02:54+0000\n"
-"PO-Revision-Date: 2025-11-28 21:23+0100\n"
+"PO-Revision-Date: 2026-09-14 17:21+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: calendarbase.cpp:271
 #, kde-format
@@ -767,7 +767,7 @@ msgstr "Имейл за групово планиране"
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
 msgid "<placeholder>No summary given</placeholder>"
-msgstr "<placeholder> Не е дадено резюме </placeholder>"
+msgstr "<placeholder> Не е дадено обобщение </placeholder>"
 
 #: itiphandlerhelper_p.cpp:246
 #, kde-format
@@ -1772,7 +1772,7 @@ msgid ""
 "deleted, along with all the events, todos and journals they contain.</p>"
 msgstr ""
 "Изтриване на избраните календари<p>Избраните в момента календари ще бъдат "
-"изтрити, заедно с всички събития, задания и списания, които те съдържат.</p>"
+"изтрити, заедно с всички събития, задания и дневници, които те съдържат.</p>"
 
 #: standardcalendaractionmanager.cpp:163
 #, kde-format
@@ -1909,7 +1909,7 @@ msgstr "Редактиране на задачата…"
 msgid "Copy Journal"
 msgid_plural "Copy %1 Journals"
 msgstr[0] "Копиране на дневник"
-msgstr[1] "Копиране на %1 списания"
+msgstr[1] "Копиране на %1 дневници"
 
 #: standardcalendaractionmanager.cpp:363 standardcalendaractionmanager.cpp:367
 #, kde-format
@@ -1921,14 +1921,14 @@ msgstr "Копиране на дневник в"
 msgid "Delete Journal"
 msgid_plural "Delete %1 Journals"
 msgstr[0] "Изтриване на дневник"
-msgstr[1] "Изтриване на %1 списания"
+msgstr[1] "Изтриване на %1 дневници"
 
 #: standardcalendaractionmanager.cpp:373
 #, kde-format
 msgid "Cut Journal"
 msgid_plural "Cut %1 Journals"
-msgstr[0] "Изрязан дневник"
-msgstr[1] "Изрязване на %1 списания"
+msgstr[0] "Изрязване на дневник"
+msgstr[1] "Изрязване на %1 дневници"
 
 #: standardcalendaractionmanager.cpp:377 standardcalendaractionmanager.cpp:381
 #, kde-format
@@ -1978,7 +1978,7 @@ msgstr "Нов &дневник…"
 #: standardcalendaractionmanager.cpp:563
 #, kde-format
 msgid "Create a new Journal"
-msgstr "Създаване на ново списание"
+msgstr "Създаване на нов дневник"
 
 #: standardcalendaractionmanager.cpp:572
 #, kde-format
