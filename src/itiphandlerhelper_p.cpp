@@ -183,12 +183,13 @@ bool ITIPHandlerHelper::weNeedToSendMailFor(const KCalendarCore::Incidence::Ptr 
         return false;
     }
 
-    if (incidence->attendees().isEmpty()) {
+    const auto attendees = incidence->attendees();
+    if (attendees.isEmpty()) {
         return false;
     }
 
     // At least one attendee
-    return incidence->attendees().count() > 1 || incidence->attendees().at(0).email() != incidence->organizer().email();
+    return attendees.count() > 1 || attendees.at(0).email() != incidence->organizer().email();
 }
 
 ITIPHandlerHelper::ITIPHandlerHelper(ITIPHandlerComponentFactory *factory, QWidget *parent)

@@ -408,9 +408,9 @@ void MailClient::mailAttendees(const KCalendarCore::IncidenceBase::Ptr &incidenc
 
         // Optional Participants and Non-Participants are copied on the email
         if (a.role() == KCalendarCore::Attendee::OptParticipant || a.role() == KCalendarCore::Attendee::NonParticipant) {
-            msg.cc.push_back(a.email());
+            msg.cc.push_back(email);
         } else {
-            msg.to.push_back(a.email());
+            msg.to.push_back(email);
         }
     }
     if (msg.cc.isEmpty() && msg.to.isEmpty()) {
