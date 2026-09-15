@@ -544,6 +544,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
     if (!mProvidersRequestsByEmail.contains(email)) {
         mProvidersRequestsByEmail[email] = FreeBusyProvidersRequestsQueue();
     }
+    FreeBusyProvidersRequestsQueue &requestsQueueForEmail = mProvidersRequestsByEmail[email];
 
     for (const QString &provider : providers) {
         FreeBusyProviderRequest request(provider);
@@ -553,7 +554,7 @@ void FreeBusyManagerPrivate::queryFreeBusyProviders(const QStringList &providers
         // clang-format on
         request.mInterface->call(u"canHandleFreeBusy"_s, email);
         request.mRequestStatus = FreeBusyProviderRequest::HandlingRequested;
-        mProvidersRequestsByEmail[email].mRequests << request;
+        requestsQueueForEmail.mRequests << request;
     }
 }
 
