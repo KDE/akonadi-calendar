@@ -64,6 +64,9 @@ void History::recordDeletion(const Akonadi::Item &item, const QString &descripti
 
 void History::recordDeletions(const Akonadi::Item::List &items, const QString &description, const uint atomicOperationId)
 {
+    if (items.isEmpty()) {
+        return;
+    }
     Entry::Ptr const entry(new DeletionEntry(items, description, this));
 
     for (const Akonadi::Item &item : items) {
