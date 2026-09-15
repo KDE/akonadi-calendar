@@ -139,7 +139,7 @@ private:
             for (int row = topLeft.row(); row <= bottomRight.row(); ++row) {
                 index = index.sibling(row, 0);
                 const auto item = m_model->data(index, EntityTreeModel::ItemRole).value<Item>();
-                if (item.isValid() || item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
+                if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
                     updateItem(item);
                 }
             }
