@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-11 00:46+0000\n"
+"POT-Creation-Date: 2026-09-16 00:46+0000\n"
 "PO-Revision-Date: 2026-08-07 13:35+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -392,20 +392,20 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Nezināms"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:378
 #, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
 "Neizdevās lejupielādēt aizņemtības datus no: <link>%1</link>.<nl/>Iemesls: %2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:382 freebusymanager.cpp:405
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Aizņemtības izgūšanas kļūda"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:404
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -414,7 +414,7 @@ msgid ""
 msgstr ""
 "Neizdevās parsēt aizņemtības informāciju, kas tika izgūta no: <link>%1</link>"
 
-#: freebusymanager.cpp:419
+#: freebusymanager.cpp:420
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -429,25 +429,25 @@ msgstr ""
 "%2</emphasis>.<nl/>Pārbaudiet URL vai sazinieties ar sistēmas administratoru."
 "</p></qt>"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Aizņemtības informācija ir nosūtīta."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:622 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Nosūta aizņemtības statusu"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:625
 #, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Neizdodas publicēt aizņemtības datus: %1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:749
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -459,19 +459,19 @@ msgstr ""
 "aizņemtības lapas konfigurācijas lodziņā.<nl/>Sazinieties ar savas sistēmas "
 "administratoru, lai iegūtu precīzu URL adresi un konta informāciju."
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:754
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Nav aizņemtības augšupielādes URL"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:764
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "Mērķa URL „<link>%1</link>“ nav norādīta vai nav derīga."
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:765
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -697,7 +697,7 @@ msgid "Do Not Send"
 msgstr "Nesūtīt"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
-#: itiphandlerhelper_p.cpp:506
+#: itiphandlerhelper_p.cpp:507
 #, kde-format
 msgid "Error: %1"
 msgstr "Kļūda: %1"
@@ -776,7 +776,7 @@ msgstr "Grupēt ieplānotās e-pasta vēstules"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Nav norādīts kopsavilkums</placeholder>"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:246
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -785,7 +785,7 @@ msgstr ""
 "Notikums „%1“ satur citus cilvēkus.\n"
 "Vai tiešām vēlaties e-pastā nosūtīt ielūgumu apmeklētājiem?"
 
-#: itiphandlerhelper_p.cpp:250
+#: itiphandlerhelper_p.cpp:251
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -794,7 +794,7 @@ msgstr ""
 "Darāmais uzdevums „%1“ satur citus cilvēkus.\n"
 "Vai tiešām vēlaties e-pastā nosūtīt ielūgumu apmeklētājiem?"
 
-#: itiphandlerhelper_p.cpp:255
+#: itiphandlerhelper_p.cpp:256
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -802,7 +802,7 @@ msgid ""
 msgstr ""
 "Šis notikums satur citus cilvēkus. Vai apmeklētājiem nosūtīt e-pasta vēstuli?"
 
-#: itiphandlerhelper_p.cpp:279
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -811,7 +811,7 @@ msgstr ""
 "Jūs neorganizējat šo notikumu. Rediģēšana novedīs pie tā, ka jūsu kalendārs "
 "nesinhronizēsies ar organizatora kalendāru. Vai tiešām vēlaties to rediģēt?"
 
-#: itiphandlerhelper_p.cpp:310
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -820,19 +820,19 @@ msgstr ""
 "Jūs izmainījāt ielūgumu „%1“.\n"
 "Vai vēlaties apmeklētājiem nosūtīt atjauninātu e-pasta vēstuli?"
 
-#: itiphandlerhelper_p.cpp:318 itiphandlerhelper_p.cpp:334
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
+#: itiphandlerhelper_p.cpp:347
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Nosūt atjauninājumu"
 
-#: itiphandlerhelper_p.cpp:328 itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:329 itiphandlerhelper_p.cpp:407
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Vai vēlaties uzdevuma organizatoram nosūtīt statusa atjauninājumu?"
 
-#: itiphandlerhelper_p.cpp:339
+#: itiphandlerhelper_p.cpp:340
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -841,7 +841,7 @@ msgstr ""
 "Ir mainījies šīs notikuma jūsu apmeklētāja statuss. Vai vēlaties nosūtīt "
 "atjauninājumu notikuma organizētājam?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:383
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -850,7 +850,7 @@ msgstr ""
 "Jūs noņēmāt ielūgumu „%1“.\n"
 "Vai vēlaties nosūtīt e-pasta vēstuli apmeklētājiem, ka notikums ir atcelts?"
 
-#: itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:388
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -859,7 +859,7 @@ msgstr ""
 "Jūs noņēmāt ielūgumu „%1“.\n"
 "Vai vēlaties nosūtīt e-pasta vēstuli apmeklētājiem, ka uzdevums ir atcelts?"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -868,18 +868,18 @@ msgstr ""
 "Jūs noņēmāt ielūgumu „%1“.\n"
 "Vai vēlaties nosūtīt e-pasta vēstuli apmeklētājiem, ka žurnāls ir atcelts?"
 
-#: itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Vai vēlaties žurnāla organizatoram nosūtīt statusa atjauninājumu?"
 
-#: itiphandlerhelper_p.cpp:414 itiphandlerhelper_p.cpp:435
+#: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Nosūtīt atjauninājumu"
 
-#: itiphandlerhelper_p.cpp:429
+#: itiphandlerhelper_p.cpp:430
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -888,17 +888,17 @@ msgstr ""
 "Jūs iepriekš apstiprinājāt uzaicinājumu uz šo pasākumu. Vai vēlaties nosūtīt "
 "atjauninātu atbildi organizatoram, noraidot šo ielūgumu?"
 
-#: itiphandlerhelper_p.cpp:474 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Pretpriekšlikums: %1"
 
-#: itiphandlerhelper_p.cpp:491
+#: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Neizdevās grupas plānošanas vēstules nosūtīšana."
 
-#: itiphandlerhelper_p.cpp:499
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"

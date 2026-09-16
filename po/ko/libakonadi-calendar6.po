@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-11 00:46+0000\n"
+"POT-Creation-Date: 2026-09-16 00:46+0000\n"
 "PO-Revision-Date: 2026-04-26 22:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -384,19 +384,19 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:378
 #, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr "바쁨/한가함 데이터를 다운로드할 수 없음: <link>%1</link>.<nl/>이유: %2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:382 freebusymanager.cpp:405
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "바쁨/한가함 가져오기 오류"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:404
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -404,7 +404,7 @@ msgid ""
 "link>"
 msgstr "다음에서 가져온 바쁨/한가함 정보를 해석할 수 없음: <link>%1</link>"
 
-#: freebusymanager.cpp:419
+#: freebusymanager.cpp:420
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -418,25 +418,25 @@ msgstr ""
 "다음과 같습니다: <nl/><emphasis>%2</emphasis>.<nl/>URL을 다시 한 번 확인해 "
 "본 후 시스템 관리자에게 문의하십시오."
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "바쁨/한가함 정보를 보냈습니다."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:622 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "바쁨/한가함 보내는 중"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:625
 #, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "바쁨/한가함 데이터를 공개할 수 없음: %1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:749
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -448,19 +448,19 @@ msgstr ""
 "화 상자의 \"바쁨/한가함\" 페이지에 설정하십시오.<nl/>정확한 URL 및 계정 정보"
 "는 시스템 관리자에게 문의하십시오."
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:754
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "바쁨/한가함 업로드 URL이 없음"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:764
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "입력한 대상 URL <link>%1</link>이(가) 잘못되었습니다."
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:765
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -702,7 +702,7 @@ msgid "Do Not Send"
 msgstr "보내지 않음"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
-#: itiphandlerhelper_p.cpp:506
+#: itiphandlerhelper_p.cpp:507
 #, kde-format
 msgid "Error: %1"
 msgstr "오류: %1"
@@ -781,7 +781,7 @@ msgstr "그룹 스케줄링 이메일"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>요약 없음</placeholder>"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:246
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -790,7 +790,7 @@ msgstr ""
 "\"%1\" 이벤트에 다른 사람이 있습니다.\n"
 "참석자에게 초대장을 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:250
+#: itiphandlerhelper_p.cpp:251
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -799,14 +799,14 @@ msgstr ""
 "\"%1\" 할 일에 다른 사람이 있습니다.\n"
 "참석자에게 초대장을 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:255
+#: itiphandlerhelper_p.cpp:256
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "이 반복 항목에 다른 사람이 있습니다. 참석자에게 메일을 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:279
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -815,7 +815,7 @@ msgstr ""
 "이 이벤트의 주최자가 아닙니다. 항목을 편집하면 주최자의 캘린더와 데이터가 달"
 "라집니다. 그래도 편집하시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:310
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -824,19 +824,19 @@ msgstr ""
 "\"%1\" 초대장의 내용을 변경했습니다.\n"
 "참석자들에게 업데이트된 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:318 itiphandlerhelper_p.cpp:334
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
+#: itiphandlerhelper_p.cpp:347
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "업데이트 보내기"
 
-#: itiphandlerhelper_p.cpp:328 itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:329 itiphandlerhelper_p.cpp:407
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "이 작업의 주최자에게 상태 업데이트를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:339
+#: itiphandlerhelper_p.cpp:340
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -845,7 +845,7 @@ msgstr ""
 "이 이벤트의 참가 상태가 변경되었습니다. 이벤트 주최자에게 상태 업데이트를 보"
 "내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:383
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -854,7 +854,7 @@ msgstr ""
 "\"%1\" 초대장을 삭제했습니다.\n"
 "참석자들에게 이벤트 취소 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:388
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -863,7 +863,7 @@ msgstr ""
 "\"%1\" 초대장을 삭제했습니다.\n"
 "참석자들에게 할 일 취소 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -872,18 +872,18 @@ msgstr ""
 "\"%1\" 초대장을 삭제했습니다.\n"
 "참석자들에게 저널 취소 메시지를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "이 저널의 주최자에게 상태 업데이트를 보내시겠습니까?"
 
-#: itiphandlerhelper_p.cpp:414 itiphandlerhelper_p.cpp:435
+#: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "업데이트 보내기"
 
-#: itiphandlerhelper_p.cpp:429
+#: itiphandlerhelper_p.cpp:430
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -892,17 +892,17 @@ msgstr ""
 "이 이벤트 초대장을 이전에 수락했습니다. 주최자에게 초대 거절 메시지를 보내시"
 "겠습니까?"
 
-#: itiphandlerhelper_p.cpp:474 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "역제안: %1"
 
-#: itiphandlerhelper_p.cpp:491
+#: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "그룹 약속 결정 이메일을 보낼 수 없습니다."
 
-#: itiphandlerhelper_p.cpp:499
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"

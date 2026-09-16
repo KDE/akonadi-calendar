@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-11 00:46+0000\n"
+"POT-Creation-Date: 2026-09-16 00:46+0000\n"
 "PO-Revision-Date: 2026-08-04 08:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -382,19 +382,19 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "未知"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:378
 #, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr "從 <link>%1</link> 下載行程資訊時失敗。<nl/>原因：%2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:382 freebusymanager.cpp:405
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "有空/沒空資訊取得時發生錯誤"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:404
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -402,7 +402,7 @@ msgid ""
 "link>"
 msgstr "剖析從 <link>%1</link> 取得的行程資訊時失敗"
 
-#: freebusymanager.cpp:419
+#: freebusymanager.cpp:420
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -415,25 +415,25 @@ msgstr ""
 "或是您指定的網址有誤。系統回應為：<nl/><emphasis>%2</emphasis>。<nl/>請檢查您"
 "的網址，或是與您的系統管理員聯絡。"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "行程資訊已成功送出。"
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:622 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "正在送出有空/沒空資訊"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:625
 #, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "無法發布行程資料：%1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:749
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -444,19 +444,19 @@ msgstr ""
 "沒有設定您上傳行程資訊清單使用的網址。請在 KOrganizer 的設定對話框裡的「行程"
 "資訊」頁中設定。<nl/>關於網址與帳號詳情等資訊，請與您的系統管理員聯絡。"
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:754
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "沒有可上傳有空/沒空資訊的網址"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:764
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "提供的目標網址 <link>%1</link> 無效。"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:765
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -675,7 +675,7 @@ msgid "Do Not Send"
 msgstr "不要傳送"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
-#: itiphandlerhelper_p.cpp:506
+#: itiphandlerhelper_p.cpp:507
 #, kde-format
 msgid "Error: %1"
 msgstr "錯誤：%1"
@@ -754,7 +754,7 @@ msgstr "群組排程電子郵件"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>沒有給定摘要</placeholder>"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:246
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -763,7 +763,7 @@ msgstr ""
 "事件 %1 包含了其它人。\n"
 "您要對參加者發出邀請嗎？"
 
-#: itiphandlerhelper_p.cpp:250
+#: itiphandlerhelper_p.cpp:251
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -772,14 +772,14 @@ msgstr ""
 "待辦事項 %1 包含了其它人。\n"
 "您要對參加者發出邀請嗎？"
 
-#: itiphandlerhelper_p.cpp:255
+#: itiphandlerhelper_p.cpp:256
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "此事件包含了其他人。要將這封電子郵件發送給參加者嗎？"
 
-#: itiphandlerhelper_p.cpp:279
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -788,7 +788,7 @@ msgstr ""
 "您不是此事件的發起者。編輯此事件會讓您的行事曆與發起者的行事曆不同步。您確定"
 "要編輯嗎？"
 
-#: itiphandlerhelper_p.cpp:310
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -797,26 +797,26 @@ msgstr ""
 "您已變更邀請 %1。\n"
 "您要對參加者發出更新訊息嗎？"
 
-#: itiphandlerhelper_p.cpp:318 itiphandlerhelper_p.cpp:334
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
+#: itiphandlerhelper_p.cpp:347
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "傳送更新"
 
-#: itiphandlerhelper_p.cpp:328 itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:329 itiphandlerhelper_p.cpp:407
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "您要將狀態變更傳送到此工作的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:339
+#: itiphandlerhelper_p.cpp:340
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr "您在此事件的參加者狀態已變更。您要送出狀態變更資訊給此事件的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:383
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -825,7 +825,7 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此事件已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:388
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -834,7 +834,7 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此待辦事項已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -843,18 +843,18 @@ msgstr ""
 "您已移除邀請 %1。\n"
 "您要對參加者發出通知告知此日誌已取消嗎？"
 
-#: itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "您要將狀態變更傳送到此日誌的發起者嗎？"
 
-#: itiphandlerhelper_p.cpp:414 itiphandlerhelper_p.cpp:435
+#: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "傳送更新"
 
-#: itiphandlerhelper_p.cpp:429
+#: itiphandlerhelper_p.cpp:430
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -862,17 +862,17 @@ msgid ""
 msgstr ""
 "您已接受此事件的邀請。您要送出狀態變更資訊給此事件的發起者，告訴他您拒絕嗎？"
 
-#: itiphandlerhelper_p.cpp:474 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "反提案：%1"
 
-#: itiphandlerhelper_p.cpp:491
+#: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "傳送群組排程電子郵件失敗。"
 
-#: itiphandlerhelper_p.cpp:499
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"

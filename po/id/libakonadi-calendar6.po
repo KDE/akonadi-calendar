@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-11 00:46+0000\n"
+"POT-Creation-Date: 2026-09-16 00:46+0000\n"
 "PO-Revision-Date: 2024-09-28 17:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -392,7 +392,7 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Tak diketahui"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:378
 #, fuzzy, kde-format
 #| msgid ""
 #| "Failed to download free/busy data from: %1\n"
@@ -403,13 +403,13 @@ msgstr ""
 "Gagal mengunduh data senggang/sibuk dari: %1\n"
 "Alasannya: %2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:382 freebusymanager.cpp:405
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Galat Pengambilan Senggang/Sibuk"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:404
 #, fuzzy, kde-format
 #| msgid "Failed to parse free/busy information that was retrieved from: %1"
 msgctxt "@info"
@@ -418,7 +418,7 @@ msgid ""
 "link>"
 msgstr "Gagal mengurai informasi senggang/sibuk yang telah diambil dari: %1"
 
-#: freebusymanager.cpp:419
+#: freebusymanager.cpp:420
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
@@ -437,27 +437,27 @@ msgstr ""
 "tentukan salah. Sistem bilang: <em>%2</em>.</p><p>Silakan periksa URL atau "
 "hubungi administrator sistem Anda.</p></qt>"
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, fuzzy, kde-format
 #| msgid "The free/busy information was successfully sent."
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informasi senggang/sibuk berhasil dikirim."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:622 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Pengiriman Senggang/Sibuk"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:625
 #, fuzzy, kde-format
 #| msgid "Unable to publish the free/busy data: %1"
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Tak bisa menerbitkan data senggang/sibuk: %1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:749
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>No URL configured for uploading your free/busy list. Please set it "
@@ -475,20 +475,20 @@ msgstr ""
 "\"Senggang/Sibuk\".</p><p>Hubungi admisistrator sistem Anda untuk menepatkan "
 "detail URL dan akun.</p></qt>"
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:754
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Tidak Ada URL Unggahan Senggang/Sibuk"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:764
 #, fuzzy, kde-format
 #| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "<qt>Target URL '%1' yang disediakan tidak valid.</qt>"
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:765
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -732,7 +732,7 @@ msgid "Do Not Send"
 msgstr "Jangan Kirim"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
-#: itiphandlerhelper_p.cpp:506
+#: itiphandlerhelper_p.cpp:507
 #, kde-format
 msgid "Error: %1"
 msgstr "Galat: %1"
@@ -811,7 +811,7 @@ msgstr "Email Penjadwalan Grup"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Tidak ada ringkasan yang diberikan</placeholder>"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:246
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -820,7 +820,7 @@ msgstr ""
 "Acara \"%1\" termasuk orang lain.\n"
 "Apakah Anda ingin mengemail undangan kepada peserta?"
 
-#: itiphandlerhelper_p.cpp:250
+#: itiphandlerhelper_p.cpp:251
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -829,7 +829,7 @@ msgstr ""
 "Rencana \"%1\" termasuk orang lain.\n"
 "Apakah Anda ingin mengemail undangan kepada peserta?"
 
-#: itiphandlerhelper_p.cpp:255
+#: itiphandlerhelper_p.cpp:256
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -837,7 +837,7 @@ msgid ""
 msgstr ""
 "Insiden termasuk orang lain. Apakah email harus dikirimkan kepada peserta?"
 
-#: itiphandlerhelper_p.cpp:279
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -847,7 +847,7 @@ msgstr ""
 "tak tersinkronisasikan dengan kalender penyelenggara. Apakah Anda benar-"
 "benar ingin mengeditnya?"
 
-#: itiphandlerhelper_p.cpp:310
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -856,20 +856,20 @@ msgstr ""
 "Anda mengubah undangan  \"%1\".\n"
 "Apakah Anda ingin mengemail kepada peserta dalam sebuah pesan pembaruan?"
 
-#: itiphandlerhelper_p.cpp:318 itiphandlerhelper_p.cpp:334
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
+#: itiphandlerhelper_p.cpp:347
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Kirim Pembaruan"
 
-#: itiphandlerhelper_p.cpp:328 itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:329 itiphandlerhelper_p.cpp:407
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
 "Apakah Anda ingin mengirim pembaruan status ke penyelenggara pada tugas ini?"
 
-#: itiphandlerhelper_p.cpp:339
+#: itiphandlerhelper_p.cpp:340
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -878,7 +878,7 @@ msgstr ""
 "Statusmu sebagai peserta acara ini berubah. Apakah Anda ingin mengirim "
 "pembaruan status ke penyelenggara acara?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:383
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -887,7 +887,7 @@ msgstr ""
 "Anda menghapus undangan \"%1\".\n"
 "Apakah Anda ingin mengirim email kepada peserta bahwa acara dibatalkan?"
 
-#: itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:388
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -897,7 +897,7 @@ msgstr ""
 "Apakah Anda ingin mengirim email kepada para peserta bahwa rencana itu "
 "dibatalkan?"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -906,19 +906,19 @@ msgstr ""
 "Anda menghapus undangan \"%1\".\n"
 "Apakah Anda ingin mengirim email kepada peserta bahwa jurnal dibatalkan?"
 
-#: itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr ""
 "Apakah Anda ingin mengirim pembaruan status ke penyelenggara jurnal ini?"
 
-#: itiphandlerhelper_p.cpp:414 itiphandlerhelper_p.cpp:435
+#: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Kirim Pembaruan"
 
-#: itiphandlerhelper_p.cpp:429
+#: itiphandlerhelper_p.cpp:430
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -927,17 +927,17 @@ msgstr ""
 "Anda sebelumnya telah menerima undangan ke acara ini. Apakah Anda ingin "
 "mengirim tanggapan terbaru kepada penyelenggara yang menolak undangan?"
 
-#: itiphandlerhelper_p.cpp:474 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Usulan: %1"
 
-#: itiphandlerhelper_p.cpp:491
+#: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Mengirim email penjadwalan grup gagal."
 
-#: itiphandlerhelper_p.cpp:499
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-11 00:46+0000\n"
+"POT-Creation-Date: 2026-09-16 00:46+0000\n"
 "PO-Revision-Date: 2026-08-08 12:28+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -392,20 +392,20 @@ msgctxt "unknown resource"
 msgid "Unknown"
 msgstr "Nieznany"
 
-#: freebusymanager.cpp:377
+#: freebusymanager.cpp:378
 #, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
 "Nie udało się pobrać danej wolny/zajęty z: <link>%1</link>.<nl/>Powód: %2"
 
-#: freebusymanager.cpp:381 freebusymanager.cpp:404
+#: freebusymanager.cpp:382 freebusymanager.cpp:405
 #, kde-format
 msgctxt "@title:window"
 msgid "Free/Busy Retrieval Error"
 msgstr "Błąd pobierania danej wolny/zajęty"
 
-#: freebusymanager.cpp:403
+#: freebusymanager.cpp:404
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -414,7 +414,7 @@ msgid ""
 msgstr ""
 "Błąd przetwarzania informacji wolny/zajęty uzyskiwanej z: <link>%1</link>"
 
-#: freebusymanager.cpp:419
+#: freebusymanager.cpp:420
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -428,25 +428,25 @@ msgstr ""
 "nieprawidłowy adres URL. System odpowiedział: <emphasis>%2</emphasis>.<nl/"
 ">Proszę sprawdzić adres URL lub napisać do administratora systemu."
 
-#: freebusymanager.cpp:619
+#: freebusymanager.cpp:621
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informacja wolny/zajęty została poprawnie wysłana."
 
-#: freebusymanager.cpp:620 itiphandler_p.cpp:139
+#: freebusymanager.cpp:622 itiphandler_p.cpp:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Sending Free/Busy"
 msgstr "Wysyłanie wolny/zajęty"
 
-#: freebusymanager.cpp:623
+#: freebusymanager.cpp:625
 #, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Nie można opublikować danych wolny/zajęty: %1"
 
-#: freebusymanager.cpp:747
+#: freebusymanager.cpp:749
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -459,19 +459,19 @@ msgstr ""
 "administratora systemu w celu uzyskania dokładnego adresu URL oraz "
 "szczegółów konta."
 
-#: freebusymanager.cpp:752
+#: freebusymanager.cpp:754
 #, kde-format
 msgctxt "@title:window"
 msgid "No Free/Busy Upload URL"
 msgstr "Brak URL do wgrania wolny/zajęty"
 
-#: freebusymanager.cpp:762
+#: freebusymanager.cpp:764
 #, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
 msgstr "Docelowy adres URL <link>%1</link> jest niewłaściwy."
 
-#: freebusymanager.cpp:763
+#: freebusymanager.cpp:765
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid URL"
@@ -697,7 +697,7 @@ msgid "Do Not Send"
 msgstr "Nie wysyłaj"
 
 #: itiphandler_p.cpp:61 itiphandler_p.cpp:63 itiphandler_p.cpp:118
-#: itiphandlerhelper_p.cpp:506
+#: itiphandlerhelper_p.cpp:507
 #, kde-format
 msgid "Error: %1"
 msgstr "Błąd: %1"
@@ -776,7 +776,7 @@ msgstr "Adres pocztowy harmonogramu grupowego"
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Brak podsumowania</placeholder>"
 
-#: itiphandlerhelper_p.cpp:245
+#: itiphandlerhelper_p.cpp:246
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -785,7 +785,7 @@ msgstr ""
 "Wydarzenie \"%1\" dotyczy również innych ludzi. \n"
 "Czy chcesz wysłać do uczestników wiadomość z zaproszeniem?"
 
-#: itiphandlerhelper_p.cpp:250
+#: itiphandlerhelper_p.cpp:251
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -794,7 +794,7 @@ msgstr ""
 "Zadanie \"%1\" dotyczy również innych ludzi. \n"
 "Czy chcesz wysłać do uczestników wiadomość z zaproszeniem?"
 
-#: itiphandlerhelper_p.cpp:255
+#: itiphandlerhelper_p.cpp:256
 #, kde-format
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
@@ -803,7 +803,7 @@ msgstr ""
 "Wydarzenie dotyczy również innych ludzi. Czy ma być wysłana wiadomość do "
 "uczestników?"
 
-#: itiphandlerhelper_p.cpp:279
+#: itiphandlerhelper_p.cpp:280
 #, kde-format
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
@@ -813,7 +813,7 @@ msgstr ""
 "desynchronizację twojego kalendarza z kalendarzem organizatora. Czy "
 "rzeczywiście chcesz go edytować?"
 
-#: itiphandlerhelper_p.cpp:310
+#: itiphandlerhelper_p.cpp:311
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -822,19 +822,19 @@ msgstr ""
 "Zmieniono zaproszenie \"%1\".\n"
 "Czy chcesz wysłać wiadomość do uczestników z uaktualnieniem?"
 
-#: itiphandlerhelper_p.cpp:318 itiphandlerhelper_p.cpp:334
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
+#: itiphandlerhelper_p.cpp:347
 #, kde-format
 msgctxt "@action:button"
 msgid "Send Update"
 msgstr "Wyślij uaktualnienie"
 
-#: itiphandlerhelper_p.cpp:328 itiphandlerhelper_p.cpp:406
+#: itiphandlerhelper_p.cpp:329 itiphandlerhelper_p.cpp:407
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Czy chcesz wysłać uaktualnienie stanu do organizatora tego zadania?"
 
-#: itiphandlerhelper_p.cpp:339
+#: itiphandlerhelper_p.cpp:340
 #, kde-format
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
@@ -843,7 +843,7 @@ msgstr ""
 "Twój status jako uczestnika tego wydarzenia zmienił się. Czy chcesz wysłać "
 "uaktualnienie stanu do organizatora wydarzenia?"
 
-#: itiphandlerhelper_p.cpp:382
+#: itiphandlerhelper_p.cpp:383
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -853,7 +853,7 @@ msgstr ""
 "Czy chcesz wysłać wiadomości do uczestników z informacją o porzuceniu "
 "wydarzenia?"
 
-#: itiphandlerhelper_p.cpp:387
+#: itiphandlerhelper_p.cpp:388
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -862,7 +862,7 @@ msgstr ""
 "Usunięto zaproszenie \"%1\".\n"
 "Czy chcesz wysłać wiadomość do uczestników z informacją o porzuceniu zadania?"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:393
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -872,18 +872,18 @@ msgstr ""
 "Czy chcesz wysłać wiadomość do uczestników z informacją o porzuceniu "
 "dziennika?"
 
-#: itiphandlerhelper_p.cpp:409
+#: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Czy chcesz wysłać uaktualnienie stanu do organizatora tego dziennika?"
 
-#: itiphandlerhelper_p.cpp:414 itiphandlerhelper_p.cpp:435
+#: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Update"
 msgstr "Wyślij uaktualnienie"
 
-#: itiphandlerhelper_p.cpp:429
+#: itiphandlerhelper_p.cpp:430
 #, kde-format
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
@@ -892,17 +892,17 @@ msgstr ""
 "Wcześniej już zaakceptowałeś(łaś) zaproszenie do tego wydarzenia. Czy chcesz "
 "wysłać uaktualnioną odpowiedź do jego organizatora odrzucającą zaproszenie?"
 
-#: itiphandlerhelper_p.cpp:474 mailscheduler_p.cpp:126
+#: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Kontrpropozycja: %1"
 
-#: itiphandlerhelper_p.cpp:491
+#: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
 msgstr "Nie udało się wysłać wiadomości harmonogramu grupowego."
 
-#: itiphandlerhelper_p.cpp:499
+#: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
