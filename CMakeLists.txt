@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.29)
 
-set(PIM_VERSION "6.8.41")
+set(PIM_VERSION "6.8.42")
 project(Akonadi-Calendar VERSION ${PIM_VERSION})
 
 option(USE_MOLD_LINKER "Use the mold linker when available (much faster link times)" ON)

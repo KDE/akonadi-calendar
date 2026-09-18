@@ -9,6 +9,8 @@ add_library(KPim6::AkonadiCalendarCore ALIAS KPim6AkonadiCalendarCore)
 target_sources(
     KPim6AkonadiCalendarCore
     PRIVATE
+        blockalarmsattribute.cpp
+        blockalarmsattribute.h
         freebusyproviderbase.cpp
         freebusyproviderbase.h
         freebusyproviderbase_p.h
@@ -54,7 +56,12 @@ target_include_directories(
         "$<BUILD_INTERFACE:${Akonadi-Calendar_SOURCE_DIR}/src/core;${Akonadi-Calendar_BINARY_DIR}/src/core>"
 )
 
-target_link_libraries(KPim6AkonadiCalendarCore PUBLIC KPim6::AkonadiCore)
+target_link_libraries(
+    KPim6AkonadiCalendarCore
+    PUBLIC
+        KPim6::AkonadiCore
+        KF6::CalendarCore
+)
 
 set_target_properties(
     KPim6AkonadiCalendarCore
@@ -71,6 +78,7 @@ install(TARGETS KPim6AkonadiCalendarCore EXPORT KPim6AkonadiCalendarCoreTargets 
 
 ecm_generate_headers(AkonadiCalendarCore_CamelCase_HEADERS
     HEADER_NAMES
+        BlockAlarmsAttribute
         FreeBusyProviderBase
     REQUIRED_HEADERS AkonadiCalendarCore_HEADERS
     PREFIX Akonadi

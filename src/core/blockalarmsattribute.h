@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "akonadi-calendar_export.h"
+#include "akonadi-calendar-core_export.h"
 #include <KCalendarCore/Alarm>
 
 #include <Akonadi/Attribute>
@@ -32,7 +32,7 @@ class BlockAlarmsAttributePrivate;
  * \sa Akonadi::Attribute
  * \since 4.11
  */
-class AKONADI_CALENDAR_EXPORT BlockAlarmsAttribute : public Akonadi::Attribute
+class AKONADI_CALENDAR_CORE_EXPORT BlockAlarmsAttribute : public Akonadi::Attribute
 {
 public:
     /*!

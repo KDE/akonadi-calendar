@@ -11,8 +11,6 @@ add_library(KPim6::AkonadiCalendar ALIAS KPim6AkonadiCalendar)
 target_sources(
     KPim6AkonadiCalendar
     PRIVATE
-        blockalarmsattribute.cpp
-        blockalarmsattribute.h
         calendarbase.cpp
         calendarbase.h
         calendarbase_p.h
@@ -170,7 +168,6 @@ install(TARGETS KPim6AkonadiCalendar EXPORT KPim6AkonadiCalendarTargets ${KDE_IN
 
 ecm_generate_headers(AkonadiCalendar_CamelCase_HEADERS
   HEADER_NAMES
-  BlockAlarmsAttribute
   CalendarBase
   CalendarClipboard
   CalendarUtils
