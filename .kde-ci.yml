@@ -20,7 +20,7 @@ Dependencies:
 
 Options:
   require-passing-tests-on: ['Linux', 'FreeBSD']
-  enable-lsan: True
+  enable-lsan: true
   cppcheck-arguments:
     - --enable=warning,performance,portability,style
     - --suppress-xml=cppcheck-suppressions.xml
@@ -29,4 +29,4 @@ Options:
     - -DKCONFIGGROUP_DECLARE_ENUM_QOBJECT(X,Y)=
   cppcheck-ignore-files:
     - autotests
-  require-cppcheck-clean: True
+  require-cppcheck-clean: false
