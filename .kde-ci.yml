@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: CC0-1.0
 
 Dependencies:
- - 'on': ['Linux', 'FreeBSD', 'Windows']
+ - 'on': ['Linux']
    'require':
     'frameworks/extra-cmake-modules': 'Frameworks/6.24'
     'frameworks/kcontacts': 'Frameworks/6.24'
@@ -19,7 +19,7 @@ Dependencies:
     'pim/messagelib': '@same'
 
 Options:
-  require-passing-tests-on: ['Linux', 'FreeBSD']
+  require-passing-tests-on: ['Linux']
   cppcheck-arguments:
     - --enable=warning,performance,portability,style
     - --suppress-xml=cppcheck-suppressions.xml
