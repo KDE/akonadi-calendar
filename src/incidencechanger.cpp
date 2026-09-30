@@ -411,7 +411,7 @@ void IncidenceChangerPrivate::handleModifyJobResult(KJob *job)
         } else {
             qCritical() << errorString;
         }
-        if (mShowDialogsOnError) {
+        if (mShowDialogsOnError && change->revisionConflictPolicy == IncidenceChanger::RevisionConflictPolicy::ResolveConflict) {
             KMessageBox::error(change->parentWidget, i18n("Error while trying to modify calendar item. Error was: %1", errorString));
         }
         mChangeById.remove(change->id);
@@ -678,7 +678,8 @@ bool IncidenceChangerPrivate::myAttendeeStatusChanged(const Incidence::Ptr &newI
 int IncidenceChangerPrivate::modifyIncidence(const Akonadi::Item &changedItem,
                                              IncidenceModificationPolicy modificationPolicy,
                                              const KCalendarCore::Incidence::Ptr &originalPayload,
-                                             QWidget *parent)
+                                             QWidget *parent,
+                                             IncidenceChanger::RevisionConflictPolicy conflictPolicy)
 {
     if (!changedItem.isValid() || !changedItem.hasPayload<Incidence::Ptr>()) {
         qCWarning(AKONADICALENDAR_LOG) << "An invalid item or payload is not allowed.";
@@ -702,6 +703,7 @@ int IncidenceChangerPrivate::modifyIncidence(const Akonadi::Item &changedItem,
     const int changeId = ++mLatestChangeId;
     auto modificationChange = new ModificationChange(q, changeId, atomicOperationId, parent);
     modificationChange->modificationPolicy = modificationPolicy;
+    modificationChange->revisionConflictPolicy = conflictPolicy;
     Change::Ptr const change(modificationChange);
 
     if (originalPayload) {
@@ -922,9 +924,12 @@ void IncidenceChangerPrivate::deleteIncidences2(int changeId, ITIPHandlerHelper:
     connect(deleteJob, &KJob::result, this, &IncidenceChangerPrivate::handleDeleteJobResult, Qt::QueuedConnection);
 }
 
-int IncidenceChanger::modifyIncidence(const Item &changedItem, const KCalendarCore::Incidence::Ptr &originalPayload, QWidget *parent)
+int IncidenceChanger::modifyIncidence(const Item &changedItem,
+                                      const KCalendarCore::Incidence::Ptr &originalPayload,
+                                      QWidget *parent,
+                                      RevisionConflictPolicy conflictPolicy)
 {
-    return d->modifyIncidence(changedItem, IncidenceModificationPolicy::Default, originalPayload, parent);
+    return d->modifyIncidence(changedItem, IncidenceModificationPolicy::Default, originalPayload, parent, conflictPolicy);
 }
 
 void IncidenceChangerPrivate::performModification(const Change::Ptr &change)
@@ -990,7 +995,8 @@ void IncidenceChangerPrivate::performModification2(int changeId, ITIPHandlerHelp
     const bool hasAtomicOperationId = atomicOperationId != 0;
 
     QHash<Akonadi::Item::Id, int> &latestRevisionByItemId = *(s_latestRevisionByItemId());
-    if (latestRevisionByItemId.contains(id) && latestRevisionByItemId[id] > newItem.revision()) {
+    if (change->revisionConflictPolicy == IncidenceChanger::RevisionConflictPolicy::ResolveConflict && latestRevisionByItemId.contains(id)
+        && latestRevisionByItemId[id] > newItem.revision()) {
         /* When a ItemModifyJob ends, the application can still modify the old items if the user
          * is quick because the ETM wasn't updated yet, and we'll get a STORE error, because
          * we are not modifying the latest revision.
@@ -1039,6 +1045,9 @@ void IncidenceChangerPrivate::performModification2(int changeId, ITIPHandlerHelp
         queueModification(change);
     } else {
         auto modifyJob = new ItemModifyJob(newItem, parentJob(change));
+        if (change->revisionConflictPolicy == IncidenceChanger::RevisionConflictPolicy::FailOnConflict) {
+            modifyJob->disableAutomaticConflictHandling();
+        }
         mChangeForJob.insert(modifyJob, change);
         mDirtyFieldsByJob.insert(modifyJob, incidence->dirtyFields());
 

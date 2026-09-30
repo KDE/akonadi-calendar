@@ -85,6 +85,7 @@ public:
     IncidenceChanger::ResultCode resultCode;
     bool completed;
     bool queuedModification;
+    IncidenceChanger::RevisionConflictPolicy revisionConflictPolicy = IncidenceChanger::RevisionConflictPolicy::ResolveConflict;
     bool useGroupwareCommunication;
 
 Q_SIGNALS:
@@ -288,7 +289,8 @@ public:
     int modifyIncidence(const Akonadi::Item &item,
                         IncidenceModificationPolicy modificationPolicy,
                         const KCalendarCore::Incidence::Ptr &originalPayload = KCalendarCore::Incidence::Ptr(),
-                        QWidget *parent = nullptr);
+                        QWidget *parent = nullptr,
+                        IncidenceChanger::RevisionConflictPolicy conflictPolicy = IncidenceChanger::RevisionConflictPolicy::ResolveConflict);
 
 public Q_SLOTS:
     void handleCreateJobResult(KJob *job);

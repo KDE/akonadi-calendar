@@ -22,6 +22,7 @@
 #include <KCalendarCore/Event>
 
 #include <QBitArray>
+#include <QSignalSpy>
 
 using namespace Akonadi;
 using namespace KCalendarCore;
@@ -345,6 +346,41 @@ private Q_SLOTS:
             QCOMPARE(incidence->revision(), expectedRevision);
             delete fetchJob;
         }
+    }
+
+    void testFailOnRevisionConflict()
+    {
+        Item item;
+        const Incidence::Ptr original(new Event);
+        original->setSummary(QStringLiteral("Original"));
+        item.setMimeType(original->mimeType());
+        item.setPayload<Incidence::Ptr>(original);
+        auto create = new ItemCreateJob(item, mCollection, this);
+        AKVERIFYEXEC(create);
+        item = create->item();
+
+        IncidenceChanger changer;
+        changer.setShowDialogsOnError(false);
+        QSignalSpy modified(&changer, &IncidenceChanger::modifyFinished);
+        auto newer = item;
+        const Incidence::Ptr updated(original->clone());
+        updated->setSummary(QStringLiteral("Newer revision"));
+        newer.setPayload<Incidence::Ptr>(updated);
+        QVERIFY(changer.modifyIncidence(newer, original) >= 0);
+        QTRY_COMPARE(modified.count(), 1);
+        QCOMPARE(modified.at(0).at(2).value<IncidenceChanger::ResultCode>(), IncidenceChanger::ResultCodeSuccess);
+
+        const Incidence::Ptr draft(original->clone());
+        draft->setSummary(QStringLiteral("Stale draft"));
+        item.setPayload<Incidence::Ptr>(draft);
+        changer.setShowDialogsOnError(true);
+        QVERIFY(changer.modifyIncidence(item, original, nullptr, IncidenceChanger::RevisionConflictPolicy::FailOnConflict) >= 0);
+        QTRY_COMPARE(modified.count(), 2);
+        QCOMPARE(modified.at(1).at(2).value<IncidenceChanger::ResultCode>(), IncidenceChanger::ResultCodeJobError);
+        auto fetch = new ItemFetchJob(item, this);
+        fetch->fetchScope().fetchFullPayload();
+        AKVERIFYEXEC(fetch);
+        QCOMPARE(fetch->items().constFirst().payload<Incidence::Ptr>()->summary(), QStringLiteral("Newer revision"));
     }
 
     void testModifyingAlarmSettings()
