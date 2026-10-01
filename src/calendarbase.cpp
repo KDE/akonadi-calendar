@@ -237,9 +237,13 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
         if (!incidence->hasRecurrenceId()) {
             const QString uid = incidence->uid();
             const QString parentUid = incidence->relatedTo();
-            mParentUidToChildrenUid.remove(uid);
             if (!parentUid.isEmpty()) {
-                mParentUidToChildrenUid[parentUid].removeAll(uid);
+                if (auto it = mParentUidToChildrenUid.find(parentUid); it != mParentUidToChildrenUid.end()) {
+                    it->removeAll(uid);
+                    if (it->isEmpty()) {
+                        mParentUidToChildrenUid.erase(it);
+                    }
+                }
                 mUidToParent.remove(uid);
             }
         }
@@ -382,8 +386,14 @@ void CalendarBasePrivate::handleParentChanged(const KCalendarCore::Incidence::Pt
 
     if (!originalParentUid.isEmpty()) {
         // Remove this child from it's old parent:
-        Q_ASSERT(mParentUidToChildrenUid.contains(originalParentUid));
-        mParentUidToChildrenUid[originalParentUid].removeAll(newIncidence->uid());
+        auto it = mParentUidToChildrenUid.find(originalParentUid);
+        Q_ASSERT(it != mParentUidToChildrenUid.end());
+        if (it != mParentUidToChildrenUid.end()) {
+            it->removeAll(newIncidence->uid());
+            if (it->isEmpty()) {
+                mParentUidToChildrenUid.erase(it);
+            }
+        }
     }
 
     mUidToParent.remove(newIncidence->uid());
