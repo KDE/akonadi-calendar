@@ -5,13 +5,7 @@
 */
 
 #include "calendarclipboard_p.h"
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-#include <KCalUtils/ICalDrag>
-using namespace KCalendarCore;
-using namespace KCalUtils;
-#else
 #include <KCalendarCore/MimeData>
-#endif
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -27,28 +21,6 @@ static bool copyIncidences(const KCalendarCore::Incidence::List &incidences)
 {
     QClipboard *clipboard = QGuiApplication::clipboard();
     Q_ASSERT(clipboard);
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-    Calendar::Ptr const calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
-
-    Incidence::List::ConstIterator it;
-    const Incidence::List::ConstIterator end(incidences.constEnd());
-    for (it = incidences.constBegin(); it != end; ++it) {
-        if (*it) {
-            calendar->addIncidence(Incidence::Ptr((*it)->clone()));
-        }
-    }
-
-    auto mimeData = new QMimeData;
-
-    ICalDrag::populateMimeData(mimeData, calendar);
-
-    if (calendar->incidences().isEmpty()) {
-        return false;
-    } else {
-        clipboard->setMimeData(mimeData);
-        return true;
-    }
-#else
     auto mimeData = new QMimeData;
     KCalendarCore::MimeData::populate(mimeData, incidences);
     if (KCalendarCore::MimeData::canDecode(mimeData)) {
@@ -57,7 +29,6 @@ static bool copyIncidences(const KCalendarCore::Incidence::List &incidences)
     }
     delete mimeData;
     return false;
-#endif
 }
 
 CalendarClipboardPrivate::CalendarClipboardPrivate(const Akonadi::CalendarBase::Ptr &calendar, Akonadi::IncidenceChanger *changer, CalendarClipboard *qq)
@@ -286,11 +257,7 @@ bool CalendarClipboard::copyIncidence(const KCalendarCore::Incidence::Ptr &incid
 
 bool CalendarClipboard::pasteAvailable() const
 {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-    return KCalUtils::ICalDrag::canDecode(QApplication::clipboard()->mimeData());
-#else
     return KCalendarCore::MimeData::canDecode(QGuiApplication::clipboard()->mimeData());
-#endif
 }
 
 #include "moc_calendarclipboard.cpp"

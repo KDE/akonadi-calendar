@@ -17,13 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/IncidenceTreeModel>
 #include <Akonadi/TagCache>
 
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-#include <KCalUtils/DndFactory>
-#include <KCalUtils/ICalDrag>
-#include <KCalUtils/VCalDrag>
-#else
 #include <KCalendarCore/MimeData>
-#endif
 
 #include "akonadicalendar_debug.h"
 
@@ -529,15 +523,7 @@ Qt::DropActions TodoModel::supportedDropActions() const
 
 QStringList TodoModel::mimeTypes() const
 {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-    static QStringList list;
-    if (list.isEmpty()) {
-        list << KCalUtils::ICalDrag::mimeType() << KCalUtils::VCalDrag::mimeType();
-    }
-    return list;
-#else
     return KCalendarCore::MimeData::supportedMimeTypes();
-#endif
 }
 
 QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
@@ -559,15 +545,9 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, [[may
         return false;
     }
 
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-    if (d->m_changer && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
-        KCalendarCore::Todo::Ptr const t = KCalUtils::DndFactory::createDropTodo(data);
-        KCalendarCore::Event::Ptr const e = KCalUtils::DndFactory::createDropEvent(data);
-#else
     if (d->m_changer && KCalendarCore::MimeData::canDecode(data)) {
         KCalendarCore::Todo::Ptr const t = KCalendarCore::MimeData::decodeTodo(data);
         KCalendarCore::Event::Ptr const e = KCalendarCore::MimeData::decodeEvent(data);
-#endif
 
         if (t) {
             // we don't want to change the created todo, but the one which is already
