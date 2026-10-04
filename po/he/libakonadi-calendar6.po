@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:46+0000\n"
+"POT-Creation-Date: 2026-10-04 00:47+0000\n"
 "PO-Revision-Date: 2026-08-11 12:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -23,32 +23,32 @@ msgstr ""
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr "לא ניתן למצוא מופע לעדכון. כנראה שהוא נמחק לא מזמן."
 
-#: calendarclipboard.cpp:106
+#: calendarclipboard.cpp:77
 #, kde-format
 msgid "Error performing deletion."
 msgstr "שגיאה בביצוע המחיקה."
 
-#: calendarclipboard.cpp:111
+#: calendarclipboard.cpp:82
 #, kde-format
 msgid "Error performing copy."
 msgstr "שגיאה בביצוע העתקה."
 
-#: calendarclipboard.cpp:135
+#: calendarclipboard.cpp:106
 #, kde-format
 msgid "Can't find item: %1"
 msgstr "לא ניתן לאתר פריט: %1"
 
-#: calendarclipboard.cpp:151 calendarclipboard.cpp:168
+#: calendarclipboard.cpp:122 calendarclipboard.cpp:139
 #, kde-format
 msgid "Error while removing relations."
 msgstr "שגיאה בהסרת קשרים."
 
-#: calendarclipboard.cpp:197
+#: calendarclipboard.cpp:168
 #, kde-format
 msgid "Error while deleting incidences: %1"
 msgstr "שגיאה במחיקת מופעים: %1"
 
-#: calendarclipboard.cpp:214
+#: calendarclipboard.cpp:185
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to cut just this item and make "
@@ -57,25 +57,25 @@ msgstr ""
 "לפריט „%1” יש מטלות משנה. לגזור פריט זה ולהפוך את מטלות המשנה שלו לבלתי "
 "תלויות, או שמא לגזור את המטלה וכל מטלות המשנה שלה?"
 
-#: calendarclipboard.cpp:219 calendarclipboard.cpp:258
+#: calendarclipboard.cpp:190 calendarclipboard.cpp:229
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "אישור KOrganizer"
 
-#: calendarclipboard.cpp:220
+#: calendarclipboard.cpp:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut Only This"
 msgstr "לגזור רק את זה"
 
-#: calendarclipboard.cpp:221
+#: calendarclipboard.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Cut All"
 msgstr "לגזור את הכול"
 
-#: calendarclipboard.cpp:254
+#: calendarclipboard.cpp:225
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -84,13 +84,13 @@ msgstr ""
 "לפריט „%1” יש מטלות משנה. להעתיק רק את הפריט הזה או להעתיק את המטלה עם כל "
 "מטלות המשנה שלה?"
 
-#: calendarclipboard.cpp:259
+#: calendarclipboard.cpp:230
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "להעתיק רק את זה"
 
-#: calendarclipboard.cpp:260
+#: calendarclipboard.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
@@ -296,87 +296,87 @@ msgstr ""
 "לחלק שם התחום במזהה המשתמש שמחפשים. למשל, אם האפשרות הזאת מוגדרת, חיפוש אחר "
 "נתוני פנוי/עסוק של joe@mydomain.com בשרת www.yourdomain.com תיכשל."
 
-#: calendarutils.cpp:107 calendarutils.cpp:124 calendarutils.cpp:172
-#: todomodel.cpp:493
+#: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
+#: todomodel.cpp:487
 #, kde-format
 msgid "Calendar"
 msgstr "לוח שנה"
 
-#: calendarutils.cpp:112 calendarutils.cpp:124 calendarutils.cpp:174
+#: calendarutils.cpp:108 calendarutils.cpp:120 calendarutils.cpp:170
 #, kde-format
 msgid "Tasks"
 msgstr "משימות"
 
-#: calendarutils.cpp:117 calendarutils.cpp:124 calendarutils.cpp:176
+#: calendarutils.cpp:113 calendarutils.cpp:120 calendarutils.cpp:172
 #, kde-format
 msgid "Journal"
 msgstr "יומן"
 
-#: calendarutils.cpp:122 calendarutils.cpp:124 calendarutils.cpp:178
+#: calendarutils.cpp:118 calendarutils.cpp:120 calendarutils.cpp:174
 #, kde-format
 msgid "Notes"
 msgstr "פתקיות"
 
-#: calendarutils.cpp:137
+#: calendarutils.cpp:133
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "My Kolab %1"
 msgstr "ה־Kolab שלי %1"
 
-#: calendarutils.cpp:140
+#: calendarutils.cpp:136
 #, kde-format
 msgctxt "%1 is folder name, %2 is folder contents"
 msgid "Shared Kolab %1 %2"
 msgstr "Kolab משותף %1 %2"
 
-#: calendarutils.cpp:143
+#: calendarutils.cpp:139
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
 msgstr "%2 ה־Kolab של %1"
 
-#: calendarutils.cpp:145
+#: calendarutils.cpp:141
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name, %3 is folder contents"
 msgid "%1's %2 Kolab %3"
 msgstr "%3 ‏Kolab ה־%2 של %1"
 
-#: calendarutils.cpp:149
+#: calendarutils.cpp:145
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Kolab %1"
 msgstr "Kolab %1"
 
-#: calendarutils.cpp:156
+#: calendarutils.cpp:152
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
 msgstr "%1 בתוך %2"
 
-#: calendarutils.cpp:189
+#: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
 msgstr "%2 של ה־Google של %1"
 
-#: calendarutils.cpp:191
+#: calendarutils.cpp:187
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder name"
 msgid "%1's %2"
 msgstr "%2 של %1"
 
-#: calendarutils.cpp:194
+#: calendarutils.cpp:190
 #, kde-format
 msgctxt "%1 is folder contents"
 msgid "Google %1"
 msgstr "%1 של Google"
 
-#: calendarutils.cpp:202
+#: calendarutils.cpp:198
 #, kde-format
 msgid "My %1"
 msgstr "%1 שלי"
 
-#: calendarutils.cpp:206
+#: calendarutils.cpp:202
 #, kde-format
 msgctxt "unknown resource"
 msgid "Unknown"
@@ -2145,73 +2145,73 @@ msgstr "ע&ריכה…"
 msgid "Edit the selected incidence."
 msgstr "עריכת המופע הנבחר."
 
-#: todomodel.cpp:160 todomodel.cpp:195
+#: todomodel.cpp:154 todomodel.cpp:189
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "חריגה"
 
-#: todomodel.cpp:162 todomodel.cpp:197
+#: todomodel.cpp:156 todomodel.cpp:191
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "כן"
 
-#: todomodel.cpp:165 todomodel.cpp:200
+#: todomodel.cpp:159 todomodel.cpp:194
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "לא"
 
-#: todomodel.cpp:179 todomodel.cpp:216
+#: todomodel.cpp:173 todomodel.cpp:210
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:475
+#: todomodel.cpp:469
 #, kde-format
 msgid "Summary"
 msgstr "תקציר"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:471
 #, kde-format
 msgid "Recurs"
 msgstr "חזרתיות"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:473
 #, kde-format
 msgid "Priority"
 msgstr "עדיפות"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:475
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "השלמה"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:477
 #, kde-format
 msgid "Start Date"
 msgstr "תאריך התחלה"
 
-#: todomodel.cpp:485
+#: todomodel.cpp:479
 #, kde-format
 msgid "Due Date"
 msgstr "תאריך יעד"
 
-#: todomodel.cpp:487
+#: todomodel.cpp:481
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "הושלמה"
 
-#: todomodel.cpp:489
+#: todomodel.cpp:483
 #, kde-format
 msgid "Tags"
 msgstr "תגיות"
 
-#: todomodel.cpp:491
+#: todomodel.cpp:485
 #, kde-format
 msgid "Description"
 msgstr "תיאור"
