@@ -1,16 +1,16 @@
-# Translation for libakonadi-calendar5.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2025 This file is copyright:
+# Translation for libakonadi-calendar6.po to Euskara/Basque (eu).
+# Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 02:54+0000\n"
-"PO-Revision-Date: 2025-12-07 12:05+0100\n"
+"PO-Revision-Date: 2026-10-03 12:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: calendarbase.cpp:271
 #, kde-format
@@ -897,13 +897,13 @@ msgstr "Ordezko proposamena: %1"
 #: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr "Talde antolaketako e-posta bidaltzea huts egin du."
+msgstr "Talde-antolaketako e-posta bidaltzeak huts egin du."
 
 #: itiphandlerhelper_p.cpp:500
 #, kde-format
 msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
-msgstr "Galarazi eguneratzea"
+msgstr "Eguneratzea bertan behera utzi"
 
 #: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
