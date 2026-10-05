@@ -73,7 +73,7 @@ public:
      *
      * \since 4.13
      */
-    explicit ETMCalendar(ETMCalendar *calendar, QObject *parent = nullptr);
+    explicit ETMCalendar(const ETMCalendar *calendar, QObject *parent = nullptr);
 
     explicit ETMCalendar(Monitor *monitor, QObject *parent = nullptr);
     /*!

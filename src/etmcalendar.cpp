@@ -432,7 +432,7 @@ ETMCalendar::ETMCalendar(const QStringList &mimeTypes, QObject *parent)
     d->init();
 }
 
-ETMCalendar::ETMCalendar(ETMCalendar *calendar, QObject *parent)
+ETMCalendar::ETMCalendar(const ETMCalendar *calendar, QObject *parent)
     : CalendarBase(new ETMCalendarPrivate(this), parent)
 {
     Q_D(ETMCalendar);
