@@ -29,7 +29,7 @@ msgstr ""
 #, kde-format
 msgid "Could not find incidence to update, it probably was deleted recently."
 msgstr ""
-"Не удалось найти мероприятие для изменения, возможно оно было удалено "
+"Не удалось найти мероприятие для изменения, возможно, оно было удалено "
 "недавно."
 
 #: calendarclipboard.cpp:67
@@ -193,13 +193,13 @@ msgstr "Пароль для публикации сведений о занят�
 #: calendarsettings.kcfg:34
 #, kde-format
 msgid "Enable Automatic Free/Busy Retrieval"
-msgstr "Автоизвлечение сведений о занятости"
+msgstr "Автоматически получать сведения о занятости"
 
 #. i18n: ectx: label, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:38
 #, kde-format
 msgid "Use full email address for retrieval"
-msgstr "Сохранять данные с полным электронным адресом"
+msgstr "Использовать для получения полный адрес электронной почты"
 
 #. i18n: ectx: whatsthis, entry (FreeBusyFullDomainRetrieval), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:39
@@ -210,10 +210,10 @@ msgid ""
 "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
 "download user.ifb, for example nn.ifb."
 msgstr ""
-"Этот параметр влияет на имя файла, в который будут сохраняться данные, "
-"загружаемые с сервера. Когда он установлен, файл с данными занятости будет "
-"называться {пользователь}@{домен}.ifb, например, nn@kde.org.ifb. Если он не "
-"установлен, данные сохранятся в файле {пользователь}.ifb, например nn.ifb."
+"Этот параметр определяет имя файла, загружаемого с сервера. Если он "
+"установлен, будет загружаться файл данных о занятости {пользователь}@{домен}."
+"ifb, например, nn@kde.org.ifb. Если не установлен — файл {пользователь}.ifb, "
+"например, nn.ifb."
 
 #. i18n: ectx: label, entry (FreeBusyRetrieveUrl), group (FreeBusy Retrieve)
 #: calendarsettings.kcfg:43
@@ -291,7 +291,7 @@ msgstr ""
 #: calendarsettings.kcfg:79
 #, kde-format
 msgid "Send Outlook-like pseudo counter proposals"
-msgstr "Посылать контрпредложения как это делает Outlook"
+msgstr "Отправлять контрпредложения в стиле Outlook"
 
 #. i18n: ectx: label, entry (FreeBusyCheckHostname), group (Hidden Options)
 #: calendarsettings.kcfg:83
@@ -462,8 +462,8 @@ msgid ""
 "your system administrator for the exact URL and the account details."
 msgstr ""
 "Не определён URL-адрес для публикации сведений о занятости. Задайте его в "
-"диалоге конфигурации KOrganizer, на вкладке «Занятое время».<nl/>Точный "
-"адрес и учётные данные можно узнать у системного администратора."
+"диалоге настройки KOrganizer, на вкладке «Занятое время».<nl/>Точный адрес и "
+"учётные данные можно узнать у системного администратора."
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -521,7 +521,7 @@ msgstr ""
 #: icalimporter.cpp:82
 #, kde-format
 msgid "Error creating ical resource: %1"
-msgstr "Ошибка загрузки ресурса ical: %1"
+msgstr "Ошибка создания ресурса ical: %1"
 
 #: icalimporter.cpp:92
 #, kde-format
@@ -570,7 +570,7 @@ msgstr "Выбранный файл пуст."
 #: icalimporter.cpp:212
 #, kde-format
 msgid "Merge ical file into existing calendar."
-msgstr "Загрузить файл ical в существующий календарь."
+msgstr "Объединить файл ical с существующим календарём."
 
 #: incidencechanger.cpp:264
 #, kde-format
@@ -621,16 +621,14 @@ msgstr ""
 #: incidencechanger.cpp:1223
 #, kde-format
 msgid "Duplicate item id in a group operation"
-msgstr "Дублирование кодов элементов в операции с группой"
+msgstr "Повторяющийся идентификатор элемента в групповой операции"
 
 #: incidencechanger.cpp:1227
 #, kde-format
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
-msgstr ""
-"Сбой изменения из числа относящихся к группе. Программа откатила назад все "
-"изменения."
+msgstr "Сбой одного из изменений группы. Все изменения отменяются."
 
 #: incidencechanger.cpp:1232
 #, kde-format
@@ -731,13 +729,13 @@ msgid ""
 "Unable to send the item '%1'.\n"
 "Method: %2"
 msgstr ""
-"Не удалось отправить сообщение «%1».\n"
+"Не удалось отправить запись «%1».\n"
 "Метод: %2"
 
 #: itiphandler_p.cpp:163 itiphandler_p.cpp:183
 #, kde-format
 msgid "The item information was successfully sent."
-msgstr "Информация записи отправлена успешно."
+msgstr "Сведения о записи успешно отправлены."
 
 #: itiphandler_p.cpp:164
 #, kde-format
@@ -770,7 +768,7 @@ msgstr "Ошибка пересылки"
 #: itiphandlerhelper_p.cpp:37
 #, kde-format
 msgid "Proposed new meeting time: %1 - %2"
-msgstr "Предложено новое время встречи: %1 - %2"
+msgstr "Предложено новое время встречи: %1 — %2"
 
 #: itiphandlerhelper_p.cpp:69
 #, kde-format
@@ -846,8 +844,8 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
-"Ваш статус как участника этого события изменился. Отправить сообщение об "
-"изменении статуса организатору события?"
+"Ваше состояние участия в этом событии изменилось. Отправить организатору "
+"события обновление состояния?"
 
 #: itiphandlerhelper_p.cpp:383
 #, kde-format
@@ -879,7 +877,7 @@ msgstr ""
 #: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr "Отправить письмо об изменении статуса организатору дневника?"
+msgstr "Отправить обновление состояния организатору этой записи дневника?"
 
 #: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
@@ -893,8 +891,8 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
-"Ранее вы приняли приглашение на это событие. Отправить изменённый ответ "
-"организатору, отменившему приглашение?"
+"Ранее вы приняли приглашение на это событие. Отправить организатору "
+"изменённый ответ с отказом от приглашения?"
 
 #: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
@@ -930,12 +928,12 @@ msgstr "Сообщение занятости"
 #: mailclient_p.cpp:629
 #, kde-format
 msgid "Error while creating transport"
-msgstr "Ошибка при создании транспорта"
+msgstr "Ошибка при создании метода отправки"
 
 #: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
-msgstr "Ошибка получения транспорта. Отправить приглашения не удалось."
+msgstr "Ошибка получения метода отправки. Отправить приглашения не удалось."
 
 #: mailclient_p.cpp:670
 #, kde-format
@@ -1019,7 +1017,7 @@ msgid ""
 "Sign message instead?"
 msgstr ""
 "Это сообщение не будет подписано.\n"
-"Отправка неподписанного сообщения может нарушать правила сайта.\n"
+"Отправка неподписанного сообщения может нарушать установленные правила.\n"
 "Подписать сообщение?"
 
 #: mailclient_p.cpp:778
@@ -1455,13 +1453,13 @@ msgstr "Общая ошибка"
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
-msgstr "%1 будет вместе с %2, но без приглашения."
+msgstr "%1 хочет участвовать в %2 без приглашения."
 
 #: scheduler_p.cpp:481
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
-msgstr "%1 будет вместе с %2 от имени %3."
+msgstr "%1 хочет участвовать в %2 от имени %3."
 
 #: scheduler_p.cpp:485
 #, kde-format

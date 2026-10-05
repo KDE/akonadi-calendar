@@ -132,7 +132,7 @@ msgstr "Напоминания"
 #: kalendaracmain.cpp:28
 #, kde-format
 msgid "Calendar Reminder Service"
-msgstr "Служба напоминания календаря"
+msgstr "Служба напоминаний календаря"
 
 #: kalendaracmain.cpp:32
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "Clau Cambra"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
-msgstr "Отложить на:"
+msgstr "&Отложить на:"
 
 #: suspenddialog.cpp:81
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "Отмена"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
-msgstr "Отменить повторные напоминания, не показывать уведомление снова"
+msgstr "Отменить отложенное напоминание и снова показать уведомление"
 
 #~ msgid "Task"
 #~ msgstr "Задача"

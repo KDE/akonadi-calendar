@@ -171,7 +171,7 @@ msgstr "Определена дата выполнения"
 #: akonadi_serializer_kcalcore.cpp:309
 #, kde-format
 msgid "Complete"
-msgstr "Выполняется"
+msgstr "Выполнено"
 
 #: akonadi_serializer_kcalcore.cpp:315
 #, kde-format
