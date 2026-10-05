@@ -6,7 +6,6 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "scheduler_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarbase_p.h"
 
@@ -18,6 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageBox>
 #include <QTimeZone>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 using namespace Akonadi;
 

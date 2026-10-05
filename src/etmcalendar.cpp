@@ -5,7 +5,6 @@
 */
 
 #include "etmcalendar.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "blockalarmsattribute.h"
 #include "calendarmodel_p.h"
@@ -29,6 +28,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QItemSelectionModel>
 #include <QTreeView>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace KCalendarCore;
 

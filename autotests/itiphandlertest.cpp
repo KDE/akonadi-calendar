@@ -7,7 +7,6 @@
 // NOLINTBEGIN(misc-const-correctness) due to QFETCH
 
 #include "itiphandlertest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "fetchjobcalendar.h"
 #include "helper.h"
@@ -26,6 +25,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QString>
 #include <QTimeZone>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace KCalendarCore;
 

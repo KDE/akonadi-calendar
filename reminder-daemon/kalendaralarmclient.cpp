@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "kalendaralarmclient.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../src/calendarsettings.h"
 #include "alarmnotification.h"
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QFileInfo>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 
 namespace

@@ -5,7 +5,6 @@
 */
 
 #include "freebusyproviderbase.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "freebusyproviderbase_p.h"
 
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDBusConnection>
 #include <QDateTime>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 FreeBusyProviderBasePrivate::FreeBusyProviderBasePrivate(FreeBusyProviderBase *qq)

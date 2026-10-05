@@ -7,7 +7,6 @@
 */
 
 #include "icalimporter.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "icalimporter_p.h"
 #include "selectcollection.h"
@@ -26,6 +25,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTemporaryFile>
 #include <QTimeZone>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 using namespace Akonadi;
 

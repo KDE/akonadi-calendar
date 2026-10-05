@@ -7,7 +7,6 @@
  */
 
 #include "standardcalendaractionmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/EntityTreeModel>
 
@@ -19,6 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QItemSelectionModel>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 class Akonadi::StandardCalendarActionManagerPrivate

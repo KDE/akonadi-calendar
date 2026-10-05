@@ -6,7 +6,6 @@
 */
 
 #include "mailscheduler_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarbase.h"
 #include "calendarsettings.h"
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <QStandardPaths>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace KIdentityManagementCore;
 

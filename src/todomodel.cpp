@@ -6,7 +6,6 @@
 */
 
 #include "todomodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KCalendarCore/Attachment>
 #include <KCalendarCore/Event>
@@ -23,6 +22,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QIcon>
 #include <QMimeData>
+
+using namespace Qt::Literals::StringLiterals;
 
 namespace Akonadi
 {

@@ -5,12 +5,12 @@
 */
 
 #include "itiphandler_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "fetchjobcalendar.h"
 #include <KCalendarCore/Incidence>
 #include <KLocalizedString>
 #include <KMessageBox>
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 ITIPHandlerPrivate::ITIPHandlerPrivate(ITIPHandlerComponentFactory *factory, ITIPHandler *qq)

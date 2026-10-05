@@ -5,11 +5,11 @@
 */
 
 #include "history.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadicalendar_debug.h"
 #include "history_p.h"
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 using namespace Akonadi;
 

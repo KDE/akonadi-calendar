@@ -5,12 +5,12 @@
 */
 
 #include "akonadicalendar_debug.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidencetreemodel_p.h"
 
 #include <Akonadi/EntityTreeModel>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 static QDebug operator<<(QDebug s, const Node::Ptr &node);
 

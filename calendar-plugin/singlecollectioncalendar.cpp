@@ -4,7 +4,6 @@
 */
 
 #include "singlecollectioncalendar.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../src/calendarbase_p.h"
 
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
+
+using namespace Qt::Literals::StringLiterals;
 
 SingleCollectionCalendar::SingleCollectionCalendar(const Akonadi::Collection &col, QObject *parent)
     : Akonadi::CalendarBase(parent)

@@ -7,7 +7,6 @@
 */
 
 #include "searchcollectionhelper.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadicalendar_debug.h"
 
@@ -28,6 +27,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 namespace Akonadi

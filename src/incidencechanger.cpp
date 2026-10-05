@@ -5,7 +5,6 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "incidencechanger.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadicalendar_debug.h"
 #include "calendarutils.h"
@@ -24,6 +23,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QBitArray>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace KCalendarCore;
 

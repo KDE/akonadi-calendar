@@ -8,7 +8,6 @@
 // clazy:excludeall=lambda-in-connect
 
 #include "mailclient_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadi-calendar-version.h"
 #include "akonadicalendar_debug.h"
@@ -55,6 +54,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QTemporaryDir>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 // Crypto-related helpers

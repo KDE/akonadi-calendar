@@ -6,7 +6,6 @@
 */
 
 #include "publishdialog_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/AbstractEmailAddressSelectionDialog>
 #include <Akonadi/EmailAddressSelectionDialog>
@@ -18,6 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPointer>
 #include <QTreeView>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 using namespace Akonadi;
 

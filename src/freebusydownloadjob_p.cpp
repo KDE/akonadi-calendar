@@ -6,12 +6,12 @@
 */
 
 #include "freebusydownloadjob_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KIO/Job>
 #include <KIO/TransferJob>
 #include <KJobWidgets>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 FreeBusyDownloadJob::FreeBusyDownloadJob(const QUrl &url, QWidget *parentWidget)

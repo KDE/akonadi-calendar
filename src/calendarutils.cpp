@@ -9,7 +9,6 @@
 */
 
 #include "calendarutils.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "etmcalendar.h"
 
@@ -23,6 +22,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QMimeData>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 KCalendarCore::Incidence::Ptr CalendarUtils::incidence(const Akonadi::Item &item)

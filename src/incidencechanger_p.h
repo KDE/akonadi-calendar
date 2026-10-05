@@ -11,7 +11,6 @@
 #pragma once
 
 #include "history.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidencechanger.h"
 #include "incidencemodificationpolicy_p.h"
@@ -25,6 +24,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QObject>
 #include <QPointer>
 #include <QSet>
+
+using namespace Qt::Literals::StringLiterals;
 
 class KJob;
 class QWidget;

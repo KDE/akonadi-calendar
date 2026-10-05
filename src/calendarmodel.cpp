@@ -7,7 +7,6 @@
 */
 
 #include "calendarmodel_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarutils.h"
 #include <Akonadi/ItemFetchScope>
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QIcon>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 class Akonadi::CalendarModelPrivate

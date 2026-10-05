@@ -5,7 +5,6 @@
 */
 
 #include "collectioncalendar.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadicalendar_debug.h"
 #include "calendarbase_p.h"
@@ -18,6 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QAbstractProxyModel>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 
 namespace Akonadi

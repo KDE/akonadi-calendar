@@ -9,7 +9,6 @@
 */
 
 #include "itiphandlerhelper_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarsettings.h"
 #include "utils_p.h"
@@ -21,6 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QWidget>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 static QString proposalComment(const KCalendarCore::Incidence::Ptr &incidence)

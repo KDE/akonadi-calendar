@@ -10,7 +10,6 @@
 // TODO: the list in PublishDialog::addresses()
 
 #include "publishdialog_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KCalendarCore/Person>
 
@@ -24,6 +23,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QUrl>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 using namespace Akonadi;
 

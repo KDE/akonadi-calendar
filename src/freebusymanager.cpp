@@ -6,7 +6,6 @@
 */
 
 #include "freebusymanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarsettings.h"
 #include "freebusydownloadjob_p.h"
@@ -42,6 +41,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTimer>
 #include <QTimerEvent>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace KCalendarCore;
 

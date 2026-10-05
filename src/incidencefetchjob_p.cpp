@@ -6,7 +6,6 @@
 */
 
 #include "incidencefetchjob_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 IncidenceFetchJob::IncidenceFetchJob(QObject *parent)
