@@ -42,6 +42,7 @@ AkonadiCalendarPlugin::AkonadiCalendarPlugin(QObject *parent, const QVariantList
     });
 
     auto monitor = new Akonadi::Monitor(this);
+    monitor->setCollectionMonitored(Akonadi::Collection::root());
     monitor->setCollectionFetchScope(job->fetchScope());
     connect(monitor, &Akonadi::Monitor::collectionAdded, this, [this](const Akonadi::Collection &c) {
         if (!filterCollection(c)) {
