@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-04 00:47+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2013-03-25 17:45+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -284,7 +284,7 @@ msgid ""
 msgstr ""
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:487
+#: todomodel.cpp:488
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar title"
 #| msgid "Calendar"
@@ -2059,50 +2059,50 @@ msgstr "संपादन (&E)..."
 msgid "Edit the selected incidence."
 msgstr ""
 
-#: todomodel.cpp:154 todomodel.cpp:189
+#: todomodel.cpp:155 todomodel.cpp:190
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr ""
 
-#: todomodel.cpp:156 todomodel.cpp:191
+#: todomodel.cpp:157 todomodel.cpp:192
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr ""
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr ""
 
-#: todomodel.cpp:173 todomodel.cpp:210
+#: todomodel.cpp:174 todomodel.cpp:211
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ""
 
-#: todomodel.cpp:469
+#: todomodel.cpp:470
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event summary"
 #| msgid "Summary"
 msgid "Summary"
 msgstr "सारांश"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:472
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todomodel.cpp:473
+#: todomodel.cpp:474
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item priority"
 #| msgid "Priority"
 msgid "Priority"
 msgstr "प्राधान्यता"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:476
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2110,21 +2110,21 @@ msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "पूर्ण"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:478
 #, fuzzy, kde-format
 #| msgctxt "@title:column calendar event start date and time"
 #| msgid "Start Date and Time"
 msgid "Start Date"
 msgstr "सुरुवातीचा दिनांक व वेळ"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:480
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item due date and time"
 #| msgid "Due Date and Time"
 msgid "Due Date"
 msgstr "ठरलेला दिनांक व वेळ"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "@title:column todo item completion in percent"
 #| msgid "Complete"
@@ -2132,12 +2132,12 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "पूर्ण"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:484
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: todomodel.cpp:485
+#: todomodel.cpp:486
 #, kde-format
 msgid "Description"
 msgstr ""

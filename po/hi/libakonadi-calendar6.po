@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-04 00:47+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -302,7 +302,7 @@ msgstr ""
 "की तलाश विफल हो जाएगी।"
 
 #: calendarutils.cpp:103 calendarutils.cpp:120 calendarutils.cpp:168
-#: todomodel.cpp:487
+#: todomodel.cpp:488
 #, kde-format
 msgid "Calendar"
 msgstr "कैलेंडर"
@@ -2181,73 +2181,73 @@ msgstr "&संपादन करना…"
 msgid "Edit the selected incidence."
 msgstr "चयनित घटना को संपादित करें."
 
-#: todomodel.cpp:154 todomodel.cpp:189
+#: todomodel.cpp:155 todomodel.cpp:190
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "अपवाद"
 
-#: todomodel.cpp:156 todomodel.cpp:191
+#: todomodel.cpp:157 todomodel.cpp:192
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "हाँ"
 
-#: todomodel.cpp:159 todomodel.cpp:194
+#: todomodel.cpp:160 todomodel.cpp:195
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "नहीं"
 
-#: todomodel.cpp:173 todomodel.cpp:210
+#: todomodel.cpp:174 todomodel.cpp:211
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todomodel.cpp:469
+#: todomodel.cpp:470
 #, kde-format
 msgid "Summary"
 msgstr "सारांश"
 
-#: todomodel.cpp:471
+#: todomodel.cpp:472
 #, kde-format
 msgid "Recurs"
 msgstr "फिर से होता है"
 
-#: todomodel.cpp:473
+#: todomodel.cpp:474
 #, kde-format
 msgid "Priority"
 msgstr "प्राथमिकता"
 
-#: todomodel.cpp:475
+#: todomodel.cpp:476
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "पूरा"
 
-#: todomodel.cpp:477
+#: todomodel.cpp:478
 #, kde-format
 msgid "Start Date"
 msgstr "आरंभ करने की तिथि"
 
-#: todomodel.cpp:479
+#: todomodel.cpp:480
 #, kde-format
 msgid "Due Date"
 msgstr "दो तिथियाँ"
 
-#: todomodel.cpp:481
+#: todomodel.cpp:482
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "पुरा होना।"
 
-#: todomodel.cpp:483
+#: todomodel.cpp:484
 #, kde-format
 msgid "Tags"
 msgstr "टैग"
 
-#: todomodel.cpp:485
+#: todomodel.cpp:486
 #, kde-format
 msgid "Description"
 msgstr "विवरण"
