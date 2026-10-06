@@ -141,6 +141,45 @@ void CalendarBasePrivate::internalInsert(const Akonadi::Item &item)
     }
 }
 
+void CalendarBasePrivate::internalUpdate(const Akonadi::Item &item)
+{
+    Incidence::Ptr const newIncidence = CalendarUtils::incidence(item);
+    Q_ASSERT(newIncidence);
+    Q_ASSERT(!newIncidence->uid().isEmpty());
+    const QScopedValueRollback modificationGuard(mModificationInProgress, true);
+    newIncidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
+    newIncidence->setCustomProperty("VOLATILE", "COLLECTION-ID", QString::number(item.storageCollectionId()));
+    IncidenceBase::Ptr const existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
+    Akonadi::Item const seenItem = mItemById.value(item.id()); // if not found, seenItem will be invalid
+
+    if (!existingIncidence && !seenItem.isValid()) {
+        // We don't know about this one because it was discarded, for example because of not having DTSTART
+        return;
+    }
+
+    mItemsByCollection.remove(seenItem.storageCollectionId(), seenItem);
+
+    if (existingIncidence) {
+        // We set the payload so that the internal incidence pointer and the one in mItemById stay the same
+        Akonadi::Item updatedItem = item;
+        updatedItem.setPayload<KCalendarCore::Incidence::Ptr>(existingIncidence.staticCast<KCalendarCore::Incidence>());
+        mItemsByCollection.insert(updatedItem.storageCollectionId(), updatedItem);
+        mItemById.insert(item.id(), updatedItem); // The item needs updating too, revision changed.
+
+        newIncidence->setReadOnly(existingIncidence->isReadOnly());
+
+        // Check if RELATED-TO changed, updating parenting information
+        handleParentChanged(newIncidence);
+        *(existingIncidence.data()) = *(newIncidence.data());
+    } else { // seenItem must be valid
+        mItemsByCollection.insert(item.storageCollectionId(), item);
+        mItemById.insert(item.id(), item); // The item needs updating too, revision changed.
+        // The item changed it's UID, update our maps, the Google resource changes the UID when we create incidences.
+        newIncidence->setReadOnly(CalendarUtils::incidence(seenItem)->isReadOnly());
+        handleUidChange(seenItem, item, newIncidence->instanceIdentifier());
+    }
+}
+
 void CalendarBasePrivate::collectionFetchResult(KJob *job)
 {
     Akonadi::Collection::Id const colid = mCollectionJobs.take(job);

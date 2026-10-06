@@ -23,6 +23,7 @@ public:
     ~CalendarBasePrivate() override;
 
     AKONADI_CALENDAR_EXPORT void internalInsert(const Akonadi::Item &item);
+    AKONADI_CALENDAR_EXPORT void internalUpdate(const Akonadi::Item &item);
     AKONADI_CALENDAR_EXPORT void internalRemove(const Akonadi::Item &item);
 
     void handleUidChange(const Akonadi::Item &oldItem, const Akonadi::Item &newItem, const QString &newIdentifier);

@@ -52,11 +52,14 @@ SingleCollectionCalendar::SingleCollectionCalendar(const Akonadi::Collection &co
     connect(monitor, &Akonadi::Monitor::itemChanged, this, [this](Akonadi::Item item) {
         Q_D(Akonadi::CalendarBase);
         item.setParentCollection(m_collection);
-        d->internalInsert(item);
+        d->internalUpdate(item);
     });
     connect(monitor, &Akonadi::Monitor::itemRemoved, this, [this](const Akonadi::Item &item) {
         Q_D(Akonadi::CalendarBase);
-        d->internalRemove(item);
+        const auto storedItem = d->mItemById.value(item.id());
+        if (storedItem.isValid()) {
+            d->internalRemove(storedItem);
+        }
     });
 }
 
