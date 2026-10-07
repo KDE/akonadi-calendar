@@ -29,5 +29,3 @@ Q_SIGNALS:
 private:
     KSharedConfig::Ptr m_config;
 };
-
-Q_DECLARE_METATYPE(SuspendDialog::SuspendUnit)
