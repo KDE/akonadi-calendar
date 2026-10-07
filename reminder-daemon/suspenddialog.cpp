@@ -53,6 +53,7 @@ SuspendDialog::SuspendDialog(const KSharedConfig::Ptr &config, const QString &ti
     : QDialog(parent, Qt::WindowStaysOnTopHint)
     , m_config(config)
 {
+    setWindowTitle(i18nc("@title:window", "Remind Later"));
     KConfigGroup const configGroup(config, QStringLiteral("Suspend"));
     const int suspendVal = configGroup.readEntry(QStringLiteral("DefaultSuspendValue"), defSuspendVal);
     const SuspendUnit suspendUnit = configGroup.readEntry(QStringLiteral("DefaultSuspendUnit"), defSuspendUnit);
