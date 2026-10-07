@@ -597,8 +597,8 @@ bool MailClient::addKeysToContext(const QString &gnupgHome,
                 QStringList patterns;
                 patterns << QString::fromUtf8(k.primaryFingerprint());
                 runningJobs++;
-                exportJob->start(patterns);
                 exportJob->setExportFlags(GpgME::Context::ExportMinimal);
+                exportJob->start(patterns);
             } else {
                 qCDebug(AKONADICALENDAR_LOG) << "Adding " << k.primaryFingerprint() << "from Autocrypt storage";
                 const auto recipient = storage->getRecipient(it->second.toUtf8());
