@@ -56,7 +56,7 @@ void PublishDialogPrivate::removeItem()
     const QListWidgetItem *item = mUI.mListWidget->selectedItems().at(0);
 
     int row = mUI.mListWidget->row(item);
-    mUI.mListWidget->takeItem(row);
+    delete mUI.mListWidget->takeItem(row);
 
     if (!mUI.mListWidget->count()) {
         mUI.mNameLineEdit->setText(QString());
