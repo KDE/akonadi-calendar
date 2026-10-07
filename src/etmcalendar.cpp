@@ -171,6 +171,7 @@ void ETMCalendarPrivate::setupFilteredETM()
 
 #ifdef AKONADI_CALENDAR_DEBUG_MODEL
     QTreeView *view = new QTreeView;
+    view->setAttribute(Qt::WA_DeleteOnClose);
     view->setModel(mFilteredETM);
     view->show();
 #endif
