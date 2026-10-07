@@ -114,8 +114,10 @@ void SerializerPluginKCalCore::serialize(const Item &item, const QByteArray &lab
     }
     auto i = item.payload<Incidence::Ptr>();
 
+    static const bool binarySerializer = qEnvironmentVariableIntValue("KCALCORE_BINARY_SERIALIZER") == 1;
+
     // Using an env variable for now while testing
-    if (qgetenv("KCALCORE_BINARY_SERIALIZER") == QByteArray("1")) {
+    if (binarySerializer) {
         QDataStream output(&data);
         IncidenceBase::Ptr const base = i;
         output << base;
