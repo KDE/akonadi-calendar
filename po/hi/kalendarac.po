@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-13 00:45+0000\n"
+"POT-Creation-Date: 2026-10-08 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -155,19 +155,27 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "चैम्बर कुंजी"
 
-#: suspenddialog.cpp:74
+#: suspenddialog.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Remind Later"
+msgctxt "@title:window"
+msgid "Remind Later"
+msgstr "बाद में याद दिलाएँ"
+
+#: suspenddialog.cpp:75
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "निलम्बन अवधि:"
 
-#: suspenddialog.cpp:81
+#: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "अनुस्मारकों को इस समय तक स्थगित करें"
 
-#: suspenddialog.cpp:83
+#: suspenddialog.cpp:84
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -178,37 +186,37 @@ msgstr ""
 "चयनित घटनाओं के लिए प्रत्येक अनुस्मारक को समय इकाइयों की इस संख्या द्वारा निलंबित कर "
 "दिया जाएगा। आप आसन्न चयनकर्ता में समय इकाइयाँ (आमतौर पर मिनट) चुन सकते हैं।"
 
-#: suspenddialog.cpp:91
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "मिनट)"
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "घंटे)"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "दिन"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "सप्ताह"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "इस समय इकाई का उपयोग करके अनुस्मारक निलंबित करें"
 
-#: suspenddialog.cpp:97
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -219,19 +227,19 @@ msgstr ""
 "चयनित घटनाओं के लिए प्रत्येक अनुस्मारक को इस समय इकाई का उपयोग करके निलंबित कर दिया "
 "जाएगा। आप आसन्न संख्या प्रविष्टि इनपुट में समय इकाइयों की संख्या निर्धारित कर सकते हैं।"
 
-#: suspenddialog.cpp:110
+#: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "बाद में याद दिलाएँ"
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "निर्दिष्ट अंतराल के बाद मुझे पुनः याद दिलाएं"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -239,13 +247,13 @@ msgid ""
 "specified amount of time."
 msgstr "निर्दिष्ट समय के बाद इस घटना के बारे में पुनः याद दिलाने के लिए यह बटन दबाएं।"
 
-#: suspenddialog.cpp:116
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "रद्द करना"
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"

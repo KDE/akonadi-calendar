@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-13 00:45+0000\n"
+"POT-Creation-Date: 2026-10-08 00:46+0000\n"
 "PO-Revision-Date: 2025-12-22 18:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -153,19 +153,27 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:74
+#: suspenddialog.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Remind Later"
+msgctxt "@title:window"
+msgid "Remind Later"
+msgstr "Daha Sonra Anımsat"
+
+#: suspenddialog.cpp:75
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "Askıya alma &süresi:"
 
-#: suspenddialog.cpp:81
+#: suspenddialog.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "Anımsatıcıları bu süre kadar askıya al"
 
-#: suspenddialog.cpp:83
+#: suspenddialog.cpp:84
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -177,37 +185,37 @@ msgstr ""
 "alınır. Bitişikteki seçiciden zaman birimlerini (genelde dakika) "
 "seçebilirsiniz."
 
-#: suspenddialog.cpp:91
+#: suspenddialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "dakika"
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "saat"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:94
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "gün"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "hafta"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "Anımsatıcıları bu zaman birimini kullanarak askıya al"
 
-#: suspenddialog.cpp:97
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -219,19 +227,19 @@ msgstr ""
 "alınır. Bitişikteki seçiciden zaman birimlerini (genelde dakika) "
 "seçebilirsiniz."
 
-#: suspenddialog.cpp:110
+#: suspenddialog.cpp:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "Daha Sonra Anımsat"
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:112
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "Belirtilen aralıktan sonra yeniden anımsat"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:113
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -241,13 +249,13 @@ msgstr ""
 "Belirtilen süre sonunda bu olayın yeniden anımsatılması için bu düğmeye "
 "basın."
 
-#: suspenddialog.cpp:116
+#: suspenddialog.cpp:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
