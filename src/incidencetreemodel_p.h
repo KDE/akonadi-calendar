@@ -35,7 +35,7 @@ struct Node {
     QString parentUid;
     QString uid;
     List directChilds;
-    int depth;
+    int depth = 0;
 };
 
 /** Just a struct to contain some data before we create the node */
