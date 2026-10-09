@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-08 00:46+0000\n"
-"PO-Revision-Date: 2026-01-28 19:07+0200\n"
+"PO-Revision-Date: 2026-10-08 08:05+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -158,12 +158,10 @@ msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
 #: suspenddialog.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remind Later"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remind Later"
-msgstr "Напомнить позже"
+msgstr "Отсрочка напоминания"
 
 #: suspenddialog.cpp:75
 #, kde-format
