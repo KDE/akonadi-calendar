@@ -636,7 +636,7 @@ void FreeBusyManagerPrivate::onFreeBusyRetrieved(const QString &email, const QSt
         return;
     }
 
-    auto iface = dynamic_cast<QDBusInterface *>(sender());
+    auto iface = qobject_cast<QDBusInterface *>(sender());
     if (!iface) {
         return;
     }
