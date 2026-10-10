@@ -103,12 +103,6 @@ public:
     [[nodiscard]] QVariant headerData(int column, Qt::Orientation orientation, int role) const override;
 
     /*!
-     * Sets the calendar to be used.
-     */
-    AKONADI_CALENDAR_DECL_DEPRECATED_TEXT("Setting calendar is no longer necessary.")
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
-
-    /*!
      * Sets the incidence changer.
      */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
