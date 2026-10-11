@@ -455,8 +455,9 @@ void Scheduler::acceptReply(const IncidenceBase::Ptr &incidenceBase,
         // get matching attendee in calendar
         qCDebug(AKONADICALENDAR_LOG) << "match found!";
         const Attendee::List attendeesIn = incidenceBase->attendees();
-        Attendee::List attendeesNew;
         Attendee::List attendeesEv = incidence->attendees();
+        Attendee::List attendeesNew;
+        attendeesNew.reserve(attendeesIn.size());
         for (const auto &attIn : attendeesIn) {
             bool found = false;
             for (auto &attEv : attendeesEv) {

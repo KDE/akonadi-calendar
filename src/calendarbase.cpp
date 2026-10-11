@@ -519,8 +519,9 @@ KCalendarCore::Incidence::List CalendarBase::childIncidences(Akonadi::Item::Id p
 KCalendarCore::Incidence::List CalendarBase::childIncidences(const QString &parentUid) const
 {
     Q_D(const CalendarBase);
-    KCalendarCore::Incidence::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
+    KCalendarCore::Incidence::List children;
+    children.reserve(uids.size());
     for (const QString &uid : uids) {
         Incidence::Ptr const child = incidence(uid);
         if (child) {
@@ -555,8 +556,9 @@ Akonadi::Item::List CalendarBase::childItems(Akonadi::Item::Id parentId) const
 Akonadi::Item::List CalendarBase::childItems(const QString &parentUid) const
 {
     Q_D(const CalendarBase);
-    Akonadi::Item::List children;
     const QStringList uids = d->mParentUidToChildrenUid.value(parentUid);
+    Akonadi::Item::List children;
+    children.reserve(uids.size());
     for (const QString &uid : uids) {
         Akonadi::Item const child = item(uid);
         if (child.isValid() && child.hasPayload<KCalendarCore::Incidence::Ptr>()) {

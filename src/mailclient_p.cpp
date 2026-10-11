@@ -278,7 +278,7 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
             auto composerJob = std::make_unique<MessageComposer::ComposerJob>();
 
             if (encryptSomething || identity.autocryptEnabled()) {
-                QList<QPair<QStringList, std::vector<GpgME::Key>>> data;
+                QList<QPair<QStringList, std::vector<GpgME::Key>>> data; // clazy:exclude=container-inside-loop
                 data.reserve(encData.size());
                 for (const auto &info : encData) {
                     data.push_back(qMakePair(info.recipients, info.keys));

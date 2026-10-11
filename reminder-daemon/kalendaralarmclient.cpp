@@ -275,8 +275,9 @@ bool KalendarAlarmClient::collectionsAvailable() const
 
 QStringList KalendarAlarmClient::unpopulatedCollectionNames() const
 {
-    QStringList names;
     const int rowCount = mETM->rowCount();
+    QStringList names;
+    names.reserve(rowCount);
     for (int row = 0; row < rowCount; ++row) {
         const QModelIndex index = mETM->index(row, 0);
         if (!index.data(Akonadi::EntityTreeModel::IsPopulatedRole).toBool()) {
