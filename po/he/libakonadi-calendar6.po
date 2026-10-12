@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:47+0000\n"
+"POT-Creation-Date: 2026-10-12 00:52+0000\n"
 "PO-Revision-Date: 2026-08-11 12:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -57,7 +57,7 @@ msgstr ""
 "לפריט „%1” יש מטלות משנה. לגזור פריט זה ולהפוך את מטלות המשנה שלו לבלתי "
 "תלויות, או שמא לגזור את המטלה וכל מטלות המשנה שלה?"
 
-#: calendarclipboard.cpp:190 calendarclipboard.cpp:229
+#: calendarclipboard.cpp:190 calendarclipboard.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
@@ -75,7 +75,7 @@ msgctxt "@action:button"
 msgid "Cut All"
 msgstr "לגזור את הכול"
 
-#: calendarclipboard.cpp:225
+#: calendarclipboard.cpp:226
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
@@ -84,13 +84,13 @@ msgstr ""
 "לפריט „%1” יש מטלות משנה. להעתיק רק את הפריט הזה או להעתיק את המטלה עם כל "
 "מטלות המשנה שלה?"
 
-#: calendarclipboard.cpp:230
+#: calendarclipboard.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr "להעתיק רק את זה"
 
-#: calendarclipboard.cpp:231
+#: calendarclipboard.cpp:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
@@ -1350,13 +1350,13 @@ msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr "לחיצה על הכפתור הזה תציג בפניך פרטים נוספים על תזמון קבוצתי."
 
-#: publishdialog.cpp:118
+#: publishdialog.cpp:119
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
 msgstr "נא לספק לפחות כתובת דוא״ל תקפה אחת"
 
-#: publishdialog.cpp:122
+#: publishdialog.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1367,7 +1367,7 @@ msgstr ""
 "לא ניתן לפרסם את מופע לוח השנה הזה עקב מחרוזת נמענים שגויה.\n"
 "%1"
 
-#: publishdialog.cpp:125
+#: publishdialog.cpp:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
@@ -1514,7 +1514,7 @@ msgstr "שגיאה בהוספת מופע"
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr "זה לא עדכון. המופע שנמצא נערך מאוחר יותר."
 
-#: scheduler_p.cpp:269 scheduler_p.cpp:540 scheduler_p.cpp:555
+#: scheduler_p.cpp:269 scheduler_p.cpp:541 scheduler_p.cpp:556
 #, kde-format
 msgid "Error modifying incidence"
 msgstr "שגיאה בשינוי מופע"
@@ -1566,49 +1566,49 @@ msgstr ""
 "לא ניתן להסיר את האירוע או המשימה מלוח השנה שלך. אולי הוא כבר נמחק או שאינו "
 "בבעלותך. או שהוא שייך ללוח שנה לקריאה בלבד או מושבת."
 
-#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:574
-#: scheduler_p.cpp:580
+#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:575
+#: scheduler_p.cpp:581
 #, kde-format
 msgid "Generic Error"
 msgstr "שגיאה כללית"
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr "התקבלה בקשה מצד %1 להשתתף באירוע %2 אך לא נשלחה הזמנה לצד המבקש."
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr "התקבלה בקשה מצד %1 להשתתף באירוע %2 מטעם %3."
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr "משתתף או משתתפת שלא הוזמנו"
 
-#: scheduler_p.cpp:489
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr "קבלת השתתפות"
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:491
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr "דחיית השתתפות"
 
-#: scheduler_p.cpp:493
+#: scheduler_p.cpp:494
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr "המארגנים דחו את השתתפותך בפגישה הזאת."
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:515
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1616,35 +1616,35 @@ msgid ""
 "an update message?"
 msgstr "נוספו משתתפים למופע. לשלוח למשתתפים הודעת עדכון?"
 
-#: scheduler_p.cpp:516
+#: scheduler_p.cpp:517
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr "נוספו משתתפים"
 
-#: scheduler_p.cpp:517
+#: scheduler_p.cpp:518
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr "לשלוח הודעות"
 
-#: scheduler_p.cpp:518
+#: scheduler_p.cpp:519
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr "לא לשלוח"
 
-#: scheduler_p.cpp:564
+#: scheduler_p.cpp:565
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr "אין מופע לתזמון."
 
-#: scheduler_p.cpp:587
+#: scheduler_p.cpp:588
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr "אין מטמון פנוי/עסוק"
 
-#: scheduler_p.cpp:606
+#: scheduler_p.cpp:607
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr "שגיאה בשמירת פריט פנוי/עסוק"

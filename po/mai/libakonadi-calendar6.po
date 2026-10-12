@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:47+0000\n"
+"POT-Creation-Date: 2026-10-12 00:52+0000\n"
 "PO-Revision-Date: 2010-09-24 20:38+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -56,7 +56,7 @@ msgid ""
 "all its sub-to-dos independent, or cut the to-do with all its sub-to-dos?"
 msgstr ""
 
-#: calendarclipboard.cpp:190 calendarclipboard.cpp:229
+#: calendarclipboard.cpp:190 calendarclipboard.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
@@ -74,20 +74,20 @@ msgctxt "@action:button"
 msgid "Cut All"
 msgstr ""
 
-#: calendarclipboard.cpp:225
+#: calendarclipboard.cpp:226
 #, kde-format
 msgid ""
 "The item \"%1\" has sub-to-dos. Do you want to copy just this item or copy "
 "the to-do with all its sub-to-dos?"
 msgstr ""
 
-#: calendarclipboard.cpp:230
+#: calendarclipboard.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Only This"
 msgstr ""
 
-#: calendarclipboard.cpp:231
+#: calendarclipboard.cpp:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy All"
@@ -1289,13 +1289,13 @@ msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
 
-#: publishdialog.cpp:118
+#: publishdialog.cpp:119
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
 msgstr ""
 
-#: publishdialog.cpp:122
+#: publishdialog.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1304,7 +1304,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: publishdialog.cpp:125
+#: publishdialog.cpp:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Publishing Error"
@@ -1449,7 +1449,7 @@ msgstr ""
 msgid "This isn't an update. The found incidence was modified more recently."
 msgstr ""
 
-#: scheduler_p.cpp:269 scheduler_p.cpp:540 scheduler_p.cpp:555
+#: scheduler_p.cpp:269 scheduler_p.cpp:541 scheduler_p.cpp:556
 #, kde-format
 msgid "Error modifying incidence"
 msgstr ""
@@ -1493,49 +1493,49 @@ msgid ""
 "only or disabled calendar."
 msgstr ""
 
-#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:574
-#: scheduler_p.cpp:580
+#: scheduler_p.cpp:424 scheduler_p.cpp:439 scheduler_p.cpp:575
+#: scheduler_p.cpp:581
 #, kde-format
 msgid "Generic Error"
 msgstr ""
 
-#: scheduler_p.cpp:482
+#: scheduler_p.cpp:483
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 but was not invited."
 msgstr ""
 
-#: scheduler_p.cpp:484
+#: scheduler_p.cpp:485
 #, kde-format
 msgctxt "@info"
 msgid "%1 wants to attend %2 on behalf of %3."
 msgstr ""
 
-#: scheduler_p.cpp:488
+#: scheduler_p.cpp:489
 #, kde-format
 msgctxt "@title:window"
 msgid "Uninvited Attendee"
 msgstr ""
 
-#: scheduler_p.cpp:489
+#: scheduler_p.cpp:490
 #, kde-format
 msgctxt "@option"
 msgid "Accept Attendance"
 msgstr ""
 
-#: scheduler_p.cpp:490
+#: scheduler_p.cpp:491
 #, kde-format
 msgctxt "@option"
 msgid "Reject Attendance"
 msgstr ""
 
-#: scheduler_p.cpp:493
+#: scheduler_p.cpp:494
 #, kde-format
 msgctxt "@info"
 msgid "The organizer rejected your attendance at this meeting."
 msgstr ""
 
-#: scheduler_p.cpp:514
+#: scheduler_p.cpp:515
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1543,35 +1543,35 @@ msgid ""
 "an update message?"
 msgstr ""
 
-#: scheduler_p.cpp:516
+#: scheduler_p.cpp:517
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee Added"
 msgstr ""
 
-#: scheduler_p.cpp:517
+#: scheduler_p.cpp:518
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
 msgstr ""
 
-#: scheduler_p.cpp:518
+#: scheduler_p.cpp:519
 #, kde-format
 msgctxt "@option"
 msgid "Do Not Send"
 msgstr ""
 
-#: scheduler_p.cpp:564
+#: scheduler_p.cpp:565
 #, kde-format
 msgid "No incidence for scheduling."
 msgstr ""
 
-#: scheduler_p.cpp:587
+#: scheduler_p.cpp:588
 #, kde-format
 msgid "No Free Busy Cache"
 msgstr ""
 
-#: scheduler_p.cpp:606
+#: scheduler_p.cpp:607
 #, kde-format
 msgid "Error saving freebusy object"
 msgstr ""
