@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-12 00:52+0000\n"
-"PO-Revision-Date: 2026-08-09 18:39+0300\n"
+"PO-Revision-Date: 2026-10-12 10:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: calendarbase.cpp:310
 #, kde-format
@@ -67,7 +67,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "K Organizatör Onayı"
+msgstr "KOrganizer Onayı"
 
 #: calendarclipboard.cpp:191
 #, kde-format
@@ -250,7 +250,7 @@ msgid ""
 "Check this box to get a copy of all e-mail messages that KOrganizer sends at "
 "your request to event attendees."
 msgstr ""
-"Etkinlik katılımcılarına K Organizatör tarafından gönderilen bütün istek "
+"Etkinlik katılımcılarına KOrganizer tarafından gönderilen bütün istek "
 "iletilerinin e-posta adreslerinin bir kopyasını almak için bunu işaretleyin."
 
 #. i18n: ectx: label, entry (HideDeclinedInvitations), group (Group Scheduling)
@@ -460,7 +460,7 @@ msgid ""
 "your system administrator for the exact URL and the account details."
 msgstr ""
 "Uygun/Meşgûl listenizi yüklemek için yapılandırılmış bir URL yok. Lütfen "
-"bunu, K Organizatör’ün yapılandırma iletişim kutusunun “Uygun/Meşgûl” "
+"bunu, KOrganizer’ın yapılandırma iletişim kutusunun “Uygun/Meşgûl” "
 "sayfasından ayarlayın.<nl/>URL ve hesap ayrıntıları için sistem yöneticinize "
 "başvurun."
 
