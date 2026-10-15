@@ -16,6 +16,7 @@
 #include <QMetaEnum>
 #include <QPushButton>
 #include <QSpinBox>
+#include <QTextBrowser>
 #include <QVBoxLayout>
 
 KCONFIGGROUP_DECLARE_ENUM_QOBJECT(SuspendDialog, SuspendUnit)
@@ -64,8 +65,10 @@ SuspendDialog::SuspendDialog(const KSharedConfig::Ptr &config, const QString &ti
     mainLayout->addWidget(titleLabel);
 
     if (!text.isEmpty()) {
-        auto textLabel = new QLabel(text, this);
-        mainLayout->addWidget(textLabel);
+        auto textBrowser = new QTextBrowser(this);
+        textBrowser->setText(text);
+        textBrowser->setLineWrapMode(QTextEdit::WidgetWidth);
+        mainLayout->addWidget(textBrowser);
     }
 
     auto suspendBox = new QWidget(this);
