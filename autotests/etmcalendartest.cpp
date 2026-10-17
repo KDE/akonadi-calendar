@@ -13,6 +13,7 @@
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/CollectionModifyJob>
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemModifyJob>
@@ -482,6 +483,58 @@ void ETMCalendarTest::testItem()
     // The pointers should be the same
     QCOMPARE(incidence1.data(), incidence2.data());
     QCOMPARE(incidence.data(), incidence1.data());
+}
+
+void ETMCalendarTest::testDuplicateUid()
+{
+    const QString uid = QStringLiteral("uid-duplicate");
+    mIncidencesToAdd = 1;
+    createIncidence(uid);
+    waitForIt();
+    const Item kept = mCalendar->item(uid);
+    QVERIFY(kept.isValid());
+
+    // The calendar discards a second item with the same UID
+    Item duplicate;
+    duplicate.setMimeType(Event::eventMimeType());
+    Incidence::Ptr const incidence = Incidence::Ptr(new Event());
+    incidence->setUid(uid);
+    incidence->setDtStart(QDateTime::currentDateTimeUtc());
+    incidence->setSummary(QStringLiteral("duplicate"));
+    duplicate.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
+    auto createJob = new ItemCreateJob(duplicate, mCollection, this);
+    AKVERIFYEXEC(createJob);
+    duplicate = createJob->item();
+    QVERIFY(duplicate.id() != kept.id());
+    QTRY_VERIFY(!EntityTreeModel::modelIndexesForItem(mCalendar->entityTreeModel(), duplicate).isEmpty());
+    QVERIFY(!mCalendar->item(duplicate.id()).isValid());
+
+    // Notifications arrive in order: once the marker is added, the duplicate's notifications were handled too
+    auto waitForMarker = [this](const QString &markerUid) {
+        mIncidencesToAdd = 1;
+        createIncidence(markerUid);
+        waitForIt();
+    };
+
+    // Changing the duplicate must not change the incidence of the kept item
+    Incidence::Ptr const changed(incidence->clone());
+    changed->setSummary(QStringLiteral("changed duplicate"));
+    duplicate.setPayload(changed);
+    auto modifyJob = new ItemModifyJob(duplicate);
+    AKVERIFYEXEC(modifyJob);
+    duplicate = modifyJob->item();
+    waitForMarker(QStringLiteral("uid-after-duplicate-change"));
+    QVERIFY(mCalendar->incidence(uid));
+    QCOMPARE(mCalendar->incidence(uid)->summary(), QStringLiteral("summary"));
+    QCOMPARE(mCalendar->item(uid).id(), kept.id());
+
+    // Deleting the duplicate must not remove the incidence of the kept item
+    auto deleteJob = new ItemDeleteJob(duplicate);
+    AKVERIFYEXEC(deleteJob);
+    waitForMarker(QStringLiteral("uid-after-duplicate-delete"));
+    QVERIFY(mCalendar->incidence(uid));
+    QCOMPARE(mCalendar->item(uid).id(), kept.id());
+    QVERIFY(mCalendar->item(kept.id()).isValid());
 }
 
 void ETMCalendarTest::testShareETM()

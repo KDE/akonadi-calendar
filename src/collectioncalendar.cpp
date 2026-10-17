@@ -195,6 +195,10 @@ private:
             // We don't know about this one because it was discarded, for example because of not having DTSTART
             return;
         }
+        if (existingIncidence && mItemIdByUid.value(newIncidence->instanceIdentifier()) != item.id()) {
+            // The UID belongs to another item, e.g. internalInsert() discarded this item as a duplicate
+            return;
+        }
 
         if (existingIncidence) {
             // We set the payload so that the internal incidence pointer and the one in mItemById stay the same

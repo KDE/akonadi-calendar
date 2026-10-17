@@ -146,13 +146,13 @@ Akonadi::Collection findResourceCollection(const QString &resource)
     return {};
 }
 
-Akonadi::Item createIncidence(const Akonadi::Collection &parent, const QString &summary)
+Akonadi::Item createIncidence(const Akonadi::Collection &parent, const QString &summary, const QString &uid = {})
 {
     auto event = KCalendarCore::Event::Ptr::create();
     event->setSummary(summary);
     event->setDtStart(QDateTime(QDate::currentDate(), QTime(10, 0, 0), QTimeZone::utc()));
     event->setDtEnd(QDateTime(QDate::currentDate(), QTime(11, 0, 0), QTimeZone::utc()));
-    event->setUid(QUuid::createUuid().toString());
+    event->setUid(uid.isEmpty() ? QUuid::createUuid().toString() : uid);
 
     Akonadi::Item item;
     item.setMimeType(event->mimeType());
@@ -458,6 +458,59 @@ void CollectionCalendarTest::testUnrelatedItemIsNotSeen()
     QVERIFY(observer.incidenceChangedSpy.empty());
     QVERIFY(observer.incidenceRemovedSpy.empty());
     QCOMPARE(calendar.incidences().size(), 10);
+}
+
+void CollectionCalendarTest::testDuplicateUid()
+{
+    auto monitor = createMonitor();
+    Akonadi::EntityTreeModel etm(monitor.get());
+    QVERIFY(waitForEtmToPopulate(&etm));
+
+    Akonadi::CollectionCalendar calendar(&etm, testCollection);
+    Observer observer(calendar);
+
+    EphemeralItem kept = createIncidence(testCollection, QStringLiteral("Kept"));
+    QVERIFY(observer.incidenceAddedSpy.wait());
+    const QString uid = kept->gid();
+    QCOMPARE(calendar.item(uid).id(), kept->id());
+
+    // The calendar discards a second item with the same UID
+    EphemeralItem duplicate = createIncidence(testCollection, QStringLiteral("Duplicate"), uid);
+    QVERIFY(duplicate->isValid());
+    QTRY_VERIFY(!Akonadi::EntityTreeModel::modelIndexesForItem(&etm, *duplicate).isEmpty());
+
+    // Changing the duplicate must not change the incidence of the kept item
+    KCalendarCore::Event::Ptr const changed(duplicate->payload<KCalendarCore::Event::Ptr>()->clone());
+    changed->setSummary(QStringLiteral("Changed duplicate"));
+    (*duplicate).setPayload(changed);
+    auto modifyJob = new Akonadi::ItemModifyJob(*duplicate);
+    QVERIFY(modifyJob->exec());
+    *duplicate = modifyJob->item();
+    QVERIFY(waitForItemRevision(&etm, *duplicate));
+    QVERIFY(calendar.event(uid));
+    QCOMPARE(calendar.event(uid)->summary(), QStringLiteral("Kept"));
+
+    // Deleting the duplicate must not remove the incidence of the kept item
+    const Akonadi::Item deleted = *duplicate;
+    duplicate = Akonadi::Item();
+    QTRY_VERIFY(Akonadi::EntityTreeModel::modelIndexesForItem(&etm, deleted).isEmpty());
+    QVERIFY(calendar.event(uid));
+    QCOMPARE(calendar.item(uid).id(), kept->id());
+
+    // Changing the UID of a duplicate must not remove the incidence of the kept item
+    EphemeralItem duplicate2 = createIncidence(testCollection, QStringLiteral("Duplicate 2"), uid);
+    QVERIFY(duplicate2->isValid());
+    QTRY_VERIFY(!Akonadi::EntityTreeModel::modelIndexesForItem(&etm, *duplicate2).isEmpty());
+    KCalendarCore::Event::Ptr const newUid(duplicate2->payload<KCalendarCore::Event::Ptr>()->clone());
+    newUid->setUid(QUuid::createUuid().toString());
+    (*duplicate2).setPayload(newUid);
+    modifyJob = new Akonadi::ItemModifyJob(*duplicate2);
+    QVERIFY(modifyJob->exec());
+    *duplicate2 = modifyJob->item();
+    QVERIFY(waitForItemRevision(&etm, *duplicate2));
+    QVERIFY(calendar.event(uid));
+    QCOMPARE(calendar.item(uid).id(), kept->id());
+    QVERIFY(observer.incidenceRemovedSpy.empty());
 }
 
 QTEST_AKONADIMAIN(CollectionCalendarTest)

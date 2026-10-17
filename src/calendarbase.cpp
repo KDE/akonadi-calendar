@@ -156,6 +156,10 @@ void CalendarBasePrivate::internalUpdate(const Akonadi::Item &item)
         // We don't know about this one because it was discarded, for example because of not having DTSTART
         return;
     }
+    if (existingIncidence && mItemIdByUid.value(newIncidence->instanceIdentifier()) != item.id()) {
+        // The UID belongs to another item, e.g. internalInsert() discarded this item as a duplicate
+        return;
+    }
 
     mItemsByCollection.remove(seenItem.storageCollectionId(), seenItem);
 
@@ -214,17 +218,13 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
 {
     Q_ASSERT(item.isValid());
 
-    Incidence::Ptr const tmp = CalendarUtils::incidence(item);
-    if (!tmp) {
-        qCritical() << "CalendarBase::internalRemove1: incidence is null, item.id=" << item.id();
-        return;
-    }
+    // We want the one stored in the calendar. Look it up by id, not by UID:
+    // internalInsert() doesn't store an item it discarded as a duplicate UID.
+    Incidence::Ptr const incidence = CalendarUtils::incidence(mItemById.value(item.id()));
 
-    // We want the one stored in the calendar
-    Incidence::Ptr const incidence = q->incidence(tmp->uid(), tmp->recurrenceId());
-
-    // Null incidence means it was deleted via CalendarBase::deleteIncidence(), but then
-    // the ETMCalendar received the monitor notification and tried to delete it again.
+    // Null incidence means internalInsert() discarded the item, or it was deleted via
+    // CalendarBase::deleteIncidence(), but then the ETMCalendar received the monitor notification
+    // and tried to delete it again.
     if (incidence) {
         q->Calendar::notifyIncidenceAboutToBeDeleted(incidence);
 
@@ -254,7 +254,7 @@ void CalendarBasePrivate::internalRemove(const Akonadi::Item &item)
             Q_ASSERT(false);
         }
     } else {
-        qCWarning(AKONADICALENDAR_LOG) << "CalendarBase::internalRemove2: incidence is null, item.id=" << itemToString(item);
+        qCWarning(AKONADICALENDAR_LOG) << "CalendarBase::internalRemove: incidence is null, item.id=" << itemToString(item);
     }
 }
 

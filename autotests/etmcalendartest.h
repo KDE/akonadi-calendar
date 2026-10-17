@@ -36,6 +36,7 @@ private Q_SLOTS:
     void testNotifyObserverBug();
     void testUidChange();
     void testItem(); // tests item()
+    void testDuplicateUid();
     void testShareETM();
     void testFilterInvitations();
     void testFilterInvitationsChanged();

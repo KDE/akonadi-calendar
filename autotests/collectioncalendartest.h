@@ -28,6 +28,7 @@ private Q_SLOTS:
     void testItemChanged();
     void testPopulatedItemChanged();
     void testUnrelatedItemIsNotSeen();
+    void testDuplicateUid();
 
 private:
     Akonadi::Collection testCollection;
