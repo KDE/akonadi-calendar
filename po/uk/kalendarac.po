@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-18 00:49+0000\n"
 "PO-Revision-Date: 2026-10-08 17:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -156,25 +156,25 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:56
+#: suspenddialog.cpp:57
 #, kde-format
 msgctxt "@title:window"
 msgid "Remind Later"
 msgstr "Нагадати згодом"
 
-#: suspenddialog.cpp:75
+#: suspenddialog.cpp:78
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "Призупинити &на:"
 
-#: suspenddialog.cpp:82
+#: suspenddialog.cpp:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "Відкласти завчасні нагадування на цей проміжок часу"
 
-#: suspenddialog.cpp:84
+#: suspenddialog.cpp:87
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -186,37 +186,37 @@ msgstr ""
 "кількість часових одиниць. Обрати одиниці часу (типово, хвилини) можна у "
 "сусідньому інструменті вибору."
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "хвилин"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "годин"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "днів"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "тижнів"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:99
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "Відкласти завчасні нагадування на основі цієї одиниці часу"
 
-#: suspenddialog.cpp:98
+#: suspenddialog.cpp:101
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -228,19 +228,19 @@ msgstr ""
 "цієї одиниці часу. Кількість одиниць часу можна вказати у сусідньому полі "
 "для введення чисел."
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "Нагадати"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "Нагадати знову за вказаний проміжок часу"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -250,13 +250,13 @@ msgstr ""
 "Натисніть цю кнопку, щоб програма нагадала нам про цю зустріч за вказаний "
 "проміжок часу."
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:121
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"

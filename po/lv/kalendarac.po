@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-18 00:49+0000\n"
 "PO-Revision-Date: 2025-08-25 09:22+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -155,7 +155,7 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
-#: suspenddialog.cpp:56
+#: suspenddialog.cpp:57
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Remind Later"
@@ -163,19 +163,19 @@ msgctxt "@title:window"
 msgid "Remind Later"
 msgstr "Atgādināt vēlāk"
 
-#: suspenddialog.cpp:75
+#: suspenddialog.cpp:78
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "&Apturēšanas ilgums:"
 
-#: suspenddialog.cpp:82
+#: suspenddialog.cpp:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "Apturēt paziņojumus uz šādu laiku"
 
-#: suspenddialog.cpp:84
+#: suspenddialog.cpp:87
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -187,37 +187,37 @@ msgstr ""
 "ilgi. Laika vienības varat izvēlēties (parasti minūtes) blakus esošajā "
 "izvēlnē."
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "minūte(s)"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "stunda(s)"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "diena(as)"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "nedēļa(as)"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:99
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "Apturēt atgādinājumus, izmantojot šo laika vienību"
 
-#: suspenddialog.cpp:98
+#: suspenddialog.cpp:101
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -228,19 +228,19 @@ msgstr ""
 "Katrs atgādinājums atlasītajiem ierakstiem tiks apturēts uz šādu ilgumu. "
 "Laika vienības varat norādīt blakus ciparu ievadei."
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "Atgādināt vēlāk"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "Atgādināt man vēlāk pēc noteikta laika"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -250,13 +250,13 @@ msgstr ""
 "Nospiediet šo pogu, lai atgādinājumu par šo ierakstu saņemtu pēc noteikta "
 "laika."
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Atcelt"
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:121
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"

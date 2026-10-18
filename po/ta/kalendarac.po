@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-18 00:49+0000\n"
 "PO-Revision-Date: 2025-08-10 19:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -153,7 +153,7 @@ msgctxt "@info:credit"
 msgid "Clau Cambra"
 msgstr "க்லாவ் காம்பிரா"
 
-#: suspenddialog.cpp:56
+#: suspenddialog.cpp:57
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Remind Later"
@@ -161,19 +161,19 @@ msgctxt "@title:window"
 msgid "Remind Later"
 msgstr "பின்னர் நினைவூட்டு…"
 
-#: suspenddialog.cpp:75
+#: suspenddialog.cpp:78
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Suspend &duration:"
 msgstr "இவ்வளவு &நேரத்திற்கு ஒத்திவை:"
 
-#: suspenddialog.cpp:82
+#: suspenddialog.cpp:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders by this amount of time"
 msgstr "நினைவூட்டல்களை இவ்வளவு நேரத்திற்கு ஒத்திவைக்கும்"
 
-#: suspenddialog.cpp:84
+#: suspenddialog.cpp:87
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -184,37 +184,37 @@ msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட நிகழ்வுகளுக்கான நினைவூட்டல்கள் இவ்வளவு நேரத்திற்கு ஒத்திவைக்கப்படும். நேர "
 "அலகை (எ.கா. நிமிடங்கள்) பக்கத்திலுள்ள தேர்வுப்பெட்டியில் தேர்ந்தெடுக்கலாம்."
 
-#: suspenddialog.cpp:92
+#: suspenddialog.cpp:95
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of minutes"
 msgid "minute(s)"
 msgstr "நிமிடம்"
 
-#: suspenddialog.cpp:93
+#: suspenddialog.cpp:96
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of hours"
 msgid "hour(s)"
 msgstr "மணிநேரம்"
 
-#: suspenddialog.cpp:94
+#: suspenddialog.cpp:97
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of days"
 msgid "day(s)"
 msgstr "நாள்"
 
-#: suspenddialog.cpp:95
+#: suspenddialog.cpp:98
 #, kde-format
 msgctxt "@item:inlistbox suspend in terms of weeks"
 msgid "week(s)"
 msgstr "வாரம்"
 
-#: suspenddialog.cpp:96
+#: suspenddialog.cpp:99
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Suspend the reminders using this time unit"
 msgstr "நினைவூட்டல்களை ஒத்திவைக்கும் நேரத்திற்கு இந்த அலகை பயன்படுத்து"
 
-#: suspenddialog.cpp:98
+#: suspenddialog.cpp:101
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -225,19 +225,19 @@ msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட நிகழ்வுகளுக்கான நினைவூட்டல்கள் இந்த அலகைக் கொண்டு ஒத்திவைக்கப்படும். நேர "
 "அளவை பக்கத்திலுள்ள உள்ளீட்டுப்பெட்டியில் தேர்ந்தெடுக்கலாம்."
 
-#: suspenddialog.cpp:111
+#: suspenddialog.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Remind Later"
 msgstr "பின்னர் நினைவூட்டு…"
 
-#: suspenddialog.cpp:112
+#: suspenddialog.cpp:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remind me again after the specified interval"
 msgstr "குறிப்பிட்ட இடைவெளிக்கு பிறகு மறுபடியும் நினைவூட்டும்"
 
-#: suspenddialog.cpp:113
+#: suspenddialog.cpp:116
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -247,13 +247,13 @@ msgstr ""
 "குறிப்பிட்ட நேர இடைவெளிக்குப் பிறகு மறுபடியும் இதைப் பற்றி நினைவூட்டலைத் தூண்ட இப்பட்டனை "
 "அழுத்தலாம்."
 
-#: suspenddialog.cpp:117
+#: suspenddialog.cpp:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: suspenddialog.cpp:118
+#: suspenddialog.cpp:121
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel reminding later, show the notification again"
