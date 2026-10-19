@@ -610,11 +610,7 @@ void ITIPHandlerTest::processItip(const QByteArray &icaldata,
 
     MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
     ICalFormat format;
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    const auto message = format.parseScheduleMessage(calendar, QString::fromUtf8(icaldata));
-#else
     const auto message = format.parseScheduleMessage(calendar, icaldata);
-#endif
     if (!message) {
         QSKIP("invalid input");
         return;
