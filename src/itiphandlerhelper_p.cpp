@@ -27,7 +27,7 @@ static QString proposalComment(const KCalendarCore::Incidence::Ptr &incidence)
 {
     QString comment;
 
-    // TODO: doesn't KCalUtils/IncidenceFormater already provide this?
+    // TODO: doesn't CalendarSupport/IncidenceFormater already provide this?
     // if not, it should go there.
 
     switch (incidence->type()) {

@@ -13,7 +13,7 @@
 #include <memory>
 
 // TODO: documentation
-// Uses akonadi-contact, so don't move this class to KCalUtils.
+// Uses akonadi-contact, so don't move this class to CalendarSupport.
 namespace Akonadi
 {
 class PublishDialogPrivate;
@@ -46,7 +46,7 @@ public:
 
     /*!
      * Returns a list of e-mail addresses.
-     * //TODO: This should be a QStringList, but KCalUtils::Scheduler::publish() accepts a QString.
+     * //TODO: This should be a QStringList, but MailScheduler::Scheduler::publish() accepts a QString.
      */
     [[nodiscard]] QString addresses() const;
 

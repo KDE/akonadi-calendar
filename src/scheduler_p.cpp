@@ -420,7 +420,7 @@ void Scheduler::acceptCancel(const IncidenceBase::Ptr &incidenceBase,
 
 void Scheduler::acceptDeclineCounter(const IncidenceBase::Ptr &, ScheduleMessage::Status)
 {
-    // Not sure why KCalUtils::Scheduler returned false here
+    // Not sure why MailScheduler returned false here
     Q_EMIT transactionFinished(ResultGenericError, i18n("Generic Error"));
 }
 

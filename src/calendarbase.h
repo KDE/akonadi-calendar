@@ -29,7 +29,7 @@ class IncidenceChanger;
  * \brief The base class for all akonadi aware calendars.
  *
  * Because it inherits KCalendarCore::Calendar, it provides seamless integration
- * with KCalendarCore and KCalUtils libraries eliminating any need for adapter
+ * with KCalendarCore and CalendarSupport libraries eliminating any need for adapter
  * ( akonadi<->KCalendarCore ) classes.
  *
  * \sa ETMCalendar
