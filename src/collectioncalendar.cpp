@@ -79,8 +79,6 @@ public:
     Monitor *m_monitor = nullptr;
     bool m_populatedFromEtm = false;
 
-    QHash<Item::Id, Item> m_itemById;
-
 private:
     void init()
     {
@@ -163,7 +161,6 @@ private:
             const auto index = m_model->index(row, 0, parent);
             const auto item = m_model->data(index, EntityTreeModel::ItemRole).value<Item>();
             if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-                m_itemById.remove(item.id());
                 internalRemove(item);
             }
         }
@@ -175,7 +172,6 @@ private:
             const auto index = m_model->index(row, 0, parent);
             const auto item = m_model->data(index, EntityTreeModel::ItemRole).value<Item>();
             if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-                m_itemById.insert(item.id(), item);
                 internalInsert(item);
             }
         }
@@ -193,7 +189,7 @@ private:
         newIncidence->setCustomProperty("VOLATILE", "AKONADI-ID", QString::number(item.id()));
         IncidenceBase::Ptr const existingIncidence = q->incidence(newIncidence->uid(), newIncidence->recurrenceId());
 
-        auto oldItem = m_itemById.value(item.id()); // if not found, seenItem will be invalid
+        const Item oldItem = mItemById.value(item.id()); // if not found, oldItem will be invalid
 
         if (!existingIncidence && !oldItem.isValid()) {
             // We don't know about this one because it was discarded, for example because of not having DTSTART
@@ -201,14 +197,14 @@ private:
         }
 
         if (existingIncidence) {
-            // We set the payload so that the internal incidence pointer and the one in m_itemById stay the same
+            // We set the payload so that the internal incidence pointer and the one in mItemById stay the same
             auto updatedItem = item;
             updatedItem.setPayload(existingIncidence.staticCast<KCalendarCore::Incidence>());
-            m_itemById.insert(item.id(), updatedItem);
+            mItemById.insert(item.id(), updatedItem); // The item needs updating too, revision changed.
 
             (*existingIncidence.data()) = *(newIncidence.data());
-        } else { // seenItem must be valid
-            m_itemById.insert(item.id(), item);
+        } else { // oldItem must be valid
+            mItemById.insert(item.id(), item); // The item needs updating too, revision changed.
             // The item changed it's UID, update our maps, the Google resource changes the UID when we create incidences.
             handleUidChange(oldItem, item, newIncidence->instanceIdentifier());
         }

@@ -185,6 +185,22 @@ bool waitForEtmToPopulate(Akonadi::EntityTreeModel *etm)
     });
 }
 
+// Returns the ETM's version of the item, invalid if the ETM doesn't have it
+Akonadi::Item etmItem(Akonadi::EntityTreeModel *etm, const Akonadi::Item &item)
+{
+    const auto indexes = Akonadi::EntityTreeModel::modelIndexesForItem(etm, item);
+    return indexes.isEmpty() ? Akonadi::Item() : indexes.first().data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+}
+
+// Waits until the ETM holds the given revision of the item
+bool waitForItemRevision(Akonadi::EntityTreeModel *etm, const Akonadi::Item &item)
+{
+    return QTest::qWaitFor([etm, &item]() {
+        const auto current = etmItem(etm, item);
+        return current.isValid() && current.revision() >= item.revision();
+    });
+}
+
 bool populateCollection(const Akonadi::Collection &collection, int count)
 {
     for (int i = 0; i < count; ++i) {
@@ -350,6 +366,48 @@ void CollectionCalendarTest::testItemChanged()
         QVERIFY(changedItem.hasPayload<KCalendarCore::Event::Ptr>());
         QCOMPARE(*changedItem.payload<KCalendarCore::Event::Ptr>(), *copy);
     }
+}
+
+void CollectionCalendarTest::testPopulatedItemChanged()
+{
+    auto monitor = createMonitor();
+    Akonadi::EntityTreeModel etm(monitor.get());
+    QVERIFY(waitForEtmToPopulate(&etm));
+
+    // The calendar loads this item from the ETM when it is created
+    QSignalSpy itemChangedSpy(monitor.get(), &Akonadi::Monitor::itemChanged);
+    EphemeralItem item = createIncidence(testCollection, QStringLiteral("Populated"));
+    // Wait for the resource to set the remote id, so that the calendar doesn't see that change
+    QTRY_VERIFY(std::any_of(itemChangedSpy.cbegin(), itemChangedSpy.cend(), [&item](const QList<QVariant> &args) {
+        return args[0].value<Akonadi::Item>().id() == item->id();
+    }));
+    *item = etmItem(&etm, *item);
+    Akonadi::CollectionCalendar calendar(&etm, testCollection);
+    const QString oldUid = item->payload<KCalendarCore::Event::Ptr>()->uid();
+    QVERIFY(calendar.event(oldUid));
+
+    const QString newUid = QUuid::createUuid().toString();
+    KCalendarCore::Event::Ptr const renamed(item->payload<KCalendarCore::Event::Ptr>()->clone());
+    renamed->setUid(newUid);
+    (*item).setPayload(renamed);
+    auto modifyJob = new Akonadi::ItemModifyJob(*item);
+    QVERIFY(modifyJob->exec());
+    *item = modifyJob->item();
+    QVERIFY(waitForItemRevision(&etm, *item));
+    QVERIFY(!calendar.event(oldUid));
+    QVERIFY(calendar.event(newUid));
+    QCOMPARE(calendar.item(newUid).id(), item->id());
+    QCOMPARE(calendar.item(item->id()).revision(), item->revision());
+
+    KCalendarCore::Event::Ptr const changed(item->payload<KCalendarCore::Event::Ptr>()->clone());
+    changed->setSummary(QStringLiteral("Changed"));
+    (*item).setPayload(changed);
+    modifyJob = new Akonadi::ItemModifyJob(*item);
+    QVERIFY(modifyJob->exec());
+    *item = modifyJob->item();
+    QVERIFY(waitForItemRevision(&etm, *item));
+    QCOMPARE(calendar.event(newUid)->summary(), QStringLiteral("Changed"));
+    QCOMPARE(calendar.item(item->id()).revision(), item->revision());
 }
 
 void CollectionCalendarTest::testUnrelatedItemIsNotSeen()
