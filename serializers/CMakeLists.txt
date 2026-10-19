@@ -17,7 +17,6 @@ ecm_qt_declare_logging_category(akonadi_serializer_kcalcore HEADER serializer_de
 
 target_link_libraries(
     akonadi_serializer_kcalcore
-    KPim6::CalendarUtils
     KF6::CalendarCore
     KPim6::AkonadiCore
     KF6::I18n

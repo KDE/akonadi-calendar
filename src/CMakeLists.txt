@@ -146,7 +146,6 @@ target_link_libraries(
         KF6::XmlGui
         KPim6::AkonadiContactCore
         KPim6::AkonadiMime
-        KPim6::CalendarUtils
         KPim6::MailTransport
         KPim6::MessageCore
         KPim6::MessageComposer

@@ -61,6 +61,6 @@ endif()
 ecm_qt_declare_logging_category(akonadi_serializer_kcalcore_autotest_SRCS HEADER serializer_debug.h IDENTIFIER AKONADI_SERIALIZER_CALENDAR_LOG CATEGORY_NAME org.kde.pim.calendar_serializer)
 
 ecm_add_test(kcalcoreserializertest.cpp ../serializers/akonadi_serializer_kcalcore.cpp ${akonadi_serializer_kcalcore_autotest_SRCS}
-    LINK_LIBRARIES KPim6::CalendarUtils KF6::CalendarCore KPim6::AkonadiCore KF6::I18n Qt::Test
+    LINK_LIBRARIES KF6::CalendarCore KPim6::AkonadiCore KF6::I18n Qt::Test
     TEST_NAME kcalcoreserializertest
 )
