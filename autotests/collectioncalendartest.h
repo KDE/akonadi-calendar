@@ -26,6 +26,7 @@ private Q_SLOTS:
     void testItemAdded();
     void testItemRemoved();
     void testItemChanged();
+    void testPopulatedItemChanged();
     void testUnrelatedItemIsNotSeen();
 
 private:
