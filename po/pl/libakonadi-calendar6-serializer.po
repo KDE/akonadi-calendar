@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
 "PO-Revision-Date: 2014-08-23 10:44+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -18,177 +18,177 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: akonadi_serializer_kcalcore.cpp:176
+#: akonadi_serializer_kcalcore.cpp:172
 #, kde-format
 msgid "Yes"
 msgstr "Tak"
 
-#: akonadi_serializer_kcalcore.cpp:178
+#: akonadi_serializer_kcalcore.cpp:174
 #, kde-format
 msgid "No"
 msgstr "Nie"
 
-#: akonadi_serializer_kcalcore.cpp:200
+#: akonadi_serializer_kcalcore.cpp:196
 #, kde-format
 msgid "Attendees"
 msgstr "Uczestnicy"
 
-#: akonadi_serializer_kcalcore.cpp:203
+#: akonadi_serializer_kcalcore.cpp:199
 #, kde-format
 msgid "Organizer"
 msgstr "Organizator"
 
-#: akonadi_serializer_kcalcore.cpp:207
+#: akonadi_serializer_kcalcore.cpp:203
 #, kde-format
 msgid "UID"
 msgstr "UID"
 
-#: akonadi_serializer_kcalcore.cpp:211
+#: akonadi_serializer_kcalcore.cpp:207
 #, kde-format
 msgid "Is all-day"
 msgstr "Trwa cały dzień"
 
-#: akonadi_serializer_kcalcore.cpp:215
+#: akonadi_serializer_kcalcore.cpp:211
 #, kde-format
 msgid "Has duration"
 msgstr "Posiada czas trwania"
 
-#: akonadi_serializer_kcalcore.cpp:220
+#: akonadi_serializer_kcalcore.cpp:216
 #, kde-format
 msgid "Duration"
 msgstr "Czas trwania"
 
-#: akonadi_serializer_kcalcore.cpp:229
+#: akonadi_serializer_kcalcore.cpp:225
 #, kde-format
 msgid "Description"
 msgstr "Opis"
 
-#: akonadi_serializer_kcalcore.cpp:233
+#: akonadi_serializer_kcalcore.cpp:229
 #, kde-format
 msgid "Summary"
 msgstr "Podsumowanie"
 
-#: akonadi_serializer_kcalcore.cpp:239 akonadi_serializer_kcalcore.cpp:243
+#: akonadi_serializer_kcalcore.cpp:233
 #, kde-format
 msgid "Status"
 msgstr "Stan"
 
-#: akonadi_serializer_kcalcore.cpp:248
+#: akonadi_serializer_kcalcore.cpp:237
 #, kde-format
 msgid "Secrecy"
 msgstr "Tajemnica"
 
-#: akonadi_serializer_kcalcore.cpp:252
+#: akonadi_serializer_kcalcore.cpp:241
 #, kde-format
 msgid "Priority"
 msgstr "Priorytet"
 
-#: akonadi_serializer_kcalcore.cpp:256
+#: akonadi_serializer_kcalcore.cpp:245
 #, kde-format
 msgid "Location"
 msgstr "Lokalizacja"
 
-#: akonadi_serializer_kcalcore.cpp:259
+#: akonadi_serializer_kcalcore.cpp:248
 #, kde-format
 msgid "Categories"
 msgstr "Kategorie"
 
-#: akonadi_serializer_kcalcore.cpp:260
+#: akonadi_serializer_kcalcore.cpp:249
 #, kde-format
 msgid "Alarms"
 msgstr "Alarmy"
 
-#: akonadi_serializer_kcalcore.cpp:261
+#: akonadi_serializer_kcalcore.cpp:250
 #, kde-format
 msgid "Resources"
 msgstr "Zasoby"
 
-#: akonadi_serializer_kcalcore.cpp:262
+#: akonadi_serializer_kcalcore.cpp:251
 #, kde-format
 msgid "Attachments"
 msgstr "Załączniki"
 
-#: akonadi_serializer_kcalcore.cpp:263
+#: akonadi_serializer_kcalcore.cpp:252
 #, kde-format
 msgid "Exception Dates"
 msgstr "Wyjątek daty"
 
-#: akonadi_serializer_kcalcore.cpp:264
+#: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
 msgid "Exception Times"
 msgstr "Wyjątek czasu"
 
-#: akonadi_serializer_kcalcore.cpp:268
+#: akonadi_serializer_kcalcore.cpp:257
 #, kde-format
 msgid "Created"
 msgstr "Stworzone"
 
-#: akonadi_serializer_kcalcore.cpp:272
+#: akonadi_serializer_kcalcore.cpp:261
 #, kde-format
 msgid "Related Uid"
 msgstr "Powiązany UID"
 
-#: akonadi_serializer_kcalcore.cpp:279
+#: akonadi_serializer_kcalcore.cpp:268
 #, kde-format
 msgid "Start time"
 msgstr "Czas początku"
 
-#: akonadi_serializer_kcalcore.cpp:283
+#: akonadi_serializer_kcalcore.cpp:272
 #, kde-format
 msgid "Has End Date"
 msgstr "Posiada datę zakończenia"
 
-#: akonadi_serializer_kcalcore.cpp:287
+#: akonadi_serializer_kcalcore.cpp:276
 #, kde-format
 msgid "End Date"
 msgstr "Data zakończenia"
 
-#: akonadi_serializer_kcalcore.cpp:297
+#: akonadi_serializer_kcalcore.cpp:286
 #, kde-format
 msgid "Has Start Date"
 msgstr "Posiada datę rozpoczęcia"
 
-#: akonadi_serializer_kcalcore.cpp:303
+#: akonadi_serializer_kcalcore.cpp:292
 #, kde-format
 msgid "Has Due Date"
 msgstr "Posiada termin realizacji"
 
-#: akonadi_serializer_kcalcore.cpp:307
+#: akonadi_serializer_kcalcore.cpp:296
 #, kde-format
 msgid "Due Date"
 msgstr "Termin realizacji"
 
-#: akonadi_serializer_kcalcore.cpp:312
+#: akonadi_serializer_kcalcore.cpp:301
 #, kde-format
 msgid "Has Complete Date"
 msgstr "Posiada datę zakończenia"
 
-#: akonadi_serializer_kcalcore.cpp:319
+#: akonadi_serializer_kcalcore.cpp:308
 #, kde-format
 msgid "Complete"
 msgstr "Zakończono"
 
-#: akonadi_serializer_kcalcore.cpp:325
+#: akonadi_serializer_kcalcore.cpp:314
 #, kde-format
 msgid "Completed"
 msgstr "Zakończone"
 
-#: akonadi_serializer_kcalcore.cpp:339
+#: akonadi_serializer_kcalcore.cpp:328
 #, kde-format
 msgid "Changed Event"
 msgstr "Zmienione zdarzenie"
 
-#: akonadi_serializer_kcalcore.cpp:340
+#: akonadi_serializer_kcalcore.cpp:329
 #, kde-format
 msgid "Conflicting Event"
 msgstr "Zdarzenie będące w konflikcie"
 
-#: akonadi_serializer_kcalcore.cpp:342
+#: akonadi_serializer_kcalcore.cpp:331
 #, kde-format
 msgid "Changed Todo"
 msgstr "Zmienione zadanie"
 
-#: akonadi_serializer_kcalcore.cpp:343
+#: akonadi_serializer_kcalcore.cpp:332
 #, kde-format
 msgid "Conflicting Todo"
 msgstr "Zadanie będące w konflikcie"

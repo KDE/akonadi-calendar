@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
 "PO-Revision-Date: 2013-03-13 11:12+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -17,177 +17,177 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: akonadi_serializer_kcalcore.cpp:176
+#: akonadi_serializer_kcalcore.cpp:172
 #, kde-format
 msgid "Yes"
 msgstr "हो"
 
-#: akonadi_serializer_kcalcore.cpp:178
+#: akonadi_serializer_kcalcore.cpp:174
 #, kde-format
 msgid "No"
 msgstr "नाही"
 
-#: akonadi_serializer_kcalcore.cpp:200
+#: akonadi_serializer_kcalcore.cpp:196
 #, kde-format
 msgid "Attendees"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:203
+#: akonadi_serializer_kcalcore.cpp:199
 #, kde-format
 msgid "Organizer"
 msgstr "आयोजक"
 
-#: akonadi_serializer_kcalcore.cpp:207
+#: akonadi_serializer_kcalcore.cpp:203
 #, kde-format
 msgid "UID"
 msgstr "यूआईडी"
 
-#: akonadi_serializer_kcalcore.cpp:211
+#: akonadi_serializer_kcalcore.cpp:207
 #, kde-format
 msgid "Is all-day"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:215
+#: akonadi_serializer_kcalcore.cpp:211
 #, kde-format
 msgid "Has duration"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:220
+#: akonadi_serializer_kcalcore.cpp:216
 #, kde-format
 msgid "Duration"
 msgstr "कालावधी"
 
-#: akonadi_serializer_kcalcore.cpp:229
+#: akonadi_serializer_kcalcore.cpp:225
 #, kde-format
 msgid "Description"
 msgstr "वर्णन"
 
-#: akonadi_serializer_kcalcore.cpp:233
+#: akonadi_serializer_kcalcore.cpp:229
 #, kde-format
 msgid "Summary"
 msgstr "सारांश"
 
-#: akonadi_serializer_kcalcore.cpp:239 akonadi_serializer_kcalcore.cpp:243
+#: akonadi_serializer_kcalcore.cpp:233
 #, kde-format
 msgid "Status"
 msgstr "स्थिती"
 
-#: akonadi_serializer_kcalcore.cpp:248
+#: akonadi_serializer_kcalcore.cpp:237
 #, kde-format
 msgid "Secrecy"
 msgstr "गुप्तता"
 
-#: akonadi_serializer_kcalcore.cpp:252
+#: akonadi_serializer_kcalcore.cpp:241
 #, kde-format
 msgid "Priority"
 msgstr "प्राधान्यता"
 
-#: akonadi_serializer_kcalcore.cpp:256
+#: akonadi_serializer_kcalcore.cpp:245
 #, kde-format
 msgid "Location"
 msgstr "स्थान"
 
-#: akonadi_serializer_kcalcore.cpp:259
+#: akonadi_serializer_kcalcore.cpp:248
 #, kde-format
 msgid "Categories"
 msgstr "विभाग"
 
-#: akonadi_serializer_kcalcore.cpp:260
+#: akonadi_serializer_kcalcore.cpp:249
 #, kde-format
 msgid "Alarms"
 msgstr "एलार्म्स"
 
-#: akonadi_serializer_kcalcore.cpp:261
+#: akonadi_serializer_kcalcore.cpp:250
 #, kde-format
 msgid "Resources"
 msgstr "संसाधने"
 
-#: akonadi_serializer_kcalcore.cpp:262
+#: akonadi_serializer_kcalcore.cpp:251
 #, kde-format
 msgid "Attachments"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:263
+#: akonadi_serializer_kcalcore.cpp:252
 #, kde-format
 msgid "Exception Dates"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:264
+#: akonadi_serializer_kcalcore.cpp:253
 #, kde-format
 msgid "Exception Times"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:268
+#: akonadi_serializer_kcalcore.cpp:257
 #, kde-format
 msgid "Created"
 msgstr "तयार केले"
 
-#: akonadi_serializer_kcalcore.cpp:272
+#: akonadi_serializer_kcalcore.cpp:261
 #, kde-format
 msgid "Related Uid"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:279
+#: akonadi_serializer_kcalcore.cpp:268
 #, kde-format
 msgid "Start time"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:283
+#: akonadi_serializer_kcalcore.cpp:272
 #, kde-format
 msgid "Has End Date"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:287
+#: akonadi_serializer_kcalcore.cpp:276
 #, kde-format
 msgid "End Date"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:297
+#: akonadi_serializer_kcalcore.cpp:286
 #, kde-format
 msgid "Has Start Date"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:303
+#: akonadi_serializer_kcalcore.cpp:292
 #, kde-format
 msgid "Has Due Date"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:307
+#: akonadi_serializer_kcalcore.cpp:296
 #, kde-format
 msgid "Due Date"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:312
+#: akonadi_serializer_kcalcore.cpp:301
 #, kde-format
 msgid "Has Complete Date"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:319
+#: akonadi_serializer_kcalcore.cpp:308
 #, kde-format
 msgid "Complete"
 msgstr "पूर्ण"
 
-#: akonadi_serializer_kcalcore.cpp:325
+#: akonadi_serializer_kcalcore.cpp:314
 #, kde-format
 msgid "Completed"
 msgstr "पूर्ण झालेले"
 
-#: akonadi_serializer_kcalcore.cpp:339
+#: akonadi_serializer_kcalcore.cpp:328
 #, kde-format
 msgid "Changed Event"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:340
+#: akonadi_serializer_kcalcore.cpp:329
 #, kde-format
 msgid "Conflicting Event"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:342
+#: akonadi_serializer_kcalcore.cpp:331
 #, kde-format
 msgid "Changed Todo"
 msgstr ""
 
-#: akonadi_serializer_kcalcore.cpp:343
+#: akonadi_serializer_kcalcore.cpp:332
 #, kde-format
 msgid "Conflicting Todo"
 msgstr ""
