@@ -36,7 +36,6 @@
 
 #include <MessageComposer/ComposerJob>
 #include <MessageComposer/ContactPreference>
-#include <MessageComposer/GlobalPart>
 #include <MessageComposer/InfoPart>
 #include <MessageComposer/ItipPart>
 #include <MessageComposer/KeyResolver>
@@ -505,9 +504,6 @@ void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, con
     KConfig config(u"kmail2rc"_s);
     KConfigGroup const configGroup(&config, u"Invitations"_s);
     const bool outlookConformInvitation = configGroup.readEntry("LegacyBodyInvites", false);
-
-    auto *globalPart = composerJob->globalPart();
-    globalPart->setGuiEnabled(false);
 
     auto *infoPart = composerJob->infoPart();
     infoPart->setCc(msg.cc);
