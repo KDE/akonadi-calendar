@@ -154,9 +154,7 @@ msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
 #: suspenddialog.cpp:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remind Later"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remind Later"
 msgstr "Pripomenúť neskôr"

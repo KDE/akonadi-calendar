@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-12 00:52+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-11 12:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1045,37 +1045,37 @@ msgstr ""
 "טקסט היומן:\n"
 "%1\n"
 
-#: mailclient_p.cpp:381 mailclient_p.cpp:419
+#: mailclient_p.cpp:380 mailclient_p.cpp:418
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "אין נמענים לשליחת הודעת הדוא״ל"
 
-#: mailclient_p.cpp:427
+#: mailclient_p.cpp:426
 #, kde-format
 msgid "Free Busy Object"
 msgstr "פריט פנוי עסוק"
 
-#: mailclient_p.cpp:461 mailclient_p.cpp:492
+#: mailclient_p.cpp:460 mailclient_p.cpp:491
 #, kde-format
 msgid "Free Busy Message"
 msgstr "הודעת פנוי עסוק"
 
-#: mailclient_p.cpp:629
+#: mailclient_p.cpp:625
 #, kde-format
 msgid "Error while creating transport"
 msgstr "שגיאה ביצירת תעבורה"
 
-#: mailclient_p.cpp:647
+#: mailclient_p.cpp:643
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "שגיאה במשיכת תעבורה. לא ניתן לשלוח הזמנות"
 
-#: mailclient_p.cpp:670
+#: mailclient_p.cpp:666
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "שגיאה בהצבת ההודעה הזאת בתור תיבת הדוא״ל היוצא: %1"
 
-#: mailclient_p.cpp:702
+#: mailclient_p.cpp:698
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -1086,24 +1086,24 @@ msgstr ""
 "או לא.\n"
 "לחתום על ההודעה הזאת?"
 
-#: mailclient_p.cpp:707 mailclient_p.cpp:733
+#: mailclient_p.cpp:703 mailclient_p.cpp:729
 #, kde-format
 msgid "Sign Message?"
 msgstr "לחתום על ההודעה?"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:704 mailclient_p.cpp:730
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "ל&חתום"
 
-#: mailclient_p.cpp:709 mailclient_p.cpp:735
+#: mailclient_p.cpp:705 mailclient_p.cpp:731
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&לא לחתום"
 
-#: mailclient_p.cpp:729
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -1112,26 +1112,26 @@ msgstr ""
 "יש העדפות חתימה סותרות לנמענים האלה.\n"
 "לחתום על ההודעה הזאת?"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:750
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
 "configured for this identity."
 msgstr "ביקשת לחתום על ההודעה הזאת אך לא הוגדרו מפתחות חתימה תקפים לזהות הזאת."
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:753
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "לשלוח ללא חתימה?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:753
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "לשלוח ללא ח&תימה"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1142,7 +1142,7 @@ msgstr ""
 "שליחת הודעה חתומה באופן חלקי עלולה להפר את מדיניות האתר.\n"
 "לחתום על כל החלקים במקום?"
 
-#: mailclient_p.cpp:775
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1153,29 +1153,29 @@ msgstr ""
 "שליחת הודעה לא חתומה עלולה להפר את מדיניות האתר.\n"
 "לחתום על ההודעה במקום?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:774
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "לחתום על &כל החלקים"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:774
 #, kde-format
 msgid "&Sign"
 msgstr "ל&חתום"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:776
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "אזהרת הודעה לא חתומה"
 
-#: mailclient_p.cpp:782
+#: mailclient_p.cpp:778
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "לשלוח &ללא שינוי"
 
-#: mailclient_p.cpp:835
+#: mailclient_p.cpp:831
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1184,7 +1184,7 @@ msgstr ""
 "מפתחות הצפנה תקפים ואמינים נמצאו לכל הנמענים.\n"
 "להצפין את ההודעה הזאת?"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1194,33 +1194,33 @@ msgstr ""
 "חקירת העדפות ההצפנה של הנמען מראה שתופיע שאלה האם להצפין את ההודעה או לא.\n"
 "להצפין את ההודעה?"
 
-#: mailclient_p.cpp:843
+#: mailclient_p.cpp:839
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "להצפין את ההודעה?"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:840
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "לחתום ולה&צפין"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:917
+#: mailclient_p.cpp:840 mailclient_p.cpp:913
 #, kde-format
 msgid "&Encrypt"
 msgstr "להצ&פין"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:841 mailclient_p.cpp:917
 #, kde-format
 msgid "&Sign Only"
 msgstr "ל&חתום בלבד"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:841 mailclient_p.cpp:917
 #, kde-format
 msgid "&Send As-Is"
 msgstr "לשלוח בלי &שינוי"
 
-#: mailclient_p.cpp:865
+#: mailclient_p.cpp:861
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1229,24 +1229,24 @@ msgstr ""
 "יש העדפות הצפנה סותרות לנמענים האלה.\n"
 "להצפין את ההודעה הזאת?"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:865
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "להצפין את ההודעה?"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:866
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "לה&צפין"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:867
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&לא להצפין"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:886
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1256,18 +1256,18 @@ msgstr ""
 "ביקשת להצפין את ההודעה הזאת ולהצפין עותק לעצמך, אך לא נמצאו מפתחות הצפנה "
 "אמינים לזהות הזאת."
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:890
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "לשלוח ללא הצפנה?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:890
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "לשלוח ל&לא הצפנה"
 
-#: mailclient_p.cpp:908
+#: mailclient_p.cpp:904
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1279,7 +1279,7 @@ msgstr ""
 "שליחת הודעה מוצפנת חלקית יכולה להפר את מדיניות האתר ו/או להדליף מידע רגיש.\n"
 "להצפין את כל החלקים במקום?"
 
-#: mailclient_p.cpp:913
+#: mailclient_p.cpp:909
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1291,12 +1291,12 @@ msgstr ""
 "שליחת הודעות לא מוצפות עלולה להפר את מדיניות האתר ו/או להדליף מידע רגיש.\n"
 "להצפין את ההודעות במקום?"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:913
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "להצפין את &כל החלקים"
 
-#: mailclient_p.cpp:919
+#: mailclient_p.cpp:915
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "אזהרת הודעה לא מוצפנת"

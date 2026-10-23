@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-12 00:52+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2024-09-28 17:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -1109,37 +1109,37 @@ msgid ""
 "%1\n"
 msgstr ""
 
-#: mailclient_p.cpp:381 mailclient_p.cpp:419
+#: mailclient_p.cpp:380 mailclient_p.cpp:418
 #, kde-format
 msgid "There are no attendees to e-mail"
 msgstr "Tidak ada peserta yang akan diemail"
 
-#: mailclient_p.cpp:427
+#: mailclient_p.cpp:426
 #, kde-format
 msgid "Free Busy Object"
 msgstr "Obyek Senggang Sibuk"
 
-#: mailclient_p.cpp:461 mailclient_p.cpp:492
+#: mailclient_p.cpp:460 mailclient_p.cpp:491
 #, kde-format
 msgid "Free Busy Message"
 msgstr "Pesan Senggang Sibuk"
 
-#: mailclient_p.cpp:629
+#: mailclient_p.cpp:625
 #, kde-format
 msgid "Error while creating transport"
 msgstr "Galat selagi membuat transpor"
 
-#: mailclient_p.cpp:647
+#: mailclient_p.cpp:643
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
 msgstr "Galat mengambil transpor. Tak bisa mengirim undangan"
 
-#: mailclient_p.cpp:670
+#: mailclient_p.cpp:666
 #, kde-format
 msgid "Error queuing message in outbox: %1"
 msgstr "Galat mengantrekan pesan di kotak keluar: %1"
 
-#: mailclient_p.cpp:702
+#: mailclient_p.cpp:698
 #, kde-format
 msgid ""
 "Examination of the recipient's signing preferences yielded that you be asked "
@@ -1150,24 +1150,24 @@ msgstr ""
 "Anda ditanya apakah menandatangani pesan ini atau tidak.\n"
 "Tanda tangani pesan ini?"
 
-#: mailclient_p.cpp:707 mailclient_p.cpp:733
+#: mailclient_p.cpp:703 mailclient_p.cpp:729
 #, kde-format
 msgid "Sign Message?"
 msgstr "Apakah Tanda Tangani Pesan?"
 
-#: mailclient_p.cpp:708 mailclient_p.cpp:734
+#: mailclient_p.cpp:704 mailclient_p.cpp:730
 #, kde-format
 msgctxt "to sign"
 msgid "&Sign"
 msgstr "&Tanda tangani"
 
-#: mailclient_p.cpp:709 mailclient_p.cpp:735
+#: mailclient_p.cpp:705 mailclient_p.cpp:731
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Sign"
 msgstr "&Jangan Tanda Tangani"
 
-#: mailclient_p.cpp:729
+#: mailclient_p.cpp:725
 #, kde-format
 msgid ""
 "There are conflicting signing preferences for these recipients.\n"
@@ -1176,7 +1176,7 @@ msgstr ""
 "Ada preferensi penandatanganan yang konflik terhadap penerimaan tersebut.\n"
 "Tanda tangani pesan ini?"
 
-#: mailclient_p.cpp:754
+#: mailclient_p.cpp:750
 #, kde-format
 msgid ""
 "You have requested to sign this message, but no valid signing keys have been "
@@ -1185,19 +1185,19 @@ msgstr ""
 "Anda telah diminta untuk menandatangani pesan ini, tetapi tidak ada kunci "
 "penandatanganan valid yang telah dikonfigurasi untuk identitas ini."
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:753
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Unsigned?"
 msgstr "Apakah Kirim Tak Tertandatangani?"
 
-#: mailclient_p.cpp:757
+#: mailclient_p.cpp:753
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unsigned"
 msgstr "Kirim Tak &Tertandatangani"
 
-#: mailclient_p.cpp:771
+#: mailclient_p.cpp:767
 #, kde-format
 msgid ""
 "Some parts of this message will not be signed.\n"
@@ -1209,7 +1209,7 @@ msgstr ""
 "kebijakan situs.\n"
 "Tanda tangani semua bagian sebagai gantinya?"
 
-#: mailclient_p.cpp:775
+#: mailclient_p.cpp:771
 #, kde-format
 msgid ""
 "This message will not be signed.\n"
@@ -1220,29 +1220,29 @@ msgstr ""
 "Mengirim pesan yang tak ditandatangani mungkin menyalahi kebijakan situs.\n"
 "Tanda tangani pesan sebagai gantinya?"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:774
 #, kde-format
 msgid "&Sign All Parts"
 msgstr "&Tanda tangani Semua Bagian"
 
-#: mailclient_p.cpp:778
+#: mailclient_p.cpp:774
 #, kde-format
 msgid "&Sign"
 msgstr "&Tanda tangani"
 
-#: mailclient_p.cpp:780
+#: mailclient_p.cpp:776
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
 msgstr "Peringatan Pesan Tak Tertandatangani"
 
-#: mailclient_p.cpp:782
+#: mailclient_p.cpp:778
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
 msgstr "Kirim &Apa Adanya"
 
-#: mailclient_p.cpp:835
+#: mailclient_p.cpp:831
 #, kde-format
 msgid ""
 "Valid trusted encryption keys were found for all recipients.\n"
@@ -1251,7 +1251,7 @@ msgstr ""
 "Kunci enkripsi terpercaya valid yang ditemukan untuk semua penerimaan.\n"
 "Enkripsikan pesan ini?"
 
-#: mailclient_p.cpp:838
+#: mailclient_p.cpp:834
 #, kde-format
 msgid ""
 "Examination of the recipient's encryption preferences yielded that you be "
@@ -1262,33 +1262,33 @@ msgstr ""
 "apakah akan mengenkripsi pesan ini atau tidak.\n"
 "Enkripsikan pesan ini?"
 
-#: mailclient_p.cpp:843
+#: mailclient_p.cpp:839
 #, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
 msgstr "Enkripsi Pesan?"
 
-#: mailclient_p.cpp:844
+#: mailclient_p.cpp:840
 #, kde-format
 msgid "Sign && &Encrypt"
 msgstr "Tanda tangani && &Enkripsi"
 
-#: mailclient_p.cpp:844 mailclient_p.cpp:917
+#: mailclient_p.cpp:840 mailclient_p.cpp:913
 #, kde-format
 msgid "&Encrypt"
 msgstr "&Enkripsi"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:841 mailclient_p.cpp:917
 #, kde-format
 msgid "&Sign Only"
 msgstr "&Tanda Tangani Saja"
 
-#: mailclient_p.cpp:845 mailclient_p.cpp:921
+#: mailclient_p.cpp:841 mailclient_p.cpp:917
 #, kde-format
 msgid "&Send As-Is"
 msgstr "&Kirim Apa Adanya"
 
-#: mailclient_p.cpp:865
+#: mailclient_p.cpp:861
 #, kde-format
 msgid ""
 "There are conflicting encryption preferences for these recipients.\n"
@@ -1297,24 +1297,24 @@ msgstr ""
 "Ada preferensi enkripsi yang konflik untuk penerima tersebut.\n"
 "Enkripsikan pesan ini?"
 
-#: mailclient_p.cpp:869
+#: mailclient_p.cpp:865
 #, kde-format
 msgid "Encrypt Message?"
 msgstr "Enkripsikan Pesan?"
 
-#: mailclient_p.cpp:870
+#: mailclient_p.cpp:866
 #, kde-format
 msgctxt "@action:button"
 msgid "&Encrypt"
 msgstr "&Enkripsi"
 
-#: mailclient_p.cpp:871
+#: mailclient_p.cpp:867
 #, kde-format
 msgctxt "@action:button"
 msgid "Do &Not Encrypt"
 msgstr "&Jangan Enkripsikan"
 
-#: mailclient_p.cpp:890
+#: mailclient_p.cpp:886
 #, kde-format
 msgid ""
 "You have requested to encrypt this message, and to encrypt a copy to "
@@ -1325,18 +1325,18 @@ msgstr ""
 "mengenkripsi salinan untuk Anda sendiri, tetapi tidak ada kunci enkripsi "
 "terpercaya yang valid untuk identitas ini."
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:890
 #, kde-format
 msgid "Send Unencrypted?"
 msgstr "Kirim Tak Terenkripsi?"
 
-#: mailclient_p.cpp:894
+#: mailclient_p.cpp:890
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &Unencrypted"
 msgstr "Kirim &Tak Terenkripsi"
 
-#: mailclient_p.cpp:908
+#: mailclient_p.cpp:904
 #, kde-format
 msgid ""
 "Some parts of this message will not be encrypted.\n"
@@ -1349,7 +1349,7 @@ msgstr ""
 "kebijakan situs dan/atau bocornya informasi yang sensitif.\n"
 "Enkripsikan semua bagian sebagai gantinya?"
 
-#: mailclient_p.cpp:913
+#: mailclient_p.cpp:909
 #, kde-format
 msgid ""
 "This message will not be encrypted.\n"
@@ -1362,12 +1362,12 @@ msgstr ""
 "membocorkan informasi sensitif.\n"
 "Enkripsi pesan sebagai gantinya?"
 
-#: mailclient_p.cpp:917
+#: mailclient_p.cpp:913
 #, kde-format
 msgid "&Encrypt All Parts"
 msgstr "&Enkripsi Semua Bagian"
 
-#: mailclient_p.cpp:919
+#: mailclient_p.cpp:915
 #, kde-format
 msgid "Unencrypted Message Warning"
 msgstr "Peringatan Pesan Tak Terenkripsi"
