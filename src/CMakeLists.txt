@@ -217,4 +217,4 @@ ecm_installed_library_check_include_strings(KPim6AkonadiCalendar
     PREFIX Akonadi
 )
 
-ecm_generate_qdoc(KPim6AkonadiCalendar akonadi-calendar.qdocconf)
+ecm_generate_qdoc(KPim6AkonadiCalendar akonadicalendar.qdocconf)

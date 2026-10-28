@@ -1,6 +1,6 @@
 /*!
     \module AkonadiCalendarCore
-    \title KPim6AkonadiCalendarCore C++ Classes
+    \title AkonadiCalendarCore C++ Classes
     \ingroup modules
     \cmakepackage KPim6
     \cmakecomponent AkonadiCalendarCore
