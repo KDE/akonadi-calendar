@@ -41,7 +41,6 @@ private Q_SLOTS:
     void testIdentity();
 
 private:
-    void waitForSignals();
     void cleanup();
     void createITIPHandler();
     QByteArray icalData(const QString &filename);
