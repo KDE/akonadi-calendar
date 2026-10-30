@@ -979,7 +979,7 @@ bool FreeBusyManager::saveFreeBusy(const KCalendarCore::FreeBusy::Ptr &freebusy,
     QString filename(fbd);
     filename += u'/';
     filename += person.email();
-    filename += u".ifb"_s;
+    filename += u".ifb";
     QFile f(filename);
 
     qCDebug(AKONADICALENDAR_LOG) << "filename:" << filename;
