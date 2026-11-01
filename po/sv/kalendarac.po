@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kalendar package.
 #
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-18 00:49+0000\n"
-"PO-Revision-Date: 2025-08-04 08:19+0200\n"
+"PO-Revision-Date: 2026-10-31 20:32+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -154,9 +154,7 @@ msgid "Clau Cambra"
 msgstr "Clau Cambra"
 
 #: suspenddialog.cpp:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remind Later"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remind Later"
 msgstr "Påminn senare"
