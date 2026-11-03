@@ -39,8 +39,7 @@ msgid "To-do"
 msgstr ""
 
 #: alarmnotification.cpp:58
-#, fuzzy, kde-format
-#| msgid "Event"
+#, kde-format
 msgctxt "incidence is an event"
 msgid "Event"
 msgstr "Evento"
