@@ -5,6 +5,14 @@ cmake_minimum_required(VERSION 3.29)
 
 set(PIM_VERSION "6.8.44")
 project(Akonadi-Calendar VERSION ${PIM_VERSION})
+# use a different SOVERSION for each minor release because we don't guarantee any ABI stability;
+# bump the SOVERSION with the first development version, i.e. major.minor.40
+if(PROJECT_VERSION_PATCH VERSION_GREATER_EQUAL "40")
+    math(EXPR minorPlus1 "${PROJECT_VERSION_MINOR} + 1")
+    set(PROJECT_SOVERSION ${PROJECT_VERSION_MAJOR}.${minorPlus1})
+else()
+    set(PROJECT_SOVERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR})
+endif()
 
 # ECM setup
 set(KF_MIN_VERSION "6.30.0")
@@ -124,7 +132,7 @@ set(GPGME_LIB_VERSION "1.23.2")
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarConfigVersion.cmake"
-    SOVERSION 6
+    SOVERSION ${PROJECT_SOVERSION}
 )
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDARCORE
