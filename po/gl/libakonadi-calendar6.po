@@ -444,8 +444,7 @@ msgstr ""
 "contacte co equipo administrador do sistema.</p></qt>"
 
 #: freebusymanager.cpp:621
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "A información da dispoñibilidade enviouse correctamente."
@@ -457,8 +456,7 @@ msgid "Sending Free/Busy"
 msgstr "Enviando a dispoñibilidade"
 
 #: freebusymanager.cpp:625
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
 msgstr "Non é posíbel publicar os datos de dispoñibilidade: %1"
@@ -1461,11 +1459,7 @@ msgid "Please provide at least 1 valid email address"
 msgstr ""
 
 #: publishdialog.cpp:123
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to publish the calendar incidence due to an invalid recipients "
-#| "string.\n"
-#| "%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to publish the calendar incidence due to an invalid recipients "
