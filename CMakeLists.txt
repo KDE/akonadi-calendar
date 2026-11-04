@@ -138,7 +138,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDAR
 ecm_setup_version(PROJECT VARIABLE_PREFIX AKONADICALENDARCORE
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/akonadi-calendar-core_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6AkonadiCalendarCoreConfigVersion.cmake"
-    SOVERSION 6
+    SOVERSION ${PROJECT_SOVERSION}
 )
 
 configure_file(akonadi-calendar-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/akonadi-calendar-version.h @ONLY)
