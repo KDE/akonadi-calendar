@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libakonadi-calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 02:54+0000\n"
-"PO-Revision-Date: 2024-08-14 00:10+0300\n"
+"PO-Revision-Date: 2026-11-04 03:19+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.10\n"
 
 #: calendarbase.cpp:271
 #, kde-format
@@ -345,7 +345,7 @@ msgstr "Bendrinama „Kolab“ %1 %2"
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Kolab %2"
-msgstr ""
+msgstr "Naudotojo %1 Kolab %2"
 
 #: calendarutils.cpp:141
 #, kde-format
@@ -363,13 +363,13 @@ msgstr "„Kolab“ %1"
 #, kde-format
 msgctxt "%1 is the folder name"
 msgid "%1 in %2"
-msgstr ""
+msgstr "%1, esantis %2"
 
 #: calendarutils.cpp:185
 #, kde-format
 msgctxt "%1 is folder owner name, %2 is folder contents"
 msgid "%1's Google %2"
-msgstr ""
+msgstr "Naudotojo %1 Google %2"
 
 #: calendarutils.cpp:187
 #, kde-format
@@ -395,15 +395,11 @@ msgid "Unknown"
 msgstr "Nežinomas"
 
 #: freebusymanager.cpp:377
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to download free/busy data from: %1\n"
-#| "Reason: %2"
+#, kde-format
 msgctxt "@info"
 msgid "Failed to download free/busy data from: <link>%1</link>.<nl/>Reason: %2"
 msgstr ""
-"Nepavyko atsisiųsti užimtumo duomenų iš: %1\n"
-"Priežastis: %2"
+"Nepavyko atsisiųsti užimtumo duomenų iš: <link>%1</link>.<nl/>Priežastis: %2"
 
 #: freebusymanager.cpp:381 freebusymanager.cpp:404
 #, kde-format
@@ -412,21 +408,16 @@ msgid "Free/Busy Retrieval Error"
 msgstr "Užimtumo gavimo klaida"
 
 #: freebusymanager.cpp:403
-#, fuzzy, kde-format
-#| msgid "Failed to parse free/busy information that was retrieved from: %1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "Nepavyko išnagrinėti informacijos apie užimtumą, gautos iš: %1"
+msgstr ""
+"Nepavyko išnagrinėti informacijos apie užimtumą, gautos iš: <link>%1</link>"
 
 #: freebusymanager.cpp:419
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p>The software could not upload your free/busy list to the URL '%1'. "
-#| "There might be a problem with the access rights, or you specified an "
-#| "incorrect URL. The system said: <em>%2</em>.</p><p>Please check the URL "
-#| "or contact your system administrator.</p></qt>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The software could not upload your free/busy list to the URL <link>%1</"
@@ -434,14 +425,13 @@ msgid ""
 "incorrect URL. The system said: <nl/><emphasis>%2</emphasis>.<nl/>Please "
 "check the URL or contact your system administrator."
 msgstr ""
-"<qt><p>Programinei įrangai nepavyko išsiųsti jūsų užimtumo sąrašo į URL "
-"„%1“. Gali būti, jog yra problemų su prieigos teisėmis arba nurodėte "
-"neteisingą URL. Sistema pranešė: <em>%2</em>.</p><p>Patikrinkite URL adresą "
-"arba susisiekite su sistemos administratoriumi.</p></qt>"
+"Programinei įrangai nepavyko išsiųsti jūsų užimtumo sąrašo į URL adresą "
+"<link>%1</link>. Gali būti, jog yra problemų su prieigos teisėmis arba "
+"nurodėte neteisingą URL. Sistema pranešė: <nl/><emphasis>%2</emphasis>.<nl/"
+">Patikrinkite URL adresą arba susisiekite su sistemos administratoriumi."
 
 #: freebusymanager.cpp:619
-#, fuzzy, kde-format
-#| msgid "The free/busy information was successfully sent."
+#, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
 msgstr "Informacija apie užimtumą buvo sėkmingai išsiųsta."
@@ -453,11 +443,10 @@ msgid "Sending Free/Busy"
 msgstr "Siunčiamas užimtumas"
 
 #: freebusymanager.cpp:623
-#, fuzzy, kde-format
-#| msgid "Unable to publish the free/busy data: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to publish the free/busy data: %1"
-msgstr "Nepavyko publikuoti užimtumo duomenų: %1"
+msgstr "Nepavyko paskelbti užimtumo duomenų: %1"
 
 #: freebusymanager.cpp:747
 #, kde-format
@@ -467,6 +456,10 @@ msgid ""
 "KOrganizer's configuration dialog, on the \"Free/Busy\" page.<nl/>Contact "
 "your system administrator for the exact URL and the account details."
 msgstr ""
+"Nėra sukonfigūruotas joks URL adresas, skirtas užimtumo sąrašo išsiuntimui. "
+"Nustatykite jį programos KOrganizer konfigūracijos dialoge, „Užimtumo“ "
+"puslapyje.<nl/>Susisiekite su sistemos administratoriumi norėdami sužinoti "
+"tikslų URL adresą ir informaciją apie paskyrą."
 
 #: freebusymanager.cpp:752
 #, kde-format
@@ -475,11 +468,10 @@ msgid "No Free/Busy Upload URL"
 msgstr "Nėra užimtumo išsiuntimo URL"
 
 #: freebusymanager.cpp:762
-#, fuzzy, kde-format
-#| msgid "<qt>The target URL '%1' provided is invalid.</qt>"
+#, kde-format
 msgctxt "@info"
 msgid "The target URL <link>%1</link> provided is invalid."
-msgstr "<qt>Nurodytas paskirties URL „%1“ yra neteisingas.</qt>"
+msgstr "Pateiktas paskirties URL adresas <link>%1</link> yra netinkamas."
 
 #: freebusymanager.cpp:763
 #, kde-format
@@ -670,18 +662,18 @@ msgid "Could not start editor to edit counter proposal"
 msgstr "Nepavyko paleisti redaktoriaus, skirto taisyti kontrapasiūlymą"
 
 #: itiphandler.cpp:272
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr ""
-"Elemente „%1“ nėra dalyvių. Štai kodėl bus išsiųsta grupinio darbo "
-"programinės įrangos žinutė."
+"Elemente „%1“ nėra dalyvių. Štai kodėl nebus išsiųstas joks grupinio darbo "
+"programinės įrangos laiškas."
 
 #: itiphandler.cpp:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Message Not Sent"
-msgstr "Žinutė neišsiųsta"
+msgstr "Laiškas neišsiųstas"
 
 #: itiphandler.h:123 itiphandler.h:141 itiphandler.h:157 itiphandler.h:170
 #, kde-format
@@ -707,13 +699,13 @@ msgid "Error loading calendar: %1"
 msgstr "Klaida įkeliant kalendorių: %1"
 
 #: itiphandler_p.cpp:135
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
 "Method: %2"
 msgstr ""
-"Grupinio darbo programinės įrangos žinutė, skirta elementui „%1“, buvo "
-"sėkmingai išsiųsta.\n"
+"Grupinio darbo programinės įrangos laiškas, skirtas elementui „%1“, buvo "
+"sėkmingai išsiųstas.\n"
 "Metodas: %2"
 
 #: itiphandler_p.cpp:147
@@ -769,7 +761,7 @@ msgstr "Pasiūlytas naujas susitikimo laikas: %1 – %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr ""
+msgstr "Grupės tvarkaraščio el. laiškas"
 
 #: itiphandlerhelper_p.cpp:146
 #, kde-kuit-format
@@ -782,6 +774,8 @@ msgid ""
 "The event \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
+"Į įvykį „%1“ yra įtraukti kiti žmonės.\n"
+"Ar norite el. laišku išsiųsti dalyviams pakvietimą?"
 
 #: itiphandlerhelper_p.cpp:251
 #, kde-format
@@ -789,6 +783,8 @@ msgid ""
 "The todo \"%1\" includes other people.\n"
 "Do you want to email the invitation to the attendees?"
 msgstr ""
+"Į užduotį „%1“ yra įtraukti kiti žmonės.\n"
+"Ar norite el. laišku išsiųsti dalyviams pakvietimą?"
 
 #: itiphandlerhelper_p.cpp:256
 #, kde-format
@@ -796,6 +792,7 @@ msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr ""
+"Į šį reiškinį įtraukti kiti žmonės. Ar reikėtų dalyviams išsiųsti el. laišką?"
 
 #: itiphandlerhelper_p.cpp:280
 #, kde-format
@@ -803,6 +800,9 @@ msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
 msgstr ""
+"Jūs nesate šio įvykio organizatorius. Jei taisysite įvykį, jūsų kalendorius "
+"daugiau nebebus sinchronizuotas su organizatoriaus kalendoriumi. Ar tikrai "
+"norite taisyti įvykį?"
 
 #: itiphandlerhelper_p.cpp:311
 #, kde-format
@@ -810,6 +810,8 @@ msgid ""
 "You changed the invitation \"%1\".\n"
 "Do you want to email the attendees an update message?"
 msgstr ""
+"Jūs pakeitėte pakvietimą „%1“.\n"
+"Ar norite el. paštu išsiųsti dalyviams laišką su atnaujinimu?"
 
 #: itiphandlerhelper_p.cpp:319 itiphandlerhelper_p.cpp:335
 #: itiphandlerhelper_p.cpp:347
@@ -822,6 +824,7 @@ msgstr "Siųsti atnaujinimą"
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr ""
+"Ar norite šios užduoties organizatoriui siųsti atnaujinimą apie būseną?"
 
 #: itiphandlerhelper_p.cpp:340
 #, kde-format
@@ -829,6 +832,8 @@ msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
 msgstr ""
+"Jūsų, kaip šio įvykio dalyvio, būsena pasikeitė. Ar norite siųsti įvykio "
+"organizatoriui atnaujinimą apie būseną?"
 
 #: itiphandlerhelper_p.cpp:383
 #, kde-format
@@ -836,6 +841,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the event is canceled?"
 msgstr ""
+"Jūs pašalinote pakvietimą „%1“.\n"
+"Ar norite išsiųsti dalyviams el. laišką apie tai, kad įvykis panaikintas?"
 
 #: itiphandlerhelper_p.cpp:388
 #, kde-format
@@ -843,6 +850,8 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the todo is canceled?"
 msgstr ""
+"Jūs pašalinote pakvietimą „%1“.\n"
+"Ar norite išsiųsti dalyviams el. laišką apie tai, kad užduotis panaikinta?"
 
 #: itiphandlerhelper_p.cpp:393
 #, kde-format
@@ -850,11 +859,13 @@ msgid ""
 "You removed the invitation \"%1\".\n"
 "Do you want to email the attendees that the journal is canceled?"
 msgstr ""
+"Jūs pašalinote pakvietimą „%1“.\n"
+"Ar norite išsiųsti dalyviams el. laišką apie tai, kad dienynas panaikintas?"
 
 #: itiphandlerhelper_p.cpp:410
 #, kde-format
 msgid "Do you want to send a status update to the organizer of this journal?"
-msgstr ""
+msgstr "Ar norite šio dienyno organizatoriui siųsti atnaujinimą apie būseną?"
 
 #: itiphandlerhelper_p.cpp:415 itiphandlerhelper_p.cpp:436
 #, kde-format
@@ -868,6 +879,8 @@ msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
 msgstr ""
+"Jūs anksčiau buvote priėmę pakvietimą į šį įvykį. Ar norite siųsti "
+"organizatoriui atnaujintą atsakymą, kuriame atmetate pakvietimą?"
 
 #: itiphandlerhelper_p.cpp:475 mailscheduler_p.cpp:126
 #, kde-format
@@ -877,7 +890,7 @@ msgstr "Kontrapasiūlymas: %1"
 #: itiphandlerhelper_p.cpp:492
 #, kde-format
 msgid "Sending group scheduling email failed."
-msgstr ""
+msgstr "Nepavyko išsiųsti grupės tvarkaraščio el. laišką."
 
 #: itiphandlerhelper_p.cpp:500
 #, kde-format
@@ -888,7 +901,7 @@ msgstr "Nutraukti atnaujinimą"
 #: mailclient_p.cpp:381 mailclient_p.cpp:419
 #, kde-format
 msgid "There are no attendees to e-mail"
-msgstr ""
+msgstr "Nėra dalyvių, kuriems siųsti el. laišką"
 
 #: mailclient_p.cpp:427
 #, kde-format
@@ -898,7 +911,7 @@ msgstr "Užimtumo objektas"
 #: mailclient_p.cpp:461 mailclient_p.cpp:492
 #, kde-format
 msgid "Free Busy Message"
-msgstr "Užimtumo pranešimas"
+msgstr "Laiškas su užimtumu"
 
 #: mailclient_p.cpp:629
 #, kde-format
@@ -908,12 +921,12 @@ msgstr "Klaida kuriant perdavimą"
 #: mailclient_p.cpp:647
 #, kde-format
 msgid "Error fetching transport. Unable to send invitations"
-msgstr ""
+msgstr "Klaida gaunant perdavimą. Nepavyksta siųsti pakvietimus"
 
 #: mailclient_p.cpp:670
 #, kde-format
 msgid "Error queuing message in outbox: %1"
-msgstr ""
+msgstr "Klaida statant laišką į išsiunčiamų laiškų eilę: %1"
 
 #: mailclient_p.cpp:702
 #, kde-format
@@ -926,7 +939,7 @@ msgstr ""
 #: mailclient_p.cpp:707 mailclient_p.cpp:733
 #, kde-format
 msgid "Sign Message?"
-msgstr "Pasirašyti žinutę?"
+msgstr "Pasirašyti laišką?"
 
 #: mailclient_p.cpp:708 mailclient_p.cpp:734
 #, kde-format
@@ -985,7 +998,7 @@ msgstr ""
 #: mailclient_p.cpp:778
 #, kde-format
 msgid "&Sign All Parts"
-msgstr ""
+msgstr "Pa&sirašyti visas dalis"
 
 #: mailclient_p.cpp:778
 #, kde-format
@@ -996,13 +1009,13 @@ msgstr "Pa&sirašyti"
 #, kde-format
 msgctxt "@title:window"
 msgid "Unsigned-Message Warning"
-msgstr ""
+msgstr "Įspėjimas apie nepasirašytą laišką"
 
 #: mailclient_p.cpp:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Send &As Is"
-msgstr ""
+msgstr "Siųsti es&amu pavidalu"
 
 #: mailclient_p.cpp:835
 #, kde-format
@@ -1020,11 +1033,10 @@ msgid ""
 msgstr ""
 
 #: mailclient_p.cpp:843
-#, fuzzy, kde-format
-#| msgid "Encrypt Message?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Encrypt Message?"
-msgstr "Šifruoti žinutę?"
+msgstr "Šifruoti laišką?"
 
 #: mailclient_p.cpp:844
 #, kde-format
@@ -1044,7 +1056,7 @@ msgstr "Tik pa&sirašyti"
 #: mailclient_p.cpp:845 mailclient_p.cpp:921
 #, kde-format
 msgid "&Send As-Is"
-msgstr ""
+msgstr "&Siųsti esamu pavidalu"
 
 #: mailclient_p.cpp:865
 #, kde-format
@@ -1056,7 +1068,7 @@ msgstr ""
 #: mailclient_p.cpp:869
 #, kde-format
 msgid "Encrypt Message?"
-msgstr "Šifruoti žinutę?"
+msgstr "Šifruoti laišką?"
 
 #: mailclient_p.cpp:870
 #, kde-format
@@ -1141,37 +1153,39 @@ msgid ""
 "Clicking this button will cause an email to be sent to the recipients you "
 "have entered."
 msgstr ""
+"Spustelėjus šį mygtuką, el. laiškas bus išsiųstas čia įvestiems gavėjams."
 
 #: publishdialog.cpp:65
-#, fuzzy, kde-format
-#| msgid "Cancel recipient selection and the email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel recipient selection and the email"
-msgstr "Atsisakyti adresatų žymėjimo ir el. laiško"
+msgstr "Atsisakyti gavėjų pasirinkimo ir el. laiško"
 
 #: publishdialog.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Clicking this button will cause the email operation to be terminated."
-msgstr ""
+msgstr "Spustelėjus šį mygtuką, el. laiško operacija bus nutraukta."
 
 #: publishdialog.cpp:69
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "See the Group Scheduling manual"
-msgstr ""
+msgstr "Rodyti grupės tvarkaraščio žinyną"
 
 #: publishdialog.cpp:70
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to read more information about Group Scheduling."
 msgstr ""
+"Spustelėkite šį mygtuką norėdami skaityti daugiau informacijos apie grupės "
+"tvarkaraštį."
 
 #: publishdialog.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid "Please provide at least 1 valid email address"
-msgstr ""
+msgstr "Pateikite bent vieną tinkamą el. pašto adresą"
 
 #: publishdialog.cpp:122
 #, kde-format
@@ -1181,6 +1195,8 @@ msgid ""
 "string.\n"
 "%1"
 msgstr ""
+"Nepavyko paskelbti kalendoriaus reiškinio dėl netinkamos gavėjų eilutės.\n"
+"%1"
 
 #: publishdialog.cpp:125
 #, kde-format
@@ -1201,6 +1217,8 @@ msgid ""
 "This is a list of all the addresses you have currently selected to receive "
 "the iCalendar invitation."
 msgstr ""
+"Tai yra visų adresų, kuriuos šiuo metu pasirinkote, kad gautų iCalendar "
+"pakvietimą, sąrašas."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mNew)
 #: publishdialog_base.ui:52
@@ -1215,6 +1233,8 @@ msgid ""
 "Click this button and you will be able to enter a name and email for a new "
 "addressee to add to the recipients list"
 msgstr ""
+"Spustelėję šį mygtuką galėsite įvesti naujo adresato, kuris bus pridėtas į "
+"gavėjų sąrašą, vardą ir el. paštą"
 
 #. i18n: ectx: property (text), widget (QPushButton, mNew)
 #: publishdialog_base.ui:58
@@ -1234,6 +1254,8 @@ msgstr "Pašalinti šiuo metu pažymėtą gavėją"
 msgid ""
 "Click this button to remove the recipient currently selected from the list"
 msgstr ""
+"Spustelėkite šį mygtuką norėdami pašalinti šiuo metu pažymėtą gavėją iš "
+"sąrašo"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemove)
 #: publishdialog_base.ui:71
@@ -1254,13 +1276,14 @@ msgid ""
 "Click this button to show another dialog where you will be able to select a "
 "recipient from your address book"
 msgstr ""
+"Spustelėkite šį mygtuką, kad būtų rodomas kitas dialogas, kuriame galėsite "
+"pasirinkti gavėją iš adresų knygos"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectAddressee)
 #: publishdialog_base.ui:84
-#, fuzzy, kde-format
-#| msgid "&Select..."
+#, kde-format
 msgid "&Select…"
-msgstr "Ž&ymėti..."
+msgstr "Pa&sirinkti…"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: publishdialog_base.ui:113
@@ -1301,28 +1324,26 @@ msgid "This field contains the email address of the recipient"
 msgstr "Šiame lauke yra gavėjo el. pašto adresas"
 
 #: publishdialog_p.cpp:45
-#, fuzzy, kde-format
-#| msgid "The recipient's name"
+#, kde-format
 msgctxt "@info/plain optional email recipient name"
 msgid "recipient name (optional)"
-msgstr "Gavėjo vardas"
+msgstr "gavėjo vardas (nebūtinas)"
 
 #: publishdialog_p.cpp:46
-#, fuzzy, kde-format
-#| msgid "The recipient's email address"
+#, kde-format
 msgctxt "@info/plain required email recipient address"
 msgid "recipient email (required)"
-msgstr "Gavėjo el. pašto adresas"
+msgstr "gavėjo el. paštas (būtinas)"
 
 #: scheduler_p.cpp:134 scheduler_p.cpp:242
 #, kde-format
 msgid "Error: Assigning different incidence types."
-msgstr ""
+msgstr "Klaida: Priskiriami skirtingi reiškinio tipai."
 
 #: scheduler_p.cpp:224 scheduler_p.cpp:275
 #, kde-format
 msgid "This isn't an update. The found incidence was modified more recently."
-msgstr ""
+msgstr "Tai nėra atnaujinimas. Rastas reiškinys buvo modifikuotas vėliau."
 
 #: scheduler_p.cpp:266 scheduler_p.cpp:537 scheduler_p.cpp:552
 #, kde-format
@@ -1342,12 +1363,19 @@ msgid ""
 "invitation</item></list></para><para>This is not a problem, but we thought "
 "you should know.</para>"
 msgstr ""
+"<para>Jūs pridėjote pakvietimo atnaujinimą, bet jūsų kalendoriuje nepavyko "
+"rasti ankstesnės šio elemento versijos.</para><para>Taip galėjo nutikti dėl "
+"to, kad:<list><item>organizatorius nepridėjo jūsų į pradinį pakvietimą</"
+"item><item>jūs dar nepriėmėte pradinio pakvietimo</item><item>jūs ištrynėte "
+"pradinį pakvietimą iš savo kalendoriaus</item><item>jūs daugiau nebeturite "
+"prieigos prie kalendoriaus, kuriame yra pakvietimas</item></list></"
+"para><para>Tai nėra problema, bet, tiesiog, turėkite tai omenyje.</para>"
 
 #: scheduler_p.cpp:300
 #, kde-format
 msgctxt "@title:window"
 msgid "Cannot Find Invitation to be Updated"
-msgstr ""
+msgstr "Nepavyksta rasti, kurį pakvietimą atnaujinti"
 
 #: scheduler_p.cpp:307
 #, kde-format
@@ -1357,7 +1385,7 @@ msgstr "Klaida pridedant įvykį"
 #: scheduler_p.cpp:341
 #, kde-format
 msgid "Could not find incidence to delete."
-msgstr ""
+msgstr "Nepavyko rasti, kurį reiškinį ištrinti."
 
 #: scheduler_p.cpp:394
 #, kde-format
@@ -1422,6 +1450,8 @@ msgid ""
 "An attendee was added to the incidence. Do you want to email the attendees "
 "an update message?"
 msgstr ""
+"Dalyvis buvo pridėtas į reiškinį. Ar norite el. paštu išsiųsti dalyviams "
+"laišką su atnaujinimu?"
 
 #: scheduler_p.cpp:513
 #, kde-format
@@ -1433,7 +1463,7 @@ msgstr "Dalyvis pridėtas"
 #, kde-format
 msgctxt "@option"
 msgid "Send Messages"
-msgstr "Siųsti žinutes"
+msgstr "Siųsti laiškus"
 
 #: scheduler_p.cpp:515
 #, kde-format
@@ -1444,7 +1474,7 @@ msgstr "Nesiųsti"
 #: scheduler_p.cpp:561
 #, kde-format
 msgid "No incidence for scheduling."
-msgstr ""
+msgstr "Nėra planavimui skirto reiškinio."
 
 #: scheduler_p.cpp:584
 #, kde-format
@@ -1454,19 +1484,19 @@ msgstr "Nėra užimtumo podėlio"
 #: scheduler_p.cpp:603
 #, kde-format
 msgid "Error saving freebusy object"
-msgstr ""
+msgstr "Klaida įrašant užimtumo objektą"
 
 #: searchcollectionhelper.cpp:179
 #, kde-format
 msgctxt "A collection of all declined invidations."
 msgid "Declined Invitations"
-msgstr ""
+msgstr "Atmesti pakvietimai"
 
 #: searchcollectionhelper.cpp:187
 #, kde-format
 msgctxt "A collection of all open invidations."
 msgid "Open Invitations"
-msgstr ""
+msgstr "Atviri pakvietimai"
 
 #: standardcalendaractionmanager.cpp:47
 #, kde-format
@@ -1863,10 +1893,9 @@ msgid "Move To-do To"
 msgstr "Perkelti užduotį į"
 
 #: standardcalendaractionmanager.cpp:355
-#, fuzzy, kde-format
-#| msgid "Edit To-do..."
+#, kde-format
 msgid "Edit To-do…"
-msgstr "Taisyti užduotį..."
+msgstr "Taisyti užduotį…"
 
 #: standardcalendaractionmanager.cpp:359
 #, kde-format
@@ -1921,10 +1950,9 @@ msgid "Create a new event"
 msgstr "Sukurti naują įvykį"
 
 #: standardcalendaractionmanager.cpp:541
-#, fuzzy, kde-format
-#| msgid "New &To-do..."
+#, kde-format
 msgid "New &To-do…"
-msgstr "Nauja &užduotis..."
+msgstr "Nauja užduo&tis…"
 
 #: standardcalendaractionmanager.cpp:542
 #, kde-format
@@ -1932,14 +1960,14 @@ msgid "Create a new To-do"
 msgstr "Sukurti naują užduotį"
 
 #: standardcalendaractionmanager.cpp:551
-#, fuzzy, kde-format
+#, kde-format
 msgid "New Su&b-to-do…"
-msgstr "Naujas sudedamasis darbas..."
+msgstr "Nauja da&linė užduotis…"
 
 #: standardcalendaractionmanager.cpp:552
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create a new Sub-to-do"
-msgstr "Sukurti naują sudedamąjį darbą"
+msgstr "Sukurti naują dalinę užduotį"
 
 #: standardcalendaractionmanager.cpp:562
 #, kde-format
@@ -1993,7 +2021,7 @@ msgstr "Santrauka"
 #: todomodel.cpp:474
 #, kde-format
 msgid "Recurs"
-msgstr ""
+msgstr "Pasikartoja"
 
 #: todomodel.cpp:476
 #, kde-format
@@ -2035,7 +2063,7 @@ msgstr "Aprašas"
 #: todopurger.cpp:61
 #, kde-format
 msgid "Purging completed to-dos"
-msgstr ""
+msgstr "Išvalomos užbaigtos užduotys"
 
 #, fuzzy
 #~| msgid "(EmptyName)"
