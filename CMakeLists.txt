@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.29)
 
-set(PIM_VERSION "6.8.44")
+set(PIM_VERSION "6.9.40")
 project(Akonadi-Calendar VERSION ${PIM_VERSION})
 # use a different SOVERSION for each minor release because we don't guarantee any ABI stability;
 # bump the SOVERSION with the first development version, i.e. major.minor.40
