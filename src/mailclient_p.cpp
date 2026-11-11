@@ -277,10 +277,10 @@ MailClient::buildComposers(const KCalendarCore::IncidenceBase::Ptr &incidence, c
             auto composerJob = std::make_unique<MessageComposer::ComposerJob>();
 
             if (encryptSomething || identity.autocryptEnabled()) {
-                QList<QPair<QStringList, std::vector<GpgME::Key>>> data; // clazy:exclude=container-inside-loop
+                QList<std::pair<QStringList, std::vector<GpgME::Key>>> data; // clazy:exclude=container-inside-loop
                 data.reserve(encData.size());
                 for (const auto &info : encData) {
-                    data.push_back(qMakePair(info.recipients, info.keys));
+                    data.push_back(std::make_pair(info.recipients, info.keys));
                     qCDebug(AKONADICALENDAR_LOG) << "Resolved keys for:" << info.recipients;
                 }
                 composerJob->setEncryptionKeys(data);
@@ -529,7 +529,7 @@ void MailClient::populateComposer(MessageComposer::ComposerJob *composerJob, con
 }
 
 bool MailClient::addKeysToContext(const QString &gnupgHome,
-                                  const QList<QPair<QStringList, std::vector<GpgME::Key>>> &data,
+                                  const QList<std::pair<QStringList, std::vector<GpgME::Key>>> &data,
                                   const std::map<QByteArray, QString> &autocryptMap)
 {
     bool needSpecialContext = false;
