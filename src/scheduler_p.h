@@ -168,7 +168,6 @@ private Q_SLOTS:
 
 private:
     void connectCalendar(const Akonadi::CalendarBase::Ptr &calendar);
-    Q_DISABLE_COPY(Scheduler)
     std::unique_ptr<SchedulerPrivate> const d;
 };
 }

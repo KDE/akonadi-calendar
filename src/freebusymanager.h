@@ -141,7 +141,6 @@ private:
 
     std::unique_ptr<FreeBusyManagerPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(FreeBusyManager)
-    Q_DISABLE_COPY(FreeBusyManager)
     Q_PRIVATE_SLOT(d_ptr, void checkFreeBusyUrl())
     Q_PRIVATE_SLOT(d_ptr, void processFreeBusyDownloadResult(KJob *))
     Q_PRIVATE_SLOT(d_ptr, void processFreeBusyUploadResult(KJob *))

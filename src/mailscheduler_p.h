@@ -66,7 +66,6 @@ private:
 
 private:
     //@cond PRIVATE
-    Q_DISABLE_COPY(MailScheduler)
     std::unique_ptr<MailSchedulerPrivate> const d;
     //@endcond
 };

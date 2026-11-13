@@ -56,7 +56,6 @@ protected:
 
 private:
     void init(const QString &description, History *qq);
-    Q_DISABLE_COPY(Entry)
 };
 
 class AKONADI_CALENDAR_EXPORT HistoryPrivate : public QObject
@@ -123,9 +122,6 @@ private Q_SLOTS:
     onDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &deletedIds, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
-
-private:
-    Q_DISABLE_COPY(CreationEntry)
 };
 
 class DeletionEntry : public Entry
@@ -149,7 +145,6 @@ private:
     QString mErrorString;
     QHash<int, Akonadi::Item::Id> mOldIdByChangeId;
     int mNumPendingCreations;
-    Q_DISABLE_COPY(DeletionEntry)
 };
 
 class ModificationEntry : public Entry
@@ -166,7 +161,6 @@ private Q_SLOTS:
     void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
 private:
-    Q_DISABLE_COPY(ModificationEntry)
     Incidence::Ptr mOriginalPayload;
 };
 
@@ -194,6 +188,5 @@ private:
     Entry::List mEntries;
     int mFinishedEntries;
     OperationType mOperationInProgress;
-    Q_DISABLE_COPY(MultiEntry)
 };
 }

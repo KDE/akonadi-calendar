@@ -391,7 +391,6 @@ Q_SIGNALS:
     // NOLINTEND(readability-inconsistent-declaration-parameter-name)
 
 private:
-    Q_DISABLE_COPY(ITIPHandler)
     std::unique_ptr<ITIPHandlerPrivate> const d;
 };
 }
