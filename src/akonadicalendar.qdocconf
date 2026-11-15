@@ -7,7 +7,30 @@ description = Akonadi Calendar library.
 
 documentationinheaders = true
 
-headerdirs += .
+headers += \
+    akonadicalendar_qdocmoduleheader.h \
+    calendarbase.h \
+    calendarclipboard.h \
+    calendarutils.h \
+    calfilterpartstatusproxymodel.h \
+    calfilterproxymodel.h \
+    collectioncalendar.h \
+    core/blockalarmsattribute.h \
+    core/freebusyproviderbase.h \
+    etmcalendar.h \
+    fetchjobcalendar.h \
+    freebusymanager.h \
+    history.h \
+    icalimporter.h \
+    incidencechanger.h \
+    incidencetreemodel.h \
+    itiphandler.h \
+    publishdialog.h \
+    searchcollectionhelper.h \
+    selectcollection.h \
+    standardcalendaractionmanager.h \
+    todomodel.h \
+    todopurger.h
 sourcedirs += .
 
 outputformats = HTML
