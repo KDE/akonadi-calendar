@@ -2,8 +2,8 @@
     \module AkonadiCalendarCore
     \title AkonadiCalendarCore C++ Classes
     \ingroup modules
-    \cmakepackage KPim6
-    \cmakecomponent AkonadiCalendarCore
+    \cmakepackage KPim6AkonadiCalendar
+    \cmaketargetitem KPim6::AkonadiCalendarCore
 
     \brief AkonadiCalendarCore provides API calendar core.
 */
