@@ -476,10 +476,7 @@ KCalendarCore::Alarm::List ETMCalendar::alarms(const QDateTime &from, const QDat
 {
     Q_D(const ETMCalendar);
     KCalendarCore::Alarm::List alarmList;
-    QHashIterator<Akonadi::Item::Id, Akonadi::Item> i(d->mItemById);
-    while (i.hasNext()) {
-        const Akonadi::Item item = i.next().value();
-
+    for (const Akonadi::Item &item : std::as_const(d->mItemById)) {
         Akonadi::Collection parentCollection; // must have same lifetime as blockedAttr
         const BlockAlarmsAttribute *blockedAttr = nullptr;
 
