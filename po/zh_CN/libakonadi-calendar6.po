@@ -400,7 +400,7 @@ msgctxt "@info"
 msgid ""
 "Failed to parse free/busy information that was retrieved from: <link>%1</"
 "link>"
-msgstr "从 <link>%1</link> 获取的闲忙信息解析失败"
+msgstr "从 <link>%1</link> 获取的空闲/忙碌信息解析失败"
 
 #: freebusymanager.cpp:420
 #, kde-format
@@ -419,7 +419,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "The free/busy information was successfully sent."
-msgstr "闲忙信息已成功发送。"
+msgstr "空闲/忙碌信息已成功发送。"
 
 #: freebusymanager.cpp:622 itiphandler_p.cpp:139
 #, kde-format
