@@ -89,6 +89,8 @@ public:
      * Only the direct children are returned
      * \a parentUid identifier of the parent incidence
      *///TODO: unit-test
+    /*!
+     */
     [[nodiscard]] KCalendarCore::Incidence::List childIncidences(const QString &parentUid) const;
 
     /*!
@@ -224,7 +226,11 @@ Q_SIGNALS:
 
 protected:
     Q_DECLARE_PRIVATE(CalendarBase)
+    /*!
+     */
     std::unique_ptr<CalendarBasePrivate> const d_ptr;
+    /*!
+     */
     CalendarBase(CalendarBasePrivate *const d, QObject *parent);
 
     /*!

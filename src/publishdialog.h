@@ -51,6 +51,8 @@ public:
     [[nodiscard]] QString addresses() const;
 
 public Q_SLOTS:
+    /*!
+     */
     void accept() override;
 
 private:

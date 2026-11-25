@@ -166,6 +166,8 @@ public:
      */
     void setContextText(StandardActionManager::Type type, StandardActionManager::TextContext context, const KLocalizedString &text);
 
+    /*!
+     */
     void setCollectionPropertiesPageNames(const QStringList &names);
 
 Q_SIGNALS:

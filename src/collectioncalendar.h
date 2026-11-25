@@ -18,7 +18,12 @@ class EntityTreeModel;
 
 class CollectionCalendarPrivate;
 
-/*! Calendar representing a single Akonadi::Collection. */
+/*!
+ * \class Akonadi::CollectionCalendar
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/CollectionCalendar
+ *
+ * Calendar representing a single Akonadi::Collection. */
 class AKONADI_CALENDAR_EXPORT CollectionCalendar : public Akonadi::CalendarBase
 {
     Q_OBJECT

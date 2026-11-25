@@ -26,7 +26,12 @@ namespace Akonadi
 {
 class TodoModelPrivate;
 
-/*! Expands an IncidenceTreeModel by additional columns for showing todos. */
+/*!
+ * \class Akonadi::TodoModel
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/TodoModel
+ *
+ * Expands an IncidenceTreeModel by additional columns for showing todos. */
 class AKONADI_CALENDAR_EXPORT TodoModel : public KExtraColumnsProxyModel
 {
     Q_OBJECT

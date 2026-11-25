@@ -18,7 +18,12 @@ namespace Akonadi
 
 class IncidenceTreeModelPrivate;
 
-/*! Hierarchical incidence model.
+/*!
+ * \class Akonadi::IncidenceTreeModel
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/IncidenceTreeModel
+ *
+ * Hierarchical incidence model.
  *  Useful as a source for TodoModel for example.
  */
 class AKONADI_CALENDAR_EXPORT IncidenceTreeModel : public QAbstractProxyModel
@@ -42,21 +47,41 @@ public:
      */
     explicit IncidenceTreeModel(const QStringList &mimeTypes, QObject *parent = nullptr);
 
+    /*!
+     */
     ~IncidenceTreeModel() override;
 
+    /*!
+     */
     [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    /*!
+     */
     [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
+    /*!
+     */
     [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
 
+    /*!
+     */
     [[nodiscard]] QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
+    /*!
+     */
     [[nodiscard]] QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
+    /*!
+     */
     [[nodiscard]] QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
+    /*!
+     */
     [[nodiscard]] QModelIndex parent(const QModelIndex &child) const override;
 
+    /*!
+     */
     void setSourceModel(QAbstractItemModel *sourceModel) override;
+    /*!
+     */
     [[nodiscard]] bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
 
     /*!

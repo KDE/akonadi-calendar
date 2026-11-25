@@ -33,6 +33,8 @@ class AKONADI_CALENDAR_EXPORT CalendarClipboard : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum Mode {
         SingleMode = 0, ///< Only the specified incidence is cut/copied.
         RecursiveMode, ///< The specified incidence's children are also cut/copied

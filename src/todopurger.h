@@ -19,6 +19,9 @@ class IncidenceChanger;
 class TodoPurgerPrivate;
 
 /*!
+ * \class Akonadi::TodoPurger
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/TodoPurger
  * \brief Class to delete completed to-dos.
  *
  * \author Sérgio Martins <iamsergio@gmail.com>
@@ -32,6 +35,8 @@ public:
      * Creates a new TodoPurger instance.
      */
     explicit TodoPurger(QObject *parent = nullptr);
+    /*!
+     */
     ~TodoPurger() override;
 
     /*!

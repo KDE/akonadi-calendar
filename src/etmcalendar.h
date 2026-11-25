@@ -22,6 +22,9 @@ class ETMCalendarPrivate;
 class EntityTreeModel;
 
 /*!
+ * \class Akonadi::ETMCalendar
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ETMCalendar
  * \brief A KCalendarCore::Calendar that uses an EntityTreeModel to populate itself.
  *
  * All non-idempotent KCalendarCore::Calendar methods interact with Akonadi.
@@ -41,6 +44,8 @@ class AKONADI_CALENDAR_EXPORT ETMCalendar : public CalendarBase
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum CollectionColumn {
         CollectionTitle = 0,
         CollectionColumnCount
@@ -75,6 +80,8 @@ public:
      */
     explicit ETMCalendar(const ETMCalendar *calendar, QObject *parent = nullptr);
 
+    /*!
+     */
     explicit ETMCalendar(Monitor *monitor, QObject *parent = nullptr);
     /*!
      * Destroys this ETMCalendar.

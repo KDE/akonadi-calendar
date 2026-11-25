@@ -43,6 +43,9 @@ namespace Akonadi
 class ITIPHandlerPrivate;
 
 /*!
+ * \class Akonadi::GroupwareUiDelegate
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ITIPHandler
  * \brief Ui delegate for editing counter proposals.
  * \since 4.11
  */
@@ -74,6 +77,9 @@ public:
 };
 
 /*!
+ * \class Akonadi::ITIPHandlerDialogDelegate
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ITIPHandler
  * \brief Ui delegate for dialogs raised by the ITIPHandler and IncidenceChanger.
  * \since 4.15
  */
@@ -82,6 +88,8 @@ class AKONADI_CALENDAR_EXPORT ITIPHandlerDialogDelegate : public QObject
     Q_OBJECT
 public:
     // Possible default actions
+    /*!
+     */
     enum Action {
         ActionAsk, /*!< Ask the user for a decision */
         ActionSendMessage, /*!< Answer with Yes */
@@ -89,11 +97,15 @@ public:
     };
 
     // How will receive the mail afterwards
+    /*!
+     */
     enum Recipient {
         Organizer, /*!< the organizer of the incidence */
         Attendees /*!< the attendees of the incidence */
     };
 
+    /*!
+     */
     enum DialogAction {
         OkAction = 1,
         CancelAction = 2,
@@ -223,16 +235,25 @@ protected:
     int askUserIfNeeded(const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo) const;
 
     // parent of the dialog
+    /*!
+     */
     QWidget *mParent = nullptr;
 
     // Incidence related to the dialog
+    /*!
+     */
     KCalendarCore::Incidence::Ptr mIncidence;
 
     // ITIPMethod related to the dialog
+    /*!
+     */
     KCalendarCore::iTIPMethod mMethod;
 };
 
 /*!
+ * \class Akonadi::ITIPHandlerComponentFactory
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ITIPHandler
  * \brief Factory to create Akonadi::MessageQueueJob jobs or ITIPHandlerDialogDelegate objects.
  * \since 4.15
  */
@@ -243,10 +264,14 @@ public:
     /*
      * Created a new ITIPHandlerComponentFactory object.
      */
+    /*!
+     */
     explicit ITIPHandlerComponentFactory(QObject *parent = nullptr);
 
     /*
      * deletes the object.
+     */
+    /*!
      */
     ~ITIPHandlerComponentFactory() override;
 
@@ -255,6 +280,8 @@ public:
      * \a incidence related to the mail
      * \a identity that is the mail sender
      * \a parent of the Akonadi::MessageQueueJob object
+     */
+    /*!
      */
     virtual Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, QObject *parent = nullptr);
@@ -266,11 +293,16 @@ public:
      * @parent parent of the AskDelegator
      *
      */
+    /*!
+     */
     virtual ITIPHandlerDialogDelegate *
     createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent = nullptr);
 };
 
 /*!
+ * \class Akonadi::ITIPHandler
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ITIPHandler
  * \brief Handles sending of iTip messages as well as processing incoming ones.
  * \since 4.11
  */
@@ -278,6 +310,8 @@ class AKONADI_CALENDAR_EXPORT ITIPHandler : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum Result {
         ResultError, /*!< An unexpected error occurred */
         ResultSuccess, /*!< The invitation was successfully handled. */

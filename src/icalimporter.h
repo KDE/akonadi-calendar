@@ -31,6 +31,11 @@ namespace Akonadi
 class IncidenceChanger;
 class ICalImporterPrivate;
 
+/*!
+ * \class Akonadi::ICalImporter
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/ICalImporter
+ */
 class AKONADI_CALENDAR_EXPORT ICalImporter : public QObject
 {
     Q_OBJECT
@@ -43,6 +48,8 @@ public:
      * \a parent  Parent QObject.
      */
     explicit ICalImporter(Akonadi::IncidenceChanger *changer = nullptr, QObject *parent = nullptr);
+    /*!
+     */
     ~ICalImporter() override;
 
     /*!

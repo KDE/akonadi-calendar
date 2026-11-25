@@ -23,6 +23,9 @@ class IncidenceChanger;
 class HistoryPrivate;
 
 /*!
+ * \class Akonadi::History
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/History
    \brief History class for implementing undo/redo of calendar operations
 
    Whenever you use IncidenceChanger to create, delete or modify incidences,

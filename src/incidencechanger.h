@@ -72,6 +72,11 @@ class IncidenceChangerPrivate;
 
 class History;
 
+/*!
+ * \class Akonadi::IncidenceChanger
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/IncidenceChanger
+ */
 class AKONADI_CALENDAR_EXPORT IncidenceChanger : public QObject
 {
     Q_OBJECT

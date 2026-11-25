@@ -28,7 +28,12 @@ class ETMCalendar;
 class EntityTreeModel;
 class Item;
 
-/*! Utility methods for dealing with calendar content in Akonadi items.
+/*!
+ * \namespace Akonadi::CalendarUtils
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/CalendarUtils
+ *
+ * Utility methods for dealing with calendar content in Akonadi items.
  *  \since 5.20.42
  */
 namespace CalendarUtils
@@ -58,7 +63,11 @@ AKONADI_CALENDAR_EXPORT KCalendarCore::Journal::Ptr journal(const Akonadi::Item 
  * This takes backend-specific special cases into account.
  */
 [[nodiscard]] AKONADI_CALENDAR_EXPORT QString displayName(const Akonadi::ETMCalendar *calendar, const Akonadi::Collection &collection);
+/*!
+ */
 [[nodiscard]] AKONADI_CALENDAR_EXPORT QString displayName(const Akonadi::EntityTreeModel *model, const Akonadi::Collection &collection);
+/*!
+ */
 [[nodiscard]] AKONADI_CALENDAR_EXPORT QString displayName(const Akonadi::Collection &collection);
 
 /*!

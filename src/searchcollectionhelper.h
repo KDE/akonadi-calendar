@@ -22,6 +22,11 @@ namespace Akonadi
 {
 /// Helper class to initialise the search collections
 class SearchCollectionHelperPrivate;
+/*!
+ * \class Akonadi::SearchCollectionHelper
+ * \inmodule AkonadiCalendar
+ * \inheaderfile Akonadi/SearchCollectionHelper
+ */
 class AKONADI_CALENDAR_EXPORT SearchCollectionHelper : public QObject
 {
     Q_OBJECT
