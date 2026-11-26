@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:49+0000\n"
+"POT-Creation-Date: 2026-11-26 01:04+0000\n"
 "PO-Revision-Date: 2013-10-31 04:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -722,14 +722,14 @@ msgctxt "@title:window"
 msgid "Message Not Sent"
 msgstr "Хат жіберілмеді"
 
-#: itiphandler.h:123 itiphandler.h:141 itiphandler.h:157 itiphandler.h:170
+#: itiphandler.h:135 itiphandler.h:153 itiphandler.h:169 itiphandler.h:182
 #, fuzzy, kde-format
 #| msgid "Send Email"
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "Эл.поштаны жіберу"
 
-#: itiphandler.h:124 itiphandler.h:142 itiphandler.h:158 itiphandler.h:171
+#: itiphandler.h:136 itiphandler.h:154 itiphandler.h:170 itiphandler.h:183
 #, fuzzy, kde-format
 #| msgid "Do Not Send"
 msgctxt "@action:button dialog negative answer"
